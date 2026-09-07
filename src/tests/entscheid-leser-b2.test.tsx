@@ -150,8 +150,10 @@ describe('A-5 — der Lesemodus bleibt im Pane', () => {
   });
 
   it('im Pane `absolute` + klickbar, ausserhalb unverändert `fixed`', () => {
-    expect(q).toContain('pointer-events-auto absolute inset-0 z-50 overflow-y-auto bg-paper');
-    expect(q).toContain('fixed inset-0 z-50 overflow-y-auto bg-paper');
+    // C3 (5.9.2026): `z-50` → `z-modal` (Schichtungs-Skala, index.css bei
+    // --z-modal) — derselbe resolvierte Wert (50), nur benannt.
+    expect(q).toContain('pointer-events-auto absolute inset-0 z-modal overflow-y-auto bg-paper');
+    expect(q).toContain('fixed inset-0 z-modal overflow-y-auto bg-paper');
   });
 
   it('trägt seinen eigenen `@container/pane` — sonst feuerte keine Pane-Klasse darin', () => {

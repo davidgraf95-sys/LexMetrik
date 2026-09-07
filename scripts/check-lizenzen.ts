@@ -1,42 +1,16 @@
 // scripts/check-lizenzen.ts — Lizenz-Tor (QS-VERWENDEN V1).
 //
-// Prüft ALLE installierten Abhängigkeiten (prod UND dev, `npm ls --all
-// --json --long`) gegen eine Allowlist permissiver Lizenzen. Copyleft
-// (LGPL/GPL/AGPL/CPAL/SSPL), fehlende oder unbekannte Lizenzangaben
-// (NOASSERTION) sind ROT — Verstösse gegen §URG-Leitbild («nur amtliche und
-// urheberrechtsfreie Quellen») sollen nicht erst beim Vertrieb auffallen.
-// MPL-2.0 (file-level Copyleft, in der Praxis bei Bibliotheken unkritisch)
-// ist GELB — Warnung, kein Baustopp.
+// Prüft ALLE Abhängigkeiten (prod+dev, `npm ls --all --json --long`) gegen
+// eine Allowlist permissiver Lizenzen. Copyleft (LGPL/GPL/AGPL/CPAL/SSPL) und
+// NOASSERTION sind ROT (§URG-Leitbild); MPL-2.0 ist GELB (Warnung). SPDX `OR`
+// = eine Alternative reicht, `AND` = alle Teile; verschachtelte Klammern
+// (>1 Ebene) und `WITH`-Exceptions werden NICHT aufgelöst, fail-closed rot
+// in `klassifiziereLeaf` (gemessen 2.9.2026). Ausnahmen nur in
+// `scripts/lizenzen-ausnahmen.json` (bereits produktiv genutzte rote Pakete).
 //
-// SPDX-Ausdrücke: `OR` ist erlaubt, wenn EINE Alternative erlaubt ist; `AND`
-// nur, wenn ALLE Teile erlaubt sind. Verschachtelte Klammern (mehr als eine
-// Ebene) und `WITH`-Exceptions (z. B. `Apache-2.0 WITH LLVM-exception`)
-// werden NICHT aufgelöst — bewusst kein Parser-Ausbau, sondern fail-closed:
-// ein nicht auflösbarer Ausdruck landet als Ganzes in `klassifiziereLeaf`,
-// matcht dort keinen Allowlist-Eintrag und ist damit ROT (gemessen 2.9.2026:
-// `(MIT AND (BSD-3-Clause OR Apache-2.0))` → rot, `Apache-2.0 WITH
-// LLVM-exception` → rot). Konservativ, nicht vollständig — für den Bestand
-// bislang ausreichend, weil kein real vorkommender Ausdruck bisher fälschlich
-// rot markiert wurde.
-//
-// Ausnahmen: `scripts/lizenzen-ausnahmen.json` (optional) — nur für Pakete,
-// die HEUTE schon rot sind UND bereits in Betrieb sind (nie vorsorglich).
-//
-// Bug-Check-Nachzug PR #622 (2.9.2026), vier Befunde behoben:
-//  (1) `npm ls` liefert bei ELSPROBLEMS (Exit 1, z. B. kaputter/unsynchron.
-//      node_modules) trotzdem auswertbares JSON auf stdout — vorher liess
-//      `execFileSync` das Tor mit einem uncaught TypeError sterben, statt
-//      den Baum (mit Warnung) auszuwerten oder sauber rot zu melden. Rot
-//      reproduziert: `mv node_modules/wrap-ansi /tmp/…` → `npm run
-//      check:lizenzen` endete in `Error: Command failed: npm ls …` +
-//      Stacktrace statt einer Tor-Meldung.
-//  (2) Untergrenze `gesehen.size < 100` — «0 Pakete geprüft» darf nie grün
-//      sein (Leerlauf-Grün-Falle).
-//  (3) `dep.license` als Objekt (`{type: 'MIT'}`, altes npm-Format) liess
-//      `.trim()` mit `TypeError: dep.license.trim is not a function`
-//      abstürzen — reproduziert per `lizenzText({license:{type:'MIT'}})`.
-//  (4) Übersprungene Knoten (`missing`/ohne `version`) werden gezählt und
-//      in der Zusammenfassung ausgewiesen statt stillschweigend verworfen.
+// PR #622 (2.9.2026), vier Befunde: ELSPROBLEMS-JSON wird ausgewertet statt
+// TypeError; Untergrenze 100 Pakete gegen Leerlauf-Grün; `dep.license`-Objekt
+// stürzte `.trim()` ab; übersprungene Knoten zählen statt zu verschwinden.
 import { existsSync, readFileSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 
@@ -85,8 +59,7 @@ type Ausnahme = { paket: string; grund: string; datum: string };
 export function entklammern(s: string): string {
   s = s.trim();
   if (s.startsWith('(') && s.endsWith(')')) {
-    // Nur entfernen, wenn die öffnende Klammer zur schliessenden gehört
-    // (kein "(A) OR (B)"-Fall, der hier fälschlich verschmelzen würde).
+    // Nur wenn die öffnende Klammer zur schliessenden gehört (kein "(A) OR (B)").
     let tiefe = 0;
     for (let i = 0; i < s.length - 1; i++) {
       if (s[i] === '(') tiefe++;
@@ -134,8 +107,7 @@ export function klassifiziereAusdruck(ausdruck: string): Klasse {
   return klassifiziereLeaf(s);
 }
 
-/** Einen einzelnen Lizenzwert (String ODER `{type}`-Objekt) sicher zu Text
- *  machen — nie `.trim()` auf einen Nicht-String aufrufen (Befund 3). */
+/** Lizenzwert (String oder `{type}`-Objekt) sicher zu Text — nie `.trim()` auf Nicht-String (Befund 3). */
 function lizenzWertZuText(wert: LizenzWert): string {
   if (typeof wert === 'string') return wert.trim();
   if (wert && typeof wert === 'object' && typeof wert.type === 'string') {
@@ -144,8 +116,7 @@ function lizenzWertZuText(wert: LizenzWert): string {
   return '';
 }
 
-/** Lizenz-Rohtext aus `license` (neu) oder `licenses[]` (alt) extrahieren.
- *  Beide Felder können String ODER Objektform sein (Befund 3). */
+/** Lizenz-Rohtext aus `license` (neu) oder `licenses[]` (alt) — beide können String oder Objektform sein (Befund 3). */
 export function lizenzText(dep: NpmDep): string {
   const direkt = lizenzWertZuText(dep.license);
   if (direkt) return direkt;
@@ -201,12 +172,9 @@ export function parseNpmLsJson(text: string): NpmLsBaum | null {
   }
 }
 
-/** `npm ls --all --json --long` ausführen und auswerten (Befund 1).
- *  `npm ls` beendet sich mit Exit-Code 1 (ELSPROBLEMS), sobald der Baum
- *  irgendein Problem hat (fehlende peer-Deps, kaputtes node_modules …) —
- *  liefert dabei aber i. d. R. TROTZDEM vollständiges JSON auf stdout.
- *  `execFileSync` wirft in diesem Fall; ohne try/catch stirbt das ganze Tor
- *  mit einem uncaught TypeError-Dump statt einer lesbaren Tor-Meldung. */
+/** `npm ls --all --json --long` ausführen (Befund 1): bei ELSPROBLEMS
+ *  (Exit 1) liefert npm ls meist trotzdem JSON auf stdout — execFileSync
+ *  wirft dann aber; ohne try/catch stirbt das Tor mit TypeError statt Meldung. */
 function npmLsLesen(): { baum: NpmLsBaum; problems: string[] } {
   let roh: string;
   try {
@@ -215,9 +183,8 @@ function npmLsLesen(): { baum: NpmLsBaum; problems: string[] } {
       maxBuffer: 64 * 1024 * 1024,
     });
   } catch (e) {
-    // ELSPROBLEMS o.ä.: execFileSync wirft, aber e.stdout trägt oft noch das
-    // vollständige JSON. Wenn parsebar: Baum trotzdem auswerten (Warnung
-    // statt Absturz) — sonst sauber rot mit der echten npm-Fehlermeldung.
+    // e.stdout trägt oft noch vollständiges JSON — parsebar: Baum auswerten
+    // (Warnung statt Absturz), sonst rot mit der echten npm-Fehlermeldung.
     const stdout = (e as { stdout?: unknown }).stdout;
     const baum = typeof stdout === 'string' ? parseNpmLsJson(stdout) : null;
     if (baum) {

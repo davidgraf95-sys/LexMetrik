@@ -242,10 +242,11 @@ export function VerjaehrungForm() {
                 <>
                   <span className="text-body-s text-ink-500">rechtskräftig erledigt am</span>
                   <DatumsFeld value={u.prozessEnde ?? ''} onChange={(v) => setU(i, { prozessEnde: v || undefined })} className={inputCls} wrapperClassName="w-full sm:w-44" />
-                  <label className="flex items-center gap-1.5 text-body-s cursor-pointer text-ink-700">
-                    <input type="checkbox" checked={u.mitUrteil ?? false} onChange={(e) => setU(i, { mitUrteil: e.target.checked })} />
-                    durch Urteil (→ 10 Jahre)
-                  </label>
+                  <Checkbox
+                    checked={u.mitUrteil ?? false}
+                    onChange={(v) => setU(i, { mitUrteil: v })}
+                    label="durch Urteil (→ 10 Jahre)"
+                  />
                 </>
               )}
             </div>

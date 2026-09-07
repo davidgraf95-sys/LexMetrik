@@ -7,7 +7,7 @@ import { KV_GERICHTE_BS } from '../lib/vorlagen/klageVereinfacht';
 import { ParteiEditor } from './VorlageKlageVereinfacht';
 import type { PdfBanner } from '../lib/vorlagen/banner';
 import { DatumsFeld } from '../components/DatumsFeld';
-import { Checkbox, Field, inputCls, ListenEditor } from '../components/vorlagen/ui';
+import { Checkbox, Field, ListenEditor, NICHT_GESPEICHERT_HINWEIS, inputCls } from '../components/vorlagen/ui';
 import { BetragsFeld } from '../components/BetragsFeld';
 import { SelectionGrid } from '../components/ui/SelectionGrid';
 import { GerichtsWahlBlock } from '../components/vorlagen/GerichtsWahlBlock';
@@ -273,10 +273,11 @@ export function VorlageEheschutzgesuch() {
       intro="Das Gesuch um Regelung des Getrenntlebens (Art. 175 f. ZGB) im summarischen Verfahren — mit dem vollen Begehren-Katalog: Wohnung mit Auszugsfrist, Obhut und persönlicher Verkehr, Bar- und Betreuungsunterhalt als getrennte Begehren, Rückwirkung nach Art. 173 Abs. 3 ZGB, Gütertrennung, Schuldneranweisung und Verfügungsbeschränkung. Formeln sind berechnet, Beträge und Würdigungen bleiben Ihre Eingabe."
       norms={card?.norms ?? []}
       badge="Zu unterzeichnen"
-      fussnote="Eingaben werden NICHT lokal gespeichert (Parteidaten)."
+      fussnote={NICHT_GESPEICHERT_HINWEIS}
       zuruecksetzen={zuruecksetzen}
       schritte={SCHRITTE} schritt={schritt} setSchritt={setSchritt}
       fehler={fehler}
+      fehlerJeSchritt={(i) => maengel.filter((m) => m.schritt === i).map((m) => m.text)}
       inhalt={inhalt()}
       vorschau={<VorschauPanel ergebnis={ergebnis} kompakt direktExport={{
         pdf: { label: 'PDF', banner: BANNER_EG, dateiName: 'Eheschutzgesuch.pdf' },

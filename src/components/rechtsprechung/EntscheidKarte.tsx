@@ -4,6 +4,7 @@ import { themaText, istSynth, istBetreff, istBge, hauptIdentitaet } from '../../
 import { GEBIET_LABEL } from '../../lib/normtext/register';
 import { NormChip } from './NormChip';
 import { datumAnzeige, DATUM_UNBEKANNT_TITEL, spracheBadgeTitel } from './format';
+import { StatusBadge } from '../verzahnung/StatusBadge';
 
 // Karte eines Entscheids (Dichte 'karten'). Hierarchie-Umkehr ggü. der alten
 // Karte: das THEMA führt (Scent), das Aktenzeichen wandert in die gedämpfte
@@ -57,9 +58,7 @@ export function EntscheidKarte({ e, onNorm }: {
               <span className="text-ink-500 italic"
                 title="Betreff/Titel aus dem amtlichen Portal — keine Regeste">amtl. Betreff</span>
             )}
-            {e.kuratierung === 'maschinell' && (
-              <span className="lc-badge lc-badge-soft" title="Automatisch erfasst, fachlich noch nicht geprüft">ungeprüft</span>
-            )}
+            {e.kuratierung === 'maschinell' && <StatusBadge praedikat="maschinell" />}
           </span>
         </div>
 
@@ -103,7 +102,7 @@ export function EntscheidKarte({ e, onNorm }: {
           Grammatik macht die Aktions-Form an der ROLLE fest, damit sie gleich
           aussehen wie die Facetten-<button> der Filterleiste (§23). */}
       {e.normKeys.length > 0 && (
-        <div className="lc-chip-zeile relative mt-3 flex flex-wrap items-center gap-1.5">
+        <div className="lc-chip-zeile lc-normzeile relative mt-3 flex flex-wrap items-center gap-1.5">
           {e.normKeys.slice(0, 4).map((k) => <NormChip key={k} normKey={k} onWaehle={onNorm} />)}
           {/* LM-049: der Überlaufhinweis ist ein ZÄHLER, kein Bedienelement — die
               nackte «+2» war neben den gerahmten Chips nicht als Text erkennbar.
@@ -141,7 +140,7 @@ export function EntscheidKarte({ e, onNorm }: {
           {istBge(e) && e.nummer !== e.bgeReferenz && (
             <span className="num text-ink-500" title="Aktenzeichen">({e.nummer})</span>
           )}
-          {e.sprache !== 'de' && <span className="lc-badge lc-badge-soft uppercase" title={spracheBadgeTitel(e.sprache)}>{e.sprache}</span>}
+          {e.sprache !== 'de' && <span className="lc-badge lc-badge-soft" title={spracheBadgeTitel(e.sprache)}>{e.sprache}</span>}
         </div>
         <a href={e.quelleUrl} target="_blank" rel="noopener noreferrer"
           className="shrink-0 text-xs text-ink-500 no-underline hover:text-brass-700"

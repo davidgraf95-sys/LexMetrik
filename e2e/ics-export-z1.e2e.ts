@@ -96,7 +96,11 @@ test.describe('Z1 · Kalender-Ausleitung im Schnell-/Tagerechner', () => {
     expect(zpo.uid, `UID kollidiert: ${ohne.uid}`).not.toBe(ohne.uid)
   })
 
-  test('Startseiten-Schnellrechner trägt dieselbe Ausleitung', async ({ page }) => {
+  // DEKLARIERTE UMBENENNUNG (W2·23-STARTSEITE-V4, 5.9.2026): auf «/» steht seit
+  // V4 kein Tab-Kasten «Schnellrechner» mehr, sondern die Fristen-ZEILE
+  // (dieselbe `EinfacheFristForm`, Variante `zeile`). Die geprüfte Zusage —
+  // die Startseite trägt dieselbe .ics-Ausleitung — ist unverändert.
+  test('Startseiten-Fristenzeile trägt dieselbe Ausleitung', async ({ page }) => {
     await page.goto('/')
     const knopf = page.getByRole('button', { name: KNOPF }).first()
     await expect(knopf).toBeVisible()

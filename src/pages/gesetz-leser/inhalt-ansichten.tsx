@@ -108,7 +108,7 @@ export function PdfEmbedAnsicht({ erlass, currency, kopf, internRefs }: {
             dem Linien-Kanon (§2.2⑦). Das PDF IST die amtliche Fassung (§7/§8). */}
         <div className="relative">
           {!pdfBereit && (
-            <div aria-hidden className="absolute inset-0 z-10 flex flex-col items-center justify-center gap-3 rounded-lg border border-rule-struktur bg-paper-sunken py-12 text-center">
+            <div aria-hidden className="absolute inset-0 z-sticky flex flex-col items-center justify-center gap-3 rounded-lg border border-rule-struktur bg-paper-sunken py-12 text-center">
               <div className="scale-rule max-w-[200px]" />
               <p className="text-body-s text-ink-500">Amtliches PDF wird geladen …</p>
             </div>

@@ -4,8 +4,9 @@ Alle **datierten Parameter** im Code: Werte, die sich ausserhalb des Repos ände
 und darum regelmässig geprüft werden müssen. Wer einen neuen datierten Wert
 verdrahtet, trägt ihn HIER ein (mit Fundstelle, Stand, Prüfrhythmus).
 
-Stand des Registers: 2.9.2026 (fortlaufend gepflegt — zuletzt inhaltlich
-ergänzt um die BWO-Publikation vom 1.9.2026 zum hypothekarischen
+Stand des Registers: 6.9.2026 (fortlaufend gepflegt — zuletzt inhaltlich
+ergänzt um die maschinelle Fassungsprüfung der kantonalen Tarif-Stammdaten
+(`check:tarif-drift`, W3-TARIF-STAND); davor die BWO-Publikation vom 1.9.2026 zum hypothekarischen
 Referenzzinssatz (unverändert 1.25 %, gültig ab 2.9.2026, nächste Publikation
 1.12.2026); davor die angekündigte TI-LTORF-Fassung per 1.1.2027 samt der Feststellung,
 dass die Wiedervorlage-Automatik kantonale Quellen strukturell nicht sieht; davor
@@ -19,6 +20,7 @@ mitziehen, nicht nur beim jährlichen Audit).
 | Hypothekarischer Referenzzinssatz | `src/lib/vorlagen/mietvertrag.ts` (`MV_PARAMETER.referenzzinssatz`) | 1.25 % (unverändert; Stand 2.9.2026, publiziert 1.9.2026, BWO https://www.bwo.admin.ch/de/referenzzinssatz) | **quartalsweise** (bwo.admin.ch/de/referenzzinssatz) | 1.12.2026 |
 | MWST-Normalsatz | `src/lib/vorlagen/mietvertrag.ts` (`MV_PARAMETER.mwstSatz`) | 8.1 % (seit 1.1.2024) | bei Satzänderung | — |
 | MWST-Normalsatz (Prozesskosten-Cockpit, MwSt auf Parteientschädigung) | `src/data/tarif/typen.ts` (`MWST_NORMALSATZ_PROZENT`) | 8.1 % (seit 1.1.2024, Art. 25 I MWSTG) | bei Satzänderung — **zusammen mit der Mietvertrags-Kopie pflegen** | — |
+| Kantonale Tarif-Fassungen (954 Einträge: Gerichtskosten, Parteientschädigung, Schlichtung, Beurkundung, Grundbuch, Notariat) | `src/data/tarif/*.ts` (`stand` + `quelleUrl` je Eintrag) | **maschinell geprüft: `npm run check:tarif-drift`** (Netz-Tor, vergleicht die hinterlegte Fassung gegen `current_version` der Quelle). Erster Lauf 6.9.2026: 557 aktuell · **93 DRIFT in 34 Erlassen** · 304 unklar (Portale ohne Adapter) · 0 unerreichbar | **maschinell** statt Handzeile; die Werte-Nachverifikation der DRIFT-Fälle bleibt fachliche Arbeit (§7) | **93 DRIFT-Einträge offen** (Liste: Tor-Ausgabe) |
 | Kantonale Mindestlöhne | `src/lib/vorlagen/arbeitsvertrag.ts` (`AV_MINDESTLOEHNE`) | je Eintrag datiert | **jährlich** (Indexierung per 1.1.) | Jan. 2027 |
 | Formularpflicht-Kantone (Mietzins) | `src/lib/vorlagen/mietvertrag.ts` (`MV_FORMULARPFLICHT`) | BWO 4.2.2026 | jährlich; **BE ändert dynamisch per 1.11.2026** | **1.11.2026 (BE!)** |
 | LIK-Indexreihen | `src/data/likReihe.ts` (`LIK_REIHEN`, bis `LIK_LETZTER_MONAT`) | bis 2026-05 (BFS, abgerufen 5.6.2026) | monatlich/bei Bedarf — `scripts/lik-reihe-generieren.py` | bei Nutzerbedarf |
@@ -26,7 +28,7 @@ mitziehen, nicht nur beim jährlichen Audit).
 | BWO-Verzeichnis Miet-Schlichtungsbehörden | noch nicht verdrahtet (Bibliothek: `schlichtungsbehoerden-kantone.md`) | PDF-Stand 13.02.2026 | **jährlich** | Feb. 2027 |
 | Behörden-Stammdaten | `src/lib/vorlagen/behoerden.ts` | je Adresse `stand`-Feld (BS: 5.6.2026) | vor jeder «geprüft»-Hebung; sonst jährlich | — |
 | Fedlex-Konsolidierungsstände | `bibliothek/register/quellen-register.md` | je Gesetz dokumentiert | bei Rechtsänderungen (AS-Publikationen) | bei neuen Aufträgen |
-| Kantons-Snapshots aus dem PDF-Pfad (Fassungs-Bindung) | `public/normtext/kanton/*.json` mit `quelleUrl` `…/api/<lang>/versions/<vid>/pdf_file` (8 Erlasse) ↔ `normen/kanton-gliederung-sidecar-luecke-2026-08-13.md` | Diese Snapshots hängen an einer festen Versions-Id; ihr `fassungsToken` ist ein Inhalts-Hash des PDF und ändert sich NICHT, wenn das Portal längst eine neue Fassung führt — die Drift bleibt unbemerkt. **Belegt 13.8.2026: SG-2808 (GKV sGS 941.12) hängt an Version 2808 / Stand 1.3.2012, amtlich gilt Version 3863 seit 1.7.2026.** Übrige sieben am selben Datum fassungsgleich geprüft | **halbjährlich**, bis ein Tor `current_version.id` gegen die Snapshot-Version prüft (Wurzel-Fix, §17) | **SG-2808: sofort** · übrige: Feb. 2027 |
+| Kantons-Snapshots aus dem PDF-Pfad (Fassungs-Bindung) | `public/normtext/kanton/*.json` mit `quelleUrl` `…/api/<lang>/versions/<vid>/pdf_file` (8 Erlasse) ↔ `normen/kanton-gliederung-sidecar-luecke-2026-08-13.md` | Diese Snapshots hängen an einer festen Versions-Id; ihr `fassungsToken` ist ein Inhalts-Hash des PDF und ändert sich NICHT, wenn das Portal längst eine neue Fassung führt — die Drift bleibt unbemerkt. **Belegt 13.8.2026: SG-2808 (GKV sGS 941.12) hängt an Version 2808 / Stand 1.3.2012, amtlich gilt Version 3863 seit 1.7.2026.** Übrige sieben am selben Datum fassungsgleich geprüft | **halbjährlich**, bis ein Tor `current_version.id` gegen die Snapshot-Version prüft (Wurzel-Fix, §17). NACHTRAG 6.9.2026: Für die TARIF-Seite derselben Erlasse leistet das jetzt `check:tarif-drift` (es meldet SG-2808 automatisch, Lauf 6.9.2026); die SNAPSHOT-Seite (`public/normtext/kanton/*.json`) ist damit NICHT gedeckt — dieser Wurzel-Fix bleibt offen | **SG-2808: sofort** · übrige: Feb. 2027 |
 | Beurkundungs-/Beglaubigungs-Hinweise (Kantone, Richtwerte CHF) | `src/lib/vorlagen/vorsorgeauftrag.ts` (`beurkundungsHinweis`) | dokumentierte Beispiele, 5.6.2026 | jährlich, niedrige Priorität | — |
 | Verzugszins-Sätze (gesetzlich 5 %) | `src/lib/…verzugszins` | gesetzlich fix (Art. 104 OR) | nur bei Gesetzesänderung | — |
 | HReg-Gebühren (Neueintragung 420/280/210 …) | `src/lib/gruendungsunterlagen.ts` + Masken-/Mappen-Texte | GebV-HReg-Anhang @ 1.1.2021 (einzige Konsolidierung, Cache) | **jährlich** (Verordnungs-Pauschalen) | Jan. 2027 |

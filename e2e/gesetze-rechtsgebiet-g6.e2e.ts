@@ -52,7 +52,12 @@ test.describe('/gesetze — Rechtsgebiets-Sicht (G6)', () => {
     // Rückweg zum Landeplatz. (IA-5, deklarierte URL-FORM-Anpassung: der Zustand
     // liegt jetzt kanonisch in `?ebene=…&gliederung=…` — «zurück» heisst: keine
     // Säule mehr gewählt; die Gliederungs-Wahl bleibt als Deep-Link-Parameter.)
-    await main.getByRole('button', { name: '← Übersicht' }).click()
+    // DEKLARIERTE ANPASSUNG (R12A/D22, 6.9.2026): der Rückweg heisst «Alle» und
+    // ist der erste der vier Ebenen-Text-Schalter — der frühere Extra-Knopf
+    // «← Übersicht» neben der Segmented-Control ist entfallen (zwei
+    // Bedienelemente für EINE Achse). Zusicherung unverändert: kein `ebene=`
+    // mehr in der Adresse, Landeplatz-Kachel «Bundesrecht» wieder sichtbar.
+    await main.getByRole('button', { name: 'Alle', exact: true }).click()
     await expect(page).not.toHaveURL(/ebene=/)
     await expect(main.getByRole('button', { name: /Bundesrecht/ })).toBeVisible()
 

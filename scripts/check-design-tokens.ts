@@ -67,7 +67,25 @@ const FOKUS_ARB_RE = /\bfocus(?:-visible)?:-?(?:outline|ring|ring-offset)-\[(?!v
 // degradiert die 11px-Overline unter AA (ink-500 4.05:1, gemessen). axe-e2e
 // blieb grün — einziger Wächter hier. brass-Pairings bleiben erlaubt; Treffer
 // nur innerhalb desselben className-Strings.
+// ERGÄNZUNG W2·24-DESIGN-IDENTITAET R1 (6.9.2026, §2b — der Befund oben bleibt
+// als datierter Beleg stehen): die Overline ist seither entversalt, 12 px und
+// selbst auf --ink-500 kalibriert (gemessen 5.31:1 auf --paper, 4.82:1 auf
+// --well, KONTRAST-R1.md). Der Ausdruck bleibt UNVERÄNDERT scharf: ein
+// ausdrückliches `text-ink-500` am Etikett ist heute ein No-op und morgen ein
+// stiller Vorgriff auf eine Rekalibrierung, 400/300 bleiben unter AA.
 const OVERLINE_DIM_RE = /\blc-overline\b[^"'`]*\btext-ink-(?:500|400|300)\b|\btext-ink-(?:500|400|300)\b[^"'`]*\blc-overline\b/;
+// ── GB-13 (W2·24, 7.9.2026) · KEIN VERSAL-ETIKETT AM BADGE ──────────────────
+// F0.7 («Kein ALL-CAPS-Etikett mehr») galt bis hierher nur der `.lc-overline`;
+// GEMESSEN am gebauten Stand 6.9.2026 trugen 53 + 1 `span.lc-badge` auf
+// /rechtsprechung und im Entscheid-Leser die Utility `uppercase` mit Inhalt
+// «fr»/«it» — dieselbe Regel, andere Klasse, unbewacht. Die WIRKUNG ist seit
+// GB-13 an `.lc-badge { text-transform: none }` gekappt (src/index.css); diese
+// Schranke hält die QUELLE sauber, damit niemand ein `uppercase` schreibt, das
+// still nichts tut (F7: ein No-op im Markup ist eine Lüge über die Absicht).
+// ABGRENZUNG: nicht betroffen ist `uppercase` an einem Sprach-/ISO-CODE ausser
+// halb der Badge-Achse (`SprachUmschalter`: «DE» ist ein Kürzel, kein Etikett).
+const BADGE_VERSAL_RE = /\blc-badge(?:-[a-z]+)?\b[^"'`]*\buppercase\b|\buppercase\b[^"'`]*\blc-badge(?:-[a-z]+)?\b/;
+const BADGE_VERSAL_AUSNAHMEN = new Set<string>(); // Ausnahme EntscheidLeser 7.9.2026 aufgelöst (GA+GB gelandet)
 // ── Verbot: Reinweiss als Fläche (§13-Nachtrag d / Befund 41) ──────────────
 // Lese-/Arbeitsflächen tragen --paper*/--surface*, nie #FFFFFF. Kein
 // bg-white/text-white/…-white und kein #fff/#ffffff im Inline-Style
@@ -105,11 +123,15 @@ function dateien(dir: string): string[] {
   return out;
 }
 
+// Kommentare raus vor dem Scan, Strings bleiben unberührt (Fehlerbuch W2·18, 5.9.2026).
+const KOMMENTAR_ODER_STRING = /(["'`])(?:\\.|(?!\1)[\s\S])*\1|\/\/[^\n]*|\/\*[\s\S]*?\*\//g;
+const ohneKommentare = (c: string) => c.replace(KOMMENTAR_ODER_STRING, (m) => (/^["'`]/.test(m) ? m : m.replace(/[^\n]/g, ' ')));
+
 const fehler: string[] = [];
 /** Fundstellen je Deckkraft-Klasse: "bg-brass-100/70" → ["src/…:42", …] */
 const alphaFunde = new Map<string, string[]>();
 for (const datei of dateien(WURZEL)) {
-  const zeilen = readFileSync(datei, 'utf8').split('\n');
+  const zeilen = ohneKommentare(readFileSync(datei, 'utf8')).split('\n');
   zeilen.forEach((zeile, i) => {
     if (DEFAULT_GROESSE.test(zeile))
       fehler.push(`${datei}:${i + 1} — Tailwind-Default-Grösse (text-sm/lg/xl…). Stattdessen die Skala oder text-[length:var(--…)].`);
@@ -138,6 +160,8 @@ for (const datei of dateien(WURZEL)) {
       while ((fm = re.exec(zeile)) !== null)
         fehler.push(`${datei}:${i + 1} — eigene Fokusring-Farbe «${fm[0]}» (E-1, §13 F3). Der Ring hat EINE Rolle (--focus) und kommt aus der globalen «:focus-visible»-Regel in src/index.css: Farb- und Breiten-Utilities ersatzlos streichen, nur einen wirklich nötigen Offset (focus-visible:-outline-offset-2) behalten.`);
     }
+    if (BADGE_VERSAL_RE.test(zeile) && !BADGE_VERSAL_AUSNAHMEN.has(datei))
+      fehler.push(`${datei}:${i + 1} — Versal-Etikett an einer lc-badge (F0.7 «Kein ALL-CAPS-Etikett mehr», Befund G13). Die Utility «uppercase» ersatzlos streichen: .lc-badge traegt seit GB-13 text-transform:none (src/index.css), das Markup-Wort ist damit ein stiller No-op (F7). Der volle Wortlaut gehoert in den title (§8).`);
     if (OVERLINE_DIM_RE.test(zeile))
       fehler.push(`${datei}:${i + 1} — lc-overline mit text-ink-500/400/300 gedimmt (AA-Fail bei 11px, D-1.2/E1). Override strippen — lc-overline trägt die kalibrierte ink-600-Basis.`);
     let wm: RegExpExecArray | null;
@@ -273,6 +297,46 @@ if (alphaFunde.size > 0) {
       fehler.push(`src/components/thema.ts — theme-color dunkel «${tm[1]}» ≠ --paper dunkel «${SOLL.dunkel}» aus src/index.css (E-3).`);
     if (tm[2].toUpperCase() !== SOLL.hell)
       fehler.push(`src/components/thema.ts — theme-color hell «${tm[2]}» ≠ --paper hell «${SOLL.hell}» aus src/index.css (E-3).`);
+  }
+}
+
+// ── Prüfung 6: Schichtungs-Skala — keine rohe z-Index-Utility mehr (C3) ─────
+// (Prüfung 5 = der Ad-hoc-Scrim-Ausdruck, SCRIM_RE oben im Hauptlauf — der
+// Name ist an zwei Stellen bereits verankert: `layout/Shell.tsx` und
+// `src/tests/design-r2d-mobil-zustaende.test.ts`.)
+// GEMESSEN (Design-Review C3, 5.9.2026): 65 Fundstellen in ~30 Dateien trugen
+// `z-<Zahl>`/`z-[<Zahl>]` ohne Skala — Reihenfolgen liessen sich nur durch
+// Ausprobieren rekonstruieren (Beleg: die geschachtelten Kommentare an
+// `v3/LeserKopf.tsx`/`v3/LeserScrim.tsx`/`layout/InhaltsKopf.tsx`, je «ANLASS
+// der Zahl» erklärend). Migriert auf `--z-*`/`zIndex`-Rollen (index.css bei
+// --z-base, tailwind.config.js), Werte unverändert (1:1 benannt, keine Zahl
+// geändert — Stapelreihenfolge bewiesen identisch). Diese Prüfung verbietet
+// KÜNFTIGE rohe z-Utilities; Tailwinds eingebaute Zahlen-Skala bleibt technisch
+// erreichbar (`extend` entfernt sie nicht), hier ist sie trotzdem verboten.
+{
+  // KEIN `\b` nach `\]`: «]» ist selbst ein Nicht-Wortzeichen, ein
+  // nachfolgendes Nicht-Wortzeichen (Anführungszeichen, Leerzeichen) böte
+  // darum NIE eine Wortgrenze — `\bz-\[[0-9]+\]` bräuchte sie auch nicht,
+  // die schliessende Klammer ist Grenze genug (Rot-Beweis 5.9.2026:
+  // `z-[99]` blieb mit `\b` am Ende unentdeckt).
+  const Z_ROH_RE = /\bz-\[[0-9]+\]|\bz-[0-9]+\b/g;
+  /** Befristete Ausnahme (Kollisions-Vorsicht, paralleler Bauer auf demselben
+   *  Branch, C3/5.9.2026): Datei → Satz, der dort stehen MUSS. Fällt weg,
+   *  sobald die Datei in einer eigenen, kollisionsfreien Runde migriert ist. */
+  const Z_ROH_AUSNAHMEN: Record<string, string> = {};
+  for (const datei of dateien(WURZEL)) {
+    const begruendung = Z_ROH_AUSNAHMEN[datei];
+    if (begruendung !== undefined) {
+      if (!readFileSync(datei, 'utf8').includes(begruendung))
+        fehler.push(`${datei} — C3-Ausnahme ohne Begründung am Fundort: der Satz «${begruendung}» steht dort nicht (mehr). Entweder die Begründung zurückschreiben oder die Datei auf die Schichtungs-Skala migrieren und die Ausnahme hier streichen.`);
+      continue;
+    }
+    ohneKommentare(readFileSync(datei, 'utf8')).split('\n').forEach((zeile, i) => {
+      let zm: RegExpExecArray | null;
+      Z_ROH_RE.lastIndex = 0;
+      while ((zm = Z_ROH_RE.exec(zeile)) !== null)
+        fehler.push(`${datei}:${i + 1} — rohe z-Index-Utility «${zm[0]}» (C3, Schichtungs-Skala). Eine der Rollen aus tailwind.config.js nutzen (z-base/-sticky/-entscheid-sticky/-reader-scrim/-reader-kopf/-inhalt-kopf/-leiste/-dropdown/-overlay/-modal) oder — falls wirklich neu — Wert + Rolle in src/index.css bei --z-base ergänzen.`);
+    });
   }
 }
 

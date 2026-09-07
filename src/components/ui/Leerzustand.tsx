@@ -28,14 +28,18 @@
 //
 // Reine Darstellungsschicht (§1/§3) — kein Filterzustand, keine Rechtslogik.
 
-/** Der Weiterweg aus dem Leerzustand: EIN Knopf mit EINER Wirkung. Bewusst kein
- *  freier ReactNode — sonst hätte jede Aufrufstelle wieder ihre eigene Optik,
- *  und genau die Streuung behebt D-7 (§5/§10: Konsumenten auf einen Baustein). */
+import { Link } from 'react-router-dom';
+
+/** Der Weiterweg aus dem Leerzustand: EIN Bedienelement mit EINER Wirkung.
+ *  Bewusst kein freier ReactNode — sonst hätte jede Aufrufstelle wieder ihre
+ *  eigene Optik, und genau die Streuung behebt D-7 (§5/§10: Konsumenten auf
+ *  einen Baustein). Zwei Formen, je nach Wirkung: `onKlick` setzt einen
+ *  lokalen Zustand zurück (Knopf); `href` verlässt die Seite (Link, R6-B:
+ *  fehlt ein Rücksetzer, ist der einzig ehrliche Ausweg eine Navigation). */
 export type LeerzustandWeiterweg = {
   /** Beschriftung im Imperativ, ohne Fragezeichen («Filter zurücksetzen»). */
   text: string;
-  onKlick: () => void;
-};
+} & ({ onKlick: () => void; href?: never } | { href: string; onKlick?: never });
 
 type Basis = {
   /** Der Aussagesatz. Endet mit «.», nie mit «?» (Sonde im Test). */
@@ -56,13 +60,17 @@ export function Leerzustand(props: LeerzustandProps) {
         <>
           {' '}
           {/* Gleiche Aktions-Grammatik wie die «zurücksetzen»-Zeile der
-              Filterleiste (EntscheidFilter) — ein <button> ist im Absatz
+              Filterleiste (EntscheidFilter) — Knopf ODER Link sind im Absatz
               gültiges Inhaltsmodell (phrasing content), der Fokusring kommt
               unverändert vom globalen :focus-visible (F3). */}
-          <button type="button" onClick={weiterweg.onKlick}
-            className="font-medium text-brass-700 hover:text-brass-600">
-            {weiterweg.text}
-          </button>
+          {weiterweg.href
+            ? <Link to={weiterweg.href} className="font-medium text-brass-700 hover:text-brass-600">
+                {weiterweg.text}
+              </Link>
+            : <button type="button" onClick={weiterweg.onKlick}
+                className="font-medium text-brass-700 hover:text-brass-600">
+                {weiterweg.text}
+              </button>}
         </>
       )}
     </p>

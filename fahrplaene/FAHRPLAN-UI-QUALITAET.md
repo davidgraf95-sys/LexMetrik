@@ -237,7 +237,7 @@ ROADMAP-Bindung mehr. Titel:
 
 ## §2.5 · Nebenfunde Nacht 5.9.2026 (QS-UI-Folgeschritte)
 
-- [ ] **Baum-Knopfnamen Rest** (#689) — OR 3/ZGB 2 Dopplungs-Gruppen (Eltern-Titel selbst doppelt: Rekursion bis Wurzel); GEBV_HREG Fallback «1./2. Vorkommen» — **David-Entscheid**: Wortlaut oder Modell-Fix in `gliederungsModell.ts`. OR-Übergangsbestimmungen 12× «Art. 1» (11 unsichtbar).
+- [x] **Baum-Knopfnamen Rest** (#689) — Entscheid David 5.9.2026 (nach Empfehlung): Wortlaut-Fallback «n. Vorkommen» statt Modell-Fix; gebaut 5.9.2026 in `klappNamen.ts` (+Unit-Test): doppelt benannte Knöpfe OR 6→0, ZGB 6→0, GEBV_HREG 0.
 - [x] **Konventions-Linter deckt UI-Strings nicht** (B13 #676) — erledigt 5.9.2026: Scan-Test in `konventionen.test.ts` über `src/components/**`+`src/pages/**` (nur Prozent-Regel; alle 8 Regeln gaben 347 Falschtreffer, Geviertstrich ist legitimer Trenner), 0 Bestandsverstösse, Rot-Beweis. Offen: `MehrKante` unerreichbar (3 Tests, V2-Punkt) — Rückbau-Entscheid.
 - [x] **Checkbox-Baustein ohne Grössenklasse** (B12 #675) — erledigt 5.9.2026: Befund war überholt (globale Regel `input[type=checkbox]{1.1rem}` aus E7 macht ihn schon quadratisch 17.59 px); Baustein trägt die Grösse jetzt explizit (`h-/w-[1.1rem]`, 0 px Änderung). 34 direkte `<input type=checkbox>` ausserhalb des Bausteins bleiben (Liste im Bericht PR, kein Umbau).
 - [x] **`/einstellungen` fehlt in `STATISCHE_SEITEN`** (B14 #670) — erledigt 5.9.2026: eigener Titel/Canonical/Description, indexiert wie `/abdeckung`/`/datenschutz` (kein noindex im Register), Prerender 62→63 Routen, Sitemap enthält den Pfad.

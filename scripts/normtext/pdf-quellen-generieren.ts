@@ -36,6 +36,7 @@ import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { sparqlBatch, type FetchImpl } from '../fedlex-sparql.ts';
 import { inKraftSeit } from './adapter-lexwork.ts';
+import { lexworkApiUrl } from './lexwork-url.ts';
 
 // Triviale, seiteneffektfreie Helfer lokal (der Bezug fedlex-wiedervorlage-
 // generieren.ts läuft beim Import als CLI mit — darum NICHT von dort importieren).
@@ -125,11 +126,10 @@ export async function bundPdfQuellen(
 
 // ─── Kanton: LexWork pdf_link_tol (nur bei Versions-Gleichstand) ─────────────
 
-/** '…/app/de/texts_of_law/291.150' → '…/api/de/texts_of_law/291.150'. null = kein LexWork-Muster. */
-export function lexworkApiUrl(quelleUrl: string): string | null {
-  const m = quelleUrl.match(/^(https:\/\/[^/]+)\/app\/(de|fr|it)\/texts_of_law\/(.+)$/);
-  return m ? `${m[1]}/api/${m[2]}/texts_of_law/${m[3]}` : null;
-}
+/** '…/app/de/texts_of_law/291.150' → '…/api/de/texts_of_law/291.150'. null = kein LexWork-Muster.
+ *  Wohnt seit 6.9.2026 in `lexwork-url.ts` (nebenwirkungsfrei importierbar) und
+ *  wird hier nur re-exportiert — Aufrufer und Test bleiben unverändert. */
+export { lexworkApiUrl };
 
 type LexworkText = {
   text_of_law?: {

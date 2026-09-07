@@ -4,6 +4,16 @@
 // Artikelebene/Marginalie. fn 666 («Eingefügt durch …») bleibt an der Marginalie.
 // Prüft das am echten ZGB-Reader (gebautes dist via vite preview).
 import { test, expect } from '@playwright/test'
+import { vollerApparat } from './helpers/vollerApparat'
+
+// ── §6.3-DEKLARATION (D35-F3, Entscheid David 7.9.2026) ─────────────────────
+// Die Vorgabe der Ansicht ist seither «Fassung», und dort sind die als `kl:'A'`
+// klassifizierten Änderungs-Fussnoten samt ihren Markern gedämpft (beim
+// Bundesrecht die Mehrheit: ZGB 719 von 809, StPO 187 von 283). Diese Sonde
+// prüft die EXTRAKTION, nicht die Ansicht — sie stellt darum den vollen
+// Apparat ein. Die geprüfte Aussage ist Wort für Wort unverändert.
+test.beforeEach(async ({ page }) => { await vollerApparat(page) })
+
 
 test('ZGB 798a: fn 667 steht INLINE im Fliesstext-Absatz, fn 666 bleibt Artikelebene', async ({ page }) => {
   await page.goto('/gesetze/bund/ZGB')

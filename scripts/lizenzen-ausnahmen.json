@@ -1,12 +1,12 @@
 [
   {
     "paket": "apca-w3@0.1.9",
-    "grund": "\"Limited W3 License\" (Referenzimplementierung des APCA-Kontrastmodells) — devDependency, nur in scripts/check-farbwelt.ts (CI-Prüfung), nie im ausgelieferten Bundle → keine AGPL-Weitergabepflicht ausgelöst; Ersatz-Kandidat prüfen (apca-w3 hat W3C-Lizenzvariante?) — wartet auf David.",
+    "grund": "\"Limited W3 License\" (Referenzimplementierung des APCA-Kontrastmodells) — devDependency, nur in scripts/check-farbwelt.ts (CI-Prüfung), nie im ausgelieferten Bundle → keine AGPL-Weitergabepflicht ausgelöst. Entscheid David 5.9.2026 (nach Empfehlung): BEHALTEN — devDependency ohne Weitergabe, kein Ersatz nötig.",
     "datum": "2026-09-02"
   },
   {
     "paket": "colorparsley@0.1.8",
-    "grund": "AGPL-3.0 — transitive Abhängigkeit von apca-w3, devDependency, nur in scripts/check-farbwelt.ts (CI-Prüfung), nie im ausgelieferten Bundle → keine AGPL-Weitergabepflicht ausgelöst; Ersatz-Kandidat prüfen (apca-w3 hat W3C-Lizenzvariante?) — wartet auf David.",
+    "grund": "AGPL-3.0 — transitive Abhängigkeit von apca-w3, devDependency, nur in scripts/check-farbwelt.ts (CI-Prüfung), nie im ausgelieferten Bundle → keine AGPL-Weitergabepflicht ausgelöst. Entscheid David 5.9.2026 (nach Empfehlung): BEHALTEN — devDependency ohne Weitergabe, kein Ersatz nötig.",
     "datum": "2026-09-02"
   }
 ]

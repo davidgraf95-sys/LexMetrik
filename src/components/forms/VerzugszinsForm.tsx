@@ -1,4 +1,4 @@
-import { BeispielChips, EckdatenKachel, Field, ListenEditor } from '../vorlagen/ui';
+import { BeispielChips, Checkbox, EckdatenKachel, Field, ListenEditor } from '../vorlagen/ui';
 import { ErgebnisBlock } from '../ErgebnisBlock';
 import { useState } from 'react';
 import { BetragsFeld } from '../BetragsFeld';
@@ -204,10 +204,12 @@ export function VerzugszinsForm() {
           </select>
         </Field>
         <Field label="Rückständige Zins-/Rentenforderung?">
-          <label className="flex items-center gap-2.5 py-1.5 text-body-s cursor-pointer pt-2 text-ink-700">
-            <input type="checkbox" checked={zinsforderung} onChange={(e) => setZinsforderung(e.target.checked)} />
-            Ja – Verzinsung erst ab Betreibung/Klage (Art. 105 Abs. 1 OR)
-          </label>
+          <Checkbox
+            checked={zinsforderung}
+            onChange={setZinsforderung}
+            label="Ja – Verzinsung erst ab Betreibung/Klage (Art. 105 Abs. 1 OR)"
+            className="pt-2"
+          />
         </Field>
       </div>
 

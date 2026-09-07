@@ -98,12 +98,41 @@ function materialDetailPfad(m: Pick<BrowseMaterial, 'key'>): string {
 
 // ─── Metadaten (mechanisches Template, kein Rechtstext §7) ───────────────────
 
+/** Escapt ein Kürzel für den Einsatz als literales Regex-Teilstück. */
+function escapeRegex(s: string): string {
+  return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+/**
+ * true, wenn `kuerzel` im `titel` als GANZES Token vorkommt (Wortgrenzen:
+ * Anfang/Ende des Titels, Leerzeichen, Klammern, Komma, Schrägstrich,
+ * Semikolon, Doppelpunkt, Punkt) — kein Substring-Treffer.
+ *
+ * Auflage Gegenprüfung PR #721 (5.9.2026): `titel.includes(kuerzel)` matchte
+ * `ZEMIS-V` in «…(ZEMIS-Verordnung)» und `Staatenlose` in «…der Staatenlosen»
+ * als Substring, obwohl das Kürzel dort kein eigenständiges Wort ist — Folge:
+ * die Kürzel-Klammer im <title> fehlte fälschlich komplett. Kein `\b`, weil
+ * `\b` an Ziffern-/Umlaut-Rändern versagt (z. B. Kürzel endet auf Ziffer
+ * gefolgt von Buchstabe). Ein Bindestrich INNERHALB des Kürzels (z. B.
+ * `ZEMIS-V`) zählt als Teil des Kürzels, nicht als Wortgrenze — daher matcht
+ * `ZEMIS-V` nicht in `ZEMIS-Verordnung` (das `V` dort ist keine Grenze).
+ */
+function kuerzelAlsTokenImTitel(titel: string, kuerzel: string): boolean {
+  const re = new RegExp(`(^|[\\s(\\[/,;:])${escapeRegex(kuerzel)}(?=$|[\\s)\\]/,;:.])`, 'u');
+  return re.test(titel);
+}
+
 export function metaFuerErlass(e: BrowseErlass): RouteMetadaten {
   const pfad = erlassDetailPfad(e);
-  const srTeil = e.sr ? `, SR ${e.sr}` : '';
+  // Fehlerbuch W2·18 (5.9.2026): Kürzel nicht zweimal in Klammern (EMRK-Titel
+  // endet bereits auf «(EMRK)») — Kürzel nur anhängen, wenn es im Titel als
+  // GANZES Token vorkommt (nicht als Substring, s. kuerzelAlsTokenImTitel).
+  const klammerTeile = [kuerzelAlsTokenImTitel(e.titel, e.kuerzel) ? null : e.kuerzel, e.sr ? `SR ${e.sr}` : null]
+    .filter((t): t is string => t !== null);
+  const klammer = klammerTeile.length ? ` (${klammerTeile.join(', ')})` : '';
   return {
     pfad,
-    titel: `${e.titel} (${e.kuerzel}${srTeil}) — LexMetrik`,
+    titel: `${e.titel}${klammer} — LexMetrik`,
     beschreibung:
       `Volltext von ${e.kuerzel}${e.sr ? ` (SR ${e.sr})` : ''} – ${e.titel}. ` +
       // Gleiche Weiche wie im Volltext-Kopf: leerer `stand` (VD-vd-106879,

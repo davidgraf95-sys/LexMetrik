@@ -1,5 +1,6 @@
 import type { SachgebietZaehler } from '../../lib/rechtsprechung/browse';
 import type { Rechtsgebiet } from '../../lib/normtext/register';
+import { zahlGruppiert } from '../typografie';
 
 // Sachgebiet-Navigation — die EINZIGE Sachgebiet-Steuerung (das alte Filter-
 // Select entfällt, Entdoppelung). Kontrastreiche, zählende Rail: der kuratierte
@@ -57,7 +58,7 @@ export function SachgebietKacheln({ zaehler, gesamt, aktiv, onWaehle }: {
                     versicherung & Abgaben»). Mobil (horizontale Scroll-Reihe)
                     bleibt es einzeilig. */}
                 <span className="truncate lg:overflow-visible lg:whitespace-normal lg:leading-snug">{e.label}</span>
-                <span className={`num text-xs ${an ? 'text-brass-700' : 'text-ink-500'}`}>{e.count}</span>
+                <span className={`num text-xs ${an ? 'text-brass-700' : 'text-ink-500'}`}>{zahlGruppiert(e.count)}</span>
               </button>
             </li>
           );

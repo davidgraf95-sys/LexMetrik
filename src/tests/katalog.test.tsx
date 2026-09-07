@@ -6,16 +6,30 @@ import { Startseite } from '../pages/Startseite';
 import { RechnerUebersicht } from '../pages/RechnerUebersicht';
 import { VorlagenUebersicht } from '../pages/VorlagenUebersicht';
 import { HeaderSuche } from '../components/layout/HeaderSuche';
-import { HERO_TITEL } from '../lib/seo';
+import { IMMER, TAGESZEITEN } from '../lib/begruessungen';
+
+/** Alle möglichen Grüsse — für den H1-Inhaltstest unten (D39). */
+const ALLE_GRUESSE = [...IMMER, ...TAGESZEITEN.flatMap((t) => t.pool)];
 
 // Akzeptanztests Katalog/Rubriken. Stand UI-Welle (deklarierte Anpassung
 // §6 Ziff. 3): /recherche ist aufgelöst — die Rechner-/Vorlagen-Register leben
 // auf eigenen Übersichtsseiten (/rechner, /vorlagen), die die bestehende
 // KategorieSektion wiederverwenden; die Suche liegt im Header-Dropdown. Die
-// Startseite «/» ist das Suche-zuerst-Cockpit (Begrüssung, News, Schnellrechner,
-// Gesetze-Rubrik). Startseite V3 · Schritt 2 (deklarierte Änderung §6.3):
-// Favoriten gestrichen (Anweisung David 5.6.), Zeiterfassung auf /rechner
-// verschoben — beide nicht mehr auf «/».
+// Startseite «/» ist das Suche-zuerst-Cockpit. Startseite V3 · Schritt 2
+// (deklarierte Änderung §6.3): Favoriten gestrichen (Anweisung David 5.6.),
+// Zeiterfassung auf /rechner verschoben — beide nicht mehr auf «/».
+// W2·23-STARTSEITE-V4 (5.9.2026, deklarierte Änderung §6.3 — fachlich gewollter
+// Umbau, kein Refactoring): der Tab-Kasten «Schnellrechner» ist auf «/»
+// zurückgebaut (nur noch die Fristen-ZEILE + zwei Link-Karten unter
+// «Werkzeuge»), «Gesetze» hat eine eigene Schwerpunkt-Sektion, und die
+// Landkarte heisst «Weitere Bereiche».
+// W2·24-DESIGN-IDENTITAET R3 (6.9.2026, DEKLARIERTE Änderung §6.3): die
+// Startseite ist das INHALTSVERZEICHNIS der Sammlung — Satzspiegel mit
+// Marginalie statt Hero-Kasten, Listen statt Kacheln. Was sie ZEIGT, ist
+// dasselbe (Suche, Bund, Kantone, Entscheide, Materialien, Frist-Zeile,
+// Vertrauens-Sätze); geprüft wird darum unverändert der Bestand, nur an seiner
+// neuen Form. Ebenfalls deklariert: die Sprach-Diät (Fahrplan §6 (h)) — die
+// Value-Proposition-H1 «Schweizer Recht an einem Ort» ist gestrichen.
 
 // Minimaler localStorage-Mock (Node hat keinen)
 beforeEach(() => {
@@ -137,10 +151,16 @@ describe('Vorlagen-Übersicht /vorlagen (UI-Welle)', () => {
     expect(html).not.toContain('aria-label="Oberkategorien"');
   });
 
-  it('eine verfügbare Vorlage ist direkt verlinkt; Filter-Reset «Alle» vorhanden', () => {
+  it('eine verfügbare Vorlage ist direkt verlinkt; Filter-Reset «Alle Rechtsgebiete» vorhanden', () => {
     const html = vorlagenHtml();
     expect(html).toContain('href="/vorlagen/mahnung"');
-    expect(html).toContain('>Alle<');
+    // Deklarierte Anpassung (D22-Nachzug D24, 6.9.2026): die Filterzeile trägt
+    // jetzt das sichtbare Label «Filtern» (D22-Anatomie, wie /gesetze und
+    // /materialien). Damit stünde die Achse nirgends mehr im Bedienelement —
+    // die Reset-Option benennt sie darum selbst: «Alle Rechtsgebiete» statt
+    // «Alle». Die ZUSICHERUNG des Falls ist unverändert: die Reset-Option
+    // existiert im gerenderten Markup.
+    expect(html).toContain('>Alle Rechtsgebiete<');
   });
 });
 
@@ -169,44 +189,108 @@ describe('Globale Suche im Top-Streifen (UI-Welle: Dropdown überall, §6.3)', (
   });
 });
 
-describe('Startseite V3 — Hero + Kachel-Landkarte (Schritt 4, deklarierte Anpassung §6.3)', () => {
-  it('zeigt Hero-H1, Schnellrechner und Rubrik-Kacheln — KEIN Katalog-Deckblatt', () => {
+describe('Startseite R3 — Inhaltsverzeichnis der Sammlung (deklarierte Anpassung §6.3)', () => {
+  it('Titelblatt-Zeile: EINE H1 = die Begrüssung, Datumszeile, Bestands-Aufzählung — kein Slogan', () => {
     const html = startHtml('/');
-    // Startseite V3 · Schritt 4 (deklarierte Änderung §6.3): der Hero ersetzt die
-    // Begrüssung — Value-Proposition-H1 (aus seo.ts) statt zufälligem Gruss, und
-    // eine ruhige Datums-Overline «Wochentag, T. Monat JJJJ» OHNE tickende Uhr
-    // (Scherzpool/Uhr gestrichen, §0). Das «Berechnung statt KI»-Badge bleibt weg.
-    expect(html).toContain(HERO_TITEL);
-    expect(html).toMatch(/\d{1,2}\.\s(Januar|Februar|März|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember)\s\d{4}/);
+    // Genau eine H1. DEKLARIERTE ANPASSUNG (W2·24-DESIGN-IDENTITAET D39,
+    // David 7.9.2026, §6.3): bis hierher trug die H1 wortwörtlich den
+    // Titelblatt-Begriff `SAMMLUNG_TITEL` («Sammlung») — Wortlaut «entferne
+    // oberhalb der begrüssung das wort Sammlung […] die begrüssung [wird
+    // die] h1». Die H1 trägt jetzt den (zufällig gezogenen) Gruss aus dem
+    // Begrüssungs-Pool statt eines festen Worts; geprüft wird darum
+    // Mitgliedschaft im Pool statt eines festen Substrings, UND dass
+    // «Sammlung» nirgends mehr im Kopfbereich (vor der Bereichs-Reihe) steht.
+    // `e2e/a11y.e2e.ts` prüft zusätzlich, dass die H1 SICHTBAR ist — eine
+    // sr-only-H1 wäre dort rot.
+    expect(html.match(/<h1[\s>]/g) ?? []).toHaveLength(1);
+    const h1Inhalt = html.match(/<h1[^>]*>(.*?)<\/h1>/s)?.[1] ?? '';
+    expect(h1Inhalt, `H1-Inhalt: ${h1Inhalt}`).not.toBe('');
+    expect(ALLE_GRUESSE, `H1-Inhalt «${h1Inhalt}» nicht im Gruss-Pool`).toContain(h1Inhalt);
+    const kopfbereich = html.slice(0, html.indexOf('Bereiche der Sammlung'));
+    expect(kopfbereich, 'kein «Sammlung» oberhalb der Bereichs-Reihe (D39)').not.toContain('Sammlung');
+    // DEKLARIERTE ANPASSUNG (W2·24-DESIGN-IDENTITAET R10, 6.9.2026, §6.3): hier
+    // stand zusätzlich `toContain(SAMMLUNG_BESTAND)` — «Gesetze, Entscheide,
+    // Materialien, Rechner, Vorlagen.». Genau diese fünf stehen seit R10 als
+    // BEREICHS-REIHE mit ihren gemessenen Zahlen unmittelbar unter der Suche
+    // (Referenzbild `pult-freigegeben.html`, Marke `.bereiche`); der Satz war
+    // dieselbe Auskunft ein zweites Mal und ist Teil dessen, was David am
+    // 6.9.2026 als «zu viel text» gesehen hat. Die AUSSAGE geht nicht verloren,
+    // sie wird nur einmal statt zweimal gemacht — die fünf Bereiche werden
+    // unten geprüft, und die Konstante selbst trägt unverändert der Seitenfuss
+    // (`layout/Footer`, auf jeder Seite).
+    for (const bereich of ['Gesetze', 'Rechtsprechung', 'Materialien', 'Rechner', 'Vorlagen']) {
+      expect(html, `Bereichs-Reihe: ${bereich}`).toContain(`>${bereich}</span>`);
+    }
+    expect(html, 'Bereichs-Reihe trägt die Navigations-Ziele').toContain('href="/rechtsprechung"');
+    // Sprach-Diät (§6 (h)): die beiden getilgten Wendungen stehen nirgends mehr.
+    expect(html).not.toContain('an einem Ort');
+    expect(html).not.toContain('miteinander verzahnt');
     expect(html).not.toContain('Berechnung statt KI');
-    // Sektionen des Cockpits: Schnellrechner + die neue Rubrik-Landkarte.
-    expect(html).toContain('Schnellrechner');
-    expect(html).toContain('Alle Bereiche');
-    // Direktzugriff-Chips (aus der früheren GesetzeRubrik gezogen, deren eigenes
-    // Suchfeld entfällt — §5-Doppelung zur UniversalSuche).
-    expect(html).toContain('href="/gesetze/bund/OR"');
-    expect(html).toContain('Alle Gesetze');
-    // Favoriten (5.6.) + Zeiterfassung (→ /rechner) sind nicht mehr auf «/».
+    // Begrüssung + Datum «T. Monat JJJJ». Seit D39 tickt daneben eine Uhr —
+    // aber NICHT im statischen Server-Render hier (`renderToString` feuert
+    // keine `useEffect`s, s. `Begruessung.tsx` `useHeute`): der HTML-Schnappschuss
+    // trägt darum nur den unsichtbaren `00:00`-Platzhalter, der die Zeilenbreite
+    // reserviert (§15, CLS) — keine echte, gebackene Uhrzeit.
+    expect(html).toMatch(/\d{1,2}\.\s(Januar|Februar|März|April|Mai|Juni|Juli|August|September|Oktober|November|Dezember)\s\d{4}/);
+    expect(html, 'Uhrzeit-Platzhalter unsichtbar reserviert').toContain('visibility:hidden');
+    expect(html.match(/\d{2}:\d{2}/g), 'einzige HH:MM-Stelle ist der Platzhalter').toEqual(['00:00']);
+    // ── DEKLARIERTE ANPASSUNG (§6.3, W2·24-R5-F1C, David-Befund D18, 6.9.2026)
+    // «insgesamt braucht es auf der startseite keine suche. nur oben reicht».
+    // Hier standen drei Erwartungen an die Hero-Suche (`role="search"`,
+    // `type="search"`) und an die Beispiel-Verweise unter ihr
+    // (Art. 336c OR · BGE 152 V 52 · Arbeitsvertrag). Beides ist mit D18
+    // entfallen: die EINE Suche steht im Titelblatt (`layout/HeaderSuche`, auf
+    // JEDER Route — der `sucheHtml`-Block oben in dieser Datei prüft sie
+    // unverändert, auch für die Adresse «/»), die Beispiel-Links fielen der
+    // Sprach-Diät zum Opfer. Statt die Erwartungen zu streichen, werden sie
+    // UMGEDREHT: die Startseite trägt jetzt nachweislich KEIN eigenes Suchfeld
+    // — sonst wären es wieder zwei, und genau das war Davids Befund.
+    expect(html, 'die Startseite trägt kein eigenes Suchfeld mehr (D18)').not.toContain('role="search"');
+    expect(html).not.toContain('type="search"');
+  });
+
+  it('die vier Bestände stehen als Listen mit Zahlen — keine Kachel-Optik mehr', () => {
+    const html = startHtml('/');
+    // Die Zeilen-Titel des Satzspiegels.
+    expect(html).toContain('Systematische Ordnung');
+    expect(html).toContain('Kantone, erfasste Erlasse');
+    expect(html).toContain('Amtliche Materialien nach Behörde');
+    expect(html).toContain('Frist berechnen');
+    // Bund: die Systematik-Ordnung der Gesetze-Übersicht mit ihren Ankern.
+    expect(html).toContain('href="/gesetze?ebene=bund#sys-privatrecht"');
+    // Kantone: Bestands-Ziel `?ebene=kanton&kt=<KT>` (nie erfunden).
+    expect(html).toContain('/gesetze?ebene=kanton&amp;kt=BS');
+    // Materialien: Behörden-Sprungmarke der Übersicht.
+    expect(html).toContain('href="/materialien#b-ESTV"');
+    // Kachel-Optik ist weg (RubrikKachel/lc-tile auf «/»), Landkarte ebenso.
+    expect(html).not.toContain('lc-tile');
+    expect(html).not.toContain('Weitere Bereiche');
+    expect(html).not.toContain('Alle Bereiche');
+    // Favoriten (5.6.) + Zeiterfassung (→ /rechner) sind nicht auf «/».
     expect(html).not.toContain('Favoriten');
     expect(html).not.toContain('Zeiterfassung');
-    // Schnellrechner rechnet live (der «live hergeleitet»-Badge wurde 25.6.2026
-    // als redundant entfernt — der Live-Hinweis im Ergebnisblock genügt).
-    expect(html).toContain('Live-Berechnung');
-    // Vertrauens-Fuss trägt den Pflichthinweis (§8).
-    expect(html).toContain('Rechtlicher Hinweis');
-    // Der Katalog (vier Oberkategorien) ist NICHT mehr auf der Startseite.
+    // Der Katalog (vier Oberkategorien) ist NICHT auf der Startseite.
     expect(html).not.toContain('aria-label="Oberkategorien"');
   });
 
-  it('bietet drei Schnellrechner-Tabs; der aktive (Fristen) verlinkt in den Voll-Rechner', () => {
+  it('«Frist berechnen» ist die ECHTE Engine-Zeile — kein Tab-Kasten, keine Kopie', () => {
     const html = startHtml('/');
-    // Tablist mit drei Tabs
-    expect(html).toContain('role="tablist"');
-    expect((html.match(/role="tab"/g) ?? []).length).toBe(3);
-    expect(html).toContain('>Gebühren<');
-    expect(html).toContain('>Zuständigkeit<');
-    // Aktiver Tab (Fristen) zeigt das echte Engine-Ergebnis-Umfeld + Voll-Rechner-Link
+    // V4-Rückbau, unverändert: kein dreifacher Reiter, keine zweite Tab-Leiste.
+    expect(html).not.toContain('role="tablist"');
+    expect(html).not.toMatch(/role="tab"/);
+    // Die Fristen-Zeile rechnet live (echte Engine, keine Kopie).
+    expect(html).toContain('Live-Berechnung');
+    // Statt eingebetteter Zweit-Formulare Text-Verweise in die Voll-Rechner.
     expect(html).toContain('href="/rechner/tagerechner"');
+    expect(html).toContain('href="/rechner/prozesskosten"');
+    expect(html).toContain('href="/rechner/zustaendigkeit"');
+  });
+
+  it('§8: die Vertrauens-Sätze und der Pflichthinweis stehen wörtlich im Schluss', () => {
+    const html = startHtml('/');
+    expect(html).toContain('Rechtlicher Hinweis');
+    expect(html).toContain('keine Rechtsberatung');
+    expect(html).toContain('Kein Sprachmodell schätzt Ergebnisse');
   });
 });
 

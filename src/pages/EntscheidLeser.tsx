@@ -21,7 +21,9 @@ import {
   ENTSCHEID_HIGHLIGHT_INSTANZ, ankunftsAnker,
   LESE_PARAM, leseAusParam, loescheNennungen, maleNennungen, nennungsAnker,
   referenzImTitel, trefferInErwaegungen, urlMitHash, urlMitLese, zaehleNennungen, zaehleTreffer,
+  angabeImTitel, leitzeileOhneKopfangaben,
 } from './entscheidLeserRegeln';
+import { datumOderStrich } from '../components/ui/datumText';
 import { setzeSuchHighlight } from './gesetz-leser/suchHighlight';
 import { usePaneKlasse, usePaneKontext } from '../components/layout/PaneKontext';
 import { useMeldeInhaltsKopf } from '../components/layout/InhaltsKopfKontext';
@@ -175,8 +177,8 @@ function SprungNavigation({ ziele, springe, aktiv }: {
           brachen also um, statt zu scrollen, und rissen die klebende Leiste auf
           zwei Zeilen. Jetzt misst sie im Pane die PANE-Breite. */}
       <div className={pk(
-        'flex gap-2 overflow-x-auto pb-0.5 -mb-0.5 pr-5 sm:pr-0 sm:flex-wrap sm:overflow-visible [scrollbar-width:thin]',
-        'flex gap-2 overflow-x-auto pb-0.5 -mb-0.5 pr-5 @xl/pane:pr-0 @xl/pane:flex-wrap @xl/pane:overflow-visible [scrollbar-width:thin]',
+        'flex gap-2 overflow-x-auto lc-scrollrand-x pb-0.5 -mb-0.5 pr-5 sm:pr-0 sm:flex-wrap sm:overflow-visible [scrollbar-width:thin]',
+        'flex gap-2 overflow-x-auto lc-scrollrand-x pb-0.5 -mb-0.5 pr-5 @xl/pane:pr-0 @xl/pane:flex-wrap @xl/pane:overflow-visible [scrollbar-width:thin]',
       )}>
         {/* ── LM-059 (B15, 4.9.2026) · REITER SIND KEINE CHIPS ────────────────
             GEMESSEN vor dem Bau, `/rechtsprechung/bs_sozialversicherungsgericht_AH.2025.7`
@@ -524,6 +526,15 @@ function EntscheidLeserInhalt({ schluessel, ansichtParam, normParam, leseParam }
   // Einheitlicher Kopf: Modell aus der reinen Regel-Lib (§3) — Komponente rendert nur.
   const kopf = kopfModell(snap);
   const kopfLabel = KOPF_LABEL[snap.sprache];
+  // ── GA-2 (W2·24, 7.9.2026) · was der Kopf schon sagt, sagt er nicht zweimal ─
+  // Beide Ableitungen sind rein und liegen in `entscheidLeserRegeln` (dort die
+  // Messung und die Herleitung); hier stehen nur die zwei Aufrufe, damit die
+  // Bänder unten lesbar bleiben.
+  const datumImTitel = !snap.datumUnbekannt && angabeImTitel(snap.zitierung, datumOderStrich(snap.datum));
+  const leitzeile = leitzeileOhneKopfangaben(kopf.leitzeile, [
+    GEBIET_LABEL[snap.sachgebiet],   // steht in der Overline
+    snap.gerichtName,                // steht in der H1 (Zitierung)
+  ]);
   // BGE-Umschalter: nur wenn ein separater amtlicher Sammlungs-Auszug vorliegt.
   const hatAuszug = !!snap.auszugAbschnitte && snap.auszugAbschnitte.length > 0;
 
@@ -646,7 +657,13 @@ function EntscheidLeserInhalt({ schluessel, ansichtParam, normParam, leseParam }
         // J3 (§8): Sachgebiet ist maschinell zugeordnet — der title sagt es an
         // Ort und Stelle; das Badge dazu trägt der Kopf bereits (V1.2, unten).
         overline={<KopfOverline glieder={[
-          { text: snap.gerichtName, rolle: 'herkunft' },
+          // GA-2 (7.9.2026): der Gerichtsname steht nur hier, wenn die
+          // ZITIERUNG darunter ihn nicht ohnehin wörtlich trägt — sie tut es am
+          // heutigen Korpus fast immer («Obergericht AG HOR.2024.19 vom …»),
+          // und dann war die Overline die dritte Nennung desselben Namens im
+          // selben Bild (Herleitung: `entscheidLeserRegeln`, GA-2).
+          angabeImTitel(snap.zitierung, snap.gerichtName)
+            ? null : { text: snap.gerichtName, rolle: 'herkunft' },
           snap.abteilung ? { text: snap.abteilung, rolle: 'art' } : null,
           {
             text: GEBIET_LABEL[snap.sachgebiet], rolle: 'sachgebiet',
@@ -668,15 +685,21 @@ function EntscheidLeserInhalt({ schluessel, ansichtParam, normParam, leseParam }
            Panes ist die Klassenzeile zeichengleich zum Vorzustand (Prerender
            der 5'093 Entscheid-Seiten unberührt); im Pane misst die Kaskade
            neu die Pane- statt die Fensterbreite. */
-        titel={<SeitenTitel className={`num${lese ? ' hidden' : ''}`}>{snap.zitierung}</SeitenTitel>}
+        /* G3 (Gesamtprüfung 6.9.2026): `stimme="serif"`. Der Entscheid-Titel lief
+           als einziger Leser-Titel in der Sans-Display-Stimme, während Erlass-
+           und Vorlagen-Leser Literata sprechen — im Split-View standen beide
+           nebeneinander (Screen 15). Ein Urteil IST zitierfähiger Quelltext,
+           also die Stimme, für die `ui/SeitenTitel` sie vorsieht. Die
+           `num`-Klasse bleibt: sie setzt nur `tabular-nums`, keine Schriftart. */
+        titel={<SeitenTitel stimme="serif" className={`num${lese ? ' hidden' : ''}`}>{snap.zitierung}</SeitenTitel>}
         nachTitel={
           <>
             {/* 3 Abgeleitete Sachgebiets-Leitzeile — nur wenn weder ein Rubrum-Gegenstand
                 noch die Regeste-Box das Thema trägt (kopf.ts entscheidet, §3/§5). Nüchtern +
                 ehrlicher Marker, dass sie aus der Struktur abgeleitet ist (§8). */}
-            {kopf.leitzeile && (
+            {leitzeile && (
               <div className="space-y-0.5">
-                <p className="text-body-s leading-snug text-ink-700">{kopf.leitzeile}</p>
+                <p className="text-body-s leading-snug text-ink-700">{leitzeile}</p>
                 <p className="text-micro italic text-ink-500">{SYNTH_MARKER[snap.sprache]}</p>
               </div>
             )}
@@ -753,7 +776,11 @@ function EntscheidLeserInhalt({ schluessel, ansichtParam, normParam, leseParam }
            BS §7.2: die parallele Zweit-Geschäftsnummer desselben Verfahrens
            («ZB.2023.4 (AG.2023.…)») ist Identität, keine zweite Zitierung. */
         fakten={[
-          <DatumMeta snap={snap} />,
+          // GA-2 (7.9.2026): «Entscheid vom 12.12.2025» entfällt, wenn die
+          // Zitierung darüber dasselbe Datum wörtlich führt — sonst steht das
+          // Urteilsdatum zweimal in 60 px. Fehlt es im Titel (BGE-Zitierungen,
+          // «Entscheiddatum nicht publiziert», BGE-Jahrgang), bleibt die Zeile.
+          datumImTitel ? null : <DatumMeta snap={snap} />,
           snap.bgeReferenz && !referenzImTitel(snap.zitierung, snap.bgeReferenz)
             ? <span className="num">{snap.bgeReferenz}</span> : null,
           snap.nummerSekundaer
@@ -780,7 +807,7 @@ function EntscheidLeserInhalt({ schluessel, ansichtParam, normParam, leseParam }
           <div className="space-y-1 text-xs text-ink-500">
             <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5">
               {snap.leitcharakter === 'leitentscheid' && <StatusBadge praedikat="leitentscheid" interaktiv />}
-              <span className="lc-badge lc-badge-soft uppercase" title={spracheBadgeTitel(snap.sprache)}>{snap.sprache}</span>
+              <span className="lc-badge lc-badge-soft" title={spracheBadgeTitel(snap.sprache)}>{snap.sprache}</span>
               {snap.kuratierung === 'maschinell' && <StatusBadge praedikat="maschinell" />}
             </div>
             <p className="leading-snug">Wiedergabe des amtlichen Urteilstexts — {MASSGEBLICH_HALBSATZ}</p>
@@ -823,15 +850,29 @@ function EntscheidLeserInhalt({ schluessel, ansichtParam, normParam, leseParam }
                 deckt ihn zu), es gibt also keinen Zwilling zu unterscheiden. */}
             <span className="inline-flex shrink-0 items-center gap-1.5" role="group" aria-label="Grösse nur des Entscheidtexts">
               <span aria-hidden className="select-none whitespace-nowrap text-micro text-ink-500">Nur Entscheidtext</span>
-              <span className="inline-flex items-stretch rounded border border-line overflow-hidden">
+              {/* B-K1 (R9-2, 6.9.2026): die beiden Stufenknöpfe waren die EINZIGEN
+                  rohen `<button>` dieser Datei — ein selbstgezeichnetes Segment-
+                  Steuerelement (aussen `rounded border border-line overflow-hidden`,
+                  innen `min-h-6 px-2 py-1` plus eine Trennlinie von Hand), während
+                  die Nachbarn derselben Zeile (Fundstelle, Zitat kopieren, Lesemodus)
+                  auf `.lc-chip` stehen. Kanon für kleine Textknöpfe in einer Meta-
+                  Zeile ist `.lc-btn-mini` — dieselbe Bauform wie die Zitat/Link-Paare
+                  im Gesetzes-Leser (`parts/ArtikelLeser.tsx:522/523`) und der
+                  Zurücksetzer der Filterleiste (`EntscheidFilter.tsx:355`); die
+                  Haarlinie IST dort die Anatomie, jeder Knopf trägt sie selbst, und
+                  die Höhe kommt aus `--tap-ziel` statt aus einer `min-h-6`-Zahl.
+                  `rounded` fällt weg (Radius-Token = 0, F0.5). Handler, `disabled`,
+                  `aria-label`, `title`, `role="group"` und Fokus-Reihenfolge
+                  unverändert. */}
+              <span className="inline-flex items-center gap-1">
                 <button type="button" onClick={() => setFs(fsIdx - 1)} disabled={fsIdx === 0}
                   aria-label="Entscheidtext verkleinern"
                   title="Entscheidtext verkleinern — die Anwendung bleibt gleich gross"
-                  className="min-h-6 px-2 py-1 text-ink-600 lc-hover-flaeche disabled:opacity-40">A−</button>
+                  className="lc-btn-mini text-ink-600 hover:text-brass-700 disabled:opacity-40">A−</button>
                 <button type="button" onClick={() => setFs(fsIdx + 1)} disabled={fsIdx === FS_STUFEN.length - 1}
                   aria-label="Entscheidtext vergrössern"
                   title="Entscheidtext vergrössern — die Anwendung bleibt gleich gross"
-                  className="min-h-6 px-2 py-1 text-ink-600 lc-hover-flaeche disabled:opacity-40 border-l border-line">A+</button>
+                  className="lc-btn-mini text-ink-600 hover:text-brass-700 disabled:opacity-40">A+</button>
               </span>
             </span>
             <button type="button" onClick={kopiereZitat}
@@ -851,7 +892,8 @@ function EntscheidLeserInhalt({ schluessel, ansichtParam, normParam, leseParam }
       {/* Gemeinsamer sticky Kopf-Block (§13-Bug-Fix: EIN sticky-Element statt zweier
           sich überlagernder). Oben — beim BGE mit Volltext — der Fassungs-Umschalter
           (§8: «Amtlicher BGE-Auszug» ⟷ «Vollständiges Urteil»), darunter die Sprung-Chips.
-          Die App-Topbar liegt mit z-20 darüber, dieser Block mit z-[15] darunter.
+          Die App-Topbar liegt mit z-leiste (20) darüber, dieser Block mit
+          z-entscheid-sticky (15) darunter (Schichtungs-Skala, C3, index.css).
           LM-007 (W2·17-UI-BEFUNDE-B3, K-01, Mittel): Topbar + dieser Block belegten
           beim BGE-Volltext (Umschalter sichtbar) rund 190 px dauerhaft sichtbare
           Höhe. B6 (FAHRPLAN-VERZAHNUNG-UI.md §9, «minimalistischer») als Muster
@@ -876,7 +918,7 @@ function EntscheidLeserInhalt({ schluessel, ansichtParam, normParam, leseParam }
         //    als ein alter — der Nachzug gehört an den Pane-Wrapper und ist als
         //    Nebenfund gemeldet, nicht hier.
         <div ref={stickLeisteRef} style={{ top: imPane ? '0.5rem' : 'calc(4rem + 2.25rem)' }}
-          className="sticky z-[15] -mx-5 sm:-mx-6 px-5 sm:px-6 py-1.5 bg-paper border-b border-line space-y-1.5">
+          className="sticky z-entscheid-sticky -mx-5 sm:-mx-6 px-5 sm:px-6 py-1.5 bg-paper border-b border-line space-y-1.5">
           {switcherSichtbar && (
             <Tabs
               items={[

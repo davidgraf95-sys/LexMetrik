@@ -72,8 +72,8 @@ export function SheetRahmen({
       // statt `vh`, damit die mobile Browser-Leiste das Blatt nicht unter den
       // Rand schiebt.
       className={`${inPane
-        ? 'pointer-events-auto absolute inset-x-0 bottom-0 top-8 z-50 rounded-t-xl'
-        : 'fixed inset-x-0 bottom-0 z-50 rounded-t-xl'} flex flex-col border-t border-line bg-paper-raised shadow-lg`}
+        ? 'pointer-events-auto absolute inset-x-0 bottom-0 top-8 z-modal rounded-t-xl'
+        : 'fixed inset-x-0 bottom-0 z-modal rounded-t-xl'} flex flex-col border-t border-line bg-paper-raised shadow-lg`}
       style={inPane ? undefined : { top: anschlag, maxHeight: `calc(100dvh - ${anschlag})` }}>
       {/* 1 · Griffleiste + Titel + Schliessen. Die Griffleiste ist das Zeichen
           für «von unten angeschlagen» — dieselbe Optik trägt das Panel-Blatt

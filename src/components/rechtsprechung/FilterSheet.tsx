@@ -112,7 +112,7 @@ export function FilterSheet({ anzahl, children }: {
               `#E9E7E2`), der «Scrim» HELLTE im Dunkelmodus also auf, statt
               abzudunkeln (Messung/Herleitung: `pages/gesetz-leser/v3/LeserScrim.tsx`,
               B7-N1). */}
-          <div className="lc-scrim fixed inset-0 z-40" onClick={() => setOffen(false)} aria-hidden />
+          <div className="lc-scrim fixed inset-0 z-overlay" onClick={() => setOffen(false)} aria-hidden />
           {/* F2-2: Rahmen, Griffleiste, Titelzeile, ✕, Scroller und Sockel kommen
               aus dem EINEN Sheet-Baustein. Der Kommentar oben versprach seit J2
               «ein Sheet-Muster im Haus, nicht zwei» — bis hierher war es eine

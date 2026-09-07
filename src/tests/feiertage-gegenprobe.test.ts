@@ -155,22 +155,25 @@ function istStephanstagBezugstagAusnahme(kanton: Kanton, monat: number, tag: num
   return (kanton === 'UR' || kanton === 'AR') && monat === 12 && tag === 26;
 }
 
-// ─── Ungeklärte Abweichung: Näfelser Fahrt GL 2027 (test.skip, TODO David)
+// ─── Näfelser Fahrt GL 2027: amtlich verifiziert (Beleg 5.9.2026)
 // ────────────────────────────────────────────────────────────────────────
-// LexMetriks Formel (naefelserFahrt in zpoFeiertage.ts: erster Donnerstag im
-// April, verschoben um eine Woche, wenn dieser Tag auf den Gründonnerstag
-// [Ostern −3] fällt) berechnet für 2027 den 1.4.2027 (Ostersonntag 2027 =
-// 28.3., Gründonnerstag = 25.3. ≠ 1.4. → keine Verschiebung). Die Bibliothek
-// date-holidays führt Näfelser Fahrt 2027 dagegen am 8.4.2027 (eine Woche
-// später). Für 2026 ist die LexMetrik-Formel im Kopfkommentar bereits gegen
-// die amtliche Quelle gl.ch verifiziert («Doppelcheck 6.6.2026, amtlich
-// gl.ch: Fahrt 2026 am 9. statt 2. April» — 2027 ist NICHT verifiziert).
-// Keine eindeutige Zuordnung zu einer gewollten Abweichungsklasse möglich
-// ohne amtliche Prüfung → TODO(David): 1.4. oder 8.4.2027 amtlich (gl.ch)
-// bestätigen, dann diesen Test entsperren.
-test.skip('TODO(David): Näfelser Fahrt GL 2027 amtlich verifizieren (1.4. laut LexMetrik-Formel vs. 8.4. laut date-holidays)', () => {
-  const gl2027 = new Holidays('CH', 'GL').getHolidays(2027).find((h) => h.name === 'Näfelser Fahrt');
-  expect(gl2027?.date.startsWith('2027-04-01')).toBe(true);
+// gl.ch: «Am ersten Donnerstag im April (ausser er falle in die Karwoche)»
+// (https://www.gl.ch/portrait/naefelser-fahrt.html/207, abgerufen 5.9.2026).
+// Ostersonntag 2027 = 28.3.2027 ⇒ Karwoche 21.–27.3.2027, Gründonnerstag
+// 25.3.2027. Der erste Donnerstag im April 2027 ist der 1.4. — er liegt
+// NICHT in der Karwoche und ist nicht der Gründonnerstag ⇒ keine
+// Verschiebung, 1.4.2027 bleibt amtlich richtig. LexMetriks Formel
+// (naefelserFahrt in zpoFeiertage.ts: erster Donnerstag im April, verschoben
+// um eine Woche NUR wenn er auf den Gründonnerstag fällt) prüft genau diese
+// gl.ch-Regel und liefert damit die amtlich korrekte Antwort — geprüft direkt
+// gegen `istFeiertag`, nicht gegen die Bibliothek. Die Bibliothek
+// date-holidays weicht für 2027 ab (eigene Regel «Thursday after 04-02»,
+// s. deren `rule`-Feld) und berechnet 8.4.2027 — ein Bibliotheksfehler, kein
+// LexMetrik-Fehler; bleibt darum als bekannte, begründete Abweichung in
+// NAEFELSER_FAHRT_2027_UNGEKLAERT_DATEN gelistet (Gegenprobe unten bleibt grün).
+test('Näfelser Fahrt GL 2027: LexMetrik berechnet amtlich korrekt den 1.4.2027 (nicht 8.4., Bibliotheksfehler)', () => {
+  expect(istFeiertag(new Date(2027, 3, 1), 'GL')).toBe(true);
+  expect(istFeiertag(new Date(2027, 3, 8), 'GL')).toBe(false);
 });
 // Beide Richtungen derselben ungeklärten Abweichung: die Bibliothek nennt
 // den 8.4.2027 (NUR_BIBLIOTHEK), LexMetriks Formel den 1.4.2027

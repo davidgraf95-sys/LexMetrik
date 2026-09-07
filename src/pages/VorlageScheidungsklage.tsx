@@ -8,7 +8,7 @@ import { KV_GERICHTE_BS } from '../lib/vorlagen/klageVereinfacht';
 import { ParteiEditor } from './VorlageKlageVereinfacht';
 import type { PdfBanner } from '../lib/vorlagen/banner';
 import { DatumsFeld } from '../components/DatumsFeld';
-import { Checkbox, Field, inputCls, ListenEditor } from '../components/vorlagen/ui';
+import { Checkbox, Field, ListenEditor, NICHT_GESPEICHERT_HINWEIS, inputCls } from '../components/vorlagen/ui';
 import { BetragsFeld } from '../components/BetragsFeld';
 import { SelectionGrid } from '../components/ui/SelectionGrid';
 import { GerichtsWahlBlock } from '../components/vorlagen/GerichtsWahlBlock';
@@ -244,10 +244,11 @@ export function VorlageScheidungsklage() {
       intro="Die Scheidungsklage nach Art. 290 ZPO mit dem gesetzlichen Mindestinhalt — Scheidungsgrund (Art. 114/115 ZGB), Begehren zu Kindern, Unterhalt, Güterrecht und Vorsorgeausgleich. Der Zweijahres-Check ist berechnet; was Würdigung wäre (Art. 115, Unterhaltsbeträge), wird offengelegt, nie gerechnet."
       norms={card?.norms ?? []}
       badge="Zu unterzeichnen"
-      fussnote="Eingaben werden NICHT lokal gespeichert (Parteidaten)."
+      fussnote={NICHT_GESPEICHERT_HINWEIS}
       zuruecksetzen={zuruecksetzen}
       schritte={SCHRITTE} schritt={schritt} setSchritt={setSchritt}
       fehler={fehler}
+      fehlerJeSchritt={(i) => maengel.filter((m) => m.schritt === i).map((m) => m.text)}
       inhalt={inhalt()}
       vorschau={<VorschauPanel ergebnis={ergebnis} kompakt direktExport={{
         pdf: { label: 'PDF', banner: BANNER_SK, dateiName: 'Scheidungsklage.pdf' },

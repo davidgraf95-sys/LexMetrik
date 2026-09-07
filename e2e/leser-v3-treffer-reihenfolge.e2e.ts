@@ -105,7 +105,30 @@ test.describe('H2 — Trefferliste in Erlass-Reihenfolge, je Artikel gruppiert',
     })
     expect(wahl, 'kein Artikel mit mehr als einer Fundstelle — Testfall trägt nicht').not.toBeNull()
     const { token, zahl } = wahl!
-    await page.locator(`[data-treffer-artikel="${token}"] button`).first().click()
+
+    // ── §6.3-UMSTELLUNG D38 (David 7.9.2026) · WIE DER ARTIKEL AUFKLAPPT ─────
+    // Hier stand ein KLICK auf den Artikelkopf. Der springt seit je zur ersten
+    // Fundstelle und klappte nebenbei auf; solange die Liste NEBEN dem Text lag,
+    // sah man beides. Über dem Text kann sie nach dem Sprung nicht stehen
+    // bleiben — sie verdeckte genau den Wortlaut, in den der Klick führt
+    // (`leser-v3-suche-ohne-gliederung` (c)). Der Kopf-Klick ist damit die
+    // Geste «dahin», nicht «zeig mir mehr».
+    // AUFGEKLAPPT WIRD DER ARTIKEL, IN DEM DIE ↑↓-NAVIGATION STEHT — das war
+    // schon vorher der tragende Zweig (`offen = aktiv || handAuf`,
+    // `v3/LeserTrefferListe.tsx`) und ist der einzige, der ohne Sprung
+    // auskommt. Die Sonde schreitet darum mit ↓ bis zu dem gewählten Artikel
+    // vor, statt ihn anzuklicken. Was sie prüft — eine Zeile JE Fundstelle,
+    // genau eine davon aktiv — ist unverändert.
+    const vor = page.locator('[data-treffer-vor]')
+    await expect(vor, 'kein ↓-Griff in der Werkzeugzeile — Vorbedingung fehlt (§6.7)').toHaveCount(1)
+    let erreicht = false
+    for (let i = 0; i < 60 && !erreicht; i += 1) {
+      await vor.click()
+      erreicht = await page.locator(`[data-treffer-artikel="${token}"][data-fundstellen-zahl]`)
+        .evaluate((el) => el.querySelector('[data-treffer-stelle]') !== null)
+        .catch(() => false)
+    }
+    expect(erreicht, `↓ hat Artikel ${token} in 60 Schritten nicht erreicht`).toBe(true)
 
     // Aufgeklappt: so viele Fundstellen-Zeilen wie der Zähler nennt (bis zum
     // Deckel von 40 — der Zähler bleibt datenseitig und nennt die volle Zahl).

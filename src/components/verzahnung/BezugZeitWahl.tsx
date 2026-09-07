@@ -175,6 +175,10 @@ export function BezugZeitWahl({ bereich, histogramm, onBereich }: {
                   // Jahr als «gewählt», also lag das Band über allen Balken und
                   // die Verteilung war nicht mehr ablesbar — eine Grafik, die
                   // genau das verdeckt, wofür sie da ist. Ohne Auswahl kein Band.
+                  // `rounded-[1px]` bleibt bewusst unter dem kleinsten Radius-
+                  // Token (4px, DESIGN-REGLEMENT.md F7b, C4 5.9.2026): die
+                  // Balkenhöhe an MIN_ANTEIL ist selbst nur ~2–3px, ein
+                  // Token-Radius würde den Balken zum Punkt verformen.
                   className={`flex h-full flex-1 items-end rounded-[1px] transition-colors ${
                     bandSichtbar && gewaehlt ? 'bg-slate-bg' : ''
                   }`}

@@ -212,7 +212,7 @@ export function LeserTastatur({ tokens, aktivToken, onSprung, onPanel, imSekunda
     // auf, statt abzudunkeln (Messung/Herleitung: `../v3/LeserScrim.tsx`, B7-N1).
     // `.lc-scrim-dialog` ist die Rolle «zentrierter modaler Dialog»: schwarz
     // statt Tinte, Deckung unverändert 40 %.
-    <div className="lc-scrim-dialog fixed inset-0 z-50 flex items-center justify-center px-4"
+    <div className="lc-scrim-dialog fixed inset-0 z-modal flex items-center justify-center px-4"
       onClick={() => setHilfeOffen(false)}>
       <div ref={dialogRef} role="dialog" aria-modal="true" aria-label="Tastatur-Kurzbefehle"
         tabIndex={-1} onClick={(e) => e.stopPropagation()}

@@ -32,12 +32,19 @@ import { parsePassus } from '../../src/lib/normtext/passus.ts';
 import { ZH_QUELLEN } from './zh-quellen.ts';
 
 /** Roh-Tarif-Eintrag, wie er in den Daten steht (nur die hier relevanten Felder). */
-interface TarifEintrag {
+export interface TarifEintrag {
   kanton: string;
   erlassName: string;
   erlassNr: string;
   artikel: string;
   quelleUrl: string;
+  /** Anzeige-String der Fassung («1.1.2024», «2026 (konsolidiert)», …).
+   *  W3-TARIF-STAND: das Drift-Tor `check:tarif-drift` liest ihn über die
+   *  Projektion `scripts/tarif/stand.ts`. Alle 954 Einträge tragen ihn
+   *  (Erhebung 6.9.2026) — die Signatur-Erkennung unten prüft ihn mit, damit
+   *  ein künftiger Eintrag ohne `stand` sichtbar herausfällt statt still
+   *  ungeprüft mitzulaufen. */
+  stand: string;
 }
 
 export interface KantonInventarArtikel {
@@ -221,7 +228,8 @@ function istTarifEintrag(v: unknown): v is TarifEintrag {
     typeof o.erlassName === 'string' &&
     typeof o.erlassNr === 'string' &&
     typeof o.artikel === 'string' &&
-    typeof o.quelleUrl === 'string'
+    typeof o.quelleUrl === 'string' &&
+    typeof o.stand === 'string'
   );
 }
 
@@ -239,8 +247,12 @@ function sammleEintraege(v: unknown, ziel: TarifEintrag[]): void {
 
 /** Alle Tarif-Module deep-walken → flache, deduplizierte Eintragsliste.
  *  (Mehrere Module re-exportieren dieselbe NOTARIAT/GRUNDBUCH-Tabelle; ein
- *   Eintrag ist über die Identität des Objekts oder den Tripel-Schlüssel eindeutig.) */
-function alleTarifEintraege(): TarifEintrag[] {
+ *   Eintrag ist über die Identität des Objekts oder den Tripel-Schlüssel eindeutig.)
+ *
+ *  Exportiert (W3-TARIF-STAND, 6.9.2026): `scripts/tarif/tarif-drift.ts` braucht
+ *  dieselbe Eintragsliste. §5 — ein zweiter Enumerator wäre eine zweite Wahrheit
+ *  darüber, was «alle Tarif-Einträge» sind. */
+export function alleTarifEintraege(): TarifEintrag[] {
   const module: unknown[] = [
     gerichtskosten,
     schlichtung,

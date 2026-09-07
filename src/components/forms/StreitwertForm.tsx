@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { BeruehrtRahmen, Checkbox, ErgebnisPlatzhalter, FehlerBox, Field, inputCls, ListenEditor } from '../vorlagen/ui';
+import { BeruehrtRahmen, Checkbox, EckdatenKachel, ErgebnisPlatzhalter, FehlerBox, Field, inputCls, ListenEditor } from '../vorlagen/ui';
 import { zahlBeliebig as zahl } from './eingabe';
 import { ErgebnisBlock } from '../ErgebnisBlock';
 import { PflichtDisclaimer } from '../PflichtDisclaimer';
@@ -13,6 +13,7 @@ import { permalinkKodieren, type PermalinkSpec } from '../../lib/permalink';
 import { usePermalinkFelder } from '../../hooks/usePermalinkFelder';
 import type { PdfDocConfig } from '../../lib/pdf/pdfModel';
 import { berechneStreitwert, streitwertGrenzwerte, type Begehren, type BegehrenTyp, type WiederkehrDauer, type StreitwertErgebnis, type StreitwertGebiet } from '../../lib/streitwert';
+import { chfPraefix } from '../../lib/format';
 import { SelectionGrid } from '../ui/SelectionGrid';
 
 // ─── Streitwert-Form (Art. 91–94a ZPO) — Quick-Win B.9 ──────────────────────
@@ -243,6 +244,19 @@ export function StreitwertForm() {
 
       {ergebnis && (
         <ErgebnisBlock>
+          {/* Finder-6 A2 (5.9.2026): einziger ErgebnisAnzeige-Rechner ohne Eckdaten-
+              Kachelreihe vor dem Verdikt (R4 Ziff. 1) — an das Muster der anderen
+              angeglichen (z. B. VerzugszinsForm). Nur bei berechenbarem Streitwert
+              (Ermessensfälle bleiben Fliesstext im Verdikt, kein Kachel-«null»). */}
+          {ergebnis.streitwertVerfahrenCHF != null && (
+            <div className={ergebnis.kostenBasisCHF != null && ergebnis.kostenBasisCHF !== ergebnis.streitwertVerfahrenCHF
+              ? 'grid grid-cols-1 sm:grid-cols-2 gap-3' : 'grid grid-cols-1 gap-3'}>
+              <EckdatenKachel label="Streitwert (Verfahren/Rechtsmittel)" wert={chfPraefix(ergebnis.streitwertVerfahrenCHF)} num akzent />
+              {ergebnis.kostenBasisCHF != null && ergebnis.kostenBasisCHF !== ergebnis.streitwertVerfahrenCHF && (
+                <EckdatenKachel label="Kosten-Bemessungsgrundlage (Art. 94 ZPO)" wert={chfPraefix(ergebnis.kostenBasisCHF)} num />
+              )}
+            </div>
+          )}
           <ErgebnisAnzeige titel="Streitwert (Art. 91–94a ZPO)" ergebnis={ergebnis} />
 
           {/* Grenzwert-Abgleich (#2): ZPO-Verfahrensart ≠ BGG-Beschwerde-Schwelle,

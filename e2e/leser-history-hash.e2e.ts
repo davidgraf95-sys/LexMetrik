@@ -135,8 +135,13 @@ test.describe('LM-201 — Routenwechsel auf kürzere Seite: kein Frame mit alter
     // Schalter, dann den Startseiten-Link. `pressed: false` hält zusätzlich
     // fest, WAS hier vorausgesetzt wird — die Leiste ist im Leser eingeklappt
     // (Ä1c); vorher steckte diese Vorbedingung stillschweigend im Namen.
-    await page.getByRole('button', { name: 'Seitenleiste ein- und ausblenden', pressed: false }).click()
-    await page.locator('nav[aria-label="Hauptnavigation"] a[aria-label="LexMetrik – Startseite"]').click()
+    // DEKLARIERTE ANPASSUNG W2·24-DESIGN-IDENTITAET R2 (6.9.2026, §6.3): seit der
+    // Titelblatt-Zeile trägt die Marke im `header` auf JEDER Breite den
+    // Startseiten-Link (Topbar.tsx); der Seitenleisten-Logo-Link lebt nur noch in
+    // der mobilen Schublade (`hidden max-[480px]:flex`). Der Umweg über den
+    // Seitenleisten-Schalter entfällt — die Sache (SPA-Navigation per Klick auf
+    // eine kürzere Seite) ist unverändert.
+    await page.locator('header a[aria-label="LexMetrik – Startseite"]').first().click()
     await expect(page).toHaveURL(/\/$/, { timeout: 15000 })
     await page.waitForFunction(() => (window as unknown as { __lm201?: unknown[] }).__lm201!.length >= 4, undefined, { timeout: 15000 })
 

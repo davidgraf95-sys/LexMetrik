@@ -7,7 +7,7 @@ import {
   type RechtsgebietThema, type ThemaMitglied,
 } from '../../lib/normtext/rechtsgebiet-thema';
 import { getCalculator } from '../../lib/calculators';
-import { ErlassZeile } from './ErlassKarte';
+import { ErlassTabelle } from './ErlassKarte';
 import { usePaneKlasse } from '../layout/PaneKontext';
 import { GruppenKopf } from '../ui/GruppenKopf';
 import { erlassPfadVonKey } from '../../lib/normtext/erlassAdresse';
@@ -108,7 +108,6 @@ function ThemaKarte({ t, proKey }: { t: RechtsgebietThema; proKey: Map<string, B
 // je Gebiet aufklappbar (Übersicht zuerst, wie die Systematik-Sicht). Deckt
 // JEDEN Bund-Erlass — auch die keinem Querschnitts-Thema zugeordneten.
 function Grundgeruest({ erlasse }: { erlasse: BrowseErlass[] }) {
-  const pk = usePaneKlasse();
   const proGebiet = useMemo(() => {
     const m = new Map<string, BrowseErlass[]>();
     for (const e of erlasse) {
@@ -135,8 +134,11 @@ function Grundgeruest({ erlasse }: { erlasse: BrowseErlass[] }) {
               <span className="font-sans font-semibold text-ink-900 text-body-l tracking-tight">{g.label}</span>
               <span className="num text-body-s text-ink-500 ml-auto">{items.length}</span>
             </summary>
-            <div className={pk('px-5 pb-4 pt-3 border-t border-line grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-2', 'px-5 pb-4 pt-3 border-t border-line grid grid-cols-1 @lg/pane:grid-cols-2 gap-x-5 gap-y-2')}>
-              {items.map((e) => <ErlassZeile key={e.key} e={e} />)}
+            {/* D24: EIN Raster statt zweier verschieden hoch umbrechender
+                Spalten — Zeile i links und rechts auf derselben Höhe. */}
+            <div className="px-5 pb-4 pt-3 border-t border-line">
+              <ErlassTabelle erlasse={items} art="bund"
+                beschriftung={`${g.label} — Kürzel, Titel, SR-Nummer`} />
             </div>
           </details>
         );

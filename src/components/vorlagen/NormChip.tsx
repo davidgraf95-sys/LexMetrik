@@ -419,7 +419,7 @@ export function NormPopoverOverlay({ children, onClose, triggerRef, modal = true
   );
 
   // ── BLOCKER B1 (Gegenprüfung 7.8.2026): KEIN Klick-Fänger auf dem Hover-Weg ─
-  // Der verankerte Backdrop (`fixed inset-0 z-50` + `onClick={onClose}`) ist auf
+  // Der verankerte Backdrop (`fixed inset-0 z-modal` + `onClick={onClose}`) ist auf
   // dem KLICK-Weg richtig: er schliesst den Dialog beim Danebenklicken. Auf dem
   // HOVER-Weg war er der Defekt — er legte sich über die ganze Seite, also auch
   // über den Chip. Zwei belegte Folgen: (1) der Chip verlor den Zeiger
@@ -443,7 +443,7 @@ export function NormPopoverOverlay({ children, onClose, triggerRef, modal = true
       // statt abzudunkeln (Messung/Herleitung: `pages/gesetz-leser/v3/LeserScrim.tsx`,
       // B7-N1). `.lc-scrim-dialog` ist die Rolle «zentrierter modaler Dialog»
       // (src/index.css): schwarz statt Tinte, Deckung unverändert 40 %.
-      className={verankert ? 'fixed inset-0 z-50' : 'lc-scrim-dialog fixed inset-0 z-50 flex items-center justify-center p-4'}
+      className={verankert ? 'fixed inset-0 z-modal' : 'lc-scrim-dialog fixed inset-0 z-modal flex items-center justify-center p-4'}
       onClick={onClose}
     >
       {/* Klicks im Dialog dürfen nicht zum Backdrop durchschlagen. */}
@@ -473,7 +473,7 @@ export function NormPopoverHuelle({ zustand, url, artikel, alsDialog = true, onC
     <div data-norm-vorschau role={alsDialog ? 'dialog' : 'group'}
       {...(alsDialog ? { 'aria-modal': true as const, tabIndex: -1 } : {})}
       aria-label={`Norm-Vorschau ${artikel}`}
-      className="lc-card w-full max-w-xl p-0 text-left">
+      className="lc-popover w-full max-w-xl p-0 text-left">
       <div className="flex items-start justify-between gap-3 border-b border-line px-5 py-3">
         <div className="min-w-0">
           <p className="lc-overline text-brass-700">Norm-Vorschau</p>

@@ -48,7 +48,7 @@ export function ArtikelSprungFeld({ loese, onSprung }: {
             weder das Gliederungs-Sichtfenster des TOC-Kopfs verkleinern noch die
             Zonen des Sheets verschieben — CLS 0 per Konstruktion (§15/2). */}
         <p id={hinweisId} role={fehler ? 'alert' : undefined}
-          className={`pointer-events-none absolute left-0 top-full z-10 mt-0.5 rounded bg-paper-raised text-micro leading-4 text-ink-700 ${fehler ? 'px-1' : 'sr-only'}`}>
+          className={`pointer-events-none absolute left-0 top-full z-sticky mt-0.5 rounded bg-paper-raised text-micro leading-4 text-ink-700 ${fehler ? 'px-1' : 'sr-only'}`}>
           {fehler ? 'Diesen Artikel gibt es in diesem Erlass nicht.' : ''}
         </p>
       </div>

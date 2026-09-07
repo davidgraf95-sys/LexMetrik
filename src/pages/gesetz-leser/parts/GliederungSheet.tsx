@@ -124,7 +124,7 @@ export function GliederungSheet({
           dem Thema und ist im Dunkelmodus `#E9E7E2`, dieser «Scrim» HELLTE also
           im Dunkelmodus auf, statt abzudunkeln (Messung/Herleitung:
           `../v3/LeserScrim.tsx`, B7-N1). Position und z-Ebene bleiben hier. */}
-      <div className={inPane ? 'lc-scrim pointer-events-auto absolute inset-0 z-40' : 'lc-scrim fixed inset-0 z-40'}
+      <div className={inPane ? 'lc-scrim pointer-events-auto absolute inset-0 z-overlay' : 'lc-scrim fixed inset-0 z-overlay'}
         onClick={onSchliessen} aria-hidden />
       {/* Rahmen, Griffleiste, Titelzeile, ✕ und Scroller kommen aus dem EINEN
           Sheet-Baustein (F2-2, `ui/SheetRahmen`) — sie standen zeichengleich

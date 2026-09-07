@@ -1,4 +1,4 @@
-import { BeruehrtRahmen, FehlerBox, Field, inputCls } from '../vorlagen/ui';
+import { BeruehrtRahmen, Checkbox, FehlerBox, Field, inputCls } from '../vorlagen/ui';
 import { ErgebnisBlock } from '../ErgebnisBlock';
 import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { useEffect, useState } from 'react';
@@ -171,16 +171,12 @@ export function KuendigungSperrForm({ onBeendigung }: {
         {form.abweichendeFristMonate != null && (
           <Field label="Abweichende Frist – Gültigkeit (§3.2)">
             <div className="flex flex-col gap-2 pt-1">
-              <label className="flex items-center gap-2.5 py-1.5 text-body-s cursor-pointer">
-                <input type="checkbox" checked={form.abweichendeFristFormGueltig ?? false}
-                  onChange={(e) => set('abweichendeFristFormGueltig', e.target.checked)} />
-                Schriftlich / GAV / NAV (Gültigkeitsvoraussetzung)
-              </label>
-              <label className="flex items-center gap-2.5 py-1.5 text-body-s cursor-pointer">
-                <input type="checkbox" checked={form.abweichendeFristQuelleGAV ?? false}
-                  onChange={(e) => set('abweichendeFristQuelleGAV', e.target.checked)} />
-                Quelle GAV (Verkürzung &lt; 1 Monat nur GAV &amp; 1. DJ)
-              </label>
+              <Checkbox checked={form.abweichendeFristFormGueltig ?? false}
+                onChange={(v) => set('abweichendeFristFormGueltig', v)}
+                label="Schriftlich / GAV / NAV (Gültigkeitsvoraussetzung)" />
+              <Checkbox checked={form.abweichendeFristQuelleGAV ?? false}
+                onChange={(v) => set('abweichendeFristQuelleGAV', v)}
+                label="Quelle GAV (Verkürzung < 1 Monat nur GAV & 1. DJ)" />
             </div>
           </Field>
         )}

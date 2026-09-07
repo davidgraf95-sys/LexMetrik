@@ -93,7 +93,7 @@ function Marker({ p, iso, color, label, oben = false }: { p: number; iso?: strin
         style={{ left: `${p}%`, background: color, opacity: 0.45,
           ...(oben ? { top: '0.9rem', bottom: 'calc(50% + 0.45rem)' } : { top: 'calc(50% + 0.45rem)', bottom: '0.9rem' }) }} />
       {/* Punkt auf der Linie */}
-      <span className="absolute top-1/2 w-3 h-3 rounded-full -translate-x-1/2 -translate-y-1/2 z-10"
+      <span className="absolute top-1/2 w-3 h-3 rounded-full -translate-x-1/2 -translate-y-1/2 z-sticky"
         style={{ left: `${p}%`, background: color, boxShadow: '0 0 0 2px var(--surface)' }} />
       {/* Beschriftung */}
       <div className="absolute flex flex-col pointer-events-none"

@@ -1,6 +1,7 @@
 import { Suspense, type ReactNode } from 'react';
 import { ErrorBoundary } from '../ErrorBoundary';
 import { usePaneKlasse } from './PaneKontext';
+import { registerVonPfad } from './bereiche';
 
 // ─── A-6 (W2·19-DESIGN-KONSISTENZ, 31.8.2026) · EINE ROUTEN-HÜLLE ───────────
 //
@@ -61,7 +62,22 @@ export function RouteHuelle({ schluessel, children }: {
   return (
     <ErrorBoundary key={schluessel}>
       <Suspense fallback={<RouteLadeanzeige />}>
-        <div key={schluessel} className="lc-route">{children}</div>
+        {/* ── GB-1 (W2·24, Befund G1) · DIE REGISTERFARBE STEHT IN DER SEITE ──
+            GEMESSEN 6./7.9.2026 (Gesamtprüfung §1, Zeile G1): ausserhalb von «/»
+            trug im ERSTEN BILD fast nur noch der Reiter-Unterstrich Farbe —
+            Erlass-Leser 2 Träger, /gesetze 3, «/» zum Vergleich 14; in 7 von 9
+            Fällen war der einzige Träger `SPAN.absolute inset-x-0`, also die
+            Arbeitsleiste, nicht die Seite. David 6.9.2026: «nicht trist».
+            DIE FARBE WIRD HIER NICHT GEMALT, sondern nur ANGESAGT: die Hülle
+            hängt das Register des Pfades als `data-reg` an, die Rezepte in
+            `src/index.css` (§GB-1) lesen es. Ein Ort für die Ansage (§5) statt
+            einer Farb-Prop an jedem Kopf, jedem Etikett, jedem Zähler — und
+            jeder künftige Kopf-Baustein erbt sie, ohne davon zu wissen.
+            Die Ableitung kommt aus der bestehenden SSoT `layout/bereiche`
+            (`registerVonPfad`), nicht aus einer zweiten Tabelle. Kein Register
+            (Start, Meta-Seiten) ⇒ kein Attribut ⇒ die Tinte bleibt Tinte;
+            nie eine geratene Farbe (§8). */}
+        <div key={schluessel} className="lc-route" data-reg={registerVonPfad(schluessel) ?? undefined}>{children}</div>
       </Suspense>
     </ErrorBoundary>
   );

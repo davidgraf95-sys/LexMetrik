@@ -698,6 +698,30 @@ vollständig). Darauf, je EIGENE Runde mit eigener Gegenprüfung:
   zwischen Fassungen — zhlex liefert ALLE Vorfassungen als PDF (ø 4,2,
   max 48; Stadt-AS analog); natürlicher POC für W2·5g-ZEIT
   (Blocker zeit-historik-poc), was der Bund mangels Alt-Volltext nicht kann.
+- **R12b Entstehung am Paragraph — ZH-Pendant zu `W2·6c-ENTSTEHUNG-*`**
+  *(David 6.9.2026: «Botschaften und anderes analog von Gesetzen Zürich» —
+  ja, aber nach Bund und BS; Grundlage `bibliothek/materialien/
+  entstehung-2026-09-06/kantone-zh-bs.md` §1, Spec Bund: FAHRPLAN-
+  MATERIALIEN-VERZAHNUNG §11).* **Braucht R3 + R7 + R12 als Vorstufen**
+  (heute 0 Fussnoten in den ZH-Struktur-Sidecars ⇒ keine Fassungskette je §).
+  Quellen ZH (Stand 6.9.2026): Kantonsrats-Geschäftsdatenbank
+  `parlzhcdws.cmicloud.ch` (CMI-XML-Feed, 18 946 Geschäfte, Weisungen/Anträge
+  RR als Geschäftsart mit PDF, Index ABLAUFSCHRITTE = Verfahrens-Zeitstrahl;
+  undokumentiert, **Lizenz nicht deklariert**) · zhlex-Vorfassungen als PDF
+  (ø 4,2 / max 48 je Erlass, **ohne Zeitgrenze** — Synopse könnte anders als
+  beim Bund vor 2021 zurückreichen, Weg über R12) · Abstimmungsarchiv ab 1831
+  (OGD) · Staatsarchiv TEI (Kantonsratsprotokolle, RRB 1803–1998, Zenodo
+  13347459, Fremdquellen-Sichtung 2.9.2026) · RRB aktuell, Vernehmlassungen
+  ZH, ZH-Lex-API: **Negativbefund** (nur HTML/PDF). **Kein amtlicher Schlüssel
+  Erlass/§ ↔ Vorlage:** die OS-Fundstelle der Fussnote nennt keine Vorlagen-
+  Nummer ⇒ Zuordnung zur Weisung nur über Datum/Titel = Heuristik, Kante
+  `quelle: maschinell` (§8), nie stillschweigend amtlich. **Zwei Handgriffe
+  ohne Bau (David/OGD-Fachstelle ZH):** (1) Lizenz des Kantonsrats-Feeds
+  klären, (2) nach einem amtlichen Schlüssel Erlass ↔ Vorlage fragen — mit
+  Schlüssel würde die Kante amtlich. Etappen dann wie Bund E1/E2/E3 (Zeitstrahl
+  aus ABLAUFSCHRITTE, Fassungskette aus R3, Karte im ZH-Leser), ohne E4-Pendant
+  (keine Namensabstimmungs-Daten gefunden). Reihenfolge: **Bund → BS
+  (`K-16`, data.bs.ch CC BY 4.0, fertige Änderungs-Metadaten) → ZH.**
 
 **Phase V — Ernte:**
 - **R13 Rechtsprechungs-Brücke:** (a) LS-Zitate in Entscheiden → kantonale

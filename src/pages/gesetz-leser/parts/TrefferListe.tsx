@@ -36,8 +36,10 @@ export interface TrefferListeProps {
   begriff: string;
   /** Datenseitige Gesamtzahl der Fundstellen (§4.4 Ziff. 1). */
   fundstellen: number;
-  /** `html[data-fussnoten="aus"]` — steuert allein die BADGE-Ehrlichkeit. */
-  fussnotenAus: boolean;
+  /** D35-F3: `html[data-vermerke]` steht auf «fassung» oder «aus», die
+   *  Änderungs-Fussnoten sind also gedämpft — steuert allein die
+   *  BADGE-Ehrlichkeit (bis 7.9.2026 `html[data-fussnoten="aus"]`). */
+  aenderungenAus: boolean;
   /** 0-basierte laufende Fundstelle der ↑↓-Navigation; -1 = noch keine. */
   position: number;
   /** Artikel-Token der laufenden Fundstelle (markiert die Zeile). */
@@ -63,7 +65,7 @@ function Ausschnitt({ t }: { t: LeserTreffer }) {
 }
 
 export function TrefferListe({
-  treffer, begriff, fundstellen, fussnotenAus, position, aktivToken, onZurueck, onVor, onSprung,
+  treffer, begriff, fundstellen, aenderungenAus, position, aktivToken, onZurueck, onVor, onSprung,
 }: TrefferListeProps) {
   const hatSprung = fundstellen > 0;
   const anzeige = position < 0 ? '–' : String(position + 1);
@@ -130,7 +132,7 @@ export function TrefferListe({
           Vorzustand, falls die Marke einmal fehlt. */}
       <div data-treffer-leiste
         style={{ top: 'var(--toc-deckel, 0px)' }}
-        className="sticky z-10 bg-paper pb-1 pt-0.5 text-body-s text-ink-500">
+        className="sticky z-sticky bg-paper pb-1 pt-0.5 text-body-s text-ink-500">
         <p className="min-h-5 truncate">
           <span className="num">{treffer.length}</span> Artikel
           <span aria-hidden className="mx-1 text-ink-300">·</span>
@@ -177,7 +179,7 @@ export function TrefferListe({
 
       <ul className="space-y-0.5">
         {zeilen.map(({ t, kopf }) => {
-          const badges = badgesFuer(t, fussnotenAus);
+          const badges = badgesFuer(t, aenderungenAus);
           const aktiv = aktivToken === t.token;
           return (
             <Fragment key={t.token}>

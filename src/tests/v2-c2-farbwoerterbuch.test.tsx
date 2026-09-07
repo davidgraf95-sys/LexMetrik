@@ -28,7 +28,7 @@
 import { describe, it, expect } from 'vitest';
 import { renderToString } from 'react-dom/server';
 import { MemoryRouter } from 'react-router-dom';
-import { ArtikelLeser } from '../pages/gesetz-leser/parts';
+import { LeitfallZeile } from '../pages/gesetz-leser/parts/ArtikelLeser.leitfaelle';
 import { ErlassLeserKopf } from '../pages/gesetz-leser/parts/ErlassLeserKopf';
 import type { NormSnapshot } from '../lib/normtext/typen';
 import type { BrowseErlass } from '../lib/normtext/browse-typen';
@@ -53,9 +53,20 @@ const leitfaelle: LeitfallRef[] = [
     leitcharakter: 'leitentscheid', gericht: 'BGer', kanton: 'CH', gewicht: 3 },
 ];
 
+// ── DEKLARIERTE ANPASSUNG (W2·24-D35-F1, 7.9.2026 — §6.3, kein Refactoring) ──
+// Die Sonde rendert bis hierher den GANZEN Artikel und suchte die
+// «Leitfälle»-Overline im Ergebnis. Das ging, solange die Bezüge-Rubriken auch
+// zugeklappt im DOM standen (`<details>`, D34). Seit D35-F1 klappt jede Rubrik
+// einzeln auf KLICK auf und rendert ihren Inhalt erst dann (David: «das alles
+// soll dann nur auf klick aufklappbar sein») — im SSR-Ausgabestring eines
+// frisch geladenen Artikels steht die Zeile also zu Recht nicht mehr.
+// Die ZUSAGE bleibt Wort für Wort dieselbe und wird jetzt an dem Baustein
+// gemessen, der sie trägt: `LeitfallZeile`. Das ist kein Nachführen eines
+// Belegs (§2b), sondern der engere Messpunkt — er kann nicht mehr dadurch grün
+// werden, dass ein Dritter die Zeile zufällig mitrendert.
 const ssrArtikel = () => renderToString(
   <MemoryRouter>
-    <ArtikelLeser e={artMitLeitfall} erlass={erlass} basisPfad="/gesetze/bund/OR" leitfaelle={leitfaelle} />
+    <LeitfallZeile refs={leitfaelle} normZitat={`${artMitLeitfall.artikelLabel} ${erlass.kuerzel}`} />
   </MemoryRouter>,
 );
 

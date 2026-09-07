@@ -221,7 +221,7 @@ export function KombinierteAnsicht() {
 
       <ErgebnisBlock>
       {ergebnisse.kuendigung?.status === 'nichtig' && (
-        <div className="lc-notice-danger">
+        <div role="alert" className="lc-notice-danger">
           <p className="lc-overline text-danger-700 mb-1">Kündigung nichtig</p>
           <p className="text-body-s text-danger-700">
             Der Zugang der Kündigung fällt in eine Sperrfrist – die Kündigung ist nichtig und entfaltet keine Wirkung.

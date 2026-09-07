@@ -164,7 +164,7 @@ export function DeepLinkSkeleton() {
       // veraltet still, wenn eine der beiden Leisten ihre Höhe ändert (§0.5).
       // Die Leiste selbst bleibt sichtbar; sie beantwortet ja bereits «wo bin
       // ich». Verdeckt wird nur der Dokumentanfang, der hier nichts zu suchen hat.
-      className="pointer-events-none absolute inset-x-0 top-full z-30 flex h-screen justify-center bg-paper px-5">
+      className="pointer-events-none absolute inset-x-0 top-full z-dropdown flex h-screen justify-center bg-paper px-5">
       <div className="w-full max-w-3xl pt-8">
         {/* Ohne Artikel-Etikett: es steht erst im DOM, wenn das Ziel da ist —
             und dann ist das Overlay schon weg. Aus dem opaken Anker-Token

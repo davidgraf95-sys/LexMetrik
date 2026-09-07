@@ -269,10 +269,10 @@ export function LohnfortzahlungForm() {
 
       {/* Erweiterte Eingaben – kein overflow-hidden, sonst wird das
           DatumsFeld-Popover abgeschnitten; Rundung trägt der Button selbst. */}
-      <div className="border border-line rounded-md">
+      <div className="border border-line ">
         <button type="button" onClick={() => setErweitert(!erweitert)}
           aria-expanded={erweitert} aria-controls="lf-erweiterte-eingaben"
-          className={`w-full flex items-center justify-between px-4 py-3 bg-surface hover:bg-brass-100 text-left rounded-t-md ${erweitert ? '' : 'rounded-b-md'}`}>
+          className={`w-full flex items-center justify-between px-4 py-3 bg-surface hover:bg-brass-100 text-left ${erweitert ? '' : ''}`}>
           <span className="text-body-s font-medium text-ink-700">Erweiterte Eingaben (Anspruch, DJ-übergreifend, Lohnbasis)</span>
           <span className="text-ink-500" aria-hidden="true">{erweitert ? '▲' : '▼'}</span>
         </button>
@@ -302,16 +302,12 @@ export function LohnfortzahlungForm() {
                 onChange={(e) => set('anrechenbareVordienstzeitMonate', e.target.value ? Number(e.target.value) : undefined)} />
             </Field>
             <div className="flex flex-col justify-end gap-2">
-              <label className="flex items-center gap-2.5 py-1.5 text-body-s cursor-pointer">
-                <input type="checkbox" checked={form.befristetFest ?? false}
-                  onChange={(e) => set('befristetFest', e.target.checked)} />
-                Befristeter Vertrag fester Dauer &gt; 3 Monate
-              </label>
-              <label className="flex items-center gap-2.5 py-1.5 text-body-s cursor-pointer">
-                <input type="checkbox" checked={form.dreizehnterMonatslohn ?? false}
-                  onChange={(e) => set('dreizehnterMonatslohn', e.target.checked)} />
-                13. Monatslohn (anteilig) berücksichtigen
-              </label>
+              <Checkbox checked={form.befristetFest ?? false}
+                onChange={(v) => set('befristetFest', v)}
+                label="Befristeter Vertrag fester Dauer > 3 Monate" />
+              <Checkbox checked={form.dreizehnterMonatslohn ?? false}
+                onChange={(v) => set('dreizehnterMonatslohn', v)}
+                label="13. Monatslohn (anteilig) berücksichtigen" />
             </div>
           </div>
         )}

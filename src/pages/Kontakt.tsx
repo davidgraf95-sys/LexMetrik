@@ -70,13 +70,13 @@ export function Kontakt() {
           label={
             <span>
               Ich willige ein, dass meine Angaben zur Bearbeitung der Anfrage verwendet werden.
-              Details in der <Link to="/datenschutz" className="text-brass-700 hover:text-brass-600">Datenschutzerklärung</Link>.
+              Details in der <Link to="/datenschutz" className="text-brass-700 underline hover:text-brass-600">Datenschutzerklärung</Link>.
             </span>
           }
         />
 
         {beruehrt && fehler.length > 0 && (
-          <div className="rounded-md bg-danger-bg p-3 space-y-0.5">
+          <div role="alert" className="lc-notice lc-notice-danger space-y-0.5">
             {fehler.map((f, i) => <p key={i} className="text-body-s text-danger-700">• {f}</p>)}
           </div>
         )}

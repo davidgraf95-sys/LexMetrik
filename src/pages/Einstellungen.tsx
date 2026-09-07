@@ -8,6 +8,8 @@ import { DETAILGRAD_OPTIONEN } from '../lib/vorlagen/detailgrad';
 import { speichereThema, wendeThemaAn, systemThema, useThemaWahl, type ThemaWahl } from '../components/thema';
 import { useAusgabeStil, setAusgabeStil } from '../components/vorlagen/ausgabeStil';
 import { SelectionGrid } from '../components/ui/SelectionGrid';
+import { SchriftgroessenRegler } from '../components/ui/SchriftgroessenRegler';
+import { useSchriftskala } from '../components/layout/useSchriftskala';
 
 // ─── Rubrik «Einstellungen» (Auftrag David) ─────────────────────────────────
 //
@@ -63,6 +65,10 @@ function schreibeKey(key: string, wert: string): void {
 export function Einstellungen() {
   const e = useEinstellungen();
   const stil = useAusgabeStil();
+  // W2·23-STARTSEITE-V4 §6.2: der Regler «Ganze Seite» stand bis hierher im
+  // Top-Streifen. Er gehört zu den Dauer-Vorgaben, die diese Seite pflegt —
+  // derselbe Hook, derselbe Speicher-Schlüssel, nur ein anderer Ort.
+  const schrift = useSchriftskala();
   // Theme aus dem geteilten Store (synchron mit dem Topbar-Umschalter); Rechtsprechungs-
   // Ansicht lokal (clientseitig, opt-in).
   const themaWahl: ThemaWahl = useThemaWahl() ?? 'auto';
@@ -106,8 +112,17 @@ export function Einstellungen() {
     // Lesespalte unter breiteren Modulen ist die gewollte Satzbreite (§13.2,
     // dieselbe Herleitung wie Responsive-Audit D3 in pages/Methodik.tsx).
     <div className="max-w-reading space-y-8">
-      <SeitenKopf overline="Persönlich" titel="Einstellungen"
-        intro="Standardwerte für die ganze Seite — sie werden lokal in diesem Browser gespeichert, nie übermittelt." />
+      {/* ── G9/G17 (Gesamtprüfung 6.9.2026) · DIESELBE KOPF-ANATOMIE ────────
+          H1 zuerst, darunter EINE Zeile aus dem Bestand — die Form aller
+          Übersichten (`layout/SeitenKopf`, D22). Overline und Ablesekante
+          entfallen; sie hoben die H1 auf y = 213 statt auf 177 (G17).
+          DER §8-SATZ BLEIBT, er wechselt nur die Zeile: dass Einstellungen
+          diesen Browser nie verlassen, ist eine Zusage über die Datenhaltung,
+          kein Erklärtext — als Ausgabe-Zeile (13 px, ink-500) steht sie in
+          derselben Zelle, in der `/gesetze` seine Zähler führt, und fällt
+          damit nicht unter D11 («Übersichts-Köpfe ohne Erklärtext»). */}
+      <SeitenKopf titel="Einstellungen"
+        ausgabe="Standardwerte für die ganze Seite — lokal in diesem Browser gespeichert, nie übermittelt." />
 
       <section className="lc-card p-5 sm:p-6 space-y-5">
         <Zeile titel="Standard-Kanton" hinweis="Wird in Fristen- und Gebührenrechnern vorgewählt (ein Permalink oder eine eigene Wahl im Formular geht weiter vor).">
@@ -131,6 +146,24 @@ export function Einstellungen() {
       </section>
 
       <section className="lc-card p-5 sm:p-6 space-y-5">
+        <Zeile titel="Schriftgrösse — ganze Seite"
+          hinweis="Vergrössert Schrift und Abstände der ganzen Anwendung (der Gesetzestext hat im Leser-Menü «Ansicht» zusätzlich einen eigenen Regler). Die Wahl gilt sofort und bleibt in diesem Browser gespeichert.">
+          {/* role="group" + sichtbares Scope-Wort bleiben am Aufrufer (Baustein
+              trägt nur das Knopf-Paar) — derselbe Umschluss wie
+              `v3/LeserAnsichtV3.tsx` («Nur Gesetzestext»), hier mit dem
+              Gegenstück «Ganze Seite» (C4, Entscheid David 5B 29.8.2026). */}
+          <div role="group" aria-label="Schriftgrösse der ganzen Seite" className="inline-flex items-center gap-1.5">
+            <span aria-hidden className="select-none whitespace-nowrap text-micro text-ink-500">Ganze Seite</span>
+            <SchriftgroessenRegler
+              schrift={schrift}
+              kleinerLabel="Ganze Seite verkleinern"
+              kleinerTitle="Verkleinert die ganze Anwendung — der Gesetzestext hat im Menü «Ansicht» einen eigenen Regler"
+              groesserLabel="Ganze Seite vergrössern"
+              groesserTitle="Vergrössert die ganze Anwendung — der Gesetzestext hat im Menü «Ansicht» einen eigenen Regler"
+            />
+          </div>
+        </Zeile>
+
         <Zeile titel="Farbschema">
           <Segment label="Farbschema" wert={themaWahl} onWahl={themaSetzen}
             optionen={[

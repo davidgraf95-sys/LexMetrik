@@ -129,7 +129,10 @@ export function ErbteilungForm() {
 
   const fehler: string[] = [];
   if (!todesdatum) fehler.push('Bitte das Todesdatum angeben (Recht-Schalter, Art. 15/16 SchlT ZGB).');
-  if (!Number.isInteger(kinderLebend) || kinderLebend < 0) fehler.push('Anzahl lebender Kinder: ganze Zahl ≥ 0.');
+  // LM-Fix Finder-6 A1 (5.9.2026): Obergrenze in der Fehlerpruefung nachgezogen — bisher
+  // nur >=0 geprueft, dieselbe Grenze wie die Permalink-Validierung (ET_LINK_SPEC.kinderLebend,
+  // <= 30) fehlte hier. Ohne sie rendert die Tabelle ungeprueft z. B. 5000 Zeilen (§15).
+  if (!Number.isInteger(kinderLebend) || kinderLebend < 0 || kinderLebend > 30) fehler.push('Anzahl lebender Kinder: ganze Zahl zwischen 0 und 30 (realistische Obergrenze).');
   staemme.forEach((s, i) => { if (!Number.isInteger(s.enkel) || s.enkel < 0) fehler.push(`Stamm ${i + 1}: Anzahl Nachkommen als ganze Zahl ≥ 0.`); });
 
   let ergebnis: ErbteilungErgebnis | null = null;
@@ -213,7 +216,7 @@ export function ErbteilungForm() {
                 die erwartete Eingabelänge). Die schmalen Felder der INLINE-Reihen
                 (Zahl + Einheit nebeneinander, `w-24`) bleiben, dort trägt die Breite
                 die Zusammengehörigkeit. */}
-            <input type="number" inputMode="decimal" min={0} step={1} value={kinderLebend} onChange={(e) => setKinderLebend(Number(e.target.value))} className={inputCls} />
+            <input type="number" inputMode="decimal" min={0} max={30} step={1} value={kinderLebend} onChange={(e) => setKinderLebend(Number(e.target.value))} className={inputCls} aria-invalid={!Number.isInteger(kinderLebend) || kinderLebend < 0 || kinderLebend > 30} />
           </Field>
           <Field label="Vorverstorbene Kinder mit Nachkommen (Stämme)" hint="Deren Nachkommen treten nach Stämmen ein (Art. 457 Abs. 3)">
             {/* Der Wrapper-<div> bleibt: `Field` verknüpft nur ein natives
@@ -267,9 +270,9 @@ export function ErbteilungForm() {
       )}
 
       {/* Güterrechtliche Herleitung (optional) – übersteuert das Direktfeld oben */}
-      <div className="border border-line rounded-lg">
+      <div className="border border-line ">
         <button type="button" onClick={() => setGueterrechtAn(!gueterrechtAn)}
-          className={`w-full flex items-center justify-between px-4 py-3 bg-surface hover:bg-brass-100 text-left rounded-t-lg ${gueterrechtAn ? '' : 'rounded-b-lg'}`}>
+          className={`w-full flex items-center justify-between px-4 py-3 bg-surface hover:bg-brass-100 text-left ${gueterrechtAn ? '' : ''}`}>
           <span className="text-body-s font-medium text-ink-700">Güterrechtliche Vorstufe – Nachlass herleiten (optional)</span>
           <span className="text-ink-500">{gueterrechtAn ? '▲' : '▼'}</span>
         </button>
@@ -372,7 +375,7 @@ export function ErbteilungForm() {
               Ansicht aus reinen Divs (R4 Ziff. 3, `data-ansicht`). */}
           <div data-ansicht="quoten-balken" className="lc-card p-5">
             <p className="lc-overline mb-3">Gebundene vs. verfügbare Quote</p>
-            <div className="flex h-7 rounded-md overflow-hidden border border-line">
+            <div className="flex h-7 overflow-hidden border border-line">
               {ergebnis.erben.filter((e) => !istNull(e.pflichtteil)).map((e) => {
                 const breite = zahl(e.pflichtteil) * (e.anzahl ?? 1) * 100;
                 return (

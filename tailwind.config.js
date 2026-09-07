@@ -51,7 +51,15 @@ export default {
         // Linien-Sprache — vertikaler Gliederungs-Guide, Artikel-Trenner (fein),
         // Struktur-Trenner (oberste Sektionen, eine Spur kräftiger). Nur im
         // Normtext-Reader verwendet; Chrome-Borders bleiben `border-line`.
-        rule: { artikel: 'var(--rule-artikel)', struktur: 'var(--rule-struktur)' },
+        // W2·24-R1 ergänzt DEFAULT/soft: die zwei SOLIDEN Trennlinien des neuen
+        // Bildes (1 px weich im Satzspiegel, 2 px hart unter der Titelblatt-Zeile)
+        // — dieselbe `rule`-Familie, weil es dieselbe Sache ist: Trennung durch
+        // Linie statt durch Fläche. Ein zweiter `rule:`-Schlüssel hätte diesen
+        // hier still überschrieben (JS-Objektliteral, letzter gewinnt).
+        rule: {
+          DEFAULT: 'var(--rule)', soft: 'var(--rule-soft)',
+          artikel: 'var(--rule-artikel)', struktur: 'var(--rule-struktur)',
+        },
         // raised/sunken ergänzt 7.6.2026: bg-paper-raised wurde in
         // FristenKalender/wizard bereits verwendet, war aber nie generiert
         // (stiller No-op — die Kreise/Flächen blieben transparent).
@@ -70,6 +78,20 @@ export default {
           400: 'var(--brass-400)', 500: 'var(--brass-500)', 600: 'var(--brass-600)',
           700: 'var(--brass-700)', 800: 'var(--brass-800)',
         },
+        // C2 (5.9.2026): Text AUF einer Gold-/Messing-Füllung braucht eine
+        // Tinte, die NIE mit dem Thema flippt (D-1.8, `--auf-gold` speist sich
+        // aus `--ink-fixed-dark`) — `text-ink-900` kippt im Dunkelmodus auf
+        // hell und verfehlt dort die 4.5:1 (Beleg: VerzugszinsTimeline.tsx,
+        // dort bislang nur per Inline-Style erreichbar; hier als Utility).
+        // C2-Gegenstück: Text auf --ok-solid (flippt bewusst nicht) braucht die
+        // STETS helle Tinte (--auf-sage, aus --ink-fixed-light gespeist).
+        auf: { gold: 'var(--auf-gold)', sage: 'var(--auf-sage)' },
+        // ── REGISTERFARBEN (W2·24-DESIGN-IDENTITAET R1, 6.9.2026) ───────────
+        // Die vier Register der Sammlung — Gesetze · Rechtsprechung ·
+        // Materialien · Werkzeuge. Werte in src/index.css (:root + html.dark).
+        // Hier registriert, damit sie ab R2 als Utility greifbar sind UND das
+        // Farbwelt-Tor sie als Pflichtpaare prüfen kann (sonst stiller No-op, F7).
+        reg: { g: 'var(--reg-g)', r: 'var(--reg-r)', m: 'var(--reg-m)', w: 'var(--reg-w)' },
         // ── Rollen-Alias-Schicht (D-2, Radix-Muster) ──────────────────────
         // Wertidentische Rollen über den Basis-Skalen (Werte in src/index.css).
         // NEUE Komponenten greifen die Rolle (text-accent-text, bg-accent-bg,
@@ -106,7 +128,9 @@ export default {
       // fremde Zeilenhöhen; body-s/body-l sind die Pendants mit System-lh.
       fontSize: {
         micro: ['0.6875rem', { lineHeight: '1.2' }],
-        overline: ['0.6875rem', { lineHeight: '1.4', letterSpacing: '0.12em' }],
+        // W2·24-R1: die Overline ist entversalt — 12 px, Tracking normal
+        // (Rezept .lc-overline in src/index.css; hier der Utility-Zwilling).
+        overline: ['0.75rem', { lineHeight: '1.4', letterSpacing: '0em' }],
         xs: ['0.75rem', { lineHeight: '1.4' }],
         'body-s': ['0.875rem', { lineHeight: '1.5' }],
         'body-l': ['1.125rem', { lineHeight: '1.6' }],
@@ -134,7 +158,8 @@ export default {
         // zu vergrössern hätte David am Bogen nicht gesehen (Ä7 wird über die
         // Randtitel-Seite gelöst, s. `helpers.tsx` margStufeStil).
         //
-        //  · `leser-text` 17 px / lh 1.55 — Normtext-Fliesstext. Ersetzt das
+        //  · `leser-text` 18 px / lh 1.62 (bis R6c 17 px / 1.55) — Normtext-
+        //    Fliesstext. Ersetzt das
         //    Paar `text-body-l leading-[1.65]` (18 px / 1.65) am Artikel-Körper:
         //    der rohe `leading-[…]`-Override fällt damit weg, die Zeilenhöhe
         //    gehört zur Stufe (Grundlage Kap. 8 Nr. 4 «kein fixer Leading-Wert
@@ -156,7 +181,30 @@ export default {
         //    Fliesstext) für Blocktext verlangt — knapp darunter, weil der
         //    Apparat Referenz-, kein Lesetext ist. Die GRÖSSE bleibt
         //    unangetastet (0.6875 rem, Entscheid David 17.8.2026 am Bildbogen).
-        'leser-text': ['1.0625rem', { lineHeight: '1.55' }],
+        // W2·24-R4 · ZEILENHÖHE 1.55 → 1.62 (deklarierte Typo-Änderung, kein
+        // Refactoring). Das freigegebene Referenzbild (`abnahme/design-
+        // identitaet/vorschlag-freigegeben.html`, `.norm { font-size:17px;
+        // line-height:1.62 }`) setzt den Normtext im Satzspiegel auf 1.62; die
+        // Grösse (17 px) bleibt unangetastet. Die Zahl muss HIER stehen und
+        // kann nirgends sonst gesetzt werden: `src/tests/leser-typo-tokens.
+        // test.ts` verbietet jedes `leading-…` am Fliesstext-Markup, weil die
+        // Zeilenhöhe zur Stufe gehört (Grundlage Kap. 8 Nr. 4) — die Tabelle
+        // dort ist mit derselben Änderung nachgezogen.
+        // WCAG 1.4.8 unverändert eingehalten: 1.62 ≥ 1.5 (Zusage von
+        // `e2e/leser-lesemass.e2e.ts`), das Zeilenmass rechnet nicht mit der
+        // Zeilenhöhe und bleibt Zeichen für Zeichen, was es war.
+        // W2·24-R6c · GRÖSSE 17 → 18 px (deklarierte Typo-Änderung, kein
+        // Refactoring). D20 (c) verlangt «Lesetext 18 px»; R6b konnte die Zahl
+        // nicht setzen, weil `src/index.css` dort TABU war und ein Alleingang an
+        // der Basis den Schriftregler zerbrochen hätte (die Stufe «mittel» wäre
+        // von 108 % auf 102 % kollabiert — Herleitung in `abnahme/design-
+        // identitaet/R6-NACHZUG.md` §4). R6c setzt die Basis UND die drei
+        // Reglerstufen in EINEM Zug: `index.css` (Block LESER-SCHRIFTSKALA) und
+        // `pages/gesetz-leser/leserSchrift.ts` (`SCHRIFT_REM`) tragen dieselben
+        // Faktoren 1.08 / 1.18 / 1.30 über der neuen Basis, die Anzeigewerte
+        // bleiben 100 · 108 · 118 · 130 %. `src/tests/leser-schriftskala.test.ts`
+        // hält die drei Orte gegeneinander.
+        'leser-text': ['1.125rem', { lineHeight: '1.62' }],
         'leser-rand': ['0.8125rem', { lineHeight: '1.35' }],
         'leser-fn': ['0.6875rem', { lineHeight: '1.45' }],
       },
@@ -177,6 +225,18 @@ export default {
       transitionDuration: { fast: 'var(--dur-fast)', base: 'var(--dur-base)', slow: 'var(--dur-slow)', stage: 'var(--dur-stage)' },
       transitionTimingFunction: { DEFAULT: 'var(--ease)' },
       boxShadow: { sm: 'var(--shadow-sm)', md: 'var(--shadow-md)', lg: 'var(--shadow-lg)' },
+      // Schichtungs-Skala (C3, 5.9.2026) — Rollen statt roher Zahlen, Werte
+      // unverändert aus dem Bestand migriert (Herleitung + Reihenfolge in
+      // src/index.css bei --z-base). `extend` lässt Tailwinds Default-Skala
+      // (z-0/10/20/…) technisch weiter zu — Prüfung 5 in
+      // check-design-tokens.ts verbietet ihre NEUE Verwendung im Quellbaum.
+      zIndex: {
+        base: 'var(--z-base)', sticky: 'var(--z-sticky)',
+        'entscheid-sticky': 'var(--z-entscheid-sticky)',
+        'reader-scrim': 'var(--z-reader-scrim)', 'reader-kopf': 'var(--z-reader-kopf)',
+        'inhalt-kopf': 'var(--z-inhalt-kopf)', leiste: 'var(--z-leiste)',
+        dropdown: 'var(--z-dropdown)', overlay: 'var(--z-overlay)', modal: 'var(--z-modal)',
+      },
       // `reading` (40rem ≈ 66–71 ch) = die knappe Standard-Lesespalte site-weit
       // (Verdikte, Leden). `normtext` (42rem = 672px) = die etwas grosszügigere
       // Lesespalte NUR des Gesetzes-Readers (E6/A37, David 16.7.2026: «gib dem
@@ -342,7 +402,16 @@ export default {
       // Höhen-Reservierungen (`titel-2z`, `beiwerk`, `inhalt-region`), und
       // `src/tests/tap-ziel-token.test.ts` hält index.css frei von rohen
       // min-height-Zahlen (F9: dort gehört nur var(--tap-ziel) hin).
-      minHeight: { 'modul-news': '12.5rem', 'modul-zuletzt': '4.5rem', 'titel-2z': '2.35em', beiwerk: '1.5rem', 'inhalt-region': 'calc(100svh - 8rem)', 'kopf-stand': '5.4375rem', 'kopf-stand-sm': '4.375rem', 'kopf-stand-md': '3.375rem' },
+      // W2·24-D35-F1 (7.9.2026) · `bez-skelett` reserviert den BODEN der
+      // wartenden Rubrik in der Funktionszeile am Artikelende. Sie klappt auf
+      // KLICK auf (input-behaftet, CLS-exkludiert), aber der Entscheid-Shard
+      // trifft danach ein — und darf den Artikel darunter nicht noch einmal
+      // schieben. Der Wert ist ein BODEN und bewusst KNAPPER als der echte
+      // Inhalt: ein Entscheid-Eintrag misst Gruppenkopf + Chip + Regeste, die
+      // Reservierung 48 px. Ein Skelett, das MEHR reserviert, als der Inhalt
+      // braucht, verlegt den Sprung nur (der Block schrumpfte beim Laden) —
+      // dagegen misst `e2e/leser-d35-f1-funktionszeile` (e).
+      minHeight: { 'modul-news': '12.5rem', 'modul-zuletzt': '4.5rem', 'titel-2z': '2.35em', beiwerk: '1.5rem', 'bez-skelett': '3rem', 'inhalt-region': 'calc(100svh - 8rem)', 'kopf-stand': '5.4375rem', 'kopf-stand-sm': '4.375rem', 'kopf-stand-md': '3.375rem' },
       // E4-Korrektur (David 25.7.2026): der frühere `toc-kontext`-33vh-Slot-
       // Token ist ERSATZLOS entfernt — er klemmte das Gliederungs-Sichtfenster
       // ein («aktuell schneidet es gliederung ab»). Das Kontext-Panel steht

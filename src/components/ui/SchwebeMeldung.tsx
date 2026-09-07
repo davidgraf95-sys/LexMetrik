@@ -62,7 +62,7 @@ export function SchwebeMeldung({
     : ausrichtung === 'mitte' ? 'justify-center' : 'justify-end';
   return (
     <div aria-live="polite" role={rolle} {...(daten ? { [daten]: true } : {})}
-      className={`pointer-events-none fixed inset-x-0 z-40 flex px-4 ${justify}${kante === 'unten' ? ' bottom-4' : ''}`}
+      className={`pointer-events-none fixed inset-x-0 z-overlay flex px-4 ${justify}${kante === 'unten' ? ' bottom-4' : ''}`}
       style={kante === 'oben' ? { top: 'calc(var(--nt-stick, 6.25rem) + 0.5rem)' } : undefined}>
       <div className={`pointer-events-auto flex items-center rounded-full bg-paper-raised shadow-lg${inhaltKlassen ? ` ${inhaltKlassen}` : ''}`}>
         {children}

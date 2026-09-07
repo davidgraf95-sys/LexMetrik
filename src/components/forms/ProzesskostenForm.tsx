@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { BeruehrtRahmen, ErgebnisPlatzhalter, Field, inputCls } from '../vorlagen/ui';
+import { BeruehrtRahmen, Checkbox, ErgebnisPlatzhalter, Field, inputCls } from '../vorlagen/ui';
 import { zahlBeliebig as zahl } from './eingabe';
 import { NormText } from '../NormText';
 import { KantonArtikelTrigger } from '../KantonQuelleLink';
@@ -263,10 +263,7 @@ export function ProzesskostenForm({ minimal = false }: { minimal?: boolean } = {
 
           {/* MwSt auf die Parteientschädigung (Art. 95 III lit. b ZPO i.V.m. MWSTG) — fallabhängig. */}
           {!ergebnis.parteientschaedigung.kostenlos && (
-            <label className="mt-3 flex items-start gap-2 text-body-s text-ink-700">
-              <input type="checkbox" checked={mwst} onChange={(e) => setMwst(e.target.checked)} className="mt-0.5" />
-              <span>Berechtigte Partei nicht vorsteuerabzugsberechtigt (z.&nbsp;B. Privatperson) — MwSt auf die Parteientschädigung hinzurechnen</span>
-            </label>
+            <Checkbox checked={mwst} onChange={setMwst} className="mt-3" label="Berechtigte Partei nicht vorsteuerabzugsberechtigt (z. B. Privatperson) — MwSt auf die Parteientschädigung hinzurechnen" />
           )}
           {mwstAufschlag && (
             <div className="mt-2 lc-tile lc-akzent-brass">
@@ -286,7 +283,7 @@ export function ProzesskostenForm({ minimal = false }: { minimal?: boolean } = {
           </ul>
 
           {/* Weitere, nicht bezifferbare Kostenposten (Art. 95 II c–e / III a; UR Art. 117 ff.). */}
-          <details className="mt-3 rounded-xl border border-line bg-surface p-3">
+          <details className="mt-3 border border-line bg-surface p-3">
             <summary className="cursor-pointer text-body-s text-ink-700 hover:text-ink-900">Weitere Kostenposten (nicht beziffert)</summary>
             <ul className="mt-2 space-y-1 text-xs text-ink-500 list-disc pl-5">
               {WEITERE_KOSTENPOSTEN.map((h, i) => <li key={i}><NormText text={h} /></li>)}
@@ -330,7 +327,7 @@ export function ProzesskostenForm({ minimal = false }: { minimal?: boolean } = {
           </div>
 
           {risiko && (
-            <div className="mt-4 rounded-xl border border-line bg-surface p-4">
+            <div className="mt-4 border border-line bg-surface p-4">
               <div className="flex items-center gap-3 flex-wrap mb-3">
                 <label htmlFor="pk-ausgang" className="text-body-s text-ink-700">Verfahrensausgang</label>
                 <select id="pk-ausgang" value={ausgang} onChange={(e) => setAusgang(e.target.value as Verfahrensausgang)} className={inputCls + ' sm:max-w-[20rem]'} aria-label="Verfahrensausgang">
@@ -345,10 +342,7 @@ export function ProzesskostenForm({ minimal = false }: { minimal?: boolean } = {
                 </div>
               )}
               <p className="mt-2 text-xs text-ink-500"><NormText text={ausgangInfo.hinweis} /> <span className="text-ink-500">({ausgangInfo.norm})</span></p>
-              <label className="mt-2 flex items-start gap-2 text-body-s text-ink-700">
-                <input type="checkbox" checked={ur} onChange={(e) => setUr(e.target.checked)} className="mt-0.5" />
-                <span>Unentgeltliche Rechtspflege bewilligt (Art. 117 ff. ZPO) — befreit von Vorschuss/Gerichtskosten, aber nicht von der gegnerischen Parteientschädigung</span>
-              </label>
+              <Checkbox checked={ur} onChange={setUr} className="mt-2" label="Unentgeltliche Rechtspflege bewilligt (Art. 117 ff. ZPO) — befreit von Vorschuss/Gerichtskosten, aber nicht von der gegnerischen Parteientschädigung" />
               {!kostenrisiko ? (
                 <p className="mt-3 text-body-s text-ink-600">Ermessensverteilung — kein bezifferter Wert; massgebend ist die richterliche Würdigung.</p>
               ) : kostenrisiko.berechenbar ? (
@@ -413,7 +407,7 @@ export function ProzesskostenForm({ minimal = false }: { minimal?: boolean } = {
           )}
 
           {zug && instanzenzug && (
-            <div className="mt-4 rounded-xl border border-line bg-surface p-4">
+            <div className="mt-4 border border-line bg-surface p-4">
               <p className="lc-overline">Gesamtkostenrisiko über den Instanzenzug</p>
               <div className="mt-3 overflow-x-auto">
                 <table className="w-full min-w-[30rem] text-body-s border-collapse">
@@ -450,7 +444,7 @@ export function ProzesskostenForm({ minimal = false }: { minimal?: boolean } = {
           )}
 
           {kaution && sicherheit && (
-            <div className="mt-4 rounded-xl border border-line bg-surface p-4">
+            <div className="mt-4 border border-line bg-surface p-4">
               <p className="lc-overline"><NormText text={`Sicherheit für die Parteientschädigung (Art. 99 ZPO)`} /></p>
               {sicherheit.moeglich ? (
                 <p className="mt-2 num text-body-l font-semibold text-ink-900">{sicherheit.spanne ? spanneText(sicherheit.spanne) : 'nicht beziffert'}</p>

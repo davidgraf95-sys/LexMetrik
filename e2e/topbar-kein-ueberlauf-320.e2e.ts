@@ -86,8 +86,17 @@ test.describe('C2 — die Topbar bleibt @320 im Fenster', () => {
 
       // Vorbedingung (§6.7): der Streifen ist WARM — sonst wäre der Fall grün,
       // weil zwei der vier Werkzeug-Knöpfe schlicht fehlen.
-      await expect(page.locator('header.sticky button[aria-label="Alle geöffneten Reiter"]'))
-        .toHaveCount(1, { timeout: 20_000 })
+      //
+      // ── NACHGEZOGEN 6.9.2026 (R2-Nachzug) · DIE SONDE ZEIGTE INS LEERE ────
+      // Bis hierher suchte sie `button[aria-label="Alle geöffneten Reiter"]` im
+      // Streifen — den ☰-Trigger der `ReiterUebersicht`. Den hat W2·24 R2
+      // gelöscht (die offenen Reiter stehen sichtbar in der Arbeitsleiste);
+      // GEMESSEN gegen das R2-`dist/`: alle drei Fälle rot, «resolved to 0
+      // elements», also seit dem R2-Bau ein totes Tor. Die Vorbedingung ist
+      // dieselbe geblieben — «es ist ein Reiter offen» —, sie wird nur dort
+      // gemessen, wo die Reiter heute stehen.
+      await expect(page.locator('nav[aria-label="Offene Reiter"] [data-reiter-aktiv]').first())
+        .toBeVisible({ timeout: 20_000 })
 
       const { ueberlauf, quellen } = await streifenKante(page)
       expect(ueberlauf, `Streifen-Überlauf @320 auf ${pfad}: ${ueberlauf} px — ${quellen.join(' | ') || 'keine Quelle'}`)
@@ -104,12 +113,24 @@ test.describe('C2 — die Topbar bleibt @320 im Fenster', () => {
   // `markeZeigen ? 'flex' : 'hidden max-[480px]:flex'` wieder auf ein
   // `{markeZeigen && …}` zurücknehmen ⇒ @320 findet der Fall 0 sichtbare Marken.
   // Gemessen 29.8.2026 (Schublade offen): sichtbar 1 @320, 1 @375, 0 @500.
-  test('@320 trägt die Schublade die Marke, die der Streifen weglässt', async ({ page }) => {
+  //
+  // ── F7 (Prüfbefund 6.9.2026) · DAS SIEGEL STEHT JETZT AUCH IM STREIFEN ────
+  // Der Kopf ist seit R2 das TITELBLATT der Sammlung; @390 trug er kein Zeichen
+  // der Herkunft mehr. Zurück kommt das §-Siegel (28 px), NICHT die Wortmarke —
+  // an deren ~130 px war C2 gescheitert. Die Zusage dieses Falls ändert sich
+  // damit: geprüft wird nicht mehr «der Streifen hat KEINE Marke», sondern
+  // «Siegel ja, Wortmarke nein — und die Schublade trägt beides».
+  test('@320 trägt der Streifen das Siegel, die Schublade die volle Marke', async ({ page }) => {
     await page.setViewportSize({ width: 320, height: 800 })
     await page.goto('/gesetze')
     await expect(page.locator('header.sticky')).toBeVisible({ timeout: 20_000 })
-    // Vorbedingung: der Streifen hat sie hier wirklich NICHT.
-    await expect(page.locator('header.sticky a[aria-label="LexMetrik – Startseite"]')).toBeHidden()
+    // Vorbedingung: das Siegel steht im Streifen, die Wortmarke nicht.
+    await expect(page.locator('header.sticky a[aria-label="LexMetrik – Startseite"]')).toBeVisible()
+    await expect(page.locator('header.sticky a[aria-label="LexMetrik – Startseite"] svg')).toBeVisible()
+    const wortmarkeBreit = await page.locator('header.sticky a[aria-label="LexMetrik – Startseite"]')
+      .evaluate((a) => a.getBoundingClientRect().width)
+    expect(wortmarkeBreit, `Marke im Streifen @320: ${wortmarkeBreit} px — mehr als das Siegel`)
+      .toBeLessThan(60)
 
     await page.locator('header.sticky button[aria-label="Navigation öffnen"]').click()
     const schublade = page.locator('#seitenleisten-schublade')

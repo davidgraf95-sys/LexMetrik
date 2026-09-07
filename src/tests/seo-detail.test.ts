@@ -71,6 +71,41 @@ describe('metaFuerErlass()', () => {
     expect(m.beschreibung).toContain('Stand unbekannt,');
     expect(m.beschreibung).not.toContain('Stand ,');
   });
+  it('hängt das Kürzel nicht doppelt an, wenn der Titel es schon enthält (Fehlerbuch W2·18, EMRK)', () => {
+    const emrk = erlasse.find((e) => e.key === 'EMRK')!;
+    const m = metaFuerErlass(emrk);
+    expect(m.titel).not.toContain('(EMRK (EMRK)');
+    expect(m.titel).toContain('(EMRK)');
+    expect((m.titel.match(/EMRK/g) ?? []).length).toBe(1);
+  });
+
+  // Auflage Gegenprüfung PR #721 (5.9.2026, nicht bestanden): die vorige
+  // `titel.includes(kuerzel)`-Bedingung matchte das Kürzel auch als
+  // Substring innerhalb eines längeren Titel-Worts — Folge: die
+  // Kürzel-Klammer fehlte im <title> komplett, obwohl das Kürzel dort gar
+  // kein eigenständiges Wort ist.
+  it('hängt das Kürzel an, wenn es im Titel nur als Substring (kein Token) vorkommt — ZEMIS-V', () => {
+    const zemis = erlasse.find((e) => e.key === 'ZEMIS_V')!;
+    expect(zemis.kuerzel).toBe('ZEMIS-V');
+    expect(zemis.titel).toContain('ZEMIS-Verordnung');
+    const m = metaFuerErlass(zemis);
+    expect(m.titel).toContain('(ZEMIS-V');
+  });
+
+  it('hängt das Kürzel an, wenn es im Titel nur als Substring (kein Token) vorkommt — Staatenlose', () => {
+    const staatenlose = erlasse.find((e) => e.key === 'STAATENLOSE')!;
+    expect(staatenlose.kuerzel).toBe('Staatenlose');
+    expect(staatenlose.titel).toContain('der Staatenlosen');
+    const m = metaFuerErlass(staatenlose);
+    expect(m.titel).toContain('(Staatenlose');
+  });
+
+  it('erkennt das Kürzel als Token am Titel-Ende (kein Substring-Fehlschluss)', () => {
+    const m = metaFuerErlass({ ...or, titel: 'Bundesgesetz betreffend die Ergänzung des OR', sr: '' });
+    // Kürzel ist am Titel-Ende bereits ein eigenständiges Wort → nicht erneut anhängen.
+    expect(m.titel).not.toContain('(OR)');
+    expect((m.titel.match(/OR/g) ?? []).length).toBe(1);
+  });
 });
 
 describe('jsonLdFuerErlass()', () => {

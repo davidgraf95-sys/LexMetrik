@@ -26,7 +26,18 @@ const LIES = (p: string) => readFileSync(p, 'utf8');
 
 const HOOKS = 'src/pages/gesetz-leser/inhalt-hooks.tsx';
 const ANKER = 'src/pages/gesetz-leser/scrollAnker.ts';
-const ARTIKEL = 'src/pages/gesetz-leser/parts/ArtikelLeser.tsx';
+// ── DEKLARIERTE ANPASSUNG (W2·24-D35-F1, 7.9.2026 — §6.3, kein Refactoring) ──
+// Die Teilen-Aktion ist mit den Knöpfen «Zitat · Link · Amtliche Fassung ↗» aus
+// der Artikel-KOPFZEILE in die Funktionszeile am Artikelende gezogen und wohnt
+// seither in `parts/ArtikelAktionen.tsx` (Entscheid David, Variante A). Der
+// CODE ist wortgleich mitgewandert — nur `e.artikel` heisst dort `artikel`, weil
+// die neue Datei den Artikel-Token als Prop bekommt statt den ganzen Snapshot.
+// Die Sonde zeigt darum auf den neuen Fundort und auf denselben Wortlaut; ihre
+// ZUSAGEN (eine Weiche, ein Adress-Schreiber, EINE Kodierung über `urlMitHash`)
+// sind unverändert. Zusätzlich bewacht: die alte Stelle schreibt NICHT mehr —
+// sonst hätte der Umzug einen zweiten Schreiber hinterlassen (§5).
+const ARTIKEL = 'src/pages/gesetz-leser/parts/ArtikelAktionen.tsx';
+const ARTIKEL_ALT = 'src/pages/gesetz-leser/parts/ArtikelLeser.tsx';
 // H5 (21.8.2026): `inhalt.tsx` (Ist-Hülle, Orchestrierung) gelöscht — der
 // Anker-Klick-Schreiber lebt seither im V3-Adapter.
 const SPRUNG_ADAPTER = 'src/pages/gesetz-leser/v3/leserV3Modell.ts';
@@ -153,9 +164,12 @@ describe('Die zwei erlaubten Adress-Schreiber (LM-202)', () => {
   it('(b) Teilen: der «Link»-Knopf zieht die Adresse mit — per replaceState', () => {
     const quelle = LIES(ARTIKEL);
     expect(traegt(quelle, /was === 'link' && !istSekundaer/), 'Teilen-Weiche fehlt').toBe(true);
-    expect(traegt(quelle, /window\.history\.replaceState\(window\.history\.state, '', urlMitHash\(window\.location\.href, `art-\$\{e\.artikel\}`\)\)/),
+    expect(traegt(quelle, /window\.history\.replaceState\(window\.history\.state, '', urlMitHash\(window\.location\.href, `art-\$\{artikel\}`\)\)/),
       'Teilen schreibt die Adresse nicht').toBe(true);
     expect(traegt(quelle, /window\.history\.pushState\(/), 'pushState in der Teilen-Aktion').toBe(false);
+    // D35-F1: der alte Ort schreibt nicht mehr mit (kein zweiter Schreiber, §5).
+    expect(traegt(LIES(ARTIKEL_ALT), /window\.history\.(?:replaceState|pushState)\(/),
+      'die Artikel-Kopfzeile schreibt die Adresse immer noch').toBe(false);
   });
 
   it('(b1) die Teilen-Grenze heisst istSekundaer, nicht imPane — Split-View-Falle', () => {
@@ -180,8 +194,12 @@ describe('Die zwei erlaubten Adress-Schreiber (LM-202)', () => {
     // (`#art-${e.artikel}`), die Adresse lief über `urlMitHash`. Bei 54
     // Artikel-Token mit Leerzeichen/Halbgeviert liefen beide auseinander.
     const quelle = LIES(ARTIKEL);
-    expect(traegt(quelle, /urlMitHash\(`\$\{window\.location\.origin\}\$\{basisPfad\}`, `art-\$\{e\.artikel\}`\)/),
+    expect(traegt(quelle, /urlMitHash\(`\$\{ursprung\}\$\{basisPfad\}`, `art-\$\{artikel\}`\)/),
       'Permalink wird nicht über urlMitHash kodiert').toBe(true);
+    // D35-F1: `ursprung` IST `window.location.origin` — der SSR-Zweig ist reine
+    // Absicherung und darf die Kodierung nicht auf einen zweiten Weg schicken.
+    expect(traegt(quelle, /const ursprung = typeof window !== 'undefined' \? window\.location\.origin :/),
+      'der Ursprung kommt nicht mehr aus window.location.origin').toBe(true);
   });
 
   it('die Kodierung deckt die real vorkommenden Sonderzeichen-Token', () => {

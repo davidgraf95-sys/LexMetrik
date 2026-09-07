@@ -194,10 +194,12 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl, minima
               <option value="klage_gegen_bund">Klage gegen den Bund (lit. f — nur über 30'000)</option>
             </select>
             {f.ipUnterfall === 'uwg' && (
-              <label className="flex items-center gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700 mt-2">
-                <input type="checkbox" checked={f.bundKlagerecht} onChange={(e) => set('bundKlagerecht', e.target.checked)} />
-                Der Bund übt sein Klagerecht aus (dann einzige Instanz unabhängig vom Streitwert)
-              </label>
+              <Checkbox
+                checked={f.bundKlagerecht}
+                onChange={(v) => set('bundKlagerecht', v)}
+                label="Der Bund übt sein Klagerecht aus (dann einzige Instanz unabhängig vom Streitwert)"
+                className="mt-2"
+              />
             )}
           </Field>
         )}
@@ -287,11 +289,11 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl, minima
               <div className="space-y-1.5">
                 <BetragsFeld value={f.streitwertRoh} onChange={(v) => set('streitwertRoh', v)} className={inputCls}
                   placeholder="z. B. 12'000" aria-label="Streitwert in Franken" />
-                <label className="flex items-center gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-                  <input type="checkbox" checked={!f.vermoegensrechtlich}
-                    onChange={(e) => set('vermoegensrechtlich', !e.target.checked)} />
-                  nicht vermögensrechtliche Streitigkeit
-                </label>
+                <Checkbox
+                  checked={!f.vermoegensrechtlich}
+                  onChange={(v) => set('vermoegensrechtlich', !v)}
+                  label="nicht vermögensrechtliche Streitigkeit"
+                />
               </div>
             </Field>
           </div>

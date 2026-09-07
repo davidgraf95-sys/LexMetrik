@@ -11,6 +11,11 @@ import {
   type MaterialFilterWerte,
 } from '../lib/materialien/browse';
 import type { BrowseMaterial, BehoerdeId, DoktypId } from '../lib/materialien/typen';
+import { STARTSEITE_ZAEHLER } from '../data/startseiteZaehler.generated';
+
+/** Zahl der Ausgabe-Zeile in Schweizer Schreibweise (1'338). */
+const nf = (n: number) => n.toLocaleString('de-CH');
+
 
 // ─── Rubrik «Amtliche Ressourcen / Materialien» (Auftrag David, Auftrag 5) ──
 //
@@ -56,15 +61,20 @@ export function Materialien() {
   const gruppen = useMemo(() => gruppiereNachBehoerde(gefiltert), [gefiltert]);
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-6">
+      {/* D22 Ziff. 4 · DIE ABSTÄNDE DER ÜBERSICHT SIND GEDECKELT.
+          Gemessen (Playwright, Preview, 6.9.2026, @1440/@1160/@1024/@390):
+          die grösste senkrechte Leerfläche zwischen zwei Inhaltsblöcken lag
+          auf den fünf Übersichten bei 64/49/57/74/56 px. Das Budget ist
+          48 px — der Seitenrhythmus geht darum von `space-y-8` (32) auf
+          `space-y-6` (24). Nur Abstand, kein Inhalt, keine Reihenfolge. */}
+      {/* D11/D22 (David 6.9.2026) — Kopf-Regel für ALLE fünf Übersichten,
+          Herleitung in `components/layout/SeitenKopf.tsx`: H1 = Bereichsname
+          wie im Reiter, DARUNTER die Ausgabe-Zeile aus dem Register — keine
+          Overline, keine halbe Haarlinie, kein Erklär-Absatz. */}
       <SeitenKopf
-        overline="Amtliche Ressourcen"
         titel="Materialien"
-        // B-6-Nachzug (R2-A, 31.8.2026): derselbe Absatz sagte erst «amtliche
-        // Fassung» (Link) und dann «amtliche Quelle» (Vorbehalt). Der Satz
-        // steht hier im Nachsatz nach Semikolon, also klein — darum wird er aus
-        // dem NOMEN gebaut (§5: eine Wahrheit ist das Nomen, nicht der Satz).
-        intro={`Praxisleitende Publikationen der Bundesbehörden — Kreisschreiben, Wegleitungen, Leitfäden, Rundschreiben und Praxismitteilungen. Das ist faktisches «Soft-Law», kein Gesetzesrang: jeder Eintrag führt mit Live-Link zur amtlichen Fassung. Diese Rubrik führt keine eigenen Volltexte; massgeblich ist stets ${AMTLICHE_FASSUNG_NOMEN}.`}
+        ausgabe={`${nf(STARTSEITE_ZAEHLER.materialien)} Publikationen der Bundesbehörden, bibliografisch mit Live-Link`}
       />
 
       {fehler && (
@@ -82,64 +92,60 @@ export function Materialien() {
 
       {materialien && (
         <>
-          <div className="flex flex-wrap items-center gap-3" role="group" aria-label="Materialien filtern">
-            <label className="flex flex-wrap items-center gap-2 text-body-s text-ink-600">
-              <span>Behörde</span>
-              {/* LM-068 (B12, 4.9.2026): `sm:max-w-[16rem]` deckelt die Behörden-Liste.
-                  GEMESSEN @1440 stand hier ein inhaltsbreites Feld von 475 px neben
-                  einem Suchfeld von 225 px — das Suchfeld, die Hauptsache der Zeile,
-                  war halb so breit wie ein Filter. Der Deckel gibt die Breite an das
-                  `flex-1`-Suchfeld zurück; wo ein Behördenname länger ist als der
-                  Deckel, zeigt ihn jetzt die Auslassung aus `.lc-input` (LM-067). */}
-              <select
-                value={behoerde}
-                onChange={(e) => setBehoerde(e.target.value as BehoerdeId | '')}
-                className="lc-select lc-input-sm w-full min-w-0 sm:w-auto sm:min-w-[12rem] sm:max-w-[16rem]"
-              >
-                <option value="">Alle</option>
-                {gruppiereNachBehoerde(materialien).map((g) => (
-                  <option key={g.behoerde} value={g.behoerde}>{g.kuerzel} — {g.name}</option>
-                ))}
-              </select>
-            </label>
-            <label className="flex flex-wrap items-center gap-2 text-body-s text-ink-600">
-              <span>Dokumenttyp</span>
-              <select
-                value={doktyp}
-                onChange={(e) => setDoktyp(e.target.value as DoktypId | '')}
-                className="lc-select lc-input-sm w-full min-w-0 sm:w-auto sm:min-w-[11rem]"
-              >
-                <option value="">Alle</option>
-                {doktypOptionen.map((d) => <option key={d.id} value={d.id}>{d.label}</option>)}
-              </select>
-            </label>
-            {/* O5 (W2·10-UI-NAV-O): das lokale Feld erklärt seinen Scope. Ohne
-                Label sah es aus wie die App-Suche im Kopf und weckte die falsche
-                Erwartung, es fände Gesetzesartikel — es filtert aber nur die
-                Felder dieser Rubrik. Der Wortlaut nennt genau, worüber `filtere`
-                in lib/materialien/browse.ts sucht (Titel · Nummer · Behörde ·
-                Dokumenttyp), und zeigt den Weg zur grossen Suche. Von Anfang an
-                im Layout (§15.2, kein CLS) und programmatisch mit dem Feld
-                verknüpft (aria-describedby) — dieselbe Anatomie wie das
-                Scope-Label auf /gesetze (§5). */}
-            {/* LM-068 (B12, 4.9.2026): Basis 18rem statt 12rem — das Suchfeld ist damit
-                nie schmaler als die beiden Filter daneben (gemessen @1440: 439 px
-                statt 225 px), und wo die Zeile nicht mehr reicht, bricht es auf eine
-                eigene volle Zeile um, statt sich auf einen Rest zu quetschen. */}
-            <label className="flex flex-col gap-1.5 text-body-s text-ink-600 flex-1 min-w-[18rem]">
-              <span className="sr-only">Suche</span>
-              <input
-                type="search"
-                value={suche}
-                onChange={(e) => setSuche(e.target.value)}
-                placeholder="Titel, Nummer oder Behörde suchen …"
-                aria-describedby="materialien-filter-scope"
-                className="lc-input lc-input-sm w-full"
-              />
-              <span id="materialien-filter-scope" className="block min-h-5 text-xs text-ink-500">
-                Nur Titel, Nummer, Behörde und Dokumenttyp dieser Rubrik — Gesetzes- und Entscheidtext über die Suche oben.
-              </span>
-            </label>
+          {/* ── D22 Ziff. 2 · EIN FILTERFELD, VOLLE BREITE, MIT LABEL ────────
+              Die drei Achsen standen in EINER Zeile nebeneinander (zwei Selects
+              plus Suchfeld), das Feld bekam den Rest der Breite. Neu trägt das
+              Suchfeld die volle Inhaltsbreite mit sichtbarem Label «Filtern»
+              (gleiche Anatomie wie /gesetze und /rechner), die beiden Facetten
+              stehen als eigene Zeile darunter. Sie bleiben <select>: Behörde und
+              Dokumenttyp sind Listen mit zweistelliger Optionszahl, keine drei
+              Schalter — ein Text-Schalter je Behörde wäre die Lücke, die D22
+              gerade schliesst. */}
+          <div className="ub-filter" role="group" aria-label="Materialien filtern">
+            <label htmlFor="materialien-filter" className="lc-overline">Filtern</label>
+            <input
+              id="materialien-filter"
+              type="search"
+              value={suche}
+              onChange={(e) => setSuche(e.target.value)}
+              placeholder="Titel, Nummer oder Behörde …"
+              aria-describedby="materialien-filter-scope"
+              className="lc-input lc-input-sm w-full"
+            />
+            {/* O5 (W2·10-UI-NAV-O): das lokale Feld erklärt seinen Umfang —
+                ohne diese Zeile weckt es die Erwartung, es fände Gesetzesartikel.
+                Der Wortlaut nennt genau, worüber `filtere` in
+                lib/materialien/browse.ts sucht. Von Anfang an im Layout
+                (§15.2, kein CLS) und per aria-describedby verknüpft. */}
+            <p id="materialien-filter-scope" className="ub-filter-fuss min-h-5">
+              Titel, Nummer, Behörde und Dokumenttyp dieser Rubrik · Gesetzes- und Entscheidtext über die Suche oben
+            </p>
+            <div className="mt-1 flex flex-wrap items-center gap-x-5 gap-y-2">
+              <label className="flex flex-wrap items-center gap-2 text-body-s text-ink-600">
+                <span>Behörde</span>
+                <select
+                  value={behoerde}
+                  onChange={(e) => setBehoerde(e.target.value as BehoerdeId | '')}
+                  className="lc-select lc-input-sm w-full min-w-0 sm:w-auto sm:min-w-[12rem] sm:max-w-[16rem]"
+                >
+                  <option value="">Alle</option>
+                  {gruppiereNachBehoerde(materialien).map((g) => (
+                    <option key={g.behoerde} value={g.behoerde}>{g.kuerzel} — {g.name}</option>
+                  ))}
+                </select>
+              </label>
+              <label className="flex flex-wrap items-center gap-2 text-body-s text-ink-600">
+                <span>Dokumenttyp</span>
+                <select
+                  value={doktyp}
+                  onChange={(e) => setDoktyp(e.target.value as DoktypId | '')}
+                  className="lc-select lc-input-sm w-full min-w-0 sm:w-auto sm:min-w-[11rem]"
+                >
+                  <option value="">Alle</option>
+                  {doktypOptionen.map((d) => <option key={d.id} value={d.id}>{d.label}</option>)}
+                </select>
+              </label>
+            </div>
           </div>
 
           {gruppen.length === 0 ? (
@@ -153,7 +159,7 @@ export function Materialien() {
             <Leerzustand art="filter" text="Kein Material gefunden."
               weiterweg={{ text: 'Filter zurücksetzen', onKlick: () => { setBehoerde(''); setDoktyp(''); setSuche(''); } }} />
           ) : (
-            <div className="space-y-10">
+            <div className="space-y-6">
               {gruppen.map((g) => (
                 <section key={g.behoerde} id={`b-${g.behoerde}`} className="space-y-3 scroll-mt-24">
                   <div className="space-y-1.5">
@@ -176,6 +182,12 @@ export function Materialien() {
           )}
         </>
       )}
+      {/* D11: der §8-Vorbehalt steht im Fuss, nicht im Einstieg. Die Rubrik
+          führt bewusst keine eigenen Volltexte — das ist eine Aussage über die
+          Sammlung und gehört zu ihrem Fuss, nicht über ihren Titel. */}
+      <p className="border-t border-line/60 pt-3 text-micro text-ink-500 max-w-reading">
+        Faktisches «Soft-Law», kein Gesetzesrang. Diese Rubrik führt keine eigenen Volltexte; jeder Eintrag verlinkt die Publikation, massgeblich ist stets {AMTLICHE_FASSUNG_NOMEN}.
+      </p>
     </div>
   );
 }

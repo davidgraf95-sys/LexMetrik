@@ -131,10 +131,24 @@ export function GruppenKopf({
    *  Layout/Kappung, nie Typo/Farbe. */
   className?: string;
 }) {
+  // ── GB-2 (W2·24, Befund G2, 7.9.2026) · DER GRUPPENKOPF IST EIN RANDTITEL ──
+  // GEMESSEN: `Literata italic` kam im ersten Bild auf 8 von 9 Routen gar nicht
+  // vor — der Serifen-Akzent, den David am Bildbogen mochte, lebte nur auf «/».
+  // Dieser Baustein ist die Zeile, die auf JEDER Route einen Abschnitt BENENNT
+  // (Randtitel/Blattname); er ist damit der eine Ort, an dem der Akzent ohne
+  // Einzelstellen zurückkommt. `.lc-randtitel` (index.css §GB-2) setzt Literata
+  // kursiv UND die Registerfarbe der Route (`data-reg` an `layout/RouteHuelle`)
+  // — beides in EINEM Rezept, damit «welche Farbe» nie hier entschieden wird.
+  // `.lc-overline` selbst bleibt unangetastet (F0.7: Archivo, keine Versalien,
+  // ink-500-Boden) — die Variante nimmt der Klasse nichts.
+  // GESTRICHEN dabei: `text-brass-700` an der breiten Gestalt. Es war die
+  // Ersatz-Farbigkeit aus der Zeit VOR den Registerfarben (§17-Gegengewicht:
+  // ersetzen statt addieren) — Messing hätte auf allen vier Registern dasselbe
+  // gesagt, also nichts. Die dichte Gestalt trug schon vorher keine Farbe.
   const El = als === 'h' ? (`h${stufe}` as 'h2' | 'h3' | 'h4') : als;
   if (dicht) {
     return (
-      <El id={id} title={title} className={className ? `lc-overline ${className}` : 'lc-overline'}>
+      <El id={id} title={title} className={className ? `lc-overline lc-randtitel ${className}` : 'lc-overline lc-randtitel'}>
         {markeStellung === 'links' && marke}
         {titel}
         {zahl != null && <span className="num ml-1 text-ink-500">{zahl}</span>}
@@ -145,7 +159,7 @@ export function GruppenKopf({
   return (
     <div className={className ? `flex items-center gap-3 ${className}` : 'flex items-center gap-3'}>
       {markeStellung === 'links' && marke}
-      <El id={id} title={title} className="lc-overline text-brass-700">{titel}</El>
+      <El id={id} title={title} className="lc-overline lc-randtitel">{titel}</El>
       <span aria-hidden className="flex-1 h-px bg-line" />
       {zahl != null && <span className="num text-body-s text-ink-500">{zahl}</span>}
       {markeStellung === 'rechts' && marke}

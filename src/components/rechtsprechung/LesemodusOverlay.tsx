@@ -120,8 +120,8 @@ export function LesemodusOverlay({ ziel, snap, abschnitte, regesteText, massgebl
       // Pane-Breite — ein zweiter Container-Name wäre eine zweite Wahrheit über
       // dieselbe Fläche (§5), und `ui/SeitenTitel` misst ohnehin `/pane`.
       className={imPane
-        ? '@container/pane pointer-events-auto absolute inset-0 z-50 overflow-y-auto bg-paper'
-        : 'fixed inset-0 z-50 overflow-y-auto bg-paper'}>
+        ? '@container/pane pointer-events-auto absolute inset-0 z-modal overflow-y-auto bg-paper'
+        : 'fixed inset-0 z-modal overflow-y-auto bg-paper'}>
       {/* Schlanke, sticky Kopfleiste: Identität + Schriftgrösse + Schliessen.
           F2-3 (31.8.2026): sie stand als `bg-paper/95` + `backdrop-blur-sm` da —
           die LETZTE Glas-Fläche dieser Rolle. `src/index.css` (`.lc-glass`, ab
@@ -135,7 +135,7 @@ export function LesemodusOverlay({ ziel, snap, abschnitte, regesteText, massgebl
           Datei. Volldeckend `bg-paper` — dieselbe opake Fläche, die auch der
           klebende Leser-Kopf (`v3/LeserKopf`) und die Lese-Zeile
           (`v3/LeserLeseZeile`) tragen. */}
-      <div className="sticky top-0 z-10 flex items-center gap-3 border-b border-line bg-paper px-5 py-2.5">
+      <div className="sticky top-0 z-sticky flex items-center gap-3 border-b border-line bg-paper px-5 py-2.5">
         <span className="num text-body-s font-medium text-ink-700">{snap.bgeReferenz ?? snap.zitierung}</span>
         <span className="ml-auto inline-flex items-center gap-2">
           {/* 5B-Nachzug (29.8.2026), abgestufte Fassung: Gruppen-Name und

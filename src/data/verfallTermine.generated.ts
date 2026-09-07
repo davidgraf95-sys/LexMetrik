@@ -12,9 +12,9 @@ export type VerfallTermin = {
   rhythmus?: string;
 };
 
-export const VERFALL_STAND = "2.9.2026";
+export const VERFALL_STAND = "6.9.2026";
 export const VERFALL_QUELLE = "bibliothek/register/parameter-verfall.md";
-export const VERFALL_MANUELL_ANZAHL = 21;
+export const VERFALL_MANUELL_ANZAHL = 22;
 
 export const VERFALL_TERMINE: VerfallTermin[] = [
   {
@@ -486,7 +486,7 @@ export const VERFALL_TERMINE: VerfallTermin[] = [
     "quelle": "Tabelle",
     "fundstelle": "`public/normtext/kanton/*.json` mit `quelleUrl` `…/api/<lang>/versions/<vid>/pdf_file` (8 Erlasse) ↔ `normen/kanton-gliederung-sidecar-luecke-2026-08-13.md`",
     "wert": "Diese Snapshots hängen an einer festen Versions-Id; ihr `fassungsToken` ist ein Inhalts-Hash des PDF und ändert sich NICHT, wenn das Portal längst eine neue Fassung führt — die Drift bleibt unbemerkt. Belegt 13.8.2026: SG-2808 (GKV sGS 941.12) hängt an Version 2808 / Stand 1.3.2012, amtlich gilt Version 3863 seit 1.7.2026. Übrige sieben am selben Datum fassungsgleich geprüft",
-    "rhythmus": "halbjährlich, bis ein Tor `current_version.id` gegen die Snapshot-Version prüft (Wurzel-Fix, §17)"
+    "rhythmus": "halbjährlich, bis ein Tor `current_version.id` gegen die Snapshot-Version prüft (Wurzel-Fix, §17). NACHTRAG 6.9.2026: Für die TARIF-Seite derselben Erlasse leistet das jetzt `check:tarif-drift` (es meldet SG-2808 automatisch, Lauf 6.9.2026); die SNAPSHOT-Seite (`public/normtext/kanton/*.json`) ist damit NICHT gedeckt — dieser Wurzel-Fix bleibt offen"
   },
   {
     "label": "Künftige Fassung BVV 3 (SR 831.461.3)",

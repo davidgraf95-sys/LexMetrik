@@ -31,15 +31,17 @@ export function vollText(k: GliederungsKnoten): string {
  *
  * DISAMBIGUIERUNG: der nächste ELTERN-Titel, der vom eigenen abweicht — «eine
  * Chevron-Zeile namens X (Y)» dort, wo Y der nächste andersnamige Vorfahre ist.
- * DEGENERIERTER FALL (GEBV_HREG): trägt auch die gesamte Vorfahren-Kette
- * denselben Titel — hier eine synthetische Anhang-Wurzel, die genau EINE
- * amtliche Anhang-Sektion NAMENS «Anhänge» umschliesst —, gäbe es keinen
- * unterscheidenden Eltern-Titel; ein erfundener Kontext wäre eine zweite,
- * ungeprüfte Aussage über den Baum (§8). Der Fallback ist darum ein
- * Vorkommen-Zähler («1. Vorkommen» / «2. Vorkommen») statt eines geratenen
- * Orts. Offene Frage an die Abnahme: ob dieser Fallback-Wortlaut taugt, oder
- * ob der eigentliche Fund (Wurzel und Kind heissen fachlich identisch) ins
- * Modell gehört (`gliederungsModell.ts`, ausserhalb dieser Whitelist).
+ * REST-DOPPLUNG (David-Entscheid 5.9.2026, #689, FAHRPLAN-UI-QUALITAET.md §2.5):
+ * der EINE-Eltern-Schritt löst nicht jeden Fall — in OR/ZGB kommt derselbe
+ * nächste abweichende Eltern-Titel selbst mehrfach vor (z. B. «A. Begriff und
+ * Geltungsbereich» zweimal, je mit eigenem «II. Geltungsbereich»-Kind), und im
+ * GEBV_HREG-Fall gibt es gar keinen abweichenden Ahnen (Wurzel und Kind heissen
+ * beide «Anhänge»). Statt der dafür nötigen Rekursion bis zur Wurzel (David
+ * entscheidet: kein Modell-Fix in `gliederungsModell.ts`) ist der Fallback ein
+ * Vorkommen-Zähler («1. Vorkommen» / «2. Vorkommen» …), gezählt je
+ * RESTgruppe — also nur unter den Einträgen, die auch nach dem Eltern-Schritt
+ * noch denselben resultierenden Namen trügen (gleicher abweichender Ahn, oder
+ * beide ohne einen).
  */
 export function berechneKlappKontext(wurzeln: GliederungsKnoten[]): Map<string, string> {
   interface ChevronEintrag { id: string; titel: string; ahnenTitel: string[] }
@@ -59,13 +61,33 @@ export function berechneKlappKontext(wurzeln: GliederungsKnoten[]): Map<string, 
     if (liste) liste.push(e); else gruppen.set(e.titel, [e]);
   }
 
+  const KEIN_AHN = ' kein-ahn'; // interner Schlüssel, nie ein echter Titel
   const kontext = new Map<string, string>();
   for (const liste of gruppen.values()) {
     if (liste.length < 2) continue; // eindeutig — Auftrag: «sonst unverändert»
-    liste.forEach((e, i) => {
-      const abweichenderAhn = e.ahnenTitel.find((a) => a !== e.titel);
-      kontext.set(e.id, abweichenderAhn ?? `${i + 1}. Vorkommen`);
-    });
+
+    // Erster Schritt: nächster abweichender Eltern-Titel je Eintrag.
+    const kandidaten = liste.map((e) => ({
+      e,
+      ahn: e.ahnenTitel.find((a) => a !== e.titel),
+    }));
+
+    // Zweiter Schritt: je resultierendem Namen gruppieren — nur ein EINDEUTIGER
+    // abweichender Ahn löst die Dopplung; alles andere (derselbe Ahn mehrfach,
+    // oder gar keiner) bleibt Restgruppe mit Vorkommen-Zähler.
+    const restGruppen = new Map<string, typeof kandidaten>();
+    for (const k of kandidaten) {
+      const schluessel = k.ahn ?? KEIN_AHN;
+      const rest = restGruppen.get(schluessel);
+      if (rest) rest.push(k); else restGruppen.set(schluessel, [k]);
+    }
+    for (const [schluessel, rest] of restGruppen) {
+      if (schluessel !== KEIN_AHN && rest.length === 1) {
+        kontext.set(rest[0].e.id, schluessel);
+      } else {
+        rest.forEach((k, i) => kontext.set(k.e.id, `${i + 1}. Vorkommen`));
+      }
+    }
   }
   return kontext;
 }

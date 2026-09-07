@@ -10,7 +10,7 @@
 // ausschliesslich V3-eigenes Verhalten, ohne je nach V1 zu wechseln.
 import { test, expect } from '@playwright/test'
 import { fehlerSammeln } from './helpers/fehlerSammeln'
-import { VERMERKE_SCHALTER_NAME } from './helpers/leserBeschriftung';
+import { SCHALTER_ROLLE, VERMERKE_SCHALTER_NAME, WAHL_ROLLE } from './helpers/leserBeschriftung';
 
 test.describe('Ansicht-Menü — D1/B3', () => {
   // ── D1 (S1-Rest, gebaut im H3-Nachzug 17.8.2026) ──────────────────────────
@@ -35,21 +35,49 @@ test.describe('Ansicht-Menü — D1/B3', () => {
       await expect(panel).toBeVisible()
     }
 
+    // ── §6.3-DEKLARATION (D35-F3, Entscheid David 7.9.2026) ─────────────────
+    // Die Aussage des Falls ist unverändert («die Historie-Bedienung erscheint
+    // NUR an Erlassen, die Vermerke tragen»); ihr Griff ist neu: aus zwei
+    // Checkboxen ist EINE Radiogruppe mit drei Stellungen geworden. Die
+    // Rechtsprechungs-Checkbox bleibt, was sie war.
+    //
+    // WAS SICH FACHLICH ÄNDERT — und warum das richtig ist: auf einem Erlass
+    // OHNE Klassifikation fällt jetzt die GANZE Wahl weg, nicht nur ihre
+    // «Fassung»-Stellung. Bis 7.9. blieb dort der Fussnoten-Schalter stehen,
+    // weil er die 16 klassenlosen Fussnoten wirklich ausblendete; genau dieses
+    // Ausblenden gibt es nicht mehr (verlustfrei). Drei Stellungen mit
+    // identischer Wirkung anzubieten wäre das tote Steuerelement, das D1
+    // abgeschafft hat (§8).
+    //
+    // ── §6.3-DEKLARATION (D35-F2, Entscheid David 7.9.2026) ─────────────────
+    // Die EINE `menuitemcheckbox` war «Rechtsprechung im Kopf». Sie ist mit
+    // Variante A ersatzlos gefallen; an ihrer Stelle stehen die FÜNF Schalter
+    // der Rubriken-Wahl. Die Aussage des Falls bleibt Wort für Wort dieselbe —
+    // die Historie-Bedienung erscheint nur an Erlassen mit Vermerken, und der
+    // Rest des Menüs steht unabhängig davon —, nur die Zahl der Nachbarn
+    // wechselt von 1 auf 5. Sie ist bewusst als LITERAL geprüft und nicht aus
+    // `FUSS_RUBRIKEN` abgeleitet: ein Wächter, der seine Erwartung aus dem
+    // Prüfling zieht, prüft nichts (§6.7).
+
     // POSITIV — StPO: 187 von 283 Fussnoten sind `kl:'A'`, dazu ein
-    // Historie-Shard. Alle drei V3-Schalter stehen.
+    // Historie-Shard. Die Wahl steht vollzählig, dazu die eine Checkbox.
     await oeffne('/gesetze/bund/STPO')
-    await expect(panel.getByRole('switch', { name: VERMERKE_SCHALTER_NAME })).toHaveCount(1)
-    await expect(panel.getByRole('switch')).toHaveCount(3)
+    await expect(panel.getByRole(WAHL_ROLLE, { name: VERMERKE_SCHALTER_NAME })).toHaveCount(1)
+    await expect(panel.getByRole(WAHL_ROLLE)).toHaveCount(3)
+    // §6.3-DEKLARATION (D40, 7.9.2026): SECHS Rubriken-Schalter — «Fassung» ist
+    // dazugekommen (David: «und wieso ist fassung nicht auch unten am
+    // artikel?»). Die Aussage bleibt: die Wahl steht vollzählig.
+    await expect(panel.getByRole(SCHALTER_ROLLE)).toHaveCount(6)
 
     // NEGATIV 1 — BS-640.100 (StG BS): 16 Fussnoten, KEINE klassifiziert, kein
-    // Historie-Shard. Der Fussnoten-Schalter bleibt (die 16 sind da und er
-    // blendet sie wirklich aus), «Rechtsprechung im Text» auch.
+    // Historie-Shard. Keine Wahl; die sechs Rubriken-Schalter bleiben.
     await oeffne('/gesetze/kanton/BS-640.100')
-    await expect(panel.getByRole('switch', { name: VERMERKE_SCHALTER_NAME })).toHaveCount(0)
-    await expect(panel.getByRole('switch', { name: 'Fussnoten' })).toHaveCount(1)
-    await expect(panel.getByRole('switch')).toHaveCount(2)
-    // §8: nichts weggeblendet — es gibt hier wirklich keine Fassungs-Zeile.
+    await expect(panel.getByRole(WAHL_ROLLE)).toHaveCount(0)
+    await expect(panel.getByRole(SCHALTER_ROLLE)).toHaveCount(6)
+    // §8: nichts weggeblendet — es gibt hier wirklich keine Fassungs-Zeile …
     await expect(page.locator('[data-historie-zeile]')).toHaveCount(0)
+    // … und die 16 klassenlosen Fussnoten stehen vollständig da (verlustfrei).
+    await expect(page.locator('.lc-leser [data-fn-apparat]').first()).toBeVisible()
 
     // NEGATIV 2 — ZH-211.11: gar KEIN Struktur-Sidecar (404 → `null`). Der
     // zweideutige `null`-Fall, an dem eine naive Fassung scheitert: bei
@@ -60,8 +88,8 @@ test.describe('Ansicht-Menü — D1/B3', () => {
     await expect(page.locator('.lc-leser article').first()).toBeVisible({ timeout: 20_000 })
     await page.locator('[data-v3-ansicht]').click()
     await expect(panel).toBeVisible()
-    await expect(panel.getByRole('switch', { name: VERMERKE_SCHALTER_NAME })).toHaveCount(0)
-    await expect(panel.getByRole('switch')).toHaveCount(2)
+    await expect(panel.getByRole(WAHL_ROLLE)).toHaveCount(0)
+    await expect(panel.getByRole(SCHALTER_ROLLE)).toHaveCount(6)
 
     expect(fehler, fehler.join('\n')).toEqual([])
   })

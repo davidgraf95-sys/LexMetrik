@@ -61,17 +61,22 @@ const GENITIV_BY_NAME = new Map<string, GenitivEintrag>(GENITIV_EINTRAEGE.map((e
 // Namen), escaped. Fedlex-HTML trägt in langen Wörtern SOFT HYPHENS (U+00AD,
 // z. B. «Zivilgesetz­bu­ches») — zwischen den Buchstaben wird darum
 // optional ­ toleriert (reine Anzeige-Trennstelle, kein Inhalt).
-const escSoft = (n: string): string =>
-  n.split('').map((c) => c.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('­?');
-export const GENITIV_NAMEN_ESC = [...GENITIV_GESETZ]
-  .map(([n]) => n)
-  .sort((a, b) => b.length - a.length)
-  .map(escSoft);
+const escRoh = (c: string): string => c.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+const escSoft = (n: string): string => n.split('').map(escRoh).join('­?');
+/** Dieselbe Escapung OHNE die Weichtrenn-Toleranz — die eine Zeile, die den
+ *  Schnellpfad in `spannen.ts` trägt (Herleitung dort an `Z1_ERLASS_HART`). */
+const escHart = (n: string): string => n.split('').map(escRoh).join('');
+const laengsteZuerst = (xs: readonly string[]): string[] => [...xs].sort((a, b) => b.length - a.length);
+const GENITIV_NAMEN = laengsteZuerst(GENITIV_GESETZ.map(([n]) => n));
+export const GENITIV_NAMEN_ESC = GENITIV_NAMEN.map(escSoft);
+/** Weichtrenn-freies Gegenstück (§5: dieselbe Liste, dieselbe Reihenfolge). */
+export const GENITIV_NAMEN_HART = GENITIV_NAMEN.map(escHart);
 /** V-7b: Alternation der amtlichen Titel-Fragmente («über die Alters- und …»),
  *  längste zuerst; Leerraum im Fragment toleriert beliebigen Whitespace. */
-export const TITEL_FRAGMENTE_ESC = [...new Set(TITEL_EINTRAEGE.map((e) => e.fragment))]
-  .sort((a, b) => b.length - a.length)
-  .map((f) => f.split(/\s+/).map(escSoft).join('\\s+'));
+const TITEL_FRAGMENTE = laengsteZuerst([...new Set(TITEL_EINTRAEGE.map((e) => e.fragment))]);
+export const TITEL_FRAGMENTE_ESC = TITEL_FRAGMENTE.map((f) => f.split(/\s+/).map(escSoft).join('\\s+'));
+/** Weichtrenn-freies Gegenstück (§5: dieselbe Liste, dieselbe Reihenfolge). */
+export const TITEL_FRAGMENTE_HART = TITEL_FRAGMENTE.map((f) => f.split(/\s+/).map(escHart).join('\\s+'));
 const TITEL_BY_KOPF_FRAGMENT = new Map<string, TitelEintrag>(
   TITEL_EINTRAEGE.map((e) => [`${e.kopf}|${e.fragment}`, e]),
 );

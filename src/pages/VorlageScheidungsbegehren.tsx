@@ -7,7 +7,7 @@ import { KV_GERICHTE_BS } from '../lib/vorlagen/klageVereinfacht';
 import { ParteiEditor } from './VorlageKlageVereinfacht';
 import type { PdfBanner } from '../lib/vorlagen/banner';
 import { DatumsFeld } from '../components/DatumsFeld';
-import { Checkbox, Field, inputCls, ListenEditor } from '../components/vorlagen/ui';
+import { Checkbox, Field, ListenEditor, NICHT_GESPEICHERT_HINWEIS, inputCls } from '../components/vorlagen/ui';
 import { SelectionGrid } from '../components/ui/SelectionGrid';
 import { GerichtsWahlBlock } from '../components/vorlagen/GerichtsWahlBlock';
 import { useWizardState } from '../components/vorlagen/useWizardState';
@@ -223,10 +223,11 @@ export function VorlageScheidungsbegehren() {
       intro="Die gemeinsame Eingabe beider Ehegatten nach Art. 285/286 ZPO — bei umfassender Einigung mit Genehmigungsantrag zur vollständigen Vereinbarung (Art. 111 ZGB), bei Teileinigung mit dem Pflicht-Antrag, die streitigen Folgen gerichtlich zu beurteilen (Art. 112 ZGB). Inhalte der Vereinbarung bleiben Ihre Entscheidung; die Eingabe strukturiert den gesetzlichen Mindestinhalt."
       norms={card?.norms ?? []}
       badge="Beide unterzeichnen"
-      fussnote="Eingaben werden NICHT lokal gespeichert (Parteidaten)."
+      fussnote={NICHT_GESPEICHERT_HINWEIS}
       zuruecksetzen={zuruecksetzen}
       schritte={SCHRITTE} schritt={schritt} setSchritt={setSchritt}
       fehler={fehler}
+      fehlerJeSchritt={(i) => maengel.filter((m) => m.schritt === i).map((m) => m.text)}
       inhalt={inhalt()}
       vorschau={<VorschauPanel ergebnis={ergebnis} kompakt direktExport={{
         pdf: { label: 'PDF', banner: BANNER_SB, dateiName: 'Gemeinsames-Scheidungsbegehren.pdf' },

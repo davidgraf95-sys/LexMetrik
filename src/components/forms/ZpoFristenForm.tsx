@@ -1,5 +1,5 @@
 import { KANTONE } from '../../lib/kantone';
-import { BeruehrtRahmen, EckdatenKachel, FehlerBox, Field, GruppenTitel, inputCls } from '../vorlagen/ui';
+import { BeruehrtRahmen, Checkbox, EckdatenKachel, FehlerBox, Field, GruppenTitel, inputCls } from '../vorlagen/ui';
 import { ErgebnisBlock } from '../ErgebnisBlock';
 import { Tabs } from '../ui/Tabs';
 import { useState } from 'react';
@@ -225,8 +225,14 @@ export function ZpoFristenForm({ live }: {
         <Tabs items={PHASEN.map((p) => ({ code: p.code, label: p.label }))} value={phase} onChange={(c) => { setPhase(c); setPresetKey(''); setPresetHinweis(null); }} mode="pressed" ariaLabel="Verfahrensphase" />
       </div>
 
+      {/* R9-2 (6.9.2026): `role="status"`, nicht `role="alert"`. Die Meldung
+          antwortet nicht auf einen Eingabefehler, sondern beschreibt eine
+          ABDECKUNGSGRENZE des Rechners (§8) — es gibt nichts zu beheben, also
+          unterbricht sie auch nichts. Die Blocker- und Mängellisten der Vorlagen
+          tragen aus demselben Grund `role="alert"`. Wächter:
+          `src/tests/design-r9-fehlerbox-baustein.test.ts`. */}
       {phase === 'materiell' ? (
-        <div className="lc-notice-danger">
+        <div role="status" className="lc-notice-danger">
           <p className="lc-overline text-danger-700 mb-1">Materielle Frist – nicht von diesem Rechner erfasst</p>
           <p className="text-body-s text-danger-700">{MATERIELL_WARNUNG}</p>
         </div>
@@ -280,11 +286,12 @@ export function ZpoFristenForm({ live }: {
 
         {!aktVerfahren.stillstand && (
           <Field label="Hinweis des Gerichts auf Nichtgeltung des Stillstands?" hint="Art. 145 Abs. 3 ZPO – Gültigkeitsvorschrift (BGE 139 III 78)">
-            <label className="flex items-center gap-2.5 py-1.5 text-body-s cursor-pointer pt-2 text-ink-700">
-              <input type="checkbox" checked={form.gerichtshinweisStillstand ?? true}
-                onChange={(e) => set('gerichtshinweisStillstand', e.target.checked)} />
-              Gericht hat hingewiesen (sonst gilt der Stillstand gleichwohl)
-            </label>
+            <Checkbox
+              checked={form.gerichtshinweisStillstand ?? true}
+              onChange={(v) => set('gerichtshinweisStillstand', v)}
+              label="Gericht hat hingewiesen (sonst gilt der Stillstand gleichwohl)"
+              className="pt-2"
+            />
           </Field>
         )}
 
@@ -311,9 +318,9 @@ export function ZpoFristenForm({ live }: {
 
       {/* Optionale / erweiterte Funktionen – kein overflow-hidden, sonst wird
           das DatumsFeld-Popover (Zustellfiktion) abgeschnitten. */}
-      <div className="border border-line rounded-lg">
+      <div className="border border-line ">
         <button type="button" onClick={() => setErweitert(!erweitert)}
-          className={`w-full flex items-center justify-between px-4 py-3 bg-surface hover:bg-brass-100 text-left rounded-t-lg ${erweitert ? '' : 'rounded-b-lg'}`}>
+          className={`w-full flex items-center justify-between px-4 py-3 bg-surface hover:bg-brass-100 text-left ${erweitert ? '' : ''}`}>
           <span className="text-body-s font-medium text-ink-700">Optionale Funktionen (Berechnungsmodus, Erstreckung, Zustellfiktion)</span>
           <span className="text-ink-500">{erweitert ? '▲' : '▼'}</span>
         </button>
@@ -328,10 +335,11 @@ export function ZpoFristenForm({ live }: {
 
             {form.fristnatur === 'gerichtlich' && (
               <div className="space-y-2">
-                <label className="flex items-center gap-2.5 py-1.5 text-body-s cursor-pointer">
-                  <input type="checkbox" checked={erstreckungAn} onChange={(e) => setErstreckungAn(e.target.checked)} />
-                  Erstreckung berechnen (Art. 144 Abs. 2 ZPO)
-                </label>
+                <Checkbox
+                  checked={erstreckungAn}
+                  onChange={setErstreckungAn}
+                  label="Erstreckung berechnen (Art. 144 Abs. 2 ZPO)"
+                />
                 {erstreckungAn && (
                   <div className="flex gap-2 items-center">
                     <input type="number" inputMode="decimal" min={1} value={erstreckung.laenge}
@@ -351,7 +359,7 @@ export function ZpoFristenForm({ live }: {
                 <DatumsFeld value={fiktionDatum} onChange={(v) => setFiktionDatum(v)} className={inputCls} />
                 <button type="button" disabled={!fiktionDatum}
                   onClick={() => set('ereignis', zustellfiktion(fiktionDatum))}
-                  className="text-body-s px-3 py-2 bg-surface hover:bg-brass-100 disabled:opacity-50 text-ink-700 rounded-lg whitespace-nowrap">
+                  className="text-body-s px-3 py-2 bg-surface hover:bg-brass-100 disabled:opacity-50 text-ink-700 whitespace-nowrap">
                   → als Ereignis übernehmen
                 </button>
               </div>
@@ -375,7 +383,7 @@ export function ZpoFristenForm({ live }: {
             ))}
           </div>
           {ergebnis.erstrecktBis && (
-            <div className="rounded-lg border border-line bg-ok-bg p-3 text-body-s text-ok-text">
+            <div className=" border border-line bg-ok-bg p-3 text-body-s text-ok-text">
               Nach Erstreckung: <strong>{ergebnis.erstrecktBis}</strong> (24.00 Uhr).
             </div>
           )}

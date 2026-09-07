@@ -2,6 +2,7 @@ import type { KopfDaten } from './InhaltsKopfKontext';
 import { RuecksprungChip } from './RuecksprungChip';
 import { DeepLinkSkeleton } from './DeepLinkSkeleton';
 import { OrtsAngabe, StandAngabe } from './OrtsAngabe';
+import { ortsLeistenKrumen } from './BrotkrumeRegel';
 import { SchliessKnopf } from '../ui/SchliessKnopf';
 
 // ─── Inhalts-Kopf (Einzelansicht «analog Split-View», ohne Verschiebe-Optionen) ─
@@ -141,23 +142,26 @@ export function InhaltsKopf({ daten, breiteKlasse, onSchliessen }: {
   return (
     // Klebt unter der Topbar (sticky top-16 = 4rem), bleibt beim Scrollen sichtbar
     // (damit der Live-Artikel mitläuft). z ÜBER den Inhalts-Sticky-Leisten (Suche
-    // z-16 / Sektions-Kontextkopf z-15), damit das A26-«Ansicht»-Dropdown-Panel
-    // beim Aufklappen über sie legt statt dahinter zu verschwinden; die Leiste
-    // selbst überlappt sie nicht (sie sitzt 36 px höher), das z ist rein fürs Panel.
+    // z-reader-scrim=16 / Sektions-Kontextkopf z-entscheid-sticky=15), damit das
+    // A26-«Ansicht»-Dropdown-Panel beim Aufklappen über sie legt statt dahinter zu
+    // verschwinden; die Leiste selbst überlappt sie nicht (sie sitzt 36 px höher),
+    // das z ist rein fürs Panel.
     // A41 (David 16.7.2026, Overlay-Bug): z BEWUSST UNTER dem Topbar-Stapelkontext
-    // (Topbar sticky z-20). Vorher z-30 > 20 → dieser Kopf legte sich über das
-    // GANZE Topbar-Fenster inkl. des Header-Such-Dropdowns (dessen z-30 IM z-20-
-    // Topbar-Kontext gefangen ist) → «kopfzeile bei gesetzen verdeckt suchresultate
-    // aus dem header». z-[19] hält den Kopf weiter über den Reader-Sticky-Leisten
-    // (z-16/z-15 → A26-Panel bleibt oben), lässt aber das Header-Dropdown darüber.
+    // (Topbar sticky z-leiste=20). Vorher z-dropdown(30) > 20 → dieser Kopf legte
+    // sich über das GANZE Topbar-Fenster inkl. des Header-Such-Dropdowns (dessen
+    // z-dropdown IM z-leiste-Topbar-Kontext gefangen ist) → «kopfzeile bei
+    // gesetzen verdeckt suchresultate aus dem header». z-inhalt-kopf (C3: benannte
+    // Rolle für den vormals rohen Wert 19) hält den Kopf weiter über den
+    // Reader-Sticky-Leisten (16/15 → A26-Panel bleibt oben), lässt aber das
+    // Header-Dropdown darüber.
     // Der STILLE Zustand (A-2, `kopfzeileSelbst`) trägt denselben Träger mit
     // `h-9` reserviertem, transparentem Band — die Herleitung dafür steht oben
     // («UND WARUM ER SEINE HÖHE BEHÄLT»): fiele er auf 0 px zusammen, sprängen
     // 37 px und das Bestands-Tor `leser-kopf-cls-s3` riss seine Schwelle.
     <div data-inhalt-kopf={still ? undefined : true} data-inhalt-kopf-still={still ? true : undefined}
       className={still
-        ? 'pointer-events-none sticky top-16 z-[19] h-9 border-b border-transparent'
-        : 'sticky top-16 z-[19] border-b border-line bg-paper'}>
+        ? 'pointer-events-none sticky top-16 z-inhalt-kopf h-9 border-b border-transparent'
+        : 'sticky top-16 z-inhalt-kopf border-b border-line bg-paper'}>
       {/* `relative`: Anker für das mobile Overlay-Suchfeld (A35, sucheSlot) — es legt
           sich `absolute` über die Zeile, ohne etwas zu verschieben (§15.2). */}
       {still ? null : (
@@ -166,7 +170,12 @@ export function InhaltsKopf({ daten, breiteKlasse, onSchliessen }: {
             aus dem geteilten Baustein `./OrtsAngabe`, den auch der `PaneKopf`
             konsumiert. `mitLink`, weil in der Einzelansicht der globale Router
             zuständig ist (im Pane ist es der Pane-eigene Navigator). */}
-        <OrtsAngabe breadcrumb={daten.breadcrumb} artikel={daten.artikel} mitLink navLabel="Brotkrümel" />
+        {/* GA-1 (W2·24, 7.9.2026): die Leiste zeigt NIE das Blatt, nur den
+            Rücksprung auf die Sektion — und den nur, wo die Seite keinen
+            eigenen trägt. Herleitung und Messung: `./BrotkrumeRegel`. Die
+            MELDUNG der Seiten bleibt vollständig (der `PaneKopf` braucht die
+            ganze Kette); gefiltert wird an der Leiste, die die Regel betrifft. */}
+        <OrtsAngabe breadcrumb={ortsLeistenKrumen(daten.breadcrumb)} artikel={daten.artikel} mitLink navLabel="Brotkrümel" />
         {/* ③ GRIFF-RIEGEL: drei Gruppen (finden · wählen · Blatt), innen gap-1,
             zwischen den Gruppen gap-3 — Nähe trägt die Gruppierung, nicht Linien
             (Reglement F1). */}

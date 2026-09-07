@@ -35,3 +35,27 @@ export async function kopfSucheOeffnen(page: Page, timeout = 20_000) {
   await expect(feld).toBeFocused({ timeout: 10_000 })
   return feld
 }
+
+// ── DIE SPRUNG-ZEILE DER KOPF-SUCHE (§6.3-DEKLARATION, 6.9.2026) ─────────────
+// GEMESSEN am Vorstand: die Sprung-Zeile trug bis zur Treffer-Anatomie D23/F1
+// ein gerahmtes Etikett mit dem Wort «Sprung» bzw. «Direkt öffnen»
+// (`SuchTreffer.marke`, `.lc-badge-soft`). F1/F4 haben die AKTIONS-Etiketten
+// gestrichen — nachlesbar in `src/components/suche/trefferAnatomie.ts`
+// (`trefferArt`: `marke.ton === 'ok'` fällt weg, «die Zeile sagt das mit ihrem
+// ↵, und die Gruppe heisst ohnehin Norm-Sprung»). Das Etikett war damit ein
+// drittes Mal dasselbe Wort in derselben Liste.
+//
+// NICHTS WIRD AUFGEWEICHT: Die Zusage «die Sprung-Zeile ist als solche
+// erkennbar und steht zuoberst» wird weiterhin geprüft, nur an der Stelle, an
+// der sie jetzt steht — am «↵»-Griff der Zeile (`SuchResultate.ZeileInhalt`,
+// gerendert genau für `gruppe.id === 'sprung'`, also für Norm- UND
+// Entscheid-Sprung). Die Gruppen-Überschrift («Norm-Sprung» / «Entscheid-
+// Sprung») bleibt in den aufrufenden Wächtern zusätzlich geprüft, wo sie es
+// vorher war — es fällt kein Prüfpunkt weg.
+//
+// ROT ZU BEKOMMEN (§6.7): in `SuchResultate.tsx` das `{sprung && <span …>↵`
+// streichen ⇒ jeder Sprung-Wächter (norm-sprung, gesetze-ia-v2-walks) reisst.
+export const sucheListbox = (page: Page) => page.getByRole('listbox', { name: 'Suchtreffer' })
+
+/** Die Zeile, die «Enter springt direkt» verspricht — an ihrem «↵»-Griff. */
+export const sprungZeile = (page: Page) => sucheListbox(page).getByRole('option').filter({ hasText: '↵' })

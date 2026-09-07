@@ -382,3 +382,66 @@ export function maleNennungen(container: Element | null, zitat: string): number 
 export function loescheNennungen(): void {
   setzeSuchHighlightRanges([], ENTSCHEID_HIGHLIGHT_INSTANZ);
 }
+
+// ── GA-2 (W2·24-DESIGN-IDENTITAET, 7.9.2026) · JEDE ANGABE GENAU EINMAL ─────
+//
+// BEFUND G4 (Messung 6.9.2026 @1440, `/rechtsprechung/ag_gerichte_HOR_2024_19`,
+// oberste 300 px): «Obergericht AG» stand DREIMAL (Overline · H1 · abgeleitete
+// Leitzeile), «Privatrecht» zweimal (Overline · Leitzeile), das Urteilsdatum
+// zweimal (H1 «… vom 12.12.2025» · Fakten «Entscheid vom 12.12.2025»). Die H1
+// ist die ZITIERUNG des Entscheids und trägt Gericht, Nummer und Datum bereits
+// vollständig — jede weitere Nennung derselben Angabe im selben Bild ist keine
+// Auskunft mehr, sondern Wiederholung (FAHRPLAN-DESIGN-IDENTITAET §5 D4).
+//
+// Die Antwort ist dieselbe, die B-5 für den BGE-Referenz-Chip schon getroffen
+// hat: NICHT «die Angabe ist überflüssig», sondern «sie ist überflüssig, WENN
+// der Titel sie wörtlich trägt» — geprüft an den Daten, wortgrenzen-genau
+// (CLAUDE.md §7), nie an einer Annahme über sie. Trägt eine künftige Zitierung
+// den Gerichtsnamen NICHT (z. B. «BGE 152 IV 14»), steht die Angabe weiter da.
+//
+// §3: reine Darstellungsregeln — sie sagen nur, ob eine Angabe im selben Bild
+// noch etwas hinzufügt, nichts über Geltung oder Inhalt des Entscheids.
+
+/**
+ * Trägt der Titel (die Zitierung) diese Angabe bereits wörtlich? Verallgemeinert
+ * `referenzImTitel` auf jede Kopf-Angabe (Gerichtsname, Datumstext) und nutzt
+ * dasselbe eine Muster (`zitatMuster`, §5). Leere Angabe ⇒ `false`.
+ */
+export function angabeImTitel(zitierung: string, angabe: string | null | undefined): boolean {
+  if (!angabe) return false;
+  const re = zitatMuster(angabe);
+  return re ? re.test(zitierung) : false;
+}
+
+/**
+ * Die abgeleitete Leitzeile OHNE die Angaben, die derselbe Kopf schon zeigt.
+ *
+ * `synthThema` (lib/rechtsprechung/browse.ts) baut sie als
+ * «<Sachgebiet> — <Gericht> · angewandt: <Normen>» bzw. «<Sachgebiet> —
+ * <Gericht>, <Jahr>». Beide führenden Glieder stehen im Reader-Kopf bereits:
+ * das Sachgebiet in der Overline, das Gericht in der H1. Die Zeile wird darum
+ * für DIESE eine Anzeige um sie gekürzt — `synthThema` selbst bleibt
+ * unangetastet, weil dieselbe Zeile auch die Rechtsprechungs-Liste trägt, wo
+ * kein Kopf daneben steht (§5: eine Quelle, zwei Zuschnitte).
+ *
+ * Bleibt nach dem Kürzen keine Sachaussage übrig (der Fall ohne Normen: es
+ * stünde nur noch eine Jahreszahl da, die die H1 ebenfalls trägt), gibt sie
+ * `null` zurück — lieber keine Zeile als eine leere (§8).
+ */
+export function leitzeileOhneKopfangaben(
+  leitzeile: string | null | undefined,
+  angaben: readonly (string | null | undefined)[],
+): string | null {
+  if (!leitzeile) return null;
+  let rest = leitzeile;
+  for (const a of angaben) {
+    if (!a) continue;
+    const re = zitatMuster(a);
+    if (re) rest = rest.replace(re, '');
+  }
+  // Die Fugen, die dabei entstehen («— · angewandt: …», « — , 2025»), sind die
+  // Trennzeichen von `synthThema` ohne ihren linken Operanden. Sie fallen mit
+  // weg; was übrig bleibt, muss mit einem Wort beginnen.
+  rest = rest.replace(/\s+/g, ' ').replace(/^[\s—·,–-]+/, '').replace(/[\s—·,–-]+$/, '').trim();
+  return /\p{L}{2}/u.test(rest) ? rest : null;
+}

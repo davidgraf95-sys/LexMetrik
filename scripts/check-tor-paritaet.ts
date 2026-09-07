@@ -148,7 +148,6 @@ const ALLOWLIST: Record<string, string> = {
   'check:materialien': 'braucht daten/*.db für die Byte-Reprojektion (CI-Zweig prüft committete Shards)',
   'check:gegenpruefung': 'liest den Working Tree, der in CI sauber ist; protokolliert unter CI=1 ausdrücklich SKIP (§6 Ziff. 7 lit. b) — Arbiter für den committeten Bereich ist check:merge-schutz in ci.yml',
   'check:schlankheit': 'lokal-warnend im gate, nicht Required — Zeilen-Wächter mit Baseline; ein Required-Rot bei Bestands-Regrowth würde fremde PRs blockieren, Eskalationsweg ist schlankheit:update mit Commit-Begründung',
-  'check:feed': 'neu (Gegenprüfung QS-VERWENDEN V5/V6, 2.9.2026, H-2) — ci.yml war für diesen Bau-Auftrag TABU (baut eine andere Einheit, parallele PRs); Verdrahtung in den PR-Pfad ist ein eigener, nachgelagerter Schritt (Folge-PR verdrahtet check:feed im Tore-Job von ci.yml, analog check:datenhaltung). Bis dahin lokal in check:seriell/gate vor jedem Deploy.',
 };
 
 /**

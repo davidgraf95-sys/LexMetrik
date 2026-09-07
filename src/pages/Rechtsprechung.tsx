@@ -26,6 +26,11 @@ import { FilterSheet } from '../components/rechtsprechung/FilterSheet';
 import type { BrowseEntscheid, RichterRegister } from '../lib/rechtsprechung/register';
 import type { Rechtsgebiet } from '../lib/normtext/register';
 import { useSucheAusUrl } from '../components/suche/useSucheAusUrl';
+import { STARTSEITE_ZAEHLER } from '../data/startseiteZaehler.generated';
+
+/** Zahl der Ausgabe-Zeile in Schweizer Schreibweise (1'338). */
+const nf = (n: number) => n.toLocaleString('de-CH');
+
 
 // Übersicht der Rubrik «Rechtsprechung» — kuratierter Einstieg (Sachgebiets-Rail,
 // Leitentscheide-first, Norm-Verzahnung), bessere Übersicht als eine flache
@@ -332,10 +337,13 @@ export function Rechtsprechung() {
 
   return (
     <div className="space-y-6">
+      {/* D11/D22 (David 6.9.2026) — Kopf-Regel für ALLE fünf Übersichten,
+          Herleitung in `components/layout/SeitenKopf.tsx`: H1 = Bereichsname
+          wie im Reiter, DARUNTER die Ausgabe-Zeile aus dem Register — keine
+          Overline, keine halbe Haarlinie, kein Erklär-Absatz. */}
       <SeitenKopf
-        overline="Bundesgericht & Kantone"
         titel="Rechtsprechung"
-        intro="Entscheide des Bundesgerichts und kantonaler Gerichte, verzahnt mit der angewandten Norm."
+        ausgabe={`${nf(STARTSEITE_ZAEHLER.rechtsprechungVolltext)} Entscheide des Bundesgerichts und kantonaler Gerichte im Volltext`}
       />
 
       {fehler && (
@@ -344,8 +352,28 @@ export function Rechtsprechung() {
         </div>
       )}
 
+      {/* ── D21-NEBENFUND (David 6.9.2026): «Fusszeile flackert beim Routenwechsel» ──
+          GEMESSEN 6.9.2026 @1440, gebautes dist/, Chromium mit 400 kbit/s + 150 ms
+          Latenz (Nullprobe 3×, Weg /gesetze → /rechtsprechung per Sidebar-Klick):
+            t≈2.8 s  Suspense-Fallback  → Dokumenthöhe 1524, Fuss bei y=1189 (unter der Falz)
+            t≈3.2 s  DIESER Ladezustand → Dokumenthöhe  900, Fuss bei y= 564 (IM Bild)
+            t≈5.4 s  Daten da           → Dokumenthöhe 27208
+          Der einzige gezählte Layout-Shift war `<footer>` von y=564 nach unten,
+          CLS 0.307. Über eine schnelle Leitung ist dasselbe Fenster ~100 ms lang —
+          genau das «Flackern», das David gesehen hat. Auf «/» → /rechner trat es
+          nicht auf: dort lädt die Seite keine zweite Datei nach.
+          URSACHE: `RouteHuelle` reserviert die Routenhöhe NUR bis zum Auflösen des
+          lazy-Chunks. Danach hängt die Seite an ihrem eigenen `register.json`
+          (Fetch in der useEffect oben) und rendert bis dahin diesen ~200 px hohen
+          Block — die Inhaltsspalte fällt unter die Fensterhöhe, der Fuss rutscht
+          ins Bild und beim Eintreffen der Daten wieder hinaus.
+          FIX: der Ladezustand reserviert dieselbe Höhe wie der Fallback der
+          Routen-Hülle (`components/layout/RouteHuelle.tsx`, dort die Herleitung,
+          warum es im Pane ein fester Block statt 100 vh ist). Nichts wird
+          verzögert oder versteckt: es steht dieselbe Anzeige, nur ohne dass der
+          Seitenfuss dafür nach oben rückt. */}
       {!alle && !fehler && (
-        <div className="space-y-3 py-12 text-center">
+        <div className={`${pk('min-h-screen', 'min-h-[24rem]')} space-y-3 py-12 text-center`}>
           <div className="scale-rule mx-auto max-w-[200px]" aria-hidden />
           <p className="text-body-s text-ink-500">Die Sammlung wird abgerufen …</p>
         </div>
@@ -360,7 +388,8 @@ export function Rechtsprechung() {
       {alle && alle.length > 0 && (
         <div className={pk('lg:grid lg:grid-cols-[14rem_minmax(0,1fr)] lg:gap-6', '@3xl/pane:grid @3xl/pane:grid-cols-[14rem_minmax(0,1fr)] @3xl/pane:gap-6')}>
           {/* Links: Sachgebiets-Rail (Mobil oben als Chip-Band). */}
-          <div className={pk('mb-4 lg:mb-0', 'mb-4 @3xl/pane:mb-0')}>
+          {/* D22 Ziff. 4: @390 stand die Rail 49 px über der Live-Suche (Budget 48). */}
+          <div className={pk('mb-3 lg:mb-0', 'mb-3 @3xl/pane:mb-0')}>
             <SachgebietKacheln
               zaehler={railZaehler}
               gesamt={railGesamt}

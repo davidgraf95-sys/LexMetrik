@@ -140,7 +140,7 @@ export function RichterFilter({ aktiv, aktivName, registerGeladen, optionen, onW
           className="lc-input lc-input-sm w-full"
         />
         {zeigtListe && (
-          <div ref={panel} className="lc-panel absolute left-0 right-0 top-full z-30 mt-1 shadow-md">
+          <div ref={panel} className="lc-panel absolute left-0 right-0 top-full z-dropdown mt-1 shadow-md">
             {sichtbar.length === 0 ? (
               // Leerzustand (F4): ehrliche Auskunft, keine Fehler-Optik — der
               // Name kommt schlicht im aktuellen Filterausschnitt nicht vor.

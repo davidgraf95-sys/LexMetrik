@@ -42,7 +42,7 @@ export function TrefferLeiste({
   return (
     <div data-treffer-leiste
       style={{ top: 'var(--toc-deckel, 0px)' }}
-      className="sticky z-10 space-y-1 bg-paper pb-1 pt-0.5 text-body-s text-ink-500">
+      className="sticky z-sticky space-y-1 bg-paper pb-1 pt-0.5 text-body-s text-ink-500">
       {/* ── Ä94 (H4-Nachzug 18.8.2026) · DER STUMMEL NIMMT DEN KNOPF AUF ─────
           Gemessen im Handy-Sheet (390, StPO/«Entschädigung»): das Segment stand
           mit 288 px in einem 358-px-Kasten — 70 px Stummel rechts —, und genau

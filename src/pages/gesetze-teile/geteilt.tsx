@@ -3,7 +3,7 @@
 // (Gitter in der Such-Trefferliste). Reiner Move aus Gesetze.tsx —
 // Verhalten/Props unverändert.
 import { usePaneKlasse } from '../../components/layout/PaneKontext';
-import { ErlassKarte, ErlassZeile } from '../../components/normtext/ErlassKarte';
+import { ErlassKarte, ErlassTabelle } from '../../components/normtext/ErlassKarte';
 import { type BrowseErlass } from '../../lib/normtext/browse-typen';
 import { GruppenKopf } from '../../components/ui/GruppenKopf';
 
@@ -42,7 +42,6 @@ export function Kategorie({ id, offen, onToggle, kopf, anzahl, children }: {
 // Inhalt einer Untergruppe: Leitgesetze als Karten, untergeordnetes
 // Ausführungsrecht (Verordnungen/Reglemente) dezent als eingerückte Liste.
 export function GruppenInhalt({ titel, items }: { titel: string; items: BrowseErlass[] }) {
-  const pk = usePaneKlasse();
   const gesetze = items.filter((e) => !istVerordnung(e));
   const verordnungen = items.filter(istVerordnung);
   return (
@@ -52,9 +51,10 @@ export function GruppenInhalt({ titel, items }: { titel: string; items: BrowseEr
       {verordnungen.length > 0 && (
         <div className="pl-3 border-l-2 border-line/70 ml-0.5">
           <p className="lc-overline mb-1">Verordnungen &amp; Ausführungsrecht</p>
-          <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-x-4 gap-y-2')}>
-            {verordnungen.map((e) => <ErlassZeile key={e.key} e={e} />)}
-          </div>
+          {/* D24: dieselbe Zeilen-Anatomie wie die Kanton-Listen — Kürzel,
+              Titel, SR-Nr. in gemeinsamen Spalten, Zeilenpaare gleich hoch. */}
+          <ErlassTabelle erlasse={verordnungen} art="bund"
+            beschriftung={`${titel} — Verordnungen: Kürzel, Titel, SR-Nummer`} />
         </div>
       )}
     </div>
