@@ -1,5 +1,4 @@
 import { usePaneKontext } from '../../../components/layout/PaneKontext';
-import { usePaneSteuerung } from '../../../components/layout/usePaneLayout';
 import { useKopieren } from '../../../components/useKopieren';
 import { NEUER_TAB } from '../../../lib/benennung';
 import { zitatMitAusweis, heuteIso } from '../../../lib/format';
@@ -23,11 +22,27 @@ import { urlMitHash } from '../../../lib/liveUrlSync';
 //     zusätzlich gebaut (§5, §17-Gegengewicht): zwei Orte für dieselbe Aktion
 //     wären genau die Dopplung, die dieser Schritt abräumt.
 //
-// NEU dazu: «⧉ Daneben öffnen» — der Artikel im zweiten Fenster. Die Wirkung
-// gibt es im Haus längst (`usePaneSteuerung`, NormPopover/HeaderSuche); am
-// Artikel selbst fehlte sie. Sie erscheint nur, wenn ein Fenster auch wirklich
-// aufgeht (`kannOeffnen`) und der Pfad nicht schon offen ist — sonst wäre der
-// Knopf eine Zusage ohne Wirkung (§8).
+// ── ABWEICHUNG VOM AUFTRAG, OFFENGELEGT (§7) · «⧉ Daneben öffnen» FEHLT ────
+// Der D35-F1-Auftrag nennt als vierte Aktion «⧉ daneben öffnen». Gebaut und
+// GEMESSEN am 7.9.2026 (Preview :4435, /gesetze/bund/OR#art-336_c @1440): der
+// Knopf kann an einem Artikel NIE erscheinen. Die Pane-Steuerung entscheidet
+// über `istOffen(pfad)`, und die Kennung eines Fensters ist `tabSchluessel` —
+// die den `#hash` ausdrücklich abstreift (`usePaneLayout.ts:26`,
+// `Shell.tsx:301`). `/gesetze/bund/OR#art-336_c` ist damit für die Steuerung
+// derselbe Pfad wie `/gesetze/bund/OR`, und der steht immer offen: sonst
+// stünde dieser Artikel gar nicht auf dem Schirm. `kannOeffnen && !istOffen(…)`
+// ist an JEDEM Artikel jedes Erlasses false — gemessen: der Knopf renderte
+// nicht ein einziges Mal. Und würde er es doch, bliebe er wirkungslos:
+// `Shell.tsx:357` führt dieselbe Sperre noch einmal im Klick-Pfad.
+//
+// EIN KNOPF, DER NIE ERSCHEINT, WIRD NICHT GEBAUT (§8, §17-Gegengewicht: was
+// nicht wirken kann, wird gestrichen statt bewacht). Der Weg, der WIRKT, wäre
+// eine ZWEITE Instanz desselben Erlasses (`?r=`-Diskriminator — `tabSchluessel`
+// behält ihn ausdrücklich); die Vergabe dieser Instanz-Nummer gehört aber der
+// Fenster-/Reiter-Mechanik (R13), nicht dieser Zeile. Der Auftrag ist insoweit
+// OFFEN und im PR als solcher gemeldet, nicht still übergangen.
+// Der Weg zum zweiten Fenster bleibt unterdessen da, wo er heute steht: am
+// Erlass-Kopf («Daneben öffnen») und an jedem Norm-Popover.
 //
 // FUNKTION, aria und title der drei bestehenden Knöpfe sind WORT FÜR WORT
 // unverändert übernommen (§6: der Schritt verschiebt und macht sichtbar, er
@@ -55,7 +70,6 @@ export function ArtikelAktionen({ artikel, basisPfad, zitat, zitatVoll, amtlich 
   // primäre Pane mit `imPane: true`; nur die Rolle unterscheidet die beiden.
   const { rolle } = usePaneKontext();
   const istSekundaer = rolle === 'sekundaer';
-  const { oeffneDaneben, kannOeffnen, istOffen } = usePaneSteuerung();
 
   /** §5 — EINE Kodierung für Kopie, Adresse und Pane-Pfad (`urlMitHash`).
    *  Handgebaute Strings gerieten bei 54 Artikel-Token mit Leerzeichen oder
@@ -63,11 +77,6 @@ export function ArtikelAktionen({ artikel, basisPfad, zitat, zitatVoll, amtlich 
    *  Permalink bricht zusätzlich die Auto-Verlinkung in Mail und Chat. */
   const ursprung = typeof window !== 'undefined' ? window.location.origin : 'https://lexmetrik.ch';
   const permalink = urlMitHash(`${ursprung}${basisPfad}`, `art-${artikel}`);
-  /** Derselbe Wert als PFAD — das ist es, was ein Pane speichert. */
-  const panePfad = (() => {
-    const u = new URL(permalink);
-    return `${u.pathname}${u.hash}`;
-  })();
 
   const kopiere = (was: 'zitat' | 'link') => {
     // B-6 (QS-BASIS): die Zitat-Kopie trägt den Stand-Ausweis (§7 a–d) —
@@ -110,16 +119,6 @@ export function ArtikelAktionen({ artikel, basisPfad, zitat, zitatVoll, amtlich 
           className="lc-btn-mini text-micro text-ink-500 hover:text-brass-700 no-underline whitespace-nowrap"
           aria-label={`Amtliche Fassung von ${zitat} auf Fedlex öffnen ${NEUER_TAB}`}
           title="Amtliche Fassung an genau dieser Stelle (Fedlex)">Amtliche Fassung ↗</a>
-      )}
-      {/* Ä118/M8: das Wort sagt die Wirkung — «Daneben öffnen», wie an den
-          vier anderen Stellen mit derselben Wirkung. Die Glyphe steht NEBEN
-          ihrem Wort und folgt dessen Type (R3-B, «beschriftet»); sie trägt
-          darum keine eigene Typo-Klasse. */}
-      {kannOeffnen && !istOffen(panePfad) && (
-        <button type="button" onClick={() => oeffneDaneben(panePfad)}
-          className="lc-btn-mini text-micro text-ink-500 hover:text-brass-700 whitespace-nowrap"
-          title={`${zitat} daneben öffnen`} aria-label={`${zitat} daneben öffnen`}>
-          <span aria-hidden>⧉</span>&nbsp;Daneben öffnen</button>
       )}
     </span>
   );

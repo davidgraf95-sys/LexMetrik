@@ -8,7 +8,7 @@ import { useState, type ReactNode } from 'react';
 // die Rubriken dieses Artikels mit ihren Zahlen und RECHTS seine Aktionen:
 //
 //     Bezüge  11 Entscheide › · 2 Materialien › · 6 Verweise › · 1 Rechner ›
-//                             Zitat · Link · Amtliche Fassung ↗ · ⧉ Daneben öffnen
+//                                       Zitat · Link · Amtliche Fassung ↗
 //
 // DREI ÄNDERUNGEN GEGENÜBER D34, jede mit eigenem Grund:
 //
@@ -147,7 +147,7 @@ export function BezuegeKopf({ marken, zitat, aktionen, onOeffnen, laedt = false 
             <div key={m.reg} className="lr7-bez-block" data-reg={m.reg}>
               {/* Das Skelett steht NUR in der Rubrik, die wartet — Verweise und
                   Rechner brauchen keinen Shard und stehen sofort. Es reserviert
-                  eine Zeilenhöhe (`.lr7-bez-skelett`, `min-height`), damit der
+                  eine Zeilenhöhe (`min-h-bez-skelett`, tailwind.config.js), damit der
                   eintreffende Apparat reservierten Platz FÜLLT statt den Artikel
                   darunter zu schieben; die Reservierung ist ein BODEN, nie mehr
                   als der echte Inhalt — sonst schrumpfte der Block beim Laden

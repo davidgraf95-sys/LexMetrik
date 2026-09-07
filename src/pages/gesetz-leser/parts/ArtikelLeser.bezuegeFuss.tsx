@@ -46,7 +46,8 @@ import type { ArtikelRevision } from '../../../lib/verzahnung/artikel-revisionen
 // klick aufklappbar sein». Diese Datei RECHNET die Zahlen und liefert je Rubrik
 // den Inhalt, den ihr Griff aufklappt; die Zeile selbst (Griffe, Zustand,
 // Aktions-Slot) steht in `./BezuegeKopf.tsx`. Neu ist der Slot `aktionen`: die
-// Artikel-Aktionen «Zitat · Link · Amtliche Fassung ↗ · ⧉ Daneben öffnen»
+// Artikel-Aktionen «Zitat · Link · Amtliche Fassung ↗» (zum fehlenden vierten
+// Knopf «⧉ Daneben öffnen» s. die Abweichungs-Notiz in `./ArtikelAktionen.tsx`)
 // stehen seither RECHTS in derselben Zeile und dauerhaft sichtbar, statt in der
 // Artikel-Kopfzeile unter `opacity-0` (Herleitung in `./ArtikelAktionen.tsx`).
 //
