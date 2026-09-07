@@ -1,15 +1,15 @@
 import { useEffect, useRef } from 'react';
-import { useLocation } from 'react-router-dom';
-import { ersetzeTab, hatLeerenReiter, istReiterPfad, merkeTab } from '../lib/tabs';
+import { useLocation, useNavigationType } from 'react-router-dom';
+import { ersetzeTab, istReiterPfad, merkeTab } from '../lib/tabs';
 import { labelAusMeta } from '../lib/verlaufLabel';
 import { kanonisierePfad } from '../lib/normtext/erlassAdresse';
 
 // Unsichtbarer Tracker in App.tsx: öffnet einen Reiter NUR für ein KONKRETES
 // Inhalts-Item (Auftrag David) — ein bestimmter Rechner/Engine, ein bestimmtes
 // Gesetz, eine bestimmte Vorlage oder ein konkreter Entscheid (zweite Pfadebene
-// unter einer Inhalts-Rubrik). Übersichts-/Rubrik-Seiten (`/gesetze`, `/rechner`,
-// `/rechtsprechung`, `/vorlagen`), die Startseite und Info-Seiten öffnen KEINEN
-// Reiter — ein blosser Seitenleisten-Klick soll nicht jedes Mal einen Tab erzeugen.
+// unter einer Inhalts-Rubrik). Seit D7 tragen auch die fünf Bereichs-Übersichten
+// einen Reiter, seit R14 (7.9.2026) die Sammlung «/»; ohne Reiter bleiben allein
+// die Info-/Meta-Seiten (/ueber, /methodik, /einstellungen, /kontakt).
 // Reines localStorage-Schreiben (§3).
 //
 // ── W2·24 §5a Ziff. 3 (R2-NACHZUG) · NAVIGATION ERSETZT, SIE HÄUFT NICHT AN ──
@@ -24,6 +24,19 @@ import { kanonisierePfad } from '../lib/normtext/erlassAdresse';
 //     `lmNeuerReiter`),
 //   · «zweite Instanz» desselben Erlasses (`lib/useErlassOeffnen.ts`,
 //     `gesetz-leser/v3/ReiterAktion.tsx` — beide rufen weiterhin `merkeTab`).
+//
+// ── R14 (Entscheid David 7.9.2026) · ALLES IST EIN REITER ───────────────────
+// Die Sammlung «/» ist seit R14 ein gewöhnlicher Reiter (`lib/tabs`, Block bei
+// `istReiterPfad`). Hier folgen daraus GENAU ZWEI Sätze:
+//   · Wer auf «/» geht, ERSETZT nichts — die Sammlung wird aktiviert oder
+//     angelegt (`merkeTab`). Das ist der Fix für Davids «weird»: der Klick auf
+//     die Marke lässt das offene Gesetz stehen, statt es zu überschreiben.
+//   · Wer eine Nicht-Reiter-Route betritt (/ueber, /kontakt …), verliert den
+//     aktiven Reiter als Herkunft (`aktiv.current = null`). Sonst zeigte der Ref
+//     weiter auf das verlassene Dokument, und die nächste Navigation träfe
+//     DESSEN Reiter — genau die gemessene Wurzel des Verlusts (R14-Prüfung
+//     §1.4). Damit erzeugt der Aufrufer endlich den Fall 3, den der Vertrag von
+//     `lib/tabs.ersetzeTab` seit dem R2-Nachzug beschreibt.
 //
 // ── D7 (David 6.9.2026) · DIE BEREICHS-ÜBERSICHTEN ZÄHLEN MIT ───────────────
 // «achte darauf dass der reiter bei gesetz mitzählt». WELCHER Pfad einen Reiter
@@ -41,21 +54,20 @@ export interface NeuerReiterState { lmNeuerReiter?: boolean }
 
 export function TabTracker() {
   const { pathname, search, hash, state } = useLocation();
+  // Die RICHTUNG der Navigation, deterministisch aus dem Router (§2): 'POP' =
+  // Zurück/Vorwärts. Nur eine Vorwärts-Navigation verbraucht einen Reiter und
+  // gehört in den Schliess-Ring — Blättern nicht (Herleitung bei `ersetzeTab`).
+  const navTyp = useNavigationType();
   // Die Adresse, aus der die nächste Navigation kommt = der aktive Reiter.
   // `null` beim Kaltstart: dort wird nichts ersetzt, sondern der bestehende
   // Reiter aktualisiert bzw. angehängt — die Persistenz bleibt unberührt.
   const aktiv = useRef<string | null>(null);
   useEffect(() => {
     if (!istReiterPfad(pathname)) {
-      // ── D19 (David 6.9.2026, «+») · DER LEERE REITER IST DIE EINE AUSNAHME ──
-      // Pfad '/' erzeugt sonst KEINEN Reiter (D7-Abweichung oben) und würde
-      // hier sonst einfach übersprungen. Existiert aber der eine ausdrücklich
-      // angelegte leere Reiter (`lib/tabs.neuerLeererReiter`), gilt ER als
-      // aktiver Reiter — sonst ersetzt die nächste Navigation NICHT ihn,
-      // sondern den davor aktiven (oder häuft an, §5a Ziff. 3). Nur die exakte
-      // Adresse zählt (kein ?search/#hash): genau die, unter der der leere
-      // Reiter angelegt wird.
-      if (pathname === '/' && !search && !hash && hatLeerenReiter()) aktiv.current = '/';
+      // R14: Meta-Routen tragen keinen Reiter — und lassen darum auch keinen
+      // als Herkunft zurück (Herleitung oben). Bis R14 stand hier der
+      // D19-Sonderfall für den leeren «+»-Reiter; er ist ersatzlos weg.
+      aktiv.current = null;
       return;
     }
     // pathname + ?search: der Instanz-Diskriminator ?r=<n> (dasselbe Gesetz
@@ -71,10 +83,15 @@ export function TabTracker() {
     // laufende Lesestellung schreibt weiterhin allein `aktualisiereTabArtikel`.
     const ziel = kanonisierePfad(pathname) + search + hash;
     const label = labelAusMeta(pathname) ?? undefined;
-    if ((state as NeuerReiterState | null)?.lmNeuerReiter) merkeTab(ziel, label);
-    else ersetzeTab(aktiv.current, ziel, label);
+    // R14: die Sammlung wird AKTIVIERT oder ANGELEGT, nie an die Stelle eines
+    // anderen Reiters gesetzt — dieselbe Semantik wie `merkeTab` sie ohnehin
+    // trägt (Dublette behält ihre Position, Neues hängt hinten an). Damit ist
+    // die «Höchstens EINE Sammlung»-Regel des «+» dieselbe Regel, kein zweiter
+    // Ort (§5) — und der Weg zurück ins Gesetz kostet keinen Reiter.
+    if ((state as NeuerReiterState | null)?.lmNeuerReiter || pathname === '/') merkeTab(ziel, label);
+    else ersetzeTab(aktiv.current, ziel, label, navTyp !== 'POP');
     aktiv.current = ziel;
-  }, [pathname, search, hash, state]);
+  }, [pathname, search, hash, state, navTyp]);
 
   useNeuerReiterGeste();
   return null;

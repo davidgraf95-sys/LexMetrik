@@ -1,7 +1,7 @@
 import { describe, it, expect, beforeEach } from 'vitest';
 import {
   ladeTabs, merkeTab, ersetzeTab, schliesseTab, leereTabs, ordneTabsUm, naechsteInstanz,
-  aktualisiereTabArtikel, neuerLeererReiter, hatLeerenReiter,
+  aktualisiereTabArtikel,
   schliesseAndere, schliesseRechtsVon, stelleLetztenWiederHer, letzterGeschlossener,
   istReiterPfad,
 } from '../lib/tabs';
@@ -210,48 +210,52 @@ describe('tabs.ts — offene Reiter', () => {
     expect(ladeTabs()).toEqual([]);
   });
 
-  // ── D19 (David 6.9.2026: «mit plus einen neuen reiter erzeugen können») ───
-  describe('neuerLeererReiter — höchstens ein leerer Reiter', () => {
-    it('legt Pfad "/" mit leer:true an, hinten angehängt', () => {
+  // ── DEKLARIERTE TEST-ÄNDERUNG (§6.3) · R14, Entscheid David 7.9.2026 ──────
+  //
+  // Hier stand der Block «neuerLeererReiter — höchstens ein leerer Reiter»
+  // (D19, 6.9.2026) mit fünf Fällen über `{ path: '/', leer: true }`. Die
+  // geprüfte SACHE — «höchstens EINE Neuer-Reiter-Seite, und die erste
+  // Navigation füllt genau sie» — ist unverändert; nur trägt sie seit R14
+  // kein eigenes Datenmodell mehr: die Sammlung «/» ist ein gewöhnlicher
+  // Reiter, `merkeTab` erkennt sie an ihrer Identität. Der alte Wortlaut der
+  // aufgehobenen Erwartung, damit er nachlesbar bleibt:
+  //   `neuerLeererReiter(); neuerLeererReiter()` ⇒ `[{ path: '/', leer: true }]`
+  //   `hatLeerenReiter()` ⇒ true/false
+  // ROT ZU BEKOMMEN (§6.7): in `lib/tabs.ladeTabs` den `leer`-Filter der
+  // Migration streichen ⇒ der Migrations-Fall unten liest das Feld zurück.
+  describe('R14 — die Sammlung ist ein Reiter wie jeder andere', () => {
+    it('höchstens EINE Sammlung: zweimal öffnen ergibt einen Reiter', () => {
       merkeTab('/rechner/tagerechner');
-      neuerLeererReiter();
-      const t = ladeTabs();
-      expect(t.map((x) => x.path)).toEqual(['/rechner/tagerechner', '/']);
-      expect(t[1].leer).toBe(true);
+      merkeTab('/');
+      merkeTab('/');
+      expect(ladeTabs()).toEqual([{ path: '/rechner/tagerechner' }, { path: '/' }]);
     });
 
-    it('zweiter Aufruf legt KEINEN zweiten an (höchstens einer gleichzeitig)', () => {
-      neuerLeererReiter();
-      neuerLeererReiter();
-      neuerLeererReiter();
-      expect(ladeTabs().length).toBe(1);
-      expect(ladeTabs()[0]).toEqual({ path: '/', leer: true });
-    });
-
-    it('hatLeerenReiter meldet den Zustand korrekt', () => {
-      expect(hatLeerenReiter()).toBe(false);
-      neuerLeererReiter();
-      expect(hatLeerenReiter()).toBe(true);
-      schliesseTab('/');
-      expect(hatLeerenReiter()).toBe(false);
-    });
-
-    it('ersetzeTab füllt den leeren Reiter und streicht das leer-Kennzeichen (§5a Ziff. 3 greift unverändert)', () => {
-      neuerLeererReiter();
+    it('die Navigation aus der Sammlung heraus füllt GENAU sie (§5a Ziff. 3)', () => {
+      merkeTab('/');
       ersetzeTab('/', '/gesetze/bund/OR#art-257_d', 'Art. 257d OR');
       const t = ladeTabs();
       expect(t.length).toBe(1);
       expect(t[0].path).toBe('/gesetze/bund/OR#art-257_d');
-      expect(t[0].leer).toBeUndefined();
     });
 
-    it('ein bereits offenes Ziel behält seine Position (Regel 1 aus §5a Ziff. 3): der leere Reiter bleibt dann leer stehen', () => {
+    it('ein bereits offenes Ziel behält seine Position — die Sammlung bleibt stehen', () => {
       merkeTab('/gesetze/bund/OR');
-      neuerLeererReiter();
+      merkeTab('/');
       ersetzeTab('/', '/gesetze/bund/OR');
-      const t = ladeTabs();
-      expect(t.map((x) => x.path)).toEqual(['/gesetze/bund/OR', '/']);
-      expect(t[1].leer).toBe(true);
+      expect(ladeTabs().map((x) => x.path)).toEqual(['/gesetze/bund/OR', '/']);
+    });
+
+    it('ein gespeicherter leerer «+»-Reiter (D19) lädt als gewöhnliche Sammlung', () => {
+      localStorage.setItem('lexmetrik-tabs',
+        JSON.stringify([{ path: '/gesetze/bund/OR' }, { path: '/', leer: true }]));
+      expect(ladeTabs()).toEqual([{ path: '/gesetze/bund/OR' }, { path: '/' }]);
+    });
+
+    it('trifft die Migration auf eine schon offene Sammlung, bleibt EIN Reiter', () => {
+      localStorage.setItem('lexmetrik-tabs',
+        JSON.stringify([{ path: '/' }, { path: '/', leer: true }]));
+      expect(ladeTabs()).toEqual([{ path: '/' }]);
     });
   });
   // ═══ M2 · MATERIALIEN TRAGEN EINEN REITER (Prüfbefund R11 #23) ════════════
@@ -263,9 +267,15 @@ describe('tabs.ts — offene Reiter', () => {
       expect(istReiterPfad('/materialien/BJ-EHRA-PM-2025-01')).toBe(true);
     });
 
-    it('die Rubrik-Übersicht /materialien trägt weiterhin einen Reiter (D7), die Startseite weiterhin keinen', () => {
+    // ── DEKLARIERTE TEST-ÄNDERUNG (§6.3) · R14, 7.9.2026 ────────────────────
+    // Alter Wortlaut: «die Rubrik-Übersicht /materialien trägt weiterhin einen
+    // Reiter (D7), die Startseite weiterhin keinen» mit
+    // `expect(istReiterPfad('/')).toBe(false)`. Die Startseite IST seit R14 ein
+    // Reiter (Entscheid David 7.9.2026, Herleitung in `lib/tabs`); der Fall
+    // dreht sich darum um. Die D7-Zusage für /materialien bleibt unberührt.
+    it('die Rubrik-Übersicht /materialien trägt einen Reiter (D7), die Sammlung «/» seit R14 auch', () => {
       expect(istReiterPfad('/materialien')).toBe(true);
-      expect(istReiterPfad('/')).toBe(false);
+      expect(istReiterPfad('/')).toBe(true);
     });
 
     it('Meta-Seiten bleiben ohne Reiter — der Regex öffnet nur die fünf Rubriken', () => {
@@ -315,9 +325,23 @@ describe('tabs.ts — offene Reiter', () => {
       expect(ladeTabs()).toEqual([]);
     });
 
-    it('der leere «+»-Reiter kommt NICHT in den Ring — er trägt kein Dokument', () => {
-      neuerLeererReiter();
+    // DEKLARIERTE TEST-ÄNDERUNG (§6.3) · R14: alter Wortlaut «der leere
+    // «+»-Reiter kommt NICHT in den Ring» mit `neuerLeererReiter()`. Die
+    // Zusage ist unverändert — nur heisst der Reiter jetzt «Sammlung» und
+    // trägt kein `leer`-Feld mehr; erkannt wird er an seinem Pfad.
+    it('die Sammlung kommt NICHT in den Ring — sie trägt kein Dokument', () => {
+      merkeTab('/');
       schliesseTab('/');
+      expect(letzterGeschlossener()).toBeNull();
+    });
+
+    // R14 · Blättern (Zurück/Vorwärts) ist kein Verlust: `ringt = false`.
+    // ROT ZU BEKOMMEN (§6.7): in `lib/tabs.ersetzeTab` das `if (ringt)` wieder
+    // durch den unbedingten `merkeGeschlossen`-Aufruf ersetzen.
+    it('eine POP-Navigation (Zurück/Vorwärts) füllt den Ring NICHT', () => {
+      merkeTab('/gesetze/bund/OR');
+      ersetzeTab('/gesetze/bund/OR', '/gesetze/bund/ZGB', undefined, false);
+      expect(ladeTabs().map((t) => t.path)).toEqual(['/gesetze/bund/ZGB']);
       expect(letzterGeschlossener()).toBeNull();
     });
 

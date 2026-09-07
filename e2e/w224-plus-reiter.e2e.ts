@@ -3,37 +3,47 @@
 //
 // David wörtlich: «in der tab zeile oben soll man mit plus einen neuen reiter
 // erzeugen können». Browser-Vorbild: ein «+» am Ende der Arbeitsleiste legt
-// einen LEEREN Reiter an (Kurzform «Neuer Reiter»), macht ihn aktiv, zeigt «/»
-// und schickt den Fokus in die Kopf-Suche. Die erste Navigation/Suche füllt
-// GENAU diesen Reiter — die D7-Regel «Navigation ersetzt den aktiven Reiter»
-// (§5a Ziff. 3) greift dafür unverändert, weil `TabTracker.tsx` den leeren
-// Reiter trotz Pfad «/» als aktiv führt (D7 kennt sonst KEINEN Reiter für die
-// Startseite). Höchstens EIN leerer Reiter gleichzeitig: ein zweiter Klick auf
-// «+» aktiviert den bestehenden.
+// einen Reiter an, macht ihn aktiv und schickt den Fokus in die Kopf-Suche.
+// Die erste Navigation/Suche füllt GENAU diesen Reiter (§5a Ziff. 3
+// «Navigation ersetzt den aktiven Reiter»). Höchstens EINER gleichzeitig: ein
+// zweiter Klick auf «+» aktiviert den bestehenden.
 //
-// ROT ZU BEKOMMEN (§6.7 — beide Fälle einmal gefahren, 6.9.2026):
-//   (a) `lib/tabs.neuerLeererReiter` entfernen ⇒ der Klick auf «+» tut nichts,
-//       kein Reiter entsteht.
-//   (b) den D19-Zweig in `TabTracker.tsx` (`hatLeerenReiter`) entfernen ⇒ die
-//       Suche aus dem leeren Reiter legt einen ZWEITEN Reiter an, statt ihn zu
-//       füllen — der zweite Fall unten («Suche füllt DENSELBEN Reiter») wird
-//       rot (2 Reiter statt 1).
+// ── DEKLARIERTE TEST-ÄNDERUNG (§6.3) · R14, Entscheid David 7.9.2026 ────────
+// Bis R14 legte «+» einen LEEREN Reiter an: Pfad «/», Feld `leer: true`,
+// Aufschrift «Neuer Reiter» — über einem Bildschirm, der Zeichen für Zeichen
+// derselbe blieb (gemessen 3777 == 3777 Zeichen; Davids «dann erscheint
+// einfach neuer reiter»). Seit R14 ist die SAMMLUNG die Neuer-Reiter-Seite und
+// ein gewöhnlicher Reiter. Alle fünf Fälle prüfen dieselben Zusagen wie zuvor
+// — anlegen, füllen, höchstens einer, Alt+T, Reload —; nachgeführt sind allein
+// die Aufschrift («Sammlung» statt «Neuer Reiter») und der gespeicherte
+// Eintrag (`{ path: '/' }` statt `{ path: '/', leer: true }`).
+//
+// ROT ZU BEKOMMEN (§6.7 — beide Fälle einmal gefahren, 6.9.2026, R14-Fassung
+// 7.9.2026):
+//   (a) in `layout/Reiterleiste.neuerReiter` das `zurSammlung()` streichen ⇒
+//       der Klick auf «+» tut nichts, kein Reiter entsteht.
+//   (b) in `lib/tabs.istReiterPfad` den `'/'`-Zweig streichen ⇒ die Suche aus
+//       der Sammlung legt einen ZWEITEN Reiter an, statt sie zu füllen — der
+//       zweite Fall unten wird rot (2 Reiter statt 1).
 import { test, expect, type Page } from '@playwright/test'
 import { warteAufSuchindex } from './helpers/warteAufSuchindex'
 
 const REITER = 'nav[aria-label="Offene Reiter"]'
 const aktiv = (page: Page) => page.locator(`${REITER} [data-reiter-aktiv="true"]`)
-// `exact: true`: sobald der leere Reiter existiert, tragen auch SEIN eigener
-// Reiter-Knopf («Reiter 1: Neuer Reiter») und sein Schliess-✕ («Reiter «Neuer
-// Reiter» schliessen») die Zeichenkette «Neuer Reiter» als TEIL ihres
-// Accessible Name — Playwrights Substring-Vergleich fände dann drei Treffer
-// statt des einen «+»-Knopfs.
+// `exact: true`: der «+» heisst «Neuer Reiter» (die AKTION), der Reiter selbst
+// «Sammlung» (der INHALT). Der exakte Vergleich hielt schon vor R14 die drei
+// Treffer auseinander und bleibt darum unverändert stehen.
 const plusKnopf = (page: Page) => page.locator(REITER).getByRole('button', { name: 'Neuer Reiter', exact: true })
 const kopfFeld = (page: Page) => page.getByRole('combobox', { name: /LexMetrik durchsuchen/ })
 
-/** Die gespeicherte Reiter-Liste — die Wahrheit, die auch den Neustart übersteht. */
+/** Die gespeicherten Reiter-ADRESSEN — die Wahrheit, die den Neustart übersteht.
+ *  Nur die Pfade: die Sammlung trägt wie die fünf Bereichs-Übersichten ihren
+ *  SEO-Titel als `label` (R3-F7 — die ANZEIGE holt ihre Kurzform «Sammlung»
+ *  aus `lib/tabs.reiterKurzform`, nicht daraus), und dieses Feld wird vom
+ *  TabTracker einen Tick nach dem Öffnen nachgetragen. Ein Vergleich ganzer
+ *  Objekte hinge damit am Zeitpunkt der Messung, nicht an der Zusage. */
 const tabs = (page: Page) => page.evaluate(() =>
-  JSON.parse(localStorage.getItem('lexmetrik-tabs') ?? '[]') as { path: string; leer?: boolean }[])
+  (JSON.parse(localStorage.getItem('lexmetrik-tabs') ?? '[]') as { path: string }[]).map((t) => t.path))
 
 test.describe.configure({ timeout: 60_000 })
 
@@ -46,11 +56,11 @@ test.beforeEach(async ({ page }) => {
   await expect(plusKnopf(page)).toBeVisible()
 })
 
-test('Klick auf «+» legt einen leeren, aktiven Reiter an und schickt den Fokus in die Kopf-Suche', async ({ page }) => {
+test('Klick auf «+» legt einen aktiven Sammlungs-Reiter an und schickt den Fokus in die Kopf-Suche', async ({ page }) => {
   await plusKnopf(page).click()
   await expect(page).toHaveURL(/\/$/)
-  expect(await tabs(page)).toEqual([{ path: '/', leer: true }])
-  await expect(aktiv(page)).toContainText('Neuer Reiter')
+  expect(await tabs(page)).toEqual(['/'])
+  await expect(aktiv(page)).toContainText('Sammlung')
   await expect(kopfFeld(page)).toBeFocused()
 })
 
@@ -70,28 +80,30 @@ test('Suche füllt DENSELBEN Reiter — kein zweiter, die Zahl bleibt', async ({
   // Genau EIN Reiter — der leere ist gefüllt, nicht verdoppelt.
   const t = await tabs(page)
   expect(t.length).toBe(1)
-  expect(t[0].leer).toBeUndefined()
+  expect(t[0]).toContain('/gesetze/bund/OR')
   await expect(aktiv(page)).toContainText('257d OR')
 })
 
-test('zweiter Klick auf «+» aktiviert den bestehenden leeren Reiter statt einen zweiten anzulegen', async ({ page }) => {
+test('zweiter Klick auf «+» aktiviert den bestehenden Sammlungs-Reiter statt einen zweiten anzulegen', async ({ page }) => {
   await plusKnopf(page).click()
-  expect(await tabs(page)).toEqual([{ path: '/', leer: true }])
+  expect(await tabs(page)).toEqual(['/'])
+  // Das Suchvorschlags-Blatt fängt sonst den Zeiger ab (R14-Prüfung §1.3 e).
+  await page.keyboard.press('Escape')
   await plusKnopf(page).click()
-  expect(await tabs(page)).toEqual([{ path: '/', leer: true }])
+  expect(await tabs(page)).toEqual(['/'])
 })
 
-test('Alt+T legt denselben leeren Reiter an wie der Klick', async ({ page }) => {
+test('Alt+T legt denselben Sammlungs-Reiter an wie der Klick', async ({ page }) => {
   await page.keyboard.press('Alt+T')
   await expect(page).toHaveURL(/\/$/)
-  expect(await tabs(page)).toEqual([{ path: '/', leer: true }])
+  expect(await tabs(page)).toEqual(['/'])
   await expect(kopfFeld(page)).toBeFocused()
 })
 
-test('Reload: der leere Reiter übersteht den Neustart', async ({ page }) => {
+test('Reload: der Sammlungs-Reiter übersteht den Neustart', async ({ page }) => {
   await plusKnopf(page).click()
   await page.reload()
   await expect(plusKnopf(page)).toBeVisible()
-  await expect(aktiv(page)).toContainText('Neuer Reiter')
-  expect(await tabs(page)).toEqual([{ path: '/', leer: true }])
+  await expect(aktiv(page)).toContainText('Sammlung')
+  expect(await tabs(page)).toEqual(['/'])
 })

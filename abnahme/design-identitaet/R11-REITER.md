@@ -12,7 +12,7 @@ bewertet; Screens `pruef-r11-01…11.jpg` in diesem Ordner.
 
 | Mass | Inventar-Befund | Zusage | Stand |
 |---|---|---|---|
-| M1 | #16 P4 | Jeder Pfad in einem Fenster hat seinen Reiter; beide Marken ◧◨ | gebaut |
+| M1 | #16 P4 | Jeder Pfad in einem Fenster hat seinen Reiter; beide Marken ◧◨ | gebaut · **mit R14 vollständig** (7.9.2026: seit die Sammlung «/» ein Reiter ist, gilt der Satz ohne Ausnahme — `R14-REITER-MODELL.md`) |
 | M2 | #23/#24 | Materialien reiterfähig, mit echtem Namen aus dem Manifest | gebaut |
 | M3 | #37 | «Wieder öffnen»: Ring, Alt+Shift+T, Menü, Blatt | gebaut |
 | M4 | #35 | Reiter-Kontextmenü mit fünf Aktionen, Maus und Tastatur | gebaut |
