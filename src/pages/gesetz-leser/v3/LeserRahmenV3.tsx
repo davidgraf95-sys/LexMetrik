@@ -287,16 +287,8 @@ export function LeserRahmenV3({ ebene, schluessel }: LeserRahmenV3Props) {
       style={{
         ...leserCssVariablen({
           stufe, vollflaechig: !umgebung.imPane, suchZoneKlebt,
-          // D28-Nachzug: hoch nur, wenn die Zähler-Zeile wirklich steht.
-          // W2·24-F (7.9.2026): der ROHE Feldzustand, nicht `m.sucheAktiv` —
-          // die Höhe muss in derselben Eingabe-Aufgabe wachsen wie der
-          // Tastendruck, sonst ist sie auf langsamer CPU ein eingabefreier
-          // Layout-Sprung (Messung und Herleitung in `./leserGeometrie`,
-          // `zoneHoch`; die A9-DoD-Sonde mass CLS 0.01914 unter Drossel 20×).
-          // Der INHALT der Zone bleibt am entprellten Wert (`suchZoneAufbau`
-          // oben, `sucheAktiv: m.sucheAktiv`) — reservierter Platz ist
-          // richtig, geratene Zahlen wären es nicht (§8).
-          zoneHoch: !m.sucheFeldLeer && !zweiSpalten,
+          // D28 + W2·24-F: nur bei stehender Zähler-Zeile, roher Feldwert (`zoneHoch`).
+          zoneHoch: m.suche.trim() !== '' && !zweiSpalten,
           suchInZeile, spurVersatzRem: bild.spurVersatzRem,
         }),
         // D33: Rahmen-Aufweitung und dynamischer Lesemass-Deckel sind mit der

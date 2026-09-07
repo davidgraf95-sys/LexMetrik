@@ -109,7 +109,10 @@ export interface LeserGeometrieLage {
    *  feuert MITTEN im Tippen, und der Browser verbucht den Sprung als
    *  eingabefrei. Dasselbe sieht ein Leser auf einem schwachen Telefon.
    *
-   *  DER WERT KOMMT DARUM VOM ROHEN FELDINHALT (`!m.sucheFeldLeer`, Rahmen):
+   *  DER WERT KOMMT DARUM VOM ROHEN FELDWERT (`m.suche.trim() !== ''`, Rahmen —
+   *  `.trim()`, damit ein reines Leerzeichen die Zone nicht dauerhaft hochstellt,
+   *  ohne dass je eine Zähler-Zeile käme; im Ruhezustand deckungsgleich mit
+   *  `sucheFeldLeer` des Modells, das dieselbe Frage für die Treffer stellt):
    *  die Höhe wächst in DERSELBEN Eingabe-Aufgabe wie der Tastendruck, also
    *  eingabe-nah. Der Name sagt jetzt, was er meint — die Zone ist HOCH, nicht
    *  «die Suche läuft»; das eine ist Geometrie und sofort, das andere ist die

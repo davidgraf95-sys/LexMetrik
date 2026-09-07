@@ -119,16 +119,6 @@ export interface LeserV3Modell {
   suche: string;
   setSuche: Dispatch<SetStateAction<string>>;
   sucheAktiv: boolean;
-  /** ── W2·24-F · DER SOFORTIGE FELDZUSTAND, NEBEN DEM ENTPRELLTEN ───────────
-   *  `sucheAktiv` oben hängt am ENTPRELLTEN Wert (200 ms) — richtig für alles,
-   *  was TEUER ist (Trefferfilter über ~1000 Artikel, IntersectionObserver).
-   *  Falsch für alles, was GEOMETRIE ist: eine Höhe, die 200 ms nach dem
-   *  Tastendruck umschaltet, ist auf langsamer CPU ein Layout-Sprung ausserhalb
-   *  des 500-ms-Eingabefensters (Messung in `./leserGeometrie`, `zoneHoch`).
-   *  Darum steht der rohe Zustand hier daneben — und ist nicht dasselbe wie
-   *  `!sucheAktiv`: zwischen Tastendruck und Entprellung sind BEIDE `false`
-   *  bzw. `true` verschieden, und genau diese Lücke ist der Sprung. */
-  sucheFeldLeer: boolean;
   sucheBegriff: string;
   treffer: LeserTreffer[];
   fundstellen: number;
@@ -415,7 +405,7 @@ export function useLeserV3Modell({ ebene: routenSegment, schluessel }: { ebene: 
       aktArtikel, aktivToken, artTokens, aktivIds, offen, setOffen, tocBaum, setTocBaum,
       tocToggleGruppe,
       tocOffen, setTocOffen, tocAuf, setTocAuf,
-      suche, setSuche, sucheAktiv: sucheBegriff !== '', sucheFeldLeer, sucheBegriff,
+      suche, setSuche, sucheAktiv: sucheBegriff !== '', sucheBegriff,
       treffer, fundstellen, fussnotenAus, trefferPos, trefferAktivToken,
       suchBereich, setzeSuchBereich, aktivStelle, fundstellenFuer,
       springeZuFundstelle, springeZuTreffer, springeZuStelle, loeseArtikel, siePfad, siePfadArtikel,
