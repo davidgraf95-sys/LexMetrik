@@ -359,6 +359,9 @@
          10 --z-sticky         app-weit: klebende Kopf-/Werkzeugleisten
          15 --z-entscheid-sticky  EntscheidLeser.tsx (zweite Sticky-Ebene dort)
          16 --z-reader-scrim   v3/LeserScrim.tsx (Ansicht-Menü-Scrim)
+                                — Träger mit D41 (7.9.2026) entfallen; die
+                                Sprosse bleibt reserviert, weil 17 und 19
+                                sich ausdrücklich GEGEN sie herleiten.
          17 --z-reader-kopf    v3/LeserKopf.tsx (klebt ÜBER seinem eigenen Scrim)
          19 --z-inhalt-kopf    layout/InhaltsKopf.tsx (ÜBER allen Reader-Sticky-
                                 Leisten 15/16, UNTER der App-Leiste 20/30)
@@ -491,7 +494,9 @@
        DREI ROLLEN, DREI DECKUNGEN, EINE FARBE. Die Farbe ist `black` und NICHT
        `--ink-900`: das Tinten-Token flippt mit dem Thema (hell #201E16, dunkel
        #E9E7E2), ein `bg-ink-900/30` HELLT im Dunkelmodus also auf, statt
-       abzudunkeln (Herleitung und Messung: `v3/LeserScrim.tsx`, B7-N1;
+       abzudunkeln (Herleitung und Messung: `v3/LeserScrim.tsx`, B7-N1 — die
+       Datei ist mit D41 (7.9.2026) entfallen, die Messung von damals bleibt
+       gültig und wohnt seither hier;
        gemessene Leuchtdichte im Lesefeld hell 237.5 → 166.1, dunkel
        32.7 → 23.0). Vor F2-1 stand dieselbe Zusage in SECHS Fundstellen als
        Utility-Kette, davon drei mit dem falschen, aufhellenden Token.
