@@ -3731,8 +3731,38 @@ html[data-lr6-anker-warten] footer { visibility: hidden; }
    Knopf (Referenzbild `vorschlag-freigegeben.html`), darum ausgenommen.
    Die Tap-Fläche (44 px) bleibt unverändert: die ruhigere Optik darf sie nie
    kaufen (F2b, dieselbe Auflage wie an `.lc-kopf-aktionen .lc-chip`). */
+
+/* FA (7.9.2026) · WARUM DER GRUNDRISS GESCHICHTET IST UND DER REST NICHT.
+   Der Block hier ist mit Absicht ungeschichtet (Kopf der GB-Sektion): er muss
+   `bg-surface`/`border-line` an den Aufrufern schlagen. `display` MITZUNEHMEN
+   war der Fehler — ungeschichtet schlaegt es auch die DISPLAY-Utilities, mit
+   denen jeder Griff seine Sichtbarkeit steuert (`hidden`, `lg:hidden`,
+   `max-[480px]:inline-flex`). Alle drei versteckten Griffe standen dadurch auf
+   JEDER Breite im Streifen.
+   GEMESSEN gegen `dist/` am Merge-Stand 85daf2926, warm, Port 4418:
+     · D23 «kein Spalt zwischen Feld und Panel» @1024 UND @1440: 44 px statt 0
+       — exakt `--tap-ziel-komfort`. Die erzwungene Lupe umbrach im
+       `role="search"`-Anker auf eine zweite Zeile, `top-full` mass ab deren
+       Unterkante statt ab der Feldkante.
+     · «@320 oeffnet die Lupe das Feld ueber die volle Streifenbreite»:
+       176 px statt >= 240 — der NUR-Desktop-Griff (`hidden lg:inline-flex`)
+       stand @320 mit im Streifen und nahm dem Feld seine Breite.
+     · «@500 stehen Logo und Verlauf-Trigger wieder im Streifen»: die Lupe war
+       sichtbar, obwohl sie nur unter 480 px gehoert.
+   NULLPROBE (§0 Ziff. 3): dieselben zwei Sonden, byte-gleich seit 018b41a37,
+   auf demselben Rechner gegen einen Build von 018b41a37 (vor GA/GB/KF):
+   19/19 gruen. Der Defekt liegt an GB-15, nicht auf main.
+   FIX: der Grundriss (`display` + seine beiden Ausrichtungen) zieht nach
+   `@layer components` und verliert damit gegen jede Display-Utility — genau
+   das, was ein Baustein tun soll. Die Aussage von GB-15 (kein Rahmen, keine
+   Fuellung, 44-px-Tap-Flaeche, Zustand ueber Tinte) bleibt ungeschichtet und
+   damit unveraendert stark. Die textuelle Position von `@layer components` ist
+   fuer Tailwind 3 belanglos — die Regel wandert an die Stelle von
+   `@tailwind components` (Z. 2), also VOR die Utilities. */
+@layer components {
+  .lc-topbar-griff { display: inline-flex; align-items: center; justify-content: center; }
+}
 .lc-topbar-griff {
-  display: inline-flex; align-items: center; justify-content: center;
   min-height: var(--tap-ziel-komfort, 2.75rem);
   min-width: var(--tap-ziel-komfort, 2.75rem);
   border: 0; border-radius: 0; background: transparent;
