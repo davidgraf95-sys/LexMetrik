@@ -139,20 +139,25 @@ test.describe('D4 — das Ansicht-Menü trägt seine Rolle und löst sie ein', (
     await expect(flaeche).toHaveAttribute('role', 'menu')
     await expect(flaeche).toHaveAttribute('aria-label', 'Ansicht')
     // Die Schalter tragen ihren Zustand weiterhin selbst — als
-    // `menuitemcheckbox` mit `aria-checked`, nicht mehr als `switch`.
-    const schalter = flaeche.locator('[role="menuitemcheckbox"]')
+    // `menuitemcheckbox`/`menuitemradio` mit `aria-checked`, nicht als `switch`.
+    // D35-F3 (§6.3, Entscheid David 7.9.2026): «Fussnoten» und «Fassung» sind
+    // Stellungen EINER Radiogruppe geworden; im Menü stehen seither eine
+    // Checkbox und drei Radios statt dreier Checkboxen.
+    const schalter = flaeche.locator('[role="menuitemcheckbox"], [role="menuitemradio"]')
     expect(await schalter.count(), 'Schalter im Menü').toBeGreaterThanOrEqual(2)
     await expect(schalter.first()).toHaveAttribute('aria-checked', /true|false/)
     // Und NICHTS im Menü, das keine Menü-Rolle trägt: die Kinder sind
-    // vollzählig `menuitemcheckbox`/`menuitem`. Genau das ist die Bedingung,
-    // an der axe den ersten Bau gekippt hat.
-    expect(await page.evaluate(() => [...document.querySelectorAll(
+    // vollzählig `menuitemcheckbox`/`menuitem`/`group`. Genau das ist die
+    // Bedingung, an der axe den ersten Bau gekippt hat — `group` ist nach ARIA
+    // ein erlaubtes Kind von `menu` und trägt die Radiogruppe samt ihrem Titel.
+    const ERLAUBT = ['menuitem', 'menuitemcheckbox', 'menuitemradio', 'group']
+    expect(await page.evaluate((erlaubt) => [...document.querySelectorAll(
       '[data-v3-ansicht-menue] > *')].map((e) => e.getAttribute('role') ?? '(ohne)')
-      .filter((r) => r !== 'menuitem' && r !== 'menuitemcheckbox')), 'Fremdkinder im Menü')
+      .filter((r) => !erlaubt.includes(r)), ERLAUBT), 'Fremdkinder im Menü')
       .toEqual([])
 
     // ── DAS EINGELÖSTE VERSPRECHEN: ↓ wandert von Eintrag zu Eintrag ────────
-    const eintraege = flaeche.locator('[role="menuitemcheckbox"], [role="menuitem"]')
+    const eintraege = flaeche.locator('[role="menuitemcheckbox"], [role="menuitemradio"], [role="menuitem"]')
     await eintraege.first().focus()
     const vorher = await page.evaluate(() => document.activeElement?.getAttribute('aria-label')
       ?? document.activeElement?.textContent ?? '')

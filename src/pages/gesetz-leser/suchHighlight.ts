@@ -171,7 +171,9 @@ function istFussnotenMarker(el: Element): boolean {
  * `display:none` auf Marker + Apparat, index.css) oder die Änderungsvermerke ab
  * (S1-Nachzug 17.8.2026: hier stand «die Hist-Chronologie» — jener dritte Modus ist
  * mit S1 gestrichen, der Sachverhalt gilt unverändert für den zweiwertigen
- * Schalter), lag der Text weiter im DOM — der Zähler meldete für OR «Fassung» 141, wovon 61
+ * Schalter; D35-F3 7.9.2026: aus beiden ist die Stellung `html[data-vermerke]`
+ * geworden, und was dämpfbar bleibt, ist `kl:'A'` — der Sachverhalt gilt
+ * unverändert weiter), lag der Text weiter im DOM — der Zähler meldete für OR «Fassung» 141, wovon 61
  * (43 %) in `display:none`-Teilbäumen lagen: unmalbar, und der Sprung dorthin
  * bewegte nichts. Eine Zahl, die Stellen mitzählt, die es auf dem Schirm nicht
  * gibt, lügt über den Zustand (§8).

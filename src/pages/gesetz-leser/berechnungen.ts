@@ -163,6 +163,10 @@ export function schaetzeArtikelHoehe(e: NormSnapshot): number {
   // `aus`, blendet `html[data-histansicht="aus"] .lc-leser [data-hist-slot]`
   // (index.css) den SLOT aus — dann sind diese 40 px nicht da, und die Schätzung
   // überreserviert um 40 px je off-screen-Artikel.
+  // NACHTRAG D35-F3 (7.9.2026, §0 Ziff. 2b — ergänzt, nicht nachgeführt): der
+  // Schalter heisst jetzt eine Stellung, die Weiche `html[data-vermerke]`. Der
+  // Sachverhalt ist unverändert; die Stellungen «fussnoten» und «aus» nehmen
+  // den Slot, «fassung» zeigt ihn.
   //
   // KORREKTUR S2 · Ä26 (17.8.2026): «bei JEDEM Artikel» stimmt jetzt auch OHNE
   // Schalter nicht mehr. Der Slot trägt seine Mindesthöhe nur noch, wenn der

@@ -292,7 +292,7 @@ export function LeserRahmenV3({ ebene, schluessel }: LeserRahmenV3Props) {
 
       {/* D27: kein `aktArtikel` mehr — Herleitung in `./LeserKopf`. */}
       <LeserKopf erlass={erlass} fussnotenAnzahl={m.fussnotenAnzahl}
-        hatAenderungsvermerke={m.hatAenderungsvermerke}
+        hatAenderungsvermerke={m.hatAenderungsvermerke} aenderungsFussnoten={m.aenderungsFussnoten}
         stufe={stufe} gliederungKnopf={gliederungKnopf}
         suchInZeile={suchInZeile} tocOffen={m.tocOffen}
         onGliederungZu={zweiSpalten ? () => setzeTocOffen(false) : undefined}

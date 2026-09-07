@@ -141,6 +141,34 @@ test.describe('Z2 · Druck der Fundstelle', () => {
     expect(ohneSplit, 'Referenz: der Erlass ist vielseitig').toBeGreaterThan(20_000)
     await page.emulateMedia({ media: 'screen' })
 
+    // ── §6.3-DEKLARATION (D35-F3, Entscheid David 7.9.2026) ──────────────────
+    // ZURÜCK ZUM ANKER, bevor das Panel aufgezogen wird. Grund, gemessen
+    // 7.9.2026 an ZGB #art-684: die Änderungs-Wahl dämpft am Bildschirm die
+    // `kl:'A'`-Fussnoten, im DRUCK nie (ein Ausdruck ohne amtliche Fussnoten
+    // wäre ein unvollständiges Dokument, §7/§8) — die Regel steht darum in
+    // `@media screen`. `emulateMedia` schaltet das LIVE-Layout um, und der
+    // Rundlauf screen→print→screen kostet dadurch Dokumenthöhe:
+    //   vor print   y 352 277 · Höhe 571 855 · Panel-Zähler 3
+    //   in  print   y 352 277 · Höhe 843 946 · Zähler 9
+    //   nach print  y 351 993 · Höhe 571 948 · Zähler WEG
+    // Die absolute Scrollposition zeigt danach auf einen anderen Artikel, der
+    // Scroll-Spy findet dort keine Entscheide, und der Zähler verschwindet
+    // (F8-Regel, richtig). Das ist ein Artefakt der Media-EMULATION — ein echter
+    // Ausdruck lässt das Bildschirm-Layout unangetastet. Die Sonde prüft den
+    // Split-AUSDRUCK, nicht die Spy-Stabilität unter Media-Wechsel; sie holt
+    // ihren Artikel darum zurück in den Blick, statt auf die Pixel zu vertrauen.
+    // Die Referenzmessung ist damit abgeschlossen; für den eigentlichen Beweis
+    // wird die Seite frisch geladen. Ein `scrollIntoViewIfNeeded` allein genügt
+    // NICHT (gemessen: der Zähler kommt zurück, die Bezugs-Shards des neuen
+    // Spy-Artikels aber nicht mehr) — der Reload ist der eine Griff, der jeden
+    // Rest der Emulation abräumt.
+    await page.goto('/gesetze/bund/ZGB#art-684')
+    await expect(page.locator('[data-v3-kopf]')).toBeVisible({ timeout: 20_000 })
+    await expect.poll(
+      async () => page.locator('[data-v3-panel-zaehler]').count(),
+      { timeout: 20_000, message: 'kein Panel-Zähler am Artikel — der Spy steht woanders' },
+    ).toBeGreaterThan(0)
+
     // Zweiten Pane über den ⧉ am Panel-Chip öffnen.
     await panelAufziehen(page)
     const panel = page.locator('[data-v3-panel]')

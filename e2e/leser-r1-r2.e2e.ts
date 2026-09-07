@@ -323,20 +323,31 @@ test.describe('S8 — Trefferliste in der Leiste, Lesespalte vollständig', () =
     await inGesetzSuche(page).fill(BEGRIFF_FN);
     await expect(leiste(page)).toBeVisible({ timeout: 20_000 });
 
-    // «Fassung» trifft im BGFA im Fussnoten-Apparat ⇒ Badge «Fussnote».
+    // ── §6.3-DEKLARATION (D35-F3, Entscheid David 7.9.2026) ──────────────────
+    // Der Fall schaltete `data-fussnoten` — das Attribut gibt es nicht mehr, und
+    // den Zustand «der ganze Apparat ist aus» auch nicht (verlustfrei). Die
+    // Badge-Frage lautet seither «sind die ÄNDERUNGS-Fussnoten gedämpft?», wahr
+    // in den Stellungen «fassung» und «aus». Die geprüfte AUSSAGE ist
+    // unverändert: der Badge sagt es ausdrücklich, statt dass die Ansicht beim
+    // Sprung still umgeschaltet würde (§4.4 Ziff. 2, §8). Gedreht ist nur die
+    // Reihenfolge — die VORGABE ist «fassung», also steht der Zusatz zuerst da.
     const badges = liste(page).locator('[data-treffer-badge]');
     await expect.poll(async () => badges.count(), { timeout: 20_000 }).toBeGreaterThan(0);
-    await expect(badges.filter({ hasText: /^Fussnote$/ }).first()).toBeVisible({ timeout: 20_000 });
-
-    // Apparat ausblenden: der Badge sagt es AUSDRÜCKLICH — die Ansicht wird
-    // beim Sprung nicht still umgeschaltet (§4.4 Ziff. 2, §8).
-    await page.evaluate(() => { document.documentElement.dataset.fussnoten = 'aus'; });
+    // «Fassung» trifft im BGFA in ÄNDERUNGS-Fussnoten ⇒ Badge mit Zusatz.
     await expect(badges.filter({ hasText: 'Fussnote (ausgeblendet)' }).first())
       .toBeVisible({ timeout: 20_000 });
     // Und der Badge ist SICHTBARER Text, nicht nur ein `title` (Touch/Screenreader).
     await expect(liste(page)).toContainText('(ausgeblendet)');
-    await page.evaluate(() => { document.documentElement.dataset.fussnoten = 'an'; });
+
+    // Stellung «Fussnoten»: der Apparat steht vollständig ⇒ Badge ohne Zusatz.
+    await page.evaluate(() => { document.documentElement.dataset.vermerke = 'fussnoten'; });
+    await expect(badges.filter({ hasText: /^Fussnote$/ }).first()).toBeVisible({ timeout: 20_000 });
     await expect(badges.filter({ hasText: 'Fussnote (ausgeblendet)' })).toHaveCount(0, { timeout: 20_000 });
+    // Und zurück — zweiseitig, sonst wäre die Zusicherung mit «der Zusatz steht
+    // immer da» erfüllbar (§6.7).
+    await page.evaluate(() => { document.documentElement.dataset.vermerke = 'aus'; });
+    await expect(badges.filter({ hasText: 'Fussnote (ausgeblendet)' }).first())
+      .toBeVisible({ timeout: 20_000 });
   });
 
   test('↑↓ springt zyklisch durch die Fundstellen (Tastatur + 44-px-Tap-Ziele)', async ({ page }) => {

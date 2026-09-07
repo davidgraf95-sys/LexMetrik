@@ -105,21 +105,31 @@ export function useSuchTreffer({
   // («KEIN Artikel-Re-Render», leserOptionen.ts) — sie in React-State zu ziehen
   // würde genau diese §15-Zusage aufgeben (der OR-Reader reconciliert sonst
   // 1686 Artikel je Toggle). Ein MutationObserver liest sie darum ab, statt sie
-  // zu besitzen. Er treibt zwei Dinge: die Badge-Ehrlichkeit (`fussnotenAus`)
+  // zu besitzen. Er treibt zwei Dinge: die Badge-Ehrlichkeit (`aenderungenAus`)
   // und ein Neu-Sammeln der gemalten Ranges (`ansichtTick`), weil sich mit
   // jedem Toggle ändert, was überhaupt malbar ist (RV6, 4.8.2026).
-  const [fussnotenAus, setFussnotenAus] = useState(false);
+  //
+  // D35-F3 (7.9.2026): die zwei Attribute `data-fussnoten`/`data-histansicht`
+  // sind zu EINEM `data-vermerke` geworden, und die Badge-Frage lautet damit
+  // nicht mehr «ist der Apparat aus?» (den Zustand gibt es nicht mehr), sondern
+  // «sind die ÄNDERUNGS-Fussnoten gedämpft?» — wahr in «fassung» und in «aus».
+  // Der Vorgabe-Zustand ist «fassung», also startet das Feld auf `true`; stünde
+  // hier weiter `false`, zeigte die Trefferliste bis zur ersten Mutation eine
+  // Badge ohne den Zusatz «(ausgeblendet)» für eine Stelle, die nicht leuchtet
+  // (§8). Beim Prerender/Hydrieren steht das Attribut noch nicht — `undefined`
+  // ist ungleich `'fussnoten'`, der Startwert stimmt also auch dort.
+  const [aenderungenAus, setAenderungenAus] = useState(true);
   const [ansichtTick, setAnsichtTick] = useState(0);
   useEffect(() => {
     if (typeof document === 'undefined') return;
-    const lies = () => setFussnotenAus(document.documentElement.dataset.fussnoten === 'aus');
+    const lies = () => setAenderungenAus(document.documentElement.dataset.vermerke !== 'fussnoten');
     lies();
     const beob = new MutationObserver(() => { lies(); setAnsichtTick((n) => n + 1); });
     beob.observe(document.documentElement, {
       attributes: true,
-      // S1: `data-verweise` ist entfallen (der Schalter ist gestrichen). Die drei
-      // verbliebenen Attribute sind genau die drei Schalter aus Kap. 4f.
-      attributeFilter: ['data-fussnoten', 'data-histansicht', 'data-leitfaelle'],
+      // S1: `data-verweise` ist entfallen (der Schalter ist gestrichen). D35-F3:
+      // `data-fussnoten`/`data-histansicht` sind in `data-vermerke` aufgegangen.
+      attributeFilter: ['data-vermerke', 'data-leitfaelle'],
     });
     return () => beob.disconnect();
   }, []);
@@ -143,7 +153,7 @@ export function useSuchTreffer({
   // B5: der Ansicht-Schalter gehört IN die Folge, nicht daneben — bei
   // ausgeblendetem Apparat sind Fussnoten-Stellen nicht malbar, und ein Rang,
   // der sie mitzählte, verschöbe den Sprung um genau sie (Herleitung dort).
-  const folge = useMemo(() => fundstellenFolge(treffer, fussnotenAus), [treffer, fussnotenAus]);
+  const folge = useMemo(() => fundstellenFolge(treffer, aenderungenAus), [treffer, aenderungenAus]);
 
   // ─── Artikelweise Hervorhebung, IntersectionObserver-getrieben (§4.5) ──────
   // Die Ranges werden je Artikel gehalten und zur EINEN Highlight-Menge
@@ -398,7 +408,7 @@ export function useSuchTreffer({
   const aktivStelle = trefferPos >= 0 ? folge[trefferPos] ?? null : null;
 
   return {
-    leseRef, treffer, artikelAnzahl, fundstellen, fussnotenAus,
+    leseRef, treffer, artikelAnzahl, fundstellen, aenderungenAus,
     trefferPos, aktivToken, springeZuFundstelle, springeZuTreffer, springeZuStelle,
     aktivStelle, fundstellenFuer, loeseArtikel, siePfad, siePfadArtikel,
   };

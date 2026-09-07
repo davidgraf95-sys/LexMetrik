@@ -76,6 +76,8 @@ export interface LeserV3Modell {
   fussnotenAnzahl: number | null;
   /** D1 · trägt dieser Erlass überhaupt Änderungsvermerke? Geteilte Quelle mit V1 (§5). */
   hatAenderungsvermerke: boolean;
+  /** D35-F3 · `kl:'A'`-Fussnoten; `null` = noch nicht geladen, `0` = keine klassifizierte Historie. */
+  aenderungsFussnoten: number | null;
   kantonErlassAnzahl: number | null;
   nichtKonsolidiert: boolean;
   /** S3/F5-Nachzug: ISO-Datum des frühesten nicht konsolidierten Inkrafttretens
@@ -122,7 +124,7 @@ export interface LeserV3Modell {
   sucheBegriff: string;
   treffer: LeserTreffer[];
   fundstellen: number;
-  fussnotenAus: boolean;
+  aenderungenAus: boolean;
   trefferPos: number;
   trefferAktivToken: string | null;
   /** H2 · Suchbereich (Kap. 4b, Pos. 5) — Zustand der V3-Huelle, kein Speicher.
@@ -258,13 +260,11 @@ export function useLeserV3Modell({ ebene: routenSegment, schluessel }: { ebene: 
     for (const v of Object.values(struktur)) n += v?.fussnoten?.length ?? 0;
     return n;
   }, [struktur]);
-  // D1: Schalter «Änderungsvermerke» nur bei Erlassen, die sie TRAGEN — dieselbe
-  // Funktion wie V1 seit S1, nicht nachgebaut (§5). Drei Zustände, zweiter Träger
-  // «Fassung»-Zeile und Korpus-Messung: `../berechnungen`.
-  const hatAenderungsvermerke = useMemo(() => bieteAenderungsvermerkeSchalter(
-    zaehleAenderungsvermerke(struktur),
-    (eintraege ?? []).some((e) => historieFuer(e.artikel) !== undefined), eintraege !== null,
-  ), [struktur, eintraege, historieFuer]);
+  // D1/D35-F3: EINE Zählung, zwei Leser (§5) — «wird die Wahl angeboten?» und «dämpft «Fassung» hier etwas?».
+  const aenderungsFussnoten = useMemo(() => zaehleAenderungsvermerke(struktur), [struktur]);
+  const hatAenderungsvermerke = useMemo(() => bieteAenderungsvermerkeSchalter(aenderungsFussnoten,
+    (eintraege ?? []).some((e) => historieFuer(e.artikel) !== undefined), eintraege !== null),
+  [aenderungsFussnoten, eintraege, historieFuer]);
 
   // ── A-2 · DIE MELDUNG AN DIE APP-LEISTE IST WEG (David 17.8.2026) ──────────
   // Hier stand bis 17.8. ein Effekt, der Krume · Stand · laufenden Artikel an
@@ -373,7 +373,7 @@ export function useLeserV3Modell({ ebene: routenSegment, schluessel }: { ebene: 
   // nicht bloss die Darstellung filtert — die Liste bekommt ihn als Prop (§3).
   const [suchBereich, setzeSuchBereich] = useState<SuchBereich>('alles');
   const {
-    leseRef, treffer, fundstellen, fussnotenAus, trefferPos, aktivToken: trefferAktivToken,
+    leseRef, treffer, fundstellen, aenderungenAus, trefferPos, aktivToken: trefferAktivToken,
     springeZuFundstelle, springeZuTreffer, springeZuStelle, aktivStelle, fundstellenFuer,
     loeseArtikel, siePfad, siePfadArtikel,
   } = useSuchTreffer({
@@ -397,7 +397,7 @@ export function useLeserV3Modell({ ebene: routenSegment, schluessel }: { ebene: 
     modell: {
       erlass, eintraege, struktur, kopf, currency, fehler, manifest, kantonSys, kantonLuecken,
       sektionen, ohneGliederung, gliederung, alleKnotenIds,
-      gliederungsTiefe, fussnotenAnzahl, hatAenderungsvermerke, kantonErlassAnzahl,
+      gliederungsTiefe, fussnotenAnzahl, hatAenderungsvermerke, aenderungsFussnoten, kantonErlassAnzahl,
       nichtKonsolidiert, nichtKonsolidiertSeit,
       vorher, nachher,
       sekPos, artIndex, sektionMeta, margAnzeige, internRefs,
@@ -406,7 +406,7 @@ export function useLeserV3Modell({ ebene: routenSegment, schluessel }: { ebene: 
       tocToggleGruppe,
       tocOffen, setTocOffen, tocAuf, setTocAuf,
       suche, setSuche, sucheAktiv: sucheBegriff !== '', sucheBegriff,
-      treffer, fundstellen, fussnotenAus, trefferPos, trefferAktivToken,
+      treffer, fundstellen, aenderungenAus, trefferPos, trefferAktivToken,
       suchBereich, setzeSuchBereich, aktivStelle, fundstellenFuer,
       springeZuFundstelle, springeZuTreffer, springeZuStelle, loeseArtikel, siePfad, siePfadArtikel,
       springeZuArtikel, springeZuSektion, zumAnfang,
