@@ -51,11 +51,18 @@ const RUBRIKEN: ReadonlyArray<{ id: FussRubrik; label: string; titel: (dativ: st
   {
     id: 'a',
     label: 'Aktionen',
-    // Das Wort des Artikel-Griffs ist seit dem F1-Nachfix vom 7.9.2026
-    // «Artikel daneben» (nicht «Daneben öffnen» — das bleibt dem Erlass-Kopf,
-    // Herleitung in `../parts/ArtikelAktionen.tsx`). Der Menütitel nennt die
-    // Aktionen so, wie sie in der Zeile stehen (Ä110: EINE Schreibung).
-    titel: () => '«Zitat», «Link», «Amtliche Fassung ↗» und «Artikel daneben» in der Zeile am Ende zeigen',
+    // NACHZUG NACH DEM F1-NACHFIX (7.9.2026): der vierte Griff der Zeile heisst
+    // seither nicht mehr «Daneben öffnen» — das Wort bleibt dem ERLASS-Kopf
+    // (`./ReiterAktion.tsx`), die Zeile stellt die einzelne Stelle daneben
+    // (`../parts/ArtikelAktionen.tsx`). Der Titel nennt darum die VERBFORM
+    // «daneben stellen», die dort in `title` und `aria-label` steht.
+    //
+    // WARUM NICHT DER SICHTBARE TEXT «⧉ Artikel daneben»: er traegt die
+    // Bund-Annahme als festes Wort, und an einem §-Erlass (BS-640.100) waere sie
+    // falsch. In `v3/` ist das gegatet (`leser-v3-fundament` C1: kein
+    // «Artikel»-Literal ausserhalb von `./erlassAnsicht.ts`) — die Regel gilt
+    // hier und wird nicht umgangen; die Verbform sagt dasselbe ohne Substantiv.
+    titel: () => '«Zitat», «Link», «Amtliche Fassung ↗» und «daneben stellen» in der Zeile am Ende zeigen',
   },
 ];
 
