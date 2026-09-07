@@ -102,14 +102,25 @@ function EbenenSchalter({ aktiv, onWahl, onAlle }: {
   );
 }
 
-function Kernerlasse() {
+// D6 (W2·24-Funktions-Inventar, Befund 6./7.9.2026): bei aktivem Filter blieb
+// die Zeile stehen und stand ÜBER den echten Treffern (§1: kein Rechtsschluss,
+// reine Bedienreihenfolge — Treffer zuerst). `aktiv=false` blendet sie darum
+// per `visibility:hidden` (+ `aria-hidden`) aus, statt sie zu unmounten: die
+// erste Fassung (bedingtes Rendering) schob den `min-h-inhalt-region`-Block
+// darunter um die Zeilenhöhe nach oben — ein ECHTER, unter CPU-Drossel 6×
+// gemessener Layout-Shift (0.0198, Quelle `DIV.min-h-inhalt-region`, Rot-Probe
+// 7.9.2026 in `gesetze-footer-cls.e2e.ts`). `visibility:hidden` reserviert die
+// Zeilenhöhe unverändert (kein Element darunter bewegt sich, D9), entfernt die
+// Links aber aus Fokus-Reihenfolge und Screenreader-Baum — dasselbe Muster wie
+// `html[data-lr6-anker-warten] footer` in index.css.
+function Kernerlasse({ aktiv }: { aktiv: boolean }) {
   return (
-    <div className="space-y-1.5">
+    <div className={`space-y-1.5${aktiv ? '' : ' invisible'}`} aria-hidden={!aktiv}>
       <p className="lc-overline">Kernerlasse</p>
       <ul className="ub-kern">
         {kernerlasse().map((e) => (
           <li key={e.key}>
-            <Link to={e.pfad} title={e.titel}>{e.kuerzel}</Link>
+            <Link to={e.pfad} title={e.titel} tabIndex={aktiv ? undefined : -1}>{e.kuerzel}</Link>
           </li>
         ))}
       </ul>
@@ -389,8 +400,12 @@ export function Gesetze() {
         </div>
       </div>
 
-      {/* D22 Ziff. 5 / R12: Kernerlasse direkt unter dem Filter — ein Klick. */}
-      <Kernerlasse />
+      {/* D22 Ziff. 5 / R12: Kernerlasse direkt unter dem Filter — ein Klick.
+          D6 (Befund 6./7.9.2026): bei aktivem Filterbegriff blendet die Zeile
+          aus (Treffer zuerst, kein Rechtsschluss — §1) — nicht bei blosser
+          Ebenen-Wahl ohne Suchtext. `aktiv`-Steuerung samt D9-Begründung
+          (reservierte Höhe, kein Layout-Sprung) direkt bei `Kernerlasse`. */}
+      <Kernerlasse aktiv={!suche.trim()} />
 
       {/* B2 (Bug-Check #565): auch der Fehlerpfad reserviert die Inhaltshöhe —
           sonst kollabiert die Fläche auf die Notice und der Footer springt
