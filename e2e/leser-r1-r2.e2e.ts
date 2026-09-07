@@ -625,6 +625,50 @@ test.describe('R2 — Mobile Gliederung als volles Bottom-Sheet', () => {
 // Oberfläche kostet. Will er stattdessen die 24 px Reserve (Weg 1), ist das ein
 // Gestaltungsentscheid, der diesen Fall wieder öffnet — der Vermerk steht dafür
 // im Fahrplan Kap. 9 und im Kontaktbogen §7c/§8.
+//
+// ── WEG 3 IST AUF LANGSAMER CPU FALSIFIZIERT (gemessen 7.9.2026, CI-Fix E) ───
+// Die Zahlen vom 18.8.2026 darüber bleiben stehen, wie sie gemessen wurden
+// (§0 Ziff. 2b) — sie sind richtig für die Maschine, auf der sie entstanden.
+// Der Satz, der sie trug, ist es nicht mehr: «Für einen realen Leser ist dieser
+// Sprung nach der CLS-Definition ausgeschlossen — er ist Folge seiner eigenen
+// Tastatureingabe». Das gilt nur, solange die Eingabe SCHNELL genug verarbeitet
+// wird.
+//   BEFUND CI (Lauf 34066539241, Shard 7, 2-vCPU-Runner, Drossel 6×, DIESE
+//   Geste mit `pressSequentially`): **CLS 0.019140**, Quelle `DIV.relative
+//   min-w-0`, fremd 0.
+//   LOKAL NACHGESTELLT (Preview 4406, dieselbe Geste, Drossel auf **20×**
+//   gehoben): **CLS 0.01914**, dieselbe Quelle, `hadRecentInput = false` —
+//   bit-nah am CI-Wert, also derselbe Vorgang und kein Rauschen. Bei Drossel 6×
+//   ist der Fall auf dieser Maschine grün (n=5); die Drossel ist die
+//   MESSBEDINGUNG, nicht der Defekt.
+//   MECHANIK, punktgenau: `sucheAktiv` hängt am ENTPRELLTEN Wert
+//   (`v3/leserV3Modell.ts:394/408` ← `inhalt-zustand.tsx:100 ff.`, 200 ms), und
+//   erst er schaltet die Zonenhöhe (`v3/leserGeometrie.ts:118`
+//   `SUCH_H_RUHE`→`SUCH_H_AKTIV`, gerendert als `height` in `v3/SuchZone.tsx`).
+//   Auf schneller CPU verfällt die Entprellung NACH dem letzten Tastendruck,
+//   also innerhalb des 500-ms-Eingabefensters. Auf langsamer CPU dauert die
+//   Verarbeitung EINES Tastendrucks länger als 200 ms — die Entprellung feuert
+//   dann MITTEN im Tippen, in einer Lücke, in der das Eingabefenster längst
+//   abgelaufen ist (gemessen: der Sprung fiel 724 ms VOR dem letzten
+//   Tastendruck). Der Browser verbucht ihn folgerichtig als eingabefrei.
+//   WAS DAS HEISST: der Fall misst kein Sonden-Problem. Ein Leser auf einem
+//   schwachen Telefon SIEHT diesen 24-px-Sprung beim Tippen, und die
+//   CLS-Definition schliesst ihn dort nicht aus. Die Sonde bleibt darum
+//   unverändert (kein gehobenes Budget, kein Skip, keine weichere Geste) — sie
+//   hat recht.
+//   OFFEN, und bewusst NICHT hier repariert: der Wurzel-Fix liegt in Dateien,
+//   die am 7.9.2026 eine parallele Bau-Einheit hält (`v3/SuchZone.tsx`,
+//   `v3/LeserRahmenV3.tsx` — §0 Ziff. 5, kein Doppelbau). Zwei Wege stehen zur
+//   Wahl, beide brauchen einen Gestaltungsentscheid:
+//     (i) Weg 1 von oben — die 24 px dauerhaft reservieren (kostet jedem Leser
+//         @390 Lesehöhe, 18.8.2026 aus genau diesem Grund verworfen);
+//     (ii) die ZONENHÖHE vom entprellten Wert lösen und an den ROHEN Feldinhalt
+//         hängen (`sucheFeldLeer`, `leserV3Modell.ts:370`), sodass sie in
+//         derselben Eingabe-Aufgabe wächst wie der Tastendruck. Kostet keine
+//         Lesehöhe, zeigt aber die Trefferansicht 200 ms lang leer, bevor die
+//         entprellten Treffer eintreffen — das ist Davids Entscheid, nicht der
+//         einer Bau-Einheit.
+//   Bis dahin ist dieser Fall auf CI ROT und meldet einen echten Mangel.
 test.describe('A9-DoD — Flüssigkeit unter CPU-Drossel 6×', () => {
   test('Suche, Fundstellen-Sprung und Gliederungs-Sheet ohne Layout-Shift (CLS 0)', async ({ page }) => {
     test.slow();

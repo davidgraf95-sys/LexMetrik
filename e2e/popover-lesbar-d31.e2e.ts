@@ -124,7 +124,24 @@ for (const thema of ['light', 'dark'] as const) {
         await details.locator('summary.lr7-bez-zeile').click();
       }
       const chip = details.locator('[data-bezug-linie] a[href^="/rechtsprechung/"]').first();
-      await expect(chip, 'kein Bezugs-Chip zum Hovern').toBeVisible({ timeout: 25_000 });
+      // ── WARTEFENSTER, GEMESSEN (CI-Fix E, 7.9.2026) ───────────────────────
+      // Lauf 34066539241/Shard 2 meldete diesen Fall zweimal FLAKY (hell und
+      // dunkel), beide Male mit «kein Bezugs-Chip zum Hovern» im ersten Versuch
+      // und grün im Retry — kein Deckungs-Defekt, ein zu enges Zeitbudget.
+      // URSACHE, nicht Vermutung: der Chip steht seit D30 (a60dd7f75) hinter
+      // einem LAZY-Pfad — das Aufklappen ruft `onOeffnen` → `weckeDaten`
+      // (`v3/panelModell.ts`), und erst dann wird der OR-Bezugs-Shard (2.2 MB
+      // roh) geholt und projiziert. Auf dem 2-vCPU-Free-Runner liegt genau das
+      // über den 25 s, die hier bis dahin standen; lokal (Preview 4406) steht
+      // der Chip in ~1 s. Die Datei sagt das im Kopf des Falls selbst an
+      // («dieser Fall braucht den vollen OR-Bezugs-Shard»), nur das Budget war
+      // noch das von vor dem Lazy-Pfad.
+      // KEINE LOCKERUNG (§6.3): geändert wird ein TIMEOUT, keine Zusage — die
+      // Sichtbarkeit des Chips bleibt Bedingung, und alle Messungen darunter
+      // laufen unverändert. Dieselbe Politik wie im `playwright.config.ts`
+      // («Test-Timeout-Politik», CI-Zweig 90 s): ein Budget greift nur bei
+      // Überschreitung und macht grüne Läufe nicht langsamer.
+      await expect(chip, 'kein Bezugs-Chip zum Hovern').toBeVisible({ timeout: 60_000 });
       const popover = page.locator('.lc-popover').first();
       // ZWEI GRÜNDE FÜR DIE SCHLEIFE statt eines einzelnen `hover()` (gemessen
       // 7.9.2026 unter `--repeat-each=2`): die Vorschau öffnet erst, wenn der
