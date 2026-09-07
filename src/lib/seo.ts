@@ -34,8 +34,13 @@ export const SITE_URL = 'https://lexmetrik.vercel.app';
 // gekürzt, nicht getilgt — sie sind an `check:seo-index` und an index.html
 // gebunden, und eine Seite ohne Suchbegriffe im Titel findet niemand.
 
-/** H1 der Startseite — der Titelblatt-Begriff, keine Value Proposition. */
-export const SAMMLUNG_TITEL = 'Sammlung';
+// SAMMLUNG_TITEL («Sammlung», Titelblatt-Begriff/H1) ist mit D39 (David
+// 7.9.2026: «entferne oberhalb der begrüssung das wort Sammlung») ENTFALLEN
+// — die BEGRÜSSUNG ist jetzt die H1 (`start/SuchBlock.tsx`), kein zweites
+// Wort trägt den Rang. Kein anderer Konsument blieb übrig (Minimalismus,
+// `.claude/rules/schichtentrennung.md`): die Konstante ist gestrichen statt
+// unbenutzt bewacht. `SAMMLUNG_BESTAND` (Aufzählung im Seitenfuss) ist davon
+// unberührt.
 /** Was in der Sammlung steht, als Aufzählung (Bezeichnung, kein Versprechen). */
 export const SAMMLUNG_BESTAND =
   'Gesetze, Entscheide, Materialien, Rechner, Vorlagen.';

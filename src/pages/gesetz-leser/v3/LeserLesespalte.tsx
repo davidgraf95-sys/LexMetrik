@@ -118,6 +118,9 @@ export function LeserLesespalte({ m, bezuege, weckeBezuege, bezuegeGeweckt = fal
       // Der Kern rendert wie bisher; das Öffnen der Zeile lädt weiterhin lazy.
       zaehler={bezuegeZaehler(e.artikel)}
       // ── D30 · POS. 12 IST NICHT ZURÜCK (und `bezuege` bleibt ungesetzt) ──
+      // D34 (7.9.2026): die Prop hiess bis D33 `bezuegeImKopf` — die Zeile stand
+      // damals unter der Artikelnummer, seit D34 steht sie am Artikelfuss. Nur
+      // der Name folgt dem Ort; der Ladevertrag darunter ist unverändert.
       // Der Block darüber begründet, warum `bezuege` an dieser Stelle FIEL: die
       // `BezuegeZeile` stand damals UNBEDINGT im Fliesstext, an jedem Artikel,
       // und wuchs beim Eintreffen des Shards in den Lesekörper hinein. Beides
@@ -129,7 +132,7 @@ export function LeserLesespalte({ m, bezuege, weckeBezuege, bezuegeGeweckt = fal
       // Layout-Sprung, und `leser-v3-kontext-cls` misst weiterhin dasselbe.
       // `alleFuer`, nicht `bezuegeFuer`: die Zeile zeigt, was ihre Kopfzahl
       // zählt — ungefiltert. Herleitung in `../bezuegeLaden` (D30).
-      bezuegeImKopf={bezuege?.alleFuer(e.artikel)}
+      bezuegeImFuss={bezuege?.alleFuer(e.artikel)}
       materialien={artikelMaterialien(e.artikel)}
       onBezuegeOeffnen={weckeBezuege}
       // «lädt …» heisst: geweckt, aber der Lade-VERSUCH ist noch nicht durch.

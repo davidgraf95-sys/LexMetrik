@@ -172,42 +172,148 @@ export function useTieflinkSprung(opts: {
     wurzelEl?.setAttribute('data-lr6-anker-warten', '');
     let aufgedeckt = false;
     const aufdecken = () => { aufgedeckt = true; wurzelEl?.removeAttribute('data-lr6-anker-warten'); };
-    const springe = (blink: boolean) => {
-      const el = findeArt(paneRoot(imPane, wurzel), token);
-      if (!el) return null;
-      // R1: oberer Lese-Rand statt Mitte (deckt sich mit der Scroll-Spy-Bezugslinie).
-      el.scrollIntoView({ block: 'start', behavior: 'auto' });
-      if (blink) {
-        el.classList.add('lc-ziel-blink');
-        window.setTimeout(() => el.classList.remove('lc-ziel-blink'), 2400);
-      }
-      return el;
-    };
-    springe(true);
+    const ziel = () => findeArt(paneRoot(imPane, wurzel), token);
+    // R1: oberer Lese-Rand statt Mitte (deckt sich mit der Scroll-Spy-Bezugslinie).
+    // EINE Sprung-Stelle für Erst-Sprung, Einschwingen und Nachzug (§5).
+    const springe = (el: HTMLElement) => el.scrollIntoView({ block: 'start', behavior: 'auto' });
+    const erstZiel = ziel();
+    if (erstZiel) {
+      springe(erstZiel);
+      erstZiel.classList.add('lc-ziel-blink');
+      window.setTimeout(() => erstZiel.classList.remove('lc-ziel-blink'), 2400);
+    }
     // Deckel für den Aufdeck-Zeitpunkt. GEMESSEN schwingt der Sprung nach
     // 127 ms ein (1313 → 1440); 600 ms ist das Vierfache davon und damit die
     // Reserve für langsame Geräte, nicht der Regelfall.
     const AUFDECK_MS = 600;
     const deckel = window.setTimeout(aufdecken, AUFDECK_MS);
+    // ── W2·24-D34 · DER NACHZUG: WAS NACH DEM AUFDECKEN NOCH WÄCHST ─────────
+    //
+    // BEFUND (CI-Rot 34111127560, Shard 5; lokal byte-gleich nachgestellt,
+    // `dist/`-Preview, Chromium 1440×900, 6× CPU-Drossel, rAF-Sampler auf
+    // `/gesetze/bund/BV#art-8`):
+    //     t 6046 ms  Lage steht, Verdeckung fällt — Ziel bei 154 px
+    //                (= Landepunkt), 0 Bezüge-Zeilen im Dokument
+    //     t 7099 ms  145 Bezüge-Zeilen da, davon 7 oberhalb des Ziels,
+    //                docH 118'314 → 119'000 — Ziel bei 203 px
+    // Die Zähl-Datei (`../bezuegeZaehler`) entscheidet, OB ein Artikel eine
+    // Bezüge-Zeile bekommt (§8: keine Rubrik ohne echte Zahl). Bei der BV führt
+    // vor ihrem Eintreffen KEIN Artikel eine Zahl aus statischer Quelle; die
+    // Zeile ist seit D34 der Artikel-FUSS und damit 49 px hoch. Ihr Zuwachs
+    // liegt also ZWISCHEN dem Scroll-Anker des Browsers (oberer Bildrand) und
+    // dem Ziel — den Teil oberhalb des Ankers fängt die Scroll-Verankerung auf,
+    // diesen nicht, und das Ziel rutscht um genau eine Zeilenhöhe ab.
+    //
+    // NICHT DER WEG: die Datei früher laden. GEMESSEN (Netz-Zeitleiste): sie
+    // ist bei t 1116 ms fertig — 5 s vor dem Aufdecken. Was fehlt, ist nicht
+    // das Byte, sondern die ZWEITE Render-Runde: ein Fetch-Ergebnis kann
+    // frühestens im Folge-Render stehen, und der lag unter Last hinter dem
+    // Einschwingen. Ein Vorziehen des Fetch (probiert, gemessen, verworfen)
+    // ändert daran nichts und kostet nur die Leerlauf-Schonung (§15).
+    //
+    // DER WEG: dieselbe Schleife läuft weiter, nur mit anderem Auftrag. Bis zum
+    // Aufdecken zieht sie JEDEN Frame nach (unverändert); danach fasst sie
+    // nichts mehr an, ausser das Ziel ist von seiner eingeschwungenen Lage
+    // WEGGELAUFEN — dann stellt sie es einmal zurück. Das ist keine Animation
+    // und kein zweites Bild: die Korrektur ist ein SCROLL, der einen Zuwachs
+    // oberhalb ausgleicht, und macht damit genau das sichtbar-Nichts, das die
+    // Scroll-Verankerung des Browsers hier nicht leisten kann.
+    //
+    // ZWEI KLAMMERN. (1) `NACHZUG_MS` — gemessene Verzugszeit 1053 ms bzw.
+    // 1665 ms in zwei Läufen; 4000 ms ist rund das Doppelte des schlechteren
+    // und deckt den 2-vCPU-Runner. (2) ÜBERNAHME durch den Leser: wer scrollt,
+    // tippt oder klickt, bestimmt die Lage selbst — dieselben vier Ereignisse,
+    // mit denen auch die Zielansage aufhört (`components/layout/
+    // DeepLinkSkeleton.tsx`); ein Nachzug, der gegen den Leser scrollt, wäre
+    // schlimmer als der Versatz, den er heilt.
+    const NACHZUG_MS = 4000;
     let ruhig = 0;
     // Gemessen wird die LAGE DES ZIELS im Bild, nicht `window.scrollY`: im
     // sekundären Pane scrollt nicht das Fenster, sondern der Pane-Scroller —
     // die Fensterposition stünde dort von Anfang an still und der Deckel wäre
     // die einzige Klammer (§5: eine Grösse, die in beiden Lagen dasselbe misst).
+    // Aus demselben Grund misst auch der Nachzug den ABSTAND ZUR LETZTEN LAGE
+    // und nicht den Landepunkt: `scroll-margin-top` gilt gegen den Scroll-
+    // Container, nicht gegen den Bildschirm — im Pane wäre der Vergleich falsch.
     let letzteLage = Number.NaN;
     let rafId = 0;
+    let fertig = false;
+    // ── W2·24-D34/2 · WER BESITZT DEN SCROLL GERADE (§5) ────────────────────
+    //
+    // BEFUND (CI-Rot 34117385177, Shard 1, `e2e/leser-history-hash.e2e.ts:21`;
+    // lokal 3/3 byte-gleich nachgestellt, `dist/`-Preview, Chromium 1440×900,
+    // Port 4424). Die Sonde springt per Tieflink auf `AIG#art-90` und scrollt
+    // dann PROGRAMMATISCH zu Art. 5. Zwei `scroll`-Ereignisse, 10 ms auseinander:
+    //     t 1458 ms  scrollY 3'280   — Art. 90 bei 92'403 px (weit unterhalb)
+    //     t 1468 ms  scrollY 95'529  — Art. 90 wieder bei 154 px
+    // Die zweite Zeile ist der Nachzug: er las «das Ziel ist von seiner Lage
+    // weggelaufen» und zog zurück. Der Anker-Spy sah damit nie Art. 5, die
+    // A16-Leseposition blieb Art. 90 — die ganze LM-199-Kette fiel.
+    //
+    // WURZEL: die Schleife kannte NUR die Frage «hat sich die Lage geändert?»,
+    // nicht die Frage «von wem?». Zuwachs oberhalb (der D34-Fall) und ein
+    // FREMDER Scroll erzeugen dasselbe Signal. Die vier Übernahme-Ereignisse
+    // unten fangen den Menschen (Rad, Tippen, Tippen auf den Schirm, Zeiger),
+    // aber keinen Scroll aus Code — Playwrights `scrollIntoViewIfNeeded`, die
+    // A16-Konvergenzschleife, ein `scrollTo` aus einem anderen Baustein.
+    //
+    // DER MASSSTAB, und er ist hergeleitet, nicht gewählt: unkompensiert kann
+    // das Ziel nur das verschieben, was ZWISCHEN dem oberen Bildrand (dem
+    // Scroll-Anker des Browsers) und dem Ziel wächst — und das Ziel steht per
+    // Konstruktion am Landepunkt, also im ERSTEN Bild. Ein Nachzug bewegt es
+    // darum höchstens um eine Bildhöhe. Ein Ziel, das das Bild VERLASSEN hat,
+    // ist kein Nachzug-Fall, sondern ein fremder Scroll: dann gibt die Schleife
+    // ab, statt zurückzureissen. Damit gibt es genau EINEN Eigentümer des
+    // Scrolls je Zeitpunkt (§5) statt zweier Schleifen im Rennen.
+    //
+    // GEMESSEN wird die Bildhöhe am FENSTER, auch im Pane: `getBoundingClient-
+    // Rect().top` ist immer fenster-relativ, und das Pane liegt im Fenster —
+    // eine Grösse, die in beiden Lagen dasselbe misst (wie oben bei `letzteLage`).
+    //
+    // DER SCHALTER IST NICHT `aufgedeckt`, SONDERN `eingeschwungen`. Deckt der
+    // Zeitdeckel (`AUFDECK_MS`) auf, WÄHREND die Lage noch wandert, steht das
+    // Ziel u. U. gar nicht im Bild — eine Abgabe in diesem Moment liesse den
+    // Leser irgendwo stehen. Erst wenn die Lage zwei Frames ruhig war, ist der
+    // Landepunkt erreicht und «ausserhalb des Bildes» aussagekräftig.
+    //
+    // NICHT NOCHMAL GEBAUT (§17-Gegengewicht): «nur beim echten Tieflink-
+    // Einsprung» steht bereits zweimal weiter oben — `istHashVerbraucht()`
+    // (Z. 95) sperrt Zurück/Vorwärts aus einer anderen Route, `hashSeedGetan`
+    // (Z. 87) den Pane-Wechsel. Beim Browser-Zurück läuft dieser Effekt also
+    // gar nicht erst bis hierher; die Sonde unten belegt das.
+    let eingeschwungen = false;
+    const UEBERNAHME = ['wheel', 'touchstart', 'keydown', 'pointerdown'] as const;
+    const beende = () => {
+      if (fertig) return;
+      fertig = true;
+      window.clearTimeout(deckel);
+      window.clearTimeout(nachzugDeckel);
+      window.cancelAnimationFrame(rafId);
+      for (const ev of UEBERNAHME) window.removeEventListener(ev, beende);
+      aufdecken();
+    };
+    const nachzugDeckel = window.setTimeout(beende, NACHZUG_MS);
+    for (const ev of UEBERNAHME) window.addEventListener(ev, beende, { passive: true, once: true });
     const nachziehen = () => {
-      if (aufgedeckt) return;
-      const el = springe(false);
-      if (!el) { aufdecken(); return; }
+      if (fertig) return;
+      const el = ziel();
+      if (!el) { beende(); return; }
+      const vorLage = el.getBoundingClientRect().top;
+      // Ziel ausserhalb des Bildes ⇒ der Scroll gehört jemand anderem: abgeben.
+      if (eingeschwungen && (vorLage < 0 || vorLage > window.innerHeight)) { beende(); return; }
+      // Verdeckt: jeden Frame nachziehen. Aufgedeckt: nur bei Weglaufen.
+      if (!aufgedeckt || Math.abs(vorLage - letzteLage) > 1) springe(el);
       const lage = el.getBoundingClientRect().top;
       ruhig = Math.abs(lage - letzteLage) <= 1 ? ruhig + 1 : 0;
+      if (ruhig >= 2) {
+        eingeschwungen = true;
+        if (!aufgedeckt) { window.clearTimeout(deckel); aufdecken(); }
+      }
       letzteLage = lage;
-      if (ruhig >= 2) { window.clearTimeout(deckel); aufdecken(); return; }
       rafId = window.requestAnimationFrame(nachziehen);
     };
     rafId = window.requestAnimationFrame(nachziehen);
-    return () => { window.clearTimeout(deckel); window.cancelAnimationFrame(rafId); aufdecken(); };
+    return beende;
     // location.hash bewusst NICHT in den Deps: der Effekt springt EINMAL beim
     // Erlass-Laden an die (Pane-lokale bzw. Fenster-)Fundstelle — die Primär-
     // Instanz führt spätere Hash-Wechsel über den letzteNavKey-Effekt nach
