@@ -110,7 +110,10 @@ EIN Umschaltvorgang, 0.0).
 | `src/tests/fussnoten-toggle-huellenneutral.test.ts` | neu **H0-Auflage 1 als Tor**: `index.css` darf `[data-fn-klasse="V"|"G"|"Z"|"U"]` nirgends selektieren |
 | `e2e/helpers/vollerApparat.ts` (neu) | die Extraktions-Sonden stellen den vollen Apparat ein — an EINER Stelle (§5) |
 
-**Rot-Proben** — siehe Ziff. 8.
+**Rot-Proben** — siehe Ziff. 8 (vier Eingriffe, jeder einmal gefahren).
+
+**Doppellauf der Bau-Fläche** (Auftrag): 14 Specs, `--repeat-each=2 --workers=2`,
+gebautes `dist/` auf `:4434` — **182 passed (5.9 min)**, keine Flake.
 
 ---
 
