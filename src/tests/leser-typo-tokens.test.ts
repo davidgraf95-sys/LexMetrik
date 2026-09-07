@@ -43,6 +43,12 @@ const ARTIKELBODY_DATEIEN = readdirSync(NORMTEXT_DIR)
 /** Die Dateien, die den Leser-WORTLAUT setzen (Fliesstext, Ingress, Apparat). */
 const WORTLAUT_DATEIEN = [
   '../pages/gesetz-leser/parts/ArtikelLeser.tsx',
+  // W2·24-F: der Randtitel (Sachüberschrift, `font-serif`/`text-leser-rand`)
+  // ist mit dem §6.6-Split hierher gezogen — er setzt Wortlaut-Typografie und
+  // gehört darum weiter in diesen Geltungsbereich. `ArtikelLeser.bezuegeZone`
+  // bewusst NICHT: sie ist Referenzschicht, kein Wortlaut (wie
+  // `ArtikelLeser.leitfaelle`, die hier ebenfalls nie stand).
+  '../pages/gesetz-leser/parts/ArtikelLeser.kopfteile.tsx',
   '../pages/gesetz-leser/parts/ErlassKopfBlock.tsx',
   '../pages/gesetz-leser/parts/SektionKopf.tsx',
   '../pages/gesetz-leser/helpers.tsx',

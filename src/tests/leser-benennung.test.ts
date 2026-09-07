@@ -57,6 +57,12 @@ const GETEILTE_BAUSTEINE = [
   'parts/ErlassLeserKopf.tsx',
   'parts/ArtikelLeser.tsx',
   'parts/ArtikelLeser.leitfaelle.tsx',
+  // W2·24-F (7.9.2026): die zwei §6.6-Splits von `ArtikelLeser.tsx` — sie
+  // tragen sichtbare Wörter («Materialien», «Verweise», «Rechnen», «Vorlage»,
+  // «Rechner») und standen bis zum Split IN der Datei darüber. Ohne diese zwei
+  // Zeilen hätte der Split die Wörter still aus dem Geltungsbereich getragen.
+  'parts/ArtikelLeser.kopfteile.tsx',
+  'parts/ArtikelLeser.bezuegeZone.tsx',
   'parts/SektionKopf.tsx',
   'parts/ErlassKopfBlock.tsx',
 ];
