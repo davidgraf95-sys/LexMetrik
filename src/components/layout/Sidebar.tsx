@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link, useLocation, type Location } from 'react-router-dom';
 import {
-  NAVIGATION, alleNavLinks, type NavKnoten, type NavGruppe, type NavLink as NavLinkT,
+  NAVIGATION, NAVIGATION_META, alleNavLinks, type NavKnoten, type NavGruppe, type NavLink as NavLinkT,
 } from '../../lib/navigation';
 import { STUFE_WORT } from '../../lib/normtext/erfassungsgrad';
 import { LexMetrikSiegel, LexMetrikWortmarke } from './Logo';
@@ -13,6 +13,13 @@ import { registerVonPfad, REG_FLAECHE, REG_HOVER_FLAECHE_BLATT } from './bereich
 // Single-Entry-Seiten mit internen Hash-Tabs wie /rechner/tagerechner#zpo ihre
 // Aktiv-Markierung).
 const NAV_ZIELE = new Set(alleNavLinks().map((l) => l.ziel));
+
+// D36 (David 7.9.2026) · «Einstellungen» wieder unten in der Seitenleiste,
+// abgesetzt durch eine Haarlinie — separat von den vier übrigen Meta-Zielen
+// (Methodik/Über/Kontakt/Datenschutz), die seit D26 im Footer bleiben. Aus
+// derselben SSoT gelesen wie zuvor (`NAVIGATION_META`, §5) statt neu
+// hartcodiert — sonst zwei Wahrheiten für dasselbe Ziel.
+const EINSTELLUNGEN = NAVIGATION_META.find((l) => l.ziel === '/einstellungen')!;
 
 // ─── App-Shell-Seitenleiste (Build-Plan App-Shell, Phase 3) ─────────────────
 //
@@ -380,16 +387,26 @@ export function Sidebar({ onNavigate, markeZeigen = false }: { onNavigate?: () =
         <Abschnitt key={i} a={abschnitt} loc={loc} onNavigate={onNavigate} />
       ))}
 
-      {/* Fuss der Leiste — abgesetzt durch Hairline.
-          ── D26 (David 6.9.2026) · DIE META-ZIELE STEHEN IM SEITENFUSS ────────
-          Einstellungen · Methodik · Über · Kontakt · Datenschutz standen hier als
-          fünf gleichrangige Zeilen unter den Inhalts-Rubriken und beanspruchten
-          in einer Leiste, die «zeigen soll, was man aufschlägt», ein Fünftel der
-          Höhe für Dinge, die man einmal im Jahr braucht. Sie sind NICHT weg —
+      {/* Fuss der Leiste — abgesetzt durch Hairline, am unteren Rand verankert
+          (`mt-auto` im `flex-col min-h-full`-Nav: kein Sprung, sitzt auch bei
+          kurzem Inhalt unten).
+          ── D26 (David 6.9.2026) · DIE VIER PFLICHT-/VERTRAUENSZIELE STEHEN IM
+          SEITENFUSS. Einstellungen · Methodik · Über · Kontakt · Datenschutz
+          standen hier als fünf gleichrangige Zeilen unter den Inhalts-Rubriken
+          und beanspruchten in einer Leiste, die «zeigen soll, was man
+          aufschlägt», ein Fünftel der Höhe für Dinge, die man einmal im Jahr
+          braucht. Methodik/Über/Kontakt/Datenschutz sind darum NICHT weg —
           `Footer.tsx` führt dieselbe SSoT-Liste (`NAVIGATION_META`), und der
-          Seitenfuss steht auf jeder Route. `NAVIGATION_META` bleibt darum
-          unverändert exportiert; nur die Leiste rendert es nicht mehr. */}
+          Seitenfuss steht auf jeder Route.
+          ── D36 (David 7.9.2026) · «EINSTELLUNGEN» KEHRT ZURÜCK, ALLEIN ───────
+          Anders als die vier übrigen Meta-Ziele braucht man Einstellungen
+          (Schriftgrösse, Thema, Sprache) häufig genug, dass sie in die
+          Leiste gehört, wo man ohnehin navigiert — nicht erst in den Fuss der
+          Seite scrollen. Bleibt trotzdem aus derselben `NAVIGATION_META`-SSoT
+          abgeleitet (§5); im Footer entfällt der Eintrag darum, statt ihn ein
+          zweites Mal zu zeigen (D4: jede Angabe einmal). */}
       <div className="mt-auto pt-3 border-t border-rule-soft flex flex-col gap-0.5">
+        <Blatt k={EINSTELLUNGEN} loc={loc} onNavigate={onNavigate} />
         {/* W2·23-STARTSEITE-V4 §6.3 · Fuss «Stand des Korpus». Dieselbe Wahrheit
             wie die Korpus-Stand-Zeile auf «/» — EIN Baustein, zwei Konsumenten
             (§5), kein zweiter Datumssatz in der Leiste. Auf Mobil trägt die
