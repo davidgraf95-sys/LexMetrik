@@ -271,6 +271,137 @@ an einen neuen Ist-Stand nachgeführt, nur ergänzt (§0 Ziff. 2b).
   Startlast: Kopf-Geometrie vor dem Takeover reservieren, statt die Schranke zu
   heben (§8). Diagnose: `e2e/gesetze-historie-badge.e2e.ts`, Datei-Kopf.
 
+### §1-N3 · Leser-Tempo gebaut — A/B 1.9.2026 (ERGÄNZUNG, keine Nachführung)
+
+Die Blöcke oben bleiben unverändert stehen: sie gelten für ihren Stand
+(§0 Ziff. 2b). Was folgt, ist eine **zusätzliche** Messreihe auf dem Basis-Stand
+`cd4dc65cb` und darauf zwei gebaute Massnahmen. Voller Aufbau, Wasserfall und
+alle Einzelläufe: [`bibliothek/seo/leser-tempo-qs-perf-2026-09-01.md`](../bibliothek/seo/leser-tempo-qs-perf-2026-09-01.md).
+Werkzeug im Repo: `npm run perf:leser` (`scripts/perf/leser-tempo.ts`) — bewusst
+**kein Tor** (Timing ist last- und maschinenabhängig; eine Schwelle darauf
+deckelte die Messung statt die Ladekosten, §2/§6.7).
+
+**Gebaut (beide mit Logikverlust-Bewertung «keiner»):**
+1. `Shell.tsx` zieht ein Browse-Manifest nur noch, wenn ein **tatsächlich
+   gezeigter** Pfad ein Label daraus braucht. Bis dahin lud jede
+   Gesetzes-Leserseite `/rechtsprechung/register.json` (753 KB gzip), ohne je
+   ein Label daraus zu lesen.
+2. Der Prerender setzt `<link rel="preload" as="fetch" crossorigin="anonymous">`
+   für **Register und Struktur-Sidecar** in den Kopf jeder Erlass-Seite —
+   Kandidat K2 des Kanton-Reader-Profils in der Variante **ohne zweite
+   Wahrheit** (das Register bleibt im Client die einzige Quelle des Dateinamens,
+   §5). Der Snapshot selbst ist **bewusst nicht** dabei — siehe den dritten
+   Befund unten.
+
+**Ergebnis (Median, n=5 je Zelle, je Lauf kalt; Marker `[data-v3-ansicht]` =
+dieselbe Bedingung wie `e2e/helpers/leserBereit.ts`):**
+
+| Bedingung | Route | vorher | nachher | Δ |
+|---|---|--:|--:|--:|
+| 1× CPU, ungedrosselt | OR | 788 | 780 | ±0 (Rauschen) |
+| 4× CPU + langsames 4G | OR | 10 368 | 7 899 | **−23.8 %** |
+| 4× CPU + langsames 4G | ZGB | 8 486 | 6 399 | **−24.6 %** |
+| 4× CPU + langsames 4G | StGB | 6 511 | 4 834 | **−25.8 %** |
+| 4× CPU + langsames 4G | BS-154.100 | 4 902 | 3 807 | **−22.3 %** |
+| 6× CPU + langsames 3G | OR | 38 296 | 27 432 | **−28.4 %** |
+| 6× CPU + langsames 3G | BS-154.100 | 18 538 | 13 975 | **−24.6 %** |
+
+**Drei Befunde, die die Spec fortschreiben — ohne die alten Zahlen anzutasten:**
+
+- **Der OR-Wert «8,4–17,2 s bis bedienbar» (17.8.2026) ist ungedrosselt nicht
+  mehr reproduzierbar.** Am 1.9.2026 misst dieselbe Grösse auf dem
+  unveränderten Basis-Stand **788 ms** (n=5, Spanne 776–853). Der alte Wert wird
+  nicht korrigiert — er gilt für `19a989f93`. Naheliegende, hier **ungeprüfte**
+  Erklärung: dazwischen landete `QS-BASIS (d) K3` (−4.66 MiB gzip Suchindex).
+  Wer die Frage schliessen will, misst beide Stände mit `npm run perf:leser`
+  gegeneinander. Praktische Folge für die Spec: **die Zielgrösse «unter 2 s» ist
+  auf einer schnellen Maschine erfüllt**; der offene Posten heisst nicht mehr
+  «Erst-Render OR», sondern «gedrosselte Geräte und langsame Netze».
+- **Nach den zwei Massnahmen ist die Strecke bandbreiten-, nicht mehr
+  kettengebunden.** Snapshot/Register/Struktur starten bei ~181 ms statt
+  5215/2672/3923 ms; was bleibt, sind ~1.1 MB gzip auf dem kritischen Pfad des
+  OR (bei 1.6 Mbit/s allein ~5.5 s Download). Weitere Gewinne verlangen
+  **weniger Bytes**, nicht eine andere Reihenfolge — der grösste Posten ist
+  strukturell (derselbe Normtext einmal als Prerender-HTML für Crawler/no-JS und
+  einmal als JSON für den Leser; beides zu behalten ist §15-Treue, kein Fehler).
+
+- **Der Leser hängt an der REIHENFOLGE, in der er Daten bekommt — ein latenter
+  Defekt, kein Perf-Posten.** Der lohnendste Preload wäre der Snapshot selbst
+  (OR: 344 KB gzip, zuletzt angefordert). Mit ihm im Kopf fallen **20 Specs in
+  8 Dateien** (Scroll-Spy, TOC-Ruhe A33, Weiterlesen-Chip R4/R8,
+  Kopf-Geometrie, Ortsangabe, Split-View-Faltung). Sauber isoliert, je derselbe
+  49-Test-Satz, nichts sonst laufend: Basis-Stand **49 passed** · +Shell-Fix
+  **49 passed** · +Preload Register/Struktur **49 passed** ·
+  +Preload **mit Snapshot** **29 passed / 20 failed**. Symptome: der Spy
+  schreibt die gelesene Stelle nie (`localStorage` bleibt null bis zum 20-s-
+  Timeout, `e2e/leser-weiterlesen-r4-r8.e2e.ts:44`); der Abstand Kopf→Artikel
+  wandert um 44 px gegen Deckel 4 (`e2e/leser-v3-rahmen.e2e.ts:286`).
+  Der Snapshot-Preload ist darum **ausgebaut** (§1/§15: Treue vor Tempo; §6.3:
+  Specs sind das Orakel, nicht die Stellschraube).
+  **Bau-Auftrag daraus:** Der Spy-Effekt
+  (`src/pages/gesetz-leser/inhalt-hooks.tsx:337 ff.`) setzt über
+  `sektionen`/`ohneGliederung` auf, also über einen Zustandsübergang, den ein
+  sofort verfügbarer Snapshot überspringt. Solange das so ist, ist **jede**
+  Massnahme gesperrt, die dem Leser Daten früher liefert als heute
+  (Service-Worker-Cache, Edge-Cache, HTTP/2 Push, warmer Reload) — der Fix
+  gehört an die Wurzel (§17). Beweismittel liegt bereit: derselbe 49-Test-Satz
+  plus der Ein-Zeilen-Eingriff (Snapshot in `preloads`, `scripts/prerender.ts`).
+  Daran hängen gemessene 3–10 % je Route.
+
+- **Dieselbe Wurzel trifft den Deep-Link-Einsprung (R7) — und macht den Zweig
+  NICHT landefähig.** `e2e/leser-ruecksprung-r5-r7.e2e.ts:201` prüft mit
+  `dauerMs > 300`, dass das «Springe zu …»-Overlay steht; die Schranke war an
+  einer damals gemessenen Standzeit von 1673 ms kalibriert. Mit den Massnahmen
+  steht das Overlay 89–241 ms — der Einsprung ist 7–19× schneller, und die
+  Schranke meldet einen Fehler für einen Fortschritt (Latenz-Boden).
+  `--repeat-each=5`, 6× Drossel, lokal: Basis **0/10 rot** · nur M1 **1/5** ·
+  M1+M2 **4/5**. **Es genügt nicht, M2 wegzulassen** — auch die verlustfreie
+  M1 reisst den Test.
+  **Darunter liegt ein echter Defekt, den der Latenz-Boden bisher verdeckt hat:**
+  in einem Diagnose-Lauf mit testweise gesenkter Schranke (nicht ausgeliefert,
+  Eingriff zurückgenommen) fällt der Test an
+  `expect(top, 'Ziel im DOM').not.toBeNull()` (3/5) — das Overlay gibt auf,
+  bevor das Ziel im DOM ist. Ursache in
+  `src/components/layout/DeepLinkSkeleton.tsx`: der Toter-Anker-Zweig schliesst,
+  sobald **irgendein** `article[id^="art-"]` steht, gestützt auf die Annahme
+  «die Artikel erscheinen gemeinsam». Wird der Reader schneller, trägt die
+  Annahme nicht mehr.
+  **Reihenfolge des Bauens daraus:** erst der Wurzel-Fix, dann die
+  Perf-Massnahmen, dann der Snapshot-Preload. Die Schranke abzusenken ist
+  ausdrücklich KEIN Weg (§6.3, und sie deckt hier einen echten Defekt).
+
+- **WURZEL-FIX GEBAUT (1.9.2026) — es war eine MOUNT-Kopplung, nicht der
+  Toter-Anker-Zweig.** Die Vermutung oben ist gemessen widerlegt: alle 232
+  BV-Artikel erscheinen im SELBEN Frame, `#art-8` auf die Millisekunde mit dem
+  ersten von ihnen (1193/1227/1390 ms) — der Toter-Anker-Zweig ist bereits
+  zustandsgekoppelt und bleibt unverändert (Beleg am Fundort verankert, §7).
+  Die Ansage ging vorzeitig aus, weil `InhaltsKopf` ZWEI `return`-Zweige hatte
+  (still/laut) und `RuecksprungChip`/`DeepLinkSkeleton` in beiden an
+  verschiedener Kind-POSITION standen: der Zweigwechsel auf `kopfzeileSelbst`
+  — der bei jedem Leser-Einsprung passiert, weil die Route `lazy` ist — war
+  damit ein UNMOUNT + REMOUNT. Aus-Flanke und Zweigwechsel fielen auf die
+  Millisekunde zusammen (823/823, 666/666, 672/672). Für die Nutzerin ein
+  **Blinken** der Ansage (13–511 ms Lücke) — ein Bestandsfehler, unabhängig vom
+  Tempo; das Tempo hat ihn nur sichtbar gemacht.
+  **Fix:** EIN Träger, zwei Zustände; die Rückmeldungen behalten ihre Position
+  und damit ihre Identität. Markup unverändert, `golden:vergleich` byte-gleich,
+  `h-9`-Reservierung (CLS `leser-kopf-cls-s3`) unberührt.
+  **Nachher:** genau eine Flanke je Lauf, die Ansage steht ~780 ms und bis das
+  Ziel im DOM ist. **R7 50/50 grün** (vorher 4/5 rot), volle Suite
+  **722 passed / 0 failed**. KEIN Test angepasst — `dauerMs > 300` steht
+  unverändert und wird erfüllt.
+
+**Weiterhin offen in `QS-PERF`:** der Snapshot-Preload (B4 — zweite
+Reihenfolge-Stelle im Spy-Effekt, nicht untersucht) · K3-Chunk-Kaskade (Eager-Welle trägt
+`katalogSuche`, drei `browse-*`, `kantone`, `fedlex`, `startseiteConfig`, die
+der Leser nicht braucht) · der Reader-Kopf-Reflow aus §1-N2 (nicht angefasst:
+sein Fix reserviert Kopf-Geometrie und ist damit eine Design-Entscheidung nach
+§13, kein reiner Perf-Eingriff; OR-CLS steht bei 0.003 gegen Schranke 0.05) ·
+`hydrateRoot` (bleibt beim ROADMAP-Unterpunkt von `QS-BASIS`: Skill `perf`
+Bauregel 5 verbietet die naive Form, und der Posten verlangt eigenen PR mit
+Hydrations-Fehler-Wächter und Gegenprüfung; sein Anteil ist mit 27–78 ms klein
+gegen die hier gehobenen 3–11 s).
+
 ---
 
 

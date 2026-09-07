@@ -4,6 +4,7 @@ import { themaText, istSynth, istBetreff, istBge, hauptIdentitaet } from '../../
 import { GEBIET_LABEL } from '../../lib/normtext/register';
 import { NormChip } from './NormChip';
 import { datumAnzeige, DATUM_UNBEKANNT_TITEL, spracheBadgeTitel } from './format';
+import { StatusBadge } from '../verzahnung/StatusBadge';
 
 // Kompakte Listen-Zeile (Default-Dichte). Bezeichnung führt mit dem THEMA/Leitsatz
 // (Auftrag David: man soll schon sehen, worum es geht) — die BGE-Nummer steht als
@@ -25,13 +26,13 @@ export function EntscheidZeile({ e, onNorm }: {
     : `/rechtsprechung/${encodeURIComponent(e.key)}`;
   const bezeichnung = verweis ? `Vollständiges Urteil zu BGE ${verweis.bgeReferenz}` : themaText(e);
   return (
-    <div className="group relative flex items-stretch gap-3 px-4 py-3 hover:bg-well transition-colors">
+    <div className="group relative flex items-stretch gap-3 px-4 py-3 lc-hover-flaeche">
       {/* Overlay-Link über der ganzen Zeile (Navigation); Name = Bezeichnung. */}
       <Link to={ziel} aria-label={bezeichnung} className="absolute inset-0 no-underline" />
 
       {/* Ganz links — Entscheiddatum (feste Spalte, scanbare Kante). Platzhalter
           datumsloser Entscheide NIE als echtes Datum (§8/BS §7.2): «JJJJ, o. D.». */}
-      <span className="num w-[5.25rem] shrink-0 pt-0.5 text-xs text-ink-500 tabular-nums"
+      <span className="num w-[5.25rem] shrink-0 pt-0.5 text-xs text-ink-500"
         title={e.datumUnbekannt ? DATUM_UNBEKANNT_TITEL : undefined}>
         {datumAnzeige(e.datum, e.datumUnbekannt)}
       </span>
@@ -39,10 +40,30 @@ export function EntscheidZeile({ e, onNorm }: {
       <div className="min-w-0 flex-1 space-y-1.5">
         {/* Bezeichnung — Thema/Leitsatz führt; BGE-Nummer als Identität rechtsbündig. */}
         <div className="flex items-baseline gap-3">
-          <span className={`min-w-0 flex-1 truncate text-body-s ${synth ? 'text-ink-700' : 'font-medium text-ink-900'} group-hover:text-brass-700`}>
+          {/* U3 (Prüfbefund W2·24-R5, 6.9.2026): `truncate` OHNE `title` — gemessen
+              63 gekappte Bezeichnungen @1440 (scrollWidth 1006 gegen clientWidth
+              596) und 325 @390 (bis 360/132, also ~37 % sichtbar). Der volle
+              Wortlaut war weder per Hover noch im A11y-Baum erreichbar. Das
+              Muster steht eine Zeile darüber am `datumUnbekannt`-Titel; hier
+              fehlte es. Reine Ergänzung, kein Layout-Eingriff. */}
+          <span title={bezeichnung}
+            className={`min-w-0 flex-1 truncate text-body-s ${synth ? 'text-ink-700' : 'font-medium text-ink-900'} group-hover:text-brass-700`}>
             {bezeichnung}
           </span>
-          <span className={`num shrink-0 text-xs ${istBge(e) ? 'font-medium text-brass-700' : 'text-ink-500'}`}>
+          {/* R8 (7.9.2026) · EINE IDENTITAET, DIE NICHT MEHR IN DIE ZEILE PASST.
+              `shrink-0` haelt die Kennung vollstaendig — richtig, solange sie
+              EINE Geschaeftsnummer ist. Traegt ein Entscheid deren mehrere
+              («S2024_005, S2024_006, S2024_007 …»), wuchs der Kasten auf 197 px
+              und wurde vom `overflow-hidden` des `lc-panel` glatt abgeschnitten:
+              gemessen /rechtsprechung @320, Panel 280 px, Inhalt 321 px — die
+              letzten 41 px waren weder sichtbar noch erreichbar (§8).
+              `max-w`-Anteil + `truncate` + `title` loest beides: kurze Kennungen
+              stehen unveraendert voll da (sie bleiben unter dem Anteil), lange
+              kuerzen sichtbar per Ellipse und geben den vollen Wortlaut per
+              Hover und im A11y-Baum her. Ein Anteil statt einer Pixelzahl,
+              damit die Regel ueber alle Viewports gilt. */}
+          <span title={hauptIdentitaet(e)}
+            className={`num shrink-0 max-w-[60%] truncate text-xs ${istBge(e) ? 'font-medium text-brass-700' : 'text-ink-500'}`}>
             {hauptIdentitaet(e)}
           </span>
         </div>
@@ -58,14 +79,28 @@ export function EntscheidZeile({ e, onNorm }: {
             <span className="text-micro italic text-ink-500"
               title="Betreff/Titel aus dem amtlichen Portal — keine Regeste">amtl. Betreff</span>
           )}
-          {e.kuratierung === 'maschinell' && (
-            <span className="lc-badge lc-badge-soft" title="Automatisch erfasst, fachlich noch nicht geprüft">ungeprüft</span>
-          )}
-          {e.sprache !== 'de' && <span className="lc-badge lc-badge-soft uppercase" title={spracheBadgeTitel(e.sprache)}>{e.sprache}</span>}
+          {e.kuratierung === 'maschinell' && <StatusBadge praedikat="maschinell" />}
+          {e.sprache !== 'de' && <span className="lc-badge lc-badge-soft" title={spracheBadgeTitel(e.sprache)}>{e.sprache}</span>}
           {/* lc-chip-zeile (LM-044/N1): Aktions-Form an der ROLLE (span[role=button]),
-              gleiche Grammatik wie in der Karten-Ansicht und der Filterleiste (§23). */}
+              gleiche Grammatik wie in der Karten-Ansicht und der Filterleiste (§23).
+              C3 (5.9.2026, R6-C): `z-10` → `z-sticky` (Schichtungs-Skala,
+              index.css), Wert unverändert (10), nur benannt. */}
+          {/* ── GB-12/13 (W2·24, Befunde G12/G13, 7.9.2026) · KLARTEXT STATT KASTEN
+              GEMESSEN: 12 gerahmte Chips im ersten Bild von /rechtsprechung, im
+              DOM 847 `span.lc-chip` + 392 `span.lc-badge` (davon 53 versale
+              Sprach-Etiketten «fr»/«it»). Den Rahmen setzt die Chip-Grammatik
+              der KOPF-Metazeilen (`.lc-chip-zeile`, index.css): dort stehen drei
+              Element-Arten nebeneinander und die Form muss sie trennen (LM-044)
+              — in der Trefferliste steht nur EINE Art, 847-fach; dort trennt die
+              Form nichts, sie rahmt nur (F0.6 «Linien statt Flächen»).
+              `lc-normzeile` steht NEBEN `lc-chip-zeile`, nicht statt ihr: die
+              Link-/Knopf-Grammatik bleibt gültig, GB-12 nimmt ihr nur den
+              Kasten (Rezept + Kontrastnachweis: index.css §GB-12).
+              Das `uppercase` am Sprach-Badge ist ersatzlos weg (F0.7); die
+              Regel steht seit GB-13 EINMAL an `.lc-badge`, der volle Sprachname
+              bleibt im `title` (§8). */}
           {e.normKeys.length > 0 && (
-            <span className="lc-chip-zeile relative z-10 flex flex-wrap items-center gap-x-2 gap-y-1">
+            <span className="lc-chip-zeile lc-normzeile relative z-sticky flex flex-wrap items-center gap-x-2 gap-y-1">
               {e.normKeys.slice(0, 5).map((k) => <NormChip key={k} normKey={k} onWaehle={onNorm} />)}
               {/* LM-049 (gleiche Formensprache wie die Karte): Zähler, nicht
                   Bedienelement — «+3 weitere» statt nackter «+3». */}

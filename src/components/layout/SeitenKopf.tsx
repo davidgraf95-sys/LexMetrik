@@ -7,20 +7,37 @@ import { SeitenTitel } from '../ui/SeitenTitel';
 // Köpfe ab — die stille Drift (Kontakt hatte die scale-rule verloren, drei
 // Schreibweisen fürs Label, ErrorBoundary fiel ganz heraus) verschwindet damit
 // an EINER Stelle. Reine Darstellung (§3).
-export function SeitenKopf({ overline, titel, intro, children }: {
-  overline: string;
+export function SeitenKopf({ overline, ausgabe, titel, intro, children }: {
+  /** Etikett ÜBER dem Titel (statische Seiten). Entfällt auf den Übersichten. */
+  overline?: string;
+  /** D22/R12A: Ausgabe-Zeile UNTER dem Titel (Zähler aus dem Register). */
+  ausgabe?: ReactNode;
   titel: string;
   intro?: ReactNode;
   children?: ReactNode;
 }) {
   return (
     <div className="space-y-2">
-      <p className="lc-overline">{overline}</p>
-      <div className="scale-rule max-w-[280px]" aria-hidden />
+      {/* ── D22 (David 6.9.2026, Bild /gesetze) · DER TITEL STEHT ZUERST ───────
+          Die fünf Übersichten trugen ihre Ausgabe-Zeile im `overline`-Feld —
+          also ÜBER der H1 und mit der halben Haarlinie (`scale-rule`)
+          dazwischen. Gelesen wurde damit zuerst eine Zahlenreihe und erst
+          danach der Name des Bereichs; die Haarlinie trennte beide zusätzlich
+          in zwei Blöcke («komische Lücken»). Neu: H1 zuerst, Ausgabe-Zeile
+          direkt darunter (`ausgabe`), keine Overline, keine Haarlinie.
+          Die statischen Seiten (Über, Kontakt, Methodik, Datenschutz,
+          Einstellungen, Suche, Abdeckung, Fehlseiten) behalten ihr Etikett
+          ÜBER dem Titel — dort benennt es die Rubrik, nicht den Bestand;
+          `overline` ist darum optional geworden, nicht abgeschafft. */}
+      {overline && <p className="lc-overline">{overline}</p>}
+      {overline && <div className="scale-rule max-w-[280px]" aria-hidden />}
       {/* A-1: die H1 kommt aus dem EINEN Titel-Baustein (`ui/SeitenTitel`) —
           ausserhalb eines Panes zeichengleich zum Vorzustand, im Pane
           container-basiert skaliert. */}
       <SeitenTitel>{titel}</SeitenTitel>
+      {/* Ausgabe-Zeile: Archivo 13 px, ink-500 (`.ub-ausgabe`, index.css) —
+          eine Zeile aus dem Register, kein Erklärsatz (D11/D22 Ziff. 6). */}
+      {ausgabe && <p className="ub-ausgabe">{ausgabe}</p>}
       {/* T1/L5 (Design-Qualitäts-Pass 29.8.2026, W2·11-DESIGN): der Lead lief bis
           hierher OHNE Lesespalte über die volle Inhaltsbreite. Gemessen @1440
           (Methode `e2e/leser-lesemass.e2e.ts`: Textlänge / Zeilenkästen):

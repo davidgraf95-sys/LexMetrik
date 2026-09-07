@@ -783,6 +783,28 @@ function zhLawIdSafe(url: string): string {
   return m ? m[1].replace(/_/g, '.') : url.replace(/[^a-z0-9.]+/gi, '_');
 }
 
+/**
+ * ZH-4b (§17-Wurzelfix / §8, 31.8.2026): Ein gelisteter ZH-Erlass, der nicht
+ * abrufbar war, darf NICHT still fehlen.
+ *
+ * Vorher wurde der Fetch-Fehler nur in eine Log-Zeile geschrieben und der Lauf
+ * baute Manifest/Register/Golden mit der Lücke weiter. Bei drei Erlassen fiel
+ * das noch auf; ab ~20 (deklarative Quellenliste) nicht mehr — genau die
+ * Fehlerklasse, die das Dossier §7 als «schlägt still zu» benennt. Jetzt:
+ * sichtbarer Abbruch mit Fehl-Erlass-Liste VOR dem Golden-Schreiben. Die
+ * Soll-Menge ist `ZH_QUELLEN` ∪ Tarif-Ableitung; ein Fehl-Erlass ist ein
+ * unvollständiger Korpus, kein Teilerfolg.
+ */
+function pruefeZhVollstaendig(zhCov: HtmCoverage): void {
+  if (zhCov.fetchFehler.length === 0) return;
+  const liste = zhCov.fetchFehler.map((f) => `  - ${f.kanton} ${f.url}\n      ${f.fehler}`).join('\n');
+  throw new Error(
+    `ZH-Import UNVOLLSTÄNDIG: ${zhCov.fetchFehler.length} gelistete(r) Erlass(e) nicht abrufbar —\n${liste}\n` +
+      'Lauf abgebrochen vor Manifest/Register/Golden (kein halber Korpus, §8). ' +
+      'Netz/Quelle prüfen und erneut fahren.',
+  );
+}
+
 // ── ZH-Snapshots (zhlex Text-PDF via pdfjs) erzeugen ─────────────────────────
 // Spiegelt die HTM-Phase: Inventar → holeZhPdf (Registry→notes.zh.ch-PDF) →
 // NormSnapshot. quelleUrl = zhlex-Registry-URL (= Manifest-Key). Drift via
@@ -803,6 +825,8 @@ async function erzeugeZhPdfSnapshots(
   const flipDb = erstelleFlipDb();
 
   const cov: HtmCoverage = { totalSnapshots: 0, reportZeilen: [], tokenFehlt: [], fetchFehler: [] };
+  // §8-Auslassungen je Erlass (Bug B-6, Gegenprüfung Runde 2, 31.8.2026).
+  const luecken: Record<string, { quelleUrl: string; erlass: string; hinweise: string[] }> = {};
 
   const limit = pLimit(FETCH_CONCURRENCY);
   const abrufe = await Promise.all(
@@ -869,10 +893,76 @@ async function erzeugeZhPdfSnapshots(
     const projJson = flipKantonErlass(flipDb, { key: `${g.kanton}-${safe}`, kanton: g.kanton }, snapshotListe);
     writeFileSync(ausgabePfad, projJson, 'utf8');
     cov.totalSnapshots += snapshotListe.length;
-    cov.reportZeilen.push(`  ${g.kanton}-${safe.padEnd(16)} ${snapshotListe.length} Snapshots → ${ausgabePfad}`);
+    if (ergebnis.hinweise.length > 0) {
+      luecken[`${g.kanton}-${safe}`] = {
+        quelleUrl: g.quelleUrl,
+        erlass,
+        hinweise: [...ergebnis.hinweise].sort(),
+      };
+    }
+    cov.reportZeilen.push(
+      `  ${g.kanton}-${safe.padEnd(16)} ${snapshotListe.length} Snapshots → ${ausgabePfad}` +
+        (ergebnis.hinweise.length > 0 ? ` · ${ergebnis.hinweise.length} §8-Hinweis(e)` : ''),
+    );
   }
 
+  schreibeLueckenIndex(abgerufen, luecken, kantonFilter);
   return cov;
+}
+
+/**
+ * §8-LÜCKEN-INDEX (Bug B-6, Gegenprüfung Runde 2, 31.8.2026).
+ *
+ * Der ZH-Import lässt Erlassteile bewusst weg — Übergangs-/Schlussbestimmungen
+ * und, bei ZH-700.1, den Anhang mit den Altfassungen einzelner §§ (dort 486 von
+ * 4327 Textzeilen = 11 %). Beide führen eine zweite, mit dem Haupttext
+ * kollidierende §-Zählung; sie wegzulassen ist richtig, sie zu VERSCHWEIGEN
+ * nicht (§8: offenlegen statt wegglätten). Bis hierher stand die Auslassung nur
+ * in einem Code-Kommentar — im Artefakt war der Erlass scheinbar vollständig.
+ *
+ * Eigene Datei statt eines Feldes im Erlass-Snapshot: die Snapshot-JSON sind
+ * byte-genaue Projektionen aus `daten/lexmetrik.db` (§5, check:paritaet). Ein
+ * neues Erlass-Feld verlangte eine Schema-Änderung in scripts/datenhaltung/**,
+ * an der parallel gebaut wird. Der Index ist die additive, kollisionsfreie
+ * Form; die Überführung in die DB-Projektion ist Nachzug-Stoff, sobald der
+ * Datenhaltungs-Umbau gelandet ist.
+ *
+ * Deterministisch: Erlass-Keys und Hinweise sortiert (§2).
+ */
+function schreibeLueckenIndex(
+  abgerufen: string,
+  luecken: Record<string, { quelleUrl: string; erlass: string; hinweise: string[] }>,
+  kantonFilter?: Set<string>,
+): void {
+  const pfad = 'public/normtext/kanton-luecken.json';
+  // Teil-Läufe (--nur=zh deckt nur ZH ab) dürfen fremde Kantone nicht löschen:
+  // bestehende Einträge ausserhalb des Filters bleiben stehen.
+  let bestand: Record<string, { quelleUrl: string; erlass: string; hinweise: string[] }> = {};
+  if (existsSync(pfad)) {
+    const alt = JSON.parse(readFileSync(pfad, 'utf8')) as {
+      erlasse?: Record<string, { quelleUrl: string; erlass: string; hinweise: string[] }>;
+    };
+    bestand = alt.erlasse ?? {};
+  }
+  const behalten = Object.fromEntries(
+    Object.entries(bestand).filter(([key]) => {
+      const kanton = key.split('-')[0];
+      // Alles, was dieser Lauf abgedeckt hat, wird ersetzt; der Rest bleibt.
+      if (kantonFilter && !kantonFilter.has(kanton)) return true;
+      return kanton !== 'ZH';
+    }),
+  );
+  const zusammen = { ...behalten, ...luecken };
+  const sortiert: typeof zusammen = {};
+  for (const k of Object.keys(zusammen).sort()) sortiert[k] = zusammen[k];
+  writeFileSync(
+    pfad,
+    JSON.stringify({ erzeugt: abgerufen, erlasse: sortiert }, null, 2) + '\n',
+    'utf8',
+  );
+  console.log(
+    `  §8-Lücken-Index → ${pfad} (${Object.keys(sortiert).length} Erlass(e) mit Auslassung)`,
+  );
 }
 
 // pdfLawIdSafe liegt zentral in ./normtext/lawid-safe.ts (§5, C1-1) — importiert oben.
@@ -1020,6 +1110,7 @@ async function main(): Promise<void> {
     for (const z of zhCov.reportZeilen) console.log(z);
     console.log(`\nGesamt ZH: ${zhCov.totalSnapshots} Snapshots; fetch-Fehler: ${zhCov.fetchFehler.length}`);
     for (const f of zhCov.fetchFehler) console.log(`  ${f.kanton} ${f.url}: ${f.fehler}`);
+    pruefeZhVollstaendig(zhCov);
 
     // Manifest + Register aus der Platte neu (alle Snapshots; nur ZH verändert).
     const kantonManifest = baueManifest('public/normtext/kanton');
@@ -1121,6 +1212,8 @@ async function main(): Promise<void> {
     console.log(`\nfetch-Fehler: ${alleFetchFehler.length}`);
     for (const f of alleFetchFehler) console.log(`  ${f}`);
 
+    if (zhCov) pruefeZhVollstaendig(zhCov);
+
     // Manifest + Register aus der Platte neu (alle Dateien; nur die Ziel-Kantone verändert).
     const kantonManifest = baueManifest('public/normtext/kanton');
     const kantonManifestSortiert: Record<string, string> = {};
@@ -1141,7 +1234,17 @@ async function main(): Promise<void> {
     }
     // Merge-Regel: scripts/normtext/golden-kanton-merge.ts (eine Quelle, isoliert
     // getestet in src/tests/golden-kanton-merge.test.ts).
-    const merge = mischeGoldenKanton(bestand, goldenIndex, kantone);
+    // existsSync als Datei-Sonde: ein Erlass der Ziel-Kantone ohne frische
+    // Knoten wird nur dann aus dem Golden entfernt, wenn auch seine
+    // Snapshot-Datei fort ist (= aus dem Korpus zurückgezogen). Ausfall bleibt
+    // bewahrt (§8) — dieselbe Regel wie im Voll-Lauf.
+    const merge = mischeGoldenKanton(bestand, goldenIndex, kantone, existsSync);
+    if (merge.verworfen.length > 0) {
+      console.log(
+        `\nℹ️  §5: ${merge.verworfen.length} Erlass(e) der Ziel-Kantone ohne Snapshot-Datei — ` +
+          `Golden-Knoten verworfen (aus dem Korpus zurückgezogen): ${merge.verworfen.join(', ')}`,
+      );
+    }
     if (merge.fehlgeschlageneKantone.length > 0) {
       console.log(
         `\n⚠️  WARN (§8): Ziel-Kantone OHNE neue Snapshots (Fetch-Fehler?): ${merge.fehlgeschlageneKantone.join(', ')} — ` +

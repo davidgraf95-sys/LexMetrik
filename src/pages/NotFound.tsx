@@ -1,4 +1,6 @@
+import { useEffect } from 'react';
 import { FehlSeite, type FehlWeg } from '../components/ui/FehlSeite';
+import { SITE_TITEL } from '../lib/seo';
 
 // 404 in der Familie der statischen Seiten (SeitenKopf): Overline + Ablesekante
 // + Display-Titel. Statt einer Sackgasse mehrere geführte Wiedereinstiege.
@@ -23,7 +25,56 @@ const WEGE: [FehlWeg, ...FehlWeg[]] = [
   { to: '/kontakt', label: 'Kontakt' },
 ];
 
+// ── LM-188 (W2·17-UI-BEFUNDE/B14) · EIGENER SEITENTITEL, KEIN FREMDES CANONICAL ─
+// Gemessen 4.9.2026 @1440 auf `/gibtesnicht` (Preview von origin/main): Tab-Titel
+// UND `link[rel=canonical]` waren die der STARTSEITE. Herkunft: die 404-Adresse ist
+// keine prerenderte Route, der SPA-Fallback liefert das Startseiten-HTML, und
+// `RouteMeta` lässt den Head bei `metaFuerPfad(pfad) === null` bewusst unverändert
+// (Kommentar dort: «Stub/NotFound/Redirects»). Für die 404-Fläche ist «unverändert»
+// aber falsch: der Reiter log über seinen Inhalt (§8), und ein Canonical auf «/»
+// erklärt eine Fehlseite zur Startseite. Darum setzt DIESE Seite ihren Head selbst
+// und räumt ihn beim Verlassen wieder auf, damit `RouteMeta` die nächste Route
+// unverändert bespielen kann.
+//
+// NICHT über `lib/seo` gelöst: ein Eintrag in `STATISCHE_SEITEN` liefe über
+// `alleRouten()` in Prerender UND Sitemap — eine gesitemappte 404-Adresse ist ein
+// Widerspruch in sich (dieselbe Herleitung, mit der dort der /international-
+// Redirect ausgetragen ist).
+//
+// NICHT gebaut, weil widerlegt: der zweite Teil des Befundes («es fehlt die
+// Breadcrumb-Leiste, die alle anderen Seiten haben»). Gemessen am selben Stand:
+// /methodik, /kontakt und /einstellungen tragen ebenfalls KEINE Krumenleiste —
+// die trägt nur, wer eine Detail-Route ist (`INHALT_RE`, InhaltsKopfKontext.ts).
+// Das Seitengerüst der 404 entspricht also den statischen Schwesterseiten.
+const TITEL_404 = 'Seite nicht gefunden — LexMetrik';
+
+function useFehlseitenHead() {
+  useEffect(() => {
+    const vorher = document.title;
+    document.title = TITEL_404;
+    const canonical = document.querySelector('link[rel="canonical"]');
+    const canonicalHref = canonical?.getAttribute('href') ?? null;
+    canonical?.remove();
+    const robots = document.createElement('meta');
+    robots.setAttribute('name', 'robots');
+    robots.setAttribute('content', 'noindex');
+    document.head.appendChild(robots);
+    return () => {
+      // Der Titel wird von `RouteMeta` nachgeführt, sobald die Zielroute Meta
+      // trägt; der Rückfall deckt die Routen ohne Meta ab (dann steht wieder der
+      // Head der Hülle da, nicht der 404-Titel).
+      document.title = vorher === TITEL_404 ? SITE_TITEL : vorher;
+      robots.remove();
+      if (canonical && canonicalHref) {
+        canonical.setAttribute('href', canonicalHref);
+        document.head.appendChild(canonical);
+      }
+    };
+  }, []);
+}
+
 export function NotFound() {
+  useFehlseitenHead();
   return (
     <FehlSeite bereich="404 · Nicht gefunden" objekt="Seite" wege={WEGE}
       erklaerung="Die Adresse ist veraltet oder vertippt. Hier kommen Sie zurück ins Werkzeug:" />

@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import {
-  baueBotschaften, keyAusFga, liveLink, type ErlassMeta,
+  baueBotschaften, sortiereBindings, keyAusFga, liveLink, type ErlassMeta,
 } from '../../scripts/materialien/botschaften-generieren';
 import { parlamentUrlAusCuria } from '../lib/materialien/botschaften';
 import type { SparqlBinding } from '../../scripts/fedlex-sparql';
@@ -133,5 +133,26 @@ describe('BOTSCHAFTEN (committet) — Struktur-Invarianten', () => {
   it('Keys sind eindeutig', () => {
     const keys = BOTSCHAFTEN.map((b) => b.key);
     expect(new Set(keys).size).toBe(keys.length);
+  });
+});
+
+// Befund (f), QS-MONITOR-ROT 1.9.2026: Roh-Bindings je SR deterministisch geordnet — der SPARQL-
+// Endpunkt liefert ohne ORDER BY in wechselnder Reihenfolge (Rot-Beweis: vier Roh-Dateien am
+// 30.8. und 1.9.2026 bei identischem Inhalt umsortiert, multiset-identisch).
+describe('sortiereBindings — deterministische Roh-Ordnung', () => {
+  const a = { sr: { type: 'literal', value: '831.10' }, fga: { type: 'uri', value: 'https://fedlex.data.admin.ch/eli/fga/2024/2' } };
+  const b = { sr: { type: 'literal', value: '831.10' }, fga: { type: 'uri', value: 'https://fedlex.data.admin.ch/eli/fga/2023/9' } };
+  const c = { fga: { type: 'uri', value: 'https://fedlex.data.admin.ch/eli/fga/2023/9' }, sr: { type: 'literal', value: '831.10' } };
+  it('gleiche Bindings in anderer Reihenfolge ⇒ gleiche Ausgabe', () => {
+    expect(sortiereBindings([a, b])).toEqual(sortiereBindings([b, a]));
+  });
+  it('Feld-Reihenfolge innerhalb eines Bindings zählt nicht (kanonischer Schlüssel)', () => {
+    expect(sortiereBindings([a, b]).map((x) => x.fga.value)).toEqual(sortiereBindings([a, c]).map((x) => x.fga.value));
+  });
+  it('Eingabe bleibt unverändert (rein), Ausgabe hat alle Elemente', () => {
+    const eingabe = [a, b];
+    const out = sortiereBindings(eingabe);
+    expect(eingabe).toEqual([a, b]);
+    expect(out).toHaveLength(2);
   });
 });

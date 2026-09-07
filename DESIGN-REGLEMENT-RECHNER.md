@@ -91,6 +91,22 @@ erst referenzieren, dann exportieren.
 auf einer Seite gerendert werden können (Tagerechner-Teilformulare,
 Kombinierte Ansicht), tragen eindeutige Suffixe (`lc-ergebnis-zpo`, …).
 
+**Akzent-Oberkante — zwei Farben, EINE Anatomie** (ergänzt 31.8.2026,
+Design-Konsistenz R2-F/F1-5). Die 3 px starke Oberkante kommt immer aus
+einer CSS-Klasse, nie aus einem inline `border-t-[3px]`:
+
+| Klasse | Bedeutung | Beispiel |
+|---|---|---|
+| `.lc-akzent-brass` | massgeblicher Wert | frühere Verjährungsfrist, Hauptbetrag |
+| `.lc-akzent-danger` | Sperre / kein statthaftes Rechtsmittel | «NICHTIG» (Art. 336c OR), `statthaft === 'keines'` |
+
+Die FARBE trägt die Bedeutung, die Stelle ist immer dieselbe. Nur in der
+Klasse hält der Ton im Dunkelmodus (`--brass-line` / `--danger-line`,
+`src/index.css`); handgesetzte Utilities greifen dort an der
+Theme-Umschaltung vorbei. Anlass: sechs handgebaute `border-t-[3px]` in
+vier Dateien, davon eine (`VerjaehrungForm`), die zusätzlich alle vier
+Kanten einfärbte. Bewacht von `src/tests/listen-editor-r2f.test.tsx`.
+
 ## R5 · Export-Zeile
 
 Reihenfolge fix: **PDF → ICS → Teilen** (vom Dokument über den Termin
@@ -188,10 +204,36 @@ nennt keine Frist, keinen Schwellenwert, kein Ergebnis (§3).
 Nicht betroffen sind Wizards, deren Ergebnis ein eigener Schritt ist
 (Zuständigkeits-Trio): dort trägt der Schritt selbst die Ansage.
 
+## R14 · Repeater = ListenEditor
+
+Jede wiederholbare Eingabezeile — Rechtsbegehren, Kinder, Beilagen,
+Sperrereignisse, Gründer:innen, Teilzahlungen — kommt aus dem geteilten
+`ListenEditor` (`src/components/vorlagen/ui.tsx`), nie aus einem
+handgebauten `map()` mit eigenem Knopf:
+
+- **Behälter je Eintrag:** `lc-panel p-3` (kein `lc-card`, kein nacktes
+  `border border-line`, kein behälterloses `flex`).
+- **Kopfzeile je Eintrag:** Overline «‹Element› N», rechts der
+  Entfernen-Link.
+- **Entfernen:** roter Text-Link, klein, Wortlaut **«entfernen»** —
+  nicht «Entfernen», nicht «✕», nicht `lc-btn-ghost`.
+- **Hinzufügen:** `lc-btn-outline lc-btn-sm` mit **«+ ‹Element›»**,
+  UNTER der Liste. Kein «hinzufügen» im Text: das Pluszeichen sagt die
+  Handlung bereits.
+- Mindest-/Höchstzahl von Einträgen ist eine Zahl am Baustein
+  (`mindestens`/`hoechstens`), keine eigene Bedingung um den Knopf —
+  und nie ein Knopf, der still nichts tut (§8).
+
+Ergänzt 31.8.2026 (Design-Konsistenz R2-F/F1-9): Das Reglement schwieg
+zu Repeatern, und entsprechend standen 43 Hinzufügen-Knöpfe in 20
+Dateien in drei Optiken, zwei Beschriftungsgrammatiken und vier
+Entfernen-Formen nebeneinander. Bewacht von
+`src/tests/listen-editor-r2f.test.tsx`.
+
 ## Prüfung
 
 Jeder neue oder geänderte Rechner besteht vor dem Commit die
-Checkliste R1–R13 (Bau-Begleitpflicht im WACHSTUM-REGLEMENT, Ziff. 4
+Checkliste R1–R14 (Bau-Begleitpflicht im WACHSTUM-REGLEMENT, Ziff. 4
 «Rahmen vorhanden»). Verstösse, die sich fachlich begründen, werden im
 Code an Ort kommentiert und hier als Ausnahme (R12) nachgeführt —
 stille Abweichungen sind Bugs.

@@ -31,7 +31,19 @@ const ARTEFAKTE: {
   ingest: (db: DatabaseSync) => Zaehler;
   fts?: (db: DatabaseSync) => Zaehler;
 }[] = [
-  { pfad: 'daten/normtext.db', doktyp: 'normtext', ingest: ingestNormtextVoll, fts: (db) => ({ 'fts_artikel': baueFtsArtikel(db) }) },
+  {
+    pfad: 'daten/normtext.db',
+    doktyp: 'normtext',
+    ingest: ingestNormtextVoll,
+    // `fts_artikel ohne Struktur` wird MITGEDRUCKT (§8): die Recall-Felder m/n/g/f
+    // speisen sich aus dem Struktur-Sidecar, und Artikel ohne Sidecar tragen sie
+    // leer. Diese Zahl darf nicht still wachsen — sie ist die Abdeckungs-Anzeige
+    // der Recall-Parität (K1). Stand 31.8.2026: 2264 von 56 113 (4.03 %).
+    fts: (db) => {
+      const b = baueFtsArtikel(db);
+      return { 'fts_artikel': b.zeilen, 'fts_artikel ohne Struktur': b.ohneStruktur };
+    },
+  },
   { pfad: 'daten/rechtsprechung.db', doktyp: 'rechtsprechung', ingest: ingestRechtsprechung, fts: (db) => ({ 'fts_entscheide_schaufenster': baueFtsEntscheideSchaufenster(db) }) },
   { pfad: 'daten/soft-law.db', doktyp: 'soft-law', ingest: ingestSoftLaw },
 ];

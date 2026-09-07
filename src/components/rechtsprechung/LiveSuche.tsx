@@ -2,7 +2,9 @@ import { useEffect, useRef, useState } from 'react';
 import {
   sucheLive, LIVE_QUELLE, type LiveTreffer, type LiveSortierung, type LiveSuchErgebnis,
 } from '../../lib/rechtsprechung/livesuche';
-import { formatiereDatum, kantonLabel } from './format';
+import { kantonLabel } from './format';
+import { Datum } from '../ui/Datum';
+import { TrefferZeile, TREFFER_ZEILE_RAHMEN } from '../ui/TrefferZeile';
 
 // Opt-in Live-Volltextsuche über den GESAMTEN Schweizer Korpus (entscheidsuche.ch),
 // weit über die kuratierte LexMetrik-Auswahl hinaus. DISCOVERY, keine Engine (§2):
@@ -10,29 +12,41 @@ import { formatiereDatum, kantonLabel } from './format';
 // amtliche Fassung (Link je Treffer). Standardmässig eingeklappt — der Suchbegriff
 // verlässt die App erst auf bewusste Aktion (Berufsgeheimnis, §8). Reine Darstellung (§3).
 
-function TrefferZeile({ t }: { t: LiveTreffer }) {
+// A3-3 (R3-β, 31.8.2026): die Zeile lief über den geteilten `ui/TrefferZeile`
+// — bis dahin war sie die DRITTE Bauform derselben Inhaltsklasse («anklickbare
+// Zeile mit Titel, zweiter Zeile, Marke und Pfeil») neben Katalog und Suche,
+// die Runde 2 bereits zusammengeführt hatte. Die lokale Kopie ist gelöscht,
+// nicht angeglichen (§5/§10). Damit folgt sie auch dem Kanon der Zeile:
+// Untertitel in `body-s` statt `xs`, zwei Zeilen statt harter Kappung (§8),
+// Titel-Hover über den Gruppen-Namen des Rahmens. Additiv am Baustein waren
+// zwei Dinge, die diese Fläche mitbringt und die anderen nicht hatten: der
+// `meta`-Slot (Kanton · Datum · Aktenzeichen) und die Pfeil-Glyphe «↗» für
+// «führt aus der App hinaus».
+function LiveTrefferZeile({ t }: { t: LiveTreffer }) {
   const inner = (
-    <>
-      <div className="min-w-0 flex-1">
-        <div className="truncate text-body-s text-ink-800 group-hover:text-brass-700">{t.titel}</div>
-        {t.thema && <div className="mt-0.5 truncate text-xs text-ink-500">{t.thema}</div>}
-        <div className="mt-1 flex flex-wrap items-center gap-x-2 text-micro text-ink-500">
-          <span>{kantonLabel(t.kanton)}</span>
-          {t.datum && <><span aria-hidden>·</span><span className="num">{formatiereDatum(t.datum)}</span></>}
-          {t.aktenzeichen && <><span aria-hidden>·</span><span className="num">{t.aktenzeichen}</span></>}
-        </div>
-      </div>
-      {t.quelleUrl && <span aria-hidden className="shrink-0 self-center text-brass-600">↗</span>}
-    </>
+    <TrefferZeile
+      titel={t.titel}
+      untertitel={t.thema}
+      pfeil={t.quelleUrl ? '↗' : null}
+      meta={<>
+        <span>{kantonLabel(t.kanton)}</span>
+        {/* B-3-NACHZUG (R2-A, 31.8.2026): das Datum stand in der MONO-Stimme
+            (`.num`) — die bleibt SR-Nummer und Aktenzeichen vorbehalten
+            (Design-Grundlage Kap. 2.1). Format und Auszeichnung kommen jetzt
+            aus dem einen Baustein; das Aktenzeichen daneben behält `.num`. */}
+        {t.datum && <><span aria-hidden>·</span><Datum iso={t.datum} /></>}
+        {t.aktenzeichen && <><span aria-hidden>·</span><span className="num">{t.aktenzeichen}</span></>}
+      </>}
+    />
   );
   return t.quelleUrl ? (
     <a href={t.quelleUrl} target="_blank" rel="noopener noreferrer"
-      className="group flex items-stretch gap-3 px-4 py-2.5 no-underline hover:bg-well transition-colors"
+      className={`${TREFFER_ZEILE_RAHMEN} px-4 py-2.5 no-underline lc-hover-flaeche`}
       title="Amtliches Dokument bei entscheidsuche.ch öffnen">
       {inner}
     </a>
   ) : (
-    <div className="flex items-stretch gap-3 px-4 py-2.5">{inner}</div>
+    <div className={`${TREFFER_ZEILE_RAHMEN} px-4 py-2.5`}>{inner}</div>
   );
 }
 
@@ -95,7 +109,7 @@ export function LiveSuche({ initialQ = '' }: { initialQ?: string }) {
         <div className="inline-flex items-stretch overflow-hidden rounded border border-line" role="group" aria-label="Sortierung">
           {(['relevanz', 'datum'] as const).map((s) => (
             <button key={s} type="button" onClick={() => setzeSort(s)} aria-pressed={sortNach === s}
-              className={`px-2.5 py-1.5 text-xs ${sortNach === s ? 'bg-well text-brass-700' : 'text-ink-600 hover:bg-paper-sunken'} ${s === 'datum' ? 'border-l border-line' : ''}`}>
+              className={`px-2.5 py-1.5 text-xs ${sortNach === s ? 'bg-well text-brass-700' : 'text-ink-600 lc-hover-flaeche'} ${s === 'datum' ? 'border-l border-line' : ''}`}>
               {s === 'relevanz' ? 'Relevanz' : 'Neueste'}
             </button>
           ))}
@@ -122,7 +136,7 @@ export function LiveSuche({ initialQ = '' }: { initialQ?: string }) {
               {' '}· angezeigt {erg.treffer.length}
             </p>
             <div className="lc-panel divide-y divide-line overflow-hidden">
-              {erg.treffer.map((t) => <TrefferZeile key={t.id} t={t} />)}
+              {erg.treffer.map((t) => <LiveTrefferZeile key={t.id} t={t} />)}
             </div>
           </div>
         )

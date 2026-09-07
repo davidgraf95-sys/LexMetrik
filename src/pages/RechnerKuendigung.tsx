@@ -61,7 +61,15 @@ export function RechnerKuendigung() {
           label: (
             <>
               <span className="block">{t.label}</span>
-              <span className="block text-xs font-normal opacity-70">{t.sub}</span>
+              {/* `opacity-70` → Token (QS-UI Teilpass (e), 5.9.2026): Opazität
+                  auf Text hebelt jede Kontrast-Zusage der Token-Schicht aus —
+                  sie rechnet die FERTIGE Farbe gegen den Grund und macht aus
+                  einer geprüften Farbe eine ungeprüfte. Gemessen am neuen
+                  Flächen-Tor: im aktiven Reiter wurde brass-700 (#826225) zu
+                  #A89166 auf #FFFEFC = 3.01:1 (AA verlangt 4.5) — `color-contrast`,
+                  serious. ink-600 (#56534C) ist die gedämpfte Stufe des Hauses
+                  und liegt in BEIDEN Reiter-Zuständen über AA. */}
+              <span className="block text-xs font-normal text-ink-600">{t.sub}</span>
             </>
           ),
         }))}

@@ -200,10 +200,28 @@ function berechneZustandsAenderungen(dokumente: SoftLawDok[], datum: string): Do
   const heutigeIds = new Set(dokumente.map((d) => d.id));
   const out: DokZeile[] = [];
 
-  // NEU / GEÄNDERT: neue id oder drift_token weicht vom letzten Zustand ab.
+  // NEU / GEÄNDERT: neue id, oder drift_token / sha / stand weichen vom letzten Zustand ab.
+  //
+  // WARUM sha UND stand seit 5.9.2026 (QS-MONITOR-ROT): der drift_token hängt allein an den
+  // ToC-Ankern (adapter-estv-mwst.ts, tocDriftToken), und das ToC trägt live KEINE
+  // Publikationsdaten — eine In-place-Änderung einer Ziffer ist für ihn unsichtbar (Sonde
+  // 1.9.2026, 0 Treffer; dieselbe Begründung trägt estv-mwst-stand-probe.ts). Bis hierher
+  // hatte der Kreislauf darum nur einen Detektor und keine Reparatur: `check:materialien-netz`
+  // meldete am 5.9.2026 ROT («ESTV-MWST-BRANCHEN-INFO-26 Publiziert-am 2026-09-03 ≠
+  // committeter Stand 2025-03-31 — Snapshot neu ziehen»), der Snapshot-Lauf schrieb aber
+  // «0 Zustandsänderung(en)», weil der Token gleich blieb — der Befund war mit dem eigenen
+  // Werkzeug nicht heilbar (genau die Alarm-Müdigkeit, gegen die fedlex-frische.yml als
+  // Reparatur-Arm gebaut wurde). GEMESSEN am Voll-Crawl vom 5.9.2026 (48 Dokumente, 3118
+  // Requests): über drift_token 0 Änderungen, über sha/stand 3 — ESTV-MWST-INFO-04
+  // (2026-08-27 → 2026-09-03), ESTV-MWST-BRANCHEN-INFO-13 (2025-11-05 → 2026-09-03),
+  // ESTV-MWST-BRANCHEN-INFO-26 (2026-03-06 → 2026-09-03).
+  // Deterministisch und ohne Heuristik: verglichen werden gelesene Quell-Werte, nichts geraten.
   for (const d of dokumente) {
     const vor = zustand.letzterZustand.get(d.id);
-    const geaendert = !vor || vor.status !== 'gelistet' || vor.drift_token !== d.drift_token;
+    const geaendert = !vor || vor.status !== 'gelistet'
+      || vor.drift_token !== d.drift_token
+      || vor.sha !== d.sha
+      || vor.stand !== d.stand;
     if (geaendert) out.push(dokZeileVon(d));
   }
 

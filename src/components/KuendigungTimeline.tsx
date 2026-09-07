@@ -29,7 +29,10 @@ export function KuendigungTimeline({ e }: { e: SperrfristenErgebnis }) {
 
   const endIso = nichtig ? e.fruehesteNeueKuendigungISO : e.beendigungISO;
   const endLabel = nichtig ? 'frühestens neu kündbar' : 'Beendigung';
-  const endFarbe = nichtig ? 'var(--brass-500)' : 'var(--sage-500)';
+  // A3-6 (R3-α, 31.8.2026): `--sage-500` → `--ok-solid` (wertidentisch).
+// Das Ende der Frist ist eine ZUSTANDS-Aussage; `sage` ist die
+// Materialien-Kennfarbe (§4b-B-i, Befunde 7+37).
+const endFarbe = nichtig ? 'var(--brass-500)' : 'var(--ok-solid)';
 
   return (
     // data-ansicht: abgeleitete Ansicht (R4 Ziff. 3) — steht immer NACH dem
@@ -68,7 +71,7 @@ export function KuendigungTimeline({ e }: { e: SperrfristenErgebnis }) {
         {(e.sperrIntervalle ?? []).length > 0 && <Leg band label="Sperrfrist" />}
         {nichtig
           ? <Leg swatch="bg-brass-500" label="frühestens neu kündbar" />
-          : <Leg swatch="bg-sage-500" label="Beendigung" />}
+          : <Leg swatch="bg-ok-solid" label="Beendigung" />}
         {e.gehemmtTage ? <span className="num text-ink-500">· Hemmung: {e.gehemmtTage} Tage</span> : null}
       </div>
     </div>
@@ -90,7 +93,7 @@ function Marker({ p, iso, color, label, oben = false }: { p: number; iso?: strin
         style={{ left: `${p}%`, background: color, opacity: 0.45,
           ...(oben ? { top: '0.9rem', bottom: 'calc(50% + 0.45rem)' } : { top: 'calc(50% + 0.45rem)', bottom: '0.9rem' }) }} />
       {/* Punkt auf der Linie */}
-      <span className="absolute top-1/2 w-3 h-3 rounded-full -translate-x-1/2 -translate-y-1/2 z-10"
+      <span className="absolute top-1/2 w-3 h-3 rounded-full -translate-x-1/2 -translate-y-1/2 z-sticky"
         style={{ left: `${p}%`, background: color, boxShadow: '0 0 0 2px var(--surface)' }} />
       {/* Beschriftung */}
       <div className="absolute flex flex-col pointer-events-none"

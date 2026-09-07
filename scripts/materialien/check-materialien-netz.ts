@@ -11,8 +11,6 @@
 //   · Soft-404 (Content-Type statt HTTP-Status) — ladeHub prüft das.
 //   · Drift = neue/verschwundene id ODER drift_token-Abweichung (Datumslabel/URL/Dateiname geändert).
 
-import { readFileSync, existsSync, readdirSync } from 'node:fs';
-import { join } from 'node:path';
 import { ladeZustand, type DokZeile } from './soft-law-zustand.ts';
 import { baueKorpusInfo, KANTEN_DIR } from './soft-law-projektion.ts';
 import { crawleSeco, SECO_QUELLEN } from './adapter-seco.ts';
@@ -20,6 +18,7 @@ import { crawleEdoeb, EDOEB_ID_PREFIX } from './adapter-edoeb.ts';
 import { crawleEstvKs, ESTV_KS_ID_PREFIXE } from './adapter-estv-ks.ts';
 import { inventarEstvMwst, ladeSeite as ladeMwstSeite, pruefeKurzUrl, kurzUrl, type InventarEintrag } from './adapter-estv-mwst.ts';
 import { ESTV_MWST_ID_PREFIX } from './estv-mwst-ids.ts';
+import { leseShards, planeStandProben, pruefeStandProbe } from './estv-mwst-stand-probe.ts';
 
 interface QuelleArbiter {
   quelle: string;
@@ -144,51 +143,13 @@ const estvKsArbiter: QuelleArbiter = {
 };
 
 // ── ESTV-MWST (M1) ───────────────────────────────────────────────────────────
-// Arbiter §3 Q1: ToC-Hash je Publikation (1 GET/Publikation, robots-höflich) gegen das Manifest;
-// Kurz-URL-302-Ziel + Ziffer-Deep-Link-Stichprobe (Publiziert-am gegen den Kanten-stand) als
-// Zweitsignal. robots-Freigabe David 4.7.2026 (§8).
+// Arbiter §3 Q1: ToC-Anker-Token je Publikation (1 GET/Publikation, robots-höflich) gegen das
+// Manifest; Kurz-URL-302-Ziel + Stand-Probe JE Dokument (Publiziert-am der stand-tragenden Ziffer
+// gegen den committeten Shard, estv-mwst-stand-probe.ts) als Zweitsignale. Bis 31.8.2026 war die
+// Stand-Probe eine Dreier-Stichprobe — ~45 Dokumente ohne Stand-Deckung (§17-Wurzel-Fix 1.9.2026).
+// robots-Freigabe David 4.7.2026 (§8).
 function istEstvMwstId(id: string): boolean {
   return id.startsWith(ESTV_MWST_ID_PREFIX);
-}
-
-interface MwstShardKante { dok: string; stand: string; fundstellen?: { z: string; url?: string }[] }
-interface MwstShard { erlass: string; dokumente?: Record<string, { urlBasis: string }>; kanten?: MwstShardKante[] }
-
-/** Ziffer-Deep-Link-Stichprobe aus den committeten Shards (bis zu `n` distinkte Dokumente). */
-export function zifferStichprobe(n: number): { dok: string; url: string; stand: string }[] {
-  if (!existsSync(KANTEN_DIR)) return [];
-  const basen = new Map<string, string>();
-  const proben: { dok: string; url: string; stand: string }[] = [];
-  const dateien: string[] = [];
-  for (const e of readdirSync(KANTEN_DIR, { withFileTypes: true })) {
-    if (e.isFile() && e.name.endsWith('.json')) dateien.push(join(KANTEN_DIR, e.name));
-    else if (e.isDirectory()) {
-      for (const f of readdirSync(join(KANTEN_DIR, e.name))) {
-        if (f.endsWith('.json')) dateien.push(join(KANTEN_DIR, e.name, f));
-      }
-    }
-  }
-  dateien.sort();
-  for (const p of dateien) {
-    const obj = JSON.parse(readFileSync(p, 'utf8')) as MwstShard;
-    for (const [id, meta] of Object.entries(obj.dokumente ?? {})) {
-      if (istEstvMwstId(id)) basen.set(id, meta.urlBasis);
-    }
-  }
-  const gesehen = new Set<string>();
-  for (const p of dateien) {
-    const obj = JSON.parse(readFileSync(p, 'utf8')) as MwstShard;
-    for (const k of obj.kanten ?? []) {
-      if (!istEstvMwstId(k.dok) || gesehen.has(k.dok)) continue;
-      const suffix = k.fundstellen?.find((f) => f.url)?.url;
-      const basis = basen.get(k.dok);
-      if (!suffix || !basis) continue;
-      gesehen.add(k.dok);
-      proben.push({ dok: k.dok, url: basis + suffix, stand: k.stand });
-      if (proben.length >= n) return proben;
-    }
-  }
-  return proben;
 }
 
 const estvMwstArbiter: QuelleArbiter = {
@@ -235,22 +196,27 @@ const estvMwstArbiter: QuelleArbiter = {
       }
     }
 
-    // Zweitsignal 2 (§0/A11 + A6): Ziffer-Deep-Links aus den committeten Shards — erreichbar
-    // (url_effective/Content-Type) UND «Publiziert am» deckt den Kanten-stand.
-    for (const probe of zifferStichprobe(3)) {
+    // Zweitsignal 2 (§0/A11 + A6, §17 1.9.2026): Stand-Probe JE Dokument aus den committeten
+    // Shards — erreichbar (url_effective/Content-Type) UND «Publiziert am» deckt den Stand der
+    // stand-tragenden Ziffer. Fängt In-place-Änderungen, die den Anker-Token nicht bewegen.
+    const proben2 = planeStandProben(leseShards(KANTEN_DIR), istEstvMwstId);
+    const ohneProbe = [...manifestMwst.keys()].filter((id) => !proben2.some((p) => p.dok === id));
+    if (ohneProbe.length) {
+      console.log(`  ESTV-MWST: ${ohneProbe.length} Dokument(e) ohne belegte Kante — keine Stand-Probe möglich: ${ohneProbe.join(', ')}`);
+    }
+    let erste = true;
+    for (const probe of proben2) {
+      if (!erste) await new Promise<void>((r) => setTimeout(r, 300));
+      erste = false;
       try {
         const html = await ladeMwstSeite(probe.url);
-        const m = /Publiziert am:[\s\S]{0,300}?(\d{2})\.(\d{2})\.(\d{4})/.exec(html);
-        const liveStand = m ? `${m[3]}-${m[2]}-${m[1]}` : null;
-        if (liveStand === null) {
-          fehler.push(`ESTV-MWST: Ziffer-Stichprobe ${probe.dok} (${probe.url}) ohne «Publiziert am» — Struktur-Drift.`);
-        } else if (liveStand !== probe.stand) {
-          fehler.push(`ESTV-MWST: Ziffer-Stichprobe ${probe.dok} Publiziert-am ${liveStand} ≠ Kanten-Stand ${probe.stand} (In-place-Änderung) — Snapshot neu ziehen.`);
-        }
+        const f = pruefeStandProbe(probe, html);
+        if (f) fehler.push(f);
       } catch (err) {
-        fehler.push(`ESTV-MWST: Ziffer-Deep-Link ${probe.dok} tot (${(err as Error).message}) — Snapshot neu ziehen.`);
+        fehler.push(`ESTV-MWST: Stand-Probe ${probe.dok} tot (${(err as Error).message}) — Snapshot neu ziehen.`);
       }
     }
+    console.log(`  ESTV-MWST: ${proben2.length} Stand-Proben (je Dokument eine Ziffer) gefahren.`);
     return fehler;
   },
 };

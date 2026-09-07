@@ -4,7 +4,8 @@ import type { InternRefs } from '../../components/NormText';
 import type { BrowseErlass, BrowseManifest } from '../../lib/normtext/browse-typen';
 import type { CurrencyMap, ErlassKopf } from '../../lib/normtext/browse';
 import { KontextPanel } from '../../components/kontext/KontextPanel';
-import { formatiereDatum } from './helpers';
+import { QuellLink } from '../../components/ui/QuellLink';
+import { Datum } from '../../components/ui/Datum';
 import { ErlassKopfBlock, ErlassLeserKopf } from './parts';
 import { AmtlichesPdf } from './parts/AmtlichesPdf';
 import { ErlassUebersicht } from './parts/ErlassUebersicht';
@@ -39,7 +40,8 @@ export function LadeAnzeige() {
 // darum SELBST gehostet (same-origin). Wichtig: die globale DENY-Header-Politik
 // (vercel.json) ist für /normtext/ auf SAMEORIGIN + frame-ancestors 'self'
 // gelockert, sonst blockiert der Browser auch den eigenen PDF-iframe (Prod-only).
-// Massgeblich bleibt die amtliche Quelle (sichtbarer Live-Link, §7/§8); Drift-
+// Massgeblich bleibt die amtliche Fassung (sichtbarer Live-Link, §7/§8 — Nomen
+// aus `lib/benennung`, B-6-Nachzug R2-A 31.8.2026); Drift-
 // Tor: check:pdf (offline Integrität + netz Drift & geltende Konsolidierung).
 export function PdfEmbedAnsicht({ erlass, currency, kopf, internRefs }: {
   erlass: BrowseErlass;
@@ -106,7 +108,7 @@ export function PdfEmbedAnsicht({ erlass, currency, kopf, internRefs }: {
             dem Linien-Kanon (§2.2⑦). Das PDF IST die amtliche Fassung (§7/§8). */}
         <div className="relative">
           {!pdfBereit && (
-            <div aria-hidden className="absolute inset-0 z-10 flex flex-col items-center justify-center gap-3 rounded-lg border border-rule-struktur bg-paper-sunken py-12 text-center">
+            <div aria-hidden className="absolute inset-0 z-sticky flex flex-col items-center justify-center gap-3 rounded-lg border border-rule-struktur bg-paper-sunken py-12 text-center">
               <div className="scale-rule max-w-[200px]" />
               <p className="text-body-s text-ink-500">Amtliches PDF wird geladen …</p>
             </div>
@@ -127,7 +129,7 @@ export function PdfEmbedAnsicht({ erlass, currency, kopf, internRefs }: {
           diesem Erlass am Leseende (Single Source mit dem Volltext-Reader). */}
       <KontextPanel typ="norm" normKeys={[erlass.key]} />
       <nav className="mt-4 border-t border-line pt-5 flex flex-wrap justify-between gap-3 text-body-s" aria-label="Weitere Erlasse">
-        <Link to="/gesetze" className="text-ink-500 hover:text-brass-700">‹ Übersicht</Link>
+        <Link to="/gesetze" className="text-ink-500 hover:text-brass-700">← Übersicht</Link>
         <a href={`/normtext/${erlass.pdfPfad}`} target="_blank" rel="noopener noreferrer" className="text-brass-700 hover:underline">Amtliches PDF in neuem Tab öffnen ↗</a>
       </nav>
     </div>
@@ -137,7 +139,8 @@ export function PdfEmbedAnsicht({ erlass, currency, kopf, internRefs }: {
 // ── ⑧ LIVE_VERWEIS: kein In-App-Volltext — ehrliche Verweiskarte (§8) ────────
 // Statt der «nicht verfügbar»-Fehlerseite: prominenter amtlicher Live-Link +
 // Stand + ehrlicher Hinweis «nicht als In-App-Volltext gehostet» (FAHRPLAN
-// §2.2⑧, Referenz DSGVO). Massgeblich bleibt die amtliche Quelle (§7/§8). Reine
+// §2.2⑧, Referenz DSGVO). Massgeblich bleibt die amtliche Fassung (§7/§8,
+// B-6-Nachzug R2-A). Reine
 // Darstellung; eintraege bleibt null (darum VOR dem Lade-Guard unten).
 export function LiveVerweisAnsicht({ erlass, currency }: {
   erlass: BrowseErlass;
@@ -151,19 +154,22 @@ export function LiveVerweisAnsicht({ erlass, currency }: {
       <ErlassLeserKopf erlass={erlass} artikelAnzahl={null} currency={currency?.[erlass.key]}
         overline={verweisOverline}
         hinweis="Verweis — massgeblich ist die amtliche Fassung" />
-      <section className="max-w-reading space-y-4 rounded-lg border border-rule-struktur bg-paper-sunken/20 p-5">
+      <section data-verweiskarte className="max-w-reading space-y-4 rounded-lg border border-rule-struktur bg-paper-sunken/20 p-5">
         <p className="font-serif text-body-l leading-[1.65] text-ink-700">
           Dieser Erlass wird in LexMetrik <strong className="font-semibold">nicht als In-App-Volltext gehostet</strong>.
           Massgeblich und vollständig ist die amtliche Fassung bei der Quelle.
         </p>
+        {/* B-1-NACHZUG (R2-A, 31.8.2026): hier stand «↗ Amtliche Fassung
+            öffnen» mit dem Pfeil VORNE — die fünfte Handform des einen Links.
+            Wortlaut und Pfeilstellung kommen jetzt aus `ui/QuellLink` (Ä110);
+            die Container-Grammatik (Umriss-Knopf) bleibt der Fläche, weil sie
+            hier den prominenten Weiterweg der Verweiskarte trägt. */}
         {erlass.quelleUrl && (
-          <a href={erlass.quelleUrl} target="_blank" rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 rounded-md border border-brass-400 px-3 py-2 text-body-s font-medium text-brass-700 no-underline hover:border-brass-500 hover:bg-brass-100/40 transition-colors">
-            <span aria-hidden>↗</span> Amtliche Fassung öffnen
-          </a>
+          <QuellLink href={erlass.quelleUrl}
+            className="inline-flex items-center gap-1.5 rounded-md border border-brass-400 px-3 py-2 text-body-s font-medium text-brass-700 no-underline hover:border-brass-500 hover:bg-brass-100/40 transition-colors" />
         )}
         {erlass.stand && (
-          <p className="text-micro text-ink-500">Stand der zuletzt erfassten Referenz: <span className="num">{formatiereDatum(erlass.stand)}</span></p>
+          <p className="text-micro text-ink-500">Stand der zuletzt erfassten Referenz: <Datum iso={erlass.stand} /></p>
         )}
       </section>
       {/* W2·19-GLIEDERUNG/S9: dieselbe Übersicht wie im pdf-embed-Pfad (s. o.),
@@ -174,8 +180,8 @@ export function LiveVerweisAnsicht({ erlass, currency }: {
           Werkzeuge zu diesem Erlass (Single Source, §5). */}
       <KontextPanel typ="norm" normKeys={[erlass.key]} />
       <nav className="mt-4 border-t border-line pt-5 flex flex-wrap justify-between gap-3 text-body-s" aria-label="Weitere Erlasse">
-        <Link to="/gesetze" className="text-ink-500 hover:text-brass-700">‹ Übersicht</Link>
-        {erlass.quelleUrl && <a href={erlass.quelleUrl} target="_blank" rel="noopener noreferrer" className="text-brass-700 hover:underline">Amtliche Fassung in neuem Tab öffnen ↗</a>}
+        <Link to="/gesetze" className="text-ink-500 hover:text-brass-700">← Übersicht</Link>
+        {erlass.quelleUrl && <QuellLink href={erlass.quelleUrl} className="text-brass-700 hover:underline" />}
       </nav>
     </div>
   );

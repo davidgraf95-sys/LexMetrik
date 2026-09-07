@@ -1,0 +1,42 @@
+{
+  "erzeugt": "2026-09-01",
+  "eintraege": [
+    {
+      "id": "kanton/ZH/631.423/art_1",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung der Finanzdirektion über die Steuerfreibeträge von quellensteuerpflichtigen Personen ohne steuerrechtlichen Wohnsitz oder Aufenthalt in der Schweiz (LS 631.423)",
+      "artikel": "1",
+      "artikelLabel": "§ 1",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Quellensteuer für natürliche und juristische Personen ohne steuerrechtlichen Wohnsitz oder Aufenthalt in der Schweiz wird nicht erhoben, wenn die steuerbaren Bruttoeinkünfte weniger betragen als:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bei Künstlerinnen, Künstlern, Sportlerinnen, Sportlern, Referentinnen und Referenten (§ 95 Steuergesetz vom 8. Juni 1997 [StG]): Fr. 300 der von einer Schuldnerin oder einem Schuldner der steuerbaren Leistung pro Veranstaltung ausgerichteten Leistungen,"
+            },
+            {
+              "marke": "b",
+              "text": "bei Verwaltungsrätinnen und Verwaltungsräten (§ 96 StG): Fr. 300 der von einer Schuldnerin oder einem Schuldner der steuerbaren Leistung gesamthaft in einem Steuerjahr ausgerichteten Leistungen,"
+            },
+            {
+              "marke": "c",
+              "text": "bei Hypothekargläubigerinnen und Hypothekargläubigern (§ 97 StG): Fr. 300 im Steuerjahr,"
+            },
+            {
+              "marke": "d",
+              "text": "bei Empfängerinnen und Empfängern von Renten aus Vorsorgeeinrichtungen (§§ 98 und 99 StG): Fr. 1000 im Steuerjahr."
+            }
+          ]
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-631_423-2020_09_10-2021_01_01-111.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "3923601e7e41f40e10a2507588df282b87611b318b17d354f63389ffb0b8920f",
+      "sha": "4e45ff7cc59c4a1956457deea8fa5c6f4cb967af99f35fc75b98fc611422916b"
+    }
+  ]
+}

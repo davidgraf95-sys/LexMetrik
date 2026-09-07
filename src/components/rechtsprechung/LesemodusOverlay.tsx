@@ -6,6 +6,7 @@ import { BesetzungWert, DatumMeta, MassgeblicheFassung } from './EntscheidKopfTe
 import { FS_STUFEN } from './leseGroesse';
 import { SeitenTitel } from '../ui/SeitenTitel';
 import { paneKlasse } from '../layout/PaneKontext';
+import { useDialogFokus } from '../layout/useDialogFokus';
 import { GEBIET_LABEL } from '../../lib/normtext/register';
 import { referenzImTitel } from '../../pages/entscheidLeserRegeln';
 import { MASSGEBLICH_SATZ } from '../../lib/benennung';
@@ -84,31 +85,22 @@ export function LesemodusOverlay({ ziel, snap, abschnitte, regesteText, massgebl
   // Body-Sperre): das Portal-Ziel IST die Lage. Ein zweites `imPane` aus dem
   // Kontext wäre eine zweite Quelle für dieselbe Aussage (§5).
   const imPane = ziel != null;
+  // Runde-2-Nachzug (31.8.2026, §5): Escape, Fokus-Falle und Fokus-Rückgabe
+  // liefen hier als HANDGESCHRIEBENE Kopie — die zehnte Dialog-Fläche des Hauses
+  // und die einzige, die `useDialogFokus` nicht benutzte. Der Kommentar oben
+  // sagte bereits «wie der V3-Drawer, der `useDialogFokus` unverändert benutzt»;
+  // jetzt stimmt das auch für den Code. Die Kopie war zudem schwächer: sie sammelte
+  // nur `a[href], button:not([disabled])` und liess unsichtbare Kandidaten mitzählen.
+  // Der Anfangsfokus bleibt «✕ schliessen» (`startFokus`) — die Schriftgrössen-
+  // Knöpfe stehen im DOM davor, wären also die Vorgabe-Landung des Hooks.
+  useDialogFokus(true, dialogRef, onClose, schliessRef);
   useEffect(() => {
-    const vorigerFokus = document.activeElement as HTMLElement | null;
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') { onClose(); return; }
-      // Fokus-Falle: Tab bleibt im Dialog (a11y, aria-modal).
-      if (e.key === 'Tab' && dialogRef.current) {
-        const f = dialogRef.current.querySelectorAll<HTMLElement>('a[href], button:not([disabled])');
-        if (f.length === 0) return;
-        const erst = f[0], letzt = f[f.length - 1];
-        if (e.shiftKey && document.activeElement === erst) { e.preventDefault(); letzt.focus(); }
-        else if (!e.shiftKey && document.activeElement === letzt) { e.preventDefault(); erst.focus(); }
-      }
-    };
-    document.addEventListener('keydown', onKey);
     // A-5 Ziff. 2: die Body-Sperre gilt nur dem VOLLBILD-Dialog. Aus einem Pane
     // heraus fror sie eine Fläche ein, die gar nicht verdeckt ist.
     const vorher = document.body.style.overflow;
     if (!imPane) document.body.style.overflow = 'hidden';
-    schliessRef.current?.focus();
-    return () => {
-      document.removeEventListener('keydown', onKey);
-      if (!imPane) document.body.style.overflow = vorher;
-      vorigerFokus?.focus?.();   // Fokus zum Auslöser zurück
-    };
-  }, [onClose, imPane]);
+    return () => { if (!imPane) document.body.style.overflow = vorher; };
+  }, [imPane]);
 
   // Portal-Ziel (A-5): im Pane dessen Overlay-Schicht, sonst wie bisher
   // `<body>` — dort fängt ein `@container/pane`-Vorfahr sonst das
@@ -128,10 +120,22 @@ export function LesemodusOverlay({ ziel, snap, abschnitte, regesteText, massgebl
       // Pane-Breite — ein zweiter Container-Name wäre eine zweite Wahrheit über
       // dieselbe Fläche (§5), und `ui/SeitenTitel` misst ohnehin `/pane`.
       className={imPane
-        ? '@container/pane pointer-events-auto absolute inset-0 z-50 overflow-y-auto bg-paper'
-        : 'fixed inset-0 z-50 overflow-y-auto bg-paper'}>
-      {/* schlanke, sticky Kopfleiste: Identität + Schriftgrösse + Schliessen */}
-      <div className="sticky top-0 z-10 flex items-center gap-3 border-b border-line bg-paper/95 px-5 py-2.5 backdrop-blur-sm">
+        ? '@container/pane pointer-events-auto absolute inset-0 z-modal overflow-y-auto bg-paper'
+        : 'fixed inset-0 z-modal overflow-y-auto bg-paper'}>
+      {/* Schlanke, sticky Kopfleiste: Identität + Schriftgrösse + Schliessen.
+          F2-3 (31.8.2026): sie stand als `bg-paper/95` + `backdrop-blur-sm` da —
+          die LETZTE Glas-Fläche dieser Rolle. `src/index.css` (`.lc-glass`, ab
+          «Sticky-Chrome-Kopf (Topbar)») hat den Effekt für klebende Kopfleisten
+          begründet abgeschafft: «Volldeckend statt 96 % + Blur; `backdrop-filter`
+          entfällt gleich mit (ohne Transparenz wirkungslos UND Verdachtsursache
+          des Scroll-Repaint-Flackerns LM-006, dieselbe Fläche)» — Anlass war der
+          extern gemessene Blocker LM-001: «beim Scrollen läuft der Seiteninhalt
+          sichtbar durch den oberen Rand der Kopfleiste». Genau das tat diese
+          Leiste noch, und der Entscheid galt für die ROLLE, nicht für eine
+          Datei. Volldeckend `bg-paper` — dieselbe opake Fläche, die auch der
+          klebende Leser-Kopf (`v3/LeserKopf`) und die Lese-Zeile
+          (`v3/LeserLeseZeile`) tragen. */}
+      <div className="sticky top-0 z-sticky flex items-center gap-3 border-b border-line bg-paper px-5 py-2.5">
         <span className="num text-body-s font-medium text-ink-700">{snap.bgeReferenz ?? snap.zitierung}</span>
         <span className="ml-auto inline-flex items-center gap-2">
           {/* 5B-Nachzug (29.8.2026), abgestufte Fassung: Gruppen-Name und
@@ -144,10 +148,10 @@ export function LesemodusOverlay({ ziel, snap, abschnitte, regesteText, massgebl
           <span className="inline-flex items-stretch overflow-hidden rounded border border-line" role="group" aria-label="Grösse nur des Entscheidtexts">
             <button type="button" onClick={() => setFs(fsIdx - 1)} disabled={fsIdx === 0}
               aria-label="Entscheidtext verkleinern"
-              className="min-h-6 px-2 py-1 text-ink-600 hover:bg-paper-sunken disabled:opacity-40" title="Entscheidtext verkleinern">A−</button>
+              className="min-h-6 px-2 py-1 text-ink-600 lc-hover-flaeche disabled:opacity-40" title="Entscheidtext verkleinern">A−</button>
             <button type="button" onClick={() => setFs(fsIdx + 1)} disabled={fsIdx === FS_STUFEN.length - 1}
               aria-label="Entscheidtext vergrössern"
-              className="border-l border-line min-h-6 px-2 py-1 text-ink-600 hover:bg-paper-sunken disabled:opacity-40" title="Entscheidtext vergrössern">A+</button>
+              className="border-l border-line min-h-6 px-2 py-1 text-ink-600 lc-hover-flaeche disabled:opacity-40" title="Entscheidtext vergrössern">A+</button>
           </span>
           <button ref={schliessRef} type="button" onClick={onClose}
             className="lc-chip no-underline hover:text-brass-700 hover:border-brass-400" title="Lesemodus schliessen (Esc)">

@@ -19,11 +19,18 @@ const FOKUSSIERBAR =
  *
  * `onClose` darf instabil sein (wird über eine Ref gelesen → der Effekt hängt
  * nur an `offen`, re-fokussiert also nicht bei jedem Render).
+ *
+ * `startFokus` (optional, Runde 2 · 31.8.2026): Element, das den Anfangsfokus
+ * bekommt, wenn das erste fokussierbare Element NICHT die sinnvolle Landung ist.
+ * Gebraucht vom Lesemodus-Overlay, dessen Kopfleiste mit den Schriftgrössen-
+ * Knöpfen beginnt und dessen erste sinnvolle Landung «✕ schliessen» ist. Ohne
+ * die Angabe bleibt es beim ARIA-Dialog-Standard (erstes fokussierbares Element).
  */
 export function useDialogFokus(
   offen: boolean,
   containerRef: RefObject<HTMLElement | null>,
   onClose: () => void,
+  startFokus?: RefObject<HTMLElement | null>,
 ): void {
   const onCloseRef = useRef(onClose);
   // Stets die aktuelle onClose halten, ohne sie zur Effekt-Abhängigkeit zu machen
@@ -46,7 +53,7 @@ export function useDialogFokus(
       );
 
     // Initialen Fokus in den Dialog setzen (sonst bleibt er auf dem Auslöser).
-    (sammle()[0] ?? wurzel).focus();
+    (startFokus?.current ?? sammle()[0] ?? wurzel).focus();
 
     const onKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape' || e.key === 'Esc') {
@@ -75,5 +82,5 @@ export function useDialogFokus(
         vorherFokussiert.focus();
       }
     };
-  }, [offen, containerRef]);
+  }, [offen, containerRef, startFokus]);
 }

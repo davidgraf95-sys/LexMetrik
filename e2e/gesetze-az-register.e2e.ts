@@ -99,9 +99,13 @@ test.describe('IA-3 · A–Z-Register — Budget-Walk + Einsortierung', () => {
     // jetzt den gehaltvollen Default-Inhalt des Landeplatzes).
     await expect(page.getByRole('region', { name: 'Register-Liste' })).toHaveCount(0)
     await expect(page.getByText(/Einen Anfangsbuchstaben wählen/)).toBeVisible()
-    // Die Sprung-Karte (HeaderSuche-CTA) bleibt unverändert daneben bestehen
-    // (kein dritter Suchpfad, A5).
-    await expect(page.getByRole('button', { name: /Direkt zum Artikel springen/ })).toBeVisible()
+    // DEKLARIERTE ANPASSUNG (R12A/D22, 6.9.2026): die Sprung-KARTE ist entfallen
+    // — sie war die dritte Suche derselben Seite und tat nichts, als die
+    // Kopf-Suche zu fokussieren. An ihrer Stelle steht die Kernerlass-Zeile
+    // (R12 «Wege verkürzen»). Zusicherung dieses Tests unverändert: neben dem
+    // schlanken Register-Hinweis steht weiterhin ein Einstieg, keine leere
+    // Fläche. Der Norm-Sprung selbst ist in `norm-sprung.e2e.ts` bewiesen.
+    await expect(page.getByRole('link', { name: 'OR', exact: true })).toBeVisible()
   })
 
   // LM-162 (B6-N1, Sichtprüfung 29.7.2026): «Der Kasten wächst mit seinem
@@ -163,7 +167,18 @@ test.describe('IA-3 · A–Z-Register — Budget-Walk + Einsortierung', () => {
   test('Register nur auf dem Landeplatz — Säulen-Sichten bleiben unverändert (G4)', async ({ page }) => {
     await page.goto('/gesetze?ebene=bund')
     // Bund-Säule gewählt → kein Register-Block (der Landeplatz trägt ihn).
-    await expect(page.getByRole('main').getByText(/Systematische Sammlung|Erlasse/).first()).toBeVisible()
+    // ── DEKLARIERTE LOCATOR-VERSCHÄRFUNG (§6.3, W2·24-F1F 6.9.2026) ──────────
+    // GEMESSEN auf dem Basisstand ebf53e425 (Nullprobe): der lose Ausdruck
+    // `/Systematische Sammlung|Erlasse/` traf mit `.first()` seit dem D22-Umbau
+    // des Gesetze-Kopfs (04815ac33, `pages/Gesetze.tsx`) die Überschrift
+    // «Internationales Privatrecht & weitere Erlasse» — eine Systematik-Gruppe
+    // INNERHALB einer zugeklappten `<details>`-Karte. Playwright wertet Inhalt
+    // eines geschlossenen `<details>` als `hidden`, also war der Wächter rot,
+    // ohne dass an der Säule etwas fehlte. Er misst jetzt die Ausgabe-Zeile der
+    // Säule (Identitäts-Treffer auf ihre Bestandsangabe, §7) — sichtbar,
+    // eindeutig und genau die Zusage «die Säulen-Sicht rendert unverändert».
+    await expect(page.getByRole('main')
+      .getByText(/Bundeserlasse · .* Kantonserlasse/)).toBeVisible()
     await expect(kopfToggle(page)).toHaveCount(0)
     // Landeplatz-Deep-Link unverändert auflösbar (E.4).
     await page.goto('/gesetze')

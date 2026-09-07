@@ -1,6 +1,6 @@
 {
   "sr": "642.11",
-  "korpusStand": "2026-01-01",
+  "korpusStand": "2026-09-02",
   "bBindings": [
     {
       "sr": {
@@ -3433,6 +3433,38 @@
       },
       "oc": {
         "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2026/448"
+      },
+      "dateForce": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2026-09-02"
+      },
+      "dateDoc": {
+        "type": "typed-literal",
+        "datatype": "http://www.w3.org/2001/XMLSchema#date",
+        "value": "2026-08-26"
+      },
+      "titleDe": {
+        "type": "literal",
+        "value": "Bundesgesetz über den zivilen Ersatzdienst (Zivildienstgesetz, ZDG). Berichtigung (Betrifft nur den italienischen Text)"
+      },
+      "titleFr": {
+        "type": "literal",
+        "value": "Loi fédérale sur le service civil (LSC). Erratum (Ne concerne que le texte italien)"
+      },
+      "titleIt": {
+        "type": "literal",
+        "value": "Legge federale sul servizio civile sostitutivo (Legge sul servizio civile, LSC). Correzione"
+      }
+    },
+    {
+      "sr": {
+        "type": "literal",
+        "value": "642.11"
+      },
+      "oc": {
+        "type": "uri",
         "value": "https://fedlex.data.admin.ch/eli/oc/56/1947_2021_2107"
       },
       "dateForce": {
@@ -3612,6 +3644,7 @@
     "2024-05-16",
     "2025-01-01",
     "2026-01-01",
+    "2026-09-02",
     "2027-01-01",
     "2029-01-01"
   ]

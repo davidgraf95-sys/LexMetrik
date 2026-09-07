@@ -6,123 +6,6 @@
     },
     "botschaft": {
       "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2013/1658"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2010/1024"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2015/3"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2013-10-23"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "13.087"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zum Steuererlassgesetz "
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant la loi sur la remise de l'impôt "
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente la legge sul condono dell'imposta "
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "173.110"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2013/1658"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2010/1024"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2015/3"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2013-10-23"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "13.087"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zum Steuererlassgesetz "
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant la loi sur la remise de l'impôt "
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente la legge sul condono dell'imposta "
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "173.110"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2013/1658"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2010/1024"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2015/3"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2013-10-23"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "13.087"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zum Steuererlassgesetz "
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant la loi sur la remise de l'impôt "
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente la legge sul condono dell'imposta "
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "173.110"
-    },
-    "botschaft": {
-      "type": "uri",
       "value": "https://fedlex.data.admin.ch/eli/fga/1999/1_7922_7145_6784"
     },
     "proj": {
@@ -504,6 +387,123 @@
     "titleIt": {
       "type": "literal",
       "value": "Messaggio concernente la legge che integra e attualizza la revisione totale dell'organizzazione giudiziaria federale "
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "173.110"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2013/1658"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2010/1024"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2015/3"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2013-10-23"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "13.087"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zum Steuererlassgesetz "
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant la loi sur la remise de l'impôt "
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente la legge sul condono dell'imposta "
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "173.110"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2013/1658"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2010/1024"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2015/3"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2013-10-23"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "13.087"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zum Steuererlassgesetz "
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant la loi sur la remise de l'impôt "
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente la legge sul condono dell'imposta "
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "173.110"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2013/1658"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2010/1024"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2015/3"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2013-10-23"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "13.087"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zum Steuererlassgesetz "
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant la loi sur la remise de l'impôt "
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente la legge sul condono dell'imposta "
     }
   }
 ]

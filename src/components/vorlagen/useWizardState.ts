@@ -1,4 +1,5 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useKopieren } from '../useKopieren';
 
 // ─── Geteilter Zustands-Rahmen der Vorlagen-Wizards ─────────────────────────
 //
@@ -41,7 +42,6 @@ export function useWizardState<T extends object>(opts: {
   });
   const [schritt, setSchritt] = useState(0);
   const [bestaetigt, setBestaetigt] = useState(false);
-  const [kopiert, setKopiert] = useState(false);
 
   // Eingaben lokal sichern (verlassen den Browser nicht)
   useEffect(() => {
@@ -56,22 +56,12 @@ export function useWizardState<T extends object>(opts: {
     if (speicherKey) { try { localStorage.removeItem(speicherKey); } catch { /* ignorieren */ } }
   };
 
-  // Rücksetz-Timer des «Kopiert ✓»-Häkchens: Handle halten, damit eine zweite
-  // Kopie den ersten Timer ersetzt (kein vorzeitiges Verschwinden) und der
-  // Timer beim Unmount aufgeräumt wird (kein setState auf weg-Komponente).
-  const kopierTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
-  useEffect(() => () => { if (kopierTimer.current) clearTimeout(kopierTimer.current); }, []);
-
-  const kopieren = (text: string) => {
-    navigator.clipboard?.writeText(text).then(
-      () => {
-        setKopiert(true);
-        if (kopierTimer.current) clearTimeout(kopierTimer.current);
-        kopierTimer.current = setTimeout(() => setKopiert(false), 2000);
-      },
-      () => {},
-    );
-  };
+  // R4-D (5.9.2026): Timer-Handle, Unmount-Aufräumen und die
+  // Erst-nach-Erfolg-Quittung standen hier zeichengleich zum geteilten Hook —
+  // die Mechanik war schon dieselbe, nur zweimal geschrieben (§5). Der Hook
+  // nimmt den Text jetzt beim KLICK entgegen; genau daran scheiterte die
+  // Migration bisher.
+  const { kopiert, kopieren } = useKopieren();
 
   return { a, setA, set, schritt, setSchritt, bestaetigt, setBestaetigt, kopiert, kopieren, zuruecksetzen };
 }

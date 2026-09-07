@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Field, inputCls } from '../components/vorlagen/ui';
+import { Field, inputCls, KopierButton } from '../components/vorlagen/ui';
 import { SeitenKopf } from '../components/layout/SeitenKopf';
 import { KONTAKT_EMPFAENGER, kontaktMailto, type KontaktEingaben } from '../lib/kontakt';
 
@@ -14,7 +14,6 @@ const DEFAULTS: KontaktEingaben = { name: '', email: '', betreff: '', nachricht:
 export function Kontakt() {
   const [e, setE] = useState<KontaktEingaben>(DEFAULTS);
   const [einwilligung, setEinwilligung] = useState(false);
-  const [kopiert, setKopiert] = useState(false);
   // §13/4 (C2): Ein leeres, noch nie berührtes Formular zeigt keine Fehler.
   // Erst nach der ersten Eingabe (oder Einwilligungs-Klick) blendet die Fehlerbox ein.
   const [beruehrt, setBeruehrt] = useState(false);
@@ -32,13 +31,13 @@ export function Kontakt() {
   const bereit = fehler.length === 0;
   const versandKonfiguriert = KONTAKT_EMPFAENGER !== null;
 
-  const kopieren = () => {
-    const text = `Betreff: ${e.betreff || '–'}\n\n${e.nachricht}\n\nName: ${e.name || '–'}\nAntwort an: ${e.email || '–'}`;
-    navigator.clipboard?.writeText(text).then(
-      () => { setKopiert(true); setTimeout(() => setKopiert(false), 2000); },
-      () => {},
-    );
-  };
+  // R3-α/B3-9 (31.8.2026): hier stand die letzte eigene Kopier-Mechanik der
+  // App — eigener Zustand, eigene Verweildauer (2000 ms statt des Kanons 1600)
+  // und die Erfolgs-Beschriftung «Kopiert ✓» ein zweites Mal ausgeschrieben.
+  // Die frühere Test-Ausnahme (`NOCH_EIGEN` in eingabe-bausteine-r2e) ist damit
+  // EINGEZOGEN statt bewacht (§17-Gegengewicht). Nur der ZUSAMMENGESETZTE Text
+  // bleibt hier — er ist der Inhalt, nicht die Mechanik.
+  const kopierText = `Betreff: ${e.betreff || '–'}\n\n${e.nachricht}\n\nName: ${e.name || '–'}\nAntwort an: ${e.email || '–'}`;
 
   return (
     <div className="space-y-10 max-w-reading">
@@ -69,12 +68,12 @@ export function Kontakt() {
           <input type="checkbox" className="mt-0.5" checked={einwilligung} onChange={(ev) => { setBeruehrt(true); setEinwilligung(ev.target.checked); }} />
           <span>
             Ich willige ein, dass meine Angaben zur Bearbeitung der Anfrage verwendet werden.
-            Details in der <Link to="/datenschutz" className="text-brass-700 hover:text-brass-600">Datenschutzerklärung</Link>.
+            Details in der <Link to="/datenschutz" className="text-brass-700 underline hover:text-brass-600">Datenschutzerklärung</Link>.
           </span>
         </label>
 
         {beruehrt && fehler.length > 0 && (
-          <div className="rounded-md bg-danger-bg p-3 space-y-0.5">
+          <div role="alert" className="lc-notice lc-notice-danger space-y-0.5">
             {fehler.map((f, i) => <p key={i} className="text-body-s text-danger-700">• {f}</p>)}
           </div>
         )}
@@ -99,9 +98,12 @@ export function Kontakt() {
               Nachricht senden
             </button>
           )}
-          <button type="button" disabled={!e.nachricht.trim()} onClick={kopieren} className="lc-btn-outline">
-            {kopiert ? 'Kopiert ✓' : 'Nachricht kopieren'}
-          </button>
+          {/* `className` bleibt `lc-btn-outline` (ohne `lc-btn-sm`): der Knopf
+              steht in der Fuss-Zeile neben dem Primärknopf «Nachricht senden»
+              und trägt dessen Höhe — Beschriftung und Erfolgs-Quittung kommen
+              aus dem Baustein. */}
+          <KopierButton text={kopierText} gegenstand="Nachricht"
+            className="lc-btn-outline" disabled={!e.nachricht.trim()} />
         </div>
 
         <p className="text-xs text-ink-500">

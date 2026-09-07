@@ -46,8 +46,16 @@ export function RechnerVerjaehrungBoard() {
               <thead>
                 <tr className="text-left text-ink-600 border-b border-line">
                   <th className="py-2 pr-4 font-medium">Anspruchstyp</th>
-                  <th className="py-2 pr-4 font-medium">Relative Frist</th>
-                  <th className="py-2 pr-4 font-medium">Absolute Frist</th>
+                  {/* LM-191 (W2·17-UI-BEFUNDE/B18): Zahlenspalten rechtsbündig.
+                      Linksbündig stand «Jahre» bei «10 Jahre» eine Ziffernbreite
+                      neben «5 Jahre»/«3 Jahre» — die Spalte liess sich nicht als
+                      Spalte lesen. `num` (Tabellenziffern) allein reicht dafür
+                      nicht: es hält die ZIFFERN gleich breit, nicht die Zahlen
+                      gleich lang. Reine Darstellung (§3), Werte unverändert.
+                      `whitespace-nowrap`: die Auto-Layout-Breite verschob sich mit
+                      der Ausrichtung, «10 Jahre» brach sonst hinter der Zahl um. */}
+                  <th className="py-2 pr-4 font-medium text-right whitespace-nowrap">Relative Frist</th>
+                  <th className="py-2 pr-4 font-medium text-right whitespace-nowrap">Absolute Frist</th>
                   <th className="py-2 pr-4 font-medium">Fristbeginn</th>
                   <th className="py-2 font-medium">Normen</th>
                 </tr>
@@ -58,8 +66,8 @@ export function RechnerVerjaehrungBoard() {
                   return (
                     <tr key={r} className="border-b border-line align-top">
                       <td className="py-2 pr-4 text-ink-900">{m.label.split(' – ')[0]}</td>
-                      <td className="py-2 pr-4 num">{jahre(m.relativJahre)}</td>
-                      <td className="py-2 pr-4 num">{m.absolutJahre != null ? jahre(m.absolutJahre) : '—'}</td>
+                      <td className="py-2 pr-4 num text-right whitespace-nowrap">{jahre(m.relativJahre)}</td>
+                      <td className="py-2 pr-4 num text-right whitespace-nowrap">{m.absolutJahre != null ? jahre(m.absolutJahre) : '—'}</td>
                       <td className="py-2 pr-4 text-ink-700">{m.beginnLabel}</td>
                       <td className="py-2">
                         <div className="flex flex-wrap gap-1">

@@ -184,7 +184,7 @@ export const ErwaegungsRail = memo(function ErwaegungsRail({
                       e.preventDefault();
                       springe(p.anker);
                     }}
-                    className="num flex min-h-6 items-center gap-1.5 rounded px-1 text-xs tabular-nums text-ink-700 no-underline hover:bg-brass-100/40 hover:text-brass-700">
+                    className="num flex min-h-6 items-center gap-1.5 rounded px-1 text-xs text-ink-700 no-underline hover:bg-brass-100/40 hover:text-brass-700">
                     <span>{p.marke}</span>
                     {p.anzahl != null && (
                       <span className="ml-auto text-micro text-ink-500">{p.anzahl}</span>

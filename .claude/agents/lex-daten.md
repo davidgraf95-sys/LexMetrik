@@ -64,6 +64,7 @@ KEIN WARTE-STOPP (F5, 3. Vorfall 31.8.2026): Beende deinen Turn NIE im Zustand �
   Ergebnis lesen, dann zurückmelden (16./17.8.2026: drei Agenten mussten je
   mehrfach zum Abschluss aufgefordert werden).
 
+QUITTUNG: Ein Bauer quittiert NIE seine eigene Arbeit — kein gegenpruefung:ok, keine Register-Zeile, kein Gegenpruefung:-Trailer (F10, PR #616 2.9.2026).
 RISIKOPFAD: Gegenprüfung ist Pflicht — sie beauftragt der ORCHESTRATOR nach deiner Rückgabe, NICHT du (F5-Wartetod 15.8.2026: ein Daten-Agent spawnte selbst eine Gegenprüfung und wartete 5 h auf ein Verdikt, das ein Sub-Agent nie empfangen kann). Du lieferst committete Arbeit + Bericht ab und ENDEST. Merge ist gesperrt (check:merge-schutz).
 MANIFEST: Nach jedem Generator-Lauf `npm run datenhaltung:manifest` mitregenerieren — F2b-Vorfall 4.8.2026: #425 landete mit Manifest-Drift, #430 musste heilen.
 RÜCKGABE: Stichprobe n≥10 mit Identitätsbeleg gegen die Amtsquelle + Trefferquote + Commit-SHA der eigenen Arbeit («Commit <sha>», §14.7).

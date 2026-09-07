@@ -1,5 +1,5 @@
 import { KANTONE } from '../../lib/kantone';
-import { BeruehrtRahmen, EckdatenKachel, FehlerBox, Field, GruppenTitel, inputCls } from '../vorlagen/ui';
+import { BeruehrtRahmen, Checkbox, EckdatenKachel, FehlerBox, Field, GruppenTitel, inputCls } from '../vorlagen/ui';
 import { ErgebnisBlock } from '../ErgebnisBlock';
 import { Tabs } from '../ui/Tabs';
 import { useState } from 'react';
@@ -24,6 +24,7 @@ import { FristenKalender } from '../FristenKalender';
 import { PHASEN, PRESETS, MATERIELL_WARNUNG, type ZpoPhase, type ZpoPreset } from '../../lib/zpoPresets';
 import { getStandardKanton } from '../../lib/einstellungen';
 import { usePaneKlasse } from '../layout/PaneKontext';
+import type { EinfacheFristMeldung } from './einfacheFristTexte';
 
 
 const EINHEITEN: { code: ZpoEinheit; label: string }[] = [
@@ -70,7 +71,12 @@ const DEFAULTS: ZpoInput = {
 };
 
 
-export function ZpoFristenForm() {
+export function ZpoFristenForm({ live }: {
+  /** Live-Brücke des Tagerechners (Auftrag David 1.9.2026): die oben
+   *  BERÜHRTEN Felder überschreiben die geteilten Felder hier, damit der
+   *  Rechenweg automatisch mitrechnet. */
+  live?: EinfacheFristMeldung;
+} = {}) {
   const pk = usePaneKlasse();
   // Permalink einmalig lesen (lazy, validiert) — speist die Initialwerte.
   const ausLink = usePermalinkFelder(ZPO_LINK_SPEC);
@@ -112,6 +118,35 @@ export function ZpoFristenForm() {
     einheit: (ausLink.erstreckungEinheit as 'tage' | 'wochen' | undefined) ?? 'tage',
     laenge: ausLink.erstreckungLaenge ?? 10,
   });
+
+  // Live-Brücke: Sync während des Renderns (Muster «adjusting state»);
+  // Referenzvergleich genügt, die Seite hält `live` im State. Anwendungsregel
+  // (GP-Befund B2): oben Berührtes gewinnt immer; Unberührtes füllt nur
+  // Felder, die hier weder aus dem Permalink stammen noch von Hand geändert
+  // wurden. Der Preset-Hinweis fällt nur bei echter Wert-Änderung (Muster
+  // presetPasst, Bug-Check 10.6.2026: kein Hinweis neben fremder Rechnung).
+  const ausLinkFelder = { ereignis: !!ausLink.ereignis, laenge: ausLink.laenge != null, einheit: !!ausLink.einheit, kanton: !!ausLink.kanton };
+  // Mount-Stand als einmaliger State-Snapshot (kein Ref — Refs sind im
+  // Render tabu, react-hooks/refs); nie aktualisiert, nur Vergleichsbasis.
+  const [mountForm] = useState(form);
+  const ZUORDNUNG = { start: 'ereignis', laenge: 'laenge', einheit: 'einheit', kanton: 'kanton' } as const;
+  const [letzterLive, setLetzterLive] = useState<EinfacheFristMeldung | undefined>(undefined);
+  if (live && live !== letzterLive) {
+    setLetzterLive(live);
+    const n = { ...form };
+    let geaendert = false;
+    (['start', 'laenge', 'einheit', 'kanton'] as const).forEach((k) => {
+      const feld = ZUORDNUNG[k];
+      if (live.beruehrt.includes(k) || (!ausLinkFelder[feld] && form[feld] === mountForm[feld])) {
+        if (n[feld] !== live.werte[k]) { (n as Record<string, unknown>)[feld] = live.werte[k]; geaendert = true; }
+      }
+    });
+    if (geaendert) {
+      setForm(n);
+      setPresetKey('');
+      setPresetHinweis(null);
+    }
+  }
 
   const set = <K extends keyof ZpoInput>(k: K, v: ZpoInput[K]) => setForm((f) => ({ ...f, [k]: v }));
   const presetsDerPhase = PRESETS.filter((p) => p.phase === phase);
@@ -190,8 +225,14 @@ export function ZpoFristenForm() {
         <Tabs items={PHASEN.map((p) => ({ code: p.code, label: p.label }))} value={phase} onChange={(c) => { setPhase(c); setPresetKey(''); setPresetHinweis(null); }} mode="pressed" ariaLabel="Verfahrensphase" />
       </div>
 
+      {/* R9-2 (6.9.2026): `role="status"`, nicht `role="alert"`. Die Meldung
+          antwortet nicht auf einen Eingabefehler, sondern beschreibt eine
+          ABDECKUNGSGRENZE des Rechners (§8) — es gibt nichts zu beheben, also
+          unterbricht sie auch nichts. Die Blocker- und Mängellisten der Vorlagen
+          tragen aus demselben Grund `role="alert"`. Wächter:
+          `src/tests/design-r9-fehlerbox-baustein.test.ts`. */}
       {phase === 'materiell' ? (
-        <div className="lc-notice-danger">
+        <div role="status" className="lc-notice-danger">
           <p className="lc-overline text-danger-700 mb-1">Materielle Frist – nicht von diesem Rechner erfasst</p>
           <p className="text-body-s text-danger-700">{MATERIELL_WARNUNG}</p>
         </div>
@@ -216,19 +257,26 @@ export function ZpoFristenForm() {
           <DatumsFeld value={form.ereignis} onChange={(v) => set('ereignis', v)} className={inputCls} />
         </Field>
 
-        <Field label="Fristtyp & Länge">
-          <div className="flex gap-2">
+        {/* LM-078 (B19): zwei eigene Fields statt einem Field für zwei Controls —
+            `Field` verknüpft `label`/`htmlFor` nur mit EINEM nativen Kind (siehe
+            vorlagen/ui.tsx); bei einer umschliessenden <div> ging die Verknüpfung
+            ins Leere und das Zahlenfeld blieb ohne eigene Beschriftung. Muster
+            identisch zu AllgemeineFristForm.tsx (Länge/Einheit-Grid). */}
+        <div className="grid grid-cols-[7rem_1fr] gap-2">
+          <Field label="Länge">
             {/* LM-160 (B6/K-15): aria-invalid rollt das Muster aus AllgemeineFristForm
                 aus — das Feld selbst markiert den Eingabefehler, statt ihn nur ~400 px
                 weiter unten in der FehlerBox stehen zu lassen (§8). */}
             <input type="number" inputMode="decimal" min={1} step={1} value={form.laenge}
               aria-invalid={!Number.isInteger(form.laenge) || form.laenge <= 0}
-              onChange={(e) => set('laenge', Number(e.target.value))} className={inputCls + ' w-24'} />
+              onChange={(e) => set('laenge', Number(e.target.value))} className={inputCls} />
+          </Field>
+          <Field label="Einheit">
             <select value={form.einheit} onChange={(e) => set('einheit', e.target.value as ZpoEinheit)} className={inputCls}>
               {EINHEITEN.map((u) => <option key={u.code} value={u.code}>{u.label}</option>)}
             </select>
-          </div>
-        </Field>
+          </Field>
+        </div>
 
         <Field label="Verfahrensart" hint={`Fristenstillstand: ${aktVerfahren.stillstand ? 'gilt' : 'gilt nicht'} (Art. 145 Abs. 2 ZPO)`}>
           <select value={form.verfahren} onChange={(e) => set('verfahren', e.target.value as ZpoVerfahren)} className={inputCls}>
@@ -238,11 +286,12 @@ export function ZpoFristenForm() {
 
         {!aktVerfahren.stillstand && (
           <Field label="Hinweis des Gerichts auf Nichtgeltung des Stillstands?" hint="Art. 145 Abs. 3 ZPO – Gültigkeitsvorschrift (BGE 139 III 78)">
-            <label className="flex items-center gap-2.5 py-1.5 text-body-s cursor-pointer pt-2 text-ink-700">
-              <input type="checkbox" checked={form.gerichtshinweisStillstand ?? true}
-                onChange={(e) => set('gerichtshinweisStillstand', e.target.checked)} />
-              Gericht hat hingewiesen (sonst gilt der Stillstand gleichwohl)
-            </label>
+            <Checkbox
+              checked={form.gerichtshinweisStillstand ?? true}
+              onChange={(v) => set('gerichtshinweisStillstand', v)}
+              label="Gericht hat hingewiesen (sonst gilt der Stillstand gleichwohl)"
+              className="pt-2"
+            />
           </Field>
         )}
 
@@ -259,7 +308,7 @@ export function ZpoFristenForm() {
           </select>
         </Field>
 
-        <Field label="Zustellart (optional)" hint="Art. 142 Abs. 1bis ZPO">
+        <Field label="Zustellart" optional hint="Art. 142 Abs. 1bis ZPO">
           <select value={form.zustellart} onChange={(e) => set('zustellart', e.target.value as ZpoZustellart)} className={inputCls}>
             <option value="empfangsbestaetigung">Gegen Empfangsbestätigung (eingeschrieben/GU)</option>
             <option value="gewoehnliche_post">Gewöhnliche Post (A-/B-Post)</option>
@@ -269,9 +318,9 @@ export function ZpoFristenForm() {
 
       {/* Optionale / erweiterte Funktionen – kein overflow-hidden, sonst wird
           das DatumsFeld-Popover (Zustellfiktion) abgeschnitten. */}
-      <div className="border border-line rounded-lg">
+      <div className="border border-line ">
         <button type="button" onClick={() => setErweitert(!erweitert)}
-          className={`w-full flex items-center justify-between px-4 py-3 bg-surface hover:bg-brass-100 text-left rounded-t-lg ${erweitert ? '' : 'rounded-b-lg'}`}>
+          className={`w-full flex items-center justify-between px-4 py-3 bg-surface hover:bg-brass-100 text-left ${erweitert ? '' : ''}`}>
           <span className="text-body-s font-medium text-ink-700">Optionale Funktionen (Berechnungsmodus, Erstreckung, Zustellfiktion)</span>
           <span className="text-ink-500">{erweitert ? '▲' : '▼'}</span>
         </button>
@@ -286,10 +335,11 @@ export function ZpoFristenForm() {
 
             {form.fristnatur === 'gerichtlich' && (
               <div className="space-y-2">
-                <label className="flex items-center gap-2.5 py-1.5 text-body-s cursor-pointer">
-                  <input type="checkbox" checked={erstreckungAn} onChange={(e) => setErstreckungAn(e.target.checked)} />
-                  Erstreckung berechnen (Art. 144 Abs. 2 ZPO)
-                </label>
+                <Checkbox
+                  checked={erstreckungAn}
+                  onChange={setErstreckungAn}
+                  label="Erstreckung berechnen (Art. 144 Abs. 2 ZPO)"
+                />
                 {erstreckungAn && (
                   <div className="flex gap-2 items-center">
                     <input type="number" inputMode="decimal" min={1} value={erstreckung.laenge}
@@ -304,12 +354,12 @@ export function ZpoFristenForm() {
               </div>
             )}
 
-            <Field label="Zustellfiktion-Helfer (Art. 138 Abs. 3 lit. a, optional)" hint="Datum des erfolglosen Zustellversuchs → fingiertes Zustelldatum (+7 Tage)">
+            <Field label="Zustellfiktion-Helfer (Art. 138 Abs. 3 lit. a)" optional hint="Datum des erfolglosen Zustellversuchs → fingiertes Zustelldatum (+7 Tage)">
               <div className="flex gap-2 items-center">
                 <DatumsFeld value={fiktionDatum} onChange={(v) => setFiktionDatum(v)} className={inputCls} />
                 <button type="button" disabled={!fiktionDatum}
                   onClick={() => set('ereignis', zustellfiktion(fiktionDatum))}
-                  className="text-body-s px-3 py-2 bg-surface hover:bg-brass-100 disabled:opacity-50 text-ink-700 rounded-lg whitespace-nowrap">
+                  className="text-body-s px-3 py-2 bg-surface hover:bg-brass-100 disabled:opacity-50 text-ink-700 whitespace-nowrap">
                   → als Ereignis übernehmen
                 </button>
               </div>
@@ -333,7 +383,7 @@ export function ZpoFristenForm() {
             ))}
           </div>
           {ergebnis.erstrecktBis && (
-            <div className="rounded-lg border border-line bg-sage-bg p-3 text-body-s text-sage-700">
+            <div className=" border border-line bg-ok-bg p-3 text-body-s text-ok-text">
               Nach Erstreckung: <strong>{ergebnis.erstrecktBis}</strong> (24.00 Uhr).
             </div>
           )}

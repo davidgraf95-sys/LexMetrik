@@ -24,15 +24,53 @@ import react from '@vitejs/plugin-react';
 // Arimo/Liberation Sans gehärtet. fontsource hardcodet `swap` in seiner CSS —
 // darum wird es beim Bau NUR für die source-serif-4-CSS auf `optional` umgeschrieben.
 // Reine Ladeverhalten-Änderung (§3/§6.4): Inhalt/Reihenfolge unberührt.
+//
+// ── W2·24-NACHZUG R6I (7.9.2026) · DER WAECHTER WAR SEIT R1 TOT ─────────────
+// Diese Umschreibung suchte bis heute `@fontsource-variable/source-serif-4`.
+// W2·24-R1 hat den Lesetext am 6.9.2026 auf **Literata** gestellt und das Paket
+// `source-serif-4` aus package.json entfernt — seither traf die Bedingung KEINE
+// Datei mehr, und der Serif-Webfont lief wieder auf `swap`. Der oben
+// beschriebene, auf dem Linux-Runner DETERMINISTISCHE +30-px-Lade-Shift war
+// damit ungeschuetzt; lokal (macOS, Georgia vorhanden) ist er nicht
+// reproduzierbar, also faellt so etwas nur in CI auf — oder gar nicht.
+// ZWEI AENDERUNGEN, und die zweite ist die wichtigere:
+//  (a) Das Ziel kommt aus EINER Konstante (`SERIF_PAKET`), nicht mehr aus einem
+//      Literal mitten in der Bedingung.
+//  (b) Der Bau BRICHT, wenn die Umschreibung nie gegriffen hat (`buildEnd`).
+//      Ein Schutz, der beim naechsten Schriftwechsel wieder still verschwinden
+//      kann, ist keiner (§6.7 «ein Tor, das nicht scheitern kann» / §17). Genau
+//      dieser stille Ausfall hat den Perf-Deckel rot gemacht.
+// ROT ZU BEKOMMEN: `SERIF_PAKET` auf einen nicht installierten Paketnamen
+// stellen ⇒ `npm run build` bricht mit «serif-font-display-optional hat nie
+// gegriffen».
+/** Das fontsource-Paket des LESETEXTES (`src/main.tsx`). Eine Quelle (§5). */
+const SERIF_PAKET = '@fontsource-variable/literata';
+
 function serifFontDisplayOptional(): Plugin {
+  let getroffen = 0;
   return {
     name: 'serif-font-display-optional',
     enforce: 'pre',
     transform(code, id) {
-      if (id.includes('@fontsource-variable/source-serif-4') && id.endsWith('.css')) {
-        return { code: code.replace(/font-display:\s*swap/g, 'font-display: optional'), map: null };
+      if (id.includes(SERIF_PAKET) && id.endsWith('.css')) {
+        const neu = code.replace(/font-display:\s*swap/g, 'font-display: optional');
+        if (neu !== code) getroffen += 1;
+        return { code: neu, map: null };
       }
       return null;
+    },
+    buildEnd(fehler) {
+      // Bei einem ohnehin gescheiterten Bau nicht den echten Fehler ueberdecken.
+      if (fehler) return;
+      if (getroffen === 0) {
+        throw new Error(
+          `serif-font-display-optional hat nie gegriffen: unter '${SERIF_PAKET}' wurde keine CSS `
+          + 'mit `font-display: swap` gefunden. Entweder heisst das Lesetext-Paket anders '
+          + '(dann SERIF_PAKET nachziehen) oder fontsource liefert kein `swap` mehr '
+          + '(dann diese Umschreibung samt Begruendung streichen). Stillschweigend '
+          + 'weiterbauen wuerde den §15.2-CLS-Schutz des Linux-Runners verlieren.',
+        );
+      }
     },
   };
 }

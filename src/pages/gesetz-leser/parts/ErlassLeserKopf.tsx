@@ -1,13 +1,15 @@
 import { type ReactNode } from 'react';
-import type { CurrencyEintrag } from '../../../lib/normtext/browse';
+import type { CurrencyEintrag, KantonLueckeEintrag } from '../../../lib/normtext/browse';
 import type { BrowseErlass } from '../../../lib/normtext/browse-typen';
 import {
   GELTUNG_UNGEPRUEFT_SATZ, STAND_UNBEKANNT,
-  datumCh, naechsteFassungSatz, nichtKonsolidiertSatz, standausweisSatz, zaehlWort,
+  naechsteFassungSatz, nichtKonsolidiertSatz, standausweisSatz, zaehlWort,
 } from '../../../lib/normtext/erlassKopfText';
 import { MASSGEBLICH_HALBSATZ } from '../../../lib/benennung';
+import { Datum } from '../../../components/ui/Datum';
 import { QuellLink } from '../../../components/ui/QuellLink';
 import { SeitenTitel } from '../../../components/ui/SeitenTitel';
+import { LeserKopfGeruest } from '../../../components/layout/LeserKopfGeruest';
 import { kennungEtikett, titelOhneKlammerSuffix } from '../helpers';
 
 // W2·5d G2b — EINE Leser-Kopf-Komponente für ALLE Grundarten (Kopf-Zusammen-
@@ -30,12 +32,28 @@ import { kennungEtikett, titelOhneKlammerSuffix } from '../helpers';
 // wird die Chip-Anatomie in `.lc-kopf-aktionen` neutralisiert (index.css), damit
 // der Slot-Vertrag unverändert bleibt und kein Aufrufer umgebaut werden muss.
 // Das 44-px-Tap-Ziel der Chips bleibt dabei ausdrücklich erhalten (F2b/a11y).
+//
+// ─── B-4 (W2·19-DESIGN-KONSISTENZ, Runde 2, 31.8.2026) ───────────────────────
+// Diese Bänder-Ordnung war site-weit die einzige ihrer Art — Entscheid- und
+// Material-Leser bauten ihren Kopf je selbst. Sie ist jetzt der geteilte
+// Baustein `components/layout/LeserKopfGeruest` (§5/§10: Konsumenten ziehen um,
+// die Kopie wird gelöscht). DIESER Kopf ist der Kanon, aus dem das Gerüst
+// hergeleitet wurde — er rendert darum Zeichen für Zeichen dieselbe Ausgabe wie
+// vorher (Byte-Beweis: `src/tests/kopf-geruest-b4.test.tsx`, fünf Varianten).
+// Was hier BLEIBT, sind die Aussagen ÜBER DEN ERLASS: welche Segmente Fakten
+// und Stand tragen, welcher Satz die Ehrlichkeitszeile füllt, wann ein
+// Aufhebungs-Banner steht. Was GEHT, ist das Gehäuse.
 export function ErlassLeserKopf({
   erlass, overline, artikelAnzahl, bestimmungsWort = 'Artikel', kennzahlen = null,
   aktionen, hinweis, currency, nichtKonsolidiert = false, nichtKonsolidiertSeit = null,
-  kennung = null,
+  kennung = null, luecken,
 }: {
   erlass: BrowseErlass;
+  /** §8-Nachzug (PR #614-Auflage): vom §-Parser bewusst ausgelassene Teile
+   *  dieses (kantonalen) Erlasses — Anhänge, Übergangs-/Schlussbestimmungen.
+   *  `undefined` = keine ausgewiesene Lücke (Bund trägt nie einen Eintrag,
+   *  §15) → kein Hinweis (§8: Schweigen ist hier korrekt, nicht verschwiegen). */
+  luecken?: KantonLueckeEintrag;
   /** ── Ä-(d) aus S3 (LESER-V3 H2b) · Kennung VOR dem Titel ──────────────────
    *  `null` (Vorgabe) = die S3-Zitierform «Volltitel (Kürzel)» bleibt Zeichen für
    *  Zeichen, wie sie ist — die Ist-Hülle setzt die Prop nicht und ist damit
@@ -177,11 +195,11 @@ export function ErlassLeserKopf({
     // K-2d/F27-Rest: leerer `stand` (VD-vd-106879, VD-vd-128150) liess das
     // Segment bis 31.8.2026 STILL weg. Eine verschwiegene Lücke ist die
     // unehrlichere Form als eine benannte (§8) — der Kopf sagt sie jetzt.
-    erlass.stand ? <>Stand {datumCh(erlass.stand)}</> : <>{STAND_UNBEKANNT}</>,
+    erlass.stand ? <>Stand <Datum iso={erlass.stand} /></> : <>{STAND_UNBEKANNT}</>,
     // K-1: Ur-Inkrafttreten (Fedlex `dateEntryInForce`, build-time projiziert ⇒
     // CLS 0). Distinkt vom «Stand» (Konsolidierung) — nur Bund; Kanton trägt es
     // nicht (§8). «vom …» wird NICHT gedoppelt (steht im Ingress).
-    erlass.inkraftSeit ? <>in Kraft seit {datumCh(erlass.inkraftSeit)}</> : null,
+    erlass.inkraftSeit ? <>in Kraft seit <Datum iso={erlass.inkraftSeit} /></> : null,
     // F5-Standausweis. Prerender-stabil (Sidecar zur Bauzeit erhoben, keine
     // Client-Datums-Logik). Wortlaut aus `erlassKopfText` — derselbe String
     // steht im prerenderten SEO-Kopf (§5, `seo-detail.ts`).
@@ -195,128 +213,124 @@ export function ErlassLeserKopf({
       : null,
   ].filter(Boolean) as ReactNode[];
 
-  return (
-    <header className="space-y-2 border-b border-line pb-5">
-      <p className="lc-overline">{overline}</p>
+  // ── DIE BÄNDER DIESES KOPFES ───────────────────────────────────────────────
+  // Gehäuse und Bänder-Ordnung kommen seit B-4 aus `layout/LeserKopfGeruest`;
+  // was hier steht, sind die Aussagen ÜBER DEN ERLASS und ihre Herleitungen.
 
-      {/* Zwei-Stimmen-Regel (DESIGN-REGLEMENT §e): Serif trägt den zitierfähigen
-          Quelltext einschliesslich Erlass-Kopf — bis S3 lief der Titel als
-          einzige Stelle des Kopfs noch auf der Sans-Display-Stimme (h-Tag-Regel
-          index.css). min-h-titel-2z (§15.2) reserviert unverändert die
-          2-Zeilen-Höhe gegen den font-display-Swap (CLS 0); nur
-          Platz-Reservierung — der volle Titel steht immer (§15/2). */}
-      {/* ── Ä101 (Live-Ästhetik-Prüfung 18.8.2026) · KEINE SILBENTRENNUNG IM
-          ERLASS-TITEL ────────────────────────────────────────────────────────
-          GEMESSEN @1440 und @390: `hyphens-auto` trennte die Überschrift mitten
-          im Namen — «Aner-kennung» (LugÜ), «Strafprozess-ordnung» (StPO). Der
-          Titel ist der NAME des Erlasses und die grösste Type der Seite;
-          Design-Grundlage Kap. 8 Nr. 7 verbietet die automatische Trennung
-          ausdrücklich für Überschriften (der Browser trennt nach Wörterbuch,
-          nicht nach Kompositum-Fuge, und in einer 32-px-Serif sieht man jeden
-          Fehlgriff). `[overflow-wrap:anywhere]` BLEIBT: es fängt den
-          pathologischen Fall — ein einzelnes Wort, das breiter ist als die
-          Spalte — und bricht dann ohne Trennstrich, statt die Zeile zu sprengen.
-          Zwei Regeln, zwei Aufgaben: keine Kosmetik-Trennung, aber auch kein
-          Überlauf. */}
-      {/* A-1 (31.8.2026): die GRÖSSEN-Kaskade kommt aus dem EINEN Titel-Baustein
-          (`components/ui/SeitenTitel`) und misst im Split-View die Pane-Breite
-          statt des Viewports (Herleitung dort). Stimme, Umbruch-Regel und
-          Höhen-Reservierung bleiben Aussagen DIESES Kopfes — sie stehen darum
-          weiterhin hier, samt ihren Messungen oben. */}
-      <SeitenTitel stimme="serif" className="[overflow-wrap:anywhere] min-h-titel-2z">
-        {/* Ä-(d): die Kennung als eigene, nicht umbrechende Marke VOR dem Titel.
-            Kein zweites Element neben der H1 und kein `aria-label`-Ersatz — sie
-            ist Teil desselben Namens und bleibt darum in der Überschrift; nur
-            ihre Stelle wechselt. `whitespace-nowrap`, damit «LugÜ» nie über zwei
-            Zeilen reisst; der Punkt-Trenner ist `aria-hidden`, weil er die
-            Aussprache nur unterbrechen würde. */}
-        {kennung && (
-          <>
-            <span data-kopf-kennung className="whitespace-nowrap">{kennung}</span>
-            <span aria-hidden className="mx-2 font-normal text-ink-300">·</span>
-          </>
-        )}
-        {titelZeile}
-      </SeitenTitel>
-
-      {fakten.length > 0 && (
-        <p className="text-xs text-ink-500">
-          {fakten.map((f, i) => (
-            <span key={i}>{i > 0 && <span className="text-ink-300" aria-hidden> · </span>}{f}</span>
-          ))}
-        </p>
+  /* Zwei-Stimmen-Regel (DESIGN-REGLEMENT §e): Serif trägt den zitierfähigen
+     Quelltext einschliesslich Erlass-Kopf — bis S3 lief der Titel als einzige
+     Stelle des Kopfs noch auf der Sans-Display-Stimme (h-Tag-Regel index.css).
+     min-h-titel-2z (§15.2) reserviert unverändert die 2-Zeilen-Höhe gegen den
+     font-display-Swap (CLS 0); nur Platz-Reservierung — der volle Titel steht
+     immer (§15/2).
+     ── Ä101 (Live-Ästhetik-Prüfung 18.8.2026) · KEINE SILBENTRENNUNG IM
+     ERLASS-TITEL ───────────────────────────────────────────────────────────
+     GEMESSEN @1440 und @390: `hyphens-auto` trennte die Überschrift mitten im
+     Namen — «Aner-kennung» (LugÜ), «Strafprozess-ordnung» (StPO). Der Titel ist
+     der NAME des Erlasses und die grösste Type der Seite; Design-Grundlage
+     Kap. 8 Nr. 7 verbietet die automatische Trennung ausdrücklich für
+     Überschriften (der Browser trennt nach Wörterbuch, nicht nach
+     Kompositum-Fuge, und in einer 32-px-Serif sieht man jeden Fehlgriff).
+     `[overflow-wrap:anywhere]` BLEIBT: es fängt den pathologischen Fall — ein
+     einzelnes Wort, das breiter ist als die Spalte — und bricht dann ohne
+     Trennstrich, statt die Zeile zu sprengen. Zwei Regeln, zwei Aufgaben: keine
+     Kosmetik-Trennung, aber auch kein Überlauf.
+     A-1 (31.8.2026): die GRÖSSEN-Kaskade kommt aus dem EINEN Titel-Baustein
+     (`components/ui/SeitenTitel`) und misst im Split-View die Pane-Breite statt
+     des Viewports (Herleitung dort). Stimme, Umbruch-Regel und
+     Höhen-Reservierung bleiben Aussagen DIESES Kopfes — sie stehen darum
+     weiterhin hier, samt ihren Messungen oben. */
+  const titel = (
+    <SeitenTitel stimme="serif" className="[overflow-wrap:anywhere] min-h-titel-2z">
+      {/* Ä-(d): die Kennung als eigene, nicht umbrechende Marke VOR dem Titel.
+          Kein zweites Element neben der H1 und kein `aria-label`-Ersatz — sie
+          ist Teil desselben Namens und bleibt darum in der Überschrift; nur
+          ihre Stelle wechselt. `whitespace-nowrap`, damit «LugÜ» nie über zwei
+          Zeilen reisst; der Punkt-Trenner ist `aria-hidden`, weil er die
+          Aussprache nur unterbrechen würde. */}
+      {kennung && (
+        <>
+          <span data-kopf-kennung className="whitespace-nowrap">{kennung}</span>
+          <span aria-hidden className="mx-2 font-normal text-ink-300">·</span>
+        </>
       )}
+      {titelZeile}
+    </SeitenTitel>
+  );
 
-      {/* §15.2 — WARUM STAND UND STATUS EINE HÖHENFESTE ZELLE TEILEN.
-          Beide Zeilen wachsen NACH dem ersten Paint: der Standausweis kommt aus
-          dem Currency-Sidecar, die Warnung aus dem Revisions-Sidecar. Der erste
-          Bauversuch der Warnung (9.8.2026) setzte einen `lc-notice-warn`-Block
-          ans Kopfende und wurde GEMESSEN rot — CLS 0.0227, Quelle laut
-          layout-shift-`sources` das um 72 px nach unten gerutschte 2-Spalten-
-          Grid (e2e/leser-kontext-e4 hält den Sidecar per Route bis NACH dem
-          Start des CLS-Beobachters zurück, der Shift ist also reproduzierbar).
-          Die Lehre daraus war «feste Zeile statt eigener Banner»; S3 behält sie
-          und verallgemeinert sie: eine Zelle mit reservierter Höhe für BEIDE
-          asynchronen Aussagen. Eine gemeinsame Zelle statt zwei Einzel-
-          Reservierungen, weil sich die Zeilen den Platz teilen können — der
-          Warnfall (lang, 5 von 227 Erlassen) trifft fast immer auf einen
-          Standausweis, der auf derselben Breite kürzer ausfällt.
-          Die Höhe ist GEMESSEN kalibriert (Tokens `kopf-stand*` in
-          tailwind.config.js — dort stehen die vier Fenster-Werte samt Messfall),
-          nicht geschätzt: schmal brechen dieselben Sätze über mehr Zeilen. */}
-      <div className="min-h-kopf-stand sm:min-h-kopf-stand-sm md:min-h-kopf-stand-md space-y-1">
-        {/* S2 · Ä-(b): `tabular-nums` an der ZEILE — eine Auszeichnung für beide
-            Daten, auch für das im String steckende (s. Herleitung oben). */}
-        {stand.length > 0 && (
-          <p className="text-xs leading-snug tabular-nums text-ink-500">
-            {stand.map((s, i) => (
-              <span key={i}>{i > 0 && <span className="text-ink-300" aria-hidden> · </span>}{s}</span>
-            ))}
-          </p>
-        )}
-        {/* F5-Warnzeile: Klartext, nicht Tooltip. Der ganze Positions-11-Befund
-            war, dass die Einschränkung nur dort stand, wo man sie erst NACH dem
-            Lesen findet. «⚠» ist redundante Verstärkung des Wortes, nie
-            alleiniger Bedeutungsträger (DESIGN-REGLEMENT B3) ⇒ aria-hidden.
-            Ohne Warnung trägt die Zeile den unveränderten Grundhinweis — §8:
-            «keine Warnung» heisst hier auch «noch nicht bekannt», also wird
-            nichts Beruhigendes behauptet. */}
-        <p className={`text-xs leading-snug ${warnung ? 'text-warn-700' : 'text-ink-500'}`}>
-          {warnung
-            ? <><span aria-hidden>⚠ </span>{warnung}</>
-            : hinweis}
-        </p>
-      </div>
+  /* §15.2 — WARUM STAND UND STATUS EINE HÖHENFESTE ZELLE TEILEN (`standReserve`).
+     Beide Zeilen wachsen NACH dem ersten Paint: der Standausweis kommt aus dem
+     Currency-Sidecar, die Warnung aus dem Revisions-Sidecar. Der erste
+     Bauversuch der Warnung (9.8.2026) setzte einen `lc-notice-warn`-Block ans
+     Kopfende und wurde GEMESSEN rot — CLS 0.0227, Quelle laut
+     layout-shift-`sources` das um 72 px nach unten gerutschte 2-Spalten-Grid
+     (e2e/leser-kontext-e4 hält den Sidecar per Route bis NACH dem Start des
+     CLS-Beobachters zurück, der Shift ist also reproduzierbar). Die Lehre daraus
+     war «feste Zeile statt eigener Banner»; S3 behält sie und verallgemeinert
+     sie: eine Zelle mit reservierter Höhe für BEIDE asynchronen Aussagen. Eine
+     gemeinsame Zelle statt zwei Einzel-Reservierungen, weil sich die Zeilen den
+     Platz teilen können — der Warnfall (lang, 5 von 227 Erlassen) trifft fast
+     immer auf einen Standausweis, der auf derselben Breite kürzer ausfällt.
+     Die Höhe ist GEMESSEN kalibriert (Tokens `kopf-stand*` in
+     tailwind.config.js — dort stehen die vier Fenster-Werte samt Messfall),
+     nicht geschätzt: schmal brechen dieselben Sätze über mehr Zeilen.
+     S2 · Ä-(b): `tabular-nums` sitzt an der Stand-ZEILE (im Gerüst) — eine
+     Auszeichnung für beide Daten, auch für das im String steckende.
+     F5-Warnzeile: Klartext, nicht Tooltip. Der ganze Positions-11-Befund war,
+     dass die Einschränkung nur dort stand, wo man sie erst NACH dem Lesen
+     findet. «⚠» ist redundante Verstärkung des Wortes, nie alleiniger
+     Bedeutungsträger (DESIGN-REGLEMENT B3) ⇒ aria-hidden. Ohne Warnung trägt
+     die Zeile den unveränderten Grundhinweis — §8: «keine Warnung» heisst hier
+     auch «noch nicht bekannt», also wird nichts Beruhigendes behauptet. */
+  const ehrlichkeit = (
+    <p className={`text-xs leading-snug ${warnung ? 'text-warn-700' : 'text-ink-500'}`}>
+      {warnung
+        ? <><span aria-hidden>⚠ </span>{warnung}</>
+        : hinweis}
+    </p>
+  );
 
-      {/* Aktionen-Zeile (Skizze 4e): Icon + Label als ruhige Text-Links, keine
-          Chip-Kästen. Ist-Verhalten unverändert — dieselben URLs, dasselbe
-          target/rel, derselbe `aktionen`-Slot in derselben Reihenfolge. */}
-      {/* ── Ä110 (Live-Ästhetik-Prüfung 18.8.2026) · EIN ZIEL, EIN NAME ──────
-          GEMESSEN hiess DERSELBE Fedlex-Link an drei Stellen dreierlei: hier
-          «↗ geltende Fassung», am Artikel und am Sektionskopf «amtliche Fassung
-          ↗», in der Übersichtsbox «geltende Fassung». Und die Zeile mischte die
-          Schreibung: ein klein beginnendes Label neben zwei gross beginnenden
-          («⧉ In neuem Reiter», «⬇ Amtliches PDF»).
-          JETZT, nach dem Benennungs-Glossar (Design-Grundlage, Abschnitt
-          «Benennung»): der Link heisst überall «Amtliche Fassung ↗» — der Pfeil
-          HINTEN, weil er das Verlassen der Seite ankündigt und darum ans Ende
-          der Beschriftung gehört, nicht davor. «geltende» fällt weg: es doppelt
-          die Aussage der Stand-Zeile darüber und ist am aufgehobenen Erlass
-          gerade falsch (dieser Zweig läuft dort ohnehin nicht — `lebt`).
-          Alle Beschriftungen der Zeile beginnen jetzt gross; das ist die eine
-          Schreibung, die Ä110 verlangt.
-          B-1 (31.8.2026): der Wortlaut ist nicht mehr Literal, sondern kommt aus
-          dem geteilten `QuellLink` — dasselbe Ziel hiess an vier Stellen
-          viererlei, obwohl Ä110 seit dem 18.8. feststand. `.lc-chip` bleibt: die
-          Zeile neutralisiert die Chip-Anatomie selbst (index.css,
-          `.lc-kopf-aktionen`), der Slot-Vertrag ist unverändert. */}
-      <div className="lc-kopf-aktionen flex flex-wrap items-center gap-x-5 gap-y-0.5 text-xs">
-        {erlass.quelleUrl && lebt && (
-          <QuellLink href={erlass.quelleUrl} className="lc-chip" />
-        )}
-        {aktionen}
-      </div>
+  /* Aktionen-Zeile (Skizze 4e): Icon + Label als ruhige Text-Links, keine
+     Chip-Kästen. Ist-Verhalten unverändert — dieselben URLs, dasselbe
+     target/rel, derselbe `aktionen`-Slot in derselben Reihenfolge.
+     ── Ä110 (Live-Ästhetik-Prüfung 18.8.2026) · EIN ZIEL, EIN NAME ──────────
+     GEMESSEN hiess DERSELBE Fedlex-Link an drei Stellen dreierlei: hier
+     «↗ geltende Fassung», am Artikel und am Sektionskopf «amtliche Fassung ↗»,
+     in der Übersichtsbox «geltende Fassung». Und die Zeile mischte die
+     Schreibung: ein klein beginnendes Label neben zwei gross beginnenden
+     («⧉ In neuem Reiter», «⬇ Amtliches PDF»).
+     JETZT, nach dem Benennungs-Glossar (Design-Grundlage, Abschnitt
+     «Benennung»): der Link heisst überall «Amtliche Fassung ↗» — der Pfeil
+     HINTEN, weil er das Verlassen der Seite ankündigt und darum ans Ende der
+     Beschriftung gehört, nicht davor. «geltende» fällt weg: es doppelt die
+     Aussage der Stand-Zeile darüber und ist am aufgehobenen Erlass gerade
+     falsch (dieser Zweig läuft dort ohnehin nicht — `lebt`). Alle
+     Beschriftungen der Zeile beginnen jetzt gross; das ist die eine Schreibung,
+     die Ä110 verlangt.
+     B-1 (31.8.2026): der Wortlaut ist nicht mehr Literal, sondern kommt aus dem
+     geteilten `QuellLink` — dasselbe Ziel hiess an vier Stellen viererlei,
+     obwohl Ä110 seit dem 18.8. feststand. `.lc-chip` bleibt: das Gerüst
+     neutralisiert die Chip-Anatomie im Band selbst (index.css,
+     `.lc-kopf-aktionen`), der Slot-Vertrag ist unverändert. */
+  const aktionenBand = (
+    <>
+      {erlass.quelleUrl && lebt && (
+        <QuellLink href={erlass.quelleUrl} className="lc-chip" />
+      )}
+      {aktionen}
+    </>
+  );
 
+  return (
+    <LeserKopfGeruest
+      overline={overline}
+      titel={titel}
+      fakten={fakten}
+      stand={stand}
+      standReserve
+      ehrlichkeit={ehrlichkeit}
+      aktionen={aktionenBand}
+    >
       {/* §8-Ehrlichkeit: GANZ aufgehobener Erlass (jolux:dateNoLongerInForce). Der
           Snapshot bleibt als historische Fassung lesbar, wird aber unmissverständlich
           als aufgehoben ausgewiesen — Status-Banner (Design-Token danger, §13, kein
@@ -324,9 +338,9 @@ export function ErlassLeserKopf({
       {erlass.aufgehoben && (
         <div role="status" className="lc-notice-danger text-body-s leading-snug space-y-1.5">
           <p>
-            <strong className="font-semibold">Aufgehoben per {datumCh(erlass.aufgehoben.seit)}.</strong>{' '}
+            <strong className="font-semibold">Aufgehoben per <Datum iso={erlass.aufgehoben.seit} />.</strong>{' '}
             Dieser Erlass ist nicht mehr in Kraft. Der Text bleibt als historische Fassung
-            (Stand {datumCh(erlass.stand)}) abrufbar — {MASSGEBLICH_HALBSATZ}.
+            (Stand <Datum iso={erlass.stand} />) abrufbar — {MASSGEBLICH_HALBSATZ}.
           </p>
           {/* ── B-1/B-2 (31.8.2026) · DAS BANNER BRACH Ä110 ────────────────────
               GEMESSEN: beide Links dieses Banners trugen den Pfeil VORNE und
@@ -343,7 +357,7 @@ export function ErlassLeserKopf({
                 href={`https://www.fedlex.admin.ch/eli/${erlass.aufgehoben.nachfolger.eli}/de`}
                 className="underline hover:no-underline"
               >
-                Nachfolge-Erlass: SR <span className="num">{erlass.aufgehoben.nachfolger.sr}</span> (in Kraft seit {datumCh(erlass.aufgehoben.seit)})
+                Nachfolge-Erlass: SR <span className="num">{erlass.aufgehoben.nachfolger.sr}</span> (in Kraft seit <Datum iso={erlass.aufgehoben.seit} />)
               </QuellLink>
             )}
             {erlass.quelleUrl && (
@@ -352,6 +366,39 @@ export function ErlassLeserKopf({
           </p>
         </div>
       )}
-    </header>
+      {/* §8-Nachzug (PR #614-Auflage): ausgewiesene Erlass-Lücke. Getrennt vom
+          `standReserve`-Feld oben (§15.2, kalibrierte Höhe der Stand+Status-Zelle,
+          Design-Token — nicht angefasst) und darum HIER, in der ohnehin variablen
+          Kind-Zone, wie schon das Aufhebungs-Banner. Neutraler Ton (`.lc-notice`,
+          kein `-warn`/`-danger`): eine benannte Auslassung ist kein Fehler, nur
+          eine Tatsache (§8). Wortlaut UNVERÄNDERT aus dem Generator (§7 —
+          nichts umformuliert, nichts geraten); bei mehreren Einträgen als Liste.
+          Link-Quelle F1 (Gegenprüfung Opus, PR #616): `luecken.quelleUrl` ist bei
+          allen 15 heutigen Einträgen identisch zu `erlass.quelleUrl` (unabhängig
+          gemessen) — GENAU das Ziel, das oben schon als «Amtliche Fassung ↗»
+          verlinkt ist (Ä110, EIN ZIEL EIN NAME), darum derselbe Kanon-Name statt
+          des vorherigen, meist toten `erlass.pdfUrl` («Amtliches PDF» — 0 von 15
+          Einträgen trugen ein pdfUrl, der Link fehlte live). `pdfUrl` bleibt
+          Fallback für den (heute unbelegten) Fall eines Sidecars ohne quelleUrl. */}
+      {luecken && luecken.hinweise.length > 0 && (
+        <div role="note" className="lc-notice text-body-s leading-snug space-y-1.5">
+          <p className="font-semibold">
+            Nicht vollständig erfasst
+            {luecken.quelleUrl
+              ? <> — <QuellLink href={luecken.quelleUrl} /></>
+              : erlass.pdfUrl
+                ? <> — <QuellLink href={erlass.pdfUrl}>Amtliches PDF</QuellLink></>
+                : null}
+          </p>
+          {luecken.hinweise.length === 1 ? (
+            <p>{luecken.hinweise[0]}</p>
+          ) : (
+            <ul className="list-disc pl-5 space-y-1">
+              {luecken.hinweise.map((h) => <li key={h}>{h}</li>)}
+            </ul>
+          )}
+        </div>
+      )}
+    </LeserKopfGeruest>
   );
 }

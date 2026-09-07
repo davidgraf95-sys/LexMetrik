@@ -1,4 +1,4 @@
-import { isValidElement, useId, useRef, type CSSProperties } from 'react';
+import { isValidElement, useId, useRef } from 'react';
 import { grundartMeta } from '../helpers';
 import { paneRoot } from '../berechnungen';
 import { ErlassKopfBlock } from '../parts';
@@ -11,23 +11,23 @@ import { LadeAnzeige, FruehAnsicht } from '../inhalt-ansichten';
 import { WeiterlesenChip } from '../parts/WeiterlesenChip';
 import { LeserTastatur } from '../parts/LeserTastatur';
 import { LeserKopf } from './LeserKopf';
-import { LeserSeitenleiste } from './LeserSeitenleiste';
-import { LeserGliederung } from './LeserGliederung';
+import { gliederungsSheetAufbau, leisteAufbau } from './leisteAufbau';
 import { LeserLesespalte } from './LeserLesespalte';
 import { LeserLeseZeile } from './LeserLeseZeile';
-import { LeserLeisteSheet } from './LeserLeisteSheet';
 import { LeserErlassKopfZone } from './LeserErlassKopfZone';
 import { LeserPanelZone } from './LeserPanelZone';
-import { PanelZaehler } from './LeserPanelOeffner';
-import { normZitat, panelBezug, trefferZahl, usePanelBezuege, usePanelZustand } from './panelModell';
+import { ErlassGriff } from './LeserPanelOeffner';
+import { normZitat, panelBezug, usePanelBezuege, usePanelZustand } from './panelModell';
 import { SuchSprungFeld } from './SuchSprungFeld';
 import { suchZoneAufbau } from './suchZoneAufbau';
-import { useTrefferBlatt } from './useTrefferBlatt';
+import { SchwebeMeldung } from '../../../components/ui/SchwebeMeldung';
+import { useTrefferSicht } from './useTrefferSicht';
+import { LeserTrefferSpalte } from './LeserTrefferSpalte';
 import { useKopfAnspruch } from './useKopfAnspruch';
 import { useStickAusgleich } from './useStickAusgleich';
 import { leserCssVariablen } from './leserGeometrie';
 import { rahmenBild, useRahmenRaum } from './rahmenSpalten';
-import { kopfElemente, kopfGlypheKlassen, kopfGriffKlassen, panelForm, useKopfStufe } from './kopfStufen';
+import { kopfGlypheKlassen, kopfGriffKlassen, panelForm, useKopfStufe } from './kopfStufen';
 import { useSuchSprungKuerzel } from './suchKuerzel';
 import { bestimmungsWort as bestimmungsWortVon, panelEbene, suchFeldName, suchPlatzhalter } from './erlassAnsicht';
 import { LeserUebersicht } from './LeserUebersicht';
@@ -41,16 +41,15 @@ import { useLeserV3Modell } from './leserV3Modell';
 // die Datei, die man liest, um die Hülle zu verstehen.
 //
 // DER AUFBAU, VON OBEN:
-//   LeserKopf   klebt · Ort · ⚖ · ☰ · Ansicht · [Such-Zone ohne Spalte] (4a/Ä19)
+//   LeserKopf   klebt · Kürzel · ⚖ · ☰ · Ansicht · Such-Zone (4a/Ä19/D28)
 //   ┌ aside ────────────┬ Zelle ───────────────────────────┐
 //   │ Übersicht (zu)    │ ErlassLeserKopf                  │  (Kap. 4b/4e)
-//   │ Feld klebt zuoberst│ ErlassKopfBlock (Ingress)       │
-//   │ Gliederung klebt  │ Lesespalte  ← KERN, eingefroren  │  (Kap. 1.3)
+//   │ Gliederung klebt  │ ErlassKopfBlock (Ingress)        │
+//   │                   │ Lesespalte  ← KERN, eingefroren  │  (Kap. 1.3)
 //   └───────────────────┴──────────────────────────────────┘
-// OHNE Spalte (Handy · Split-Pane · Gliederung eingeklappt) wandert das Feld in
-// den klebenden Kopf-Block (`./SuchZone`) und die Gliederung in ein Bottom-Sheet
-// hinter ☰. Die Regel dahinter, auf allen drei Breiten dieselbe: das Feld ist das
-// oberste Element des klebenden Blocks.
+// Das Feld steht seit D28 (6.9.2026) in JEDER Lage im klebenden Kopf-Block
+// (`./SuchZone`); ohne Spalte wandert nur die Gliederung in ein Bottom-Sheet
+// hinter ☰.
 //
 // ── DIE ERWEITERUNGS-SLOTS SIND GESTRICHEN (C4/H3, ein Eintrag statt zwei) ──
 // `beiwerkSlot` · `fassungsWahl` · `leisteExtra` (H1, Fundament-Auflage 3) und
@@ -91,12 +90,18 @@ export function LeserRahmenV3({ ebene, schluessel }: LeserRahmenV3Props) {
   // war, und ohne Key lädt die Bezugs-Hook nicht (Nachladen, Kap. 7).
   const rohPanel = usePanelZustand();
   const bezuege = usePanelBezuege(m.erlass?.key, rohPanel.jeGeoeffnet);
+  // ── D35-F2 (7.9.2026) · HIER STAND DER ZWEITE KONSUMENT DER ZÄHL-DATEI ───
+  // N1 (7.9.2026) hatte den Kopf-Zähler auf `useBezuegeZaehler` umgestellt,
+  // damit er DIESELBE Bezugsgrösse nennt wie die Zeile am Artikel (Befund:
+  // «11 Entscheide» gegen «⚖ 3 Entscheide» auf einem Bildschirm). Der Befund
+  // bleibt richtig für seinen Stand (§0 Ziff. 2b); D35-F2 löst ihn eine Ebene
+  // höher — der Kopf nennt gar keine Artikel-Zahl mehr, es gibt also nur noch
+  // EINEN Konsumenten (`./LeserLesespalte`, für die Funktionszeile).
   // V6/Ä88: Höhenausgleich, wenn der klebende Kopf-Block wächst — Befund,
   // Messreihe und der Vertrag von `mitAusgleich`/`wurzelRef`:
   // `./useStickAusgleich`. Scroller aus derselben `paneRoot`-Auflösung wie
-  // «↑ Anfang» (§5). Die LAGE trägt seit dem H4-Nachzug BEIDE Auslöser: die
-  // Gliederung faltet den Kopf, und seit Ä60 (c) faltet das Beiwerk-Blatt
-  // zwischen 1024 und 1391 px die Gliederung — also auch den Kopf.
+  // «↑ Anfang» (§5). Seit D33 faltet nur noch die Gliederung den Kopf; das
+  // Beiwerk-Blatt verschiebt nichts mehr (`./rahmenSpalten`).
   const { wurzelRef, mitAusgleich } = useStickAusgleich(
     `${m.tocOffen}·${rohPanel.offen}`,
     paneRoot(umgebung.imPane, umgebung.wurzel), m.aktivToken);
@@ -120,14 +125,15 @@ export function LeserRahmenV3({ ebene, schluessel }: LeserRahmenV3Props) {
   // ⌘K / «/» — Zusage des RAHMENS, nicht des Feldes (Bug-Check B1). Steht VOR den
   // frühen Rückgaben, weil Hooks nicht bedingt laufen dürfen.
   // A3: WELCHES Pane den Tastendruck bekommt, entscheidet `./suchKuerzel` am
-  // Fokus. KEIN `onKuerzel` mehr — seit Ä19/A2 ist das Feld in jeder Lage im DOM
-  // (Spalte · Kopf-Zone · offenes Blatt), es ist also nichts zu öffnen (§17
-  // Rückbau; der Zweig war unerreichbar, Beleg im Vollzugsvermerk).
+  // Fokus. KEIN `onKuerzel` mehr — das Feld ist in jeder Lage im DOM (Kopf-Zone
+  // bzw. offenes Blatt), es ist also nichts zu öffnen (§17 Rückbau).
   const suchFeldRef = useRef<HTMLInputElement>(null);
   useSuchSprungKuerzel({ feldRef: suchFeldRef, imSekundaerenPane: umgebung.istSekundaer });
-  // Ä76: Offen-Zustand des Treffer-Blattes (Herleitung in `./LeserTrefferBlatt`).
-  // Vor den frühen Rückgaben — Hooks laufen nicht bedingt.
-  const trefferBlatt = useTrefferBlatt(m.sucheBegriff);
+  // D38: Liegt die Trefferliste über der Lesespalte? (`./LeserTrefferSpalte`.)
+  // Vor den frühen Rückgaben — Hooks laufen nicht bedingt. Schlüssel ist der
+  // ROHE Feldwert: wer nach dem Wegschalten weitertippt, bekommt sie sofort
+  // zurück, nicht erst nach der Entprellung.
+  const trefferSicht = useTrefferSicht(m.suche.trim());
 
   // Frühe Ansichten (Fehlseite · Currency-Pin · pdf-embed · nur-live-link) und
   // der Ladezustand — dieselben Bausteine wie die Ist-Hülle (§5).
@@ -149,15 +155,12 @@ export function LeserRahmenV3({ ebene, schluessel }: LeserRahmenV3Props) {
   const hatLeiste = eintraege.length > 0;
   const bild = rahmenBild({
     raum, spaltenLage: hatLeiste && umgebung.istXl, tocOffen: m.tocOffen,
-    blattOffen: panel.offen, ruheForm: panelForm(stufe, !umgebung.imPane),
+    ruheForm: panelForm(stufe, !umgebung.imPane),
   });
   const zweiSpalten = bild.gliederungSpalte;
   // ── P3 (3b) · DREI NAMEN FÜR DREI DINGE (H4-Nachzug 18.8.2026) ────────────
-  // Bis hierher hiess die Zeile darunter `blattOffen` — und im selben Bau hiess
-  // auch das BEIWERK-Blatt so (`rahmenBild({ blattOffen: panel.offen })`,
-  // `bild.blattForm`). Zwei Flächen, ein Wort: der Architektur-Review 18.8.2026
-  // hat es als (3b) gemeldet, und die dritte Formulierung stand weiter unten als
-  // `zweiSpalten || blattOffen` — eine Frage ohne Namen.
+  // Zwei Flächen hiessen einmal beide `blattOffen`, die dritte Frage hatte gar
+  // keinen Namen (Architektur-Review 18.8.2026). Seither:
   //   `gliederungsSheetOffen`  das GLIEDERUNGS-Sheet (☰, unter der Spaltenschwelle)
   //   `panel.offen`            das BEIWERK-Blatt (Rechtsprechung & Kontext)
   //   `leisteSteht`            trägt die Seitenleiste den Steckbrief gerade
@@ -183,42 +186,40 @@ export function LeserRahmenV3({ ebene, schluessel }: LeserRahmenV3Props) {
       // ↑↓-Knöpfe im Kopf der Trefferliste — EIN Weg, zwei Bedienarten (§5).
       hatTreffer={m.fundstellen > 0}
       onVor={() => m.springeZuFundstelle?.(1)}
-      onZurueck={() => m.springeZuFundstelle?.(-1)} />
+      onZurueck={() => m.springeZuFundstelle?.(-1)}
+      // D38: ↵ ist die Wahl — die Liste gibt die Lesefläche frei (`./SuchSprungFeld`).
+      onBestaetigt={trefferSicht.schliesse} />
   );
 
-  const leiste = (imSheet: boolean) => (
-    <LeserSeitenleiste
-      // Ä32: im TREFFER-Blatt keine Ankunfts-Übersicht über der Trefferliste.
-      uebersicht={imSheet && m.sucheAktiv ? undefined : <LeserUebersicht m={m} bestimmungsWort={bestimmungsWort} />}
-      // Ä19: Feld nur in der SPALTE — ohne Spalte trägt es die Such-Zone des
-      // Kopf-Blocks (`./SuchZone`) bzw., bei offenem Blatt, dessen Kopf (A2).
-      suchFeld={imSheet ? undefined : suchFeld}
-      baum={<LeserGliederung m={m} bestimmungsWort={bestimmungsWort} />}
-      baumKnoepfe={!m.sucheAktiv} // Ä32: «alles auf/zu» nur zum Baum
-      // Ä10: im Sheet benennt der Sheet-Kopf die Zone (sonst «Gliederung» doppelt).
-      baumTitel={imSheet ? undefined : (m.sucheAktiv ? 'Treffer' : 'Gliederung')}
-      onAlleAuf={() => m.setTocBaum((o) => ({ ...o, ...Object.fromEntries(m.alleKnotenIds.map((id) => [id, true])) }))}
-      onAlleZu={() => m.setTocBaum((o) => ({ ...o, ...Object.fromEntries(m.alleKnotenIds.map((id) => [id, false])) }))}
-      alleOffen={m.alleKnotenIds.length > 0 && m.alleKnotenIds.every((id) => m.tocBaum[id] === true)}
-      onAnfang={m.zumAnfang} />
-  );
-
-  // Ä19: Wo die Gliederung NICHT als Spalte steht, trägt der klebende Kopf-Block
-  // das Feld (Regel in `./SuchZone`) — ausser das Blatt ist offen, dann es (A2).
-  const suchZoneKlebt = hatLeiste && !zweiSpalten;
-  // Zusammensetzung in `./suchZoneAufbau` (Auslagerung des Integrations-Nachzugs
-  // 17.8.2026, §6.6 — Anlass und Messung dort). Der Rahmen sagt weiterhin, OB die
-  // Zone klebt und WAS darin steht; `useTrefferBlatt` bleibt oben im Rahmen,
-  // damit der Offen-Zustand keinen Lagewechsel verliert.
+  // D28 (6.9.2026): der Kopf-Block trägt das Feld IMMER — bis hierher stand
+  // `&& !zweiSpalten`, und dieses Hin-und-Her war der Mangel (`./SuchZone`).
+  const suchZoneKlebt = hatLeiste;
+  // D38 · ZWEI FRAGEN, ZWEI NAMEN (dieselbe Trennung wie W2·24-F): `feldGefuellt`
+  // ist GEOMETRIE und sofort — daran hängen Zonenhöhe und Erscheinen der Liste,
+  // beides eingabe-nah (Messreihe in `./leserGeometrie`, `zoneHoch`).
+  // `m.sucheAktiv` ist die entprellte DATENLAGE und sagt nur, ob in der Liste
+  // schon Treffer oder noch «sucht …» stehen.
+  const feldGefuellt = m.suche.trim() !== '';
+  const trefferSteht = hatLeiste && feldGefuellt && trefferSicht.offen;
+  // Zusammensetzung in `./suchZoneAufbau` (§6.6-Auslagerung 17.8.2026); der
+  // Rahmen sagt, OB die Zone klebt und WAS darin steht.
   const suchZone = suchZoneAufbau({
-    klebt: suchZoneKlebt, istXl: umgebung.istXl, sucheAktiv: m.sucheAktiv,
-    // `blattOffen` ist der PROP-Name von `suchZoneAufbau` (Fläche des
-    // Übersicht-/Blatt-Auftrags) — hier steht die umbenannte Quelle davor.
-    blattOffen: gliederungsSheetOffen, suchFeld, bestimmungsWort,
-    liste: <LeserGliederung m={m} bestimmungsWort={bestimmungsWort} />,
+    klebt: suchZoneKlebt, sucheAktiv: m.sucheAktiv,
+    feldImSheet: gliederungsSheetOffen, suchFeld, bestimmungsWort,
     bestimmungen: m.treffer.length, fundstellen: m.fundstellen,
-    trefferBlatt, onSheet: () => m.setTocAuf(true),
+    onListe: trefferSicht.oeffne,
+    // D28 · ‹ ›: dieselben Callbacks wie ↑↓ im Feld (§5, eine Folge).
+    onVor: () => m.springeZuFundstelle?.(1),
+    onZurueck: () => m.springeZuFundstelle?.(-1),
+    listeSteht: trefferSteht, // D38, Herleitung in `./SuchZone`
   });
+  // N4: die Zone zieht genau dann in die Kopfzeile, wenn links eine Spur steht
+  // — nur dort hat das Feld eine Kante (D32) und daneben Platz für die Griffe
+  // (Messung und Höhen-Rechnung in `./leserGeometrie`, `suchInZeile`).
+  const suchInZeile = suchZone != null && bild.spurVersatzRem > 0;
+  // D32: «‹ Gliederung ausblenden» steht seit 7.9.2026 im linken Streifen der
+  // Kopfzeile (`./LeserKopf`) statt über der Spalte — und nur, wo die Spalte
+  // steht: eingeklappt ist die Schiene der eine Griff (Ä79).
 
   // ── H3 · Panel: WO es steht, WAS am Öffner steht ──────────────────────────
   // Die Overlay-Wurzel und die Pane-Rolle stehen hier EINMAL — Gliederungs-Blatt
@@ -230,34 +231,25 @@ export function LeserRahmenV3({ ebene, schluessel }: LeserRahmenV3Props) {
   // (Begründung und Befund in `./panelModell`, `panelBezug`).
   const panelZiel = panelBezug(m.aktArtikel, m.aktivToken, eintraege[0]);
   const panelArtikel = panelZiel.label;
-  // Die Zone steht, solange ein Öffner sichtbar IST oder das Panel offen ist —
-  // das zweite ist der F8-Fall: mit «Rechtsprechung im Text: aus» gibt es keine
-  // Lasche und keinen Zähler, das per `r` geöffnete Panel muss trotzdem rendern
-  // (`panelModell`, `offen` ist bewusst nicht mit `oeffnerSichtbar` verrechnet).
-  const panelZone = panel.oeffnerSichtbar || panel.offen;
-  // A1: die Zahl gilt nur, wenn der Lade-VERSUCH durch ist — `bezuege.geladen`
-  // kommt aus der Hook, die den Fetch kennt (Herleitung dort). Der abgelöste
-  // Klassen-Zähler konnte «nichts erfasst» nicht von «lädt noch» trennen.
-  const panelZahl = trefferZahl(bezuege.bezuegeFuer, bezuege.geladen, panelZiel.token);
+  // D35-F2: die Zone steht immer. Bis hierher hing sie an
+  // `panel.oeffnerSichtbar || panel.offen` — der zweite Zweig war der F8-Fall
+  // (Schalter aus, Panel per «r» aufgezogen). Mit dem Wegfall des Schalters ist
+  // der erste Zweig konstant `true`, und ein konstanter Ausdruck ist keine
+  // Bedingung mehr (§17-Gegengewicht). Die Zahl `panelZahl` fällt mit ihm: der
+  // Kopf nennt keine Artikel-Zahl mehr (Herleitung in `./LeserPanelOeffner`).
 
   // Ä79 (H4-II): steht die Schiene, ist SIE der eine Griff — die Herleitung samt
   // Messreihe steht am Bauteil, das sie betrifft (`./LeserGliederungSchiene`).
   const schieneSteht = bild.schiene;
-  // Ä60 (c): die Schiene steht seit H4 aus ZWEI Gründen — der Nutzer hat die
-  // Gliederung eingeklappt, ODER das Beiwerk-Blatt hat ihren Platz. Im zweiten
-  // Fall wäre «einblenden» ohne das Schliessen des Blatts eine Zusage ohne
-  // Wirkung (der Platz reicht nicht für beide), also tut der Griff beides.
-  // P1-1 (18.8.2026): BEIDE Zustandswechsel in EINER Klammer — der Ausgleich
-  // misst dann einmal und rechnet mit der Lage NACH beiden (früher zwei Aufrufe,
-  // also zwei Messungen desselben Vorher-Werts).
-  const schieneAuf = () => mitAusgleich(() => {
-    m.setTocOffen(true);
-    if (bild.schieneHoltPlatz) rohPanel.schliesse();
-  });
+  // D33 (7.9.2026): die Schiene steht nur noch AUS EINEM Grund — der Nutzer hat
+  // die Gliederung eingeklappt. Der zweite Grund (das Beiwerk-Blatt hatte ihren
+  // Platz, Ä60 (c)) ist mit der Blatt-Spur gefallen; der Griff blendet darum
+  // wieder nur ein und schliesst nichts mehr (`schieneHoltPlatz` gestrichen).
+  const schieneAuf = () => setzeTocOffen(true);
   // ☰ nur, wenn die Gliederung gerade NICHT als Spalte steht — sonst ein Knopf
-  // ohne Wirkung (Design-Grundlage Kap. 6, Icon-Flut-Verbot).
-  // Ä90: dieselbe Bauform wie ⚖ und «Ansicht» (`kopfStufen.kopfGriffKlassen`) —
-  // bis 17.8. war dies der einzige NACKTE Griff der Zeile.
+  // ohne Wirkung (Kap. 6, Icon-Flut-Verbot). Ä90: dieselbe Bauform wie ⚖ und
+  // «Ansicht»; bis 17.8. der einzige NACKTE Griff der Zeile, bis G14 (7.9.2026)
+  // @390 der einzige ganz OHNE Wort — Messreihe in `./LeserPanelOeffner`.
   const gliederungKnopf = hatLeiste && !zweiSpalten && !schieneSteht
     ? (
       <button type="button" data-v3-gliederung-auf
@@ -265,14 +257,13 @@ export function LeserRahmenV3({ ebene, schluessel }: LeserRahmenV3Props) {
         onClick={() => { if (umgebung.istXl) setzeTocOffen(true); else m.setTocAuf((v) => !v); }}
         // ── Ä111 (18.8.2026) · ZWEI ☰, ZWEI ZIELE ──────────────────────────
         // GEMESSEN @390: zwei ☰ in derselben Kopfzone — links das der App-Topbar
-        // («Navigation öffnen»), rechts dieses. Der Name sagte nur, WAS
-        // dahinterliegt, nicht was der Klick tut; ein Screenreader las an beiden
-        // ein Substantiv. JETZT nennt er die Handlung, wortgleich mit
-        // «Gliederung ausblenden» (`LeserLeseZeile`) und «Gliederung einblenden»
-        // (Schiene). Die GLYPHE bleibt: ein zweites Zeichen wäre eine
-        // Entscheidung über das App-Icon-Set (`Icon.tsx`) und damit H5.
-        title="Gliederung öffnen" aria-label="Gliederung öffnen" className={kopfGriffKlassen(stufe === 'mini')}>
-        <span aria-hidden className={kopfGlypheKlassen(stufe === 'mini')}>☰</span>
+        // («Navigation öffnen»), rechts dieses; beide Namen waren Substantive,
+        // keiner sagte, was der Klick tut. JETZT nennt er die Handlung,
+        // wortgleich mit «Gliederung ausblenden»/«einblenden» (`LeserLeseZeile`,
+        // Schiene). Die Glyphe blieb damals — ein zweites ZEICHEN wäre eine
+        // Icon-Set-Entscheidung und damit H5; seit G14 weicht sie @390 dem WORT.
+        title="Gliederung öffnen" aria-label="Gliederung öffnen" className={`${kopfGriffKlassen(stufe === 'mini')} ${stufe === 'mini' ? 'px-1.5' : ''}`}>
+        {stufe === 'mini' ? <span className="whitespace-nowrap">Gliederung</span> : <span aria-hidden className={kopfGlypheKlassen(false)}>☰</span>}
       </button>
     )
     : undefined;
@@ -288,78 +279,78 @@ export function LeserRahmenV3({ ebene, schluessel }: LeserRahmenV3Props) {
       // samt LM-003. Der Rahmen sagt nur noch, WELCHE Lage gilt (C5a, §6.6).
       style={{
         ...leserCssVariablen({
-          stufe, vollflaechig: !umgebung.imPane, suchZoneKlebt, sucheAktiv: m.sucheAktiv,
+          stufe, vollflaechig: !umgebung.imPane, suchZoneKlebt,
+          // W2·24-F: roher Feldwert (`zoneHoch`). D38 strich `&& !zweiSpalten`:
+          // die Zone ist hoch, sobald im Feld etwas steht — auch wenn die
+          // Zähler-Zeile schweigt, weil die Liste dasteht. RESERVIERT statt
+          // gefüllt, sonst spränge `--nt-stick` bei jedem Wechsel um 24 px.
+          zoneHoch: feldGefuellt,
+          suchInZeile, spurVersatzRem: bild.spurVersatzRem,
         }),
-        // FIX PR #559 (Herleitung `rahmenSpalten.RahmenBild.lesemassMaxRem`): löst den 45rem-Fallback ab, reserviert die Blatt-Spur statisch.
-        ...({ '--leser-lesemass-max': `${bild.lesemassMaxRem}rem` } as CSSProperties),
-        // Ä60 (c): die Aufweitung. `undefined`, solange das Blatt keine eigene
-        // Spur hat — dann ist der Rahmen Zeichen für Zeichen der bisherige.
-        ...bild.breite,
+        // D33: Rahmen-Aufweitung und dynamischer Lesemass-Deckel sind mit der
+        // Blatt-Spur gefallen (`./rahmenSpalten`).
       }}>
 
-      <LeserKopf erlass={erlass} aktArtikel={m.aktArtikel} fussnotenAnzahl={m.fussnotenAnzahl}
-        hatAenderungsvermerke={m.hatAenderungsvermerke}
-        stufe={stufe} gliederungKnopf={gliederungKnopf}
-        // F8-Regel David 16.8.2026 («Rechtsprechung im Text» aus ⇒ Zähler weg):
-        // unverändert der EINE wirksame Torwächter, `panel.oeffnerSichtbar`.
-        // H4-II: die Stufe entscheidet nur noch die GESTALT des Zählers, nicht
-        // sein Dasein (`kopfElemente(stufe).panel`, Herleitung dort).
-        panelOeffner={panel.oeffnerSichtbar
-          ? (
-            <PanelZaehler anzahl={panelZahl} artikelLabel={panelArtikel} offen={panel.offen}
-              form={kopfElemente(stufe).panel}
-              // A3: dieselbe Id wie die Fläche — sonst ist `aria-controls` null.
-              panelId={panel.offen ? panelId : undefined}
-              onKlick={panel.umschalten} />
-          )
-          : undefined}
-        // A2/Ä92: der Weg zum Panel OHNE Tastatur und ohne Zähler — und genau
-        // dann, wenn kein Zähler dasteht. «Ein Öffner je Breite» (Fahrplan
-        // Kap. 7): derselbe Torwächter `panel.oeffnerSichtbar` entscheidet
-        // BEIDE Öffner, damit sie nie zugleich stehen und nie zugleich fehlen.
-        onPanelOeffnen={panel.oeffnerSichtbar ? undefined : () => panel.oeffne('entscheide')}
+      {/* D27: kein `aktArtikel` mehr — Herleitung in `./LeserKopf`. */}
+      <LeserKopf erlass={erlass} fussnotenAnzahl={m.fussnotenAnzahl}
+        hatAenderungsvermerke={m.hatAenderungsvermerke} aenderungsFussnoten={m.aenderungsFussnoten}
+        bestimmungsWort={bestimmungsWort} stufe={stufe} gliederungKnopf={gliederungKnopf}
+        suchInZeile={suchInZeile} tocOffen={m.tocOffen}
+        onGliederungZu={zweiSpalten ? () => setzeTocOffen(false) : undefined}
+        // D35-F2: der Griff steht UNBEDINGT — «ein Öffner je Breite» (Ä92) ist
+        // damit trivial erfüllt, und der Menü-Eintrag «Entscheide & Kontext …»,
+        // der ihn in der F8-Lage vertrat, ist mit ihr gefallen.
+        panelOeffner={(
+          <ErlassGriff offen={panel.offen} kompakt={stufe === 'mini'}
+            // A3: dieselbe Id wie die Fläche — sonst ist `aria-controls` null.
+            panelId={panel.offen ? panelId : undefined}
+            onKlick={panel.umschalten} />
+        )}
         suchZone={suchZone} />
 
       {/* Handy/schmales Pane: die GANZE Seitenleiste als Bottom-Sheet hinter ☰
-          (Kap. 4b). Wiederverwendet wird die bestehende Sheet-Anatomie
-          (Dialog-Rolle, Fokusfang, Esc, Portal in die Pane-Overlay-Schicht) —
-          §5, kein zweiter Overlay-Mechanismus. Portal-Vertrag und Pane-Rolle:
-          `./LeserLeisteSheet` (H3-Auslagerung = B10-Auflage des H2b-Nachzugs,
+          (Kap. 4b). Aufbau und Herleitung: `./leisteAufbau` (D38-Auslagerung,
           §6.6); der Rahmen entscheidet OB, WOHIN und WAS darin steht. */}
-      {gliederungsSheetOffen && (
-        <LeserLeisteSheet ziel={overlayZiel} paneRolle={paneRolle}
-          sheetRef={m.refs.tocDrawerRef} onSchliessen={() => m.setTocAuf(false)}
-          pfad={m.siePfad} aktArtikelLabel={m.siePfadArtikel}
-          // A2/Ä32: DASSELBE Feld zuoberst im Blatt (Fokus-Falle, WCAG 2.4.3;
-          // die Such-Zone gibt es solange her) · «Sie sind hier» nur zum Baum.
-          sprungFeld={suchFeld} feldZuoberst ortAnzeigen={!m.sucheAktiv}
-          titel={m.sucheAktiv ? 'Treffer' : 'Gliederung'} baum={leiste(true)} />
-      )}
+      {gliederungsSheetOffen && gliederungsSheetAufbau({
+        m, bestimmungsWort, ziel: overlayZiel, paneRolle,
+        sheetRef: m.refs.tocDrawerRef, suchFeld,
+      })}
 
       {/* Die Lese-Zeile — die drei Spuren nebeneinander (`./LeserLeseZeile`,
           Auslagerung H4-Nachzug 18.8.2026, §6.6). Der Rahmen entscheidet ihre
           Gestalt (`bild` aus `./rahmenSpalten`) und füllt ihre Slots; WIE die
           Spuren stehen, steht dort. */}
-      <LeserLeseZeile bild={bild} vollflaechig={!umgebung.imPane} tocOffen={m.tocOffen}
-        onSchieneAuf={schieneAuf} onGliederungZu={() => setzeTocOffen(false)}
-        leiste={leiste(false)}
+      <LeserLeseZeile bild={bild} vollflaechig={!umgebung.imPane}
+        onSchieneAuf={schieneAuf}
+        leiste={leisteAufbau(m, bestimmungsWort, false)}
         zelle={<>
           {/* Der geteilte Erlass-Kopf (Kap. 4e) — Prop-Weitergabe in
               `./LeserErlassKopfZone` (H3-Auslagerung, §6.6). */}
           <LeserErlassKopfZone m={m} erlass={erlass} artikelAnzahl={eintraege.length}
             bestimmungsWort={bestimmungsWort} />
           {m.kopf && <ErlassKopfBlock kopf={m.kopf} intern={m.internRefs} />}
-          {/* Ä76: der `trefferListe`-Prop ist gestrichen — er traf die
-              EINGEKLAPPTE Spalte statt des angekündigten Rand-Falls, und der ist
-              unerreichbar. Herleitung samt Messreihe steht am Bauteil, das sie
-              betrifft (`./LeserLesespalte`, `./LeserTrefferBlatt`). */}
-          <LeserLesespalte m={m} />
+          {/* D38: der Text bleibt IMMER gerendert, die Trefferliste legt sich
+              darüber (`trefferSpalte` unten) — Warum: `./LeserTrefferSpalte`. */}
+          <LeserLesespalte m={m} bezuege={bezuege} weckeBezuege={rohPanel.weckeDaten}
+            oeffneBlatt={rohPanel.oeffneEntscheide} bezuegeGeweckt={rohPanel.jeGeoeffnet} />
         </>}
+        // D38 · Trefferliste über der Lesespalte — `absolute`, ohne Platz im
+        // Fluss; der Rahmen sagt nur, OB sie da ist (`./LeserTrefferSpalte`).
+        trefferSpalte={trefferSteht
+          ? (
+            <LeserTrefferSpalte m={m} bestimmungsWort={bestimmungsWort}
+              vollflaechig={!umgebung.imPane}
+              // Esc ist eine TASTATUR-Geste ⇒ Fokus zurück ins Feld, sonst fiele
+              // er auf den Body. Beim KLICK nicht: ein Fokus im Feld öffnete
+              // @390 die Bildschirmtastatur über dem eben geholten Text.
+              onSprung={trefferSicht.schliesse}
+              onSchliessen={() => { trefferSicht.schliesse(); suchFeldRef.current?.focus(); }} />
+          )
+          : null}
         // H3 · Panel/Lasche. EIN Aufrufpunkt für beide Modi: im Spalten-Modus
         // füllt die Zone die dritte Grid-Spur, im Blatt-Modus hat sie keine Box
         // und liegt ausserhalb des Flusses.
-        panelZone={panelZone
-          ? (
+        panelZone={(
             <LeserPanelZone form={bild.blattForm} panelId={panelId}
               paneZiel={overlayZiel} paneRolle={paneRolle}
               zustand={panel} bezuege={bezuege} erlassKey={erlass.key} quelleUrl={erlass.quelleUrl}
@@ -367,8 +358,7 @@ export function LeserRahmenV3({ ebene, schluessel }: LeserRahmenV3Props) {
               artikelLabel={panelArtikel} erlassKuerzel={erlass.kuerzel}
               bestimmungsWort={bestimmungsWort} aktArtikel={panelZiel.token} ebene={panelEbene(erlass)}
               steckbrief={leisteSteht ? null : <LeserUebersicht m={m} bestimmungsWort={bestimmungsWort} />} />
-          )
-          : null} />
+          )} />
 
       {/* R4 «Weiterlesen» + R8 Tastatur — dieselben BAUSTEINE wie die Ist-Hülle
           (Kap. 4h: KEINE zweite Tastaturebene), direkt aus `parts/` statt über
@@ -388,21 +378,20 @@ export function LeserRahmenV3({ ebene, schluessel }: LeserRahmenV3Props) {
             sichtbarer Sprung von 20 px, sobald er erschien (Bug-Check «Nice»,
             16.8.2026). Derselbe `display: contents`-Träger, der das schon für
             «Weiterlesen» und die Tastatur löst, nimmt den Margin entgegen und
-            wirft ihn weg. */}
+            wirft ihn weg. F2-5 (31.8.2026): Geometrie und Optik kommen aus `ui/SchwebeMeldung` — der Toast war die Abweichung unter drei gleichen Rollen (`top-20` geraten statt `--nt-stick`, darum @390 über den Kopf-Griffen; Herleitung und Messung dort). Behalten: `role="status"`. M8 (6.9.2026): der INHALT hiess «Im neuen Reiter geöffnet — oben unter ☰» und war zweimal überholt — das ☰-Flyout ist mit der Arbeitsleiste (W2·24) weg, und der auslösende Knopf öffnet seit M8 das zweite Fenster statt eines zweiten Reiters (Herleitung in `ReiterAktion.tsx`). */}
         {m.reiterToast && (
-          <div role="status" aria-live="polite"
-            className="fixed right-3 top-20 z-50 flex items-center gap-2 rounded-lg border border-line bg-paper-raised px-3 py-2 text-body-s text-ink-700 shadow-lg">
+          <SchwebeMeldung kante="oben" ausrichtung="rechts" rolle="status" inhaltKlassen="gap-2 px-3 py-2 text-body-s text-ink-700">
             <span aria-hidden className="text-brass-700">⧉</span>
-            Im neuen Reiter geöffnet — oben unter ☰
-          </div>
+            Daneben geöffnet — im Fenster rechts
+          </SchwebeMeldung>
         )}
         {!umgebung.istSekundaer && m.weiterlesen && (
           <WeiterlesenChip label={m.weiterlesen.label}
             onWeiterlesen={m.weiterlesenSprung} onVerwerfen={m.weiterlesenVerwerfen} />
         )}
         {/* H3 · «r» zieht das Panel auf (KEINE zweite Tastaturebene, Kap. 4h) —
-            der Weg, der bleibt, wenn der Zähler nach der F8-Regel weg ist; darum
-            UNABHÄNGIG von `oeffnerSichtbar` gesetzt.
+            der zweite Weg neben dem Kopf-Griff; bis D35-F2 war er der einzige,
+            wenn die F8-Regel den Zähler wegnahm (Herleitung in `./panelModell`).
             A2 (Nachzug): der Listener läuft jetzt in BEIDEN Panes. Vorher stand er
             unter `!istSekundaer` — mit der Folge, dass «r» aus dem sekundären Pane
             das PRIMÄRE Panel aufzog (gemessen 17.8.2026). Doppelte j/k-Sprünge

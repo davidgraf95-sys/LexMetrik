@@ -6,6 +6,10 @@
 
 import { FEDLEX, type FedlexGesetz } from './tabelle';
 import { fedlexUrl } from './url';
+import {
+  GENITIV_EINTRAEGE, KUERZEL_SCHREIBWEISEN, TITEL_EINTRAEGE, titelGeltung,
+  type FremdEbene, type GenitivEintrag, type TitelEintrag,
+} from './positivliste';
 
 // Mehrwort-Gesetzesnamen → Registry-Key. Nötig, weil der generische Matcher
 // nur das LETZTE Token vergleicht: «Art. 16 GebV SchKG» endete sonst auf
@@ -22,65 +26,79 @@ const MEHRWORT_ALIAS: ReadonlyArray<[string, FedlexGesetz]> = [
 // Reiner Helfer (§5): einzige Quelle der Gesetz-Erkennung; von
 // fedlexLinkFuerArtikel UND vom Norm-Snapshot-Resolver (normtext/bundRef)
 // wiederverwendet — die Matching-Logik wird nicht dupliziert.
+// V-8 (W2·20, 1.9.2026): die AMTLICHE Schreibweise («BankG», «AsylG») wird wie
+// ein Key behandelt — dieselbe Wortgrenzen-Regel, Tabelle in `positivliste.ts`.
+const endetAufToken = (text: string, token: string): boolean =>
+  new RegExp(`(^|\\s)${token.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}$`).test(text);
 export function erkenneFedlexGesetz(text: string): FedlexGesetz | null {
   const bereinigt = text.trim();
   const alias = MEHRWORT_ALIAS.find(([name]) => bereinigt.endsWith(name));
   return alias?.[1]
-    ?? (Object.keys(FEDLEX) as FedlexGesetz[]).find((g) => new RegExp(`(^|\\s)${g.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}$`).test(bereinigt))
+    ?? KUERZEL_SCHREIBWEISEN.find(([s]) => endetAufToken(bereinigt, s))?.[1]
+    ?? (Object.keys(FEDLEX) as FedlexGesetz[]).find((g) => endetAufToken(bereinigt, g))
     ?? null;
 }
+/** Alle Token, die `erkenneFedlexGesetz` am Zitat-Ende akzeptiert (Keys +
+ *  amtliche Schreibweisen) — Quelle der Regex-Alternationen im Parser (§5). */
+export const KUERZEL_TOKENS: ReadonlyArray<string> = [
+  ...Object.keys(FEDLEX), ...KUERZEL_SCHREIBWEISEN.map(([s]) => s),
+];
 
 // ─── Kuratierte Genitiv-Namen → Fedlex-Kürzel (A10/A11, David 5.7.2026) ──────
 //
 // Präambeln/Ingresse UND Fliesstext nennen Fremdgesetze oft mit AUSGESCHRIEBENEM
 // Namen OHNE Klammer-Kürzel («gestützt auf Artikel 130 der Bundesverfassung»;
 // «nach den Artikeln 4 und 5 des Strafgesetzbuches»). N2b erkennt nur die
-// «(KÜRZEL)»-Form; diese DETERMINISTISCHE, kuratierte Genitiv-Map ergänzt die
-// ausgeschriebene Kurztitel-Form. §1-Grenze: NUR eindeutige amtliche Kurztitel-
-// Genitive — generische Wendungen («des Bundesgesetzes über …», «der Verordnung»)
-// bleiben bewusst OHNE Eintrag (⇒ Link-Unterdrückung, nie ein geratenes Ziel).
-// Jeder Eintrag ist gegen den amtlichen Kurztitel des Ziel-Erlasses (struktur-
-// Sidecar `kopf.titel`) belegt (Verifikation 2026-07-10, §7).
-const GENITIV_GESETZ: ReadonlyArray<readonly [string, FedlexGesetz]> = [
-  ['Bundesverfassung', 'BV'],
-  ['Strafgesetzbuches', 'StGB'], ['Strafgesetzbuchs', 'StGB'],
-  ['Militärstrafgesetzes', 'MStG'],
-  ['Zivilgesetzbuches', 'ZGB'], ['Zivilgesetzbuchs', 'ZGB'],
-  ['Obligationenrechts', 'OR'],
-  ['Strafprozessordnung', 'StPO'],
-  ['Zivilprozessordnung', 'ZPO'],
-  ['Bundesgerichtsgesetzes', 'BGG'],
-  ['Verwaltungsgerichtsgesetzes', 'VGG'],
-  ['Umweltschutzgesetzes', 'USG'],
-  ['Gewässerschutzgesetzes', 'GSCHG'],
-  ['Asylgesetzes', 'ASYLG'],
-  ['Strassenverkehrsgesetzes', 'SVG'],
-  ['Arbeitsgesetzes', 'ArG'],
-  ['Datenschutzgesetzes', 'DSG'],
-  ['Berufsbildungsgesetzes', 'BBG'],
-  ['Versicherungsvertragsgesetzes', 'VVG'],
-  ['Freizügigkeitsgesetzes', 'FZG'],
-  ['Lebensmittelgesetzes', 'LMG'],
-  ['Fusionsgesetzes', 'FusG'],
-  ['Bundespersonalgesetzes', 'BPG'],
-  ['Unfallversicherungsgesetzes', 'UVG'],
-  ['Mehrwertsteuergesetzes', 'MWSTG'],
-  ['Kartellgesetzes', 'KG'],
-];
-const GENITIV_BY_NAME = new Map<string, FedlexGesetz>(GENITIV_GESETZ);
+// «(KÜRZEL)»-Form; die DETERMINISTISCHE, kuratierte Positivliste
+// (`positivliste.ts`, V-7 W2·20) ergänzt die ausgeschriebenen Formen: Kurztitel-
+// Genitive MIT Geltung je Ebene und amtliche Volltitel «Bundesgesetzes/
+// Verordnung [vom Datum] über …». §1-Grenze: generische Wendungen ohne Eintrag
+// («des Gesetzes», «der Verordnung» ohne Titel) bleiben Link-Unterdrückung.
+const GENITIV_GESETZ: ReadonlyArray<readonly [string, FedlexGesetz]> =
+  GENITIV_EINTRAEGE.map((e) => [e.name, e.gesetz] as const);
+const GENITIV_BY_NAME = new Map<string, GenitivEintrag>(GENITIV_EINTRAEGE.map((e) => [e.name, e]));
 // Für die Regex-Alternation: längste zuerst (kein Präfix frisst einen längeren
 // Namen), escaped. Fedlex-HTML trägt in langen Wörtern SOFT HYPHENS (U+00AD,
 // z. B. «Zivilgesetz­bu­ches») — zwischen den Buchstaben wird darum
 // optional ­ toleriert (reine Anzeige-Trennstelle, kein Inhalt).
-export const GENITIV_NAMEN_ESC = [...GENITIV_GESETZ]
-  .map(([n]) => n)
-  .sort((a, b) => b.length - a.length)
-  .map((n) => n.split('').map((c) => c.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('­?'));
+const escRoh = (c: string): string => c.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+const escSoft = (n: string): string => n.split('').map(escRoh).join('­?');
+/** Dieselbe Escapung OHNE die Weichtrenn-Toleranz — die eine Zeile, die den
+ *  Schnellpfad in `spannen.ts` trägt (Herleitung dort an `Z1_ERLASS_HART`). */
+const escHart = (n: string): string => n.split('').map(escRoh).join('');
+const laengsteZuerst = (xs: readonly string[]): string[] => [...xs].sort((a, b) => b.length - a.length);
+const GENITIV_NAMEN = laengsteZuerst(GENITIV_GESETZ.map(([n]) => n));
+export const GENITIV_NAMEN_ESC = GENITIV_NAMEN.map(escSoft);
+/** Weichtrenn-freies Gegenstück (§5: dieselbe Liste, dieselbe Reihenfolge). */
+export const GENITIV_NAMEN_HART = GENITIV_NAMEN.map(escHart);
+/** V-7b: Alternation der amtlichen Titel-Fragmente («über die Alters- und …»),
+ *  längste zuerst; Leerraum im Fragment toleriert beliebigen Whitespace. */
+const TITEL_FRAGMENTE = laengsteZuerst([...new Set(TITEL_EINTRAEGE.map((e) => e.fragment))]);
+export const TITEL_FRAGMENTE_ESC = TITEL_FRAGMENTE.map((f) => f.split(/\s+/).map(escSoft).join('\\s+'));
+/** Weichtrenn-freies Gegenstück (§5: dieselbe Liste, dieselbe Reihenfolge). */
+export const TITEL_FRAGMENTE_HART = TITEL_FRAGMENTE.map((f) => f.split(/\s+/).map(escHart).join('\\s+'));
+const TITEL_BY_KOPF_FRAGMENT = new Map<string, TitelEintrag>(
+  TITEL_EINTRAEGE.map((e) => [`${e.kopf}|${e.fragment}`, e]),
+);
+const normTitelText = (s: string): string => s.replace(/­/g, '').trim().replace(/\s+/g, ' ');
 
 /** Kuratierter ausgeschriebener Genitiv-Name → Fedlex-Kürzel (exakter Treffer;
- *  Soft-Hyphens U+00AD werden vor dem Lookup entfernt — reine Trennstellen). */
-export function erkenneGenitivGesetz(name: string): FedlexGesetz | null {
-  return GENITIV_BY_NAME.get(name.replace(/­/g, '').trim()) ?? null;
+ *  Soft-Hyphens U+00AD werden vor dem Lookup entfernt — reine Trennstellen).
+ *  `ebene` = Ebene des LESENDEN Erlasses: Kurznamen mit Geltung `bund` lösen
+ *  in kantonalen Erlassen NICHT auf (gleichnamiger kantonaler Erlass möglich —
+ *  gemessener Falschlink BE-154.21 «des Datenschutzgesetzes … (KDSG)» → DSG). */
+export function erkenneGenitivGesetz(name: string, ebene: FremdEbene = 'bund'): FedlexGesetz | null {
+  const e = GENITIV_BY_NAME.get(name.replace(/­/g, '').trim());
+  if (!e) return null;
+  return e.geltung === 'alle' || ebene === 'bund' ? e.gesetz : null;
+}
+
+/** V-7b: Kopfwort + amtliches Titel-Fragment → Fedlex-Kürzel (exakter Treffer
+ *  nach Whitespace-Normalisierung). Kopf `Verordnung` nur in Bundeserlassen. */
+export function erkenneTitelGesetz(kopf: string, fragment: string, ebene: FremdEbene = 'bund'): FedlexGesetz | null {
+  const e = TITEL_BY_KOPF_FRAGMENT.get(`${normTitelText(kopf)}|${normTitelText(fragment)}`);
+  if (!e) return null;
+  return titelGeltung(e.kopf) === 'alle' || ebene === 'bund' ? e.gesetz : null;
 }
 
 // ─── M6-D (W2·5b): Zielgesetz eines Fremdgesetz-Chapeaus deterministisch ──────
@@ -135,9 +153,10 @@ export function chapeauZielFremdgesetz(chapeau: string, eigenesKuerzel?: string)
   // (b) Eindeutigkeit: genau EIN Register-Gesetz (bare Kürzel + ausgeschriebener
   //     Genitiv) im Objekt, und das ist das adjazente Ziel.
   const gesetze = new Set<FedlexGesetz>();
-  for (const g of Object.keys(FEDLEX) as FedlexGesetz[]) {
+  for (const token of KUERZEL_TOKENS) {
+    const g = erkenneFedlexGesetz(token)!; // Key oder amtliche Schreibweise (V-8)
     if (KANON(g) === eigen) continue;
-    const esc = g.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const esc = token.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     if (new RegExp(`(?:^|[^0-9A-Za-zÀ-ÿ])${esc}(?![0-9A-Za-zÀ-ÿ])`).test(objekt)) gesetze.add(g);
   }
   for (const [name, g] of GENITIV_GESETZ) {

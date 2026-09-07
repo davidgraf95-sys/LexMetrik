@@ -104,12 +104,13 @@ export function UebersichtBox({ angaben }: { angaben: UebersichtsAngaben }) {
         <span aria-hidden className="shrink-0 text-ink-400 transition-transform group-open:rotate-90">▸</span>
         <span className="min-w-0">
           <span className="font-medium text-ink-700">Übersicht</span>{' '}
-          {/* Ä70 · Sans mit `tabular-nums` statt der Mono-Stimme. Die
+          {/* Ä70 · Sans mit `tabular-nums` statt der Mono-Stimme (seit R6-B,
+              5.9.2026, als `.lc-ziffern` geschrieben — gleiche Rolle). Die
               SR-Nummer bleibt der Fall, für den Mono reserviert ist (Kap. 2.1)
               — aber sie steht hier in EINER Zeile mit Zähl-Substantiven, und
               zwei Schriftstimmen in einer Zeile waren der sichtbare Teil des
               Befunds. Dieselbe Auflösungsrichtung wie S2/Ä-(b) am Kopf. */}
-          <span className="tabular-nums [overflow-wrap:anywhere]">{ruhe}</span>
+          <span className="lc-ziffern [overflow-wrap:anywhere]">{ruhe}</span>
         </span>
       </summary>
 
@@ -188,7 +189,7 @@ export function UebersichtBox({ angaben }: { angaben: UebersichtsAngaben }) {
                 <dt>{z.label}</dt>
                 {/* Kein `truncate`: der Wert bricht um. Das war der schwerste
                     Ist-Befund (bis 284 px stiller Textverlust je Zeile). */}
-                <dd className={z.ziffern ? 'tabular-nums' : undefined}>{z.wert}</dd>
+                <dd className={z.ziffern ? 'lc-ziffern' : undefined}>{z.wert}</dd>
               </div>
             ))}
           </dl>
@@ -214,7 +215,7 @@ export function UebersichtBox({ angaben }: { angaben: UebersichtsAngaben }) {
               // Links, und gilt darum auch für ein künftiges drittes Ziel.
               <a key={l.id} data-v3-uebersicht-link={l.id} href={l.href}
                 target="_blank" rel="noopener noreferrer"
-                className="text-brass-700 hover:underline">
+                className="text-brass-700">
                 {l.zeichen === '↗'
                   ? <>{l.label} <span aria-hidden>↗</span></>
                   : <><span aria-hidden>{l.zeichen}</span> {l.label}</>}

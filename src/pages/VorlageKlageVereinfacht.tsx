@@ -9,7 +9,7 @@ import type { SgPartei } from '../lib/vorlagen/schlichtungsgesuchBs';
 import type { PdfBanner } from '../lib/vorlagen/banner';
 import { BetragsFeld } from '../components/BetragsFeld';
 import { DatumsFeld } from '../components/DatumsFeld';
-import { Checkbox, Field, GruppenTitel, inputCls } from '../components/vorlagen/ui';
+import { Checkbox, Field, GruppenTitel, ListenEditor, NICHT_GESPEICHERT_HINWEIS, inputCls } from '../components/vorlagen/ui';
 import { SelectionGrid } from '../components/ui/SelectionGrid';
 import { GerichtsWahlBlock } from '../components/vorlagen/GerichtsWahlBlock';
 import { useWizardState } from '../components/vorlagen/useWizardState';
@@ -231,16 +231,19 @@ export function VorlageKlageVereinfacht() {
           </Field>
           <div className="space-y-2">
             <GruppenTitel>Weitere Rechtsbegehren <span className="normal-case text-ink-500">(optional)</span></GruppenTitel>
-            {a.weitereRechtsbegehren.map((w, i) => (
-              <div key={i} className="flex gap-2">
-                <input className={inputCls} value={w}
+            {/* R2-F/F1-9: Knopf und Wortlaut waren Kanon, der Behälter fehlte —
+                der ListenEditor bringt ihn und nummeriert die Begehren. */}
+            <ListenEditor
+              element="Begehren"
+              eintraege={a.weitereRechtsbegehren}
+              className="space-y-2"
+              onHinzufuegen={() => set('weitereRechtsbegehren', [...a.weitereRechtsbegehren, ''])}
+              onEntfernen={(i) => set('weitereRechtsbegehren', a.weitereRechtsbegehren.filter((_, j) => j !== i))}
+              kinder={(w, i) => (
+                <input className={inputCls} value={w} aria-label={`Weiteres Rechtsbegehren ${i + 1}`}
                   onChange={(e) => set('weitereRechtsbegehren', a.weitereRechtsbegehren.map((x, j) => j === i ? e.target.value : x))} />
-                <button type="button" className="text-body-s text-danger-700 hover:underline shrink-0"
-                  onClick={() => set('weitereRechtsbegehren', a.weitereRechtsbegehren.filter((_, j) => j !== i))}>entfernen</button>
-              </div>
-            ))}
-            <button type="button" className="lc-btn-outline lc-btn-sm"
-              onClick={() => set('weitereRechtsbegehren', [...a.weitereRechtsbegehren, ''])}>+ Begehren</button>
+              )}
+            />
           </div>
         </div>
       );
@@ -268,35 +271,39 @@ export function VorlageKlageVereinfacht() {
               {!a.begruendungPlatzhalter && (<>
               <div className="space-y-2">
                 <GruppenTitel>Sachverhalt — Tatsachenbehauptungen</GruppenTitel>
-                {a.sachverhalt.map((s, i) => (
-                  <div key={i} className="flex gap-2">
-                    <textarea className={inputCls} rows={2} value={s.text}
+                <ListenEditor
+                  element="Behauptung"
+                  eintraege={a.sachverhalt}
+                  className="space-y-2"
+                  onHinzufuegen={() => set('sachverhalt', [...a.sachverhalt, { text: '' }])}
+                  onEntfernen={(i) => set('sachverhalt', a.sachverhalt.filter((_, j) => j !== i))}
+                  kinder={(s, i) => (
+                    <textarea className={inputCls} rows={2} value={s.text} aria-label={`Behauptung ${i + 1}`}
                       onChange={(e) => set('sachverhalt', a.sachverhalt.map((x, j) => j === i ? { text: e.target.value } : x))} />
-                    <button type="button" className="text-body-s text-danger-700 hover:underline shrink-0 self-start pt-2"
-                      onClick={() => set('sachverhalt', a.sachverhalt.filter((_, j) => j !== i))}>entfernen</button>
-                  </div>
-                ))}
-                <button type="button" className="lc-btn-outline lc-btn-sm"
-                  onClick={() => set('sachverhalt', [...a.sachverhalt, { text: '' }])}>+ Behauptung</button>
+                  )}
+                />
               </div>
               <div className="space-y-2">
                 <GruppenTitel>Beweismittel</GruppenTitel>
-                {a.beweismittel.map((b, i) => (
-                  <div key={i} className="flex flex-wrap gap-2 items-end">
-                    <div className="flex-1 min-w-[12rem]">
-                      <Field label="Bezeichnung"><input className={inputCls} value={b.bezeichnung}
-                        onChange={(e) => set('beweismittel', a.beweismittel.map((x, j) => j === i ? { ...x, bezeichnung: e.target.value } : x))} /></Field>
+                <ListenEditor
+                  element="Beweismittel"
+                  eintraege={a.beweismittel}
+                  className="space-y-2"
+                  onHinzufuegen={() => set('beweismittel', [...a.beweismittel, { bezeichnung: '' }])}
+                  onEntfernen={(i) => set('beweismittel', a.beweismittel.filter((_, j) => j !== i))}
+                  kinder={(b, i) => (
+                    <div className="flex flex-wrap gap-2 items-end">
+                      <div className="flex-1 min-w-[12rem]">
+                        <Field label="Bezeichnung"><input className={inputCls} value={b.bezeichnung}
+                          onChange={(e) => set('beweismittel', a.beweismittel.map((x, j) => j === i ? { ...x, bezeichnung: e.target.value } : x))} /></Field>
+                      </div>
+                      <div className="flex-1 min-w-[12rem]">
+                        <Field label="zum Beweis von" optional><input className={inputCls} value={b.fuer ?? ''}
+                          onChange={(e) => set('beweismittel', a.beweismittel.map((x, j) => j === i ? { ...x, fuer: e.target.value } : x))} /></Field>
+                      </div>
                     </div>
-                    <div className="flex-1 min-w-[12rem]">
-                      <Field label="zum Beweis von" optional><input className={inputCls} value={b.fuer ?? ''}
-                        onChange={(e) => set('beweismittel', a.beweismittel.map((x, j) => j === i ? { ...x, fuer: e.target.value } : x))} /></Field>
-                    </div>
-                    <button type="button" className="text-body-s text-danger-700 hover:underline pb-2.5"
-                      onClick={() => set('beweismittel', a.beweismittel.filter((_, j) => j !== i))}>entfernen</button>
-                  </div>
-                ))}
-                <button type="button" className="lc-btn-outline lc-btn-sm"
-                  onClick={() => set('beweismittel', [...a.beweismittel, { bezeichnung: '' }])}>+ Beweismittel</button>
+                  )}
+                />
                 <p className="text-xs text-ink-500"><NormText text={`Verfügbare Urkunden sind beizulegen (Art. 244 Abs. 3 ZPO) — sie erscheinen automatisch im Beilagenverzeichnis.`} /></p>
               </div>
               </>)}
@@ -346,16 +353,17 @@ export function VorlageKlageVereinfacht() {
                         </>} />
           <div className="space-y-2">
             <GruppenTitel>Weitere Beilagen</GruppenTitel>
-            {a.weitereBeilagen.map((b, i) => (
-              <div key={i} className="flex gap-2">
-                <input className={inputCls} value={b.bezeichnung}
+            <ListenEditor
+              element="Beilage"
+              eintraege={a.weitereBeilagen}
+              className="space-y-2"
+              onHinzufuegen={() => set('weitereBeilagen', [...a.weitereBeilagen, { bezeichnung: '' }])}
+              onEntfernen={(i) => set('weitereBeilagen', a.weitereBeilagen.filter((_, j) => j !== i))}
+              kinder={(b, i) => (
+                <input className={inputCls} value={b.bezeichnung} aria-label={`Weitere Beilage ${i + 1}`}
                   onChange={(e) => set('weitereBeilagen', a.weitereBeilagen.map((x, j) => j === i ? { bezeichnung: e.target.value } : x))} />
-                <button type="button" className="text-body-s text-danger-700 hover:underline shrink-0"
-                  onClick={() => set('weitereBeilagen', a.weitereBeilagen.filter((_, j) => j !== i))}>entfernen</button>
-              </div>
-            ))}
-            <button type="button" className="lc-btn-outline lc-btn-sm"
-              onClick={() => set('weitereBeilagen', [...a.weitereBeilagen, { bezeichnung: '' }])}>+ Beilage</button>
+              )}
+            />
           </div>
           <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-4', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-4')}>
             <Field label="Ort"><input className={inputCls} value={a.ort} onChange={(e) => set('ort', e.target.value)} /></Field>
@@ -367,7 +375,7 @@ export function VorlageKlageVereinfacht() {
       case 'pruefen': return (
         <div className="space-y-5">
           {maengel.map((m, i) => (
-            <div key={i} className="lc-notice-danger">
+            <div role="alert" key={i} className="lc-notice-danger">
               <p className="text-body-s text-danger-700">{m.text}</p>
             </div>
           ))}
@@ -411,10 +419,11 @@ export function VorlageKlageVereinfacht() {
       intro="Erstellt die Klage nach Art. 244 ZPO aus festen Bausteinen: Rechtsbegehren, Streitgegenstand, freiwillige strukturierte Begründung, Beilagen mit Klagebewilligung — inkl. Gerichts-Adressat für alle Kantone (BS: abgenommenes Zivil-/Arbeitsgericht-Routing), Kostenfreiheits-Prüfung und Klagefrist-Berechnung mit Gerichtsferien. Ohne Sprachmodell."
       norms={card?.norms ?? []}
       badge="Papierform · unterschreiben · im Doppel"
-      fussnote="Eingaben werden nicht gespeichert – sie bestehen nur, solange diese Seite geöffnet ist."
+      fussnote={NICHT_GESPEICHERT_HINWEIS}
       zuruecksetzen={zuruecksetzen}
       schritte={SCHRITTE} schritt={schritt} setSchritt={setSchritt}
       fehler={fehler}
+      fehlerJeSchritt={(i) => maengel.filter((m) => m.schritt === i).map((m) => m.text)}
       weiterDeaktiviert={stopp && schritt === 0}
       inhalt={inhalt()}
       vorschau={stopp

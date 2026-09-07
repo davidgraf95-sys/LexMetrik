@@ -1,39 +1,15 @@
 // scripts/check-dispatch-klausel.ts — hält den §0-Pflichtblock lauffähig.
-//
-// Ohne dieses Tor kann jemand den §0-Block umformatieren/umbenennen und
-// `npm run dispatch` bricht erst beim nächsten Auftrag — also genau dann,
-// wenn niemand Zeit hat.
-//
-// SELBSTVALIDIERUNGS-LEKTION (20.7.2026, adversariale Prüfung PR #315):
-// Die erste Fassung prüfte NUR die Markdown-Vorlage. Sie meldete GRÜN
-// («alle 6 Pflichtpunkte vorhanden»), während `npm run dispatch -- pruefung`
-// gleichzeitig ein stiller No-op war (exit 0, null Ausgabe — der Einstiegs-
-// Guard testete process.argv[1] auf 'dispatch.ts', unter vite-node ist argv[1]
-// aber der vite-node-Bin). Das Tor validierte gegen die eigene Ladung: es prüfte
-// das Dokument, nicht das Werkzeug. Genau die Fehlerklasse F2(a), die dieser PR
-// bekämpft — reproduziert in seinem Inneren (§6 Ziff. 7 lit. a).
-//
-// Darum prüft dieses Tor jetzt ZWEI Ebenen:
-//   (A) STRUKTUR — der Block existiert in der Vorlage und trägt die 6 Punkte.
-//   (B) WIRKUNG  — `npm run dispatch -- <klasse>` liefert diesen Block für
-//                  JEDE Auftragsklasse wirklich auf stdout.
-// (B) läuft als echter Subprozess über `npm run` — nicht als Import. Ein Import
-// würde genau die Verpackung überspringen (package.json-Verdrahtung, Einstieg,
-// Argument-Durchreichung), in der der Defekt sass.
-// Ebene (C) — seit 4.8.2026 (Agent-Typen): Die generierten Sub-Agenten-
-// Definitionen `.claude/agents/lex-<klasse>.md` tragen die Klausel eingebaut;
-// der Hook `dispatch-schutz.py` befreit lex-*-Dispatches deshalb von der
-// Prompt-Prüfung. Diese Befreiung ist NUR solange sicher, wie die Dateien
-// byte-gleich mit der Projektion aus dispatch-agents.ts sind — genau das
-// beweist (C). Drift (Hand-Edit, veraltete PALETTE, geänderter §0-Block)
-// ⇒ rot ⇒ `npm run dispatch:agents`.
-// VARIANTEN (seit 7.8.2026, Ent-Regulierung — Freigabe David 7.8.2026): Die
-// read-only-Klassen pruefung/recherche tragen nur die Punkte 1–3; 4–6 setzen
-// Schreibrechte voraus und Punkt 4 (Recovery-COMMIT) widersprach ihrem eigenen
-// TABU «nichts ändern» im selben Prompt. Damit dieses Tor durch den Umbau für
-// KEINEN Altfall blind wird, prüft es die Varianten getrennt und zusätzlich die
-// Byte-Gleichheit der gemeinsamen Punkte 1–3 (§5) — eine still auseinander
-// gelaufene Prüf-Fassung wäre sonst die neue Lücke.
+// Ohne dieses Tor bricht ein umformatierter §0-Block erst beim nächsten Auftrag.
+// 20.7.2026 (PR #315): erste Fassung prüfte nur die Vorlage, meldete GRÜN
+// während `dispatch -- pruefung` ein stiller No-op war (F2(a), §6.7a) — darum
+// zwei Ebenen: (A) STRUKTUR — Block+6 Punkte in der Vorlage. (B) WIRKUNG —
+// `npm run dispatch -- <klasse>` liefert ihn als echter Subprozess (kein Import).
+// (C, 4.8.2026): `.claude/agents/lex-<klasse>.md` trägt die Klausel eingebaut;
+// dispatch-schutz.py befreit lex-*-Dispatches, solange sie byte-gleich zur
+// Projektion aus dispatch-agents.ts sind — das prüft (C).
+// (Varianten, 7.8.2026): read-only-Klassen pruefung/recherche tragen nur
+// Punkte 1–3 (Punkt 4 Recovery-COMMIT widerspräche ihrem TABU); Byte-Gleichheit
+// der gemeinsamen Punkte 1–3 wird separat geprüft (§5).
 import { execFileSync } from 'node:child_process';
 import { existsSync, readFileSync } from 'node:fs';
 import {
@@ -96,10 +72,9 @@ for (const variante of Object.keys(PFLICHT) as Klauselvariante[]) {
   bloecke[variante] = block;
 }
 
-// (A2) Die Punkte 1–3 sind in beiden Fassungen DIESELBEN Bytes (§5). Ohne diese
-// Prüfung könnte die Prüf-Fassung umformuliert werden, ohne dass etwas rot wird
-// — und die Wortlaut-Treue von F4/F2d/F3 hinge wieder an Disziplin. Sie deckt
-// zugleich ab, dass 4–6 im Prüf-Fence NICHT stehen (sonst schert der Vergleich aus).
+// (A2) Punkte 1–3 sind in beiden Fassungen dieselben Bytes (§5) — sonst hinge
+// die Wortlaut-Treue von F4/F2d/F3 an Disziplin; deckt zugleich ab, dass 4–6
+// im Prüf-Fence fehlen.
 if (punkte123(bloecke.pruefung) !== punkte123(bloecke.voll)) {
   rot(
     `Die Punkte 1–3 laufen zwischen Voll- und Prüf-Fence auseinander (${TEMPLATE}).\n\n` +
@@ -117,17 +92,11 @@ if (ohneVariante.length) {
     `  Jede Klasse in KLASSEN braucht eine ausdrückliche Zuordnung 'voll' | 'pruefung'.`);
 }
 
-// (B0b) `varianteVon()` ist der fail-safe Wrapper um VARIANTE — er darf von der
-// Tabelle nicht abweichen.
-//
-// SELBSTVALIDIERUNGS-LEKTION II (7.8.2026, Rotprobe zu diesem Umbau): Ebene (B)
-// leitete ihre ERWARTUNG zuerst aus `varianteVon()` ab — also aus genau der
-// Funktion, die sie prüfen soll. In der Sabotage-Probe (`varianteVon` gibt immer
-// 'voll' zurück) meldete das Tor darum GRÜN, obwohl die Varianten-Wahl komplett
-// tot war: es fragte den Defekt, was er erwarte, und bekam Zustimmung. Dieselbe
-// Fehlerklasse F2(a) wie am 20.7.2026, eine Ebene höher. Seither kommt die
-// Erwartung aus der DEKLARATIVEN Tabelle VARIANTE, und der Wrapper wird
-// zusätzlich hier gegen sie geprüft.
+// (B0b) `varianteVon()` ist der fail-safe Wrapper um VARIANTE — darf nicht abweichen.
+// 7.8.2026 Rotprobe: Ebene (B) leitete die ERWARTUNG aus varianteVon() selbst ab;
+// Sabotage (Funktion immer 'voll') meldete GRÜN trotz toter Varianten-Wahl (F2(a)
+// eine Ebene höher). Seither Erwartung aus der Tabelle VARIANTE, Wrapper hier
+// zusätzlich geprüft.
 const wrapperDrift = Object.keys(VARIANTE).filter((k) => varianteVon(k) !== VARIANTE[k]);
 if (wrapperDrift.length) {
   rot(
@@ -137,18 +106,11 @@ if (wrapperDrift.length) {
 }
 
 /**
- * (B0c) SOLL-LISTE der read-only-Klassen — die einzige Menge, die je die
- * verkürzte Klausel tragen darf.
- *
- * WARUM ALS KONSTANTE HIER (Befund B3 der Gegenprüfung 7.8.2026): Die Erwartung
- * lebte nur im Vitest. Stuft jemand eine SCHREIBENDE Klasse auf 'pruefung' herab
- * (Probe: daten → pruefung) und regeneriert die Agent-Dateien, wird alles
- * konsistent — Tabelle, Wrapper, Generator, Projektion — und das Tor meldete
- * GRÜN. Konsistenz ist eben kein Beleg für Richtigkeit: `daten` ist der
- * Risikopfad, und ihm die Punkte 4/5/6 zu nehmen (Recovery, Kollisionssonden,
- * Merge-Verbot) ist genau die Änderung, die niemand mechanisch durchwinken darf.
- * Die Liste steht darum im TOR und nicht nur im Test: eine Herabstufung ist ein
- * bewusster Reglement-Entscheid und muss hier sichtbar mitgeändert werden.
+ * (B0c) SOLL-LISTE der read-only-Klassen — einzige Menge mit verkürzter Klausel.
+ * Befund B3 (Gegenprüfung 7.8.2026): Erwartung lebte nur im Vitest — eine
+ * schreibende Klasse (z. B. daten) auf 'pruefung' herabgestuft + Agent-Dateien
+ * regeneriert wäre konsistent und GRÜN, obwohl ihr die Punkte 4/5/6 fehlten.
+ * Darum als Konstante hier: eine Herabstufung ist Reglement-Entscheid, nicht Mechanik.
  */
 const READONLY_SOLL = ['pruefung', 'recherche'] as const;
 
@@ -177,20 +139,16 @@ if (unerlaubtHochgestuft.length) {
 }
 
 /**
- * (B0d) Der Hook-Vorschlag erkennt die Prüf-Fassung an Kopfzeile UND dem
- * read-only-TABU der Klasse (Härtung zu Befund B1). Diese zweite Bedingung ist
- * ein WÖRTLICHES Zitat aus KLASSEN — wird das TABU dort umformuliert, erkennt
- * der Hook echte Prüf-Dispatches nicht mehr. Das ist fail-safe (er verlangt dann
- * sechs Punkte), aber es entwertet die Variante still. Darum hier festgenagelt.
+ * (B0d) Hook erkennt Prüf-Fassung an Kopfzeile + read-only-TABU (Härtung zu
+ * Befund B1) — ein wörtliches Zitat aus KLASSEN. Wird das TABU dort umformuliert,
+ * entwertet das die Variante still (fail-safe, aber unbemerkt) — darum hier fixiert.
  */
 const HOOK_TABU: Record<string, string> = {
   pruefung: 'TABU: nichts ändern',
   recherche: 'TABU: kein Code, keine Repo-Änderung',
 };
-// Geprüft wird die aktive Hook-Datei, sofern sie die Varianten-Erkennung
-// SCHON KENNT (Marker `PRUEF_KOPF`). Der frühere Vorschlags-Pfad
-// scripts/hooks-vorschlag-dispatch-schutz.py ist seit seiner Anwendung
-// (QS-EFFIZIENZ Pkt. 2, 14.8.2026) gelöscht — eine Quelle statt zwei (§5).
+// Geprüft wird die aktive Hook-Datei mit Marker `PRUEF_KOPF`. Der frühere
+// Vorschlags-Pfad ist seit 14.8.2026 (QS-EFFIZIENZ Pkt. 2) gelöscht (§5).
 const HOOK_DATEIEN = ['.claude/hooks/dispatch-schutz.py'];
 const HOOK_MARKER = 'PRUEF_KOPF';
 
@@ -219,11 +177,8 @@ for (const datei of HOOK_DATEIEN.filter((d) => existsSync(d))) {
   }
 }
 
-// (B0e, Gegenprüfungs-Auflage B2-2, 14.8.2026): Ein Tor, das 0 Dateien prüft,
-// kann nie scheitern und ist damit kein Tor (§6.7) — es meldete bislang still
-// GRÜN, wenn HOOK_DATEIEN leerlief oder keine Datei den Marker trug (genau der
-// Zustand, den die Löschung von scripts/hooks-vorschlag-dispatch-schutz.py
-// oben erzeugt hätte, wäre die aktive Hook-Datei je ohne Marker).
+// (B0e, Auflage B2-2, 14.8.2026): 0 geprüfte Dateien = ein Tor, das nie
+// scheitern kann (§6.7) — bislang still GRÜN bei leerem HOOK_DATEIEN/Marker.
 if (hookGeprueft.length === 0) {
   rot(
     `Keine Hook-Datei geprüft (0 von ${HOOK_DATEIEN.length} in HOOK_DATEIEN existiert/trägt den Marker).\n\n` +
@@ -265,9 +220,8 @@ for (const klasse of Object.keys(KLASSEN)) {
       `  (Die Vorlage trägt sie — der Generator gibt sie nicht weiter.)`);
   }
 
-  // Die read-only-Klassen müssen die Prüf-Fassung bekommen, nicht still den
-  // Voll-Block: eine kaputte Varianten-Wahl ist sonst unsichtbar, weil der
-  // Voll-Block die Punkte 1–3 ja enthält und alle Prüfungen oben bestünde.
+  // read-only-Klassen müssen die Prüf-Fassung bekommen; sonst wäre eine
+  // kaputte Varianten-Wahl unsichtbar (Voll-Block enthält Punkte 1–3 mit).
   if (variante === 'pruefung' && P456.some(([, re]) => re.test(ausgabe))) {
     rot(
       `\`npm run dispatch -- ${klasse}\` ist als read-only-Klasse auf die Prüf-Variante\n` +

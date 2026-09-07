@@ -1,6 +1,6 @@
 import { KANTONE } from '../../lib/kantone';
 import { NormText } from '../NormText';
-import { BeispielChips, Checkbox, EckdatenKachel, Field, GruppenTitel, inputCls } from '../vorlagen/ui';
+import { BeispielChips, Checkbox, EckdatenKachel, Field, GruppenTitel, inputCls, ListenEditor } from '../vorlagen/ui';
 import { ErgebnisBlock } from '../ErgebnisBlock';
 import { useState } from 'react';
 import { format } from 'date-fns';
@@ -23,6 +23,7 @@ import { usePermalinkFelder } from '../../hooks/usePermalinkFelder';
 import { IcsExportButton } from '../IcsExportButton';
 import { getStandardKanton } from '../../lib/einstellungen';
 import { usePaneKlasse } from '../layout/PaneKontext';
+import { datumOderStrich } from '../ui/datumText';
 
 const VERJ_DISCLAIMER =
   'Automatisierte Orientierungsberechnung der Verjährung (Art. 60, 67, 127 ff. OR, Stand Revision 1.1.2020) – ' +
@@ -60,13 +61,17 @@ const STILLSTAND_GRUENDE = [
 ];
 
 
-const fmtISO = (s?: string) => (s ? s.split('-').reverse().join('.') : '–');
 
 // Eckdaten-Karte für eine Verjährungsfrist; die massgebliche (= frühere)
 // Frist erhält Goldrand und Badge.
 function FristKarte({ label, sub, wert, massgeblich }: { label: string; sub: string; wert: string; massgeblich: boolean }) {
   return (
-    <div className={`lc-tile ${massgeblich ? 'border-brass-500 border-t-[3px]' : ''}`}>
+    // R2-F/F1-5: war `border-brass-500 border-t-[3px]` — das färbte ALLE vier
+    // Kanten messingfarben, während dieselbe «massgeblich»-Markierung überall
+    // sonst (EckdatenKachel, Beurkundung, Prozesskosten …) nur die Oberkante
+    // trägt. Kanon ist `.lc-akzent-brass` (index.css), Seitenkanten bleiben
+    // `--line`.
+    <div className={`lc-tile ${massgeblich ? 'lc-akzent-brass' : ''}`}>
       <div className="flex items-start justify-between gap-2 mb-1">
         <p className="text-xs text-ink-500">{label}</p>
         {massgeblich && <span className="lc-badge lc-badge-massgeblich shrink-0">massgeblich</span>}
@@ -152,13 +157,13 @@ export function VerjaehrungForm() {
 
   const eingaben: Record<string, string> = {
     'Anspruchstyp': R.label,
-    [beginnLabel]: fmtISO(beginnRelativ),
-    ...(hatAbsolut && beginnAbsolut ? { [absolutLabel]: fmtISO(beginnAbsolut) } : {}),
-    'Stichtag': fmtISO(stichtag),
+    [beginnLabel]: datumOderStrich(beginnRelativ),
+    ...(hatAbsolut && beginnAbsolut ? { [absolutLabel]: datumOderStrich(beginnAbsolut) } : {}),
+    'Stichtag': datumOderStrich(stichtag),
     'Kanton (Feiertage, Erfüllungsort)': kanton,
-    ...(stillstaende.length ? { 'Stillstand (Art. 134 OR)': stillstaende.map((s) => `${fmtISO(s.von)}–${fmtISO(s.bis)}`).join('; ') } : {}),
-    ...(unterbrechungen.length ? { 'Unterbrechungen (Art. 135 OR)': unterbrechungen.map((u) => `${U_TYPEN.find((t) => t.code === u.typ)?.label} am ${fmtISO(u.datum)}`).join('; ') } : {}),
-    ...(verzichtAn && verzichtDatum ? { 'Einredeverzicht (Art. 141 OR)': `vom ${fmtISO(verzichtDatum)}` } : {}),
+    ...(stillstaende.length ? { 'Stillstand (Art. 134 OR)': stillstaende.map((s) => `${datumOderStrich(s.von)}–${datumOderStrich(s.bis)}`).join('; ') } : {}),
+    ...(unterbrechungen.length ? { 'Unterbrechungen (Art. 135 OR)': unterbrechungen.map((u) => `${U_TYPEN.find((t) => t.code === u.typ)?.label} am ${datumOderStrich(u.datum)}`).join('; ') } : {}),
+    ...(verzichtAn && verzichtDatum ? { 'Einredeverzicht (Art. 141 OR)': `vom ${datumOderStrich(verzichtDatum)}` } : {}),
   };
 
   // FAHRPLAN-PRAXIS 1.2: Mandats-Referenz für den PDF-Kopf (optional).
@@ -217,53 +222,59 @@ export function VerjaehrungForm() {
       {/* Unterbrechungen */}
       <div className="space-y-2">
         <GruppenTitel><NormText text={`Unterbrechungen (Art. 135 OR) – Frist beginnt neu`} /></GruppenTitel>
-        {unterbrechungen.map((u, i) => (
-          <div key={i} className="flex flex-wrap items-center gap-2 pl-1">
-            <select value={u.typ} onChange={(e) => setU(i, { typ: e.target.value as UnterbrechungsTyp })} className={inputCls + ' sm:max-w-xs'}>
-              {U_TYPEN.map((t) => <option key={t.code} value={t.code}>{t.label}</option>)}
-            </select>
-            <span className="text-body-s text-ink-500">am</span>
-            <DatumsFeld value={u.datum} onChange={(v) => setU(i, { datum: v })} className={inputCls} wrapperClassName="w-full sm:w-44" />
-            {u.typ === 'klage_schlichtung' && (
-              <>
-                <span className="text-body-s text-ink-500">rechtskräftig erledigt am</span>
-                <DatumsFeld value={u.prozessEnde ?? ''} onChange={(v) => setU(i, { prozessEnde: v || undefined })} className={inputCls} wrapperClassName="w-full sm:w-44" />
-                <label className="flex items-center gap-1.5 text-body-s cursor-pointer text-ink-700">
-                  <input type="checkbox" checked={u.mitUrteil ?? false} onChange={(e) => setU(i, { mitUrteil: e.target.checked })} />
-                  durch Urteil (→ 10 Jahre)
-                </label>
-              </>
-            )}
-            <button type="button" onClick={() => setUnterbrechungen((arr) => arr.filter((_, j) => j !== i))}
-              className="text-body-s text-danger-700 hover:underline">Entfernen</button>
-          </div>
-        ))}
-        <button type="button" onClick={() => setUnterbrechungen((arr) => [...arr, { typ: 'anerkennung', datum: '' }])}
-          className="lc-btn-outline lc-btn-sm">
-          + Unterbrechung hinzufügen
-        </button>
+        {/* R2-F/F1-9: die beiden Repeater dieser Fläche standen als nackte
+            `flex`-Zeilen ohne Behälter da; Kanon ist der ListenEditor
+            (lc-panel je Eintrag, «entfernen» klein, «+ <Element>»). */}
+        <ListenEditor
+          element="Unterbrechung"
+          eintraege={unterbrechungen}
+          className="space-y-2"
+          onHinzufuegen={() => setUnterbrechungen((arr) => [...arr, { typ: 'anerkennung', datum: '' }])}
+          onEntfernen={(i) => setUnterbrechungen((arr) => arr.filter((_, j) => j !== i))}
+          kinder={(u, i) => (
+            <div className="flex flex-wrap items-center gap-2">
+              <select value={u.typ} onChange={(e) => setU(i, { typ: e.target.value as UnterbrechungsTyp })} className={inputCls + ' sm:max-w-xs'}>
+                {U_TYPEN.map((t) => <option key={t.code} value={t.code}>{t.label}</option>)}
+              </select>
+              <span className="text-body-s text-ink-500">am</span>
+              <DatumsFeld value={u.datum} onChange={(v) => setU(i, { datum: v })} className={inputCls} wrapperClassName="w-full sm:w-44" />
+              {u.typ === 'klage_schlichtung' && (
+                <>
+                  <span className="text-body-s text-ink-500">rechtskräftig erledigt am</span>
+                  <DatumsFeld value={u.prozessEnde ?? ''} onChange={(v) => setU(i, { prozessEnde: v || undefined })} className={inputCls} wrapperClassName="w-full sm:w-44" />
+                  <Checkbox
+                    checked={u.mitUrteil ?? false}
+                    onChange={(v) => setU(i, { mitUrteil: v })}
+                    label="durch Urteil (→ 10 Jahre)"
+                  />
+                </>
+              )}
+            </div>
+          )}
+        />
       </div>
 
       {/* Stillstand */}
       <div className="space-y-2">
         <GruppenTitel><NormText text={`Stillstand / Hemmung (Art. 134 OR) – Uhr pausiert`} /></GruppenTitel>
-        {stillstaende.map((s, i) => (
-          <div key={i} className="flex flex-wrap items-center gap-2 pl-1">
-            <select value={s.grund ?? STILLSTAND_GRUENDE[0]} onChange={(e) => setStillstaende((arr) => arr.map((x, j) => (j === i ? { ...x, grund: e.target.value } : x)))} className={inputCls + ' sm:max-w-xs'}>
-              {STILLSTAND_GRUENDE.map((g) => <option key={g} value={g}>{g}</option>)}
-            </select>
-            <span className="text-body-s text-ink-500">von</span>
-            <DatumsFeld value={s.von} onChange={(v) => setStillstaende((arr) => arr.map((x, j) => (j === i ? { ...x, von: v } : x)))} className={inputCls} wrapperClassName="w-full sm:w-44" />
-            <span className="text-body-s text-ink-500">bis</span>
-            <DatumsFeld value={s.bis} onChange={(v) => setStillstaende((arr) => arr.map((x, j) => (j === i ? { ...x, bis: v } : x)))} className={inputCls} wrapperClassName="w-full sm:w-44" />
-            <button type="button" onClick={() => setStillstaende((arr) => arr.filter((_, j) => j !== i))}
-              className="text-body-s text-danger-700 hover:underline">Entfernen</button>
-          </div>
-        ))}
-        <button type="button" onClick={() => setStillstaende((arr) => [...arr, { von: '', bis: '', grund: STILLSTAND_GRUENDE[0] }])}
-          className="lc-btn-outline lc-btn-sm">
-          + Stillstandsperiode hinzufügen
-        </button>
+        <ListenEditor
+          element="Stillstandsperiode"
+          eintraege={stillstaende}
+          className="space-y-2"
+          onHinzufuegen={() => setStillstaende((arr) => [...arr, { von: '', bis: '', grund: STILLSTAND_GRUENDE[0] }])}
+          onEntfernen={(i) => setStillstaende((arr) => arr.filter((_, j) => j !== i))}
+          kinder={(s, i) => (
+            <div className="flex flex-wrap items-center gap-2">
+              <select value={s.grund ?? STILLSTAND_GRUENDE[0]} onChange={(e) => setStillstaende((arr) => arr.map((x, j) => (j === i ? { ...x, grund: e.target.value } : x)))} className={inputCls + ' sm:max-w-xs'}>
+                {STILLSTAND_GRUENDE.map((g) => <option key={g} value={g}>{g}</option>)}
+              </select>
+              <span className="text-body-s text-ink-500">von</span>
+              <DatumsFeld value={s.von} onChange={(v) => setStillstaende((arr) => arr.map((x, j) => (j === i ? { ...x, von: v } : x)))} className={inputCls} wrapperClassName="w-full sm:w-44" />
+              <span className="text-body-s text-ink-500">bis</span>
+              <DatumsFeld value={s.bis} onChange={(v) => setStillstaende((arr) => arr.map((x, j) => (j === i ? { ...x, bis: v } : x)))} className={inputCls} wrapperClassName="w-full sm:w-44" />
+            </div>
+          )}
+        />
       </div>
 
       {/* Verzicht */}
@@ -288,32 +299,34 @@ export function VerjaehrungForm() {
             <FristKarte
               label={hatAbsolut ? `Relative Frist – ${REGIME[regime].relativJahre} Jahre` : `Frist – ${REGIME[regime].relativJahre} Jahre`}
               sub={`ab ${beginnLabel}`}
-              wert={ergebnis.relativEndeISO ? fmtISO(ergebnis.relativEndeISO) : 'steht still (Art. 138 Abs. 1)'}
+              wert={ergebnis.relativEndeISO ? datumOderStrich(ergebnis.relativEndeISO) : 'steht still (Art. 138 Abs. 1)'}
               massgeblich={hatAbsolut && ergebnis.massgeblicheFrist === 'relativ'}
             />
             {hatAbsolut && (
               <FristKarte
                 label={`Absolute Frist – ${REGIME[regime].absolutJahre} Jahre`}
                 sub={`ab ${absolutLabel}`}
-                wert={ergebnis.absolutEndeISO ? fmtISO(ergebnis.absolutEndeISO) : '–'}
+                wert={ergebnis.absolutEndeISO ? datumOderStrich(ergebnis.absolutEndeISO) : '–'}
                 massgeblich={ergebnis.massgeblicheFrist === 'absolut'}
               />
             )}
-            <EckdatenKachel akzent num label="Verjährungseintritt"
-              wert={ergebnis.verjaehrungISO ? `${fmtISO(ergebnis.verjaehrungISO)} · 24.00 Uhr` : 'noch offen'} />
+            {/* LM-034: «noch offen» ist ein Satz, keine Zahl — Mono nur, wenn
+                ein Datum steht (DESIGN-REGLEMENT §4b(e)). */}
+            <EckdatenKachel akzent num={!!ergebnis.verjaehrungISO} label="Verjährungseintritt"
+              wert={ergebnis.verjaehrungISO ? `${datumOderStrich(ergebnis.verjaehrungISO)} · 24.00 Uhr` : 'noch offen'} />
             <div className="lc-tile">
-              <p className="text-xs text-ink-500 mb-1">Am Stichtag ({fmtISO(stichtag)})</p>
+              <p className="text-xs text-ink-500 mb-1">Am Stichtag ({datumOderStrich(stichtag)})</p>
               <p className="text-body-l font-semibold">
                 {ergebnis.status !== 'ok'
                   ? <span className="text-ink-500">Eingaben unvollständig</span>
                   : ergebnis.verjaehrtAmStichtag
                     ? <span className="text-danger-700"><NormText text={`verjährt (Einrede, Art. 142 OR)`} /></span>
-                    : <span className="text-sage-700">nicht verjährt</span>}
+                    : <span className="text-ok-text">nicht verjährt</span>}
               </p>
             </div>
           </div>
           {ergebnis.verzichtBisISO && (
-            <p className="text-body-s text-ink-500 num">Einredeverzicht wirkt bis {fmtISO(ergebnis.verzichtBisISO)} (Art. 141 OR).</p>
+            <p className="text-body-s text-ink-500 num">Einredeverzicht wirkt bis {datumOderStrich(ergebnis.verzichtBisISO)} (Art. 141 OR).</p>
           )}
 
           <ErgebnisAnzeige titel="Verjährung (Art. 60, 67, 127 ff. OR)" ergebnis={ergebnis} />

@@ -1,5 +1,6 @@
 import { datumAnzeige } from '../../../components/rechtsprechung/format';
 import { KanteMitVorschau } from '../../../components/verzahnung/KanteMitVorschau';
+import { GruppenKopf } from '../../../components/ui/GruppenKopf';
 import {
   entscheidDatum, klassifiziereFassungsBezug, revisionFuerToken,
   type ArtikelRevision, type RevisionShard,
@@ -234,15 +235,23 @@ export function PanelEntscheide({
         <div className="px-2.5 py-1">
           {gruppen.map(([status, liste]) => (
             <section key={status} data-v3-panel-gruppe={status} className="pt-2 first:pt-1">
-              <p className="lc-overline" title={`${STATUS_LABEL[status]} — ${liste.length} Fundstelle(n) an ${artikelLabel ?? bestimmungDativ(bestimmungsWort)}`}>
-                {KLASSE_KURZ[status]}
-                <span className="num tabular-nums ml-1 font-normal normal-case text-ink-500">{liste.length}</span>
-                {/* Befund 6b: EIN Hinweis je Gruppe, nicht je Zeile (Ä106). */}
-                {traegtWeiterzugHinweis(liste) && (
+              {/* B3-1 (R3-β): dichte Gestalt des EINEN Gruppenkopfs
+                  (`ui/GruppenKopf`). Der Weiterzugs-Hinweis ist die `marke` am
+                  ZEILENENDE — Befund 6b: EIN Hinweis je Gruppe, nicht je Zeile
+                  (Ä106). Sein `normal-case` bleibt (anders als am Zähler ist es
+                  dort NICHT tot: `text-transform: uppercase` bildet «ⓘ»
+                  U+24D8 auf «Ⓘ» U+24BE ab). */}
+              <GruppenKopf
+                als="p" dicht
+                title={`${STATUS_LABEL[status]} — ${liste.length} Fundstelle(n) an ${artikelLabel ?? bestimmungDativ(bestimmungsWort)}`}
+                titel={KLASSE_KURZ[status]}
+                zahl={liste.length}
+                markeStellung="rechts"
+                marke={traegtWeiterzugHinweis(liste) ? (
                   <span aria-label={WEITERZUG_ERKLAERUNG} title={WEITERZUG_ERKLAERUNG}
                     className="ml-1 normal-case font-normal text-ink-400">ⓘ</span>
-                )}
-              </p>
+                ) : undefined}
+              />
               {/* KEINE Portionierung, kein «weitere 5»: die Liste im Panel darf
                   senkrecht wachsen, das Panel scrollt ohnehin. Die Kappung am
                   Artikelfuss war eine Folge der festen Zeilenhöhe (CLS), nicht

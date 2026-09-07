@@ -10,7 +10,7 @@ import {
 import type { PdfBanner } from '../lib/vorlagen/banner';
 import { BetragsFeld } from '../components/BetragsFeld';
 import { DatumsFeld } from '../components/DatumsFeld';
-import { Checkbox, Field, GruppenTitel, inputCls, NormLink } from '../components/vorlagen/ui';
+import { Checkbox, Field, GruppenTitel, inputCls, ListenEditor, NormLink } from '../components/vorlagen/ui';
 import { SelectionGrid } from '../components/ui/SelectionGrid';
 import { useWizardState } from '../components/vorlagen/useWizardState';
 import { VariantenKopf } from '../components/vorlagen/VariantenKopf';
@@ -143,7 +143,7 @@ export function VorlageMietvertrag() {
                   <DatumsFeld value={a.hmDatum ?? ''} onChange={(v) => set('hmDatum', v || undefined)} className={inputCls} />
                 </Field>
                 <Field label="Hauptmietzins netto (CHF/Monat)" hint="Vergleichsgrösse für den Missbrauchs-Check (Art. 262 Abs. 2 lit. b)">
-                  <input className={inputCls + ' num'} inputMode="decimal" value={a.hmMietzinsCHF ?? ''} onChange={(e) => set('hmMietzinsCHF', e.target.value || undefined)} placeholder="z. B. 1500" />
+                  <BetragsFeld className={inputCls + ' num'} value={a.hmMietzinsCHF ?? ''} onChange={(v) => set('hmMietzinsCHF', v || undefined)} placeholder="z. B. 1'500" />
                 </Field>
                 <Field label="Zustimmung des Hauptvermieters" hint="formfrei gültig — beweishalber schriftlich festhalten">
                   <select className={inputCls} value={a.zustimmungStatus ?? 'nicht_angefragt'} onChange={(e) => set('zustimmungStatus', e.target.value as MvAntworten['zustimmungStatus'])}>
@@ -307,22 +307,30 @@ export function VorlageMietvertrag() {
             )}
             {a.mietzinsModell === 'staffel' && (
               <div className="space-y-2">
-                {(a.staffeln ?? []).map((s, i) => (
-                  <div key={i} className={pk('grid grid-cols-1 sm:grid-cols-[1fr_10rem_auto] gap-2 items-end', 'grid grid-cols-1 @xl/pane:grid-cols-[1fr_10rem_auto] gap-2 items-end')}>
-                    <Field label={i === 0 ? 'Erhöhung ab' : ''}>
-                      <DatumsFeld value={s.ab} onChange={(v) => setStaffel(i, { ab: v })} className={inputCls} />
-                    </Field>
-                    <Field label={i === 0 ? 'Betrag (CHF/Monat)' : ''}>
-                      <BetragsFeld className={inputCls + ' num'} value={s.erhoehungCHF} onChange={(v) => setStaffel(i, { erhoehungCHF: v } )} placeholder="z. B. 50" />
-                    </Field>
-                    <button type="button" onClick={() => set('staffeln', (a.staffeln ?? []).filter((_, j) => j !== i))}
-                      className="text-body-s text-danger-700 hover:underline pb-2.5">entfernen</button>
-                  </div>
-                ))}
-                {(a.staffeln?.length ?? 0) < 5 && (
-                  <button type="button" onClick={() => set('staffeln', [...(a.staffeln ?? []), { ab: '', erhoehungCHF: '' }])}
-                    className="lc-btn-outline lc-btn-sm">+ Staffel</button>
-                )}
+                {/* R2-F/F1-9: Behälter kommt neu vom ListenEditor; die
+                    Höchstzahl 5 steuert `hoechstens` (bisher eine Bedingung
+                    um den Knopf herum — gleiche Wirkung, eine Stelle). Die
+                    Feld-Labels standen nur an der ERSTEN Zeile und fehlten
+                    darunter; jede Zeile trägt sie jetzt, weil der Panel-Kanon
+                    die Zeilen sichtbar trennt. */}
+                <ListenEditor
+                  element="Staffel"
+                  eintraege={a.staffeln ?? []}
+                  className="space-y-2"
+                  hoechstens={5}
+                  onHinzufuegen={() => set('staffeln', [...(a.staffeln ?? []), { ab: '', erhoehungCHF: '' }])}
+                  onEntfernen={(i) => set('staffeln', (a.staffeln ?? []).filter((_, j) => j !== i))}
+                  kinder={(s, i) => (
+                    <div className={pk('grid grid-cols-1 sm:grid-cols-[1fr_10rem] gap-2 items-end', 'grid grid-cols-1 @xl/pane:grid-cols-[1fr_10rem] gap-2 items-end')}>
+                      <Field label="Erhöhung ab">
+                        <DatumsFeld value={s.ab} onChange={(v) => setStaffel(i, { ab: v })} className={inputCls} />
+                      </Field>
+                      <Field label="Betrag (CHF/Monat)">
+                        <BetragsFeld className={inputCls + ' num'} value={s.erhoehungCHF} onChange={(v) => setStaffel(i, { erhoehungCHF: v } )} placeholder="z. B. 50" />
+                      </Field>
+                    </div>
+                  )}
+                />
                 <p className="text-xs text-ink-500">Höchstens eine Erhöhung pro Jahr; Beträge in Franken (<NormLink artikel="Art. 269c OR" />).</p>
               </div>
             )}
@@ -436,7 +444,7 @@ export function VorlageMietvertrag() {
       case 'pruefen': return (
         <div className="space-y-5">
           {gates.blocker.length > 0 && (
-            <div className="lc-notice-danger space-y-1">
+            <div role="alert" className="lc-notice-danger space-y-1">
               <p className="lc-overline text-danger-700 mb-1">Vor der Ausgabe zu beheben</p>
               {gates.blocker.map((b, i) => <p key={i} className="text-body-s text-danger-700">• <NormText text={b} /></p>)}
             </div>
@@ -500,6 +508,7 @@ export function VorlageMietvertrag() {
       zuruecksetzen={zuruecksetzen}
       schritte={SCHRITTE} schritt={schritt} setSchritt={setSchritt}
       fehler={fehler}
+      fehlerJeSchritt={fehlerImSchritt}
       kopfSchalter={<VariantenKopf detailgrad={a.detailgrad} onDetailgrad={(v) => set('detailgrad', v)} />}
       inhalt={inhalt()}
       vorschau={<VorschauPanel ergebnis={ergebnis} direktExport={{

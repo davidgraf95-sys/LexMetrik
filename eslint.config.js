@@ -5,6 +5,49 @@ import reactRefresh from 'eslint-plugin-react-refresh'
 import tseslint from 'typescript-eslint'
 import { defineConfig, globalIgnores } from 'eslint/config'
 
+// ── ARIA_ZUSTANDSNAME · zugänglicher Name darf den Zustand nicht mitführen ───
+// (QS-UI Teilpass (e), §17-Sweep aus dem Vorfall vom 4.9.2026.)
+//
+// BEFUND, gemessen an /gesetze/bund/GEBV_HREG (11 Artikel, kleinster Erlass):
+// `aria-label={offen ? 'Artikel einklappen' : 'Artikel ausklappen'}` neben
+// `aria-expanded` — zwölf Knöpfe mit WORTGLEICHEM Namen auf einer Seite (auf
+// dem OR wären es 1099). Drei Schäden, alle WCAG 4.1.2:
+//   1. der Name benennt nicht, WAS bedient wird → in der Knopf-Liste eines
+//      Screenreaders sind die Knöpfe ununterscheidbar;
+//   2. der Zustand steht doppelt — einmal in `aria-expanded`, einmal im Namen
+//      («Artikel einklappen, erweitert»);
+//   3. der Name WECHSELT beim Klick → Sprachsteuerung («klicke Artikel
+//      einklappen») zielt danach auf einen Namen, den es nicht mehr gibt.
+// Richtig ist: der Name benennt konstant das Ding, das Zustands-Attribut
+// benennt den Zustand.
+//
+// ZWEI Verengungen halten die Regel falsch-rot-frei (§6.7 «ein flackerndes Tor
+// ist schlechter als keines»), beide am Bestand gemessen:
+//   · nur wo ein Zustands-Attribut DANEBEN steht — ohne aria-expanded/pressed
+//     darf ein Name selbstverständlich die Lage beschreiben;
+//   · nur wenn BEIDE Zweige String-Literale sind. Zwei fest verdrahtete Namen
+//     nebeneinander sind praktisch immer «der Name trägt den Zustand». Ein
+//     datenabhängiger Name (`waehlbar ? name(k) : `${name(k)} — keine Erlasse``
+//     in SchweizKarte.tsx, neben `aria-pressed`) fällt damit heraus: die
+//     Bedingung ist die Datenlage, nicht der Zustand, und der Name ist je
+//     Kanton stabil. Vor dieser zweiten Verengung war genau das der einzige
+//     Falsch-Treffer des ersten Laufs.
+// Rot-Beweis (Kommando + Ausgabe) im PR-Body.
+const ARIA_ZUSTANDSNAME = {
+  selector: 'JSXOpeningElement:has(JSXAttribute[name.name=/^aria-(expanded|pressed|selected|checked)$/]) > JSXAttribute[name.name="aria-label"] > JSXExpressionContainer > ConditionalExpression[consequent.type="Literal"][alternate.type="Literal"]',
+  message: 'WCAG 4.1.2: aria-label darf den Zustand nicht mitführen, wenn aria-expanded/pressed/selected/checked ihn schon trägt — konstanter Name, der das BEDIENTE Ding benennt (Zustand bleibt beim ARIA-Attribut).',
+}
+
+// R2-Selektoren des Normtext-Lesers (Herleitung unten am Block). Als Konstante,
+// weil `no-restricted-syntax` in Flat-Config nicht MERGT: ein späterer Block
+// ERSETZT die Optionen eines früheren für dieselbe Datei. Der Leser-Block muss
+// ARIA_ZUSTANDSNAME darum ausdrücklich mitführen, sonst gälte dort nur noch die
+// eine oder die andere Regel — still.
+const NORMTEXT_MAXW = [
+  { selector: 'Literal[value=/max-w-\\[[0-9.]+rem\\]/]', message: 'R2 (Linien-/Typo-Kanon): keine arbitrary max-w-[…rem] im Normtext-Reader — nur max-w-reading / max-w-content (Token).' },
+  { selector: 'TemplateElement[value.raw=/max-w-\\[[0-9.]+rem\\]/]', message: 'R2 (Linien-/Typo-Kanon): keine arbitrary max-w-[…rem] im Normtext-Reader — nur max-w-reading / max-w-content (Token).' },
+]
+
 export default defineConfig([
   // .claude: Agent-Worktrees (isolierte Arbeitskopien) nicht mitlinten —
   // sonst kippen Läufe durch halbfertige Stände fremder Sessions (6.6.2026).
@@ -76,10 +119,21 @@ export default defineConfig([
   {
     files: ['src/pages/gesetz-leser/**/*.{ts,tsx}', 'src/components/normtext/**/*.{ts,tsx}'],
     rules: {
-      'no-restricted-syntax': ['error',
-        { selector: 'Literal[value=/max-w-\\[[0-9.]+rem\\]/]', message: 'R2 (Linien-/Typo-Kanon): keine arbitrary max-w-[…rem] im Normtext-Reader — nur max-w-reading / max-w-content (Token).' },
-        { selector: 'TemplateElement[value.raw=/max-w-\\[[0-9.]+rem\\]/]', message: 'R2 (Linien-/Typo-Kanon): keine arbitrary max-w-[…rem] im Normtext-Reader — nur max-w-reading / max-w-content (Token).' },
-      ],
+      // ARIA_ZUSTANDSNAME muss hier mitlaufen — sonst ersetzte dieser Block ihn
+      // für den gesamten Leser (Flat-Config merged Regel-Optionen nicht).
+      'no-restricted-syntax': ['error', ...NORMTEXT_MAXW, ARIA_ZUSTANDSNAME],
+    },
+  },
+  // §13/WCAG 4.1.2 in der Darstellungsschicht mechanisch gesperrt: ein
+  // zugänglicher Name, der den Zustand mitführt (Herleitung oben bei
+  // ARIA_ZUSTANDSNAME). Steht NACH dem Leser-Block, damit die Reihenfolge der
+  // Blöcke nichts stillschweigend abschaltet — der Leser-Block führt die Regel
+  // ohnehin selbst.
+  {
+    files: ['src/pages/**/*.tsx', 'src/components/**/*.tsx'],
+    ignores: ['src/pages/gesetz-leser/**', 'src/components/normtext/**'],
+    rules: {
+      'no-restricted-syntax': ['error', ARIA_ZUSTANDSNAME],
     },
   },
 ])

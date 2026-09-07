@@ -20,6 +20,7 @@ import { fetchMitWiederholung } from './netz-retry.ts';
 // Single Source of Truth (§5): exakt dieselbe präfix-bewahrende Normalisierung
 // wie der Lookup in der UI (src/lib/normtext/systematik.ts:sachgruppe).
 import { systematikSchluessel } from '../../src/lib/normtext/systematik.ts';
+import { baueZhSystematik } from './zh-systematik.ts';
 
 interface Sachgebiet { nummer: string; name: string; }
 /** Pro Kanton: Top-Level-Sachgebiete mit ihren Untergruppen (2. Ebene) für die
@@ -112,6 +113,18 @@ for (const e of erlasse) {
 console.log(`[kanton-systematik] ${hostProKanton.size} Kantone mit Snapshots gefunden`);
 const out: Record<string, KantonSystematik> = {};
 for (const [kt, host] of [...hostProKanton].sort()) {
+  // ZH-4c (31.8.2026): ZH hat keine clex/LexWork-Instanz — /api/de/systematic_categories
+  // existiert auf www.zh.ch nicht. Einziger maschinell greifbarer Systematik-Träger
+  // ist die server-gerenderte Ordner-Auswahl der Suchseite; sie steht als statische,
+  // quellenbelegte Tabelle in zh-systematik.ts (Herkunft + Abrufdatum dort im Kopf).
+  // Die Projektion hier bleibt generiert (§5) — die Tabelle wird nie in die JSON
+  // hineinkopiert, sondern über baueZhSystematik() erzeugt.
+  if (kt === 'ZH') {
+    const sys = baueZhSystematik();
+    out[kt] = sys;
+    console.log(`  ${kt} (${host}): ${sys.roots.length} Top-Level, ${Object.keys(sys.index).length} Knoten (statische Ordner-Tabelle, kein clex-API)`);
+    continue;
+  }
   try {
     const sys = await holeSystematik(host);
     if (sys.roots.length === 0) {

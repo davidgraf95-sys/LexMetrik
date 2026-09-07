@@ -101,46 +101,17 @@ export interface KopfElemente {
   /** Öffner «Ansicht ▾» bzw. «···». Bleibt IMMER (Fahrplan Kap. 4a). */
   ansicht: true;
   /**
-   * H3/Ä11 — Zähler «⚖ 14 Entscheide» in der Kopfzeile.
-   *
-   * ── H4-II (17./18.8.2026) · ER SCHRUMPFT, ER FÄLLT NICHT ──────────────────
-   * Das Feld war bis hierher ein `boolean` und auf `mini` `false`: die
-   * Design-Grundlage Kap. 6 deckelt die Ruhezustand-Kopfzeile auf VIER
-   * Elemente, und dort standen bereits Ort · ☰ · ··· · ✕. Die Randlasche, die
-   * den Zähler auf dem Handy ersetzen sollte, ist im H3-Nachzug gestrichen
-   * worden (sie lag gemessen 16 px IM Normtext) — seither führte auf `mini`
-   * kein Öffner mehr in der Kopfzeile zur Rechtsprechung. Gemessen
-   * 17.8.2026 @390 (StPO Art. 429): `[data-v3-panel-oeffner]` sichtbar **0**,
-   * der Weg über «···» → «Entscheide & Kontext …» kostete **2 Taps** gegen
-   * einen auf D/S (NM-2 des Kontaktbogens H4, dort der Flip-Blocker).
-   *
-   * DARUM ZWEI WERTE statt eines Flags — dieselbe Bauform wie `krume` (V2), und
-   * aus demselben Grund: ein Zuschnitt, der eine Handlung auf einer von drei
-   * Breiten ENTFERNT, ist keiner.
-   *   'voll'     «⚖ 14 Entscheide» — Ikone, Zahl, Zähl-Substantiv;
-   *   'kompakt'  «⚖ 14» — Ikone und Zahl, ohne Wort. Gemessen @390 bleiben in
-   *              der Ort-Zone 115 px frei (Zeile 350 px, Ort-Inhalt 144 px,
-   *              Griff-Zone 84 px); der Chip misst 24 px ohne und rund 45 px
-   *              mit Zahl.
-   *              EHRLICHER REST, gemessen 18.8.2026: im RUHEZUSTAND trägt er
-   *              nur die Ikone — die Zahl kennt niemand, bevor der Bezugs-Shard
-   *              geladen ist, und eine erfundene 0 verbietet §8
-   *              (`panelModell.oeffnerLabelKompakt`, dieselbe Schranke wie bei
-   *              `oeffnerLabel`, das auf D/S solange «Rechtsprechung» schreibt).
-   *              Er ist damit auf `mini` bis zum ersten Öffnen ein reines Icon,
-   *              und die zweite Hälfte der Design-Grundlage Kap. 6 («≤ 2 reine
-   *              Icons») bleibt @390 mit ⚖ · ☰ · ··· gerissen — genauso wie
-   *              vorher mit ☰ · ··· · ✕. Kein Rückschritt, aber auch kein
-   *              Fortschritt; als offener Punkt im Kontaktbogen geführt.
-   * Einen dritten Wert «weg» gibt es nicht, und genau das prüft
-   * `leser-v3-kopfstufen.test.ts` über jede Breite — eine Aussage über den
-   * Rückgabewert, nicht über abwesenden Code (§6.7).
-   *
-   * DAS ELEMENT-BUDGET HÄLT TROTZDEM: das ✕ weicht, weil es das Duplikat des
-   * sichtbaren Rücksprungs «‹ Gesetze» ist — seit dem H4-Nachzug auf JEDER
-   * Breite (Ä87/Ä91, Herleitung und Messreihe im Block unter dieser Funktion).
+   * ── D35-F2 (7.9.2026) · HIER STAND `panel: 'voll' | 'kompakt'` ────────────
+   * Das Feld entschied die GESTALT des Kopf-Zählers — «⚖ 14 Entscheide» auf
+   * D/S, «⚖ 14» auf `mini` (H3/Ä11, H4-II). Es hatte genau einen Zweck: den
+   * NM-2-Befund vom 17.8.2026 einzulösen, dass auf `mini` überhaupt ein Öffner
+   * in der Kopfzeile steht (gemessen `[data-v3-panel-oeffner]` 0, zwei Taps
+   * statt einem). Der Befund und seine Messreihe bleiben in der Historie dieser
+   * Datei stehen (§0 Ziff. 2b); eingelöst ist er seither STÄRKER, nicht
+   * schwächer: seit D35-F2 trägt der Griff «Erlass ▾» auf JEDER Breite dasselbe
+   * Wort, es gibt also keine Gestalt-Frage mehr zu beantworten. Ein Feld ohne
+   * Frage ist gestrichen, nicht bewacht (§17-Gegengewicht).
    */
-  panel: 'voll' | 'kompakt';
 }
 
 export function kopfElemente(stufe: KopfStufe): KopfElemente {
@@ -150,7 +121,6 @@ export function kopfElemente(stufe: KopfStufe): KopfElemente {
     kuerzel: true,
     artikel: true,
     ansicht: true,
-    panel: stufe === 'mini' ? 'kompakt' : 'voll',
   };
 }
 
@@ -218,7 +188,8 @@ export function kopfElemente(stufe: KopfStufe): KopfElemente {
 //
 // EHRLICHER REST, unverändert benannt: die zweite Hälfte des Deckels von Kap. 6
 // («≤ 2 reine Icons») bleibt @390 mit ⚖ · ☰ · ··· gerissen. Neu ist, dass die
-// drei WIE EINE FAMILIE aussehen und 32 px Ziel tragen — der Deckel selbst ist
+// drei WIE EINE FAMILIE aussehen und (seit F2-6, 31.8.2026) 44 px Ziel tragen;
+// bis dahin waren es 32 — der Deckel selbst ist
 // als «drei, aber eine Bauform» im Fahrplan datiert nachgeführt; der Rest gehört
 // zu Ä33/Ä34 (Griff-Zahl), nicht hierher.
 
@@ -229,18 +200,30 @@ export const KOPF_GRIFF = 'lc-leiste-griff lc-leiste-griff-fest';
 /**
  * Klassen des Kopf-Griffs.
  *
- * Auf dem Handy-Zuschnitt wächst das Ziel von 24 auf **32 px**
- * (`min-h-8 min-w-8`): die Kopfzeile ist dort 48 px hoch, das Ziel passt also
- * ohne Umbruch, und in der Ort-Zone bleibt Platz (Zeile 350 px, Griff-Zone
- * vorher 84 px). Sonst bleibt `--tap-ziel`: dort bedient eine Maus, und ein
- * grösserer Chip nähme dem Ort Platz, den er braucht.
+ * Auf dem Handy-Zuschnitt wächst das Ziel von 24 auf **44 px**
+ * (`.lc-leiste-griff-komfort` → `--tap-ziel-komfort`, src/index.css). Sonst
+ * bleibt `--tap-ziel`: dort bedient eine Maus, und ein grösserer Chip nähme dem
+ * Ort Platz, den er braucht.
+ *
+ * F2-6 (31.8.2026) — VON 32 AUF 44: hier stand `min-h-8 min-w-8`, also eine
+ * Untergrenze von 32 px. Das war weder der Token `--tap-ziel` (24 px, WCAG 2.5.8
+ * AA) noch das Komfortmass (44 px, WCAG 2.5.5 AAA), sondern eine dritte, nirgends
+ * hergeleitete Zahl — und zwar auf dem einzigen Zuschnitt, auf dem der Finger das
+ * einzige Werkzeug ist (der Abschnitt über `KOPF_GRIFF` nennt 24 px dort selbst
+ * «der schlechteste noch zulässige Wert»). Die alte Begründung für 32 war die
+ * 48 px hohe Kopfzeile: «das Ziel passt also ohne Umbruch, und in der Ort-Zone
+ * bleibt Platz (Zeile 350 px, Griff-Zone vorher 84 px)». Sie trägt 44 ebenso —
+ * 44 passt in 48, und die Griff-Zone wächst von 84 auf ~108 px (zwei Icon-Griffe
+ * +12 px; «Ansicht ▾» ist ohnehin breiter), die Ort-Zone bleibt bei ~242 px.
+ * Als KLASSE statt als Utility-Kette, damit der Wert bei seinem Token bleibt und
+ * das a11y-Tor die Komfort-Griffe an einem stabilen Selektor findet.
  *
  * `mini` als BOOLEAN und nicht als `KopfStufe`: die drei Aufrufer haben die
  * Antwort bereits in der Hand (`form === 'kompakt'`, `kompakt`,
  * `stufe === 'mini'`) und sollen die Stufe nicht neu kennen müssen (§3).
  */
 export function kopfGriffKlassen(mini: boolean): string {
-  return mini ? `${KOPF_GRIFF} min-h-8 min-w-8` : KOPF_GRIFF;
+  return mini ? `${KOPF_GRIFF} lc-leiste-griff-komfort` : KOPF_GRIFF;
 }
 
 /**
@@ -253,7 +236,7 @@ export function kopfGriffKlassen(mini: boolean): string {
  * `check:design-tokens` gemeldet — rot gesehen 18.8.2026. Der Name der Stufe
  * meint hier keine Überschrift, sondern schlicht ihre Grösse; `leading-none`
  * nimmt die mitgelieferte Zeilenhöhe wieder heraus, weil eine Glyphe in einem
- * 32-px-Ziel keine braucht.
+ * Komfort-Ziel keine braucht (bis F2-6: 32 px, seither 44).
  *
  * Getrennt von den Griff-Klassen, weil sonst auch die Zahl im Zähler-Chip
  * mitwüchse — sie ist Text, keine Glyphe.

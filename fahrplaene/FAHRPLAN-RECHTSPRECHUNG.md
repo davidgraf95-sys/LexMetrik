@@ -130,6 +130,37 @@ Sprachregel bleibt CLAUDE.md §13.3 (klar für Fach UND Laie) — keine parallel
 
 ---
 
+## §15 · ROADMAP-Spec `W2·21-ZULIEFERER` — Anbinden statt nachbauen (Prüfschritt, 1.9.2026)
+
+**Anlass:** Quellen-Sichtung 1.9.2026 (`bibliothek/recherche/fremdquellen-sichtung-2026-09-02.md` (absorbiert)).
+OpenCaseLaw (CC0-Daten, MIT-Code, tägliche Parquet-Lieferung, REST/MCP) trägt einen Nachweis-Index
+über 1,05 Mio. Entscheide mit Original-URL, ~10 Mio. Entscheid→Entscheid-Kanten, 12,4 Mio.
+Entscheid→Artikel-Verweise und 84'000 Botschafts-Artikel-Verweise. Das deckt die Bau-Absicht von
+`W2·6` (Nachweisdatenbank nach dejure-Modell, Leitsatz David 16.8.2026), `W2·14-SIGNAL`-GER und der
+Materialien-Verzahnung weitgehend ab.
+
+**Prüfauftrag (kein Bau, Ergebnis = Entscheidvorlage an David):**
+1. Lizenz-/§7-Matrix je Datenschicht: Entscheid-Metadaten · Regesten · Zitatkanten · Artikel-Verweise ·
+   Botschaften-Index · Kommentare (OnlineKommentar CC-BY — **Leitbild schliesst Kommentare aus**, nur
+   als David-Frage führen) · Scholarship. Je Schicht: amtliche Quelle verlinkbar? abgeleitet oder
+   wörtlich? Herkunft sauber (Gerichte mit umgangenem Bot-Schutz — `deploy_incapsula_bypass.sh` im
+   Repo — ausschliessen)?
+2. Betriebsform: tägliche Datei (HuggingFace-Parquet) einlesen und als eigene Projektion halten — nie
+   Live-Abfrage im Produkt (Zustandslosigkeit, Offline-Fähigkeit, kein Fremd-Ausfall auf unserer Seite).
+3. Stichprobe n ≥ 30 ihrer Entscheid→Artikel-Kanten gegen unsere Entscheid-Snapshots: Präzision messen
+   (unsere Phantom-Quote liegt bei 25 %, `QS-KORPUS`); erst bei belegter Überlegenheit anbinden.
+4. Zuschnitt-Folgen benennen: was aus `W2·6`, `W2·6-RESOLVER`, `W2·14-SIGNAL`-GER, Materialien-
+   Pipeline entfällt oder schrumpft; was bleibt (Darstellung am Artikel, Kanton-Verzahnung, Werkzeuge).
+5. Nebenkandidaten mitprüfen: SCD (Uni Zürich, 116'000 BGer-Fälle mit Rechtsgebiet/Abteilung —
+   Rechtsgebiet-Facette, deskriptiv, Richter-Gate beachten); Staatsarchiv ZH TEI (OS 1803–1998,
+   Zenodo 13347459) und Zentrale Serien (KRP/RRB) für Fussnoten-Apparat, Zeitmaschine und Materialien
+   Kanton ZH (FAHRPLAN-KANTONE §5 R3/R7/R12).
+
+**Grenzen:** §2 (kein LLM-Richter wie deren `/verify-claim` im Produkt), §7 (Fremdindex ist Wegweiser,
+nie Wahrheit), §8 (Herkunft je Nachweis sichtbar). Entscheid bleibt bei David.
+
+---
+
 ## Archivierte Abschnitte *(Plan-Neuschnitt 29.8.2026)*
 
 14 Abschnitt(e) dieser Datei sind wörtlich nach

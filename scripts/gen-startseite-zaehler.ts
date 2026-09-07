@@ -19,6 +19,20 @@ import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { KATALOG_KARTEN, istVerfuegbar } from '../src/lib/startseiteConfig.ts';
 import { istVorlage } from '../src/lib/vorlagenKategorie.ts';
+// W2·24-R3: die Startseite zeigt die Systematik des Bundesrechts und die
+// Behörden der Materialien als Listen MIT Zahlen. Beide Ordnungen bleiben ihre
+// eigene SSoT (§5) — `SYSTEMATIK` (Anzeige-Ordnung des Bundesrechts) und
+// `BEHOERDEN` (Herausgeber der Materialien); hier werden sie NUR mit dem
+// Register verschnitten und die Zahl daraus GEZÄHLT. Beide Module wandern damit
+// nicht in den Startseiten-Chunk (§15, `check:perf-budget`).
+import { SYSTEMATIK } from '../src/lib/normtext/systematik.ts';
+import { BEHOERDEN } from '../src/lib/materialien/register.ts';
+// W2·24-D26: die Seitenleiste zeigt die Sachgebiete der Rechtsprechung mit Zahl.
+// Ordnung + Beschriftung bleiben `GEBIETE` (SSoT der Sach-Achse); gezählt wird
+// hier gegen das Entscheid-Register, nach DERSELBEN Regel wie `zaehleSachgebiete`
+// in `src/lib/rechtsprechung/browse.ts` (Verweise raus) — die Zahl in der Leiste
+// ist damit exakt die Zahl auf der Sachgebiets-Kachel der Übersicht (§5/§8).
+import { GEBIETE } from '../src/lib/normtext/register.ts';
 
 const wurzel = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const GESETZE_REGISTER = resolve(wurzel, 'public/normtext/register.json');
@@ -26,9 +40,54 @@ const RSPR_REGISTER = resolve(wurzel, 'public/rechtsprechung/register.json');
 const MATERIALIEN_REGISTER = resolve(wurzel, 'public/materialien/register.json');
 const ZIEL = resolve(wurzel, 'src/data/startseiteZaehler.generated.ts');
 
-interface ErlassEintrag { ebene: 'bund' | 'kanton'; status: string; kanton?: string }
-interface EntscheidEintrag { verweis?: unknown }
-interface MaterialEintrag { key: string }
+interface ErlassEintrag {
+  key: string; ebene: 'bund' | 'kanton'; status: string; kanton?: string;
+  kuerzel: string; rechtsgebiet: string;
+  /** Konsolidierungsstand des Snapshots (ISO) — D8: Quelle des Inhaltsalters. */
+  stand?: string | null;
+}
+interface EntscheidEintrag {
+  verweis?: unknown;
+  /** Entscheiddatum (ISO) — D8. */
+  datum?: string | null;
+  /** Sach-Achse (GEBIETE-id) — D26. */
+  sachgebiet?: string;
+  /** 'leitentscheid' | 'routine' … — D26. */
+  leitcharakter?: string;
+}
+interface MaterialEintrag {
+  key: string; behoerde: string;
+  /** Publikations-/Fassungsstand der Materialie (ISO) — D8. */
+  stand?: string | null;
+}
+
+// ─── D8 (David 6.9.2026) · JÜNGSTER EINTRAG STATT BUILD-DATUM ────────────────
+//
+// «Register erzeugt: Gesetze 05.09.2026 · …» nannte das Datum des BUILD-LAUFS
+// und las sich wie das Alter der Inhalte — David: irreführend. Die drei Register
+// tragen das echte Alter selbst mit (`stand` am Erlass, `datum` am Entscheid,
+// `stand` an der Materialie); hier wird je Sammlung das JÜNGSTE davon gezogen.
+//
+// ZWEI REGELN, beide §8:
+//  · Nur ISO-Datumswerte `JJJJ-MM-TT` zählen; alles andere (null, leer, ein
+//    Freitext-Stand) fällt weg, statt still als «1970» oder als Zeichenkette
+//    mitsortiert zu werden. Lexikografischer Vergleich ist bei diesem Format
+//    identisch mit dem chronologischen — kein Date-Objekt, kein Zeitzonen-Risiko
+//    (§2, das Artefakt muss deterministisch sein).
+//  · Gibt es keinen einzigen gültigen Wert, ist das Feld `null` und die Zeile
+//    entfällt in der Anzeige — nie ein erfundenes Datum.
+const ISO_TAG = /^\d{4}-\d{2}-\d{2}$/;
+function juengstes(werte: Array<string | null | undefined>): string | null {
+  let max: string | null = null;
+  for (const w of werte) {
+    if (typeof w !== 'string' || !ISO_TAG.test(w)) continue;
+    if (max === null || w > max) max = w;
+  }
+  return max;
+}
+
+/** Wie viele Kürzel je Systematik-Zeile als Beispiel-Zeile mitlaufen. */
+const KUERZEL_PRO_ZEILE = 4;
 
 function zaehle() {
   // Gesetze: nur echter Volltext (status 'snapshot'); nach Ebene getrennt, damit
@@ -51,10 +110,49 @@ function zaehle() {
     Object.keys(proKanton).sort().map((k) => [k, proKanton[k]]),
   );
 
+  // ── Systematik des Bundesrechts (W2·24-R3) ────────────────────────────────
+  // Die Startseite listet die Ordnung, nach der `/gesetze?ebene=bund` gliedert
+  // (Anker `#sys-<id>`). Gezählt wird, was in DIESER Kategorie als Volltext
+  // vorliegt — nie eine erfundene oder aus der Schlüssel-Liste geschätzte Zahl
+  // (§8): ein in SYSTEMATIK gelisteter Key ohne Snapshot zählt nicht mit.
+  const bundVolltext = g.erlasse.filter((e) => e.ebene === 'bund' && e.status === 'snapshot');
+  const nachKey = new Map(bundVolltext.map((e) => [e.key.toUpperCase(), e]));
+  const bundSystematik = SYSTEMATIK.map((k) => {
+    const treffer: ErlassEintrag[] = [];
+    for (const gruppe of k.gruppen) {
+      for (const key of gruppe.keys) {
+        const e = nachKey.get(key.toUpperCase());
+        if (e) treffer.push(e);
+      }
+    }
+    return {
+      nr: k.nr, id: k.id, titel: k.titel,
+      kuerzel: treffer.slice(0, KUERZEL_PRO_ZEILE).map((e) => e.kuerzel),
+      anzahl: treffer.length,
+    };
+  });
+  // Die Säule «International» ist seit IA-6 KEINE Systematik-Kategorie mehr
+  // (systematik.ts, Kommentar am Listenende) — sie steht als eigene Zeile, mit
+  // ihrer eigenen Zahl aus derselben Regel.
+  const international = bundVolltext.filter((e) => e.rechtsgebiet === 'international');
+
   // Rechtsprechung: Nicht-Verweis-Entscheide = echte Volltext-Snapshots (Verweise
   // sind Redirect-Stubs auf ein anderes Urteil, s. NewsHeader/Rechtsprechung.tsx).
   const r = JSON.parse(readFileSync(RSPR_REGISTER, 'utf8')) as { erzeugt: string; entscheide: EntscheidEintrag[] };
-  const entscheide = r.entscheide.filter((e) => !e.verweis).length;
+  const echteEntscheide = r.entscheide.filter((e) => !e.verweis);
+  const entscheide = echteEntscheide.length;
+  // D26 · je Sachgebiet + Leitentscheide. Sachgebiete ohne Entscheid fallen weg
+  // (nie eine 0-Zeile behaupten, §8 — dieselbe Regel wie bei den Behörden und
+  // wie in `zaehleSachgebiete`, das die Kacheln der Übersicht speist).
+  const proGebiet: Record<string, number> = {};
+  for (const e of echteEntscheide) {
+    if (e.sachgebiet) proGebiet[e.sachgebiet] = (proGebiet[e.sachgebiet] ?? 0) + 1;
+  }
+  const rechtsprechungSachgebiete = GEBIETE
+    .filter((gb) => (proGebiet[gb.id] ?? 0) > 0)
+    .map((gb) => ({ id: gb.id, label: gb.label, anzahl: proGebiet[gb.id] }));
+  const rechtsprechungLeitentscheide = echteEntscheide
+    .filter((e) => e.leitcharakter === 'leitentscheid').length;
 
   // Rechner/Vorlagen: verfügbare Katalog-Karten MIT eigener Seite (aus dem Katalog
   // abgeleitet, §5 — nicht zweitgepflegt).
@@ -66,19 +164,49 @@ function zaehle() {
   // Verweise (nur-live-link) — der Zähler nennt ehrlich «erfasste», nie Volltext.
   const m = JSON.parse(readFileSync(MATERIALIEN_REGISTER, 'utf8')) as { erzeugt: string; materialien: MaterialEintrag[] };
   const materialien = m.materialien.length;
+  // Je Behörde, in der Anzeige-Reihenfolge BEHOERDEN (rang = Praxisrelevanz).
+  // Behörden ohne Eintrag fallen weg — nie eine 0-Zeile behaupten (§8).
+  const proBehoerde: Record<string, number> = {};
+  for (const x of m.materialien) proBehoerde[x.behoerde] = (proBehoerde[x.behoerde] ?? 0) + 1;
+  const materialienBehoerden = BEHOERDEN
+    .filter((b) => (proBehoerde[b.id] ?? 0) > 0)
+    .map((b) => ({ id: b.id, kuerzel: b.kuerzel, name: b.name, anzahl: proBehoerde[b.id] }));
+
+  // D8: das Alter der INHALTE je Sammlung (nicht des Builds).
+  //  · Gesetze — jüngster Konsolidierungsstand über die Volltext-Snapshots.
+  //    `status !== 'snapshot'`-Einträge tragen keinen eigenen Stand und blieben
+  //    sonst als Fremdwert in der Zahl (dieselbe Zählmenge wie `gesetzeVolltext`).
+  //  · Rechtsprechung — jüngstes Entscheiddatum über die NICHT-Verweise
+  //    (ein Verweis ist ein Redirect-Stub, kein eigener Entscheid).
+  //  · Materialien — jüngster `stand`; existiert das Feld nirgends, bleibt es
+  //    null und die Zeile fehlt in der Anzeige, statt etwas zu behaupten.
+  const juengsterGesetzStand = juengstes(
+    g.erlasse.filter((e) => e.status === 'snapshot').map((e) => e.stand));
+  const juengsterEntscheid = juengstes(
+    r.entscheide.filter((e) => !e.verweis).map((e) => e.datum));
+  const juengsteMaterialie = juengstes(m.materialien.map((x) => x.stand));
 
   return {
     gesetzeBundVolltext: bund,
     gesetzeKantonVolltext: kanton,
     gesetzeVolltext: bund + kanton,
     kantonErlassZahlen,
+    bundSystematik,
+    gesetzeInternationalVolltext: international.length,
+    internationalKuerzel: international.slice(0, KUERZEL_PRO_ZEILE).map((e) => e.kuerzel),
     rechtsprechungVolltext: entscheide,
+    rechtsprechungSachgebiete,
+    rechtsprechungLeitentscheide,
     materialien,
+    materialienBehoerden,
     rechner,
     vorlagen,
     standGesetze: g.erzeugt,
     standRechtsprechung: r.erzeugt,
     standMaterialien: m.erzeugt,
+    juengsterGesetzStand,
+    juengsterEntscheid,
+    juengsteMaterialie,
   };
 }
 
@@ -100,10 +228,28 @@ function baue(): string {
     '  /** IA-7: erfasste Erlasse JE Kanton (alle Manifest-Einträge der Ebene kanton —\n' +
     '   *  dieselbe Zählregel wie die IA-2-Badges/`kantonAnzahl` in Gesetze.tsx). */\n' +
     '  kantonErlassZahlen: Record<string, number>;\n' +
+    '  /** W2·24-R3: Systematik des Bundesrechts (Ordnung + Titel aus\n' +
+    '   *  `lib/normtext/systematik.ts`, Anker `/gesetze?ebene=bund#sys-<id>`),\n' +
+    '   *  je Kategorie die Zahl der VOLLTEXT-Erlasse und bis zu vier Kürzel. */\n' +
+    '  bundSystematik: Array<{ nr: string; id: string; titel: string; kuerzel: string[]; anzahl: number }>;\n' +
+    '  /** Bundeserlasse der Säule «International» im Volltext (rechtsgebiet international). */\n' +
+    '  gesetzeInternationalVolltext: number;\n' +
+    '  /** Bis zu vier Kürzel der Säule «International» (Register-Reihenfolge). */\n' +
+    '  internationalKuerzel: string[];\n' +
     '  /** Gerichtsentscheide im Volltext (Nicht-Verweise). */\n' +
     '  rechtsprechungVolltext: number;\n' +
+    '  /** W2·24-D26: Entscheide je Sachgebiet (Ordnung/Label aus `GEBIETE`),\n' +
+    '   *  Zählregel identisch zu `zaehleSachgebiete` (Verweise raus); Sachgebiete\n' +
+    '   *  ohne Entscheid fehlen (§8). Ziel je Zeile: `/rechtsprechung?rg=<id>`. */\n' +
+    '  rechtsprechungSachgebiete: Array<{ id: string; label: string; anzahl: number }>;\n' +
+    '  /** W2·24-D26: amtliche Leitentscheide (Nicht-Verweise, leitcharakter\n' +
+    '   *  `leitentscheid`) — Ziel `/rechtsprechung?leit=1`. */\n' +
+    '  rechtsprechungLeitentscheide: number;\n' +
     '  /** Erfasste amtliche Materialien (Behördenpublikationen, nur-live-link). */\n' +
     '  materialien: number;\n' +
+    '  /** W2·24-R3: erfasste Materialien je Behörde, Reihenfolge BEHOERDEN (rang);\n' +
+    '   *  Behörden ohne Eintrag fehlen (nie eine 0-Zeile behaupten, §8). */\n' +
+    '  materialienBehoerden: Array<{ id: string; kuerzel: string; name: string; anzahl: number }>;\n' +
     '  /** Verfügbare Rechner (eigene Seite). */\n' +
     '  rechner: number;\n' +
     '  /** Verfügbare Vorlagen (eigene Seite). */\n' +
@@ -114,6 +260,14 @@ function baue(): string {
     '  standRechtsprechung: string;\n' +
     '  /** Stand der Materialien-Register-Erzeugung (ISO). */\n' +
     '  standMaterialien: string;\n' +
+    '  /** D8: jüngster Konsolidierungsstand über alle Volltext-Erlasse (ISO)\n' +
+    '   *  — das Alter der INHALTE, nicht des Builds. null = kein gültiges Datum. */\n' +
+    '  juengsterGesetzStand: string | null;\n' +
+    '  /** D8: jüngstes Entscheiddatum (Nicht-Verweise, ISO) oder null. */\n' +
+    '  juengsterEntscheid: string | null;\n' +
+    '  /** D8: jüngster Materialien-Stand (ISO) oder null — fehlt das Feld im\n' +
+    '   *  Register durchgehend, bleibt die Zeile in der Anzeige weg (§8). */\n' +
+    '  juengsteMaterialie: string | null;\n' +
     '}\n\n' +
     'export const STARTSEITE_ZAEHLER: StartseiteZaehler = ' + JSON.stringify(z, null, 2) + ';\n'
   );
@@ -138,5 +292,6 @@ if (istCheck) {
 } else {
   writeFileSync(ZIEL, neu, 'utf8');
   const z = zaehle();
-  console.log(`gen:zaehler: Gesetze ${z.gesetzeVolltext} (Bund ${z.gesetzeBundVolltext}/Kanton ${z.gesetzeKantonVolltext}) · Entscheide ${z.rechtsprechungVolltext} · Materialien ${z.materialien} · Rechner ${z.rechner} · Vorlagen ${z.vorlagen} → src/data/startseiteZaehler.generated.ts`);
+  console.log(`gen:zaehler: Gesetze ${z.gesetzeVolltext} (Bund ${z.gesetzeBundVolltext}/Kanton ${z.gesetzeKantonVolltext}) · Entscheide ${z.rechtsprechungVolltext} · Materialien ${z.materialien} · Rechner ${z.rechner} · Vorlagen ${z.vorlagen} → src/data/startseiteZaehler.generated.ts` +
+    `\n           jüngster Eintrag: Gesetze ${z.juengsterGesetzStand ?? '—'} · Entscheide ${z.juengsterEntscheid ?? '—'} · Materialien ${z.juengsteMaterialie ?? '—'}`);
 }

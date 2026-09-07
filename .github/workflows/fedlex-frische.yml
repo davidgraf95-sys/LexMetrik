@@ -21,7 +21,7 @@ name: Fedlex-Frische-Automatik
 
 on:
   schedule:
-    - cron: '43 4 * * 1' # montags 04:43 UTC (vor dem 05:17-Monitor)
+    - cron: '43 4 * * 1' # montags 04:43 UTC (vor dem 07:17-Monitor; Abstand seit 1.9.2026 2,5 h, s. normen-monitor.yml)
   workflow_dispatch:
 
 # Auto-Merge-PRs, die von github.token erstellt werden, lösen KEINE CI aus (GH-
@@ -140,12 +140,34 @@ jobs:
             echo "Kein Re-Pin — keine Regenerierung nötig."
           else
             echo "cache.sh re-gepinnt → Snapshots/Struktur/Register regenerieren."
-            npm run normtext -- --datum=${{ steps.datum.outputs.iso }}
-            # gen:pdf-quellen VOR dem Register: register.json projiziert
-            # pdfUrl/pdfStand aus pdf-quellen.json (§5-Kaskade). Fehlte bis
-            # 29.8.2026 — der Re-Pin der RDV hob ihre Konsolidierung von
-            # 2025-11-01 auf 2026-08-20, das PDF-Sidecar blieb stehen und
-            # check:pdf-quellen wurde im PR #572 rot.
+            # `--nur=bund` seit 1.9.2026 (QS-MONITOR-ROT, Befund (a2)): der Voll-Lauf
+            # regenerierte 4860 Kantons-Snapshots mit reinem Datums-Churn; PR #596
+            # (31.8.) kollidierte an vier ZH-Dateien mit der ZH-Tranche #606 und
+            # blieb liegen, während der Monitor auf main am selben Pin rot stand.
+            # Dieser Workflow hebt ausschliesslich BUND-Pins — die Kantons-Phasen
+            # gehören nicht in seinen Diff (dieselbe Begründung wie bei
+            # gen:pdf-quellen unten). Golden-Index wird gemischt, Kanton-Einträge
+            # bleiben (scripts/normtext-snapshot.ts, Nur-Bund-Modus).
+            npm run normtext -- --datum=${{ steps.datum.outputs.iso }} --nur=bund
+            # ── Reihenfolge Register → pdf-quellen → Register ────────────────
+            # ZWEI Läufe von normtext:register, mit Absicht (5.9.2026, Lauf
+            # 33937353756). Die Kaskade ist zirkulär:
+            #   · gen:pdf-quellen LIEST je Erlass den `fassungsToken` aus
+            #     public/normtext/register.json und nimmt die pdf-a-URL, deren
+            #     dateApplicability exakt diesem Token entspricht
+            #     (scripts/normtext/pdf-quellen-generieren.ts, bundPdfQuellen).
+            #   · normtext:register PROJIZIERT umgekehrt pdfUrl/pdfStand aus
+            #     pdf-quellen.json (§5-Kaskade) — der Grund, aus dem der
+            #     Generator am 29.8.2026 VOR das Register gestellt wurde
+            #     (RDV-Re-Pin 2025-11-01 → 2026-08-20, PR #572 rot).
+            # Genau diese eine Reihenfolge war der Defekt: der Generator sah nur
+            # den ALTEN Token. Nach dem DBG-Re-Pin 2026-01-01 → 2026-09-02 zog er
+            # deshalb das PDF der Fassung 2026-01-01, und check:pdf-quellen wurde
+            # rot mit «DBG: PDF-Konsolidierung 2026-01-01 ≠ Pin 2026-09-02 —
+            # Generator neu laufen»; der Arm endete ohne PR. Beide Läufe sind
+            # idempotent, der erste liefert die frische Eingabe, der zweite die
+            # Projektion — der 29.8.-Grund bleibt damit unangetastet.
+            npm run normtext:register -- --datum=${{ steps.datum.outputs.iso }}
             # `--nur=bund`, weil dieser Workflow ausschliesslich BUND-Pins hebt:
             # eine Voll-Erhebung würde 1231 Kantons-Quellen neu befragen und
             # deren unabhängige Quell-Drift in den Reparatur-PR ziehen (gemessen
@@ -155,6 +177,12 @@ jobs:
             npm run gen:pdf-quellen -- --nur=bund
             npm run normtext:register -- --datum=${{ steps.datum.outputs.iso }}
             npm run normtext:struktur -- --datum=${{ steps.datum.outputs.iso }}
+            # Churn-Reset seit 1.9.2026 (Befund (a2)): Dateien, die sich NUR in
+            # `erzeugt`/`abgerufen` unterscheiden, zurück auf HEAD — der PR trägt
+            # danach nur Substanz (Pin-Hebung, neue Fassung). Vor den abgeleiteten
+            # Generatoren und vor dem Manifest, damit beide vom bereinigten
+            # Stand ausgehen. Reset-Regel bisher nur von Hand (fedlex-cache.sh).
+            npm run normtext:churn-reset -- --pfad=public/normtext
             npm run gen:fedlex-wiedervorlage -- --datum=${{ steps.datum.outputs.iso }}
             npm run gen:verfall
             # gen:historie VOR dem Manifest: Historie-Shards leiten aus den
@@ -168,6 +196,12 @@ jobs:
             # Zähler aus den Registern (check:zaehler rot).
             npm run gen:artikel-revisionen
             npm run gen:zaehler
+            # gen:feed seit 5.9.2026 (Lauf 33937353756): public/feed/erlasse.xml
+            # leitet aus register.json ab (§5-Kaskade), wurde aber bisher NUR im
+            # `build`-Skript erzeugt und fehlte hier ganz. Der Arm hob den Pin,
+            # das Register änderte sich, der Feed blieb stehen — check:feed rot
+            # mit «erlasse.xml VERALTET gegenüber dem Register».
+            npm run gen:feed
             npm run datenhaltung:manifest
           fi
 
@@ -236,6 +270,16 @@ jobs:
       # `npm ci` (ohne Build, ohne DB) und hält den 30-Minuten-Rahmen; hier kommt
       # sie zu den Netz-Schritten oben hinzu. timeout-minutes ist darum von 30
       # auf 45 gehoben.
+      # OFFENER PUNKT (5.9.2026, Lauf 33937353756): `check:materialien` ist
+      # WANDUHR-abhängig — es vergleicht `fristEnde` der Vernehmlassungen gegen
+      # das heutige Datum (Finding 7) und wird an jedem Tag rot, an dem eine
+      # Frist abgelaufen ist, ohne dass dieser Arm etwas damit zu tun hat. Der
+      # Lauf oben scheiterte auch daran (VERN-2026-7, geheilt in PR #687). Das
+      # wird hier NICHT aufgeweicht (kein Ausklammern, kein `|| true` — §6.7):
+      # ein wanduhr-abhängiges Tor gehört an seiner Wurzel repariert, d. h. der
+      # Vernehmlassungs-Generator muss im Frische-Kreislauf mitlaufen oder das
+      # Tor auf einen erhobenen Stand statt auf `heute` prüfen. Bis dahin kann
+      # dieser Arm an einem fremden Befund scheitern.
       - name: Offline-Tore vor dem PR (VOLLE Tor-Menge, keine Auswahl)
         if: steps.diff.outputs.geaendert == '1'
         run: |

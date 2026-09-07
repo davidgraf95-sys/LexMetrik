@@ -31,6 +31,7 @@ import { suchFeldName, suchPlatzhalter } from './erlassAnsicht';
 
 export function SuchSprungFeld({
   wert, setzeWert, loeseArtikel, onSprung, feldRef, onVor, onZurueck, hatTreffer = false,
+  onBestaetigt,
   // Ä126: die Vorgaben sind KEINE dritten Literale, sondern dieselbe Quelle
   // ohne Erlass-Kürzel (§5) — sonst trüge ein Aufrufer ohne Erlass die Wörter
   // der Ist-Hülle («Im Gesetz suchen») mitten in die V3-Fläche.
@@ -61,6 +62,18 @@ export function SuchSprungFeld({
   /** Gibt es überhaupt Fundstellen? Ohne sie tun ↑↓ und Enter nichts — und das
    *  Feld verspricht sie dann auch nicht (§8). */
   hatTreffer?: boolean;
+  /** ── D38 (7.9.2026) · ENTER IST DIE BESTÄTIGUNG, NICHT NUR EIN SCHRITT ────
+   *  Seit D38 liegt die Trefferliste über der Lesespalte, solange im Feld etwas
+   *  steht (`./LeserTrefferSpalte`). Damit gibt es eine Frage, die es vorher
+   *  nicht gab: WOMIT verlässt man die Liste und kommt beim Text an?
+   *  ↑↓ können es nicht sein — sie durchmustern die Treffer, und wer die Liste
+   *  bei jedem Schritt verlöre, könnte sie gar nicht durchmustern. Enter kann es:
+   *  die Taste sagt in jeder Oberfläche «das da, nimm es», und sie tut hier
+   *  ohnehin schon das Zielführende (Artikel-Sprung bzw. nächste Fundstelle).
+   *  `onBestaetigt` läuft NACH beiden Enter-Zweigen und in beiden, denn beide
+   *  sind eine Wahl: «Art. 429» meint diesen Artikel, ↵ ohne Token die nächste
+   *  Fundstelle. Ungesetzt (Sonden, andere Aufrufer) ändert sich nichts. */
+  onBestaetigt?: () => void;
   /** ── A2 (H2b-Nachzug) · WEM GEHÖRT `Esc`? ─────────────────────────────────
    *  Vorgabe `true` = das Ist-Verhalten von Pos. 14: Esc leert das Feld, springt
    *  nicht, und hält den Tastendruck bei sich (`stopPropagation`).
@@ -136,8 +149,15 @@ export function SuchSprungFeld({
               // genau diesen Artikel und keine Fundstelle darin. Sonst rückt
               // Enter auf die nächste Fundstelle vor — die Taste tut damit
               // immer das, was das Feld gerade anbietet, und nie nichts.
-              if (token) onSprung(token);
-              else if (hatTreffer) onVor?.();
+              // D38: der Sprung ist gewählt ⇒ die Trefferliste gibt die
+              // Lesefläche frei. NUR DANN — «Art. 99999» ohne auflösbares Ziel
+              // und ohne Fundstelle bestätigt nichts, und die Liste trägt dann
+              // die ehrliche Absage «Kein Artikel gefunden für …» (§8). Sie
+              // wegzuschalten hiesse, die Antwort auf die Eingabe zu verbergen;
+              // gemessen am Zwischenstand (`leser-r1-r2`, Quickjump @390: die
+              // Absage war nach ↵ nicht mehr auffindbar).
+              if (token) { onSprung(token); onBestaetigt?.(); }
+              else if (hatTreffer) { onVor?.(); onBestaetigt?.(); }
             }
           }}
           placeholder={platzhalter}
@@ -158,6 +178,15 @@ export function SuchSprungFeld({
           // V3-Bestand, `.lc-input` trägt die ganze App (FL-4).
           className={`lc-input lc-v3-feld h-8 w-full min-w-0 py-0 pl-2.5 text-body-s ${wert !== '' ? 'pr-16 sm:pr-20' : 'pr-8 sm:pr-10'}`}
         />
+        {/* R6-C (5.9.2026): die Glyphe kam aus `text-body-s leading-none` und
+            stand damit als EINZIGE der drei «Suche leeren»-Flächen in 14 px —
+            GEMESSEN am Preview: Tinte 10.67 px hier gegen 12.20 px in
+            `start/UniversalSuche` und `pages/Suche` (gleiche Handlung, gleicher
+            `aria-label`, 2:1 für 16 px). Jetzt `.lc-griff-glyph`, dieselbe
+            Gestalt wie am `ui/SchliessKnopf`. Die BOX bleibt, wo sie ist
+            (24×24, rund) — sie gehört der Zeile, hier einem `h-8`-Feld mit
+            ⌘K-Nachbarn; das ist dieselbe Trennung, die der Schliess-Baustein
+            deklariert (Glyphe geteilt, Box der Umgebung). */}
         {/* ✕ — sichtbar und mit Namen. Es ist seit Ä16 (H2b) das EINZIGE: das
             native Kreuz von `type="search"` erschien je nach Browser gar nicht,
             trug keinen zugänglichen Namen und war kein 44-px-Ziel — darum trägt
@@ -170,8 +199,8 @@ export function SuchSprungFeld({
             onClick={() => { setzeWert(''); ref.current?.focus(); }}
             aria-label="Suche leeren"
             title="Suche leeren (Esc)"
-            className="absolute right-6 top-1/2 inline-flex h-6 w-6 -translate-y-1/2 items-center justify-center rounded-full text-ink-500 transition-colors hover:bg-paper-sunken/70 hover:text-brass-700 sm:right-8">
-            <span aria-hidden className="text-body-s leading-none">✕</span>
+            className="absolute right-6 top-1/2 inline-flex h-6 w-6 -translate-y-1/2 items-center justify-center rounded-full text-ink-500 transition-colors lc-hover-flaeche hover:text-brass-700 sm:right-8">
+            <span aria-hidden className="lc-griff-glyph">✕</span>
           </button>
         )}
         {/* Das Kürzel steht sichtbar am Feld — ein Kürzel, das man kennen muss,

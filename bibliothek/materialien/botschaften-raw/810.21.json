@@ -6,6 +6,162 @@
     },
     "botschaft": {
       "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2002/13"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2001/0918"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2007/279"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2001-09-12"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "01.057"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zum Bundesgesetz über die Transplantation von Organen, Geweben und Zellen (Transplantationsgesetz)"
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant la loi fédérale sur la transplantation d'organes, de tissus et de cellules (Loi sur la transplantation)"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente la legge federale sul trapianto di organi, tessuti e cellule (Legge sui trapianti)"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "810.21"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2002/13"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2001/0918"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2007/279"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2001-09-12"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "01.057"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zum Bundesgesetz über die Transplantation von Organen, Geweben und Zellen (Transplantationsgesetz)"
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant la loi fédérale sur la transplantation d'organes, de tissus et de cellules (Loi sur la transplantation)"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente la legge federale sul trapianto di organi, tessuti e cellule (Legge sui trapianti)"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "810.21"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2002/13"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2001/0918"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2007/279"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2001-09-12"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "01.057"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zum Bundesgesetz über die Transplantation von Organen, Geweben und Zellen (Transplantationsgesetz)"
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant la loi fédérale sur la transplantation d'organes, de tissus et de cellules (Loi sur la transplantation)"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente la legge federale sul trapianto di organi, tessuti e cellule (Legge sui trapianti)"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "810.21"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2002/13"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2001/0918"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2007/279"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2001-09-12"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "01.057"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zum Bundesgesetz über die Transplantation von Organen, Geweben und Zellen (Transplantationsgesetz)"
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant la loi fédérale sur la transplantation d'organes, de tissus et de cellules (Loi sur la transplantation)"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente la legge federale sul trapianto di organi, tessuti e cellule (Legge sui trapianti)"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "810.21"
+    },
+    "botschaft": {
+      "type": "uri",
       "value": "https://fedlex.data.admin.ch/eli/fga/2013/414"
     },
     "proj": {
@@ -231,162 +387,6 @@
     "titleIt": {
       "type": "literal",
       "value": "Messaggio concernente l'approvazione e la trasposizione della Convenzione del Consiglio d'Europa contro il traffico di organi umani (Modifica della legge sui trapianti e della legge sulla ricerca umana)"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "810.21"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2002/13"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2001/0918"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2007/279"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2001-09-12"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "01.057"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zum Bundesgesetz über die Transplantation von Organen, Geweben und Zellen (Transplantationsgesetz)"
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant la loi fédérale sur la transplantation d'organes, de tissus et de cellules (Loi sur la transplantation)"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente la legge federale sul trapianto di organi, tessuti e cellule (Legge sui trapianti)"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "810.21"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2002/13"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2001/0918"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2007/279"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2001-09-12"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "01.057"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zum Bundesgesetz über die Transplantation von Organen, Geweben und Zellen (Transplantationsgesetz)"
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant la loi fédérale sur la transplantation d'organes, de tissus et de cellules (Loi sur la transplantation)"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente la legge federale sul trapianto di organi, tessuti e cellule (Legge sui trapianti)"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "810.21"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2002/13"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2001/0918"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2007/279"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2001-09-12"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "01.057"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zum Bundesgesetz über die Transplantation von Organen, Geweben und Zellen (Transplantationsgesetz)"
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant la loi fédérale sur la transplantation d'organes, de tissus et de cellules (Loi sur la transplantation)"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente la legge federale sul trapianto di organi, tessuti e cellule (Legge sui trapianti)"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "810.21"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2002/13"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2001/0918"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2007/279"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2001-09-12"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "01.057"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zum Bundesgesetz über die Transplantation von Organen, Geweben und Zellen (Transplantationsgesetz)"
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant la loi fédérale sur la transplantation d'organes, de tissus et de cellules (Loi sur la transplantation)"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente la legge federale sul trapianto di organi, tessuti e cellule (Legge sui trapianti)"
     }
   }
 ]

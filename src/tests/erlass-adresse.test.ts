@@ -45,7 +45,13 @@ const SRC = resolve(fileURLToPath(import.meta.url), '..', '..');
 
 /** Zeilen- und Blockkommentare entfernen, damit Herleitungs-PROSA (die die
  *  Alt-Form zwangsläufig zitiert) nicht als Verstoss zählt. Strings bleiben
- *  stehen — genau sie sollen gefunden werden. */
+ *  stehen — genau sie sollen gefunden werden.
+ *
+ *  R5-A (5.9.2026) · begruendete Ausnahme von `appDateien.ts`: dieser Waechter
+ *  sucht nach ADRESSEN, also nach Zeichenketten mit `//` darin. Das geteilte
+ *  Sieb streicht jede Zeile ab `//` und wuerde damit genau die gesuchten
+ *  URL-Formen unsichtbar machen; das Sieb hier schuetzt `://` ausdruecklich
+ *  (`(^|[^:])//`). Gleiche Absicht, notwendig anderes Sieb — keine Dublette. */
 function ohneKommentare(q: string): string {
   return q.replace(/\/\*[\s\S]*?\*\//g, '').replace(/(^|[^:])\/\/.*$/gm, '$1');
 }

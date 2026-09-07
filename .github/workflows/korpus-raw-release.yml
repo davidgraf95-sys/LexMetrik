@@ -1,0 +1,134 @@
+# ─── Korpus-Raw-Release: Fedlex-Rohfassungen als signiertes GitHub-Release ──
+#
+# QS-VERWENDEN V3 (2.9.2026, Dossier fremdquellen-sichtung-2026-09-02 Platz 9).
+# scripts/fedlex-cache.sh lädt die konsolidierten Fedlex-Fassungen nach /tmp —
+# «Caches überleben Neustarts nicht». Für den Bund heisst das: «Raw ist
+# Golden, nie re-crawlen» ist faktisch NICHT erfüllt. Zieht Fedlex eine
+# Fassung zurück (oder ändert der Filestore-Pfad), ist die Extraktions-
+# grundlage weg, ohne dass sie irgendwo überlebt hätte.
+#
+# Dieser Workflow lädt darum ALLE gepinnten Rohfassungen mit dem bestehenden,
+# UNVERÄNDERTEN fedlex-cache.sh (kein zweiter Lade-Pfad, §5 — und kein Diff
+# an einer Risiko-Pfad-Datei, die eine Gegenprüfung verlangen würde), sammelt
+# die Pin-Dateien danach aus /tmp nach raw/ ein und veröffentlicht sie als
+# GitHub-Release mit Provenance-Attestation. KEIN Cron:
+# Rohdaten ändern sich nur, wenn ein Pin sich ändert — der push-Trigger unten
+# deckt das ab, ein Zeitplan würde nur unveränderte Stände wiederholen.
+#
+# Rückholung eines Stands: `gh release download korpus-raw-<datum>`.
+# Frischeprüfung (nicht im Gate): `npm run check:raw-store`.
+
+name: Korpus-Raw-Release
+
+on:
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/fedlex-pins.ts'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: korpus-raw-release
+  cancel-in-progress: false
+
+jobs:
+  raw-release:
+    name: Rohfassungen laden · Release veröffentlichen
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+      id-token: write
+      attestations: write
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+      - run: npx -y npm@11 ci
+
+      - name: Laufdatum festlegen (§2 — kein Date.now im Skript)
+        id: datum
+        run: echo "iso=$(date -u +%Y%m%d)" >> "$GITHUB_OUTPUT"
+
+      # Wiederverwendet die BESTEHENDE Lade-/Prüflogik 1:1, UNVERÄNDERT (§5,
+      # Single Source of Truth — und kein Risiko-Pfad-Diff): dieselbe
+      # URL-Konstruktion, dieselbe Content-Prüfung (Casemates-Soft-404,
+      # Anker-Count, SR-Identität, ≥20 kB-Schwelle), schreibt wie immer nach
+      # /tmp. Ein HTML-Shell-/Fehlschlag lässt fedlex-cache.sh mit Exit 1
+      # enden — der Lauf wird rot, es wird KEIN Release aus unvollständigen
+      # Rohdaten veröffentlicht.
+      - name: Alle gepinnten Rohfassungen laden (Content-Type-Prüfung wie in fedlex-cache.sh)
+        run: bash scripts/fedlex-cache.sh
+
+      # Sammelt NUR die Dateien ein, die scripts/fedlex-pins.ts als Pins
+      # führt (kein zweiter Pin-Bestand), und schreibt das sha256-Manifest.
+      - name: Rohfassungen nach raw/ einsammeln + Manifest schreiben
+        run: mkdir -p raw && npx vite-node scripts/gen-raw-manifest.ts -- /tmp raw > raw/MANIFEST.txt
+
+      - name: Pin-Zusammenfassung für die Release-Notes
+        id: zusammenfassung
+        run: |
+          set -euo pipefail
+          anzahl=$(find raw -maxdepth 1 -name '*.html' | wc -l | tr -d ' ')
+          groesse=$(du -sh raw | cut -f1)
+          echo "anzahl=${anzahl}" >> "$GITHUB_OUTPUT"
+          echo "groesse=${groesse}" >> "$GITHUB_OUTPUT"
+
+      - name: Archiv bauen (zstd bevorzugt, sonst gzip)
+        id: archiv
+        run: |
+          set -euo pipefail
+          datum="${{ steps.datum.outputs.iso }}"
+          tar_det=(--sort=name --mtime=@0 --owner=0 --group=0 --numeric-owner)
+          if command -v zstd >/dev/null 2>&1; then
+            tar "${tar_det[@]}" -cf - raw | zstd -19 -T0 -o "fedlex-raw-${datum}.tar.zst"
+            datei="fedlex-raw-${datum}.tar.zst"
+          else
+            tar "${tar_det[@]}" -czf "fedlex-raw-${datum}.tar.gz" raw
+            datei="fedlex-raw-${datum}.tar.gz"
+          fi
+          echo "datei=${datei}" >> "$GITHUB_OUTPUT"
+          bytes=$(wc -c < "$datei" | tr -d ' ')
+          echo "bytes=${bytes}" >> "$GITHUB_OUTPUT"
+          limit=$((2 * 1024 * 1024 * 1024))
+          if [ "$bytes" -gt "$limit" ]; then
+            echo "::error::Archiv ${datei} ist ${bytes} B — über dem 2-GiB-Release-Limit. Splitten (z.B. tar --multi-volume oder je Rechtsgebiet ein Archiv) und diesen Schritt anpassen, statt den Upload versuchen zu lassen."
+            exit 1
+          fi
+          echo "Archiv ${datei}: ${bytes} B (Limit 2 GiB)."
+
+      - name: GitHub-Release veröffentlichen
+        id: release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          DATUM: ${{ steps.datum.outputs.iso }}
+          DATEI: ${{ steps.archiv.outputs.datei }}
+          ANZAHL: ${{ steps.zusammenfassung.outputs.anzahl }}
+          GROESSE: ${{ steps.zusammenfassung.outputs.groesse }}
+        run: |
+          set -euo pipefail
+          tag="korpus-raw-${DATUM}"
+          notes="Fedlex-Rohfassungen (konsolidierte Filestore-HTMLs), 1:1 wie von scripts/fedlex-cache.sh gepinnt und geprüft (Content-Type/Anker/SR).
+
+          - Pins/Dateien: ${ANZAHL}
+          - Archiv-Rohgrösse (raw/, unkomprimiert): ${GROESSE}
+          - Quelle: scripts/fedlex-pins.ts @ ${GITHUB_SHA}
+          - Manifest: MANIFEST.txt im Archiv (sha256 je Datei + Pin-eli/-kons)
+
+          Rückholung: \`gh release download ${tag}\`
+          Frischeprüfung gegen den aktuellen Pin-Stand: \`npm run check:raw-store\`"
+          # Re-Run am selben Tag ersetzt den Stand (Tag wäre sonst belegt).
+          gh release delete "$tag" --yes --cleanup-tag || true
+          gh release create "$tag" "$DATEI" raw/MANIFEST.txt \
+            --title "Fedlex Raw-Store ${DATUM}" \
+            --notes "$notes"
+
+      - name: Provenance-Attestation auf das Archiv
+        uses: actions/attest-build-provenance@v2
+        with:
+          subject-path: ${{ steps.archiv.outputs.datei }}

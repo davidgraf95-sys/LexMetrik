@@ -1,0 +1,277 @@
+{
+  "_zweck": "Verweis-Inventar des Normtext-Korpus (V-1, W2·20-VERWEIS-SCHAERFE). Basislinie: jede Abweichung Artefakt ↔ Neuberechnung ist ROT. Erzeugung und Grenzen: scripts/check-verweis-inventar.ts (Kopf).",
+  "_regenerieren": "npm run check:verweis-inventar -- --schreiben",
+  "_quellen": {
+    "normTextSha256": "0fdc2dbebce57363b9bc1da7c4137711a249f6072cbfa415f1cdeab098a7b9b7",
+    "guards": 23
+  },
+  "korpus": {
+    "erlasse": 1565,
+    "eintraege": 60257,
+    "texte": 214321
+  },
+  "gesamt": {
+    "stellen": 36045,
+    "self": 19651,
+    "fremd": 11360,
+    "text": 5034,
+    "selbstmarker": 927
+  },
+  "klassen": [
+    {
+      "klasse": "anker-ausgeschrieben",
+      "entscheid": "FREMD",
+      "stellen": 4151,
+      "erlasse": 253,
+      "selbstmarker": 0,
+      "was": "Ausgeschriebener Artikelverweis «Artikel N … KÜRZEL» → Fremd-Artikel (Z5, W2·22)"
+    },
+    {
+      "klasse": "anker-erlass",
+      "entscheid": "FREMD",
+      "stellen": 1095,
+      "erlasse": 362,
+      "selbstmarker": 0,
+      "was": "Blosser Erlass-Verweis OHNE Artikelnummer → Erlass-Seite (Z1, W2·22)"
+    },
+    {
+      "klasse": "anker-fedlex",
+      "entscheid": "FREMD",
+      "stellen": 2605,
+      "erlasse": 337,
+      "selbstmarker": 0,
+      "was": "Voll zitierter Bund-Anker «Art. N GESETZ» (NORM_IM_TEXT)"
+    },
+    {
+      "klasse": "anker-kette",
+      "entscheid": "FREMD",
+      "stellen": 69,
+      "erlasse": 36,
+      "selbstmarker": 0,
+      "was": "Ketten-Glied, Kürzel aus dem Anker-Ende propagiert (i.V.m.)"
+    },
+    {
+      "klasse": "anker-self",
+      "entscheid": "SELF",
+      "stellen": 6,
+      "erlasse": 3,
+      "selbstmarker": 0,
+      "was": "Voll zitierter Anker auf den GELESENEN Erlass → Sprung statt Fedlex-Chip (V-2 Ziel 3)"
+    },
+    {
+      "klasse": "art-chapeau-fremd",
+      "entscheid": "FREMD",
+      "stellen": 72,
+      "erlasse": 7,
+      "selbstmarker": 0,
+      "was": "bare «Art. N» unter Fremdgesetz-Chapeau → Zielgesetz (M6-D)"
+    },
+    {
+      "klasse": "art-desder-guard",
+      "entscheid": "TEXT",
+      "stellen": 914,
+      "erlasse": 331,
+      "selbstmarker": 0,
+      "was": "«Art. N des/der/über/vom …» ohne Klammer-Kürzel"
+    },
+    {
+      "klasse": "art-f41",
+      "entscheid": "TEXT",
+      "stellen": 302,
+      "erlasse": 130,
+      "selbstmarker": 0,
+      "was": "bare «Art. N» im §-designierten Erlass — Self-Sperre (F41)"
+    },
+    {
+      "klasse": "art-kein-token",
+      "entscheid": "TEXT",
+      "stellen": 957,
+      "erlasse": 218,
+      "selbstmarker": 3,
+      "was": "bare «Art. N» — Bestimmung existiert im Erlass nicht"
+    },
+    {
+      "klasse": "art-m12-kuerzel",
+      "entscheid": "TEXT",
+      "stellen": 1006,
+      "erlasse": 266,
+      "selbstmarker": 0,
+      "was": "«Art. N KÜRZEL» (unbekanntes Kürzel) — Self unterdrückt (M12)"
+    },
+    {
+      "klasse": "art-n2-fremdkuerzel",
+      "entscheid": "TEXT",
+      "stellen": 15,
+      "erlasse": 7,
+      "selbstmarker": 0,
+      "was": "«Art. N … FEDLEX-Kürzel» (N2 Form A) — Self unterdrückt"
+    },
+    {
+      "klasse": "art-self",
+      "entscheid": "SELF",
+      "stellen": 12898,
+      "erlasse": 471,
+      "selbstmarker": 606,
+      "was": "bare «Art. N» → Sprung im eigenen Erlass"
+    },
+    {
+      "klasse": "gliederungs-genitiv",
+      "entscheid": "TEXT",
+      "stellen": 12,
+      "erlasse": 2,
+      "selbstmarker": 0,
+      "was": "«Art./§ N dieses Titels/Abschnitts …» — Gliederungseinheit, nie der Erlass (Härtung 31.8.2026)"
+    },
+    {
+      "klasse": "m6-chapeau-unterdrueckt",
+      "entscheid": "TEXT",
+      "stellen": 33,
+      "erlasse": 5,
+      "selbstmarker": 0,
+      "was": "Zitat in Items unter unauflösbarem Fremdgesetz-Chapeau (M6)"
+    },
+    {
+      "klasse": "n2b-genitiv",
+      "entscheid": "FREMD",
+      "stellen": 666,
+      "erlasse": 211,
+      "selbstmarker": 0,
+      "was": "Form-B-Glied über kuratierten Kurztitel-Genitiv ohne Klammer («des Bankengesetzes», V-7a; Geltung je Ebene)"
+    },
+    {
+      "klasse": "n2b-glied",
+      "entscheid": "FREMD",
+      "stellen": 341,
+      "erlasse": 148,
+      "selbstmarker": 0,
+      "was": "Glied der Form B «Artikel N … des <Name> (KÜRZEL)» — Klammer-Kürzel"
+    },
+    {
+      "klasse": "n2b-glied-text",
+      "entscheid": "TEXT",
+      "stellen": 0,
+      "erlasse": 0,
+      "selbstmarker": 0,
+      "was": "Form-B-Glied ohne Ziel-Token (heute strukturell 0 — NormText übergibt kein Prädikat)"
+    },
+    {
+      "klasse": "n2b-titel",
+      "entscheid": "FREMD",
+      "stellen": 327,
+      "erlasse": 160,
+      "selbstmarker": 0,
+      "was": "Form-B-Glied über amtlichen Volltitel «Bundesgesetzes/Verordnung [vom Datum] über …» (V-7b)"
+    },
+    {
+      "klasse": "paragraf-fremd-grosswort",
+      "entscheid": "TEXT",
+      "stellen": 164,
+      "erlasse": 79,
+      "selbstmarker": 0,
+      "was": "«§ N <Grosswort>» — Fremd-Indiz, kein Link"
+    },
+    {
+      "klasse": "paragraf-fremd-name",
+      "entscheid": "TEXT",
+      "stellen": 916,
+      "erlasse": 302,
+      "selbstmarker": 0,
+      "was": "«§ N des/der/über/vom …» — Fremd-Indiz, kein Link"
+    },
+    {
+      "klasse": "paragraf-kanton-kuerzel",
+      "entscheid": "FREMD",
+      "stellen": 560,
+      "erlasse": 116,
+      "selbstmarker": 0,
+      "was": "«§ N KÜRZEL» — im Kanton EINDEUTIGES Kürzel eines anderen Erlasses → Link auf dessen Lesesicht (V-3)"
+    },
+    {
+      "klasse": "paragraf-kein-token",
+      "entscheid": "TEXT",
+      "stellen": 75,
+      "erlasse": 47,
+      "selbstmarker": 0,
+      "was": "«§ N» — Bestimmung existiert im Erlass nicht"
+    },
+    {
+      "klasse": "paragraf-self",
+      "entscheid": "SELF",
+      "stellen": 3289,
+      "erlasse": 464,
+      "selbstmarker": 318,
+      "was": "«§ N» → Sprung im eigenen Erlass (F40)"
+    },
+    {
+      "klasse": "plural-glied-chapeau",
+      "entscheid": "FREMD",
+      "stellen": 20,
+      "erlasse": 1,
+      "selbstmarker": 0,
+      "was": "A10-Glied unter Fremdgesetz-Chapeau → Zielgesetz"
+    },
+    {
+      "klasse": "plural-glied-f41",
+      "entscheid": "TEXT",
+      "stellen": 4,
+      "erlasse": 2,
+      "selbstmarker": 0,
+      "was": "A10-Glied im §-designierten Erlass — Self-Sperre (F41)"
+    },
+    {
+      "klasse": "plural-glied-fremd",
+      "entscheid": "FREMD",
+      "stellen": 1454,
+      "erlasse": 153,
+      "selbstmarker": 0,
+      "was": "A10-Glied mit aufgelöstem Fremdgesetz-Signal"
+    },
+    {
+      "klasse": "plural-glied-kein-token",
+      "entscheid": "TEXT",
+      "stellen": 63,
+      "erlasse": 32,
+      "selbstmarker": 0,
+      "was": "A10-Glied — Bestimmung existiert im Erlass nicht"
+    },
+    {
+      "klasse": "plural-glied-self",
+      "entscheid": "SELF",
+      "stellen": 3458,
+      "erlasse": 203,
+      "selbstmarker": 0,
+      "was": "A10-Glied → Sprung im eigenen Erlass"
+    },
+    {
+      "klasse": "plural-region-unterdrueckt",
+      "entscheid": "TEXT",
+      "stellen": 573,
+      "erlasse": 96,
+      "selbstmarker": 0,
+      "was": "A10-Region mit unauflösbarem Fremdnamen — ganz unterdrückt"
+    }
+  ],
+  "toteSelbstziele": [
+    {
+      "erlass": "KVG",
+      "fundstelle": "bund/KVG/art_99",
+      "bestimmung": "11"
+    },
+    {
+      "erlass": "AI-640.000",
+      "fundstelle": "kanton/AI/640.000/art_146",
+      "bestimmung": "90a"
+    },
+    {
+      "erlass": "BS-786.370",
+      "fundstelle": "kanton/BS/786.370/art_5.4",
+      "bestimmung": "4"
+    }
+  ],
+  "zeitKanten": {
+    "stellen": 29,
+    "erlasse": 15,
+    "uebergangsTitel": 20,
+    "altrechtBlock": 11
+  }
+}

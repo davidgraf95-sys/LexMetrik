@@ -375,7 +375,9 @@ describe('B8 — der Tastatur-Fokus überlebt das Auto-Zuklappen', () => {
         __id: z.ids[0],
         querySelector: (sel: string) => {
           if (sel === ':scope > div.grid') return z.hatAst ? astEl(z) : null;
-          if (sel === ':scope > div > button[title]') return z.ohneKnopf ? null : knopf(`sprung:${z.ids[0]}`, false);
+          // §6.3-DEKLARATION (R6c, P8): der Produktionsselektor trifft seit der
+          // Umstellung auf `<a href>` beide Tags — das Doppel spiegelt ihn.
+          if (sel === ':scope > div > :is(a, button)[title]') return z.ohneKnopf ? null : knopf(`sprung:${z.ids[0]}`, false);
           if (sel === ':scope > div > button[aria-expanded]') return knopf(`chevron:${z.ids[0]}`, false);
           return null;
         },

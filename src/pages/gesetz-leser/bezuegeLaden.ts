@@ -126,6 +126,9 @@ export function useBezuege(erlassKey: string | undefined): {
    */
   geladen: boolean;
   bezuegeFuer: (artikel: string) => ArtikelBezuege | undefined;
+  /** D30 · dieselben Kanten OHNE die UI-Auswahl — die Bezugsgrösse, die die
+   *  Kopfzahl der Bezüge-Zeile zählt (Herleitung an der Implementierung). */
+  alleFuer: (artikel: string) => ArtikelBezuege | undefined;
   /** Kantone, zu denen dieser Erlass wirklich Kanten hat (leer, solange der
    *  Shard nicht geladen ist) — speist den Kanton-Schalter im «Ansicht ▾». */
   kantoneVerfuegbar: string[];
@@ -215,6 +218,38 @@ export function useBezuege(erlassKey: string | undefined): {
     };
   }, [aktiv, erlassKey, shard, klassen, kantone, bereich]);
 
+  /**
+   * DIESELBEN KANTEN, OHNE DIE UI-AUSWAHL (W2·24-R5-F1K · D30, 6.9.2026).
+   *
+   * ── DER BEFUND, DEN DAS BEHEBT (gemessen 7.9.2026, OR 336c @1440) ─────────
+   * Die aufgeklappte Bezüge-Zeile am Artikelkopf zeigte 3 von 11 Entscheiden.
+   * Die Kopfzahl (Zähl-Datei, ungefiltert) sagte 11, die Liste zeigte die
+   * Leitentscheide — die übrigen 8 fehlten samt ihrer Gruppe, also OHNE jeden
+   * Hinweis, dass eine Auswahl im Spiel ist. Das ist genau das versteckte
+   * Filter, das Ä54 am Panel verbietet: «ein Ergebnis, dessen Einschränkung man
+   * nicht sieht, ist eine falsche Auskunft über den Bestand» (§8).
+   *
+   * WARUM NICHT STATTDESSEN DIE FILTERZEILE AN DIE BEZÜGE-ZEILE HÄNGEN: die
+   * Facetten gehören zum Panel, das sie anzeigt und bedienbar macht. Die Zeile
+   * am Artikelkopf ist eine ANTWORT AUF DIE KOPFZAHL — sie soll zeigen, was die
+   * Zahl zählt, und die Zahl zählt ungefiltert (§5, eine Bezugsgrösse). Ein
+   * zweiter Satz Filterknöpfe im Lesekörper wäre eine zweite Auswahl-Wahrheit.
+   *
+   * KEINE NEUE RECHNUNG: das ist `bezuegeFuer` ohne den einen `waehleBezuege`-
+   * Schritt. Dieselbe Quelle, dieselbe Ordnung, dieselbe `gesamt`-Angabe;
+   * `zeitAktiv`/`kantonAktiv` sind hier per Definition `false`, weil kein
+   * Filter wirkt — die Gruppenköpfe schreiben dann keine «von»-Einschränkung,
+   * und das ist wahr.
+   */
+  const alleFuer = useCallback((artikel: string): ArtikelBezuege | undefined => {
+    if (!aktiv || !erlassKey || shard?.key !== erlassKey || !shard.shard) return undefined;
+    const s = shard.shard;
+    const token = normArtikelToken(artikel);
+    const kanten = bezuegeFuerArtikel(s, token);
+    if (kanten.length === 0) return undefined;
+    return { kanten, gesamt: s.gesamtProArtikel?.[token] ?? {}, zeitAktiv: false, kantonAktiv: false };
+  }, [aktiv, erlassKey, shard]);
+
   // useMemo, nicht bei jedem Render neu: die Ableitung geht über ALLE Dokumente
   // des Shards (bis ~1200 bei der StPO) und das Ergebnis hängt an einem Prop-
   // Pfad bis ins «Ansicht ▾»-Menü — eine neue Array-Identität je Render machte
@@ -264,7 +299,7 @@ export function useBezuege(erlassKey: string | undefined): {
   // darin liegt die Auskunft, die aus `klassenImErlass` nicht zu holen ist.
   const geladen = aktiv && shard != null && shard.key === erlassKey;
 
-  return { aktiv, geladen, bezuegeFuer, kantoneVerfuegbar, klassenImErlass, histogramm, bereich };
+  return { aktiv, geladen, bezuegeFuer, alleFuer, kantoneVerfuegbar, klassenImErlass, histogramm, bereich };
 }
 
 /** Geteilte Leer-Instanzen: halten die Referenz stabil, solange nichts geladen

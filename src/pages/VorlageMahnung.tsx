@@ -8,6 +8,7 @@ import { zahl } from '../lib/vorlagen/datum';
 import type { PdfBanner } from '../lib/vorlagen/banner';
 import { DatumsFeld } from '../components/DatumsFeld';
 import { Checkbox, Field, inputCls } from '../components/vorlagen/ui';
+import { BetragsFeld } from '../components/BetragsFeld';
 import { SelectionGrid } from '../components/ui/SelectionGrid';
 import { VorlagenSeite, type SeiteCtx, type VorlagenSeitenConfig } from '../components/vorlagen/VorlagenSeite';
 import { istIsoDatum } from '../components/vorlagen/seiteHelfer';
@@ -76,7 +77,7 @@ function eingabeInhalt({ a, set }: SeiteCtx<MaAntworten>, schritt: number) {
     case 'forderung': return a.variante === 'zahlung' ? (
       <div className="space-y-4">
         <Field label="Forderungsbetrag (CHF)">
-          <input className={inputCls + ' sm:max-w-[12rem]'} inputMode="decimal" value={a.betrag} onChange={(e) => set('betrag', e.target.value)} placeholder="z. B. 1250.00" />
+          <BetragsFeld className={inputCls + ' sm:max-w-[12rem]'} value={a.betrag} onChange={(v) => set('betrag', v)} placeholder="z. B. 1'250.00" />
         </Field>
         <Field label="Rechtsgrund / Rechnung" hint="erscheint im Betreff und im Forderungs-Satz">
           <input className={inputCls} value={a.rechtsgrund} onChange={(e) => set('rechtsgrund', e.target.value)} placeholder="z. B. Rechnung Nr. 4711 vom 12. Mai 2026" />
@@ -116,7 +117,7 @@ function eingabeInhalt({ a, set }: SeiteCtx<MaAntworten>, schritt: number) {
         {a.mahngebuehrErfassen && (
           <div className="space-y-3 pl-6">
             <Field label="Mahngebühr (CHF)">
-              <input className={inputCls + ' sm:max-w-[8rem]'} inputMode="decimal" value={a.mahngebuehr} onChange={(e) => set('mahngebuehr', e.target.value)} placeholder="z. B. 20.00" />
+              <BetragsFeld className={inputCls + ' sm:max-w-[8rem]'} value={a.mahngebuehr} onChange={(v) => set('mahngebuehr', v)} placeholder="z. B. 20.00" />
             </Field>
             <Checkbox
               checked={a.mahngebuehrVertraglich}

@@ -46,11 +46,29 @@ test.describe('H2 / Pos. 14 — Suche verlassen bewegt den Lesetext um 0 px', ()
     test.slow()
     const { fehler, y } = await oeffneUndScrolle(page)
 
+    // Ein Artikel im Bild als Zeuge — er misst, was der LESER sieht.
+    const zeuge = page.locator('#lc-lesespalte [id^="art-"]').first()
+    const lage = () => zeuge.evaluate((el) => Math.round(el.getBoundingClientRect().top))
+    const lageVorher = await lage()
+
     await suchFeld(page).fill('Entschädigung')
     await expect(page.locator('[data-treffer-liste]')).toBeVisible({ timeout: 30_000 })
     // Schon das BEGINNEN der Suche darf nichts bewegen — in der Ist-Hülle
     // sprang der Text hier an den Anfang (scrollY 0).
-    expect(await scrollY(page), 'die Suche selbst hat den Text bewegt').toBe(y)
+    //
+    // ── §6.3-UMSTELLUNG D38 (7.9.2026) · GEMESSEN WIRD DIE BILDLAGE ──────────
+    // Hier stand `expect(await scrollY(page)).toBe(y)`. Das galt, solange die
+    // Such-Zone bei STEHENDER Gliederungs-Spalte nicht wachsen konnte
+    // (`zoneHoch: … && !zweiSpalten`). Seit D38 wird die Zeile für die ganze
+    // Dauer einer Eingabe reserviert — die Zone wächst um 24 px, Chromes
+    // Scroll-Anchoring zieht `scrollY` um dieselben 24 px nach, und genau
+    // dadurch sieht der Leser nichts wandern. Eine Zusicherung auf konstantes
+    // `scrollY` verlangte hier also das Gegenteil dessen, was Pos. 14
+    // verspricht. Dieselbe Umstellung und dieselbe Begründung wie in
+    // `leser-v3-suche-ohne-gliederung` (d) und `leser-d38-treffer-lesespalte`
+    // (c) — eine Messart für eine Frage (§5).
+    expect(Math.abs(await lage() - lageVorher),
+      'die Suche selbst hat den Text bewegt').toBeLessThanOrEqual(2)
 
     await suchFeld(page).focus()
     await page.keyboard.press('Escape')
@@ -58,7 +76,11 @@ test.describe('H2 / Pos. 14 — Suche verlassen bewegt den Lesetext um 0 px', ()
     // Kurz nachlaufen lassen: der Rücksprung der Ist-Hülle lief über einen
     // requestAnimationFrame, ein sofortiges Messen hätte ihn verpasst.
     await page.waitForTimeout(1200)
+    // Nach dem Leeren ist die Geometrie wieder die des Ruhezustands — hier ist
+    // `scrollY` wieder der schärfere Zeuge und bleibt unverändert geprüft.
     expect(await scrollY(page), 'Esc hat den Text bewegt').toBe(y)
+    expect(Math.abs(await lage() - lageVorher), 'Esc hat den Text im Bild bewegt')
+      .toBeLessThanOrEqual(2)
 
     expect(fehler, `Konsolen-/Seitenfehler: ${fehler.join(' | ')}`).toEqual([])
   })

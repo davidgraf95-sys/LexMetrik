@@ -14,7 +14,7 @@
 // Regenerieren:  node scripts/normtext/seed-grundart.mjs
 // Reine Daten (§3), kein Render — golden byte-gleich.
 
-import { existsSync, readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 
@@ -94,12 +94,35 @@ function main() {
 
   const eintraege = [];
   const gesehen = new Set();
+  // Mindestzahl-Sperre (Nach-Verdikt 5.9.2026, PR #694): ohne sie verwarf ein
+  // fehlendes/leeres Snapshot-Verzeichnis ALLE ~1230 Kantons-Einträge lautlos
+  // (Exit 0, 238 statt 1468 Einträge). Ein Rückzug ist EIN Key, kein Verzeichnis.
+  const kantonDateien = existsSync(KANTON_SNAPSHOTS)
+    ? readdirSync(KANTON_SNAPSHOTS).filter((d) => d.endsWith('.json')).length : 0;
+  const kantonImSeed = zuordnung.filter((e) => e.ebene === 'kanton').length;
+  if (kantonDateien < Math.floor(kantonImSeed * 0.9)) {
+    throw new Error(`seed-grundart: nur ${kantonDateien} Kanton-Snapshots unter public/normtext/kanton, `
+      + `Seed kennt ${kantonImSeed} — Verzeichnis fehlt oder Teil-Checkout; kein Rückzug, Abbruch (§8).`);
+  }
   for (const e of zuordnung) {
     if (!GRUNDARTEN.has(e.grundart)) {
       throw new Error(`seed-grundart: ungültige grundart «${e.grundart}» bei ${e.key}`);
     }
     if (gesehen.has(e.key)) throw new Error(`seed-grundart: doppelter key «${e.key}»`);
     gesehen.add(e.key);
+
+    // Kanton-Waisen-Sonde (Gegenprüfungs-Befund PR #694, 5.9.2026): der
+    // statische Audit-Snapshot erlass-klassifikation.json kennt einen später
+    // aus dem Korpus zurückgezogenen Key (§5/§8) nicht — ohne Sonde blieb
+    // GL-III%20B_7_1 nach seinem Rückzug als Geist im Seed. Sonde = Datei-
+    // Existenz (dieselbe Art wie golden-kanton-merge.ts), NICHT das Register:
+    // register.ts importiert GRUNDART_SEED selbst, ein Import davon zurück
+    // wäre ein Zyklus. Nur Kanton — Bund-Stubs/PDF-Embed/Live-Link haben
+    // ohnehin nie eine Snapshot-Datei und dürfen das auch nicht werden.
+    if (e.ebene === 'kanton' && !existsSync(join(KANTON_SNAPSHOTS, `${e.key}.json`))) {
+      console.log(`  Rückzug (kein Snapshot mehr): ${e.key} — aus dem Seed entfernt`);
+      continue;
+    }
 
     // Grenzfall-Wächter: garantiert die KODIFIKATION-Zuordnung (Drift bräche hier).
     if (GRENZFALL_KODIFIKATION.has(e.key) && e.grundart !== 'KODIFIKATION') {

@@ -3,6 +3,7 @@ import { readFileSync } from 'node:fs';
 import { renderToString } from 'react-dom/server';
 import { SeitenTitel } from '../components/ui/SeitenTitel';
 import { PaneProvider } from '../components/layout/PaneKontext';
+import { alleTsx, liesOhneKommentare, pruefeAusnahmen, rel } from './appDateien';
 
 // ─── A-1 (W2·19-DESIGN-KONSISTENZ, 31.8.2026) · EIN SEITENTITEL ─────────────
 //
@@ -72,10 +73,48 @@ describe('A-1 — keine zweite Titel-Anatomie mehr (§5/§10)', () => {
     }
   });
 
-  it('keiner baut die H1-Kaskade noch von Hand nach', () => {
-    for (const datei of KONSUMENTEN) {
-      const quelle = readFileSync(datei, 'utf8');
-      expect(/<h1[^>]*text-h2/.test(quelle), `${datei} trägt wieder eine handgebaute H1`).toBe(false);
+  // ─── R3-α-WURZEL (31.8.2026, §17/§6.7) ────────────────────────────────────
+  //
+  // Hier stand `/<h1[^>]*text-h2/` gegen sechs gelistete Dateien. Beides war zu
+  // eng, und beides zusammen ergab ein Vakuum: der Ausdruck erkannte nur die
+  // KASKADE (`text-h2 sm:text-h1`), die Liste nur die schon migrierten Flächen.
+  // Gemessen am 31.8.2026 standen drei Vorlagen-Seiten mit fester `text-h1`-H1
+  // ausserhalb von beidem (VorlageKuendigungVermieter, VorlageKapitalerhoehung,
+  // VorlageGmbhGruendung) — der Wächter war grün. Jetzt: KEIN `<h1` in der App
+  // ausser im Baustein und in der einen begründeten Ausnahme.
+  // DEKLARIERTE ANPASSUNG (W2·24-DESIGN-IDENTITAET R10, 6.9.2026, §6.3): die
+  // Ausnahme ist DIESELBE und trägt dieselbe Begründung — nur ist aus
+  // `start/Hero` (Titelblatt-Zeile des Satzspiegels) der `start/SuchBlock`
+  // (erste Ebene des Pults) geworden. Umfang und Assertion unverändert: genau
+  // eine handgebaute <h1> in der App, und die trägt ihre Begründung am Fundort.
+  const AUSNAHMEN = [{
+    datei: 'components/start/SuchBlock.tsx',
+    begruendung: 'A-1-AUSNAHME (R3-α, 31.8.2026)',
+  }] as const;
+
+  it('jede Ausnahme trägt ihre Begründung am Fundort', () => {
+    expect(() => pruefeAusnahmen(AUSNAHMEN)).not.toThrow();
+  });
+
+  it('App-weit: die H1 zeichnet nur der Baustein', () => {
+    const erlaubt = pruefeAusnahmen(AUSNAHMEN);
+    const funde = alleTsx()
+      .filter((d) => rel(d) !== 'components/ui/SeitenTitel.tsx' && !erlaubt.has(rel(d)))
+      .filter((d) => /<h1[\s>]/.test(liesOhneKommentare(d)))
+      .map(rel);
+    expect(funde, 'handgebaute <h1> statt <SeitenTitel>').toEqual([]);
+  });
+
+  it('NEGATIV-KONTROLLE: der Ausdruck findet BEIDE Vorher-Formen', () => {
+    // (a) die Kaskade, die der alte Ausdruck sah; (b) die feste `text-h1`, an
+    // der er vorbeiging — genau die Lücke, die B3-6 gemeldet hat.
+    for (const vorher of [
+      '<h1 className="text-h2 sm:text-h1 font-display font-semibold text-ink-900">X</h1>',
+      '<h1 className="text-h1 font-display font-semibold text-ink-900">GmbH-Gründungsunterlagen</h1>',
+    ]) {
+      expect(/<h1[\s>]/.test(vorher), vorher).toBe(true);
     }
+    expect(/<h1[^>]*text-h2/.test('<h1 className="text-h1 font-display font-semibold text-ink-900">X</h1>'),
+      'der ALTE Ausdruck ging an der festen text-h1 vorbei — das war die Lücke').toBe(false);
   });
 });

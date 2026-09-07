@@ -1,5 +1,10 @@
 # Standard-Dispatch-Template — Sub-Agenten kompakt beauftragen (QS-TOK P3)
 
+> **Grüne-Spur-Weiche (vor JEDEM Bau-Dispatch beantworten, Skill auftrag Ziff. 6; Lehre 5.9.2026: Prosa feuerte nachts nicht):**
+> (a) nur `src/**`, kein Risikopfad? · (b) Fertig-Kriterium maschinell (Tore, gleiche Tests, Golden), kein Sichtentscheid? · (c) ein Ziel, ≤ ~5 Dateien, Whitelist benennbar? · (d) keine offene David-Frage?
+> **4× ja ⇒ Jules-Ticket (Vorlage `jules-ticket-vorlage.md`, Kontingent vorher messen), nicht Claude-Agent.** Ein Nein ⇒ Claude, mit dem Nein als Begründung im Dispatch.
+
+
 > **Heimat:** Detailquelle zu `FAHRPLAN-TOKEN-OEKONOMIE.md` §5 (P3 Dispatch+Prozess),
 > verankert über §14.6 (Kontext-Hygiene: *Delegieren > Persistieren > gezielt
 > lesen > Handoff > `/compact`*; seit 25.7.2026 im Skill `auftrag`, Ziff. 6). Umgesetzt: **T4** (dieses Template) · **T15** (Modell-/

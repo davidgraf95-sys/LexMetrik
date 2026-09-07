@@ -1,115 +1,50 @@
 import { useState, memo } from 'react';
 import { ArtikelBody, FnRef } from '../../../components/normtext/ArtikelBody';
-import { WJ } from '../../../components/normtext/wortverbinder';
 import { type InternRefs } from '../../../components/NormText';
-import { trenneAenderungshistorie, labelMitBereich, artikelGanzAufgehoben } from '../../../lib/normtext/darstellung';
+import { labelMitBereich, artikelGanzAufgehoben } from '../../../lib/normtext/darstellung';
 import type { Fussnote } from '../../../lib/normtext/browse';
-import { NORM_IM_TEXT, fedlexLinkFuerArtikel } from '../../../lib/fedlex';
-import { NEUER_TAB } from '../../../lib/benennung';
-import { NormChip } from '../../../components/vorlagen/NormChip';
-import { KanteMitVorschau } from '../../../components/verzahnung/KanteMitVorschau';
-import { MehrKante } from '../../../components/verzahnung/MehrKante';
 import type { LeitfallRef } from '../../../lib/rechtsprechung/norm-index';
-import {
-  klassifiziereFassungsBezug, entscheidDatum, type ArtikelRevision,
-} from '../../../lib/verzahnung/artikel-revisionen';
+import type { MaterialBezug } from '../../../lib/normtext/werkzeuge';
+import type { ArtikelRevision } from '../../../lib/verzahnung/artikel-revisionen';
 import type { BrowseErlass } from '../../../lib/normtext/browse-typen';
 import type { NormSnapshot } from '../../../lib/normtext/typen';
 import { verifizierLinkArtikel } from '../../../lib/normtext/verifikationslink';
 import type { ArtikelHistorie } from '../../../lib/normtext/historie-laden';
-import { ArtikelHistorieZeile } from './ArtikelHistorie';
-import { margStufeStil, fnTextMitLinks, baueZitat, margLabel } from '../helpers';
+import { fnTextMitLinks, baueZitat } from '../helpers';
 import { SUCH_META } from '../suchHighlight';
-import { zitatMitAusweis, heuteIso } from '../../../lib/format';
-import { schaetzeArtikelHoehe, fnNrSortKey } from '../berechnungen';
-import { BezuegeZeile } from './BezuegeZeile';
+import { schaetzeArtikelHoehe } from '../berechnungen';
+import { fussnotenAnzeige, verteileFussnoten, sammleVerweise } from './ArtikelLeser.fussnoten';
+import { useSatzspiegel } from '../v3/satzspiegel';
 import type { ArtikelBezuege } from '../bezuegeLaden';
-import { urlMitHash } from '../../../lib/liveUrlSync';
-import { usePaneKontext } from '../../../components/layout/PaneKontext';
-
-// Schaufenster-Chips: nur die zentralen Leitfälle direkt zeigen (Reihenfolge =
-// `gewicht` aus dem Shard), Rest hinter «+n weitere». V2·B-2 (David 10.7.2026,
-// «auch mehr als fünf»): Kappung von 5 auf 10 angehoben; below-fold, kein
-// Normtext-Re-Render (§15). Bewusst klein, kein Panel.
-const LEITFAELLE_SICHTBAR = 10;
-
-// «Leitfälle zu diesem Artikel» (FAHRPLAN-DATENHALTUNG §11.2, Weiche B): Chip-Zeile
-// analog «Verweise». V1a-Endzustand (CI-Befund W2·7-VZUI, 3 Iterationen): die Zeile
-// ist ein REINER Renderer — die Daten kommen als Prop vom Reader, der den erlass-
-// lokalen Shard GENAU EINMAL idle lädt (inhalt.tsx). Vorher fetchte jede der ~1000
-// Zeilen grosser Erlasse selbst (idle-Herde: >13 s Long-Tasks im 20×-Throttle,
-// ★ nach ~15 s; ein Sichtbarkeits-Ansatz je Zeile scheiterte am Hydrations-Drift).
-// Ein Fetch + ein setState auf Reader-Ebene: kein Herden-Jam, kein Race — memo
-// re-rendert nur Artikel, deren `leitfaelle`-Prop wirklich wechselt (§15.4).
-//
-// Chips = geteilter KantenChip (Dichte-Regel: ★-Glyph als EIN Zusatz, aria-label
-// aus dem StatusBadge-Vokabular), «+n weitere» = MehrKante. `normZitat`
-// («Art. 957 OR») wandert als ?norm= an den Entscheid-Link — der EntscheidLeser
-// springt zur ERSTEN Erwägung, die den Artikel zitiert (Auftrag David 3.7.2026;
-// keine Fundstelle ableitbar → ehrlicher Seitenanfang, §8).
-const LeitfallZeile = memo(function LeitfallZeile({ refs, normZitat, revision }: {
-  /** Leitfälle dieses Artikels aus dem erlass-lokalen Shard (Reader lädt einmal). */
-  refs?: LeitfallRef[];
-  /** Voll zitierfähige Norm («Art. 957 OR») für den Fundstellen-Sprung im Ziel. */
-  normZitat: string;
-  /** Revision r(a) dieses Artikels (§V1c): undefined = unbekannt (⇒ still),
-   *  null = Urfassung (⇒ still), Objekt = letzte Textänderung. Ein Leitfall,
-   *  dessen Entscheiddatum VOR r(a) liegt, legt eine ältere Fassung aus → ↻-Glyph. */
-  revision?: ArtikelRevision | null;
-}) {
-  const [alleAuf, setAlleAuf] = useState(false);
-
-  // Wie die «Verweise»-Zeile: ohne Treffer GAR KEINE Zeile (kein reservierter
-  // Leerraum, §15.2 — die grosse Mehrheit der Artikel hat keine Leitfälle; eine
-  // Reservierung zöge in fast jeden Artikel Weissraum ein). Die Zeilen wachsen
-  // mit dem EINEN Shard-Resolve am Artikel-Fuss ein (below-fold); der
-  // prerenderte Normtext (LCP/Ctrl+F) bleibt unberührt (§15.1/3).
-  if (!refs || refs.length === 0) return null;
-
-  // W2·7-BEZUG/B5: die frühere Zeitraum-Kappung («alle · 20 · 10 · 5 J.») ist HIER
-  // ENTFALLEN. Sie war die einzige Verbraucherin der abgelösten Stufen-Wahl; der
-  // Zeit-Bereich wirkt seit B5 eine Schicht früher, nämlich in der Kanten-Auswahl
-  // (`waehleBezuege`), und damit auf ALLE Instanzen statt nur auf die BGE-Zeile.
-  // Diese Zeile filtert deshalb gar nicht mehr — sie rendert, was sie bekommt.
-  const sichtbar = alleAuf ? refs : refs.slice(0, LEITFAELLE_SICHTBAR);
-  const rest = refs.length - sichtbar.length;
-  return (
-    <div data-leitfall-zeile className="mt-4 flex flex-wrap items-center gap-2">
-      <span className="lc-overline mr-1" title="Maschinell aus den zitierten Normen zugeordnet — keine redaktionelle Präjudizienauswahl. Entscheide beziehen sich auf die im Entscheidzeitpunkt geltende Fassung."><span className="lc-punkt lc-punkt-entscheid" aria-hidden />Leitfälle</span>
-      {sichtbar.map((r) => {
-        // ?norm= trägt die Fundstellen-Absicht: das Ziel springt zur ersten
-        // Erwägung, die diese Norm zitiert (Auflösung im EntscheidLeser, §5).
-        const ziel = `/rechtsprechung/${encodeURIComponent(r.key)}?norm=${encodeURIComponent(normZitat)}`;
-        // §V1c: hat sich die Norm SEIT diesem Entscheid revidiert? Q1-sicher über
-        // die Entscheid-Präzision (BGE-Bandjahr-Platzhalter ⇒ strikter Jahresvergleich).
-        const revidiert = klassifiziereFassungsBezug(entscheidDatum(r.datum, r.gericht), revision) === 'revidiert'
-          ? (revision ?? null) : null;
-        return (
-          <KanteMitVorschau key={r.key} ziel={ziel} zitierung={r.zitierung}
-            kurztext={r.regesteKurz}
-            leitentscheid={r.leitcharakter === 'leitentscheid'}
-            revidiert={revidiert}
-            titel={r.regesteKurz ?? r.zitierung} />
-        );
-      })}
-      <MehrKante rest={rest} offen={alleAuf} onOeffne={() => setAlleAuf(true)} />
-      {/* Weiche-B-Erweiterungspunkt (§10(6)): der Massen-Anteil «+n weitere (online)»
-          aus der Edge-Query kommt HIER dazu, sobald E2 live ist — heute nur der
-          geshardete Schaufenster-Anteil, kein Edge-Fetch. NICHT bauen. */}
-    </div>
-  );
-});
+import { werkzeugeAmArtikel } from '../randNotizWerkzeuge';
+import { RandTitel } from './ArtikelLeser.kopfteile';
+import { ArtikelHistorieZeile } from './ArtikelHistorie';
+import { ArtikelBezuegeFuss } from './ArtikelLeser.bezuegeFuss';
+import { ArtikelAktionen } from './ArtikelAktionen';
 
 // Ein Artikel im Lesefluss (Richtung A): zweispaltig wie die amtliche Druckfassung —
 // links «Art. N» als ruhiger Anker mit den Randtiteln darunter (rechtsbündig, nur die
 // gegenüber dem Vorartikel GEÄNDERTEN Stufen, `marg`), rechts der Serif-
 // Bestimmungstext. Ersetzt den früheren fliegenden Standort-Tracker. Reine Darstellung.
-export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, fussnoten, intern, marg, margBasis, imTreffer, onSpringe, leitfaelle, bezuege, revision, historie, istAnhang = false }: {
+
+export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, fussnoten, intern, marg, margBasis, imTreffer, onSpringe, leitfaelle, bezuege, bezuegeImFuss, materialien, onBezuegeOeffnen, onImBlatt, bezuegeLaedt, revision, historie, zaehler, istAnhang = false }: {
   e: NormSnapshot; erlass: BrowseErlass; basisPfad: string; fussnoten?: Fussnote[]; intern?: InternRefs;
   marg?: string[];
   /** G-HIST-UI: Fassungshistorie dieses Artikels aus dem erlass-lokalen Shard
    *  (Reader lädt ihn einmal idle). undefined = kein Eintrag ⇒ kein Badge (§8). */
   historie?: ArtikelHistorie;
+  /**
+   * W2·24-R6c · die ZAHLEN der Bezüge-Zeile, buildseitig gezählt
+   * (`../bezuegeZaehler`, Zähl-Datei je Erlass, ø 289 B). Sie sagen, WIE VIELE
+   * Entscheide und Materialien an diesem Artikel hängen — nicht WELCHE. Damit
+   * steht die Zeile vollständig da, bevor irgendein Shard geladen ist, und die
+   * Rubrik «Materialie» wird überhaupt erst möglich: ihr Shard kommt im Leser
+   * sonst gar nicht vor (§8 — bis hierher fehlte die Rubrik lieber ganz, als
+   * eine Zusage ohne Deckung zu machen).
+   * `undefined` = keine Datei oder noch nicht geladen ⇒ die Zeile fällt auf
+   * das zurück, was der Artikel ohnehin führt.
+   */
+  zaehler?: { entscheide: number; materialien: number };
   /** W2·5d G3b (③/⑤): der Eintrag ist ein Anhang (`annex_*`) bzw. Staatsvertrags-
    *  Protokoll (`lvl_*`) — als eigenständig erkennbarer, klar abgesetzter Block
    *  rendern (Struktur-Trenner statt Artikel-Trenner, «Anhang N»/«Protokoll N» als
@@ -132,6 +67,45 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
    *  der `LeitfallZeile` (der Bezugs-Shard ist deren Obermenge, §5 — nie beide
    *  nebeneinander, das wären zwei Wahrheiten am selben Artikel). */
   bezuege?: ArtikelBezuege;
+  /**
+   * D30 · der Inhalt der AUFGEKLAPPTEN Bezüge-Zeile. Sie hiess bis D33
+   * `bezuegeImFuss` — die Zeile stand damals unter der Artikelnummer; seit D34
+   * steht sie am Artikelfuss (Auftrag David 7.9.2026), und der Prop-Name folgt
+   * dem Ort.
+   *
+   * BEWUSST NICHT `bezuege` (Nullprobe 7.9.2026, `leser-v3-kontext-cls` (b)):
+   * `bezuege` speiste AUCH den unbedingten Artikelfuss der schmalen Form und
+   * der Suchsicht (`!kopfForm`). Wer im V3-Leser `bezuege` setzte, brachte
+   * damit Pos. 12 zurück — gemessen @390 an der StPO: das Öffnen des Panels lud
+   * den Shard, und die Fuss-Zeile wuchs an JEDEM Artikel in den Lesekörper
+   * hinein (Artikel-y 1385→1493, 1798→2013, 2461→2783). Genau das verbietet der
+   * CLS-Fall.
+   *
+   * DER BELEG BLEIBT STEHEN, DIE STELLE IST WEG: D34 hat den unbedingten
+   * Fuss-Zweig gelöscht — beide Props landen jetzt im selben `<details>`.
+   * Zwei Props bleiben es trotzdem, weil es zwei LADEVERTRÄGE sind: `bezuege`
+   * wird unbedingt gesetzt (Ist-Hülle, Tests, V1), diese hier erst, NACHDEM der
+   * Leser eine Zeile aufgeklappt hat. Genau diese Grenze bewacht die H3-Sonde
+   * in `src/tests/leser-v3-fundament.test.ts`; sie fiele mit einer
+   * zusammengelegten Prop ersatzlos weg (§6.7).
+   */
+  bezuegeImFuss?: ArtikelBezuege;
+  /** D30 (David 6.9.2026) · die Materialien DIESES Artikels, sobald der Leser
+   *  die Bezüge-Zeile einmal aufgeklappt hat (`../artikelMaterialienLaden`).
+   *  Bis dahin `undefined` — die Rubrik zeigt dann ihre gezählte Zahl aus der
+   *  Zähl-Datei und noch keine Liste. Gleiche Quelle wie die Zahl (§5). */
+  materialien?: MaterialBezug[];
+  /** D30 · wird beim Aufklappen der Bezüge-Zeile gerufen und armiert den
+   *  bestehenden Ladepfad (`v3/panelModell.ts` → `weckeDaten`). Ohne die Prop
+   *  bleibt die Zeile, was sie war (Ist-Hülle, Tests, Druck). */
+  onBezuegeOeffnen?: () => void;
+  /** D35-F2 · «im Blatt öffnen ›» in der aufgeklappten Rubrik «Entscheide»
+   *  (Herleitung in `./ArtikelLeser.bezuegeFuss.tsx`). MUSS referenz-stabil
+   *  sein — diese Komponente ist `memo`, und 1686 neue Funktionen je Render des
+   *  Rahmens hoben die Schranke auf (§15, `../v3/panelModell.oeffneEntscheide`). */
+  onImBlatt?: () => void;
+  /** D30 · der Apparat ist unterwegs ⇒ Skelett-Zeile «lädt …» statt Leere. */
+  bezuegeLaedt?: boolean;
   /** Revision r(a) dieses Artikels (§V1c) — an die LeitfallZeile durchgereicht. */
   revision?: ArtikelRevision | null;
   // Absolute Tiefe der ERSTEN gezeigten Randtitel-Stufe (Delta-Offset). Damit
@@ -143,13 +117,13 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
   // Trefferliste zu ankern.
   imTreffer?: boolean; onSpringe?: (token: string) => void;
 }) {
-  const [kopiert, setKopiert] = useState<'' | 'zitat' | 'link'>('');
-  // LM-202: der Teilen-Knopf schreibt die Adresse — im SEKUNDÄREN Pane nicht
-  // (Herleitung unten bei `kopiere`; massgeblich ist die Rolle, nicht `imPane`).
-  // Ohne montierten Provider liefert der Kontext `rolle: 'primaer'` ⇒
-  // Einzelansicht/Prerender unverändert.
-  const { rolle } = usePaneKontext();
-  const istSekundaer = rolle === 'sekundaer';
+  // ── W2·24-D35-F1 · DIE KOPIER-MECHANIK WOHNT JETZT BEI IHREN KNÖPFEN ────
+  // `useKopieren` (Marke), `usePaneKontext` (Rolle) und die ganze
+  // `kopiere`-Funktion samt LM-202-Regel sind mit den drei Knöpfen nach
+  // `./ArtikelAktionen.tsx` gezogen — WORT FÜR WORT, mitsamt ihren
+  // Herleitungen. Diese Datei kannte den Zustand nur, weil die Knöpfe hier
+  // standen; sie stehen jetzt am Artikelende (§6.6, und eine Datei weniger
+  // gegen die 800er-Schwelle).
   const label = labelMitBereich(e.artikelLabel, e.artikel);
   // KURZ-Zitat («Art. 957 OR») — Fundstellen-Signal für den Entscheid-Sprung
   // (LeitfallZeile `normZitat` → ?norm=). MUSS knapp bleiben, sonst matcht der
@@ -166,114 +140,16 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
   // G-AUFH-ART: e.aufgehoben (amtlich verifiziertes Adapter-Signal) hat Vorrang
   // vor der Text-Heuristik, falls gesetzt (s. artikelGanzAufgehoben-Doku).
   const ganzAufgehoben = artikelGanzAufgehoben(e.bloecke, e.aufgehoben);
-  // Fussnoten am Fuss: amtliche Sidecar-Fussnoten bevorzugen; fehlen sie, die
-  // aus dem Wortlaut-Block abgetrennte Änderungshistorie (Extraktions-Artefakt)
-  // hier zeigen — einheitlich EINE Quelle, keine Doppelung.
-  const fussAnzeigeRoh: Fussnote[] = fussnoten && fussnoten.length > 0
-    ? fussnoten
-    : e.bloecke
-        .map((b) => trenneAenderungshistorie(b.text).historie)
-        .filter((h): h is string => !!h)
-        .map((text): Fussnote => ({ nr: '', text, links: [] }));
-  // A43 (David 16.7.): Fussnoten in Fedlex-ANZEIGE-Reihenfolge = laufende Nummer
-  // (Fedlex nummeriert global nach Dokumentposition). Das Sidecar liefert bewusst
-  // [artikel-eigene, …Section-heading] (load-bearing für den Revisions-Extrakt,
-  // §3) — die Section-heading-Fussnote (z. B. SchKG 56 fn 95 am Randtitel «III.
-  // Geschlossene Zeiten …», steht ÜBER dem Artikel) hat aber eine KLEINERE Nummer
-  // und gehört im Apparat VOR die artikel-eigenen. Darum hier für die DARSTELLUNG
-  // stabil nach numerischer Nr (+ Buchstaben-Suffix «95a») sortieren; leere/nicht-
-  // parsbare Nr behalten stabil ihre Lage. Reine Darstellung — Sidecar/Daten unberührt.
-  // W2·5i: der Nummern-Sortierschlüssel steht als `fnNrSortKey` in ./berechnungen
-  // (identische Implementierung, dort auch von der Chronologie-Reihung genutzt) —
-  // die frühere lokale Kopie ist entfallen, damit die Anzeige-Ordnung der
-  // Fussnoten nicht an zwei Stellen definiert ist (§5).
-  const fussAnzeige: Fussnote[] = [...fussAnzeigeRoh].sort((a, b) => {
-    const ka = fnNrSortKey(a.nr), kb = fnNrSortKey(b.nr);
-    return ka[0] - kb[0] || ka[1].localeCompare(kb[1]);
-  });
+  // Welche Fussnoten der Apparat zeigt und in welcher Reihenfolge:
+  // `./ArtikelLeser.fussnoten` (§6.6-Split, Herleitung dort).
+  const fussAnzeige: Fussnote[] = fussnotenAnzeige(e, fussnoten);
   const [artOffen, setArtOffen] = useState(!ganzAufgehoben); // einzelner Artikel ein-/ausklappbar; aufgehoben → zu
-  // Fussnoten dem Absatz zuordnen, den sie betreffen: trägt der Absatz einen
-  // Normverweis auf denselben Erlass (eli/cc-Basis), auf den die Fussnote
-  // verlinkt (z. B. «SR 311.0» = StGB), gehört die Fussnote zu diesem Absatz →
-  // Marker am Absatzende. Sonst (z. B. «Fassung gemäss …») an der Artikelnummer.
-  // Fussnote → Block: die Absatznummer kommt direkt aus der Extraktion
-  // (fn.absatz = Absatz, in dem der Marker im Fedlex-HTML steht). Marker auf dem
-  // Artikelkopf/der Marginalie tragen absatz=null → Artikelebene. Schlüssel =
-  // Block-Index (mehrere absatzlose Blöcke kollidieren nicht).
-  const fnProAbsatz: Record<number, string[]> = {};
-  const fnProItem: Record<string, string[]> = {}; // Schlüssel «<blockIndex>|<marke>»
-  const fnArtikelEbene: string[] = [];
-  // G11: Marker für section-heading-Fussnoten je Überschrift-Label — landen NICHT
-  // mehr anonym auf Artikelebene, sondern an der passenden Randtitel-/Sektions-Zeile.
-  const fnProSektion: Record<string, string[]> = {};
-  // FN-5/M14: wortgenau positionierbare Marker (Sidecar-`pos`) je Block bzw.
-  // Item (Schlüssel «<blockIndex>|<itemIndex>»). NUR wenn der Drift-Riegel hält
-  // (pos.l === aktuelle Textlänge, Offset im Bereich) — sonst fällt der Marker
-  // auf die bisherigen Block-Ende-Pfade zurück (§1: nie eine geratene Position).
-  const fnInlineAbsatz: Record<number, Array<{ nr: string; o: number }>> = {};
-  const fnInlineItem: Record<string, Array<{ nr: string; o: number }>> = {};
-  // W2·5i-HIST-ANSICHT: Fussnoten-Nr → build-seitige Klasse (`kl`). EINE Abbildung
-  // für alle Marker-Pfade (ArtikelBody-Prop) und den Apparat hier. Fehlt `kl`
-  // (Kanton-Sidecars, Extraktions-Fallback aus dem Wortlaut-Block), bleibt der
-  // Eintrag leer → kein data-fn-klasse → in JEDER Ansicht sichtbar (§8).
-  const fnKlasse: Record<string, string> = {};
-  for (const f of fussAnzeige) if (f.nr && f.kl) fnKlasse[f.nr] = f.kl;
-  // S1 (Optionen-Rückbau, David F1 «ja»): die frühere Chronologie-Reihung dieses
-  // Artikels ist ENTFALLEN — mit dem dritten Historie-Modus fällt die zweite
-  // Darstellung derselben Vermerke weg. Die Vermerke selbst sind unberührt: sie
-  // stehen im Fussnoten-Apparat unten, mit Nummer, Wortlaut und AS/BBl-Link.
-  for (const f of fussAnzeige) {
-    if (!f.nr) continue;
-    if (f.sektion) { (fnProSektion[f.sektion] ??= []).push(f.nr); continue; }
-    const p = f.pos;
-    if (p != null && p.b >= 0 && p.b < e.bloecke.length) {
-      const blk = e.bloecke[p.b];
-      // B1-Riegel (Gegenprüfungs-Befund 26.7.): eine pos darf nur inline
-      // routen, wenn ArtikelBody für die Zielstelle wirklich einen Marker-Slot
-      // rendert — sonst wird der Marker ersatzlos verschluckt. Spiegelbildlich
-      // zu ArtikelBody, seit PR #372 (Bild-Blöcke rendern ihre items über die
-      // geteilte itemListe) nach Slot getrennt:
-      // - titel-Block (`titel !== undefined`; Gegenprüfung R2: `== null`
-      //   liesse `titel: null` durch): rendert weder Text noch items → JEDE
-      //   pos verwerfen, Legacy-Fallback unten.
-      // - Bild-/Kachel-Block: Item-Slot existiert (itemListe), Text-<p>
-      //   weiterhin nicht → Item-pos inline erlaubt (DBG 22 fn57, STHG 7
-      //   fn27: <dl> am Formelbild), Absatz-pos verwerfen.
-      // - Prosa-Block: beide Slots wie bisher.
-      const bb = blk as { bild?: unknown; bildKacheln?: unknown[]; titel?: unknown };
-      const istTitel = bb.titel !== undefined;
-      const istBild = Boolean(bb.bild) || Boolean(bb.bildKacheln && bb.bildKacheln.length > 0);
-      const itemSlotDa = !istTitel;
-      const textSlotDa = !istTitel && !istBild;
-      if (p.it != null && !itemSlotDa) {
-        // pos verwerfen → Legacy-Routing unten (Marker am sichtbaren Block).
-      } else if (p.it == null && !textSlotDa) {
-        // pos verwerfen → Legacy-Routing unten (Marker am sichtbaren Block).
-      } else if (p.it != null) {
-        const its = blk.items ?? [];
-        const zt = p.it >= 0 && p.it < its.length ? its[p.it].text : null;
-        if (zt != null && p.l === zt.length && p.o >= 0 && p.o <= zt.length) {
-          (fnInlineItem[`${p.b}|${p.it}`] ??= []).push({ nr: f.nr, o: p.o });
-          continue;
-        }
-      } else if (blk.text && p.l === blk.text.length && p.o >= 0 && p.o <= blk.text.length) {
-        (fnInlineAbsatz[p.b] ??= []).push({ nr: f.nr, o: p.o });
-        continue;
-      }
-    }
-    let idx = f.absatz != null ? e.bloecke.findIndex((b) => b.absatz === f.absatz) : -1;
-    // A31a: Marker in einem absatzlosen Fliesstext-Absatz (fn 667 in ZGB 798a) → am
-    // Ende SEINES Blocks (0-basierter Index vom Extraktor) statt auf der Artikelebene.
-    // Defensiv: Index im Bereich UND Zielblock wirklich absatzlos (gegen Sidecar-Drift).
-    if (idx < 0 && f.absatzIndex != null && f.absatzIndex >= 0 && f.absatzIndex < e.bloecke.length
-        && e.bloecke[f.absatzIndex].absatz == null) idx = f.absatzIndex;
-    if (f.item && idx < 0) idx = e.bloecke.findIndex((b) => (b.items ?? []).some((it) => it.marke === f.item));
-    if (idx >= 0 && f.item && (e.bloecke[idx].items ?? []).some((it) => it.marke === f.item)) {
-      (fnProItem[`${idx}|${f.item}`] ??= []).push(f.nr); // Fussnote am lit/Ziff-Item
-    } else if (idx >= 0) {
-      (fnProAbsatz[idx] ??= []).push(f.nr); // am Absatz
-    } else fnArtikelEbene.push(f.nr); // am Artikel
-  }
+  // Marker-Verteilung (Absatz · Item · Randtitel · Artikelebene) samt Inline-
+  // Positionen und Klassen: `./ArtikelLeser.fussnoten` (§6.6-Split, Namen
+  // unveraendert).
+  const {
+    fnProAbsatz, fnProItem, fnArtikelEbene, fnProSektion, fnInlineAbsatz, fnInlineItem, fnKlasse,
+  } = verteileFussnoten(fussAnzeige, e.bloecke);
   // Marker nur, wenn der Artikel offen ist (Ziel <p id=fn-…> lebt im artOffen-Block):
   // sonst öffnete der sichtbare Marker am eingeklappten Artikel ein leeres Popover
   // (toter Bedienpfad — typisch bei aufgehobenen Artikeln, Default eingeklappt).
@@ -294,88 +170,9 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
         <span key={nr} data-fn-klasse={fnKlasse[nr]}>{i > 0 && <span className="align-super text-[length:var(--hochgestellt)] text-ink-500">,</span>}<FnRef artikel={e.artikel} nr={nr} /></span>
       ))}</span>
     : null;
-  // VERWEISE: im Artikel genannte, auflösbare (Bund-)Normverweise als Chips am
-  // Fuss sammeln (Davids Referenz). Dedupliziert; nur was fedlexLinkFuerArtikel
-  // wirklich auflöst (nie ein toter Link, §8). Inline-Links bleiben (17.6).
-  const verweise: string[] = (() => {
-    const seen = new Set<string>(); const out: string[] = [];
-    for (const b of e.bloecke) {
-      for (const t of [b.text, ...(b.items?.map((it) => it.text) ?? [])]) {
-        for (const m of t.matchAll(NORM_IM_TEXT)) {
-          const roh = m[0].trim();
-          if (fedlexLinkFuerArtikel(roh) == null) continue;
-          const key = roh.replace(/\s+/g, ' ');
-          if (!seen.has(key)) { seen.add(key); out.push(roh); }
-        }
-      }
-    }
-    return out;
-  })();
-  const kopiere = (was: 'zitat' | 'link') => {
-    // §5 — der Permalink wird mit DERSELBEN Funktion kodiert, die unten die
-    // Adresse schreibt (`urlMitHash`). Vorher stand hier ein handgebauter
-    // String, und die beiden gerieten bei 54 Artikel-Token auseinander: Tokens
-    // mit Leerzeichen oder Halbgeviert («22 a» in BS-215.400, «36–42» in
-    // AR-233.3, «10. 1» in BS-785.700) liefen als Kopie roh («#art-22 a»), als
-    // Adresse prozent-kodiert («#art-22%20a») aus dem Haus. Kopie ≠ Adresse ist
-    // genau das, was LM-202 abstellt — und ein Leerzeichen im Permalink bricht
-    // zusätzlich die Auto-Verlinkung in Mail- und Chat-Programmen.
-    // `origin` nur im Browser; `kopiere` läuft ausschliesslich aus einem
-    // onClick, der Zweig ohne `window` ist reine Absicherung (kein URL-Wurf).
-    const permalink = typeof window !== 'undefined'
-      ? urlMitHash(`${window.location.origin}${basisPfad}`, `art-${e.artikel}`)
-      : `${basisPfad}#art-${e.artikel}`;
-    // B-6 (QS-BASIS): die Zitat-Kopie trägt jetzt den Stand-Ausweis (§7 a–d) —
-    // `zitatVoll` (baueZitat) liefert bereits «… (Stand …)» = die Fassung, der
-    // Baustein ergänzt Abrufdatum + Permalink (kein doppeltes Standdatum, §5).
-    // W2·10-UI-NAV/R3: zusätzlich der amtliche Deep-Link (`amtlich`, EID-2) —
-    // derselbe Wert, den der «amtliche Fassung ↗»-Knopf daneben ansteuert (§5,
-    // EINE Quelle: `verifizierLinkArtikel`). Er stand bisher nur ALS KLICK im
-    // UI; wer das Zitat kopierte, verlor genau den Nachweis, der es überprüfbar
-    // macht. `?? undefined`: liefert der Validator null (Kanton, aufgehoben,
-    // Synthese-Suffix), bleibt die Zeile ohne amtliche Quelle statt mit einer
-    // geratenen (§8).
-    const text = was === 'zitat'
-      ? zitatMitAusweis(zitatVoll, {
-          abruf: heuteIso(new Date()), permalink, amtlich: amtlich ?? undefined,
-        })
-      : permalink;
-    void navigator.clipboard?.writeText(text).then(() => {
-      setKopiert(was); window.setTimeout(() => setKopiert(''), 1500);
-    });
-    // ── LM-202 (W2·10-UI-NAV-URL, David-Entscheid 3.8.2026) ──────────────────
-    // «Die URL ändert sich NUR bei explizitem Klick auf einen Artikel-Anker bzw.
-    // bei der Teilen-Aktion.» Der «Link»-Knopf IST die Teilen-Aktion — er legte
-    // den Permalink bisher in die Zwischenablage, während die Adressleiste auf
-    // dem zuletzt angesprungenen Anker stehen blieb. Wer den Link teilte und
-    // danach die Adresse las, sah zwei verschiedene Fundstellen (genau die
-    // LM-202-Beobachtung). Darum: der Teilen-Klick setzt den Anker auch in die
-    // Adresse — per `replaceState`, damit das Kopieren keinen «Zurück»-Schritt
-    // erzeugt (Verlaufs-Ökonomie wie LM-209).
-    //
-    // NUR beim «Link»-Knopf, nicht beim «Zitat»-Knopf: das Zitat wandert in
-    // einen Schriftsatz, es ist kein Ortswechsel.
-    //
-    // Und nur, wenn dieser Teilbaum die ADRESSIERTE Seite ist. Die Grenze heisst
-    // darum `!istSekundaer`, NICHT `!imPane` — die beiden fallen im Split-View
-    // auseinander: `Shell.tsx` montiert auch das PRIMÄRE Pane mit
-    // `imPane: true` (Container-Query-Modus), nur die Rolle unterscheidet die
-    // beiden. Mit `!imPane` schwieg der Teilen-Knopf im Split-View auf BEIDEN
-    // Seiten, während `springeZuArtikel` (inhalt.tsx) im primären Pane sehr wohl
-    // schrieb — das LM-202-Symptom (Kopie ≠ Adresse) überlebte dort also genau
-    // in der Ansicht, für die es gebaut wurde. `springeZuArtikel` zieht die
-    // Grenze seit je über `istSekundaer`; hier gilt dieselbe (§5, EINE Grenze).
-    // Sekundäres Pane bleibt aussen vor: es ist nicht die adressierte Seite und
-    // darf die Haupt-URL nie umschreiben (Konvention auch von `wechsleTab`).
-    //
-    // `?r=`-Instanz-Diskriminator: die Adresse behält ihn (er ist die Reiter-
-    // Identität), der KOPIERTE Link trägt ihn bewusst nicht — er ist rein lokal
-    // und hätte beim Empfänger keine Bedeutung. Ohne offene Zweitinstanz sind
-    // beide zeichengleich.
-    if (was === 'link' && !istSekundaer && typeof window !== 'undefined' && window.history) {
-      window.history.replaceState(window.history.state, '', urlMitHash(window.location.href, `art-${e.artikel}`));
-    }
-  };
+  // VERWEISE: im Artikel genannte, aufloesbare (Bund-)Normverweise als Chips am
+  // Fuss sammeln — Herleitung und Dedupe in `./ArtikelLeser.fussnoten` (§6.6-Split).
+  const verweise: string[] = sammleVerweise(e.bloecke);
   // Aufhebungsnotiz (G16/#3): die amtliche «Aufgehoben durch … (AS …)»-Notiz eines
   // voll aufgehobenen Artikels liegt als artikel-Ebene-Fussnote im Snapshot
   // (absatz/item = null). M2 (David 29.6.2026) / G2b: sie ist eine Fussnote und liegt
@@ -385,6 +182,66 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
   const aufhebungNotiz: Fussnote[] = ganzAufgehoben
     ? fussAnzeige.filter((f) => f.absatz == null && f.item == null)
     : [];
+  // ═══ W2·24-R6b · DIE FORM DES ARTIKELS ══════════════════════════════════
+  // Der Rahmen (`v3/rahmenSpalten.ts`) hat gerechnet, wie viel die Lese-Zelle
+  // trägt; hier wird daraus Markup. ZWEI Formen, EIN Baum:
+  //   'zeile' — Ist-Form: Randtitel als Zeile über dem Artikel, Beiwerk
+  //             darunter. Gilt im Pane, auf dem Handy, in der Trefferliste und
+  //             ohne Provider (V1) — dort ändert sich nichts (§6).
+  //   'breit' — Randtitel + Fassungsdatum IM ARTIKELKOPF, die Bezüge als EINE
+  //             aufklappbare Zeile darunter. Keine Randspalten mehr.
+  //
+  // BIS R6 STANDEN HIER DREI FORMEN mit zwei Randspuren (Marginalie links 150 px,
+  // Randnotizen rechts 210 px). Sie sind auf Davids Befund vom 6.9.2026 gefallen
+  // — sie nahmen der Lese-Zelle 432 px. Wohin ihr Inhalt gewandert ist und warum:
+  // `../v3/satzspiegel.ts`.
+  const spiegel = useSatzspiegel();
+  // In der TREFFERLISTE bleibt jeder Artikel in Zeilenform: sie steht in einer
+  // eigenen, schmalen Fläche und soll den Treffer zeigen, nicht seinen Apparat.
+  const kopfForm = spiegel === 'breit' && !imTreffer;
+  // «Rechnen» in der Bezüge-Zeile (seit W2·24-R6): statische Kantentabelle, kein
+  // Ladepfad — Herleitung in `randNotizWerkzeuge.ts`.
+  // D34: nicht mehr an `kopfForm` gebunden. Seit die Bezüge-Zeile in BEIDEN
+  // Formen am Artikelfuss steht, fragt auch die Zeilenform nach der Rubrik; die
+  // frühere Form-Weiche (samt der geteilten Leerliste `LEERE_WERKZEUGE`, die
+  // nur ihr Sonst-Zweig war) ist ersatzlos gefallen. Kein Ladepfad, kein Netz —
+  // ein Nachschlag in einer statischen Tabelle je Artikel (§15).
+  const werkzeuge = werkzeugeAmArtikel(erlass?.key, e.artikel);
+  // ── W2·24-D40 (David 7.9.2026) · DER FASSUNGS-SLOT IM KOPF IST GEFALLEN ──
+  // Wörtlich: «und wieso ist fassung nicht auch unten am artikel?». Hier stand
+  // bis D40 `histImKopf`/`histSlot` — der Slot `[data-hist-slot]` mit «Gilt
+  // seit … ▸», in der Breitform neben dem Randtitel (`.lr7-fassung`), in der
+  // Zeilenform im Beiwerk. Beide Orte sind ERSATZLOS gelöscht, nicht bewacht
+  // (§17-Gegengewicht): die Auskunft ist jetzt die Rubrik «Fassung» der
+  // Funktionszeile am Artikelende, wo alle anderen artikelbezogenen Rubriken
+  // seit D34/D35 stehen (`./ArtikelLeser.bezuegeFuss.tsx`, Marke `reg: 'f'`).
+  //
+  // MIT DEM SLOT FÄLLT SEINE RESERVE (`mt-4 min-h-beiwerk`, §15.2/Ä26, und die
+  // `:empty`-Zeilenbox aus W2·24-CI). Sie fing einen idle eintreffenden Shard
+  // ab, der jetzt nichts mehr im Lesekörper aufblendet: die Zeitleiste rendert
+  // erst auf Klick, die Marke wächst in eine Zeile hinein, die ohnehin auf die
+  // Zähl-Datei wartet. Eine Reservierung ohne Gegenstand wäre die Phantom-Lücke,
+  // gegen die Ä26 sie überhaupt artikelweise gemacht hat (§8).
+  //
+  // WAS DER DRUCK BEHÄLT, steht unten in der Beiwerk-Zone (`[data-hist-druck]`).
+  //
+  // Der Randtitel steht seit dem §6.6-Split (W2·24-F) als Bauteil in
+  // `./ArtikelLeser.kopfteile` — beide Satzspiegel-Formen zeigen DASSELBE
+  // Markup an zwei verschiedenen Orten, und genau darum ist es ein Bauteil
+  // (Herleitung dort). Hier bleibt er ein Wert, weil jede Form ihn an ihrer
+  // eigenen Stelle einsetzt.
+  /** Trägt die Randtitel-Zeile der ZEILENFORM überhaupt etwas? Ohne das stünde
+   *  der Registerfarben-Strich als Balken über einer leeren Zeile — Lärm statt
+   *  Gliederung. In React entschieden und nicht per `:has()`: eine
+   *  `:has()`-Regel über 1686 Artikel ist genau die Bauart, die
+   *  W2·19-GLIEDERUNG/F1 als Scroll-Bremse nachgewiesen hat.
+   *  Wertgleich mit der Null-Bedingung von `RandTitel` — die Breitform prüft
+   *  darum ebenfalls hiergegen (§6-Split W2·24-F, Herleitung dort). */
+  const randInhalt = (marg != null && marg.length > 0) || !!e.titel;
+  const randTitel = (
+    <RandTitel marg={marg} margBasis={margBasis} titel={e.titel} artikel={e.artikel}
+      markerOffen={artOffen} fnProSektion={fnProSektion} fnKlasse={fnKlasse} />
+  );
   // W2·5d G3b (③/⑤): Anhang/Protokoll tragen einen kräftigeren Struktur-Trenner
   // (rule-struktur statt rule-artikel) + mehr Weissraum — so hebt sich jeder
   // Anhang-Block klar vom Normtext und vom Vor-Anhang ab (Linien-Kanon-Rolle
@@ -416,51 +273,57 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
       // Scrim-Ersatz (F1b); es wird KEIN anderes Mittel eingesetzt.
       //
       // WAS BLEIBT: `group` (der Aktions-Slot der Kopfzeile hängt mit
-      // `group-hover:opacity-100` daran, s. u.), `relative z-0` (unveränderte
-      // Stapelordnung des Ruhezustands — nur der Hover-Sprung auf z-[5] fällt weg).
+      // `group-hover:opacity-100` daran, s. u.), `relative z-base` (unveränderte
+      // Stapelordnung des Ruhezustands — nur der Hover-Sprung auf z-[5] fällt weg;
+      // `z-base` = C3-Rolle für den Wert 0, s. index.css bei --z-base).
       // §15-Logikverlust: keiner — reine Darstellung (§3), Normtext, Anker, Ctrl+F,
       // Druck und Golden-Ausgaben sind unberührt.
-      className={`nt-art-cv group relative z-0 nt-anker border-t ${istAnhang ? 'border-rule-struktur pt-9 mt-9' : 'border-rule-artikel pt-7 mt-7'} first:border-t-0 first:mt-0 first:pt-0`}>
-      {/* Fedlex-Stil (Auftrag David): «Art. N» + Randtitel/Sachüberschrift stehen
-          IMMER OBERHALB des Absatztextes (keine seitliche Randspalte mehr), damit
-          der Normtext die volle Lesespaltenbreite bekommt. Reine Darstellung (§3). */}
-      <div>
-        {/* Kopfzeile des Artikels: «Art. N» als Anker, darunter die Randtitel
-            (linksbündig, Sachüberschrift zuunterst) — über dem Fliesstext. */}
+      className={`lr-satz nt-art-cv group relative z-base nt-anker border-t ${istAnhang ? 'border-rule-struktur pt-9 mt-9' : 'border-rule-artikel pt-7 mt-7'} first:border-t-0 first:mt-0 first:pt-0`}>
+      {/* ═══ W2·24-R6b · DER ARTIKEL: KOPF · WORTLAUT · BEIWERK ═════════════
+          Bis R6 lagen hier drei Grid-Spalten (Marginalie · Text · Randnotizen).
+          Beide Randspuren sind gefallen (Auftrag David 6.9.2026, Herleitung in
+          `../v3/satzspiegel.ts`); übrig bleibt der EINE Fluss, den die
+          Zeilenform immer schon hatte — nur trägt der Artikelkopf in der
+          Breitform jetzt den Randtitel, das Fassungsdatum und die Bezüge-Zeile.
+
+          Die Zeilenform ist damit unverändert: Randtitel als Zeile über der
+          Artikelnummer (Auftrag David 26.6.2026 — Fedlex-Stil; bleibt auch bei
+          eingeklapptem/aufgehobenem Artikel sichtbar), Beiwerk unter dem
+          Wortlaut. */}
+      {!kopfForm && (
+        <div className="lr-rand">
+          {/* Registerfarben-Strich: ausserhalb der Randspalte 0 px hoch
+              (`index.css`, `.lr-reg`) — er darf die Zeilenform nicht um eine
+              Zeile verschieben. */}
+          {randInhalt && <span aria-hidden className="lr-reg" />}
+          {randTitel}
+        </div>
+      )}
+      <div className="lr-text">
+        {/* ── (a) BREITFORM: Randtitel + Fassungsdatum ÜBER der Artikelnummer ──
+            Auftrag David 6.9.2026: der Randtitel als kursive Literata-Zeile im
+            Artikelkopf, das Fassungsdatum klein daneben. Beides stand bis R6
+            links in einer 150-px-Spalte, die dem Text die Breite nahm. Der
+            Fassungs-Slot wandert MIT SEINER RESERVE (`min-h-beiwerk`), damit der
+            späte Shard-Resolve weiter reservierten Platz füllt statt zu schieben
+            (§15.2). */}
+        {/* W2·24-F: `randInhalt` statt `randTitel` — seit dem §6.6-Split ist der
+            Randtitel ein Bauteil und damit immer ein Element; die Frage «steht
+            überhaupt etwas darin?» beantwortet der Wert, den die Zeilenform
+            oben ohnehin schon bildet (wertgleich mit der Null-Bedingung von
+            `RandTitel`). */}
+        {/* D40: die Bedingung ist wieder die EINE Frage «trägt der Randtitel
+            etwas?». Die beiden anderen Glieder (`fussAnzeige.length > 0 ||
+            historie`) standen nur dafür da, den Fassungs-Slot daneben zu
+            tragen — mit ihm sind sie gefallen; ohne Randtitel wäre der Kopf
+            sonst ein leerer Kasten (§8/§13). */}
+        {kopfForm && randInhalt && (
+          <div className="lr7-kopf">
+            <div className="lr7-kopf-titel">{randTitel}</div>
+          </div>
+        )}
+        {/* Kopfzeile des Artikels: «Art. N» als Anker über dem Fliesstext. */}
         <div className="mb-1.5">
-          {/* Fedlex-Reihenfolge (Auftrag David 26.6.2026): Gliederungs-/Randtitel
-              stehen ÜBER der Artikelnummer (nicht darunter) — und bleiben auch bei
-              eingeklapptem/aufgehobenem Artikel sichtbar (Fedlex-treu). Die unterste
-              Stufe (Sachüberschrift) zuunterst, font-medium. Reine Darstellung (§3).
-              N1 (BS-Audit 23.6.2026): amtlicher Randtitel (article_title) nur, wenn
-              KEINE feinere struktur-Marginalie (marg) vorliegt. */}
-          {marg && marg.length > 0 ? (
-            <div className="mb-1 space-y-0.5 font-serif leading-snug">
-              {marg.map((m, i) => (
-                <div key={i} className={margStufeStil((margBasis ?? 0) + i, i === marg.length - 1)}>
-                  {/* A30: bis/ter-Suffix des Enumerators hochgestellt (margLabel). */}
-                  {margLabel(m)}
-                  {/* G11: section-heading-Fussnoten-Marker an der passenden Randtitel-
-                      Zeile (blatt im Volltext, ganze Kette in der Suchsicht). G2b:
-                      immer (an artOffen gebunden), Prominenz via data-fussnoten-CSS.
-                      A31: Wort-Verbinder (U+2060) klebt den Marker DIREKT an die
-                      Marginalie (kein Abstand, kein Umbruch auf eine eigene Zeile). */}
-                  {artOffen && fnProSektion[m]?.map((nr, j) => (
-                    <span key={nr} data-fn-marker data-fn-klasse={fnKlasse[nr]}>{WJ}{j > 0 && <span className="align-super text-[length:var(--hochgestellt)] text-ink-500">,</span>}<FnRef artikel={e.artikel} nr={nr} /></span>
-                  ))}
-                </div>
-              ))}
-            </div>
-          ) : e.titel ? (
-            /* S2 · Ä7: derselbe Stil wie das Randtitel-BLATT in `margStufeStil`
-               (dort steht die Herleitung) — es ist dieselbe Rolle, nur aus der
-               anderen Quelle (`article_title` statt `marg`). Beide müssen gleich
-               aussehen, sonst wechselt die Sachüberschrift zwischen Artikeln ihre
-               Stimme (§5). */
-            <div className="mb-1 font-sans text-leser-rand font-semibold text-ink-800">
-              {e.titel}
-            </div>
-          ) : null}
           {/* Artikelnummer-Zeile: «Art. N» als Anker; Zitat/Link rechtsbündig INLINE
               (ml-auto) statt als eigene Zeile darunter — schliesst den Abstand zum
               ersten Absatz (Auftrag David 26.6.2026, P8). */}
@@ -473,7 +336,23 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
             {ganzAufgehoben
               ? <span className="inline-flex w-4 shrink-0" aria-hidden />
               : <button type="button" onClick={() => setArtOffen((v) => !v)} aria-expanded={artOffen}
-                  aria-label={artOffen ? 'Artikel einklappen' : 'Artikel ausklappen'}
+                  // WCAG 4.1.2 · konstanter, den Artikel BENENNENDER Name
+                  // (QS-UI Folgeschritt, 5.9.2026; in Teilpass (e) noch
+                  // zurückgestellt, weil er Test-Zeilen berührt).
+                  // Vorher: `artOffen ? 'Artikel einklappen' : 'Artikel
+                  // ausklappen'`. Gemessen an /gesetze/bund/GEBV_HREG: ZWÖLF
+                  // Knöpfe mit wortgleichem Namen «Artikel einklappen» auf EINER
+                  // Seite (auf dem OR 1598 bei derselben Erhebung über alle
+                  // aria-expanded-Knöpfe der Artikel) — in der Knopf-Liste eines
+                  // Screenreaders ununterscheidbar; dazu wechselte der Name beim
+                  // Klick, worauf Sprachsteuerung ins Leere zielt. Jetzt trägt
+                  // der Name den Artikel, den er klappt, den Zustand trägt
+                  // allein `aria-expanded` — dasselbe Muster wie beim Zwilling
+                  // `SektionBaumTOC.tsx` (dort steht die ausführliche
+                  // Herleitung). Bewacht von `ARIA_ZUSTANDSNAME`
+                  // (eslint.config.js); die Ausnahme aus Teilpass (e) ist
+                  // ersatzlos weg, das Tor ist hier wieder scharf.
+                  aria-label={`«${label}» auf- und zuklappen`}
                   // F3/C5 (29.8.2026): ink-300 → ink-500 — einzige Affordanz
                   // des Klapp-Knopfes, gemessen 2.28:1 hell / 2.34:1 dunkel
                   // gegen `--paper`, unter der F2-Schwelle 3:1 für Nicht-Text.
@@ -501,33 +380,20 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
             {/* aufgehoben gedämpft, aber ink-500 (WCAG 4.5:1 hell+dunkel) statt
                 ink-400 (3.2–3.6:1) — essentieller Link-Text, kein incidental. */}
             {ganzAufgehoben && <span {...{ [SUCH_META]: '' }} className="text-xs italic text-ink-500">· aufgehoben</span>}
-            {artOffen && (
-              // W2·19-GLIEDERUNG/S8 (Bau-Spec §4.4): `data-such-meta` — die
-              // Aktions-Zeile ist BEDIENUNG, kein Gesetzestext. Ohne die Marke
-              // malte die Suche nach «Zitat» oder «Link» in JEDEM Artikel eine
-              // Fundstelle, die der datenseitige Zähler zu Recht nicht kennt
-              // (gemessen am BGFA: 0 gezählt gegen 39 gemalt) — und weil die
-              // Zeile bis zum Hover `opacity-0` trägt, wären es 39 UNSICHTBARE
-              // Markierungen. Genau der Fall, für den SUCH_META gebaut wurde
-              // (Bug-Check §9 vom 4.8.2026, B1).
-              <span {...{ [SUCH_META]: '' }}
-                className="ml-auto flex shrink-0 gap-3 opacity-0 transition-opacity focus-within:opacity-100 group-hover:opacity-100 [@media(hover:none)]:opacity-100">
-                <button type="button" onClick={() => kopiere('zitat')} className="text-micro text-ink-500 hover:text-brass-700" aria-label={`Zitat kopieren: ${zitatVoll}`}>{kopiert === 'zitat' ? '✓ kopiert' : 'Zitat'}</button>
-                <button type="button" onClick={() => kopiere('link')} className="text-micro text-ink-500 hover:text-brass-700" aria-label="Permalink kopieren">{kopiert === 'link' ? '✓' : 'Link'}</button>
-                {/* EID-2: Outbound zur amtlichen Fassung AN DIESER STELLE (ELI-Form,
-                    target/rel wie die bestehenden amtlichen Links, §12.4). Stil =
-                    dieselbe dezente Aktions-Stimme wie Zitat/Link daneben (§13). */}
-                {amtlich && (
-                  <a href={amtlich} target="_blank" rel="noopener noreferrer"
-                    className="text-micro text-ink-500 hover:text-brass-700 no-underline whitespace-nowrap"
-                    aria-label={`Amtliche Fassung von ${zitat} auf Fedlex öffnen ${NEUER_TAB}`}
-                    // Ä110 (18.8.2026): EINE Schreibung für EIN Ziel — der
-                    // sichtbare Text folgt dem `aria-label` und dem `title`
-                    // darüber, die schon immer «Amtliche Fassung» sagten.
-                    title="Amtliche Fassung an genau dieser Stelle (Fedlex)">Amtliche Fassung ↗</a>
-                )}
-              </span>
-            )}
+            {/* ── W2·24-D35-F1 (David 7.9.2026) · HIER STANDEN DIE AKTIONEN ──
+                «Zitat · Link · Amtliche Fassung ↗» sassen rechtsbündig in
+                dieser Kopfzeile — und trugen `opacity-0` bis Hover, Fokus oder
+                Touch (gemessen 7.9.2026: Deckkraft 0). Mit dem Variante-A-
+                Entscheid stehen sie am ARTIKELENDE in der Funktionszeile,
+                dauerhaft sichtbar (`./ArtikelAktionen.tsx`, eingehängt unten am
+                `<ArtikelBezuegeFuss aktionen=…>`).
+
+                ERSATZLOS gelöscht, nicht zusätzlich gebaut (§5/§17-Gegengewicht):
+                zwei Orte für dieselbe Aktion wären genau die Dopplung, die D35
+                abräumt. Mit der Zeile fällt auch ihr `data-such-meta`-Bedarf
+                weg — die Suche kann in dieser Kopfzeile keine unsichtbaren
+                Fundstellen mehr malen (Bug-Check B1, 4.8.2026), weil hier keine
+                Bedienwörter mehr stehen. */}
             {/* Amtliche Aufhebungsnotiz (eigene Zeile, dezent eingerückt) — M2: erst
                 auf Klick (hinter dem Fussnoten-Schalter), wie jede andere Fussnote.
                 Die Statuszeile «· aufgehoben» oben bleibt unabhängig immer sichtbar. */}
@@ -617,36 +483,66 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
               klick-getrieben, liegt binnen 500 ms nach der Eingabe und ist damit per
               Definition kein unerwarteter Sprung. Zahlen im Vollzugsvermerk S2. */}
           <div data-beiwerk>
-          {/* VERWEISE: auflösbare Normverweise des Artikels als Chips (Referenz David). */}
-          {/* S8: Verweis-Chips sind Wegweiser, kein Wortlaut — `data-such-meta`,
-              damit die Suche nach «Verweise» oder einer Chip-Beschriftung nicht
-              eine Fundstelle malt, die es im Gesetzestext nicht gibt (§4.4). */}
-          {verweise.length > 0 && (
-            <div {...{ [SUCH_META]: '' }} className="mt-4 flex flex-wrap items-center gap-2">
-              <span className="lc-overline mr-1"><span className="lc-punkt" aria-hidden />Verweise</span>
-              {verweise.map((v) => <NormChip key={v} artikel={v} />)}
-            </div>
-          )}
-          {/* LEITFÄLLE (§11.2): Bundesgerichtsentscheide zu genau diesem Artikel, lazy
-              aus dem erlass-lokalen Shard. Verdrahtet das bisher tote proNormArtikel-
-              Modell (norm-index.ts) sichtbar — vom Artikel direkt zur Rechtsprechung.
+          {/* ── W2·24-D34 · WAS HIER NICHT MEHR STEHT ───────────────────────
+              Bis D33 trug das Beiwerk der ZEILENFORM einen ZWEITEN Artikelfuss:
+              eine offene Verweis-Chip-Reihe und daneben die unbedingte
+              Rechtsprechungs-Zeile (`BezuegeZeile`, sonst `LeitfallZeile`).
+              Derselbe Fachinhalt wie die Rubriken «Verweise» und «Entscheide»
+              der Breitform — nur in anderer Gestalt, an anderem Ort und aus
+              einer anderen Prop: zwei Wahrheiten am selben Artikel (§5).
 
-              W2·7-BEZUG/B4: der Reader liefert `bezuege` — die nach Instanz
-              gruppierte Auflistung aus dem Bezugs-Shard. Sie tritt AN DIE STELLE
-              der V1a-Zeile (Obermenge, §5): nie beide, sonst stünden dieselben
-              BGE zweimal am Artikel. Ist keine Facette aktiv, ist `bezuege`
-              undefined UND `leitfaelle` ungesetzt ⇒ unter dem Artikel steht
-              nichts (Vorgabe David 28.7.2026). */}
-          {/* S8: die Rechtsprechungs-Zeile am Artikelfuss ist Referenzschicht,
-              kein Normtext (§4.4) — sie zählt nicht zu den Fundstellen und
-              wird darum auch nicht markiert. */}
-          <div {...{ [SUCH_META]: '' }}>
-            {bezuege
-              ? <BezuegeZeile kanten={bezuege.kanten} gesamt={bezuege.gesamt}
-                  zeitAktiv={bezuege.zeitAktiv} kantonAktiv={bezuege.kantonAktiv}
-                  normZitat={zitat} revision={revision} />
-              : <LeitfallZeile refs={leitfaelle} normZitat={zitat} revision={revision} />}
+              Beide Blöcke sind mit D34 ERSATZLOS gelöscht, nicht bewacht
+              (§17-Gegengewicht). Verweise, Entscheide, Materialien und Rechner
+              stehen in BEIDEN Formen im EINEN Bezüge-Fuss unter diesem Block
+              (`ArtikelBezuegeFuss`, ganz unten) — und erst auf Aufklappen.
+
+              NEBENWIRKUNG, ausdrücklich erwünscht: Pos. 12 kann es baulich
+              nicht mehr geben. Die gelöschte Zeile war die Stelle, an der der
+              eintreffende Bezugs-Shard @390 in den Lesekörper hineinwuchs
+              (gemessen an der StPO, Artikel-y 1385→1493→…; `leser-v3-kontext-
+              cls` (b)). Ein geschlossenes `<details>` legt seinen Inhalt nicht
+              ins Layout — die Zusage hängt jetzt an der Bauart, nicht mehr an
+              der Disziplin, eine Prop wegzulassen. */}
+          {/* ═══ W2·24-D40 (David 7.9.2026) · WAS HIER NOCH STEHT: DER DRUCK ═══
+              Wörtlich: «und wieso ist fassung nicht auch unten am artikel?».
+              Auf dem BILDSCHIRM steht die Fassungs-Auskunft seither in der
+              Funktionszeile am Artikelende, als Rubrik «3 Fassungen ›» neben den
+              anderen (`./ArtikelLeser.bezuegeFuss.tsx`). Der reservierte Slot
+              `[data-hist-slot]`, den die Absätze darunter beschreiben, gibt es
+              nicht mehr — weder hier noch im Kopf.
+
+              AUF DEM PAPIER ÄNDERT SICH NICHTS, und das ist der Grund für dieses
+              Element. Die Funktionszeile ist `print:hidden` (sie ist Bedienung,
+              `./BezuegeKopf.tsx`); ihr die Fassung zu überlassen hiesse, dem
+              Ausdruck den Stand des Artikels zu nehmen — die Auskunft, die ein
+              Aktenstück am dringendsten braucht (§8, dieselbe Sorge wie die
+              Stand-Zeile im Erlass-Kopf, `e2e/druck-fundstellen-z2`).
+
+              KEINE ZWEITE WAHRHEIT (§5): es ist DIESELBE Komponente mit
+              DENSELBEN Daten, nur eine zweite Projektion — Bildschirm auf Klick,
+              Papier immer. Und es ist BYTE-GLEICH zu dem, was der Drucker bis
+              D40 bekam: dort war die Zeitleiste zugeklappt, also stand auch nur
+              das Badge «Fassung · Gilt seit …» auf dem Blatt (`zeitleiste`
+              bleibt darum aus, §2b — der Druckstand wird gehalten, nicht
+              nachgeführt).
+
+              KOSTET NICHTS ZUSÄTZLICH: die Komponente wurde bis D40 an genau
+              dieser Stelle für JEDEN Artikel gerendert. `hidden print:block` ist
+              `display:none` am Bildschirm — kein Layout, kein Paint, keine
+              Reserve (die 24-px-Reserve ist mit dem Slot gefallen, s. o.).
+              Die Dreier-Wahl greift weiter (`html[data-vermerke]` auf
+              `[data-hist-druck]`, `src/index.css`): sie stand schon bisher
+              ausserhalb von `@media screen`, weil der Fassungs-Slot ABGELEITET
+              ist und der Wahl auch im Druck folgt. */}
+          <div data-hist-druck className="hidden print:block">
+            <ArtikelHistorieZeile historie={historie} />
           </div>
+          {/* ── WAS HIER BIS D40 STAND (§0 Ziff. 2b: ERGÄNZT, nicht ────────────
+              nachgeführt). Die folgenden Absätze beschreiben den reservierten
+              Fassungs-Slot und seine Messungen vom 20.7./17.8.2026. Sie bleiben
+              Wort für Wort stehen: sie belegen, warum die Reserve gebaut wurde
+              und was sie gemessen verhindert hat. Der Slot selbst ist mit D40
+              gefallen (Herleitung oben), die Belege altern nicht. */}
           {/* G-HIST-UI: «Gilt seit»-Badge + aufklappbare Fassungs-Timeline dieses
               Artikels (aus dem erlass-lokalen Historie-Shard, idle geladen). Am
               Artikel-Fuss wie Verweise/Leitfälle. §15.2: der Slot steht ab dem
@@ -727,16 +623,23 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
               Der Token heisst seit S2 `min-h-beiwerk` (Wert unverändert 1.5 rem = die
               gemessenen 24 px der einen Chip-Zeile): er reserviert den Boden der
               Beiwerk-Zone, nicht «eine Historie-Zeile». */}
-          <div {...{ [SUCH_META]: '' }} data-hist-slot
-            className={fussAnzeige.length > 0 || historie ? 'mt-4 min-h-beiwerk' : undefined}>
-            <ArtikelHistorieZeile historie={historie} artikel={e.artikel} />
-          </div>
           {/* Fussnoten (Änderungs-/Quellenhistorie, AS/BBl klickbar). W2·5d G2b:
               der Apparat liegt IMMER im DOM (Ctrl+F/Print/Screenreader, R9/§8);
               der data-fussnoten-CSS-Toggle dämpft ihn bei «AUS» (data-fn-apparat),
               versteckt ihn nie. Marker + Apparat = EINE Bedienung (Options-Leiste). */}
           {fussAnzeige.length > 0 && (
-            <div data-fn-apparat className="mt-3 border-t border-rule-artikel pt-2 space-y-1">
+            /* D35-F3 (7.9.2026) · `data-fn-nur-a`: trägt dieser Apparat AUSSCHLIESSLICH
+               Änderungs-Fussnoten? Dann nimmt die Wahl «Fassung»/«aus» den ganzen
+               Kasten mit, statt eine nackte Haarlinie über nichts stehen zu lassen.
+               Die Frage wird HIER beantwortet und nicht per `:has()` in der CSS —
+               eine Nachbarschafts-Anfrage über bis zu 1686 Artikel ist genau die
+               Bauart, die W2·19-GLIEDERUNG/F1 als Scroll-Bremse nachgewiesen hat
+               (§15, dieselbe Begründung wie bei `randInhalt` oben).
+               `undefined` statt `false`: React lässt das Attribut dann ganz weg —
+               ein `data-fn-nur-a="false"` wäre für den Attribut-Selektor ein
+               TREFFER und blendete jeden Apparat aus. */
+            <div data-fn-apparat data-fn-nur-a={fussAnzeige.every((f) => f.kl === 'A') ? '' : undefined}
+              className="mt-3 border-t border-rule-artikel pt-2 space-y-1">
               {fussAnzeige.map((fn, i) => (
                 <p key={i} id={fn.nr ? `fn-${e.artikel}-${fn.nr}` : undefined} data-fn-klasse={fn.kl}
                   /* S2 (V2-Spalte «Fussnoten-Body 0.6875 rem / lh 1.3»): `text-leser-fn`
@@ -772,6 +675,31 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
           </div>{/* /data-beiwerk */}
         </div>
         )}
+        {/* ═══ W2·24-D34 · DER BEZÜGE-FUSS ═══════════════════════════════════
+            Auftrag David 7.9.2026, wörtlich: «das mit den bezügen soll unten an
+            den artikel und nicht direkt nach der artikel nummer». Die Zeile
+            steht darum HIER: unter dem letzten Absatz und dem Fussnoten-Apparat,
+            vor dem nächsten Artikel. Eine feine Trennlinie darüber (`.lr7-bez`,
+            `--rule-soft`) sagt «gehört noch zu diesem Artikel, ist aber nicht
+            mehr sein Wortlaut» — eine Linie, keine Fläche (F0.6).
+
+            EIN Baustein für BEIDE Formen (§5). Bis D33 hatte die Breitform ihn
+            unter dem Artikelkopf und die Zeilenform einen eigenen, anders
+            gestalteten Fuss im Beiwerk; beide Stellen sind gelöscht, `kopfForm`
+            entscheidet über die Bezüge nichts mehr.
+
+            AUSSERHALB von `artOffen`, genau wie die Kopf-Variante vorher: der
+            Apparat gehört zum Artikel, nicht zu seinem entfalteten Wortlaut —
+            ein eingeklappter (typisch: aufgehobener) Artikel behält seine
+            Bezüge-Zeile, und sie steht dann direkt unter dem Kopf, weil es
+            dazwischen nichts gibt. Im Druck bleibt sie ausgeblendet
+            (`print:hidden` in `BezuegeKopf.tsx`). */}
+        <ArtikelBezuegeFuss bezuege={bezuege} bezuegeImFuss={bezuegeImFuss}
+          historie={historie} leitfaelle={leitfaelle} materialien={materialien} verweise={verweise}
+          werkzeuge={werkzeuge} zaehler={zaehler} zitat={zitat} revision={revision}
+          onOeffnen={onBezuegeOeffnen} onImBlatt={onImBlatt} laedt={bezuegeLaedt && !bezuege}
+          aktionen={<ArtikelAktionen artikel={e.artikel} basisPfad={basisPfad}
+            zitat={zitat} zitatVoll={zitatVoll} amtlich={amtlich} />} />
       </div>
     </article>
   );

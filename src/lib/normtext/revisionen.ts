@@ -10,6 +10,8 @@
 // §15: der Sidecar wird erst bei Bedarf (Reader offen) geladen; nie im App-Bundle.
 // Übergangslösung bis E1 (dann Projektion aus erlass_fassungen) — siehe Generator.
 
+import { kodiereSchluessel } from './dateiUrl';
+
 /** Ein Timeline-Eintrag in Anzeige-Form (Feld-Teilmenge des Sidecars). */
 export interface RevisionBezug {
   /** 'aenderung' = realer AS/oc-Änderungserlass · 'sammelerlass-marker' = Änderung über
@@ -46,7 +48,7 @@ function ladeSidecar(key: string): Promise<RevisionSidecar | null> {
   if (!p) {
     p = (async () => {
       try {
-        const res = await fetch(`/normtext/revisionen/${encodeURIComponent(key)}.json`);
+        const res = await fetch(`/normtext/revisionen/${kodiereSchluessel(key)}.json`);
         if (!res.ok) return null;
         const s = (await res.json()) as RevisionSidecar;
         return Array.isArray(s.revisionen) ? s : null;

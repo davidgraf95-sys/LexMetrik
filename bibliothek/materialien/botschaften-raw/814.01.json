@@ -6,6 +6,474 @@
     },
     "botschaft": {
       "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2002/1014"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2001/2034"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2003/624"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2002-09-20"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "02.073"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft über die Förderung der Einführung schwefelfreier Treibstoffe. Änderung des Bundesgesetzes über den Umweltschutz (USG)"
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant la promotion des carburants désulfurés. (Modification de la loi fédérale sur la protection de l'environnement)"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio sulla promozione dell'introduzione di carburanti privi di zolfo. (Modifica della legge federale sulla protezione dell'ambiente)"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "814.01"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2002/1014"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2001/2034"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2003/624"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2002-09-20"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "02.073"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft über die Förderung der Einführung schwefelfreier Treibstoffe. Änderung des Bundesgesetzes über den Umweltschutz (USG)"
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant la promotion des carburants désulfurés. (Modification de la loi fédérale sur la protection de l'environnement)"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio sulla promozione dell'introduzione di carburanti privi di zolfo. (Modifica della legge federale sulla protezione dell'ambiente)"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "814.01"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2002/1014"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2001/2034"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2003/624"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2002-09-20"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "02.073"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft über die Förderung der Einführung schwefelfreier Treibstoffe. Änderung des Bundesgesetzes über den Umweltschutz (USG)"
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant la promotion des carburants désulfurés. (Modification de la loi fédérale sur la protection de l'environnement)"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio sulla promozione dell'introduzione di carburanti privi di zolfo. (Modifica della legge federale sulla protezione dell'ambiente)"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "814.01"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2002/1272"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2002/0831"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2003/597"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2002-11-06"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "02.079"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft über einen Rahmenkredit für die globale Umwelt und über eine Änderung des Bundesgesetzes über den Umweltschutz"
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant un crédit-cadre en faveur de l'environnement mondial et une modification de la loi fédérale sur la protection de l'environnement"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente un credito quadro per l'ambiente globale e una modifica della legge federale sulla protezione dell'ambiente"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "814.01"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2002/1272"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2002/0831"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2003/597"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2002-11-06"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "02.079"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft über einen Rahmenkredit für die globale Umwelt und über eine Änderung des Bundesgesetzes über den Umweltschutz"
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant un crédit-cadre en faveur de l'environnement mondial et une modification de la loi fédérale sur la protection de l'environnement"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente un credito quadro per l'ambiente globale e una modifica della legge federale sulla protezione dell'ambiente"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "814.01"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2002/1272"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2002/0831"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2003/597"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2002-11-06"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "02.079"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft über einen Rahmenkredit für die globale Umwelt und über eine Änderung des Bundesgesetzes über den Umweltschutz"
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant un crédit-cadre en faveur de l'environnement mondial et une modification de la loi fédérale sur la protection de l'environnement"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente un credito quadro per l'ambiente globale e una modifica della legge federale sulla protezione dell'ambiente"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "814.01"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2003/887"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2003/1255"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2003/767"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2003-07-02"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "03.047"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zum Entlastungsprogramm 2003 für den Bundeshaushalt (EP 03)"
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant le programme d'allégement 2003 du budget de la Confédération (PAB 03)"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio relativo al programma di sgravio 2003 del budget della Confederazione"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "814.01"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2003/887"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2003/1255"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2003/767"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2003-07-02"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "03.047"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zum Entlastungsprogramm 2003 für den Bundeshaushalt (EP 03)"
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant le programme d'allégement 2003 du budget de la Confédération (PAB 03)"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio relativo al programma di sgravio 2003 del budget della Confederazione"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "814.01"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2003/887"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2003/1255"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2003/767"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2003-07-02"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "03.047"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zum Entlastungsprogramm 2003 für den Bundeshaushalt (EP 03)"
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant le programme d'allégement 2003 du budget de la Confédération (PAB 03)"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio relativo al programma di sgravio 2003 del budget della Confederazione"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "814.01"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2012/596"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2009/2195"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2014/234"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2012-03-28"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "12.044"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zur Genehmigung und Umsetzung der Aarhus-Konvention und von deren Änderung"
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message portant approbation de la convention d'Aarhus et de son application ainsi que de son amendement"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente l'approvazione e la trasposizione della Convenzione di Aarhus e del suo emendamento "
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "814.01"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2012/596"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2009/2195"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2014/234"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2012-03-28"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "12.044"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zur Genehmigung und Umsetzung der Aarhus-Konvention und von deren Änderung"
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message portant approbation de la convention d'Aarhus et de son application ainsi que de son amendement"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente l'approvazione e la trasposizione della Convenzione di Aarhus e del suo emendamento "
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "814.01"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2012/596"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2009/2195"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2014/234"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2012-03-28"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "12.044"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zur Genehmigung und Umsetzung der Aarhus-Konvention und von deren Änderung"
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message portant approbation de la convention d'Aarhus et de son application ainsi que de son amendement"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente l'approvazione e la trasposizione della Convenzione di Aarhus e del suo emendamento "
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "814.01"
+    },
+    "botschaft": {
+      "type": "uri",
       "value": "https://fedlex.data.admin.ch/eli/fga/2019/275"
     },
     "proj": {
@@ -75,474 +543,6 @@
     "titleIt": {
       "type": "literal",
       "value": "Messaggio concernente la modifica della legge federale sulla protezione dell'ambiente (Divieto di mettere in commercio legname ottenuto illegalmente)"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "814.01"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2002/1014"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2001/2034"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2003/624"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2002-09-20"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "02.073"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft über die Förderung der Einführung schwefelfreier Treibstoffe. Änderung des Bundesgesetzes über den Umweltschutz (USG)"
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant la promotion des carburants désulfurés. (Modification de la loi fédérale sur la protection de l'environnement)"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio sulla promozione dell'introduzione di carburanti privi di zolfo. (Modifica della legge federale sulla protezione dell'ambiente)"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "814.01"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2002/1014"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2001/2034"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2003/624"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2002-09-20"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "02.073"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft über die Förderung der Einführung schwefelfreier Treibstoffe. Änderung des Bundesgesetzes über den Umweltschutz (USG)"
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant la promotion des carburants désulfurés. (Modification de la loi fédérale sur la protection de l'environnement)"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio sulla promozione dell'introduzione di carburanti privi di zolfo. (Modifica della legge federale sulla protezione dell'ambiente)"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "814.01"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2002/1014"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2001/2034"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2003/624"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2002-09-20"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "02.073"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft über die Förderung der Einführung schwefelfreier Treibstoffe. Änderung des Bundesgesetzes über den Umweltschutz (USG)"
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant la promotion des carburants désulfurés. (Modification de la loi fédérale sur la protection de l'environnement)"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio sulla promozione dell'introduzione di carburanti privi di zolfo. (Modifica della legge federale sulla protezione dell'ambiente)"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "814.01"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2012/596"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2009/2195"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2014/234"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2012-03-28"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "12.044"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zur Genehmigung und Umsetzung der Aarhus-Konvention und von deren Änderung"
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message portant approbation de la convention d'Aarhus et de son application ainsi que de son amendement"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente l'approvazione e la trasposizione della Convenzione di Aarhus e del suo emendamento "
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "814.01"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2012/596"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2009/2195"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2014/234"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2012-03-28"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "12.044"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zur Genehmigung und Umsetzung der Aarhus-Konvention und von deren Änderung"
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message portant approbation de la convention d'Aarhus et de son application ainsi que de son amendement"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente l'approvazione e la trasposizione della Convenzione di Aarhus e del suo emendamento "
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "814.01"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2012/596"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2009/2195"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2014/234"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2012-03-28"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "12.044"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zur Genehmigung und Umsetzung der Aarhus-Konvention und von deren Änderung"
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message portant approbation de la convention d'Aarhus et de son application ainsi que de son amendement"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente l'approvazione e la trasposizione della Convenzione di Aarhus e del suo emendamento "
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "814.01"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2002/1272"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2002/0831"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2003/597"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2002-11-06"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "02.079"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft über einen Rahmenkredit für die globale Umwelt und über eine Änderung des Bundesgesetzes über den Umweltschutz"
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant un crédit-cadre en faveur de l'environnement mondial et une modification de la loi fédérale sur la protection de l'environnement"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente un credito quadro per l'ambiente globale e una modifica della legge federale sulla protezione dell'ambiente"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "814.01"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2002/1272"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2002/0831"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2003/597"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2002-11-06"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "02.079"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft über einen Rahmenkredit für die globale Umwelt und über eine Änderung des Bundesgesetzes über den Umweltschutz"
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant un crédit-cadre en faveur de l'environnement mondial et une modification de la loi fédérale sur la protection de l'environnement"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente un credito quadro per l'ambiente globale e una modifica della legge federale sulla protezione dell'ambiente"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "814.01"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2002/1272"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2002/0831"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2003/597"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2002-11-06"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "02.079"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft über einen Rahmenkredit für die globale Umwelt und über eine Änderung des Bundesgesetzes über den Umweltschutz"
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant un crédit-cadre en faveur de l'environnement mondial et une modification de la loi fédérale sur la protection de l'environnement"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente un credito quadro per l'ambiente globale e una modifica della legge federale sulla protezione dell'ambiente"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "814.01"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2003/887"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2003/1255"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2003/767"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2003-07-02"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "03.047"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zum Entlastungsprogramm 2003 für den Bundeshaushalt (EP 03)"
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant le programme d'allégement 2003 du budget de la Confédération (PAB 03)"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio relativo al programma di sgravio 2003 del budget della Confederazione"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "814.01"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2003/887"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2003/1255"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2003/767"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2003-07-02"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "03.047"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zum Entlastungsprogramm 2003 für den Bundeshaushalt (EP 03)"
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant le programme d'allégement 2003 du budget de la Confédération (PAB 03)"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio relativo al programma di sgravio 2003 del budget della Confederazione"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "814.01"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2003/887"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2003/1255"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2003/767"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2003-07-02"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "03.047"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zum Entlastungsprogramm 2003 für den Bundeshaushalt (EP 03)"
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant le programme d'allégement 2003 du budget de la Confédération (PAB 03)"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio relativo al programma di sgravio 2003 del budget della Confederazione"
     }
   },
   {

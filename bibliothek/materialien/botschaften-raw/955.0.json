@@ -6,6 +6,123 @@
     },
     "botschaft": {
       "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2012/1031"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2012/1141"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2013/648"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2012-06-27"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "12.065"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zur Änderung des Geldwäschereigesetzes "
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message relatif à la modification de la loi sur le blanchiment d'argent"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente la modifica della legge sul riciclaggio di denaro"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "955.0"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2012/1031"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2012/1141"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2013/648"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2012-06-27"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "12.065"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zur Änderung des Geldwäschereigesetzes "
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message relatif à la modification de la loi sur le blanchiment d'argent"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente la modifica della legge sul riciclaggio di denaro"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "955.0"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2012/1031"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2012/1141"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2013/648"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2012-06-27"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "12.065"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zur Änderung des Geldwäschereigesetzes "
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message relatif à la modification de la loi sur le blanchiment d'argent"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente la modifica della legge sul riciclaggio di denaro"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "955.0"
+    },
+    "botschaft": {
+      "type": "uri",
       "value": "https://fedlex.data.admin.ch/eli/fga/2019/1932"
     },
     "proj": {
@@ -71,123 +188,6 @@
     "titleFr": {
       "type": "literal",
       "value": "Message concernant la modification de la loi sur le blanchiment d'argent"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente la modifica della legge sul riciclaggio di denaro"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "955.0"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2012/1031"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2012/1141"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2013/648"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2012-06-27"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "12.065"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zur Änderung des Geldwäschereigesetzes "
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message relatif à la modification de la loi sur le blanchiment d'argent"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente la modifica della legge sul riciclaggio di denaro"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "955.0"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2012/1031"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2012/1141"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2013/648"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2012-06-27"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "12.065"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zur Änderung des Geldwäschereigesetzes "
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message relatif à la modification de la loi sur le blanchiment d'argent"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente la modifica della legge sul riciclaggio di denaro"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "955.0"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2012/1031"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2012/1141"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2013/648"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2012-06-27"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "12.065"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zur Änderung des Geldwäschereigesetzes "
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message relatif à la modification de la loi sur le blanchiment d'argent"
     },
     "titleIt": {
       "type": "literal",

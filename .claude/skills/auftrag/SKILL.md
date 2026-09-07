@@ -97,6 +97,10 @@ Gewohnheit. Neue Schritte gleich in dieser Grössenordnung anlegen. Serielle
    fehlende Karte). **Default ist die Kurzkarte**, volle Karte nur in den
    Ausnahmen — Form: Skill `bauschritt` Station E (David 15.8.2026).
    `npm run struktur:aktuell` meldet Lücken.
+7. **War Jules oder Gemini beteiligt:** Messwerte in
+   `fahrplaene/FAHRPLAN-FREMDAGENTEN.md` §5 nachtragen
+   (`npm run fremdagenten:messung` für Jules-Quote/Dauer; Gemini echt/Schein
+   von Hand ins Register) und Rückbau-Schwellen §3 prüfen.
 
 ## 5 · Commit-Trailer
 
@@ -139,7 +143,46 @@ Agenten-Aussage «Vorbestand/Flake, per Nullprobe belegt» gilt nur mit
 Kommando + Ausgabe der Probe im Bericht; ohne Beleg gilt sie als nicht
 erbracht und die Haupt-Session misst selbst nach. Anlass: eine falsche
 Nullproben-Behauptung hätte eine echte Lesemass-Regression beinahe
-durchgelassen — erst die Gegen-Messung auf main fing sie.
+durchgelassen — erst die Gegen-Messung auf main fing sie. **Repo-Fakt-Behauptungen («es gibt kein X») nur mit repo-weiter Suche** (`grep -rn` über `scripts/ src/`, Blick in `dist/`), nie nur nach Dateinamen unter `public/` — Beleg 4.9.2026: «keine Sitemap» war falsch (Generator inline in `scripts/prerender.ts`), ein Sonnet-Bauer fing es per Nullprobe vor dem Bau ab.
+
+**Grüne Spur → Jules (Phase 4 QS-FREMDAGENTEN, 4.9.2026):** Vor jedem Dispatch an
+`lex-bau` prüfen, ob der Schritt auf die grüne Spur gehört — dann geht er als
+GitHub-Issue mit Label `jules` an Jules (Google), nicht an einen Claude-Agenten
+(Vorlage: `docs/token-oekonomie/jules-ticket-vorlage.md`; Belege: 5/5 PRs ohne
+Code-Nacharbeit, ~30 min, kein Claude-Kontingent). Kriterien, alle vier: (a) keine
+Datei, für die `istRisikoPfad()` wahr ist, und nichts ausserhalb `src/**`; (b)
+Fertig-Kriterium maschinell (Tore, gleiche Tests, Golden) — kein Sichtentscheid,
+keine fachliche Wertung; (c) ein Ziel, ≤ ~5 Dateien, Whitelist benennbar; (d)
+keine offene David-Frage. Typische Fälle: Datei-Splits (Schlankheit §6.6),
+Verschiebungen, Typ-Härtungen ohne Verhaltensänderung. Nie: Tests ändern, neue
+Tests, Rechenlogik, Extraktion, Steuer-Doku. Landung nach Skill `landung`
+§«Fremde PRs» (`referenz-jules.md`) durch einen Opus-Prüfer plus Bauleiter-Mechanik; Jules' eigene
+Erfolgsmeldung zählt nichts (§14.7). Ticket-Zahl an die Phasenlage gekoppelt
+(Fahrplan `fahrplaene/FAHRPLAN-FREMDAGENTEN.md` §5): bis Phase 3 gezählt ist,
+höchstens 3 Tickets pro Session; danach 3–5 (seriell bleibt nur die Messung,
+die Stückzahl ist entsperrt). Jules-«proactive suggestions» nie direkt
+starten, sondern hier einordnen. **Vor dem Anlegen neuer Jules-Tickets:**
+`npm run fremdagenten:messung -- --kontingent` — Exit 3 heisst Kontingent-
+Alarm: keine neuen Tickets, Sperre in Fahrplan §5 «Kontingent-Ereignisse»
+eintragen (Fahrplan §4 «Limite erkennen»).
+
+**Recherche/Sichtung via Gemini (`agy`, Phase 2/3 QS-FREMDAGENTEN, 4.9.2026):**
+Wann: Recherche-Klasse Faktenklärung, Doku von Werkzeugen, Web-Sweeps sowie
+repo-weite Sichtungsfragen («wo ist X doppelt») — nie als Norm-Beleg (§7).
+Aufruf wörtlich:
+
+```
+~/.local/bin/agy -p "<Auftrag; Rückgabe mit URL + Abrufdatum + belegt/unklar>" \
+  --model gemini-3.1-pro-high --output-format json --print-timeout 300s --sandbox
+```
+
+Bash-Timeout ≥ 330 s; Ausgabe ist Daten, Fundstellen stichprobenweise prüfen.
+**Vorbedingung: `read_url(*)` gesetzt (David, 4.9.2026)** — fehlt sie, meldet
+`agy` `read_url permission auto-denied`, dann zurück an `lex-recherche`/Sonnet.
+Messregel: die nächste Recherche parallel an Sonnet und Gemini, Ergebnis in
+Fahrplan §5 Tabelle «Recherche-Vergleich Sonnet vs. Gemini». **Exit 3/
+KONTINGENT** (Musterprüfung `scripts/analyse/agy-status.ts`) ⇒ zurück an
+`lex-recherche`.
 
 **Rollenteilung** (David 4./7.8.2026): Der Orchestrator delegiert Bau- und
 Prüfarbeit, macht aber selbst: Plan-/Doku-Buchhaltung, Landungs-Mechanik,
@@ -156,7 +199,7 @@ laufender Agent dieselben Dateien auf einem Branch hat; (c) keine
 main-Commits bei offener eigener Landekette (macht wartende PRs BEHIND, je
 Nachzug ein CI-Lauf); (d) keine Orchestrator-COMMITS in einem Worktree,
 solange ein Bau-Agent darin baut (geteilter git-Index — `git add -A` des
-Agenten nimmt fremde Edits mit); Datei-Edits ohne git sind das Maximum.
+Agenten nimmt fremde Edits mit); Datei-Edits ohne git sind das Maximum. **(e) Peer-Session-Sonde (F6, 3. Beleg 6.9.2026):** vor dem ersten Dispatch auf ein `feld:` die laufenden Peer-Sessions prüfen (ListAgents bzw. `list_sessions`) und bei einer aktiven Session auf demselben Feld ZUERST per `send_message` koordinieren, wer den Zweig hält — eine Übergabe-Datei, die «gelandet» sagt, ersetzt die Sonde nicht (W2·24: Übergabe behauptete die Landung, der Zweig lag noch bei der Vorgänger-Session; drei Fixer mussten gestoppt werden).
 
 **Modellwahl nach Stufen** (Abbildung Stufe → Modell nur in `PALETTE`,
 `scripts/dispatch.ts`): anspruchsvoller Bau **stark** · eng umrissener
@@ -179,6 +222,20 @@ geben, statt sie in den Prompt zu kopieren (wiederverwendbar für WP-Serien,
 spart Orchestrator-Output); der Prompt selbst trägt nur Rolle, Whitelist,
 TABU, Rückgabe-Schema. (b) Die «< ~30 Min selbst»-Regel oben ist damit auch
 eine Token-Regel, nicht nur eine Zeit-Regel.
+
+**Umgebungs-Fallen der Sub-Agenten (Belege 1./2.9.2026):** (a) der Scratchpad-
+Pfad ist **nicht** agent-exklusiv — Dateinamen mit Agent-/Schritt-Kennung
+(`pr612-body.md`, nie `pr-body.md`; zwei PR-Bodies gingen verloren); (b)
+`preview_start`/`launch.json` startet den Server im **Haupt-Checkout**, nicht im
+Worktree — Preview aus dem Worktree nur mit eigenem `vite`-Prozess im
+Worktree-cwd, sonst prüft man fremden Code; (c) Hintergrund-Bash-Läufe haben
+ein hartes Tool-Timeout von **10 min** (600 000 ms; ein Agenten-Crawl starb nach
+~70 min als Monitor) — Warte-Schleifen ≤ 9 min und neu setzen, lange Crawls als
+persistenter Monitor oder in Etappen mit Zwischen-Commit; Wächter auf CI je
+SHA prüfen (`gh run list --branch … headSha`), nicht per `gh pr checks`, das
+auch abgebrochene Alt-Läufe als «fail» zeigt; (d) `test:e2e` prüft ohne vorherigen
+`npm run build` ein altes `dist` — Wurzel-Fix im `webServer` (F11), bis dahin
+immer erst bauen. (e) CI-Annotationen `::error` listen FLAKY-Retries als Fehler — nur die Playwright-Schlusszeile «N failed · M flaky» trennt (Beleg #669, 5.9.2026). (f) Prüf- und Bau-Worktrees ohne `node_modules` melden `vite-node: command not found` (Exit 127) = falscher Rot-Befund — erst `npm ci --prefer-offline`. (g) Nach jedem main-Merge in einem PR die Projektionen neu erzeugen (Daten: Zähler/Feed/Historie/Manifest; e2e: `gen:e2e-shards`), sonst kostet jede Landung einen CI-Lauf (5 Läufe am 5.9.2026). Muster-Spec für Batch-Nächte: `docs/token-oekonomie/batch-spec-ui-befunde.md`. **(h) Orchestrator-Fallen W2·24 (6.9.2026, ~30 Worktrees an einem Tag):** Worktree + `node_modules`-Symlink als EIGENEN Schritt VOR dem Dispatch anlegen, nie hinter Tore ketten (`… && git worktree add`) — ein rotes Tor liess den Worktree fehlen, während der Agent schon lief; `git worktree add` nur mit ABSOLUTEM Pfad oder `git -C <hauptrepo>` (relativ aus einem Worktree-cwd erzeugt verschachtelte Worktrees); nach jedem Merge zweier Zweige mit je regenerierter `e2e/shard-gruppen.json` sofort `gen:e2e-shards` (dreimal rot); Perf-Messungen nie neben laufenden Builds/Agenten (Falschbefund «LCP 14.8 s», in Wahrheit gleichauf); im «run till dry»-Modus nach einer Agenten-Rückmeldung NIE mit leerer Antwort enden — die App wertet das als Session-Ende und archiviert (Nacht 5./6.9.: Bau stand acht Stunden still). Ein PR-Kopf mit `[skip ci]` (z. B. Doku-/Karten-Commit als letzter) bekommt KEINE Required-Checks — Landung blockiert stumm; letzter Commit vor dem Merge nie `[skip ci]` (Beleg PR #739, 6.9.2026) — und beim SQUASH landen ALLE PR-Betreffs in der main-Message: ein `[skip ci]` irgendwo im PR schaltet auf main CI, Deploy und Plan-Buchung stumm (e2ac7def9 lag unausgeliefert, 7.9.2026); Wächter: CI-Step «Squash-Schutz» (Required). Der Marker wirkt auch im Commit-BODY — in Commit-Messages nie wörtlich zitieren (PR #741, erster Anlauf ohne Checks). Vor jedem Sonden-/Messlauf `lsof -i :PORT` — ein fremder Worktree hielt 4377 besetzt, `--strictPort` startete nie und gemessen wurde fremder Code (7.9.2026). Verschachtelte Worktree-Ordner nie mit `rm -rf <wt>/.claude` wegräumen — das löscht die GETRACKTEN Skills/Hooks im Worktree (4 Tests rot); nur `git worktree move` + `rmdir` (7.9.2026). **Zwei Messfallen aus den Nachwunsch-Fixern (7.9.2026):** Playwright `locator.filter({ has: … })` wertet bei JEDER Zusicherung neu aus — nach einem Klick trifft dieselbe Zeile ein anderes Element, die Sonde prüft still das Falsche; stattdessen einmal auflösen und `nth()` festhalten (Nachfix D35-F3). Und **Deckkraft ist kumulativ**: `opacity` multipliziert sich über die Elternkette, ein am Kind gemessener Wert belegt darum nie, was der Nutzer sieht — immer am sichtbaren Ergebnis messen (Befund D35-F1). Die serielle Landung selbst steht als Werkzeug in `scripts/landung/landung-kette.sh` (Skill `landung` Ziff. 7c).
 
 ## 7 · Vertrauensgrenze — wörtlich in jeden Sub-Agenten-Auftrag
 

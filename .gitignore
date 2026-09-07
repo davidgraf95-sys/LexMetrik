@@ -108,6 +108,11 @@ tmp/
 # gate-stopp Grün-Fingerabdruck (Vorschlag QS-SELBSTOPT 7.8.2026)
 .gate-stopp-gruen
 
+# Volllog eines roten Tores (QS-EFFIZIENZ, Kondensat 5.9.2026): scripts/gate.sh
+# druckt bei Rot nur ein Kondensat in den Chat und schreibt die volle Ausgabe
+# hierher — je Maschine eigen, reproduzierbar aus dem nächsten Gate-Lauf.
+.gate/
+
 # Nachlass des Hooks abschluss-wache.py (QS-HOOKS-AUSBAU 14.8.2026):
 # Session-Ende-Befund über die Session-Grenze — lokal, nie committen.
 # (subagent-wache.py führt seit den Gegenprüfungs-Auflagen keine eigene
@@ -123,3 +128,8 @@ __pycache__/
 
 # Token-Spool je Session-Ende (QS-EFFIZIENZ 14.8.2026; Konsument: selbstopt:erheben)
 messwerte/token-spool.jsonl
+
+# Raw-Store-Arbeitsverzeichnis (QS-VERWENDEN V3, 2.9.2026): geladene Fedlex-
+# Rohdateien landen hier NUR temporär (korpus-raw-release.yml), werden als
+# Release-Archiv veröffentlicht und nie committet.
+/raw/

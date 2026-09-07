@@ -88,22 +88,32 @@
     },
     "status": {
       "type": "uri",
-      "value": "https://fedlex.data.admin.ch/vocabulary/consultation-status/1"
+      "value": "https://fedlex.data.admin.ch/vocabulary/consultation-status/2"
     },
     "titelDe": {
       "type": "literal",
       "xml:lang": "de",
-      "value": "Vernehmlassung zur Agrarpolitik ab 2030 (AP30+)"
+      "value": "Agrarpolitik 2030+"
     },
     "titelFr": {
       "type": "literal",
       "xml:lang": "fr",
-      "value": "Consultation sur la Politique agricole 2030+ (PA30+)"
+      "value": "Politique agricole 2030+"
     },
     "titelIt": {
       "type": "literal",
       "xml:lang": "it",
-      "value": "Consultazione sulla Politica agricola 2030+ (PA30+)"
+      "value": "Politica agricola 2030+"
+    },
+    "start": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2026-09-02"
+    },
+    "ende": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2026-12-08"
     }
   },
   {

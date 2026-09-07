@@ -1,0 +1,43 @@
+{
+  "erzeugt": "2026-09-01",
+  "eintraege": [
+    {
+      "id": "kanton/ZH/631.424/art_1",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung über die Bezugsprovision im Quellensteuerverfahren (LS 631.424)",
+      "artikel": "1",
+      "artikelLabel": "§ 1",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Bezugsprovision beträgt 2% des gesamten Quellensteuerbetrags. § 2 bleibt vorbehalten."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-631_424-2020_09_10-2021_01_01-111.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "f55b983e07bed143dd5d1aeff8680ddb39c28ddc62f5b81e28d74c25e8d26471",
+      "sha": "efab593b8ead19cf68ae29c749f2d8c70696e417f63f99e8574226c343dd2a26"
+    },
+    {
+      "id": "kanton/ZH/631.424/art_2",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung über die Bezugsprovision im Quellensteuerverfahren (LS 631.424)",
+      "artikel": "2",
+      "artikelLabel": "§ 2",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Für Kapitalleistungen aus Vorsorge beträgt die Bezugsprovision 1% des gesamten Quellensteuerbetrags, jedoch höchstens Fr. 50 pro Kapitalleistung für die Quellensteuer von Bund, Kanton und Gemeinde."
+        }
+      ],
+      "stand": "2021-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-631_424-2020_09_10-2021_01_01-111.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "f55b983e07bed143dd5d1aeff8680ddb39c28ddc62f5b81e28d74c25e8d26471",
+      "sha": "e7f2dfd3f9251fb8a84284dcdb016579ae18c5650e389c257e4a3c30f3864249"
+    }
+  ]
+}

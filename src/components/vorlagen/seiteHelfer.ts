@@ -13,3 +13,26 @@ export const istIsoDatum = (wert: string): boolean => ISO_DATUM.test(wert);
  *  Formvorschrift bestimmt die angebotenen Exportformate.) */
 export const docxAktiv = (card: CatalogItem | undefined): boolean =>
   card?.modus === 'vorlage' && !!card.output?.includes('docx');
+
+// ─── D5 (W2·24) · Prüf-Befund des letzten Wizard-Schritts ───────────────────
+
+export type SchrittBefund = { index: number; label: string; fehler: string[] };
+
+/** Sammelt die Fehler ALLER Schritte zu einer Liste der unvollständigen
+ *  Schritte — die Auskunft, die dem Schritt «Prüfen & Download» bis D5
+ *  fehlte (er kannte nur die Fehler des gerade sichtbaren Schritts).
+ *  Rein und deterministisch (§2): gleiche Eingabe, gleiche Liste. */
+export function sammleBefunde(
+  schritte: readonly { id: string; label: string }[],
+  fehlerJeSchritt: (i: number) => string[],
+): SchrittBefund[] {
+  const out: SchrittBefund[] = [];
+  for (let i = 0; i < schritte.length; i++) {
+    const fehler = fehlerJeSchritt(i);
+    if (fehler.length > 0) out.push({ index: i, label: schritte[i].label, fehler });
+  }
+  return out;
+}
+
+export const befundZahl = (befunde: SchrittBefund[]): number =>
+  befunde.reduce((n, b) => n + b.fehler.length, 0);

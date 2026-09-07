@@ -6,6 +6,162 @@
     },
     "botschaft": {
       "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2003/1274"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2003/1819"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2004/745"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2003-10-22"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "03.072"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zum Bundesgesetz über die Sammlungen des Bundesrechts und das Bundesblatt (Publikationsgesetz, PublG)"
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant la loi fédérale sur les recueils du droit fédéral et la Feuille fédérale (Loi sur les publications officielles, LPubl)"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente la legge federale sulle raccolte del diritto federale e sul Foglio federale (Legge sulle pubblicazioni ufficiali, LPubl)"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "170.512"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2003/1274"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2003/1819"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2004/745"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2003-10-22"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "03.072"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zum Bundesgesetz über die Sammlungen des Bundesrechts und das Bundesblatt (Publikationsgesetz, PublG)"
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant la loi fédérale sur les recueils du droit fédéral et la Feuille fédérale (Loi sur les publications officielles, LPubl)"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente la legge federale sulle raccolte del diritto federale e sul Foglio federale (Legge sulle pubblicazioni ufficiali, LPubl)"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "170.512"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2003/1274"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2003/1819"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2004/745"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2003-10-22"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "03.072"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zum Bundesgesetz über die Sammlungen des Bundesrechts und das Bundesblatt (Publikationsgesetz, PublG)"
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant la loi fédérale sur les recueils du droit fédéral et la Feuille fédérale (Loi sur les publications officielles, LPubl)"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente la legge federale sulle raccolte del diritto federale e sul Foglio federale (Legge sulle pubblicazioni ufficiali, LPubl)"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "170.512"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2003/1274"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2003/1819"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2004/745"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2003-10-22"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "03.072"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zum Bundesgesetz über die Sammlungen des Bundesrechts und das Bundesblatt (Publikationsgesetz, PublG)"
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant la loi fédérale sur les recueils du droit fédéral et la Feuille fédérale (Loi sur les publications officielles, LPubl)"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente la legge federale sulle raccolte del diritto federale e sul Foglio federale (Legge sulle pubblicazioni ufficiali, LPubl)"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "170.512"
+    },
+    "botschaft": {
+      "type": "uri",
       "value": "https://fedlex.data.admin.ch/eli/fga/2013/1331"
     },
     "proj": {
@@ -75,162 +231,6 @@
     "titleIt": {
       "type": "literal",
       "value": "Messaggio concernente la modifica della legge sulle  pubblicazioni ufficiali (Cambiamento della versione determinante: dalla versione cartacea a quella elettronica) "
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "170.512"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2003/1274"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2003/1819"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2004/745"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2003-10-22"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "03.072"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zum Bundesgesetz über die Sammlungen des Bundesrechts und das Bundesblatt (Publikationsgesetz, PublG)"
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant la loi fédérale sur les recueils du droit fédéral et la Feuille fédérale (Loi sur les publications officielles, LPubl)"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente la legge federale sulle raccolte del diritto federale e sul Foglio federale (Legge sulle pubblicazioni ufficiali, LPubl)"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "170.512"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2003/1274"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2003/1819"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2004/745"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2003-10-22"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "03.072"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zum Bundesgesetz über die Sammlungen des Bundesrechts und das Bundesblatt (Publikationsgesetz, PublG)"
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant la loi fédérale sur les recueils du droit fédéral et la Feuille fédérale (Loi sur les publications officielles, LPubl)"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente la legge federale sulle raccolte del diritto federale e sul Foglio federale (Legge sulle pubblicazioni ufficiali, LPubl)"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "170.512"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2003/1274"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2003/1819"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2004/745"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2003-10-22"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "03.072"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zum Bundesgesetz über die Sammlungen des Bundesrechts und das Bundesblatt (Publikationsgesetz, PublG)"
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant la loi fédérale sur les recueils du droit fédéral et la Feuille fédérale (Loi sur les publications officielles, LPubl)"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente la legge federale sulle raccolte del diritto federale e sul Foglio federale (Legge sulle pubblicazioni ufficiali, LPubl)"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "170.512"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2003/1274"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2003/1819"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2004/745"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2003-10-22"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "03.072"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zum Bundesgesetz über die Sammlungen des Bundesrechts und das Bundesblatt (Publikationsgesetz, PublG)"
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant la loi fédérale sur les recueils du droit fédéral et la Feuille fédérale (Loi sur les publications officielles, LPubl)"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente la legge federale sulle raccolte del diritto federale e sul Foglio federale (Legge sulle pubblicazioni ufficiali, LPubl)"
     }
   }
 ]

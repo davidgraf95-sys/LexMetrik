@@ -1,64 +1,42 @@
 /**
  * check:schlankheit — Zeilen-Wächter gegen Churn-Regrowth (§6.6 mechanisiert).
  *
- * ANLASS (belegt): `src/pages/gesetz-leser/inhalt.tsx` wuchs nach dem
- * §6.6-Split vom 24.7.2026 (781 Z.) binnen 12 Tagen auf 1090 Z. (+40 %)
- * zurück — niemand merkte es, bis eine Session zufällig nachmass. Die
- * §6.6-Schwelle (~800 Z., Skill `refactoring` → «Datei-Schlankheit») existierte
- * bis hierhin nur als Prosa-Regel ohne mechanischen Wächter: CLAUDE.md §6.7
- * («ein Tor, das nicht scheitern kann, ist gefährlicher als keines») traf
- * exakt zu — es gab hier gar kein Tor.
+ * 24.7.2026 · ANLASS · gesetz-leser/inhalt.tsx wuchs nach dem §6.6-Split
+ * (781 Z.) binnen 12 Tagen unbemerkt auf 1090 Z. (+40 %) zurück — die
+ * §6.6-Schwelle (~800 Z.) existierte bis dahin nur als Prosa ohne
+ * mechanischen Wächter (§6.7). Tor eingeführt.
  *
- * WAS GEMESSEN WIRD. Zeilenzahlen (`wc -l`-Äquivalent: Anzahl `\n`) aller
- * `*.ts`/`*.tsx` unter `src/` und `scripts/`, MIT drei Ausschlüssen:
+ * Misst Zeilen (Anzahl `\n`) aller `*.ts`/`*.tsx` unter `src/` und `scripts/`,
+ * mit drei Ausschlüssen: (1) `*.generated.ts(x)` — Zeilenzahl folgt den
+ * Quelldaten, kein Wartbarkeits-Signal; (2) jedes `linguist-generated`-Muster
+ * aus `.gitattributes` — generische statt hartkodierte Bindung an das, was
+ * GitHub schon als generiert einklappt; (3) `src/tests/fixtures/**` — grosse
+ * Snapshot-Inputs, kein editierter Code (`*.test.ts` selbst wird weiter
+ * gemessen).
  *
- *   1. `*.generated.ts` / `*.generated.tsx` — regenerierbare Projektionen
- *      (Banner + eigenes `npm run gen:*`/`check:*` decken deren Drift ab,
- *      §5). Ihre Zeilenzahl ist eine Funktion der Quelldaten, kein
- *      Wartbarkeits-Signal.
- *   2. Jedes Muster aus `.gitattributes`, das `linguist-generated` trägt
- *      (z. B. `src/lib/pdf/fonts/fontData.ts`) — dieselbe Begründung,
- *      generisch statt hartkodiert: was GitHub schon als generiert einklappt,
- *      soll dieses Tor nicht als Handschrift werten.
- *   3. `src/tests/fixtures/**` — Test-Fixtures sind oft grosse, wörtlich
- *      übernommene Beispieldaten (Snapshot-Inputs), kein editierter Code.
- *      Stand heute (5.8.2026) ist keine Fixture > 800 Z. (grösste 595 Z.,
- *      `lexwork-bs-audit.ts`) — der Ausschluss ist trotzdem generell gesetzt,
- *      damit ein künftiger grosser Fixture-Import nicht unnötig rot wird;
- *      *.test.ts-Dateien SELBST (nicht unter fixtures/) werden weiter
- *      gemessen — sie sind Handschrift wie jeder andere Code.
+ * Bestand wird GRANDFATHERED (`scripts/schlankheit-bestand.json`, 18 Dateien
+ * bei Einführung bereits > 800 Z.) — das Tor fängt NEUEN Zuwachs, nicht
+ * historische Schuld auf einen Schlag.
  *
- * BESTAND WIRD GRANDFATHERED (`scripts/schlankheit-bestand.json`). Am
- * Einführungstag lagen 18 Dateien bereits über 800 Z. (u. a. die
- * Fedlex-Adapter unter `scripts/normtext/`, die Snapshot-Pipeline). Diese
- * rückwirkend alle zu zwingen wäre eine andere, deutlich grössere Bau-Einheit
- * (§4-Verschmelzung wäre für einige davon vermutlich der richtige Weg) — das
- * Tor soll NEUEN Zuwachs fangen, nicht historische Schuld auf einen Schlag
- * einfordern.
+ * ROT nur bei (a) neuer Datei > 800 Z. (nicht in Baseline) oder (b)
+ * Bestands-Datei > Baseline-Zahl × 1.1 (die Fehlerklasse aus dem Anlass wäre
+ * bei ~859 Z. gestoppt worden). Unter 800 Z. gefallen ist kein Rot, nur ein
+ * Hinweis. Baseline wird nie automatisch geschrieben (Determinismus, §2) —
+ * dafür `--update` (`npm run schlankheit:update`), analog `npm run golden`.
  *
- * ROT wird das Tor nur, wenn:
- *   (a) eine NEUE Datei > 800 Z. auftaucht (nicht in der Baseline), oder
- *   (b) eine Bestands-Datei ihre Baseline-Zahl um > 10 % überschreitet
- *       (die Fehlerklasse aus dem Anlass: 781 → 1090 Z. ist +39.6 %, hätte
- *       dieses Tor schon bei ~859 Z. gestoppt).
- * Eine Bestands-Datei, die unter 800 Z. fällt, ist KEIN Rot — nur ein
- * Hinweis («kann aus der Baseline entfernt werden»). Das Tor schreibt die
- * Baseline nie von sich aus (Determinismus, §2): dafür gibt es das explizite
- * `--update`-Flag (`npm run schlankheit:update`), das die Baseline bewusst
- * NEU aus dem aktuellen Bestand schreibt — Muster wie `npm run golden`
- * (schreiben ist ein eigener, deklarierter Schritt, nie ein Nebeneffekt des
- * Lesens).
+ * Seit e24b97b80 Teil von `check:seriell`, aber BEWUSST NICHT CI-Required
+ * (Allowlist-Eintrag in `scripts/check-tor-paritaet.ts`) — lokal-warnend,
+ * damit Bestands-Regrowth fremde PRs nicht blockiert. Eskalation:
+ * `npm run schlankheit:update -- <pfad>` mit Commit-Begründung.
  *
- * Lauf: `npm run check:schlankheit` (reines fs+Zeilenzählen, kein Build,
- * keine Netz-Zugriffe — Laufzeit < 1 s). Seit e24b97b80 Teil von
- * `check:seriell` (package.json) und damit von `npm run check`/`npm run gate`
- * — BEWUSST NICHT CI-Required: ein begründeter Allowlist-Eintrag in
- * `scripts/check-tor-paritaet.ts` hält es lokal-warnend, damit ein
- * Bestands-Regrowth fremde PRs nicht blockiert (Eskalationsweg dort:
- * `npm run schlankheit:update` mit Commit-Begründung).
+ * 5.9.2026 · GEZIELT (QS-EFFIZIENZ, #699) · `--update` schrieb bisher still
+ * die GANZE Baseline neu, auch wenn nur eine Datei gemeint war (§6.7). Jetzt:
+ * `--update <pfad>…` setzt/entfernt NUR die genannten Pfade; ohne Pfade räumt
+ * es nur bestehende Einträge auf und nimmt NIE neue Dateien auf (Fund → Exit
+ * 1 mit Aufnahme-Hinweis). Jede Änderung wird ausgegeben, nichts still.
  */
 import { readFileSync, readdirSync, statSync, existsSync, writeFileSync } from 'node:fs';
-import { join, relative, sep } from 'node:path';
+import { join, relative, resolve, sep } from 'node:path';
 
 const WURZEL = process.cwd();
 const SCHWELLE = 800;
@@ -266,7 +244,7 @@ export function pruefeSchlankheit(
       if (zeilen > schwelle) {
         rot.push(
           `${pfad}: NEU über der Schwelle — ${zeilen} Z. (Schwelle ${schwelle}). ` +
-          `Entweder splitten (§6.6) oder bewusst in die Baseline aufnehmen (\`npm run schlankheit:update\`, ` +
+          `Entweder splitten (§6.6) oder bewusst in die Baseline aufnehmen (\`npm run schlankheit:update -- ${pfad}\`, ` +
           `mit Begründung im Commit).`);
       }
       continue;
@@ -291,6 +269,95 @@ export function pruefeSchlankheit(
   return { rot, hinweise };
 }
 
+// ─── Update-Berechnung (rein, testbar ohne fs) ─────────────────────────────
+
+export interface UpdateErgebnis {
+  /** Neuer Baseline-Inhalt (unsortiert; der Schreiber sortiert vor dem Schreiben). */
+  neueBaseline: Record<string, number>;
+  /** Pfade, die neu in die Baseline aufgenommen wurden (nur mit Zielpfaden möglich). */
+  hinzu: string[];
+  /** Pfade, die aus der Baseline entfernt wurden (unter Schwelle oder Datei fehlt). */
+  entfernt: string[];
+  /** Bestehende Einträge, deren Zahl nachgezogen wurde. */
+  geaendert: Array<{ pfad: string; alt: number; neu: number }>;
+  /** NUR im Aufräum-Modus (keine Zielpfade): neue Dateien > Schwelle, bewusst
+   *  NICHT aufgenommen — der Aufrufer meldet sie und beendet mit Exit 1. */
+  uebersehen: string[];
+  /** Pfad unbekannt → Exit 1, kein Schreiben. */
+  unbekannt: string[];
+}
+
+/**
+ * Reine Update-Berechnung — GEZIELT 5.9.2026 (QS-EFFIZIENZ, Beleg #699).
+ *
+ * `zielPfade` undefined/leer → NUR Aufräumen: bestehende Baseline-Einträge
+ * werden nachgezogen (Zahl an `aktuell` angepasst) oder entfernt (Datei fehlt
+ * oder liegt jetzt unter `schwelle`). Neue Dateien über der Schwelle werden
+ * NIE automatisch aufgenommen — sie landen in `uebersehen`.
+ *
+ * `zielPfade` mit Einträgen → NUR diese Pfade werden gesetzt/aktualisiert
+ * (aktuell > Schwelle) oder entfernt (aktuell fehlt oder ≤ Schwelle). Jeder
+ * andere Baseline-Eintrag bleibt byte-gleich, auch wenn seine aktuelle
+ * Zeilenzahl inzwischen abweicht (das holt ein eigener gezielter Aufruf nach,
+ * kein impliziter Nebeneffekt). Unbekannt → `unbekannt`, kein Schreiben.
+ */
+export function berechneUpdate(
+  aktuell: ReadonlyMap<string, number>,
+  baseline: Readonly<Record<string, number>>,
+  zielPfade: readonly string[] | undefined,
+  schwelle = SCHWELLE,
+): UpdateErgebnis {
+  const neueBaseline: Record<string, number> = { ...baseline };
+  const hinzu: string[] = [];
+  const entfernt: string[] = [];
+  const geaendert: Array<{ pfad: string; alt: number; neu: number }> = [];
+  const uebersehen: string[] = [];
+  const unbekannt: string[] = [];
+
+  if (zielPfade && zielPfade.length > 0) {
+    for (const pfad of zielPfade) {
+      const zeilen = aktuell.get(pfad);
+      const altWert = baseline[pfad];
+      if (zeilen === undefined && altWert === undefined) {
+        // bisher still (Exit 0), jetzt gemeldet (§6.7).
+        unbekannt.push(pfad);
+        continue;
+      }
+      // Symmetrie: bei `schwelle` bleibt der Eintrag.
+      if (zeilen !== undefined && zeilen >= schwelle) {
+        if (altWert === undefined) {
+          if (zeilen > schwelle) {
+            neueBaseline[pfad] = zeilen;
+            hinzu.push(pfad);
+          }
+        } else if (altWert !== zeilen) {
+          neueBaseline[pfad] = zeilen;
+          geaendert.push({ pfad, alt: altWert, neu: zeilen });
+        }
+      } else if (altWert !== undefined) {
+        delete neueBaseline[pfad];
+        entfernt.push(pfad);
+      }
+    }
+    return { neueBaseline, hinzu, entfernt, geaendert, uebersehen, unbekannt };
+  }
+
+  for (const pfad of Object.keys(baseline)) {
+    const zeilen = aktuell.get(pfad);
+    if (zeilen === undefined || zeilen < schwelle) {
+      delete neueBaseline[pfad];
+      entfernt.push(pfad);
+    } else if (zeilen !== baseline[pfad]) {
+      neueBaseline[pfad] = zeilen;
+      geaendert.push({ pfad, alt: baseline[pfad], neu: zeilen });
+    }
+  }
+  for (const [pfad, zeilen] of aktuell) {
+    if (baseline[pfad] === undefined && zeilen > schwelle) uebersehen.push(pfad);
+  }
+  return { neueBaseline, hinzu, entfernt, geaendert, uebersehen, unbekannt };
+}
+
 // ─── CLI ────────────────────────────────────────────────────────────────────
 
 function ladeBaseline(): Record<string, number> {
@@ -298,17 +365,23 @@ function ladeBaseline(): Record<string, number> {
   return JSON.parse(readFileSync(BASELINE_PFAD, 'utf8')) as Record<string, number>;
 }
 
-function schreibeBaseline(bestand: ReadonlyMap<string, number>): void {
-  const neu: Record<string, number> = {};
-  for (const [pfad, zeilen] of bestand) {
-    if (zeilen > SCHWELLE) neu[pfad] = zeilen;
-  }
-  const sortiert = Object.fromEntries(Object.entries(neu).sort(([a], [b]) => a.localeCompare(b)));
+function schreibeBaselineDatei(baseline: Readonly<Record<string, number>>): void {
+  const sortiert = Object.fromEntries(Object.entries(baseline).sort(([a], [b]) => a.localeCompare(b)));
   writeFileSync(BASELINE_PFAD, JSON.stringify(sortiert, null, 2) + '\n', 'utf8');
 }
 
+/** CLI-Pfad (roh, ggf. relativ zum aktuellen `cwd` oder absolut) auf die
+ *  posix-relative Form normiert, die Baseline und Bestand als Schlüssel nutzen. */
+function normalisierePfad(roh: string): string {
+  const absolut = resolve(process.cwd(), roh);
+  return relative(WURZEL, absolut).split(sep).join('/');
+}
+
 function main(): void {
-  const update = process.argv.includes('--update');
+  const argv = process.argv.slice(2);
+  const updateIdx = argv.indexOf('--update');
+  const update = updateIdx !== -1;
+  const zielPfadeRoh = update ? argv.slice(updateIdx + 1).filter((a) => a.length > 0) : [];
 
   let bestand: Map<string, number>;
   try {
@@ -332,17 +405,33 @@ function main(): void {
   }
 
   if (update) {
-    const vorher = ladeBaseline();
-    schreibeBaseline(bestand);
-    const nachher = ladeBaseline();
-    const hinzu = Object.keys(nachher).filter((p) => !(p in vorher));
-    const weg = Object.keys(vorher).filter((p) => !(p in nachher));
-    const geaendert = Object.keys(nachher).filter((p) => p in vorher && vorher[p] !== nachher[p]);
-    console.log(`schlankheit:update — Baseline neu geschrieben (${Object.keys(nachher).length} Einträge).`);
-    if (hinzu.length) console.log(`  + neu:      ${hinzu.join(', ')}`);
-    if (weg.length) console.log(`  − entfernt: ${weg.join(', ')}`);
-    for (const p of geaendert) console.log(`  ~ ${p}: ${vorher[p]} → ${nachher[p]} Z.`);
-    if (!hinzu.length && !weg.length && !geaendert.length) console.log('  (keine Änderung gegenüber der bestehenden Baseline)');
+    const baseline = ladeBaseline();
+    const zielPfade = zielPfadeRoh.length > 0 ? zielPfadeRoh.map(normalisierePfad) : undefined;
+    const { neueBaseline, hinzu, entfernt, geaendert, uebersehen, unbekannt } = berechneUpdate(bestand, baseline, zielPfade);
+
+    if (unbekannt.length) {
+      console.error(`schlankheit:update ROT — ${unbekannt.length} unbekannte(r) Zielpfad(e), keine Baseline-Änderung:`);
+      for (const p of unbekannt) console.error(`  ✗ Zielpfad unbekannt/nicht im Scan: ${p}`);
+      process.exit(1);
+    }
+
+    schreibeBaselineDatei(neueBaseline);
+
+    if (zielPfade) {
+      console.log(`schlankheit:update — ${zielPfade.length} Zielpfad(e) verarbeitet, alle anderen Einträge byte-gleich.`);
+    } else {
+      console.log('schlankheit:update — Aufräumen (keine Zielpfade): nur bestehende Einträge nachgezogen/entfernt, keine neuen Dateien aufgenommen.');
+    }
+    for (const p of hinzu) console.log(`  + neu aufgenommen: ${p}: ${neueBaseline[p]} Z.`);
+    for (const { pfad, alt, neu } of geaendert) console.log(`  ~ ${pfad}: ${alt} → ${neu} Z.`);
+    for (const p of entfernt) console.log(`  − entfernt: ${p}`);
+    if (!hinzu.length && !entfernt.length && !geaendert.length) console.log('  (keine Änderung gegenüber der bestehenden Baseline)');
+
+    if (uebersehen.length) {
+      console.error(`\nschlankheit:update ROT — ${uebersehen.length} neue Datei(en) über der Schwelle, NICHT automatisch aufgenommen (§6.7 — «--update» ohne Pfad nimmt nie neue Dateien auf):`);
+      for (const p of uebersehen) console.error(`  ✗ ${p}: bewusst aufnehmen: npm run schlankheit:update -- ${p}`);
+      process.exit(1);
+    }
     return;
   }
 

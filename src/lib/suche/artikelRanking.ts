@@ -59,6 +59,17 @@ const EBENEN_RANG: Record<'bund' | 'kanton', number> = { bund: 0, kanton: 1 };
 // Zivilrecht, StGB/StPO = Strafrecht/-verfahren, ZPO = Zivilverfahren, BV =
 // Verfassung, SchKG = Vollstreckung.
 const KERNERLASSE: readonly string[] = ['OR', 'ZGB', 'STGB', 'ZPO', 'STPO', 'BV', 'SCHKG'];
+
+/** NUR für die Spiegel-Prüfung exportiert (QS-BASIS (d) K2, 31.8.2026).
+ *
+ *  Seit K2 kennt auch der Edge-/DB-Weg diese Rangfolge — dort als SQL in
+ *  scripts/datenhaltung/suche-kern.ts, weil dessen Null-Import-Regel für api/**
+ *  keinen geteilten Import zulässt. Damit die beiden Listen nicht auseinanderlaufen,
+ *  vergleicht scripts/datenhaltung/suche-rang.test.ts sie gegeneinander. Dieser
+ *  Export ist ausschliesslich dafür da; Produktivcode nutzt weiter die Konstante
+ *  oben. Wer hier etwas ändert, muss suche-kern.ts mitziehen — sonst läuft der
+ *  Spiegel-Test rot. */
+export const KERNERLASSE_FUER_SPIEGELPRUEFUNG = KERNERLASSE;
 const KERN_RANG = new Map(KERNERLASSE.map((k, i) => [k, i]));
 const KERN_NICHT = KERNERLASSE.length; // Rang für Nicht-Kernerlasse (ganz hinten)
 

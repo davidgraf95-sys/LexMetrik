@@ -1,0 +1,298 @@
+{
+  "erzeugt": "2026-09-01",
+  "eintraege": [
+    {
+      "id": "kanton/ZH/631.43/art_1",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung über die elektronische Einreichung von Quellensteuerdaten (LS 631.43)",
+      "artikel": "1",
+      "artikelLabel": "§ 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das kantonale Steueramt stellt den Schuldnerinnen und Schuldnern der steuerbaren Leistung und den quellensteuerpflichtigen Personen über das Internet eine Applikation zur elektronischen Einreichung von Quellensteuerdaten (Webportal Quellensteuer) zur Verfügung."
+        },
+        {
+          "absatz": "2",
+          "text": "Über das Webportal Quellensteuer können die folgenden Quellensteuerdaten gemäss den Vorgaben dieser Verordnung rechtsgültig elektronisch eingereicht werden:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Quellensteuerabrechnungen,"
+            },
+            {
+              "marke": "b",
+              "text": "Anmeldungen von Neuanstellungen von quellensteuerpflichtigen Arbeitnehmenden,"
+            },
+            {
+              "marke": "c",
+              "text": "Mutationsmeldungen zur Überprüfung der Tarifeinstufungen von quellensteuerpflichtigen Arbeitnehmenden,"
+            },
+            {
+              "marke": "d",
+              "text": "Anträge auf Neuveranlagung der Quellensteuern,"
+            },
+            {
+              "marke": "e",
+              "text": "Anträge auf Rückerstattung der Quellensteuern auf Kapitalleistungen von Vorsorgeeinrichtungen an Personen mit Wohnsitz im Ausland,"
+            },
+            {
+              "marke": "f",
+              "text": "weitere vom kantonalen Steueramt bezeichnete Daten."
+            }
+          ]
+        },
+        {
+          "absatz": "3",
+          "text": "Quellensteuerabrechnungen nach § 13 Abs. 1 lit. d der Verordnung über die Quellensteuer für ausländische Arbeitnehmer und Mutationsmeldungen zur Überprüfung der Tarifeinstufungen von quellensteuerpflichtigen Arbeitnehmenden können auch über das elektronische Lohnmeldeverfahren Quellensteuer (ELM Quellensteuer) gemäss den Vorgaben des Vereins swissdec rechtsgültig eingereicht werden."
+        },
+        {
+          "absatz": "4",
+          "text": "Quellensteuerdaten können auch in Papierform eingereicht werden. Diese Verordnung regelt nur die elektronische Einreichung."
+        }
+      ],
+      "stand": "2015-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-631_43-2014_09_15-2015_01_01-087.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "c0959e4af4449920519e59dbde519401ef539098f36ee5bd7a84cfc8b5f5f632",
+      "sha": "b98da3d21513f8690728755d5c590ebdd8688ac80655ed131008db3da2a7255f"
+    },
+    {
+      "id": "kanton/ZH/631.43/art_2",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung über die elektronische Einreichung von Quellensteuerdaten (LS 631.43)",
+      "artikel": "2",
+      "artikelLabel": "§ 2",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Das kantonale Steueramt speichert die mittels Webportal Quellensteuer und ELM Quellensteuer elektronisch eingereichten Daten auf einem von ihm oder in seinem Auftrag betriebenen Server."
+        }
+      ],
+      "stand": "2015-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-631_43-2014_09_15-2015_01_01-087.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "c0959e4af4449920519e59dbde519401ef539098f36ee5bd7a84cfc8b5f5f632",
+      "sha": "d5c8635fc7a97aba007c32d54b042c6b692cc7f552837d750b6159514753978d"
+    },
+    {
+      "id": "kanton/ZH/631.43/art_3",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung über die elektronische Einreichung von Quellensteuerdaten (LS 631.43)",
+      "artikel": "3",
+      "artikelLabel": "§ 3",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Das kantonale Steueramt trifft die erforderlichen Massnahmen,",
+          "items": [
+            {
+              "marke": "a",
+              "text": "damit jederzeit auf die elektronisch eingereichten Daten zugegriffen werden kann,"
+            },
+            {
+              "marke": "b",
+              "text": "damit die elektronisch eingereichten Daten nicht gelöscht oder verändert werden können,"
+            },
+            {
+              "marke": "c",
+              "text": "damit das Steuergeheimnis gemäss § 120 StG gewährleistet ist und keine unberechtigten Personen Zugang zu den Daten haben, und"
+            },
+            {
+              "marke": "d",
+              "text": "damit jederzeit nachvollzogen werden kann, welche Personen auf welche Daten Zugriff haben."
+            }
+          ]
+        }
+      ],
+      "stand": "2015-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-631_43-2014_09_15-2015_01_01-087.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "c0959e4af4449920519e59dbde519401ef539098f36ee5bd7a84cfc8b5f5f632",
+      "sha": "346aa1aba6a4b74203cfa40bad26529bcc908755c5c3a4151457697cd93e544a"
+    },
+    {
+      "id": "kanton/ZH/631.43/art_4",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung über die elektronische Einreichung von Quellensteuerdaten (LS 631.43)",
+      "artikel": "4",
+      "artikelLabel": "§ 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Über das Webportal Quellensteuer eingehende Quellensteuerdaten, die von den Gemeindesteuerämtern zu verarbeiten sind, werden diesen in Papierform zugestellt."
+        },
+        {
+          "absatz": "2",
+          "text": "Auf Ersuchen kann das kantonale Steueramt den Gemeindesteuerämtern diese Daten elektronisch über eine von diesen einzurichtende elektronische Schnittstelle übermitteln."
+        }
+      ],
+      "stand": "2015-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-631_43-2014_09_15-2015_01_01-087.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "c0959e4af4449920519e59dbde519401ef539098f36ee5bd7a84cfc8b5f5f632",
+      "sha": "ecba5cf20f724d754b57e31dec48a2ce8497f2d1f8d4272e8617909e376ef294"
+    },
+    {
+      "id": "kanton/ZH/631.43/art_5",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung über die elektronische Einreichung von Quellensteuerdaten (LS 631.43)",
+      "artikel": "5",
+      "artikelLabel": "§ 5",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Das kantonale Steueramt kann den Gemeindesteuerämtern die Nutzung des Webportals Quellensteuer erlauben. Die Gemeindesteuerämter haben dabei die Vorschriften dieser Verordnung und die dazu erlassenen Ausführungsbestimmungen zu beachten."
+        }
+      ],
+      "stand": "2015-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-631_43-2014_09_15-2015_01_01-087.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "c0959e4af4449920519e59dbde519401ef539098f36ee5bd7a84cfc8b5f5f632",
+      "sha": "3b2c073456dbddaec0dc1bc399e89dc999fc1a577dc0e817be4dbd35425e3001"
+    },
+    {
+      "id": "kanton/ZH/631.43/art_6",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung über die elektronische Einreichung von Quellensteuerdaten (LS 631.43)",
+      "artikel": "6",
+      "artikelLabel": "§ 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Zugang zum Webportal Quellensteuer erfolgt über die von der Staatskanzlei betriebene Transaktionsplattform «ZHServices»."
+        },
+        {
+          "absatz": "2",
+          "text": "Schuldnerinnen und Schuldner der steuerbaren Leistung, quellensteuerpflichtige Personen sowie Gemeindesteuerämter beantragen dafür beim kantonalen Steueramt einen Zugangscode."
+        }
+      ],
+      "stand": "2015-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-631_43-2014_09_15-2015_01_01-087.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "c0959e4af4449920519e59dbde519401ef539098f36ee5bd7a84cfc8b5f5f632",
+      "sha": "88db543e57100f3d1e3aa0df58f74cde7eedb11040b4d2e5f88d84f70c3d7fe7"
+    },
+    {
+      "id": "kanton/ZH/631.43/art_7",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung über die elektronische Einreichung von Quellensteuerdaten (LS 631.43)",
+      "artikel": "7",
+      "artikelLabel": "§ 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Nach erfolgter Authentifizierung kann die Nutzerin bzw. der Nutzer des Webportals Quellensteuer Quellensteuerdaten elektronisch erfassen, übermitteln und, soweit sie bzw. er dazu berechtigt ist, zur Weiterbearbeitung verwenden."
+        },
+        {
+          "absatz": "2",
+          "text": "Das Webportal Quellensteuer erlaubt die elektronische Übernahme von Quellensteuerdaten aus vorangehenden Abrechnungsperioden und aus elektronisch geführten Lohnbuchhaltungen."
+        },
+        {
+          "absatz": "3",
+          "text": "Bis zur elektronischen Einreichung gemäss § 8 können die erfassten Daten jederzeit geändert oder gelöscht werden."
+        }
+      ],
+      "stand": "2015-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-631_43-2014_09_15-2015_01_01-087.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "c0959e4af4449920519e59dbde519401ef539098f36ee5bd7a84cfc8b5f5f632",
+      "sha": "bb1fb6b916d5d8bfc7147934608abc9e2bb42164453882b810d7e7cdb5738f52"
+    },
+    {
+      "id": "kanton/ZH/631.43/art_8",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung über die elektronische Einreichung von Quellensteuerdaten (LS 631.43)",
+      "artikel": "8",
+      "artikelLabel": "§ 8",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Nach der elektronischen Übermittlung der Quellensteuerdaten wird der Nutzerin oder dem Nutzer des Webportals Quellensteuer eine Geschäftsfallnummer mitgeteilt und die Übermittlung wird in der Vorgangsverwaltung des Webportals Quellensteuer angezeigt. Die Quellensteuerdaten gelten damit als elektronisch eingereicht."
+        },
+        {
+          "absatz": "2",
+          "text": "Bei Anträgen um Neuveranlagung der Quellensteuer und bei Anträgen auf Rückerstattung der Quellensteuern auf Kapitalleistungen von Vorsorgeeinrichtungen an Personen mit Wohnsitz im Ausland muss die quellensteuerpflichtige Person zusätzlich die vom Webportal generierte Antragsquittung unterzeichnen und mit den erforderlichen Belegen dem kantonalen Steueramt einreichen."
+        }
+      ],
+      "stand": "2015-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-631_43-2014_09_15-2015_01_01-087.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "c0959e4af4449920519e59dbde519401ef539098f36ee5bd7a84cfc8b5f5f632",
+      "sha": "b8bdd8034bb629248b63900904432b58e073fc6320a22162a946467ab82e084d"
+    },
+    {
+      "id": "kanton/ZH/631.43/art_9",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung über die elektronische Einreichung von Quellensteuerdaten (LS 631.43)",
+      "artikel": "9",
+      "artikelLabel": "§ 9",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Elektronisch eingereichte Quellensteuerabrechnungen können nur im Abrechnungsverfahren einer nachfolgenden Periode korrigiert werden. Die Schuldnerin bzw. der Schuldner der steuerbaren Leistung hat dabei die zu korrigierenden Quellensteuerdaten zu stornieren und durch die korrekten Quellensteuerdaten zu ersetzen."
+        }
+      ],
+      "stand": "2015-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-631_43-2014_09_15-2015_01_01-087.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "c0959e4af4449920519e59dbde519401ef539098f36ee5bd7a84cfc8b5f5f632",
+      "sha": "9c6c6818aab9834e6024f9d1e69c2ba5eabe477fb1cdb956ccf7653cca853db2"
+    },
+    {
+      "id": "kanton/ZH/631.43/art_10",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung über die elektronische Einreichung von Quellensteuerdaten (LS 631.43)",
+      "artikel": "10",
+      "artikelLabel": "§ 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Schuldnerin oder der Schuldner der steuerbaren Leistung oder die quellensteuerpflichtige Person kann Drittpersonen durch Übergabe des Zugangscodes bevollmächtigen, Quellensteuerdaten über das Webportal Quellensteuer zu erfassen und elektronisch einzureichen."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Schuldnerin oder der Schuldner der steuerbaren Leistung oder die quellensteuerpflichtige Person kann die Vollmacht jederzeit widerrufen, indem sie oder er vom kantonalen Steueramt einen neuen Zugangscode verlangt. Der neue Zugangscode wird per Post an die im Steuerregister aufgeführte Adresse der abrechnungs- oder steuerpflichtigen Person zugestellt."
+        }
+      ],
+      "stand": "2015-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-631_43-2014_09_15-2015_01_01-087.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "c0959e4af4449920519e59dbde519401ef539098f36ee5bd7a84cfc8b5f5f632",
+      "sha": "0bb305c8b7ece17f7a28298b9ccfedf5dec43e2e804f9086c7dca9d0ed0edf89"
+    },
+    {
+      "id": "kanton/ZH/631.43/art_11",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung über die elektronische Einreichung von Quellensteuerdaten (LS 631.43)",
+      "artikel": "11",
+      "artikelLabel": "§ 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Das kantonale Steueramt kann zur Umsetzung dieser Verordnung Ausführungsbestimmungen erlassen. Diese können als Vorschriften für die Nutzung des Webportals Quellensteuer erlassen werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Für die Erfassung und Aufbewahrung der gemäss dieser Verordnung eingereichten Daten gilt die Weisung der Finanzdirektion über die elektronische Erfassung und Aufbewahrung von Steuerakten sowie die Vernichtung von Papierakten im Quellensteuerverfahren vom 15. September 2014, soweit diese Verordnung keine abweichenden Bestimmungen enthält."
+        }
+      ],
+      "stand": "2015-01-01",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-631_43-2014_09_15-2015_01_01-087.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "c0959e4af4449920519e59dbde519401ef539098f36ee5bd7a84cfc8b5f5f632",
+      "sha": "df32799fab437e54e0db4df4eb4130fb36aa9b7471c1c04f332cb2f8e880e267"
+    }
+  ]
+}

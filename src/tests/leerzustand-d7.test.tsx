@@ -26,6 +26,10 @@ import { describe, it, expect } from 'vitest';
 import { readFileSync } from 'node:fs';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { Leerzustand } from '../components/ui/Leerzustand';
+import { alleTsx, APP_WURZEL, liesOhneKommentare, pruefeAusnahmen, rel } from './appDateien';
+import { join } from 'node:path';
+
+const TAGERECHNER = join(APP_WURZEL, 'pages/RechnerTagerechner.tsx');
 
 /** Quelltext ohne Kommentare — die Sonden prüfen den ausführbaren Teil. Die
  *  Begründungen am Fundort benennen den Vorzustand ausdrücklich («hier stand
@@ -36,12 +40,28 @@ const lies = (p: string) => readFileSync(new URL(p, import.meta.url), 'utf8')
   .replace(/\/\*[\s\S]*?\*\//g, '')
   .split('\n').filter((z) => !/^\s*(\/\/|\*)/.test(z)).join('\n');
 
-/** Die Aufrufstellen, die D-7 zusammengeführt hat. */
-const KONSUMENTEN = [
-  '../pages/Rechtsprechung.tsx',
-  '../pages/Materialien.tsx',
-  '../pages/Gesetze.tsx',
-] as const;
+// ─── R3-α-WURZEL (31.8.2026, §17/§6.7) ──────────────────────────────────────
+//
+// Hier stand eine Liste von DREI Dateien («KONSUMENTEN»). Sie hat getan, was
+// eine Datei-Liste immer tut: bestätigt, was schon migriert war. Gemessen am
+// 31.8.2026 standen SECHS unmigrierte Leerzustands-Kopien ausserhalb der Liste
+// (GesetzeGliederung ×4, InternationalRubriken, AzRegister) — der Wächter war
+// grün. Beide Sonden fegen darum jetzt die ganze App:
+//   (A) AUFRUFSTELLEN — jede Datei, die `<Leerzustand …/>` aufruft (finden
+//       statt aufzählen).
+//   (B) ROHFORM — nirgends in der App steht die Kanon-Form des Leerzustands
+//       («Kein …» im nackten `text-body-s text-ink-500`-Absatz) noch von Hand.
+//
+// GELTUNGSBEREICH von (B), ausdrücklich: die Sonde greift die Kanon-STIMME
+// (`text-body-s`). Dichte Rails/Sheets tragen ihre Kurzhinweise in `text-micro`
+// (ErwaegungsRail, GliederungSheet) — das ist eine andere Textklasse, nicht ein
+// umgangener Kanon; sie hier mitzunehmen hiesse, eine Regel zu behaupten, die
+// das Reglement nicht trägt (§8: keine erfundene Strenge).
+
+/** Alle Dateien, die den Baustein aufrufen — App-weit gefunden, nicht gelistet. */
+function konsumenten(): string[] {
+  return alleTsx().filter((d) => /<Leerzustand\b/.test(liesOhneKommentare(d)));
+}
 
 /** Alle `<Leerzustand …/>`-Aufrufe einer Datei als Rohtext. */
 function aufrufe(quelle: string): string[] {
@@ -80,11 +100,17 @@ describe('D-7 (1) — Form: der Baustein rendert den Kanon', () => {
   });
 });
 
-describe('D-7 (2) — Aufrufstellen: Aussagesatz und Weiterweg-Pflicht', () => {
+describe('D-7 (2) — Aufrufstellen: Aussagesatz und Weiterweg-Pflicht (App-weit)', () => {
+  it('die Sonde findet überhaupt Aufrufstellen (Negativ-Kontrolle des Sweeps)', () => {
+    // Ohne diese Zusicherung wäre jede Sonde darunter grün, sobald der Baustein
+    // aus der App verschwindet — das genaue Gegenteil dessen, was sie bewacht.
+    expect(konsumenten().map(rel).sort()).not.toEqual([]);
+  });
+
   it('jede Aufrufstelle nennt einen Aussagesatz — nie eine Frage (§8)', () => {
     const gefunden: string[] = [];
-    for (const datei of KONSUMENTEN) {
-      for (const a of aufrufe(lies(datei))) {
+    for (const datei of konsumenten()) {
+      for (const a of aufrufe(liesOhneKommentare(datei))) {
         const m = a.match(/text=(?:"([^"]*)"|\{`([^`]*)`\})/);
         expect(m, `text-Prop fehlt in ${datei}: ${a}`).not.toBeNull();
         const text = (m![1] ?? m![2]).trim();
@@ -100,8 +126,8 @@ describe('D-7 (2) — Aufrufstellen: Aussagesatz und Weiterweg-Pflicht', () => {
 
   it('jede Filter-Leere trägt einen Weiterweg, jede Bestands-Leere keinen erfundenen', () => {
     let filterFaelle = 0;
-    for (const datei of KONSUMENTEN) {
-      for (const a of aufrufe(lies(datei))) {
+    for (const datei of konsumenten()) {
+      for (const a of aufrufe(liesOhneKommentare(datei))) {
         if (a.includes('art="filter"')) {
           filterFaelle += 1;
           expect(a, `${datei}: Filter-Leerzustand ohne Weiterweg`).toContain('weiterweg=');
@@ -113,13 +139,79 @@ describe('D-7 (2) — Aufrufstellen: Aussagesatz und Weiterweg-Pflicht', () => {
     expect(filterFaelle).toBeGreaterThanOrEqual(3);
   });
 
+  // ─── R4-E (5.9.2026) · die ART folgt der LAGE, nicht dem Wortlaut ─────────
+  //
+  // GEMESSEN am Preview: derselbe Sachverhalt — «die Suche hat nichts
+  // gefunden» — trug zwei Darstellungen:
+  //   /rechner/tagerechner, Suchtext «zzzzz»  → data-leerzustand="bestand", KEIN Weiterweg
+  //   /rechtsprechung?q=zzzzzz                → data-leerzustand="filter",  Weiterweg «Filter zurücksetzen»
+  // Massgeblich ist die LAGE: läuft der Zweig nur bei nicht-leerer Suche, ist
+  // etwas VERDECKT (`filter`, Weiterweg Pflicht); läuft er über den vollen
+  // Bestand, ist nichts DA (`bestand`, kein erfundener Weiterweg — Herleitung
+  // an den beiden `Gesetze.tsx`-Fundstellen). Der WORTLAUT entscheidet nicht:
+  // «gefunden» steht in beiden Lagen, und die Zweiteilung gefunden/erfasst ist
+  // seit Runde 1 ausdrücklich kein Befund.
+  it('R4-E: die suchgefilterte Preset-Leere des Tagerechners ist eine Filter-Leere', () => {
+    const q = liesOhneKommentare(TAGERECHNER);
+    // Der Zweig hängt an einer nicht-leeren Suche — also ist etwas verdeckt.
+    expect(q, 'der Leerzustand steht hinter `presetQuery.trim() !== \'\'`')
+      .toContain("presetQuery.trim() !== ''");
+    const a = aufrufe(q);
+    expect(a, 'genau ein Leerzustand in dieser Datei').toHaveLength(1);
+    expect(a[0], 'verdeckt ⇒ art="filter"').toContain('art="filter"');
+    expect(a[0], 'Filter-Leere ⇒ Weiterweg Pflicht').toContain('weiterweg=');
+    // Der Satz selbst bleibt unangetastet (§8) — er nennt die zwei fachlichen
+    // Auswege, die der Knopf NICHT ersetzt.
+    expect(a[0]).toContain('Kein Preset gefunden');
+    expect(a[0]).toContain('Spezialrechner der Fristen-Kategorie');
+  });
+
   it('die alten Bauformen sind weg, nicht bloss danebengestellt (§5/§10)', () => {
     expect(lies('../pages/Materialien.tsx')).not.toContain('Filter zurücksetzen?');
     expect(lies('../pages/Rechtsprechung.tsx'))
       .not.toContain('Kein Entscheid gefunden. Filter anpassen oder zurücksetzen.');
-    for (const datei of KONSUMENTEN) {
-      expect(lies(datei), `${datei}: Leerzustand als roher Absatz`)
-        .not.toMatch(/<p className="text-body-s text-ink-500">Kein /);
+  });
+});
+
+describe('D-7 (3) — App-weit: die Rohform des Leerzustands existiert nirgends mehr', () => {
+  /** Der Kanon-Absatz des Leerzustands, von Hand gezeichnet. */
+  const ROHFORM = /<p className="(?=[^"]*text-body-s)(?=[^"]*text-ink-500)[^"]*">\s*(?:Kein|Keine|Noch kein)/;
+
+  /**
+   * Die EINE Ausnahme, mit ihrer Begründung AM FUNDORT (nicht bloss hier).
+   *
+   * Die Fehlseite ist selbst schon die Antwort auf «hier ist nichts»; ihr
+   * Weiterweg steht als Sprungliste darunter. Ein zweiter Baustein mit
+   * zweitem Ausweg in derselben Ansicht wäre die Doppelung, nicht die
+   * Vereinheitlichung. Form und Wortlaut sind identisch zum Kanon.
+   */
+  const AUSNAHMEN = [{
+    datei: 'pages/gesetz-leser/FehlSeite.tsx',
+    begruendung: 'dieser Satz steht INNERHALB einer',
+  }] as const;
+
+  it('jede Ausnahme trägt ihre Begründung am Fundort', () => {
+    expect(() => pruefeAusnahmen(AUSNAHMEN)).not.toThrow();
+  });
+
+  it('kein handgezeichneter Leerzustand ausserhalb der begründeten Ausnahme', () => {
+    const erlaubt = pruefeAusnahmen(AUSNAHMEN);
+    const funde = alleTsx()
+      .filter((d) => !erlaubt.has(rel(d)))
+      .filter((d) => ROHFORM.test(liesOhneKommentare(d)))
+      .map(rel);
+    expect(funde, 'handgezeichneter Leerzustand statt <Leerzustand art="bestand" …/>').toEqual([]);
+  });
+
+  it('NEGATIV-KONTROLLE: der Ausdruck findet die sechs Vorher-Formen', () => {
+    // Wortlaut aus GesetzeGliederung.tsx / InternationalRubriken.tsx /
+    // AzRegister.tsx, Stand vor R3-α (31.8.2026).
+    for (const vorher of [
+      '<p className="text-body-s text-ink-500">Kein Erlass gefunden.</p>',
+      '<p className="text-body-s text-ink-500">Kein Eintrag gefunden.</p>',
+      '<p className="px-2 py-1 text-body-s text-ink-500">Kein Titel im Register gefunden.</p>',
+    ]) {
+      expect(ROHFORM.test(vorher), vorher).toBe(true);
     }
   });
 });

@@ -12,11 +12,25 @@
 import { test, expect, type Page } from '@playwright/test'
 import { fehlerSammeln } from './helpers/fehlerSammeln'
 
-const feld = (page: Page) => page.getByRole('searchbox', { name: 'Gesetze durchsuchen (Kürzel, Titel, SR-Nr.)' })
+// DEKLARIERTE ANPASSUNG (R12A/D22, 6.9.2026): das Filterfeld auf /gesetze trägt
+// jetzt das sichtbare Label «Filtern» — und damit auch den zugänglichen Namen
+// (WCAG 2.5.3: sichtbarer Text IST der Name; das frühere `aria-label`
+// «Gesetze durchsuchen …» sagte etwas anderes als das Bild). Nur der Locator
+// zieht nach, die Zusicherung bleibt Wort für Wort dieselbe.
+const feld = (page: Page) => page.getByRole('searchbox', { name: 'Filtern' })
 
 // Beobachter VOR der Interaktion installieren — gemessen wird genau der
 // Tipp-/Lösch-Einschwung. Attribution (Quell-Knoten) wird mitprotokolliert,
 // damit ein Rot sofort die Fläche nennt (Footer vs. Trefferregion).
+//
+// ── §17-NACHZUG 6.9.2026 · DIE MELDUNG SAGT JETZT AUCH, WOHIN ES SPRANG ─────
+// Der CI-Flake vom 6.9. meldete «Quellen: DIV.flex justify-end» — die FLÄCHE,
+// aber nicht die BEWEGUNG. Die Diagnose (54 px aufwärts, weil der Hinweis
+// «Systematik noch nicht hinterlegt» über der Zeile erschien und wieder
+// verschwand; Wurzel-Fix in `pages/Gesetze.tsx`) kostete darum eine eigene
+// Messreihe. Der Beobachter protokolliert seither zusätzlich `y` vorher→nachher
+// und den Beitrag zum Wert. REINE BERICHTERSTATTUNG: keine Assertion, kein
+// Schwellenwert, kein Timeout wird berührt (§6.3).
 async function clsBeobachten(page: Page) {
   await page.evaluate(() => {
     const w = window as unknown as { __cls: number; __clsQuellen: string[] }
@@ -26,13 +40,18 @@ async function clsBeobachten(page: Page) {
       for (const e of l.getEntries() as PerformanceEntry[]) {
         const s = e as unknown as {
           value: number; hadRecentInput: boolean
-          sources?: { node?: Element | null }[]
+          sources?: { node?: Element | null; previousRect?: DOMRectReadOnly; currentRect?: DOMRectReadOnly }[]
         }
         if (s.hadRecentInput) continue
         w.__cls += s.value
         for (const q of s.sources ?? []) {
           const n = q.node
-          if (n) w.__clsQuellen.push(`${n.tagName}${n.id ? `#${n.id}` : ''}.${String(n.className).slice(0, 60)}`)
+          const b = q as unknown as { previousRect?: DOMRectReadOnly; currentRect?: DOMRectReadOnly }
+          const weg = b.previousRect && b.currentRect
+            ? ` y ${Math.round(b.previousRect.y)}→${Math.round(b.currentRect.y)}`
+            : ''
+          if (n) w.__clsQuellen.push(
+            `${n.tagName}${n.id ? `#${n.id}` : ''}.${String(n.className).slice(0, 60)}${weg} (+${s.value.toFixed(5)})`)
         }
       }
     }).observe({ type: 'layout-shift' })

@@ -20,7 +20,9 @@
 //      Regression) plus Skip-Ausweis — Begründung bei den Konstanten unten.
 //  I3  B2 — Fliesstext im Ergebnisblock hält die Lesespalte (`max-w-reading`,
 //      40rem). Ausgenommen sind ausdrücklich Kacheln und Tabellen (D-1.5:
-//      «NUR Prosa-<p>; Kacheln/lc-tile/Tabellen bleiben unbegrenzt»).
+//      «NUR Prosa-<p>; Kacheln/lc-tile/Tabellen bleiben unbegrenzt») — und
+//      seit dem 5.9.2026 alles, was NICHT WIRKLICH SICHTBAR ist (Restliste
+//      Ziff. 6, Herleitung unten bei `SICHTBAR`).
 //  I4  Die Sprungmarke zum Ergebnis ist **erreichbar** — sichtbar, im Bild und
 //      am Klickpunkt nicht verdeckt —, solange das Ergebnis nicht im Bild
 //      steht, auf JEDER Breite. Sie trug bis QS-UI 8b `sm:hidden`, war also
@@ -51,6 +53,31 @@ import { DROSSEL, REAKTIONS_BUDGET, REAKTIONS_LATTE, CONTAINER_BUDGET_CI } from 
 test.beforeEach(async ({ page }) => {
   await page.emulateMedia({ reducedMotion: 'reduce' })
 })
+
+// ── SICHTBAR · Restliste Ziff. 6, nachgezogen 5.9.2026 ──────────────────────
+// Methodischer Fund aus Teil 2 (FAHRPLAN-UI-QUALITAET, Archiv §2.2): Chromium
+// liefert `getBoundingClientRect` weiterhin für Absätze in einem GESCHLOSSENEN
+// `<details>` — `::details-content` arbeitet mit `content-visibility: hidden`,
+// nicht mit `display: none`. Wer nur die Rects prüft, misst Text, den niemand
+// sieht: auf /vorlagen/gmbh-gruendung meldete die erste Messung 21
+// Lesespalten-Verstösse, echt waren drei. I6 prüft darum seit Teil 2
+// `checkVisibility()`; I3 (Teil 1) tat es NICHT und trug damit dieselbe blinde
+// Stelle.
+//
+// Rot-Beweis am unveränderten Stand, 5.9.2026, /rechner/verzugszins @1280×800
+// (Sonde: derselbe DOM, beide Filterketten nebeneinander, 900-px-Absatz
+// injiziert):
+//   Fall A · Absatz in geschlossenem <details> → alt 1 Verstoss, neu 0 (Falsch-Rot)
+//   Fall B · Absatz sichtbar                   → alt 1 Verstoss, neu 1 (Tor beisst)
+// Fall B ist die §6.7-Gegenprobe: die Verengung macht das Tor genauer, nicht
+// stumpf.
+//
+// REIHENFOLGE (Korrektur 15.8.2026, Archiv-Restliste Ziff. 6): erst der
+// Settle-Fix (Ziff. 7), dann dieses Nachziehen — `checkVisibility` trägt sonst
+// die Falsch-Rot-Klasse des lc-fade-in-Nullframes mit. Der Settle-Fix steht
+// seit PR #522 (`beforeEach` oben); nachgemessen 5.9.2026: 2 × 65/65 grün
+// unter `--workers=16` (kalt) und `--workers=14` (warm).
+const SICHTBAR = { contentVisibilityAuto: true, opacityProperty: true, visibilityProperty: true } as const
 
 // Rechner-Flächen, die ohne Eingabe schon ein Ergebnis zeigen (Live-Berechnung).
 // Eingabe-gegatete Flächen (Streitwert, Prozesskosten, Betreibungskosten,
@@ -117,7 +144,28 @@ const VERDIKT_BH_REGRESSION = 1.2
 // einer, die beide durchwinken müsste und damit nichts mehr fände:
 //   Wizard-Flächen (26): Desktop 0.65–1.08 · mobil 1.50–2.61
 //   Mappen-Flächen (2):  Desktop 2.50/5.09 · mobil 4.24/8.25
-const DOKUMENT_BH_REGRESSION = { desktop: 1.2, mobil: 2.8 } as const
+//
+// ── NEU GEMESSEN 6.9.2026 (W2·24-DESIGN-IDENTITAET, §6.3-Deklaration) ────────
+// Das Tor hat GENAU DAS GEMELDET, WOFÜR ES GEBAUT IST: über dem Dokument ist
+// etwas Neues eingeschoben worden. Gemessen @1280×800 auf `/vorlagen/…`:
+//   Kopfzone VOR dieser Runde:  Titelblatt 64 + Brotkrumen-Leiste 37      = 101 px
+//   Kopfzone SEIT R2/R4/F8:     + Arbeitsleiste 34 + Ausgabe-Zeile 31     = 166 px
+// Die 65 px treffen JEDE Route gleich (beide Leisten sind app-weit, nicht
+// vorlagen-spezifisch) — das ist eine Verschiebung der ganzen Familie um
+// 65/800 = 0.081 Bildschirmhöhen, kein Einzelwert-Ausreisser (§0 Ziff. 3).
+// Verteilung nach der Verschiebung, alle 11 Wizard-Flächen mit Dokument:
+//   0.810 patientenverfuegung · 0.810 vollmacht · 0.813 schlichtungsgesuch-bs
+//   0.815 testament · 0.843 ag-gruendung · 0.851 rubrum · 0.851 verjaehrungs-
+//   verzicht · 0.887 mahnung · 0.910 klage-vereinfacht · 1.011 nda
+//   · 1.212 arbeitsvertrag (die längste Wizard-Fläche: 7 Schritte, dazu der
+//     Vertragstyp-Wähler — sie lag mit 1.131 auch vorher an der Spitze).
+// Die Schranke zieht darum auf 1.25 nach. Sie wird dabei ENGER, nicht weiter:
+// über dem gemessenen Maximum blieben zuvor 0.12 Bildschirmhöhen Luft (1.08 →
+// 1.2), jetzt sind es 0.038 (1.212 → 1.25). Wer über dem Dokument das Nächste
+// einschiebt, wird also FRÜHER rot gestellt als bisher.
+// ROT ZU BEKOMMEN (§6.7): die Ausgabe-Zeile in `layout/Shell.tsx` ein zweites
+// Mal einhängen (+31 px) ⇒ arbeitsvertrag steht bei 1.251 und der Fall reisst.
+const DOKUMENT_BH_REGRESSION = { desktop: 1.25, mobil: 2.8 } as const
 
 // Die zwei Mappen-Flächen sind KONSTRUKTIONSBEDINGT tief: vor der Mappe steht
 // die Checkliste, die überhaupt erst bestimmt, welche Dokumente entstehen. Das
@@ -154,7 +202,7 @@ type Befund = {
 }
 
 async function erhebe(page: Page, viewportHoehe: number): Promise<Befund[]> {
-  return page.evaluate((vh) => {
+  return page.evaluate(([vh, sichtbar]: [number, typeof SICHTBAR]) => {
     const oben = (el: Element) => el.getBoundingClientRect().top + window.scrollY
     const bloecke = [...document.querySelectorAll('[id^="lc-ergebnis"]')]
     return bloecke.map((b) => {
@@ -189,6 +237,9 @@ async function erhebe(page: Page, viewportHoehe: number): Promise<Befund[]> {
       }
       // I3 gilt auch ohne Verdikt (der Schnellrechner trägt Prosa).
       befund.breiteProsa = [...b.querySelectorAll('p')]
+        // Echte Sichtbarkeit zuerst (Restliste Ziff. 6, s. oben bei `SICHTBAR`):
+        // ein geschlossenes `<details>` liefert weiterhin Rect-Masse.
+        .filter((p) => p.checkVisibility(sichtbar))
         .filter((p) => (p.textContent || '').trim().length > 90)
         // Kacheln und Tabellen sind ausgenommen (D-1.5); `sr-only`-Absätze sind
         // 1 px breit und tragen keine Lesespalte.
@@ -216,7 +267,7 @@ async function erhebe(page: Page, viewportHoehe: number): Promise<Befund[]> {
       void vh
       return befund
     })
-  }, viewportHoehe)
+  }, [viewportHoehe, SICHTBAR] as [number, typeof SICHTBAR])
 }
 
 for (const [breite, hoehe, name] of [[1280, 800, 'Desktop'], [390, 844, 'Mobil']] as const) {
@@ -420,17 +471,18 @@ const LESESPALTE_AUSWEIS: readonly string[] = [
   'Checklisten · Mandatsaufnahme-Formular · Öffen',
 ]
 
-/** Prosa-Absätze über der Lesespalte — mit ECHTER Sichtbarkeitsprüfung (I6). */
+/** Prosa-Absätze über der Lesespalte — mit ECHTER Sichtbarkeitsprüfung (I6).
+ *  Teilt die Optionen mit I3 (`SICHTBAR`, oben) — EINE Definition, §5. */
 async function lesespalte(page: Page): Promise<string[]> {
-  return page.evaluate((max) => [...document.querySelectorAll('main p')]
-    .filter((p) => p.checkVisibility({ contentVisibilityAuto: true, opacityProperty: true, visibilityProperty: true }))
+  return page.evaluate(([max, sichtbar]: [number, typeof SICHTBAR]) => [...document.querySelectorAll('main p')]
+    .filter((p) => p.checkVisibility(sichtbar))
     .filter((p) => (p.textContent || '').trim().length > 90)
     // Kacheln, Tabellen und das Dokument-«Papier» sind ausgenommen (D-1.5; das
     // Papier bildet ein Schriftbild ab, das PDF und DOCX teilen — seine Breite
     // regelt DESIGN-REGLEMENT-VORLAGEN V2, nicht die Lesespalte der App).
     .filter((p) => !p.closest('.lc-tile') && !p.closest('table') && !p.closest('[data-dokument]'))
     .filter((p) => p.getBoundingClientRect().width > max)
-    .map((p) => (p.textContent || '').trim().slice(0, 46)), LESESPALTE_MAX)
+    .map((p) => (p.textContent || '').trim().slice(0, 46)), [LESESPALTE_MAX, SICHTBAR] as [number, typeof SICHTBAR])
 }
 
 for (const [breite, hoehe, name] of [[1280, 800, 'Desktop'], [390, 844, 'Mobil']] as const) {

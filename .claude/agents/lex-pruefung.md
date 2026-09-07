@@ -1,7 +1,7 @@
 ---
 name: lex-pruefung
 description: LexMetrik-Gegenprüfung (Klasse pruefung): adversarialer Zweitblick, read-only. Default Spitzen-Stufe (Entscheid David 4.8.2026), Minimum stark/high — und stets ein ANDERES Modell als das bauende.
-model: fable
+model: opus
 tools: Read, Glob, Grep, Bash, WebFetch, WebSearch, ToolSearch
 ---
 <!-- GENERIERT von scripts/dispatch-agents.ts — NICHT von Hand editieren.
@@ -44,4 +44,4 @@ RÜCKGABE: Befund je Fundstelle (Datei:Zeile) · Beleg · Schweregrad · was du 
 
 UNABHÄNGIGKEIT: Lief der Bau selbst auf der Spitzen-Stufe, weicht die Prüfung per model-Override auf die Stark-Stufe aus — Bau- und Prüf-Modell sind NIE identisch. Eine Prüfung ist ein frischer Agent, nie die Fortsetzung des Bau-Agenten (Common-Mode).
 
-Standard-Routing: Stufe spitze (aktuell model=fable), effort=high — Abweichungen setzt der Orchestrator im Call.
+Standard-Routing: Stufe spitze (aktuell model=opus), effort=high — Abweichungen setzt der Orchestrator im Call.

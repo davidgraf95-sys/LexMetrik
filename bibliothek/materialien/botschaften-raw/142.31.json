@@ -6,6 +6,240 @@
     },
     "botschaft": {
       "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2002/1106"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2002/1779"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2006/727"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2002-09-04"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "02.060"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zur Änderung des Asylgesetzes zur Änderung des Bundesgesetzes über die Krankenversicherung sowie zur Änderung des Bundesgesetzes über die Alters- und Hinterlassenenversicherung"
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant la modification de la loi sur l'asile, de la loi fédérale sur l'assurance-maladie et de la loi fédérale sur l'assurance-vieillesse et survivants"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio relativo alla modifica della legge sull'asilo, alla modifica della legge federale sull'assicurazione malattie e alla modifica della legge federale sull'assicurazione per la vecchiaia e per i superstiti"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "142.31"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2002/1106"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2002/1779"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2006/727"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2002-09-04"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "02.060"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zur Änderung des Asylgesetzes zur Änderung des Bundesgesetzes über die Krankenversicherung sowie zur Änderung des Bundesgesetzes über die Alters- und Hinterlassenenversicherung"
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant la modification de la loi sur l'asile, de la loi fédérale sur l'assurance-maladie et de la loi fédérale sur l'assurance-vieillesse et survivants"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio relativo alla modifica della legge sull'asilo, alla modifica della legge federale sull'assicurazione malattie e alla modifica della legge federale sull'assicurazione per la vecchiaia e per i superstiti"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "142.31"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2002/1106"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2002/1779"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2006/727"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2002-09-04"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "02.060"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zur Änderung des Asylgesetzes zur Änderung des Bundesgesetzes über die Krankenversicherung sowie zur Änderung des Bundesgesetzes über die Alters- und Hinterlassenenversicherung"
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant la modification de la loi sur l'asile, de la loi fédérale sur l'assurance-maladie et de la loi fédérale sur l'assurance-vieillesse et survivants"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio relativo alla modifica della legge sull'asilo, alla modifica della legge federale sull'assicurazione malattie e alla modifica della legge federale sull'assicurazione per la vecchiaia e per i superstiti"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "142.31"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2010/264"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2010/0150"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2011/137"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2010-02-24"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "10.031"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zum Bundesgesetz über die Koordination des Asyl- und des Auslieferungsverfahrens"
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant la loi fédérale sur la coordination entre la procédure d'asile et la procédure d'extradition"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente la legge federale sul coordinamento tra la procedura d'asilo e la procedura d'estradizione"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "142.31"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2010/264"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2010/0150"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2011/137"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2010-02-24"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "10.031"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zum Bundesgesetz über die Koordination des Asyl- und des Auslieferungsverfahrens"
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant la loi fédérale sur la coordination entre la procédure d'asile et la procédure d'extradition"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente la legge federale sul coordinamento tra la procedura d'asilo e la procedura d'estradizione"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "142.31"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2010/264"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2010/0150"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2011/137"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2010-02-24"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "10.031"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zum Bundesgesetz über die Koordination des Asyl- und des Auslieferungsverfahrens"
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant la loi fédérale sur la coordination entre la procédure d'asile et la procédure d'extradition"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente la legge federale sul coordinamento tra la procedura d'asilo e la procedura d'estradizione"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "142.31"
+    },
+    "botschaft": {
+      "type": "uri",
       "value": "https://fedlex.data.admin.ch/eli/fga/2010/794"
     },
     "proj": {
@@ -357,240 +591,6 @@
     },
     "botschaft": {
       "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2014/708"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2013/1943"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2015/360"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2014-04-09"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "14.032"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft über die Genehmigung und die Umsetzung des Notenaustausches zwischen der Schweiz und der EU betreffend die Übernahme der Verordnung (EU) Nr. 1051/2013 zur Änderung des Schengener Grenzkodex zwecks Festlegung einer gemeinsamen Regelung für die vorübergehende Wiedereinführung von Kontrollen an den Binnengrenzen (Weiterentwicklung des Schengen-Besitzstands) sowie zu weiteren Änderungen im Asyl- und Ausländerrecht "
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message sur la reprise et la mise en uvre de l'échange de notes entre la Suisse et l'UE concernant la reprise du règlement (UE) n° 1051/2013 modifiant le code frontières Schengen afin d'établir des règles communes relatives à la réintroduction temporaire du contrôle aux frontières intérieures (développement de l'acquis de Schengen) et sur d'autres modifications apportées au droit de l'asile et au droit des étrangers"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente l'approvazione e la trasposizione dello scambio di note tra la Svizzera e l'Unione europea concernente il recepimento del regolamento (UE) n. 1051/2013 che modifica il codice frontiere Schengen al fine di introdurre norme comuni sul ripristino temporaneo del controllo di frontiera alle frontiere interne (sviluppo dell'acquis di Schengen) e altre modifiche del diritto in materia d'asilo e di stranieri "
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "142.31"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2014/708"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2013/1943"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2015/360"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2014-04-09"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "14.032"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft über die Genehmigung und die Umsetzung des Notenaustausches zwischen der Schweiz und der EU betreffend die Übernahme der Verordnung (EU) Nr. 1051/2013 zur Änderung des Schengener Grenzkodex zwecks Festlegung einer gemeinsamen Regelung für die vorübergehende Wiedereinführung von Kontrollen an den Binnengrenzen (Weiterentwicklung des Schengen-Besitzstands) sowie zu weiteren Änderungen im Asyl- und Ausländerrecht "
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message sur la reprise et la mise en uvre de l'échange de notes entre la Suisse et l'UE concernant la reprise du règlement (UE) n° 1051/2013 modifiant le code frontières Schengen afin d'établir des règles communes relatives à la réintroduction temporaire du contrôle aux frontières intérieures (développement de l'acquis de Schengen) et sur d'autres modifications apportées au droit de l'asile et au droit des étrangers"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente l'approvazione e la trasposizione dello scambio di note tra la Svizzera e l'Unione europea concernente il recepimento del regolamento (UE) n. 1051/2013 che modifica il codice frontiere Schengen al fine di introdurre norme comuni sul ripristino temporaneo del controllo di frontiera alle frontiere interne (sviluppo dell'acquis di Schengen) e altre modifiche del diritto in materia d'asilo e di stranieri "
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "142.31"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2014/708"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2013/1943"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2015/360"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2014-04-09"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "14.032"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft über die Genehmigung und die Umsetzung des Notenaustausches zwischen der Schweiz und der EU betreffend die Übernahme der Verordnung (EU) Nr. 1051/2013 zur Änderung des Schengener Grenzkodex zwecks Festlegung einer gemeinsamen Regelung für die vorübergehende Wiedereinführung von Kontrollen an den Binnengrenzen (Weiterentwicklung des Schengen-Besitzstands) sowie zu weiteren Änderungen im Asyl- und Ausländerrecht "
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message sur la reprise et la mise en uvre de l'échange de notes entre la Suisse et l'UE concernant la reprise du règlement (UE) n° 1051/2013 modifiant le code frontières Schengen afin d'établir des règles communes relatives à la réintroduction temporaire du contrôle aux frontières intérieures (développement de l'acquis de Schengen) et sur d'autres modifications apportées au droit de l'asile et au droit des étrangers"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente l'approvazione e la trasposizione dello scambio di note tra la Svizzera e l'Unione europea concernente il recepimento del regolamento (UE) n. 1051/2013 che modifica il codice frontiere Schengen al fine di introdurre norme comuni sul ripristino temporaneo del controllo di frontiera alle frontiere interne (sviluppo dell'acquis di Schengen) e altre modifiche del diritto in materia d'asilo e di stranieri "
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "142.31"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2010/264"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2010/0150"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2011/137"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2010-02-24"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "10.031"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zum Bundesgesetz über die Koordination des Asyl- und des Auslieferungsverfahrens"
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant la loi fédérale sur la coordination entre la procédure d'asile et la procédure d'extradition"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente la legge federale sul coordinamento tra la procedura d'asilo e la procedura d'estradizione"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "142.31"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2010/264"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2010/0150"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2011/137"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2010-02-24"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "10.031"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zum Bundesgesetz über die Koordination des Asyl- und des Auslieferungsverfahrens"
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant la loi fédérale sur la coordination entre la procédure d'asile et la procédure d'extradition"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente la legge federale sul coordinamento tra la procedura d'asilo e la procedura d'estradizione"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "142.31"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2010/264"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2010/0150"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2011/137"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2010-02-24"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "10.031"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zum Bundesgesetz über die Koordination des Asyl- und des Auslieferungsverfahrens"
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant la loi fédérale sur la coordination entre la procédure d'asile et la procédure d'extradition"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente la legge federale sul coordinamento tra la procedura d'asilo e la procedura d'estradizione"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "142.31"
-    },
-    "botschaft": {
-      "type": "uri",
       "value": "https://fedlex.data.admin.ch/eli/fga/2014/405"
     },
     "proj": {
@@ -708,36 +708,36 @@
     },
     "botschaft": {
       "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2002/1106"
+      "value": "https://fedlex.data.admin.ch/eli/fga/2014/708"
     },
     "proj": {
       "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2002/1779"
+      "value": "https://fedlex.data.admin.ch/eli/proj/2013/1943"
     },
     "oc": {
       "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2006/727"
+      "value": "https://fedlex.data.admin.ch/eli/oc/2015/360"
     },
     "dateDoc": {
       "type": "typed-literal",
       "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2002-09-04"
+      "value": "2014-04-09"
     },
     "curia": {
       "type": "literal",
-      "value": "02.060"
+      "value": "14.032"
     },
     "titleDe": {
       "type": "literal",
-      "value": "Botschaft zur Änderung des Asylgesetzes zur Änderung des Bundesgesetzes über die Krankenversicherung sowie zur Änderung des Bundesgesetzes über die Alters- und Hinterlassenenversicherung"
+      "value": "Botschaft über die Genehmigung und die Umsetzung des Notenaustausches zwischen der Schweiz und der EU betreffend die Übernahme der Verordnung (EU) Nr. 1051/2013 zur Änderung des Schengener Grenzkodex zwecks Festlegung einer gemeinsamen Regelung für die vorübergehende Wiedereinführung von Kontrollen an den Binnengrenzen (Weiterentwicklung des Schengen-Besitzstands) sowie zu weiteren Änderungen im Asyl- und Ausländerrecht "
     },
     "titleFr": {
       "type": "literal",
-      "value": "Message concernant la modification de la loi sur l'asile, de la loi fédérale sur l'assurance-maladie et de la loi fédérale sur l'assurance-vieillesse et survivants"
+      "value": "Message sur la reprise et la mise en uvre de l'échange de notes entre la Suisse et l'UE concernant la reprise du règlement (UE) n° 1051/2013 modifiant le code frontières Schengen afin d'établir des règles communes relatives à la réintroduction temporaire du contrôle aux frontières intérieures (développement de l'acquis de Schengen) et sur d'autres modifications apportées au droit de l'asile et au droit des étrangers"
     },
     "titleIt": {
       "type": "literal",
-      "value": "Messaggio relativo alla modifica della legge sull'asilo, alla modifica della legge federale sull'assicurazione malattie e alla modifica della legge federale sull'assicurazione per la vecchiaia e per i superstiti"
+      "value": "Messaggio concernente l'approvazione e la trasposizione dello scambio di note tra la Svizzera e l'Unione europea concernente il recepimento del regolamento (UE) n. 1051/2013 che modifica il codice frontiere Schengen al fine di introdurre norme comuni sul ripristino temporaneo del controllo di frontiera alle frontiere interne (sviluppo dell'acquis di Schengen) e altre modifiche del diritto in materia d'asilo e di stranieri "
     }
   },
   {
@@ -747,36 +747,36 @@
     },
     "botschaft": {
       "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2002/1106"
+      "value": "https://fedlex.data.admin.ch/eli/fga/2014/708"
     },
     "proj": {
       "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2002/1779"
+      "value": "https://fedlex.data.admin.ch/eli/proj/2013/1943"
     },
     "oc": {
       "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2006/727"
+      "value": "https://fedlex.data.admin.ch/eli/oc/2015/360"
     },
     "dateDoc": {
       "type": "typed-literal",
       "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2002-09-04"
+      "value": "2014-04-09"
     },
     "curia": {
       "type": "literal",
-      "value": "02.060"
+      "value": "14.032"
     },
     "titleDe": {
       "type": "literal",
-      "value": "Botschaft zur Änderung des Asylgesetzes zur Änderung des Bundesgesetzes über die Krankenversicherung sowie zur Änderung des Bundesgesetzes über die Alters- und Hinterlassenenversicherung"
+      "value": "Botschaft über die Genehmigung und die Umsetzung des Notenaustausches zwischen der Schweiz und der EU betreffend die Übernahme der Verordnung (EU) Nr. 1051/2013 zur Änderung des Schengener Grenzkodex zwecks Festlegung einer gemeinsamen Regelung für die vorübergehende Wiedereinführung von Kontrollen an den Binnengrenzen (Weiterentwicklung des Schengen-Besitzstands) sowie zu weiteren Änderungen im Asyl- und Ausländerrecht "
     },
     "titleFr": {
       "type": "literal",
-      "value": "Message concernant la modification de la loi sur l'asile, de la loi fédérale sur l'assurance-maladie et de la loi fédérale sur l'assurance-vieillesse et survivants"
+      "value": "Message sur la reprise et la mise en uvre de l'échange de notes entre la Suisse et l'UE concernant la reprise du règlement (UE) n° 1051/2013 modifiant le code frontières Schengen afin d'établir des règles communes relatives à la réintroduction temporaire du contrôle aux frontières intérieures (développement de l'acquis de Schengen) et sur d'autres modifications apportées au droit de l'asile et au droit des étrangers"
     },
     "titleIt": {
       "type": "literal",
-      "value": "Messaggio relativo alla modifica della legge sull'asilo, alla modifica della legge federale sull'assicurazione malattie e alla modifica della legge federale sull'assicurazione per la vecchiaia e per i superstiti"
+      "value": "Messaggio concernente l'approvazione e la trasposizione dello scambio di note tra la Svizzera e l'Unione europea concernente il recepimento del regolamento (UE) n. 1051/2013 che modifica il codice frontiere Schengen al fine di introdurre norme comuni sul ripristino temporaneo del controllo di frontiera alle frontiere interne (sviluppo dell'acquis di Schengen) e altre modifiche del diritto in materia d'asilo e di stranieri "
     }
   },
   {
@@ -786,36 +786,153 @@
     },
     "botschaft": {
       "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2002/1106"
+      "value": "https://fedlex.data.admin.ch/eli/fga/2014/708"
     },
     "proj": {
       "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2002/1779"
+      "value": "https://fedlex.data.admin.ch/eli/proj/2013/1943"
     },
     "oc": {
       "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2006/727"
+      "value": "https://fedlex.data.admin.ch/eli/oc/2015/360"
     },
     "dateDoc": {
       "type": "typed-literal",
       "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2002-09-04"
+      "value": "2014-04-09"
     },
     "curia": {
       "type": "literal",
-      "value": "02.060"
+      "value": "14.032"
     },
     "titleDe": {
       "type": "literal",
-      "value": "Botschaft zur Änderung des Asylgesetzes zur Änderung des Bundesgesetzes über die Krankenversicherung sowie zur Änderung des Bundesgesetzes über die Alters- und Hinterlassenenversicherung"
+      "value": "Botschaft über die Genehmigung und die Umsetzung des Notenaustausches zwischen der Schweiz und der EU betreffend die Übernahme der Verordnung (EU) Nr. 1051/2013 zur Änderung des Schengener Grenzkodex zwecks Festlegung einer gemeinsamen Regelung für die vorübergehende Wiedereinführung von Kontrollen an den Binnengrenzen (Weiterentwicklung des Schengen-Besitzstands) sowie zu weiteren Änderungen im Asyl- und Ausländerrecht "
     },
     "titleFr": {
       "type": "literal",
-      "value": "Message concernant la modification de la loi sur l'asile, de la loi fédérale sur l'assurance-maladie et de la loi fédérale sur l'assurance-vieillesse et survivants"
+      "value": "Message sur la reprise et la mise en uvre de l'échange de notes entre la Suisse et l'UE concernant la reprise du règlement (UE) n° 1051/2013 modifiant le code frontières Schengen afin d'établir des règles communes relatives à la réintroduction temporaire du contrôle aux frontières intérieures (développement de l'acquis de Schengen) et sur d'autres modifications apportées au droit de l'asile et au droit des étrangers"
     },
     "titleIt": {
       "type": "literal",
-      "value": "Messaggio relativo alla modifica della legge sull'asilo, alla modifica della legge federale sull'assicurazione malattie e alla modifica della legge federale sull'assicurazione per la vecchiaia e per i superstiti"
+      "value": "Messaggio concernente l'approvazione e la trasposizione dello scambio di note tra la Svizzera e l'Unione europea concernente il recepimento del regolamento (UE) n. 1051/2013 che modifica il codice frontiere Schengen al fine di introdurre norme comuni sul ripristino temporaneo del controllo di frontiera alle frontiere interne (sviluppo dell'acquis di Schengen) e altre modifiche del diritto in materia d'asilo e di stranieri "
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "142.31"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2018/2305"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2018/2120"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2020/742"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2018-09-28"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "18.068"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zur Änderung des Asylgesetzes (Kompetenz des Bundesrates zum Abschluss völkerrechtlicher Verträge über die Ausrichtung von Beiträgen an ausgewählte EU-Mitgliedstaaten oder an internationale Organisationen)"
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant la modification de la loi sur l'asile (Compétence du Conseil fédéral en matière de conclusion d'accords internationaux sur le versement de contributions à certains États membres de l'Union européenne ou à des organisations internationales)"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente la modifica della legge sull'asilo (Competenza del Consiglio federale di concludere trattati internazionali sul versamento di sussidi ad alcuni Stati membri dell'UE o a organizzazioni internazionali)"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "142.31"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2018/2305"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2018/2120"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2020/742"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2018-09-28"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "18.068"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zur Änderung des Asylgesetzes (Kompetenz des Bundesrates zum Abschluss völkerrechtlicher Verträge über die Ausrichtung von Beiträgen an ausgewählte EU-Mitgliedstaaten oder an internationale Organisationen)"
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant la modification de la loi sur l'asile (Compétence du Conseil fédéral en matière de conclusion d'accords internationaux sur le versement de contributions à certains États membres de l'Union européenne ou à des organisations internationales)"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente la modifica della legge sull'asilo (Competenza del Consiglio federale di concludere trattati internazionali sul versamento di sussidi ad alcuni Stati membri dell'UE o a organizzazioni internazionali)"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "142.31"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2018/2305"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2018/2120"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2020/742"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2018-09-28"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "18.068"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zur Änderung des Asylgesetzes (Kompetenz des Bundesrates zum Abschluss völkerrechtlicher Verträge über die Ausrichtung von Beiträgen an ausgewählte EU-Mitgliedstaaten oder an internationale Organisationen)"
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant la modification de la loi sur l'asile (Compétence du Conseil fédéral en matière de conclusion d'accords internationaux sur le versement de contributions à certains États membres de l'Union européenne ou à des organisations internationales)"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente la modifica della legge sull'asilo (Competenza del Consiglio federale di concludere trattati internazionali sul versamento di sussidi ad alcuni Stati membri dell'UE o a organizzazioni internazionali)"
     }
   },
   {
@@ -894,123 +1011,6 @@
     "titleIt": {
       "type": "literal",
       "value": "Messaggio concernente il recepimento e la trasposizione del regolamento (UE) 2019/1896 relativo alla guardia di frontiera e costiera europea e che abroga i regolamenti (UE) n. 1052/2013 e (UE) 2016/1624 (sviluppo dell'acquis di Schengen), nonché una modifica della legge sull'asilo"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "142.31"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2018/2305"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2018/2120"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2020/742"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2018-09-28"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "18.068"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zur Änderung des Asylgesetzes (Kompetenz des Bundesrates zum Abschluss völkerrechtlicher Verträge über die Ausrichtung von Beiträgen an ausgewählte EU-Mitgliedstaaten oder an internationale Organisationen)"
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant la modification de la loi sur l'asile (Compétence du Conseil fédéral en matière de conclusion d'accords internationaux sur le versement de contributions à certains États membres de l'Union européenne ou à des organisations internationales)"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente la modifica della legge sull'asilo (Competenza del Consiglio federale di concludere trattati internazionali sul versamento di sussidi ad alcuni Stati membri dell'UE o a organizzazioni internazionali)"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "142.31"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2018/2305"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2018/2120"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2020/742"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2018-09-28"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "18.068"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zur Änderung des Asylgesetzes (Kompetenz des Bundesrates zum Abschluss völkerrechtlicher Verträge über die Ausrichtung von Beiträgen an ausgewählte EU-Mitgliedstaaten oder an internationale Organisationen)"
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant la modification de la loi sur l'asile (Compétence du Conseil fédéral en matière de conclusion d'accords internationaux sur le versement de contributions à certains États membres de l'Union européenne ou à des organisations internationales)"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente la modifica della legge sull'asilo (Competenza del Consiglio federale di concludere trattati internazionali sul versamento di sussidi ad alcuni Stati membri dell'UE o a organizzazioni internazionali)"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "142.31"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2018/2305"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2018/2120"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2020/742"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2018-09-28"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "18.068"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zur Änderung des Asylgesetzes (Kompetenz des Bundesrates zum Abschluss völkerrechtlicher Verträge über die Ausrichtung von Beiträgen an ausgewählte EU-Mitgliedstaaten oder an internationale Organisationen)"
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant la modification de la loi sur l'asile (Compétence du Conseil fédéral en matière de conclusion d'accords internationaux sur le versement de contributions à certains États membres de l'Union européenne ou à des organisations internationales)"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente la modifica della legge sull'asilo (Competenza del Consiglio federale di concludere trattati internazionali sul versamento di sussidi ad alcuni Stati membri dell'UE o a organizzazioni internazionali)"
     }
   },
   {

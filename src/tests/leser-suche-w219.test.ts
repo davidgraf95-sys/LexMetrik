@@ -60,7 +60,10 @@ function kunstErlass(): { eintraege: NormSnapshot[]; struktur: StrukturMap } {
     '1': { gliederung: [], marginalie: [] },
     '2': { gliederung: [], marginalie: ['Zaunkoenig'] },
     '3': { gliederung: [{ ebene: 1, label: 'Zaunkoenig, Zaunkoenig und Zaunkoenig' }], marginalie: [] },
-    '4': { gliederung: [], marginalie: [], fussnoten: [{ nr: '7', text: 'Fassung zum Zaunkoenig', links: [] }] },
+    // D35-F3: `kl: 'A'` — eine ÄNDERUNGS-Fussnote. Nur diese Klasse kann seit
+    // dem Entscheid vom 7.9.2026 überhaupt noch gedämpft werden, also muss der
+    // Baustein sie tragen, damit die Malbarkeits-Fälle unten etwas prüfen.
+    '4': { gliederung: [], marginalie: [], fussnoten: [{ nr: '7', text: 'Fassung zum Zaunkoenig', links: [], kl: 'A' }] },
     '5': { gliederung: [], marginalie: [] },
     // Der Treffer sitzt auf der NACHRANGIGEN Stufe (Index ≥ 1) — die oberste
     // Stufe ist `m`, jede weitere `n` (Generator-Semantik, such-index-generieren).
@@ -187,7 +190,10 @@ describe('S8 §4.4 — findbar/malbar: der Zähler ist datenseitig, die Badges s
     expect(feldVon('3').malbar).toBe('nie');
     expect(feldVon('6').malbar).toBe('nie');
     expect(feldVon('1').malbar).toBe('immer');
-    expect(feldVon('4').malbar).toBe('fussnoten');
+    // §6.3-DEKLARATION (D35-F3): der Wert hiess `'fussnoten'` und meinte «hängt
+    // am Apparat-Schalter»; den gibt es nicht mehr. Er heisst `'aenderung'` und
+    // meint die einzige Klasse, die noch verschwinden kann (`kl:'A'`).
+    expect(feldVon('4').malbar).toBe('aenderung');
   });
 
   it('jeder Nicht-Fliesstext-Treffer trägt einen Herkunfts-Badge, ein Fliesstext-Treffer keinen', () => {
@@ -202,7 +208,7 @@ describe('S8 §4.4 — findbar/malbar: der Zähler ist datenseitig, die Badges s
     expect(badges('6')).toEqual(['Randtitel']);
   });
 
-  it('bei «Fussnoten aus» sagt der Badge es — die Ansicht wird nicht still umgeschaltet', () => {
+  it('bei gedämpfter Änderungshistorie sagt der Badge es — die Ansicht wird nicht still umgeschaltet', () => {
     const { eintraege, struktur } = kunstErlass();
     const treffer = sucheImErlass(baueLeserSuchIndex('X', eintraege, struktur), 'Zaunkoenig');
     const fn = treffer.find((t) => t.token === '4')!;
@@ -287,16 +293,22 @@ describe('S8 §4.4 — findbar/malbar: der Zähler ist datenseitig, die Badges s
     expect(signatur(blank)).toBe(signatur(mitLuecke));
   });
 
-  it('B5 — bei ausgeblendetem Apparat zählen Fussnoten-Stellen nicht als malbar', () => {
-    // Der Apparat ist per CSS ausgeblendet; `sammleTrefferRanges` überspringt
-    // ihn dann (`istGerendert`). Wer den malbaren Rang unabhängig davon zählte,
-    // verschöbe die Zuordnung genau um die Fussnoten-Treffer.
+  it('B5 — bei gedämpfter Änderungshistorie zählen deren Stellen nicht als malbar', () => {
+    // Die A-Fussnoten sind per CSS gedämpft; `sammleTrefferRanges` überspringt
+    // sie dann (`istGerendert`). Wer den malbaren Rang unabhängig davon zählte,
+    // verschöbe die Zuordnung genau um diese Treffer.
+    // ── §6.3-DEKLARATION (D35-F3, Entscheid David 7.9.2026) ──────────────────
+    // Der Fall zitierte bis hierher die Malbarkeit `'fussnoten'` — den Zustand
+    // «der ganze Apparat ist aus». Den gibt es nicht mehr (verlustfrei: amtlicher
+    // Nicht-Änderungs-Apparat wird nie ausgeblendet). Geprüft wird jetzt, was
+    // wirklich verschwinden kann: `kl:'A'`. Die MECHANIK des Falls — gedämpfte
+    // Stellen sind nicht malbar, also schrumpft die Folge — ist unverändert.
     const treffer = sucheImErlass(index('BGFA'), 'Fassung');
-    const mitFn = treffer.filter((t) => t.felder.some((f) => f.malbar === 'fussnoten'));
-    expect(mitFn.length, 'BGFA trägt Fussnoten-Treffer für «Fassung»').toBeGreaterThan(0);
+    const mitFn = treffer.filter((t) => t.felder.some((f) => f.malbar === 'aenderung'));
+    expect(mitFn.length, 'BGFA trägt Änderungs-Fussnoten-Treffer für «Fassung»').toBeGreaterThan(0);
     const an = fundstellenFolge(treffer, false).filter((f) => f.malRang !== null).length;
     const aus = fundstellenFolge(treffer, true).filter((f) => f.malRang !== null).length;
-    expect(aus, 'ausgeblendeter Apparat ⇒ weniger malbare Stellen').toBeLessThan(an);
+    expect(aus, 'gedämpfte Änderungshistorie ⇒ weniger malbare Stellen').toBeLessThan(an);
   });
 });
 

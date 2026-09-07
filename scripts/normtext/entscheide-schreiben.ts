@@ -475,6 +475,32 @@ export function schreibeKorpus(auswahl: EntscheidSnapshot[], datum: string, root
     writeFileSync(join(PUB, 'bezuege-bilanz.json'), serialisiere(baueBezugsBilanz(bezuege, datum)), 'utf8');
   }
 
+  // ── N0a: kantonale normKeys als EIGENE Projektion ──────────────────────────
+  //
+  // Die Zitat-Brücke Entscheid → kantonaler Erlass. `register.json` führt
+  // `normKeys` je Entscheid, aber ausschliesslich mit BUNDES-Register-keys; für
+  // die kantonale Ebene stand dort bis hierher nichts (gemessen 31.8.2026:
+  // 0 von 6341 Einträgen mit einem Kantons-key).
+  //
+  // Sie wird NICHT in `register.json` nachgetragen, sondern liegt daneben — die
+  // Begründung samt Messung steht an `BezugsIndex.kantonNormKeys`. Die Datei
+  // liegt NEBEN dem Shard-Verzeichnis, nicht darin (dieselbe Lehre #404 wie
+  // bezuege-bilanz.json eine Zeile höher).
+  //
+  // Serialisierung: `serialisiere` (2-Space) wie die übrigen Bestands-Artefakte
+  // — die Datei ist ein Manifest, kein Shard, und wird als Ganzes gelesen.
+  if (bezugsBau) {
+    const eintraege: Record<string, string[]> = {};
+    for (const k of [...bezugsBau.kantonNormKeys.keys()].sort()) {
+      eintraege[k] = bezugsBau.kantonNormKeys.get(k)!;
+    }
+    writeFileSync(
+      join(PUB, 'normkeys-kanton.json'),
+      serialisiere({ erzeugt: datum, eintraege }),
+      'utf8',
+    );
+  }
+
   const keys = manifest.map((m) => m.key).sort();
   writeFileSync(
     GENKEYS,

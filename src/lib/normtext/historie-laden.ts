@@ -11,6 +11,7 @@
 // dauerhaft als null gecacht (ein späterer Zugriff darf neu versuchen, §8).
 
 import type { ArtikelHistorie } from './historie-parse';
+import { kodiereSchluessel } from './dateiUrl';
 
 // Der Per-Artikel-Eintrag ist exakt die Generator-Projektion `ArtikelHistorie`
 // ({ giltSeit, aufgehobenSeit?, ereignisse }). Re-Export als Typ (zur Bauzeit
@@ -39,7 +40,7 @@ export async function ladeHistorieShard(key: string): Promise<HistorieShard | nu
   if (!p) {
     p = (async () => {
       try {
-        const res = await fetch(`/normtext/historie/${encodeURIComponent(key)}.json`);
+        const res = await fetch(`/normtext/historie/${kodiereSchluessel(key)}.json`);
         if (res.status === 404) return null; // kein Shard = kein Fehler (still)
         if (!res.ok) { shardPromises.delete(key); return null; }
         return (await res.json()) as HistorieShard;

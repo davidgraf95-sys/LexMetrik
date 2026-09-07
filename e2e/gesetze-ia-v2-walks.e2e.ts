@@ -16,6 +16,7 @@
 // §11.6.9 Mobil @390 (kollabiert, keine Wucherung). Läuft gegen `vite preview`.
 import { test, expect, type Page } from '@playwright/test'
 import { fehlerSammeln } from './helpers/fehlerSammeln'
+import { sprungZeile } from './helpers/kopfSuche'
 
 // CI-Härtung 19.7.2026 (BEFUND 3a): die IA-1-Walks laden EINMAL den ~4-MB-Artikel-
 // Index und warten per 20-s-Latch auf den «Sprung»-Treffer (sprungWalk). Auf dem
@@ -42,7 +43,11 @@ async function sprungWalk(page: Page, query: string): Promise<{ interaktionen: n
   // Schwester-Spec norm-sprung nutzt für denselben Index-Latch bereits 20 s. Reine
   // Lade-Synchronisation, kein Prüfschritt — der Interaktions-Beweis (Enter → URL)
   // bleibt eng gebunden und unverändert.
-  await expect(listbox(page).getByText('Sprung', { exact: true })).toBeVisible({ timeout: 20_000 })
+  // §6.3-DEKLARATION 6.9.2026 (W2·24 · Treffer-Anatomie D23/F1): das gerahmte
+  // «Sprung»-Etikett ist entfallen, der Griff «↵» der Sprung-Zeile ist an seine
+  // Stelle getreten (Herleitung an EINER Stelle: `helpers/kopfSuche.sprungZeile`).
+  // Gewartet wird auf DASSELBE: die Sprung-Zeile steht in der Trefferliste.
+  await expect(sprungZeile(page)).toBeVisible({ timeout: 20_000 })
   await feld.press('Enter')
   return { interaktionen: 1 } // Eingabe+Enter = 1
 }
@@ -197,8 +202,12 @@ test.describe('IA-2 · Erfassungsgrad — Task-Walks (§11.3/§11.6)', () => {
     await main.getByRole('button', { name: 'Zürich', exact: true }).press('Enter'); interaktionen++
 
     // Ehrliche Antwort: Erfassungs-Kopf mit Zahl + Zustands-Wort + Weiterweg.
+    // Fachliche Aenderung 1.9.2026 (§6.3, deklariert): ZH traegt seit der
+    // Kern-Tranche 24 Erlasse — die dokumentierte Schwelle (§11.2, n>=20)
+    // stuft ZH von «duenn» auf «Auswahl». Die AUSSAGE des Walks (Zahl +
+    // Zustands-Wort + Weiterweg in <=2 Interaktionen) ist unveraendert.
     await expect(main.getByText(/Erlasse erfasst/)).toBeVisible()
-    await expect(main.getByText('dünn').first()).toBeVisible()
+    await expect(main.getByText('Auswahl').first()).toBeVisible()
     await expect(main.getByRole('link', { name: /lexfind/ }).first()).toBeVisible()
     expect(interaktionen, 'Budget §11.3 Zeile 4/11').toBeLessThanOrEqual(2)
     expect(fehler).toEqual([])

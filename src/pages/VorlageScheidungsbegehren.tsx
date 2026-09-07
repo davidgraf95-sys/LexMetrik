@@ -7,7 +7,7 @@ import { KV_GERICHTE_BS } from '../lib/vorlagen/klageVereinfacht';
 import { ParteiEditor } from './VorlageKlageVereinfacht';
 import type { PdfBanner } from '../lib/vorlagen/banner';
 import { DatumsFeld } from '../components/DatumsFeld';
-import { Checkbox, Field, inputCls } from '../components/vorlagen/ui';
+import { Checkbox, Field, ListenEditor, NICHT_GESPEICHERT_HINWEIS, inputCls } from '../components/vorlagen/ui';
 import { SelectionGrid } from '../components/ui/SelectionGrid';
 import { GerichtsWahlBlock } from '../components/vorlagen/GerichtsWahlBlock';
 import { useWizardState } from '../components/vorlagen/useWizardState';
@@ -49,17 +49,23 @@ export function VorlageScheidungsbegehren() {
 
   const freitextListe = (feld: 'streitigePunkte' | 'antraegeEhegatte1' | 'antraegeEhegatte2', label: string, placeholder: string) => (
     <Field label={label} optional={feld !== 'streitigePunkte'}>
-      <div className="space-y-2">
-        {a[feld].map((r, i) => (
-          <div key={i} className="flex gap-2">
+      {/* Wrapper-<div> bleibt: `Field` verknüpft nur ein Einzel-Control. */}
+      <div>
+        {/* R2-F/F1-9: «×» als Entfernen und «+ Eintrag hinzufügen» wichen dem
+            geteilten ListenEditor. Das `label` der Gruppe steht am `Field`,
+            der Eintrag trägt neu die Nummer in der Kopfzeile. */}
+        <ListenEditor
+          element="Eintrag"
+          eintraege={a[feld]}
+          className="space-y-2"
+          onHinzufuegen={() => set(feld, [...a[feld], ''])}
+          onEntfernen={(i) => set(feld, a[feld].filter((_, j) => j !== i))}
+          kinder={(r, i) => (
             <input className={inputCls} value={r} placeholder={placeholder}
+              aria-label={`${label} — Eintrag ${i + 1}`}
               onChange={(e) => set(feld, listeSetzen(a[feld], i, e.target.value))} />
-            <button type="button" className="lc-btn-ghost lc-btn-sm"
-              onClick={() => set(feld, a[feld].filter((_, j) => j !== i))}>×</button>
-          </div>
-        ))}
-        <button type="button" className="lc-btn-outline lc-btn-sm"
-          onClick={() => set(feld, [...a[feld], ''])}>+ Eintrag hinzufügen</button>
+          )}
+        />
       </div>
     </Field>
   );
@@ -123,22 +129,26 @@ export function VorlageScheidungsbegehren() {
             label={<><span>Gemeinsame minderjährige Kinder <span className="text-ink-500"><NormText text={`(gemeinsame Anträge sind Mindestinhalt, Art. 285 lit. d ZPO)`} /></span></span></>} />
           {a.kinderErfassen && (
             <div className="space-y-3 pl-6">
-              {a.kinder.map((k, i) => (
-                <div key={i} className="grid grid-cols-1 sm:grid-cols-[1fr_11rem_auto] gap-3 items-end">
-                  <Field label={`Kind ${i + 1} – Vorname`}>
-                    <input className={inputCls} value={k.vorname} onChange={(e) => kinderSetzen(i, { vorname: e.target.value })} />
-                  </Field>
-                  <Field label="Geburtsdatum">
-                    <DatumsFeld value={k.geburtsdatum} onChange={(v) => kinderSetzen(i, { geburtsdatum: v })} className={inputCls} />
-                  </Field>
-                  <button type="button" className="lc-btn-ghost lc-btn-sm mb-1"
-                    onClick={() => set('kinder', a.kinder.filter((_, j) => j !== i))}>Entfernen</button>
-                </div>
-              ))}
-              <button type="button" className="lc-btn-outline lc-btn-sm"
-                onClick={() => set('kinder', [...a.kinder, { vorname: '', geburtsdatum: '' }])}>
-                + Kind hinzufügen
-              </button>
+              {/* R2-F/F1-9: «Entfernen» stand hier als `lc-btn-ghost lc-btn-sm`
+                  in einer eigenen Grid-Spalte, der Knopf hiess «+ Kind
+                  hinzufügen». Kanon ist der ListenEditor; die Kind-Nummer
+                  trägt neu die Kopfzeile statt des Vornamen-Labels. */}
+              <ListenEditor
+                element="Kind"
+                eintraege={a.kinder}
+                onHinzufuegen={() => set('kinder', [...a.kinder, { vorname: '', geburtsdatum: '' }])}
+                onEntfernen={(i) => set('kinder', a.kinder.filter((_, j) => j !== i))}
+                kinder={(k, i) => (
+                  <div className="grid grid-cols-1 sm:grid-cols-[1fr_11rem] gap-3 items-end">
+                    <Field label="Vorname">
+                      <input className={inputCls} value={k.vorname} onChange={(e) => kinderSetzen(i, { vorname: e.target.value })} />
+                    </Field>
+                    <Field label="Geburtsdatum">
+                      <DatumsFeld value={k.geburtsdatum} onChange={(v) => kinderSetzen(i, { geburtsdatum: v })} className={inputCls} />
+                    </Field>
+                  </div>
+                )}
+              />
             </div>
           )}
         </div>
@@ -213,10 +223,11 @@ export function VorlageScheidungsbegehren() {
       intro="Die gemeinsame Eingabe beider Ehegatten nach Art. 285/286 ZPO — bei umfassender Einigung mit Genehmigungsantrag zur vollständigen Vereinbarung (Art. 111 ZGB), bei Teileinigung mit dem Pflicht-Antrag, die streitigen Folgen gerichtlich zu beurteilen (Art. 112 ZGB). Inhalte der Vereinbarung bleiben Ihre Entscheidung; die Eingabe strukturiert den gesetzlichen Mindestinhalt."
       norms={card?.norms ?? []}
       badge="Beide unterzeichnen"
-      fussnote="Eingaben werden NICHT lokal gespeichert (Parteidaten)."
+      fussnote={NICHT_GESPEICHERT_HINWEIS}
       zuruecksetzen={zuruecksetzen}
       schritte={SCHRITTE} schritt={schritt} setSchritt={setSchritt}
       fehler={fehler}
+      fehlerJeSchritt={(i) => maengel.filter((m) => m.schritt === i).map((m) => m.text)}
       inhalt={inhalt()}
       vorschau={<VorschauPanel ergebnis={ergebnis} kompakt direktExport={{
         pdf: { label: 'PDF', banner: BANNER_SB, dateiName: 'Gemeinsames-Scheidungsbegehren.pdf' },

@@ -42,7 +42,7 @@ describe('sammleTermine — gegen das echte Register', () => {
     expect(sg).toBeUndefined();
   });
   it('erfasst die weiteren datierten Verfälle aus «Pflege & Termine»', () => {
-    expect(datumVon('Referenzzinssatz')).toBe('2026-09-01'); // Anfang Sept.
+    expect(datumVon('Referenzzinssatz')).toBe('2026-12-01'); // Nächste Prüfung 1.12.2026
     expect(datumVon('Formularpflicht-Kantone')).toBe('2026-11-01'); // BE 1.11.2026
     expect(datumVon('GR Honorarverordnung')).toBe('2026-12-31');
     expect(datumVon('BE EAV')).toBe('2026-12-31');

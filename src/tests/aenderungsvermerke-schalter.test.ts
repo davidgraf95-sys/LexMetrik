@@ -68,9 +68,12 @@ describe('bieteAenderungsvermerkeSchalter', () => {
 
   it('GAR KEIN Sidecar bei geladenem Erlass ⇒ NICHT anbieten (ZH-211.11)', () => {
     // `ladeStruktur` löst 404 und «lädt noch» beide auf `null` auf (browse.ts).
-    // Ohne die dritte Eingabe behielte ZH-211.11 — der Erlass hat überhaupt kein
-    // Struktur-Sidecar — den Schalter, obwohl er einer der drei gemeldeten Fälle
-    // ist. Kein Sidecar bei geladenem Erlass heisst: keine Fussnoten, keine Vermerke.
+    // Ohne die dritte Eingabe behielte ZH-211.11 — der Erlass hatte am 17.8.2026
+    // überhaupt kein Struktur-Sidecar — den Schalter, obwohl er einer der drei
+    // gemeldeten Fälle ist. Kein Sidecar bei geladenem Erlass heisst: keine
+    // Fussnoten, keine Vermerke. (Anlass-Beleg von damals; ZH-211.11 hat seit
+    // den ZH-Randtitel-Sidecars vom 2.9.2026 eines — die REGEL hier ist rein
+    // und erlass-neutral, ihr Bestands-Beleg steht unten in der Datenlage.)
     expect(bieteAenderungsvermerkeSchalter(null, false, GELADEN)).toBe(false);
   });
 
@@ -93,7 +96,8 @@ const STRUKTUR = 'public/normtext/struktur';
 const HISTORIE = 'public/normtext/historie';
 
 /** `null` = kein Sidecar im Korpus — genau, was `ladeStruktur` (browse.ts) bei
- *  404 an den Reader gibt. ZH-211.11 hat keines. */
+ *  404 an den Reader gibt (bis 2.9.2026 der Fall an ZH-211.11; heute an den
+ *  Kantons-Erlassen, die die Sonde unten aufsammelt). */
 function ladeStruktur(ebene: 'bund' | 'kanton', key: string): StrukturMap | null {
   try {
     const j = JSON.parse(readFileSync(join(STRUKTUR, ebene, `${key}.json`), 'utf8')) as
@@ -129,10 +133,38 @@ describe('B3 an den echten Sidecars', () => {
   it('die drei gemeldeten Erlasse bekommen ihn NICHT', () => {
     // Bug-Check-Messung: `[data-historie-zeile]` = 0 auf allen drei.
     expect(bietet('kanton', 'BS-640.100')).toBe(false); // 16 Fussnoten, keine klassifiziert
-    // ZH-211.11 hat GAR KEIN Struktur-Sidecar (der `null`-Fall oben).
-    expect(ladeStruktur('kanton', 'ZH-211.11')).toBeNull();
+    // ZH-211.11 hatte am 17.8.2026 GAR KEIN Struktur-Sidecar — es war der
+    // Datenlage-Beleg für den `null`-Zweig oben. ERGÄNZT (nicht nachgeführt,
+    // §0-2b), Messung 2.9.2026: seit den ZH-Gliederungs-/Randtitel-Sidecars
+    // (R1) trägt der Erlass ein Sidecar mit 23 Artikeln und NULL Fussnoten. Er
+    // wechselt damit vom `null`- in den `0`-Zweig; das Ergebnis ist dasselbe,
+    // und genau das wird hier weiter gemessen. Den `null`-Zweig im Bestand
+    // belegt jetzt die Sonde «Erlasse ganz OHNE Sidecar» unten — welcher Erlass
+    // gerade keines hat, ist Korpus-Zufall und darf kein Fixture-Anker sein.
+    expect(zaehleAenderungsvermerke(ladeStruktur('kanton', 'ZH-211.11'))).toBe(0);
     expect(bietet('kanton', 'ZH-211.11')).toBe(false);
     expect(bietet('bund', 'LUGUE')).toBe(false);        // Staatsvertrag, 2 Fussnoten
+  });
+
+  it('Erlasse ganz OHNE Sidecar bekommen ihn nicht (der `null`-Zweig im Bestand)', () => {
+    // Nachfolger des früheren Einzelbelegs an ZH-211.11 (s. o.), als
+    // EIGENSCHAFT formuliert wie der Rest dieses Blocks: dass irgendein
+    // Kantons-Erlass noch kein Struktur-Sidecar hat, ist ein wandernder
+    // Korpus-Zustand; dass keiner von ihnen den Schalter bekommt, ist die Regel.
+    const ohneSidecar: string[] = [];
+    for (const datei of readdirSync('public/normtext/kanton')) {
+      if (!datei.endsWith('.json') || datei === 'index.json') continue;
+      const key = datei.replace(/\.json$/, '');
+      if (ladeStruktur('kanton', key) === null) ohneSidecar.push(key);
+    }
+    // POSITIV-Vorbedingung (§6.7): ohne sie wäre die Schleife auch dann erfüllt,
+    // wenn sie gar nichts sieht. Wird sie eines Tages rot, weil JEDER
+    // Kantons-Erlass ein Sidecar hat, ist der `null`-Zweig im Bestand nicht mehr
+    // belegbar — dann trägt ihn nur noch der synthetische Test oben und dieser
+    // Fall darf entfallen (er behauptet dann nichts Falsches, nur nichts mehr).
+    expect(ohneSidecar.length, 'kein sidecar-loser Kantons-Erlass mehr im Korpus')
+      .toBeGreaterThan(0);
+    for (const key of ohneSidecar) expect(bietet('kanton', key), key).toBe(false);
   });
 
   it('Staatsverträge MIT Fassungszeile behalten ihn (Gegenprobe zur Herkunfts-Weiche)', () => {

@@ -6,123 +6,6 @@
     },
     "botschaft": {
       "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2014/1878"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2014/1914"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2016/612"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2014-10-29"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "14.073"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zur Änderung des Bundesgesetzes über Schuldbetreibung und Konkurs (Gewerbsmässige Vertretung im Zwangsvollstreckungsverfahren) "
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant la modification de la loi fédérale sur la poursuite pour dettes et la faillite (représentation professionnelle dans une procédure d'exécution forcée) "
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente la modifica della legge federale sulla esecuzione e sul fallimento (Professione di rappresentante nel procedimento esecutivo) "
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "281.1"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2014/1878"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2014/1914"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2016/612"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2014-10-29"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "14.073"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zur Änderung des Bundesgesetzes über Schuldbetreibung und Konkurs (Gewerbsmässige Vertretung im Zwangsvollstreckungsverfahren) "
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant la modification de la loi fédérale sur la poursuite pour dettes et la faillite (représentation professionnelle dans une procédure d'exécution forcée) "
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente la modifica della legge federale sulla esecuzione e sul fallimento (Professione di rappresentante nel procedimento esecutivo) "
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "281.1"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2014/1878"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2014/1914"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2016/612"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2014-10-29"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "14.073"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zur Änderung des Bundesgesetzes über Schuldbetreibung und Konkurs (Gewerbsmässige Vertretung im Zwangsvollstreckungsverfahren) "
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant la modification de la loi fédérale sur la poursuite pour dettes et la faillite (représentation professionnelle dans une procédure d'exécution forcée) "
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente la modifica della legge federale sulla esecuzione e sul fallimento (Professione di rappresentante nel procedimento esecutivo) "
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "281.1"
-    },
-    "botschaft": {
-      "type": "uri",
       "value": "https://fedlex.data.admin.ch/eli/fga/2006/54"
     },
     "proj": {
@@ -348,6 +231,123 @@
     "titleIt": {
       "type": "literal",
       "value": "Messaggio sulla modifica della legge federale sulla esecuzione e sul fallimento (procedura di risanamento) "
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "281.1"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2014/1878"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2014/1914"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2016/612"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2014-10-29"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "14.073"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zur Änderung des Bundesgesetzes über Schuldbetreibung und Konkurs (Gewerbsmässige Vertretung im Zwangsvollstreckungsverfahren) "
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant la modification de la loi fédérale sur la poursuite pour dettes et la faillite (représentation professionnelle dans une procédure d'exécution forcée) "
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente la modifica della legge federale sulla esecuzione e sul fallimento (Professione di rappresentante nel procedimento esecutivo) "
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "281.1"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2014/1878"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2014/1914"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2016/612"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2014-10-29"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "14.073"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zur Änderung des Bundesgesetzes über Schuldbetreibung und Konkurs (Gewerbsmässige Vertretung im Zwangsvollstreckungsverfahren) "
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant la modification de la loi fédérale sur la poursuite pour dettes et la faillite (représentation professionnelle dans une procédure d'exécution forcée) "
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente la modifica della legge federale sulla esecuzione e sul fallimento (Professione di rappresentante nel procedimento esecutivo) "
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "281.1"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2014/1878"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2014/1914"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2016/612"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2014-10-29"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "14.073"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zur Änderung des Bundesgesetzes über Schuldbetreibung und Konkurs (Gewerbsmässige Vertretung im Zwangsvollstreckungsverfahren) "
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant la modification de la loi fédérale sur la poursuite pour dettes et la faillite (représentation professionnelle dans une procédure d'exécution forcée) "
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente la modifica della legge federale sulla esecuzione e sul fallimento (Professione di rappresentante nel procedimento esecutivo) "
     }
   }
 ]

@@ -84,45 +84,6 @@
     },
     "cons": {
       "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/dl/proj/6018/29/cons_1"
-    },
-    "status": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/vocabulary/consultation-status/4"
-    },
-    "titelDe": {
-      "type": "literal",
-      "xml:lang": "de",
-      "value": "Pa.Iv. 12.402 Die Eidgenössische Natur und Heimatschutzorganisation und ihre Aufgabe als Gutachterin"
-    },
-    "titelFr": {
-      "type": "literal",
-      "xml:lang": "fr",
-      "value": "Iv.pa. 12.402 Rôle de la Commission fédérale pour la protection de la nature et des paysages"
-    },
-    "titelIt": {
-      "type": "literal",
-      "xml:lang": "it",
-      "value": "Iv.pa. 12.402 La Commissione federale per la protezione della natura e del paesaggio e i suoi compiti come perito"
-    },
-    "start": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2018-03-29"
-    },
-    "ende": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2018-07-09"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "451"
-    },
-    "cons": {
-      "type": "uri",
       "value": "https://fedlex.data.admin.ch/eli/dl/proj/2024/96/cons_1"
     },
     "status": {
@@ -153,6 +114,45 @@
       "type": "typed-literal",
       "datatype": "http://www.w3.org/2001/XMLSchema#date",
       "value": "2025-05-05"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "451"
+    },
+    "cons": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/dl/proj/6018/29/cons_1"
+    },
+    "status": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/vocabulary/consultation-status/4"
+    },
+    "titelDe": {
+      "type": "literal",
+      "xml:lang": "de",
+      "value": "Pa.Iv. 12.402 Die Eidgenössische Natur und Heimatschutzorganisation und ihre Aufgabe als Gutachterin"
+    },
+    "titelFr": {
+      "type": "literal",
+      "xml:lang": "fr",
+      "value": "Iv.pa. 12.402 Rôle de la Commission fédérale pour la protection de la nature et des paysages"
+    },
+    "titelIt": {
+      "type": "literal",
+      "xml:lang": "it",
+      "value": "Iv.pa. 12.402 La Commissione federale per la protezione della natura e del paesaggio e i suoi compiti come perito"
+    },
+    "start": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2018-03-29"
+    },
+    "ende": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2018-07-09"
     }
   },
   {

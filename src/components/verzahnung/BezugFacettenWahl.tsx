@@ -140,7 +140,7 @@ export function BezugFacettenWahl({ klassen, kantone, kantoneVerfuegbar, klassen
                 /* LM-051: Trenner als eigener Textknoten (sonst «BGE164» beim
                    Kopieren). ink-600 statt ink-500 — 12px-Ziffer auf --well
                    ≥4.5:1 (R4); der aktive Chip erbt brass-800. */
-                <>{' '}<span className={`num tabular-nums ml-1 font-normal ${aktiv ? '' : 'text-ink-600'}`}>{n}</span></>
+                <>{' '}<span className={`num ml-1 font-normal ${aktiv ? '' : 'text-ink-600'}`}>{n}</span></>
               )}
             </button>
           );

@@ -123,6 +123,162 @@
     },
     "botschaft": {
       "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2009/1323"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2009/1310"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2012/855"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2009-08-26"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "09.067"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft über die Schweizer Klimapolitik nach 2012 (Revision des CO2-Gesetzes und eidgenössische Volksinitiative «Für ein gesundes Klima»)  "
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message relatif à la politique climatique suisse après 2012 (Révision de la loi sur le CO2 et initiative populaire fédérale  «pour un climat sain») "
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente la politica climatica della Svizzera dopo il 2012 (Revisione della legge sul CO2 e iniziativa popolare federale «Per un clima sano») "
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "641.71"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2009/1323"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2009/1310"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2012/855"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2009-08-26"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "09.067"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft über die Schweizer Klimapolitik nach 2012 (Revision des CO2-Gesetzes und eidgenössische Volksinitiative «Für ein gesundes Klima»)  "
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message relatif à la politique climatique suisse après 2012 (Révision de la loi sur le CO2 et initiative populaire fédérale  «pour un climat sain») "
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente la politica climatica della Svizzera dopo il 2012 (Revisione della legge sul CO2 e iniziativa popolare federale «Per un clima sano») "
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "641.71"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2009/1323"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2009/1310"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2012/855"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2009-08-26"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "09.067"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft über die Schweizer Klimapolitik nach 2012 (Revision des CO2-Gesetzes und eidgenössische Volksinitiative «Für ein gesundes Klima»)  "
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message relatif à la politique climatique suisse après 2012 (Révision de la loi sur le CO2 et initiative populaire fédérale  «pour un climat sain») "
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente la politica climatica della Svizzera dopo il 2012 (Revisione della legge sul CO2 e iniziativa popolare federale «Per un clima sano») "
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "641.71"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2009/1323"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2009/1310"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2012/855"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2009-08-26"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "09.067"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft über die Schweizer Klimapolitik nach 2012 (Revision des CO2-Gesetzes und eidgenössische Volksinitiative «Für ein gesundes Klima»)  "
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message relatif à la politique climatique suisse après 2012 (Révision de la loi sur le CO2 et initiative populaire fédérale  «pour un climat sain») "
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente la politica climatica della Svizzera dopo il 2012 (Revisione della legge sul CO2 e iniziativa popolare federale «Per un clima sano») "
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "641.71"
+    },
+    "botschaft": {
+      "type": "uri",
       "value": "https://fedlex.data.admin.ch/eli/fga/2010/181"
     },
     "proj": {
@@ -348,162 +504,6 @@
     "titleIt": {
       "type": "literal",
       "value": "Messaggio concernente l'approvazione e la trasposizione dell'Accordo tra la Confederazione Svizzera e l'Unione europea sul collegamento dei rispettivi sistemi di scambio di quote di emissioni di gas a effetto serra (Modifica della legge sul CO<sub>2</sub>)"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "641.71"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2009/1323"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2009/1310"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2012/855"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2009-08-26"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "09.067"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft über die Schweizer Klimapolitik nach 2012 (Revision des CO2-Gesetzes und eidgenössische Volksinitiative «Für ein gesundes Klima»)  "
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message relatif à la politique climatique suisse après 2012 (Révision de la loi sur le CO2 et initiative populaire fédérale  «pour un climat sain») "
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente la politica climatica della Svizzera dopo il 2012 (Revisione della legge sul CO2 e iniziativa popolare federale «Per un clima sano») "
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "641.71"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2009/1323"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2009/1310"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2012/855"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2009-08-26"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "09.067"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft über die Schweizer Klimapolitik nach 2012 (Revision des CO2-Gesetzes und eidgenössische Volksinitiative «Für ein gesundes Klima»)  "
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message relatif à la politique climatique suisse après 2012 (Révision de la loi sur le CO2 et initiative populaire fédérale  «pour un climat sain») "
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente la politica climatica della Svizzera dopo il 2012 (Revisione della legge sul CO2 e iniziativa popolare federale «Per un clima sano») "
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "641.71"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2009/1323"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2009/1310"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2012/855"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2009-08-26"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "09.067"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft über die Schweizer Klimapolitik nach 2012 (Revision des CO2-Gesetzes und eidgenössische Volksinitiative «Für ein gesundes Klima»)  "
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message relatif à la politique climatique suisse après 2012 (Révision de la loi sur le CO2 et initiative populaire fédérale  «pour un climat sain») "
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente la politica climatica della Svizzera dopo il 2012 (Revisione della legge sul CO2 e iniziativa popolare federale «Per un clima sano») "
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "641.71"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2009/1323"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2009/1310"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2012/855"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2009-08-26"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "09.067"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft über die Schweizer Klimapolitik nach 2012 (Revision des CO2-Gesetzes und eidgenössische Volksinitiative «Für ein gesundes Klima»)  "
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message relatif à la politique climatique suisse après 2012 (Révision de la loi sur le CO2 et initiative populaire fédérale  «pour un climat sain») "
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente la politica climatica della Svizzera dopo il 2012 (Revisione della legge sul CO2 e iniziativa popolare federale «Per un clima sano») "
     }
   }
 ]

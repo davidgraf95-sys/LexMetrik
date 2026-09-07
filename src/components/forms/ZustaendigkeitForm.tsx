@@ -66,24 +66,24 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl, minima
         {/* Rechtsweg */}
         <div className="space-y-2">
           <GruppenTitel>Rechtsweg</GruppenTitel>
-          <div className={pk('grid grid-cols-1 sm:grid-cols-4 gap-2', 'grid grid-cols-1 @3xl/pane:grid-cols-4 gap-2')}>
-            {RECHTSWEGE.map((w) => (
-              <button key={w.code} type="button" disabled={!w.aktiv}
-                aria-pressed={rechtsweg === w.code}
-                onClick={() => w.aktiv && setRechtsweg(w.code)}
-                title={w.aktiv ? undefined : 'In Vorbereitung — eigene Engine folgt'}
-                className={`text-left p-3 rounded-lg border transition-colors ${
-                  rechtsweg === w.code ? 'border-brass-500 bg-brass-100/60'
-                  : w.aktiv ? 'border-line bg-surface hover:border-brass-400'
-                  : 'border-line bg-surface opacity-55 cursor-not-allowed'
-                }`}>
-                <span className="block text-body-s font-medium text-ink-900">
-                  {w.label}{!w.aktiv && <span className="lc-badge lc-badge-soft ml-2">in Vorbereitung</span>}
-                </span>
-                <span className="block text-xs text-ink-500 mt-0.5">{w.sub}</span>
-              </button>
-            ))}
-          </div>
+          {/* B3-4 (R3-α, 31.8.2026): diese Reihe war die 13. Kachel-Kopie —
+              und die einzige mit einem echten Grund: sie kennt einen DRITTEN
+              Zustand (Rechtsweg sichtbar, aber ohne Engine → nicht wählbar,
+              §8). Der Grund ist jetzt ein Feld des Bausteins (`disabled` +
+              `titel`); die Kopie ist gelöscht (§5/§10). Die «In
+              Vorbereitung»-Marke bleibt im Label — sie ist die
+              Ehrlichkeits-Aussage, nicht Zierde. */}
+          <SelectionGrid
+            className={pk('grid grid-cols-1 sm:grid-cols-4 gap-2', 'grid grid-cols-1 @3xl/pane:grid-cols-4 gap-2')}
+            gruppenLabel="Rechtsweg"
+            items={RECHTSWEGE.map((w) => ({
+              code: w.code,
+              label: <>{w.label}{!w.aktiv && <span className="lc-badge-geplant ml-2">In Vorbereitung</span>}</>,
+              sub: w.sub,
+              disabled: !w.aktiv,
+              titel: w.aktiv ? undefined : 'In Vorbereitung — eigene Engine folgt',
+            }))}
+            value={rechtsweg} onSelect={setRechtsweg} />
         </div>
         {rechtsweg === 'schkg' ? <SchkgZustaendigkeitTeil /> : rechtsweg === 'straf' ? <StrafZustaendigkeitTeil /> : null}
         </div>
@@ -194,10 +194,12 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl, minima
               <option value="klage_gegen_bund">Klage gegen den Bund (lit. f — nur über 30'000)</option>
             </select>
             {f.ipUnterfall === 'uwg' && (
-              <label className="flex items-center gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700 mt-2">
-                <input type="checkbox" checked={f.bundKlagerecht} onChange={(e) => set('bundKlagerecht', e.target.checked)} />
-                Der Bund übt sein Klagerecht aus (dann einzige Instanz unabhängig vom Streitwert)
-              </label>
+              <Checkbox
+                checked={f.bundKlagerecht}
+                onChange={(v) => set('bundKlagerecht', v)}
+                label="Der Bund übt sein Klagerecht aus (dann einzige Instanz unabhängig vom Streitwert)"
+                className="mt-2"
+              />
             )}
           </Field>
         )}
@@ -287,11 +289,11 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl, minima
               <div className="space-y-1.5">
                 <BetragsFeld value={f.streitwertRoh} onChange={(v) => set('streitwertRoh', v)} className={inputCls}
                   placeholder="z. B. 12'000" aria-label="Streitwert in Franken" />
-                <label className="flex items-center gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-                  <input type="checkbox" checked={!f.vermoegensrechtlich}
-                    onChange={(e) => set('vermoegensrechtlich', !e.target.checked)} />
-                  nicht vermögensrechtliche Streitigkeit
-                </label>
+                <Checkbox
+                  checked={!f.vermoegensrechtlich}
+                  onChange={(v) => set('vermoegensrechtlich', !v)}
+                  label="nicht vermögensrechtliche Streitigkeit"
+                />
               </div>
             </Field>
           </div>
@@ -389,8 +391,13 @@ export function ZustaendigkeitForm({ onRechtswegChange, rechtswegVorwahl, minima
         {/* Schritt-Navigation (Muster wie VorlagenWizardRahmen): Zurück immer,
             Weiter bis zum Fahrplan; «Weiter» bei ungültigem Streitwert gesperrt. */}
         <div className="flex items-center justify-between pt-2 border-t border-line">
+          {/* LM-094 (W2·17-UI-BEFUNDE B17, 4.9.2026): dasselbe Paar wie im
+              Vorlagen-Wizard — der Befund nennt beide Fundstellen
+              ausdrücklich. Outline statt Ghost, damit die zwei Knöpfe eines
+              Assistenten sichtbar zusammengehören; Begründung im Wortlaut bei
+              `vorlagen/wizard.tsx`. */}
           <button type="button" onClick={() => setSchritt((s) => Math.max(0, s - 1))}
-            disabled={aktiverSchritt === 0} className="lc-btn-ghost">← Zurück</button>
+            disabled={aktiverSchritt === 0} className="lc-btn-outline">← Zurück</button>
           {aktiverSchritt < maxIndex && (
             <button type="button" onClick={() => setSchritt((s) => Math.min(maxIndex, s + 1))}
               disabled={weiterAus} className="lc-btn-primary">Weiter →</button>

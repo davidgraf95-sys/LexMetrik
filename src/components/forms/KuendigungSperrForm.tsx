@@ -1,4 +1,4 @@
-import { BeruehrtRahmen, FehlerBox, Field, inputCls } from '../vorlagen/ui';
+import { BeruehrtRahmen, Checkbox, FehlerBox, Field, inputCls } from '../vorlagen/ui';
 import { ErgebnisBlock } from '../ErgebnisBlock';
 import { PflichtDisclaimer } from '../PflichtDisclaimer';
 import { useEffect, useState } from 'react';
@@ -18,8 +18,8 @@ import { KuendigungTimeline } from '../KuendigungTimeline';
 import { SperrtageZaehler } from '../SperrtageZaehler';
 import { SperrereignisseEditor } from './SperrereignisseEditor';
 import { usePaneKlasse } from '../layout/PaneKontext';
+import { datumOderStrich } from '../ui/datumText';
 
-const fmtISO = (s?: string) => (s ? s.split('-').reverse().join('.') : '–');
 
 // EIN Wortlaut für Bildschirm-Disclaimer und PDF (§5).
 const KSP_DISCLAIMER =
@@ -115,12 +115,12 @@ export function KuendigungSperrForm({ onBeendigung }: {
     hero: gesamt ? (gesamt.status === 'nichtig'
       ? {
           hauptlabel: 'Frühestens neu kündbar',
-          hauptwert: fmtISO(gesamt.fruehesteNeueKuendigungISO),
+          hauptwert: datumOderStrich(gesamt.fruehesteNeueKuendigungISO),
           nebenwerte: [{ label: 'Beendigungsdatum', wert: '– (keines)' }],
         }
       : {
           hauptlabel: 'Beendigungsdatum',
-          hauptwert: fmtISO(gesamt.beendigungISO),
+          hauptwert: datumOderStrich(gesamt.beendigungISO),
           nebenwerte: [{ label: 'Hemmung', wert: gesamt.gehemmtTage ? `${gesamt.gehemmtTage} Tage` : 'keine' }],
         }) : undefined,
     sections: gesamt ? [{ titel: 'Kündigung & Sperrfristen (Art. 335c / 336c OR)', ergebnis: gesamt }] : [],
@@ -158,7 +158,7 @@ export function KuendigungSperrForm({ onBeendigung }: {
           />
         </Field>
 
-        <Field label="Abweichende Frist (Monate, optional)" hint="§3.2 schriftlich/GAV; ≥ 1 Monat gilt (auch kürzer)">
+        <Field label="Abweichende Frist (Monate)" optional hint="§3.2 schriftlich/GAV; ≥ 1 Monat gilt (auch kürzer)">
           <input
             type="number" inputMode="decimal" min={0} step={0.5}
             value={form.abweichendeFristMonate ?? ''}
@@ -171,22 +171,18 @@ export function KuendigungSperrForm({ onBeendigung }: {
         {form.abweichendeFristMonate != null && (
           <Field label="Abweichende Frist – Gültigkeit (§3.2)">
             <div className="flex flex-col gap-2 pt-1">
-              <label className="flex items-center gap-2.5 py-1.5 text-body-s cursor-pointer">
-                <input type="checkbox" checked={form.abweichendeFristFormGueltig ?? false}
-                  onChange={(e) => set('abweichendeFristFormGueltig', e.target.checked)} />
-                Schriftlich / GAV / NAV (Gültigkeitsvoraussetzung)
-              </label>
-              <label className="flex items-center gap-2.5 py-1.5 text-body-s cursor-pointer">
-                <input type="checkbox" checked={form.abweichendeFristQuelleGAV ?? false}
-                  onChange={(e) => set('abweichendeFristQuelleGAV', e.target.checked)} />
-                Quelle GAV (Verkürzung &lt; 1 Monat nur GAV &amp; 1. DJ)
-              </label>
+              <Checkbox checked={form.abweichendeFristFormGueltig ?? false}
+                onChange={(v) => set('abweichendeFristFormGueltig', v)}
+                label="Schriftlich / GAV / NAV (Gültigkeitsvoraussetzung)" />
+              <Checkbox checked={form.abweichendeFristQuelleGAV ?? false}
+                onChange={(v) => set('abweichendeFristQuelleGAV', v)}
+                label="Quelle GAV (Verkürzung < 1 Monat nur GAV & 1. DJ)" />
             </div>
           </Field>
         )}
 
         {form.kuendigendePartei === 'arbeitgeber' && (
-          <Field label="Urlaub des andern Elternteils (Art. 329g) – nicht bezogene Tage (optional)" hint="Art. 335c Abs. 3 OR (vormals Vaterschaftsurlaub), verlängert die Frist taggenau">
+          <Field label="Urlaub des andern Elternteils (Art. 329g) – nicht bezogene Tage" optional hint="Art. 335c Abs. 3 OR (vormals Vaterschaftsurlaub), verlängert die Frist taggenau">
             <input
               type="number" inputMode="decimal" min={0} step={1}
               value={form.vaterschaftsurlaubResttage ?? ''}
@@ -225,7 +221,7 @@ export function KuendigungSperrForm({ onBeendigung }: {
           {/* Prominente Eckdaten – ein kohärentes Ergebnis */}
           {gesamt.status === 'nichtig' ? (
             <div className={pk('grid grid-cols-1 sm:grid-cols-3 gap-3', 'grid grid-cols-1 @xl/pane:grid-cols-3 gap-3')}>
-              <div className="lc-tile border-t-[3px] border-t-danger-line">
+              <div className="lc-tile lc-akzent-danger">
                 <p className="lc-overline mb-1">Status</p>
                 <p className="text-h2 leading-none font-semibold text-danger-700">NICHTIG</p>
               </div>
@@ -235,14 +231,14 @@ export function KuendigungSperrForm({ onBeendigung }: {
               </div>
               <div className="lc-tile">
                 <p className="lc-overline mb-1">Frühestens neu kündbar</p>
-                <p className="num text-body-l text-ink-900">{fmtISO(gesamt.fruehesteNeueKuendigungISO)}</p>
+                <p className="num text-body-l text-ink-900">{datumOderStrich(gesamt.fruehesteNeueKuendigungISO)}</p>
               </div>
             </div>
           ) : (
             <div className={pk('grid grid-cols-1 sm:grid-cols-3 gap-3', 'grid grid-cols-1 @xl/pane:grid-cols-3 gap-3')}>
               <div className="lc-tile">
                 <p className="lc-overline mb-1">Status</p>
-                <p className="text-body-l font-semibold text-sage-700">Gültig</p>
+                <p className="text-body-l font-semibold text-ok-text">Gültig</p>
               </div>
               {/* QS-UI 8b (R4 Ziff. 1): Die Kachel des MASSGEBLICHEN Werts trägt die
                   Messing-Oberkante. Von den sechs Kacheln dieses Rechners trug bis
@@ -252,7 +248,7 @@ export function KuendigungSperrForm({ onBeendigung }: {
                   und «Hemmung». Reine Kantenmarkierung: kein Wert, kein Text. */}
               <div className="lc-tile lc-akzent-brass">
                 <p className="lc-overline mb-1">Beendigungsdatum</p>
-                <p className="num text-h2 leading-none font-medium text-ink-900">{fmtISO(gesamt.beendigungISO)}</p>
+                <p className="num text-h2 leading-none font-medium text-ink-900">{datumOderStrich(gesamt.beendigungISO)}</p>
               </div>
               <div className="lc-tile">
                 <p className="lc-overline mb-1">Hemmung</p>

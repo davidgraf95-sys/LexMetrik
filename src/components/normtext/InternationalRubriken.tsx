@@ -1,5 +1,6 @@
 import { ErlassKarte } from './ErlassKarte';
 import { GruppenKopf } from '../ui/GruppenKopf';
+import { Leerzustand } from '../ui/Leerzustand';
 import type { BrowseErlass } from '../../lib/normtext/browse-typen';
 import { INTERNATIONAL_GRUPPEN } from '../../lib/normtext/international-rubriken';
 
@@ -35,7 +36,7 @@ export function InternationalRubriken({ erlasse }: { erlasse: BrowseErlass[] }) 
   const weitere = erlasse.filter((e) => !zugeordnet.has(e.key));
 
   if (gruppen.length === 0 && weitere.length === 0) {
-    return <p className="text-body-s text-ink-500">Kein Eintrag gefunden.</p>;
+    return <Leerzustand art="bestand" text="Kein Eintrag gefunden." />;
   }
 
   return (

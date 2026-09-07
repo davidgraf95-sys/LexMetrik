@@ -435,45 +435,6 @@
     },
     "cons": {
       "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/dl/proj/2021/31/cons_1"
-    },
-    "status": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/vocabulary/consultation-status/5"
-    },
-    "titelDe": {
-      "type": "literal",
-      "xml:lang": "de",
-      "value": "Revision des ZGB (Massnahmen gegen Minderjährigenheiraten)"
-    },
-    "titelFr": {
-      "type": "literal",
-      "xml:lang": "fr",
-      "value": "Révision du code civil (Mesures de lutte contre les mariages avec un mineur)"
-    },
-    "titelIt": {
-      "type": "literal",
-      "xml:lang": "it",
-      "value": "Revisione del Codice civile (Misure contro i matrimoni con minorenni)"
-    },
-    "start": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2021-06-30"
-    },
-    "ende": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2021-10-29"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "142.20"
-    },
-    "cons": {
-      "type": "uri",
       "value": "https://fedlex.data.admin.ch/eli/dl/proj/2022/58/cons_1"
     },
     "status": {
@@ -777,6 +738,45 @@
       "type": "typed-literal",
       "datatype": "http://www.w3.org/2001/XMLSchema#date",
       "value": "2025-06-02"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "142.20"
+    },
+    "cons": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/dl/proj/2021/31/cons_1"
+    },
+    "status": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/vocabulary/consultation-status/5"
+    },
+    "titelDe": {
+      "type": "literal",
+      "xml:lang": "de",
+      "value": "Revision des ZGB (Massnahmen gegen Minderjährigenheiraten)"
+    },
+    "titelFr": {
+      "type": "literal",
+      "xml:lang": "fr",
+      "value": "Révision du code civil (Mesures de lutte contre les mariages avec un mineur)"
+    },
+    "titelIt": {
+      "type": "literal",
+      "xml:lang": "it",
+      "value": "Revisione del Codice civile (Misure contro i matrimoni con minorenni)"
+    },
+    "start": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2021-06-30"
+    },
+    "ende": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2021-10-29"
     }
   },
   {
@@ -1742,6 +1742,35 @@
       "type": "literal",
       "xml:lang": "it",
       "value": "Adozione e attuazione del regolamento sullo scambio automatizzato di dati per la cooperazione di polizia (\"Prüm II\")"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "142.20"
+    },
+    "cons": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/dl/proj/2026/87/cons_1"
+    },
+    "status": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/vocabulary/consultation-status/1"
+    },
+    "titelDe": {
+      "type": "literal",
+      "xml:lang": "de",
+      "value": "Genehmigung und Umsetzung der Änderung des Abkommens zwischen der Schweizerischen Eidgenossenschaft und der Europäischen Union über zusätzliche Regeln in Bezug auf das Instrument für finanzielle Hilfe im Bereich Grenzverwaltung und Visumpolitik im Rahmen des Fonds für integrierte Grenzverwaltung für den Zeitraum 2021 bis 2027; Abschluss des Briefwechsels"
+    },
+    "titelFr": {
+      "type": "literal",
+      "xml:lang": "fr",
+      "value": "Approbation et mise en œuvre de la modification de l’accord entre la Confédération suisse et l’Union européenne définissant des règles complémentaires relatives à l’instrument de soutien financier à la gestion des frontières et à la politique des visas, dans le cadre du fonds pour la gestion intégrée des frontières, pour la période 2021-2027 ; conclusion de l’échange de lettres"
+    },
+    "titelIt": {
+      "type": "literal",
+      "xml:lang": "it",
+      "value": "Approvazione e trasposizione nel diritto svizzero dell’accordo tra la Confederazione Svizzera e l’Unione europea su disposizioni complementari in relazione allo strumento di sostegno finanziario per la gestione delle frontiere e la politica dei visti, nell’ambito del fondo per la gestione integrata delle frontiere, per il periodo 2021‒2027;  conclusione dello scambio di note e avvio della procedura di consultazione"
     }
   },
   {

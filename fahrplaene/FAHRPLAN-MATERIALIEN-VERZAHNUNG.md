@@ -2,6 +2,9 @@
 <!-- @lagebild name: Amtliche Materialien · zweck: Botschaften, Rundschreiben und Co. einbinden und mit den Normen verzahnen. -->
 
 **Heimat: ROADMAP-Schritte `W2·6a-MAT` und `W2·6b-MAT-FINMA`.**
+**Stufe 3 «Entstehung am Artikel» (6.9.2026): §11 — Heimat `W2·6c-ENTSTEHUNG-DATEN/-LESER/-SYNOPSE`.**
+**Lesehinweis:** Scope, Datenmodell, Adapter, Tore und UI der gebauten Stufe 1 liegen wörtlich im
+[Archiv](../archiv/fahrplaene/FAHRPLAN-MATERIALIEN-VERZAHNUNG.md) §1–§5; diese Datei trägt nur noch offene Bindungen.
 
 **Auftrag:** David 3.7.2026 — «Fundament, dass zukünftige Materialien direkt verlinkt sind: Wegleitungen
 SECO für ArG, EDÖB für DSG, ESTV für MWSTG usw.» Vorgezogen VOR VPS.
@@ -63,6 +66,209 @@ Repo-Verifikation; jede Konsequenz nennt den Ziel-Abschnitt.
   VOR Bau H0-Machbarkeits-Verdikt mit Zahlen; Extraktion ⇒ `check:gegenpruefung`. Kanten tragen die
   `W2·7-BEZUG`-Facetten (`quelltyp: materialien`). Detail: diese Datei §9.
   Trailer `Roadmap: W2·6b-MAT-FINMA`.
+
+
+---
+
+## §11 · Entstehung am Artikel — Stufe 3 (Spec 6.9.2026, Fassung 4 nach Kritik A/B + Runde 2)
+
+**Auftrag:** David 6.9.2026 — «Materialien und Wegleitungen maximal sinnvoll verzahnen … dass jemand
+noch besser versteht, wie ein Gesetz zustande gekommen ist». Design-Freigabe zum klickbaren Entwurf
+(Artefakt «Entstehung am Artikel», 6.9.2026) mit Auflagen: **das Gesetz nicht überladen, nur auf
+Wunsch sichtbar**; **zuerst Bundesebene**; **Bau erst auf Davids Go**. Grundlage:
+`bibliothek/materialien/entstehung-2026-09-06/` (README, 7 Erst-Berichte, Tiefen-Runden R1–R5,
+Kritiken A/B, Gemini-Zweitquellen). Architektur-Detail für Bau-Agenten: `…/R5-architektur.md`.
+**Heimat:** ROADMAP `W2·6c-ENTSTEHUNG-DATEN` · `W2·6c-ENTSTEHUNG-LESER` · `W2·6c-ENTSTEHUNG-SYNOPSE`
+(angelegt 6.9.2026, `status: blocked · blocker: david-go-entstehung`).
+**Rahmen unverändert:** CLAUDE.md §2, §5, §7 a–d, §8, §15; Stufe-1-Regel «verankern, nicht kopieren».
+
+### §11.0 Kritik-Einarbeitung (Kritik A = Opus, 20 Befunde · Kritik B = Sonnet, 5 Befunde; 6.9.2026)
+
+| # | Befund (kurz) | Verdikt | Konsequenz (Ziel-§) |
+|---|---|---|---|
+| A1/B4 | Alle neun W2·24-Branches verlagern den Historie-Slot per Default in die Marginalie (`histInRand`); keiner ist auf `main`, nur im Sammelbranch; `r6` ändert `ArtikelHistorie.tsx` um 1 Zeile | **Blocker, berechtigt** | §11.5 gegen das Nach-Landungs-Layout spezifiziert: zugeklappt = Chip in der Marginalie (≤ 24 px), Aufklapp-Karte in der Textspalte; §11.7 E3 wartet auf die Landung des Sammelbranchs `feat/w2-24-design-identitaet` (Stand 6.9.: 0/9 auf main) |
+| A2 | `-N`-Regel auf der falschen Dokumentklasse: BBl-Dateien haben KEIN `-N`, cc-Konsolidierungen brauchen es | **Blocker** | §11.6: Anker-Zeile «BBl ohne `-N`, URL nie konstruieren, aus `isExemplifiedByPrivate` (Host-Tausch) auflösen»; Synopse-Zeile trägt die cc-Regel |
+| A3 | fga-Altformat existiert (2 938/16 328 = 18 %); nur 338/770 fga-Keys im Register; 34 % der Ereignisse hätten eine erfasste Botschaft, 50 % gar kein fga; R1 §3c falsifiziert | **Blocker (§8)** | §11.3/§11.4/§11.5: Zeile zeigt «Bundesblatt» = Fundstelle vorhanden (amtlicher Link immer); Karte unterscheidet «erfasste Botschaft» (Karte) von «BBl-Fundstelle ohne erfasste Botschaft» (nur Live-Link); Altformat = benannte Klasse ohne Key; R1-Korrektur im README |
+| A4 | `check:historie` = Generator `--check` mit Sidecars als einziger Eingabe; `botschaftKey` im Shard ⇒ Dauerrot nach jedem `gen:botschaften` | **Blocker (§17)** | **Historie-Shard bleibt Ein-Quellen-Artefakt.** Kein `botschaftKey` im Shard; stattdessen Kopf `{fassungen}` aus den Sidecars und ein separates, kleines Sidecar `public/materialien/botschaft-keys.json` (Menge der erfassten Keys, ~10 KB), das erst beim Aufklappen lädt (§11.4/§11.6) |
+| A5 | Erlass-Titel des Änderungserlasses steht weder im Revisions- noch im Historie-Shard | berechtigt | Titel aus `public/normtext/revisionen/<KEY>.json` (trägt `titelDe` je oc), lazy nach Aufklappen; fehlt der oc dort (Deckung 12,6–40 %), zeigt die Karte nur die AS-Fundstelle — kein Netzabruf |
+| A6 | Deckel 12/3 MB unter R2s pessimistischem Rand (8–17 MB); «nur Alt» vs. «alt+neu» unentschieden | berechtigt | §11.6: **nur Alt-Fassung** speichern (neu = geltender Text, liegt vor); Deckel **8 MB gesamt / 2 MB je Erlass** mit Ist-Wert-Ausgabe; E5.0 Vor-Messung 5–8 Erlasse vor dem Bau |
+| A7 | «Rot nur bei Rückgang» ist umgehbar (Stand nachziehen) und Korpus-Summe verdeckt Erlass-Rückgang | berechtigt | §11.6: Diagnose **je Erlass**; Senkung des gebuchten Stands nur mit benanntem Grund im PR-Body (Tor liest den Trailer `Entstehung-Deckung:`) |
+| A8 | `anker/**` und Curia-Shards liegen ausserhalb `istRisikoPfad()` und Paritäts-Ingest | berechtigt | E2/E4-DoD: `scripts/gegenpruefung/kern.ts` + `scripts/datenhaltung/ingest.ts` um `public/materialien/anker/` und `public/materialien/curia/` erweitern, je Rot-Beweis |
+| A9/A20 | Vier Segmente brechen im 24-px-Slot um; «Verfahren» zweideutig; Praxis-Zähler fehlt im Wortlaut | berechtigt | §11.5: zugeklappt **nur** «Gilt seit 1.1.2024 · 5 Fassungen ▸» (nicht umbrechend, feste Wegfall-Reihenfolge: Fassungszahl fällt zuerst); alles Weitere erst aufgeklappt; Playwright misst 320 px |
+| A10 | Ist-Zahlen: 26 686 Ereignisse (24 409 datiert), 407 Botschaften | berechtigt | §11.2 ersetzt, Messdatum 6.9.2026 |
+| A11 | Richtungsfehler der Deckungsquote | berechtigt | §11.3 umformuliert: «Anteil der Fussnoten-oc, die in der SPARQL-Liste vorkommen» |
+| A12 | Ereignisse in `intrinsischeSig` je proj ⇒ Mantelerlass-Fehlalarm | berechtigt | §11.7 E1: Vergleich je fga, Mantelerlass als Rot-Beweis |
+| A13/B-Rückbau | kein Rückbau (§17-Gegengewicht): `artikel-revisionen`-Shard + Tor werden Teilmenge | berechtigt | E2-DoD: Konsumenten messen (`KontextPanel.tsx:274`, `EntscheidVerzahnung.tsx:88`) ⇒ Rückbau-Entscheid oder benannter Behalt-Grund |
+| A14 | Heimat `W2·6c-*` fehlte in der ROADMAP; M15/M16 nicht als absorbiert markiert | berechtigt | Etappe 0 erledigt 6.9.2026: drei Schritte `blocked · david-go-entstehung`; M15 absorbiert (mit Korrektur der Datei-Angabe als Ergänzung), M16-Datenanteil → SYNOPSE |
+| A15/B2 | F2 Point-in-time-Umschalter und F5 Kommission/Berichterstatter weder gebaut noch abgesagt | berechtigt | §11.7: F2 als «später (M16-UI, Zeitreise-Umschalter je Erlass)»; F5: **Kommission ja** (Organ, aus `Preconsultation`), **Berichterstatter nur als Link** auf Curia (keine Personendaten, B1); §11.8 nennt beides |
+| A16 | «+ ~10 %» ungemessen; Deckel für `historie/**` fehlt | Hinweis | §11.6: Zuwachs wird in E2 gemessen; `check:entstehung` führt Deckel-Zeile für `public/normtext/historie/**` (heute 9,5 MB, Deckel 11 MB) |
+| A17 | E3 ohne Golden-Zeile | Hinweis | §11.7 E3: Golden byte-gleich (Prerender ohne Slot-Markup), rot ⇒ Abbruch, nie Test-Update (§6.3) |
+| A18/B1 | NR-Zahl = eigene Auszählung aus `Voting.Decision` (Enum undokumentiert); Personendaten in `Voting` | **B1 Blocker, A18 Hinweis** | §11.4/§11.6/§11.9: **Voting nur aggregiert; `FirstName/LastName/PersonNumber` werden nie extrahiert noch gespeichert**; UI-Beschriftung «eigene Auszählung der amtlichen Einzelstimmen, Abruf <Datum>»; Decision-Codes als geprüfte Tabelle in `bibliothek/`, unbekannter Code ⇒ rot |
+| A19 | Aufwand unterbietet R5 | Hinweis | §11.7: R5-Zahlen übernommen |
+| B3 | Curia-Vollabgleich ohne Request-Zahl/Kette | berechtigt | §11.6: ~6 Requests je Geschäft ⇒ ~2 300 je Lauf, ≤ 2/s ⇒ ~20 min; **eigener Monatslauf in `normen-monitor.yml`**, nie in der Gate-Kette; Offline-Tor prüft nur den Zustandsträger |
+| B5 | «heute»-Punkt und künftige Stände | Hinweis | §11.5: Punkte nach heute heissen «tritt in Kraft am …», nie «gilt seit»; warn-Tick |
+
+**Runde 2 (Opus, 14 Befunde C1–C14 gegen Fassung 3; `…/KRITIK-R2.md`):**
+
+| # | Befund (kurz) | Verdikt | Konsequenz |
+|---|---|---|---|
+| C5 | Rand-Spalte ist fest 150 px (`--lr-marg`); Overline «Fassung» + «Gilt seit 01.01.2024» belegen ~200 px; «· 5 Fassungen ▸» hätte keinen Platz, `nowrap` erzeugt Überlauf | **Blocker** | **Zugeklappt bleibt der Chip unverändert** («Gilt seit …», ist schon ein Button). Fassungszahl erscheint erst aufgeklappt. Damit ist «nicht überladen» maximal erfüllt |
+| C6 | Die Karte «in der Textspalte» hat nach W2·24 keinen DOM-Slot; Offen-Zustand liegt in `ArtikelHistorie.tsx:104` | **Blocker** | E3: Zustand nach `ArtikelLeser` heben, zweiter Slot in der Textspalte (nur im Offen-Zustand gerendert, Input-exkludiert); ROADMAP-LESER nennt beide Dateien |
+| C7 | 4 von 9 W2·24-Teilbranches sind nicht im Sammelbranch (`r6`, `r8-abschnitt`, `r10b`, `r5-f1b`); `r6` fasst `ArtikelHistorie.tsx` an und ist stale gegen main (würde #734 zurückbauen) | **Blocker** | E3 wartet auf die Landung **aller** Slot-verlagernden Branches; `r6` vor Landung rebasen (Hinweis an die W2·24-Session) |
+| C8 | `botschaft-keys.json` wäre dritte Ablage: `public/normtext/revisionen/<KEY>.json` trägt je oc bereits `titelDe` **und** `botschaftKey`; gemessen: oc-Weg 33,6 % erfasste Botschaften, fga-Weg 34,2 %, Vereinigung 35,1 % | **Blocker (§5)** | **`botschaft-keys.json` gestrichen.** Karte löst Titel + Botschaft über den oc-Link aus dem Revisions-Sidecar (lazy nach Aufklappen); die fga-Fussnote bleibt immer Live-Link |
+| C10 | Historie-Kopf `{fassungen}` verlangt `gen:historie` im selben PR | Hinweis | **Kopf gestrichen:** Fassungszahl = Anzahl distinkter `datum` der `ereignisse` im vorhandenen Shard, im Browser gezählt (§3). **E2 fasst den Historie-Generator nicht an** |
+| C9 | `check:paritaet` ingestiert `public/normtext/historie/**` nicht (`ingest.ts:144-155`), Kommentar `:28` behauptet Vollabdeckung | berechtigt (Nebenbefund) | nicht Teil dieser Spec (Historie bleibt unangetastet); als §17-Befund in den ROADMAP-Eingang beim Go |
+| C11 | Offline-Tor kann den Trailer `Entstehung-Deckung:` nicht lesen | berechtigt | gebuchter Stand lebt in `bibliothek/register/entstehung-deckung.json` (je Erlass: Quote, Datum, optional `grund`); Senkung ohne `grund` ⇒ rot |
+| C1–C4 | Berichterstatter-Link fehlte in §11.5; Ablageort Decision-Tabelle; E4 ohne `kern.ts`/Ingest; A8 überzeichnet (offen nur `anker/**`, `curia/**`) | klein | §11.5/§11.6/§11.7 ergänzt |
+| C12–C14 | Trailer kollidiert nicht mit `check:merge-schutz`; Blocker registriert, `check:plan` grün; `W2·24-DESIGN-IDENTITAET` existiert als Sammel-Schritt | bestätigt | — |
+
+### §11.1 Zielbild in einem Satz
+
+An jedem Artikel beantwortet die bestehende Historie-Zeile, aufgeklappt, die Praktikerfragen *welche
+Fassung galt wann, warum wurde sie geändert, was sagt die Botschaft, hat das Parlament den Entwurf
+verändert, was sagt die Verwaltung* — aus drei Ketten an amtlichen Schlüsseln: Fassungskette des
+Artikels (Fussnoten → AS → BBl, **liegt als G-HIST-Shard bereits vor**), Verfahrenskette der Vorlage
+(Fedlex-Projektgraph + Curia Vista), Praxiskette (Wegleitungen, später Bundesgericht).
+
+### §11.2 Was schon steht (nicht neu bauen, §5) — Messung 6.9.2026
+
+| Baustein | Ort | Stand |
+|---|---|---|
+| Artikel-Historie aus Fussnoten (Typ, Datum, AS+BBl-Links, Absatz/Buchstabe, «gilt seit») | `src/lib/normtext/historie-parse.ts`, `scripts/normtext/historie-generieren.ts` → `public/normtext/historie/<KEY>.json` (209 Erlasse, 13 093 Artikel, 26 686 Ereignisse, davon 24 409 datiert; OR 367 386 B roh / 13 667 B gzip; Verzeichnis 9,5 MB), Tor `check:historie` (= Generator `--check`, einzige Eingabe: Sidecars) | gebaut (`W2·5i-HIST-ANSICHT` 26.7.2026) |
+| Historie-Zeile am Artikel: Chip «Gilt seit», aufklappbare Zeitleiste, CLS-Slot 24 px (`HIST_SLOT` 40 = 16 + 24), Ansicht-Menü «Änderungshistorie aus/Fussnoten/Chronologie» | `parts/ArtikelHistorie.tsx`, Slot `parts/ArtikelLeser.tsx` (`data-hist-slot`), `berechnungen.ts` | gebaut; **nach W2·24 sitzt der Slot per Default in der Marginalie** (`histInRand`) |
+| Botschaften (407 Einträge, 385 Curia-Nrn., `projEli`, `ocUris`), Vernehmlassungen (822), Änderungs-Timeline je Erlass (3108 oc, `titelDe` je oc in `public/normtext/revisionen/<KEY>.json`), Wegleitungen ESTV/SECO/EDÖB als Kanten-Shards | `src/lib/materialien/*`, `scripts/materialien/*` | gebaut (Stufe 1) |
+| Kontext-Panel am Erlass (Botschaften · Revisionen · Vernehmlassungen · Soft-Law · Entscheide) | `src/components/kontext/*` | gebaut |
+
+### §11.3 Die drei Schlüssel — mit gemessenen Grenzen
+
+| Schlüssel | Belegt (6.9.2026) | Grenze, die die Oberfläche benennt (§8) |
+|---|---|---|
+| **Fussnote am Artikel** → AS (`eli/oc`) → BBl (`eli/fga`) | 31 176 Fussnoten, 80,6 % mit oc-Link, 42,5 % zusätzlich fga; 62 % unter Artikel-Ebene; 122 Fälle «zwei Erlasse am selben Datum im selben Artikel» (Zuordnung je Buchstabe über die Fussnote) | fga-Links: 18 % Altformat (`3_964_951_873`, kein Key ableitbar), 50 % der Ereignisse ohne fga; nur 34 % der Ereignisse treffen eine **erfasste** Botschaft ⇒ Zustände «erfasste Botschaft» / «BBl-Fundstelle (nur Live-Link)» / «keine Fundstelle». Nur 12,6–40 % der Fussnoten-oc kommen in der SPARQL-Änderungsliste vor (raw ab 2001) ⇒ kein Teilmengen-Tor, Diagnose je Erlass |
+| **Projekt-Knoten** `eli/dl/proj` + Curia-Nr. | Ereigniskette `type-projet` mit `decisionDate`; 385 Curia-Nrn., 100 % in `Business`, 92 % mit ≥1 Abstimmung | Abstimmungsresultate nicht im Graph; Ständerat ohne Einzelstimmen in Curia |
+| **Artikel-eId im Bundesblatt-HTML** | wo vorhanden exakt kompatibel (`kanonArtikelToken` = Sidecar-Schlüssel) | nur 22 % der Botschaften, keine vor 16.4.2025; Mantel-Zuordnung ~32 % regelbasiert; SPARQL ohne Ziel-SR bei 200/300 ⇒ Botschaftsstelle = Bonus, Regelfall Dokument-Link |
+
+### §11.4 Kantentypen (Erweiterung bestehender Artefakte, keine neue Tabelle, Ein-Quellen-Regel §5)
+
+| Kante | Umsetzung | `quelle` |
+|---|---|---|
+| Artikel → Änderung (Datum, oc, fga, Absatz/lit.) | **bestehend** im Historie-Shard | `amtlich` |
+| Fassungszahl je Artikel | **kein Datenfeld:** Anzahl distinkter `datum` der `ereignisse` im vorhandenen Shard, im Browser gezählt (Darstellung, §3) | — |
+| Änderung → Titel des Änderungserlasses + erfasste Botschaft | **kein neues Artefakt:** aus `public/normtext/revisionen/<KEY>.json` (je oc: `titelDe`, `botschaftKey`), lazy nach Aufklappen; Deckung gemessen 76,5 % Titel / 33,6 % erfasste Botschaft; fehlt der oc dort ⇒ nur AS-Fundstelle; die fga-Fussnote bleibt immer Live-Link | `amtlich` |
+| Botschaft → Artikel-Anker (nur Botschaften mit `id="art_*"`) | **neu, klein:** `public/materialien/anker/<KEY>.json`; Mantel-Zuordnung nur bei eindeutigem Register-Treffer, sonst Erlass-Ebene | `amtlich`; Mantel `maschinell` |
+| Vorlage → Verfahrens-Ereignis | **neu:** `ereignisse[]` in `botschaften.generated` (feste Tabelle `type-projet` → Etikett, `roh` für Audit) | `amtlich` |
+| Vorlage → Parlament | **neu:** `Bill`→`Resolution` (Beschlüsse je Rat, Text), `Preconsultation` (Kommission als Organ), `Vote`+`Voting` **nur aggregiert** für die NR-Schlussabstimmung, `Objective.ReferendumDeadline`; **SR ohne Zahl; Berichterstatter nur als Link; keine Personendaten** | `amtlich` (Auszählung eigen, beschriftet) |
+| Artikel → Synopse (Alt-Fassung je Änderung, **nur Stände ab 1.1.2021**) | **neu:** Diff zweier Konsolidierungen je eId, gespeichert wird nur der Alt-Block; Zitat-Regime §11.6 | `amtlich`, Zitat |
+| Artikel → Entwurf/Beschluss-Diff | **neu, später:** Join über normalisiertes Artikel-Label (BBl-Ids `mod_uN` verrutschen: 7/41) | `amtlich`, Zitat |
+| Artikel → Wegleitung | bestehend; Ausbau als eigene Schritte | — |
+
+### §11.5 Darstellung (Design-Freigabe 6.9.2026; gegen das Layout NACH W2·24)
+
+**Zugeklappt (Default, überall):** **der bestehende Chip, unverändert** («Gilt seit 1.1.2024», bereits
+ein Button; Rand-Spalte 150 px, `--lr-marg`, kein Platz für ein zweites Segment — Kritik C5). Nichts
+Neues im Lesefluss, **kein Fetch, kein CLS, kein Element im Artikeltext**.
+Ansicht-Menü «Änderungshistorie aus» schaltet den Chip weg wie heute. Bei Deep-Link-Ankern gilt der
+gemessene CLS-Fall (20.7.2026) als Regressionstest, zusätzlich 320 px Viewport.
+
+**Aufgeklappt (Klick/Enter, echter Input ⇒ CLS-exkludiert), Karte in der Textspalte unter dem Artikel:**
+(1) **Fassungsleiste** — ein Punkt je datiertem Ereignis mit betroffenen Teilen («lit. c^bis, c^quater»),
+«heute» sage; **Punkte nach heute heissen «tritt in Kraft am …», warn-Tick, nie «gilt seit»**;
+**DOM-Ort:** der Offen-Zustand wandert von `ArtikelHistorie.tsx` nach `ArtikelLeser`, das im Offen-Zustand
+einen zweiten Slot in der Textspalte rendert (Kritik C6). Kopf der Karte: «5 Fassungen seit 1989» (gezählt).
+(2) **Änderungskarte** zum gewählten Punkt: Betrifft · Geändert durch (Titel aus Revisions-Sidecar, sonst
+AS-Fundstelle) · AS-Link · Begründung in drei Zuständen: «Botschaft» (erfasste Karte + Live-Link) /
+«Bundesblatt» (nur Live-Link, Chip «Botschaft nicht erfasst») / kein Eintrag (nichts behaupten) · Chip
+«Sprung zur Erläuterung» nur mit Anker-Sidecar · Chip «amtlich · aus der Fedlex-Fussnote» · Link
+«Verfahren → Erlass-Übersicht»; (3) **Synopse** vorher/nachher nur für Änderungen mit
+Konsolidierungs-HTML ab 2021, sonst Zeile «Fassungsvergleich erst für Stände ab 2021 verfügbar»;
+betroffene Blöcke im Artikeltext markiert, solange die Karte offen ist; (4) **Praxis** (Wegleitungen) lädt
+erst jetzt aus dem Kanten-Shard (Lesefluss bleibt bei «Facetten aus = null Byte», Entscheid 28.7.2026):
+Zustand «keine Wegleitung erfasst, die diesen Artikel nennt» — nie «keine Wegleitung».
+**Deckungs-Seite (§8, Muster Lex `/coverage` «was wir nicht haben»):** aus `entstehung-deckung.json` eine
+öffentliche Seite je Erlass: Fussnoten-Deckung, Synopse-Fenster (ab 2021), Anker-Abdeckung, Parlament-Stand.
+
+**Am Erlass (Übersichtsseite):** senkrechter Zeitstrahl je Vorlage, jüngste zuerst: Vernehmlassung →
+Botschaft → Kommission (Organ; Berichterstatter nur als Link auf Curia) → Nationalrat/Ständerat (Beschluss-Text, Datum; NR-Zahl als «eigene
+Auszählung der amtlichen Einzelstimmen, Abruf <Datum>», SR ohne Zahl) → Schlussabstimmung →
+Referendumsfrist → [Abstimmung am …, Resultat nur Link BK] → AS → in Kraft. Quellenangabe
+«Parlamentsdienste der Bundesversammlung, Bern · Abruf <Datum>» am Parlaments-Block.
+
+**Am Material:** «Erläutert diese Artikel» nur mit Anker-Sidecar; sonst nur Live-Link.
+
+**Design-Tokens:** ausschliesslich bestehende; kein Eingriff in `src/index.css`. Zustände: zu · offen ·
+laden · leer-mit-Grund · Fehler.
+
+### §11.6 Datenhaltung (Deckel = Tor-Bedingungen in `check:entstehung`, alle offline)
+
+| Klasse | Volumen | Ablage | Regime |
+|---|---|---|---|
+| Verfahrens-Ereignisse | < 100 KB | `botschaften.generated` + Raw | wie Paket 2; Netz-Tor `check:botschaften-netz` vergleicht Ereignisse **je fga** |
+| Historie-Shard | **unverändert** (0 Byte Zuwachs) | `public/normtext/historie/<KEY>.json` | bleibt Ein-Quellen-Artefakt; Deckel `historie/**` 11 MB (Ist 9,5) nur als Wächter in `check:entstehung` |
+| Anker-Sidecars (nur Botschaften mit Ankern) | < 0,5 MB | `public/materialien/anker/<KEY>.json` | BBl-Datei **ohne `-N`**, URL nie konstruieren, aus `isExemplifiedByPrivate` (Host-Tausch) auflösen; sha + `Last-Modified`/`Content-Length`-HEAD-Alarm; HTML nie gespeichert; **in `istRisikoPfad()` und Paritäts-Ingest aufnehmen (Rot-Beweis)** |
+| Parlament (385 Geschäfte) | ~2 KB je Geschäft extrahiert; Rohsätze (12–54 KB) nie gespeichert; **keine Namen, keine PersonNumber** | `public/materialien/curia/<NR>.json` + Zustandsträger `bibliothek/register/curia-zustand.jsonl` | ~6 Requests je Geschäft ⇒ ~2 300 je Lauf, ≤ 2/s ⇒ ~20 min ⇒ **Monatslauf in `normen-monitor.yml`**, nie Gate-Kette; `Modified` unbrauchbar ⇒ Vollabgleich; Decision-Codes als geprüfte Tabelle in `bibliothek/register/curia-decision-codes.md`, unbekannt ⇒ rot; `anker/**` und `curia/**` in `istRisikoPfad()` (`kern.ts`) und Paritäts-Ingest aufnehmen (Rot-Beweis; `public/normtext/**` und `public/materialien/*.json` sind dort schon erfasst) |
+| Synopse-Alt-Blöcke (1142 Diff-Schritte ab 2021) | **3,8–4,9 MB** (nur Alt; alt+neu wäre 7,6–9,7, Band bis 17); OR ≈ 0,5 MB | Shard je Erlass, lädt erst beim Klick | Zitat §7 a–d: Stand, ELI der historischen Konsolidierung (Datum) als Live-Link, sha auf normalisiertem Text (Fussnoten-Offsets, Typographie, Soft-Hyphen raus; `<sup>` bleibt); cc-Manifestation stets kanonisch `-N` über `isExemplifiedBy` (Alias = Phantom); **Deckel 8 MB gesamt / 2 MB je Erlass, Ist-Wert im Tor-Output**; E5.0 misst 5–8 weitere Erlasse vor dem Bau; **Muster law.soufien.lu (Apache-2.0, Bibliothek `soufien-lex.md`):** Artikel-Identität über die amtlichen eIds statt Text-Diff zur Erkennung, Umnummerierung nur bei exaktem Text-Hash, Normalisierung **nur fürs Matching, nie für Hash/Speicherung**, zwei Prüfsummen (Bytes / kanonisches JSON), Wort-LCS mit Absatz-Eskalation (`web/src/diff.ts` portierbar); **Normalisierungsprofil versioniert und nie editiert** (`entstehung-norm/1` im Shard-Kopf, Verbesserung = `/2` daneben — sonst entwertet jede Parser-Korrektur rückwirkend alle Prüfsummen); **Ereignis-Schlüssel `datum + oc-ELI`**, nie Listenindex (122 Gleichtags-Fälle); Widerspruch Fussnoten-Ereignis ↔ beobachtete Textänderung wird als Zustand `validity_conflict` **angezeigt**, nie still aufgelöst |
+| Entwurf/Beschluss-Diff | < 3 MB | wie Synopse | wie Synopse |
+
+`check:entstehung` (offline, in `check:seriell`): (1) Deckel je Klasse mit Ist-Wert; (2) Anker-sha
+gegen Manifest; (3) Curia-Zustandsträger ohne Verlust; (5) **Determinismus-Wächter** (Muster Lex/SFHAJJI,
+Bibliothek `sfhajji-lex-dossier.md`): ändert sich ein Synopse-/Anker-Shard, ohne dass sich der Quell-Hash
+der Fedlex-Manifestation geändert hat ⇒ rot — Parser-Drift darf nie als Gesetzesänderung erscheinen (§7 d);
+(4) Diagnose-Tabelle **je Erlass**: Anteil der
+Fussnoten-oc, die in der SPARQL-Änderungsliste vorkommen — Rot bei Rückgang gegenüber dem gebuchten
+Stand je Erlass, der in `bibliothek/register/entstehung-deckung.json` lebt (je Erlass: Quote, Datum,
+optional `grund`); Senkung ohne `grund` ⇒ rot (offline prüfbar, Kritik C11). Jede Zusicherung einmal rot
+gezeigt (§6.7). `check:perf-budget` bleibt Wächter der
+Erstlast (feste Liste; Shard-Ordner bewacht `check:entstehung`).
+
+### §11.7 Etappen (Aufwand nach R5)
+
+| E | Inhalt | Sessions | Risiko/Tore | Konflikte | Nutzer sieht |
+|---|---|---|---|---|---|
+| **E0** ✅ 6.9. | ROADMAP-Heimat, M15 absorbiert, M16-Datenanteil → SYNOPSE | — | `check:plan` | — | — |
+| **E1** | Verfahrens-Ereignisse in der Botschaften-Query; Netz-Tor je fga, Mantelerlass als Rot-Beweis | 1–2 | Risikopfad ⇒ Gegenprüfung | keine | Zeitstrahl «Am Erlass» (ohne Parlament) |
+| **E2** | Anker-Sidecars (Bonus); `check:entstehung` (1)(2)(4) + `entstehung-deckung.json`; `kern.ts`/Ingest um `anker/**` erweitert; Konsumenten-Messung `artikel-revisionen` ⇒ Rückbau-Entscheid. **Historie-Generator und -Shard unangetastet** | 2 | Risikopfad ⇒ Gegenprüfung; Golden unberührt | nie parallel zu E1 | Daten |
+| **E3** | Chip unverändert; Offen-Zustand nach `ArtikelLeser` gehoben, zweiter Slot in der Textspalte; Karte mit Fassungsleiste, Zuständen, Praxis-Nachladen; Rückrichtung am Material; Playwright: zu ⇒ 0 Fetch, CLS 0 (Deep-Link, 320 px), Tastatur | 3 | UI; Golden byte-gleich (Prerender ohne Slot-Markup), rot ⇒ Abbruch, nie Test-Update | **wartet auf Landung aller neun Slot-verlagernden W2·24-Branches** (Sammelbranch trägt 5/9; `r6`, `r8-abschnitt`, `r10b`, `r5-f1b` separat; `r6` fasst `ArtikelHistorie.tsx` an und ist stale ⇒ rebasen) | die Sicht |
+| **E4** | Parlament: `Bill`→`Resolution`, `Preconsultation`, NR-Aggregat, `Objective`; Zustandsträger; Monatslauf; `curia/**` in `kern.ts`/Ingest; Decision-Code-Tabelle; UI-Block mit Quellenangabe | 3 | Extraktion ⇒ Gegenprüfung; Sprachmischung getestet; Personendaten-Regel als Tor (kein Namensfeld im Shard) | keine | Kommission, NR/SR-Kästen, NR-Zahl |
+| **E5.0** | Vor-Messung Synopse an 5–8 weiteren Erlassen (Volumen, Falschtreffer nach Normalisierung); **zwei Speicherformen messen:** Alt-Block je Diff-Schritt vs. distinkte Textzustände je eId + Gültigkeitsintervalle (Lex D53; Preis: Fassung wird im Browser zusammengesetzt) | 1 | Messung | keine | — |
+| **E5** | Synopse ab 2021 (nur Alt-Block), Shard je Erlass, Deckel; Gegenprobe jeder Block gegen sein Historie-Ereignis, Blöcke ohne Ereignis gelistet | 5–7 | Zitat §7 ⇒ Gegenprüfung; Golden | keine | zwei Spalten |
+| **E6** | Entwurf ↔ Beschluss (Label-Join, ≥ 2025) | 2 | wie E5 | keine | «im Entwurf so?» |
+| später | Zeitreise-Umschalter je Erlass (F2, M16-UI; 57 künftige Stände liegen vor) · BGE → Botschaft · Wegleitungen BSV/BAG/BAZG/ESTV-VSt/WEKO · FINMA (§9/§10) | je eigen | — | — | — |
+| nach Bund | Kantone BS (data.bs.ch), VS (lex.vs.ch), ZH nur Rohfeed — erst nach E1–E5 Bund | je eigen | — | — | — |
+
+ROADMAP-Schnitt: **DATEN** = E1+E2+E4 (`feld: korpus`) · **LESER** = E3 (`feld: leser`, dep DATEN +
+W2·24) · **SYNOPSE** = E5.0+E5+E6 (`feld: korpus`, dep DATEN). Reihenfolge: E1 → E2 → E4 → E3 (sobald
+W2·24 gelandet) → E5.0 → E5 → E6.
+
+### §11.8 Abgesagt oder verschoben nach Prüfung
+
+Amtliches Bulletin je Artikel · Ständerats-Stimmen (nicht in Curia) · Namensabstimmungen je Ratsmitglied
+und **jede Speicherung von Personendaten** (Namen, PersonNumber) · Berichterstatter als Datenfeld (nur
+Link) · Referendum-Erkennung aus dem Graph · Erläuternde Berichte VO, Ergebnisberichte · Synopse aus
+AS-Änderungserlassen (kein `<mod>`) · Synopse vor 2021, Botschaftsstelle vor 2025 · zweiter
+Fussnoten-Parser · jede Änderung am Historie-Shard (`botschaftKey`, Kopf) und ein drittes Sidecar `botschaft-keys.json` (§5) · Point-in-time-Umschalter
+(verschoben, F2) · ZH vor BS · Gemeindereglemente.
+
+### §11.9 Offene David-Entscheide
+
+1. **Go für E1+E2** (DATEN) — Empfehlung: ja, als Block der Gesetzesleser-Queue.
+2. **Personendaten-Regel** bestätigen: Voting nur aggregiert, keine Namen (Empfehlung: ja).
+3. Ständerat ohne Stimmenzahl akzeptieren (Empfehlung: ja).
+4. Botschafts-Anker (22 %) als Bonus in E2 behalten (Empfehlung: ja, klein) oder streichen.
+5. Externe Abstimmungsresultate — Empfehlung: erst Link.
+6. Curia-Auflagen (Quellenangabe, Änderungsverbot, Abrufdatum, Beschriftung «eigene Auszählung») — Bestätigung.
+7. Fachliche Abnahme der Stufe-1-Dossiers steht seit Juli aus.
+
+### §11.10 Korrektur-Log (Fassung 1 → 2 → 3)
+
+| Runde | Befund (belegt) | Konsequenz |
+|---|---|---|
+| R1 | Kette Artikel→AS→BBl in den Sidecars; Teilmengen-Tor hält nicht; **G-HIST existiert**; ROADMAP M15 nannte die falsche Datei (Strip in `scripts/normtext/extrahiere-fedlex.ts:74,126-132`) | E2 ohne Parser; Diagnose statt Teilmenge; M15 absorbiert |
+| R2 | HTML alter Stände erst ab 1.1.2021; 3,8–9,7 MB; kein `<mod>`; Alias-URL Phantom (cc); naiver Diff 36 % Falschtreffer; 57 künftige Stände | Synopse-Fenster, Normalisierung, nur Alt-Block |
+| R3 | Anker 22 %, keine vor 16.4.2025; Mantel 32 %; `mod_uN` verrutscht | Botschaftsstelle = Bonus; E6 Label-Join |
+| R4 | NR 2 Requests; SR ohne Einzelstimmen; `Resolution` via `Bill`; 385 Nrn.; `Modified` wertlos | E4 verkleinert; Vollabgleich; Monatslauf |
+| R5 | Slot bestehend; `check:perf-budget` feste Liste; W2·24 kollidiert mit E3 | E3 wartet; Deckel im neuen Tor |
+| Kritik A (20) / B (5) | siehe §11.0; **R1 §3c falsifiziert** (fga-Altformat 18 %) | Fassung 3 |
+| Kritik Runde 2 (14) | Marginalie 150 px; kein Karten-Slot; 4/9 Branches ausserhalb des Sammelbranchs; Revisions-Sidecar trägt `botschaftKey` schon; Trailer offline unlesbar | Fassung 4: Chip unverändert, Historie-Shard unangetastet, kein drittes Sidecar, Deckungs-Register statt Trailer |
+| Gemini | zwei Kernaussagen widerlegt | Messtabelle FAHRPLAN-FREMDAGENTEN §5 |
 
 
 ---

@@ -5,7 +5,8 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
-    { "source": "/international", "destination": "/gesetze?ebene=international", "permanent": true }
+    { "source": "/international", "destination": "/gesetze?ebene=international", "permanent": true },
+    { "source": "/gesetze/kanton/GL-III%2520B_7_1", "destination": "/gesetze/kanton/GL-III%2520B%252F7%252F1", "permanent": true }
   ],
   "rewrites": [
     { "source": "/((?!(?:normtext|rechtsprechung|materialien|such-index|assets)/.*\\.[a-zA-Z0-9]+).*)", "destination": "/app" }

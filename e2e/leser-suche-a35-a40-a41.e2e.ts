@@ -37,6 +37,16 @@ import { LESER_SUCHFELD_NAME } from './helpers/leserBeschriftung';
 // Budget greift nur bei Überschreitung und verlangsamt grüne Läufe nicht.
 test.describe.configure({ timeout: 120_000 });
 
+// NACHZUG 4.9.2026 (§17-Wurzel-Fix Shard 3/8) — DEKLARIERTE TEST-INFRASTRUKTUR,
+// KEIN Assertion-Change (§6.3): Das TEST-Budget stieg oben zweimal (30 → 60 →
+// 120 s), die Fristen der EINZELNEN OR-Leser-Latches blieben seit dem 19.7.2026
+// bei 20 s. Genau sie rissen im Shard 3/8 der Läufe vom 4.9.2026 — das engste
+// Glied in einem Budget, das das Sechsfache erlaubt. Diese Frist zieht die
+// OR-Leser-Latches auf dasselbe Verhältnis nach, das der Kopf für das Budget
+// begründet (langsamer Runner ≠ kaputte Software: Tempo prüft das
+// §15-Perf-Budget). Geprüft wird unverändert DASSELBE.
+const OR_LESER_FRIST = 45000;
+
 const inGesetzSuche = (page: Page) => page.getByRole('searchbox', { name: LESER_SUCHFELD_NAME });
 const headerFeld = (page: Page) => page.getByRole('combobox', { name: /LexMetrik durchsuchen/ });
 
@@ -52,9 +62,9 @@ test.describe('A35 — In-Gesetz-Suche in der Kopfzeile + Treffer-Highlight', ()
 
   test('«Vertrag» im OR wird im Treffertext gehighlighted (CSS Custom Highlight API)', async ({ page }) => {
     await page.goto('/gesetze/bund/OR');
-    await expect(page.locator('#art-1')).toBeVisible({ timeout: 20000 });
+    await expect(page.locator('#art-1')).toBeVisible({ timeout: OR_LESER_FRIST });
     const suche = inGesetzSuche(page);
-    await expect(suche).toBeVisible({ timeout: 20000 });
+    await expect(suche).toBeVisible({ timeout: OR_LESER_FRIST });
     await suche.fill('Vertrag');
     // ── §6.3-DEKLARATION (9.8.2026, W2·19-GLIEDERUNG/S8) ────────────────────
     // Freigabe David 8.8.2026 («e2e-Anpassungen in deklarierten Commits
@@ -106,7 +116,7 @@ test.describe('A35 — In-Gesetz-Suche in der Kopfzeile + Treffer-Highlight', ()
 test.describe('A41 — Header-Dropdown liegt über der Gesetzes-Kopfzeile', () => {
   test('Trefferdropdown der Topbar-Suche verdeckt die sticky Gesetzes-Kopfzeile (nicht umgekehrt)', async ({ page }) => {
     await page.goto('/gesetze/bund/OR');
-    await expect(page.locator('#art-1')).toBeVisible({ timeout: 20000 });
+    await expect(page.locator('#art-1')).toBeVisible({ timeout: OR_LESER_FRIST });
     // Auf der Gesetzesseite ist der sticky Inhalts-Kopf (Breadcrumb + Ansicht) präsent.
     const feld = headerFeld(page);
     await feld.click();

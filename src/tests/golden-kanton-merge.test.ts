@@ -131,6 +131,35 @@ describe('mischeGoldenKanton — Teillauf (der 7a14fa06-Schaden)', () => {
   });
 });
 
+// Gegenprüfungs-Befund PR #694 (5.9.2026): die `dateiExistiert`-Sonde selbst
+// (Rückzug vs. Ausfall) war ungetestet — kein Test oben ruft je mit einer
+// Sonde auf, die `false` liefert. Belegt hier direkt.
+describe('mischeGoldenKanton — dateiExistiert-Sonde unterscheidet Rückzug von Ausfall', () => {
+  it('Sonde meldet Datei fehlt → Präfix wird VERWORFEN statt bewahrt; Rest byte-gleich', () => {
+    const dateiExistiert = (pfad: string) => pfad !== 'public/normtext/kanton/AR-1203.json';
+    const merge = mischeGoldenKanton(BESTAND, FRISCH_DISCOVERY, new Set(['AR']), dateiExistiert);
+
+    expect(merge.verworfen).toEqual(['kanton/AR/1203']);
+    expect(merge.bewahrt).toEqual([]);
+    expect('kanton/AR/1203/art_1' in merge.gemischt).toBe(false);
+    expect('kanton/AR/1203/art_1.1' in merge.gemischt).toBe(false);
+    expect('kanton/AR/1203/art_2' in merge.gemischt).toBe(false);
+
+    // Rest unangetastet: gefahrene AR-Erlasse ersetzt, Fremd-Kanton/Bund gleich.
+    expect(merge.gemischt['kanton/AR/111.1/art_1']).toBe('NEU-ar-111-1');
+    expect(merge.gemischt['kanton/AR/131.12/art_1']).toBe('NEU-ar-131-1');
+    expect(merge.gemischt['kanton/BE/101.1/art_1']).toBe('sha-be-101-1');
+    expect(merge.gemischt['bund/OR/art_1']).toBe('sha-bund-1');
+  });
+
+  it('Default-Sonde (kein Argument) == Altformel: nichts wird je verworfen', () => {
+    const merge = mischeGoldenKanton(BESTAND, FRISCH_DISCOVERY, new Set(['AR']));
+    expect(merge.verworfen).toEqual([]);
+    expect(merge.bewahrt).toEqual(['kanton/AR/1203']);
+    expect(merge.gemischt['kanton/AR/1203/art_1']).toBe('sha-ar-1203-1');
+  });
+});
+
 describe('mischeGoldenKanton — Vollauf: Verhaltensneutralität', () => {
   it('Vollauf-Index (alle Routen) → IDENTISCH zur ALT-Logik', () => {
     const kantone = new Set(['AR']);

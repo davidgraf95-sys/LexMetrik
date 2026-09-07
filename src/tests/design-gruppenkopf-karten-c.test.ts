@@ -15,27 +15,12 @@
  * die Kontrolle grün, prüft der Ausdruck nichts und der Fall ist wertlos.
  */
 import { describe, it, expect } from 'vitest';
-import { readFileSync, readdirSync, statSync } from 'node:fs';
+import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
+import { APP_WURZEL as WURZEL, alleTsx, rel } from './appDateien';
 
-const WURZEL = join(__dirname, '..');
-
-function lies(rel: string): string {
-  return readFileSync(join(WURZEL, rel), 'utf8');
-}
-
-/** Alle .tsx unter src/, ohne Tests. */
-function alleTsx(dir = WURZEL, treffer: string[] = []): string[] {
-  for (const name of readdirSync(dir)) {
-    const p = join(dir, name);
-    if (statSync(p).isDirectory()) {
-      if (name === 'tests' || name === 'fixtures') continue;
-      alleTsx(p, treffer);
-    } else if (name.endsWith('.tsx')) {
-      treffer.push(p);
-    }
-  }
-  return treffer;
+function lies(pfad: string): string {
+  return readFileSync(join(WURZEL, pfad), 'utf8');
 }
 
 // ─── C-2/C-6/C-7 · EIN Gruppenkopf ──────────────────────────────────────────
@@ -55,23 +40,16 @@ const ZAEHLER_ALTFORMEN = [
 ];
 
 describe('C-2/C-6/C-7 · Gruppenköpfe laufen über EINEN Baustein', () => {
-  const migriert = [
-    'pages/Rechtsprechung.tsx',
-    'pages/Materialien.tsx',
-    'pages/Gesetze.tsx',
-    'pages/gesetze-teile/geteilt.tsx',
-    'pages/gesetze-teile/KantonAuswahl.tsx',
-    'pages/gesetze-teile/KantonSystematik.tsx',
-    'pages/gesetze-teile/RechtsgebietUebersicht.tsx',
-    'components/normtext/InternationalRubriken.tsx',
-    'components/normtext/GesetzeGliederung.tsx',
-    'components/normtext/RechtsgebietSicht.tsx',
-    'components/Katalog.tsx',
-  ];
+  // R3-α-WURZEL (31.8.2026, §17/§6.7): hier stand eine Liste von 14 Dateien
+  // («migriert»). Sie konnte per Bauart nur bestätigen, was schon migriert war
+  // — eine neue Fläche, die das Rezept wieder selbst zeichnet, hätte sie nie
+  // gesehen. Der Sweep geht jetzt über ALLE `.tsx` der App; die Liste ist
+  // ersatzlos gestrichen, nicht ergänzt. Keine Ausnahme nötig: der Bestand ist
+  // vollständig migriert (gemessen 31.8.2026 — beide Ausdrücke, null Treffer).
+  const sweep = (re: RegExp) => alleTsx().filter((d) => re.test(readFileSync(d, 'utf8'))).map(rel);
 
-  it('keine der migrierten Flächen zeichnet das Rezept noch selbst', () => {
-    const rueckfaelle = migriert.filter((rel) => GRUPPENKOPF_REZEPT.test(lies(rel)));
-    expect(rueckfaelle).toEqual([]);
+  it('KEINE Fläche der App zeichnet das Rezept noch selbst', () => {
+    expect(sweep(GRUPPENKOPF_REZEPT)).toEqual([]);
   });
 
   it('NEGATIV-KONTROLLE: der Ausdruck findet die Vorher-Form', () => {
@@ -84,13 +62,12 @@ describe('C-2/C-6/C-7 · Gruppenköpfe laufen über EINEN Baustein', () => {
     expect(GRUPPENKOPF_REZEPT.test(vorher)).toBe(true);
   });
 
-  it('C-6: kein Sans-H3-Gruppenkopf mehr über einer Haarlinie', () => {
+  it('C-6: kein Sans-H3-Gruppenkopf mehr über einer Haarlinie (App-weit)', () => {
     // Die Overline ist Kanon der Gruppenköpfe (§G-e). Ausgenommen bleiben
     // SEKTIONS-/Seitenköpfe — die trägt der Ausdruck nicht, weil ihnen die
     // Haarlinien-Zeile fehlt bzw. das `id`-Attribut vorangeht
     // (RechtsgebietUebersicht «Gesetze nach Rechtsgebiet», Katalog-Register).
-    const rueckfaelle = migriert.filter((rel) => SANS_GRUPPENKOPF.test(lies(rel)));
-    expect(rueckfaelle).toEqual([]);
+    expect(sweep(SANS_GRUPPENKOPF)).toEqual([]);
   });
 
   it('NEGATIV-KONTROLLE: der Sans-Ausdruck findet die Vorher-Form', () => {

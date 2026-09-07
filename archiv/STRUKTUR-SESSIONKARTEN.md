@@ -38,6 +38,7 @@ würden veralten — `ls -la archiv/struktur-sessionkarten/` misst live).
 
 ## Monatliche Archive
 
+- [2026-09](struktur-sessionkarten/2026-09.md)
 - [2026-08](struktur-sessionkarten/2026-08.md)
 - [2026-07](struktur-sessionkarten/2026-07.md)
 - [2026-06](struktur-sessionkarten/2026-06.md)

@@ -58,7 +58,7 @@ function Ring({ d, stark }: { d: string; stark: boolean }) {
 function LegendeFeld({ fuellung, schraffiert, wort }: { fuellung: string; schraffiert?: boolean; wort: string }) {
   return (
     <li className="flex items-center gap-1.5">
-      <span aria-hidden className="h-3 w-3 shrink-0 rounded-[2px] border"
+      <span aria-hidden className="h-3 w-3 shrink-0 rounded-sm border"
         style={{
           borderColor: 'var(--karte-kante)',
           background: schraffiert

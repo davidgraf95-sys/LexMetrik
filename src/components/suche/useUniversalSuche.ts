@@ -6,7 +6,7 @@ import { baueBgeIndex, parseBgeSprung } from '../../lib/suche/bgeQuery';
 import { meinenSie } from '../../lib/suche/vorschlag';
 import { vokabularBegriffe } from '../../lib/suche/vokabular';
 import { KATALOG_KARTEN } from '../../lib/startseiteConfig';
-import type { ArtikelSuche } from '../../lib/suche/artikelVolltext';
+import { SUCHE_OHNE_INDEX, type ArtikelSuche } from '../../lib/suche/artikelVolltext';
 import type { PresetIndexEintrag } from '../../lib/presetIndex';
 import type { BrowseErlass } from '../../lib/normtext/browse-typen';
 import type { BrowseEntscheid } from '../../lib/rechtsprechung/register';
@@ -31,7 +31,10 @@ export interface Abdeckung {
   volltext: number;
   /** BGE/Leitentscheide im Bestand. */
   bge: number;
-  /** Kantonale Erlasse (nur nach Titel durchsuchbar). */
+  /** Kantonale Erlasse. Seit der K3-Scharfschaltung (1.9.2026) NICHT im
+   *  statischen Volltext-Index: nach Titel überall, im Volltext nur über die
+   *  Online-Suche. Der Feldname bleibt (er benennt die Menge, nicht den Weg);
+   *  was der Nutzer davon hat, sagt die Abdeckungszeile in SuchResultate.tsx. */
   kantonTitel: number;
 }
 
@@ -85,7 +88,10 @@ export function useUniversalSuche(q: string, opt: UniversalSucheOpt = {}): Unive
     import('../../lib/suche/artikelVolltext')
       .then((m) => m.ladeArtikelSuche((nachgeladen) => setArtikelSuche(nachgeladen)))
       .then((erste) => setArtikelSuche(erste))
-      .catch(() => setArtikelSuche({ suche: () => [], fehlendeEbenen: [] }));
+      // Totaler Fehlschlag: der Ersatz meldet BEIDE Ebenen als «nur online»
+      // (SUCHE_OHNE_INDEX) — sonst fiele die Gesetzestext-Gruppe ohne Treffer
+      // aus der Liste und die Suche verschwiege, dass sie gar nichts geladen hat (§8).
+      .catch(() => setArtikelSuche(SUCHE_OHNE_INDEX));
     import('../../lib/normtext/browse').then((m) => m.ladeBrowseManifest()).then((m) => setGesetze(m?.erlasse ?? [])).catch(() => setGesetze([]));
     import('../../lib/rechtsprechung/browse').then((m) => m.ladeEntscheidManifest()).then((m) => setEntscheide(m?.entscheide ?? [])).catch(() => setEntscheide([]));
     import('../../lib/materialien/browse').then((m) => m.ladeMaterialManifest()).then((m) => setMaterialien(m?.materialien ?? [])).catch(() => setMaterialien([]));
@@ -156,6 +162,7 @@ export function useUniversalSuche(q: string, opt: UniversalSucheOpt = {}): Unive
         gesetze,
         artikel: artikelTreffer,
         artikelFehlendeEbenen: artikelSuche?.fehlendeEbenen,
+        artikelNurOnlineEbenen: artikelSuche?.nurOnlineEbenen,
         entscheide,
         materialien,
       }, kappung);
@@ -171,8 +178,12 @@ export function useUniversalSuche(q: string, opt: UniversalSucheOpt = {}): Unive
   const allesGeladen = presetSucheFn !== null && artikelSuche !== null && gesetze !== null && entscheide !== null && materialien !== null;
 
   // §8-Korpus-Offenlegung (S3/E1): rein aus den geladenen Manifesten (K10). Der
-  // Volltext-Suchindex ist Bund-only (artikelVolltext + Online-Edge, §11.5),
-  // kantonale Erlasse sind nur nach Titel durchsuchbar — genau so wird es gesagt.
+  // STATISCHE Volltext-Suchindex ist seit der K3-Scharfschaltung (1.9.2026) wieder
+  // Bund-only; kantonaler Volltext kommt ausschliesslich aus der Online-Suche
+  // (api/suche, Edge) — genau so wird es in der Abdeckungszeile gesagt, samt der
+  // Folge, dass er ohne Verbindung fehlt. (Zwischen W2·5 und K3 trug der statische
+  // Index den Kanton mit; der Satz «nur nach Titel» stand in dieser Zeit zu
+  // pessimistisch da — Befund bei der Scharfschaltung, hier mitkorrigiert.)
   const abdeckung = useMemo<Abdeckung | null>(() => {
     if (!gesetze || !entscheide) return null;
     return {

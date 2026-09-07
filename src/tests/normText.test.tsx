@@ -150,10 +150,16 @@ describe('NormText — interne Artikel-Sprünge (intern)', () => {
     expect(ssr(<NormText text="siehe Art. 5 oben" intern={intern} />)).toContain('#art-5"');
   });
 
-  it('benannter Fremderlass «Art. 20 des OR» wird NICHT intern verlinkt', () => {
+  // Z5 (W2·22, fachliche Änderung — NICHT verhaltensneutral, §6.3): die
+  // Präpositions-Form «Art. N des KÜRZEL» blieb bis hierher ganz unverlinkt
+  // (Unterdrückung des falschen Self-Links). Sie nennt das Ziel eindeutig, also
+  // wird sie jetzt nach AUSSEN verlinkt. Der ursprüngliche Kontrakt — KEIN
+  // interner Self-Sprung — bleibt Wort für Wort erhalten.
+  it('benannter Fremderlass «Art. 20 des OR» wird NICHT intern, aber extern verlinkt (Z5)', () => {
     const out = ssr(<NormText text="Art. 20 des OR bleibt extern" intern={intern} />);
     expect(out).not.toContain('#art-');
-    expect(out).toContain('Art. 20 des OR');
+    expect(out).toContain('#art_20');           // Fedlex-Anker des OR
+    expect(out).toContain('>Art. 20</a> des OR'); // Passus/Kürzel bleiben Text
   });
 
   it('ohne intern-Prop entstehen keine internen Sprung-Links', () => {
@@ -163,10 +169,13 @@ describe('NormText — interne Artikel-Sprünge (intern)', () => {
 
   // M12 (§1/§6): bare «Artikel N ‹KÜRZEL›» = Fremd-/Trägergesetz-Verweis, kein
   // Self-Verweis → falscher Self-Sprunglink wird unterdrückt (BGerR-Befund).
-  it('«Artikel 5 BGG» (ausgeschrieben + Kürzel) wird NICHT self-verlinkt', () => {
+  // Z5: seit W2·22 wird das erkannte Trägergesetz nicht mehr bloss unterdrückt,
+  // sondern verlinkt — das Ziel, das der M12-Kommentar oben ausdrücklich meint
+  // («Artikel N BGG» ⇒ BGG art_N, nicht BGerR art_N). Self-Sperre unverändert.
+  it('«Artikel 5 BGG» (ausgeschrieben + Kürzel) wird NICHT self-, sondern BGG-verlinkt (Z5)', () => {
     const out = ssr(<NormText text="richtet sich nach Artikel 5 BGG sinngemäss" intern={intern} />);
     expect(out).not.toContain('#art-5"');
-    expect(out).toContain('Artikel 5 BGG'); // Text bleibt erhalten
+    expect(out).toContain('>Artikel 5</a> BGG sinngemäss');
   });
 
   it('«Artikel 20 OR» wird NICHT self-verlinkt (Trägergesetz)', () => {
@@ -183,10 +192,12 @@ describe('NormText — interne Artikel-Sprünge (intern)', () => {
   // (727 Fälle im Bund-Korpus) entging der alten Sofort-Kürzel-Regel und erzeugte
   // einen falschen Self-Link (Bsp. AHVV «Artikel 1a Absatz 1 … AHVG» → AHVV art 1a
   // statt AHVG). Jetzt unterdrückt.
-  it('«Artikel 5 Absatz 2 Buchstabe c AHVG» wird NICHT self-verlinkt (ausgeschrieben)', () => {
+  // Z5 (W2·22): aus der Unterdrückung wird der Link auf das genannte Ziel —
+  // Anker ist der ARTIKEL, «Absatz 2 Buchstabe c AHVG» bleibt Anzeige.
+  it('«Artikel 5 Absatz 2 Buchstabe c AHVG» wird NICHT self-, sondern AHVG-verlinkt (Z5)', () => {
     const out = ssr(<NormText text="richtet sich nach Artikel 5 Absatz 2 Buchstabe c AHVG weiter" intern={intern} />);
     expect(out).not.toContain('#art-5"');
-    expect(out).toContain('Artikel 5 Absatz 2 Buchstabe c AHVG');
+    expect(out).toContain('>Artikel 5</a> Absatz 2 Buchstabe c AHVG weiter');
   });
 
   it('«Artikel 5 Absatz 2 des IVG» wird NICHT self-verlinkt (Präpositions-Form)', () => {
@@ -258,7 +269,10 @@ describe('NormText — N2b ausgeschriebenes Fremdgesetz-Routing (AIG Art. 5)', (
     const internAhvv: InternRefs = { tokenMap: ahvvTokens, basisPfad: '/gesetze/bund/AHVV', springeZu: () => {} };
     const out = ssr(<NormText text="richtet sich nach Artikel 1a Absatz 1 Buchstabe c AHVG weiter" intern={internAhvv} />);
     expect(out).not.toContain('#art-1_a"'); // kein AHVV-Self-Sprung
-    expect(out).toContain('Artikel 1a Absatz 1 Buchstabe c AHVG');
+    // Z5 (W2·22): der Verweis zeigt jetzt aktiv auf AHVG art_1_a — genau das
+    // Ziel, das der N2-Kommentar als «zurückgestellt» benannt hatte.
+    expect(out).toContain('#art_1_a');
+    expect(out).toContain('>Artikel 1a</a> Absatz 1 Buchstabe c AHVG weiter');
   });
 
   it('Einzel-Nummer: «Artikel 63 des Obligationenrechts (OR)» → OR art_63', () => {
@@ -315,11 +329,22 @@ describe('NormText — A10 Plural-Linker («in den Artikeln …»)', () => {
     expect(out).not.toContain('/gesetze/bund/MWSTG#art-'); // kein Self-Link
   });
 
-  it('unauflösbarer Fremdname unterdrückt (§1): «…Artikeln 91, 163 und 222 des Bundesgesetzes vom …» bleibt Text', () => {
+  // V-7b (W2·20, 1.9.2026, deklarierte fachliche Änderung): der amtliche Volltitel
+  // ist ein deterministisches Fremd-Signal — jedes Glied zeigt auf das SchKG,
+  // nie auf den eigenen Erlass (vorher: pauschal Text).
+  it('Volltitel im Plural (V-7b): «…Artikeln 91, 163 und 222 des Bundesgesetzes vom … über Schuldbetreibung und Konkurs» → SchKG je Glied', () => {
     const tokens91 = new Map<string, string>([['91', '91'], ['163', '163'], ['222', '222']]);
     const internX: InternRefs = { tokenMap: tokens91, basisPfad: '/gesetze/bund/AHVG', springeZu: () => {} };
     const out = ssr(<NormText text="Konkursverwaltungen nach den Artikeln 91, 163 und 222 des Bundesgesetzes vom 11. April 1889 über Schuldbetreibung und Konkurs" intern={internX} />);
-    expect(out).not.toContain('<a'); // NIE ein geratener Self-Link auf ein Fremdgesetz
+    for (const n of ['91', '163', '222']) expect(out).toMatch(new RegExp(`href="[^"]*${eliId('SchKG')}[^"]*#art_${n}"`));
+    expect(out).not.toContain('#art-'); // NIE ein geratener Self-Link auf ein Fremdgesetz
+  });
+
+  it('unbekannter Fremdname unterdrückt (§1): «…Artikeln 91, 163 und 222 des Bundesgesetzes vom … über die Sache» bleibt Text', () => {
+    const tokens91 = new Map<string, string>([['91', '91'], ['163', '163'], ['222', '222']]);
+    const internX: InternRefs = { tokenMap: tokens91, basisPfad: '/gesetze/bund/AHVG', springeZu: () => {} };
+    const out = ssr(<NormText text="Konkursverwaltungen nach den Artikeln 91, 163 und 222 des Bundesgesetzes vom 11. April 1889 über die Sache" intern={internX} />);
+    expect(out).not.toContain('<a');
   });
 
   it('Glied ohne eigenes Token bleibt Text (§8, kein toter Link)', () => {
@@ -380,9 +405,27 @@ describe('NormText — A11 Präambel/Ingress-Verweise (Genitiv-Map)', () => {
     expect(out).not.toContain('#art-81"'); // NIE ein AHVV-Self-Link (§1)
   });
 
-  it('generischer Genitiv OHNE Klammer bleibt unverlinkt: «Artikel 81 des Bundesgesetzes vom …»', () => {
+  // V-7b (W2·20, 1.9.2026, deklarierte fachliche Änderung): der amtliche Volltitel
+  // OHNE Klammer routet auf das genannte Gesetz; ein unbekannter Titel bleibt Text.
+  it('Volltitel OHNE Klammer (V-7b): «Artikel 81 des Bundesgesetzes vom … über die Invalidenversicherung» → IVG art_81, nie Self', () => {
     const internAhvv: InternRefs = { tokenMap: new Map([['81', '81']]), basisPfad: '/gesetze/bund/AHVV', springeZu: () => {} };
-    const out = ssr(<NormText text="gestützt auf Artikel 81 des Bundesgesetzes vom 6. Oktober 2000 über die Invalidenversicherung," intern={internAhvv} />);
+    // FAKTISCH KORRIGIERT (Fix-Runde 1, §7): der Fall trug das Datum des ATSG
+    // («vom 6. Oktober 2000») aus dem Fall darüber — eine erfundene Zitierung.
+    // Das IVG datiert vom 19. Juni 1959; genau so steht es 21× im Bund-Korpus.
+    const out = ssr(<NormText text="gestützt auf Artikel 81 des Bundesgesetzes vom 19. Juni 1959 über die Invalidenversicherung," intern={internAhvv} />);
+    expect(out).toMatch(new RegExp(`href="[^"]*${eliId('IVG')}[^"]*#art_81"`));
+    expect(out).not.toContain('#art-81"'); // NIE ein AHVV-Self-Link (§1)
+    // Zeit-Kante: ein Datum, das nicht das Erlassdatum des Ziels ist, verlinkt
+    // NICHT — weder auf das Fremdgesetz noch als Self-Link (belegter Tippfehler
+    // der Quelle: bund/ATSV/art_17_b zitiert das IVG «vom 19. Juni 1995»).
+    const falsch = ssr(<NormText text="gestützt auf Artikel 81 des Bundesgesetzes vom 19. Juni 1995 über die Invalidenversicherung," intern={internAhvv} />);
+    expect(falsch).not.toContain(eliId('IVG'));
+    expect(falsch).not.toContain('#art-81"');
+  });
+
+  it('unbekannter Titel OHNE Klammer bleibt unverlinkt: «Artikel 81 des Bundesgesetzes vom … über die Sache»', () => {
+    const internAhvv: InternRefs = { tokenMap: new Map([['81', '81']]), basisPfad: '/gesetze/bund/AHVV', springeZu: () => {} };
+    const out = ssr(<NormText text="gestützt auf Artikel 81 des Bundesgesetzes vom 6. Oktober 2000 über die Sache," intern={internAhvv} />);
     expect(out).not.toContain('<a'); // weder Deep-Link (kein Signal) noch Self-Link (§1)
   });
 });

@@ -29,6 +29,7 @@ Exit 2 = Aufruf blockieren, stderr geht als Feedback an Claude.
 import json
 import os
 import re
+import shlex
 import subprocess
 import sys
 
@@ -130,12 +131,67 @@ if re.search(r"git\s+commit\b[^\n]*--amend", cmd):
         "Commit umgeschrieben). Nachzügler als eigenen, additiven Commit."
     )
 
+# ── Merge-Erkennung: Kommando-Position, nicht Textvorkommen ───────────────
+# BEFUND adversariale Pruefung 20.7.2026: die erste Fassung traf nur
+# /\bgh\s+pr\s+merge\b/. Zwei belegte Umgehungen blieben offen:
+#   (a) `gh api -X PUT repos/o/r/pulls/315/merge --field merge_method=squash`
+#       passierte den Hook mit Exit 0 bei rotem Tor.
+#   (b) `gh pr merge --auto` prueft den Stand im Moment des AKTIVIERENS;
+#       danach gepushte Risiko-Commits merged GitHub serverseitig, ohne dass
+#       je wieder ein Bash-Aufruf und damit dieser Hook laeuft.
+# (a) ist unten mitgefasst. (b) ist mit einem PreToolUse-Hook strukturell
+# nicht schliessbar — darum wird `--auto` auf Risikopfaden GANZ gesperrt und
+# auf den nachgelagerten Merge nach gruener CI verwiesen. Der eigentliche
+# Schliesser bleibt der Required Check in den Branch-Regeln (DAVID-GATE).
+#
+# §17-Wurzelfix 5.9.2026: das Muster traf jedes TEXTvorkommen — ein
+# `grep 'gh pr merge' src/` wurde blockiert (reproduziert 5.9.). Massstab ist
+# jetzt die KOMMANDO-POSITION wie in Regel 1: davor nur Starter, Schalter und
+# ein oeffnendes Quote (`bash -c "gh pr merge 5"` gedeckt, `grep "…"` nicht).
+MERGE_MUSTER = re.compile(
+    r"\bgh\s+pr\s+merge\b"                       # gh pr merge …
+    r"|\bgh\s+api\b[^\n]*?/(?:pulls|merges)\b"   # gh api …/pulls/N/merge, …/merges
+    r"|\bgh\s+api\b[^\n]*?\bmerge\b"
+)
+SCHALTER = re.compile(r"^(?:-{1,2}[A-Za-z][\w-]*|[\"'])$")
+
+
+def ist_merge_lauf(stufe: str) -> bool:
+    """Wird in dieser Stufe ein Merge als KOMMANDO ausgefuehrt?"""
+    m = MERGE_MUSTER.search(stufe)
+    if not m:
+        return False
+    kopf = PFAD_ENDE.sub("", stufe[: m.start()])
+    return all(STARTER.match(t) or SCHALTER.match(t) for t in kopf.split())
+
+
+merge_stufen = [t for t in re.split(r"&&|\|\||[;|\n]", cmd) if ist_merge_lauf(t)]
+
+
+def pr_nummer(stufen: list) -> str:
+    """PR-Nummer aus dem Merge-Kommando; leer = Merge des aktuellen Branch."""
+    for st in stufen:
+        m = re.search(r"/pulls/(\d+)/merge\b", st)
+        if m:
+            return m.group(1)
+        try:
+            tok = shlex.split(st)
+        except ValueError:
+            continue  # unbalancierte Quotes: keine Nummer raten
+        for i in range(len(tok) - 2):
+            if tok[i].endswith("gh") and tok[i + 1] == "pr" and tok[i + 2] == "merge":
+                for w in tok[i + 3:]:
+                    if w.isdigit():
+                        return w
+    return ""
+
+
 # ── 2a. Merge und Aufraeumen nie in EINER Kommandozeile (Vorfall 16.8.2026) ──
 # `gh pr merge 533 …; git push origin --delete <branch>` — der Merge scheiterte
 # (BEHIND/BLOCKED), die Kette lief weiter, der Remote-Branch war weg, GitHub
 # schloss den PR unmerged. Aufraeumen (Branch/Worktree loeschen) erst NACH dem
 # geprueften `state: MERGED`, in einem eigenen Kommando.
-if re.search(r"\bgh\s+pr\s+merge\b", cmd) and re.search(
+if merge_stufen and re.search(
     r"(git\s+push\b[^\n]*--delete|git\s+branch\s+-[dD]\b|git\s+worktree\s+remove)", cmd
 ):
     probleme.append(
@@ -170,54 +226,63 @@ if re.search(r"\bgit\s+push\b[^\n|;&]*\borigin\s+(HEAD:)?main\b", cmd) \
 
 # ── 3. Merge-Sperre auf Risiko-Pfaden ──────────────────────────────────
 # Nur bei Merge-Kommandos (selten) — die ~3 s Laufzeit fallen sonst nie an.
+# Muster und Umgehungs-Befunde stehen oben bei MERGE_MUSTER.
 #
-# BEFUND adversariale Pruefung 20.7.2026: die erste Fassung traf nur
-# /\bgh\s+pr\s+merge\b/. Zwei belegte Umgehungen blieben offen:
-#   (a) `gh api -X PUT repos/o/r/pulls/315/merge --field merge_method=squash`
-#       passierte den Hook mit Exit 0 bei rotem Tor.
-#   (b) `gh pr merge --auto` prueft den Stand im Moment des AKTIVIERENS;
-#       danach gepushte Risiko-Commits merged GitHub serverseitig, ohne dass
-#       je wieder ein Bash-Aufruf und damit dieser Hook laeuft.
-# (a) ist unten mitgefasst. (b) ist mit einem PreToolUse-Hook strukturell
-# nicht schliessbar — darum wird `--auto` auf Risikopfaden GANZ gesperrt und
-# auf den nachgelagerten Merge nach gruener CI verwiesen. Der eigentliche
-# Schliesser bleibt der Required Check in den Branch-Regeln (DAVID-GATE).
-MERGE_MUSTER = re.compile(
-    r"\bgh\s+pr\s+merge\b"                       # gh pr merge …
-    r"|\bgh\s+api\b[^\n]*?/(?:pulls|merges)\b"   # gh api …/pulls/N/merge, …/merges
-    r"|\bgh\s+api\b[^\n]*?\bmerge\b"
-)
-if MERGE_MUSTER.search(cmd):
+# §17-Wurzelfix 5.9.2026 (Beleg 02:30): geprueft wurde die LOKALE Arbeitskopie.
+# Stand das Haupt-Checkout auf einem fremden Risiko-Branch (Trailer
+# «Gegenpruefung: ausstehend»), blockierte der Hook die Landung voellig
+# anderer, reiner UI-PRs (#679) — falsche Flaeche. Nennt das Kommando eine
+# PR-Nummer, wird darum der PR-HEAD geprueft (MERGE_SCHUTZ_KOPF). Ohne
+# `gh`/Netz Rueckfall aufs bisherige Verhalten — nie still gruen (§6.7).
+if merge_stufen:
     projekt = os.environ.get("CLAUDE_PROJECT_DIR") or os.getcwd()
+    umfeld = dict(os.environ)
+    umfeld.pop("MERGE_SCHUTZ_KOPF", None)
+    flaeche = "der lokalen Arbeitskopie (HEAD)"
+    nr = pr_nummer(merge_stufen)
+    if nr:
+        def lauf(*a):
+            return subprocess.run(list(a), cwd=projekt, capture_output=True,
+                                  text=True, timeout=300)
+        try:
+            v = lauf("gh", "pr", "view", nr, "--json", "headRefOid")
+            oid = json.loads(v.stdout).get("headRefOid", "") if not v.returncode else ""
+            if oid:
+                # `pull/<nr>/head` deckt auch Forks; holt nur FETCH_HEAD, bewegt
+                # keine lokale Referenz und beruehrt keinen Worktree.
+                lauf("git", "fetch", "-q", "origin", "main", f"pull/{nr}/head")
+                if not lauf("git", "cat-file", "-e", oid + "^{commit}").returncode:
+                    umfeld["MERGE_SCHUTZ_KOPF"] = oid
+                    flaeche = f"PR #{nr} (Head {oid[:8]})"
+        except Exception:  # noqa: BLE001
+            pass  # ohne gh/Netz: Rueckfall auf HEAD, unten im Text ausgewiesen
     try:
         p = subprocess.run(
             ["npm", "run", "--silent", "check:merge-schutz"],
-            cwd=projekt, capture_output=True, text=True, timeout=120,
+            cwd=projekt, capture_output=True, text=True, timeout=300, env=umfeld,
         )
         if p.returncode != 0:
             probleme.append(
                 "BLOCKIERT (§9/§14 Ziff. 4): Merge auf einem Risiko-Pfad ohne "
-                "Gegenprüfungs-Verdikt.\n\n" + (p.stdout or p.stderr).strip()
+                f"Gegenpruefungs-Verdikt. Geprueft wurde {flaeche}.\n\n"
+                + (p.stdout or p.stderr).strip()
             )
-        elif re.search(r"--auto\b", cmd):
-            # Tor ist JETZT grün — aber `--auto` merged erst spaeter, ohne
+        elif any(re.search(r"--auto\b", t) for t in merge_stufen) \
+                and "kein Risiko-Pfad" not in (p.stdout or ""):
+            # Tor ist JETZT gruen — aber `--auto` merged erst spaeter, ohne
             # erneute Pruefung. Auf Risikopfaden ist das die Luecke aus
             # Befund (b): ein danach gepushter Risiko-Commit faehrt
-            # ungeprueft auf prod.
-            risiko = subprocess.run(
-                ["npm", "run", "--silent", "check:merge-schutz"],
-                cwd=projekt, capture_output=True, text=True, timeout=120,
-            ).stdout
-            if "kein Risiko-Pfad" not in risiko:
-                probleme.append(
-                    "BLOCKIERT (§9): `--auto` auf einem Risiko-Pfad.\n\n"
-                    "  Auto-Merge prueft den Stand nur JETZT. Jeder danach "
-                    "gepushte Risiko-Commit wird serverseitig gemergt, ohne "
-                    "dass dieses Tor je wieder laeuft.\n"
-                    "  Weg: CI gruen abwarten, dann OHNE --auto mergen.\n"
-                    "  (Davids Daueranweisung 'Auto-merge bei gruener CI' "
-                    "bleibt fuer alle Nicht-Risiko-PRs unveraendert.)"
-                )
+            # ungeprueft auf prod. Urteil aus demselben Lauf (der zweite
+            # Tor-Lauf von frueher war Doppelarbeit).
+            probleme.append(
+                "BLOCKIERT (§9): `--auto` auf einem Risiko-Pfad.\n\n"
+                "  Auto-Merge prueft den Stand nur JETZT. Jeder danach "
+                "gepushte Risiko-Commit wird serverseitig gemergt, ohne "
+                "dass dieses Tor je wieder laeuft.\n"
+                "  Weg: CI gruen abwarten, dann OHNE --auto mergen.\n"
+                "  (Davids Daueranweisung 'Auto-merge bei gruener CI' "
+                "bleibt fuer alle Nicht-Risiko-PRs unveraendert.)"
+            )
     except Exception as e:  # noqa: BLE001
         # Fail-closed: kann das Tor nicht laufen, wird NICHT durchgewinkt.
         # Ein Tor, das bei Störung still grün wird, ist kein Tor (§6 Ziff. 7).

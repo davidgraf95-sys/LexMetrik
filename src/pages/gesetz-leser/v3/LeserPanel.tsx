@@ -1,6 +1,7 @@
 import { useRef, type ReactNode } from 'react';
 import type { BestimmungsWort } from './erlassAnsicht';
 import { PANEL_REITER, reiterTitel, type PanelReiter } from './panelModell';
+import { SchliessKnopf } from '../../../components/ui/SchliessKnopf';
 
 // ─── Das Panel selbst: EIN Ort, VIER Reiter (FAHRPLAN-LESER-V3 Kap. 4d, H3) ───
 //
@@ -110,8 +111,10 @@ export function LeserPanel({
     // angeschlagene füllt die Breite und stösst an die Kante, wo die untere
     // Rundung unsichtbar bleibt. EINE Kantenregel für beide Gestalten statt zwei
     // Sonderfälle — die Gestalt entscheidet die Zone, nicht diese Datei (§3).
+    // A3-2 (R3-β): die übrige Kette (`--paper-raised` · Rahmen · shadow-lg) ist
+    // `.lc-schwebeflaeche` — nur der Radius weicht ab, aus dem Grund darüber.
     <div ref={panelRef} tabIndex={-1} id={panelId} data-v3-panel
-      className="flex min-h-0 flex-col overflow-hidden rounded-xl border border-line bg-paper-raised shadow-lg">
+      className="lc-schwebeflaeche flex min-h-0 flex-col overflow-hidden rounded-xl">
       {kopfExtra}
       {/* ── Kopf: WAS ist das, WORAUF bezieht es sich, WEG damit ─────────────── */}
       <div className="flex shrink-0 items-baseline justify-between gap-2 border-b border-line px-2.5 py-1.5">
@@ -124,12 +127,8 @@ export function LeserPanel({
             ? artikelLabel && <span className="num ml-1 font-normal normal-case text-ink-600">· {artikelLabel}</span>
             : <span className="ml-1 font-normal normal-case text-ink-600">· {erlassKuerzel}</span>}
         </p>
-        <button type="button" onClick={onSchliessen} data-v3-panel-zu
-          aria-label="Rechtsprechung und Kontext schliessen"
-          title="Rechtsprechung und Kontext schliessen"
-          className="-mr-1 shrink-0 rounded-md px-1.5 py-0.5 text-ink-500 hover:text-brass-700">
-          <span aria-hidden className="text-base leading-none">✕</span>
-        </button>
+        <SchliessKnopf name="Rechtsprechung und Kontext schliessen" onClick={onSchliessen}
+          data-v3-panel-zu klasse="-mr-1 px-1.5 py-0.5" />
       </div>
 
       {/* ── Ä89 · Steckbrief-Zeile ÜBER den Reitern ──────────────────────────
@@ -157,8 +156,56 @@ export function LeserPanel({
           385 gegen `clientWidth` 350, also 35 px Scrollweg und kein
           abgeschnittenes Fach; @390 passt die Leiste ganz (388/388). Herleitung
           samt Etiketten-Wahl im Kopf von `PanelAnwendung.tsx`. */}
+      {/* ── LM-063-Klasse, hier nachgemessen (B8, 31.8.2026) ──────────────────
+          Die Vorsorge oben stimmt, die Ehrlichkeit fehlte: 35 px Scrollweg
+          ohne Scrollbalken (`scrollbar-width:none`) heisst, dass «Anwendung»
+          rechts angeschnitten steht und NICHTS das sagt — derselbe Defekt, den
+          LM-063 an den Rechner-Phasenleisten meldet, nur eine Etage tiefer.
+          `lc-scrollrand-x` ist dieselbe geteilte Affordanz wie dort (§5); der
+          Deckel-Ton folgt der Panel-Fläche, nicht dem Seitengrund. */}
+      {/* ── G11 (Gesamtprüfung W2·24, 7.9.2026) · DIE AFFORDANZ WAR NICHT DIE
+             ANTWORT, SIE WAR DAS EINGESTÄNDNIS ────────────────────────────────
+          GEMESSEN am Vorstand `72b39d50c` (OR #art-336_c, hell, @1440 UND
+          @1024): das Panel steht als `'rechts'`-Blatt 336 px breit (Aussenmass
+          22 rem = 352, minus `p-2`), die Reiterzeile misst darin
+          `scrollWidth 379` gegen `clientWidth 334` — «Anwendung» endet bei
+          x 1286, die Zeile bei x 1247, also **39 px hinter der Kante**. Der
+          Scrollweg beträgt 45 px, und er ist der EINZIGE Weg zum vierten Fach:
+          ein Scrollbalken ist per `[scrollbar-width:none]` unsichtbar.
+          @390 (Bottom-Sheet, 390 px breit) passt dieselbe Zeile ganz: 388/388.
+          Der Defekt hängt also nicht an der Schriftgrösse, sondern an der
+          BREITE DES BLATTS — und die ist mit D33 (7.9.2026) bewusst 22 rem.
+
+          WARUM DAS TROTZ `lc-scrollrand-x` EIN BEFUND IST: die Affordanz sagt
+          ehrlich «hier geht es weiter», aber die Regel des Hauses für Reiter
+          ist strenger — R13-2 («kein Reiter wird stumm angeschnitten») ist an
+          der Arbeitsleiste gerade zu «die Reiter passen ganz ins Bild, der Rest
+          steht im Blatt» ausgebaut worden. Vier feste Fächer haben kein Blatt,
+          in das ein Rest ausweichen könnte; sie müssen also passen.
+
+          DIE DREI WEGE, GEGENEINANDER GEMESSEN:
+           (a) Blatt verbreitern — 25 rem (400 px) trägt die 379 px. Kostet auf
+               @1024 weitere 48 px verdeckten Lesetext (D33 nennt die Deckung
+               ausdrücklich als Preis der Gestalt) und rührt an die eine Zahl,
+               die David am 7.9.2026 entschieden hat. Verworfen.
+           (b) Etiketten kürzen — «Anwendung» ist der Kanon aus `panelModell`
+               und steht auch im Reiter-Tooltip. Ein zweites Wort für dieselbe
+               Tafel wäre der Ä114-Fehler. Verworfen.
+           (c) UMBRECHEN. Die vier Fächer stehen dann @1440/@1024 als 3 + 1 in
+               zwei Reihen (Kosten: ~26 px Tafelhöhe von 389) und @390
+               unverändert in einer. Nichts ist verborgen, nichts ist gekürzt.
+          GEWÄHLT: (c).
+
+          `overflow-x-auto` und `lc-scrollrand-x` BLEIBEN und sind kein toter
+          Rest: die Fächer tragen `shrink-0`, ein einzelnes Fach kann also
+          breiter sein als die Zeile (schmales Pane, 200-%-Schriftskala) — dann
+          scrollt sie weiter und sagt es. Beim Vier-Fach-Normalfall greift der
+          Umbruch VORHER, und `scrollWidth` bleibt gleich `clientWidth`.
+          BEWACHT: `e2e/leser-w224-g.e2e.ts` (G11) misst @1440/@1024/@390
+          `scrollWidth ≤ clientWidth` UND die rechte Kante jedes Fachs gegen die
+          Kante der Zeile. Rot zu bekommen: `flex-wrap` hier entfernen. */}
       <div ref={leisteRef} role="tablist" aria-label="Kontext-Reiter" onKeyDown={taste}
-        className="flex shrink-0 gap-1 overflow-x-auto overflow-y-hidden border-b border-line px-1.5 pt-1.5 [scrollbar-width:none]">
+        className="lc-scrollrand-x lc-scrollrand-grund-raised flex flex-wrap shrink-0 gap-x-1 gap-y-0.5 overflow-x-auto overflow-y-hidden border-b border-line px-1.5 pt-1.5 [scrollbar-width:none]">
         {PANEL_REITER.map((r) => {
           const aktiv = r.id === reiter;
           return (

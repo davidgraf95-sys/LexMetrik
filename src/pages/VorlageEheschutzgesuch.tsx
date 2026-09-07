@@ -7,7 +7,8 @@ import { KV_GERICHTE_BS } from '../lib/vorlagen/klageVereinfacht';
 import { ParteiEditor } from './VorlageKlageVereinfacht';
 import type { PdfBanner } from '../lib/vorlagen/banner';
 import { DatumsFeld } from '../components/DatumsFeld';
-import { Checkbox, Field, inputCls } from '../components/vorlagen/ui';
+import { Checkbox, Field, ListenEditor, NICHT_GESPEICHERT_HINWEIS, inputCls } from '../components/vorlagen/ui';
+import { BetragsFeld } from '../components/BetragsFeld';
 import { SelectionGrid } from '../components/ui/SelectionGrid';
 import { GerichtsWahlBlock } from '../components/vorlagen/GerichtsWahlBlock';
 import { useWizardState } from '../components/vorlagen/useWizardState';
@@ -89,22 +90,26 @@ export function VorlageEheschutzgesuch() {
             label={<><span>Gemeinsame minderjährige Kinder <span className="text-ink-500"><NormText text={`(Massnahmen nach Kindesrecht, Art. 176 Abs. 3 ZGB)`} /></span></span></>} />
           {a.kinderErfassen && (
             <div className="space-y-3 pl-6">
-              {a.kinder.map((k, i) => (
-                <div key={i} className={pk('grid grid-cols-1 sm:grid-cols-[1fr_11rem_auto] gap-3 items-end', 'grid grid-cols-1 @xl/pane:grid-cols-[1fr_11rem_auto] gap-3 items-end')}>
-                  <Field label={`Kind ${i + 1} – Vorname`}>
-                    <input className={inputCls} value={k.vorname} onChange={(e) => kinderSetzen(i, { vorname: e.target.value })} />
-                  </Field>
-                  <Field label="Geburtsdatum">
-                    <DatumsFeld value={k.geburtsdatum} onChange={(v) => kinderSetzen(i, { geburtsdatum: v })} className={inputCls} />
-                  </Field>
-                  <button type="button" className="lc-btn-ghost lc-btn-sm mb-1"
-                    onClick={() => set('kinder', a.kinder.filter((_, j) => j !== i))}>Entfernen</button>
-                </div>
-              ))}
-              <button type="button" className="lc-btn-outline lc-btn-sm"
-                onClick={() => set('kinder', [...a.kinder, { vorname: '', geburtsdatum: '' }])}>
-                + Kind hinzufügen
-              </button>
+              {/* R2-F/F1-9: «Entfernen» stand hier als `lc-btn-ghost lc-btn-sm`
+                  in einer eigenen Grid-Spalte, der Knopf hiess «+ Kind
+                  hinzufügen». Kanon ist der ListenEditor; die Kind-Nummer
+                  trägt neu die Kopfzeile statt des Vornamen-Labels. */}
+              <ListenEditor
+                element="Kind"
+                eintraege={a.kinder}
+                onHinzufuegen={() => set('kinder', [...a.kinder, { vorname: '', geburtsdatum: '' }])}
+                onEntfernen={(i) => set('kinder', a.kinder.filter((_, j) => j !== i))}
+                kinder={(k, i) => (
+                  <div className={pk('grid grid-cols-1 sm:grid-cols-[1fr_11rem] gap-3 items-end', 'grid grid-cols-1 @xl/pane:grid-cols-[1fr_11rem] gap-3 items-end')}>
+                    <Field label="Vorname">
+                      <input className={inputCls} value={k.vorname} onChange={(e) => kinderSetzen(i, { vorname: e.target.value })} />
+                    </Field>
+                    <Field label="Geburtsdatum">
+                      <DatumsFeld value={k.geburtsdatum} onChange={(v) => kinderSetzen(i, { geburtsdatum: v })} className={inputCls} />
+                    </Field>
+                  </div>
+                )}
+              />
               <Field label="Obhut (Antrag)">
                 <SelectionGrid
                   className={pk('grid grid-cols-1 sm:grid-cols-2 gap-2', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-2')}
@@ -164,12 +169,12 @@ export function VorlageEheschutzgesuch() {
               {a.kindesunterhalt === 'beziffert' && (
                 <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-3', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-3')}>
                   <Field label="Barunterhalt je Kind (CHF/Monat)">
-                    <input className={inputCls} inputMode="decimal" value={a.barunterhaltBetrag}
-                      onChange={(e) => set('barunterhaltBetrag', e.target.value)} placeholder="z. B. 1200" />
+                    <BetragsFeld className={inputCls} value={a.barunterhaltBetrag}
+                      onChange={(v) => set('barunterhaltBetrag', v)} placeholder="z. B. 1'200" />
                   </Field>
                   <Field label="Betreuungsunterhalt (CHF/Monat)" optional>
-                    <input className={inputCls} inputMode="decimal" value={a.betreuungsunterhaltBetrag}
-                      onChange={(e) => set('betreuungsunterhaltBetrag', e.target.value)} placeholder="z. B. 800" />
+                    <BetragsFeld className={inputCls} value={a.betreuungsunterhaltBetrag}
+                      onChange={(v) => set('betreuungsunterhaltBetrag', v)} placeholder="z. B. 800" />
                   </Field>
                 </div>
               )}
@@ -189,8 +194,8 @@ export function VorlageEheschutzgesuch() {
           </Field>
           {a.ehegattenunterhalt === 'beziffert' && (
             <Field label="Ehegattenunterhalt (CHF/Monat)" hint="die Höhe ist Ihre Würdigung — LexMetrik rechnet keinen Unterhalt">
-              <input className={inputCls + ' sm:max-w-[12rem]'} inputMode="decimal" value={a.ehegattenBetrag}
-                onChange={(e) => set('ehegattenBetrag', e.target.value)} placeholder="z. B. 2500" />
+              <BetragsFeld className={inputCls + ' sm:max-w-[12rem]'} value={a.ehegattenBetrag}
+                onChange={(v) => set('ehegattenBetrag', v)} placeholder="z. B. 2'500" />
             </Field>
           )}
           {a.ehegattenunterhalt !== 'keiner' && (
@@ -268,10 +273,11 @@ export function VorlageEheschutzgesuch() {
       intro="Das Gesuch um Regelung des Getrenntlebens (Art. 175 f. ZGB) im summarischen Verfahren — mit dem vollen Begehren-Katalog: Wohnung mit Auszugsfrist, Obhut und persönlicher Verkehr, Bar- und Betreuungsunterhalt als getrennte Begehren, Rückwirkung nach Art. 173 Abs. 3 ZGB, Gütertrennung, Schuldneranweisung und Verfügungsbeschränkung. Formeln sind berechnet, Beträge und Würdigungen bleiben Ihre Eingabe."
       norms={card?.norms ?? []}
       badge="Zu unterzeichnen"
-      fussnote="Eingaben werden NICHT lokal gespeichert (Parteidaten)."
+      fussnote={NICHT_GESPEICHERT_HINWEIS}
       zuruecksetzen={zuruecksetzen}
       schritte={SCHRITTE} schritt={schritt} setSchritt={setSchritt}
       fehler={fehler}
+      fehlerJeSchritt={(i) => maengel.filter((m) => m.schritt === i).map((m) => m.text)}
       inhalt={inhalt()}
       vorschau={<VorschauPanel ergebnis={ergebnis} kompakt direktExport={{
         pdf: { label: 'PDF', banner: BANNER_EG, dateiName: 'Eheschutzgesuch.pdf' },

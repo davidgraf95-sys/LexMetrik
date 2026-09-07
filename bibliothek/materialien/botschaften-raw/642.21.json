@@ -123,6 +123,240 @@
     },
     "botschaft": {
       "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2015/1692"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2015/2073"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2016/583"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2015-09-11"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "15.060"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zu einer Änderung des Verrechnungssteuergesetzes"
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant une modification de la loi sur l'impôt anticipé"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente una modifica della legge federale sull'imposta preventiva  "
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "642.21"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2015/1692"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2015/2073"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2016/583"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2015-09-11"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "15.060"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zu einer Änderung des Verrechnungssteuergesetzes"
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant une modification de la loi sur l'impôt anticipé"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente una modifica della legge federale sull'imposta preventiva  "
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "642.21"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2015/1692"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2015/2073"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2016/583"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2015-09-11"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "15.060"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zu einer Änderung des Verrechnungssteuergesetzes"
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant une modification de la loi sur l'impôt anticipé"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente una modifica della legge federale sull'imposta preventiva  "
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "642.21"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2018/890"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2018/0126"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2019/76"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2018-03-28"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "18.030"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zu einer Änderung des Verrechnungssteuergesetzes "
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant une modification de la loi fédérale sur l'impôt anticipé"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente una modifica della legge sull'imposta preventiva"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "642.21"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2018/890"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2018/0126"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2019/76"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2018-03-28"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "18.030"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zu einer Änderung des Verrechnungssteuergesetzes "
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant une modification de la loi fédérale sur l'impôt anticipé"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente una modifica della legge sull'imposta preventiva"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "642.21"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2018/890"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2018/0126"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2019/76"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2018-03-28"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "18.030"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zu einer Änderung des Verrechnungssteuergesetzes "
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant une modification de la loi fédérale sur l'impôt anticipé"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente una modifica della legge sull'imposta preventiva"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "642.21"
+    },
+    "botschaft": {
+      "type": "uri",
       "value": "https://fedlex.data.admin.ch/eli/fga/2020/2313"
     },
     "proj": {
@@ -192,240 +426,6 @@
     "titleIt": {
       "type": "literal",
       "value": "Messaggio concernente la modifica della legge federale sull'imposta preventiva (Strumenti «too big to fail»)"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "642.21"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2015/1692"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2015/2073"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2016/583"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2015-09-11"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "15.060"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zu einer Änderung des Verrechnungssteuergesetzes"
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant une modification de la loi sur l'impôt anticipé"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente una modifica della legge federale sull'imposta preventiva  "
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "642.21"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2015/1692"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2015/2073"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2016/583"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2015-09-11"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "15.060"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zu einer Änderung des Verrechnungssteuergesetzes"
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant une modification de la loi sur l'impôt anticipé"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente una modifica della legge federale sull'imposta preventiva  "
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "642.21"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2015/1692"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2015/2073"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2016/583"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2015-09-11"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "15.060"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zu einer Änderung des Verrechnungssteuergesetzes"
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant une modification de la loi sur l'impôt anticipé"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente una modifica della legge federale sull'imposta preventiva  "
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "642.21"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2018/890"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2018/0126"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2019/76"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2018-03-28"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "18.030"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zu einer Änderung des Verrechnungssteuergesetzes "
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant une modification de la loi fédérale sur l'impôt anticipé"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente una modifica della legge sull'imposta preventiva"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "642.21"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2018/890"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2018/0126"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2019/76"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2018-03-28"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "18.030"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zu einer Änderung des Verrechnungssteuergesetzes "
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant une modification de la loi fédérale sur l'impôt anticipé"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente una modifica della legge sull'imposta preventiva"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "642.21"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2018/890"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2018/0126"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2019/76"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2018-03-28"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "18.030"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zu einer Änderung des Verrechnungssteuergesetzes "
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant une modification de la loi fédérale sur l'impôt anticipé"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente una modifica della legge sull'imposta preventiva"
     }
   }
 ]

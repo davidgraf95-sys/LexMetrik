@@ -29,6 +29,15 @@ Wörtlich aus ROADMAP.md (Stand 29.8.2026):
 
 ---
 
+**Nebenfunde Nacht 5.9.2026 (Gegenprüfungen #679/#691/#694/#695):**
+- [ ] **§17 /tmp-HTML-Cache invalidiert nicht bei Re-Pin** — `struktur-run.ts:61` refetcht nur bei Abwesenheit, `normtext-snapshot.ts:387` nur bei <20 KB; Generator stempelt neuen `fassungsToken` auf alten Text (Beleg DBG #695). Wurzel: Cache-Schlüssel um fassungsToken/html-N. Dazu (§6.7): `check-struktur-konsistenz.ts` vergleicht nur Artikel-Keys, nicht `stand`/`fassungsToken`.
+- [ ] **`normtext:struktur` ohne Erlass-Filter** — je Lauf 227 `erzeugt`-Felder (Churn); `--nur=<key>` analog `--nur=bund`.
+- [ ] **Offline-Refresh löscht bei fehlendem Shard stumm** (#691) — `entscheide-schreiben.ts:577` `continue` + `:239` `rmSync`, Guard nur `basis.length>0`; Bestandszahl-Sperre vor `schreibeKorpus`, Mindestzahl in `check:entscheide`. Analog `snapshotDateiPfad()` relativ ⇒ Datei-Sonde fail-open bei falschem cwd (#694).
+- [ ] **GL-Schlüssel auf amtliche `canonical_link`-Form (`III-B.7.1`)** (#694) — 2 Erlasse `%`-Kanonik, 2 Punkt-Form; entscheiden, sonst zweite 301-Kette. Gleiche Dubletten-Klasse: FR-261.16↔FR-8428, JU-…-34172↔…-dl (PDF-Zweitweg).
+- [ ] **Kanton-Fremd-Drift 19 Struktur-Sidecars** (#694) — BS Bürgerrechtsgesetz Stand 1.7.2026, AR/BS-PDF-Versionen; Drift-PR. `confidence.json` seit 23.6. stale (150/1565).
+- [ ] **Fedlex-Trenner `a. ` vs `A: ` mitführen** (#679) — `extrahiere-fedlex.ts` verwirft ihn; ~90 Marken mit Sonderzeichen-Anfang falsch beschriftet. Extraktion + Neuerzeugung, Gegenprüfung.
+- [ ] **`standRechtsprechung` = Erzeugungs- statt Abrufdatum** (#691, latent, nirgends gerendert) — Stand aus max(abgerufen) (§8).
+
 ## §2 — `QS-MONITOR-ROT` · Normen-Monitor seit ≥5 Wochen rot
 
 Wörtlich aus ROADMAP.md (Stand 29.8.2026) — Aktivierungs-Audit 14.8.2026 und die daraus
@@ -36,11 +45,57 @@ abgeleitete Checkliste, samt den sieben Materialien-System-Befunden (a)–(h):
 
 - [ ] **`QS-MONITOR-ROT` · Normen-Monitor seit ≥5 Wochen rot — Wurzel-Fix** — Aktivierungs-Audit 14.8.2026: `normen-monitor.yml` 5/5 Läufe failure (seit 6.7., Issue #166 offen, 8 rote Läufe in Folge); scheiternde Schritte `check:netz` und LIK-Reihe (BFS O-1.6). Rechtsstand-relevant. DIAGNOSE 14.8. (Session-Befund, Issue #166 beantwortet): Monitor korrekt, Rot ist ECHT — Checkliste: · [ ] LIK-Reihe 2026-05→2026-07 nachziehen (scripts/lik-reihe-generieren.py; amtliche Werte ⇒ Gegenprüfung trotz formal fehlendem Risikopfad-Flag) · [x] 14 nicht-kanonische Fedlex-Pins repariert (#497, 2 Gegenprüfungs-Runden 14/14 SPARQL-rederiviert; PR von 574 auf 10 Dateien entbläht — Automaten-Churn inkl. 115 Kanton-Dateien ist Befund (a2)) · [x] Frische-Automat: gen:historie/check:historie in Kaskade+Prüfliste nachgerüstet (Nullprobe-belegt) · [ ] 10 ESTV-MWST-Snapshot-Drifts aktualisieren (Risikopfad Materialien) · [ ] AIG-Botschaft BOTSCHAFT-2025-3067 nachführen (botschaften-netz rot, Klasse d — materialien:botschaften-Generator; Risikopfad) · [ ] VRV-Vernehmlassung VERN-2026-79 bereinigen (vernehmlassungen-netz rot, Klasse d — Verfahren live nicht mehr gelistet; Risikopfad) · [x] Rest-Sondierung 14.8.: 8 weitere Netz-Tore einzeln GRÜN (caches/zitate/rss-oc/normtext/pdf/pdf-quellen/revisionen/abk) — nur materialien-netz + fedlex-versionen noch offen · [ ] Materialien-System-Befunde 14.8. (aus Korpus-Nachzug, je §17-Wurzel-Fix nötig): (a) `npm run materialien` löscht in DB-losen Worktrees still 11 kanten-Artefakte — Orphan-Bereinigung bei fehlender DB überspringen; (b) Generator-Abgänge ohne Grabstein/Logzeile — Zu-/Abgänge ausgeben, Abgänge bestätigungspflichtig; (c) VERN-Schlüssel erbt mutable Fedlex-Projektnummer (79→78-Umnummerierung belegt) — intrinsische Identität wie bei fga-URIs; (d) botschaften-netz-Stichprobe = 8 feste Keys, blind für Register-Zuwachs (9 neue Erlasse monatelang ungeprüft) — Vollabgleich Grundmenge↔Roh-Dateien; (e) VERN-shas rauschen (stand=Abfragedatum im Hash); (f) Botschaften-Roh ohne ORDER BY — deterministisch sortieren; (h) Fussnoten-Link-Extraktor erzeugt «Link .»-Leerzeichen bei Satzend-Links (TGBV Fn 20/32 belegt, Muster main-weit) — Fix im Extraktor, nie in den Daten; (a2) Frische-Automat fasst bei Bund-Läufen 115 Kanton-Dateien mit Datums-Churn an (Verletzung der eigenen Reset-Invariante cache.sh:31); (g) Generator-Kaskade als EIN Kommando (materialien ⇒ normtext:revisionen ⇒ gen:zaehler — am 14.8. kostete das einzelweise Entdecken zwei CI-Rotläufe auf #499) · [ ] Verfahrens-Gap: Reparatur-Arm (Mo 04:43) vs. Detektions-Arm (Mo 05:17) — Cadence/Reihenfolge entscheiden; check:netz-&&-Kette zeigt nur ersten Befund (eigener deklarierter Schritt, §17).
 
+**Ist-Diagnose 1.9.2026 (Session QS-MONITOR-ROT, Verteilung über 15 Läufe statt Einzelwert
+— Ergänzung, keine Nachführung; die 14.8.-Angaben oben bleiben, wie sie waren):**
+
+- Rotgrund A (6.7.–15.8.: LIK 05–07/2026, ESTV-MWST-Drifts, AIG-Botschaft, VERN-2026-79) ist
+  seit #499 (14.8.), #524 (15.8.) und #581 (30.8., Gegenprüfung bestanden) behoben; Beleg: Lauf
+  31.8. 00:31 UTC GRÜN (`check:lik-frische` 2026-07 ≥ 2026-06 · materialien-netz 48/48 ·
+  botschaften/vernehmlassungen-netz OK). Die ROADMAP-Häkchen fehlten nur.
+- Rotgrund B (24.8., 31.8. 11:38 — der stehende Rotgrund): Kanonik-Arbiter in
+  `check:fedlex-versionen` — Fedlex republiziert html-N-Manifestationen (24.8.: 10 Pins bgg/vgg/
+  aig/glg/ohg/elg/fidlev/beg/lmg/thg; 31.8.: stgb html-0→4). Der Reparatur-Arm
+  (`fedlex-frische.yml`) erkennt und re-pinnt korrekt, sein PR landet aber nicht: Voll-Lauf
+  `npm run normtext` fasst 4860 Kantons-Snapshots mit Datums-Churn an (Befund (a2)) → #596
+  kollidiert an vier ZH-Dateien mit #606 (`git merge-tree`-Beleg) und bleibt liegen; der Monitor
+  läuft 34 min nach dem Reparatur-Lauf, vor dessen Merge. Verfahrens-Gap damit belegt, nicht
+  vermutet.
+- Rotgrund C (30.8. 22:37 + 22:48, beide `workflow_dispatch`): `check:fedlex-abk-netz` — SPARQL-
+  Teilantwort (Live 594 Zeilen, 199/230 SR) gegen Artefakt 597; 00:31 derselbe Lauf mit 597/597
+  grün. Flake der Quelle, fail-closed korrekt («KEIN URTEIL MÖGLICH … NICHT regenerieren»). Kein
+  Fix nötig; Verteilung notiert (2/15 Läufe).
+- ESTV-ToC-Sonde 1.9.2026 (1 GET `tableOfContent.xhtml?publicationId=1248491`): 0× «Publiziert
+  am», 0 Datumsangaben — das ToC trägt keine Publikationsdaten; der Stand-Wechsel MUSS über die
+  Ziffer-Seiten geprüft werden (Stand-Probe je Dokument, `estv-mwst-stand-probe.ts`).
+- Befund (a) war bereits behoben (`soft-law-projektion-run.ts` Z. 48–63: ohne Harvest-Kanten
+  keine Orphan-Bereinigung) — hier nur festgestellt, nicht neu gebaut.
+
 Erledigt und hier als Beleg belassen:
 
   - [x] ESTV-MWST-Drift 15.8. behoben: MI 05 + Branchen-Info 04 Snapshots nachgezogen (Gegenprüfung bestanden), check:materialien-netz 48/48 drift-frei; Monitor-Rotgrund seit 10.8. damit weg.
+  - [x] 1.9.2026 (Branch `feat/qs-monitor-rot`): Verfahrens-Gap geschlossen — Monitor-Cron 07:17 UTC
+    (2,5 h nach dem Reparatur-Arm), Reparatur-PR ohne Kanton-Churn (`--nur=bund` +
+    `normtext:churn-reset`, Befund (a2)), `check:netz` als Runner mit Tafel aller 12 Verdikte
+    (Rot-Beweis: zwei rote Dummy-Glieder beide sichtbar). StGB-Pin html-0→4 (kanonisch, SPARQL
+    isExemplifiedBy; Regenerat aus html-4 = reiner Datums-Churn, Inhalt identisch).
+  - [x] 1.9.2026 Befund (d): `check:botschaften-netz` = Vollabgleich der Grundmenge (227 Erlasse);
+    Mutationsprobe BOTSCHAFT-2025-1528/EOG entfernt → alt grün, neu rot.
+  - [x] 1.9.2026 Befund (f): Roh-Bindings deterministisch (`sortiereBindings`); reproduziert (4 Dateien
+    umsortiert, multiset-identisch), Migration 59 Dateien, zweiter Lauf byte-stabil.
+  - [x] 1.9.2026 Befund (g): `npm run materialien:kaskade -- --datum=…` (Projektion → Revisionen →
+    Zähler → Churn-Reset → Manifest, Abbruch beim ersten Rot).
+  - [x] 1.9.2026 Befund (a): bereits behoben vorgefunden (Projektion ohne Harvest-Kanten löscht nichts).
 
 ---
+
+**Nacht 5.9.2026 (#687/#695, Läufe 33936281247/33937353756):**
+- [ ] **Finding 7 ohne Reparaturweg** — bleibt Fedlex nach Fristablauf bei `laufend`, verlangt das Tor etwas, das der Generator verweigert; abgeleiteter Status `frist-abgelaufen` (amtlicher Status als Feld). `materialien:vernehmlassungen` in `materialien:kaskade` hängen (Zähler/Manifest fielen einzeln rot).
+- [ ] **Register-`sha` rotiert mit `stand`** — `material-manifest.ts:45` hasht `r.stand`; stand-freie `shaVernehmlassung()` nur im Test (§5/§6.7).
+- [ ] **Reparatur-Arm ohne `normtext:revisionen`** (#703) — Arm fährt nur `gen:artikel-revisionen`; DBG-Drift 54→55 blieb liegen. Dazu `--nur-geaendert` für den Revisionen-Lauf (227 `abgerufen`-Bumps je Lauf blähen den Diff ×20).
+- [ ] **`check:materialien` lokal 7 falsche Shard-Abweichungen** (#703) — wenn `daten/soft-law.db` nur die gecrawlte Quelle trägt (ARG…VSTG); Tor darf DB-Zustand nur bei vollständig geladenen Quellen vergleichen. Zähler «0 Kanten · 0 Downgrades» strukturell 0, während der Lauf 3380/1157 zählt (§6.7).
+- [ ] **Anker-Modell ESTV zieht nur verlinkte Normen** (Gegenprüfung #703) — MWSTV-Rechtsgrundlage von MBI 26 (Art. 83/93 MWSTV) unverlinkt ⇒ keine Kante; Text-Nennungen als Kandidaten-Kanten (Gegenprüfung).
+- [ ] **Revisionen: Plausibilitäts-Marker `rectifies`-Notation ≠ eigene** (Gegenprüfung #703) — Fedlex klassiert die ZDG-Berichtigung AS 2026 448 unter 642.11 (DBG); Generator liest treu, Marker macht den Widerspruch sichtbar (§8).
+- [ ] **Reparatur-Arm scheitert an wanduhr-abhängigem `check:materialien`** — Tor im Arm entschärfen (Kommentar in `fedlex-frische.yml`); Arm re-pinnte DBG korrekt, kam ohne PR durch (Feed/pdf-quellen-Reihenfolge behoben in #695).
 
 ## §3 — `QS-DATA-INGEST-DRIFT` · Ingest-Strecke 3× langsamer
 
@@ -91,14 +146,14 @@ Die Liste steht wörtlich so, wie sie am 29.8.2026 in ROADMAP.md stand:
 - [ ] **Leerflächen-Reservierung /gesetze messbasiert lösen (L1↔L2-Spannung)** *(Design-Review 29.8.: min-h-inhalt-region erzeugt bis 488 px Leerlauf auf ?ebene=bund; naive Verkleinerung brächte den Footer-Sprung (0.44 CLS) zurück — Fix braucht Messreihe, nicht Pixel-Jagd; App-weite Rahmen-Idee (EINE Reservierungs-Regel Route-Fallback+Platzhalter, App.tsx-Naht) als §10-Kandidat, siehe FAHRPLAN-PERFORMANCE dritter Posten.)*
 - [ ] **Browser-Pane ist nicht Worktree-isoliert (§17-Werkzeugbefund 21.8.2026, zwei Agenten unabhängig)** — fremde Tabs/Navigationen zwischen parallelen Worktree-Sessions, `preview_start` mit launch.json-Name serviert den HAUPT-Checkout statt des Worktrees, resize wirkungslos. Wurzel-Fix: Worktree-bewusste launch.json-Auflösung bzw. je-Session-Pane; bis dahin Workaround eigener Playwright-Lauf (in Dispatch-Berichten dokumentiert).
   - [ ] **FlexSearch `suggest:true` wirkt bei Mehrwort-Queries wie ODER/fuzzy** *(Wurzel von Cowork-Befund 29, Fix 21.8. nur in artikelVolltext.ts; Rest der Suche-Schicht systematisch nach weiteren `doc.search(mehrwort, {suggest:true})`-Stellen absuchen.)*
-  - [ ] **EMRK-docTitle «EMRK (EMRK)»** *(Kürzel-Duplikat im title-Tag bei pdf-embed; Gegenprüfung J3 21.8., kosmetisch.)*
-  - [ ] **Kantonskarte: aktiver Kanton verliert Hervorhebungs-Rand bei Hover über Nachbar** *(nur EIN Overlay `gezeigt = hover ?? aktiv`; Gegenprüfung 21.8., kosmetisch.)*
-  - [ ] **`e2e/helpers/istHuelle.ts` löschen (totes Modul seit H5)** *(Nachlese 21.8.2026: kein Importer mehr, Projekt leser-v1 entfernt; Streich-Massstab aufraeumen.md §3 — Beweis = leerer grep vor Löschung.)*
+  - [x] **EMRK-docTitle «EMRK (EMRK)»** *(Kürzel-Duplikat im title-Tag bei pdf-embed; Gegenprüfung J3 21.8., kosmetisch.)* **Erledigt 5.9.2026: `metaFuerErlass()` hängt Kürzel nur an, wenn nicht im Titel; Unit-Test.**
+  - [x] **Kantonskarte: aktiver Kanton verliert Hervorhebungs-Rand bei Hover über Nachbar** *(nur EIN Overlay `gezeigt = hover ?? aktiv`; Gegenprüfung 21.8., kosmetisch.)* **Überholt 5.9.2026: Duplikat von Befund 12, behoben 29.8.2026 (`markierungen()`, zwei Ringe).**
+  - [x] **`e2e/helpers/istHuelle.ts` löschen (totes Modul seit H5)** *(Nachlese 21.8.2026: kein Importer mehr, Projekt leser-v1 entfernt; Streich-Massstab aufraeumen.md §3 — Beweis = leerer grep vor Löschung.)* **Erledigt 5.9.2026 (Batch W2·18): gelöscht, grep-Beweis ohne Importer.**
   - [ ] **e2e-Assertions-Latten unter CPU-Aushungerung** *(QS-E2E-STABIL-Messreihe 14.8.: eigene Klasse, kein Timeout — international-kanonik-ia6 3× toBeInViewport, gesetze-ia-v2-walks, suche-seite:27 expect.poll, verlauf-o1, qsui-Vorlagen; wandert je Lauf mit Aushungerungstiefe; weitere Mitglieder 21.8.2026: leser-position-u:147, rechtsprechung.e2e:318 Rail-CLS, leser-gliederung-a33, norm-sprung Ctrl+K-Fokus — alle standalone grün nachgewiesen. Methode wie QS-E2E-STABIL, aber gedeckelte Lastbedingung — nie die verworfene Übersättigung. Weitere Mitglieder 29.8.2026 (drei Prüf-Sessions unabhängig): international-kanonik-ia6, leser-kopf-cls-s3, rechtsprechung-richter, datenhaltung/suche, leser-v3-h4-Familie, suche/rankingTestset-vitest-Hooks — je seriell grün, unter 5-Worker-Last wandernd.)*
   - [ ] **druck-fundstellen-z2 flakt NUR auf CI-Runnern** *(CI-Forensik 14.8.: 10 Vorkommen/30 Tage; lokal 11/11 sauber bei 19,8 s gegen 30-s-Budget — braucht Runner-Messung, kein lokaler Fix; blosses Budget-Hochsetzen ohne Messreihe bleibt ausgeschlossen.)*
   - [ ] **Kalender-Export: Termine als «frei» markieren (TRANSP:TRANSPARENT)** — Go David 8.8.2026 («frei ok»); bricht deklariert einen Golden-Anker ⇒ fachliche Änderung mit Golden-Neuschrieb im eigenen Commit (Herkunft: Session-Karte 3./4.8.2026, archiv/STRUKTUR-SESSIONKARTEN.md).
   - [ ] **LM-016-Wurzel: Topbar-Icon-Zeile an die Brotkrume-Breite angleichen** (Befund B7 8.8.2026, zurückgestellt: braucht eigenen Entscheid statt Menü-Pflaster).
-  - [ ] `check:design-tokens` scannt Kommentartext mit (Utility-Platzhalter im Kommentar = rotes Tor, je Vorfall ein Zyklus); Wurzel-Fix: Kommentar-Strip vor dem Scan, einmal rot zeigen (§6.7). *(Agent-Fund 8.8.2026.)*
+  - [x] `check:design-tokens` scannt Kommentartext mit (Utility-Platzhalter im Kommentar = rotes Tor, je Vorfall ein Zyklus); Wurzel-Fix: Kommentar-Strip vor dem Scan, einmal rot zeigen (§6.7). *(Agent-Fund 8.8.2026.)* **Erledigt 5.9.2026: Kommentar-Strip vor dem Scan, Rot-Beweis beidseitig.**
   - [ ] **Perf-Blick auf den langen Artikel-Index (aus PR #486):** der flache Index ist bewusst nicht virtualisiert; seit dem B3-Wegfall trägt SG-3849 607 Zeilen (davon 590 im Anhang-Ast, der bei Anhang-Dominanz aufgeklappt startet), ZH-243 152. Messen, ob das auf schwachen Geräten trägt — sonst Virtualisierung des Index als eigener Schritt (Skill `perf`).
   - [ ] **`check:materialien` läuft durch blossen Kalender-Ablauf rot** — das Tor misst Kalenderzeit statt Korrektheit; Wurzel-Fix: abgelaufene Fristen deterministisch als «abgeschlossen» ableiten oder auf Harvest-Alter umstellen.
   - [ ] **Muster «Test pinnt von-Hand-Tageswert» anderswo suchen** — der `registerStand`-Fall (garantierter Fehlalarm bei jeder Pflege) ist gefixt; Geschwister finden.
@@ -124,6 +179,13 @@ Die Liste steht wörtlich so, wie sie am 29.8.2026 in ROADMAP.md stand:
   - [ ] **Kantonale Gliederung ZH-211.11 nur «§ 1…§ 23» ohne Überschriften** — **Verdikt (Datenklärung 21.8.2026, lex-recherche): Extraktions-Lücke, keine Quell-Lücke.** `scripts/normtext/struktur-kanton-run.ts` überspringt bewusst Nicht-LexWork-Quellen (PDF/lexfind/zhlex); die Quelle (zhlex GebV OG) HAT eine Buchstaben-Gliederung («A. Allgemein» …). Systematisch: 38 von 1'231 kantonalen Erlassen ohne Struktur-Sidecar (ZH 3/3, JU 7, VD 7, TI 5, GE 4, NE 4, SZ 4, SG 3, AR 1, BS 0). Wurzel-Fix wäre ein PDF-Struktur-Adapter je Quellsystem — Priorisierungsentscheid, kein Quick-Fix. *(Cowork-Befund 42, 18.8.2026, unverifiziert am UI — vor Bau reproduzieren.)*
 
 ---
+
+**Nacht 5.9.2026 (CI #691/#683):**
+- [ ] **Kontention (5.9.2026, Nachmittag):** bei ≥ 4 parallelen Bau-Agenten + Stop-Hook-Gate auf einer Maschine reissen `scripts/datenhaltung/suche.test.ts`/`suche-rang.test.ts` ihr 95-s-Setup-Limit (Vollsuite 224 s statt 40 s) und E2E-Latten (`international-kanonik-ia6` toBeInViewport, `leser-kopf-cls-s3` CLS, `a11y` dunkel BS-640.100) — isoliert stets grün (belegt 4×). Kein Code-Fix; Regel: Tore seriell fahren, wenn Bauer laufen; Stop-Hook-Gate unter Last als Hinweis lesen, nicht als Rot. **Wurzel-Fix-Kandidat (Opus-Prüfer 5.9.2026):** `suche.test.ts` baut je Lauf den In-memory-FTS-Index auf (Budget 14.8. schon 60→95 s gehoben) — vorgebaute DB-Fixture statt Aufbau je Lauf; eigener Schritt unter QS-DATA-INGEST-DRIFT oder QS-BASIS.
+- [ ] **Flake-Sammlung 5.9.2026 (je 1 failed, Retry grün):** `gesetze-ia-v2-walks:65` (#691/#711), `split-erwaegungssprung.e2e.ts:47` ⧉-Pane auf Erwägung, `tastatur.e2e.ts:81` Skip-Link (#715), `leser-v3-blatt:105` ⌘K-Split — alle Hydration-/Timing-Klasse; nach der 60-s-Härtung Rate neu messen (`zaehleFlakySpecs` in der Selbstopt-Zeitreihe).
+- [ ] **OR-Leser-e2e auf 60-s-Budget härten** — `gesetze-ia-v2-walks.e2e.ts:72` 10-s-Timeout auf `#art-336_c` (2-vCPU); #682 härtete nur `norm-sprung`/`leser-suche`; alle `gesetze/bund/OR`-Specs als Infrastruktur.
+- [ ] **⌘K-Vorlauf im Split** (CI #711, `leser-v3-blatt.e2e.ts:105` flaky) — Verdacht Nebenwirkung von #682 (vor Hydration löst der Vorlauf in der Kopf-Suche aus, nicht im fokussierten Pane); bei Wiederholung `fruehesSuchKuerzel.ts`: Vorlauf nur einlösen, wenn kein Pane-Fokus.
+- [ ] **`check:e2e-shards` deckelt Laufzeit je Shard** — Balance über mehrere CI-Läufe mitteln (Streuung ≈ verschobener Betrag).
 
 ## §5 — `QS-CODE-PROP` · Eigenschafts-Tests (property-based) für die Rechen-Engines
 

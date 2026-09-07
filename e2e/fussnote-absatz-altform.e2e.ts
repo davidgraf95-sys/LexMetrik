@@ -16,6 +16,16 @@
 // FN-4-Ausgangsbefund) + KOV (zweites Familien-Mitglied): kippt ein künftiger
 // Re-Pin/Extraktor-Drift die Absatz-Zuordnung zurück auf Artikelebene, wird er rot.
 import { test, expect } from '@playwright/test'
+import { vollerApparat } from './helpers/vollerApparat'
+
+// ── §6.3-DEKLARATION (D35-F3, Entscheid David 7.9.2026) ─────────────────────
+// Die Vorgabe der Ansicht ist seither «Fassung», und dort sind die als `kl:'A'`
+// klassifizierten Änderungs-Fussnoten samt ihren Markern gedämpft (beim
+// Bundesrecht die Mehrheit: ZGB 719 von 809, StPO 187 von 283). Diese Sonde
+// prüft die EXTRAKTION, nicht die Ansicht — sie stellt darum den vollen
+// Apparat ein. Die geprüfte Aussage ist Wort für Wort unverändert.
+test.beforeEach(async ({ page }) => { await vollerApparat(page) })
+
 
 test('VZG Art. 1: fn 4/5 sitzen im jeweiligen Absatz, fn 3 auf Artikelebene', async ({ page }) => {
   await page.goto('/gesetze/bund/VZG#art-1')

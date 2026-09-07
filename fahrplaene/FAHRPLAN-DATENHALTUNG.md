@@ -88,6 +88,167 @@ Entscheide (SSoT, Andockpunkt, Quellen) stehen im nachfolgenden Abschnitt
 
 ---
 
+## §16 · Suche-Edge-Umzug Kanton — QS-BASIS (d), Etappen K0–K5 *(31.8.2026)*
+
+Umsetzung der Datenhaltungs-Optimierung aus «12. Datenhaltungs-Optimierung»
+(archiviert, s. unten) für den Such-Pfad. Bau auf `feat/qs-basis-suche-edge`,
+Basis `f283f5cb4`. **Merge gesperrt bis zur Gegenprüfung** (Risikopfad
+`scripts/datenhaltung`).
+
+> **Spec-Zugriff korrigiert (31.8.2026).** Der Bau-Auftrag verwies auf «5. Etappen»
+> und «10. Entscheide» *dieser* Datei. Beide Abschnitte liegen seit dem
+> Plan-Neuschnitt 29.8.2026 in `archiv/fahrplaene/FAHRPLAN-DATENHALTUNG.md`; die
+> lebende Datei trägt nur noch §0/§13/§14. Der Verweis war also nicht falsch, aber
+> nicht mehr auflösbar — hier festgehalten, damit die nächste Session nicht
+> dieselbe Suche fährt. Massgeblich waren: Archiv «12.1 Vier technische Posten»
+> (contentless-FTS, Index-Strategie) und «10 (7) Weiche C: Voll-Rebuild».
+
+**K0 Nullprobe.** Kennzahlen vor dem Umbau eingefroren →
+`bibliothek/register/suche-edge-nullprobe-2026-08-31.md`. Kernzahl für jede
+spätere Entscheidung: **Kanton = 4.26 MiB gzip = 45.2 %** des statischen
+Suchindex.
+
+**K1 Recall-Parität.** `fts_artikel` indexierte nur `bloeckeText` — die fünf
+Recall-Felder des statischen Index (m/n/g/tb/f, 21.5 % des Rohtextes) hatten am
+Edge kein Gegenstück. Der Fehler war STILL: die Antwort war nie leer, nur
+schlechter (Query «Miete» → OR 253 und OR 267 mit **null** Treffern, während zehn
+kantonale Gebührenerlasse die Liste anführten). Jetzt sechs FTS-Spalten, gespeist
+aus der geteilten Extraktion `scripts/suche-felder.ts` (§5); Struktur-Sidecar lag
+bereits als `dokument`-Blob in der DB. Nebenbei: `fts_artikel` liegt lokal wie
+remote **contentless** — die alte `content='artikel'`-Deklaration behauptete eine
+Spalte, die es nie gab (`SELECT count(*)` ohne MATCH scheitert deshalb heute
+schon). Das ist Posten (b) aus Archiv-§12.1. Kosten: HOT-Replika 665.46 → 671.00
+MiB (+0.8 %, Budget 1024).
+
+**K2 Ranking-Parität — Entscheid.** Der Auftrag empfahl, `artikelRanking`
+clientseitig auf die Edge-Zeilen anzuwenden. **Verworfen, weil gemessen
+untauglich:** nach K1 lag OR 253 bei «Miete» auf bm25-Rang 128 von 165, ZGB 641
+bei «Eigentum» auf 466 von 658. Ein Client-Re-Ranking sortiert nur das
+zurückgegebene Fenster (max. 50) — es rettet keinen Kandidaten, den die Abfrage
+nie geliefert hat. Die dreistufige topische Ordnung liegt darum IM SQL-Kern, wo
+sie über die ganze Treffermenge wirkt. Ergebnis: 8/8 Fälle des S4-Testsets im
+erlaubten Rang. **Preis, bewusst gezahlt:** die Rang-Politik steht jetzt zweimal
+(SQL + TypeScript) — nicht auflösbar, weil `suche-kern.ts` die Null-Import-Regel
+für `api/**` trägt und es keinen Produktiv-Import `scripts/ → src/` gibt. Die
+Doppelung ist bewacht statt versteckt (`scripts/datenhaltung/suche-rang.test.ts`
+vergleicht beide `KERNERLASSE`-Listen und misst beide Wege am gleichen Testset).
+
+**K3 vorbereitet, NICHT scharf.** `SUCHE_INDEX_EBENEN` baut auf Wunsch einen
+Bund-only-Index (−4.26 MiB gzip); Default AUS, `artikel.json` byte-gleich
+(sha256 `c2a98aea…` vor und nach dem gesamten Schritt). Mitgefundener Defekt
+behoben: der Client hängte eine Ebene auch ohne Einträge als «bereit» ein —
+`fehlendeEbenen` wäre leer geblieben und die Oberfläche hätte Vollständigkeit
+behauptet. **Scharfschaltung ist ein David-Entscheid** (§8), Restliste im
+Bau-Bericht.
+
+**K4 NICHT gebaut** — `scripts/check-perf-budget.ts` ist Top-Level und liegt bei
+einer Parallel-Session. Zieltext als Übergabe im Bau-Bericht.
+
+**K5 Nachführ-Kette.** `npm run datenhaltung:nachfuehren` fährt build → manifest →
+turso-sync → check:turso-frische in Reihenfolge, bricht beim ersten Fehlschlag ab
+(ein Sync auf eine halb gebaute DB stellte sonst einen falschen Index live) und
+überspringt die Turso-Hälfte ohne Token **laut und namentlich**. Seit K1/K2 ist
+eine veraltete Replika keine Verzögerung mehr, sondern eine falsche Auskunft.
+
+**K6 Fix-Runde nach der Gegenprüfung (31.8.2026).** Fünf Vollständigkeits-Befunde,
+alle an der Wurzel behoben, jeder mit Rot-Beweis.
+
+**F1 (HOCH) — die Landung hätte die Live-Suche gebrochen.** `api/suche.ts` schickt
+seit K2 spalten-gefilterte MATCH-Ausdrücke; gegen die alte Ein-Spalten-Replika
+antwortet SQLite `no such column: marginalie`, die Funktion macht daraus **502 auf
+jede Artikel-Query**. Kein Riegel griff: `turso-sync.yml` triggerte nur auf
+`public/normtext/**`, `public/rechtsprechung/**`, `daten-manifest.json` — dieser Diff
+berührt keines davon —, und `check-turso-frische.ts` verglich nur Zeilenzahlen,
+rowid-Spannweite und `manifest_sha`, also lauter Grössen, die eine reine FORM-Änderung
+unverändert lässt. Zwei unabhängige Wurzel-Fixe: (a) `paths` um
+`scripts/datenhaltung/**`, `scripts/suche-felder.ts`, `api/suche.ts` und die
+Workflow-Datei erweitert; (b) neue Dimension 0 im Frische-Wächter — DDL-Vergleich
+gegen `ddlFtsArtikel()`/`ddlFtsEntscheide()`, normalisiert nur um Namens-Quotes und
+Whitespace (nach `ALTER TABLE … RENAME TO` schreibt SQLite den Namen gequotet zurück;
+ein roher Vergleich wäre dauerhaft rot und damit wertlos). Mitgenommen: die
+Entscheide-DDL stand zweimal von Hand im Repo, jetzt eine Quelle.
+
+**Deploy/Sync-Fenster — gemessen, nicht geschätzt.** Beide Workflows hängen am selben
+`push` auf `main`; keiner wartet auf den anderen. Auf der realen Zeitachse
+(CI-Lauf 33411008213 vom 31.8.2026, dazu die letzten vier Push-Syncs):
+
+| | Dauer ab Push |
+|---|---|
+| Turso-Sync komplett (Build → Sync → Frische → Live-Probe) | 5,3 – 6,6 min |
+| Prod-Deploy live (`deploy` braucht `diff · tore · bau · e2e`) | **14,8 min** |
+
+Im Normalfall ist die Replika also **rund acht Minuten vor** der neuen Edge-Funktion
+umgestellt, und diese Reihenfolge ist ungefährlich: die HEUTE auf `main` laufende
+Abfrage nutzt weder Spaltenfilter noch bm25-Gewichte (`MATCH ?`, `bm25(fts_artikel)`)
+und läuft gegen den neuen Sechs-Spalten-Index anstandslos — lokal gegen
+`daten/normtext.db` verifiziert («OR 319» 4 · «Verjährung» 259 · «Miete» 165 Treffer,
+kein Fehler). **Das ist aber ein Rennen, keine Zusicherung**, und drei Wege öffnen das
+Fenster doch:
+1. ein langsamer Sync (vor dem Index-Transfer waren es 32,8 min; `timeout-minutes: 90`),
+2. ein durch `concurrency: turso-sync` hinter einem Vorlauf wartender Sync,
+3. **fehlendes `TURSO_AUTH_TOKEN`** — dann überspringt der Sync-Job ehrlich und endet
+   mit 0, während der Deploy trotzdem ausliefert. Das Fenster wäre dann nicht Minuten
+   lang, sondern offen bis zum nächsten Sync von Hand.
+
+**Billigster Riegel (Vorschlag, NICHT gebaut — Entscheid liegt beim Orchestrator/David):**
+vor dem Merge den Workflow «Turso-Serving-Sync» per `workflow_dispatch` auf dem Branch
+`feat/qs-basis-suche-edge` fahren. Er baut das Sechs-Spalten-Artefakt aus den
+committeten JSONs und stellt es live; die alte Edge-Funktion arbeitet währenddessen
+weiter (s. o.), und `check:turso-frische` bleibt grün, weil dieser Branch
+`daten-manifest.json` nicht anfasst (verifiziert: `git diff main...HEAD` zeigt die
+Datei nicht). Danach ist das Fenster null statt bloss klein — Kosten: ein Klick, kein
+Code. Die Alternative, den Deploy im Workflow auf den Sync warten zu lassen, koppelt
+zwei bisher unabhängige Pipelines und gehört in einen eigenen Schritt.
+
+**F2 (MITTEL) — Paritäts-Behauptung war überzeichnet.** Der Spaltenfilter verlangte
+ALLE Terme in derselben Spaltengruppe, `artikelRanking` nur EINEN. Gemessen:
+«Verjährung Fristen» → OR 127 auf Rang 8 statt 1; «Verjährung Forderung» → Top-3 ohne
+Grundartikel. Behoben durch OR-Verknüpfung; **recall-neutral**, weil die
+Stufen-Ausdrücke nur LEFT-JOIN-Mengen speisen (über die volle Pagination gegengeprüft:
+23/23 und 20/20 Treffer, Mengen elementweise identisch). **Präfix bleibt eine bewusste
+Abweichung:** der Client findet «Verjähr», der DB-Weg nicht. Angleichen ist eine
+Recall-, Rang- UND Latenz-Änderung auf jeder Query (Und der Präfix verschiebt nicht nur die Treffermenge, sondern auch STUFEN und RÄNGE derselben Treffer (GP-Messung 31.8.2026, echter Client-rangiere() gegen identische DB-Treffermenge, ohne Recall-Confound): «Eigentum» n=658 — OR 261 («Wechsel des Eigentümers») und ZGB 200 («Eigentumsverhältnisse») stehen beim Client via startsWith auf Stufe 0/Seite 1, am Edge auf Stufe 2; «Eigentum Grundstück» n=87 — 15 Stufen-Divergenzen, 33 Positionswechsel >5 Plätze; «Miete Kündigung» n=20 — Top-20 nicht identisch.) — lokal, warm, n=3
+Median: «Eigentum» 15,6 → 107,1 ms bei 658 → 1502 Treffern (6,9x). Eigener
+Roadmap-Punkt; bis dahin als Test mit ehrlicher Erwartung festgehalten. Die
+«gleichwertig»-Sätze an drei Stellen sind entsprechend zurückgenommen — Davids
+K3-Scharfschaltungs-Entscheid bleibt unberührt, nur seine Grundlage darf nicht zu
+stark klingen (§8).
+
+**F3 (NIEDRIG) — der behauptete Byte-Beweis existierte nicht.** Der K3-Kommentar
+verwies auf `src/tests/suchIndex.test.ts`; dort stand nichts dergleichen, und die
+K3-Tests lagen anderswo. Jetzt echter Beweis in `src/tests/suche/ebenenWahl.test.ts`.
+Referenz ist bewusst **nicht** das ausgelieferte `public/such-index/artikel.json` —
+der Ordner ist gitignored und entsteht erst in `npm run build`; der CI-Job `tore` baut
+nicht, der Test wäre dort ENOENT-rot gelaufen (lokal reproduziert). Verglichen wird
+gegen die Montage aus `baueEbenenIndex` je Ebene, also den Code-Weg vor dem Schalter
+(sha256 `c2a98aea…`, derselbe Wert wie im gebauten Artefakt).
+
+**F4 (NIEDRIG) — K5 hatte keinen Test**, weil die Logik keinen Angriffspunkt hatte
+(Rumpf-Code mit direktem `npm run` und `process.exit`). Naht `fuehreKette(...)`
+eingezogen, Ablauf unverändert; 8 hermetische Tests plus ein Subprozess-Test gegen
+einen `npm`-Stub im `PATH`, der das eine belegt, was eine Attrappe nicht kann: dass
+der echte Aufrufweg den Exit-Code durchreicht.
+
+**F5 (INFO) — der Transport-Test führte vier Zweitkopien** (Spaltenliste, Tokenizer,
+Entscheide-DDL, bm25-Gewichte) und war damit für genau die Drift blind, die er
+bewachen sollte. Alles kommt jetzt aus der Produktionsquelle; **neu** ist der Riegel,
+der ganz fehlte: gleich viele bm25-Gewichte wie FTS-Spalten, Stufen-Spalten sind echte
+Index-Spalten, und die Gewichte fallen in der dokumentierten Rangfolge
+t > m > n > g > tb > f.
+
+**Nebenbefund, bewusst NICHT gefixt — Umlaut-Faltung.** «Verjaehrung» (ae) findet
+nichts, «Verjahrung» (a) findet alle 259 Treffer: `remove_diacritics 2` faltet ä→a,
+aber niemand faltet ae→ä. Das betrifft **beide** Wege gleich — der Client normalisiert
+mit NFKD und strippt Diakritika, also genauso —, ist somit kein Edge-Paritätsdefekt,
+sondern eine gemeinsame Recall-Lücke. Ein Fix müsste beide Indizes gemeinsam ändern
+und braucht linguistische Sorgfalt (eine naive ae→ä-Faltung trifft «Aeroplan»,
+«Israel», «Praesidium» sehr unterschiedlich). Eigener Roadmap-Punkt.
+
+**Nicht berührt:** die Heiss/Kalt-Grenze (Archiv-§12.2) bleibt unverändert
+David-Gate; es wurde kein echter Turso-Lauf gefahren (Env fehlt lokal).
+
+---
+
 ## Archivierte Abschnitte *(Plan-Neuschnitt 29.8.2026)*
 
 15 Abschnitt(e) dieser Datei sind wörtlich nach
@@ -109,3 +270,11 @@ ROADMAP-Bindung mehr. Titel:
 - 11. Darstellung (drei Reader + EIN Kontext-Layer)
 - 12. Datenhaltungs-Optimierung + Heiss/Kalt-Grenze (§14-Intake David 20.7.2026)
 - §15 · ROADMAP-Spec-Nachzug `W2·6-DATA` (wörtlich verschoben 4.8.2026, ROADMAP-Diät Welle 3)
+
+> **Landungs-Lehre 31.8.2026 (CI-Rot PR #604, §17):** Der `Gegenpruefung:`-Trailer
+> wird via `git log --format=%(trailers:…)` gelesen — git erkennt NUR den letzten
+> Absatz als Trailer-Block. Eine Leerzeile zwischen `Gegenpruefung:` und
+> `Co-Authored-By:` macht das Verdikt unsichtbar → Merge-Schutz rot. Formregel:
+> Roadmap/Gegenpruefung/Co-Authored-By in EINEM Schlussblock ohne Leerzeilen;
+> vor jedem PR lokal `npm run check:merge-schutz` fahren (kostet Sekunden,
+> spart den CI-Lauf).

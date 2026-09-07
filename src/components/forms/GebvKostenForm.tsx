@@ -97,7 +97,13 @@ export function GebvKostenForm({ minimal = false }: { minimal?: boolean } = {}) 
           <BetragsFeld value={forderung} onChange={setForderung} className={inputCls}
             placeholder="z. B. 5'000" aria-label="Forderung in Franken" />
         </Field>
-        <Field label="Zahlungsbefehl (Art. 16)">
+        {/* LM-079 (B19): Hilfetext ergänzt — fehlte hier als eines von zwei
+            Feldern im Formular, obwohl Forderung/Verwertung/Einzahlung/
+            Gerichtsentscheid je einen tragen. Wortlaut aus der Engine
+            (gebvKosten.ts: «Zahlungsbefehl (Art. 16 Abs. 1 GebV SchKG)» /
+            «Weitere … Ausfertigungen (Art. 16 Abs. 2)» / «Zustellungsversuche
+            (Art. 16 Abs. 3)»). */}
+        <Field label="Zahlungsbefehl (Art. 16)" hint="Grundgebühr nach Forderungshöhe (Abs. 1); weitere Ausfertigungen (Abs. 2) und Zustellversuche (Abs. 3) zusätzlich">
           <div className="space-y-2">
             <Checkbox checked={zb} onChange={setZb} label="Zahlungsbefehl erlassen/zugestellt" />
             {zb && (
@@ -112,7 +118,9 @@ export function GebvKostenForm({ minimal = false }: { minimal?: boolean } = {}) 
             )}
           </div>
         </Field>
-        <Field label="Pfändung (Art. 20)">
+        {/* LM-079 (B19): Hilfetext ergänzt, Wortlaut aus der Engine
+            (gebvKosten.ts: «Pfändung (Art. 20 GebV SchKG)»). */}
+        <Field label="Pfändung (Art. 20)" hint="Gebühr für den Pfändungsvollzug nach Forderungshöhe">
           <select value={pf} onChange={(e) => setPf(e.target.value as typeof pf)} className={inputCls} aria-label="Pfändung">
             <option value="">keine</option>
             <option value="vollzogen">vollzogen (inkl. Pfändungsurkunde)</option>

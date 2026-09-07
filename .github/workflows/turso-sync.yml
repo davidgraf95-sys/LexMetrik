@@ -19,6 +19,23 @@
 #   2. Der Job `frische` laeuft taeglich per cron und wird ROT, wenn die Replika hinterher-
 #      hinkt oder unvollstaendig ist. Ein abgebrochener Sync kann damit nicht mehr schweigen —
 #      genau das war der eigentliche Schaden (§8).
+#
+# ── Erweiterung 31.8.2026 (Gegenpruefungs-Befund F1 zu QS-BASIS (d)) ───────────────────
+# Die `paths` unten sahen bis dahin NUR Daten-Diffs. Damit war die stille Annahme
+# verdrahtet, das SCHEMA der Replika aendere sich nie — und genau die brach QS-BASIS (d) K1:
+# `fts_artikel` bekam sechs Spalten statt einer, und api/suche.ts schickt seit K2
+# spalten-gefilterte MATCH-Ausdruecke (`{marginalie gliederung} : "…"`). Der Diff dieses
+# Bauschritts beruehrt KEINE Datei aus der alten Liste; der Sync waere also nicht gelaufen,
+# waehrend die neue Edge-Funktion gegen die alte Ein-Spalten-Replika `no such column:
+# marginalie` und damit 502 auf JEDE Artikel-Query geliefert haette.
+# Aufgenommen sind darum alle Flaechen, die das Replika-Schema oder die Query-Form
+# bestimmen: Generator- und Sync-Code (scripts/datenhaltung/**), die geteilte
+# Feld-Extraktion, die den Index FUELLT (scripts/suche-felder.ts), die Edge-Funktion selbst
+# (api/suche.ts) und diese Datei.
+# `paths` ist und bleibt aber ein Ausloeser, kein Beweis — deshalb steht der zweite,
+# unabhaengige Riegel derselben Klasse in check-turso-frische.ts: der vergleicht seit
+# demselben Befund die DDL der Replika gegen `ddlFtsArtikel()`/`ddlFtsEntscheide()` und
+# wird ROT, wenn ein Sync aus irgendeinem Grund doch nicht lief.
 name: Turso-Serving-Sync
 
 on:
@@ -28,6 +45,10 @@ on:
       - 'public/normtext/**'
       - 'public/rechtsprechung/**'
       - 'daten-manifest.json'
+      - 'scripts/datenhaltung/**'
+      - 'scripts/suche-felder.ts'
+      - 'api/suche.ts'
+      - '.github/workflows/turso-sync.yml'
   schedule:
     # Taeglich 05:17 UTC — Frische-Waechter, unabhaengig davon ob jemand pusht.
     - cron: '17 5 * * *'
@@ -89,8 +110,27 @@ jobs:
             echo "::warning::Kein TURSO_AUTH_TOKEN — Sync uebersprungen (ehrliche Degradierung)."
           fi
 
-      - name: HOT-Artefakt bauen (aus committeten JSONs, reproduzierbar)
+      # Cache fuer die drei DB-Dateien, die `datenhaltung:build` erzeugt (normtext/
+      # rechtsprechung/soft-law). Schluessel deckt DATEN (daten-manifest.json) UND
+      # GENERATOR (scripts/datenhaltung/**) sowie package-lock.json ab — das Manifest
+      # fingerprintet nur die Daten, nicht den Bau-Code; ohne den Generator im Schluessel
+      # wuerde ein reiner Code-Fix (z. B. eine Extraktionsregel) stumm den alten DB-Stand
+      # aus dem Cache ziehen. KEIN restore-keys: ein Praefix-Treffer waere ein ALTERER
+      # Stand, der nie als aktuell gelten darf (§2/§5) — bei Miss wird immer frisch gebaut.
+      # suche-felder.ts ist FTS-Bau-Input ausserhalb datenhaltung/ (Befund F1 31.8.2026) — darum im Schlüssel.
+      - name: Cache HOT-Artefakt (DB-Dateien)
+        id: db-cache
         if: steps.token.outputs.da == '1'
+        uses: actions/cache@v4
+        with:
+          path: |
+            daten/normtext.db
+            daten/rechtsprechung.db
+            daten/soft-law.db
+          key: db-${{ runner.os }}-${{ hashFiles('daten-manifest.json', 'scripts/datenhaltung/**', 'scripts/suche-felder.ts', 'package-lock.json') }}
+
+      - name: HOT-Artefakt bauen (aus committeten JSONs, reproduzierbar)
+        if: steps.token.outputs.da == '1' && steps.db-cache.outputs.cache-hit != 'true'
         run: npm run datenhaltung:build
 
       # Beweist, dass der SOEBEN gebaute lokale Stand zum committeten daten-manifest.json

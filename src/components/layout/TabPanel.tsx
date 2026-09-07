@@ -1,12 +1,13 @@
 import { useRef, useState } from 'react';
-import { ordneTabsUm, tabSchluessel, type TabEintrag } from '../../lib/tabs';
-import { erlassVonPfad, verlaufLabel, type VerlaufManifeste } from '../../lib/verlaufLabel';
+import { SchliessKnopf } from '../ui/SchliessKnopf';
+import { ordneTabsUm, tabSchluessel, type TabEintrag, reiterKurzformText, reiterTitel } from '../../lib/tabs';
+import { type VerlaufManifeste } from '../../lib/verlaufLabel';
 import {
-  reiterKategorie, herkunftVon, kantonVonPfad, artikelLabelVonPfad, gleicheReiterGruppe,
+  reiterKategorie, herkunftVon, artikelLabelVonPfad, gleicheReiterGruppe,
   KAT_META, KAT_ORDER, HERKUNFT_ORDER, HERKUNFT_LABEL,
   type Herkunft,
 } from '../../lib/tabGruppen';
-import { HerkunftIcon } from '../HerkunftIcon';
+import { RegisterMarke } from '../suche/RegisterMarke';
 
 // ─── Vertikales Reiter-Panel (Auftrag David 26.6.2026, P3) ──────────────────
 //
@@ -72,15 +73,18 @@ export function TabPanel({ tabs, manifeste, aktivSchluessel, onNavigate, onSchli
   // Eine Reiter-Zeile: dreispaltig (Icon · Name · Artikel) + Schliessen-Knopf.
   // `liste`/`idx` sind die Blatt-Liste dieser Zeile und ihre Position darin —
   // daraus leiten sich die Nachbarn für die ▲/▼-Tasten ab (immer dieselbe Gruppe).
-  const zeile = (t: TabEintrag, alsGesetz: boolean, kat: typeof KAT_ORDER[number], liste: TabEintrag[], idx: number) => {
+  const zeile = (t: TabEintrag, alsGesetz: boolean, liste: TabEintrag[], idx: number) => {
     const aktiv = tabSchluessel(t.path) === aktivSchluessel;
-    const e = alsGesetz ? erlassVonPfad(t.path, manifeste) : null;
-    const name = (alsGesetz && e?.kuerzel) ? e.kuerzel : verlaufLabel(t.path, manifeste);
+    // ── R3 (Prüfbefund R11, 6.9.2026) · DIESELBE BESCHRIFTUNG WIE DIE LEISTE ─
+    // GEMESSEN @390: das Blatt baute seine Namen selbst (`verlaufLabel`) und
+    // zeigte darum den Volltitel, wo die Leiste die Kurzform trägt —
+    // «Verfahrens- & Rechtsmittelfristen» statt «Fristenrechner», und für
+    // Entscheide die volle Zitierung samt Urteilsdatum. Zwei Beschriftungen
+    // für dieselbe Sache sind eine zweite Wahrheit (§5). Beide Flächen lesen
+    // jetzt `lib/tabs` — Kurzform in der Zeile, Volltitel im `title`.
+    const name = reiterKurzformText(t, manifeste);
+    const titel = reiterTitel(t, manifeste);
     const art = alsGesetz ? artikelLabelVonPfad(t.path) : null;
-    // herkunft kann null sein, wenn das Manifest noch nicht geladen ist → dann
-    // KEIN (falsches) Schweizerkreuz, sondern das neutrale Kategorie-Piktogramm.
-    const herkunft = alsGesetz ? herkunftVon(t.path, manifeste) : null;
-    const kanton = alsGesetz ? kantonVonPfad(t.path, manifeste) : null;
     const ueber = ueberPath === t.path;
     const vorher = liste[idx - 1];
     const nachher = liste[idx + 1];
@@ -106,44 +110,72 @@ export function TabPanel({ tabs, manifeste, aktivSchluessel, onNavigate, onSchli
         onDragEnd={() => { gezogenRef.current = null; setUeberPath(null); }}
         className={`flex items-center rounded-md ${ueber ? 'border-t-2 border-brass-400' : ''} ${aktiv ? 'bg-brass-100/50' : 'hover:bg-brass-100/30'}`}>
         <button type="button" aria-current={aktiv ? 'page' : undefined}
-          onClick={() => onNavigate(t.path)}
-          className={`grid flex-1 min-w-0 grid-cols-[1rem_1fr_auto] items-center gap-2 text-left px-2 py-1.5 text-body-s ${aktiv ? 'text-brass-800 font-medium' : 'text-ink-700'}`}>
-          {/* Spalte 1 — Herkunft/Kategorie-Icon */}
-          {alsGesetz && herkunft
-            ? <HerkunftIcon herkunft={herkunft} kanton={kanton} className="h-4 w-4" />
-            : <span aria-hidden className="text-center text-ink-500">{KAT_META[kat].pikto}</span>}
-          {/* Spalte 2 — Name/Abkürzung */}
+          onClick={() => onNavigate(t.path)} title={titel}
+          className={`grid flex-1 min-w-0 grid-cols-[3px_1fr_auto] items-center gap-2 text-left px-2 py-1.5 text-body-s ${aktiv ? 'text-brass-800 font-medium' : 'text-ink-700'}`}>
+          {/* ── R4 · SPALTE 1 IST DER REGISTERSTRICH, KEIN BILD ──────────────
+              GEMESSEN @390: die Zeile führte ein Kantonswappen als <img>, sonst
+              ein Kategorie-Piktogramm (⚖ ✎ ∑) — zwei Bildsprachen in einer
+              Spalte, und die Wappen zogen als einzige Farbflächen der ganzen
+              Liste den Blick auf sich. Der Registerstrich ist dasselbe Zeichen
+              wie in der Leiste darüber und im Such-Panel: EINE Marke, EINE
+              Quelle (`layout/bereiche`, §5). Die HERKUNFT geht nicht verloren —
+              sie ist die Untergruppe, unter der die Zeile steht («Bund»,
+              «Kanton», «International»), und steht im `title`. */}
+          <RegisterMarke route={t.path} />
+          {/* Spalte 2 — Kurzform */}
           <span className="truncate">{name}</span>
           {/* Spalte 3 — aktueller Artikel (nur Gesetze) */}
           {art ? <span className="num shrink-0 text-micro text-ink-500">{art}</span> : <span />}
         </button>
         {/* ▲/▼ — Umsortieren per Tastatur/Touch (Alternative zu Drag&Drop, a11y).
             Bewegt den Reiter an die Position des Nachbarn IN DERSELBEN Gruppe. */}
+        {/* LM-090 (W2·17-UI-BEFUNDE B10, 4.9.2026). Die GRÖSSEN-Hälfte des
+            Befunds ist widerlegt: die «rund 14 px» sind die Glyphengrösse, die
+            Zielflächen messen nachgemessen 24×28 (▲▼⧉) und 28×28 (✕) — über
+            der AA-Untergrenze (WCAG 2.5.8, 24 px). Das Komfortmass 44 px ist
+            für DIESE Zeile datiert verworfen (SchliessKnopf `komfort={false}`,
+            A3-1): das Pseudo-Element läge über den Nachbarknöpfen und den
+            Zeilen darüber/darunter und nähme denen die Klicks.
+            REPRODUZIERT war die BESCHRIFTUNGS-Hälfte, aber nur halb: die drei
+            Sortier-/Öffnen-Knöpfe trugen ein sprechendes `aria-label` und
+            damit KEIN `title` — am Zeiger blieben sie stumm, während das ✕
+            daneben (via `SchliessKnopf`) seit je beides führt. Sie bekommen
+            denselben Namen als `title`; eine sichtbare Textbeschriftung
+            scheidet in einer 28-px-Zeile aus. */}
         <button type="button" disabled={!vorher}
           onClick={() => vorher && ordneTabsUm(t.path, vorher.path)}
           aria-label={`Reiter «${name}» nach oben`}
+          title={`Reiter «${name}» nach oben`}
           className="inline-flex items-center justify-center w-6 h-7 shrink-0 rounded text-ink-500 hover:text-brass-700 disabled:opacity-30 disabled:hover:text-ink-500 transition-colors">
-          <span aria-hidden className="text-micro leading-none">▲</span>
+          <span aria-hidden className="lc-griff-glyph">▲</span>
         </button>
         <button type="button" disabled={!nachher}
           onClick={() => nachher && ordneTabsUm(t.path, nachher.path)}
           aria-label={`Reiter «${name}» nach unten`}
+          title={`Reiter «${name}» nach unten`}
           className="inline-flex items-center justify-center w-6 h-7 shrink-0 rounded text-ink-500 hover:text-brass-700 disabled:opacity-30 disabled:hover:text-ink-500 transition-colors">
-          <span aria-hidden className="text-micro leading-none">▼</span>
+          <span aria-hidden className="lc-griff-glyph">▼</span>
         </button>
         {/* ⧉ — nebeneinander öffnen (Split-View): nur ab lg + freier Kapazität. */}
         {onDaneben && !paneOffen?.(t.path) && (
           <button type="button" onClick={() => onDaneben(t.path)}
             aria-label={`Reiter «${name}» nebeneinander öffnen`}
+            title={`Reiter «${name}» nebeneinander öffnen`}
             className="hidden lg:inline-flex items-center justify-center w-6 h-7 shrink-0 rounded text-ink-500 hover:text-brass-700 transition-colors">
-            <span aria-hidden className="text-body-s leading-none">⧉</span>
+            <span aria-hidden className="lc-griff-glyph">⧉</span>
           </button>
         )}
-        <button type="button" onClick={() => onSchliessen(t.path)}
-          aria-label={`Reiter «${name}» schliessen`}
-          className="inline-flex items-center justify-center w-7 h-7 mr-0.5 shrink-0 rounded text-ink-500 hover:text-danger-700 transition-colors">
-          <span aria-hidden className="text-body-s leading-none">✕</span>
-        </button>
+        {/* A3-1 (R3-β): EIN Schliess-✕ der App. Der danger-Hover ist keine
+            Farbwahl mehr, sondern eine DEKLARIERTE Aussage über die Handlung
+            (`ton="destruktiv"`): der Klick wirft den Reiter samt Verlauf weg.
+            Die Box (w-7 h-7) bleibt die der Reiter-Zeile — 44 px hätten dort
+            keinen Platz; die Trefferfläche holt der Baustein per `::after`. */}
+        <SchliessKnopf name={`Reiter «${name}» schliessen`} ton="destruktiv"
+          /* `komfort={false}`: 44 px lägen hier über dem ⧉-Nachbarn und über den
+             Reiter-Zeilen darüber/darunter — die Fläche nähme denen die Klicks.
+             Die Zeile hält die AA-Untergrenze (24 px) aus der Grundklasse. */
+          komfort={false}
+          onClick={() => onSchliessen(t.path)} klasse="w-7 h-7 mr-0.5" />
       </li>
     );
   };
@@ -151,9 +183,11 @@ export function TabPanel({ tabs, manifeste, aktivSchluessel, onNavigate, onSchli
   // Klappbarer Gruppen-/Untergruppen-Kopf.
   const kopf = (id: string, label: string, anzahl: number, tief: boolean) => (
     <button type="button" onClick={() => toggle(id)} aria-expanded={offen(id)}
-      className={`flex w-full items-center gap-1.5 rounded px-1.5 py-1 text-left transition-colors hover:bg-paper-sunken/60 ${tief ? 'text-xs pl-3' : 'lc-overline'}`}>
+      className={`flex w-full items-center gap-1.5 rounded px-1.5 py-1 text-left transition-colors lc-hover-flaeche ${tief ? 'text-xs pl-3' : 'lc-overline'}`}>
       <span aria-hidden className={`text-micro text-ink-400 transition-transform ${offen(id) ? '' : '-rotate-90'}`}>▾</span>
-      <span className="flex-1 truncate">{label}</span>
+      {/* R3 · «kein Abschnitt ohne title»: der Gruppenname wird gekappt, sobald
+          das Blatt schmal wird — der Tooltip gibt ihn ganz zurück (§8). */}
+      <span className="flex-1 truncate" title={label}>{label}</span>
       <span className="num text-micro text-ink-400">{anzahl}</span>
     </button>
   );
@@ -186,15 +220,15 @@ export function TabPanel({ tabs, manifeste, aktivSchluessel, onNavigate, onSchli
                           return (
                             <div key={h}>
                               {kopf(subId, HERKUNFT_LABEL[h], subItems.length, true)}
-                              {offen(subId) && <ul className="mt-0.5 space-y-0.5">{subItems.map((t, i) => zeile(t, true, kat, subItems, i))}</ul>}
+                              {offen(subId) && <ul className="mt-0.5 space-y-0.5">{subItems.map((t, i) => zeile(t, true, subItems, i))}</ul>}
                             </div>
                           );
                         })}
-                        {ungeklaert.length > 0 && <ul className="mt-0.5 space-y-0.5">{ungeklaert.map((t, i) => zeile(t, true, kat, ungeklaert, i))}</ul>}
+                        {ungeklaert.length > 0 && <ul className="mt-0.5 space-y-0.5">{ungeklaert.map((t, i) => zeile(t, true, ungeklaert, i))}</ul>}
                       </div>
                     );
                   })()
-                : <ul className="mt-0.5 space-y-0.5 pl-2">{items.map((t, i) => zeile(t, false, kat, items, i))}</ul>
+                : <ul className="mt-0.5 space-y-0.5 pl-2">{items.map((t, i) => zeile(t, false, items, i))}</ul>
             )}
           </div>
         );

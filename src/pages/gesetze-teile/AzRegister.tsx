@@ -64,17 +64,21 @@ import { Link } from 'react-router-dom';
 import { istLesbar, type BrowseErlass } from '../../lib/normtext/browse-typen';
 import { AZ_KLASSEN, gruppiereAZ, ebeneLabel } from './az-register';
 import { erlassPfad } from '../../lib/normtext/erlassAdresse';
+import { zahlGruppiert } from '../../components/typografie';
 
 function AzZeile({ e }: { e: BrowseErlass }) {
   const basePath = erlassPfad(e);
   // Kürzel dezent daneben, wenn es echten Mehrwert trägt (nicht schon im Titel —
   // kantonale «kuerzel» sind oft der ganze Titel, vgl. SysZeile).
+  // B13/LM-118: IN KLAMMERN wie in den Bundes-Titeln («Medizinprodukteverordnung
+  // (MepV)»); freistehend las es sich als Teil des Titels («… Basel-Stadt,
+  // Mietreglement MR»). Eine Kürzel-Schreibweise auf der ganzen Liste.
   const zeigeKuerzel = e.kuerzel && e.kuerzel !== e.titel && !e.titel.includes(e.kuerzel);
   const inhalt = (
     <>
       <span className="min-w-0 break-words text-ink-700 group-hover/az:text-brass-700 transition-colors">
         {e.titel}
-        {zeigeKuerzel && <span className="ml-2 text-xs text-ink-500">{e.kuerzel}</span>}
+        {zeigeKuerzel && <span className="ml-2 text-xs text-ink-500">({e.kuerzel})</span>}
       </span>
       <span className="shrink-0 flex items-baseline gap-2 text-xs text-ink-500">
         <span>{ebeneLabel(e)}</span>
@@ -108,7 +112,19 @@ export function AzRegister({ erlasse }: { erlasse: BrowseErlass[] }) {
   const gruppen = useMemo(() => gruppiereAZ(erlasse), [erlasse]);
   // Sichtbare Liste: die gewählte Buchstaben-Klasse (Lazy-je-Buchstabe — nie
   // alle 1469 auf einmal); null = noch nichts gewählt.
-  const liste = buchstabe ? gruppen.get(buchstabe) ?? [] : null;
+  //
+  // R5-C (5.9.2026) · WARUM HIER KEIN LEERZUSTAND STEHT: eine gewählte Klasse
+  // ist nie leer. `gruppiereAZ` legt einen Map-Eintrag ausschliesslich beim
+  // ERSTEN Erlass einer Klasse an (leere Gruppen entstehen gar nicht), und die
+  // Buchstaben-Leiste unten setzt `disabled` bei `n === 0` — ein Buchstabe ohne
+  // Titel ist also nicht wählbar. Bis Runde 4 hing unter dieser Zeile ein
+  // `liste.length > 0 ? <ul> : <Leerzustand …>`; GEMESSEN am Preview
+  // (`/gesetze`, 5.9.2026): 27 Knöpfe, 4 davon disabled, alle 23 übrigen
+  // durchgeklickt — der Leerzustand erschien null Mal. Ein Zweig, der nicht
+  // scheitern kann, ist gefährlicher als keiner (§6.7): er sieht nach
+  // geprüftem Verhalten aus und ist keines. Darum `?? null` statt `?? []` —
+  // die eine Bedingung unten trägt jetzt beide unerreichbaren Fälle.
+  const liste = buchstabe ? gruppen.get(buchstabe) ?? null : null;
 
   return (
     <section aria-labelledby="az-register-kopf" className="lc-card p-5 space-y-4">
@@ -127,9 +143,15 @@ export function AzRegister({ erlasse }: { erlasse: BrowseErlass[] }) {
               kollidierten (strict mode) mit den Accessible Names der drei
               Einstiegskacheln — die Ebenen-Erklärung steht unten im Panel. */}
           <span className="text-body-s text-ink-500">
-            <span className="num">{erlasse.length.toLocaleString('de-CH')}</span> Erlasse nach Titel
+            <span className="num">{zahlGruppiert(erlasse.length)}</span> Erlasse nach Titel
           </span>
-          <span aria-hidden className={`ml-auto text-ink-500 transition-transform ${offen ? 'rotate-90' : ''}`}>›</span>
+          {/* R8 (7.9.2026): der Pfeil dreht per `rotate-90`. Ein Transform
+              aendert die LAYOUT-Breite nicht, wohl aber den gezeichneten
+              Kasten — das hohe, schmale Glyphen-Feld wurde gedreht zum
+              breiten und ragte 10 px ueber die Karte hinaus (gemessen
+              /gesetze @768–1440, h2 690/680 px). Ein QUADRATISCHES Feld ist
+              drehneutral: gedreht misst es dieselben Kanten wie ungedreht. */}
+          <span aria-hidden className={`ml-auto inline-flex size-5 shrink-0 items-center justify-center leading-none text-ink-500 transition-transform ${offen ? 'rotate-90' : ''}`}>›</span>
         </button>
       </h2>
 
@@ -156,7 +178,7 @@ export function AzRegister({ erlasse }: { erlasse: BrowseErlass[] }) {
                           ? 'bg-brass-100 text-brass-800'
                           : n === 0
                             ? 'cursor-default text-ink-300'
-                            : 'text-ink-700 hover:bg-paper-sunken hover:text-brass-700'
+                            : 'text-ink-700 lc-hover-flaeche hover:text-brass-700'
                       }`}
                     >
                       {k}
@@ -205,22 +227,18 @@ export function AzRegister({ erlasse }: { erlasse: BrowseErlass[] }) {
                 tabIndex={0}
                 className="max-h-96 overflow-y-auto overscroll-contain rounded border border-line/70 p-2"
               >
-                {liste.length > 0 ? (
-                  <ul
-                    /* Remount je Klasse (CI-Befund PR #347, Rest-Shift): OHNE den
-                       key reusen React-Keys (e.key) LI-Knoten über den Klassen-
-                       Wechsel hinweg — überlebende Knoten WANDERN dann im
-                       Scroll-Container (layout-shift), und auf langsamer
-                       Hardware landet der Commit nach der 500-ms-Input-Gnade.
-                       Frische Knoten je Klasse shiften nie. */
-                    key={`b:${buchstabe}`}
-                    className="m-0 list-none space-y-0.5 p-0"
-                  >
-                    {liste.map((e) => <li key={e.key}><AzZeile e={e} /></li>)}
-                  </ul>
-                ) : (
-                  <p className="px-2 py-1 text-body-s text-ink-500">Kein Titel im Register gefunden.</p>
-                )}
+                <ul
+                  /* Remount je Klasse (CI-Befund PR #347, Rest-Shift): OHNE den
+                     key reusen React-Keys (e.key) LI-Knoten über den Klassen-
+                     Wechsel hinweg — überlebende Knoten WANDERN dann im
+                     Scroll-Container (layout-shift), und auf langsamer
+                     Hardware landet der Commit nach der 500-ms-Input-Gnade.
+                     Frische Knoten je Klasse shiften nie. */
+                  key={`b:${buchstabe}`}
+                  className="m-0 list-none space-y-0.5 p-0"
+                >
+                  {liste.map((e) => <li key={e.key}><AzZeile e={e} /></li>)}
+                </ul>
               </div>
             </div>
           )}

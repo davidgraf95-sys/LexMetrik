@@ -6,6 +6,8 @@
 // Reine Datenschicht (§3). §7-Statusprädikat bleibt Davids Abnahme vorbehalten —
 // wo Herkunft «kuratiert» verbalisiert wird, heisst es «strukturiert erfasst».
 
+import { MASSGEBLICH_SATZ } from '../benennung';
+
 export interface GlossarEintrag {
   /** Angezeigter Begriff (Kurzform). */
   begriff: string;
@@ -40,7 +42,10 @@ export const GLOSSAR = {
   },
   inkraft: {
     begriff: 'in Kraft',
-    erklaerung: 'Das Datum, ab dem die gezeigte Fassung einer Bestimmung gilt. Massgeblich ist stets die amtliche Quelle.',
+    // B-6-Nachzug (R2-A, 31.8.2026): der Satz sagte «Quelle», obwohl sein
+    // eigener Vordersatz schon von der «Fassung» spricht — genau die Dopplung,
+    // gegen die B-6 sich richtet. Der Vorbehalt kommt jetzt aus der Wortquelle.
+    erklaerung: `Das Datum, ab dem die gezeigte Fassung einer Bestimmung gilt. ${MASSGEBLICH_SATZ}`,
   },
   sr: {
     begriff: 'SR',

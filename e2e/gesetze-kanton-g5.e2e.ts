@@ -70,10 +70,15 @@ test.describe('Kantons-Übersicht (G5 · §4.3)', () => {
     await expect(main.getByRole('heading', { name: 'Genferseeregion' })).toBeVisible()
   })
 
-  test('§4.3.5 Roh-Code→Klartext: ZH zeigt «Nicht systematisiert», nicht «Bereich LS»', async ({ page }) => {
+  test('§4.3.5 Roh-Code→Klartext: ZH zeigt amtliche Ordner-Namen, nicht «Bereich LS»', async ({ page }) => {
+    // Fachliche Aenderung 1.9.2026 (§6.3, deklariert): Die ZH-Kern-Tranche
+    // liefert den amtlichen 14-Ordner-Baum (zh-systematik.ts) — der ehrliche
+    // Zustand ist seither der Ordner-Name, nicht mehr «Nicht systematisiert».
+    // Die AUSSAGE des Tests (kein Sammlungs-Kuerzel als vermeintliches
+    // Sachgebiet + Roh-Code je Erlass sichtbar, §8) ist unveraendert.
     await page.goto('/gesetze?ebene=kanton&kt=ZH')
     await expect(page.getByRole('heading', { level: 1 })).toBeVisible()
-    await expect(page.getByText('Nicht systematisiert').first()).toBeVisible()
+    await expect(page.getByText(/Gerichtsorganisation - Zivilrecht/).first()).toBeVisible()
     // Kein Sammlungs-Kürzel als vermeintliches Sachgebiet.
     await expect(page.getByText(/Bereich LS/)).toHaveCount(0)
     // Der Roh-Code bleibt je Erlass an der systematischen Nummer sichtbar (§8) —

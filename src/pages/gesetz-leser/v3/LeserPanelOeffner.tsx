@@ -1,5 +1,5 @@
-import { oeffnerLabel, oeffnerLabelKompakt, oeffnerName, zaehlerAttribut } from './panelModell';
-import { kopfGlypheKlassen, kopfGriffKlassen, type KopfElemente } from './kopfStufen';
+import { OEFFNER_NAME, OEFFNER_WORT } from './panelModell';
+import { kopfGriffKlassen } from './kopfStufen';
 
 // ─── Der Öffner des Panels — EINER je Zuschnitt (H3, F8; Nachzug Ä53/Ä56) ─────
 //
@@ -74,56 +74,78 @@ import { kopfGlypheKlassen, kopfGriffKlassen, type KopfElemente } from './kopfSt
 // abwesenden Code (§6.7). Diese Datei liest den Wert, sie leitet ihn nicht ab —
 // eine zweite Ableitung derselben Frage wäre eine zweite Wahrheit.
 
-/** Zähler in der Kopfzeile: «⚖ 14 Entscheide» bzw. auf `mini` «⚖ 14».
- *  Ohne bekannte Zahl «⚖ Rechtsprechung» bzw. die blosse Ikone. */
-export function PanelZaehler({ anzahl, artikelLabel, offen, panelId, form, onKlick }: {
-  anzahl: number | null;
-  artikelLabel: string | null;
+/**
+ * Der Kopf-Griff «Erlass ▾» — EINER je Zuschnitt.
+ *
+ * ── D35-F2 (Entscheid David 7.9.2026, Variante A) · HIER STAND EIN ZÄHLER ───
+ * Bis hierher hiess dieses Bauteil `PanelZaehler` und trug «⚖ Rechtsprechung
+ * 24» bzw. auf `mini` «⚖ 24»: das Wort, die Ikone und die Zahl der Entscheide
+ * DES ARTIKELS unter dem Scroll-Spy. Die Herleitung der Zahl — feste Breite,
+ * `tabular-nums`, linksbündig, `h-4 leading-4`, drei gemessene CLS-Befunde vom
+ * 7.9.2026 — bleibt als Beleg ihres Datums in der Historie dieser Datei stehen
+ * (§0 Ziff. 2b) und ist mit dem Wegfall der Zahl gegenstandslos: was nicht mehr
+ * gerendert wird, kann nicht mehr schieben. Der CLS-Grund GILT WEITER für die
+ * Stelle, die die Zahl übernommen hat (`parts/BezuegeKopf.tsx` — dort steht sie
+ * in einer Zeile, die nicht klebt und beim Scrollen nicht wechselt).
+ *
+ * WAS BLEIBT UND WARUM:
+ *  · `data-v3-panel-zaehler` — der Selektor, an dem rund fünfzehn Sonden diesen
+ *    Griff greifen (`e2e/helpers/panelOeffnen.ts` und die `leser-v3-panel-*`).
+ *    Der Name beschreibt seit D35-F2 nicht mehr, was der Knopf ZEIGT, sondern
+ *    welcher Knopf er IST. Ihn umzubenennen kostete fünfzehn Spec-Dateien, die
+ *    dieser Schritt sonst nicht anfasst (§6.3), und brächte keine Zusage dazu.
+ *  · `data-v3-panel-oeffner` — die Aussenklick-Ausnahme des Panels (A3).
+ *  · `aria-expanded`/`aria-controls` — unverändert, samt der B3-Regel, dass die
+ *    Id nur im offenen Zustand steht.
+ *
+ * WAS FÄLLT: `data-v3-panel-anzahl` (die Zahl steht jetzt genau einmal, an der
+ * Funktionszeile) und die Prop `form` samt `kopfElemente(stufe).panel` — sie
+ * entschied allein die GESTALT des Zählers («⚖ 14 Entscheide» gegen «⚖ 14»),
+ * und beide Gestalten gibt es nicht mehr. Der Griff sieht auf jeder Stufe
+ * gleich aus: ein Wort und ein ▾, wie «Ansicht ▾» daneben.
+ */
+export function ErlassGriff({ offen, panelId, kompakt, onKlick }: {
   offen: boolean;
   /** Id der Fläche — nur im offenen Zustand gesetzt (Bug-Check B3, H1): im
    *  geschlossenen Zustand existiert sie nicht, und eine kaputte Id-Referenz
    *  meldet axe als `aria-valid-attr-value`.
    *
-   *  A3 (H3-Nachzug): der RAHMEN reicht sie herein. Bis zum Nachzug entstand sie
-   *  in `LeserPanelZone` per `useId` und wurde nie durchgereicht — `aria-controls`
-   *  war am Kopf-Zähler auf JEDER Desktop-Breite `null` (gemessen @1024/@1440). */
+   *  A3 (H3-Nachzug): der RAHMEN reicht sie herein. */
   panelId?: string;
-  /** H4-II · Gestalt des Chips, aus `kopfElemente(stufe).panel`. Der Rahmen
-   *  reicht sie herein; diese Datei kennt die Stufe nicht und soll sie nicht
-   *  kennen (§3 — sie rendert, sie entscheidet nicht). */
-  form: KopfElemente['panel'];
+  /** Nur der ZUSCHNITT der Kopfzeile (`stufe === 'mini'`) — er entscheidet die
+   *  Zielgrösse in `kopfGriffKlassen`, nicht mehr die Beschriftung. */
+  kompakt: boolean;
   onKlick: () => void;
 }) {
-  const kompakt = form === 'kompakt';
-  const text = kompakt ? oeffnerLabelKompakt(anzahl) : oeffnerLabel(anzahl);
   return (
     <button
       type="button"
       onClick={onKlick}
       aria-expanded={offen}
       aria-controls={offen ? panelId : undefined}
-      aria-label={oeffnerName(anzahl, artikelLabel)}
-      title={oeffnerName(anzahl, artikelLabel)}
+      aria-label={OEFFNER_NAME}
+      title={OEFFNER_NAME}
       data-v3-panel-zaehler
       // A3: der Öffner ist für die Aussenklick-Regel des Panels kein «Aussen».
       // Sammel-Marker statt Aufzählung zweier Selektoren (`OEFFNER_SELEKTOR` in
       // `panelModell`), damit ein dritter Öffner nicht vergessen werden kann.
       data-v3-panel-oeffner
-      data-v3-panel-anzahl={zaehlerAttribut(anzahl)}
-      data-v3-panel-zaehler-form={form}
       // Ä90: die EINE Bauform der Kopf-Griffe — Umriss und Zielgrösse kommen
       // aus `kopfStufen`, nicht aus einer Klassenliste je Griff (§5).
-      className={`${kopfGriffKlassen(kompakt)} ${kompakt ? 'gap-0.5 px-1' : 'gap-1 px-1.5'}`}
+      className={`${kopfGriffKlassen(kompakt)} gap-1 px-1.5`}
     >
-      <span aria-hidden className={kopfGlypheKlassen(kompakt)}>⚖</span>
-      {/* `tabular-nums` + `whitespace-nowrap`: die Zahl wechselt mit der
-          Leseposition (Scroll-Spy). Proportionale Ziffern liessen den Knopf bei
-          jedem Artikelwechsel um Bruchteile atmen und schöben die Nachbarn —
-          eine Bewegung in der klebenden Kopfzeile, die niemand angefordert hat.
-          H4-II: auf `mini` kann der Text leer sein (keine Zahl bekannt) — dann
-          entfällt das `span` ganz, statt eine 0 zu behaupten oder eine leere
-          Box mit `gap` stehen zu lassen (§8). */}
-      {text && <span className="num tabular-nums whitespace-nowrap">{text}</span>}
+      {/* G14 (7.9.2026): jeder Kopf-Griff trägt @320/@390 ein Wort (F0.9). Seit
+          D35-F2 trägt er auf JEDER Breite DASSELBE Wort — die zwei Gesichter
+          von Ä91 (mit und ohne Glyphe) sind mit der ⚖ entfallen, und damit auch
+          die Falle, die N1 hier beseitigt hat: ein Knopf, der je nach Breite
+          oder Datenlage anders heisst.
+          Gemessen 7.9.2026 an der 350-px-Kopfzeile @390 (Archivo 11 px) trug
+          die Zeile «Rechtsprechung 11» 105 · «Gliederung» 63 · «Ansicht ▾» 53
+          plus 2 × 4 px `gap` = 229 px; «Erlass ▾» ist kürzer als der abgelöste
+          Griff, die Zeile wird also nicht enger — die Ort-Zone (`min-w-0
+          truncate`) kann ohnehin auf keiner Breite überlaufen. */}
+      <span className="whitespace-nowrap">{OEFFNER_WORT}</span>
+      <span aria-hidden className={`transition-transform ${offen ? 'rotate-180' : ''}`}>▾</span>
     </button>
   );
 }

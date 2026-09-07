@@ -6,6 +6,7 @@ import { istSchliessTaste } from '../lib/normtext/tasten';
 import { bestimmePassusZiel } from '../lib/normtext/passusZiel';
 import { usePaneSteuerung } from './layout/usePaneLayout';
 import { ArtikelBody } from './normtext/ArtikelBody';
+import { SchliessKnopf } from './ui/SchliessKnopf';
 import { VerweisKontext } from './kontext/VerweisKontext';
 import { erlassPfadVonKey } from '../lib/normtext/erlassAdresse';
 import { Datum } from './ui/Datum';
@@ -122,7 +123,7 @@ export function NormPopover({ snapshot, passus, sachtitel, alsDialog = true, onC
       role={alsDialog ? 'dialog' : 'group'}
       {...(alsDialog ? { 'aria-modal': true as const, tabIndex: -1 } : {})}
       aria-label={alsDialog ? titel : `Norm-Vorschau ${titel}`}
-      className="lc-card w-full max-w-xl max-h-[80vh] overflow-y-auto p-0 text-left"
+      className="lc-popover w-full max-w-xl max-h-[80vh] overflow-y-auto p-0 text-left"
     >
       {/* Kopf */}
       <div className="flex items-start justify-between gap-3 border-b border-line px-5 py-3">
@@ -133,15 +134,12 @@ export function NormPopover({ snapshot, passus, sachtitel, alsDialog = true, onC
             {sachtitel && <span className="text-ink-500 font-normal"> — {sachtitel}</span>}
           </h2>
         </div>
-        <button
-          ref={schliessRef}
-          type="button"
-          onClick={onClose}
-          aria-label="Schliessen"
-          className="lc-btn-ghost lc-btn-sm shrink-0 px-2"
-        >
-          ✕
-        </button>
+        {/* A3-1 (R3-β): EIN Schliess-✕ der App. `lc-btn-ghost lc-btn-sm` fällt
+            weg — ein Schliess-Griff ist kein Knopf mit Fläche (5 von 7
+            Fundstellen zeichneten ihn schon ohne). Der Name wird dabei konkret:
+            «Schliessen» allein sagt nicht, WAS zugeht (§8). */}
+        <SchliessKnopf ref={schliessRef} name="Norm-Vorschau schliessen"
+          onClick={onClose} klasse="-mr-1" />
       </div>
 
       {/* Body: alle Blöcke in Reihenfolge (Fedlex-Stil), zitierte Stelle
@@ -184,7 +182,7 @@ export function NormPopover({ snapshot, passus, sachtitel, alsDialog = true, onC
               onClick={() => { oeffneDaneben(readerLink); onClose(); }}
               title={`${titel} nebeneinander öffnen`} aria-label={`${titel} nebeneinander öffnen`}
               className="inline-flex h-6 w-6 items-center justify-center rounded-md border border-line text-ink-500 hover:text-brass-700 hover:border-brass-400 transition-colors">
-              <span aria-hidden className="text-base leading-none">⧉</span>
+              <span aria-hidden className="lc-griff-glyph">⧉</span>
             </button>
           )}
         </span>

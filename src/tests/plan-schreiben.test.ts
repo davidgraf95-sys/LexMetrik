@@ -542,16 +542,54 @@ describe('parseBuchungAusPrBody', () => {
     expect(parseBuchungAusPrBody('')).toBeNull();
   });
 
-  // FACHLICHE ÄNDERUNG 15.8.2026 (deklariert, §6.3): ein HALBER Buchungs-Block
-  // verpuffte bis dahin still — Realfall PR #507: `Roadmap:` und
-  // `Roadmap-Status:` durch Leerzeile getrennt, nur der letzte Absatz zählte
-  // als Block, Workflow endete «success» ohne Push, Hand-Buchung nötig.
-  // Seither gilt: erkennbare, aber unvollständige Buchungs-Absicht => Wurf.
-  it('wirft bei halbem Buchungs-Block (nur einer der beiden Trailer)', () => {
-    expect(() => parseBuchungAusPrBody('Text.\n\nRoadmap: QS-EFFIZIENZ')).toThrow(/unvollständiger Buchungs-Block/);
+  // VERHALTENSÄNDERUNG 3.9.2026 (deklariert, §6.3; Beleg: Workflow-Lauf
+  // 33694227189 bei PR #636 rot): «lone Roadmap = noop». Ein PR-Body mit NUR
+  // `Roadmap:` (keine `Roadmap-Status:`-Zeile irgendwo im Body) ist seither
+  // KEIN Fehler mehr, sondern der gültige Normalzustand für einen Schritt,
+  // der nach der Landung bewusst `wip` bleibt (Skill landung Ziff. 9) — bis
+  // 3.9.2026 warf dieselbe Eingabe noch (siehe Historie unten).
+  it('gibt null zurück (kein Fehler), wenn im ganzen Body keine Roadmap-Status-Zeile vorkommt', () => {
+    // (iii) nur `Roadmap:` -> kein Fehler, vorhanden=false.
+    expect(parseBuchungAusPrBody('Text.\n\nRoadmap: QS-EFFIZIENZ')).toBeNull();
+  });
+
+  // Nachprüfungs-Befund Opus 3.9.2026: ein wip-Body, der die Trailer-FORM nur
+  // ZITIERT (```-Fence oder eingerückter Codeblock — genau das Beispiel aus
+  // Skill landung Ziff. 9), trägt keine Buchungsabsicht. Zählte das Zitat, käme
+  // der #636-Rotlauf für jeden Body zurück, der die Regel erklärt.
+  it('ignoriert eine Roadmap-Status-Zeile, die nur in einem Codeblock zitiert wird', () => {
+    const fence = 'Regel:\n\n```\nRoadmap: <ID>\nRoadmap-Status: done|ready\n```\n\nRoadmap: QS-EFFIZIENZ';
+    expect(parseBuchungAusPrBody(fence)).toBeNull();
+    const eingerueckt = 'Regel:\n\n    Roadmap-Status: done\n\nRoadmap: QS-EFFIZIENZ';
+    expect(parseBuchungAusPrBody(eingerueckt)).toBeNull();
+    // Gegenprobe: dieselbe Zeile AUSSERHALB des Fences zählt weiterhin => Wurf.
+    const echt = 'Regel:\n\n```\nRoadmap: <ID>\n```\n\nRoadmap-Status: done\n\nRoadmap: QS-EFFIZIENZ';
+    expect(() => parseBuchungAusPrBody(echt)).toThrow(/unvollständiger Buchungs-Block/);
+  });
+
+  // FACHLICHE ÄNDERUNG 15.8.2026 (deklariert, §6.3): ein ECHTER halber
+  // Buchungs-Block verpuffte bis dahin still — Realfall PR #507: `Roadmap:`
+  // und `Roadmap-Status:` durch Leerzeile getrennt, nur der letzte Absatz
+  // zählte als Block, Workflow endete «success» ohne Push, Hand-Buchung
+  // nötig. Seither gilt: erkennbare, aber unvollständige Buchungs-Absicht
+  // => Wurf — UND (Gegenprüfungs-Korrektur 3.9.2026, Opus-Prüfer) das gilt
+  // unabhängig davon, in welcher Reihenfolge/Vollständigkeit die beiden
+  // Trailer erscheinen, sobald irgendwo im Body eine `Roadmap-Status:`-Zeile
+  // steht.
+  it('wirft bei erkennbarer, aber unvollständiger Buchungs-Absicht (Roadmap-Status irgendwo im Body)', () => {
     // der exakte #507-Fall: beide Trailer da, aber in GETRENNTEN Absätzen —
     // nur der letzte (status-only) zählt als Block => laut, nie still.
     expect(() => parseBuchungAusPrBody('Text.\n\nRoadmap: QS-EFFIZIENZ\n\nRoadmap-Status: ready\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)'))
+      .toThrow(/unvollständiger Buchungs-Block/);
+    // (i) Regression A: Status-Absatz ZUERST, Roadmap-Absatz DANACH — der
+    // Schlussblock enthält nur `Roadmap`; da irgendwo im Body dennoch eine
+    // `Roadmap-Status:`-Zeile steht, gelten die strengen Regeln => Wurf.
+    expect(() => parseBuchungAusPrBody('Text.\n\nRoadmap-Status: done\n\nRoadmap: QS-EFFIZIENZ'))
+      .toThrow(/unvollständiger Buchungs-Block/);
+    // (ii) Regression B: `Roadmap:` + `Roadmap-Status:` im SELBEN Absatz,
+    // aber mit LEEREM Wert — die Zeile ist da, ein leerer Wert ist kein
+    // gültiger Status => Wurf (kein stilles null).
+    expect(() => parseBuchungAusPrBody('Text.\n\nRoadmap: QS-EFFIZIENZ\nRoadmap-Status:'))
       .toThrow(/unvollständiger Buchungs-Block/);
   });
 

@@ -7,7 +7,8 @@ description: Verwenden für einen Lagebild-Bau-Prompt oder einen einzelnen Roadm
 
 **Anlass-Kopf — Ritual-Diät 29.8.2026 (Auftrag David: «Kontrolle abbauen, wo
 sie nichts trägt»).** Der frühere «leichte Pfad» ist ab hier der NORMALFALL:
-Station A hat 3 Punkte, Station E 4. Was gestrichen wurde und warum, steht
+Station A hat 3 Punkte, Station E 6 (Nachtrag 4.9.2026:
+Fremdagenten-Messwerte; Nachtrag 4.9.2026: Kontingent-Lauf). Was gestrichen wurde und warum, steht
 unten unter «Gestrichene Pflichten» — **Station C (Prüfung) ist unverändert**,
 und §9/§12/§14.7/§18 bleiben Wort für Wort in Kraft.
 
@@ -51,6 +52,10 @@ ohne Rückfrage nach diesem Zyklus.
   David-Anmerkungen) bekommen einen frischen Agent mit frischem Kontext als
   eigenen Nachzug — nie in den laufenden Bau nachschieben (16.8.2026:
   H2-Agent lieferte nach ~470k Token sichtbar weniger als beauftragt).
+- **Im «run till dry» nie mit leerer Antwort enden.** Nach jeder Agenten-Rückmeldung
+  folgt der nächste Zug oder ein ausdrücklicher Zwischenstand — eine leere Antwort
+  archiviert die Session, und der Bau steht bis zum nächsten Menschen still (Nacht
+  5./6.9.2026).
 - **Nebenfunde in den Plan**, nie in diese Session oder als Chip:
   Checklisten-Zeile im Dach-Schritt, sonst ROADMAP-Schritt (Skill `auftrag`
   Ziff. 3), weiterbauen.
@@ -93,7 +98,7 @@ Commit mit eigenem Roadmap-Trailer).
 **NIE sortenrein-widrig auf Risikopfade wechseln**; Schluss
 **spätestens bevor der Kontext zur Neige geht** — lieber sauber landen.
 
-## Station E — Abschluss (4 Punkte)
+## Station E — Abschluss (5 Punkte)
 
 - [ ] **Karten-ZEILE in `STRUKTUR.md`** (was gebaut, Commit/PR-Beleg).
       Volle Session-Karte NUR bei Risikopfad-Berührung, gezogener §17-Lehre
@@ -108,6 +113,12 @@ Commit mit eigenem Roadmap-Trailer).
       Formregel Skill `lehren` (Tor > Dispatch-§0 > Skill > Prosa) — nur im
       Chat gilt als nicht gezogen. Dazu der Klartext-Schlusssatz an David:
       was live ist, «nichts wartet auf dich» oder genau *was* und warum.
+- [ ] **Fremdagenten-Messwerte:** war Jules oder Gemini beteiligt — Skill
+      `auftrag` Ziff. 4 Punkt 7 (Fahrplan §5 nachtragen, Rückbau-Schwellen §3
+      prüfen).
+- [ ] **Kontingent-Lauf:** `npm run fremdagenten:messung -- --kontingent` —
+      Ergebnis nur bei Alarm (Exit 3) in Fahrplan §5 «Kontingent-Ereignisse»
+      eintragen, sonst nichts zu tun.
 
 ### Gestrichene Pflichten (29.8.2026) — je mit Anlass
 

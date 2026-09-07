@@ -99,7 +99,7 @@ export function Zeiterfassung() {
   return (
     <div className="lc-card p-5 space-y-4">
       <div className="flex flex-wrap items-center gap-4">
-        <span className="num font-medium text-ink-900 tabular-nums" style={{ fontSize: 'var(--timer-fs)', letterSpacing: '-0.02em' }}>
+        <span className="num font-medium text-ink-900" style={{ fontSize: 'var(--timer-fs)', letterSpacing: '-0.02em' }}>
           {uhr(verstrichen)}
         </span>
         <input

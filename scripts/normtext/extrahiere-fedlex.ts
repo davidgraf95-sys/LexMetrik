@@ -562,21 +562,57 @@ function parseDefinitionsListe(
     // Marke-Tags OHNE Leerzeichen strippen: das lat. Suffix steht als <sup>bis</sup>
     // direkt am Buchstaben («c<sup>bis</sup>»); entferneTags würde es zu «c bis»
     // trennen und die Regex unten verstümmelte es zu «c» (Bug-Audit 19.6.2026).
-    const markeRoh = dekodiereEntities(dtOhneFn.replace(/<[^>]+>/g, '')).trim();
+    // Innen-Leerraum normalisieren wie in entferneTags: Fedlex trennt mehrteilige
+    // Marken mit zwei &nbsp; («B.&nbsp;&nbsp;1.», GFK Art. 1) — als Marke ist das
+    // EIN Abstand, sonst trüge der Snapshot einen Doppelabstand im Zitat.
+    const markeRoh = dekodiereEntities(dtOhneFn.replace(/<[^>]+>/g, '')).replace(/\s+/g, ' ').trim();
+    // ── Die Marke wird GELESEN, nicht nachnummeriert ─────────────────────────
     // «a.» / «17.» / «a)» → nackte Marke ohne Punkt/Klammer.
     // Bug-Audit 19.6.2026: lat. Suffix bis/ter/quater/quinquies erhalten (sonst
     // «cbis»→«c», «1bis»→«1b»). Suffix VOR optionalem Buchstaben (wie ABS-Regex).
-    // M13-Annex (Gegenprüfung), NUR im Anhang-Pfad (anhang): (a) MEHRTEILIGE Ziffern
-    // «1.1.1»/«211.1» (Anhänge nummerieren tief gepunktet) komplett erfassen —
-    // `(?:\.\d+)*` — statt auf die erste Ziffer zu kürzen (sonst zwölf identische
-    // «1.»-Labels, Zitat verfälscht). (b) Der Einbuchstaben-Zweig nur als ECHTE
-    // lit.-Marke (gefolgt von ./)/Space/Ende), sonst kürzte ein BESCHREIBENDES <dt>
-    // («Flupo:», «SEM:») auf den ersten Buchstaben und kollabierte Legenden-Schlüssel.
-    // Der Haupttext-/Schlusstitel-Pfad nutzt die ALTE Regex → byte-gleich (§6).
-    const markeMatch = anhang
-      ? markeRoh.match(/^([0-9]+(?:\.[0-9]+)*(?:bis|ter|quater|quinquies)?[a-z]?|[a-z](?:bis|ter|quater|quinquies)?(?=[.)\s]|$))\s*[.)]?/i)
-      : markeRoh.match(/^([0-9]+(?:bis|ter|quater|quinquies)?[a-z]?|[a-z](?:bis|ter|quater|quinquies)?)\s*[.)]?/i);
-    const marke = markeMatch ? markeMatch[1].toLowerCase() : markeRoh.replace(anhang ? /[.):]\s*$/ : /[.)]\s*$/, '');
+    //
+    // BEFUND QS-KORPUS 4.9.2026 (§1, Diskrepanz-Finder PR #650): Beide früheren
+    // Regexe griffen als PRÄFIX-Match. Was nicht ins kanonische lit./Ziff.-Muster
+    // passte, wurde damit auf dessen ERSTES Token GEKÜRZT statt gelesen — aus dem
+    // amtlichen «BE:» wurde «b», aus «C1E:» «c», aus «ii)» «i», aus «asexies.»
+    // «a», aus «BAS» «b». Zwei Folgen, beide fachlich falsch: die amtliche
+    // Bezeichnung war weg (VZV Art. 3 zitiert «Kategorie BE», nicht «lit. b»),
+    // und die gekürzten Marken kollidierten INNERHALB desselben Absatzes
+    // (VZV Art. 3 Abs. 1: a,b,c,d,b,c,d — «B» und «BE» beide als «b»).
+    //
+    // Neue Regel, eine für beide Pfade:
+    //  (1) Endet die <dt>-Marke auf ':', ist sie ein LABEL (amtliche Kategorie,
+    //      Kolonnen-/Legenden-Schlüssel) — verbatim übernehmen, Grossschreibung
+    //      erhalten. Empirisch (gepinnter Cache, 229 Bund-HTMLs, art_*-Körper):
+    //      51 Vorkommen in genau 3 Erlassen — VZV (Ausweiskategorien A…D1E),
+    //      VBB (B/F/G/V/W, «Kolonne 1»), UVG («für Witwen und Witwer») — und
+    //      KEINE davon ist eine gewöhnliche lit.-Aufzählung. Fedlex trennt
+    //      Ordinalmarken mit '.'/')' und Labels mit ':'.
+    //  (2) Sonst nur dann normalisieren (klein schreiben), wenn die GANZE Marke
+    //      — ohne den nachgestellten Trenner — eine kanonische Ordinalmarke ist.
+    //      Trifft das nicht zu, bleibt die Marke verbatim stehen. Damit ist jede
+    //      bisher korrekte Marke byte-gleich und keine wird mehr erfunden (§1/§6).
+    // Die lat. Suffixe reichen bis `decies`: «asexies.»/«anovies.» (HMG Art. 9,
+    // FINMA-GebV) wurden zuvor auf «a» gekürzt.
+    // Der Anhang-Pfad behält seine mehrteiligen Ziffern «1.1.1»/«211.1»
+    // (M13-Annex) — sie sind hier Teil des kanonischen Musters.
+    const LAT_SUFFIX = 'bis|ter|quater|quinquies|sexies|septies|octies|novies|decies';
+    const KANONISCHE_MARKE = anhang
+      ? new RegExp(`^(?:[0-9]+(?:\\.[0-9]+)*(?:${LAT_SUFFIX})?[a-z]?|[a-z](?:${LAT_SUFFIX})?)$`, 'i')
+      : new RegExp(`^(?:[0-9]+(?:${LAT_SUFFIX})?[a-z]?|[a-z](?:${LAT_SUFFIX})?)$`, 'i');
+    const istLabel = /:\s*$/.test(markeRoh);
+    // Nachgestellten Trenner abstreifen — beim Label nur den ':' (der Rest ist
+    // Bestandteil des Labels: «Kolonne 1»), sonst die Ordinal-Trenner.
+    const markeKern = (
+      istLabel ? markeRoh.replace(/\s*:\s*$/, '').trim() : markeRoh.replace(/[\s.)]+$/, '')
+    )
+      // EINE Schreibweise je Marke (§5): das lat. Suffix steht im Korpus als
+      // «cbis» (Fedlex setzt «c<sup>bis</sup>»); BankG Art. 3 schreibt dieselbe
+      // Marke als «c.<sup>bis</sup>» → «c.bis». Der Trennpunkt wird darum
+      // eingezogen, sonst fände ein Zitat «lit. cbis» seine Fundstelle nicht.
+      .replace(new RegExp(`^([a-z])\\.(${LAT_SUFFIX})$`, 'i'), '$1$2');
+    const istKanonisch = !istLabel && KANONISCHE_MARKE.test(markeKern);
+    let marke = istKanonisch ? markeKern.toLowerCase() : markeKern;
 
     const ddVorListe = subDlIdx >= 0 ? ddRoh.slice(0, subDlIdx) : ddRoh;
     const ddOhneFn = ddVorListe.replace(/<sup[^>]*><a[\s\S]*?<\/a><\/sup>/gi, '');
@@ -589,17 +625,32 @@ function parseDefinitionsListe(
     // wenn das <dd> wirklich leer ist UND keine Unterliste vorliegt — sonst bleibt
     // alles byte-gleich (§6). Der Resttext nach der Marke wird tag-/fussnoten-
     // bereinigt übernommen.
-    if (!text && subDlIdx < 0 && markeMatch) {
-      // Die nackte Marke + Punkt/Klammer aus dem getaggt-/fussnoten-bereinigten
-      // <dt> entfernen; der Rest ist der Punkttext.
-      // entferneTags: identische Bereinigung wie zuvor inline, aber inkl. N1-Fix
-      // (Inline-Tags leerzeichenlos) — «14<i>a</i>» im <dt>-Text bleibt «14a».
-      const dtTextRoh = entferneTags(dtOhneFn);
-      const nachMarke = dtTextRoh.replace(
-        /^[0-9]+(?:bis|ter|quater|quinquies)?[a-z]?\s*[.)]?\s*|^[a-z](?:bis|ter|quater|quinquies)?\s*[.)]?\s*/i,
-        '',
-      ).trim();
-      if (nachMarke) text = nachMarke;
+    // Hier — und NUR hier — ist die Marke ein PRÄFIX des <dt> statt sein ganzer
+    // Inhalt. Die Aufteilung greift deshalb nur bei leerem <dd> ohne Unterliste
+    // UND nur, wenn das <dt> die Form «kanonische Marke + optionaler Trenner +
+    // LEERRAUM + Text» hat. Ohne die Leerraum-Bedingung zerschnitte sie auch
+    // marken-lose Legenden-Schlüssel («BAS» → «b» + «AS», ASYLV 2) — genau die
+    // Kürzung, die oben abgestellt wurde (§1). Sie greift auch bei einem
+    // Label-<dt> («4.3.1&nbsp;&nbsp;Name(n) des (der) Kläger(s):», LugÜ
+    // Anhang V/VI): dort ist der Doppelpunkt Teil des Punkt-TEXTES, nicht
+    // Marken-Trenner — ohne diesen Zweig verlöre der Anhang die Punkte stumm.
+    if (!text && subDlIdx < 0 && !istKanonisch) {
+      const KANON_QUELLE = anhang
+        ? `[0-9]+(?:\\.[0-9]+)*(?:${LAT_SUFFIX})?[a-z]?|[a-z](?:${LAT_SUFFIX})?`
+        : `[0-9]+(?:${LAT_SUFFIX})?[a-z]?|[a-z](?:${LAT_SUFFIX})?`;
+      const praefix = markeRoh.match(new RegExp(`^(${KANON_QUELLE})\\s*[.)]?\\s+(?=\\S)`, 'i'));
+      if (praefix) {
+        // entferneTags: identische Bereinigung wie zuvor inline, aber inkl. N1-Fix
+        // (Inline-Tags leerzeichenlos) — «14<i>a</i>» im <dt>-Text bleibt «14a».
+        const dtTextRoh = entferneTags(dtOhneFn);
+        const nachMarke = dtTextRoh
+          .replace(new RegExp(`^(?:${KANON_QUELLE})\\s*[.)]?\\s*`, 'i'), '')
+          .trim();
+        if (nachMarke) {
+          marke = praefix[1].toLowerCase();
+          text = nachMarke;
+        }
+      }
     }
 
     // LEERES <dt> + Text-<dd> = Fortsetzungszeile des vorausgehenden Items
@@ -864,8 +915,24 @@ export function entferneTags(s: string): string {
         (_m, a, b) => ` ${(a ?? b).trim()} `,
       )
       .replace(/<[^>]+>/g, (tag) => {
-        const name = tag.match(/^<\/?\s*([a-zA-Z][a-zA-Z0-9]*)/);
-        return name && INLINE_STRIP_TAGS.has(name[1].toLowerCase()) ? '' : ' ';
+        // NAMENSRAUM MITLESEN (Befund QS-KORPUS 4.9.2026): Fedlex streut leere
+        // Konversions-Marker der legi4ch-XSLT-/Word-Kette ein —
+        // «<tmp:inl md="E" …></tmp:inl>», «<w:smartTag …>» — und zwar MITTEN IM
+        // WORT. Der frühere Namens-Match `[a-zA-Z][a-zA-Z0-9]*` brach am
+        // Doppelpunkt ab und lieferte «tmp» statt «tmp:inl»; «tmp» steht in
+        // keiner Inline-Liste, also wurde der Marker durch ein LEERZEICHEN
+        // ersetzt und zerriss den Text: «Zwischen produkten», «Erfah rung»,
+        // «GMP-Kon trollsysteme», «werden ;» (AMBV Art. 6/11/12/14/21, §1).
+        // HTML kennt keine Elemente mit Namensraum-Präfix — ein Tag mit ':' im
+        // Namen ist ausnahmslos ein Rest der Konversion, nie ein Block-/Umbruch-
+        // Element, das visuell trennt. Darum: Name mit ':' = inline (spurlos).
+        // Messung über den gepinnten Filestore-Cache (229 Bund-HTMLs, 4.9.2026):
+        // exakt vier solche Namen, alle inline — tmp:inl (680), w:smartTag (64),
+        // w:moveFromRangeStart/-End (je 2).
+        const name = tag.match(/^<\/?\s*([a-zA-Z][a-zA-Z0-9]*(?::[a-zA-Z0-9_.-]+)?)/);
+        if (!name) return ' ';
+        const n = name[1].toLowerCase();
+        return n.includes(':') || INLINE_STRIP_TAGS.has(n) ? '' : ' ';
       }),
   )
     .replace(/\s+/g, ' ')

@@ -60,14 +60,17 @@ describe('Leser-Schriftskala — Persistenz und Migration', () => {
     expect(el.attrs['data-leserschrift']).toBe('normal');
     // Die anderen Felder desselben Speichers bleiben unberührt — der neue
     // Schlüssel darf keinen Alt-Zustand überschreiben (§8).
-    expect(el.attrs['data-fussnoten']).toBe('aus');
-    // S1 (deklarierte fachliche Änderung, §6.3): derselbe Alt-Speicher, aber
-    // `histansicht` ist seit dem Optionen-Rückbau zweiwertig — 'chronologie'
-    // bedeutete «Vermerke sichtbar» und migriert darum auf 'an' (nie auf 'aus';
-    // der Nutzer hatte sie ausdrücklich bestellt, §8). Die Migrations-Regeln
-    // selbst stehen unter `src/tests/leser-optionen-migration.test.ts`; hier
-    // zählt nur, dass der Schrift-Schlüssel sie nicht stört.
-    expect(el.attrs['data-histansicht']).toBe('an');
+    // S1 (deklarierte fachliche Änderung, §6.3): 'chronologie' bedeutete
+    // «Vermerke sichtbar» und migriert darum nie auf «aus» — der Nutzer hatte
+    // sie ausdrücklich bestellt (§8).
+    // D35-F3 (deklarierte fachliche Änderung, §6.3, Entscheid David 7.9.2026):
+    // `data-fussnoten`/`data-histansicht` sind zu EINEM `data-vermerke`
+    // geworden. «Vermerke sichtbar» ist dort die Stellung «fassung»; das
+    // abgewählte `fussnoten` spielt in diesem Zweig keine Rolle mehr, weil es
+    // den Apparat-Schalter nicht mehr gibt. Die Migrations-Regeln selbst stehen
+    // unter `src/tests/leser-optionen-migration.test.ts`; hier zählt nur, dass
+    // der Schrift-Schlüssel sie nicht stört.
+    expect(el.attrs['data-vermerke']).toBe('fassung');
   });
 
   it('unbekannter Wert ⇒ Vorgabestufe (nicht durchgereicht)', async () => {
@@ -115,18 +118,31 @@ describe('Leser-Schriftskala — Persistenz und Migration', () => {
     optionen.setzeLeserSchrift('sehr-gross');
     const o = JSON.parse(speicher.get('lm.leser.optionen')!);
     expect(o.schrift).toBe('sehr-gross');
-    expect(o.fussnoten).toBe('aus');
-    expect(o.leitfaelle).toBe('an');
+    // §6.3-DEKLARATION (D35-F2, 7.9.2026): hier stand `o.leitfaelle === 'an'`.
+    // Das Feld ist ersatzlos gestrichen (`leserOptionen.ts`) und wird beim
+    // Schreiben abgeräumt wie jeder Alt-Schlüssel. Die Aussage des Falls — der
+    // Schrift-Setzer rührt die FREMDEN Felder desselben Speichers nicht an —
+    // steht unverändert, jetzt am nachgerückten Feld.
+    // §6.3-DEKLARATION (D40, 7.9.2026): der Grundzustand trägt die sechste
+    // Rubrik `f` (Fassung in der Funktionszeile). Die Aussage bleibt: der
+    // Schrift-Setzer rührt das fremde Feld nicht an.
+    expect(o.fussRubriken).toEqual(['f', 'r', 'm', 'g', 'w', 'a']);
     expect(o.bezugKantone).toEqual(['BS']);
-    // S1 (deklarierte fachliche Änderung, §6.3): `hist: 'aus'` steht als
-    // `histansicht: 'aus'` im neuen Speicher — die Nutzerwahl ist erhalten, nur
-    // unter dem neuen Schlüssel. Der mit S1 gestrichene `verweise` und der
-    // Alt-Schlüssel `hist` werden beim Schreiben ABGERÄUMT (dieselbe Mechanik wie
-    // `linien` und `zeitraum`): ein weitergeschleppter Alt-Wert liesse die
-    // Migration bei jedem Laden neu greifen.
-    expect(o.histansicht).toBe('aus');
+    // S1 (deklarierte fachliche Änderung, §6.3): `hist: 'aus'` stand als
+    // `histansicht: 'aus'` im neuen Speicher — die Nutzerwahl erhalten, nur
+    // unter neuem Schlüssel.
+    // D35-F3 (deklarierte fachliche Änderung, §6.3, Entscheid David 7.9.2026):
+    // dieselbe Wahl trägt jetzt EIN Feld. `fussnoten:'aus'` + `hist:'aus'` ist
+    // Zeile 4 der Entscheid-Tabelle und landet auf «aus» — die Nutzerwahl bleibt
+    // erhalten, sie heisst nur anders (Tabelle in `leserOptionen.ts`).
+    expect(o.vermerke).toBe('aus');
+    // Die gestrichenen Schlüssel werden beim Schreiben ABGERÄUMT (dieselbe
+    // Mechanik wie `linien` und `zeitraum`): ein weitergeschleppter Alt-Wert
+    // liesse die Migration bei jedem Laden neu greifen.
     expect(o.hist).toBeUndefined();
     expect(o.verweise).toBeUndefined();
+    expect(o.fussnoten).toBeUndefined();
+    expect(o.histansicht).toBeUndefined();
   });
 
   it('dieselbe Stufe noch einmal setzen weckt die Hörer NICHT (§15)', async () => {
@@ -190,7 +206,11 @@ describe('Leser-Schriftskala — Treue-Grenze und §5-Spiegel', () => {
     expect(stufe, 'Stufe «leser-text» steht nicht mehr in tailwind.config.js').not.toBeNull();
     expect(schrift.SCHRIFT_REM.normal, 'Regler-Basis und Fliesstext-Stufe laufen auseinander (§5)')
       .toBe(Number(stufe![1]));
-    expect(schrift.SCHRIFT_REM.normal).toBe(1.0625);
+    // W2·24-R6c (6.9.2026): 1.0625 → 1.125 — DEKLARIERTE fachliche Änderung
+    // (§6.3) nach D20 (c) «Lesetext 18 px». Die Verschärfung darüber (Wert aus
+    // der Config GELESEN statt abgeschrieben) bleibt unberührt; diese Zeile ist
+    // die zweite Klammer, die verhindert, dass beide Orte GEMEINSAM wandern.
+    expect(schrift.SCHRIFT_REM.normal).toBe(1.125);
   });
 
   it('«normal» ist aus dem CSS-Selektor ausgenommen ⇒ keine Regel im Grundzustand (R6)', () => {

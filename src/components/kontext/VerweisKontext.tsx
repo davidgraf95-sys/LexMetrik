@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { kontextFuerArtikel, type ArtikelKontext } from '../../lib/kontext';
 import { KontextGruppe } from './KontextPanel';
 import { StatusBadge } from '../verzahnung/StatusBadge';
+import { Datum } from '../ui/Datum';
 
 // ─── VerweisKontext — artikelscharfe Verzahnung im Verweis-Popover ───────────
 //
@@ -26,11 +27,12 @@ import { StatusBadge } from '../verzahnung/StatusBadge';
 
 const MAX_ZEILEN = 3;
 
-/** ISO → DD.MM.YYYY (rein, kein new Date). */
-function kurzDatum(iso: string): string {
-  const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso);
-  return m ? `${m[3]}.${m[2]}.${m[1]}` : iso;
-}
+// B-3/B3-7 (R3-α, 31.8.2026): hier stand `kurzDatum` — der letzte Zwilling von
+// `datumCh` (byte-gleiche Regex, byte-gleiche Rückgabe) und dazu das `num` an
+// der Zeile unten, das das Datum in die Mono-Stimme setzte. Die Mono-Stimme ist
+// seit S2/Ä-(b) auf SR-Nr./Aktenzeichen begrenzt — DATEN gehören nicht dazu.
+// Beides erledigt jetzt der EINE Baustein `ui/Datum` (Format + Auszeichnung
+// gehören zusammen, sonst laufen sie wieder auseinander).
 
 export function VerweisKontext({ erlassKey, artikel, artikelZitat }: {
   /** Register-key des Erlasses ('MWSTG', 'AR-621.12') — Shard-Namensraum. */
@@ -93,7 +95,7 @@ export function VerweisKontext({ erlassKey, artikel, artikelZitat }: {
                   <span className="text-ink-500">{m.behoerdeKuerzel} · {m.doktypLabel}{m.nummer ? ` ${m.nummer}` : ''}</span>
                   {' — '}<span className="font-medium">{m.titel}</span>
                   {m.sublabel && <span className="num text-micro font-normal text-ink-500"> · {m.sublabel}</span>}
-                  <span className="num text-micro text-ink-500"> · Stand {kurzDatum(m.stand)}</span>
+                  <span className="text-micro text-ink-500"> · Stand <Datum iso={m.stand} /></span>
                   {m.herkunft === 'maschinell' && (
                     <StatusBadge praedikat="maschinell" className="ml-1.5 align-middle" />
                   )}

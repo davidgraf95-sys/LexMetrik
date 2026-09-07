@@ -206,7 +206,13 @@ export function LeserTastatur({ tokens, aktivToken, onSprung, onPanel, imSekunda
     // Der Overlay-Hintergrund schliesst per Klick; die Tastatur-Wege (Escape,
     // Fokusfalle, Fokus-Rückgabe) trägt `useDialogFokus`. `fixed` ⇒ kein
     // Layout-Einfluss auf das Dokument (CLS 0, §15).
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-ink-900/40 px-4"
+    //
+    // F2-1 (31.8.2026): der Hintergrund war `bg-ink-900/40`. `--ink-900` flippt
+    // mit dem Thema (dunkel `#E9E7E2`) — dieser «Scrim» HELLTE im Dunkelmodus
+    // auf, statt abzudunkeln (Messung/Herleitung: `../v3/LeserScrim.tsx`, B7-N1).
+    // `.lc-scrim-dialog` ist die Rolle «zentrierter modaler Dialog»: schwarz
+    // statt Tinte, Deckung unverändert 40 %.
+    <div className="lc-scrim-dialog fixed inset-0 z-modal flex items-center justify-center px-4"
       onClick={() => setHilfeOffen(false)}>
       <div ref={dialogRef} role="dialog" aria-modal="true" aria-label="Tastatur-Kurzbefehle"
         tabIndex={-1} onClick={(e) => e.stopPropagation()}

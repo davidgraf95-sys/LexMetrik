@@ -68,10 +68,15 @@ function schluesselAusRoute(ebene: string, key: string): string | null {
 const ALLE_KEYS: string[] = (registerManifest as { erlasse: { key: string }[] }).erlasse.map((e) => e.key);
 
 describe('F25 · Routen-Schlüssel wird genau einmal dekodiert (K-1b)', () => {
-  // Die drei Glarner Schlüssel mit `%` in der Kanonik — der Defekt in Reinform.
-  const PROZENT_KEYS = ['GL-III%20B_7_1', 'GL-III%20B%2F7%2F1', 'GL-III%20B%2F3%2F2'];
+  // Die Glarner Schlüssel mit `%` in der Kanonik — der Defekt in Reinform.
+  // Nachtrag 5.9.2026 (deklarierte Teständerung): `GL-III%20B_7_1` ist fort. Er
+  // war die zweite Schreibweise desselben Erlasses (GS III B/7/1) und stand als
+  // Dublette neben `GL-III%20B%2F7%2F1`; der Korpus führt ihn nicht mehr. Am
+  // geprüften Verhalten ändert das nichts — beide verbliebenen Schlüssel tragen
+  // dasselbe Muster («%» + «%2F») und durchlaufen dieselben Zusicherungen.
+  const PROZENT_KEYS = ['GL-III%20B%2F7%2F1', 'GL-III%20B%2F3%2F2'];
 
-  it('die Messgrundlage stimmt: genau diese drei Schlüssel tragen ein «%»', () => {
+  it('die Messgrundlage stimmt: genau diese Schlüssel tragen ein «%»', () => {
     expect(ALLE_KEYS.filter((k) => k.includes('%')).sort()).toEqual([...PROZENT_KEYS].sort());
   });
 
@@ -102,7 +107,7 @@ describe('F25 · Routen-Schlüssel wird genau einmal dekodiert (K-1b)', () => {
     expect(treffer ? (treffer.schluessel as string) : null).toBe('ZH-211.1');
   });
 
-  it('nur die drei %-Schlüssel überleben einen zweiten Decode-Lauf NICHT', () => {
+  it('nur die %-Schlüssel überleben einen zweiten Decode-Lauf NICHT', () => {
     // §7-Sonde: Belegt, dass der Zweitdecode GENAU die drei %-Schlüssel zerstört
     // — und dass er sonst nirgends nötig war (alle übrigen sind Fixpunkte).
     const zerstoert = ALLE_KEYS.filter((k) => {

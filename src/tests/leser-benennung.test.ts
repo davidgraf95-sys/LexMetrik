@@ -56,6 +56,19 @@ const V3_DIR = `${WURZEL}/v3`;
 const GETEILTE_BAUSTEINE = [
   'parts/ErlassLeserKopf.tsx',
   'parts/ArtikelLeser.tsx',
+  'parts/ArtikelLeser.leitfaelle.tsx',
+  // W2·24-F (7.9.2026): die zwei §6.6-Splits von `ArtikelLeser.tsx` — sie
+  // tragen sichtbare Wörter («Materialien», «Verweise», «Rechnen», «Vorlage»,
+  // «Rechner») und standen bis zum Split IN der Datei darüber. Ohne diese zwei
+  // Zeilen hätte der Split die Wörter still aus dem Geltungsbereich getragen.
+  'parts/ArtikelLeser.kopfteile.tsx',
+  // §6.3-DEKLARATION (W2·24-D34, 7.9.2026): die Datei hiess bis D33
+  // `ArtikelLeser.bezuegeZone.tsx`. Sie ist mit D34 zum EINEN Bezüge-Fuss
+  // beider Satzspiegel-Formen geworden und heisst darum `…bezuegeFuss.tsx`.
+  // GEÄNDERT ist ausschliesslich der Pfad in dieser Liste — der
+  // Geltungsbereich des Wächters (dieselbe Datei, dieselben Wörter) und
+  // jede Zusage darüber sind unverändert.
+  'parts/ArtikelLeser.bezuegeFuss.tsx',
   'parts/SektionKopf.tsx',
   'parts/ErlassKopfBlock.tsx',
 ];
@@ -176,14 +189,38 @@ const GLOSSAR: GlossarEintrag[] = [
     ],
   },
   {
-    sache: 'Split-Fläche (Ä118) — «Reiter» bleibt dem Panel',
-    gewaehlt: /In neuem Fenster/,
-    verworfen: [{ wort: /In neuem Reiter/, statt: '«In neuem Fenster»' }],
+    // ── DEKLARIERTE FACHLICHE ÄNDERUNG (M8, 6.9.2026 — §6.3, kein Refactoring)
+    // Ä118 hat 18.8.2026 «In neuem Fenster» gewählt, weil «Reiter» im Browser
+    // besetzt sei und die Split-Sache «Fenster» heisse. Der Beleg gilt für
+    // seinen Stand unverändert weiter — DAMALS gab es weder eine Reiterleiste
+    // noch Pane-Marken. Seit dem R2-Nachzug trägt die Arbeitsleiste messbar
+    // `title="Fenster links"`/`"Fenster rechts"`, und GEMESSEN 6.9.2026
+    // (Prüfbefund R11 #28) öffnete der so beschriftete Knopf gar kein Fenster:
+    // `panes: []`, keine `[data-pane]`-Spalte, stattdessen ein zweiter Reiter.
+    // Der Knopf tut jetzt, was er sagt (`oeffneDaneben`), und heisst wie die
+    // vier anderen Stellen mit derselben Wirkung: «Daneben öffnen».
+    // Das Wort-VERBOT bleibt unverändert bestehen: «In neuem Reiter» kommt
+    // nicht zurück. Neu verboten ist zusätzlich das alte «In neuem Fenster» —
+    // es beschrieb eine Wirkung, die der Knopf nicht hatte.
+    sache: 'Split-Fläche (Ä118/M8) — «Reiter» bleibt dem Panel, das Wort sagt die Wirkung',
+    gewaehlt: /Daneben öffnen/,
+    verworfen: [
+      { wort: /In neuem Reiter/, statt: '«Daneben öffnen»' },
+      { wort: /In neuem Fenster/, statt: '«Daneben öffnen»' },
+    ],
   },
   {
-    sache: 'Fassungs-Zeile ↔ ihr Schalter (Ä116)',
-    gewaehlt: /label="Fassung"/,
-    verworfen: [{ wort: /label="Änderungsvermerke"/, statt: 'label="Fassung"' }],
+    // §6.3-DEKLARATION (D35-F3, Entscheid David 7.9.2026): der Schalter ist eine
+    // Stellung der Radiogruppe «Änderungen anzeigen als» geworden, seine
+    // Beschriftung steht darum als Tabellen-Eintrag statt als JSX-Attribut
+    // (`v3/LeserAenderungsWahl.tsx`). Das GLOSSAR-WORT ist unverändert
+    // «Fassung» — Ä116 gilt Wort für Wort weiter, nur die Fundstelle wandert.
+    sache: 'Fassungs-Zeile ↔ ihre Stellung in der Änderungs-Wahl (Ä116)',
+    gewaehlt: /label: 'Fassung'/,
+    verworfen: [
+      { wort: /label="Änderungsvermerke"/, statt: "label: 'Fassung'" },
+      { wort: /label: 'Änderungsvermerke'/, statt: "label: 'Fassung'" },
+    ],
   },
   {
     sache: 'Suchbereich «Überschriften» (Ä120)',
@@ -308,14 +345,55 @@ const APP_DATEIEN = [
   'pages/MaterialLeser.tsx',
   'pages/gesetz-leser/parts/ErlassLeserKopf.tsx',
   'pages/gesetz-leser/parts/AmtlichesPdf.tsx',
+  // ── R2-A-NACHZUG (31.8.2026): die sechs Flächen aus dem N2-Nachtrag ────────
+  // (FAHRPLAN-DESIGN-KONSISTENZ §3), die B-6 nachgezogen haben und danach KEIN
+  // «amtliche Quelle» mehr führen. Sie stehen hier, weil der Geltungsbereich
+  // eines Wort-Wächters die Liste IST: was nicht in ihr steht, ist nicht
+  // bewacht — und genau daran ist die Streuung nach Ä110 gewachsen.
+  'lib/seo-detail.ts',
+  'lib/verzahnung/glossar.ts',
+  'components/verzahnung/statusRezept.ts',
+  'pages/gesetz-leser/parts/ArtikelHistorie.tsx',
+  'pages/Gesetze.tsx',
+  'pages/Materialien.tsx',
 ];
+
+// ═══ DIE ZWEI-BEGRIFFE-REGEL (R2-A, 31.8.2026) ══════════════════════════════
+//
+// B-6 sagt: EIN Nomen für das Massgebliche — «die amtliche Fassung». Beim
+// Nachziehen der elf Rest-Stellen (N2-Nachtrag) hat sich gezeigt, dass «Quelle»
+// nicht überall dasselbe Ding benennt. Die Prüffrage, an der die zwei Begriffe
+// AUSEINANDERGEHALTEN werden — und die jede neue Stelle zu beantworten hat:
+//
+//   Steht statt des Wortes «der amtlich publizierte TEXT»?
+//       → «die amtliche FASSUNG», aus `lib/benennung` (Nomen bzw. Satz).
+//         Das ist der Vorbehalt: was gilt, wenn unsere Wiedergabe abweicht.
+//   Muss man «FEDLEX» / «die Amtliche Sammlung» einsetzen, damit der Satz
+//   stimmt?
+//       → «die amtliche QUELLE» bzw. «die amtliche SAMMLUNG» BLEIBT. Das ist
+//         kein zweites Wort für dasselbe, sondern ein anderes Ding: die
+//         Publikationsstelle, auf die der Link zeigt.
+//
+// GEMESSEN am Bestand 31.8.2026 gibt es genau eine Fläche, die beide Fälle
+// nebeneinander führt — das Kontext-Panel: sein Vorbehalt zu maschinell
+// zugeordneten Botschaften/Vernehmlassungen meint den TEXT (nachgezogen), seine
+// Fehler-Zeile «Amtliche Quelle: Fedlex ↗» und «Vollständige Liste über die
+// amtliche Quelle (Fedlex)» meinen die PLATTFORM (unverändert). Darum steht sie
+// nicht in `APP_DATEIEN` (dort gilt das pauschale Verbot), sondern hier — mit
+// einem engeren Verbot und einer Positiv-Sonde auf die erlaubte Verwendung.
+// Ohne diese Positiv-Sonde wäre die Ausnahme unsichtbar: wer sie eines Tages
+// wegräumt, merkt es an keinem Wächter.
+const ZWEI_BEGRIFFE_DATEIEN = ['components/kontext/KontextPanel.tsx'];
+
+/** Der VORBEHALTSSATZ mit dem falschen Nomen — «massgeblich … die amtliche Quelle». */
+const VORBEHALT_MIT_QUELLE = /[Mm]assgeblich (?:ist|bleibt)(?: stets)? die amtliche Quelle/;
 
 const LIES_APP = (rel: string) => readFileSync(`src/${rel}`, 'utf8');
 const APP_FLAECHE = APP_DATEIEN.map((d) => ohneKommentare(LIES_APP(d))).join('\n');
 
 describe('Positiv-Sonde: die App-Fläche existiert und trägt den geteilten Baustein', () => {
   it('alle gelisteten Dateien sind lesbar und der gefilterte Text ist substanziell', () => {
-    expect(APP_DATEIEN.length).toBe(8);
+    expect(APP_DATEIEN.length).toBe(14);
     expect(APP_FLAECHE.length).toBeGreaterThan(10_000);
     // Eine Beschriftung, die es garantiert gibt: ohne sie hätte der Filter zu
     // viel entfernt und jede Verbots-Sonde wäre grundlos grün.
@@ -412,9 +490,22 @@ describe('B-6: EIN Substantiv für das Massgebliche — «Fassung», nicht «Que
   it('keine «amtliche Quelle» mehr in der App-Fläche', () => {
     const treffer = APP_DATEIEN.filter((d) => ohneKommentare(LIES_APP(d)).includes('amtliche Quelle'));
     expect(treffer,
-      `«amtliche Quelle» in ${treffer.join(', ')} — der Kanon (B-6, Zählung 10:5) sagt ` +
-      '«die amtliche Fassung», aus `lib/benennung.ts`.',
+      `«amtliche Quelle» in ${treffer.join(', ')} — der Kanon (B-6) sagt «die amtliche ` +
+      'Fassung», aus `lib/benennung.ts`. Tragend ist NICHT eine Mehrheitszählung ' +
+      '(die gemeldete «10:5» ist nicht rekonstruierbar und gilt als falsifiziert, ' +
+      'Gegenprüfung N1), sondern die Präzision: massgeblich ist nicht «eine Quelle», ' +
+      'sondern der amtlich publizierte Text in seiner Fassung. Meint die Stelle die ' +
+      'PLATTFORM (Fedlex) statt des Textes, gehört sie nicht in diese Liste — dann ' +
+      'gilt die Zwei-Begriffe-Regel (s. `ZWEI_BEGRIFFE_DATEIEN`).',
     ).toEqual([]);
+  });
+
+  it('NEGATIV-KONTROLLE: das Verbot findet den Vorher-Wortlaut', () => {
+    // Ohne sie wäre der Fall auch dann grün, wenn `ohneKommentare` zu viel
+    // entfernte (§6.7 b: ein Wächter, der nichts finden KANN, ist wertlos).
+    const vorher = "erklaerung: 'Das Datum, ab dem die gezeigte Fassung einer Bestimmung"
+      + " gilt. Massgeblich ist stets die amtliche Quelle.',";
+    expect(ohneKommentare(vorher).includes('amtliche Quelle')).toBe(true);
   });
 
   it('die drei Träger ziehen den Vorbehalt aus der Wortquelle', () => {
@@ -441,6 +532,51 @@ describe('B-6: EIN Substantiv für das Massgebliche — «Fassung», nicht «Que
       'Fedlex hat eine geltende Änderung noch nicht in den Text eingearbeitet'
       + ' — massgeblich ist die amtliche Fassung.',
     );
+  });
+});
+
+describe('B-6 · Zwei-Begriffe-Regel: «Quelle» bleibt der PLATTFORM vorbehalten', () => {
+  it('kein Vorbehaltssatz führt dort noch «die amtliche Quelle»', () => {
+    const treffer = ZWEI_BEGRIFFE_DATEIEN
+      .filter((d) => VORBEHALT_MIT_QUELLE.test(ohneKommentare(LIES_APP(d))));
+    expect(treffer,
+      `Vorbehaltssatz mit «Quelle» in ${treffer.join(', ')} — der Vorbehalt meint den `
+      + 'amtlich publizierten TEXT und heisst darum «die amtliche Fassung» '
+      + '(`AMTLICHE_FASSUNG_NOMEN`). «Quelle» bleibt nur, wo die Plattform gemeint ist.',
+    ).toEqual([]);
+  });
+
+  it('NEGATIV-KONTROLLE: der Ausdruck findet beide Vorher-Wortlaute', () => {
+    // Wortlaut aus KontextPanel.tsx vor dem Fix (Stand 31.8.2026, Z. 383/509).
+    expect(VORBEHALT_MIT_QUELLE.test(
+      'fachlich nicht geprüft; massgeblich bleibt die amtliche Quelle.')).toBe(true);
+    expect(VORBEHALT_MIT_QUELLE.test(
+      'Massgeblich ist stets die amtliche Quelle.')).toBe(true);
+    // Gegenprobe: die ERLAUBTE Verwendung darf der Ausdruck NICHT fangen.
+    expect(VORBEHALT_MIT_QUELLE.test(
+      'Vollständige Liste über die amtliche Quelle (Fedlex).')).toBe(false);
+  });
+
+  it('POSITIV-SONDE: die erlaubte Verwendung steht wirklich noch da', () => {
+    // Die Ausnahme muss sichtbar bleiben — sonst ist das engere Verbot oben nur
+    // ein pauschales Verbot mit mehr Zeichen.
+    const panel = ohneKommentare(LIES_APP('components/kontext/KontextPanel.tsx'));
+    expect(panel, 'die Plattform-Verwendung «Amtliche Quelle: … (Fedlex)» ist weg — '
+      + 'dann gehört die Datei in `APP_DATEIEN` und die Ausnahme in den Rückbau')
+      .toContain('amtliche Quelle');
+  });
+
+  it('und der Vorbehalt läuft dort über die Wortquelle, nicht über ein Literal', () => {
+    expect(ohneKommentare(LIES_APP('components/kontext/KontextPanel.tsx')))
+      .toContain('AMTLICHE_FASSUNG_NOMEN');
+  });
+
+  it('«Amtliche Sammlung» bleibt als eigener Fachbegriff (AS/RO) unangetastet', () => {
+    // Sie benennt ein anderes Ding als die Fassung eines Erlasses: die
+    // Publikationsreihe, in der die Änderungserlasse stehen. Ein Vereinheitlichen
+    // auf «Fassung» wäre hier keine Vereinheitlichung, sondern ein Sachfehler.
+    expect(ohneKommentare(LIES_APP('components/kontext/KontextPanel.tsx')))
+      .toContain('amtliche Sammlung');
   });
 });
 
@@ -471,5 +607,72 @@ describe('A-3: das Material-Pane meldet seinen Dokumentnamen', () => {
     // kann — bricht der eigene Provider im Pane weg, wird der Rückbau falsch.
     expect(readFileSync('src/components/layout/Pane.tsx', 'utf8'))
       .toContain('<InhaltsKopfMeldeProvider value={setKopf}>');
+  });
+});
+
+// ═══ R7 «BESCHRIFTUNGEN» (W2·24-DESIGN-IDENTITAET, Session E6, 6./7.9.2026) ═
+//
+// Befund F1: der Begriffs-Kanon schreibt «Entscheid» vor, nicht «Urteil» —
+// die Filterzeile («Urteil ab/bis») und die generische Fallback-Datumszeile im
+// Entscheid-Leser («Urteil vom …») sprachen trotzdem von «Urteil», obwohl sie
+// für JEDE Instanz/Gerichtsbarkeit gelten, nicht nur für Urteile im engen
+// Sinn (Beschlüsse/Verfügungen laufen über denselben Zweig).
+//
+// ALLOWLIST: «Urteil» bleibt ausserhalb dieser zwei Stellen ein echter
+// Rechtsbegriff — Formular-Labels der Rechner/Vorlagen («vollstreckbares
+// Urteil», Art. 80 SchKG) und der EntscheidLeser-Fliesstext «vollständiges
+// Urteil» ↔ «amtlicher BGE-Auszug» (eine andere, bewusst beibehaltene
+// Unterscheidung: volltextliches Urteil vs. kuratierter Sammlungsauszug, kein
+// Synonym für «Entscheid»). Bewacht wird NUR der enge Begriffs-Kanon-Fall.
+const R7_URTEIL_DATEIEN = [
+  'components/rechtsprechung/EntscheidFilter.tsx',
+  'components/rechtsprechung/EntscheidKopfTeile.tsx',
+];
+
+describe('R7 F1: Kanon «Entscheid», nicht «Urteil», in Filterzeile und Datumsfallback', () => {
+  const VERBOTEN: RegExp[] = [/>Urteil ab</, />Urteil bis</, />Urteil vom /];
+
+  for (const muster of VERBOTEN) {
+    it(`«${muster.source}» kommt in den zwei bewachten Dateien nicht mehr vor`, () => {
+      const treffer = R7_URTEIL_DATEIEN.filter((d) => muster.test(ohneKommentare(LIES_APP(d))));
+      expect(treffer,
+        `Verworfener Wortlaut in ${treffer.join(', ')} — der Begriffs-Kanon sagt «Entscheid», ` +
+        'nicht «Urteil» (F1). Rechtsbegriff-Verwendungen ausserhalb dieser Filterzeile/Fallback ' +
+        'sind davon nicht betroffen (Allowlist siehe Kommentar oben).',
+      ).toEqual([]);
+    });
+  }
+
+  it('Rot-Beweis: das Verbotsmuster hätte den alten Wortlaut wirklich getroffen', () => {
+    expect('<span>Urteil ab</span>').toMatch(VERBOTEN[0]);
+    expect('<span>Urteil bis</span>').toMatch(VERBOTEN[1]);
+    expect('<span>Urteil vom <Datum /></span>').toMatch(VERBOTEN[2]);
+  });
+
+  it('Positiv-Sonde: der Kanon-Begriff steht jetzt wirklich da', () => {
+    const filter = ohneKommentare(LIES_APP('components/rechtsprechung/EntscheidFilter.tsx'));
+    expect(filter).toContain('Entscheid ab');
+    expect(filter).toContain('Entscheid bis');
+    expect(ohneKommentare(LIES_APP('components/rechtsprechung/EntscheidKopfTeile.tsx')))
+      .toContain('Entscheid vom ');
+  });
+});
+
+describe('R7 F2: ZitierMarke trägt den Kopier-Scope auch im aria-label (Fehlerbuch-18)', () => {
+  // GEMESSEN (Finder, Session E6): `title` allein ist auf Touch unerreichbar
+  // und nicht in jedem Screenreader-Baum verlässlich — dasselbe Muster wurde
+  // im Erlass-Kopf (Amtliche-Fassung-Link, ArtikelLeser.tsx) und im
+  // EntscheidLeser (5B-Nachzug) bereits behoben. `ZitierMarke` bedient JEDEN
+  // Absatz-/Ziffernmarker in JEDEM Erlass und war der eine noch offene Fall.
+  const ZITIER = () => ohneKommentare(LIES_APP('components/normtext/ArtikelBody.zitier.tsx'));
+
+  it('aria-label steht neben title, mit demselben Scope-Text', () => {
+    expect(ZITIER()).toContain('title={`${zitat} — kopieren`}');
+    expect(ZITIER()).toContain('aria-label={`${zitat} — kopieren`}');
+  });
+
+  it('Rot-Beweis: ein Knopf ohne aria-label wäre am Muster erkennbar', () => {
+    const nurTitle = '<button title={`${zitat} — kopieren`}>{children}</button>';
+    expect(nurTitle).not.toContain('aria-label={`${zitat} — kopieren`}');
   });
 });

@@ -123,162 +123,6 @@
     },
     "botschaft": {
       "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2011/853"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2010/1912"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2017/62"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2011-05-25"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "11.034"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zum Bundesgesetz über Lebensmittel und Gebrauchsgegenstände"
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message relatif à la loi fédérale sur les denrées alimentaires et les objets usuels"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente la legge federale sulle derrate alimentari e gli oggetti d'uso"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "817.0"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2011/853"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2010/1912"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2017/62"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2011-05-25"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "11.034"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zum Bundesgesetz über Lebensmittel und Gebrauchsgegenstände"
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message relatif à la loi fédérale sur les denrées alimentaires et les objets usuels"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente la legge federale sulle derrate alimentari e gli oggetti d'uso"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "817.0"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2011/853"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2010/1912"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2017/62"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2011-05-25"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "11.034"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zum Bundesgesetz über Lebensmittel und Gebrauchsgegenstände"
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message relatif à la loi fédérale sur les denrées alimentaires et les objets usuels"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente la legge federale sulle derrate alimentari e gli oggetti d'uso"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "817.0"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2011/853"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2010/1912"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2017/62"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2011-05-25"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "11.034"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zum Bundesgesetz über Lebensmittel und Gebrauchsgegenstände"
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message relatif à la loi fédérale sur les denrées alimentaires et les objets usuels"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente la legge federale sulle derrate alimentari e gli oggetti d'uso"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "817.0"
-    },
-    "botschaft": {
-      "type": "uri",
       "value": "https://fedlex.data.admin.ch/eli/fga/2006/775"
     },
     "proj": {
@@ -387,6 +231,162 @@
     "titleIt": {
       "type": "literal",
       "value": "Messaggio concernente l'evoluzione della politica agricola (Politica agricola 2011)"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "817.0"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2011/853"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2010/1912"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2017/62"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2011-05-25"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "11.034"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zum Bundesgesetz über Lebensmittel und Gebrauchsgegenstände"
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message relatif à la loi fédérale sur les denrées alimentaires et les objets usuels"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente la legge federale sulle derrate alimentari e gli oggetti d'uso"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "817.0"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2011/853"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2010/1912"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2017/62"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2011-05-25"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "11.034"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zum Bundesgesetz über Lebensmittel und Gebrauchsgegenstände"
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message relatif à la loi fédérale sur les denrées alimentaires et les objets usuels"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente la legge federale sulle derrate alimentari e gli oggetti d'uso"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "817.0"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2011/853"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2010/1912"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2017/62"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2011-05-25"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "11.034"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zum Bundesgesetz über Lebensmittel und Gebrauchsgegenstände"
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message relatif à la loi fédérale sur les denrées alimentaires et les objets usuels"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente la legge federale sulle derrate alimentari e gli oggetti d'uso"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "817.0"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2011/853"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2010/1912"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2017/62"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2011-05-25"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "11.034"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zum Bundesgesetz über Lebensmittel und Gebrauchsgegenstände"
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message relatif à la loi fédérale sur les denrées alimentaires et les objets usuels"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente la legge federale sulle derrate alimentari e gli oggetti d'uso"
     }
   }
 ]

@@ -338,6 +338,7 @@ function snapshot(p: Partial<Snapshot> = {}): Snapshot {
     flaky: null,
     tokens: null,
     fKlassen: {},
+    fremdagenten: { jules: null, gemini: null, claude_token_pro_schritt: null },
     ausfaelle: [],
     ...p,
   };

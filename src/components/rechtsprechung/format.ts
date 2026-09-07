@@ -2,18 +2,15 @@ import { datumCh } from '../../lib/normtext/erlassKopfText';
 
 // Kleine, geteilte Anzeige-Helfer für Karte und Zeile (reine Darstellung, §3).
 
-/**
- * ISO 'YYYY-MM-DD' → 'DD.MM.YYYY' (de-CH); unverändert, wenn kein ISO-Datum.
- *
- * B-3 (31.8.2026): stand hier als eigene, byte-gleiche Kopie von `datumCh`
- * (dieselbe Regex, dieselbe Rückgabe) — eine von fünf. Jetzt ein RE-EXPORT der
- * einen Quelle, unter dem hier gewohnten Namen, damit kein Aufrufer wandern
- * muss (dasselbe Muster wie `pages/gesetz-leser/helpers.tsx`, §6.1 kleinster
- * Eingriff). Die Quelle liegt in `lib/normtext/`, weil derselbe String in den
- * prerenderten SEO-Kopf muss und die Bibliotheks-Schicht nicht auf die
- * Darstellung zeigen darf (§3 — Herleitung im Kopf von `erlassKopfText.ts`).
- */
-export const formatiereDatum = datumCh;
+// B-3-RÜCKBAU (R2-A, 31.8.2026): hier stand `export const formatiereDatum =
+// datumCh` — der Alias, den B-1/B-3 als kleinsten Eingriff stehen liess. Er hat
+// die sechste Kopie VERDECKT: solange derselbe Formatierer unter zwei Namen
+// läuft, findet eine Sonde auf «formatiereDatum» die `datumCh`-Stellen nicht
+// und umgekehrt. Ein Alias ohne eigene Aussage ist kein Baustein, sondern ein
+// zweiter Name für dieselbe Wahrheit (§5) — §17-Gegengewicht: was nicht
+// scheitern kann, wird gestrichen statt bewacht. Die zwei Aufrufer sind
+// umgezogen: `LiveSuche` auf den `<Datum>`-Baustein (Format UND Stimme),
+// `datumAnzeige` hier direkt auf `datumCh`.
 
 /**
  * Datums-Zelle für Karte/Zeile: ein Platzhalterdatum (datumUnbekannt, BS §7.2)
@@ -21,7 +18,7 @@ export const formatiereDatum = datumCh;
  * Geschäftsnummer, ohne Datum); Tooltip via DATUM_UNBEKANNT_TITEL.
  */
 export function datumAnzeige(iso: string, datumUnbekannt?: boolean): string {
-  return datumUnbekannt ? `${iso.slice(0, 4)}, o. D.` : formatiereDatum(iso);
+  return datumUnbekannt ? `${iso.slice(0, 4)}, o. D.` : datumCh(iso);
 }
 
 /** Ehrlicher Tooltip zur «o. D.»-Zelle (§8). */

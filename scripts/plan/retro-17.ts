@@ -13,9 +13,17 @@
 //
 // Aufruf:  npm run retro:17
 //          npm run retro:17 -- --datei <pfad>   (andere Zeitreihe, für Proben)
+//
+// Drittes Datum für Regel (h) (Ergänzung QS-FREMDAGENTEN 4.9.2026): diese CLI
+// liest zusätzlich `bibliothek/register/antigravity-stand.json` (falls
+// vorhanden) und reicht dessen `letzte_sichtung` an `bericht()` durch —
+// `retro17Kern.ts` selbst öffnet weiterhin nur Zeitreihe + Chronik (s. dort).
 import { existsSync, readFileSync } from 'node:fs';
 import { ZEITREIHE_DATEI, pruefeZeitreihe, type Zeitreihe } from './selbstoptKern';
 import { CHRONIK_DATEI, bericht } from './retro17Kern';
+
+/** Steuer-Register, identisch mit `scripts/analyse/fremdagenten-messung.ts`. */
+const ANTIGRAVITY_REGISTER = 'bibliothek/register/antigravity-stand.json';
 
 if (!process.env.VITEST) {
   const i = process.argv.indexOf('--datei');
@@ -35,5 +43,14 @@ if (!process.env.VITEST) {
     process.exit(1);
   }
   const chronik = existsSync(CHRONIK_DATEI) ? readFileSync(CHRONIK_DATEI, 'utf8') : '';
-  for (const zeile of bericht(JSON.parse(roh) as Zeitreihe, chronik)) console.log(zeile);
+  let letzteSichtungAntigravity: string | null = null;
+  if (existsSync(ANTIGRAVITY_REGISTER)) {
+    try {
+      const reg = JSON.parse(readFileSync(ANTIGRAVITY_REGISTER, 'utf8')) as { letzte_sichtung?: string };
+      letzteSichtungAntigravity = reg.letzte_sichtung ?? null;
+    } catch {
+      // Register kaputt/unlesbar ⇒ Regel (h) schweigt (§8: degradieren, nicht abstürzen).
+    }
+  }
+  for (const zeile of bericht(JSON.parse(roh) as Zeitreihe, chronik, letzteSichtungAntigravity)) console.log(zeile);
 }

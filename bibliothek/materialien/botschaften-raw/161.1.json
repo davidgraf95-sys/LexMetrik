@@ -6,6 +6,123 @@
     },
     "botschaft": {
       "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/1999/1_7922_7145_6784"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/1999/4935"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2000/90"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "1999-08-11"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "1999.057"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft über die Inkraftsetzung der neuen Bundesverfassung und die notwendige Anpassung der Gesetzgebung "
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant la mise en vigueur de la nouvelle Constitution fédérale et les adaptations législatives consécutives"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente l'entrata in vigore della nuova Costituzione federale e i necessari adeguamenti legislativi"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "161.1"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/1999/1_7922_7145_6784"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/1999/4935"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2000/90"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "1999-08-11"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "1999.057"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft über die Inkraftsetzung der neuen Bundesverfassung und die notwendige Anpassung der Gesetzgebung "
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant la mise en vigueur de la nouvelle Constitution fédérale et les adaptations législatives consécutives"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente l'entrata in vigore della nuova Costituzione federale e i necessari adeguamenti legislativi"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "161.1"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/1999/1_7922_7145_6784"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/1999/4935"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2000/90"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "1999-08-11"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "1999.057"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft über die Inkraftsetzung der neuen Bundesverfassung und die notwendige Anpassung der Gesetzgebung "
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant la mise en vigueur de la nouvelle Constitution fédérale et les adaptations législatives consécutives"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente l'entrata in vigore della nuova Costituzione federale e i necessari adeguamenti legislativi"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "161.1"
+    },
+    "botschaft": {
+      "type": "uri",
       "value": "https://fedlex.data.admin.ch/eli/fga/2001/1111"
     },
     "proj": {
@@ -348,123 +465,6 @@
     "titleIt": {
       "type": "literal",
       "value": "Messaggio concernente la modifica della legge federale sui diritti politici "
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "161.1"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/1999/1_7922_7145_6784"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/1999/4935"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2000/90"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "1999-08-11"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "1999.057"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft über die Inkraftsetzung der neuen Bundesverfassung und die notwendige Anpassung der Gesetzgebung "
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant la mise en vigueur de la nouvelle Constitution fédérale et les adaptations législatives consécutives"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente l'entrata in vigore della nuova Costituzione federale e i necessari adeguamenti legislativi"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "161.1"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/1999/1_7922_7145_6784"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/1999/4935"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2000/90"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "1999-08-11"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "1999.057"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft über die Inkraftsetzung der neuen Bundesverfassung und die notwendige Anpassung der Gesetzgebung "
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant la mise en vigueur de la nouvelle Constitution fédérale et les adaptations législatives consécutives"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente l'entrata in vigore della nuova Costituzione federale e i necessari adeguamenti legislativi"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "161.1"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/1999/1_7922_7145_6784"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/1999/4935"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2000/90"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "1999-08-11"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "1999.057"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft über die Inkraftsetzung der neuen Bundesverfassung und die notwendige Anpassung der Gesetzgebung "
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant la mise en vigueur de la nouvelle Constitution fédérale et les adaptations législatives consécutives"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente l'entrata in vigore della nuova Costituzione federale e i necessari adeguamenti legislativi"
     }
   }
 ]

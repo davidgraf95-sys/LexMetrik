@@ -44,17 +44,20 @@ import {
   letzterSnapshot,
   parseEreignisseMitRest,
   parseFKlassen,
+  parseFremdagentenRegister,
   parseTokenMetriken,
   pruefeZeitreihe,
   quoteText,
   reworkKennzahl,
   zaehleFlakySpecs,
   type CiLauf,
+  type FremdagentenBlock,
   type RwCommit,
   type Snapshot,
   type TokenKennzahl,
   type Zeitreihe,
 } from './selbstoptKern';
+import { erhebeJules } from '../analyse/fremdagenten-messung.ts';
 
 /** Wie viele abgeschlossene CI-Läufe in die Quote eingehen (Spec: «letzten ~50»). */
 const CI_FENSTER = 50;
@@ -64,6 +67,8 @@ const CI_WORKFLOW = 'ci.yml';
 const FLAKY_REPORT = 'playwright-report.json';
 /** Quelle der Fehlerklassen — die Tabelle bleibt die Wahrheit, wir projizieren (§5). */
 const LEHREN_REGISTER = '.claude/skills/lehren/SKILL.md';
+/** Quelle der Gemini-Register (§5) — dieselbe Projektions-Logik wie beim Lehren-Register. */
+const FAHRPLAN_FREMDAGENTEN = 'fahrplaene/FAHRPLAN-FREMDAGENTEN.md';
 
 const TIMEOUT_MS = 60_000;
 
@@ -117,7 +122,46 @@ export function migriere(z: Zeitreihe): Zeitreihe {
   return {
     ...z,
     schema: SCHEMA_VERSION,
-    snapshots: z.snapshots.map((s) => (s.tokens === undefined ? { ...s, tokens: null } : s)),
+    snapshots: z.snapshots.map((s) => {
+      let n = s;
+      if (n.tokens === undefined) n = { ...n, tokens: null };
+      if (n.fremdagenten === undefined) {
+        n = { ...n, fremdagenten: { jules: null, gemini: null, claude_token_pro_schritt: null } };
+      }
+      // Schema 4: eine Jules-Messung von vor dem 4.9.2026 unterschied keine
+      // Proben und führte keine PR-Nummern mit. Nachgetragen wird darum `null`
+      // (= «nicht unterschieden»), NIE 0 oder `[]` — sonst behauptete die
+      // Migration eine Messung, die es nicht gab, und Stufe 2 entdoppelte
+      // gegen eine erfundene leere Liste.
+      const j = n.fremdagenten.jules;
+      if (j && (j.proben_7d === undefined || j.prs_geschlossen_nummern === undefined)) {
+        n = {
+          ...n,
+          fremdagenten: {
+            ...n.fremdagenten,
+            jules: {
+              ...j,
+              proben_7d: j.proben_7d ?? null,
+              prs_geschlossen_nummern: j.prs_geschlossen_nummern ?? null,
+            },
+          },
+        };
+      }
+      // Schema 5: dieselbe Linie für `entwurf_antworten_7d` (ANLASS 5.9.2026,
+      // PR #707) — eine Jules-Messung von vor dem 5.9.2026 unterschied noch
+      // keine Entwurf-Antworten, nachgetragen wird darum `null`, nie 0.
+      const j2 = n.fremdagenten.jules;
+      if (j2 && j2.entwurf_antworten_7d === undefined) {
+        n = {
+          ...n,
+          fremdagenten: {
+            ...n.fremdagenten,
+            jules: { ...j2, entwurf_antworten_7d: j2.entwurf_antworten_7d ?? null },
+          },
+        };
+      }
+      return n;
+    }),
   };
 }
 
@@ -278,6 +322,34 @@ export async function erhebe(): Promise<{ zeitreihe: Zeitreihe; snapshot: Snapsh
     if (tokens === null) ausfaelle.push(`${TOKEN_ENDPUNKT} (erreichbar, aber keine claude_code-Metrik gefunden)`);
   }
 
+  // (8) Fremdagenten — Jules über `gh` (kann scheitern: Netz/`gh` fehlt),
+  //     Gemini deterministisch aus dem lokalen Fahrplan-Register (kann nur an
+  //     einer fehlenden Datei scheitern, nie am Netz).
+  let julesMessung: FremdagentenBlock['jules'];
+  try {
+    julesMessung = erhebeJules();
+  } catch {
+    julesMessung = null;
+  }
+  if (julesMessung === null) ausfaelle.push('Jules-Messung (gh/Netz nicht verfügbar)');
+
+  const fahrplanRoh = lies(FAHRPLAN_FREMDAGENTEN);
+  if (fahrplanRoh === null) ausfaelle.push(FAHRPLAN_FREMDAGENTEN);
+  // Der Parser meldet jedes Register, dessen Marke/Kopfzeile nicht (mehr)
+  // passt, als eigenen Ausfall — statt still 0 zu zählen (Nachbesserung
+  // 4.9.2026). Die Ausfälle wandern wörtlich in den Snapshot, damit eine
+  // umbenannte Tabelle im Fahrplan sichtbar wird, statt die Messreihe
+  // schleichend auf Nullen zu setzen.
+  const register = fahrplanRoh === null ? null : parseFremdagentenRegister(fahrplanRoh);
+  if (register) for (const a of register.ausfaelle) ausfaelle.push(`${FAHRPLAN_FREMDAGENTEN} — ${a}`);
+  const geminiMessung = register?.mess ?? null;
+
+  const fremdagenten: FremdagentenBlock = {
+    jules: julesMessung,
+    gemini: geminiMessung,
+    claude_token_pro_schritt: null,
+  };
+
   const snapshot: Snapshot = {
     erhobenAm,
     headCommit,
@@ -287,6 +359,7 @@ export async function erhebe(): Promise<{ zeitreihe: Zeitreihe; snapshot: Snapsh
     flaky,
     tokens,
     fKlassen,
+    fremdagenten,
     ausfaelle,
   };
 
@@ -346,6 +419,21 @@ if (!process.env.VITEST) {
   console.log(
     `  Fehlerklassen — datierte Vorfälle in der Spalte «Was passierte» (Fix-Daten zählen nicht): ` +
       `${Object.entries(s.fKlassen).map(([k, v]) => `${k}=${v}`).join(' · ') || '—'}`,
+  );
+  console.log(
+    s.fremdagenten.jules
+      ? `  Jules (7 Tage): ${s.fremdagenten.jules.prs_gemerged_7d} gemerged · ${s.fremdagenten.jules.prs_geschlossen_7d} geschlossen · ` +
+        `${s.fremdagenten.jules.proben_7d ?? '—'} Proben (Label \`probe\`, aus der Landungsquote ausgeschlossen) · ` +
+        `${s.fremdagenten.jules.entwurf_antworten_7d ?? '—'} Entwurf-Antworten (Label \`entwurf-antwort\`, aus der Landungsquote ausgeschlossen) · ` +
+        `Median-Dauer ${s.fremdagenten.jules.median_dauer_min ?? '—'} min · Tickets/24h ${s.fremdagenten.jules.tickets_24h}` +
+        `${s.fremdagenten.jules.alarm ? ' · ⚠️  ALARM (Issue ohne Annahme)' : ''}`
+      : '  Jules: — (nicht erhoben)',
+  );
+  console.log(
+    s.fremdagenten.gemini
+      ? `  Gemini-Register (§5): Diskrepanz-Läufe ${s.fremdagenten.gemini.diskrepanz_laeufe} (echt ${s.fremdagenten.gemini.diskrepanz_echt}/Schein ${s.fremdagenten.gemini.diskrepanz_schein}) · ` +
+        `Zweitblick ${s.fremdagenten.gemini.zweitblick_durchgaenge} · Kontingent-Ereignisse ${s.fremdagenten.gemini.kontingent_ereignisse}`
+      : '  Gemini-Register: — (nicht erhoben)',
   );
   if (s.ausfaelle.length) console.log(`  ⚠️  nicht erhoben: ${s.ausfaelle.join(' · ')} (kein Fehler des Sammlers)`);
   console.log(trocken ? `  (--trocken: ${ZEITREIHE_DATEI} NICHT geschrieben)` : `  → ${ZEITREIHE_DATEI}`);

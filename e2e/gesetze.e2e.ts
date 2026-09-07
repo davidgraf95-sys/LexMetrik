@@ -16,13 +16,24 @@ test.describe('/gesetze — Übersicht', () => {
   test('Landeplatz zeigt drei Einstiegskacheln (kein stiller Bund-Default), Bund öffnet die Systematik', async ({ page }) => {
     const fehler = fehlerSammeln(page)
     await page.goto('/gesetze')
-    await expect(page.getByRole('heading', { name: 'Schweizer Gesetzessammlung' })).toBeVisible()
+// ── §6.3-DEKLARATION (W2·24-R6/D11, 6.9.2026) · DIE H1 HEISST «GESETZE» ─────
+// David 6.9.2026 zum Bild /gesetze: Overline «Rechtssammlung Schweiz» + H1
+// «Schweizer Gesetzessammlung» + Erklär-Absatz sagten dreimal dasselbe. Die H1
+// trägt seither den BEREICHSNAMEN — dasselbe Wort wie Reiter und Navigation.
+// Deklarierte fachliche Änderung: die ERWARTUNG wandert mit, die ABSICHT des
+// Falls (die Seite ist da und trägt eine H1) bleibt unberührt.
+    await expect(page.getByRole('heading', { name: 'Gesetze', exact: true })).toBeVisible()
     const inhalt = page.getByRole('main')
     // G4 · §4.1: der Landeplatz zeigt die drei gleichwertigen Kacheln — und NICHT
     // still die Bund-Systematik (kein «Alle aufklappen» vor Säulen-Wahl).
+    // DEKLARIERTE LOCATOR-ANPASSUNG (R12A/D22, 6.9.2026): «Kantone» und
+    // «International» stehen jetzt ZWEIMAL auf der Seite — als Ebenen-Text-
+    // Schalter an der Filterzeile und als Landeplatz-Kachel. Gemeint war hier
+    // immer die KACHEL; sie trägt Zahl und Einheit im Namen, der Schalter nur
+    // das Wort. Der Locator greift darum die Kachel eindeutig (Strict Mode).
     await expect(inhalt.getByRole('button', { name: /Bundesrecht/ })).toBeVisible()
-    await expect(inhalt.getByRole('button', { name: /Kantone/ })).toBeVisible()
-    await expect(inhalt.getByRole('button', { name: /International/ })).toBeVisible()
+    await expect(inhalt.getByRole('button', { name: /\d+ Kantone/ })).toBeVisible()
+    await expect(inhalt.getByRole('button', { name: /Staatsverträge/ })).toBeVisible()
     await expect(inhalt.getByRole('button', { name: 'Alle aufklappen' })).toHaveCount(0)
     // Bund-Kachel wählen → Systematik (default eingeklappt) erscheint.
     await inhalt.getByRole('button', { name: /Bundesrecht/ }).click()
@@ -36,7 +47,9 @@ test.describe('/gesetze — Übersicht', () => {
   test('Kantone-Kachel: Karte default, Liste zeigt das Kantonsraster', async ({ page }) => {
     await page.goto('/gesetze')
     const main = page.getByRole('main')
-    await main.getByRole('button', { name: /Kantone/ }).click()
+    // DEKLARIERTE LOCATOR-ANPASSUNG (R12A/D22): die KACHEL, nicht der gleichnamige
+    // Ebenen-Text-Schalter an der Filterzeile (beide führen auf dieselbe Säule).
+    await main.getByRole('button', { name: /\d+ Kantone/ }).click()
     // G5 · §4.3.3: die Karte ist der Default-Einstieg (gleichwertig neben der Liste).
     await expect(main.getByRole('group', { name: /Karte der Schweizer Kantone/ })).toBeVisible()
     // Auf «Liste» wechseln → das Auswahlraster (Wappen + Vollname + Zähler) je Kanton;
@@ -48,7 +61,7 @@ test.describe('/gesetze — Übersicht', () => {
   test('kein horizontaler Overflow bei 390px', async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 })
     await page.goto('/gesetze')
-    await expect(page.getByRole('heading', { name: 'Schweizer Gesetzessammlung' })).toBeVisible()
+    await expect(page.getByRole('heading', { name: 'Gesetze', exact: true })).toBeVisible()
     const b = await page.evaluate(() => ({
       scroll: document.documentElement.scrollWidth,
       client: document.documentElement.clientWidth,

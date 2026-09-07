@@ -1,4 +1,4 @@
-import { BeruehrtRahmen, Checkbox, EckdatenKachel, FehlerBox, Field, GruppenTitel, inputCls } from '../vorlagen/ui';
+import { BeruehrtRahmen, Checkbox, EckdatenKachel, FehlerBox, Field, GruppenTitel, inputCls, ListenEditor } from '../vorlagen/ui';
 import { NormText } from '../NormText';
 import { ErgebnisBlock } from '../ErgebnisBlock';
 import { useState } from 'react';
@@ -129,7 +129,10 @@ export function ErbteilungForm() {
 
   const fehler: string[] = [];
   if (!todesdatum) fehler.push('Bitte das Todesdatum angeben (Recht-Schalter, Art. 15/16 SchlT ZGB).');
-  if (!Number.isInteger(kinderLebend) || kinderLebend < 0) fehler.push('Anzahl lebender Kinder: ganze Zahl ≥ 0.');
+  // LM-Fix Finder-6 A1 (5.9.2026): Obergrenze in der Fehlerpruefung nachgezogen — bisher
+  // nur >=0 geprueft, dieselbe Grenze wie die Permalink-Validierung (ET_LINK_SPEC.kinderLebend,
+  // <= 30) fehlte hier. Ohne sie rendert die Tabelle ungeprueft z. B. 5000 Zeilen (§15).
+  if (!Number.isInteger(kinderLebend) || kinderLebend < 0 || kinderLebend > 30) fehler.push('Anzahl lebender Kinder: ganze Zahl zwischen 0 und 30 (realistische Obergrenze).');
   staemme.forEach((s, i) => { if (!Number.isInteger(s.enkel) || s.enkel < 0) fehler.push(`Stamm ${i + 1}: Anzahl Nachkommen als ganze Zahl ≥ 0.`); });
 
   let ergebnis: ErbteilungErgebnis | null = null;
@@ -182,13 +185,13 @@ export function ErbteilungForm() {
             {ZIVILSTAENDE.map((z) => <option key={z.code} value={z.code}>{z.label}</option>)}
           </select>
         </Field>
-        <Field label="Nachlass (CHF, optional)"
+        <Field label="Nachlass (CHF)" optional
           hint={gueterrechtAn
             ? 'Wird unten güterrechtlich hergeleitet – Direkteingabe ist deaktiviert'
             : 'Leer = nur Quoten; mit Betrag werden Erb- und Pflichtteile in CHF ausgewiesen'}>
           <input type="number" inputMode="decimal" min={0} value={betraege.direkt} disabled={gueterrechtAn}
             onChange={(e) => setBetraege((b) => ({ ...b, direkt: e.target.value }))}
-            placeholder="z. B. 500000" className={inputCls + (gueterrechtAn ? ' opacity-50 cursor-not-allowed' : '')} />
+            placeholder="z. B. 500'000" className={inputCls + (gueterrechtAn ? ' opacity-50 cursor-not-allowed' : '')} />
         </Field>
       </div>
 
@@ -206,25 +209,39 @@ export function ErbteilungForm() {
         <GruppenTitel><NormText text={`1. Parentel – Nachkommen (Art. 457 ZGB)`} /></GruppenTitel>
         <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-4', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-4')}>
           <Field label="Lebende Kinder (Anzahl)">
-            <input type="number" inputMode="decimal" min={0} step={1} value={kinderLebend} onChange={(e) => setKinderLebend(Number(e.target.value))} className={inputCls + ' w-28'} />
+            {/* LM-072 (B12, 4.9.2026): die feste Feldbreite ist weg — das Feld folgt jetzt
+                seiner Rasterzelle wie jedes andere `Field` derselben Reihe. GEMESSEN
+                @1440 stand es als 112 px neben Feldern von 495 px, ohne dass die
+                schmalere Breite etwas aussagte (§8: eine Breite ist eine Zusage über
+                die erwartete Eingabelänge). Die schmalen Felder der INLINE-Reihen
+                (Zahl + Einheit nebeneinander, `w-24`) bleiben, dort trägt die Breite
+                die Zusammengehörigkeit. */}
+            <input type="number" inputMode="decimal" min={0} max={30} step={1} value={kinderLebend} onChange={(e) => setKinderLebend(Number(e.target.value))} className={inputCls} aria-invalid={!Number.isInteger(kinderLebend) || kinderLebend < 0 || kinderLebend > 30} />
           </Field>
           <Field label="Vorverstorbene Kinder mit Nachkommen (Stämme)" hint="Deren Nachkommen treten nach Stämmen ein (Art. 457 Abs. 3)">
-            <div className="space-y-2">
-              {staemme.map((s, i) => (
-                <div key={i} className="flex items-center gap-2">
-                  <span className="text-body-s text-ink-500 w-20">Stamm {i + 1}:</span>
-                  <input type="number" inputMode="decimal" min={0} step={1} value={s.enkel}
-                    onChange={(e) => setStaemme((arr) => arr.map((x, j) => (j === i ? { enkel: Number(e.target.value) } : x)))}
-                    className={inputCls + ' w-24'} />
-                  <span className="text-body-s text-ink-500">Nachkommen</span>
-                  <button type="button" onClick={() => setStaemme((arr) => arr.filter((_, j) => j !== i))}
-                    className="text-body-s text-danger-700 hover:underline">Entfernen</button>
-                </div>
-              ))}
-              <button type="button" onClick={() => setStaemme((arr) => [...arr, { enkel: 1 }])}
-                className="lc-btn-outline lc-btn-sm">
-                + Stamm hinzufügen
-              </button>
+            {/* Der Wrapper-<div> bleibt: `Field` verknüpft nur ein natives
+                Einzel-Control, hier steht eine ganze Liste darin. */}
+            <div>
+              {/* R2-F/F1-9: Repeater auf den geteilten ListenEditor. Die
+                  Stamm-Nummer trägt jetzt die Kopfzeile des Eintrags statt
+                  eines Inline-«Stamm N:»; das Zahlenfeld behält sie als
+                  aria-label, damit die Zuordnung vorgelesen bleibt. */}
+              <ListenEditor
+                element="Stamm"
+                eintraege={staemme}
+                className="space-y-2"
+                onHinzufuegen={() => setStaemme((arr) => [...arr, { enkel: 1 }])}
+                onEntfernen={(i) => setStaemme((arr) => arr.filter((_, j) => j !== i))}
+                kinder={(s, i) => (
+                  <div className="flex items-center gap-2">
+                    <input type="number" inputMode="decimal" min={0} step={1} value={s.enkel}
+                      aria-label={`Nachkommen Stamm ${i + 1}`}
+                      onChange={(e) => setStaemme((arr) => arr.map((x, j) => (j === i ? { enkel: Number(e.target.value) } : x)))}
+                      className={inputCls + ' w-24'} />
+                    <span className="text-body-s text-ink-500">Nachkommen</span>
+                  </div>
+                )}
+              />
             </div>
           </Field>
         </div>
@@ -253,9 +270,9 @@ export function ErbteilungForm() {
       )}
 
       {/* Güterrechtliche Herleitung (optional) – übersteuert das Direktfeld oben */}
-      <div className="border border-line rounded-lg">
+      <div className="border border-line ">
         <button type="button" onClick={() => setGueterrechtAn(!gueterrechtAn)}
-          className={`w-full flex items-center justify-between px-4 py-3 bg-surface hover:bg-brass-100 text-left rounded-t-lg ${gueterrechtAn ? '' : 'rounded-b-lg'}`}>
+          className={`w-full flex items-center justify-between px-4 py-3 bg-surface hover:bg-brass-100 text-left ${gueterrechtAn ? '' : ''}`}>
           <span className="text-body-s font-medium text-ink-700">Güterrechtliche Vorstufe – Nachlass herleiten (optional)</span>
           <span className="text-ink-500">{gueterrechtAn ? '▲' : '▼'}</span>
         </button>
@@ -296,7 +313,15 @@ export function ErbteilungForm() {
               wert={ergebnis.rechtsstand === 'neu' ? 'Neues Recht (ab 1.1.2023)' : 'Altes Recht (bis 31.12.2022)'} />
             <EckdatenKachel akzent num label="Verfügbare Quote"
               wert={`${fmtB(ergebnis.verfuegbareQuote)}${ergebnis.verfuegbareQuoteChf != null ? ` · CHF ${fmtCHF(ergebnis.verfuegbareQuoteChf)}` : ''}`} />
-            <EckdatenKachel num label="Nachlass"
+            {/* LM-034 (B11-Karten, 4.9.2026): `num` gilt der KACHEL, nicht dem
+                Wert — der Ersatzsatz «nur Quoten (keine Beträge erfasst)» lief
+                dadurch in Geist Mono (am 4.9. auf /rechner/erbteilung gemessen)
+                und stand als dritte Schrift neben «Neues Recht (ab 1.1.2023)»
+                (Sans) und «1/2» (Mono). Die Zwei-Stimmen-Regel
+                (DESIGN-REGLEMENT §4b(e), Fassung 29.8.2026) gibt Mono an
+                Zahlen, Aktenzeichen und Struktur-Etiketten — ein Satz ist
+                keines davon. `num` hängt darum jetzt am Wert. */}
+            <EckdatenKachel num={nachlass != null} label="Nachlass"
               wert={nachlass != null ? `CHF ${fmtCHF(nachlass)}` : 'nur Quoten (keine Beträge erfasst)'} />
           </div>
 
@@ -350,7 +375,7 @@ export function ErbteilungForm() {
               Ansicht aus reinen Divs (R4 Ziff. 3, `data-ansicht`). */}
           <div data-ansicht="quoten-balken" className="lc-card p-5">
             <p className="lc-overline mb-3">Gebundene vs. verfügbare Quote</p>
-            <div className="flex h-7 rounded-md overflow-hidden border border-line">
+            <div className="flex h-7 overflow-hidden border border-line">
               {ergebnis.erben.filter((e) => !istNull(e.pflichtteil)).map((e) => {
                 const breite = zahl(e.pflichtteil) * (e.anzahl ?? 1) * 100;
                 return (

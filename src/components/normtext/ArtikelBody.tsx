@@ -5,8 +5,7 @@ import { absatzNorm, bestimmePassusZiel, type PassusInfo } from '../../lib/normt
 import { trenneAenderungshistorie, absatzMarke, gruppiereBetraege, istAufgehoben } from '../../lib/normtext/darstellung';
 import { NormText, type InternRefs } from '../NormText';
 import { chapeauZielFremdgesetz } from '../../lib/fedlex';
-import { BildFigur, BildKacheln, type BildDaten, type BildKachel } from './BildElemente';
-import { zitatMitAusweis, heuteIso } from '../../lib/format';
+import { BildFigur, BildKacheln } from './BildElemente';
 import { WJ } from './wortverbinder';
 import { StaffelTabelle, MehrspaltigeTabelle, TarifTabelle } from './ArtikelTabellen';
 import { staffelZeilen, normalisiereTarifText } from './tarifText';
@@ -18,112 +17,11 @@ import { staffelZeilen, normalisiereTarifText } from './tarifText';
 // ArtikelKontextGruppe) und erzeugt keinen Zyklus (check:zyklen).
 import { SUCH_META } from '../../pages/gesetz-leser/suchHighlight';
 
-// Bild-/Kachel-Felder eines Blocks (bild/bildKacheln) sind neu im Snapshot-Daten-
-// format; die Render-Schicht liest sie über diese lokale Erweiterung des
-// Snapshot-Block-Typs (wie TabSpalte — kein Import aus scripts/, §3). Additiv:
-// bestehende Blöcke ohne die Felder rendern unverändert.
-type BildBlock = NormSnapshot['bloecke'][number] & { bild?: BildDaten; bildKacheln?: BildKachel[] };
+import type { BildBlock, ZitierKontext, AusweisBasis } from './ArtikelBody.helfer';
+import { FREMD_LEER, NOOP, markenAnzeige, markenZitat, stufenFuer, vglFnNr } from './ArtikelBody.helfer';
+import { ZitierMarke } from './ArtikelBody.zitier';
 
-/** Zitier-Kontext der Lesesicht: macht Absatz-/lit.-/Ziff.-Marken klickbar
- *  («Art. X Abs. Y lit. z ERLASS» kopieren). Im Popover undefiniert → unverändert.
- *  B-6 (QS-BASIS): `fassung`/`permalinkBasis` (optional) rüsten die inline-Kopie
- *  mit dem Stand-Ausweis (§7 a–d) nach; fehlen sie (z. B. Popover), bleibt die
- *  Marke bei der reinen Fundstelle — byte-gleich zu vorher. */
-interface ZitierKontext {
-  artikelLabel: string;
-  kuerzel: string;
-  /** Konsolidierungs-/Fassungsdatum ISO des Erlasses (Stand-Ausweis). */
-  fassung?: string;
-  /** Permalink-Pfad inkl. #anker OHNE origin (origin kommt zur Klick-Zeit). */
-  permalinkBasis?: string;
-}
-
-// M6-D: leere Self-Ziel-Map + No-op-Sprung für den Fremdgesetz-Chapeau-Kontext —
-// dort gibt es kein «eigenes» Sprungziel; NormText routet bare «Art. N» allein über
-// `fremdKuerzel` auf das Fremdgesetz (NormChip). Modul-konstant (keine Re-Allokation).
-const FREMD_LEER: Map<string, string> = new Map();
-const NOOP = (): void => {};
-
-/** lit. (Buchstaben, Bund) vs. Ziff. (Zahlen, Kanton) anhand der Marke. */
-function litZiff(marke: string): string {
-  return /^\d/.test(marke.trim()) ? 'Ziff.' : 'lit.';
-}
-
-/** Verschachtelungsstufe je Item. PRIMÄR aus der EXPLIZITEN `tiefe` des
- *  Snapshots (M6, §1): liefert Fedlex die Stufe mit, wird sie NICHT mehr aus
- *  dem Markentyp geraten — das Raten erzeugte falsche Zitate, wenn die
- *  Reihenfolge umgekehrt ist (Ziff. → lit. statt lit. → Ziff.).
- *  FALLBACK-Heuristik nur für Daten OHNE tiefe (Kanton-Snapshots, noch nicht
- *  re-segnete Bund-Erlasse): Bst (a,b,c) = Stufe 0; Ziff (1,2,3) NACH einem
- *  Bst = Stufe 1, sonst 0; Gedankenstrich = eine Stufe tiefer als das
- *  vorausgehende Item. EINE Stelle (§5) — genutzt für die block-lokale
- *  Darstellung UND die blockübergreifende Fortsetzungs-Kette der Bild-Blöcke. */
-function stufenFuer(items: Array<{ marke: string; tiefe?: number }>): number[] {
-  const hatTiefe = items.some((it) => typeof it.tiefe === 'number');
-  if (hatTiefe) return items.map((it) => it.tiefe ?? 0);
-  const typ = (m: string) => /^[–—-]$/.test(m.trim()) ? 'strich' : /^\d/.test(m.trim()) ? 'ziff' : 'lit';
-  const stufen: number[] = [];
-  let sahLit = false, letzteNichtStrich = 0;
-  for (const it of items) {
-    const t = typ(it.marke);
-    let lv: number;
-    if (t === 'strich') lv = letzteNichtStrich + 1;
-    else if (t === 'ziff') { lv = sahLit ? 1 : 0; letzteNichtStrich = lv; }
-    else { lv = 0; sahLit = true; letzteNichtStrich = 0; }
-    stufen.push(lv);
-  }
-  return stufen;
-}
-
-/** Stand-Ausweis-Basis (B-6): dieselbe Fassung + Permalink-Basis für alle Marken
- *  eines Artikels; der Abruf-Tag und der origin kommen zur Klick-Zeit dazu. */
-interface AusweisBasis { fassung?: string; permalinkBasis: string }
-
-// Klickbare Zitat-Marke (Absatznummer oder lit./Ziff.). Kopiert die präzise
-// Fundstelle; kurzes ✓ als Rückmeldung. Nur in der Lesesicht (zitierKontext).
-// B-6 (QS-BASIS): liegt eine `ausweis`-Basis vor, wird beim Klick der Stand-
-// Ausweis (Fassung + Abrufdatum + Permalink, §7 a–d) an die Fundstelle gehängt.
-function ZitierMarke({ zitat, ausweis, sup, klasse, children }: {
-  zitat: string; ausweis?: AusweisBasis; sup?: boolean; klasse?: string; children: React.ReactNode;
-}) {
-  const [ok, setOk] = useState(false);
-  const kopiere = () => {
-    const text = ausweis && typeof window !== 'undefined'
-      ? zitatMitAusweis(zitat, {
-          fassung: ausweis.fassung,
-          abruf: heuteIso(new Date()),
-          permalink: `${window.location.origin}${ausweis.permalinkBasis}`,
-        })
-      : zitat;
-    void navigator.clipboard?.writeText(text).then(() => {
-      setOk(true); window.setTimeout(() => setOk(false), 1200);
-    });
-  };
-  // DESIGN-D0: `text-brass-700/55` → `text-brass-700`. Die Deckkraft war seit je
-  // ein No-op (Fund B4) — ausgeliefert wurde immer das volle brass-700 (5.41:1,
-  // AA). Mit dem Wurzel-Fix hätte sie erstmals gegriffen und den Zitierknopf auf
-  // 2.2:1 gedrückt (#b9a683 auf Papier), weit unter AA. Ein gedämpfter
-  // Ruhezustand wäre eine neue Design-Entscheidung — die trifft nicht D0.
-  const knopf = (
-    <button type="button" onClick={kopiere} title={`${zitat} — kopieren`}
-      className={`num font-semibold cursor-pointer text-brass-700 hover:underline decoration-dotted underline-offset-2 ${klasse ?? ''}`}>
-      {ok ? '✓' : children}
-    </button>
-  );
-  return sup ? <sup className="mr-1">{knopf}</sup> : knopf;
-}
-
-// FN-5: numerischer Nr-Vergleich («95» < «95a» < «96») für die stabile Reihung
-// der End-Marker, wenn Rückfall-Kandidaten mit bestehenden zusammentreffen —
-// gleiche Ordnung wie die fussAnzeige-Sortierung im ArtikelLeser (A43).
-function vglFnNr(a: string, b: string): number {
-  const key = (nr: string): [number, string] => {
-    const m = /^(\d+)([a-z]*)$/i.exec(nr.trim());
-    return m ? [parseInt(m[1], 10), m[2].toLowerCase()] : [Number.POSITIVE_INFINITY, nr];
-  };
-  const ka = key(a), kb = key(b);
-  return ka[0] - kb[0] || ka[1].localeCompare(kb[1]);
-}
+export type { ZitierKontext };
 
 // Fussnoten-Verweis (hochgestellte Nummer). Klick zeigt den Fussnotentext in einem
 // Popover DIREKT an der Stelle — ohne die Leseposition zu verschieben (früher
@@ -224,17 +122,23 @@ export function FnRef({ artikel, nr, klasse, kl }: {
     // jetzt redundant, aber zeichen- und wirkungsneutral.
     <span ref={ankerRef} className="relative whitespace-nowrap" data-fn-klasse={kl}>
       {WJ}
-      {/* `data-fn-ref` ist die MASCHINEN-Kennung des Fussnoten-Markers: der
-          `data-fussnoten`-Toggle in `index.css` greift darüber und nie über den
-          accessible name (Treuebruch 16.8.2026 — die frühere Namensregel traf
-          auch den Schalter «Fussnoten (N)» im Ansicht-Menü). Wächter:
-          `src/tests/fussnoten-toggle-huellenneutral.test.ts`. */}
+      {/* `data-fn-ref` ist die MASCHINEN-Kennung des Fussnoten-Markers: eine
+          CSS-Regel greift darüber und nie über den accessible name (Treuebruch
+          16.8.2026 — die frühere Namensregel traf auch den Schalter «Fussnoten
+          (N)» im Ansicht-Menü). Den `data-fussnoten`-Toggle, der sie damals
+          benutzte, gibt es seit D35-F3 (7.9.2026) nicht mehr; die Kennung
+          bleibt, weil sie der Nachweis der textfreien Adressierung ist.
+          Wächter: `src/tests/fussnoten-toggle-huellenneutral.test.ts`. */}
       <button type="button" data-fn-ref onClick={umschalten} aria-expanded={auf} aria-label={`Fussnote ${nr}`}
         className={`num align-super text-[length:var(--hochgestellt)] font-medium text-brass-700 hover:text-brass-800 ${klasse ?? ''}`}>{nr}</button>
       {auf && html && pos && typeof document !== 'undefined' && createPortal(
         <span ref={popRef} role="note" dangerouslySetInnerHTML={{ __html: html }}
           style={{ top: pos.top, left: pos.left }}
-          className="fixed z-30 block w-72 max-w-[78vw] cursor-auto rounded-md border border-line bg-paper p-2 text-left text-xs font-normal not-italic leading-normal text-ink-500 shadow-lg [&_a]:text-brass-700 [&_a]:underline" />,
+          /* A3-2 (R3-β): Anatomie aus `.lc-schwebeflaeche` (Fläche · Rahmen ·
+             Radius · Schatten). FIX dabei zweierlei: `--paper` statt der
+             Ebene darüber (`--paper-raised`) und `rounded-md` als einziger
+             Ausreisser unter acht Schwebeflächen. */
+          className="lc-popover fixed z-dropdown block w-72 max-w-[78vw] cursor-auto p-2 text-left text-xs font-normal not-italic leading-normal text-ink-500 [&_a]:text-brass-700 [&_a]:underline" />,
         document.body,
       )}
     </span>
@@ -427,7 +331,10 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
           // inline gesetzte Marker doppelt. Bei einer Umsortierung der
           // <span>-Kinder diese Kopplung zuerst auflösen.
           const itemInlineGesetzt = new Set<string>();
-          const markeAnzeige = istStrich ? '–' : `${it.marke}.`;
+          // QS-UI (Gegenprüfung PR #658): Beschriftung über markenAnzeige —
+          // Aufzählungsmarke «a.»/«1.» unverändert, Label-Marke «BE:» statt
+          // «BE.» (amtlicher <dt>-Doppelpunkt). Die Marke selbst bleibt «BE».
+          const markeAnzeige = markenAnzeige(it.marke);
           // Präzises Zitat inkl. Verschachtelung: eine Ziff. unter einer
           // Bst. wird «… lit. X Ziff. Y …». Eltern-Kette über die Stufen
           // rückwärts aufbauen (nächster Vorfahre je flacherer Stufe).
@@ -447,7 +354,9 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
             for (let k = jK; k >= 0 && lvl >= 0; k--) {
               if (kStufen[k] === lvl && !/^[–—-]$/.test(kette[k].marke.trim())) {
                 const m2 = kette[k].marke;
-                seg.unshift(`${litZiff(m2)} ${m2}`);
+                // QS-UI: Label-Marken ohne «lit.»-Präfix (markenZitat) — «lit. BE»
+                // ist in der VZV kein Zitat, die Kategorie heisst schlicht «BE».
+                seg.unshift(markenZitat(m2));
                 lvl--;
               }
             }
@@ -480,7 +389,7 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
               // BEIDEN Hüllen (der Befund ist in beiden derselbe, er ist heute
               // live). Golden ist unberührt (Engines/Vorlagen), der
               // Pixelvergleich PX misst den RUHEZUSTAND und sieht keinen Hover.
-              className={`flex items-baseline gap-2 rounded-md px-2 py-1 ${zk ? 'transition-colors hover:bg-paper-sunken' : ''} ${
+              className={`flex items-baseline gap-2 rounded-md px-2 py-1 ${zk ? 'transition-colors lc-hover-flaeche' : ''} ${
                 istItemZitiert
                   ? 'border-l-4 border-brass-500 bg-brass-100 text-ink-900'
                   : 'text-ink-700'
@@ -717,7 +626,7 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
             {/* Ä8 (LESER-V3 H2b): derselbe leise Hover wie an der lit.-Zeile
                 oben — Herleitung dort. Ein Absatz und eine Aufzählungszeile sind
                 dieselbe Geste und dürfen nicht zwei Farben tragen (§5). */}
-            <p className={zk ? `[overflow-wrap:anywhere] hyphens-manual pl-9 rounded transition-colors hover:bg-paper-sunken ${absMarke != null ? '-indent-9' : '[text-indent:0]'}` : undefined}>
+            <p className={zk ? `[overflow-wrap:anywhere] hyphens-manual pl-9 rounded transition-colors lc-hover-flaeche ${absMarke != null ? '-indent-9' : '[text-indent:0]'}` : undefined}>
               {absMarke != null && (
                 zk
                   ? <ZitierMarke klasse="text-body-s inline-block w-9 text-left !font-medium !text-ink-500" zitat={`${zk.artikelLabel} Abs. ${absMarke} ${zk.kuerzel}`} ausweis={ausweisBasis}>{absMarke}</ZitierMarke>

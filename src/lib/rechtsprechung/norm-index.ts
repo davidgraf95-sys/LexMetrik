@@ -17,6 +17,7 @@
 // verwerfen. Ein Eintrag im Index belegt eine NENNUNG, keine Einschlägigkeit.
 
 import type { Leitcharakter } from './typen';
+import { kodiereSchluessel } from '../normtext/dateiUrl';
 
 export interface EntscheidRef {
   key: string;
@@ -209,7 +210,7 @@ export async function ladeLeitfallShard(registerKey: string): Promise<LeitfallSh
   if (!p) {
     p = (async () => {
       try {
-        const res = await fetch(`/rechtsprechung/norm-index/${encodeURIComponent(registerKey)}.json`);
+        const res = await fetch(`/rechtsprechung/norm-index/${kodiereSchluessel(registerKey)}.json`);
         if (res.status === 404) return null; // kein Shard = Erlass ohne Artikel-Treffer (kein Fehler)
         if (!res.ok) { shardPromises.delete(registerKey); return null; }
         return (await res.json()) as LeitfallShard;

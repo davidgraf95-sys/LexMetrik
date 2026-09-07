@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { artikelWerkzeugGruppen, werkzeugeFuerNorm } from '../../../lib/normtext/werkzeuge';
 import type { MaterialBezug, Werkzeug } from '../../../lib/normtext/werkzeuge';
 import { datumAnzeige } from '../../../components/rechtsprechung/format';
+import { GruppenKopf } from '../../../components/ui/GruppenKopf';
 import type { Geladen } from './panelKontextLaden';
 
 // ─── Reiter «Anwendung» (W2·7-VZUI, 31.8.2026) ───────────────────────────────
@@ -124,9 +125,8 @@ export function PanelAnwendung({ softLaw, erlassKey, ebene }: {
     <div data-v3-panel-reiter-inhalt="anwendung" className="px-2.5 py-1">
       {ressourcen.length > 0 && (
         <section data-v3-anwendung="behoerden" className="pt-1">
-          <p className="lc-overline">Behörden-Praxis
-            <span className="num tabular-nums ml-1 font-normal normal-case text-ink-500">{ressourcen.length}</span>
-          </p>
+          {/* B3-1 (R3-β): dichte Gestalt des EINEN Gruppenkopfs (`ui/GruppenKopf`). */}
+          <GruppenKopf als="p" dicht titel="Behörden-Praxis" zahl={ressourcen.length} />
           {/* §8: der Rang wird genannt, nicht vorausgesetzt. Eine Wegleitung neben
               Gerichtsentscheiden ohne diesen Satz läse sich wie eine Quelle
               gleichen Rangs — R16 verbietet Wertungsfarben, dieser Satz ersetzt
@@ -161,9 +161,7 @@ export function PanelAnwendung({ softLaw, erlassKey, ebene }: {
 
       {gruppen.length > 0 && (
         <section data-v3-anwendung="werkzeuge" className="pt-2">
-          <p className="lc-overline">Werkzeuge
-            <span className="num tabular-nums ml-1 font-normal normal-case text-ink-500">{gruppen.length}</span>
-          </p>
+          <GruppenKopf als="p" dicht titel="Werkzeuge" zahl={gruppen.length} />
           <ul className="mt-0.5">
             {gruppen.map((g) => (
               <li key={`${g.von}-${g.bis}`} className="flex flex-wrap items-baseline gap-x-2 gap-y-1.5 border-t border-line/60 py-1.5 first:border-t-0">
@@ -180,9 +178,7 @@ export function PanelAnwendung({ softLaw, erlassKey, ebene }: {
 
       {grob.length > 0 && (
         <section data-v3-anwendung="werkzeuge-grob" className="pt-2">
-          <p className="lc-overline">Werkzeuge
-            <span className="num tabular-nums ml-1 font-normal normal-case text-ink-500">{grob.length}</span>
-          </p>
+          <GruppenKopf als="p" dicht titel="Werkzeuge" zahl={grob.length} />
           {/* §8: die Zuordnung ist hier ERLASS-weit und nicht artikelscharf — das
               steht da, statt eine Genauigkeit zu suggerieren, die die Tabelle für
               diesen Erlass nicht führt. */}

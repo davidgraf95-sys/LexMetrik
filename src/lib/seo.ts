@@ -24,11 +24,26 @@ export const SITE_URL = 'https://lexmetrik.vercel.app';
 // Absolutum, der Status-Terminus «geprüft» ist für Inhalte reserviert (nie
 // «geprüfte Bausteine»), «Ohne KI» nie als Siegel — nur der gescopte Satz.
 
-/** H1 der Startseite (Value Proposition, §6). */
-export const HERO_TITEL = 'Schweizer Recht nachschlagen, Fristen und Kosten berechnen';
-/** Subline unter der H1 (§6). */
-export const HERO_SUBLINE =
-  'Gesetze, Bundesgerichtsentscheide und amtliche Materialien in einem Werkzeug, dazu Rechner und Vorlagen — mit Norm, Link und Stand.';
+// ─── SPRACH-DIÄT (W2·24-DESIGN-IDENTITAET R3, Fahrplan §6 (h)) ──────────────
+// Weg sind die beiden SICHTBAREN Nutzenversprechen der Startseite: die H1
+// «Schweizer Recht an einem Ort» und die Subline «… miteinander verzahnt …».
+// Beide behaupteten eine Eigenschaft, statt den Bestand zu bezeichnen; «an einem
+// Ort» und «verzahnt» sind genau die Wendungen, die §5 des Fahrplans als
+// Slogan-Sprache benennt. An ihrer Stelle steht der Titelblatt-Begriff und eine
+// AUFZÄHLUNG. Die SEO-Träger unten (`SITE_TITEL`/`SITE_DESCRIPTION`) sind
+// gekürzt, nicht getilgt — sie sind an `check:seo-index` und an index.html
+// gebunden, und eine Seite ohne Suchbegriffe im Titel findet niemand.
+
+// SAMMLUNG_TITEL («Sammlung», Titelblatt-Begriff/H1) ist mit D39 (David
+// 7.9.2026: «entferne oberhalb der begrüssung das wort Sammlung») ENTFALLEN
+// — die BEGRÜSSUNG ist jetzt die H1 (`start/SuchBlock.tsx`), kein zweites
+// Wort trägt den Rang. Kein anderer Konsument blieb übrig (Minimalismus,
+// `.claude/rules/schichtentrennung.md`): die Konstante ist gestrichen statt
+// unbenutzt bewacht. `SAMMLUNG_BESTAND` (Aufzählung im Seitenfuss) ist davon
+// unberührt.
+/** Was in der Sammlung steht, als Aufzählung (Bezeichnung, kein Versprechen). */
+export const SAMMLUNG_BESTAND =
+  'Gesetze, Entscheide, Materialien, Rechner, Vorlagen.';
 /** Vertrauens-Fuss, erster Satz — gescopter Anti-KI-Satz (§6, Auflage 1). */
 export const VERTRAUENS_SATZ =
   'Kein Sprachmodell schätzt Ergebnisse: gerechnet wird nach festen Regeln, der Rechenweg ist offengelegt, Normen sind mit der amtlichen Sammlung verlinkt.';
@@ -41,13 +56,18 @@ export const SITE_KURZFORM = 'Gerechnet wird nach festen Regeln, mit offengelegt
 
 /** Globaler Titel/Description — aus dem I2-Material (§6) abgeleitet; index.html
  *  spiegelt genau diese Werte (Tor check:seo-index). */
-export const SITE_TITEL = `LexMetrik — ${HERO_TITEL}`;
+// Der Seitentitel ist NICHT aus der H1 abgeleitet: ein <title> braucht die
+// Suchbegriffe, unter denen die Seite gefunden wird. Darum hier literal — der
+// Titel bleibt trotzdem EINE Quelle (index.html spiegelt ihn, Tor
+// check:seo-index). W2·24-R3: der Slogan-Teil «Schweizer Recht an einem Ort»
+// ist gestrichen, die Suchbegriffe stehen unverändert.
+export const SITE_TITEL = 'LexMetrik — Schweizer Gesetze, Rechtsprechung, Materialien, Rechner';
 export const SITE_DESCRIPTION =
-  'Schweizer Recht nachschlagen und berechnen: Gesetze, Bundesgerichtsentscheide und Materialien, dazu Rechner und Vorlagen — mit Norm, Link und Stand.';
+  'Gesetze von Bund und Kantonen, Bundesgerichtsentscheide und amtliche Materialien der Schweiz, mit Stand und Link zur amtlichen Quelle. Dazu Rechner und Vorlagen.';
 /** Kuratierter Social-Share-Text der Startseite (og:description) — bewusst mit
  *  dem gescopten Rechen-Satz statt Marketing-Claim. */
 export const SITE_OG_DESCRIPTION =
-  'Gesetze, Bundesgerichtsentscheide und Materialien in einem Werkzeug, dazu Rechner und Vorlagen. Gerechnet wird nach festen Regeln, mit Norm, Link und Stand.';
+  'Gesetze von Bund und Kantonen, Bundesgerichtsentscheide und amtliche Materialien der Schweiz, dazu Rechner und Vorlagen. Gerechnet wird nach festen Regeln, mit Norm, Link und Stand.';
 
 export interface RouteMetadaten {
   pfad: string;          // z. B. '/rechner/verzugszins'
@@ -98,6 +118,10 @@ const STATISCHE_SEITEN: Record<string, { titel: string; beschreibung: string; og
   '/ueber': { titel: 'Über — LexMetrik', beschreibung: 'Warum es LexMetrik gibt — entstanden bei der Vorbereitung auf die Anwaltsprüfung: überprüfbare, normtreue Rechtsberechnung statt Black Box.' },
   '/kontakt': { titel: 'Kontakt aufnehmen — LexMetrik', beschreibung: 'Fragen, Korrekturen zu einer Berechnung oder einem Baustein, Vorschläge für neue Rechner und Vorlagen — Hinweise auf Fehler sind besonders willkommen.' },
   '/datenschutz': { titel: 'Datenschutzerklärung — LexMetrik', beschreibung: 'Datenschutzerklärung von LexMetrik (Entwurf). Die Eingaben verlassen den Browser nicht — Berechnung und Dokumenterstellung laufen lokal im Gerät.' },
+  // QS-UI B14 #670 (5.9.2026): erbte bisher Titel/Canonical der Startseite
+  // (kein STATISCHE_SEITEN-Eintrag → metaFuerPfad fiel auf «/» durch). Kein
+  // noindex (Muster /abdeckung, /datenschutz: kein Feld dafür im Register).
+  '/einstellungen': { titel: 'Einstellungen — LexMetrik', beschreibung: 'Persönliche Vorgaben für LexMetrik — Standard-Kanton, Vorlagen-Detailgrad, Design und Ausgabestil. Bleiben lokal im Browser gespeichert, nichts wird an einen Server übermittelt.' },
   '/abdeckung': { titel: 'Was ist durchsuchbar — LexMetrik', beschreibung: 'Was die LexMetrik-Suche wirklich durchsucht: Bundeserlasse im Volltext, kantonale Erlasse nach Titel, Bundesgerichts-Leitentscheide und amtliche Materialien — ehrlich offengelegt, mit Live-Link zur amtlichen Fassung.' },
   '/suche': { titel: 'Suche — LexMetrik', beschreibung: 'Volltextsuche über LexMetrik: Gesetzestext, Gesetze, Bundesgerichtsentscheide, amtliche Materialien sowie Rechner und Vorlagen — alle Treffer auf einer Seite, nach Inhaltstyp filterbar, mit teilbarem Deep-Link.' },
 };

@@ -28,7 +28,13 @@ interface ManifestErlass { key: string; ebene: 'bund' | 'kanton'; kanton: string
 const manifest = (JSON.parse(readFileSync('public/normtext/register.json', 'utf8')) as { erlasse: ManifestErlass[] }).erlasse;
 
 const bundKeys = new Set(ERLASS_REGISTER.filter((e) => e.ebene === 'bund').map((e) => e.key));
-const index = baueIndex();
+// AUSDRÜCKLICH über BEIDE Ebenen (K3-Scharfschaltung 1.9.2026): der Generator
+// schreibt per Default nur noch den Bund, dieser Test prüft aber die
+// Extraktions-Invarianten je Ebene (Herkunft, Kantonskürzel, Routen-Keys) — die
+// gelten für den Vollbau (`SUCHE_INDEX_EBENEN=bund,kanton`) unverändert weiter.
+// Ohne das `EBENEN` wären die Kanton-Prüfungen unten still leer gelaufen: ein
+// Tor, das nichts mehr sieht, ist gefährlicher als keines (§6.7).
+const index = baueIndex(EBENEN);
 const keys = [...new Set(index.eintraege.filter((e) => e.eb === 'bund').map((e) => e.k))];
 
 describe('Artikel-Suchindex — keine toten Links', () => {

@@ -1,5 +1,5 @@
 // AUTO-GENERIERT von scripts/normtext/seed-grundart.mjs — NICHT von Hand editieren.
-// Grundart-Klassifikation (1469 Erlasse) aus der UX-Audit-Klassifikation
+// Grundart-Klassifikation (1468 Erlasse) aus der UX-Audit-Klassifikation
 // docs/ux-audit-2026-07/erlass-klassifikation.json (Methode: Datengetriebene Signal-Extraktion je Erlass, Grundart-Zuordnung per Prioritäts-Kaskade (Trägerformat → Systematik → Bund-Struktur).).
 // Datengrundlage für register.ts (grundart/erlassTyp) + die spätere Grundart-
 // Darstellung (bestimmungsEtikett, §/Art.-Label — NUR sichtbar, NIE Anker; K2/R8).
@@ -7,7 +7,7 @@
 // Regenerieren:  node scripts/normtext/seed-grundart.mjs
 //
 // Grundart-Verteilung:
-//   KANTON: 1231
+//   KANTON: 1230
 //   ERLASS_MIT_ANHANG: 85
 //   STANDARD_ERLASS: 68
 //   FLACHER_KURZERLASS: 30
@@ -1286,7 +1286,6 @@ export const GRUNDART_SEED: Readonly<Record<string, GrundartSeed>> = {
   "GFK": {"grundart":"STAATSVERTRAG","erlassTyp":"staatsvertrag"},
   "GL-III%20B%2F3%2F2": {"grundart":"KANTON","erlassTyp":"verordnung","bestimmungsEtikett":"art","bestimmungsEtikettStatus":"entwurf"},
   "GL-III%20B%2F7%2F1": {"grundart":"KANTON","erlassTyp":"sonstiges","bestimmungsEtikett":"art","bestimmungsEtikettStatus":"entwurf"},
-  "GL-III%20B_7_1": {"grundart":"KANTON","erlassTyp":"sonstiges","bestimmungsEtikett":"art","bestimmungsEtikettStatus":"entwurf"},
   "GL-III-A.5": {"grundart":"KANTON","erlassTyp":"verordnung","bestimmungsEtikett":"art","bestimmungsEtikettStatus":"entwurf"},
   "GL-III-C.1": {"grundart":"KANTON","erlassTyp":"sonstiges","bestimmungsEtikett":"art","bestimmungsEtikettStatus":"entwurf"},
   "GLG": {"grundart":"FLACHER_KURZERLASS","erlassTyp":"gesetz"},

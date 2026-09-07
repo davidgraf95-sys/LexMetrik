@@ -1,10 +1,9 @@
 import { describe, expect, it } from 'vitest';
 import { renderToStaticMarkup } from 'react-dom/server';
 import {
-  PANEL_REITER, gruppiereKanten, normZitat, oeffnerLabel, oeffnerName, panelBezug, reiterTitel,
-  trefferZahl, zaehlerAttribut,
+  OEFFNER_NAME, OEFFNER_WORT, PANEL_REITER, gruppiereKanten, normZitat, panelBezug, reiterTitel,
 } from '../pages/gesetz-leser/v3/panelModell';
-import { kopfElemente, panelForm } from '../pages/gesetz-leser/v3/kopfStufen';
+import { panelForm } from '../pages/gesetz-leser/v3/kopfStufen';
 import { PanelSachgebiet } from '../pages/gesetz-leser/v3/PanelSachgebiet';
 import { belegung } from '../pages/gesetz-leser/parts/leserTastaturBelegung';
 import type { Bezug } from '../lib/rechtsprechung/bezuege';
@@ -29,57 +28,40 @@ function kante(key: string, status: BezugStatus, datum = '2022-03-14'): Bezug {
   } as unknown as Bezug;
 }
 
-describe('oeffnerLabel — §8: keine Zahl, die wir nicht haben', () => {
-  it('unbekannt (null) ⇒ kein Zähler, nur das Wort', () => {
-    expect(oeffnerLabel(null)).toBe('Rechtsprechung');
+// ── §6.3-DEKLARATION (D35-F2, Entscheid David 7.9.2026) · DER KOPF ZÄHLT NICHT
+// MEHR ──────────────────────────────────────────────────────────────────────
+// Hier standen vier `describe`-Blöcke: `oeffnerLabelKompakt` (die Zahl-Marke),
+// `oeffnerName(anzahl, artikel)` und `zaehlerAttribut` (dieselbe Wahrheit
+// maschinell) sowie weiter unten `artikelZahl` (die Bezugsgrösse aus der
+// Zähl-Datei). Sie prüften eine Zusage, die N1 am 7.9.2026 eingelöst hat: EINE
+// Zahl je Artikel, an Kopf und Zeile dieselbe. Die Zusage ist mit Variante A
+// (D35-F2) überholt, nicht verletzt — der Kopf nennt GAR KEINE Artikel-Zahl
+// mehr, die Zahl steht an genau einem Ort. Vier Sonden auf gestrichene
+// Funktionen sind keine Sonden mehr; sie fallen mit ihnen (§17-Gegengewicht).
+//
+// WAS AN IHRE STELLE TRITT: der Fall unten hält die neue, engere Zusage fest —
+// das Wort ist «Erlass», der Accessible Name nennt die Reiter des Blattes und
+// KEINE Zahl. Dass im Browser genau EIN Ort je Artikel eine Entscheid-Zahl
+// nennt, misst `e2e/w224-d35-f2-kopf.e2e.ts` (a); die §8-Schranke «keine Zahl,
+// die wir nicht haben» lebt unverändert an der Funktionszeile weiter
+// (`parts/BezuegeKopf.tsx`: `anzahl > 0` filtert die Rubrik heraus).
+describe('OEFFNER_WORT / OEFFNER_NAME — der Kopf-Griff nennt den ERLASS', () => {
+  it('das Wort am Knopf ist unveränderlich und heisst «Erlass»', () => {
+    expect(OEFFNER_WORT).toBe('Erlass');
   });
 
-  it('gewusste 0 ⇒ ebenfalls KEIN Zähler (kein leerer Zähler bei Kantonserlassen)', () => {
-    expect(oeffnerLabel(0)).toBe('Rechtsprechung');
-  });
-
-  it('Singular und Plural sind getrennt — «1 Entscheide» wäre ein Grammatikfehler im Produkt', () => {
-    expect(oeffnerLabel(1)).toBe('1 Entscheid');
-    expect(oeffnerLabel(14)).toBe('14 Entscheide');
-  });
-});
-
-describe('oeffnerName — der Accessible-Name sagt, WORAUF sich die Zahl bezieht', () => {
-  it('nennt den Artikel, wenn eine Leseposition bekannt ist', () => {
-    expect(oeffnerName(14, 'Art. 429')).toContain('zu Art. 429');
-    expect(oeffnerName(14, 'Art. 429')).toContain('14 Entscheide');
-  });
-
-  it('ohne Leseposition kein erfundener Artikel', () => {
-    expect(oeffnerName(null, null)).toBe('Rechtsprechung und Kontext öffnen');
-  });
-
-  it('die gewusste 0 wird ausgesprochen, obwohl der Zähler sie verschweigt', () => {
-    // Sichtbar wäre «0 Entscheide» ein leerer Zähler; VORGELESEN ist die Auskunft
-    // «keine Entscheide erfasst» genau die, die der Nutzer braucht (§8).
-    expect(oeffnerName(0, 'Art. 5')).toContain('keine Entscheide erfasst');
-  });
-});
-
-describe('zaehlerAttribut — das Attribut sagt dasselbe wie das Label', () => {
-  // BEFUND beim ersten Lauf von `leser-v3-panel-facetten` (d), 17.8.2026: am
-  // Kantonserlass stand sichtbar «Rechtsprechung», im Attribut aber «0» — zwei
-  // Aussagen an einem Knopf. Die Sonde hält die Deckung fest.
-  it('unbekannt und gewusste 0 ⇒ gar kein Attribut', () => {
-    expect(zaehlerAttribut(null)).toBeUndefined();
-    expect(zaehlerAttribut(0)).toBeUndefined();
-  });
-
-  it('jede Zahl, die das Label zeigt, steht auch im Attribut', () => {
-    expect(zaehlerAttribut(1)).toBe(1);
-    expect(zaehlerAttribut(14)).toBe(14);
-  });
-
-  it('Label und Attribut sind über den ganzen Wertebereich deckungsgleich', () => {
-    for (const n of [null, 0, 1, 2, 99]) {
-      const hatZahl = oeffnerLabel(n) !== 'Rechtsprechung';
-      expect(zaehlerAttribut(n) !== undefined, `n = ${n}`).toBe(hatZahl);
+  it('der Accessible Name nennt die vier Reiter des Blattes', () => {
+    for (const reiter of PANEL_REITER) {
+      expect(OEFFNER_NAME, `Reiter «${reiter.label}» fehlt im Namen`).toContain(reiter.label);
     }
+  });
+
+  // DIE EIGENTLICHE ZUSAGE VON D35-F2, an der Stelle, an der sie entsteht: der
+  // Name des Kopf-Griffs enthält keine Ziffer. Rot zu bekommen: in
+  // `panelModell` eine Zahl an `OEFFNER_NAME` hängen.
+  it('er behauptet keine Zahl — die steht an der Funktionszeile', () => {
+    expect(OEFFNER_NAME).not.toMatch(/\d/);
+    expect(OEFFNER_WORT).not.toMatch(/\d/);
   });
 });
 
@@ -143,29 +125,6 @@ describe('gruppiereKanten — Rangordnung strukturell, nie nach Zähler', () => 
   });
 });
 
-describe('trefferZahl — «lädt noch» ist nicht «leer»', () => {
-  const leer = () => undefined;
-  // A1 (H3-Nachzug): das «geladen»-Argument kommt aus `useBezuege().geladen`, nicht
-  // mehr aus einem Klassen-Zähler. `shardGeladen` ist mit dem Befund gestrichen —
-  // die Funktion KONNTE einen Erlass ohne Shard nicht von einem ladenden trennen
-  // (Herleitung in `panelModell.trefferZahl` und `bezuegeLaden.geladen`).
-  it('vor dem Lade-Ende: null, nicht 0', () => {
-    expect(trefferZahl(leer, false, '429')).toBeNull();
-  });
-
-  it('nach dem Lade-Ende und ohne Kante am Artikel: gewusste 0', () => {
-    expect(trefferZahl(leer, true, '429')).toBe(0);
-  });
-
-  it('ohne Leseposition bleibt es null — die Zahl gilt einem Artikel', () => {
-    expect(trefferZahl(() => ({ kanten: [kante('a', 'bge')] }), true, null)).toBeNull();
-  });
-
-  it('zählt die GEFILTERTEN Kanten des Artikels', () => {
-    expect(trefferZahl(() => ({ kanten: [kante('a', 'bge'), kante('b', 'bger')] }), true, '429')).toBe(2);
-  });
-});
-
 describe('PANEL_REITER — eine Quelle für Ordnung und Beschriftung', () => {
   // W2·7-VZUI (31.8.2026): der vierte Reiter «Anwendung» ist dazugekommen — die
   // Behörden-Ressourcen und die Werkzeuge hatten seit H3 keinen Ort mehr
@@ -208,23 +167,17 @@ describe('PANEL_REITER — eine Quelle für Ordnung und Beschriftung', () => {
   });
 });
 
-// §6.3-DEKLARATION (H4-II, 17./18.8.2026): dieser Fall hiess «auf `mini` trägt
-// die Kopfzeile keinen Zähler» und prüfte `panel === false`. Das war die
-// Ä11-Antwort von H3 — und genau sie hat den NM-2-Blocker des Kontaktbogens H4
-// erzeugt: @390 stand im Ruhezustand KEIN Öffner in der Kopfzeile, der Weg zu
-// den Entscheiden kostete zwei Taps statt einem. Der Zähler fällt seither nicht
-// mehr, er SCHRUMPFT ('voll' | 'kompakt'), und das Element-Budget hält, weil
-// dafür das ✕ weicht (`kopfStufen.zeigeSchliessKreuz`, dort die Messreihe).
-// Die Ä11-Sorge ist unverändert geprüft, nur schärfer gefasst: nicht «kein
-// Zähler», sondern «kein fünftes Element» — die Zahl im Browser misst
-// `e2e/leser-v3-h4-kopfwege` (a2).
-describe('Ä11/H4-II — welche Gestalt der Öffner je Stufe hat', () => {
-  it('auf `mini` schrumpft der Zähler zum Chip, statt zu verschwinden', () => {
-    expect(kopfElemente('mini').panel).toBe('kompakt');
-    expect(kopfElemente('kompakt').panel).toBe('voll');
-    expect(kopfElemente('voll').panel).toBe('voll');
-  });
-});
+// ── §6.3-DEKLARATION (D35-F2, 7.9.2026) · `kopfElemente(...).panel` IST WEG ─
+// Hier stand «auf `mini` schrumpft der Zähler zum Chip, statt zu verschwinden»
+// (H4-II, 17./18.8.2026 — die Antwort auf den NM-2-Blocker: @390 stand im
+// Ruhezustand KEIN Öffner in der Kopfzeile, der Weg kostete zwei Taps statt
+// einem). Der Befund bleibt in `kopfStufen.ts` stehen (§0 Ziff. 2b); das Feld
+// `panel` entschied allein die GESTALT des Zählers, und beide Gestalten gibt es
+// seit D35-F2 nicht mehr. Der Griff trägt auf JEDER Breite dasselbe Wort — die
+// NM-2-Zusage ist damit stärker eingelöst als vorher, und zwar ohne
+// Fallunterscheidung, die eine Sonde bewachen müsste (§17-Gegengewicht).
+// Dass im Browser auf jeder Breite genau ein Öffner steht, misst
+// `e2e/leser-w224-g.e2e.ts` (G14) an den Griff-Beschriftungen @320/@390.
 
 describe('panelForm — welche Kante das Blatt nimmt', () => {
   it('nur auf der breitesten Stufe UND mit ganzer Seite: rechts angeschlagen (Skizze D)', () => {

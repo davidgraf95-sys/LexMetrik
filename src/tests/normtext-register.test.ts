@@ -166,6 +166,19 @@ describe('Tor 8 — Grundart (check:grundart): Präsenz + Konsistenz', () => {
     expect(fehlend.map((r) => r.key)).toEqual([]);
   });
 
+  // Gegenrichtung (Gegenprüfungs-Befund PR #694, 5.9.2026): der obige Test
+  // prüft nur Register ⊆ Seed. Ein aus dem Korpus zurückgezogener Kanton-Key
+  // (Snapshot-Datei fort, ERLASS_REGISTER kennt ihn nicht mehr) blieb bisher
+  // unbemerkt als Geist im GRUNDART_SEED — der statische UX-Audit-Snapshot
+  // (docs/ux-audit-2026-07/erlass-klassifikation.json), aus dem seed-grundart.mjs
+  // liest, kennt keinen späteren Rückzug. Bund/Stub/PDF-Embed/Live-Link →
+  // ERLASS_REGISTER; Kanton → Snapshot-Datei (kantonStems, s.o.).
+  it('Gegenrichtung: kein GRUNDART_SEED-Key ohne Register-Eintrag (keine Erlass-Leiche)', () => {
+    const gueltig = new Set([...ERLASS_REGISTER.map((r) => r.key), ...kantonStems]);
+    const verwaist = Object.keys(GRUNDART_SEED).filter((k) => !gueltig.has(k));
+    expect(verwaist).toEqual([]);
+  });
+
   it('grundart ist ein gültiger Wert', () => {
     const ungueltig = ERLASS_REGISTER.filter((r) => r.grundart && !GRUNDARTEN.has(r.grundart));
     expect(ungueltig.map((r) => `${r.key}: ${r.grundart}`)).toEqual([]);

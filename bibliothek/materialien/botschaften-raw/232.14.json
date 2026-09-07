@@ -6,36 +6,36 @@
     },
     "botschaft": {
       "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2008/109"
+      "value": "https://fedlex.data.admin.ch/eli/fga/2005/556"
     },
     "proj": {
       "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2007/1156"
+      "value": "https://fedlex.data.admin.ch/eli/proj/2005/0592"
     },
     "oc": {
       "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2009/349"
+      "value": "https://fedlex.data.admin.ch/eli/oc/2007/848"
     },
     "dateDoc": {
       "type": "typed-literal",
       "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2007-12-21"
+      "value": "2005-05-18"
     },
     "curia": {
       "type": "literal",
-      "value": "08.010"
+      "value": "05.040"
     },
     "titleDe": {
       "type": "literal",
-      "value": "Botschaft zur Änderung des Patentgesetzes (Systementscheid bei der Erschöpfung im Patentrecht) "
+      "value": "Botschaft über die Genehmigung von zwei Abkommen betreffend das europäische Patentsystem und über die Änderung des Patentgesetzes "
     },
     "titleFr": {
       "type": "literal",
-      "value": "Message relatif à la modification de la loi sur les brevets (Choix du régime de l'épuisement en droit des brevets) "
+      "value": "Message concernant l'approbation de deux traités relatifs au système du brevet européen et la modification de la loi sur les brevets"
     },
     "titleIt": {
       "type": "literal",
-      "value": "Messaggio sulla modifica della legge sui brevetti (Scelta del sistema di esaurimento nel diritto dei brevetti) "
+      "value": "Messaggio concernente l'approvazione di due trattati relativi al sistema di brevetto europeo e la modifica della legge sui brevetti"
     }
   },
   {
@@ -45,36 +45,36 @@
     },
     "botschaft": {
       "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2008/109"
+      "value": "https://fedlex.data.admin.ch/eli/fga/2005/556"
     },
     "proj": {
       "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2007/1156"
+      "value": "https://fedlex.data.admin.ch/eli/proj/2005/0592"
     },
     "oc": {
       "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2009/349"
+      "value": "https://fedlex.data.admin.ch/eli/oc/2007/848"
     },
     "dateDoc": {
       "type": "typed-literal",
       "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2007-12-21"
+      "value": "2005-05-18"
     },
     "curia": {
       "type": "literal",
-      "value": "08.010"
+      "value": "05.040"
     },
     "titleDe": {
       "type": "literal",
-      "value": "Botschaft zur Änderung des Patentgesetzes (Systementscheid bei der Erschöpfung im Patentrecht) "
+      "value": "Botschaft über die Genehmigung von zwei Abkommen betreffend das europäische Patentsystem und über die Änderung des Patentgesetzes "
     },
     "titleFr": {
       "type": "literal",
-      "value": "Message relatif à la modification de la loi sur les brevets (Choix du régime de l'épuisement en droit des brevets) "
+      "value": "Message concernant l'approbation de deux traités relatifs au système du brevet européen et la modification de la loi sur les brevets"
     },
     "titleIt": {
       "type": "literal",
-      "value": "Messaggio sulla modifica della legge sui brevetti (Scelta del sistema di esaurimento nel diritto dei brevetti) "
+      "value": "Messaggio concernente l'approvazione di due trattati relativi al sistema di brevetto europeo e la modifica della legge sui brevetti"
     }
   },
   {
@@ -84,36 +84,153 @@
     },
     "botschaft": {
       "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2008/109"
+      "value": "https://fedlex.data.admin.ch/eli/fga/2005/556"
     },
     "proj": {
       "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2007/1156"
+      "value": "https://fedlex.data.admin.ch/eli/proj/2005/0592"
     },
     "oc": {
       "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2009/349"
+      "value": "https://fedlex.data.admin.ch/eli/oc/2007/848"
     },
     "dateDoc": {
       "type": "typed-literal",
       "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2007-12-21"
+      "value": "2005-05-18"
     },
     "curia": {
       "type": "literal",
-      "value": "08.010"
+      "value": "05.040"
     },
     "titleDe": {
       "type": "literal",
-      "value": "Botschaft zur Änderung des Patentgesetzes (Systementscheid bei der Erschöpfung im Patentrecht) "
+      "value": "Botschaft über die Genehmigung von zwei Abkommen betreffend das europäische Patentsystem und über die Änderung des Patentgesetzes "
     },
     "titleFr": {
       "type": "literal",
-      "value": "Message relatif à la modification de la loi sur les brevets (Choix du régime de l'épuisement en droit des brevets) "
+      "value": "Message concernant l'approbation de deux traités relatifs au système du brevet européen et la modification de la loi sur les brevets"
     },
     "titleIt": {
       "type": "literal",
-      "value": "Messaggio sulla modifica della legge sui brevetti (Scelta del sistema di esaurimento nel diritto dei brevetti) "
+      "value": "Messaggio concernente l'approvazione di due trattati relativi al sistema di brevetto europeo e la modifica della legge sui brevetti"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "232.14"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2005/556"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2005/0593"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2008/251"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2005-05-18"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "05.040"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft über die Genehmigung von zwei Abkommen betreffend das europäische Patentsystem und über die Änderung des Patentgesetzes "
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant l'approbation de deux traités relatifs au système du brevet européen et la modification de la loi sur les brevets"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente l'approvazione di due trattati relativi al sistema di brevetto europeo e la modifica della legge sui brevetti"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "232.14"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2005/556"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2005/0593"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2008/251"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2005-05-18"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "05.040"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft über die Genehmigung von zwei Abkommen betreffend das europäische Patentsystem und über die Änderung des Patentgesetzes "
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant l'approbation de deux traités relatifs au système du brevet européen et la modification de la loi sur les brevets"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente l'approvazione di due trattati relativi al sistema di brevetto europeo e la modifica della legge sui brevetti"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "232.14"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2005/556"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2005/0593"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2008/251"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2005-05-18"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "05.040"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft über die Genehmigung von zwei Abkommen betreffend das europäische Patentsystem und über die Änderung des Patentgesetzes "
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant l'approbation de deux traités relatifs au système du brevet européen et la modification de la loi sur les brevets"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente l'approvazione di due trattati relativi al sistema di brevetto europeo e la modifica della legge sui brevetti"
     }
   },
   {
@@ -357,36 +474,36 @@
     },
     "botschaft": {
       "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2005/556"
+      "value": "https://fedlex.data.admin.ch/eli/fga/2008/109"
     },
     "proj": {
       "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2005/0592"
+      "value": "https://fedlex.data.admin.ch/eli/proj/2007/1156"
     },
     "oc": {
       "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2007/848"
+      "value": "https://fedlex.data.admin.ch/eli/oc/2009/349"
     },
     "dateDoc": {
       "type": "typed-literal",
       "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2005-05-18"
+      "value": "2007-12-21"
     },
     "curia": {
       "type": "literal",
-      "value": "05.040"
+      "value": "08.010"
     },
     "titleDe": {
       "type": "literal",
-      "value": "Botschaft über die Genehmigung von zwei Abkommen betreffend das europäische Patentsystem und über die Änderung des Patentgesetzes "
+      "value": "Botschaft zur Änderung des Patentgesetzes (Systementscheid bei der Erschöpfung im Patentrecht) "
     },
     "titleFr": {
       "type": "literal",
-      "value": "Message concernant l'approbation de deux traités relatifs au système du brevet européen et la modification de la loi sur les brevets"
+      "value": "Message relatif à la modification de la loi sur les brevets (Choix du régime de l'épuisement en droit des brevets) "
     },
     "titleIt": {
       "type": "literal",
-      "value": "Messaggio concernente l'approvazione di due trattati relativi al sistema di brevetto europeo e la modifica della legge sui brevetti"
+      "value": "Messaggio sulla modifica della legge sui brevetti (Scelta del sistema di esaurimento nel diritto dei brevetti) "
     }
   },
   {
@@ -396,36 +513,36 @@
     },
     "botschaft": {
       "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2005/556"
+      "value": "https://fedlex.data.admin.ch/eli/fga/2008/109"
     },
     "proj": {
       "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2005/0592"
+      "value": "https://fedlex.data.admin.ch/eli/proj/2007/1156"
     },
     "oc": {
       "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2007/848"
+      "value": "https://fedlex.data.admin.ch/eli/oc/2009/349"
     },
     "dateDoc": {
       "type": "typed-literal",
       "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2005-05-18"
+      "value": "2007-12-21"
     },
     "curia": {
       "type": "literal",
-      "value": "05.040"
+      "value": "08.010"
     },
     "titleDe": {
       "type": "literal",
-      "value": "Botschaft über die Genehmigung von zwei Abkommen betreffend das europäische Patentsystem und über die Änderung des Patentgesetzes "
+      "value": "Botschaft zur Änderung des Patentgesetzes (Systementscheid bei der Erschöpfung im Patentrecht) "
     },
     "titleFr": {
       "type": "literal",
-      "value": "Message concernant l'approbation de deux traités relatifs au système du brevet européen et la modification de la loi sur les brevets"
+      "value": "Message relatif à la modification de la loi sur les brevets (Choix du régime de l'épuisement en droit des brevets) "
     },
     "titleIt": {
       "type": "literal",
-      "value": "Messaggio concernente l'approvazione di due trattati relativi al sistema di brevetto europeo e la modifica della legge sui brevetti"
+      "value": "Messaggio sulla modifica della legge sui brevetti (Scelta del sistema di esaurimento nel diritto dei brevetti) "
     }
   },
   {
@@ -435,36 +552,36 @@
     },
     "botschaft": {
       "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2005/556"
+      "value": "https://fedlex.data.admin.ch/eli/fga/2008/109"
     },
     "proj": {
       "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2005/0592"
+      "value": "https://fedlex.data.admin.ch/eli/proj/2007/1156"
     },
     "oc": {
       "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2007/848"
+      "value": "https://fedlex.data.admin.ch/eli/oc/2009/349"
     },
     "dateDoc": {
       "type": "typed-literal",
       "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2005-05-18"
+      "value": "2007-12-21"
     },
     "curia": {
       "type": "literal",
-      "value": "05.040"
+      "value": "08.010"
     },
     "titleDe": {
       "type": "literal",
-      "value": "Botschaft über die Genehmigung von zwei Abkommen betreffend das europäische Patentsystem und über die Änderung des Patentgesetzes "
+      "value": "Botschaft zur Änderung des Patentgesetzes (Systementscheid bei der Erschöpfung im Patentrecht) "
     },
     "titleFr": {
       "type": "literal",
-      "value": "Message concernant l'approbation de deux traités relatifs au système du brevet européen et la modification de la loi sur les brevets"
+      "value": "Message relatif à la modification de la loi sur les brevets (Choix du régime de l'épuisement en droit des brevets) "
     },
     "titleIt": {
       "type": "literal",
-      "value": "Messaggio concernente l'approvazione di due trattati relativi al sistema di brevetto europeo e la modifica della legge sui brevetti"
+      "value": "Messaggio sulla modifica della legge sui brevetti (Scelta del sistema di esaurimento nel diritto dei brevetti) "
     }
   },
   {
@@ -504,123 +621,6 @@
     "titleIt": {
       "type": "literal",
       "value": "Messaggio concernente la modifica della legge sui brevetti"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "232.14"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2005/556"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2005/0593"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2008/251"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2005-05-18"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "05.040"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft über die Genehmigung von zwei Abkommen betreffend das europäische Patentsystem und über die Änderung des Patentgesetzes "
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant l'approbation de deux traités relatifs au système du brevet européen et la modification de la loi sur les brevets"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente l'approvazione di due trattati relativi al sistema di brevetto europeo e la modifica della legge sui brevetti"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "232.14"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2005/556"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2005/0593"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2008/251"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2005-05-18"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "05.040"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft über die Genehmigung von zwei Abkommen betreffend das europäische Patentsystem und über die Änderung des Patentgesetzes "
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant l'approbation de deux traités relatifs au système du brevet européen et la modification de la loi sur les brevets"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente l'approvazione di due trattati relativi al sistema di brevetto europeo e la modifica della legge sui brevetti"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "232.14"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2005/556"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2005/0593"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2008/251"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2005-05-18"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "05.040"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft über die Genehmigung von zwei Abkommen betreffend das europäische Patentsystem und über die Änderung des Patentgesetzes "
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant l'approbation de deux traités relatifs au système du brevet européen et la modification de la loi sur les brevets"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente l'approvazione di due trattati relativi al sistema di brevetto europeo e la modifica della legge sui brevetti"
     }
   }
 ]

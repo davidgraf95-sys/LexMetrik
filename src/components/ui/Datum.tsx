@@ -28,8 +28,11 @@ export function Datum({ iso, className }: {
    *  stehen, statt zu einem erfundenen Datum zu werden (§8). */
   iso: string;
   /** Zusatz-Klassen des Aufrufers (Farbe/Grösse der umgebenden Zeile).
-   *  `tabular-nums` setzt der Baustein, es ist nicht verhandelbar. */
+   *  Den Ziffernsatz setzt der Baustein, er ist nicht verhandelbar — seit
+   *  R6-B (5.9.2026) über `.lc-ziffern` statt der rohen `tabular-nums`-
+   *  Utility; dieselbe Rolle, EINE Deklaration (§5). */
   className?: string;
 }) {
-  return <span className={className ? `tabular-nums ${className}` : 'tabular-nums'}>{datumCh(iso)}</span>;
+  return <span className={className ? `lc-ziffern ${className}` : 'lc-ziffern'}>{datumCh(iso)}</span>;
 }
+

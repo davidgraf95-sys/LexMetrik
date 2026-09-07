@@ -1,5 +1,6 @@
 import { useEffect, type RefObject } from 'react';
 import { tastendruckGehoertPane } from '../panePrioritaet';
+import { istSuchKuerzel } from '../../../components/suche/fruehesSuchKuerzel';
 
 // ─── ⌘K / «/» im V3-Leser · Vorrang vor der Header-Suche (Bug-Check B1) ──────
 //
@@ -25,27 +26,13 @@ import { tastendruckGehoertPane } from '../panePrioritaet';
 // statt Export neben der Komponente, weil `react-refresh/only-export-components`
 // (Tor `lint`) in einer Komponenten-Datei keinen zweiten Export duldet.
 
-/** Tippt der Nutzer gerade in ein Feld? Dann ist «/» ein Zeichen, kein Kürzel.
- *  ⌘K/Ctrl-K greift auch dort — es ist der Einstieg von überall. */
-function inEingabe(ziel: EventTarget | null): boolean {
-  const el = ziel as HTMLElement | null;
-  if (!el || !el.tagName) return false;
-  const t = el.tagName.toLowerCase();
-  return t === 'input' || t === 'textarea' || t === 'select' || el.isContentEditable === true;
-}
-
-/** Die ENTSCHEIDUNG, getrennt vom Vollzug: beansprucht der V3-Leser diesen
- *  Tastendruck? Rein und DOM-frei, damit die Vorrangregel an jeder Kombination
- *  prüfbar ist statt nur an den zweien, die ein e2e zufällig drückt (§2, §6.7).
- *  Nimmt bewusst ein Struktur-Literal und kein `KeyboardEvent` — Vitest läuft
- *  hier in `environment: 'node'`. */
-export function istSuchKuerzel(e: {
-  key: string; metaKey?: boolean; ctrlKey?: boolean; altKey?: boolean; target?: EventTarget | null;
-}): boolean {
-  if (e.altKey) return false;
-  if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') return true;
-  return e.key === '/' && !e.metaKey && !e.ctrlKey && !inEingabe(e.target ?? null);
-}
+// Die ENTSCHEIDUNG (welcher Tastendruck ist das Such-Kürzel) wohnt seit dem
+// §17-Wurzel-Fix vom 4.9.2026 in `components/suche/fruehesSuchKuerzel` — dort
+// braucht sie der Vorlauf, der das Kürzel schon VOR dem ersten React-Commit
+// auffängt. Wortlaut und Verhalten sind unverändert umgezogen; hier steht der
+// Re-Export, damit Aufrufer und Sonden diese Datei weiter befragen können und
+// es die Regel nur EINMAL gibt (§5).
+export { istSuchKuerzel } from '../../../components/suche/fruehesSuchKuerzel';
 
 // A3 (H2b-Nachzug) — WELCHES PANE beansprucht den Tastendruck? Die Regel samt
 // Messwerten steht in `../panePrioritaet`: sie gilt seit dem H3-Nachzug für BEIDE

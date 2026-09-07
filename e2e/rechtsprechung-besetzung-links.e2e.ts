@@ -58,7 +58,7 @@ test.describe('Entscheid-Leser — klickbare Besetzung', () => {
     await expect(page).toHaveURL(/\/rechtsprechung\?richter=gelzer-claudius/)
     await expect(page.getByRole('button', { name: /Richter-Filter .*Gelzer.* entfernen/ })).toBeVisible()
     const treffer = Number(
-      (await page.getByText(/^\d+\s+Entscheide?$/).first().innerText()).replace(/\D+/g, ''),
+      (await page.getByText(/^[\d'’\u00A0\u202F]+\s+Entscheide?$/).first().innerText()).replace(/\D+/g, ''),
     )
     expect(treffer).toBeGreaterThan(100)
 

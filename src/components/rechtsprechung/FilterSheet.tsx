@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { useDialogFokus } from '../layout/useDialogFokus';
+import { SheetRahmen } from '../ui/SheetRahmen';
 
 // ─── W2·10-UI-NAV/J2 · Mobil-Filter als Bottom-Sheet ─────────────────────────
 //
@@ -16,6 +17,8 @@ import { useDialogFokus } from '../layout/useDialogFokus';
 // (§5/§10 — ein Sheet-Muster im Haus, nicht zwei): von unten angeschlagen,
 // Griffleiste + Titel + ✕ (44 px Tap-Ziel) zuoberst, Inhalt darunter als
 // einziger Scroller mit `overscroll-contain`.
+// Seit F2-2 (31.8.2026) ist das kein «folgt», sondern DERSELBE Baustein:
+// `ui/SheetRahmen`. Der Satz oben stand seit J2 da und war eine Kopie.
 //
 // A11Y-EHRLICHKEIT (Lehre B2 der V-Runde: role/aria ehrlich):
 // Dieses Sheet fängt den Fokus, schliesst auf Escape, gibt den Fokus an den
@@ -98,38 +101,35 @@ export function FilterSheet({ anzahl, children }: {
               Kasten im Kasten. ink-600 statt ink-500, weil die 12px-Ziffer auf
               der `--well`-Fläche des Chips ≥4.5:1 braucht (R4; ink-500 lag bei
               4.47:1). LM-051: Trenner als eigener Textknoten, sonst «Filter3». */}
-          {anzahl > 0 && <>{' '}<span className="num tabular-nums text-ink-600">{anzahl}</span></>}
+          {anzahl > 0 && <>{' '}<span className="num text-ink-600">{anzahl}</span></>}
         </button>
       </div>
 
       {offen && (
         <>
-          <div className="fixed inset-0 z-40 bg-ink-900/30" onClick={() => setOffen(false)} aria-hidden />
-          <div ref={sheetRef} tabIndex={-1} role="dialog" aria-modal="true" aria-label="Filter"
-            data-filter-sheet
-            className="fixed inset-x-0 bottom-0 z-50 flex flex-col rounded-t-xl border-t border-line bg-paper-raised shadow-lg"
-            style={{ top: 'calc(4rem + 2.25rem)', maxHeight: 'calc(100dvh - 4rem - 2.25rem)' }}>
-            <div className="shrink-0 border-b border-line">
-              <div aria-hidden className="mx-auto mt-2 h-1 w-10 rounded-full bg-line" />
-              <div className="flex items-center justify-between px-4 py-1.5">
-                <p className="lc-overline">Filter</p>
-                <button type="button" onClick={() => setOffen(false)} aria-label="Filter schliessen"
-                  className="-mr-2 inline-flex h-11 w-11 items-center justify-center rounded-md text-ink-500 hover:text-brass-700">
-                  <span aria-hidden className="text-base leading-none">✕</span>
-                </button>
-              </div>
-            </div>
-            {/* Einziger Scroller des Sheets. */}
-            <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-4 py-3 [scrollbar-width:thin]">
-              {children}
-            </div>
-            <div className="shrink-0 border-t border-line px-4 py-2">
+          {/* F2-1: Farbe und Deckung aus `.lc-scrim` (src/index.css). Hier stand
+              `bg-ink-900/30` — `--ink-900` flippt mit dem Thema (dunkel
+              `#E9E7E2`), der «Scrim» HELLTE im Dunkelmodus also auf, statt
+              abzudunkeln (Messung/Herleitung: `pages/gesetz-leser/v3/LeserScrim.tsx`,
+              B7-N1). */}
+          <div className="lc-scrim fixed inset-0 z-overlay" onClick={() => setOffen(false)} aria-hidden />
+          {/* F2-2: Rahmen, Griffleiste, Titelzeile, ✕, Scroller und Sockel kommen
+              aus dem EINEN Sheet-Baustein. Der Kommentar oben versprach seit J2
+              «ein Sheet-Muster im Haus, nicht zwei» — bis hierher war es eine
+              Kopie, die schon in der Anschlagshöhe auseinanderlief
+              (`calc(4rem + 2.25rem)` hier, `var(--leser-kopf-h)` dort). Diese
+              Fläche kennt ihre Kopfhöhe nicht selbst und nimmt darum die Vorgabe
+              `--sheet-anschlag`. */}
+          <SheetRahmen sheetRef={sheetRef} titel="Filter" onSchliessen={() => setOffen(false)}
+            daten="data-filter-sheet"
+            sockel={(
               <button type="button" onClick={() => setOffen(false)}
                 className="lc-chip h-11 w-full justify-center font-medium text-brass-700 hover:border-brass-400">
                 Treffer anzeigen
               </button>
-            </div>
-          </div>
+            )}>
+            {children}
+          </SheetRahmen>
         </>
       )}
     </>

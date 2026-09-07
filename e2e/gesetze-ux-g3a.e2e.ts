@@ -85,6 +85,13 @@ test('LIVE_VERWEIS: Verweiskarte mit amtlichem Live-Link + ehrlichem Hinweis, ke
   await warteVerweiskarte(page, '/gesetze/international/DSGVO');
   // Ehrlicher §8-Hinweis + prominenter amtlicher Link; KEINE «nicht verfügbar»-Fehlerseite.
   await expect(page.getByText(/nicht als In-App-Volltext gehostet/i)).toBeVisible();
-  await expect(page.getByRole('link', { name: /Amtliche Fassung öffnen/i })).toBeVisible();
+  // R2-A (31.8.2026, deklarierter Nachzug): der Link der Verweiskarte trug den
+  // Eigen-Wortlaut «↗ Amtliche Fassung öffnen» (Pfeil vorne) und läuft seit
+  // B-1 über `ui/QuellLink` — Kanon-Name «Amtliche Fassung ↗» (Ä110). Die
+  // Sonde greift jetzt IN die Verweiskarte (`data-verweiskarte`): der Fuss-Nav
+  // derselben Ansicht führt denselben kanonischen Link ein zweites Mal, ein
+  // seitenweiter `getByRole` wäre seither mehrdeutig.
+  await expect(page.locator('[data-verweiskarte]')
+    .getByRole('link', { name: 'Amtliche Fassung ↗' })).toBeVisible();
   await expect(page.getByText(/nicht als Volltext verfügbar/i)).toHaveCount(0);
 });

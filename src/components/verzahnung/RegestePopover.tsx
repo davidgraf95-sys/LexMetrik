@@ -194,7 +194,7 @@ export function RegestePopover({ ankerRect, hostRef, kastenRef, kastenId, zitier
         visibility: lage ? 'visible' : 'hidden',
         zIndex: 45,
       }}
-      className="lc-card p-3 text-left"
+      className="lc-popover p-3 text-left"
     >
       <p className="lc-overline" title="Amtliche Regeste bzw. amtlicher Betreff der Quelle — gekürzt übernommen, nie umformuliert. Massgeblich ist der Entscheid selbst.">
         Kurztext

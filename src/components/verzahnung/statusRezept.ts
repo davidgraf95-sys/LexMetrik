@@ -1,3 +1,4 @@
+import { MASSGEBLICH_SATZ } from '../../lib/benennung';
 import type { GlossarSchluessel } from '../../lib/verzahnung/glossar';
 import type { StatusPraedikat } from '../../lib/verzahnung/typen';
 
@@ -65,7 +66,9 @@ export const REZEPT: Partial<Record<StatusPraedikat, Rezept>> = {
     glyph: null,
     label: 'nur Verweis',
     ariaLabel: 'nur Verweis — kein aufbereiteter Volltext, nur amtlicher Live-Link',
-    erklaerung: 'Nur Fundstelle und amtlicher Live-Link — kein in LexMetrik aufbereiteter Volltext. Massgeblich ist die amtliche Quelle.',
+    // B-6-Nachzug (R2-A, 31.8.2026): «Quelle» → Wortquelle-Konstante. §8: der
+    // Nachdruck «stets» kommt hinzu, der Satz wird also nicht abgeschwächt.
+    erklaerung: `Nur Fundstelle und amtlicher Live-Link — kein in LexMetrik aufbereiteter Volltext. ${MASSGEBLICH_SATZ}`,
     ton: 'lc-badge-soft',
   },
   // Erweiterungspunkt V2: 'masse' → Masse-Kennzeichnung aus den automatisch

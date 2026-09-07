@@ -6,123 +6,6 @@
     },
     "botschaft": {
       "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2007/648"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2007/1015"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2009/731"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2007-06-08"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "07.047"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zur Güterverkehrsvorlage"
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message sur le projet de législation concernant le transport de marchandises "
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente il progetto di legislazione sul traffico merci "
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "742.101"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2007/648"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2007/1015"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2009/731"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2007-06-08"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "07.047"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zur Güterverkehrsvorlage"
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message sur le projet de législation concernant le transport de marchandises "
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente il progetto di legislazione sul traffico merci "
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "742.101"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2007/648"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2007/1015"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2009/731"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2007-06-08"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "07.047"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zur Güterverkehrsvorlage"
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message sur le projet de législation concernant le transport de marchandises "
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente il progetto di legislazione sul traffico merci "
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "742.101"
-    },
-    "botschaft": {
-      "type": "uri",
       "value": "https://fedlex.data.admin.ch/eli/fga/2004/959"
     },
     "proj": {
@@ -231,6 +114,240 @@
     "titleIt": {
       "type": "literal",
       "value": "Messaggio concernente modifiche del finanziamento dei progetti FTP"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "742.101"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2007/425"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2006/1349"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2009/679"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2007-03-09"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "05.028"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Zusatzbotschaft zur Bahnreform 2 (Revision der Erlasse über den öffentlichen Verkehr)"
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message complémentaire sur la réforme des chemins de fer 2 (Révision des actes normatifs concernant les transports publics)"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio aggiuntivo concernente la Riforma delle ferrovie 2 (Revisione della disciplina sui trasporti pubblici)"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "742.101"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2007/425"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2006/1349"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2009/679"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2007-03-09"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "05.028"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Zusatzbotschaft zur Bahnreform 2 (Revision der Erlasse über den öffentlichen Verkehr)"
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message complémentaire sur la réforme des chemins de fer 2 (Révision des actes normatifs concernant les transports publics)"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio aggiuntivo concernente la Riforma delle ferrovie 2 (Revisione della disciplina sui trasporti pubblici)"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "742.101"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2007/425"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2006/1349"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2009/679"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2007-03-09"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "05.028"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Zusatzbotschaft zur Bahnreform 2 (Revision der Erlasse über den öffentlichen Verkehr)"
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message complémentaire sur la réforme des chemins de fer 2 (Révision des actes normatifs concernant les transports publics)"
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio aggiuntivo concernente la Riforma delle ferrovie 2 (Revisione della disciplina sui trasporti pubblici)"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "742.101"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2007/648"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2007/1015"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2009/731"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2007-06-08"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "07.047"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zur Güterverkehrsvorlage"
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message sur le projet de législation concernant le transport de marchandises "
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente il progetto di legislazione sul traffico merci "
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "742.101"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2007/648"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2007/1015"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2009/731"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2007-06-08"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "07.047"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zur Güterverkehrsvorlage"
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message sur le projet de législation concernant le transport de marchandises "
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente il progetto di legislazione sul traffico merci "
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "742.101"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2007/648"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2007/1015"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2009/731"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2007-06-08"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "07.047"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zur Güterverkehrsvorlage"
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message sur le projet de législation concernant le transport de marchandises "
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente il progetto di legislazione sul traffico merci "
     }
   },
   {
@@ -270,123 +387,6 @@
     "titleIt": {
       "type": "literal",
       "value": "Messaggio concernente una modifica della legge federale sulle ferrovie (Attuazione del pilastro tecnico del 4° pacchetto ferroviario dell’UE)"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "742.101"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2007/425"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2006/1349"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2009/679"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2007-03-09"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "05.028"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Zusatzbotschaft zur Bahnreform 2 (Revision der Erlasse über den öffentlichen Verkehr)"
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message complémentaire sur la réforme des chemins de fer 2 (Révision des actes normatifs concernant les transports publics)"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio aggiuntivo concernente la Riforma delle ferrovie 2 (Revisione della disciplina sui trasporti pubblici)"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "742.101"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2007/425"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2006/1349"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2009/679"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2007-03-09"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "05.028"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Zusatzbotschaft zur Bahnreform 2 (Revision der Erlasse über den öffentlichen Verkehr)"
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message complémentaire sur la réforme des chemins de fer 2 (Révision des actes normatifs concernant les transports publics)"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio aggiuntivo concernente la Riforma delle ferrovie 2 (Revisione della disciplina sui trasporti pubblici)"
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "742.101"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2007/425"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2006/1349"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2009/679"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2007-03-09"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "05.028"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Zusatzbotschaft zur Bahnreform 2 (Revision der Erlasse über den öffentlichen Verkehr)"
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message complémentaire sur la réforme des chemins de fer 2 (Révision des actes normatifs concernant les transports publics)"
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio aggiuntivo concernente la Riforma delle ferrovie 2 (Revisione della disciplina sui trasporti pubblici)"
     }
   }
 ]

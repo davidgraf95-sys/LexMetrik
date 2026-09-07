@@ -10,7 +10,7 @@ import { ParteiEditor } from './VorlageKlageVereinfacht';
 import type { PdfBanner } from '../lib/vorlagen/banner';
 import { BetragsFeld } from '../components/BetragsFeld';
 import { DatumsFeld } from '../components/DatumsFeld';
-import { Checkbox, Field, GruppenTitel, inputCls } from '../components/vorlagen/ui';
+import { Checkbox, Field, GruppenTitel, ListenEditor, NICHT_GESPEICHERT_HINWEIS, inputCls } from '../components/vorlagen/ui';
 import { SelectionGrid } from '../components/ui/SelectionGrid';
 import { GerichtsWahlBlock } from '../components/vorlagen/GerichtsWahlBlock';
 import { useWizardState } from '../components/vorlagen/useWizardState';
@@ -156,16 +156,20 @@ export function VorlageKlageOrdentlich() {
           {a.begehrenTyp === 'frei' && (
             <div className="space-y-2">
               <GruppenTitel>Rechtsbegehren</GruppenTitel>
-              {a.freieRechtsbegehren.map((w, i) => (
-                <div key={i} className="flex gap-2">
-                  <textarea className={inputCls} rows={2} value={w}
+              {/* R2-F/F1-9: Knopf-Optik und Wortlaut waren hier schon Kanon,
+                  der BEHÄLTER fehlte (nackte `flex`-Zeilen). Der ListenEditor
+                  bringt ihn — und nummeriert die Begehren sichtbar. */}
+              <ListenEditor
+                element="Begehren"
+                eintraege={a.freieRechtsbegehren}
+                className="space-y-2"
+                onHinzufuegen={() => set('freieRechtsbegehren', [...a.freieRechtsbegehren, ''])}
+                onEntfernen={(i) => set('freieRechtsbegehren', a.freieRechtsbegehren.filter((_, j) => j !== i))}
+                kinder={(w, i) => (
+                  <textarea className={inputCls} rows={2} value={w} aria-label={`Rechtsbegehren ${i + 1}`}
                     onChange={(e) => set('freieRechtsbegehren', a.freieRechtsbegehren.map((x, j) => j === i ? e.target.value : x))} />
-                  <button type="button" className="text-body-s text-danger-700 hover:underline shrink-0 self-start pt-2"
-                    onClick={() => set('freieRechtsbegehren', a.freieRechtsbegehren.filter((_, j) => j !== i))}>entfernen</button>
-                </div>
-              ))}
-              <button type="button" className="lc-btn-outline lc-btn-sm"
-                onClick={() => set('freieRechtsbegehren', [...a.freieRechtsbegehren, ''])}>+ Begehren</button>
+                )}
+              />
             </div>
           )}
           <Checkbox
@@ -182,16 +186,17 @@ export function VorlageKlageOrdentlich() {
           </Field>
           <div className="space-y-2">
             <GruppenTitel>Weitere Rechtsbegehren <span className="normal-case text-ink-500">(optional)</span></GruppenTitel>
-            {a.weitereRechtsbegehren.map((w, i) => (
-              <div key={i} className="flex gap-2">
-                <input className={inputCls} value={w}
+            <ListenEditor
+              element="Begehren"
+              eintraege={a.weitereRechtsbegehren}
+              className="space-y-2"
+              onHinzufuegen={() => set('weitereRechtsbegehren', [...a.weitereRechtsbegehren, ''])}
+              onEntfernen={(i) => set('weitereRechtsbegehren', a.weitereRechtsbegehren.filter((_, j) => j !== i))}
+              kinder={(w, i) => (
+                <input className={inputCls} value={w} aria-label={`Weiteres Rechtsbegehren ${i + 1}`}
                   onChange={(e) => set('weitereRechtsbegehren', a.weitereRechtsbegehren.map((x, j) => j === i ? e.target.value : x))} />
-                <button type="button" className="text-body-s text-danger-700 hover:underline shrink-0"
-                  onClick={() => set('weitereRechtsbegehren', a.weitereRechtsbegehren.filter((_, j) => j !== i))}>entfernen</button>
-              </div>
-            ))}
-            <button type="button" className="lc-btn-outline lc-btn-sm"
-              onClick={() => set('weitereRechtsbegehren', [...a.weitereRechtsbegehren, ''])}>+ Begehren</button>
+              )}
+            />
           </div>
         </div>
       );
@@ -217,50 +222,54 @@ export function VorlageKlageOrdentlich() {
           {a.begruendungModus !== 'platzhalter' && (<>
           <div className="space-y-3">
             <GruppenTitel>Tatsachenbehauptungen mit Beweisofferte</GruppenTitel>
-            {a.tatsachen.map((t, i) => (
-              <div key={i} className="lc-card p-4 space-y-3">
-                <div className="flex items-start justify-between gap-2">
-                  <GruppenTitel>Ziffer {i + 1}</GruppenTitel>
-                  {a.tatsachen.length > 1 && (
-                    <button type="button" className="text-body-s text-danger-700 hover:underline"
-                      onClick={() => set('tatsachen', a.tatsachen.filter((_, j) => j !== i))}>entfernen</button>
-                  )}
+            <ListenEditor
+              element="Tatsachenbehauptung"
+              eintraege={a.tatsachen}
+              mindestens={1}
+              kopf={(_t, i) => `Ziffer ${i + 1}`}
+              onHinzufuegen={() => set('tatsachen', [...a.tatsachen, { text: '', beweise: [] }])}
+              onEntfernen={(i) => set('tatsachen', a.tatsachen.filter((_, j) => j !== i))}
+              kinder={(t, i) => (
+                <div className="space-y-3">
+                  <textarea className={inputCls} rows={3} value={t.text} aria-label={`Tatsachenbehauptung Ziffer ${i + 1}`}
+                    placeholder="Behauptete Tatsache, je Ziffer ein Lebenssachverhalt"
+                    onChange={(e) => set('tatsachen', a.tatsachen.map((x, j) => j === i ? { ...x, text: e.target.value } : x))} />
+                  <div className="space-y-2 pl-2 border-l-2 border-line">
+                    <p className="text-xs text-ink-600"><NormText text={`Beweismittel zu dieser Tatsache (Art. 221 Abs. 1 lit. e ZPO):`} /></p>
+                    <ListenEditor
+                      element="Beweismittel"
+                      eintraege={t.beweise}
+                      className="space-y-2"
+                      kopf={null}
+                      onHinzufuegen={() => set('tatsachen', a.tatsachen.map((x, j) => j === i
+                        ? { ...x, beweise: [...x.beweise, { bezeichnung: '' }] } : x))}
+                      onEntfernen={(bi) => set('tatsachen', a.tatsachen.map((x, j) => j === i
+                        ? { ...x, beweise: x.beweise.filter((_, k) => k !== bi) } : x))}
+                      kinder={(b, bi) => (
+                        <input className={inputCls} value={b.bezeichnung} aria-label={`Beweismittel ${bi + 1} zu Ziffer ${i + 1}`}
+                          placeholder="z. B. Werkvertrag vom 1.2.2026 (Urkunde); Zeuge X; Parteibefragung"
+                          onChange={(e) => set('tatsachen', a.tatsachen.map((x, j) => j === i
+                            ? { ...x, beweise: x.beweise.map((y, k) => k === bi ? { bezeichnung: e.target.value } : y) } : x))} />
+                      )}
+                    />
+                  </div>
                 </div>
-                <textarea className={inputCls} rows={3} value={t.text} placeholder="Behauptete Tatsache, je Ziffer ein Lebenssachverhalt"
-                  onChange={(e) => set('tatsachen', a.tatsachen.map((x, j) => j === i ? { ...x, text: e.target.value } : x))} />
-                <div className="space-y-2 pl-2 border-l-2 border-line">
-                  <p className="text-xs text-ink-600"><NormText text={`Beweismittel zu dieser Tatsache (Art. 221 Abs. 1 lit. e ZPO):`} /></p>
-                  {t.beweise.map((b, bi) => (
-                    <div key={bi} className="flex gap-2">
-                      <input className={inputCls} value={b.bezeichnung} placeholder="z. B. Werkvertrag vom 1.2.2026 (Urkunde); Zeuge X; Parteibefragung"
-                        onChange={(e) => set('tatsachen', a.tatsachen.map((x, j) => j === i
-                          ? { ...x, beweise: x.beweise.map((y, k) => k === bi ? { bezeichnung: e.target.value } : y) } : x))} />
-                      <button type="button" className="text-body-s text-danger-700 hover:underline shrink-0"
-                        onClick={() => set('tatsachen', a.tatsachen.map((x, j) => j === i
-                          ? { ...x, beweise: x.beweise.filter((_, k) => k !== bi) } : x))}>entfernen</button>
-                    </div>
-                  ))}
-                  <button type="button" className="lc-btn-outline lc-btn-sm"
-                    onClick={() => set('tatsachen', a.tatsachen.map((x, j) => j === i
-                      ? { ...x, beweise: [...x.beweise, { bezeichnung: '' }] } : x))}>+ Beweismittel</button>
-                </div>
-              </div>
-            ))}
-            <button type="button" className="lc-btn-outline lc-btn-sm"
-              onClick={() => set('tatsachen', [...a.tatsachen, { text: '', beweise: [] }])}>+ Tatsachenbehauptung</button>
+              )}
+            />
           </div>
           <div className="space-y-2">
             <GruppenTitel>Rechtliche Begründung <span className="normal-case text-ink-500"><NormText text={`(fakultativ, Art. 221 Abs. 3 ZPO)`} /></span></GruppenTitel>
-            {a.rechtlicheBegruendung.map((r, i) => (
-              <div key={i} className="flex gap-2">
-                <textarea className={inputCls} rows={2} value={r.text}
+            <ListenEditor
+              element="Erwägung"
+              eintraege={a.rechtlicheBegruendung}
+              className="space-y-2"
+              onHinzufuegen={() => set('rechtlicheBegruendung', [...a.rechtlicheBegruendung, { text: '' }])}
+              onEntfernen={(i) => set('rechtlicheBegruendung', a.rechtlicheBegruendung.filter((_, j) => j !== i))}
+              kinder={(r, i) => (
+                <textarea className={inputCls} rows={2} value={r.text} aria-label={`Erwägung ${i + 1}`}
                   onChange={(e) => set('rechtlicheBegruendung', a.rechtlicheBegruendung.map((x, j) => j === i ? { text: e.target.value } : x))} />
-                <button type="button" className="text-body-s text-danger-700 hover:underline shrink-0 self-start pt-2"
-                  onClick={() => set('rechtlicheBegruendung', a.rechtlicheBegruendung.filter((_, j) => j !== i))}>entfernen</button>
-              </div>
-            ))}
-            <button type="button" className="lc-btn-outline lc-btn-sm"
-              onClick={() => set('rechtlicheBegruendung', [...a.rechtlicheBegruendung, { text: '' }])}>+ Erwägung</button>
+              )}
+            />
           </div>
           <p className="text-xs text-ink-500">
             Das Beweismittelverzeichnis (Art. 221 Abs. 2 lit. d ZPO) und das Beilagenverzeichnis
@@ -311,16 +320,17 @@ export function VorlageKlageOrdentlich() {
                         </>} />
           <div className="space-y-2">
             <GruppenTitel>Weitere Beilagen</GruppenTitel>
-            {a.weitereBeilagen.map((b, i) => (
-              <div key={i} className="flex gap-2">
-                <input className={inputCls} value={b.bezeichnung}
+            <ListenEditor
+              element="Beilage"
+              eintraege={a.weitereBeilagen}
+              className="space-y-2"
+              onHinzufuegen={() => set('weitereBeilagen', [...a.weitereBeilagen, { bezeichnung: '' }])}
+              onEntfernen={(i) => set('weitereBeilagen', a.weitereBeilagen.filter((_, j) => j !== i))}
+              kinder={(b, i) => (
+                <input className={inputCls} value={b.bezeichnung} aria-label={`Weitere Beilage ${i + 1}`}
                   onChange={(e) => set('weitereBeilagen', a.weitereBeilagen.map((x, j) => j === i ? { bezeichnung: e.target.value } : x))} />
-                <button type="button" className="text-body-s text-danger-700 hover:underline shrink-0"
-                  onClick={() => set('weitereBeilagen', a.weitereBeilagen.filter((_, j) => j !== i))}>entfernen</button>
-              </div>
-            ))}
-            <button type="button" className="lc-btn-outline lc-btn-sm"
-              onClick={() => set('weitereBeilagen', [...a.weitereBeilagen, { bezeichnung: '' }])}>+ Beilage</button>
+              )}
+            />
           </div>
           <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-4', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-4')}>
             <Field label="Ort"><input className={inputCls} value={a.ort} onChange={(e) => set('ort', e.target.value)} /></Field>
@@ -332,7 +342,7 @@ export function VorlageKlageOrdentlich() {
       case 'pruefen': return (
         <div className="space-y-5">
           {maengel.map((m, i) => (
-            <div key={i} className="lc-notice-danger">
+            <div role="alert" key={i} className="lc-notice-danger">
               <p className="text-body-s text-danger-700">{m.text}</p>
             </div>
           ))}
@@ -376,10 +386,11 @@ export function VorlageKlageOrdentlich() {
       intro="Erstellt die Klageschrift nach Art. 221 ZPO aus festen Bausteinen: Rechtsbegehren, Streitwertangabe, Tatsachenbehauptungen mit Beweisofferte je Ziffer (Pflicht), fakultative rechtliche Begründung, Beweismittel- und Beilagenverzeichnis — Gerichts-Adressat für alle Kantone, Klagefrist-Berechnung mit Gerichtsferien. Ohne Sprachmodell."
       norms={card?.norms ?? []}
       badge="Papierform · unterschreiben · im Doppel"
-      fussnote="Eingaben werden nicht gespeichert – sie bestehen nur, solange diese Seite geöffnet ist."
+      fussnote={NICHT_GESPEICHERT_HINWEIS}
       zuruecksetzen={zuruecksetzen}
       schritte={SCHRITTE} schritt={schritt} setSchritt={setSchritt}
       fehler={fehler}
+      fehlerJeSchritt={(i) => maengel.filter((m) => m.schritt === i).map((m) => m.text)}
       inhalt={inhalt()}
       vorschau={<VorschauPanel ergebnis={ergebnis} kompakt direktExport={{
         pdf: { label: 'PDF', banner: BANNER_KO, dateiName: 'Klage-ordentliches-Verfahren.pdf' },

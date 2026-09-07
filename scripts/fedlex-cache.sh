@@ -123,7 +123,7 @@ EINTRAEGE=(
   # (Eurodac/Schengen) ändert nur Art. 354/357 (nicht verdrahtet); alle
   # zitierten Artikel normtext-identisch, Anker-Inventar 477/477 stabil;
   # neue Datei liegt OHNE -N-Suffix (n=0, Muster GebV SchKG).
-  "stgb|cc/54/757_781_799|20260612|0|art_30,art_97,art_98,art_101,art_109,art_333,art_389|311.0"
+  "stgb|cc/54/757_781_799|20260612|4|art_30,art_97,art_98,art_101,art_109,art_333,art_389|311.0"
   # StG: gepinnt 6.6.2026 (Emissionsabgabe in den Gründungs-Masken:
   # Art. 8 Abs. 1 = 1 %, Art. 6 Abs. 1 lit. h = Freibetrag 1 Mio.;
   # 20240101 = neuste Konsolidierung).
@@ -153,7 +153,7 @@ EINTRAEGE=(
   # ── Volltext-Ausbau 19.6.2026 (Batch «wichtigste»): ELI/Konsolidierung/n=0
   #    empirisch am Filestore-HTML verifiziert, alle Pflicht-Anker vorhanden. ──
   "bv|cc/1999/404|20240303|10|art_1,art_5,art_8,art_36,art_190|101"
-  "dbg|cc/1991/1184_1184_1184|20260101|2|art_1,art_16,art_33,art_125,art_205|642.11"
+  "dbg|cc/1991/1184_1184_1184|20260902|1|art_1,art_16,art_33,art_125,art_205|642.11"
   "vstg|cc/1966/371_385_384|20250101|11|art_1,art_4,art_13,art_21,art_61|642.21"
   "kg|cc/1996/546_546_546|20230701|5|art_1,art_4,art_5,art_7,art_30|251"
   "fusg|cc/2004/320|20230101|9|art_1,art_3,art_29,art_69|221.301"
@@ -284,7 +284,7 @@ EINTRAEGE=(
   "gwv_finma|cc/2015/390|20230101|10|art_1|955.033.0"
   "vam|cc/2018/588|20260101|0|art_1|812.212.21"
   "ambv|cc/2018/786|20250315|1|art_1|812.212.1"
-  "mepv|cc/2020/552|20260701|1|art_1|812.213"
+  "mepv|cc/2020/552|20260701|2|art_1|812.213"
   "epv|cc/2015/298|20250101|2|art_1|818.101.1"
   "bpv|cc/2001/319|20260701|0|art_1|172.220.111.3"
   "rvov|cc/1999/170|20260301|3|art_1|172.010.1"
@@ -307,7 +307,7 @@ EINTRAEGE=(
   "lmg|cc/2017/62|20241001|5|art_1|817.0"
   "lfg|cc/1950/471_491_479|20260101|0|art_1|748.0"
   "ebg|cc/1958/335_341_347|20260101|0|art_1|742.101"
-  "fmg|cc/1997/2187_2187_2187|20260601|1|art_1|784.10"
+  "fmg|cc/1997/2187_2187_2187|20260601|2|art_1|784.10"
   "mg|cc/1995/4093_4093_4093|20260601|1|art_1|510.10"
   "zstv|cc/2004/362|20250601|5|art_1|211.112.2"
   "thg|cc/1996/1725_1725_1725|20230901|4|art_1|946.51"
@@ -343,7 +343,7 @@ EINTRAEGE=(
   "skv|cc/2007/296|20260101|1|art_1|741.013"
   "vvv|cc/1959/1271_1321_1317|20260101|1|art_1|741.31"
   "vil|cc/1994/3050_3050_3050|20260701|0|art_1|748.131.1"
-  "fdv|cc/2007/166|20260701|0|art_1|784.101.1"
+  "fdv|cc/2007/166|20260701|1|art_1|784.101.1"
   "fav|cc/2016/24|20240815|10|art_1|784.101.2"
   "uvpv|cc/1988/1931_1931_1931|20250101|1|art_1|814.011"
   # Re-Pin 20260101→20260716 (§7-Nachverifikation 18.7.2026): Fedlex publizierte

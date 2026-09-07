@@ -1,7 +1,7 @@
 {
   "erlassKey": "DBG",
   "sr": "642.11",
-  "abgerufen": "2026-08-30",
+  "abgerufen": "2026-09-05",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -23,6 +23,18 @@
       "nichtKonsolidiert": true,
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/642.11",
       "sha": "570162bf6b0e21b2c68f562ae4eba4c5ea3480b9c894d9d21b6360db39964646"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2026-09-02",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2026/448",
+      "dateDocument": "2026-08-26",
+      "roFundstelle": "AS 2026 448",
+      "titelDe": "Bundesgesetz über den zivilen Ersatzdienst (Zivildienstgesetz, ZDG). Berichtigung (Betrifft nur den italienischen Text)",
+      "titelFr": "Loi fédérale sur le service civil (LSC). Erratum (Ne concerne que le texte italien)",
+      "titelIt": "Legge federale sul servizio civile sostitutivo (Legge sul servizio civile, LSC). Correzione",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2026/448/de",
+      "sha": "43d7d32aab4eac9e8dcc4e2f19d6a8396a74a24303f23d6fff62d625a1eaa527"
     },
     {
       "art": "sammelerlass-marker",
@@ -568,5 +580,5 @@
       "sha": "74a5495e38eb632fb30ba6da63289274d420124c5da6b68290cb16603989a9db"
     }
   ],
-  "sha": "02573a728ed68d03bb7c60f24ff3cb1a4712e74761209cf81d6c4f13e7ab2cbd"
+  "sha": "65d434124016279f26243139d0ab733e4f227363d0be5bb1e49edee180420258"
 }

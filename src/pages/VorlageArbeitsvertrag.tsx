@@ -63,21 +63,18 @@ const REGIME_OPTIONEN: { id: AvRegime; label: string; sub: string }[] = [
 // Kader) zeigt den Vertragstyp dagegen GEMEINSAM mit dem Detailgrad in EINER
 // VariantenKopf-Karte (Redesign: keine Schalter-Stapelung mehr).
 function VertragstypWahl({ regime, onWahl }: { regime: AvRegime; onWahl: (v: AvRegime) => void }) {
+  // R5-F2: dieselbe Umstellung wie in `VariantenKopf` — der Schalter-Block
+  // trägt Linien statt Kasten (§5).
   return (
-    <fieldset className="rounded-xl border border-line bg-surface-raised p-4 space-y-1.5">
+    <fieldset className="border-y border-rule-soft py-4 space-y-1.5">
       <legend className="lc-overline">Vertragstyp</legend>
-      <div className="flex flex-wrap gap-2">
-        {REGIME_OPTIONEN.map((o) => (
-          <button key={o.id} type="button" onClick={() => onWahl(o.id)}
-            aria-pressed={regime === o.id}
-            className={`rounded-lg border px-3 py-1.5 text-left text-body-s ${regime === o.id ? 'border-brass-500 bg-brass-100 text-ink-900' : 'border-line text-ink-700 hover:border-brass-300'}`}>
-            <span className="font-medium block leading-tight">{o.label}</span>
-            {/* LM-176 (Fahrplan B5, §6): ink-500 auf gewählter bg-brass-100
-                lag bei 4.37:1 (unter WCAG AA) — Muster wie VorlageNda.tsx. */}
-            <span className="text-ink-600 text-xs">{o.sub}</span>
-          </button>
-        ))}
-      </div>
+      {/* B3-4 (R3-α, 31.8.2026): eigene Kachel-Anatomie (eigenes Padding,
+          `bg-brass-100` statt `/60`, kein `min-h-11`) → der EINE Baustein.
+          Die LM-176-Messung (Unterzeile ink-600) steht jetzt dort. */}
+      <SelectionGrid
+        className="flex flex-wrap gap-2" gruppenLabel="Vertragstyp"
+        items={REGIME_OPTIONEN.map((o) => ({ code: o.id, label: o.label, sub: o.sub }))}
+        value={regime} onSelect={onWahl} />
     </fieldset>
   );
 }
@@ -462,7 +459,7 @@ function EinzelKaderWizard({ untertyp, regime, setRegime }: { untertyp: AvUntert
       case 'pruefen': return (
         <div className="space-y-5">
           {gates.blocker.length > 0 && (
-            <div className="lc-notice-danger space-y-1">
+            <div role="alert" className="lc-notice-danger space-y-1">
               <p className="lc-overline text-danger-700 mb-1">Vor der Ausgabe zu beheben</p>
               {gates.blocker.map((b, i) => <p key={i} className="text-body-s text-danger-700">• <NormText text={b} /></p>)}
             </div>
@@ -526,6 +523,7 @@ function EinzelKaderWizard({ untertyp, regime, setRegime }: { untertyp: AvUntert
       zuruecksetzen={zuruecksetzen}
       schritte={SCHRITTE} schritt={schritt} setSchritt={setSchritt}
       fehler={fehler}
+      fehlerJeSchritt={fehlerImSchritt}
       kopfSchalter={
         <VariantenKopf
           untertypLabel="Vertragstyp"

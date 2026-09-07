@@ -6,123 +6,6 @@
     },
     "botschaft": {
       "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2015/311"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2014/2749"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2017/542"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2015-02-11"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "15.018"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zu einer Änderung des Freizügigkeitsgesetzes (Ansprüche bei Wahl der Anlagestrategie durch die versicherte Person) "
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant une modification de la loi sur le libre passage (Droits en cas de choix de la stratégie de placement par l'assuré) "
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente una modifica della legge sul libero passaggio (Diritti in caso di scelta della strategia d'investimento da parte dell'assicurato) "
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "831.42"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2015/311"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2014/2749"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2017/542"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2015-02-11"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "15.018"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zu einer Änderung des Freizügigkeitsgesetzes (Ansprüche bei Wahl der Anlagestrategie durch die versicherte Person) "
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant une modification de la loi sur le libre passage (Droits en cas de choix de la stratégie de placement par l'assuré) "
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente una modifica della legge sul libero passaggio (Diritti in caso di scelta della strategia d'investimento da parte dell'assicurato) "
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "831.42"
-    },
-    "botschaft": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/fga/2015/311"
-    },
-    "proj": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/proj/2014/2749"
-    },
-    "oc": {
-      "type": "uri",
-      "value": "https://fedlex.data.admin.ch/eli/oc/2017/542"
-    },
-    "dateDoc": {
-      "type": "typed-literal",
-      "datatype": "http://www.w3.org/2001/XMLSchema#date",
-      "value": "2015-02-11"
-    },
-    "curia": {
-      "type": "literal",
-      "value": "15.018"
-    },
-    "titleDe": {
-      "type": "literal",
-      "value": "Botschaft zu einer Änderung des Freizügigkeitsgesetzes (Ansprüche bei Wahl der Anlagestrategie durch die versicherte Person) "
-    },
-    "titleFr": {
-      "type": "literal",
-      "value": "Message concernant une modification de la loi sur le libre passage (Droits en cas de choix de la stratégie de placement par l'assuré) "
-    },
-    "titleIt": {
-      "type": "literal",
-      "value": "Messaggio concernente una modifica della legge sul libero passaggio (Diritti in caso di scelta della strategia d'investimento da parte dell'assicurato) "
-    }
-  },
-  {
-    "sr": {
-      "type": "literal",
-      "value": "831.42"
-    },
-    "botschaft": {
-      "type": "uri",
       "value": "https://fedlex.data.admin.ch/eli/fga/2000/99"
     },
     "proj": {
@@ -231,6 +114,123 @@
     "titleIt": {
       "type": "literal",
       "value": "Messaggio concernente l'adeguamento e l'armonizzazione delle basi legali per il trattamento di dati personali nelle assicurazioni sociali"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "831.42"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2015/311"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2014/2749"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2017/542"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2015-02-11"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "15.018"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zu einer Änderung des Freizügigkeitsgesetzes (Ansprüche bei Wahl der Anlagestrategie durch die versicherte Person) "
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant une modification de la loi sur le libre passage (Droits en cas de choix de la stratégie de placement par l'assuré) "
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente una modifica della legge sul libero passaggio (Diritti in caso di scelta della strategia d'investimento da parte dell'assicurato) "
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "831.42"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2015/311"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2014/2749"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2017/542"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2015-02-11"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "15.018"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zu einer Änderung des Freizügigkeitsgesetzes (Ansprüche bei Wahl der Anlagestrategie durch die versicherte Person) "
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant une modification de la loi sur le libre passage (Droits en cas de choix de la stratégie de placement par l'assuré) "
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente una modifica della legge sul libero passaggio (Diritti in caso di scelta della strategia d'investimento da parte dell'assicurato) "
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "831.42"
+    },
+    "botschaft": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/fga/2015/311"
+    },
+    "proj": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/proj/2014/2749"
+    },
+    "oc": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/oc/2017/542"
+    },
+    "dateDoc": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2015-02-11"
+    },
+    "curia": {
+      "type": "literal",
+      "value": "15.018"
+    },
+    "titleDe": {
+      "type": "literal",
+      "value": "Botschaft zu einer Änderung des Freizügigkeitsgesetzes (Ansprüche bei Wahl der Anlagestrategie durch die versicherte Person) "
+    },
+    "titleFr": {
+      "type": "literal",
+      "value": "Message concernant une modification de la loi sur le libre passage (Droits en cas de choix de la stratégie de placement par l'assuré) "
+    },
+    "titleIt": {
+      "type": "literal",
+      "value": "Messaggio concernente una modifica della legge sul libero passaggio (Diritti in caso di scelta della strategia d'investimento da parte dell'assicurato) "
     }
   }
 ]

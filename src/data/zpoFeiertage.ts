@@ -137,6 +137,8 @@ const FEIERTAGE: FeiertagDef[] = [
 // GL: 1. Donnerstag im April; fällt er in die Karwoche (= Gründonnerstag,
 // Ostern −3), wird die Fahrt um eine Woche verschoben (Doppelcheck 6.6.2026,
 // amtlich gl.ch: Fahrt 2026 am 9. statt 2. April).
+// Karwochen-Donnerstag = Gründonnerstag; Prüfung deckungsgleich mit gl.ch-Regel
+// (Beleg 2027: src/tests/feiertage-gegenprobe.test.ts, Näfelser-Fahrt-Block).
 function naefelserFahrt(jahr: number): Date {
   let d = new Date(jahr, 3, 1);
   while (d.getDay() !== 4) d = addDays(d, 1);

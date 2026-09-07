@@ -25,6 +25,13 @@ export const VORSCHAU = {
   // Sans + font-variant-numeric, NICHT die Monospace-.num-Klasse (die den
   // juristischen Fliesstext brechen würde). Word/Arial ist ohnehin tabellarisch;
   // im PDF/Helvetica gibt es kein tnum (de-facto schon nahezu gleich breit).
+  //
+  // R5-B (5.9.2026) · begruendete Ausnahme von `.lc-ziffern`: VORSCHAU ist ein
+  // GESCHLOSSENES Stil-Objekt — alle rund zwanzig Rollen dieses «Papiers»
+  // reisen als `style={…}` durch den Wizard, damit die Bildschirm-Vorschau
+  // Zeichen fuer Zeichen dasselbe Rezept traegt wie der PDF-/DOCX-Satz, der
+  // kein Stylesheet kennt. Eine einzelne Rolle auf eine CSS-Klasse zu heben
+  // zerrisse genau diese Deckungsgleichheit.
   papier: { fontVariantNumeric: 'tabular-nums lining-nums' } as CSSProperties,
 
   adressat: { marginBottom: r(1.25), lineHeight: 1.4 } as CSSProperties,
@@ -37,8 +44,15 @@ export const VORSCHAU = {
   rubrum: { marginBottom: r(1.6) } as CSSProperties,
   // MODERN (Variante A): Parteirolle als ruhige Overline – «— klagende Partei —»
   // wird zum kleinen, gesperrten Versal-Label (Em-Striche nur Anzeige-seitig weg).
+  // R5-F2 (6.9.2026): `fontFamily: var(--font-mono)` gestrichen. PDF und DOCX
+  // setzen dieses Etikett in der GRUNDSCHRIFT des Dokuments (Arial/Helvetica,
+  // `ROLLEN_PDF`/`ROLLEN_DOCX` — nur Grösse, Grau und Sperrung sind eigen); die
+  // Vorschau war die einzige Stelle mit einer Schreibmaschinenschrift und hat
+  // damit ein Ausgabe-Merkmal behauptet, das die Ausgabe nicht hat. Versalien
+  // und Sperrung bleiben — die trägt der Export ebenfalls (`toUpperCase()`,
+  // `rolleLabelSperrung`), sie sind Dokument-Typografie, nicht UI-Versalien.
   rubrumRolle: {
-    textAlign: 'center', fontFamily: 'var(--font-mono)', fontSize: '0.72em',
+    textAlign: 'center', fontSize: '0.72em',
     letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--ink-500)',
     marginTop: r(0.55), marginBottom: r(0.2),
   } as CSSProperties,

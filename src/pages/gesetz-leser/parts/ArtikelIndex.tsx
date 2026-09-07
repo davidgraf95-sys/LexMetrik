@@ -54,14 +54,14 @@ function Zeile({ z, aktiv, onSprung }: {
       <div className="flex items-start">
         {/* F5-Marke — dieselbe 2-px-Messingkante wie im Gliederungsbaum
             (SektionBaumTOC), immer im Markup (CLS 0, §15.2). */}
-        <span aria-hidden className={`mt-1 h-3.5 w-0.5 shrink-0 rounded-full ${aktiv ? 'bg-brass-600' : 'bg-transparent'}`} />
+        <span aria-hidden className={`mt-1 h-3.5 w-0.5 shrink-0 ${aktiv ? 'bg-brass-600' : 'bg-transparent'}`} />
         <button type="button"
           onClick={() => { merkeRuecksprungVonDom(); onSprung(z.token); }}
           data-toc-aktiv={aktiv ? '1' : undefined}
           aria-current={aktiv ? 'location' : undefined}
           title={voll} aria-label={voll}
           className={`flex-1 min-w-0 text-left rounded px-1.5 py-0.5 leading-snug transition-colors text-xs ${
-            aktiv ? 'text-ink-900' : 'text-ink-700 hover:text-ink-900 hover:bg-paper-sunken/60'
+            aktiv ? 'text-ink-900' : 'text-ink-700 hover:text-ink-900 lc-hover-flaeche'
           }`}>
           {/* Zusatzpunkt David 9.8.2026: dieselbe Umbruch-Garantie wie im Baum
               (SektionBaumTOC) — kein horizontaler Overflow im [data-toc]. */}

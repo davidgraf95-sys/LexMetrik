@@ -1,8 +1,8 @@
 // scripts/check-testtreue.ts — §6.3-Diff-Tor, git-Runner (QS-AUDIT-VERWEISE, 8.8.2026).
-// Regel, Grenzen und Klassifizierer: check-testtreue-kern.ts (dort testbar ohne git).
+// Regel, Grenzen und Klassifizierer: testtreue-kern.ts (dort testbar ohne git).
 // Muster wie check-merge-schutz.ts: merge-base(origin/main)..HEAD, kein stiller Skip.
 import { execFileSync } from 'node:child_process';
-import { findeVerstoesse, type CommitInfo } from './check-testtreue-kern';
+import { findeVerstoesse, type CommitInfo } from './testtreue-kern';
 
 function git(args: string[]): string {
   return execFileSync('git', args, {

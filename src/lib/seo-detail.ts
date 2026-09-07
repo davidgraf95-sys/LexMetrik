@@ -14,10 +14,12 @@
 // §7/§8: Titel/Meta/JSON-LD NUR aus Strukturfeldern der Manifeste. Der Volltext
 // stammt WÖRTLICH aus dem Snapshot (dieselbe kanonische Quelle, die der Reader
 // fetcht — keine zweite Wahrheit). KEINE kuratierten Beschreibungen, KEINE
-// Geltungsaussage: schema.org legislationLegalForce/legislationDate bleiben aus
-// (snapshot ≠ in Kraft — TODO(David), Welle ab 1.12.2026).
+// Geltungsaussage: schema.org legislationLegalForce bleibt aus (keine
+// Geltungsaussage ohne positives Datenfeld); legislationDateVersion = gepinnter
+// Stand, s. Block unten (snapshot ≠ in Kraft — TODO(David), Welle ab 1.12.2026).
 
 import { SITE_URL, type RouteMetadaten } from './seo';
+import { AMTLICHE_FASSUNG, AMTLICHE_FASSUNG_NOMEN, MASSGEBLICH_SATZ } from './benennung';
 import {
   GELTUNG_UNGEPRUEFT_SATZ,
   naechsteFassungSatz,
@@ -96,18 +98,50 @@ function materialDetailPfad(m: Pick<BrowseMaterial, 'key'>): string {
 
 // ─── Metadaten (mechanisches Template, kein Rechtstext §7) ───────────────────
 
+/** Escapt ein Kürzel für den Einsatz als literales Regex-Teilstück. */
+function escapeRegex(s: string): string {
+  return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+/**
+ * true, wenn `kuerzel` im `titel` als GANZES Token vorkommt (Wortgrenzen:
+ * Anfang/Ende des Titels, Leerzeichen, Klammern, Komma, Schrägstrich,
+ * Semikolon, Doppelpunkt, Punkt) — kein Substring-Treffer.
+ *
+ * Auflage Gegenprüfung PR #721 (5.9.2026): `titel.includes(kuerzel)` matchte
+ * `ZEMIS-V` in «…(ZEMIS-Verordnung)» und `Staatenlose` in «…der Staatenlosen»
+ * als Substring, obwohl das Kürzel dort kein eigenständiges Wort ist — Folge:
+ * die Kürzel-Klammer im <title> fehlte fälschlich komplett. Kein `\b`, weil
+ * `\b` an Ziffern-/Umlaut-Rändern versagt (z. B. Kürzel endet auf Ziffer
+ * gefolgt von Buchstabe). Ein Bindestrich INNERHALB des Kürzels (z. B.
+ * `ZEMIS-V`) zählt als Teil des Kürzels, nicht als Wortgrenze — daher matcht
+ * `ZEMIS-V` nicht in `ZEMIS-Verordnung` (das `V` dort ist keine Grenze).
+ */
+function kuerzelAlsTokenImTitel(titel: string, kuerzel: string): boolean {
+  const re = new RegExp(`(^|[\\s(\\[/,;:])${escapeRegex(kuerzel)}(?=$|[\\s)\\]/,;:.])`, 'u');
+  return re.test(titel);
+}
+
 export function metaFuerErlass(e: BrowseErlass): RouteMetadaten {
   const pfad = erlassDetailPfad(e);
-  const srTeil = e.sr ? `, SR ${e.sr}` : '';
+  // Fehlerbuch W2·18 (5.9.2026): Kürzel nicht zweimal in Klammern (EMRK-Titel
+  // endet bereits auf «(EMRK)») — Kürzel nur anhängen, wenn es im Titel als
+  // GANZES Token vorkommt (nicht als Substring, s. kuerzelAlsTokenImTitel).
+  const klammerTeile = [kuerzelAlsTokenImTitel(e.titel, e.kuerzel) ? null : e.kuerzel, e.sr ? `SR ${e.sr}` : null]
+    .filter((t): t is string => t !== null);
+  const klammer = klammerTeile.length ? ` (${klammerTeile.join(', ')})` : '';
   return {
     pfad,
-    titel: `${e.titel} (${e.kuerzel}${srTeil}) — LexMetrik`,
+    titel: `${e.titel}${klammer} — LexMetrik`,
     beschreibung:
       `Volltext von ${e.kuerzel}${e.sr ? ` (SR ${e.sr})` : ''} – ${e.titel}. ` +
       // Gleiche Weiche wie im Volltext-Kopf: leerer `stand` (VD-vd-106879,
       // VD-vd-128150) hiesse sonst «Stand ,» in der indexierten Beschreibung.
       `${e.stand ? `Stand ${e.stand}` : STAND_UNBEKANNT}, mit Live-Link zur amtlichen Fassung. ` +
-      `Massgeblich ist die amtliche Quelle; keine Rechtsberatung.`,
+      // B-6-Nachzug (R2-A, 31.8.2026): dasselbe Nomen wie im interaktiven Kopf.
+      // Der SATZ wird gebaut, nicht kopiert — hier trägt er einen Anhang
+      // («; keine Rechtsberatung»), für den `MASSGEBLICH_SATZ` nicht passt.
+      `Massgeblich ist ${AMTLICHE_FASSUNG_NOMEN}; keine Rechtsberatung.`,
     canonical: SITE_URL + pfad,
   };
 }
@@ -141,11 +175,27 @@ export function metaFuerMaterial(m: BrowseMaterial): RouteMetadaten {
 }
 
 // ─── JSON-LD ─────────────────────────────────────────────────────────────────
-// Erlass: schema.org Legislation + BreadcrumbList. NUR Identitätsfelder
-// (legislationIdentifier = SR, name, alternateName, inLanguage, url) — KEINE
-// legislationLegalForce/legislationDate (Geltungsaussage = TODO(David)).
+// Erlass: schema.org Legislation + BreadcrumbList. Identitätsfelder
+// (legislationIdentifier = SR, name, alternateName, inLanguage, url) plus
+// `legislationDateVersion` = das Stand-/Konsolidierungsdatum des gepinnten
+// Snapshots (BrowseErlass.stand) — schema.org: "point-in-time at which the
+// provided description of the legislation is valid" (eli:version_date), NICHT
+// das Verabschiedungsdatum (legislationDate) — NUR wenn es ein valides ISO-Datum ist — zwei
+// Registereinträge (VD-vd-106879, VD-vd-128150) tragen `stand: ''`, dort
+// bleibt das Feld weg statt ein falsches Datum zu emittieren (QS-VERWENDEN
+// V4, 2.9.2026). `legislationLegalForce` bleibt bewusst UNGESETZT: der
+// Datensatz trägt keinen POSITIVEN Geltungsstatus — nur die negative
+// Aufhebungsmarke `aufgehoben` (aufhebungen.ts), deren blosse ABSENZ laut
+// browse-typen.ts als Default "geltend" gilt. Das ist eine Annahme, keine
+// Ablesung; eine Geltungsaussage ohne Datengrundlage widerspräche §8. Bleibt
+// TODO(David), bis ein echtes positives Feld (z. B. Fedlex inForceStatus)
+// im Datensatz existiert.
 // Entscheid: NUR BreadcrumbList — schema.org hat keinen validen Gerichtsentscheid-
 // Typ; nichts erfinden (§8). Reicher Kopf + Meta tragen die Indexierung.
+
+/** Valides ISO-Datum `YYYY-MM-DD` — Schutz gegen `stand: ''` (zwei VD-Einträge,
+ *  gemessen 31.8.2026, siehe erlassKopfText.ts STAND_UNBEKANNT). */
+const ISO_DATUM = /^\d{4}-\d{2}-\d{2}$/;
 
 function breadcrumb(stufen: Array<{ name: string; pfad: string }>): object {
   return {
@@ -170,6 +220,7 @@ export function jsonLdFuerErlass(e: BrowseErlass): object {
     isPartOf: { '@type': 'WebSite', name: 'LexMetrik', url: `${SITE_URL}/` },
   };
   if (e.sr) legislation.legislationIdentifier = e.sr;
+  if (ISO_DATUM.test(e.stand)) legislation.legislationDateVersion = e.stand;
   return {
     '@context': 'https://schema.org',
     '@graph': [
@@ -234,8 +285,11 @@ export function materialDetailHtml(m: BrowseMaterial): string {
     `<p>${esc(m.behoerdeKuerzel)} · ${esc(m.doktypLabel)}${nr}</p>` +
     `<h1>${esc(m.titel)}</h1>` +
     `<p>${esc(m.behoerdeName)} · Stand ${esc(m.stand)} · ${esc(inSprache(m.sprache))}</p>` +
-    `<p>Amtliche Ressource (Soft-Law, kein Gesetzesrang). Massgeblich ist die amtliche Quelle.</p>` +
-    `<p><a href="${esc(m.quelleUrl)}" rel="noopener noreferrer">Zur amtlichen Fassung</a></p>` +
+    // B-6/B-1-Nachzug (R2-A): dasselbe Nomen und derselbe Link-Name wie in der
+    // React-Fläche (`MaterialLeser` → `ui/QuellLink`). Der Pfeil steht hinten
+    // (Ä110); «Zur amtlichen Fassung» ist der verworfene Wortlaut.
+    `<p>Amtliche Ressource (Soft-Law, kein Gesetzesrang). ${MASSGEBLICH_SATZ}</p>` +
+    `<p><a href="${esc(m.quelleUrl)}" rel="noopener noreferrer">${AMTLICHE_FASSUNG} ↗</a></p>` +
     `</article>`
   );
 }

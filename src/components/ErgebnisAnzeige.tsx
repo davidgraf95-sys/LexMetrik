@@ -1,11 +1,11 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import type { Berechnungsergebnis, BerechnungsStatus } from '../types/legal';
 import { sansAmp } from './typografie';
 import { RechtsprechungAnker } from './RechtsprechungLink';
 import { NormText } from './NormText';
 // FAHRPLAN-DESIGN 2.6: lokaler NormChip entfernt — NormLink (vorlagen/ui)
 // ist die EINE Fedlex-Chip-Komponente (deckt «bemerkung» jetzt mit ab).
-import { NormLink } from './vorlagen/ui';
+import { KopierButton, NormLink } from './vorlagen/ui';
 
 // Status-Badges (Design-Doc 5.8): gesichert→sage · umstritten/kein Anspruch→warn · nichtig/unzulässig→danger.
 // «verdikt» färbt den Hauptsatz (Design-Review 6.6.2026): ok bleibt neutrale
@@ -79,16 +79,11 @@ export function ErgebnisAnzeige({ titel, ergebnis }: Props) {
   // standardmässig offen (Lazy-Init; Live-Neuberechnungen lassen die manuelle
   // Wahl des Nutzers unangetastet).
   const [warnungenOffen, setWarnungenOffen] = useState(() => ergebnis.status !== 'ok');
-  const [kopiert, setKopiert] = useState(false);
   const druckErzwingtOffen = useDruckErzwingtOffen();
   const cfg = STATUS_CONFIG[ergebnis.status];
-
-  const kopieren = () => {
-    navigator.clipboard?.writeText(ergebnisAlsText(titel, ergebnis)).then(
-      () => { setKopiert(true); setTimeout(() => setKopiert(false), 2000); },
-      () => {},
-    );
-  };
+  // Der Kopier-Text hing zuvor am Klick; als Prop des KopierButton liefe er
+  // sonst bei JEDER Live-Neuberechnung mit (§15) — darum memoisiert.
+  const kopierText = useMemo(() => ergebnisAlsText(titel, ergebnis), [titel, ergebnis]);
 
   return (
     // Einblendung + aria-live trägt der umgebende ErgebnisBlock (R4) — eine
@@ -99,15 +94,36 @@ export function ErgebnisAnzeige({ titel, ergebnis }: Props) {
       <div className="scale-rule" aria-hidden />
       <div className="bg-surface border border-line rounded-b-lg rounded-t-none shadow-md overflow-hidden">
       {/* Header */}
-      <div className="border-b border-line px-6 py-4 flex items-start justify-between gap-3">
-        <div>
+      {/* R5-F2 (6.9.2026): GEMESSEN @390 auf 8 der 20 Rechner-Routen lief diese
+          Kopfzeile über ihre Spalte hinaus (`/rechner/mietrecht` 355 px in einer
+          355→298-px-Zelle, `/rechner/erb-fristen` 341, `/rechner/kuendigung`
+          326) — der Titel-Block ist ein Flex-Kind mit `min-width:auto` und
+          konnte darum nicht unter seine längste Zeile schrumpfen; der Rest
+          wurde vom `overflow-hidden` der Karte abgeschnitten. `min-w-0` gibt
+          dem Titel die Umbrucherlaubnis zurück, `flex-wrap` schickt den
+          Kopier-Knopf (`shrink-0`, breite Beschriftung) auf einer engen Zelle in
+          die zweite Zeile, statt dem Titel 95 px zu lassen. Anatomie und
+          Reihenfolge unverändert (§3). */}
+      <div className="border-b border-line px-6 py-4 flex flex-wrap items-start justify-between gap-3">
+        <div className="min-w-0">
           <p className="lc-overline">Ergebnis</p>
-          <h3 className="text-h3 font-display font-semibold text-ink-900 mt-0.5">{sansAmp(titel)}</h3>
+          {/* R5-F2 (6.9.2026, Befund R-3): der Ergebnis-Titel war ein `h3`
+              direkt unter dem Seiten-`h1` — axe `heading-order`, gemessen auf
+              `/rechner/verjaehrung` («Verjährung (Art. 60, 67, 127 ff. OR)») und
+              `/rechner/kuendigung` («Lohnfortzahlung (Art. 324a OR)»). Der
+              Ergebnisblock IST die zweite Ebene der Seite (auf /rechner/kuendigung
+              steht die Schwester-Sektion «Ereignis-Fristen» längst als `h2`), also
+              wird die Stufe richtiggestellt. Die GRÖSSE bleibt `text-h3` — es
+              ändert sich die Gliederung, nicht das Bild (§3). */}
+          <h2 className="text-h3 font-display font-semibold text-ink-900 mt-0.5">{sansAmp(titel)}</h2>
         </div>
-        <button type="button" onClick={kopieren} className="lc-btn-ghost lc-btn-sm shrink-0"
-          aria-label="Ergebnis in die Zwischenablage kopieren">
-          {kopiert ? 'Kopiert ✓' : 'Kopieren'}
-        </button>
+        {/* R2-E/F1-10: der geteilte KopierButton — vorher eine dritte Optik
+            (`lc-btn-ghost`) mit dem nackten «Kopieren», das offenliess, WAS in
+            der Zwischenablage landet. Die eigene Clipboard-Mechanik ist damit
+            entfallen; sie zeigte «Kopiert ✓» zudem ohne aria-Ankündigung an
+            derselben Stelle. */}
+        <KopierButton text={kopierText} gegenstand="Ergebnis"
+          className="lc-btn-outline lc-btn-sm shrink-0" />
       </div>
 
       <div className="p-6 space-y-5">
@@ -119,8 +135,12 @@ export function ErgebnisAnzeige({ titel, ergebnis }: Props) {
           {/* D-1.5 (Befund 21): Verdikt-/Prosa-Zeilen auf die Lesespalte begrenzt
               (vorher ~135 CPL auf breiten Rechner-Layouts, B2-Verstoss) —
               NUR Prosa-<p>; Kacheln/lc-tile/Tabellen bleiben unbegrenzt. */}
-          <p className={`font-display font-semibold text-h3 leading-snug max-w-reading ${cfg.verdikt}`}
-            style={{ fontVariantNumeric: 'lining-nums tabular-nums' }}>
+          {/* R5-B (5.9.2026): der Ziffernsatz kam bis hierher als rohes
+              `style={{ fontVariantNumeric: 'lining-nums tabular-nums' }}` —
+              Wort für Wort die Deklaration von `.num` aus index.css, nur ohne
+              deren Monospace-Familie (die den Display-Peak brechen würde).
+              `.lc-ziffern` ist genau diese Rolle ohne Familie (§5). */}
+          <p className={`lc-ziffern font-display font-semibold text-h3 leading-snug max-w-reading ${cfg.verdikt}`}>
             {ergebnis.ergebnis}
           </p>
         </div>
@@ -133,15 +153,40 @@ export function ErgebnisAnzeige({ titel, ergebnis }: Props) {
             Segmente des Quoten-Balkens statt einer Warnung und mass einen
             negativen «Abstand» (§9-Bug-Check zu PR #440, B3). Reines Test-Attribut,
             keine Darstellungswirkung. */}
+        {/* ── LM-056 (B15, 4.9.2026) · EIN AKKORDEON-BILD JE SEITE ─────────────
+            GEMESSEN vor dem Bau auf `/rechner/zpo-fristen` @1440: diese drei
+            Köpfe trugen ein Glyphen-TAUSCHENDES ▲/▼, die `<details>` derselben
+            Seite («Für die Rechtsschrift …», «Rechtlicher Hinweis …») ein
+            7.7-9.8 px kleines «▸» mitten im Textfluss. Zwei Klapp-Gestalten auf
+            einem Bildschirm. Die geteilte Regel in `index.css` trägt jetzt das
+            Bild (rechte Kante, ▸, Drehung um 90°); diese drei Köpfe sind
+            `<button>` und werden von ihr nicht erreicht — sie übernehmen
+            dieselbe Gestalt von Hand: gleiche Glyphe, gleiche Drehung, gleiche
+            Kante. `aria-hidden` ist neu und richtig: das Zeichen stand bisher IM
+            zugänglichen Namen des Knopfs («Rechenweg (6 Schritte)▼»); den
+            Zustand trägt `<details>`/der Inhalt, nicht eine Glyphe im Namen.
+            `.lc-druck-chevron` bleibt — die Druckregel blendet die reine
+            Auf/Zu-Deko weiterhin aus (LM-173). */}
+        {/* C4-2/D-18 (R9-2, 6.9.2026): der Vorbehalts-Block war ein KASTEN von Hand
+            — 1-px-Vollrahmen `var(--warn-500)` als Inline-Style plus `bg-warn-bg`
+            ZWEIMAL (Kopf und Körper) — neben dem geteilten `.lc-notice-warn`, das
+            dieselbe Aussage als LINIE trägt (F0.6). Der Rahmen ist die Linie des
+            Bausteins geworden; die Füllung kommt jetzt EINMAL vom Container, die
+            Kinder erben sie. `rounded-md` ist ersatzlos weg: alle fünf Radius-Token
+            stehen auf 0 (F0.5), die Utility behauptete eine Rundung, die es seit
+            der Handschrift nicht mehr gibt — mit Playwright gemessen (`border-radius:
+            0px`, Befund D-18). `p-0` schaltet die Polsterung des Bausteins ab, weil
+            Kopf und Körper des Aufklappers ihre eigene tragen (sonst doppelt).
+            Mechanik, Zustände, `data-vorbehalte`-Tor-Griff und Wortlaut unverändert. */}
         {ergebnis.warnungen.length > 0 && (
-          <div data-vorbehalte={ergebnis.warnungen.length} className="rounded-md overflow-hidden" style={{ border: '1px solid var(--warn-500)' }}>
+          <div data-vorbehalte={ergebnis.warnungen.length} className="lc-notice-warn p-0 overflow-hidden">
             <button type="button" onClick={() => setWarnungenOffen(!warnungenOffen)}
-              className="lc-druck-kopf w-full flex items-center justify-between px-4 py-2.5 bg-warn-bg text-left transition-colors">
+              className="lc-druck-kopf w-full flex items-center justify-between px-4 py-2.5 text-left transition-colors">
               <span className="lc-overline text-warn-700">Hinweise / Vorbehalte ({ergebnis.warnungen.length})</span>
-              <span className="lc-druck-chevron text-warn-700">{warnungenOffen ? '▲' : '▼'}</span>
+              <span aria-hidden className={`lc-druck-chevron shrink-0 text-warn-700 transition-transform motion-reduce:transition-none ${warnungenOffen ? 'rotate-90' : ''}`}>▸</span>
             </button>
             {(warnungenOffen || druckErzwingtOffen) && (
-              <div className="bg-warn-bg px-4 pb-3 space-y-1">
+              <div className="px-4 pb-3 space-y-1">
                 {/* Norm- UND Entscheid-Zitate in Warnungen verlinkt (Web-Anzeige; Text unverändert) */}
                 {ergebnis.warnungen.map((w, i) => <p key={i} className="text-body-s text-warn-700 max-w-reading"><NormText text={w} /></p>)}
               </div>
@@ -151,13 +196,14 @@ export function ErgebnisAnzeige({ titel, ergebnis }: Props) {
 
         {/* Rechenweg (5.6.1) — geöffnet trägt der Block einen Messing-Tick
             (FAHRPLAN-DESIGN 5.7: Marken-Element am täglichsten Interaktionspunkt) */}
-        <div className={`border border-line rounded-md overflow-hidden ${rechenWegOffen ? 'border-l-2 border-l-brass-500' : ''}`}>
+        {/* D-18: `rounded-md` entfernt — Radius-Token = 0 (F0.5), die Utility log. */}
+        <div className={`border border-line overflow-hidden ${rechenWegOffen ? 'border-l-2 border-l-brass-500' : ''}`}>
           <button type="button"
             onClick={() => setRechenWegOffen(!rechenWegOffen)}
             className="lc-druck-kopf w-full flex items-center justify-between px-4 py-3 bg-surface hover:bg-brass-100 text-left transition-colors"
           >
             <span className="text-body-s font-medium text-ink-700">Rechenweg ({ergebnis.rechenweg.length} Schritte)</span>
-            <span className="lc-druck-chevron text-ink-500">{rechenWegOffen ? '▲' : '▼'}</span>
+            <span aria-hidden className={`lc-druck-chevron shrink-0 text-ink-400 transition-transform motion-reduce:transition-none ${rechenWegOffen ? 'rotate-90' : ''}`}>▸</span>
           </button>
           {(rechenWegOffen || druckErzwingtOffen) && (
             <div className="divide-y divide-line">
@@ -176,8 +222,13 @@ export function ErgebnisAnzeige({ titel, ergebnis }: Props) {
                       /* Aktenzeichen → amtlicher bger.ch-Link (Auftrag David 6.6.2026);
                          der Verifikations-Vorbehalt (§8) bleibt unverändert sichtbar */
                       <span key={j} className="lc-badge lc-badge-danger gap-1 font-mono">
+                        {/* B-L1 (R9-1, 6.9.2026): `no-underline hover:underline` fällt —
+                            der Strich erschien erst beim Überfahren, also für Tastatur
+                            und Touch gar nicht. Der Anker steht IN einem `.lc-badge`,
+                            trägt seine Affordanz damit aus der Form (F0.8) und bleibt
+                            dauerhaft ohne Strich; die Rückmeldung gibt die Farbe. */}
                         <RechtsprechungAnker aktenzeichen={r.aktenzeichen}
-                          className="no-underline hover:underline" />
+                          className="no-underline hover:text-brass-800" />
                         {!r.verifiziert && <span className="font-sans text-micro">· zu verifizieren</span>}
                       </span>
                     ))}
@@ -190,13 +241,13 @@ export function ErgebnisAnzeige({ titel, ergebnis }: Props) {
 
         {/* Annahmen */}
         {ergebnis.annahmen.length > 0 && (
-          <div className={`border border-line rounded-md overflow-hidden ${annahmenOffen ? 'border-l-2 border-l-brass-500' : ''}`}>
+          <div className={`border border-line overflow-hidden ${annahmenOffen ? 'border-l-2 border-l-brass-500' : ''}`}>
             <button type="button"
               onClick={() => setAnnahmenOffen(!annahmenOffen)}
               className="lc-druck-kopf w-full flex items-center justify-between px-4 py-3 bg-surface hover:bg-brass-100 text-left transition-colors"
             >
               <span className="text-body-s font-medium text-ink-700">Annahmen ({ergebnis.annahmen.length})</span>
-              <span className="lc-druck-chevron text-ink-500">{annahmenOffen ? '▲' : '▼'}</span>
+              <span aria-hidden className={`lc-druck-chevron shrink-0 text-ink-400 transition-transform motion-reduce:transition-none ${annahmenOffen ? 'rotate-90' : ''}`}>▸</span>
             </button>
             {(annahmenOffen || druckErzwingtOffen) && (
               <ul className="px-4 py-3 space-y-1">

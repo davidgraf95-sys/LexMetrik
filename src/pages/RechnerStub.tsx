@@ -14,9 +14,15 @@ export function RechnerStub() {
     <div className="space-y-6">
       <RechnerKopf calc={calc} />
       <div className="lc-card p-8 text-center space-y-3">
-        <p className="text-body-s font-semibold text-warn-700 uppercase tracking-wide">
-          {calc.status === 'in Vorbereitung' ? 'In Vorbereitung' : 'Geplant'}
-        </p>
+        {/* D-5/B3-8 (R3-α, 31.8.2026): hier stand die Marke als eigene
+            Klassenkette in WARN-Ton («text-warn-700 uppercase») mit zwei
+            Wortlauten («In Vorbereitung» / «Geplant»). Beides ist mit Davids
+            Entscheid vom 31.8.2026 entschieden: EINE Marke `lc-badge-geplant`
+            (Umriss slate) und EIN Wortlaut «In Vorbereitung» — derselbe, den
+            Katalog, SprachUmschalter und die Zuständigkeits-Flächen tragen.
+            §8: die Aussage wird nicht abgeschwächt, sondern vereinheitlicht —
+            der Erklärsatz darunter bleibt Wort für Wort stehen. */}
+        <p><span className="lc-badge-geplant">In Vorbereitung</span></p>
         <p className="text-ink-600 max-w-md mx-auto">
           Dieser Rechner ist noch nicht verfügbar. Die Berechnungslogik wird separat ergänzt;
           der Seitenrahmen folgt bereits der gemeinsamen Vorlage.

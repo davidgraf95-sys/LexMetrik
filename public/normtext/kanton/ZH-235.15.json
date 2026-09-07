@@ -1,0 +1,719 @@
+{
+  "erzeugt": "2026-09-01",
+  "eintraege": [
+    {
+      "id": "kanton/ZH/235.15/art_1",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung des Obergerichts über das Verfahren bei freiwilligen öffentlichen Versteigerungen (LS 235.15)",
+      "artikel": "1",
+      "artikelLabel": "§ 1",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Freiwillige öffentliche Versteigerungen sind unter Vorbehalt der Ausnahmen gemäss § 223 EG zum ZGB durchzuführen:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "unter Leitung und Verantwortung des Gemeindeammanns,"
+            },
+            {
+              "marke": "b",
+              "text": "unter Leitung und Verantwortung einer Privatperson (Auktionator), unter Mitwirkung des Gemeindeammanns."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Der Gemeindeammann kann die ihm obliegenden Aufgaben seinen Angestellten übertragen."
+        }
+      ],
+      "stand": "2019-05-24",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-235_15-1979_12_19-1980_01_25-105.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "d1c89cecd44639a64526a6c962b2916a965c74367d63fce6fd0b0a37da6fd49a",
+      "sha": "d45a0f99a9211a307da264322284976e9e1739db186d5109fbe44ee4800e6b58"
+    },
+    {
+      "id": "kanton/ZH/235.15/art_2",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung des Obergerichts über das Verfahren bei freiwilligen öffentlichen Versteigerungen (LS 235.15)",
+      "artikel": "2",
+      "artikelLabel": "§ 2",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Durchführung von freiwilligen öffentlichen Versteigerungen obliegt:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "bei Fahrnisversteigerungen grundsätzlich dem Gemeindeammann am Ort der Versteigerung. Vorbehalten bleibt der Fall, wo für mehrere Amtskreise ein gemeinsames Gantlokal besteht,"
+            },
+            {
+              "marke": "b",
+              "text": "bei Grundstücksversteigerungen dem Gemeindeammann am Ort der gelegenen Sache. Liegt ein Grundstück in verschiedenen Amtskreisen, ist der Gemeindeammann eines jeden dieser Kreise zuständig. Liegen mehrere gemeinsam zu versteigernde Grundstücke desselben Eigentümers in verschiedenen Amtskreisen, kann der Auftraggeber wahlweise einen Gemeindeammann dieser Kreise mit der Versteigerung aller Grundstücke beauftragen."
+            }
+          ]
+        }
+      ],
+      "stand": "2019-05-24",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-235_15-1979_12_19-1980_01_25-105.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "d1c89cecd44639a64526a6c962b2916a965c74367d63fce6fd0b0a37da6fd49a",
+      "sha": "358c4b01da45b68c6e5fd6dfa535f48936f7109e9e2e52b107b296519c8d9e7e"
+    },
+    {
+      "id": "kanton/ZH/235.15/art_3",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung des Obergerichts über das Verfahren bei freiwilligen öffentlichen Versteigerungen (LS 235.15)",
+      "artikel": "3",
+      "artikelLabel": "§ 3",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Durchführung einer freiwilligen öffentlichen Versteigerung darf nicht abgelehnt, jedoch von der Leistung eines angemessenen Kostenvorschusses abhängig gemacht werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Annahme von Gegenständen, deren Versteigerung nicht zumutbar ist, kann verweigert werden."
+        }
+      ],
+      "stand": "2019-05-24",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-235_15-1979_12_19-1980_01_25-105.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "d1c89cecd44639a64526a6c962b2916a965c74367d63fce6fd0b0a37da6fd49a",
+      "sha": "99416fe498068f0aa8842c27d1074d1f310b9a557f466c2da7314878f42c7254"
+    },
+    {
+      "id": "kanton/ZH/235.15/art_4",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung des Obergerichts über das Verfahren bei freiwilligen öffentlichen Versteigerungen (LS 235.15)",
+      "artikel": "4",
+      "artikelLabel": "§ 4",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Gemeindeammann versteigert die Gegenstände gestützt auf die erhaltenen Angaben."
+        },
+        {
+          "absatz": "2",
+          "text": "Er kann jedoch eine unterschriftliche Erklärung über die Verfügungsberechtigung sowie den Nachweis verlangen, dass die zu versteigernden Gegenstände nicht mit amtlichem Beschlag belegt sind."
+        },
+        {
+          "absatz": "3",
+          "text": "Er ist befugt, den Nachweis für die Richtigkeit von Angaben über die Herkunft von Kunstwerken und Antiquitäten aus bestimmten Sammlungen oder bestimmtem Besitz zu verlangen."
+        }
+      ],
+      "stand": "2019-05-24",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-235_15-1979_12_19-1980_01_25-105.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "d1c89cecd44639a64526a6c962b2916a965c74367d63fce6fd0b0a37da6fd49a",
+      "sha": "d99a8a85507603963054943903faec41190479f1acb12ff05029b709b8f08201"
+    },
+    {
+      "id": "kanton/ZH/235.15/art_5",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung des Obergerichts über das Verfahren bei freiwilligen öffentlichen Versteigerungen (LS 235.15)",
+      "artikel": "5",
+      "artikelLabel": "§ 5",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Auftraggeber hat dem Gemeindeammann ein Verzeichnis des Steigerungsgutes einzureichen, welches als Grundlage für das Steigerungsprotokoll dienen kann. Wenn es sich als zweckmässig erweist, kann das Verzeichnis auch erst bei der Aufnahme des Steigerungsprotokolls erstellt werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Zur Versteigerung von Grundstücken ist vom Auftraggeber ein vollständiger Grundbuchauszug und ein Katasterplan einzureichen, die als Grundlage für die Versteigerung dienen."
+        }
+      ],
+      "stand": "2019-05-24",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-235_15-1979_12_19-1980_01_25-105.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "d1c89cecd44639a64526a6c962b2916a965c74367d63fce6fd0b0a37da6fd49a",
+      "sha": "bc833a3085fe56e7e7a46a1666c8eb2b0a43aceaa840962203582bebde1322af"
+    },
+    {
+      "id": "kanton/ZH/235.15/art_6",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung des Obergerichts über das Verfahren bei freiwilligen öffentlichen Versteigerungen (LS 235.15)",
+      "artikel": "6",
+      "artikelLabel": "§ 6",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Freiwillige öffentliche Versteigerungen von Fahrnis sind mindestens drei Tage, von Grundstücken mindestens 20 Tage vor Durchführung in einem geeigneten Publikationsorgan bekanntzumachen. Dabei sind Ort und Zeit der Versteigerung genau anzugeben. Das Steigerungsgut ist bei Fahrnis mindestens der Gattung nach zu bezeichnen."
+        },
+        {
+          "absatz": "2",
+          "text": "Grundstücke sind genau zu umschreiben. Es ist anzugeben, wann die Steigerungsbedingungen beim Amt eingesehen werden können und wann das Grundstück besichtigt werden kann."
+        },
+        {
+          "absatz": "3",
+          "text": "Bei Fahrnisversteigerungen ist dem Publikum in der Regel Gelegenheit zu geben, das Steigerungsgut vor der Versteigerung zu besichtigen."
+        }
+      ],
+      "stand": "2019-05-24",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-235_15-1979_12_19-1980_01_25-105.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "d1c89cecd44639a64526a6c962b2916a965c74367d63fce6fd0b0a37da6fd49a",
+      "sha": "59535d36d2c73918364ea4619af3a09d79efa2ed82bd447a860999e4041c30f4"
+    },
+    {
+      "id": "kanton/ZH/235.15/art_7",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung des Obergerichts über das Verfahren bei freiwilligen öffentlichen Versteigerungen (LS 235.15)",
+      "artikel": "7",
+      "artikelLabel": "§ 7",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Steigerungsbedingungen werden vom Gemeindeammann aufgestellt. Die Vorschläge des Auftraggebers sind im gesetzlich zulässigen Rahmen zu berücksichtigen."
+        },
+        {
+          "absatz": "2",
+          "text": "Aus den Steigerungsbedingungen sollen insbesondere die Zahlungsbedingungen, die Regelung der Herausgabe des Steigerungsgutes und die allfällige Wegbedingung der Gewährleistung ersichtlich sein, für zu versteigernde Grundstücke ausserdem der Antrittstermin, zu überbindende Grundpfandschulden, Mietverhältnisse, Versicherungsverträge, Brennstoffvorräte, Sicherstellung von Grundsteuern usw."
+        },
+        {
+          "absatz": "3",
+          "text": "Im Weiteren sollen die Steigerungsbedingungen darauf hinweisen, dass die Versteigerung gestützt auf die Angaben des Auftraggebers erfolgt."
+        },
+        {
+          "absatz": "4",
+          "text": "Werden Grundstücke versteigert, so sind den Steigerungsbedingungen Grundbuchauszug und Katasterplan beizufügen."
+        }
+      ],
+      "stand": "2019-05-24",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-235_15-1979_12_19-1980_01_25-105.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "d1c89cecd44639a64526a6c962b2916a965c74367d63fce6fd0b0a37da6fd49a",
+      "sha": "333609cb1364be35c5b7aeeeb716df4a8d9da2f121eda385f1c89692e6e00eb0"
+    },
+    {
+      "id": "kanton/ZH/235.15/art_8",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung des Obergerichts über das Verfahren bei freiwilligen öffentlichen Versteigerungen (LS 235.15)",
+      "artikel": "8",
+      "artikelLabel": "§ 8",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Die Steigerungsbedingungen sind nach der Eröffnung der Versteigerung zu verlesen, sofern sie nicht für jedermann leicht zugänglich und gut sichtbar im Steigerungslokal angeschlagen sind oder in ausreichender Anzahl zur Selbstbedienung aufliegen."
+        }
+      ],
+      "stand": "2019-05-24",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-235_15-1979_12_19-1980_01_25-105.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "d1c89cecd44639a64526a6c962b2916a965c74367d63fce6fd0b0a37da6fd49a",
+      "sha": "d34f7ae2b8aa9501588c04f0a2f684989702067907c1b653cd387623401f0c6d"
+    },
+    {
+      "id": "kanton/ZH/235.15/art_9",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung des Obergerichts über das Verfahren bei freiwilligen öffentlichen Versteigerungen (LS 235.15)",
+      "artikel": "9",
+      "artikelLabel": "§ 9",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Es kann mündlich oder schriftlich geboten werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Angebote sind nur in festen Beträgen und bedingungslos zulässig. Das höchste schriftliche Angebot gilt als Mindestangebot."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Beamten, Angestellten und Hilfspersonen des Amtes dürfen weder für sich selbst noch für Dritte bieten."
+        },
+        {
+          "absatz": "4",
+          "text": "Angebote von offensichtlich nicht urteilsfähigen Personen dürfen nicht angenommen werden."
+        }
+      ],
+      "stand": "2019-05-24",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-235_15-1979_12_19-1980_01_25-105.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "d1c89cecd44639a64526a6c962b2916a965c74367d63fce6fd0b0a37da6fd49a",
+      "sha": "be45784a7cf5ed5d62b6fc9ae4bad65cacbfa9f12dd312c084a56d9b30493ce6"
+    },
+    {
+      "id": "kanton/ZH/235.15/art_10",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung des Obergerichts über das Verfahren bei freiwilligen öffentlichen Versteigerungen (LS 235.15)",
+      "artikel": "10",
+      "artikelLabel": "§ 10",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Bietende ist nach Massgabe der Steigerungsbedingungen an sein Angebot gebunden. Er wird, falls diese nichts anderes bestimmen, frei, wenn ein höheres Angebot erfolgt oder sein Angebot nicht sofort nach dem üblichen Aufruf angenommen wird (Art. 231 OR)."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Steigerungsbedingungen können die Bindung des Bietenden an sein Angebot über die Steigerungsverhandlung hinaus für Grundstücke nur vorsehen, wenn die Veräusserung oder der Erwerb der Genehmigung einer Behörde bedarf; im Übrigen müssen solche Bindungen befristet werden."
+        }
+      ],
+      "stand": "2019-05-24",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-235_15-1979_12_19-1980_01_25-105.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "d1c89cecd44639a64526a6c962b2916a965c74367d63fce6fd0b0a37da6fd49a",
+      "sha": "289945e0ebbc7b021845b333796285c224a83ecead4729d0fc99231ad1839af1"
+    },
+    {
+      "id": "kanton/ZH/235.15/art_11",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung des Obergerichts über das Verfahren bei freiwilligen öffentlichen Versteigerungen (LS 235.15)",
+      "artikel": "11",
+      "artikelLabel": "§ 11",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Steigerungsgegenstände werden vorbehältlich abweichender Weisungen des Auftraggebers einzeln versteigert. Wenn es sich als zweckmässig erweist, können mehrere Gegenstände zusammen aufgerufen werden."
+        },
+        {
+          "absatz": "2",
+          "text": "Werden Mindestangebote festgelegt, sind diese jeweils vor dem ersten Aufruf bekanntzugeben."
+        },
+        {
+          "absatz": "3",
+          "text": "Jedes Mehrangebot nach dem ersten oder zweiten Aufruf hat zur Folge, dass der Aufruf von neuem beginnt."
+        },
+        {
+          "absatz": "4",
+          "text": "Erfolgen gleichzeitig zwei oder mehrere Angebote und will keiner der Bieter zurücktreten oder mehr bieten, so wird der Aufruf des nächsttieferen Angebotes wiederholt."
+        }
+      ],
+      "stand": "2019-05-24",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-235_15-1979_12_19-1980_01_25-105.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "d1c89cecd44639a64526a6c962b2916a965c74367d63fce6fd0b0a37da6fd49a",
+      "sha": "ab11a23b623a1836108e5372ef8aa290fa653737e93368cd61c9c8c454d18efc"
+    },
+    {
+      "id": "kanton/ZH/235.15/art_12",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung des Obergerichts über das Verfahren bei freiwilligen öffentlichen Versteigerungen (LS 235.15)",
+      "artikel": "12",
+      "artikelLabel": "§ 12",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Zuschlag wird unter Vorbehalt abweichender Steigerungsbedingungen nach dem dritten und letzten Aufruf dem Meistbietenden erteilt."
+        },
+        {
+          "absatz": "2",
+          "text": "Bieten mehrere Personen gemeinsam und erklären sie nichts anderes, so wird ihnen der Zuschlag zu Miteigentum zu gleichen Teilen erteilt."
+        },
+        {
+          "absatz": "3",
+          "text": "Dem Auftraggeber steht es frei, vor dem dritten Aufruf auf ein Angebot hin, welches ihm nicht annehmbar oder ungenügend erscheint, seine Zustimmung ausdrücklich zu verweigern. Dadurch entfallen der dritte Aufruf und der Zuschlag. In diesem Falle wird der Bieter von seiner Bindung befreit."
+        }
+      ],
+      "stand": "2019-05-24",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-235_15-1979_12_19-1980_01_25-105.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "d1c89cecd44639a64526a6c962b2916a965c74367d63fce6fd0b0a37da6fd49a",
+      "sha": "a75336f69b5e89e385e7a7476074fc6c97181a2d0cefe3429acdc07774fc641d"
+    },
+    {
+      "id": "kanton/ZH/235.15/art_13",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung des Obergerichts über das Verfahren bei freiwilligen öffentlichen Versteigerungen (LS 235.15)",
+      "artikel": "13",
+      "artikelLabel": "§ 13",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "In Streitfällen entscheidet der Gemeindeammann, ob und wem eine Sache zugeschlagen ist, oder ob ein neuer Aufruf stattzufinden hat. Die Anfechtung des Zuschlages gemäss Art. 230 OR bleibt vorbehalten."
+        }
+      ],
+      "stand": "2019-05-24",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-235_15-1979_12_19-1980_01_25-105.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "d1c89cecd44639a64526a6c962b2916a965c74367d63fce6fd0b0a37da6fd49a",
+      "sha": "fba61cca85f9dc24bfb0d1fd88c8d6a9f61ae07289ad7ec4e7d811b16c33453c"
+    },
+    {
+      "id": "kanton/ZH/235.15/art_14",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung des Obergerichts über das Verfahren bei freiwilligen öffentlichen Versteigerungen (LS 235.15)",
+      "artikel": "14",
+      "artikelLabel": "§ 14",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Es ist ein Steigerungsprotokoll zu führen, in welches Steigerungsgegenstand und Zuschlagspreis aufgenommen werden. Wird der Kaufpreis nicht sofort bezahlt oder handelt es sich um meldepflichtige Handänderungen, sind ausserdem Namen und Adresse des Ersteigerers zu protokollieren."
+        },
+        {
+          "absatz": "2",
+          "text": "Werden Grundstücke versteigert, ist jedes Angebot mit Namen und Adresse des Bieters zu protokollieren."
+        },
+        {
+          "absatz": "3",
+          "text": "Nach Beendigung der Versteigerung haben Protokollführer und Steigerungsleiter das Steigerungsprotokoll zu unterschreiben. Ist ein Grundstück versteigert worden, hat auch der Ersteigerer zu unterzeichnen, und es sind seine Personalien aufzuführen."
+        }
+      ],
+      "stand": "2019-05-24",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-235_15-1979_12_19-1980_01_25-105.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "d1c89cecd44639a64526a6c962b2916a965c74367d63fce6fd0b0a37da6fd49a",
+      "sha": "3a076aca1674a15ff6b16b4ac365f1882746d28f6871c806c2a08e6968de5394"
+    },
+    {
+      "id": "kanton/ZH/235.15/art_15",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung des Obergerichts über das Verfahren bei freiwilligen öffentlichen Versteigerungen (LS 235.15)",
+      "artikel": "15",
+      "artikelLabel": "§ 15",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Gemeindeammann sorgt für gute Ordnung während der Versteigerung. Nötigenfalls kann er die Hilfe der Polizeiorgane beanspruchen."
+        },
+        {
+          "absatz": "2",
+          "text": "Jede Beeinflussung der Versteigerung durch Scheinangebote sowie durch die Versprechung oder Gewährung von Vorteilen, wie zum Beispiel durch unentgeltliche Abgabe alkoholischer Getränke, Ess- und Raucherwaren, ist untersagt. Der Gemeindeammann ist verpflichtet, solche Vorkommnisse zu verhindern. Er stellt die Versteigerung ein, wenn seinen Anordnungen nicht sofort Folge geleistet wird."
+        }
+      ],
+      "stand": "2019-05-24",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-235_15-1979_12_19-1980_01_25-105.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "d1c89cecd44639a64526a6c962b2916a965c74367d63fce6fd0b0a37da6fd49a",
+      "sha": "b5e390db5605bf7ef33b5c13faad8d43845f5241080c34e24e7babd647e8f322"
+    },
+    {
+      "id": "kanton/ZH/235.15/art_16",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung des Obergerichts über das Verfahren bei freiwilligen öffentlichen Versteigerungen (LS 235.15)",
+      "artikel": "16",
+      "artikelLabel": "§ 16",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Mitwirkung bei freiwilligen öffentlichen Versteigerungen, die von einer Privatperson durchgeführt werden (Auktionen), obliegt dem Gemeindeammann am Ort der Durchführung, bei Grundstücksauktionen dem Gemeindeammann am Ort der gelegenen Sache."
+        },
+        {
+          "absatz": "2",
+          "text": "Versteigerungen, die nur einem beschränkten Personenkreis zugänglich sind, dürfen nicht als Auktionen angekündigt werden."
+        }
+      ],
+      "stand": "2019-05-24",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-235_15-1979_12_19-1980_01_25-105.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "d1c89cecd44639a64526a6c962b2916a965c74367d63fce6fd0b0a37da6fd49a",
+      "sha": "ab33663b5ff286932b0d400bcaaa8335f171496a0584be796ab0ebe565cdcd77"
+    },
+    {
+      "id": "kanton/ZH/235.15/art_17",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung des Obergerichts über das Verfahren bei freiwilligen öffentlichen Versteigerungen (LS 235.15)",
+      "artikel": "17",
+      "artikelLabel": "§ 17",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Gemeindeammann darf die Mitwirkung nicht ablehnen, es sei denn, der Auktionator biete keine Gewähr für ein ordnungsgemässes Verfahren. Letzteres ist namentlich anzunehmen, wenn der Auktionator wiederholt Vorschriften dieser Verordnung verletzt hat."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Mitwirkung kann von der Leistung eines angemessenen Kostenvorschusses abhängig gemacht werden."
+        }
+      ],
+      "stand": "2019-05-24",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-235_15-1979_12_19-1980_01_25-105.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "d1c89cecd44639a64526a6c962b2916a965c74367d63fce6fd0b0a37da6fd49a",
+      "sha": "721393f9dff4cd8809fc52723897f1994f8d4db9dd3a08d446c5a39676316efd"
+    },
+    {
+      "id": "kanton/ZH/235.15/art_18",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung des Obergerichts über das Verfahren bei freiwilligen öffentlichen Versteigerungen (LS 235.15)",
+      "artikel": "18",
+      "artikelLabel": "§ 18",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Mitwirkung des Gemeindeammanns beschränkt sich auf die ihm in diesem Abschnitt sowie durch die §§ 13 (Streitfälle) und 15 (Ordnungsbefugnis des Gemeindeammanns) zugewiesenen Aufgaben."
+        },
+        {
+          "absatz": "2",
+          "text": "§ 9 Abs. 3 findet Anwendung."
+        }
+      ],
+      "stand": "2019-05-24",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-235_15-1979_12_19-1980_01_25-105.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "d1c89cecd44639a64526a6c962b2916a965c74367d63fce6fd0b0a37da6fd49a",
+      "sha": "9451d2aeef190abd12611780afe1fdbf0496ea3e63560ee21ecaa72c756203e4"
+    },
+    {
+      "id": "kanton/ZH/235.15/art_19",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung des Obergerichts über das Verfahren bei freiwilligen öffentlichen Versteigerungen (LS 235.15)",
+      "artikel": "19",
+      "artikelLabel": "§ 19",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Dem Auktionator obliegen neben der Leitung der Auktion die Veröffentlichung, die Bereitstellung und Herausgabe des Steigerungsgutes, der Aufruf, der Zuschlag, die Protokollierung, der Einzug des Steigerungserlöses, die Abrechnung mit den Auftraggebern sowie die gesamte Organisation."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Bestimmungen der §§ 6 (Veröffentlichung), 9 Abs. 1, 4 (Angebote), 10 (Bindung des Bieters), 11 Abs. 1, 3, 4 (Aufruf) und 12 (Zuschlag) gelten auch für Auktionen."
+        },
+        {
+          "absatz": "3",
+          "text": "Befolgt der Auktionator Bestimmungen dieser Verordnung nicht und widersetzt er sich den Anordnungen des Gemeindeammanns, stellt dieser die Versteigerung ein."
+        }
+      ],
+      "stand": "2019-05-24",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-235_15-1979_12_19-1980_01_25-105.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "d1c89cecd44639a64526a6c962b2916a965c74367d63fce6fd0b0a37da6fd49a",
+      "sha": "511fd8e4d720318ed732fb935647fe791a5d9af506a4ea8e01781a8a944f0d72"
+    },
+    {
+      "id": "kanton/ZH/235.15/art_20",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung des Obergerichts über das Verfahren bei freiwilligen öffentlichen Versteigerungen (LS 235.15)",
+      "artikel": "20",
+      "artikelLabel": "§ 20",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Der Auktionator hat dem Gemeindeammann ein Verzeichnis des Steigerungsgutes einzureichen, das als Katalog ausgestaltet sein kann. Es soll enthalten:",
+          "items": [
+            {
+              "marke": "a",
+              "text": "Name und Adresse des verantwortlichen Auktionators,"
+            },
+            {
+              "marke": "b",
+              "text": "die Steigerungsbedingungen,"
+            },
+            {
+              "marke": "c",
+              "text": "eine ausdrückliche Erklärung, falls die Echtheit der zu versteigernden Gegenstände nicht gewährleistet ist,"
+            },
+            {
+              "marke": "d",
+              "text": "Hinweis auf das Gemeindeammannamt als mitwirkende Behörde,"
+            },
+            {
+              "marke": "e",
+              "text": "Hinweis, dass jede Haftung des mitwirkenden Gemeindeammanns, der Gemeinde und des Staates für Handlungen des Auktionators entfällt."
+            }
+          ]
+        },
+        {
+          "absatz": "2",
+          "text": "Der Auktionator haftet für die ihm zumutbare Sorgfalt bei der Erstellung des Verzeichnisses."
+        }
+      ],
+      "stand": "2019-05-24",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-235_15-1979_12_19-1980_01_25-105.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "d1c89cecd44639a64526a6c962b2916a965c74367d63fce6fd0b0a37da6fd49a",
+      "sha": "bb6606b4a8d92114e37a891870f9ad060c86d78bc8551e180517d07326f19082"
+    },
+    {
+      "id": "kanton/ZH/235.15/art_21",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung des Obergerichts über das Verfahren bei freiwilligen öffentlichen Versteigerungen (LS 235.15)",
+      "artikel": "21",
+      "artikelLabel": "§ 21",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Aufstellung der Steigerungsbedingungen obliegt dem Auktionator."
+        },
+        {
+          "absatz": "2",
+          "text": "Auf Grundstücksauktionen findet § 7 Abs. 2 und 4 dieser Verordnung Anwendung."
+        },
+        {
+          "absatz": "3",
+          "text": "In den Steigerungsbedingungen ist ausdrücklich vorzusehen, wenn Angebote und Aufrufe unterhalb der vom Auftraggeber gesetzten Limite zulässig sein sollen und Gegenstände ohne Verkauf zugeschlagen oder zurückgenommen werden können, ohne dass dies für die Auktionsteilnehmer vor Abschluss der Auktion erkennbar ist."
+        }
+      ],
+      "stand": "2019-05-24",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-235_15-1979_12_19-1980_01_25-105.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "d1c89cecd44639a64526a6c962b2916a965c74367d63fce6fd0b0a37da6fd49a",
+      "sha": "8e38fb941eb187fddc7457d0e1aa3526c73b73846fffead51b80696e80913dbc"
+    },
+    {
+      "id": "kanton/ZH/235.15/art_22",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung des Obergerichts über das Verfahren bei freiwilligen öffentlichen Versteigerungen (LS 235.15)",
+      "artikel": "22",
+      "artikelLabel": "§ 22",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Auktionen sind während den ordentlichen Ladenöffnungszeiten durchzuführen. Ausnahmen können nur im Einvernehmen mit dem Gemeindeammann und nach den Vorschriften des Ruhetags- und Ladenöffnungsgesetzes vom 26. Juni 2000 erfolgen."
+        }
+      ],
+      "stand": "2019-05-24",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-235_15-1979_12_19-1980_01_25-105.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "d1c89cecd44639a64526a6c962b2916a965c74367d63fce6fd0b0a37da6fd49a",
+      "sha": "64a279dfe3e97d64cde102a931370df8dd2d31501303e32b6afa3ac1d281c35f"
+    },
+    {
+      "id": "kanton/ZH/235.15/art_23",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung des Obergerichts über das Verfahren bei freiwilligen öffentlichen Versteigerungen (LS 235.15)",
+      "artikel": "23",
+      "artikelLabel": "§ 23",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Der Gemeindeammann ist berechtigt, die Herkunft der zu versteigernden Gegenstände, insbesondere die Herkunft von Kunstwerken und Antiquitäten aus bestimmten Sammlungen oder Besitz, sowie Preislimiten, Angebote und Zuschläge zu überprüfen und in das Protokoll des Auktionators Einsicht zu nehmen."
+        }
+      ],
+      "stand": "2019-05-24",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-235_15-1979_12_19-1980_01_25-105.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "d1c89cecd44639a64526a6c962b2916a965c74367d63fce6fd0b0a37da6fd49a",
+      "sha": "1da8c4d1a29f6a05bcc4d7fa8d61da5711ddda6c3938d6c1da8e1c289b6369e1"
+    },
+    {
+      "id": "kanton/ZH/235.15/art_24",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung des Obergerichts über das Verfahren bei freiwilligen öffentlichen Versteigerungen (LS 235.15)",
+      "artikel": "24",
+      "artikelLabel": "§ 24",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Die Führung des Protokolls obliegt dem Auktionator. Aus dem Protokoll muss insbesondere hervorgehen, ob und zu welchem Preis ein Steigerungsgegenstand verkauft wurde."
+        },
+        {
+          "absatz": "2",
+          "text": "Daneben führt der Gemeindeammann ein zusätzliches, amtliches Steigerungsprotokoll, in welches Steigerungsgegenstand und Zuschlagspreis aufzunehmen sind."
+        },
+        {
+          "absatz": "3",
+          "text": "Werden Grundstücke versteigert, protokolliert der Gemeindeammann überdies jedes Angebot mit Namen und Adresse des Bieters."
+        },
+        {
+          "absatz": "4",
+          "text": "Nach Beendigung der Auktion hat der Gemeindeammann sein Steigerungsprotokoll zu unterschreiben. Ist ein Grundstück versteigert worden, hat auch der Ersteigerer zu unterzeichnen, und es sind seine Personalien aufzuführen."
+        }
+      ],
+      "stand": "2019-05-24",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-235_15-1979_12_19-1980_01_25-105.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "d1c89cecd44639a64526a6c962b2916a965c74367d63fce6fd0b0a37da6fd49a",
+      "sha": "88b15a37e7836cfe3ea052def6fe09490f68086515fa73c9ce3fa641c36e4218"
+    },
+    {
+      "id": "kanton/ZH/235.15/art_25",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung des Obergerichts über das Verfahren bei freiwilligen öffentlichen Versteigerungen (LS 235.15)",
+      "artikel": "25",
+      "artikelLabel": "§ 25",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Teilnehmern an der Auktion ist nach deren Abschluss auf Anfrage Auskunft über nicht verkaufte Stücke zu erteilen."
+        },
+        {
+          "absatz": "2",
+          "text": "In Publikationen über Auktionsresultate dürfen nur tatsächlich erfolgte Verkäufe aufgenommen werden."
+        }
+      ],
+      "stand": "2019-05-24",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-235_15-1979_12_19-1980_01_25-105.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "d1c89cecd44639a64526a6c962b2916a965c74367d63fce6fd0b0a37da6fd49a",
+      "sha": "5d6bdca3a519bd35f991462751343ddd8cf4963e10e8a49db98fb4aa13858673"
+    },
+    {
+      "id": "kanton/ZH/235.15/art_26",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung des Obergerichts über das Verfahren bei freiwilligen öffentlichen Versteigerungen (LS 235.15)",
+      "artikel": "26",
+      "artikelLabel": "§ 26",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Aufgehoben"
+        }
+      ],
+      "stand": "2019-05-24",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-235_15-1979_12_19-1980_01_25-105.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "d1c89cecd44639a64526a6c962b2916a965c74367d63fce6fd0b0a37da6fd49a",
+      "sha": "fffd896179b5a05de5123ab834ecf45024e7a99fc81a9e6dc269c8d0b54294f4"
+    },
+    {
+      "id": "kanton/ZH/235.15/art_27",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung des Obergerichts über das Verfahren bei freiwilligen öffentlichen Versteigerungen (LS 235.15)",
+      "artikel": "27",
+      "artikelLabel": "§ 27",
+      "bloecke": [
+        {
+          "absatz": "1",
+          "text": "Verstösse gegen die Vorschriften dieser Verordnung werden nach dem Gesetz betreffend die Ordnungsstrafen vom 30. Oktober 1866 geahndet. Vorbehalten bleibt die Androhung von Bestrafung wegen Ungehorsams gemäss Art. 292 StGB."
+        },
+        {
+          "absatz": "2",
+          "text": "Der Gemeindeammann kann von Amtes wegen einschreiten."
+        }
+      ],
+      "stand": "2019-05-24",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-235_15-1979_12_19-1980_01_25-105.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "d1c89cecd44639a64526a6c962b2916a965c74367d63fce6fd0b0a37da6fd49a",
+      "sha": "3b4467bb2b34c97b6409ec16993887f7366a186f446fc633176136986432b198"
+    },
+    {
+      "id": "kanton/ZH/235.15/art_28",
+      "ebene": "kanton",
+      "quelle": "ZH",
+      "erlass": "Verordnung des Obergerichts über das Verfahren bei freiwilligen öffentlichen Versteigerungen (LS 235.15)",
+      "artikel": "28",
+      "artikelLabel": "§ 28",
+      "bloecke": [
+        {
+          "absatz": null,
+          "text": "Diese Verordnung tritt mit ihrer Veröffentlichung im Amtsblatt in Kraft. Sie ist in die Gesetzessammlung aufzunehmen."
+        }
+      ],
+      "stand": "2019-05-24",
+      "quelleUrl": "https://www.zh.ch/de/politik-staat/gesetze-beschluesse/gesetzessammlung/zhlex-ls/erlass-235_15-1979_12_19-1980_01_25-105.html",
+      "abgerufen": "2026-09-01",
+      "fassungsToken": "d1c89cecd44639a64526a6c962b2916a965c74367d63fce6fd0b0a37da6fd49a",
+      "sha": "d8dad52bad281c338cad032b8556596b155a9c10d70419b7ca3d59dce3f95530"
+    }
+  ]
+}

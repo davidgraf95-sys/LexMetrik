@@ -122,7 +122,11 @@ describe('NormPopover — Render', () => {
     const out = html({ absatz: '1' });
     expect(out).toContain('role="dialog"');
     expect(out).toContain('aria-modal="true"');
-    expect(out).toMatch(/aria-label="[^"]*Schliessen[^"]*"/);
+    // A3-1 (R3-β, 31.8.2026) — DEKLARIERTE Änderung, kein stilles Nachziehen:
+    // der Knopf hiess «Schliessen» und sagte damit nicht, WAS zugeht. Mit dem
+    // geteilten `ui/SchliessKnopf` trägt jede Fundstelle ihren Gegenstand im
+    // Namen (§8); geprüft wird darum jetzt der konkrete Name.
+    expect(out).toMatch(/aria-label="Norm-Vorschau schliessen"/);
     // Disclaimer (§8): Snapshot ist nicht massgeblich
     expect(out.toLowerCase()).toContain('massgeblich');
   });

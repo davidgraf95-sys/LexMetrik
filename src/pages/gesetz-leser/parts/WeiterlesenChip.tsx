@@ -1,3 +1,5 @@
+import { SchwebeMeldung } from '../../../components/ui/SchwebeMeldung';
+
 // ─── W2·10-UI-NAV/R4 · «Weiterlesen bei Art. X» ───────────────────────────────
 //
 // Fahrplan R4: «beim erneuten Öffnen KEIN Auto-Sprung, sondern ein unaufdringlicher
@@ -31,6 +33,12 @@
 // Wiedereinstieg stattfindet. Der Abstand von oben kommt aus `--nt-stick` — der
 // EINEN Quelle der realen Sticky-Höhe (N0c, gesetzt in `inhalt.tsx`, im Pane
 // kleiner) — statt aus einer Magic-Number (§13/D2).
+//
+// F2-5 (31.8.2026): Streifen, Offset, Pillen-Optik und die aria-live-Zusage
+// kommen aus `components/ui/SchwebeMeldung` — dieselbe Geometrie trugen der
+// R5-Chip und der Reiter-Toast des V3-Rahmens, letzterer mit geratenem Offset
+// (`top-20` statt `--nt-stick`) und darum @390 über den Kopf-Griffen. Was hier
+// bleibt, ist der Inhalt: zwei Knöpfe, zwei Wirkungen.
 
 export function WeiterlesenChip({ label, onWeiterlesen, onVerwerfen }: {
   /** Anzeige-Label des gemerkten Artikels, wörtlich wie im Reader («Art. 335c»). */
@@ -41,16 +49,11 @@ export function WeiterlesenChip({ label, onWeiterlesen, onVerwerfen }: {
   onVerwerfen: () => void;
 }) {
   return (
-    // `aria-live="polite"`: der Chip erscheint ohne Fokuswechsel — ohne Ansage
-    // erführe ein Screenreader nie von ihm. Kein `role="alert"`: er unterbricht
-    // nicht, er wartet.
-    // `pointer-events-none` am Streifen + `pointer-events-auto` an den Knöpfen:
-    // der volle Breite überspannende Container darf den Text darunter nicht für
-    // Klicks sperren (Muster wie der R5-Chip).
-    <div aria-live="polite" data-weiterlesen
-      className="pointer-events-none fixed inset-x-0 z-40 flex justify-end px-4"
-      style={{ top: 'calc(var(--nt-stick, 6.25rem) + 0.5rem)' }}>
-      <div className="pointer-events-auto flex items-center gap-1 rounded-full bg-paper-raised shadow-lg">
+    // Ohne `rolle`: der Chip ist ein ANGEBOT, keine Vollzugsmeldung — er meldet
+    // `aria-live="polite"` (sonst erführe ein Screenreader nie von ihm) und
+    // trägt bewusst weder `role="alert"` noch `role="status"`.
+    <SchwebeMeldung kante="oben" ausrichtung="rechts" daten="data-weiterlesen" inhaltKlassen="gap-1">
+      <>
         <button type="button" onClick={onWeiterlesen}
           // min-h-11 = 44 px Tap-Ziel (WCAG 2.5.8 / R6-Mass) — auch auf dem Daumen
           // treffbar. `truncate` + `min-w-0` halten auch ein langes Bereichs-Label
@@ -68,7 +71,7 @@ export function WeiterlesenChip({ label, onWeiterlesen, onVerwerfen }: {
           className="lc-btn-outline lc-btn-sm inline-flex min-h-11 min-w-11 items-center justify-center rounded-l-none rounded-r-full border-l-0 px-2">
           <span aria-hidden>✕</span>
         </button>
-      </div>
-    </div>
+      </>
+    </SchwebeMeldung>
   );
 }

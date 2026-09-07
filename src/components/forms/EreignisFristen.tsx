@@ -111,7 +111,7 @@ export function EreignisFristenSektion({ ereignisse, id, zustellungVorgabe }: {
 }) {
   return (
     <section id={id} aria-label="Ereignis-Fristen"
-      className="bg-surface-raised rounded-2xl border border-line p-6 sm:p-8 space-y-4 scroll-mt-28">
+      className="bg-surface-raised border border-line p-6 sm:p-8 space-y-4 scroll-mt-28">
       <div className="space-y-1">
         <h2 className="lc-overline text-brass-700">Ereignis-Fristen – ein Anlass, mehrere Fristen</h2>
         <p className="text-body-s text-ink-500 max-w-reading">
@@ -271,11 +271,7 @@ function EreignisFristen({ ereignisse, zustellungVorgabe }: {
               <div className="space-y-2">
                 <BetragsFeld value={streitwertRoh} onChange={setStreitwertRoh} className={inputCls}
                   placeholder="z. B. 12'000" aria-label="Streitwert in Franken" />
-                <label className="flex items-center gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700">
-                  <input type="checkbox" checked={!vermoegensrechtlich}
-                    onChange={(e) => setVermoegensrechtlich(!e.target.checked)} />
-                  nicht vermögensrechtliche Streitigkeit
-                </label>
+                <Checkbox checked={!vermoegensrechtlich} onChange={(v) => setVermoegensrechtlich(!v)} label="nicht vermögensrechtliche Streitigkeit" />
               </div>
             </Field>
             <Field label="Kanton" hint="Gerichtsort — Feiertage für die Endnormalisierung (Art. 142 Abs. 3 ZPO)">
@@ -288,7 +284,7 @@ function EreignisFristen({ ereignisse, zustellungVorgabe }: {
                 {verfahren === 'summarisch' && (
                   <Checkbox checked={familienSummarsache} onChange={setFamilienSummarsache} label="familienrechtliche Summarsache (Art. 271/276/302/305 ZPO — 30 Tage, Art. 314 Abs. 2)" />
                 )}
-                <Checkbox checked={mietOderArbeit} onChange={setMietOderArbeit} label="arbeits- oder mietrechtlicher Fall (BGer-Grenze CHF 15&#8239;000, Art. 74 Abs. 1 lit. a BGG)" />
+                <Checkbox checked={mietOderArbeit} onChange={setMietOderArbeit} label="arbeits- oder mietrechtlicher Fall (BGer-Grenze CHF 15'000, Art. 74 Abs. 1 lit. a BGG)" />
                 <Checkbox checked={nurDispositiv} onChange={setNurDispositiv} label="nur das Dispositiv wurde eröffnet (Art. 239 ZPO — zuerst Begründung verlangen)" />
               </div>
             </Field>
@@ -305,10 +301,7 @@ function EreignisFristen({ ereignisse, zustellungVorgabe }: {
             </Field>
             {ereignis === 'klagebewilligung' && (
               <Field label="Streitsache">
-                <label className="flex items-center gap-2.5 py-1.5 text-body-s cursor-pointer text-ink-700 mt-2">
-                  <input type="checkbox" checked={mietOderPacht} onChange={(e) => setMietOderPacht(e.target.checked)} />
-                  Miete/Pacht von Wohn- und Geschäftsräumen bzw. landw. Pacht (30 Tage, Art. 209 Abs. 4 ZPO)
-                </label>
+                <Checkbox checked={mietOderPacht} onChange={setMietOderPacht} label="Miete/Pacht von Wohn- und Geschäftsräumen bzw. landw. Pacht (30 Tage, Art. 209 Abs. 4 ZPO)" className="mt-2" />
               </Field>
             )}
             {ereignis === 'erbgang' && (
@@ -343,7 +336,7 @@ function EreignisFristen({ ereignisse, zustellungVorgabe }: {
       {ergebnis && (
         <div className="space-y-4">
           {/* Fristen-Tabelle: jede Zeile = ein Engine-Resultat */}
-          <div className="border border-line rounded-md overflow-hidden">
+          <div className="border border-line overflow-hidden">
             <div className="px-4 py-3 bg-surface border-b border-line flex flex-wrap items-baseline justify-between gap-2">
               <p className="text-body-s font-medium text-ink-700">
                 Fristen ab {ergebnis.ereignisDatumISO.split('-').reverse().join('.')}

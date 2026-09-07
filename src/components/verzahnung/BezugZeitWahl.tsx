@@ -34,6 +34,7 @@
 // Kenntnis des Menüs. Wer sie mountet, hält den Zustand.
 
 import { useRef, useState } from 'react';
+import { zahlGruppiert } from '../typografie';
 import {
   bereichAusJahren, bereichLabel, istBereichOffen, jahrImBereich,
   type Histogramm, type Zeitbereich,
@@ -174,6 +175,10 @@ export function BezugZeitWahl({ bereich, histogramm, onBereich }: {
                   // Jahr als «gewählt», also lag das Band über allen Balken und
                   // die Verteilung war nicht mehr ablesbar — eine Grafik, die
                   // genau das verdeckt, wofür sie da ist. Ohne Auswahl kein Band.
+                  // `rounded-[1px]` bleibt bewusst unter dem kleinsten Radius-
+                  // Token (4px, DESIGN-REGLEMENT.md F7b, C4 5.9.2026): die
+                  // Balkenhöhe an MIN_ANTEIL ist selbst nur ~2–3px, ein
+                  // Token-Radius würde den Balken zum Punkt verformen.
                   className={`flex h-full flex-1 items-end rounded-[1px] transition-colors ${
                     bandSichtbar && gewaehlt ? 'bg-slate-bg' : ''
                   }`}
@@ -189,9 +194,29 @@ export function BezugZeitWahl({ bereich, histogramm, onBereich }: {
               );
             })}
           </div>
-          <div className="num tabular-nums flex justify-between pt-0.5 text-micro text-ink-500">
-            <span>{balken[0].jahr}</span>
-            <span>{balken[balken.length - 1].jahr}</span>
+          {/* ── LM-024 (B8, 31.8.2026) · DIE BEDIENBARKEIT STEHT JETZT DA ──────
+              Befund: «sechs Balken ohne Werte, ohne Achsenbeschriftung, ohne
+              Einheit; ob es anklickbar ist, ist nicht erkennbar.» Am gebauten
+              Stand nachgeprüft (OR @1440): Werte je Balken gibt es (`title`
+              «Jahr: N Verknüpfungen»), Einheit und Grundgesamtheit stehen
+              sichtbar im Fusssatz («889 Verknüpfungen in diesem Erlass») — der
+              einzige Teil, der wirklich fehlte, war die BEDIENBARKEIT: sie
+              lebte nur im `aria-label` und im `cursor-ew-resize`, für Sehende
+              also erst NACH dem Hinfahren mit der Maus, auf Touch gar nicht.
+              Der Hinweis kostet keine Zeile: er teilt sich die Achsenzeile mit
+              den beiden Jahreszahlen und wiederholt WORTGLEICH die Formulierung
+              des `aria-label` darüber (§5 — eine Handlung, ein Wortlaut).
+              `num tabular-nums` wandert dabei von der Zeile auf die
+              Jahreszahlen: die Mono-Stimme gehört den Ziffern, nicht dem Satz.
+              NICHT GEBAUT und bewusst nicht: Achsenbeschriftung, Werte am
+              Balken, Legende — das ist Davids Minimalismus-Vorgabe vom
+              28.7.2026 («keine zweite Achse, keine Legende, kein Dashboard»),
+              und sie zu kippen wäre eine Entscheid-Änderung, kein Bugfix
+              (§0.2 des Fahrplans). */}
+          <div className="flex items-baseline justify-between gap-2 pt-0.5 text-micro text-ink-500">
+            <span className="num">{balken[0].jahr}</span>
+            <span className="min-w-0 truncate">Ziehen wählt einen Bereich</span>
+            <span className="num">{balken[balken.length - 1].jahr}</span>
           </div>
         </>
       )}
@@ -222,9 +247,13 @@ export function BezugZeitWahl({ bereich, histogramm, onBereich }: {
       <p className="pt-1 pb-0.5 text-micro leading-snug text-ink-500">
         {gesamt > 0 && (
           <>
-            <span className="num tabular-nums">{gesamt}</span>
+            {/* B13/LM-108: vierstellige Zählwerte tausendergruppiert wie überall
+                sonst («1'465 Verknüpfungen», nicht «1465»); SSoT für das
+                Trennzeichen ist src/lib/konventionen.ts. Klasse `num` ohne
+                `tabular-nums` (R4-C, 5.9.2026: die Utility nahm lining-nums weg). */}
+            <span className="num">{zahlGruppiert(gesamt)}</span>
             {gesamt === 1 ? ' Verknüpfung' : ' Verknüpfungen'} in diesem Erlass
-            {ohneJahr > 0 && <> · <span className="num tabular-nums">{ohneJahr}</span> ohne Datum (bleiben immer sichtbar)</>}
+            {ohneJahr > 0 && <> · <span className="num">{zahlGruppiert(ohneJahr)}</span> ohne Datum (bleiben immer sichtbar)</>}
             {'. '}
           </>
         )}
@@ -234,9 +263,16 @@ export function BezugZeitWahl({ bereich, histogramm, onBereich }: {
   );
 }
 
-/** Ein Datumsfeld mit vorangestelltem Label. Nativ `type="date"` — es bringt
- *  Tastatur-Eingabe, Landes-Format und Kalender mit; ein nachgebautes Feld
- *  brächte dieselbe Funktion mit eigenen Fehlern. */
+/** Ein Datumsfeld mit vorangestelltem Label. Nativ `type="date"`.
+ *
+ *  R2-E/F1-1-AUSNAHME (R3-α, 31.8.2026): Filter, kein fristauslösendes Feld.
+ *  Der frühere Satz hier («es bringt Tastatur-Eingabe, LANDES-FORMAT und
+ *  Kalender mit») ist von F1-1 widerlegt und bleibt als Beleg stehen (§2b):
+ *  gemessen rendert `type="date"` in der Locale des BROWSERS, auf einem
+ *  us-englischen Profil also MM/DD/YYYY. Tragend ist er hier trotzdem nicht:
+ *  die beiden Felder grenzen eine BEZUGS-Liste zeitlich ein — kein Wert läuft
+ *  in eine Frist- oder Verjährungsrechnung, und die Zeile ist mit `text-xs`
+ *  und `py-0.5` zu schmal für das Kalender-Popover des Haus-Felds. */
 function DatumsFeld({ label, wert, titel, onWert }: {
   label: string;
   wert: string;
