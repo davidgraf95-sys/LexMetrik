@@ -3638,10 +3638,39 @@ html[data-fuss-aus*="w"] .lc-leser .lr7-bez-block[data-reg="w"],
 html[data-fuss-aus*="a"] .lc-leser .lr7-bez-aktionen {
   display: none;
 }
-/* Das Wort «Bezüge» gehört den VIER Rubriken, nicht den Aktionen: stehen nur
-   noch «Zitat · Link · …» in der Zeile, benennt es nichts mehr. */
-html[data-fuss-aus*="r"][data-fuss-aus*="m"][data-fuss-aus*="g"][data-fuss-aus*="w"] .lc-leser .lr7-bez-wort {
-  display: none;
+/* Das Wort «Bezüge» gehört den VIER Rubriken, nicht den Aktionen: es steht
+   genau dann, wenn dieser Artikel mindestens eine Rubrik führt, die auch
+   gezeigt wird. Stehen nur noch «Zitat · Link · …» in der Zeile, benennt es
+   nichts mehr (§8).
+
+   EINE ANSCHALT-LISTE, KEINE AUSSCHALT-LISTE — und das ist der ganze Trick.
+   Die Frage lautet «ist von den GEZÄHLTEN Rubriken dieses Artikels noch eine
+   sichtbar?», und sie hängt an zwei Dingen: an der Wahl (`data-fuss-aus`, am
+   <html>) und am Bestand des Artikels (`data-bez-marken`, an der Zeile —
+   `parts/BezuegeKopf.tsx` schreibt die Buchstaben, die es wirklich gibt).
+   Als Ausschalt-Regel gefasst wären das die 16 Teilmengen von r/m/g/w, jede mit
+   vier Klauseln; als Anschalt-Regel sind es VIER Zeilen, eine je Rubrik.
+   `:has()` bleibt damit aussen vor — die Nachbarschafts-Anfrage über 1686
+   Artikel, die W2·19-GLIEDERUNG/F1 als Scroll-Bremse nachgewiesen hat (§15),
+   entsteht gar nicht erst.
+
+   `html:not([data-fuss-aus*="r"])` greift auch, solange es das Attribut noch
+   nicht gibt (prerendertes HTML vor dem Bündel) — dort ist «zeigen» richtig,
+   also flackert nichts.
+
+   BEFUND, der die Regel ausgelöst hat (gemessen 7.9.2026, Bild `d35-f2-c`):
+   ZPO Art. 272 führt genau eine Rubrik («Entscheide»). Mit abgewählter Rubrik
+   stand dort «Bezüge» allein neben den Aktionen — eine Überschrift über nichts.
+   ROT GESEHEN (§6.7, 7.9.2026): die vier Zeilen unten durch eine pauschale
+   `display: block`-Regel ersetzt ⇒ `w224-d35-f2-kopf` («das Wort ‹Bezüge›
+   steht nur, solange es etwas benennt») meldet «‹Bezüge› steht über einer
+   leeren Rubrik-Liste». */
+.lc-leser .lr7-bez-wort { display: none; }
+html:not([data-fuss-aus*="r"]) .lc-leser .lr7-bez[data-bez-marken*="r"] .lr7-bez-wort,
+html:not([data-fuss-aus*="m"]) .lc-leser .lr7-bez[data-bez-marken*="m"] .lr7-bez-wort,
+html:not([data-fuss-aus*="g"]) .lc-leser .lr7-bez[data-bez-marken*="g"] .lr7-bez-wort,
+html:not([data-fuss-aus*="w"]) .lc-leser .lr7-bez[data-bez-marken*="w"] .lr7-bez-wort {
+  display: block;
 }
 /* Alles abgewählt ⇒ die Zeile selbst geht, samt ihrer Trennlinie und ihrem
    Abstand. Eine leere Linie unter jedem Artikel wäre ein Rahmen ohne Inhalt

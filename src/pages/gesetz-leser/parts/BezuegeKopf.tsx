@@ -134,7 +134,16 @@ export function BezuegeKopf({ marken, zitat, aktionen, onOeffnen, laedt = false 
   return (
     // `print:hidden`: im Ausdruck trägt der Artikelkopf den Randtitel, die
     // Funktionszeile ist Bedienung und gehört nicht aufs Papier.
-    <div className="lr7-bez print:hidden">
+    // D35-F2 · WELCHE Rubriken dieser Artikel überhaupt führt, als Buchstaben.
+    // Der Artikel weiss das (er hat gerade gezählt), der Store weiss es nicht —
+    // und das Wort «Bezüge» links darf nur stehen, solange mindestens EINE der
+    // gezählten Rubriken auch gezeigt wird. Ohne diese Angabe stünde es an einem
+    // Artikel mit nur EINER Rubrik weiter da, nachdem der Nutzer genau sie
+    // abgewählt hat: eine Überschrift über nichts (§8, gesehen am Bild
+    // `d35-f2-c` vom 7.9.2026, ZPO Art. 272). Die Regel dazu steht in
+    // `src/index.css` und ist eine ANSCHALT-Liste, keine Ausschalt-Liste — vier
+    // Zeilen statt der sechzehn Teilmengen, die die Umkehrung gekostet hätte.
+    <div className="lr7-bez print:hidden" data-bez-marken={sichtbar.map((m) => m.reg).join('')}>
       <div className="lr7-bez-zeile">
         {sichtbar.length > 0 && <span className="lr7-bez-wort">Bezüge</span>}
         {sichtbar.map((m) => {

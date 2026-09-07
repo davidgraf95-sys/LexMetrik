@@ -130,6 +130,29 @@ test.describe('D35-F2 · Kopf-Entlastung und Rubriken-Wahl', () => {
     await expect(page.locator(`#art-${ART} .lr7-bez-aktionen`).first()).toBeVisible();
   });
 
+  test('(b) das Wort «Bezüge» steht nur, solange es etwas benennt', async ({ page }) => {
+    // BEFUND, gemessen 7.9.2026 an der ersten Fassung (Bild `d35-f2-c`): ZPO
+    // Art. 272 führt GENAU EINE Rubrik («Entscheide»). Nach dem Abwählen stand
+    // dort «Bezüge» allein neben den Aktionen — eine Überschrift über nichts
+    // (§8). Rot zu bekommen: in `src/index.css` die vier Anschalt-Zeilen für
+    // `.lr7-bez-wort` löschen, oder in `parts/BezuegeKopf.tsx` das Attribut
+    // `data-bez-marken` weglassen.
+    await oeffne(page);
+    const nur272 = page.locator('#art-272 .lr7-bez-wort');
+    // Vorbedingung: Art. 272 führt genau eine Rubrik, und es ist «Entscheide».
+    await expect(page.locator('#art-272 .lr7-bez')).toHaveAttribute('data-bez-marken', 'r');
+    await expect(nur272).toBeVisible();
+
+    await menueAuf(page);
+    await page.locator('[data-v3-fussrubrik="r"]').click();
+    await page.keyboard.press('Escape');
+
+    await expect(nur272, '«Bezüge» steht über einer leeren Rubrik-Liste').toBeHidden();
+    // Art. 271 führt daneben noch «Verweise» — dort BLEIBT das Wort stehen,
+    // sonst wäre die Regel ein pauschales Ausblenden statt einer Aussage.
+    await expect(page.locator(`#art-${ART} .lr7-bez-wort`)).toBeVisible();
+  });
+
   test('(b) auch die Aktionsgruppe ist eine Rubrik', async ({ page }) => {
     await oeffne(page);
     await expect(page.locator(`#art-${ART} .lr7-bez-aktionen`).first()).toBeVisible();
