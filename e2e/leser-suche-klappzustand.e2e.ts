@@ -108,6 +108,13 @@ test.describe('B3/B4 — Treffer in einer zugeklappten Sektion', () => {
     await page.locator(`[data-treffer-artikel="${token}"] button`).first().click()
 
     await expect(page.locator(`#art-${token}`)).toBeVisible({ timeout: 15_000 })
+    // ── §6.3-NACHZUG D38 (7.9.2026) · DIE LISTE WIRD DAFÜR ZURÜCKGEHOLT ──────
+    // Seit D38 liegt die Trefferliste ÜBER der Lesespalte und gibt sie beim
+    // Sprung frei — sie bliebe sonst über genau dem Wortlaut stehen, in den der
+    // Klick geführt hat. Die Aussage dieses Falls ist unverändert («der
+    // Eintrag ist als aktiv ausgewiesen»); sie wird nur dort geprüft, wo die
+    // Liste jetzt steht: nach einem Klick auf «Treffer anzeigen →».
+    await page.locator('[data-v3-treffer-weg]').click()
     await expect(page.locator(`[data-treffer-artikel="${token}"] [data-treffer-aktiv]`)).toHaveCount(1)
   })
 
