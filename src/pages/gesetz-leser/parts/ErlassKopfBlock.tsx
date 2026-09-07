@@ -121,8 +121,11 @@ export function ErlassKopfBlock({ kopf, intern }: { kopf: ErlassKopf; intern?: I
           Änderungsvermerke von echten Verweisen — im Vorspann steht kein solches
           Gemisch, das man trennen müsste. Das Sidecar liefert `kl` für die
           Kopf-Fussnoten weiterhin mit; wer den Kopf später doch einbeziehen will,
-          braucht dafür einen eigenen Entscheid, nicht bloss eine CSS-Regel. Der
-          `data-fussnoten`-Toggle wirkt hier unverändert weiter. */}
+          braucht dafür einen eigenen Entscheid, nicht bloss eine CSS-Regel.
+          NACHTRAG D35-F3 (7.9.2026): der `data-fussnoten`-Toggle, der hier bis
+          dahin weiterwirkte, ist ersatzlos gestrichen — der Kopf-Apparat steht
+          seither in JEDER Stellung vollständig. Das ist dieselbe konservative
+          Richtung, nur ohne Ausnahme. */}
       {kopf.fussnoten && kopf.fussnoten.length > 0 && (
         <div data-fn-apparat className="mt-3 border-t border-rule-artikel pt-2 space-y-1">
           {/* FN-3: Anker `fn-kopf-${nr}` am Kopf-Apparat — Sprungziel des FnRef-Popovers

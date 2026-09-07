@@ -1,7 +1,8 @@
 // @shard-gruppe: 6
 // Browser-Smoke der Verlauf-Initiative (UI-NAV O1). Prüft die zwei neuen
 // Zugänge auf DERSELBEN localStorage-Verlauf-Quelle (§5):
-//   1. ⌘K-/Fokus-Leerzustand der Kopf-Suche zeigt «Zuletzt geöffnet» + Einstiege.
+//   1. ⌘K-/Fokus-Leerzustand der Kopf-Suche zeigt «Zuletzt geöffnet» (seit D23
+//      ohne den früheren «Einstiege»-Block, s. Deklaration im Fall).
 //   2. Der Topbar-«Verlauf» öffnet ein Panel mit den zuletzt geöffneten Inhalten,
 //      chronologisch gruppiert, §8-ehrlich «Nur auf diesem Gerät», mit «leeren».
 // Läuft gegen `vite preview` (dist). Rechner-Routen tracken synchron (Label aus
@@ -21,7 +22,7 @@ async function verlaufAufbauen(page: Page) {
 }
 
 test.describe('UI-NAV O1 — Verlauf-Initiative', () => {
-  test('⌘K-Leerzustand zeigt «Zuletzt geöffnet» + kuratierte Einstiege', async ({ page }) => {
+  test('⌘K-Leerzustand zeigt «Zuletzt geöffnet» und navigiert', async ({ page }) => {
     const fehler = fehlerSammeln(page)
     await verlaufAufbauen(page)
 
@@ -30,13 +31,16 @@ test.describe('UI-NAV O1 — Verlauf-Initiative', () => {
     const suchBereich = page.getByRole('search').filter({ has: sucheFeld(page) })
     await sucheFeld(page).click()
     await expect(suchBereich.getByText('Zuletzt geöffnet', { exact: true })).toBeVisible()
-    await expect(suchBereich.getByText('Einstieg', { exact: true })).toBeVisible()
-
-    // Ein kuratierter Einstieg navigiert in die Rubrik. Seit Befund 38
-    // (Commit 00a586b1e) sind die Zeilen role=option in einer role=listbox
-    // statt eigener <Link>-Tab-Stopps (a11y-Umbau SucheLeerzustand.tsx).
-    await suchBereich.getByRole('option', { name: 'Gesetze', exact: true }).click()
-    await expect(page).toHaveURL(/\/gesetze$/)
+    // §6.3-DEKLARATION (W2·24-R5-F1E/D23, 6.9.2026): der Block «Einstiege» ist
+    // ERSATZLOS GEFALLEN — er wiederholte Zeile für Zeile die Seitenleiste, die
+    // seit D17 auf jeder Route steht (Davids Befund «sehr unästhetisch»,
+    // Soll-Anatomie D23: «Einstiege entfällt»). Die zwei Zeilen, die den Block
+    // und seinen Klick prüften, sind darum gestrichen und nicht umgeschrieben;
+    // dass er WEG ist, prüft jetzt `e2e/w224-kopfsuche-d23.e2e.ts`.
+    // Was der Fall hier weiterhin prüft, ist der eigentliche O1-Gegenstand: der
+    // Verlauf-Eintrag im Leerzustand navigiert zu seinem Ziel.
+    await suchBereich.getByRole('option', { name: /Verjährung/i }).first().click()
+    await expect(page).toHaveURL(/\/rechner\/verjaehrung$/)
     expect(fehler).toEqual([])
   })
 

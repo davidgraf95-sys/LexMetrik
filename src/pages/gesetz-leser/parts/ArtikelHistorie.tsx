@@ -1,4 +1,4 @@
-import { memo, useState } from 'react';
+import { memo } from 'react';
 import type { ArtikelHistorie, HistorieEreignis, HistorieTyp } from '../../../lib/normtext/historie-laden';
 import { formatiereDatum } from '../helpers';
 import { AMTLICHE_FASSUNG_NOMEN } from '../../../lib/benennung';
@@ -24,6 +24,28 @@ import { AMTLICHE_FASSUNG_NOMEN } from '../../../lib/benennung';
 // zusammenfallen. Die Timeline ist im Initialzustand ZU (Klick = echter Input ⇒
 // CLS-exkludiert). Kein leerer Kasten (§13): ohne datierten Stand UND ohne Ereignis
 // rendert die Zeile GAR NICHT (§8) — der Slot bleibt dann leerer Weissraum.
+
+// ── NACHTRAG W2·24-D40 (David 7.9.2026) · §0 Ziff. 2b: ERGAENZT, nicht ────────
+// nachgefuehrt. Die Messungen und Begruendungen oben beschreiben den Stand vom
+// 20.7.2026, an dem diese Zeile in einem reservierten Slot am Artikel stand;
+// sie bleiben Wort fuer Wort stehen.
+//
+// SEIT D40 ist der Ort ein anderer, und damit auch die CLS-Frage. Davids Frage
+// lautete «und wieso ist fassung nicht auch unten am artikel?»: die Zeile ist
+// jetzt der INHALT der Rubrik «Fassung» in der Funktionszeile am Artikelende
+// (`./BezuegeKopf.tsx`, `./ArtikelLeser.bezuegeFuss.tsx`). Sie wird deshalb auf
+// dem Bildschirm ERST GERENDERT, wenn der Leser die Rubrik aufklappt — ein
+// Klick, also input-getrieben und per Definition kein unerwarteter Sprung.
+// Damit ist die 24-px-Reserve (`min-h-beiwerk`) ersatzlos entfallen: sie hatte
+// einen Slot abzufangen, den es nicht mehr gibt (§17-Gegengewicht — was nicht
+// scheitern kann, wird gestrichen statt bewacht). Was der Shard-Resolve heute
+// noch bewegt, ist die MARKE in der Zeile («3 Fassungen»), und die trifft in
+// derselben Leerlauf-Runde ein wie die Marken «Entscheide»/«Materialien» aus
+// der Zaehl-Datei — dieselbe Bauart, dieselbe Messung (`e2e/w224-d40-fassung`,
+// `npm run check:perf-lighthouse`).
+//
+// Der Klapp-Knopf IN dieser Zeile ist mit D40 gefallen; was er tat, tut jetzt
+// der Rubrik-Griff (Herleitung an der Prop `zeitleiste`).
 
 // HistorieTyp → deutsches Anzeige-Label (Darstellung, keine Rechtslogik). Deckt die
 // im Korpus belegten Ereignistypen (historie-parse.ts) vollständig ab.
@@ -62,7 +84,7 @@ function Quellen({ quellen }: { quellen: HistorieEreignis['quellen'] }) {
         <span key={q.label + i}>
           {i > 0 && <span aria-hidden> · </span>}
           {q.url ? (
-            <a href={q.url} target="_blank" rel="noopener noreferrer" className="num hover:text-brass-700 hover:underline">{q.label}</a>
+            <a href={q.url} target="_blank" rel="noopener noreferrer" className="num hover:text-brass-700">{q.label}</a>
           ) : (
             <span className="num">{q.label}</span>
           )}
@@ -72,22 +94,31 @@ function Quellen({ quellen }: { quellen: HistorieEreignis['quellen'] }) {
   );
 }
 
-export const ArtikelHistorieZeile = memo(function ArtikelHistorieZeile({ historie, artikel }: {
+export const ArtikelHistorieZeile = memo(function ArtikelHistorieZeile({ historie, zeitleiste = false }: {
   /** Historie dieses Artikels aus dem erlass-lokalen Shard; undefined = kein Eintrag ⇒ still. */
   historie?: ArtikelHistorie;
-  /** Artikel-Token (für stabile aria-controls-/Panel-Id). */
-  artikel: string;
+  /**
+   * D40 · Steht die Zeitleiste OFFEN darunter?
+   *
+   * Bis D40 entschied das ein eigener Klapp-Knopf IN dieser Zeile («Gilt seit …
+   * ▸»). Den gibt es nicht mehr: die Zeile ist seit D40 der Inhalt der Rubrik
+   * «Fassung» in der Funktionszeile am Artikelende, und DEREN Griff klappt sie
+   * auf (`./BezuegeKopf.tsx`). Ein zweiter Knopf im aufgeklappten Block waere
+   * ein Griff, der dasselbe noch einmal tut (§5) — und der Nutzer haette nach
+   * dem ersten Klick immer noch keine Zeitleiste gesehen.
+   *
+   * `false` ist der DRUCK-Fall (`parts/ArtikelLeser.tsx`, `[data-hist-druck]`):
+   * auf dem Papier stand seit je nur das Badge «Gilt seit …», weil die Leiste
+   * dort zugeklappt war. Genau das bleibt (§2b — der Druckstand wird nicht
+   * nachgefuehrt, er wird gehalten).
+   */
+  zeitleiste?: boolean;
 }) {
-  const [offen, setOffen] = useState(false);
-
   // §8: ohne datierten Stand UND ohne Ereignis nichts anzeigen (kein leerer Kasten, §13).
   if (!historie) return null;
   const ereignisse = historie.ereignisse ?? [];
   const hatDatum = !!historie.giltSeit || !!historie.aufgehobenSeit;
   if (!hatDatum && ereignisse.length === 0) return null;
-
-  const panelId = `hist-${artikel}`;
-  const hatTimeline = ereignisse.length > 0;
 
   // Badge-Text (§8, nie erfunden): aufgehobener Artikel zeigt den Wirkungs-Stand,
   // sonst das In-Kraft-Datum der aktuellen Fassung; fehlt beides, ein neutraler
@@ -109,24 +140,12 @@ export const ArtikelHistorieZeile = memo(function ArtikelHistorieZeile({ histori
         <span className="lc-overline mr-1" title={`Fassungshistorie dieses Artikels aus den amtlichen Änderungs-Fussnoten (Fedlex). Massgeblich bleibt ${AMTLICHE_FASSUNG_NOMEN}.`}>
           <span className="lc-punkt" aria-hidden />Fassung
         </span>
-        {hatTimeline ? (
-          <button
-            type="button"
-            onClick={() => setOffen((v) => !v)}
-            aria-expanded={offen}
-            aria-controls={panelId}
-            className="lc-chip hover:text-brass-700"
-            title={offen ? 'Fassungs-Zeitleiste einklappen' : 'Fassungs-Zeitleiste anzeigen'}
-          >
-            {badgeText}
-            <span aria-hidden className="ml-1 text-ink-400">{offen ? '▾' : '▸'}</span>
-          </button>
-        ) : (
-          <span className="lc-chip">{badgeText}</span>
-        )}
+        {/* D40: ein stilles Schild, kein Knopf mehr — der Griff sitzt in der
+            Funktionszeile (Herleitung an der Prop `zeitleiste`). */}
+        <span className="lc-chip">{badgeText}</span>
       </div>
-      {hatTimeline && offen && (
-        <ol id={panelId} className="mt-2 space-y-1.5 border-l border-line pl-3 text-xs leading-snug text-ink-500">
+      {zeitleiste && ereignisse.length > 0 && (
+        <ol className="mt-2 space-y-1.5 border-l border-line pl-3 text-xs leading-snug text-ink-500">
           {ereignisse.map((e, i) => {
             const sk = skopus(e);
             return (

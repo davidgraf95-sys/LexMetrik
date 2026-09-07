@@ -126,6 +126,33 @@ describe('H3 — Pos. 12: der Lesekörper führt keine Bezüge mehr', () => {
     expect(traegt(quelle, /\bbezuege=/), 'LeserLesespalte.tsx setzt `bezuege` — die Entscheid-Linien sind zurück').toBe(false);
   });
 
+  // ── D30 (W2·24-R5-F1K, 7.9.2026) · WARUM DANEBEN EINE ZWEITE SONDE STEHT ──
+  // Der Fall darüber ist UNVERÄNDERT (§6.3: kein Test angefasst). Er trägt
+  // weiterhin Pos. 12, und er trägt sie zu Recht: `bezuege` speiste auch den
+  // Artikelfuss der schmalen Form — gemessen @390 an der StPO schob das Setzen
+  // dieser Prop beim Öffnen des Panels jeden Artikel nach unten (`leser-v3-
+  // kontext-cls` (b), Artikel-y 1385→1493→…). D30 setzt darum eine eigene Prop,
+  // die AUSSCHLIESSLICH im `<details>` der Bezüge-Zeile landet.
+  //
+  // ── §6.3-DEKLARATION (W2·24-D34, 7.9.2026) · NUR DER NAME ─────────────────
+  // Die Prop hiess `bezuegeImKopf`, solange die Zeile unter der Artikelnummer
+  // stand. D34 hat sie auf Davids Wunsch ans ARTIKELENDE gestellt («das mit den
+  // bezügen soll unten an den artikel und nicht direkt nach der artikel
+  // nummer»), und der Name folgt dem Ort: `bezuegeImFuss`. GEÄNDERT ist hier
+  // ausschliesslich die gesuchte Zeichenkette; die drei Zusagen der Sonde
+  // (genau EINE Setzung · `alleFuer`, also ungefiltert · kein zweiter Ladepfad)
+  // stehen unverändert. Der datierte Beleg oben bleibt stehen, wie er ist — er
+  // beschreibt den Stand seines Datums (§0.2b).
+  it('D30: die aufgeklappte Bezüge-Zeile speist sich aus dem geteilten, UNGEFILTERTEN Apparat', () => {
+    const quelle = ohneKommentare(LIES('LeserLesespalte.tsx'));
+    const setzungen = quelle.match(/\bbezuegeImFuss=\{[^}]*\}/g) ?? [];
+    expect(setzungen.length, 'LeserLesespalte.tsx setzt `bezuegeImFuss` nicht — die Zeile bleibt leer (D30/D34)').toBe(1);
+    expect(setzungen[0], 'die Zeile liest nicht `alleFuer` des geteilten Apparats — entweder zweiter Ladepfad oder gefilterte Liste')
+      .toBe('bezuegeImFuss={bezuege?.alleFuer(e.artikel)}');
+    expect(traegt(quelle, /\buseBezuege\b/), 'LeserLesespalte.tsx ruft `useBezuege` selbst — das ist der zweite Ladepfad, den H3 abgeschafft hat').toBe(false);
+    expect(traegt(quelle, /\bonBezuegeOeffnen=/), 'ohne `onBezuegeOeffnen` fragt niemand nach dem Apparat — genau Davids D30-Befund').toBe(true);
+  });
+
   it('Positiv-Sonde: sie setzt `revision`/`historie` weiterhin (sonst prüfte das Verbot nur eine leere Datei)', () => {
     const quelle = ohneKommentare(LIES('LeserLesespalte.tsx'));
     expect(traegt(quelle, /\brevision=/)).toBe(true);

@@ -111,7 +111,7 @@ export function EreignisFristenSektion({ ereignisse, id, zustellungVorgabe }: {
 }) {
   return (
     <section id={id} aria-label="Ereignis-Fristen"
-      className="bg-surface-raised rounded-2xl border border-line p-6 sm:p-8 space-y-4 scroll-mt-28">
+      className="bg-surface-raised border border-line p-6 sm:p-8 space-y-4 scroll-mt-28">
       <div className="space-y-1">
         <h2 className="lc-overline text-brass-700">Ereignis-Fristen – ein Anlass, mehrere Fristen</h2>
         <p className="text-body-s text-ink-500 max-w-reading">
@@ -336,7 +336,7 @@ function EreignisFristen({ ereignisse, zustellungVorgabe }: {
       {ergebnis && (
         <div className="space-y-4">
           {/* Fristen-Tabelle: jede Zeile = ein Engine-Resultat */}
-          <div className="border border-line rounded-md overflow-hidden">
+          <div className="border border-line overflow-hidden">
             <div className="px-4 py-3 bg-surface border-b border-line flex flex-wrap items-baseline justify-between gap-2">
               <p className="text-body-s font-medium text-ink-700">
                 Fristen ab {ergebnis.ereignisDatumISO.split('-').reverse().join('.')}

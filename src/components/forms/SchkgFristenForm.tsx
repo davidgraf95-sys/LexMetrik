@@ -249,7 +249,7 @@ export function SchkgFristenForm({ live }: {
 
       {/* Frist-Preset — PRIMÄRWEG (UX B11): die Vorlage setzt alle Parameter;
           die manuellen Felder darunter sind der Kontroll-/Sonderfall-Weg. */}
-      <div className={pk('rounded-lg border border-brass-500 bg-brass-100 p-4 grid grid-cols-1 sm:grid-cols-2 gap-4 items-end', 'rounded-lg border border-brass-500 bg-brass-100 p-4 grid grid-cols-1 @lg/pane:grid-cols-2 gap-4 items-end')}>
+      <div className={pk(' border border-brass-500 bg-brass-100 p-4 grid grid-cols-1 sm:grid-cols-2 gap-4 items-end', ' border border-brass-500 bg-brass-100 p-4 grid grid-cols-1 @lg/pane:grid-cols-2 gap-4 items-end')}>
         <Field label="Frist-Vorlage (empfohlener Einstieg)" hint="Setzt Stillstand-Regime, Rechtsnatur, Länge und Auslöser automatisch — manuelle Felder unten nur für Sonderfälle">
           <select value={aktiv?.key ?? ''} onChange={(e) => { const p = presetsDerPhase.find((x) => x.key === e.target.value); if (p) ladePreset(p); else setAktiv(null); }} className={inputCls}>
             <option value="">– Vorlage wählen (oder manuell unten) –</option>
@@ -357,8 +357,14 @@ export function SchkgFristenForm({ live }: {
         )}
       </div>
 
+      {/* R9-2 (6.9.2026): `role="status"`, nicht `role="alert"`. Die Meldung
+          antwortet nicht auf einen Eingabefehler, sondern beschreibt eine
+          ABDECKUNGSGRENZE des Rechners (§8) — es gibt nichts zu beheben, also
+          unterbricht sie auch nichts. Die Blocker- und Mängellisten der Vorlagen
+          tragen aus demselben Grund `role="alert"`. Wächter:
+          `src/tests/design-r9-fehlerbox-baustein.test.ts`. */}
       {istInfo && aktiv && (
-        <div className="lc-notice-danger">
+        <div role="status" className="lc-notice-danger">
           <p className="lc-overline text-danger-700 mb-1">Keine berechenbare Frist – {aktiv.norm}</p>
           <p className="text-body-s text-danger-700">{aktiv.hinweis}</p>
         </div>

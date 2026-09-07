@@ -11,6 +11,7 @@ import { EntwurfLegende } from '../components/EntwurfLegende';
 import { Leerzustand } from '../components/ui/Leerzustand';
 import { ZweiachsigerEinstieg } from '../components/ZweiachsigerEinstieg';
 import { Zeiterfassung } from '../components/start/Zeiterfassung';
+import { STARTSEITE_ZAEHLER } from '../data/startseiteZaehler.generated';
 
 // ─── Rechner-Übersicht (/rechner) — UI-Welle, Ersatz für /recherche ─────────
 //
@@ -40,21 +41,32 @@ export function RechnerUebersicht() {
   const gefiltert = q !== '';
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-6">
+      {/* D22 Ziff. 4 · DIE ABSTÄNDE DER ÜBERSICHT SIND GEDECKELT.
+          Gemessen (Playwright, Preview, 6.9.2026, @1440/@1160/@1024/@390):
+          die grösste senkrechte Leerfläche zwischen zwei Inhaltsblöcken lag
+          auf den fünf Übersichten bei 64/49/57/74/56 px. Das Budget ist
+          48 px — der Seitenrhythmus geht darum von `space-y-8` (32) auf
+          `space-y-6` (24). Nur Abstand, kein Inhalt, keine Reihenfolge. */}
+      {/* D11/D22 (David 6.9.2026) — Kopf-Regel für ALLE fünf Übersichten,
+          Herleitung in `components/layout/SeitenKopf.tsx`: H1 = Bereichsname
+          wie im Reiter, DARUNTER die Ausgabe-Zeile aus dem Register — keine
+          Overline, keine halbe Haarlinie, kein Erklär-Absatz. */}
       <SeitenKopf
-        overline="Rechner & Werkzeuge"
         titel="Rechner"
-        intro="Zwei Wege hinein: nach Rechtsgebiet (aufklappbar) oder nach Aufgabe (Zuständigkeiten · Fristen · Gebühren). Oder unten filtern bzw. oben im Feld suchen (Kürzel «/»)."
+        ausgabe={`${STARTSEITE_ZAEHLER.rechner} Rechner nach Rechtsgebiet und nach Aufgabe`}
       />
 
-      <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-        <div className="space-y-1.5">
-          <label htmlFor="rechner-filter" className="lc-overline">Rechner filtern</label>
-          <input id="rechner-filter" type="search" value={filter}
-            onChange={(e) => setFilter(e.target.value)}
-            placeholder="Titel, Rechtsgebiet oder Norm …" aria-label="Rechner filtern"
-            className="lc-input h-9 py-0 text-body-s w-full max-w-reading" />
-        </div>
+      {/* D22 Ziff. 2 — EINE Filterzeile über die volle Inhaltsbreite (Label über
+          Feld), gleiche Anatomie wie auf /gesetze und /materialien. Das
+          `aria-label` ist entfallen: der sichtbare Text IST der zugängliche
+          Name (WCAG 2.5.3), zwei Namen für dasselbe Feld sind einer zu viel. */}
+      <div className="ub-filter">
+        <label htmlFor="rechner-filter" className="lc-overline">Filtern</label>
+        <input id="rechner-filter" type="search" value={filter}
+          onChange={(e) => setFilter(e.target.value)}
+          placeholder="Titel, Rechtsgebiet oder Norm …"
+          className="lc-input h-9 py-0 text-body-s w-full" />
         <EntwurfLegende />
       </div>
 

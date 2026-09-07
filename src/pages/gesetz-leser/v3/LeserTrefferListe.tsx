@@ -57,7 +57,7 @@ export interface LeserTrefferListeProps {
    *  B8 (H2b-Nachzug): Typ und Zählform kommen aus `./erlassAnsicht`, nicht mehr
    *  als Literal-Union je Datei. */
   bestimmungsWort: BestimmungsWort;
-  fussnotenAus: boolean;
+  aenderungenAus: boolean;
   /** 0-basierte laufende Fundstelle der ↑↓-Navigation; -1 = noch keine. */
   position: number;
   /** Artikel + Rang der laufenden Fundstelle — hebt GENAU EINE Zeile hervor. */
@@ -95,7 +95,7 @@ function Schnipsel({ a, einzeilig = false }: { a: Ausschnitt; einzeilig?: boolea
 }
 
 export function LeserTrefferListe({
-  treffer, begriff, fundstellen, bestimmungsWort, fussnotenAus, position, aktivStelle,
+  treffer, begriff, fundstellen, bestimmungsWort, aenderungenAus, position, aktivStelle,
   bereich, setzeBereich, fundstellenFuer, onZurueck, onVor, onSprung, onSprungStelle,
 }: LeserTrefferListeProps) {
   // Ä94: «↑ Anfang», wenn die Leiste ihn abgegeben hat — `null`, wo sie ihn
@@ -172,7 +172,7 @@ export function LeserTrefferListe({
 
       <ul className="space-y-0.5">
         {zeilen.map(({ t, kopf }) => {
-          const badges = badgesFuer(t, fussnotenAus);
+          const badges = badgesFuer(t, aenderungenAus);
           // Aufgeklappt ist ein Artikel, wenn die laufende Fundstelle in ihm
           // liegt ODER der Leser ihn selbst geöffnet hat. Der erste Teil ist der
           // wichtige: wer ↑↓ drückt, soll die Stelle SEHEN, zu der er springt —

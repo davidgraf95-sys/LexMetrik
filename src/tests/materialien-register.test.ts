@@ -97,13 +97,27 @@ describe('Tor 2 — committetes Manifest == frischer Build (Merge-Modell §2.7, 
 
 describe('Tor 3 — Navigation verlinkt nur existierende Behörden (kein toter Link)', () => {
   it('«Materialien › Nach Behörde» trifft genau die BEHOERDEN-Anker', () => {
+    // ── D26 (David 6.9.2026), DEKLARIERTE FACHLICHE ÄNDERUNG (§6.3) ──────────
+    // Die Behörden hängen nicht mehr unter einer Klapp-Zeile «Nach Behörde»,
+    // sondern stehen direkt in der Leiste, gefolgt von «Alle Materialien».
+    // Zusätzlich zeigt die Leiste seit D26 nur Behörden MIT Einträgen (Zahl aus
+    // dem Zähler-Generat) — eine Behörde ohne Materialie ist kein toter Link
+    // mehr, sondern gar keine Zeile (§8). Der Massstab wird darum von «alle
+    // BEHOERDEN» auf «alle BEHOERDEN mit Bestand» präzisiert; was der Test
+    // schützt, bleibt: jeder Behörden-Link trifft einen echten Anker, und keine
+    // erfundene Behörde erscheint.
     const materialien = NAVIGATION.find((a) => a.titel === 'Materialien');
     expect(materialien, 'Navigations-Abschnitt «Materialien» fehlt').toBeTruthy();
-    const gruppe = materialien!.kinder.find((k) => k.art === 'gruppe');
-    expect(gruppe, 'Gruppe «Nach Behörde» fehlt').toBeTruthy();
-    const ziele = (gruppe!.art === 'gruppe' ? gruppe!.kinder : [])
-      .map((k) => (k.art === 'link' ? k.ziel : ''));
-    expect(ziele).toEqual(BEHOERDEN.map((b) => `/materialien#b-${b.id}`));
+    const links = materialien!.kinder.filter((k) => k.art === 'link');
+    expect(links.at(-1)!.ziel, '«Alle Materialien» fehlt am Listenende').toBe('/materialien');
+    const ziele = links.slice(0, -1).map((k) => k.ziel);
+    const manifest = JSON.parse(readFileSync(REGISTER_PFAD, 'utf8')) as MaterialManifest;
+    const mitBestand = new Set(manifest.materialien.map((x) => x.behoerde));
+    expect(ziele).toEqual(
+      BEHOERDEN.filter((b) => mitBestand.has(b.id)).map((b) => `/materialien#b-${b.id}`),
+    );
+    // Nulltest-Schutz (§6.7): es gibt überhaupt Behörden-Zeilen.
+    expect(ziele.length).toBeGreaterThan(0);
   });
 });
 

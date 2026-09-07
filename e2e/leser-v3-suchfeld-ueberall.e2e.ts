@@ -11,9 +11,13 @@
 // und, unbemerkt, den Desktop mit EINGEKLAPPTER Gliederung.
 //
 // DIE GEPRÜFTE REGEL: das Feld ist auf JEDER Breite das oberste Element des
-// klebenden Blocks — in der Spalte deren Sockel (Kap. 4b), sonst der klebende
-// Kopf-Block (`v3/SuchZone.tsx`). Es ist ohne jede Geste erreichbar und verdeckt
-// den Lesetext nicht.
+// klebenden Blocks. WELCHER Block das ist, war bis 6.9.2026 breitenabhängig (in
+// der Spalte deren Sockel, sonst der Kopf-Block); seit D28 ist es IMMER der
+// Kopf-Block (`v3/SuchZone.tsx`) — David wörtlich: «die suchleiste im gesetz,
+// welche sich oben an der gliederung befindet, will ich oben am gesetz — dann
+// verschiebt sie sich auch nicht, wenn gliederung eingeklappt ist». Fall (c)
+// unten ist danach neu gefasst (§6.3-Deklaration dort). Es ist ohne jede Geste
+// erreichbar und verdeckt den Lesetext nicht.
 //
 // WARUM IM BROWSER: «existiert das Feld in dieser Breite überhaupt» und «liegt an
 // seiner Stelle auch das Feld» sind Aussagen über die gerechnete Breiten-Weiche
@@ -110,17 +114,27 @@ test.describe('Ä19 — das Such-/Sprungfeld ist in jeder Breite erreichbar', ()
     expect(fehler, `Konsolen-/Seitenfehler: ${fehler.join(' | ')}`).toEqual([])
   })
 
-  test('(c) Desktop @1440 mit eingeklappter Gliederung: das Feld bleibt da', async ({ page }) => {
+  // ── §6.3-DEKLARATION (D28, David 6.9.2026) ─────────────────────────────────
+  // Der Fall prüfte bis hierher, dass das Feld MIT Spalte in deren Sockel steht
+  // und beim Einklappen in den Kopf-Block WANDERT. Genau dieses Wandern ist der
+  // Mangel, den D28 behebt («dann verschiebt sie sich auch nicht»). Die tragende
+  // Zusage des Falls («nach dem Einklappen ist das Feld noch da, genau eines,
+  // bedienbar») bleibt Wort für Wort; die Lage-Aussage wird umgedreht: das Feld
+  // steht VORHER UND NACHHER im Kopf-Block. Der Vorzustand hätte diesen Fall rot
+  // gemacht (mit Spalte lag das Feld in `[data-toc-zone-a]`).
+  test('(c) Desktop @1440: das Feld steht im Kopf-Block — mit UND ohne Gliederung', async ({ page }) => {
     const fehler = fehlerSammeln(page)
     await page.setViewportSize({ width: 1440, height: 900 })
     await page.goto('/gesetze/bund/BGFA')
     await expect(page.locator('[data-v3-aside]')).toBeVisible({ timeout: 20_000 })
 
-    // Mit Spalte: das Feld gehört in deren klebenden Sockel (Kap. 4b).
+    // Mit Spalte: das Feld gehört in den Kopf-Block, NICHT in den Sockel (D28).
     const feld = page.locator('[data-v3-suchsprung] input')
     await expect(feld).toHaveCount(1)
+    expect(await feld.evaluate((el) => !!el.closest('[data-v3-kopf]')),
+      'mit Spalte steht das Feld nicht im Kopf-Block (D28)').toBe(true)
     expect(await feld.evaluate((el) => !!el.closest('[data-toc-zone-a]')),
-      'mit Spalte muss das Feld im Sockel der Leiste stehen').toBe(true)
+      'das Feld ist wieder in den Sockel der Gliederung gerutscht (D28)').toBe(false)
 
     // Gliederung einklappen — vor H2b verschwand das Feld hier ersatzlos.
     await page.locator('[data-v3-gliederung-zu]').first().click()
@@ -128,7 +142,7 @@ test.describe('Ä19 — das Such-/Sprungfeld ist in jeder Breite erreichbar', ()
     await expect(feld, 'nach dem Einklappen fehlt das Suchfeld').toHaveCount(1)
     await expect(feld).toBeVisible()
     expect(await feld.evaluate((el) => !!el.closest('[data-v3-kopf]')),
-      'ohne Spalte muss das Feld in den Kopf-Block wandern').toBe(true)
+      'ohne Spalte muss das Feld im Kopf-Block stehen').toBe(true)
 
     // Und es ist bedienbar, nicht nur sichtbar.
     await feld.click()
@@ -186,9 +200,26 @@ test.describe('Ä19 — das Such-/Sprungfeld ist in jeder Breite erreichbar', ()
       .toBeLessThanOrEqual(RESERVE_MAX)
 
     // Mit laufender Suche wächst die Zone um die Zähler-Zeile — der zweite Wert.
+    //
+    // ── §6.3-NACHZUG D38 (7.9.2026) · ZWEI ZUSTÄNDE STATT EINEM ──────────────
+    // Seit D38 liegt die Trefferliste über der Lesespalte, und solange sie dort
+    // liegt, SCHWEIGT die Zähler-Zeile (ihre Zahlen stehen im Listenkopf, §5).
+    // Die Zone behält ihre Höhe trotzdem: der Platz wird für die ganze Dauer
+    // einer Eingabe RESERVIERT, sonst spränge sie bei jedem Wechsel
+    // Text↔Treffer um 24 px (`v3/LeserRahmenV3.tsx`, `zoneHoch`).
+    // Beide Zustände werden geprüft, statt einen wegzudefinieren (§8):
+    //  · Liste steht  ⇒ die Höhe ist dieselbe wie mit Zeile (reserviert).
+    //  · Liste weg    ⇒ die Zeile füllt sie, und zwar ohne Luft (≤ RESERVE_MAX).
     await page.locator('[data-v3-such-zone] input').fill('Anwalt')
+    await expect(page.locator('[data-treffer-liste]')).toBeVisible({ timeout: 20_000 })
+    const reserviert = await mass()
+    // ↵ ist die Wahl (D38): die Liste gibt die Lesefläche frei, die Zeile kommt.
+    await page.locator('[data-v3-such-zone] input').press('Enter')
     await expect(page.locator('[data-v3-treffer-weg]')).toBeVisible({ timeout: 15_000 })
     const aktiv = await mass()
+    expect(reserviert!.ausgelegt,
+      `die Zone springt beim Umschalten: ${reserviert!.ausgelegt} → ${aktiv!.ausgelegt} px`)
+      .toBe(aktiv!.ausgelegt)
     expect(aktiv!.ausgelegt,
       `mit Suche: ausgelegt ${aktiv!.roh} = ${aktiv!.ausgelegt} px deckt die natürlichen ${aktiv!.natuerlich} px nicht`)
       .toBeGreaterThanOrEqual(aktiv!.natuerlich)

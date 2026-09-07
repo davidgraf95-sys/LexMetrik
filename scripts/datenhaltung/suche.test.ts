@@ -58,7 +58,45 @@ beforeAll(() => {
   // hält zum schlechtesten belegten Wert noch ~30 % Abstand; eine echte
   // Verlangsamung der Ingest-Strecke (etwa durch einen Korpus-Sprung) fällt
   // unverändert durch. KEINE Assertion und kein Prüfschritt berührt (§6.3).
-}, 95000);
+  //
+  // ── NACHTRAG 6.9.2026 (W2·24 · §17-Wurzelfix, DREI Runden Falsch-Rot) ──────
+  //
+  // Der 95-s-Deckel riss in W2·24 dreimal, ohne dass an dieser Datei etwas
+  // geändert worden wäre. Vor der Zuschreibung an eine Ursache steht die
+  // Messung (§0 Ziff. 3), also NEU ERHOBEN, gleiche Bedingung wie oben
+  // «isoliert», n=3, 6.9.2026, Dateidauer in s:
+  //     16.10 · 16.18 · 14.50   (mittel 15.59, sd 0.94)
+  // Die Zahlen oben (mittel 10.85) bleiben stehen — sie sind nicht falsch
+  // geworden, sie sind von damals (§2b). Der Vergleich IST der Befund:
+  //
+  //   DIE URSACHE IST NICHT DIE PARALLEL-LAST, SONDERN DER KORPUS.
+  //   Die isolierte Strecke ist seit der Deckel-Festlegung um +44 % gewachsen
+  //   (10.85 → 15.59 s), ganz ohne fremde Last. Der Deckel wurde also gegen
+  //   einen Ist-Stand bemessen, den es nicht mehr gibt; seine Reserve war
+  //   längst um dieselben 44 % geschrumpft, bevor die erste Parallel-Last
+  //   ihn zum Reissen brachte. Ein absoluter Millisekunden-Deckel auf einer
+  //   mitwachsenden Ingest-Strecke veraltet von selbst.
+  //
+  // NEUE HÖHE, aus den vorhandenen Messreihen fortgeschrieben (nicht geraten):
+  //   · Lastfaktor aus der Reihe oben: 50.53 / 10.85 = 4.66×
+  //   · relative Streuung unter Last: sd/mittel = 9.46 / 50.53 = 18.7 %
+  //   · erwartet unter Last, heutiger Korpus: 15.59 × 4.66 = 72.6 s
+  //     (sd entsprechend 13.6 s)
+  //   · QS-PERF Ziff. 5, Ist + max(3 sd, 25 %): 72.6 + 40.8 = 113.4 s
+  //   · Die Bau-Flotte dieser Runde fährt SECHS Arbeitsbäume parallel, also
+  //     mehr als die Bedingung, unter der der Lastfaktor 4.66 gemessen wurde.
+  //     Für diesen Aufschlag ist 240 000 ms gesetzt — gut das Doppelte des
+  //     fortgeschriebenen Werts.
+  //
+  // WAS DIESER DECKEL DAMIT IST — und was er ausdrücklich NICHT ist: er ist
+  // eine ROBUSTHEITS-Grenze gegen einen hängenden Lauf, keine Perf-Schranke.
+  // Als Perf-Schranke hat er nie getaugt: eine Wanduhr-Messung unter
+  // unbekannter Fremdlast misst die Maschine, nicht die Ingest-Strecke (genau
+  // die Verwechslung, vor der §0 Ziff. 3 warnt). Wer die Ingest-GESCHWINDIGKEIT
+  // bewachen will, braucht eine Messung mit genannter Bedingung — das gehört
+  // zu `check:perf-budget`, nicht in einen Vitest-Hook-Timeout.
+  // KEINE Assertion, kein Prüfschritt, kein Deckel-Wert des Tests berührt.
+}, 240000);
 
 afterAll(() => {
   dbN?.close();

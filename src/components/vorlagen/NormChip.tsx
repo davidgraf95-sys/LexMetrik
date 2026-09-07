@@ -473,7 +473,7 @@ export function NormPopoverHuelle({ zustand, url, artikel, alsDialog = true, onC
     <div data-norm-vorschau role={alsDialog ? 'dialog' : 'group'}
       {...(alsDialog ? { 'aria-modal': true as const, tabIndex: -1 } : {})}
       aria-label={`Norm-Vorschau ${artikel}`}
-      className="lc-card w-full max-w-xl p-0 text-left">
+      className="lc-popover w-full max-w-xl p-0 text-left">
       <div className="flex items-start justify-between gap-3 border-b border-line px-5 py-3">
         <div className="min-w-0">
           <p className="lc-overline text-brass-700">Norm-Vorschau</p>

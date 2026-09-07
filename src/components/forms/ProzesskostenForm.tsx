@@ -283,7 +283,7 @@ export function ProzesskostenForm({ minimal = false }: { minimal?: boolean } = {
           </ul>
 
           {/* Weitere, nicht bezifferbare Kostenposten (Art. 95 II c–e / III a; UR Art. 117 ff.). */}
-          <details className="mt-3 rounded-xl border border-line bg-surface p-3">
+          <details className="mt-3 border border-line bg-surface p-3">
             <summary className="cursor-pointer text-body-s text-ink-700 hover:text-ink-900">Weitere Kostenposten (nicht beziffert)</summary>
             <ul className="mt-2 space-y-1 text-xs text-ink-500 list-disc pl-5">
               {WEITERE_KOSTENPOSTEN.map((h, i) => <li key={i}><NormText text={h} /></li>)}
@@ -327,7 +327,7 @@ export function ProzesskostenForm({ minimal = false }: { minimal?: boolean } = {
           </div>
 
           {risiko && (
-            <div className="mt-4 rounded-xl border border-line bg-surface p-4">
+            <div className="mt-4 border border-line bg-surface p-4">
               <div className="flex items-center gap-3 flex-wrap mb-3">
                 <label htmlFor="pk-ausgang" className="text-body-s text-ink-700">Verfahrensausgang</label>
                 <select id="pk-ausgang" value={ausgang} onChange={(e) => setAusgang(e.target.value as Verfahrensausgang)} className={inputCls + ' sm:max-w-[20rem]'} aria-label="Verfahrensausgang">
@@ -407,7 +407,7 @@ export function ProzesskostenForm({ minimal = false }: { minimal?: boolean } = {
           )}
 
           {zug && instanzenzug && (
-            <div className="mt-4 rounded-xl border border-line bg-surface p-4">
+            <div className="mt-4 border border-line bg-surface p-4">
               <p className="lc-overline">Gesamtkostenrisiko über den Instanzenzug</p>
               <div className="mt-3 overflow-x-auto">
                 <table className="w-full min-w-[30rem] text-body-s border-collapse">
@@ -444,7 +444,7 @@ export function ProzesskostenForm({ minimal = false }: { minimal?: boolean } = {
           )}
 
           {kaution && sicherheit && (
-            <div className="mt-4 rounded-xl border border-line bg-surface p-4">
+            <div className="mt-4 border border-line bg-surface p-4">
               <p className="lc-overline"><NormText text={`Sicherheit für die Parteientschädigung (Art. 99 ZPO)`} /></p>
               {sicherheit.moeglich ? (
                 <p className="mt-2 num text-body-l font-semibold text-ink-900">{sicherheit.spanne ? spanneText(sicherheit.spanne) : 'nicht beziffert'}</p>

@@ -82,6 +82,19 @@ Etikett ohne dass die Struktur es einlöst. Top-down-Versprechen wirken nachweis
 lich kaum (Martinez 2024) — die Vereinfachung gehört in die Generatoren/Templates
 und Komponenten, nicht aufs Label.
 
+**A6 — Sprach-Diät: Bezeichnungen statt Versprechen (Freigabe David 6.9.2026,
+`FAHRPLAN-DESIGN-IDENTITAET.md` §5).** Sichtbarer Text der Oberfläche trägt
+**keine Slogans und keine Nutzenversprechen** («alles an einem Ort», «verzahnt»
+als Behauptung, «modern», «leistungsstark»). Erlaubt sind: **Bezeichnungen**
+(wie die Sache heisst), **Zahlen mit Scope** («227 Bundeserlasse im Volltext»,
+nie eine nackte Zahl) und **Verben** (was der Knopf tut). Übersichts-Köpfe tragen
+den Bereichsnamen und eine Ausgabe-Zeile, keinen Erklärabsatz (D11).
+Als Negativliste gilt Wikipedia «Signs of AI writing» — Werbe-Adjektive,
+«not just X but Y», Floskel-Dreiklänge, Em-Dash-Dramatik im UI-Text.
+*Abgrenzung zu A5:* A5 verbietet das unerfüllte Verständlichkeits-**Etikett**,
+A6 die werbende **Tonlage**. Geprüft wird sie im Beschriftungs-Lauf (R7), nicht
+maschinell — ein Tor auf Tonfall wäre ein Tor, das nicht scheitern kann (§6.7).
+
 ---
 
 ## B · Informations-Darstellung (Hierarchie & Visualität)
@@ -175,6 +188,149 @@ passen), sobald Lexmetrik mehrsprachig wächst.
 
 ## F · UI-Design (visuell & interaktiv)
 
+### F0 · Die Handschrift «Sammlung» (W2·24-DESIGN-IDENTITAET, 6.9.2026)
+
+Freigabe David 6.9.2026, Referenzbilder `abnahme/design-identitaet/vorschlag-
+freigegeben.html` (Leser + Inhaltsverzeichnis) und `pult-freigegeben.html`
+(Startseite). **Massgeblich sind die Token in `src/index.css`, nicht dieser
+Text** — F0 hält fest, welche Rolle jeder Wert trägt. Was hier steht, überschreibt
+jede ältere Aussage dieses Reglements über Farbe, Schrift und Form; die abgelösten
+Sätze sind unten als AUFGEHOBEN gekennzeichnet, nicht gelöscht (Muster
+`DESIGN-REGLEMENT-NORMTEXT.md` §4b-A).
+
+**F0.1 — Papier und Tinte.** Zwei Flächen-Achsen, beide fast chromafrei; die
+Trennung im Bild läuft über **Linien, nicht über Flächentönung**. Die
+Flächen-L-Leiter `well < paper < surface < paper-raised` bleibt harter FAIL im
+Tor (F2b Ziff. 4). Ist-Werte (D12 «Lesekomfort», 6.9.2026):
+
+| Rolle | hell | dunkel |
+|---|---|---|
+| `--paper` (Blatt) | `#FAF7F2` | `#1B1917` |
+| `--paper-raised` (schwebende Ebene) | `#FFFFFF` | `#282521` |
+| `--surface` (Karten/Panels) | `#FCFAF6` | `#201E1B` |
+| `--well`/`--paper-sunken` (Feld) | `#F3F0EA` | `#131211` |
+| `--ink-900` (Fliesstext-Tinte) | `#25231F` | `#E2E0DC` |
+| `--ink-600` (Sekundär) | `#5C564A` | `#A59E90` |
+| `--rule` (2-px-Kante) | `= --ink-900` | `= --ink-900` |
+| `--rule-soft` (1-px-Zeilentrenner) | `#DDDAD4` | `#35332F` |
+
+Die Tinte ist **bewusst nicht maximal dunkel**: `--ink-fixed-dark` `#25231F`
+misst 14.68:1 auf Papier. Maximalkontrast (~17:1) erzeugt am Bildschirm Halation;
+Zielband für Langlese-Fliesstext 12–15:1 (D12, Belege in
+`abnahme/design-identitaet/KONTRAST-R1.md` Nachtrag D12). Reinschwarz/Reinweiss
+als *Lesegrund* bleibt ausgeschlossen (§G d).
+
+**F0.2 — Vier Registerfarben, sonst keine Farbe.** Je ein stumpfer Ton pro
+Register der Sammlung, als **Strich, Reiter-Unterkante und Randmarke** — nie als
+Fläche unter Fliesstext, nie allein bedeutungstragend (F2/B3):
+
+| Register | Token | hell | dunkel |
+|---|---|---|---|
+| Gesetze | `--reg-g` | `#1D4E89` | `#8FB8F0` |
+| Rechtsprechung | `--reg-r` | `#7A1F2B` | `#E39AA6` |
+| Materialien | `--reg-m` | `#2F7A3E` | `#9AD489` |
+| Werkzeuge | `--reg-w` | `#8F5E0E` | `#E6B95A` |
+
+Alle sechzehn Register-Paare (vier Töne × vier Flächen) halten ≥ 4.5:1 in beiden
+Modi und sind sämtlich Pflichtpaare im Tor (Messreihe: `KONTRAST-R1.md` D12.4).
+*Abweichung vom Fahrplan, datiert vermerkt (6.9.2026):* `FAHRPLAN-DESIGN-
+IDENTITAET.md` §5 nennt `#1F3A5F` · `#7A1F2B` · `#4E6B3A` · `#8A6A1F`; gebaut sind
+die oben stehenden Werte — Davids Nachtrag 6.9.2026 «Registerfarben eine Stufe
+kräftiger, Rot dezent» ging der Prosa vor (lebendige Spec, David 15.8.2026).
+
+**F0.3 — Rollen-Schicht: der Akzent ist die Tinte.** Die Messing-Skala
+`--brass-100…800` besteht als Werte-Träger fort, ist aber **neutral** geworden;
+`--brass-700` zeigt per `var()` auf `--ink-fixed-dark`. Die Rollen-Schicht §G
+bleibt der Zugriffsweg (`--accent-text` = `--brass-700` = Tinte, `--accent-solid`
+= `--brass-500`, `--focus` = `--brass-700` hell / `--brass-500` dunkel).
+Der Klassenname `*-brass-*` lügt damit bewusst bis zum Umbenennungs-Sweep — **die
+Werte in `index.css` sind die Wahrheit, nicht der Name**. Status-Semantik
+`sage`/`slate`/`warn`/`danger` bleibt unverändert gültig (B3, §4b-B).
+
+**F0.4 — Zwei Stimmen: Literata und Archivo.** `--font-serif` **Literata**
+(opsz-Achse geladen, `font-optical-sizing:auto`, Lesegewicht `--lese-gewicht:450`)
+trägt alles GELESENE — Normtext, Entscheide, Titel, Begrüssung. `--font-sans`/
+`--font-display` **Archivo** trägt die BEDIENUNG — Reiter, Knöpfe, Marginalien,
+Meta-Zeilen, Etiketten. `--font-mono` ist eine **System-Kette ohne eigenes Paket**
+und trägt nur noch, was fachlich Monospace braucht (Rechenweg, Code); Zahlenkolonnen
+laufen über `.num`/`font-variant-numeric: tabular-nums`, nicht über Mono. Beide
+Familien OFL, self-hosted über `@fontsource-variable` (kein Google-Fonts-Request
+zur Laufzeit); metrik-angepasste Fallbacks (`Archivo Fallback`/`Literata Fallback`/
+`Literata Times Fallback`, gemessen mit `scripts/gen-font-fallbacks.ts`) halten den
+Zeilenkasten CLS-frei, solange der Webfont lädt. **Keine dritte Schrift** (§15).
+Leser-Fliesstext 18 px / 1.62 (`DESIGN-REGLEMENT-NORMTEXT.md` §4b).
+
+**F0.5 — Form: Kanten statt Kissen.** Alle fünf Radius-Token stehen auf `0px`
+(`--radius-sm…2xl`); die Skala bleibt als EIN Ort bestehen, damit die Konsumenten
+ohne Edit umfärben. **Ausnahme:** echte Punkte, Marken und Avatare ≤ 12 px bleiben
+rund (`rounded-full`). **Schatten:** `--shadow-sm`/`--shadow-md` sind `none`; es
+gibt genau einen Schatten, `--shadow-lg`, und er gehört ausschliesslich der
+**schwebenden Ebene** — Menü, Dialog, Popover, getragen von `.lc-schwebeflaeche`.
+Was an einem Feld hängt, schwebt nicht und trägt weder Schatten noch Radius
+(`.lc-suchpanel-huelle`, D23). Kein `lc-glass`.
+
+**F0.6 — Linien statt Flächen.** Zwei solide Trenner-Töne: 1 px `--rule-soft`
+zwischen Zeilen im Satzspiegel, 2 px `--rule` unter Kopfzeilen. Sie sind das
+Gegenstück zu den transparenten `color-mix`-Haarlinien (`--line`,
+`--line-strong`, `--rule-artikel`, `--rule-struktur`), die sich der Fläche
+darunter anpassen. Gruppierung über Weissraum und Linie, nicht über Kästen und
+Füllungen.
+
+**F0.7 — Etiketten ohne Versalien.** `.lc-overline` ist umdefiniert: Archivo,
+0.75 rem, `text-transform: none`, `letter-spacing: var(--tracking-overline)` =
+`0em`, `color: var(--ink-500)`. **Kein ALL-CAPS-Etikett mehr**, kein Sperrsatz,
+keine Icons/Chips/Kästen als Etikett. Die Regel steht EINMAL an der Klasse, nicht
+an ihren ~260 Konsumenten.
+
+**F0.8 — Links sind unterstrichen.** Inline-Textlinks tragen den Strich; die Regel
+steht EINMAL in `src/index.css` (`.lc-leser :where(a[href])`, Spezifität 0 in einer
+Cascade-Layer, damit `no-underline` im Markup immer gewinnt). **Navigation,
+Listenzeilen, Brotkrume, Artikelnummer-Anker, `.lc-chip`/`.lc-btn-mini` tragen
+ihre Affordanz aus der Form und dürfen ohne Strich stehen** — sie sagen es
+ausdrücklich im Markup. Ein Link, den nur die Farbe ausweist, ist kein Link
+(WCAG 1.4.1). Wächter: `e2e/leser-links-p3.e2e.ts`.
+
+**F0.9 — Anatomien (Ist-Stand 6.9.2026).**
+- **Menü** (D5): ruhige Liste mit Linien; Zustand als **Wort** oder Schalter, nie
+  als «✓ an»-Doppel; Fokus als Strich/Unterstrich, nie als Kasten; Regler in
+  eigener Zeile mit Archivo-Label; keine Umbrüche in Menüzeilen; Icons im Menü
+  einheitlich (in der Sammlung: keine). Leser-Kopf-Knöpfe sind **Textknöpfe mit
+  Unterstrich**, keine Chips. *Offen (R11-Auflage R6/R7, wartet auf Umsetzung):
+  `.lc-schwebeflaeche` trägt heute noch `shadow-lg` — dass Menüs schattenlos auf
+  Papier stehen sollen, ist entschieden, aber im Ist-Code nicht durchgezogen.*
+- **Feld** (D9/D23): Unterstrich-Anatomie statt Kasten — `.lc-input` trägt
+  `border-bottom: 1px solid var(--rule)`, keine Füllung als Rahmenersatz. Das
+  Treffer-/Leerzustand-Panel ist die **Fortsetzung des Feldes nach unten**: gleiche
+  Kanten (`inset-x-0`), kein Abstand (`top-full`), `border-top: 0`, kein Schatten,
+  kein Radius, Grund `--paper`.
+- **Reiterleiste** (§5a, R11, D15/D16/D19/D27): zwei Zeilen mit zwei Bedeutungen —
+  Titelblatt = Marke · Suche · Werkzeuge (D17: **keine Bereichs-Reiter**),
+  darunter die **Arbeitsleiste** = offene Dokumente. Reiter tragen den
+  Registerstrich ihrer Domäne (inaktiv 60 % Deckkraft, aktiv voll + Tönung),
+  Kurzform als Beschriftung, Volltitel + Stand im `title`. Ordnen per Ziehen im
+  flachen Speicher, **ohne zweite Anzeige-Ordnung** (D16). «+» erzeugt einen neuen
+  Reiter; auf «/» bleibt die Höhe reserviert (CLS 0), ohne vollen Unterstrich. Die
+  Beschriftung folgt der Lesestellung live (D27) — die Brotkrume im Gesetz entfällt
+  dafür.
+- **Seitenleiste** (D17/D25/D26): bleibt auf **allen** Routen, auch auf «/»;
+  Werkseinstellung **eingeklappt**, Nutzerwahl persistent. Inhalt sind direkte
+  Ziele (Kernerlasse, Sachgebiete, Behörden), keine Kopie der Kategorien-Ebene.
+- **Leser-Kopf** (D20/D27/D28): Randtitel steht als kursive Literata-Zeile **im
+  Artikelkopf**, nicht in einer Randspalte; Fassungsdatum klein daneben; Bezüge als
+  EINE aufklappbare Zeile darunter; die Erlass-Suche sitzt **oben im Leser-Kopf**
+  über dem Gesetzestext und verschiebt sich beim Klappen der Gliederung nicht
+  (Δx = 0). **Keine Brotkrume** im Leser.
+
+**F0.10 — Was AUFGEHOBEN ist.** Die Creme-Gold-/Messing-Welt (Brass als Marke,
+Wärme-Dramaturgie, Geist/Geist Mono/Source Serif 4, Versal-Overlines, gerundete
+Kanten) gilt seit dem 6.9.2026 nicht mehr. Nicht gelöscht, sondern mit
+AUFGEHOBEN-Vermerk am Ort belassen, damit Alt-Verweise auflösen: **F5 · G a ·
+G c · G d · G e-Zusatz · G f · G g · G h**. Die datierten Messreihen der
+F2b-Nachträge D-3/D-4/D-5/QS-UI-8a bleiben wörtlich stehen — abgelöst ist ihr
+Geltungsanspruch, nicht ihre Richtigkeit (Belege altern nicht).
+
+---
+
 Gegründet auf doppelt-verifizierte UI-Design-Recherche (25.6.2026,
 `docs/recherche-ui-design-2026-06-25.md`; IBM Carbon, Atlassian, Material 3,
 W3C WCAG 2.2, Nielsen Norman Group, Stanford/Fogg) **und** das ultracode-
@@ -202,10 +358,15 @@ gleichwertigen Ersatz; kein Fokus, der nur die Farbe wechselt.
 loading · selected** — plus **empty- und error-State** der Sicht. Kein Zustand
 fehlt still. (Verzahnt mit C2: leeres Formular zeigt noch keinen Fehler.)
 
-**F5 — Zwei Typografie-Register.** «Produktiv» (kompakt, Sans) für Rechner/
-Generatoren/Tabellen/UI; «expressiv/Lese» (Lese-Serif, ruhige Lesespalte) nur
-für Gesetzes-/Rechtsprechungs-Volltext. Expressive Lesestile gehören NICHT in
-die Produkt-UI. Beide aus der einen verdichteten Skala (Block B2).
+**F5 — Zwei Typografie-Register.** «Produktiv» (kompakt, Sans = **Archivo**) für
+Rechner/Generatoren/Tabellen/UI; «Lese» (**Literata**, ruhige Lesespalte) für
+Gesetzes-/Rechtsprechungs-Volltext **und die getragenen Titel** (Begrüssung,
+Randtitel, H1 der Leser-Köpfe). Beide aus der einen verdichteten Skala (Block B2).
+*AUFGEHOBEN 6.9.2026 (W2·24-DESIGN-IDENTITAET R1/R3):* der frühere Satz
+«expressive Lesestile gehören NICHT in die Produkt-UI» und die Familien Geist /
+Geist Mono / Source Serif 4. Die Sammlung setzt Literata bewusst auch ausserhalb
+des Volltexts — als Titel- und Begrüssungsstimme, nie als Bedienschrift.
+Massgeblich ist F0.4.
 
 **F6 — Politur & Fehlerfreiheit sind Trust, nicht Kosmetik.** Sichtbare
 Kleinfehler — Typos, tote Links, **stille No-op-Klassen**, inkonsistente
@@ -292,20 +453,31 @@ prüft der Orchestrator separat). Vier Klassen:
 
    | Rolle | Tick/Text auf `--well` | hell | dunkel |
    |---|---|---|---|
-   | C-1 `lc-chip-entscheid` | slate-500 | 5.03 | 3.47 |
-   | C-2 Currency-Chip warn | warn-700 | 5.48 | 9.43 |
-   | C-3 brass-Tick | brass-700 | 5.13 | 10.48 |
+   | C-1 `lc-chip-entscheid` | slate-500 | 4.86 | 3.38 |
+   | C-2 Currency-Chip warn | warn-700 | 5.30 | 9.20 |
+   | C-3 Akzent-Tick (= Tinte) | brass-700 | 13.79 | 14.19 |
 
-   *(D-5/A38, 16.7.: die HELL-Werte stiegen (4.81→5.03 · 5.24→5.48 · 4.91→5.13),
-   weil `--well` heller/weisser wurde — DUNKEL unverändert; s. F2b-Nachtrag D-5.)*
+   **Nachgezogen 6.9.2026 (W2·24 R1 + D12).** Die Zahlen stammen aus dem Tor-Lauf
+   (`npm run check:farbwelt`, dokumentiert in `scripts/farbwelt-tabellen.ts`
+   `REFERENZ`), nicht aus einer Schätzung — dort steht auch die Herkunftskette je
+   Zeile. Herkunft, die weiter gilt (§2b, Belege altern nicht): C-1 D-5 5.03/3.47 →
+   R1 4.86/3.47 → D12 4.86/3.38 · C-2 D-5 5.48/9.43 → R1 5.29/9.49 → D12 5.30/9.20 ·
+   C-3 D-5 5.13/10.48 (damals Messing) → R1 16.02/16.49 → D12 13.79/14.19. Der
+   Sprung bei C-3 ist keine Drift, sondern der Rollenwechsel: **brass-700 IST seit
+   R1 die Tinte** (F0.3).
 
-   Fixpunkt Hell durch A38 überschrieben (deklariert, s. Nachtrag D-5): `--paper`
-   hell `#FCFAF6` (früher `#FAF8F2`) / dunkel unverändert `#16150F`.
+   Fixpunkte `--paper` (deklariert versetzt, nicht entkernt): hell `#FAF7F2`
+   (D12; R1 `#FBFBFB`, davor A38 `#FCFAF6`, davor `#FAF8F2`) / dunkel `#1B1917`
+   (D12; R1 `#151515`, davor `#16150F`).
 3. **Bekannte Risse (WARNUNG + FAIL nur bei Verschlechterung — D-1-Input):**
    heute unter der Schwelle liegende Paare als Baseline-Guard, damit das Tor auf
    dem IST-Stand grün ist, ohne die Risse zu verstecken:
-   `danger-500/paper` dunkel 2.72 (Ziel 3.0, D-1.3, Direkt-Nicht-Text — der
-   Linien-Ton nutzt bereits danger-700).
+   `danger-500/paper` dunkel — Baseline 6.9.2026 (D12) **2.80** (Ziel 3.0, D-1.3,
+   Direkt-Nicht-Text; der Linien-Ton nutzt bereits danger-700). *Der frühere
+   Baseline-Wert 2.72 gilt für seinen Stand: D12 hob das dunkle Papier von
+   `#151515` auf `#1B1917`, was den Riss vertieft hätte — statt die Baseline
+   abzusenken, wurde `--danger-500` im Dunkel um dieselbe Stufe mitgehoben
+   (`#9F4434`), gemessen 2.80, also besser als vorher (§17-Wurzelfix).*
    *(D-4, 13.7.: `ink-500/well` hell 4.48→**4.62** geheilt → aus der Riss-Liste in
    die WCAG-Pflichtpaare gewandert.)*
 4. **OKLCH-Struktur:** Flächen-L-Leiter `well < paper < surface < paper-raised`
@@ -473,10 +645,13 @@ die nackte Basis-Stufe. Eine spätere Farb-Rekalibrierung (D-4/D-5) wird damit
 ein reiner `:root`-Eingriff. Basis-Stufen (`brass-700`, `sage-500`, …) sind für
 **neue** Komponenten privat; Bestand migriert opportunistisch (kein Riesen-Diff).
 
-**a — Brass ist Signal, nicht Tapete.** Grosse Messing-Flächen bleiben dem
-semantisch Massgeblichen vorbehalten (Marke/Wortlaut-Referenz, §4b-B). Abnahme-
-Ritual je Kernseite: **Squint-Test** — kneift man die Augen zu, darf Brass nur
-dort leuchten, wo es Bedeutung trägt, nicht als flächige Einfärbung.
+**a — AUFGEHOBEN 6.9.2026 (W2·24-DESIGN-IDENTITAET R1)** · früher «Brass ist
+Signal, nicht Tapete». Es gibt keine Messing-Fläche mehr, die man sparsam
+einsetzen könnte — die Skala ist neutral (F0.3). *Der Wortlaut für Alt-Verweise:
+grosse Messing-Flächen blieben dem semantisch Massgeblichen vorbehalten
+(Marke/Wortlaut-Referenz, §4b-B).* **Der Squint-Test bleibt als Ritual gültig**,
+nur mit neuem Gegenstand: kneift man die Augen zu, darf allein die
+**Registerfarbe** leuchten, und nur dort, wo sie ein Register benennt (F0.2).
 
 **b — Ton vor Schatten.** Erhebung primär über Flächenton (`--paper`→`--surface`
 →`--paper-raised`) + 1px `--line`; Schatten ist **sekundär**, erst ab
@@ -484,26 +659,43 @@ dort leuchten, wo es Bedeutung trägt, nicht als flächige Einfärbung.
 Doppelsignal bleibt), aber die Regel: **Tiefe = Stufe + Border, nie Schatten
 allein.**
 
-**c — Temperatur-Dramaturgie.** Fläche→Temperatur trägt das Wörterbuch: **warm
-empfangen** (Startseite/Rubriken), **neutral-kühl prüfen** (Entscheid/Rechner/
-Fristen). Der Temperatur-Kontrast ist Feature, kein Fehler; Signaturen (gravierte
-Brass-Linie, Regeste-Box) sind katalogisierter Motiv-Rhythmus, keine Tapete.
+**c — AUFGEHOBEN 6.9.2026 (W2·24-DESIGN-IDENTITAET R1)** · früher
+«Temperatur-Dramaturgie» (warm empfangen auf Startseite/Rubriken, neutral-kühl
+prüfen bei Entscheid/Rechner/Fristen; gravierte Brass-Linie und Regeste-Box als
+Motiv-Rhythmus). Die Sammlung kennt **eine** Fläche über die ganze Seite; sie
+wechselt ihre Temperatur nicht nach Route. Die verbliebene Wärme ist eine
+Lesekomfort-Tönung des Papiers (D12, F0.1), keine Dramaturgie.
 
-**d — Reinweiss-Invariante (im Gate).** Kein `#FFFFFF`/`bg-white` als Lese-/
-Arbeitsfläche — Papier ist warm (`--paper*`/`--surface*`); `--paper-raised` deckt
-nur kleine erhabene Flächen. **Maschinell erzwungen** in `check:design-tokens`
+**d — Reinweiss-Invariante (im Gate) — Fassung 6.9.2026.** Kein `#FFFFFF`/
+`bg-white` **als Lese- oder Arbeitsfläche**; Flächen kommen aus den Rollen
+`--paper*`/`--surface*`. *Präzisiert (W2·24 R1/D12, ersetzt den früheren Zusatz
+«`--paper-raised` ist nahezu weiss, aber nicht `#FFFFFF`»):* Reinweiss gibt es
+seither **genau einmal im ganzen System** — als `--paper-raised`, die schwebende
+Ebene (Menü/Dialog/Popover). Das Blatt selbst liegt eine Stufe darunter
+(`--paper` `#FAF7F2`). Die Regel ist damit nicht gelockert, sondern verschärft:
+weiss ist eine Ebenen-Aussage, kein Grundton. **Maschinell erzwungen** in `check:design-tokens`
 (bg-white/text-white/…-white + `#fff`/`#ffffff` im Inline-Style, negativ-
 kontrolliert). Dokumentierte Ausnahmen: `@media print` (`body #fff`) und
 `text-paper` auf ink-Buttons — beide in `src/index.css`, ausserhalb des
 Komponenten-Scopes des Gates.
 
-**e — Zwei-Stimmen-Regel (grep-auditiert).** Serif (`--font-serif`) trägt
-**ausschliesslich** zitierfähigen Quelltext (Normtext, Entscheidtext, Regesten,
-Erlass-Kopf); Sans (`--font-sans`) alles Interaktive; Mono nur Zahlen/
-Aktenzeichen. Audit 12.7.2026 (`grep font-serif src/`): alle 15 Fundstellen
+**e — Zwei-Stimmen-Regel (grep-auditiert) — Fassung 6.9.2026.** Serif
+(`--font-serif` = **Literata**) trägt zitierfähigen Quelltext **und die getragenen
+Titel** (Normtext, Entscheidtext, Regesten, Erlass-Kopf, Randtitel, Begrüssung);
+Sans (`--font-sans` = **Archivo**) alles Interaktive und alle Etiketten; Mono ist
+eine System-Kette und trägt nur, was fachlich Monospace braucht (Rechenweg, Code) —
+Zahlenkolonnen laufen über `tabular-nums`, nicht über Mono (F0.4). *Der
+Erst-Audit von 12.7.2026 gilt für seinen Stand:* Audit 12.7.2026 (`grep font-serif src/`): alle 15 Fundstellen
 liegen im Gesetzes-Reader (`gesetz-leser/*`) und der Rechtsprechung
 (`RegesteBlock`/`EntscheidBody`/`EntscheidKarte`) — **null** Produkt-UI. Keine
 dritte Schrift (§15). Regel erfüllt, keine Code-Änderung nötig.
+
+*Zusatz 29.8.2026 — GEGENSTANDSLOS seit 6.9.2026 (W2·24-DESIGN-IDENTITAET R1).*
+`.lc-overline` setzt seither `var(--font-sans)` (Archivo) und `text-transform:
+none`; es gibt kein Mono-Etikett und keinen Versal-Etikett mehr, also auch keinen
+Konflikt mehr aufzulösen (F0.4/F0.7). Die Abgrenzung «Etikett wird gescannt, Satz
+wird gelesen» bleibt als **Denkfigur** brauchbar, sie trägt nur keine Schriftwahl
+mehr. Wortlaut für Alt-Verweise:
 
 *Zusatz 29.8.2026 (Entscheid David, Antwort 3 «Regel»; Review-Befund T6).* Der
 Design-Qualitäts-Pass fand, dass Mono nicht nur Zahlen trägt: `.lc-overline`
@@ -525,19 +717,34 @@ die Mono-Stimme, auch nicht kurze. Beleg für die Abgrenzung am lebenden Objekt:
 `SchweizKarte.tsx` trägt das Overline «Erfassungsgrad» in Mono, den Zusatz
 «3 Erlasse · dünn» der Bildunterschrift dagegen bewusst nicht.
 
-**f — Linien unter der Tinte, Textur-NEIN.** Struktur-/Haarlinien sind immer
-schwächer als der ink-600-Sekundärtext und laufen nur über die color-mix-Tokens
-(`--line`, `--line-strong`, `--rule-*`). Explizites **NEIN**
-zu Papier-Texturen/Noise-Overlays (auch §15 Performance).
+**f — Linien-Rollen, Textur-NEIN — Fassung 6.9.2026.** *Haarlinien* (`--line`,
+`--line-strong`, `--rule-artikel`, `--rule-struktur`) sind weiterhin immer
+schwächer als der ink-600-Sekundärtext und laufen nur über die
+`color-mix`-Tokens. *Präzisiert (W2·24 R1):* daneben stehen seit dem 6.9.2026
+zwei **solide Trenner** — `--rule-soft` (1 px, Zeilentrennung) und `--rule`
+(2 px Kopfzeilen-Kante, wertgleich `--ink-900`). Sie sind bewusst NICHT schwächer
+als die Tinte: sie tragen im neuen Bild die Struktur, die früher Flächen und
+Kästen trugen (F0.6). Neue Ad-hoc-Opazitäten bleiben verboten — wer eine Linie
+braucht, greift eine der sechs Rollen. Explizites **NEIN** zu
+Papier-Texturen/Noise-Overlays (auch §15 Performance).
 
-**g — Wärme-Architektur (der EINE Steuerhebel).** Wärme wird ausschliesslich
-über die `--paper`/`--ink`-Basiswerte + die color-mix-Rezepte gesteuert; **nie**
-flächen-lokale Warmtöne, **kein** dritter (Sepia-)Modus. Änderungspfad:
-`--paper`/`--ink-900` verschieben, alles andere folgt aus den Rezepten.
+**g — EINE Steuerstelle für Fläche und Tinte (früher «Wärme-Architektur»,
+umformuliert 6.9.2026).** Die Mechanik gilt unverändert: Fläche und Tinte werden
+**ausschliesslich** über die `--paper`/`--ink`-Basiswerte und die
+`color-mix`-Rezepte gesteuert; **nie** flächen-lokale Sondertöne, **kein** dritter
+(Sepia-)Modus. Änderungspfad: `--paper`/`--ink-900` verschieben, alles andere folgt
+aus den Rezepten — D12 hat genau diesen Weg genommen (ein `:root`- plus ein
+`html.dark`-Eingriff). *AUFGEHOBEN ist der Zweck:* «Wärme» als gestalterisches
+Ziel. Der Rest-Wärmegrad des Papiers ist heute eine gemessene
+Blendungs-Entscheidung (D12), keine Signatur.
 
-**h — Navy-Fussnote.** `slate` bleibt der neutrale Entscheid-/Referenz-
-Semantikton (§4b-B), **nie** eine Markenfläche. Die Identität wird nicht Richtung
-Kanzlei-Navy «abgesichert» — brass bleibt die Marke.
+**h — Navy-Fussnote — Fassung 6.9.2026.** `slate` bleibt der neutrale
+Entscheid-/Referenz-Semantikton (§4b-B), **nie** eine Markenfläche — dieser Satz
+gilt unverändert. *AUFGEHOBEN 6.9.2026 (W2·24 R1):* der Schlusssatz «brass bleibt
+die Marke». Es gibt keine Markenfarbe mehr; die Identität trägt die Typografie
+(Literata/Archivo) und der Register-Strich (F0.2/F0.4). Die dahinterliegende
+Sorge bleibt gültig: **kein Kanzlei-Navy als Markenfläche** — `--reg-g` ist die
+Kennfarbe des Registers «Gesetze», nicht die der Marke.
 
 **i — Werkstoff- vs. Zustandsfarbe (F1, aufgelöst).** `sage` war doppelt belegt
 (Materialien-Kennfarbe **und** ok/Live-Zustand). Aufgelöst: die Zustands-Rolle
@@ -616,6 +823,32 @@ Provenienz §7 verletzt hätte. B2/D2/E1 sind damit maschinell abgesichert.
 > Reine Disziplin-Befunde (A2b) und domänenbedingte Ausnahmen (2-spaltiges
 > Normtext-Layout, Druckbild-`em`-Grössen in `vorschauStil.ts`) sind bewusst
 > KEINE Pflicht-Fixes, sondern dokumentierte, vertretbare Abweichungen.
+
+### Nachtrag 6.9.2026 — Stand gegen die Handschrift «Sammlung» (W2·24)
+
+Der Audit oben misst den Stand vom 25.6.2026 gegen das damalige Reglement; seine
+Zeilen bleiben als Beleg für ihren Stand stehen (§2b). Was die Runden R1–R12 des
+Schrittes `W2·24-DESIGN-IDENTITAET` gegen F0 verändert haben, in Kurzform — die
+Belege liegen je Runde unter `abnahme/design-identitaet/` (Protokolle, Screens
+hell+dunkel @1440/@390, Split-View), die Messreihen in `KONTRAST-R1.md`
+(inkl. Nachtrag D12) und `PERF-LESER.md`:
+
+| F0-Regel | Stand 6.9.2026 | Beleg |
+|---|---|---|
+| F0.1 Papier/Tinte | ✅ gebaut (`:root` + `html.dark`, ein Ort) | `check:farbwelt` grün, 146 WCAG-Pflichtpaare hell+dunkel |
+| F0.2 Registerfarben | ✅ gebaut, alle 16 Paare ≥ 4.5:1 | `KONTRAST-R1.md` D12.4 |
+| F0.3 Akzent = Tinte | 🟡 Werte gebaut, **Klassennamen `*-brass-*` stehen noch** (202 Konsumenten) | Fahrplan §6 (b); Umbenennung = eigener Sweep |
+| F0.4 Literata/Archivo | ✅ gebaut, self-hosted, opsz geladen | `check:perf-budget` grün, entry 59.7 KB / 60.0 KB |
+| F0.5 Radien 0 / ein Schatten | 🟡 Radien 0 gebaut; `rounded-full` (46 Fundstellen) bewusst offen | `--radius-*` = 0px in `index.css` |
+| F0.6 Linien statt Flächen | ✅ gebaut (`--rule`/`--rule-soft` + Konsumenten) | `check:linien-kanon` |
+| F0.7 Etiketten ohne Versalien | ✅ gebaut an der Klasse `.lc-overline` | `--tracking-overline: 0em` |
+| F0.8 Links unterstrichen | ✅ Regel steht einmal, Wächter rot beweisbar | `e2e/leser-links-p3.e2e.ts` |
+| F0.9 Menü-Anatomie | 🟠 offen: `.lc-schwebeflaeche` trägt noch `shadow-lg` | R11-Auflage R6/R7 |
+| A6 Sprach-Diät | 🟡 Runde R7 «Beschriftungen» geplant, nicht abgeschlossen | BEFUNDE §R7 |
+
+**Budget-Warnung (§15, wartet auf David):** die Erstlast steht bei **59.7 KB von
+60.0 KB** (99.5 %). Der nächste Kopf-Bau reisst das Budget; zu entscheiden ist
+Lazy-Laden gegen Budget-Hebung. Nicht selbst entschieden (§15).
 
 ---
 

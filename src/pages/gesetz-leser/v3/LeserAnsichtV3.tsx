@@ -1,10 +1,14 @@
 import { useId, useRef, useState } from 'react';
 import { useLeserSchriftskala as useSchriftskala } from '../leserSchrift';
 import { usePopoverAutoZu } from './usePopoverAutoZu';
-import { kopfGlypheKlassen, kopfGriffKlassen } from './kopfStufen';
-import { setzeOption, useLeserOptionen, type OptFeld } from '../leserOptionen';
-import { LeserScrim } from './LeserScrim';
+import { menueTastenFahrt } from './menueTasten';
+import { kopfGriffKlassen } from './kopfStufen';
+import { useLeserOptionen } from '../leserOptionen';
+import { LeserAenderungsWahl } from './LeserAenderungsWahl';
+import { LeserRubrikenWahl } from './LeserRubrikenWahl';
+import type { BestimmungsWort } from './erlassAnsicht';
 import { SchriftgroessenRegler } from '../../../components/ui/SchriftgroessenRegler';
+import { MenueRegler, MenueTitel } from '../../../components/ui/Menue';
 
 // ─── «Ansicht ▾» der V3-Kopfzeile (FAHRPLAN-LESER-V3 Kap. 4a/4f, H1) ─────────
 //
@@ -34,13 +38,12 @@ import { SchriftgroessenRegler } from '../../../components/ui/SchriftgroessenReg
 //    Ist-Hülle findet ihn also unverändert vor.
 //  · Ein Suchfeld — es lebt in der Seitenleiste (Kap. 4b).
 //
-// A11Y — ehrliche Disclosure, KEIN `role=menu` (Risiko R2, A4-Präzedenz): Der
-// Trigger trägt `aria-expanded` + `aria-controls`, das Panel ist eine
-// `role="group"` mit `aria-label`; die Schalter sind `role="switch"`. Ein
-// `role=menu` verspräche Pfeiltasten-Navigation, die es hier nicht gibt.
-// Fokus-Falle, Escape und Fokus-Rückgabe kommen aus dem geteilten
-// `useDialogFokus` (§5) — dieselbe Mechanik wie im Ist-Menü.
-
+// A11Y — bis 7.9.2026 ehrliche Disclosure, KEIN `role=menu` (R2/A4-Präzedenz):
+// «verspräche Pfeiltasten-Navigation, die es hier nicht gibt» — richtig für den
+// Stand bis `72b39d50c` (§2b). D4 (7.9.2026) löst das Versprechen ein statt das
+// Bild zurückzubauen: gemessen `[role=menu]` 0, seither Rolle SAMT ↑/↓/Home/End
+// (`./menueTasten`); Esc und Fokus-Rückgabe weiter aus `usePopoverAutoZu`.
+// Wächter `e2e/leser-w224-g.e2e.ts`; Protokoll `abnahme/…/R6G-LESER.md`.
 // ── Ä69 · DER `hinweis`-SLOT IST GESTRICHEN (17.8.2026) ──────────────────────
 // Er trug genau EINEN Satz, den Ä27-Hinweis am Vermerke-Schalter, und der ist mit
 // der Entkopplung (Ä68) entfallen — die Kreuz-Abhängigkeit, die er erklärte, gibt
@@ -50,36 +53,18 @@ import { SchriftgroessenRegler } from '../../../components/ui/SchriftgroessenReg
 // fallen `useId`, `aria-describedby` und der Geschwister-`<p>`; tritt je wieder
 // eine echte Abhängigkeit zwischen zwei Schaltern auf, steht die Anatomie samt
 // ihrer Accessible-Name-Herleitung in der Historie.
-function V3Switch({ an, label, titel, onKlick, ariaLabel }: {
-  an: boolean;
-  label: string;
-  titel: string;
-  onKlick: () => void;
-  ariaLabel?: string;
-}) {
-  return (
-    <button
-      type="button"
-      role="switch"
-      aria-checked={an}
-      aria-label={ariaLabel}
-      title={titel}
-      onClick={onKlick}
-      className={`flex w-full items-center justify-between gap-3 rounded-md px-2.5 py-1.5 text-left text-body-s transition-colors hover:bg-brass-100/40 ${
-        an ? 'text-ink-900' : 'text-ink-600'
-      }`}
-    >
-      <span>{label}</span>
-      {/* `ink-500` statt `ink-400`: der AUS-Zustand ist Text und muss AA tragen
-          (derselbe axe-Befund wie im Ist-Menü, 26.7.2026). */}
-      <span aria-hidden className={`shrink-0 inline-flex items-center gap-1 text-xs ${an ? 'text-brass-700' : 'text-ink-500'}`}>
-        {an ? '✓' : '○'} {an ? 'an' : 'aus'}
-      </span>
-    </button>
-  );
-}
+// ── D5-NACHZUG (6.9.2026) · DIE HÜLLE IST JETZT GETEILT ─────────────────────
+// Hier stand ein eigener `V3Switch` mit eigenem Klassen-String und einem
+// Zustands-DOPPEL rechts («✓ an» / «○ aus»). Beides ist in den geteilten
+// Baustein `components/ui/Menue` gewandert (dort die Herleitung samt Davids
+// Befund): Zustand als EIN Häkchen LINKS, Fokus als Strich statt Kasten, Zeilen
+// durch Haarlinien getrennt, keine Umbrüche.
+// D35-F2: der Alias `V3Switch` hatte danach noch genau einen Aufrufer
+// («Rechtsprechung im Kopf») und fällt mit ihm — die beiden verbliebenen
+// Gruppen bauen ihre Zeilen in eigenen Dateien (`./LeserAenderungsWahl`,
+// `./LeserRubrikenWahl`) und ziehen `MenueSchalter` dort direkt.
 
-export function LeserAnsichtV3({ kompakt, fussnotenAnzahl, hatAenderungsvermerke, onPanelOeffnen }: {
+export function LeserAnsichtV3({ kompakt, fussnotenAnzahl, hatAenderungsvermerke, aenderungsFussnoten, bestimmungsWort }: {
   /** `true` = Handy-Zuschnitt: der Öffner zeigt «···» statt «Ansicht ▾»
    *  (Fahrplan Kap. 4a). Reine Beschriftung — der Accessible-Name bleibt in
    *  beiden Zuschnitten «Ansicht», und die Elemente des Panels sind identisch. */
@@ -97,32 +82,31 @@ export function LeserAnsichtV3({ kompakt, fussnotenAnzahl, hatAenderungsvermerke
    */
   hatAenderungsvermerke: boolean;
   /**
-   * A2 (H3-Nachzug) · «Entscheide & Kontext …» — der Weg zum Panel, der bleibt,
-   * wenn der Zähler weg ist.
+   * D35-F3 (7.9.2026) · Zahl der als `kl:'A'` klassifizierten Fussnoten des
+   * Erlasses (`zaehleAenderungsvermerke`, `../berechnungen` — dieselbe Quelle,
+   * aus der `hatAenderungsvermerke` mitgespeist wird, §5). `null` = Struktur
+   * noch nicht geladen, bewusst UNTERSCHIEDEN von 0.
    *
-   * BEFUND, gemessen 17.8.2026: mit «Rechtsprechung: aus» verschwinden Zähler
-   * und Lasche (F8, richtig), und danach gab es auf `mini` KEINEN bedienbaren
-   * Weg mehr zum Panel — nur noch die Taste «r». Auf einem Telefon ohne
-   * Hardware-Tastatur war die Fläche damit unerreichbar. Davids F8-Regel
-   * verspricht ausdrücklich das Gegenteil: «Panel bleibt über ‹Ansicht ▾› und
-   * Tastatur erreichbar».
-   *
-   * ── Ä92 (H4-Nachzug 18.8.2026) · ABER NICHT NEBEN DEM ZÄHLER ──────────────
-   * Bis hierher stand der Eintrag UNABHÄNGIG von der Schalterstellung, also
-   * auch dann, wenn der Chip zwei Zentimeter weiter oben schon dasselbe tut.
-   * Gemessen 18.8.2026 @390 UND @1440: `[data-v3-panel-zaehler]` = 1 und
-   * `[data-v3-ansicht-panel-auf]` = 1 — zwei Öffner für eine Fläche, mit
-   * verschiedenem Wortlaut («⚖ 14 Entscheide» / «Entscheide & Kontext …»).
-   * Das ist derselbe §5-Befund, an dem schon die Randlasche gefallen ist
-   * (Ä53/Ä56), nur im Menü statt am Rand.
-   * DIE ORDNUNG, die daraus folgt («ein Öffner je Breite», Fahrplan Kap. 7):
-   * der Eintrag erscheint GENAU DANN, wenn kein Chip sichtbar ist — also genau
-   * in der Lage, für die Davids F8-Regel ihn verlangt. `undefined` heisst
-   * darum nicht «nicht gebaut», sondern «der Chip trägt den Weg schon»; die
-   * Entscheidung trifft der RAHMEN aus `panel.oeffnerSichtbar`, der einen
-   * Quelle dieser Frage (§5), nicht diese Datei.
+   * Gebraucht wird sie für genau eine Aussage: `0` heisst «dieser Erlass führt
+   * keine klassifizierte Änderungshistorie» — auf Kantonsrecht der Regelfall
+   * (`lib/normtext/browse.ts`) —, und dann dämpft die Stellung «Fassung» nichts.
+   * Das sagt das Menü hin (§8), statt es den Nutzer ausprobieren zu lassen.
    */
-  onPanelOeffnen?: () => void;
+  aenderungsFussnoten: number | null;
+  /** D35-F2 · «Artikel» oder «Paragraphen» für den Kopf der Rubriken-Gruppe.
+   *  Durchgereicht aus `./erlassAnsicht.bestimmungsWort` — die EINE Ableitung
+   *  (B8/C1); hier steht keine zweite. */
+  bestimmungsWort: BestimmungsWort;
+  /**
+   * ── D35-F2 (7.9.2026) · HIER STAND `onPanelOeffnen` ───────────────────────
+   * Die Prop reichte den Menü-Eintrag «Entscheide & Kontext …» herein (A2,
+   * H3-Nachzug 17.8.2026: mit «Rechtsprechung: aus» gab es auf `mini` KEINEN
+   * bedienbaren Weg mehr zum Panel; Ä92 18.8.2026: er erschien darum genau
+   * dann, wenn kein Chip sichtbar war). Beide Befunde bleiben richtig für ihren
+   * Stand (§0 Ziff. 2b) und sind mit D35-F2 gegenstandslos: der Kopf-Griff
+   * «Erlass ▾» steht auf jeder Breite, ein zweiter Öffner wäre die Dopplung,
+   * die Ä92 gerade beseitigt hat. Ersatzlos gestrichen, nicht bewacht.
+   */
 }) {
   const opt = useLeserOptionen();
   const schrift = useSchriftskala();
@@ -138,8 +122,6 @@ export function LeserAnsichtV3({ kompakt, fussnotenAnzahl, hatAenderungsvermerke
   // auseinander. Die Mechanik liegt darum in `./usePopoverAutoZu`; die Herleitung
   // beider Effekte (samt LM-009) steht dort im Kopf, nicht mehr hier.
   usePopoverAutoZu({ offen, schliesse: () => setOffen(false), wrapRef, panelRef, modus: 'popover' });
-
-  const schalte = (feld: OptFeld, an: boolean) => setzeOption(feld, an ? 'aus' : 'an');
 
   return (
     <div ref={wrapRef} className="relative inline-flex">
@@ -161,7 +143,7 @@ export function LeserAnsichtV3({ kompakt, fussnotenAnzahl, hatAenderungsvermerke
         // Abstufung folgt dem gemessenen KOPF-Zuschnitt (`kompakt`), nicht
         // einem Viewport-Breakpoint — `sm:` hätte im Pane das Fenster gemessen
         // (Kap. 10, dieselbe Falle wie beim früheren `lg:` unten).
-        className={`${kopfGriffKlassen(kompakt)} ${kompakt ? 'gap-0.5 px-1' : 'gap-1 px-1.5'}`}
+        className={`${kopfGriffKlassen(kompakt)} gap-1 px-1.5`}
         // D1: der Tooltip nennt nur, was das Panel wirklich trägt — sonst
         // versprach er auf vermerkfreien Erlassen einen Schalter, den es dort
         // nicht gibt (dieselbe §8-Sorge wie die Bedingung unten).
@@ -179,7 +161,14 @@ export function LeserAnsichtV3({ kompakt, fussnotenAnzahl, hatAenderungsvermerke
         // enthält — stünde hier «Grösse des Gesetzestexts» und drinnen «Nur
         // Gesetzestext», trüge dieselbe Sache im selben Menü zwei Namen, genau
         // der Ä114-Fehler eine Ebene tiefer.
-        title={`Ansicht: Fussnoten${hatAenderungsvermerke ? ' · Fassung' : ''} · Rechtsprechung · Grösse nur des Gesetzestexts`}
+        // D35-F3: der Öffner kündigt an, was drinsteht — und drin steht seit dem
+        // Entscheid EINE Wahl, keine zwei Schalter. Trägt der Erlass keine
+        // Vermerke, wird sie gar nicht angeboten, also nennt der Tooltip sie
+        // dann auch nicht (dieselbe D1-Ehrlichkeit wie unten).
+        // D35-F2: «Rechtsprechung» ist raus (der Schalter ist gefallen), die
+        // Rubriken-Gruppe ist drin — der Tooltip zählt weiterhin genau die Gruppen auf,
+        // die das Menü wirklich trägt (§8).
+        title={`Ansicht: ${hatAenderungsvermerke ? 'Änderungen als Fassung, Fussnoten oder aus · ' : ''}Rubriken am Ende · Grösse nur des Gesetzestexts`}
       >
         {/* ── Ä91 (H4-Nachzug 18.8.2026) · ZWEI GESICHTER, NICHT DREI ────────
             Gemessen 18.8.2026 trug dieser Öffner DREI verschiedene Gestalten:
@@ -192,137 +181,119 @@ export function LeserAnsichtV3({ kompakt, fussnotenAnzahl, hatAenderungsvermerke
             JETZT: das Wort hängt am Zuschnitt. Wo Platz ist («voll»/«kompakt»)
             steht «◧ Ansicht ▾», auf dem Handy «···» — kein drittes Gesicht.
             Der Accessible-Name bleibt in beiden Fällen «Ansicht». */}
+        {/* G14 (7.9.2026): @390 stand hier «···», die dritte nackte Glyphe der
+            Zeile. «Ansicht» steht jetzt auf JEDER Breite (Ä114), die zwei
+            Gesichter von Ä91 bleiben zwei: mit ◧ und ohne; ▾ bleibt, es zeigt
+            kein Ding. Messreihe `./LeserPanelOeffner`. */}
         {kompakt
-          ? <span aria-hidden className={kopfGlypheKlassen(true)}>···</span>
+          ? <><span className="whitespace-nowrap">Ansicht</span><span aria-hidden className={`transition-transform ${offen ? 'rotate-180' : ''}`}>▾</span></>
           : <><span aria-hidden>◧</span><span>Ansicht</span><span aria-hidden className={`transition-transform ${offen ? 'rotate-180' : ''}`}>▾</span></>}
       </button>
 
-      {/* B7-N1 · LM-015: die abdunkelnde Fläche hinter diesem Menü. Regel,
-          Farbwahl, Stapelordnung und a11y stehen im Kopf von `./LeserScrim`
-          — kurz: der Scrim folgt der FOKUS-FALLE (Modus `popover` fängt sie),
-          nicht der Fläche; Ä52 bleibt davon unberührt. */}
-      {offen && <LeserScrim onSchliessen={() => setOffen(false)} />}
+      {/* ── D41 (David 7.9.2026) · HIER STAND DIE ABDUNKELUNG DES MENÜS ──────
+          AUFGEHOBEN, nicht verschoben: B7-N1/LM-015 hat dem «Ansicht ▾»-Menü am
+          8.8.2026 einen Vollflächen-Scrim gegeben (`./LeserScrim`, mit der Datei
+          entfallen). Der Befund von damals — «kein Scrim im DOM», 240 × 199 px
+          auf deckendem `paper-raised` — bleibt als Messung gültig; falsch war die
+          daraus gezogene FOLGERUNG.
+          Gemessen 7.9.2026 @1440 (Melder David, «wird uneinheitlich abgedunkelt»):
+          über dem Scrim (z 16) liegen VIER Balken mit DREI Breiten — Topbar
+          (z 30, 1440 px), Reiterleiste (z 20, 1440), `InhaltsKopf` (z 19, 1440)
+          und der Leser-Kopf `[data-v3-kopf]` (z 17, nur **1080** px). Δ Leuchtdichte
+          im Kopf-Band y 120–135: x 0–160 −74.9 · x 200–1160 **0.0** · x 1280–1400
+          −74.9. Ergebnis ist ein 1080 × 57 px helles Fenster mit zwei harten
+          Kanten, das beim Scrollen mitwandert. Ein vollflächiger Scrim unter einem
+          NICHT vollflächigen Kopf kann gar nicht einheitlich aussehen — der Mangel
+          war die Bauart, keine Regression.
+          Ein Dropdown auf deckendem Grund braucht keine Abdunklung (Browser-Norm);
+          die Wege hinaus trägt `usePopoverAutoZu` im Modus `popover` selbst —
+          gemessen bei entferntem Scrim-Knoten: Aussenklick 1 → 0, Escape 1 → 0.
+          Mit der Fläche entfällt allein die Zusage «Klick auf die Abdunklung
+          schliesst». Ä52 (Beiwerk-Panel ohne Scrim) bleibt unberührt und wird in
+          `e2e/leser-v3-scrim-b7n1.e2e.ts` jetzt AUCH bei offenem Menü gemessen. */}
 
       {offen && (
         <div
           ref={panelRef}
-          id={panelId}
           tabIndex={-1}
-          role="group"
-          aria-label="Ansicht"
+          onKeyDown={menueTastenFahrt}  /* D4, s. `./menueTasten` */
           data-v3-ansicht-panel
-          className="lc-schwebeflaeche absolute right-0 top-full z-overlay mt-1.5 flex w-[15rem] max-w-[calc(100vw-2rem)] flex-col gap-0.5 p-1.5"
+          /* D5: 15 rem war die Breite, in der «Rechtsprechung im Kopf» und «Nur
+             Gesetzestext» umbrachen (Davids Befund «letzter Eintrag zweizeilig
+             umgebrochen»). 17 rem trägt beide einzeilig; die Zeilen kappen
+             notfalls mit Auslassung (`.lc-menu-zeile`), sie brechen nicht.
+             `gap`/`p` fallen weg: die Trennung tragen jetzt die Haarlinien der
+             Zeilen, nicht Zwischenräume. */
+          className="lc-schwebeflaeche absolute right-0 top-full z-overlay mt-1.5 flex w-[19rem] max-w-[calc(100vw-2rem)] flex-col py-1"
         >
           {/* Ä114: dasselbe Wort wie am Öffner und im `aria-label` — der
               Glossar-Eintrag «Menü der Darstellungsschalter → Ansicht». */}
-          <p className="lc-overline px-2.5 pb-1 pt-0.5">Ansicht</p>
-          <V3Switch
-            an={opt.fussnoten === 'an'}
-            label="Fussnoten"
-            // ── LM-025 (B8, 31.8.2026) · DIE ZAHL SAGT JETZT, WAS SIE ZÄHLT ──
-            // Der Befund («neben ‹Fussnoten› steht eine unerklärte Zahl (932)»)
-            // ist SICHTBAR überholt — im V3-Menü steht keine Ziffer mehr, die
-            // A26-Zahl lebt nur noch im Accessible Name. Genau dort war sie
-            // aber weiterhin unerklärt: ein Screenreader las «Fussnoten 932»,
-            // ohne dass irgendetwas sagte, worauf sich die 932 bezieht — für
-            // diese Nutzer war der Befund unverändert reproduzierbar.
-            // Sie ist keine Zahl am Artikel, sondern die Summe über den GANZEN
-            // Erlass (`leserV3Modell.ts` → `fussnotenAnzahl`, Summe der
-            // `fussnoten` aller Struktur-Einträge; am OR gegen das gebaute
-            // Artefakt nachgezählt: 1'686 Artikel, 932 Fussnoten). Der Zusatz
-            // «im Erlass» ist damit keine Schmückung, sondern die
-            // Bezugsgrösse — ohne sie liest sich dieselbe Zahl als «932 hier»
-            // (§8). Entfernen wäre der andere Weg gewesen und kollidiert mit
-            // Davids Entscheid A26 (11.7.2026, Zähler N am Fussnoten-Schalter);
-            // der bleibt unangetastet, er bekommt nur seine Einheit dazu.
-            ariaLabel={fussnotenAnzahl != null && fussnotenAnzahl > 0 ? `Fussnoten (${fussnotenAnzahl} im Erlass)` : undefined}
-            // Ä68: dieser Schalter trägt Marker UND Apparat, und zwar ALLE
-            // Klassen — auch `kl:'A'`. Er ist damit der einzige, der amtlichen
-            // Fussnotentext ausblendet.
-            // LM-025 · dieselbe Erklärung auch für Sehende: der Accessible Name
-            // trägt die Zahl, der Tooltip trägt ihre Bedeutung — ein Wortlaut,
-            // zwei Kanäle (§5). Ohne Zahl (Struktur noch nicht geladen) bleibt
-            // der Satz exakt der bisherige.
-            titel={`Amtlicher Fussnoten-Apparat am Artikelfuss ein- oder ausblenden — Marker und Apparat, alle Fussnoten${
-              fussnotenAnzahl != null && fussnotenAnzahl > 0 ? ` (${fussnotenAnzahl} in diesem Erlass)` : ''}`}
-            onKlick={() => schalte('fussnoten', opt.fussnoten === 'an')}
-          />
-          {/* Ä68 (Entscheid David 17.8.2026) · ENTKOPPELT. Der Schalter blendet
-              AUSSCHLIESSLICH die abgeleitete Fassungs-Zeile aus
-              (`[data-hist-slot]`) — nie eine Fussnote. Bis 17.8. nahm er `kl:'A'`
-              mit, und weil das beim Bundesrecht die Regel ist (StPO 187/285,
-              ZGB 719/809), verschwand mit ihm fast der ganze Apparat: Davids
-              Befund «wenn änderungsvermerke abgewählt wird dann verschwinden auch
-              fussnoten». Herleitung und Messreihe: index.css, Regel-Block Ä68. */}
-          {/* D1: … und nur, wenn dieser Erlass Vermerke TRÄGT. Auf BS-640.100 und
-              ZH-211.11 blieb dem Schalter sonst eine Layout-Raffung von 40 px je
-              Artikel — die Beschriftung versprach mehr, als sie hielt (§8). Die
-              Stellung im geteilten Store bleibt unberührt: nicht angeboten heisst
-              nicht zurückgesetzt (`leser-v3-umschalten` (a3)). */}
+          <MenueTitel>Ansicht</MenueTitel>
+          {/* D4 · DIE ROLLE SITZT INNEN: auf der ganzen Fläche meldete axe
+              critical `aria-required-children` («span[aria-live]» = die
+              Prozent-Anzeige des Reglers). PREIS (§8): «Entscheide & Kontext …»
+              steht seither ÜBER dem Steller. `aria-controls` des Öffners zeigt
+              auf DIESEN Block — er trägt Rolle und Namen (A4-Sonde). */}
+          {/* D35-F4: `lc-menu-gruppe` statt `flex flex-col` — die Klasse IST
+              das Rezept (Trennlinie zur nächsten Gruppe, Spaltenfluss); die
+              Rolle und der Name bleiben Wort für Wort, wo sie standen. */}
+          <div id={panelId} role="menu" aria-label="Ansicht" data-v3-ansicht-menue className="lc-menu-gruppe">
+          {/* ── D35-F3 (Entscheid David 7.9.2026) · EINE WAHL STATT ZWEIER SCHALTER
+              Hier standen «Fussnoten» (amtlicher Apparat samt Markern, alle
+              Klassen — Ä68) und «Fassung» (nur der abgeleitete Slot «Gilt seit …»
+              — Ä116) als zwei unabhängige `menuitemcheckbox`. Beide Historien
+              bleiben, wo sie stehen (`src/index.css` am Regelblock, §0 Ziff. 2b);
+              gemessen waren die vier Kombinationen alle erreichbar, und genau
+              das war Davids Befund: «es soll entweder fassung oder fussnoten
+              angezeigt werden. also entweder fassung, fussnoten oder aus.»
+              Die Radiogruppe samt Verlustfreiheits-Herleitung, A26-Zähler und
+              §8-Hinweis für unklassifizierte Erlasse steht in
+              `./LeserAenderungsWahl` (eigene Datei: diese hier stand bei 418 der
+              420 zulässigen Zeilen, Fundament-Sonde §6.6).
+              D1 UNVERÄNDERT: angeboten wird die Wahl nur, wenn der Erlass
+              Änderungsvermerke TRÄGT. Sonst gäbe es nichts zu wählen — die
+              Fassungs-Zeile fehlt, und `kl:'A'` gibt es nicht; drei Stellungen
+              mit identischer Wirkung wären der §8-Fall, den D1 gerade behebt.
+              Der Wert im geteilten Store bleibt dabei unberührt: nicht angeboten
+              heisst nicht zurückgesetzt (`leser-v3-umschalten` (a3)). */}
           {hatAenderungsvermerke && (
-          <V3Switch
-            an={opt.histansicht === 'an'}
-            label="Fassung"
-            // Ä68: derselbe Wortlaut wie in V1 (§5) — und er beschreibt jetzt die
-            // ganze Wirkung, nicht mehr einen Teil davon.
-            // ── Ä116 (18.8.2026) · SCHALTER UND ELEMENT HEISSEN GLEICH ────
-            // Der Schalter hiess «Änderungsvermerke», das Element, das er
-            // schaltet, trägt die Overline «FASSUNG · Gilt seit …». Wer den
-            // Schalter umlegte, musste erraten, dass die Zeile mit dem anderen
-            // Namen gemeint war. Ä68 hat die WIRKUNG schon geklärt (nur die
-            // Fassungs-Zeile, nie eine Fussnote) — jetzt folgt ihr der Name.
-            // Glossar: «Fassungs-Zeile → Fassung» überall.
-            titel="Fassungs-Zeile am Artikelfuss ein- oder ausblenden («Gilt seit …» samt Zeitleiste) — der amtliche Fussnoten-Apparat bleibt in beiden Stellungen sichtbar"
-            // Ä69: die Ä27-Hinweiszeile ist gestrichen — die Kreuz-Abhängigkeit,
-            // die sie erklärte, gibt es nicht mehr (`../leserOptionen`).
-            onKlick={() => schalte('histansicht', opt.histansicht === 'an')}
-          />
+            <LeserAenderungsWahl wahl={opt.vermerke} fussnotenAnzahl={fussnotenAnzahl}
+              ohneKlassifikation={aenderungsFussnoten === 0} />
           )}
-          {/* ── B2 (Klick-Test 18.8.2026) · DIE BESCHRIFTUNG WAR EINE ZUSAGE,
-                 DIE V3 NICHT EINLÖST ────────────────────────────────────────
-              Hier stand «Rechtsprechung im Text», Tooltip «Hinweise auf
-              Entscheide im Lesetext ein- oder ausblenden». Gemessen am gebauten
-              Stand (StPO Art. 429, @1440 und @390): Bezugs-/Leitfall-Zeilen im
-              V3-Lesetext **0** — vor UND nach dem Umlegen. Der Schalter kann
-              dort nichts ausblenden, weil V3 gar nichts einblendet:
-              `LeserLesespalte` reicht dem Kern weder `bezuege` noch
-              `leitfaelle` weiter (Pos. 12, H3 — die Entscheide stehen im
-              Panel). Das CSS `html[data-leitfaelle="aus"] [data-leitfall-zeile]`
-              greift weiter, es findet in V3 nur keine Zeile.
-              WAS ER WIRKLICH TUT — und was jetzt dransteht: er nimmt den
-              ZUGANG aus der Kopfzeile. Gemessen wechselt `[data-v3-panel-
-              zaehler]` beim Umlegen von 1 auf 0; das ist Davids F8-Regel vom
-              16.8.2026 («aus ⇒ Zähler UND Lasche weg»), und der Zugang bleibt
-              über den Menü-Eintrag unten und die Taste «r». Eine Beschriftung,
-              die etwas anderes verspricht als sie tut, ist der §8-Fall, den
-              dieser Nachzug an mehreren Ecken einsammelt.
-              (Im geteilten Store heisst das Feld weiter `leitfaelle` — bis H5
-              wirkte es unverändert auf den Lesetext der Ist-Hülle, mit ihr
-              eigenem, dort zutreffenden Wortlaut in `LeserRechtsprechungMenu`;
-              beides ist mit der Ist-Hülle 21.8.2026 gelöscht. §5 blieb
-              gewahrt, solange es zwei Oberflächen gab: EIN Feld, jede
-              beschriftet nach ihrer eigenen Wirkung.) */}
-          <V3Switch
-            an={opt.leitfaelle === 'an'}
-            // ── Ä115 (18.8.2026) · DREI SCHALTER, EINE WORTART ────────────
-            // «Rechtsprechung anzeigen» las sich mit dem Zustandszeichen
-            // daneben als Satz («Rechtsprechung anzeigen ✓ an»), während die
-            // beiden Nachbarn Substantive sind («Fussnoten», «Fassung»). Der
-            // Schalter benennt jetzt die SACHE, die er ein- und ausschaltet —
-            // seinen Zustand sagt das Zeichen rechts, nicht das Verb.
-            // Glossar: die Fläche heisst «Rechtsprechung» (Chip konstant).
-            // ── Ä128 (Ästhetik-Nachzug 18.8.2026) · DER EINZIGE ZWEIZEILER ──
-            // GEMESSEN im aufgezogenen Ansicht-Menü: «Rechtsprechung in der
-            // Kopfzeile» war die einzige Beschriftung, die umbrach — die
-            // Schalterliste bekam dadurch eine unruhige Kante, und der Umbruch
-            // fiel ausgerechnet auf den Schalter, der ohnehin am meisten
-            // erklärt. «Im Kopf» sagt dasselbe: der Erlass-KOPF ist im Leser
-            // eine benannte Zone, keine Umschreibung. Die Wirkung bleibt Wort
-            // für Wort im `titel` stehen, wo Platz dafür ist.
-            label="Rechtsprechung im Kopf"
-            titel="Zähler und Zugang zur Rechtsprechung im Erlass-Kopf ein- oder ausblenden — das Panel bleibt über «Ansicht ▾» und die Taste «r» erreichbar"
-            onKlick={() => schalte('leitfaelle', opt.leitfaelle === 'an')}
-          />
+          {/* ── D35-F2 (Entscheid David 7.9.2026) · HIER STAND DIE GRUPPE
+                 «RECHTSPRECHUNG» ─────────────────────────────────────────────
+              Sie trug zwei Zeilen, und beide sind ersatzlos gefallen:
+
+              (1) Der Schalter «Rechtsprechung im Kopf» (Ä115/Ä128, Wirkung
+                  gemessen 18.8.2026: `[data-v3-panel-zaehler]` 1 → 0). Er nahm
+                  den Kopf-ZÄHLER weg. Den Zähler gibt es seit Variante A nicht
+                  mehr — der Kopf-Griff heisst «Erlass ▾» und trägt keine
+                  Artikel-Zahl (`./LeserPanelOeffner`). Ein Schalter, der etwas
+                  verbirgt, das niemand mehr sieht, ist ein Wächter ohne
+                  Gegenstand (§17-Gegengewicht: gestrichen statt bewacht).
+                  Und er hatte einen zweiten, gemessenen Mangel: mit «aus»
+                  versprach die Zeile am Artikel weiter «11 Entscheide» und
+                  zeigte beim Aufklappen nichts (M-6 der D35-Untersuchung,
+                  7.9.2026) — mit dem Wegfall ist auch dieser Widerspruch weg.
+
+              (2) Der Eintrag «Entscheide & Kontext …» (A2/Ä92). Er war der Weg
+                  zum Blatt für GENAU DIE LAGE, in der (1) den Griff wegnahm
+                  («ein Öffner je Breite», Fahrplan Kap. 7). Diese Lage gibt es
+                  nicht mehr, also gibt es den zweiten Öffner nicht mehr. Der
+                  Griff steht auf jeder Breite; die Taste «r» bleibt unberührt.
+
+              Beide Herleitungen samt Messreihen bleiben in der Historie dieser
+              Datei und in `./panelModell` stehen (§0 Ziff. 2b). An ihre Stelle
+              tritt keine Rechtsprechungs-Gruppe, sondern die Rubriken-Wahl —
+              eine andere Frage («was steht am ARTIKEL?»), darum ein eigener
+              Baustein mit eigenem Gruppenkopf. */}
+          {/* D35-F2 · Davids Nachtrag «man soll mittels ansicht alles einzelne
+              abwählen können». Die Wahl selbst samt ihrer §15-Herleitung
+              (Attribut + CSS statt 1686 Abonnenten) steht in
+              `./LeserRubrikenWahl` — diese Datei stand vor dem Schritt bei 399
+              der 420 zulässigen Zeilen (Fundament-Sonde §6.6). */}
+          <LeserRubrikenWahl gewaehlt={opt.fussRubriken} bestimmungsWort={bestimmungsWort} />
+          </div>
 
           {/* ── Schriftgrösse ────────────────────────────────────────────────
               H2 · DEKLARIERTE UMKEHR DER H1-ABWEICHUNG A-1 (David 16.8.2026).
@@ -373,35 +344,24 @@ export function LeserAnsichtV3({ kompakt, fussnotenAnzahl, hatAenderungsvermerke
               `components/layout/Topbar.tsx`, «Nur Gesetzestext» hier. Das «Nur»
               ist kein Füllwort — es ist die Abgrenzung, die den Unterschied ohne
               Screenreader lesbar macht (§8). */}
-          <div role="group" aria-label="Grösse nur des Gesetzestexts" className="mt-1 flex items-center justify-between gap-3 border-t border-line px-2.5 pb-0.5 pt-2">
-            <span className="text-body-s text-ink-700">Nur Gesetzestext</span>
+          {/* D5: eigene Zeile mit Label statt neben eine umbrechende
+              Beschriftung gequetscht — die Anatomie steht im geteilten
+              `MenueRegler`, der Wortlaut bleibt (Entscheid David 5B: «Nur»
+              ist das tragende Wort). */}
+          <MenueRegler label="Nur Gesetzestext" ariaLabel="Grösse nur des Gesetzestexts">
             <SchriftgroessenRegler
               schrift={schrift}
               kleinerLabel="Gesetzestext verkleinern"
               kleinerTitle="Gesetzestext verkleinern — die Anwendung bleibt gleich gross"
+              /* D4: KEIN `role="menuitem"` — der Regler liegt ausserhalb des
+                 Menüs (oben), ein Eintrag ohne Menü wäre `aria-required-parent`. */
               kleinerAttrs={{ 'data-v3-schrift': 'kleiner' }}
               groesserLabel="Gesetzestext vergrössern"
               groesserTitle="Gesetzestext vergrössern — die Anwendung bleibt gleich gross"
               groesserAttrs={{ 'data-v3-schrift': 'groesser' }}
             />
-          </div>
+          </MenueRegler>
 
-          {/* ── A2 · Der Weg zum Panel, der keine Tastatur braucht ────────────
-              KEIN `role="menuitem"`: das Panel ist eine ehrliche Disclosure
-              (R2/A4-Präzedenz), und ein einzelnes Menü-Element in einer
-              `role="group"` verspräche eine Pfeiltasten-Bedienung, die es hier
-              nicht gibt. Ein gewöhnlicher Knopf mit sprechendem Namen.
-              Er SCHLIESST das Menü mit — sonst stünde das Dropdown über der
-              Fläche, die es gerade geöffnet hat (dieselbe Falle wie Ä19). */}
-          {onPanelOeffnen && (
-            <button type="button" data-v3-ansicht-panel-auf data-v3-panel-oeffner
-              onClick={() => { setOffen(false); onPanelOeffnen(); }}
-              title="Gerichtsentscheide, Änderungen und Materialien zur gelesenen Bestimmung"
-              className="mt-1 flex w-full items-center justify-between gap-3 rounded-md border-t border-line px-2.5 pb-0.5 pt-2 text-left text-body-s text-ink-700 transition-colors hover:bg-brass-100/40 hover:text-brass-700">
-              <span>Entscheide &amp; Kontext …</span>
-              <span aria-hidden className="shrink-0 text-brass-700">⚖</span>
-            </button>
-          )}
         </div>
       )}
     </div>

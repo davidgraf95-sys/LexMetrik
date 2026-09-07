@@ -93,7 +93,18 @@ function helligkeit(farbe: string): number {
 // gegen den Ä7-Entscheid, gemessen 13 px / 600 / ink-800.
 const BLATT_PX = 13          // Token `leser-rand` 0.8125 rem (F3 = V2)
 const BLATT_GEWICHT = 600    // semibold
-const BLATT_FARBE = 'rgb(43, 41, 36)' // ink-800
+// ── §6.3-DEKLARATION (W2·24-R6b, 6.9.2026) · DIE ZAHL WAR STEHENGEBLIEBEN ────
+// `rgb(43, 41, 36)` (#2B2924) war der Wert von `--ink-800` VOR der Farbrunde
+// D12 («Lesekomfort — warmes Papier, gedämpfte Tinte», f1cef1042). Seither steht
+// `--ink-800` in `src/index.css` auf **#32302C = rgb(50, 48, 44)**; das Literal
+// hier ist nie mitgezogen worden. Aufgefallen ist es erst jetzt, weil dieselbe
+// Zusicherung seit R4/R6 gar nicht mehr erreicht wurde: die Gewichts-Prüfung
+// darüber war rot (der Randtitel lief im Satzspiegel auf `font-weight:500`), und
+// Vitest bricht am ersten `expect`. Der Fall war damit auf dem Basis-Commit
+// 84eea666e byte-gleich rot (Nullprobe 6.9.2026, gemessen «Gewicht 500»).
+// Die ABSICHT ist unverändert die des Ä7-Entscheids — das Blatt trägt ink-800 —,
+// nur steht die Zahl jetzt wieder für das, was sie behauptet.
+const BLATT_FARBE = 'rgb(50, 48, 44)' // --ink-800 = #32302C (src/index.css)
 
 test('Blatt (Sachüberschrift) trägt die Ä7-Stufe: 13 px semibold ink-800', async ({ page }) => {
   const stapel = await margStapel(page)
@@ -142,9 +153,17 @@ test('A30: Marginalien-Ordnungssuffix (bis/ter) wird hochgestellt', async ({ pag
 
 test('A31: Fussnoten-Marker klebt ohne Abstand an der Artikelnummer', async ({ page }) => {
   await page.goto('/gesetze/bund/ZGB#art-276')
-  await expect(page.locator('a[href="#art-276"]').first()).toBeVisible()
+  // ── §6.3-DEKLARATION (W2·24, 6.9.2026) · DER ANKER IM ARTIKEL, NICHT IM BAUM
+  // `a[href="#art-276"]` traf seit P8 («Gliederungszeilen sind Links», neue
+  // Spec `leser-gliederung-p8`) zuerst die GLIEDERUNGS-Zeile in der
+  // Seitenspalte: sie trägt seither dieselbe Adresse. Deren Elternteil ist ein
+  // `div.flex` ohne `nowrap` und ohne Fussnoten-Marker — der Fall prüfte also
+  // ein anderes Element als das, über das er spricht (gemessen: wrap = DIV
+  // `flex items-start`, white-space `normal`). Der Prüfpunkt ist unverändert
+  // die Artikelnummer IM Artikel; nur der Selektor sagt das jetzt auch.
+  await expect(page.locator('#art-276 a[href="#art-276"]').first()).toBeVisible()
   const geklebt = await page.evaluate(() => {
-    const a = document.querySelector('a[href="#art-276"]')
+    const a = document.querySelector('#art-276 a[href="#art-276"]')
     const wrap = a?.parentElement
     if (!wrap || getComputedStyle(wrap).whiteSpace !== 'nowrap') return false
     // Der Artikel-Fussnoten-Marker (353) liegt IM selben nowrap-Wrapper wie das

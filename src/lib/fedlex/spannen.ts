@@ -21,7 +21,9 @@ import {
   erkenneTitelGesetz,
   fedlexLinkFuerArtikel,
   GENITIV_NAMEN_ESC,
+  GENITIV_NAMEN_HART,
   TITEL_FRAGMENTE_ESC,
+  TITEL_FRAGMENTE_HART,
 } from './erkennung';
 import {
   datumPasst, historischeFassung, KUERZEL_NUR_BUND, zusatzwortSperre, type FremdEbene,
@@ -266,14 +268,45 @@ const Z1_KONTEXT = '(?:'
 // 1 = Kopfwort · 2 = Titel-Fragment · 3 = Kurztitel-Genitiv · 4 = blosses Kürzel.
 // Der Abschluss-Lookahead trennt Kürzel und Namen sauber vom Wortinneren
 // («BEGleitschreiben», «OR-konform») — Identität mit Wortgrenze (§7/§0.2).
-const Z1_ERLASS = new RegExp(
+const Z1_BAU = (titel: readonly string[], genitiv: readonly string[]): RegExp => new RegExp(
   '(?:'
-    + '\\b(Bundesgesetzes)(?:\\s+vom\\s+' + N2_DATUM + ')?\\s+(' + TITEL_FRAGMENTE_ESC.join('|') + ')'
-    + '|\\b(' + GENITIV_NAMEN_ESC.join('|') + ')'
+    + '\\b(Bundesgesetzes)(?:\\s+vom\\s+' + N2_DATUM + ')?\\s+(' + titel.join('|') + ')'
+    + '|\\b(' + genitiv.join('|') + ')'
     + '|' + Z1_KONTEXT + '\\s+(' + NORM_NAMEN_ESC.join('|') + ')'
   + ')(?![-0-9A-Za-zÀ-ÿ­])',
   'g',
 );
+/** @internal Nur für den Gleichheits-Nachweis exportiert (`spannen-weichtrenn.test.ts`). */
+export const Z1_ERLASS = Z1_BAU(TITEL_FRAGMENTE_ESC, GENITIV_NAMEN_ESC);
+// ═══ SCHNELLPFAD (W2·24-PERF, 6.9.2026) — GLEICHES ERGEBNIS, EIN FÜNFTEL KOSTEN
+//
+// Z1_ERLASS toleriert zwischen JE ZWEI Buchstaben eines Namens einen WEICHEN
+// TRENNSTRICH (U+00AD, `escSoft` in erkennung.ts) — Fedlex-HTML trägt ihn in
+// langen Wörtern. Der Preis dafür ist die Alternation: 86 Genitiv-Namen und 113
+// Titel-Fragmente werden mit je einem optionalen Zeichen zwischen allen
+// Buchstaben zu einem Muster von 20 992 Zeichen, das `matchAll` an JEDER
+// Position eines Fliesstexts durchprobiert.
+//
+// GEMESSEN (OR-Snapshot, 18 957 Texte / 1 077 491 Zeichen, node, ungedrosselt):
+//   Z1 mit Weichtrenn-Toleranz  1503 ms   ·   ohne  310 ms   (Faktor 4.8)
+//   `erlassVerweiseImText` trug damit 988 ms der 1169 ms von
+//   `normVerweiseImText` — unter CPU×4 der Löwenanteil des Long Tasks, der die
+//   Leserseite blockiert (Messreihe: abnahme/design-identitaet/PERF-LESER.md).
+//
+// WARUM DAS KEINE REGEL ÄNDERT (§1/§6, kein Logikverlust): `X­?Y` und `XY`
+// matchen auf einem Text OHNE U+00AD zeichengenau dieselben Stellen — ein
+// optionales Zeichen, das im Eingabetext nirgends vorkommt, kann nur die leere
+// Alternative nehmen. Die Fallunterscheidung ist darum keine Heuristik, sondern
+// eine Identität; das harte Muster läuft NUR auf Texten ohne Weichtrennstrich,
+// jeder Text MIT Weichtrennstrich geht unverändert durch Z1_ERLASS.
+// Nachgewiesen wird die Identität nicht bloss behauptet: `spannen-weichtrenn.
+// test.ts` fährt beide Muster über einen Bund- und einen Kanton-Snapshot und
+// vergleicht Offsets, Treffertext und Gruppen; die volle Korpus-Runde (1 566
+// Erlasse, 0 Divergenzen — und 0 Texte MIT Weichtrennstrich) steht in
+// PERF-LESER.md. Die Rot-Probe dort zeigt, dass die Fallunterscheidung trägt.
+/** @internal Nur für den Gleichheits-Nachweis exportiert (s. o.). */
+export const Z1_ERLASS_HART = Z1_BAU(TITEL_FRAGMENTE_HART, GENITIV_NAMEN_HART);
+const WEICHTRENN = '­';
 // Spiegelbild der FREMD_FORM_B-Grammatik, rückwärts gelesen: «Art./Artikel/§ N
 // [, M und K] [Passus W …] [f./ff.] [des|der|…]» unmittelbar vor der Nennung.
 const Z1_VOR_ARTIKEL = new RegExp(
@@ -345,7 +378,8 @@ const Z1_IDENT = (s: string): string => s.toUpperCase().replace(/[^A-ZÄÖÜ0-9]
 export function erlassVerweiseImText(text: string, eigenesKuerzel?: string): NormVerweisSpan[] {
   const spans: NormVerweisSpan[] = [];
   let pluralRegionen: ReturnType<typeof artikelnPluralVerweise> | null = null;
-  for (const m of text.matchAll(Z1_ERLASS)) {
+  // Schnellpfad: Text ohne Weichtrennstrich → das harte Muster (identisch, s. o.).
+  for (const m of text.matchAll(text.includes(WEICHTRENN) ? Z1_ERLASS : Z1_ERLASS_HART)) {
     const end = m.index + m[0].length;
     // Form (c): verlinkt wird NUR das Kürzel, nicht das Kontext-Wort davor.
     const start = m[4] ? end - m[4].length : m.index;

@@ -23,11 +23,14 @@
 //   + REFERENZWERTE (C-1/C-2/C-3 Farb-Wörterbuch §4b-B + --paper-Fixpunkte):
 //       Regressions-Referenz — Drift über Toleranz = FAIL (Zahlen dürfen nie
 //       stillschweigend falsch werden).
+//   (e) KEINE HEX-FARBE IN EINER DATA-URI in src/index.css (R3-F2, 6.9.2026) —
+//       Farbwerte in URLs erben keine Token und überleben jede Rekalibrierung.
 //   + BEKANNTE RISSE (D-1-Input): heute unter der Schwelle liegende Paare —
 //       WARNUNG + Fail NUR bei Verschlechterung (Baseline-Guard), damit das Tor
 //       auf dem IST-Stand grün ist, ohne die Risse zu verstecken.
 //
 // Lauf:  npm run check:farbwelt   (Teil von check:seriell → check-parallel → gate).
+import { readFileSync } from 'node:fs';
 import { calcAPCA } from 'apca-w3';
 // Farb-Maschine (Token-Auflösung, Kontrast, OKLCh) und Regelkorpus (WAS
 // geprüft wird) stehen in eigenen Modulen; hier lebt nur das Tor — Ausführung,
@@ -85,6 +88,32 @@ for (const r of RISSE) {
   warnungen.push(`[${marke}] ${r.fg}/${r.bg} ${r.mode}: ${ist.toFixed(2)}:1 (Ziel ${r.schwelle}:1) — ${r.tag}`);
   if (ist < r.ist - BASELINE_TOL)
     fehler.push(`Verschlechterung ${r.fg}/${r.bg} ${r.mode}: ${ist.toFixed(2)}:1 < Baseline ${r.ist.toFixed(2)}:1 — bekannter Riss darf nicht tiefer sinken (${r.tag}).`);
+}
+
+// ── (e) KEINE HEX-FARBE IN EINER DATA-URI (R3-F2, 6.9.2026) ─────────────────
+//
+// ANLASS, gemessen: Nach dem Token-Tausch R1 (Messing → Tinte/Registerfarben)
+// blieb GENAU EINE Stelle in `src/index.css` gold — der Select-Chevron, zweimal
+// als `data:image/svg+xml` mit `stroke='%23826225'` (hell) bzw. `%23D8BD78`
+// (dunkel). Kein Tor konnte das sehen: dieses Script prüft TOKEN-Werte, und ein
+// Farbwert in einer URL ist für die Token-Auflösung unsichtbar. Genau darin
+// liegt der Schaden — eine Rekalibrierung der Farbwelt zieht jeden Token mit,
+// aber keine data-URI. Das ist die zweite Wahrheit, die §5 verbietet.
+//
+// GREIFER: jedes `%23`-Hexliteral (URL-kodiertes `#`) im Blatt. Nur dort —
+// gewöhnliche `#RRGGBB`-Literale sind in `index.css` die TOKEN-DEFINITIONEN
+// selbst und damit die eine Quelle, kein Verstoss.
+// KOMMENTARE werden vorher entfernt: ein Hexwert in einer Notiz malt nichts
+// (und dieser Befund selbst wird unten in `index.css` erklärt — der Wächter
+// dürfte sich nicht an seiner eigenen Begründung entzünden).
+const CSS_ROH = readFileSync(new URL('../src/index.css', import.meta.url), 'utf8');
+const CSS_OHNE_KOMMENTAR = CSS_ROH.replace(/\/\*[\s\S]*?\*\//g, '');
+for (const m of CSS_OHNE_KOMMENTAR.matchAll(/%23[0-9A-Fa-f]{3,8}/g)) {
+  fehler.push(
+    `Hex-Farbe «${m[0]}» in einer data-URI in src/index.css — eine URL erbt keine Token und `
+    + `wird bei einer Farb-Rekalibrierung stumm zurückgelassen (§5, Befund R3-F2 6.9.2026). `
+    + `Weg: currentColor (Farbverlauf/SVG-Element) oder ein Token an einer CSS-Eigenschaft.`,
+  );
 }
 
 // (c) Dunkel-Rezept: Flächen-L-Leiter well<paper<surface<raised — FAIL-Regel.
@@ -157,6 +186,6 @@ if (fehler.length) {
 console.log(
   `Farbwelt-Tor ok — ${PFLICHT.length * 2} WCAG-Pflichtpaare (hell+dunkel), ` +
   `${REFERENZ.length * 2} Referenzwerte (§4b-B), ${FIXPUNKT.length} Fixpunkte, ` +
-  `Flächen-L-Leiter beide Modi. ${warnungen.length} beratende Warnung(en) offen (D-1/D-4/D-5).`,
+  `Flächen-L-Leiter beide Modi, kein Hex in data-URIs. ${warnungen.length} beratende Warnung(en) offen (D-1/D-4/D-5).`,
 );
 

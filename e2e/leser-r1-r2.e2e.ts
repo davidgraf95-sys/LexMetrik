@@ -218,7 +218,18 @@ const clsLesen = (page: Page) => page.evaluate(() => {
 });
 
 test.describe('S8 — Trefferliste in der Leiste, Lesespalte vollständig', () => {
-  test('Die Liste steht in Zone B des [data-toc] und ersetzt dort den Baum — der Gesetzestext bleibt ganz', async ({ page }) => {
+  // ── §6.3-UMSTELLUNG D38 (David 7.9.2026) ──────────────────────────────────
+  // Der Titel hiess «Die Liste steht in Zone B des [data-toc] und ersetzt dort
+  // den Baum». Genau das ist der Befund, den David am 7.9.2026 beanstandet hat:
+  // «die suchresultate … sollen nicht in der gliederung erscheinen sondern den
+  // gesetzestext ersetzen». Die Liste liegt seither über der LESESPALTE, der
+  // Baum bleibt stehen. UNVERÄNDERT geprüft wird alles, was S8 wirklich
+  // zusagte: genau EINE Liste, jeder Eintrag mit Label/Zahl/Ausschnitt, der
+  // Kopf-Zähler deckungsgleich mit der Summe — und vor allem, dass die
+  // LESESPALTE VOLLSTÄNDIG BLEIBT (Entscheid David (c) 8.8.2026). Der letzte
+  // Punkt ist unter D38 mehr wert als zuvor, nicht weniger: er schliesst aus,
+  // dass die Liste den Text aushängt statt ihn zu überlagern.
+  test('Die Liste liegt über der Lesespalte, der Baum bleibt — der Gesetzestext bleibt ganz', async ({ page }) => {
     const fehler = fehlerSammeln(page);
     await oeffneLeser(page, LEICHT);
 
@@ -231,11 +242,11 @@ test.describe('S8 — Trefferliste in der Leiste, Lesespalte vollständig', () =
     await inGesetzSuche(page).fill(BEGRIFF);
     await expect(leiste(page)).toBeVisible({ timeout: 20_000 });
 
-    // GENAU EINE Liste, und sie liegt im [data-toc]-Scroller (Zone B).
+    // GENAU EINE Liste, und sie liegt über der Lesespalte (D38).
     await expect(liste(page)).toHaveCount(1);
-    await expect(liste(page).locator('xpath=ancestor::*[@data-toc]')).toHaveCount(1);
-    // Der Baum tritt zurück, solange gesucht wird …
-    await expect(page.locator('[data-toc] [data-sektion-id]')).toHaveCount(0);
+    await expect(liste(page).locator('xpath=ancestor::*[@data-v3-treffer-spalte]')).toHaveCount(1);
+    // D38: der Baum tritt NICHT mehr zurück — er steht während der Suche da …
+    await expect(page.locator('[data-toc] [data-sektion-id]').first()).toBeVisible();
     // … und die LESESPALTE bleibt vollständig (Entscheid David (c) 8.8.2026):
     // die Zahl der Artikel im Wortlaut ändert sich durch die Suche nicht mehr.
     await expect.poll(async () => page.locator('article[id^="art-"]').count(), { timeout: 20_000 })
@@ -253,7 +264,7 @@ test.describe('S8 — Trefferliste in der Leiste, Lesespalte vollständig', () =
     // Ausschnitt mit hervorgehobenem Begriff (Entscheid c: «mit Textausschnitten»).
     await expect(liste(page).locator('.lc-such-ausschnitt mark').first()).toBeVisible();
 
-    // Suche verlassen ⇒ Baum zurück, Liste weg, Highlight weg.
+    // Suche verlassen ⇒ Liste weg, Baum unverändert da, Highlight weg.
     await inGesetzSuche(page).fill('');
     await expect(liste(page)).toHaveCount(0, { timeout: 20_000 });
     await expect(page.locator('[data-toc] [data-sektion-id]').first()).toBeVisible({ timeout: 20_000 });
@@ -312,20 +323,31 @@ test.describe('S8 — Trefferliste in der Leiste, Lesespalte vollständig', () =
     await inGesetzSuche(page).fill(BEGRIFF_FN);
     await expect(leiste(page)).toBeVisible({ timeout: 20_000 });
 
-    // «Fassung» trifft im BGFA im Fussnoten-Apparat ⇒ Badge «Fussnote».
+    // ── §6.3-DEKLARATION (D35-F3, Entscheid David 7.9.2026) ──────────────────
+    // Der Fall schaltete `data-fussnoten` — das Attribut gibt es nicht mehr, und
+    // den Zustand «der ganze Apparat ist aus» auch nicht (verlustfrei). Die
+    // Badge-Frage lautet seither «sind die ÄNDERUNGS-Fussnoten gedämpft?», wahr
+    // in den Stellungen «fassung» und «aus». Die geprüfte AUSSAGE ist
+    // unverändert: der Badge sagt es ausdrücklich, statt dass die Ansicht beim
+    // Sprung still umgeschaltet würde (§4.4 Ziff. 2, §8). Gedreht ist nur die
+    // Reihenfolge — die VORGABE ist «fassung», also steht der Zusatz zuerst da.
     const badges = liste(page).locator('[data-treffer-badge]');
     await expect.poll(async () => badges.count(), { timeout: 20_000 }).toBeGreaterThan(0);
-    await expect(badges.filter({ hasText: /^Fussnote$/ }).first()).toBeVisible({ timeout: 20_000 });
-
-    // Apparat ausblenden: der Badge sagt es AUSDRÜCKLICH — die Ansicht wird
-    // beim Sprung nicht still umgeschaltet (§4.4 Ziff. 2, §8).
-    await page.evaluate(() => { document.documentElement.dataset.fussnoten = 'aus'; });
+    // «Fassung» trifft im BGFA in ÄNDERUNGS-Fussnoten ⇒ Badge mit Zusatz.
     await expect(badges.filter({ hasText: 'Fussnote (ausgeblendet)' }).first())
       .toBeVisible({ timeout: 20_000 });
     // Und der Badge ist SICHTBARER Text, nicht nur ein `title` (Touch/Screenreader).
     await expect(liste(page)).toContainText('(ausgeblendet)');
-    await page.evaluate(() => { document.documentElement.dataset.fussnoten = 'an'; });
+
+    // Stellung «Fussnoten»: der Apparat steht vollständig ⇒ Badge ohne Zusatz.
+    await page.evaluate(() => { document.documentElement.dataset.vermerke = 'fussnoten'; });
+    await expect(badges.filter({ hasText: /^Fussnote$/ }).first()).toBeVisible({ timeout: 20_000 });
     await expect(badges.filter({ hasText: 'Fussnote (ausgeblendet)' })).toHaveCount(0, { timeout: 20_000 });
+    // Und zurück — zweiseitig, sonst wäre die Zusicherung mit «der Zusatz steht
+    // immer da» erfüllbar (§6.7).
+    await page.evaluate(() => { document.documentElement.dataset.vermerke = 'aus'; });
+    await expect(badges.filter({ hasText: 'Fussnote (ausgeblendet)' }).first())
+      .toBeVisible({ timeout: 20_000 });
   });
 
   test('↑↓ springt zyklisch durch die Fundstellen (Tastatur + 44-px-Tap-Ziele)', async ({ page }) => {
@@ -382,9 +404,16 @@ test.describe('S8 — Trefferliste in der Leiste, Lesespalte vollständig', () =
     await expect(page.locator(`#art-${token}`)).toBeInViewport({ timeout: 20_000 });
     await expect.poll(async () => page.locator('article[id^="art-"]').count(), { timeout: 20_000 })
       .toBe(artikelVorher);
-    // … und die Suche lebt weiter: Feld gefüllt, Liste da, Markierung gesetzt.
+    // … und die Suche lebt weiter: Feld gefüllt, Markierung gesetzt, Weg zur
+    // Liste benannt.
+    // §6.3-UMSTELLUNG D38: hier stand «Liste da». Über dem Text darf sie nach
+    // dem Sprung nicht stehenbleiben — sie verdeckte genau den Wortlaut, in den
+    // der Klick geführt hat. Was die Zeile schützte (die Suche überlebt den
+    // Sprung), ist unverändert geprüft: Feld, Markierung und der Ein-Klick-Weg
+    // zurück über die Zähler-Zeile.
     await expect(inGesetzSuche(page)).toHaveValue(BEGRIFF);
-    await expect(liste(page)).toHaveCount(1);
+    await expect(liste(page)).toHaveCount(0);
+    await expect(page.locator('[data-v3-treffer-weg]')).toBeVisible();
     await expect.poll(async () => gemalt(page), { timeout: 20_000 }).toBeGreaterThan(0);
   });
 
@@ -625,6 +654,57 @@ test.describe('R2 — Mobile Gliederung als volles Bottom-Sheet', () => {
 // Oberfläche kostet. Will er stattdessen die 24 px Reserve (Weg 1), ist das ein
 // Gestaltungsentscheid, der diesen Fall wieder öffnet — der Vermerk steht dafür
 // im Fahrplan Kap. 9 und im Kontaktbogen §7c/§8.
+//
+// ── WEG 3 IST AUF LANGSAMER CPU FALSIFIZIERT (gemessen 7.9.2026, CI-Fix E) ───
+// Die Zahlen vom 18.8.2026 darüber bleiben stehen, wie sie gemessen wurden
+// (§0 Ziff. 2b) — sie sind richtig für die Maschine, auf der sie entstanden.
+// Der Satz, der sie trug, ist es nicht mehr: «Für einen realen Leser ist dieser
+// Sprung nach der CLS-Definition ausgeschlossen — er ist Folge seiner eigenen
+// Tastatureingabe». Das gilt nur, solange die Eingabe SCHNELL genug verarbeitet
+// wird.
+//   BEFUND CI (Lauf 34066539241, Shard 7, 2-vCPU-Runner, Drossel 6×, DIESE
+//   Geste mit `pressSequentially`): **CLS 0.019140**, Quelle `DIV.relative
+//   min-w-0`, fremd 0.
+//   LOKAL NACHGESTELLT (Preview 4406, dieselbe Geste, Drossel auf **20×**
+//   gehoben): **CLS 0.01914**, dieselbe Quelle, `hadRecentInput = false` —
+//   bit-nah am CI-Wert, also derselbe Vorgang und kein Rauschen. Bei Drossel 6×
+//   ist der Fall auf dieser Maschine grün (n=5); die Drossel ist die
+//   MESSBEDINGUNG, nicht der Defekt.
+//   MECHANIK, punktgenau: `sucheAktiv` hängt am ENTPRELLTEN Wert
+//   (`v3/leserV3Modell.ts:394/408` ← `inhalt-zustand.tsx:100 ff.`, 200 ms), und
+//   erst er schaltet die Zonenhöhe (`v3/leserGeometrie.ts:118`
+//   `SUCH_H_RUHE`→`SUCH_H_AKTIV`, gerendert als `height` in `v3/SuchZone.tsx`).
+//   Auf schneller CPU verfällt die Entprellung NACH dem letzten Tastendruck,
+//   also innerhalb des 500-ms-Eingabefensters. Auf langsamer CPU dauert die
+//   Verarbeitung EINES Tastendrucks länger als 200 ms — die Entprellung feuert
+//   dann MITTEN im Tippen, in einer Lücke, in der das Eingabefenster längst
+//   abgelaufen ist (gemessen: der Sprung fiel 724 ms VOR dem letzten
+//   Tastendruck). Der Browser verbucht ihn folgerichtig als eingabefrei.
+//   WAS DAS HEISST: der Fall misst kein Sonden-Problem. Ein Leser auf einem
+//   schwachen Telefon SIEHT diesen 24-px-Sprung beim Tippen, und die
+//   CLS-Definition schliesst ihn dort nicht aus. Die Sonde bleibt darum
+//   unverändert (kein gehobenes Budget, kein Skip, keine weichere Geste) — sie
+//   hat recht.
+//   OFFEN, und bewusst NICHT hier repariert: der Wurzel-Fix liegt in Dateien,
+//   die am 7.9.2026 eine parallele Bau-Einheit hält (`v3/SuchZone.tsx`,
+//   `v3/LeserRahmenV3.tsx` — §0 Ziff. 5, kein Doppelbau). Zwei Wege stehen zur
+//   Wahl, beide brauchen einen Gestaltungsentscheid:
+//     (i) Weg 1 von oben — die 24 px dauerhaft reservieren (kostet jedem Leser
+//         @390 Lesehöhe, 18.8.2026 aus genau diesem Grund verworfen);
+//     (ii) die ZONENHÖHE vom entprellten Wert lösen und an den ROHEN Feldinhalt
+//         hängen (`sucheFeldLeer`, `leserV3Modell.ts:370`), sodass sie in
+//         derselben Eingabe-Aufgabe wächst wie der Tastendruck. Kostet keine
+//         Lesehöhe, zeigt aber die Trefferansicht 200 ms lang leer, bevor die
+//         entprellten Treffer eintreffen — das ist Davids Entscheid, nicht der
+//         einer Bau-Einheit.
+//   Bis dahin ist dieser Fall auf CI ROT und meldet einen echten Mangel.
+//   NACHTRAG 7.9.2026 (W2·24-F, dann D38): Weg (ii) IST gebaut — die Zonenhöhe
+//   hängt seither am rohen Feldwert (`zoneHoch` in `v3/leserGeometrie.ts`, dort
+//   die Messreihe unter Drossel 20×). D38 hat den Rest genommen: die Höhe wird
+//   jetzt für die ganze Dauer einer Eingabe RESERVIERT, unabhängig davon, ob die
+//   Zähler-Zeile gerade etwas sagt — damit springt die Zone auch beim Umschalten
+//   Text↔Treffer nicht mehr. Der Befund oben bleibt als Befund stehen (§2b: er
+//   wird nicht nachgeführt, er ist beantwortet).
 test.describe('A9-DoD — Flüssigkeit unter CPU-Drossel 6×', () => {
   test('Suche, Fundstellen-Sprung und Gliederungs-Sheet ohne Layout-Shift (CLS 0)', async ({ page }) => {
     test.slow();
@@ -655,29 +735,28 @@ test.describe('A9-DoD — Flüssigkeit unter CPU-Drossel 6×', () => {
     //     dann Zeichen für Zeichen. Nur so trägt der Browser den Folge-Shift in
     //     den Input-Topf, aus dem die CLS-Definition ihn ausschliesst; `fill()`
     //     hat diesen Weg nie genommen (Herleitung im Block über diesem Test).
+    //     §6.3-UMSTELLUNG D38 (7.9.2026): der Zeuge ist die LISTE, nicht mehr
+    //     die Zähler-Zeile. Sie erscheint mit dem Tippen von selbst über der
+    //     Lesespalte; die Zähler-Zeile schweigt dann (sonst stünde ihr Zähler
+    //     neben dem der Liste, §5). Die Geste ist unverändert die eines
+    //     Nutzers, und die gemessene Fläche ist dieselbe.
     const feld = inGesetzSuche(page);
     await feld.click();
     await feld.pressSequentially('Kanton', { delay: 60 });
-    const zaehlerZeile = page.locator('[data-v3-treffer-weg]');
-    await expect(zaehlerZeile).toBeVisible({ timeout: 40_000 });
+    await expect(liste(page)).toBeVisible({ timeout: 40_000 });
     await page.waitForTimeout(900);
 
-    // 2 · Liste aufziehen und zwei Fundstellen-Sprünge (reines Scrollen, kein
-    //     Reflow). Die Liste steht im Sheet, das ist unverändert ein Overlay.
-    await zaehlerZeile.click();
+    // 2 · Zwei Fundstellen-Sprünge (reines Scrollen, kein Reflow) über die
+    //     ↑↓-Griffe in der Werkzeugzeile der Liste.
     await expect(leiste(page)).toBeVisible({ timeout: 40_000 });
     const vor = page.locator('[data-treffer-vor]');
     await vor.click();
     await vor.click();
     await page.waitForTimeout(900);
 
-    // 3 · Sheet zu, dann Suchmodus verlassen — durch Leeren des Feldes, wie der
-    //     Nutzer es tut. (Das ✕ des Such-Overlays gehörte zum entfallenen
-    //     A35-Overlay; das Sheet schliesst über Esc, useDialogFokus.)
-    await page.keyboard.press('Escape');
-    await expect(sheet(page)).toHaveCount(0, { timeout: 20_000 });
+    // 3 · Suchmodus verlassen — durch Leeren des Feldes, wie der Nutzer es tut.
     await inGesetzSuche(page).fill('');
-    await expect(zaehlerZeile).toHaveCount(0, { timeout: 40_000 });
+    await expect(liste(page)).toHaveCount(0, { timeout: 40_000 });
     await page.waitForTimeout(900);
 
     // 4 · Gliederungs-Sheet auf und zu (Overlay, aus dem Fluss).

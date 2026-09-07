@@ -96,14 +96,27 @@ export type SuchQuelle =
  *                  Artikeln; Bild-Alt: es ist ein Attribut, kein Textknoten;
  *                  nachrangige Randtitel: sie sind seit 6b eigene
  *                  Gliederungsknoten und werden am Artikel nicht wiederholt).
- *  · `fussnoten` — sichtbar, solange der Fussnoten-Schalter AN ist
- *                  (`html[data-fussnoten="aus"]` ⇒ `display:none`, index.css).
+ *  · `aenderung` — eine als `kl:'A'` klassifizierte ÄNDERUNGS-Fussnote: sichtbar
+ *                  genau in der Stellung «Fussnoten» der Änderungs-Wahl
+ *                  (`html[data-vermerke="fassung"|"aus"]` ⇒ `display:none`,
+ *                  index.css).
+ *
+ * ── D35-F3 (7.9.2026) · WARUM DER WERT `fussnoten` NICHT MEHR STIMMT ─────────
+ * Bis hierher hiess der dritte Wert `fussnoten` und meinte «hängt am
+ * Fussnoten-Schalter» — der schaltete den GANZEN Apparat, also trugen ihn alle
+ * Fussnoten-Bausteine. Diesen Schalter gibt es nicht mehr (Entscheid David,
+ * verlustfrei): eine Fussnote der Klasse V/G/Z/U und jede ohne Klasse ist in
+ * ALLEN drei Stellungen sichtbar und damit `immer` malbar. Nur `kl:'A'` kann
+ * überhaupt noch verschwinden. Den alten Wert stehen zu lassen, hätte den
+ * Zusatz «(ausgeblendet)» an 96 ZPO-Verweis-Fussnoten gehängt, die dastehen —
+ * eine Badge, die über den Zustand lügt (§8), also genau der Fehler, den die
+ * Malbarkeit verhindern soll.
  *
  * Das ist die Zähl-Wahrheit aus Spec §4.4: der Zähler ist datenseitig und
  * unabhängig von Ansicht-Schaltern; die DOM-Hervorhebung malt nur, was malbar
  * ist. «Gemalte ≤ gezählte» ist damit KONSTRUKTIV wahr, nicht behauptet.
  */
-export type Malbarkeit = 'immer' | 'nie' | 'fussnoten';
+export type Malbarkeit = 'immer' | 'nie' | 'aenderung';
 
 interface Segment {
   feld: SuchFeld;
@@ -283,8 +296,14 @@ export function baueLeserSuchIndex(
     //     als `num`-Span vor dem Text gerendert, also ist sie gemalt — stünde
     //     sie nicht im Index, könnte die Markierung mehr zeigen als der Zähler
     //     zählt (§4.4).
+    //     D35-F3: die MALBARKEIT hängt an der build-seitigen Klasse. Fehlt `kl`
+    //     (alle Kanton-Sidecars), gilt die Fussnote als unklassifiziert und ist
+    //     in jeder Stellung sichtbar — dieselbe konservative Richtung wie im
+    //     Korpus selbst (`lib/normtext/browse.ts`: «eine fehlende Klasse blendet
+    //     nie etwas aus»).
     for (const f of st?.fussnoten ?? []) {
-      schiebe(segmente, 'f', 'Fussnote', 'fussnoten', f.nr ? `${f.nr} ${f.text}` : f.text);
+      schiebe(segmente, 'f', 'Fussnote', f.kl === 'A' ? 'aenderung' : 'immer',
+        f.nr ? `${f.nr} ${f.text}` : f.text);
     }
 
     return {
@@ -580,17 +599,21 @@ export function zaehleTreffer(treffer: readonly LeserTreffer[]): { artikel: numb
  * Herkunfts-Badges eines Treffers (Spec §4.3/§4.4 Ziff. 2).
  *
  * Gezeigt werden NUR Nicht-Fliesstext-Quellen — bei einem Fliesstext-Treffer
- * ist der Ausschnitt selbst die Erklärung. Eine Fussnoten-Quelle trägt bei
- * ausgeschaltetem Fussnoten-Apparat den Zusatz «(ausgeblendet)»: der Leser
- * sieht, dass der Sprung ihn zwar zum Artikel bringt, die Stelle aber in der
- * aktuellen Ansicht nicht leuchtet — statt dass die Ansicht beim Sprung still
- * umgeschaltet würde (§8).
+ * ist der Ausschnitt selbst die Erklärung. Eine ÄNDERUNGS-Fussnote trägt in den
+ * Stellungen «Fassung» und «aus» den Zusatz «(ausgeblendet)»: der Leser sieht,
+ * dass der Sprung ihn zwar zum Artikel bringt, die Stelle aber in der aktuellen
+ * Ansicht nicht leuchtet — statt dass die Ansicht beim Sprung still umgeschaltet
+ * würde (§8).
+ *
+ * D35-F3: der Parameter heisst nach dem, was er wirklich meint. `fussnotenAus`
+ * hätte nach dem Wegfall des Apparat-Schalters eine Stellung benannt, die es
+ * nicht mehr gibt.
  */
-export function badgesFuer(t: LeserTreffer, fussnotenAus: boolean): string[] {
+export function badgesFuer(t: LeserTreffer, aenderungenAus: boolean): string[] {
   const out: string[] = [];
   for (const f of t.felder) {
     if (f.quelle === 'Fliesstext') continue;
-    const text = f.malbar === 'fussnoten' && fussnotenAus ? `${f.quelle} (ausgeblendet)` : f.quelle;
+    const text = f.malbar === 'aenderung' && aenderungenAus ? `${f.quelle} (ausgeblendet)` : f.quelle;
     if (!out.includes(text)) out.push(text);
   }
   return out;
@@ -626,25 +649,25 @@ export interface FundstellenSchritt {
  * wird; mit B1/B2 ziehen gemalte und gezählte Menge aber auseinander, und dann
  * bricht auch diese Deckung.
  *
- * `fussnotenAus` gehört in die Rechnung, nicht daneben: ist der Apparat
- * ausgeblendet, überspringt `sammleTrefferRanges` ihn (`istGerendert`) — seine
- * Stellen sind dann NICHT malbar, und ein Rang, der sie mitzählte, verschöbe
- * die Zuordnung um genau sie. Rein und deterministisch (§2): gleiche Treffer +
- * gleicher Schalter ⇒ gleiche Folge.
+ * `aenderungenAus` gehört in die Rechnung, nicht daneben: sind die
+ * Änderungs-Fussnoten gedämpft, überspringt `sammleTrefferRanges` sie
+ * (`istGerendert`) — ihre Stellen sind dann NICHT malbar, und ein Rang, der sie
+ * mitzählte, verschöbe die Zuordnung um genau sie. Rein und deterministisch
+ * (§2): gleiche Treffer + gleiche Stellung ⇒ gleiche Folge.
  *
  * Ohne malbare Entsprechung bleibt es beim Artikel — nie wird ein Sprung an eine
  * erfundene Stelle behauptet (§8).
  */
 export function fundstellenFolge(
   treffer: readonly LeserTreffer[],
-  fussnotenAus: boolean,
+  aenderungenAus: boolean,
 ): FundstellenSchritt[] {
   const out: FundstellenSchritt[] = [];
   for (const t of treffer) {
     let malbarBisher = 0;
     for (let i = 0; i < t.fundstellen; i++) {
       const mb = t.malbarkeiten[i];
-      const malbar = mb === 'immer' || (mb === 'fussnoten' && !fussnotenAus);
+      const malbar = mb === 'immer' || (mb === 'aenderung' && !aenderungenAus);
       out.push({ token: t.token, rang: i, malRang: malbar ? malbarBisher++ : null });
     }
   }

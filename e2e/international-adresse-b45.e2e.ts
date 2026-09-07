@@ -16,8 +16,10 @@
 //     eigentliche Zusage: eine Weiterleitung, die den Anker verliert, wirft den
 //     Leser an den Erlass-Anfang zurück, und genau solche Links stehen in
 //     versendeten Rechtsschriften.
-//   – Die Brotkrume nennt «International», nicht «Bund» (die Falschangabe, an
-//     der der Befund hing).
+//   – Die Säule heisst «International», nicht «Bund» (die Falschangabe, an der
+//     der Befund hing). DAMALS stand sie in der Brotkrume des Lesers; seit R6d
+//     (D27, 6.9.2026) gibt es die nicht mehr, und die Angabe steht in der
+//     Seitenleiste — Herleitung und Messung beim Fall selbst.
 //   – Gegenprobe: ein normaler Bundeserlass leitet NICHT — die Weiterleitung
 //     darf nicht zur Allerwelts-Umleitung werden.
 //   – Keine Schleife: die Zieladresse leitet nicht weiter.
@@ -50,10 +52,35 @@ test.describe('Befund 45 · neue Adresse', () => {
     expect(fehler).toEqual([])
   })
 
-  test('die Brotkrume nennt International, nicht Bund', async ({ page }) => {
+  // ── DEKLARIERTE TEST-ÄNDERUNG (§6.3, D27/R6d, 6.9.2026) · WO DIE HERKUNFT
+  //    JETZT STEHT ────────────────────────────────────────────────────────────
+  // Der Fall hiess «die Brotkrume nennt International, nicht Bund» und suchte
+  // die Angabe in der Brotkrume des Lesers. Die gibt es nicht mehr: R6d hat sie
+  // entfernt (`feat(leser): D28 Erlass-Suche im Leser-Kopf, D27 Brotkrume
+  // raus`), die Bereichs-Navigation lebt seither allein in der Seitenleiste —
+  // dieselbe Verschiebung, die auch `e2e/w224-reiterverhalten` bereits
+  // nachgezogen hat (D17: «ich mochte die seitenleiste … und das oben
+  // entfernen?»).
+  // GEMESSEN 6.9.2026 (gebautes `dist/`, Chromium @1440×900, `/gesetze/
+  // international/CISG`): GENAU EIN Element nennt die Säule — der Link
+  // «International» → `/gesetze?ebene=international` in
+  // `aside[data-app-seitenleiste]`; kein Element nennt «Bund».
+  // Die ABSICHT des Befunds ist unverändert: Herkunft und Rückweg des
+  // Staatsvertrags heissen «International», nie «Bund». Nachgeführt ist nur der
+  // Ort, an dem beides steht. Die Seitenleiste startet seit D25/D26
+  // eingeklappt; sie wird darum vorab aufgeklappt — Testaufbau, keine
+  // Assertion.
+  test('die Säule heisst International, nicht Bund', async ({ page }) => {
+    await page.setViewportSize({ width: 1440, height: 900 })
+    await page.addInitScript(() => {
+      try { localStorage.setItem('lexmetrik-seitenleiste-eingeklappt.v2', '0') } catch { /* privater Modus */ }
+    })
     await page.goto(NEU)
-    const krume = page.getByRole('link', { name: 'International' }).first()
-    await expect(krume).toBeVisible()
+    const saeule = page.getByRole('link', { name: 'International' }).first()
+    await expect(saeule).toBeVisible()
+    // Der Rückweg führt auf die Säule, nicht auf den Bund — die Adresse des
+    // Links ist die eigentliche Zusage, der Text allein wäre Dekoration.
+    await expect(saeule).toHaveAttribute('href', '/gesetze?ebene=international')
     // Die Falschangabe des Befunds darf nicht daneben stehen bleiben.
     await expect(page.getByRole('link', { name: /^Bund$/ })).toHaveCount(0)
   })

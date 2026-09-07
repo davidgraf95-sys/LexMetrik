@@ -62,31 +62,50 @@ describe('D-1 — /suche-Facetten tragen die Chip-Familie, die Kopie ist gelösc
   const baustein = lies('../components/ui/FacettenGruppe.tsx');
   const entscheidFilter = lies('../components/rechtsprechung/EntscheidFilter.tsx');
 
-  it('die Facetten-Reihe ist eine lc-chip-zeile mit lc-chip/lc-chip-selected', () => {
-    expect(baustein).toContain('lc-chip-zeile');
-    expect(baustein).toContain('lc-chip-selected');
+  // D24-NACHZUG (Fixer 1h, 6.9.2026, DEKLARIERTE TEST-ÄNDERUNG — §6.3 fachliche
+  // Änderung, kein Refactoring): Prüfbefund «Aus D24 (offen)» verlangt Text-
+  // Schalter statt Kasten (`.lc-chip`) für GENAU diese Achse — dieselbe
+  // Kasten-Abräumung, die D22 an der Filterzeile schon vollzogen hat. Der
+  // Baustein trägt seither `.fc-zeile`/`.fc-schalter` (additiv, index.css)
+  // statt `.lc-chip-zeile`/`.lc-chip`/`.lc-chip-selected`. Die Sonde prüft
+  // darum die NEUE Anatomie — die Absicht (ein Baustein, ein Auswahl-Signal,
+  // aria-pressed trägt die Semantik) ist unverändert, nur der Klassenname.
+  it('die Facetten-Reihe ist eine fc-zeile mit fc-schalter (keine Kästen mehr)', () => {
+    expect(baustein).toContain('fc-zeile');
+    expect(baustein).toContain('fc-schalter');
+    // Die Kasten-Familie (Rahmen + Fläche) ist hier weg, nicht nur umbenannt.
+    expect(baustein).not.toContain('lc-chip');
     // aria bleibt der Auswahl-Träger (das ✓ lebt im ::before, s. index.css).
     expect(baustein).toContain('aria-pressed');
   });
 
-  it('beide Flächen konsumieren den EINEN Baustein und zeichnen keine Chips mehr selbst', () => {
+  it('beide Flächen konsumieren den EINEN Baustein und zeichnen keine Schalter mehr selbst', () => {
     for (const [name, q] of [['Suche', quelle], ['EntscheidFilter', entscheidFilter]] as const) {
       expect(q, `${name}: konsumiert FacettenGruppe`).toContain('<FacettenGruppe');
       expect(q, `${name}: importiert den Baustein`).toMatch(/import \{ FacettenGruppe \} from '[^']*ui\/FacettenGruppe'/);
       // `lies()` hat die Kommentare entfernt — was hier noch das AUSWAHL-Signal
       // der Achse setzt, ist eine echte Klassenkette und damit eine neue Kopie.
-      expect(q, `${name}: kein eigenes Auswahl-Signal`).not.toContain('lc-chip-selected');
+      expect(q, `${name}: kein eigenes Auswahl-Signal`).not.toContain('fc-schalter');
     }
-    // /suche baut überhaupt keinen Chip mehr von Hand; EntscheidFilter trägt
-    // weiterhin `.lc-chip` an den ENTFERNBAREN Aktiv-Filtern — eine andere Sache
-    // als die Facetten-Achse (LM-044/N1, dieselbe Grammatik, anderer Zweck).
+    // /suche baut überhaupt keinen Chip/Schalter mehr von Hand; EntscheidFilter
+    // trägt weiterhin `.lc-chip` an den ENTFERNBAREN Aktiv-Filtern — eine andere
+    // Sache als die Facetten-Achse (LM-044/N1, dieselbe Grammatik, anderer Zweck).
     expect(quelle).not.toContain('lc-chip');
+    expect(quelle).not.toContain('fc-schalter');
     // Die lokale Definition ist gelöscht, nicht bloss ungenutzt.
     expect(entscheidFilter).not.toMatch(/^function FacettenGruppe\(/m);
   });
 
   it('das ✓-Präfix, das die Kopie nicht hatte, kommt jetzt aus dem Kanon', () => {
-    expect(CSS).toContain(".lc-chip-selected::before { content: '✓';");
+    expect(CSS).toContain(".fc-schalter[aria-pressed=\"true\"]::before { content: '✓';");
+  });
+
+  it('der gewählte Schalter trägt den Registerstrich, keine Kasten-Fläche (D24: «keine Kästen»)', () => {
+    // Negativ zuerst (§6.7-Geist: die Sonde muss die alte Kasten-Anatomie
+    // erkennen können) — die Kasten-Familie ist nirgends im Kanon-CSS-Block
+    // der neuen Schalter referenziert.
+    expect(CSS).not.toMatch(/\.fc-schalter[^{]*\{[^}]*background:\s*var\(--brass/);
+    expect(CSS).toMatch(/\.fc-zeile\[data-reg="r"\] \.fc-schalter\[aria-pressed="true"\] \{ border-bottom-color: var\(--reg-r\); \}/);
   });
 });
 

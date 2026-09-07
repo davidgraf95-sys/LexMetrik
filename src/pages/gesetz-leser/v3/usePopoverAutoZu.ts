@@ -71,10 +71,17 @@ import { useDialogFokus } from '../../../components/layout/useDialogFokus';
 // Browser gleicht per Scroll-Anchoring aus und feuerte `scroll` ohne Geste; das
 // eben geöffnete Panel schloss sich von selbst.
 
-export type AutoZuModus = 'popover' | 'blatt' | 'beiwerk' | 'spalte';
+// D33 (7.9.2026): `'spalte'` heisst jetzt `'fest'`. Die LAGE, nach der er
+// benannt war (das Panel als eigene Rahmen-Spur, Ä60 (c)), gibt es nicht mehr;
+// die REGEL dahinter bleibt und ist der eigentliche Inhalt des Modus: ein Blatt,
+// das neben dem Lesetext steht, schliesst nicht bei jedem Klick in den Text.
+// Datierter Anlass, der ihn hält (§17-Gegengewicht): Klick-Test 18.8.2026 —
+// mit `'beiwerk'` war Textmarkieren bei offenem Panel unmöglich, das Blatt ging
+// bei JEDEM Klick in die Lesespalte zu (Wächter `leser-v3-rahmen` (f)).
+export type AutoZuModus = 'popover' | 'blatt' | 'beiwerk' | 'fest';
 
 /** Die zwei Modi OHNE Fokus-Falle: das Panel ist dort Beiwerk, kein Dialog. */
-const OHNE_FALLE: AutoZuModus[] = ['beiwerk', 'spalte'];
+const OHNE_FALLE: AutoZuModus[] = ['beiwerk', 'fest'];
 
 export function usePopoverAutoZu({ offen, schliesse, wrapRef, panelRef, modus, aussenAusnahme }: {
   offen: boolean;
@@ -124,7 +131,7 @@ export function usePopoverAutoZu({ offen, schliesse, wrapRef, panelRef, modus, a
 
   // ── Aussenklick — in JEDEM Modus ausser `spalte` (Herleitung im Kopf) ─────
   useEffect(() => {
-    if (!offen || !wrapRef || modus === 'spalte') return;
+    if (!offen || !wrapRef || modus === 'fest') return;
     const klick = (e: PointerEvent) => {
       const wurzel = wrapRef.current;
       if (!wurzel) return;
