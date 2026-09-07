@@ -188,8 +188,17 @@ export function schaetzeArtikelHoehe(e: NormSnapshot): number {
   // Darstellungs-Store zu binden und die `contain-intrinsic-size` jedes Artikels
   // beim Umschalten neu zu schreiben — genau der Re-Render des Normtexts, den die
   // CSS-Mechanik vermeidet (§15). Nur der Kommentar zieht nach.
+  //
+  // NACHTRAG W2·24-D40 (7.9.2026, §0 Ziff. 2b — ERGÄNZT, nicht nachgeführt):
+  // den Fassungs-Slot gibt es nicht mehr; die Auskunft steht als Rubrik in der
+  // Funktionszeile am Artikelende (David: «und wieso ist fassung nicht auch
+  // unten am artikel?»). Die 40 px BLEIBEN stehen und heissen jetzt: Platz für
+  // die Funktionszeile, die unter jedem Artikel steht. Das ist keine Kosmetik,
+  // sondern dieselbe Rechnung wie oben — die Zusage lautet «echte Höhe ≤
+  // Schätzung», und zu HOCH ist die tolerierte Richtung. Der Name der Konstante
+  // bleibt ebenfalls: er ist der Anker der Messreihen von 2026.
   const HIST_SLOT = 40;
-  let h = 104 + HIST_SLOT; // Artikelkopf: «Art. N» + Trenner (border-t + pt-7 mt-7) + Basisabstand + Fassungs-Slot
+  let h = 104 + HIST_SLOT; // Artikelkopf: «Art. N» + Trenner (border-t + pt-7 mt-7) + Basisabstand + Beiwerk-Zuschlag
   if (e.titel) h += 30;    // amtlicher Randtitel/Sachüberschrift (eine Zeile)
   for (const b of e.bloecke) {
     // M13-Annex-Zwischenüberschrift (titel = Heading-Tiefe): kompakte Titelzeile.
