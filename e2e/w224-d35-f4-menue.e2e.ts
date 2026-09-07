@@ -56,14 +56,30 @@ test.describe('D35-F4 — jede Menüzeile ist gleich hoch', () => {
   }
 })
 
+// ── D35-F3 (Entscheid David 7.9.2026, §6.3 DEKLARIERT) · DIE ANATOMIE HAT SICH
+//    GEÄNDERT, DIE ZUSAGE NICHT ─────────────────────────────────────────────
+// Der BEFUND oben bleibt Wort für Wort stehen (§0 Ziff. 2b): am Vorstand
+// `091e38ae5` trug das Ansicht-Menü zwei unabhängige `menuitemcheckbox`
+// («Fussnoten», «Fassung»), und diese Sonde zählte genau die. Seit D35-F3 sind
+// daraus DREI `menuitemradio`-Stellungen einer Radiogruppe geworden («entweder
+// fassung, fussnoten oder aus»); als Checkbox bleibt «Rechtsprechung im Kopf».
+// Das ist eine fachliche Änderung am Produkt, also wird die Sonde deklariert
+// auf die neue Anatomie umgestellt statt angepasst-bis-grün (§6.3): geprüft
+// wird jetzt über BEIDE Schalterrollen. Die Zusagen selbst sind unverändert —
+// jede Marke steht als FORM in beiden Stellungen da, Rollen und Tastatur
+// bleiben. Die Radiogruppe macht die Zusage sogar schärfer prüfbar: sie zeigt
+// eine gewählte und zwei ungewählte Marken im SELBEN Bild.
+const SCHALTER = '[data-v3-ansicht-panel] :is([role="menuitemcheckbox"], [role="menuitemradio"])'
+
 test.describe('D35-F4 — der Aus-Zustand ist eine Form, keine Tintenstufe', () => {
   test('@1440: jeder Schalter zeigt seine Marke in BEIDEN Stellungen', async ({ page }) => {
     await ansichtAuf(page, 1440, 900)
-    const marken = async () => page.locator('[data-v3-ansicht-panel] [role="menuitemcheckbox"]').evaluateAll(
+    const marken = async () => page.locator(SCHALTER).evaluateAll(
       (els) => els.map((e) => {
         const m = e.querySelector<HTMLElement>('[data-menu-marke]')
         const r = m?.getBoundingClientRect()
         return {
+          rolle: e.getAttribute('role'),
           an: e.getAttribute('aria-checked'),
           da: !!m,
           b: Math.round(r?.width ?? 0),
@@ -73,25 +89,60 @@ test.describe('D35-F4 — der Aus-Zustand ist eine Form, keine Tintenstufe', () 
       }),
     )
     const vorher = await marken()
-    expect(vorher.length, 'Schalter im Ansicht-Menü').toBeGreaterThanOrEqual(2)
+    expect(vorher.length, 'Schalterzeilen im Ansicht-Menü').toBeGreaterThanOrEqual(2)
     for (const m of vorher) {
-      expect(m.da, `Marke vorhanden (aria-checked=${m.an})`).toBe(true)
-      expect(m.b, `Markenbreite (aria-checked=${m.an})`).toBeGreaterThanOrEqual(10)
-      expect(m.hh, `Markenhöhe (aria-checked=${m.an})`).toBeGreaterThanOrEqual(10)
-      expect(m.kante, `Markenkante (aria-checked=${m.an})`).toBe('1px')
+      expect(m.da, `Marke vorhanden (${m.rolle}, aria-checked=${m.an})`).toBe(true)
+      expect(m.b, `Markenbreite (${m.rolle}, aria-checked=${m.an})`).toBeGreaterThanOrEqual(10)
+      expect(m.hh, `Markenhöhe (${m.rolle}, aria-checked=${m.an})`).toBeGreaterThanOrEqual(10)
+      expect(m.kante, `Markenkante (${m.rolle}, aria-checked=${m.an})`).toBe('1px')
     }
-    // Umlegen — die Form bleibt, nur ihre Füllung wechselt. Genau das war der
-    // Befund: vorher verschwand im Aus-Zustand ALLES ausser der Tintenstufe.
-    const erster = page.locator('[data-v3-ansicht-panel] [role="menuitemcheckbox"]').first()
-    const stand = await erster.getAttribute('aria-checked')
-    await erster.click()
-    await expect(erster).toHaveAttribute('aria-checked', stand === 'true' ? 'false' : 'true')
+    // DER KERN DES BEFUNDS, jetzt ohne Umweg messbar: beide Stellungen stehen
+    // gleichzeitig im Menü — vorher verschwand im Aus-Zustand ALLES ausser der
+    // Tintenstufe. Die Radiogruppe liefert die Aus-Stellung frei Haus.
+    expect(vorher.map((m) => m.an).includes('true'), 'eine Marke steht auf AN').toBe(true)
+    expect(vorher.map((m) => m.an).includes('false'), 'eine Marke steht auf AUS').toBe(true)
+
+    // Umlegen — die Form bleibt, nur ihre Füllung wechselt. Umgelegt wird die
+    // CHECKBOX: eine Radio-Stellung ist idempotent (ein Klick auf die gesetzte
+    // Stellung ist ein No-op, `LeserAenderungsWahl`), sie taugt nicht als
+    // Umschalt-Beweis.
+    const kasten = page.locator('[data-v3-ansicht-panel] [role="menuitemcheckbox"]').first()
+    const stand = await kasten.getAttribute('aria-checked')
+    await kasten.click()
+    await expect(kasten).toHaveAttribute('aria-checked', stand === 'true' ? 'false' : 'true')
     const nachher = await marken()
     for (const m of nachher) {
       expect(m.da, 'Marke auch nach dem Umlegen').toBe(true)
       expect(m.b).toBeGreaterThanOrEqual(10)
     }
-    expect(nachher[0].an).not.toBe(vorher[0].an)
+  })
+
+  test('@1440: die Wahl «Änderungen anzeigen als» wandert, statt sich abzuschalten', async ({ page }) => {
+    // EINMAL ROT GEZEIGT (§6.7, 7.9.2026): `LeserAenderungsWahl` auf
+    // `onKlick={() => setzeVermerke('fassung')}` gelegt — die Wahl bewegt sich
+    // dann nicht mehr, und dieser Fall scheitert an Zeile «aria-checked=true»
+    // (Received "false", nth(1) = «Fussnoten»).
+    // D35-F3: eine Radiogruppe hat IMMER genau eine gesetzte Stellung. Der
+    // Klick auf eine ungewählte verschiebt die gefüllte Marke, der Klick auf
+    // die gesetzte tut nichts — beides ist Form, nicht Tinte.
+    await ansichtAuf(page, 1440, 900)
+    const stellungen = page.locator('[data-v3-ansicht-panel] [role="menuitemradio"]')
+    expect(await stellungen.count(), 'Stellungen der Wahl').toBe(3)
+    const gesetzte = stellungen.filter({ has: page.locator('[data-menu-marke][data-an="an"]') })
+    await expect(gesetzte, 'genau eine gesetzte Stellung').toHaveCount(1)
+    // Index statt Filter: ein `filter({ has: … data-an="aus" })` löst sich bei
+    // JEDER Auswertung neu auf — nach dem Klick zeigte er auf eine andere
+    // Stellung, und die Zusicherung mass das falsche Element (gemessen
+    // 7.9.2026). Ein `nth()` bleibt auf demselben Knoten stehen.
+    const stand = await stellungen.evaluateAll((els) => els.map((e) => e.getAttribute('aria-checked')))
+    const andere = stellungen.nth(stand.findIndex((a) => a === 'false'))
+    await andere.click()
+    await expect(andere).toHaveAttribute('aria-checked', 'true')
+    await expect(stellungen.filter({ has: page.locator('[data-menu-marke][data-an="an"]') }),
+      'auch nach dem Wechsel genau eine gesetzte Stellung').toHaveCount(1)
+    // Idempotenz: derselbe Klick noch einmal schaltet nicht ab.
+    await andere.click()
+    await expect(andere).toHaveAttribute('aria-checked', 'true')
   })
 })
 
@@ -155,7 +206,12 @@ test.describe('D35-F4 — a11y des aufgezogenen Menüs', () => {
     await ansichtAuf(page, 1440, 900)
     const panel = page.locator('[data-v3-ansicht-menue]')
     await expect(panel).toHaveAttribute('role', 'menu')
-    expect(await page.locator('[role="menuitemcheckbox"]').count()).toBeGreaterThanOrEqual(2)
+    // D35-F3 (§6.3 deklariert): die zweite Checkbox ist seit 7.9.2026 eine
+    // Radiogruppe (`menuitemradio`). Die Zusage «das Menü führt mehrere
+    // Schalterzeilen mit Rolle, und die Pfeiltasten laufen über sie» gilt über
+    // beide Rollen — `menueTasten.ts` sammelt seither beide ein.
+    expect(await page.locator('[role="menuitemcheckbox"], [role="menuitemradio"]').count())
+      .toBeGreaterThanOrEqual(2)
     await page.keyboard.press('ArrowDown')
     const fokus1 = await page.evaluate(() => document.activeElement?.textContent?.trim() ?? '')
     await page.keyboard.press('ArrowDown')
