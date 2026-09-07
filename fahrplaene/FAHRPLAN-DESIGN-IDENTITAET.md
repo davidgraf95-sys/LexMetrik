@@ -243,6 +243,7 @@ mache nochmals einen kompletten fix indem du selbst auf die webseite gehst»).
 | R11 | Reiterleiste: Bedienbarkeit und Nützlichkeit | erledigt (M5 → `W2·25`) | `R11-REITER.md`, `uebergabe/R11-PLAN.md` |
 | R12 | Wege verkürzen (Köpfe, Listen) | erledigt | `R12A-KOEPFE.md`, `R12B-LISTEN.md` |
 | R13 | Reiter nützlicher und intuitiver (zweite Reiter-Runde, David 7.9.) | erledigt | `R13-REITER.md` |
+| R14 | «Alles ist ein Reiter»: die Sammlung wird Reiter und Neuer-Reiter-Seite (Entscheid David 7.9., Variante A) | erledigt | `R14-REITER-MODELL.md` |
 
 **Nachträge D30–D33** (Befunde David am Bild/Dev-Server, Wortlaut im Befundregister der Session):
 D30 Bezüge-Zeile klappt auf, zeigt aber nur den Rechnen-Block → Entscheide + Materialien lazy mit
@@ -345,6 +346,14 @@ leerer offen ist; ein Klick auf den bereits aktiven Reiter tut nichts (Browser-N
 Reiterstreifen auf «/» behält seine reservierte Höhe (CLS 0) — die Frage, ob der «+»-Knopf allein
 genügt, liegt bei David.
 
+**Nachtrag 7.9.2026 (R14, Entscheid David — Variante A).** Der letzte Satz des R13-Nachtrags ist
+**gegenstandslos geworden**: die Sammlung «/» ist seit R14 ein gewöhnlicher Reiter und zugleich die
+Neuer-Reiter-Seite, die Leiste steht dort nie mehr leer (`R14-REITER-MODELL.md`). Der leere
+34-px-Streifen existiert nur noch auf den Meta-Routen (/ueber, /methodik, /einstellungen,
+/kontakt), wo «kein Reiter» die wahre Auskunft ist. Die R13-Regel «höchstens EINE
+Neuer-Reiter-Seite» bleibt für `W2·25` bindend — sie fällt seit R14 ohne Sonderfall aus
+`lib/tabs.merkeTab` heraus, weil die Sammlung an ihrer Reiter-Identität erkannt wird.
+
 **Ziel (zwei Teile, in dieser Reihenfolge).**
 1. **Anheften.** OR/ZGB/ZPO … lassen sich anheften: schmaler Reiter nur mit Kürzel, ganz
    links, ohne ✕ (Schliessen nur über das Kontextmenü), überlebt «Alle schliessen» und den
@@ -374,9 +383,11 @@ Ziehen eines freien Reiters vor einen festen wird abgelehnt (sichtbar, nicht sti
 E2E: Mappe speichern → alle Reiter schliessen → Mappe öffnen ⇒ dieselbe Reiterfolge
 inkl. Lesestellung. **Rot-Probe Pflicht** (heute kein `fest`-Feld auf HEAD).
 
-**Offen, wartet auf David (nie selbst entscheiden):** ob der leere 34-px-Reiterstreifen auf
-«/» mit dem «+»-Knopf allein genügt (R11-Auflage R2) — das ist der Ort, an dem der feste
-Reiter zuerst sichtbar würde.
+**Offen, wartet auf David (nie selbst entscheiden):** ~~ob der leere 34-px-Reiterstreifen auf
+«/» mit dem «+»-Knopf allein genügt (R11-Auflage R2)~~ — **mit R14 erledigt** (7.9.2026): auf «/»
+gibt es keinen leeren Streifen mehr, dort steht der Sammlungs-Reiter. Neu offen und ebenfalls für
+David: ob auch die Meta-Routen (/ueber, /methodik, /einstellungen, /kontakt) einen Reiter tragen
+sollen — heute bleiben sie bewusst reiterlos (`R14-REITER-MODELL.md`, §Offengelegte Grenze).
 
 ## §8 · Folgeschritte nach der Landung (Stand 7.9.2026)
 
