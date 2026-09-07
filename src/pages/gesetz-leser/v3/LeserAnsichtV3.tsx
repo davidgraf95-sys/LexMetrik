@@ -212,7 +212,10 @@ export function LeserAnsichtV3({ kompakt, fussnotenAnzahl, hatAenderungsvermerke
               Prozent-Anzeige des Reglers). PREIS (§8): «Entscheide & Kontext …»
               steht seither ÜBER dem Steller. `aria-controls` des Öffners zeigt
               auf DIESEN Block — er trägt Rolle und Namen (A4-Sonde). */}
-          <div id={panelId} role="menu" aria-label="Ansicht" data-v3-ansicht-menue className="flex flex-col">
+          {/* D35-F4: `lc-menu-gruppe` statt `flex flex-col` — die Klasse IST
+              das Rezept (Trennlinie zur nächsten Gruppe, Spaltenfluss); die
+              Rolle und der Name bleiben Wort für Wort, wo sie standen. */}
+          <div id={panelId} role="menu" aria-label="Ansicht" data-v3-ansicht-menue className="lc-menu-gruppe">
           <V3Switch
             an={opt.fussnoten === 'an'}
             label="Fussnoten"
