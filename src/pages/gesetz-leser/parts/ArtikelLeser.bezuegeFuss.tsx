@@ -5,10 +5,12 @@ import { SUCH_META } from '../suchHighlight';
 import { BezuegeKopf, type BezugsMarke } from './BezuegeKopf';
 import { BezuegeZeile } from './BezuegeZeile';
 import { LeitfallZeile } from './ArtikelLeser.leitfaelle';
+import { ArtikelHistorieZeile } from './ArtikelHistorie';
 import type { ArtikelBezuege } from '../bezuegeLaden';
 import type { LeitfallRef } from '../../../lib/rechtsprechung/norm-index';
 import type { MaterialBezug, Werkzeug } from '../../../lib/normtext/werkzeuge';
 import type { ArtikelRevision } from '../../../lib/verzahnung/artikel-revisionen';
+import type { ArtikelHistorie } from '../../../lib/normtext/historie-laden';
 
 // ═══ Der BEZÜGE-FUSS des Artikels — EIN Baustein für BEIDE Formen ═══════════
 //
@@ -50,6 +52,14 @@ import type { ArtikelRevision } from '../../../lib/verzahnung/artikel-revisionen
 // stehen seither RECHTS in derselben Zeile und dauerhaft sichtbar, statt in der
 // Artikel-Kopfzeile unter `opacity-0` (Herleitung in `./ArtikelAktionen.tsx`).
 //
+// ── W2·24-D40 (David 7.9.2026) · DIE FASSUNG KOMMT DAZU ────────────────────
+// Wörtlich: «und wieso ist fassung nicht auch unten am artikel?». Diese Datei
+// bekommt dafür EINE neue Prop (`historie`) und baut daraus die erste Marke der
+// Zeile; die Zeile selbst hat davon nur den Buchstaben `f` erfahren
+// (`./BezuegeKopf.tsx`). Der Kopf-Slot, an dem die Auskunft bis D40 hing, ist
+// ersatzlos gefallen — nicht zusätzlich bewacht (§17-Gegengewicht). Herleitung
+// von Zahl, Inhalt und Registerfarbe steht unten an der Marke selbst.
+//
 // Der D34-Satz über das geschlossene `<details>` gilt für seinen Stand
 // unverändert weiter (§2b) — der Bau ist seit D35-F1 noch strenger: eine
 // zugeklappte Rubrik rendert ihren Inhalt GAR NICHT (bedingtes Rendern statt
@@ -62,11 +72,18 @@ import type { ArtikelRevision } from '../../../lib/verzahnung/artikel-revisionen
 // `npm run golden:vergleich` und `check:golden-normtext`.
 
 export function ArtikelBezuegeFuss({
-  bezuege, bezuegeImFuss, leitfaelle, materialien, verweise, werkzeuge, zaehler,
+  bezuege, bezuegeImFuss, historie, leitfaelle, materialien, verweise, werkzeuge, zaehler,
   zitat, revision, onOeffnen, laedt, aktionen, onImBlatt,
 }: {
   bezuege?: ArtikelBezuege;
   bezuegeImFuss?: ArtikelBezuege;
+  /**
+   * D40 · die Fassungshistorie dieses Artikels aus dem erlass-lokalen
+   * Historie-Shard (`lib/normtext/historie-laden`, idle geladen). `undefined` =
+   * kein Eintrag ⇒ die Rubrik «Fassung» steht gar nicht (§8, wie jede andere
+   * Rubrik ohne echte Zahl).
+   */
+  historie?: ArtikelHistorie;
   leitfaelle?: LeitfallRef[];
   materialien?: MaterialBezug[];
   /** Die im Artikel genannten, auflösbaren Normverweise (`sammleVerweise`). */
@@ -127,6 +144,41 @@ export function ArtikelBezuegeFuss({
   // `bezuegeImKopf`; der Ort hat gewechselt, die Rangfolge nicht.)
   const b = bezuegeImFuss ?? bezuege;
   const bezugsMarken: BezugsMarke[] = [
+    // ── D40 (David 7.9.2026) · «wieso ist fassung nicht auch unten am artikel?»
+    {
+      reg: 'f',
+      /* DIE ZAHL IST GEZÄHLT, NICHT GESCHÄTZT (§8/§2): sie ist die Länge der
+         Ereignis-Liste, die der Generator aus den amtlichen Änderungs-Fussnoten
+         dieses Artikels gebaut hat (`scripts/normtext/historie-generieren.ts`
+         → `baueArtikelHistorie`) — also genau die Zahl der Änderungsstände, die
+         die Zeitleiste darunter auch auflistet. Zähler und Liste können darum
+         nicht auseinanderlaufen; es ist dieselbe Länge, einmal gezählt und
+         einmal gerendert.
+
+         0 ⇒ KEINE RUBRIK. `BezuegeKopf` filtert `anzahl > 0` heraus, und das
+         ist hier keine Notlösung, sondern deckungsgleich mit dem Datenmodell:
+         korpusweit gemessen (7.9.2026, alle 209 Shards, 13 093 Artikel mit
+         Eintrag) trägt JEDER Eintrag mindestens ein Ereignis — 0 heisst also
+         «dieser Artikel hat keinen Historie-Eintrag», nie «Eintrag ohne
+         Ereignis». Die Verteilung: 7532 Artikel mit 1, 2786 mit 2, 1115 mit 3,
+         der Rest darüber.
+
+         DIE RUBRIK ERSCHEINT ERST MIT DEM SHARD, wie «Entscheide» und
+         «Materialien» erst mit der Zähl-Datei erscheinen — beide treffen in
+         derselben Leerlauf-Runde ein (`../inhalt-zustand.tsx`,
+         `../bezuegeZaehler.ts`). Ein reservierter Platz dafür wäre eine
+         Phantom-Lücke an jedem der 11 418 Artikel OHNE Eintrag (§15.2/Ä26,
+         Herleitung am gefallenen Kopf-Slot in `./ArtikelLeser.tsx`). */
+      anzahl: historie?.ereignisse?.length ?? 0,
+      wort: ['Fassung', 'Fassungen'],
+      /* GLEICHE KOMPONENTE, KEIN DUPLIKAT (§5): das ist dieselbe
+         `ArtikelHistorieZeile`, die bis D40 im Kopf-Slot stand — «Fassung ·
+         Gilt seit …» und darunter die Zeitleiste. Neu ist nur, dass sie ihre
+         Leiste OFFEN zeigt: der Rubrik-Griff hat sie gerade aufgeklappt, ein
+         zweiter Knopf darin täte dasselbe noch einmal (Herleitung an der Prop
+         `zeitleiste`). */
+      inhalt: <ArtikelHistorieZeile historie={historie} zeitleiste />,
+    },
     {
       reg: 'r',
       anzahl: zaehler ? zaehler.entscheide : (b ? b.kanten.length : (leitfaelle?.length ?? 0)),
