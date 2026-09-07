@@ -53,6 +53,10 @@ test.describe('O2 · Sidebar-Konsistenz', () => {
     await page.goto('/')
     await seitenleisteOeffnen(page)
     const leiste = nav(page)
+    // D37 (deklariert, §6.3): der Abschnitt «Vorlagen» startet jetzt selbst zu
+    // (nur der Abschnitt der aktiven Route startet offen, auf «/» keiner) —
+    // Vorbedingung herstellen, damit die Gruppe «Behördeneingaben» im DOM steht.
+    await leiste.getByRole('button', { name: 'Vorlagen aufklappen' }).click()
 
     // Die Zeile der Gruppe trägt Link + Chevron.
     const chevron = leiste.getByRole('button', { name: new RegExp(`^${GRUPPE} (auf|ein)klappen$`) })
@@ -77,6 +81,10 @@ test.describe('O2 · Sidebar-Konsistenz', () => {
     await page.goto('/')
     await seitenleisteOeffnen(page)
     const leiste = nav(page)
+    // D37 (deklariert, §6.3): s. o. — «Vorlagen» erst öffnen, damit die Gruppe
+    // «Behördeneingaben» überhaupt existiert (der AUTO-EXPAND-Beweis dieser
+    // Zeile gilt weiter der Gruppen-, nicht der Abschnitts-Ebene).
+    await leiste.getByRole('button', { name: 'Vorlagen aufklappen' }).click()
 
     // Ausgangslage: die Gruppe ist zu, ihr Kind darum nicht sichtbar.
     const chevron = leiste.getByRole('button', { name: new RegExp(`^${GRUPPE} (auf|ein)klappen$`) })
@@ -115,6 +123,10 @@ test.describe('O2 · Sidebar-Konsistenz', () => {
 
     // … ein SPA-Wechsel auf eine fremde Seite lässt sie zu (das aktive Kind
     // verschwindet — keine steigende Flanke, keine Bevormundung).
+    // D37 (deklariert, §6.3): «Alle Rechner» hängt im Abschnitt «Rechner», der
+    // auf dieser Route (noch) nicht aktiv ist und darum selbst zu startet —
+    // erst öffnen, dann den Zielsprung auslösen.
+    await leiste.getByRole('button', { name: 'Rechner aufklappen' }).click()
     const fremd = leiste.getByRole('link', { name: 'Alle Rechner', exact: true })
     await fremd.click()
     // COMMIT-BEWEIS, nicht nur Adress-Beweis (Härtung nach Gegenprüfung B1):

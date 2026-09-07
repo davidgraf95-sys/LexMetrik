@@ -15,6 +15,14 @@ import { NAVIGATION_META } from '../../lib/navigation';
 // im Fuss ausgerechnet «Einstellungen»; mit der Ableitung kann das nicht mehr
 // passieren.
 //
+// ── D36 (David 7.9.2026) · «EINSTELLUNGEN» KEHRT IN DIE SEITENLEISTE ZURÜCK ──
+// … und zwar ALLEIN, nicht die anderen vier — sie steht wieder unten in
+// `Sidebar.tsx`, abgesetzt durch eine eigene Haarlinie. Der Fuss liest darum
+// weiterhin `NAVIGATION_META`, filtert das Einstellungen-Ziel aber heraus:
+// dieselbe Angabe an zwei Orten wäre eine Dopplung (D4), und die Seitenleiste
+// ist für ein Ziel, das man häufig braucht, der näherliegende Ort. Die vier
+// übrigen (Methodik/Über/Kontakt/Datenschutz) bleiben unverändert hier.
+//
 // Die beiden Übersichts-Ziele (Rechner · Vorlagen) sind KEINE Meta-Ziele und
 // stehen darum weiter literal davor:
 //   Free/Pro-Zweiteilung aufgehoben (FAHRPLAN-EINE-HAUPTSEITE; Bug-Check
@@ -35,7 +43,9 @@ const FUSS_TEXT: Record<string, string> = {
 const NAVIGATION = [
   { to: '/rechner', label: 'Rechner' },
   { to: '/vorlagen', label: 'Vorlagen' },
-  ...NAVIGATION_META.map((l) => ({ to: l.ziel, label: FUSS_TEXT[l.ziel] ?? l.label })),
+  ...NAVIGATION_META
+    .filter((l) => l.ziel !== '/einstellungen') // D36: lebt allein in der Seitenleiste
+    .map((l) => ({ to: l.ziel, label: FUSS_TEXT[l.ziel] ?? l.label })),
 ];
 
 export function Footer() {
