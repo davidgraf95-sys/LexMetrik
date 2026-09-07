@@ -153,7 +153,31 @@ export function VorlagenWizardRahmen({
           <span aria-hidden className="inline-flex items-center justify-center w-7 h-7 border border-line bg-surface">←</span>
           Zurück zum Katalog
         </Link>
-        <p className="lc-overline">{overline}</p>
+        {/* ── FD-R8 (W2·24, 7.9.2026) · ETIKETTEN-ZEILE ────────────────────────
+            Overline UND Formvorschrift stehen in EINER Zeile. Beide sind
+            Etiketten der Vorlage («Arbeit · Vorlage» = Einordnung,
+            «Beidseitig zu unterzeichnen» = Formvorschrift), und die
+            Overline-Zeile hatte @1280 rund 1'100 px leer neben sich.
+            WARUM HIER: GB-21 hat das Badge zu Recht aus der Norm-Chip-Reihe
+            geholt (gefuellter Warn-Kasten unter unterstrichenen Normlinks =
+            zwei Grammatiken in einer Zeile). Es bekam dabei aber eine EIGENE
+            Zeile im `space-y-3`-Stapel, und die kostete 38.19 px ueber dem
+            Dokument — gemessen @1280x800 auf /vorlagen/arbeitsvertrag: die
+            Stelle des Dokuments rueckte von 964.4 auf 1002.6 px, also von
+            1.2055 auf 1.2533 Bildschirmhoehen. Genau diese Schranke haelt
+            `qsui-hierarchie` I8 bei 1.25 (Kommentar dort: Luft ueber dem
+            Maximum 0.038) — das Tor hat gemeldet, wofuer es gebaut ist.
+            GB-21 bleibt vollstaendig gewahrt: das Badge ist jetzt NOCH
+            weiter von der Chip-Reihe weg, die warn-Fuellung und die Lage im
+            ersten Viewport (§8, Tor-Griff `data-formgate`) sind unberuehrt.
+            GEMESSEN NACHHER (dieselbe Sonde, 3 Flaechen x 2 Breiten): -34.19 px
+            auf JEDER Wizard-Vorlage, arbeitsvertrag 1.2105 — unter dem Wert
+            1.212, auf dem die Schranke 1.25 aufsetzt. Die Schranke bleibt
+            darum unangetastet (keine §6.3-Aenderung an ihr). */}
+        <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
+          <p className="lc-overline">{overline}</p>
+          <span data-formgate className="lc-badge lc-badge-warn">{badge}</span>
+        </div>
         {/* overflow-wrap/hyphens: lange Komposita (z.B. «Geheimhaltungsvereinbarung»)
             sprengten den Titel bei 360px → 12px horizontaler Seiten-Overflow
             (Befund David 25.6.2026, nda). Brechen statt überlaufen. */}
@@ -175,22 +199,6 @@ export function VorlagenWizardRahmen({
             <NormChip key={n.label} artikel={n.label} hrefOverride={fedlexLokalisiert(n.url, locale)} />
           ))}
         </div>
-        {/* ── GB-21 (W2·24, Befund G21, 7.9.2026) · DIE FORMVORSCHRIFT IST EINE ZEILE
-            GEMESSEN: `span.lc-badge.lc-badge-warn` «Zu unterzeichnen» stand als
-            EINZIGER farbiger Kasten mitten in einer Reihe unterstrichener
-            Normlinks — zwei Grammatiken (Link-Chip und gefüllter Warn-Kasten)
-            in einer Zeile, und der Kasten gewann optisch gegen die Norm-Anker,
-            die die Zeile eigentlich führt.
-            NEU: eigene Zeile UNTER der Linkreihe. Was NICHT wandert, ist die
-            §8-Aussage selbst: `data-formgate` (Tor-Griff qsui-hierarchie I10)
-            und die Lage IM KOPF, also im ersten Viewport — die Formvorschrift
-            darf nie hinter der Eingabestrecke stehen. Das Tor misst die
-            Sichtbarkeit im ersten Bild, nicht die Zeilennummer; die Ansage
-            bleibt darum vollständig gedeckt.
-            Die warn-FÜLLUNG bleibt: sie trägt Bedeutung, nicht Dekor (der
-            Block-Kommentar an `.lc-badge-warn` hält das ausdrücklich fest) —
-            gewandert ist der ORT, nicht der Ton. */}
-        <p><span data-formgate className="lc-badge lc-badge-warn">{badge}</span></p>
         {/* V6 (W2·10-UI-NAV): Weg zum passenden Rechner — «Frist zuerst
             rechnen». Rendert nur, wenn die Registry für DIESE Vorlage eine
             Rechner-Kante führt; sonst gibt die Komponente null zurück und der
