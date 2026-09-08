@@ -57,8 +57,7 @@ Repo-Verifikation; jede Konsequenz nennt den Ziel-Abschnitt.
 
 *Wörtlich aus `ROADMAP.md` (QS-TOK/ROADMAP-Diät B4, 31.7.2026); dort bleiben Checkbox, `@meta`, Einzeiler, Pointer. Steuert nicht — Spec-Heimat.* *Wörtlich bis auf die Selbstverweise, die am 31.7.2026 auf «diese Datei» neutralisiert wurden (Endprüfung Fix-Runde 1; Fund R2-18).*
 
-  **Fokus-Dekret-Priorität** — Kontext: Bewerbung David bei der FINMA mit Verweis auf LexMetrik,
-  der Bereich muss vorzeigbar sein)* — **F1:** FINMA als nächste Quelle der bestehenden
+  **Fokus-Dekret-Priorität** — Kontext: externer Anlass im FINMA-Umfeld mit Verweis auf LexMetrik, der Bereich muss vorzeigbar sein)* — **F1:** FINMA als nächste Quelle der bestehenden
   Stufe-1-Pipeline (Rundschreiben/Wegleitungen/Aufsichtsmitteilungen, amtlich Art. 5 URG;
   browserloser Adapter nach §3-Muster, Provenienz §7 a–d; Quell-Wahl zuerst: strukturierte
   Endpunkte vs. PDF empirisch erheben). **F2 (evtl., David «wenn möglich»):** direkte Verzahnung
