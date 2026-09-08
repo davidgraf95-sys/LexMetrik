@@ -3,12 +3,16 @@
 # jede Landung läuft den normalen Weg (Skill landung).
 version: 2
 updates:
+  # Entscheid David 8.9.2026 (QS-CI-MINUTEN M2): monatlich statt wöchentlich und
+  # KEIN automatisches Rebase — Messung 8.9.2026: 13 Zweige lösten 113 CI-Läufe
+  # (4 487 min/30 Tage) aus, weil Dependabot bei jeder Landung auf main rebasierte.
+  # Nachziehen macht die Session, die den PR landet (`gh pr update-branch`).
   - package-ecosystem: npm
     directory: /
     schedule:
-      interval: weekly
-      day: monday
+      interval: monthly
     open-pull-requests-limit: 3
+    rebase-strategy: disabled
     groups:
       # Browser-Testkette isoliert (Lehre 15.8.2026, PR #510): ein 19-Paket-
       # Sammel-Bump mit @playwright/test 1.60→1.62 + @vitejs/plugin-react
@@ -26,6 +30,6 @@ updates:
   - package-ecosystem: github-actions
     directory: /
     schedule:
-      interval: weekly
-      day: monday
+      interval: monthly
+    rebase-strategy: disabled
     open-pull-requests-limit: 2
