@@ -242,6 +242,11 @@ Landung als Cherry-Pick.
   flackernde Specs über drei Läufe (je Lauf andere) — bis zum Stichtag nur `::warning`, danach
   automatisch hart; fehlende oder kaputte Modus-Datei ⇒ hart. Auftrag bis dahin: Wurzel je Spec
   messen (Fehlerbuch FAHRPLAN-OFFENE-BEFUNDE §4), nicht Ausnahmen sammeln.
+- **Browser-Installation** läuft in beiden Playwright-Jobs über `scripts/ci/playwright-install.sh`
+  (#785): zwei Versuche mit Prozessbaum-Kill, `dpkg --configure -a` und Warten auf die
+  dpkg-Sperre — Anlass 8.9.2026: eine Timeout-Waise `apt-get` machte jeden Retry wirkungslos.
+  Ein 403 beim Ablegen des Balancing-Reports färbt einen bestandenen Shard nicht mehr rot.
+  Ein roter Shard ohne rote Tests ⇒ zuerst den Schritt lesen, nicht die Suite verdächtigen.
 - **Reine Doku-PRs** (Diff-Klasse «doku») überspringen `bau` und `e2e`; die Doku-Tore laufen
   weiter. Ein per `if:` übersprungener Pflicht-Job gilt bei GitHub als erfüllt — deshalb
   bleibt `tore` immer aktiv.
