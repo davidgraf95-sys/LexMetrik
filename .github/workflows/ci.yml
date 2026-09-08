@@ -16,7 +16,12 @@
 #      Spec-Dauern, e2e/shard-gruppen.json, je ~7.8–8.6 min Testzeit).
 #      Der Union-Wächter (`check:e2e-shards`, auch in `check:seriell`) beweist
 #      vor den Shards: Gruppen == `playwright --list` — kein Test doppelt,
-#      keiner verloren. Reine Verteilung, kein Test/Timeout/Umfang (§6.3);
+#      keiner verloren. Reine Verteilung, kein Test/Timeout/Umfang (§6.3).
+#      NACH den Shards prüft der Flacker-Wächter (`check:e2e-flake`) den
+#      JSON-Report: ein Test, der erst im Retry grün wird, ist ROT — ausser
+#      die Spec steht mit Datum und Grund in `e2e/flake-ausnahmen.json`
+#      (verfällt nach 30 Tagen). Anlass: Lauf 34209371435 meldete «success»,
+#      obwohl `a-ueberlauf-ohne-scroller` im Erstversuch rot war;
 #   3) `tore` fährt alle Node-Tore gegen das heruntergeladene dist —
 #      unverändert im Umfang (R1-Lehre: Tore streichen ist die falsche
 #      Vereinfachung), nur nicht mehr VOR den e2e-Shards;
@@ -964,6 +969,29 @@ jobs:
           path: playwright-report.json
           retention-days: 7
           if-no-files-found: warn
+      # ── Flacker-Wächter (QS-CI-MINUTEN, 8.9.2026) ────────────────────────
+      # Playwright fährt hier `retries: 2`. Ein Test, der im Erstversuch rot
+      # und im zweiten grün ist, zählt als `flaky`: der Prozess endet mit
+      # Exit 0, der Job wird «success», GitHub meldet grün. Genau so verdeckte
+      # Lauf 34209371435 (Shard 8/8) den echten Defekt
+      # `a-ueberlauf-ohne-scroller` — Attempt 0 rot, Attempt 1 grün, Gesamt
+      # «success». Ein Lauf, der nur im Wiederholungsversuch grün wird, ist
+      # kein grüner Lauf. Der Wächter liest den JSON-Report dieses Shards und
+      # macht Flackern ROT — ausser die Spec steht mit Datum und Grund in
+      # `e2e/flake-ausnahmen.json` (Höchstdauer 30 Tage, danach wieder rot).
+      # Regel und Fehlerseite: scripts/check-e2e-flake.ts.
+      #
+      # STELLUNG im Job: NACH dem Report-Upload — der Report bleibt als
+      # Artefakt erhalten, auch wenn dieser Schritt rot wird.
+      # `!cancelled()` statt `always()`: der Schritt soll auch nach ROTEM
+      # Playwright-Lauf lesen (dort sind die Flakes besonders interessant),
+      # aber ein vom 25-min-Deckel GEKAPPTER Job hat gar keinen Report — dort
+      # wäre ein zusätzliches Rot nur Rauschen über einer schon abgebrochenen
+      # Ausführung. Er ÜBERDECKT nie ein bestehendes Rot: ein bereits roter
+      # Testlauf bleibt rot, ganz gleich, wie dieser Schritt ausgeht.
+      - name: Flacker-Wächter (Retry-Grün ist kein Grün)
+        if: ${{ !cancelled() }}
+        run: npm run check:e2e-flake
       # Playwright-Traces sichern — NUR bei rotem Shard (QS-E2E-STABIL, 7.8.2026).
       # Bisher zeichnete Playwright Traces auf, legte sie unter `test-results/` ab
       # und warf sie mit dem Runner weg. Beim Hänger vom 7.8. blieb darum nur der

@@ -26,6 +26,7 @@
     "test:e2e:kurz": "playwright test --reporter=dot",
     "test:e2e:gruppe": "node scripts/e2e-shard-gruppen.mjs --fahren",
     "check:e2e-shards": "node scripts/e2e-shard-gruppen.mjs --pruefen && node scripts/e2e-shard-gruppen-generieren.mjs --check",
+    "check:e2e-flake": "vite-node scripts/check-e2e-flake.ts",
     "check": "vite-node scripts/check-parallel.ts",
     "map": "vite-node scripts/repo-map.ts --",
     "ci:log": "bash scripts/ci-log-diaet.sh",
