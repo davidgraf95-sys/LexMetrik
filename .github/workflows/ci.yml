@@ -918,7 +918,14 @@ jobs:
     # ehrliche Arbeit nicht mehr hineinpasst. Sie passt.
     # ROT BLEIBT ROT: der Deckel bricht ab und meldet FEHLGESCHLAGEN — er macht
     # nichts grün, er kürzt nur die Brenndauer (§17: Wurzel-Deckel statt Umschiffen).
-    timeout-minutes: 25
+    # NACHTRAG (Opus-Gegenprüfung PR #785, read-only, 8.9.2026 — Auflage B1):
+    # scripts/ci/playwright-install.sh rechnet jetzt mit bis zu
+    # 2 × (30 s Sperre + 240 s Install + 15 s Kill-Kulanz) + 60 s
+    # dpkg-Configure-Vorlauf ≈ 630 s (10,5 min) Worst Case — Rechnung im
+    # Skript-Kopf. Das reisst die bisherige Reserve von 540 s (25 min − 16 min
+    # Regelfall Tests+Rüstzeit, s. oben): Deckel darum auf 28 min angehoben,
+    # neue Reserve 720 s ≥ 630 s Rechnung (Puffer 90 s).
+    timeout-minutes: 28
     env:
       TZ: Europe/Zurich
     strategy:
@@ -969,22 +976,23 @@ jobs:
       # bleibt also scharf. ROT BLEIBT ROT (§6.7): scheitern beide Versuche,
       # endet der Schritt rot mit ::error — die Schriftart-Pakete werden NICHT
       # übersprungen, weil fehlende Fonts die Pixel-Vergleiche still verschöben.
+      #
+      # NACHTRAG 8.9.2026 (§17-Wurzel-Fix, Lauf 34241159277, Job 102112456997,
+      # PR #779): Versuch 1 lief ins 5-min-Limit; `timeout` tötete nur den
+      # direkten Kindprozess (npx) — das per sudo (eigene PTY-Session) von
+      # Playwright gestartete `apt-get` (PID 2785) lief als Waise weiter und
+      # hielt /var/lib/dpkg/lock-frontend. Versuch 2 scheiterte binnen 3 s:
+      # «E: Could not get lock /var/lib/dpkg/lock-frontend. It is held by
+      # process 2785 (apt-get)» → «Installation process exited with code:
+      # 100». Der Retry war damit strukturell wirkungslos.
+      #
+      # NACHBESSERUNG PR #785 (September 2026): der Kill-und-Retry-Block ist
+      # nach scripts/ci/playwright-install.sh ausgelagert (§5 Single Source of
+      # Truth — der Perf-Budget-Job unten ruft dieselbe Datei auf und bekommt
+      # denselben Schutz); dort auch Rationale + Zeitbudget-Rechnung für die
+      # dpkg-Sperre, den dpkg-Configure-Vorlauf und den Prozessgruppen-Kill.
       - name: Playwright-Browser (Chromium)
-        run: |
-          # apt geduldig, aber nicht endlos: Retries und Socket-Timeout greifen
-          # bei STILLE. Gegen das Schneckentempo oben (15.3 kB/s bei fliessenden
-          # Daten) kennt apt keine Option — dagegen hilft nur das `timeout`.
-          echo 'Acquire::Retries "3"; Acquire::http::Timeout "30"; Acquire::https::Timeout "30";' \
-            | sudo tee /etc/apt/apt.conf.d/99-lexmetrik-geduld > /dev/null
-          for versuch in 1 2; do
-            if timeout 300 npx playwright install --with-deps chromium; then
-              echo "playwright install --with-deps: Versuch ${versuch}/2 durch."
-              exit 0
-            fi
-            echo "::warning::playwright install --with-deps: Versuch ${versuch}/2 nach spätestens 5 min abgebrochen (Mirror-Stall?) — Wiederholung."
-          done
-          echo "::error::playwright install --with-deps kam in zwei Versuchen à 5 min nicht durch — Paketspiegel gestört, Shard rot (nicht still übersprungen)."
-          exit 1
+        run: bash scripts/ci/playwright-install.sh
       # `npm run preview` serviert das heruntergeladene dist/ (kein Rebuild);
       # jeder Job fährt nur die Specs SEINER dauer-gepackten Gruppe seriell
       # (workers:1 bleibt, damit die Contention NICHT in EINEN Runner zurückkehrt)
@@ -995,8 +1003,20 @@ jobs:
       # interessant). Damit lässt sich `e2e/shard-gruppen.json` künftig gegen
       # GEMESSENE CI-Zeiten packen statt gegen lokale, die nicht uniform skalieren
       # (a33: lokal 92 s, CI ~360 s). Begründung in playwright.config.ts.
+      # continue-on-error (QS-CI-MINUTEN, 8.9.2026): Lauf 34246217673, Job
+      # 102130311970 (Shard 3/4, PR #783) — Tests grün (2 flaky, Melde-Modus),
+      # der Upload aber rot mit «Failed to FinalizeArtifact: Received
+      # non-retryable error: Failed request: (403) Forbidden: Error from
+      # intermediary», während die drei anderen Shards mit demselben Token
+      # hochluden — transienter Speicherfehler des Anbieters. Diese Datei ist
+      # nur Datengrundlage fürs Shard-Balancing, kein Tor: der Flacker-Wächter
+      # oben liest `playwright-report.json` LOKAL im selben Shard, kein Job
+      # lädt dieses Artefakt herunter (die zwei `download-artifact`-Schritte
+      # im Workflow holen `dist`, nicht diesen Report). Ein Ablage-Fehler darf
+      # eine bestandene Prüfung nicht rot färben.
       - name: Playwright-JSON-Report ablegen (Shard-Balancing-Datengrundlage)
         if: always()
+        continue-on-error: true
         uses: actions/upload-artifact@v7
         with:
           name: playwright-report-gruppe-${{ matrix.gruppe }}
@@ -1163,8 +1183,11 @@ jobs:
           path: ~/.cache/ms-playwright
           key: playwright-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
       # Lighthouse steuert Chromium — derselbe Browser wie e2e, hier eigener Job.
+      # PR #785: derselbe apt/dpkg-Sperren-Schutz wie im e2e-Shard-Job, §5
+      # Single Source of Truth statt Duplikat — Details in
+      # scripts/ci/playwright-install.sh.
       - name: Playwright-Browser (Chromium)
-        run: npx playwright install --with-deps chromium
+        run: bash scripts/ci/playwright-install.sh
       - name: Perf-Budget — Bundle-Topologie (Chrome-frei)
         run: npm run check:perf-budget
       - name: Perf-Budget — Lighthouse-Metriken (4× CPU + langsames 4G)
