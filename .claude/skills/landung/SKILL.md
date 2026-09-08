@@ -219,6 +219,27 @@ Landung als Cherry-Pick.
 - Berufung auf die gestrichene §9-Zeile «Prod: `npx vercel --prod`».
 - Nach dem Merge «zur Sicherheit» manuell nachdeployen.
 
+### Prüfstrasse seit 8.9.2026 (QS-CI-MINUTEN, Sparplan M1–M5)
+
+- **Vier Browser-Shards** statt acht; die Pflicht-Kontexte im Branch-Schutz heissen
+  «Browser-Smoke Shard N/4 (Playwright)». **Wer die Shard-Zahl ändert, zieht die
+  Pflicht-Kontexte im Branch-Schutz im selben Zug nach** (`gh api -X PATCH
+  repos/<owner>/<repo>/branches/main/protection/required_status_checks --input <json>`),
+  sonst hängt jeder PR auf nie gemeldeten Kontexten. Einzige Quelle der Zahl: die
+  ci.yml-Matrix (`scripts/e2e-shard-anzahl.mjs` liest sie); Union-Wächter `check:e2e-shards`.
+- **Reine Doku-PRs** (Diff-Klasse «doku») überspringen `bau` und `e2e`; die Doku-Tore laufen
+  weiter. Ein per `if:` übersprungener Pflicht-Job gilt bei GitHub als erfüllt — deshalb
+  bleibt `tore` immer aktiv.
+- **Push auf `main`** läuft nur noch `bau` + `deploy` («Push-Diät»), weil `strict: true` den
+  PR-Lauf auf exakt den landenden Baum zwingt; der `diff`-Job prüft das (grüner
+  PR-Check-Run für den Merge-Commit) und schaltet sonst das volle Programm ein.
+  **`strict: true` darf nicht fallen**, sonst wird main ungeprüft deployt.
+- **Dependabot** läuft monatlich ohne Auto-Rebase: die landende Session zieht offene
+  Dependabot-PRs per `gh pr update-branch` nach und setzt Auto-Merge (Patch/Minor), schliesst
+  Hauptversionen mit Begründung.
+- Messung/Nachmessung: `bibliothek/betrieb/ci-minuten-sparplan-2026-09-08.md` (61 381 min/30 Tage
+  vor dem Sparplan; Nachmessung fällig **8.10.2026**, gleiche Methode: Jobs je Lauf aufgerundet).
+
 ### Session-Ende: Bau-Flächen hinterlassen keine Zweige (Lehre 8.9.2026)
 
 Beleg: Aufräumen 8.9.2026 fand 22 Remote-Branches, 3 Worktrees, 5 Dependabot-PRs
