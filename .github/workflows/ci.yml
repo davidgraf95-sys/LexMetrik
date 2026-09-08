@@ -961,6 +961,23 @@ jobs:
       # bleibt also scharf. ROT BLEIBT ROT (§6.7): scheitern beide Versuche,
       # endet der Schritt rot mit ::error — die Schriftart-Pakete werden NICHT
       # übersprungen, weil fehlende Fonts die Pixel-Vergleiche still verschöben.
+      #
+      # NACHTRAG 8.9.2026 (§17-Wurzel-Fix, Lauf 34241159277, Job 102112456997,
+      # PR #779): Versuch 1 lief ins 5-min-Limit; `timeout` tötete nur den
+      # direkten Kindprozess (npx) — das per sudo (eigene PTY-Session) von
+      # Playwright gestartete `apt-get` (PID 2785) lief als Waise weiter und
+      # hielt /var/lib/dpkg/lock-frontend. Versuch 2 scheiterte binnen 3 s:
+      # «E: Could not get lock /var/lib/dpkg/lock-frontend. It is held by
+      # process 2785 (apt-get)» → «Installation process exited with code:
+      # 100». Der Retry war damit strukturell wirkungslos — Wiederholung nach
+      # einem Timeout kann so nie gelingen. Wirkung dieses Nachtrags: jeder
+      # Versuch läuft in einer eigenen Prozessgruppe (setsid) und wird bei
+      # Timeout per Gruppen-Signal beendet; da sudo den Waisenprozess aus
+      # dieser Gruppe herauslöst (siehe Beleg), wird er zusätzlich per Name
+      # (`apt-get`/`dpkg`) hart beendet; vor jedem Versuch wird auf die
+      # Freigabe der dpkg-Sperren gewartet (max. 240 s) statt sofort erneut
+      # anzutreten. Budget: 2 × (300 s Install + 15 s Kill-Kulanz) ≈ 10,5 min,
+      # bleibt unter dem 12-min-Schrittbudget und dem 25-min-Job-Deckel.
       - name: Playwright-Browser (Chromium)
         run: |
           # apt geduldig, aber nicht endlos: Retries und Socket-Timeout greifen
@@ -968,13 +985,52 @@ jobs:
           # Daten) kennt apt keine Option — dagegen hilft nur das `timeout`.
           echo 'Acquire::Retries "3"; Acquire::http::Timeout "30"; Acquire::https::Timeout "30";' \
             | sudo tee /etc/apt/apt.conf.d/99-lexmetrik-geduld > /dev/null
+
+          sperre_belegt() {
+            sudo fuser /var/lib/dpkg/lock-frontend /var/lib/dpkg/lock /var/lib/apt/lists/lock >/dev/null 2>&1
+          }
+
+          warte_auf_dpkg_sperre() {
+            local gewartet=0
+            while sperre_belegt; do
+              if [ "$gewartet" -ge 240 ]; then
+                echo "::error::dpkg-Sperre nach 240 s nicht freigegeben — Blockade haelt an, Abbruch."
+                return 1
+              fi
+              haltende_pid=$(sudo fuser /var/lib/dpkg/lock-frontend /var/lib/dpkg/lock /var/lib/apt/lists/lock 2>&1 | tr -s ' \t' ' ' | awk '{print $NF}')
+              echo "warte auf dpkg-Sperre (PID ${haltende_pid:-?}), ${gewartet}s/240s"
+              sleep 5
+              gewartet=$((gewartet + 5))
+            done
+            return 0
+          }
+
           for versuch in 1 2; do
-            if timeout 300 npx playwright install --with-deps chromium; then
+            warte_auf_dpkg_sperre || exit 1
+
+            setsid timeout --kill-after=15 300 npx playwright install --with-deps chromium &
+            lauf_pid=$!
+            wait "$lauf_pid"
+            status=$?
+
+            if [ "$status" -eq 0 ]; then
               echo "playwright install --with-deps: Versuch ${versuch}/2 durch."
               exit 0
             fi
-            echo "::warning::playwright install --with-deps: Versuch ${versuch}/2 nach spätestens 5 min abgebrochen (Mirror-Stall?) — Wiederholung."
+
+            echo "::warning::playwright install --with-deps: Versuch ${versuch}/2 nach spätestens 5 min abgebrochen oder fehlgeschlagen (Exit ${status}) — räume verwaiste apt/dpkg-Prozesse auf, dann Wiederholung."
+            # setsid gibt der npx-Prozessgruppe eine eigene PGID — die wird hier
+            # beendet, falls noch Mitglieder laufen. Das per sudo gestartete
+            # apt-get haengt aber typischerweise NICHT mehr in dieser Gruppe
+            # (eigene PTY-Session, s. Nachtrag oben) — deshalb zusaetzlich der
+            # Namens-Kill als zweite, unabhaengige Massnahme (§0: Gruppe toeten
+            # UND Sperre abwarten).
+            kill -TERM -- "-${lauf_pid}" 2>/dev/null || true
+            sleep 2
+            kill -KILL -- "-${lauf_pid}" 2>/dev/null || true
+            sudo pkill -9 -f 'apt-get|dpkg' 2>/dev/null || true
           done
+
           echo "::error::playwright install --with-deps kam in zwei Versuchen à 5 min nicht durch — Paketspiegel gestört, Shard rot (nicht still übersprungen)."
           exit 1
       # `npm run preview` serviert das heruntergeladene dist/ (kein Rebuild);
