@@ -738,7 +738,7 @@ zgb-a36-anhang: Die ZGB-Gliederung zeigt 74 Artikel des Anhangs «Wortlaut der f
 
 - [ ] **Prüfstrasse sparsamer ohne Prüftiefe-Verlust** *(`QS-CI-MINUTEN`, Auftrag David 8.9.2026)*
   <!-- @meta id: QS-CI-MINUTEN · status: ready · blocker: null · dep: [] · feld: betrieb -->
-  ✅ M2 (#767) · M1/M3/M4/M5 (#773) · Flacker-Wächter (#779) · Ergebnis-Job (#780); Regeln: Skill `landung` §«Prüfstrasse seit 8.9.2026». **Nachmessung 8.10.2026.** Offen: Merge Queue (Gate).
+  ✅ M2 (#767) · M1/M3/M4/M5 (#773) · Flacker-Wächter (#779, Melde-Modus bis 22.9.2026, dann hart) · Ergebnis-Job (#780) · Playwright-Install-Retry dpkg-Sperre (#785); Regeln: Skill `landung` §«Prüfstrasse seit 8.9.2026». **Nachmessung 8.10.2026.** Offen: Merge Queue (Gate) · Wurzel der 6 flackernden Specs (Fehlerbuch §4, bis 22.9.).
   **Entscheide David 8.9.2026:** Weg **A** (Repo bleibt öffentlich, Sparplan bauen; privat nur zusammen mit VPS/Self-hosted Runner) · **M2 freigegeben und gelandet** (Dependabot monatlich, `rebase-strategy: disabled`).
   Ziel: CI-Minuten senken, kein Tor entfällt, `check:e2e-shards` bleibt.
   **Detail:** [ci-minuten-sparplan-2026-09-08.md](bibliothek/betrieb/ci-minuten-sparplan-2026-09-08.md)
