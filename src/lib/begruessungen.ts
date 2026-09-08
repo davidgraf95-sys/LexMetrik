@@ -328,9 +328,11 @@ export const TAGESZEITEN: readonly Tageszeit[] = [
       'Schöne Namittag mitenand.',
       // Landessprachen und Schweizer Tagesrhythmus (Ausbau 8.9.2026;
       // «Bon après-midi.»/«Buon pomeriggio.» sind Wunsch-Formen zum Abschied
-      // und am 8.9.2026 durch Begrüssungen ersetzt — «Rebonjour.» ist der
-      // Gruss beim Wiedersehen im Lauf des Tages).
-      'Rebonjour.',
+      // und am 8.9.2026 durch Begrüssungen ersetzt; «Rebonjour.» ist
+      // nachgeschärft 8.9.2026 wieder raus — wirkte bemüht — und durch
+      // «Bienvenue à vous.» ersetzt, damit der Französisch-Wächter (Test)
+      // weiter grün bleibt).
+      'Bienvenue à vous.',
       'Salve a tutti.',
       'Zeit für ein Zvieri.',
       'Schöni Zvieri-Zyt.',
@@ -394,7 +396,6 @@ export const TAGESZEITEN: readonly Tageszeit[] = [
       'Grüezi zum Abend.',
       'Der Abend gehört Ihnen.',
       'Der Abend ist noch jung.',
-      'Was suchen Sie heute Abend?',
       'Noch eine Frist zu prüfen?',
       'Noch am Dossier?',
       'Abends noch am Werk?',
@@ -414,6 +415,9 @@ export const TAGESZEITEN: readonly Tageszeit[] = [
       'Buna saira.',
       'Schöne Obig.',
       'En Guete zum Znacht.',
+      // Nachgeschärft 8.9.2026 (Haupt-Session): «Was suchen Sie heute Abend?»
+      // gestrichen, dafür nach.
+      'Guete Aabig, willkomme.',
     ],
   },
   {
@@ -435,12 +439,9 @@ export const TAGESZEITEN: readonly Tageszeit[] = [
       'Spät im Dossier?',
       'Nachtschicht?',
       'Später Blick ins Dossier?',
-      'Um diese Zeit noch im Recht?',
       'Noch eine Frage um diese Zeit?',
       'Noch ein Paragraph?',
       'Die Suche ist auch nachts da.',
-      'Nachts recherchiert sich gut.',
-      'Die Nacht ist Ihre Zeit?',
       'Die Kanzlei ist dunkel.',
       'Nachts sind die Akten still.',
       'No spaat dra?',
@@ -455,6 +456,12 @@ export const TAGESZEITEN: readonly Tageszeit[] = [
       // durch späte Begrüssungen ersetzt).
       'Bonsoir à vous.',
       'Buonasera a voi.',
+      // Nachgeschärft 8.9.2026 (Haupt-Session, «wirken bemüht»): drei Formeln
+      // gestrichen, drei Grüsse nach — «Guete Aabig mitenand.» stünde doppelt
+      // (schon im Abend-Pool), darum «Salü, no wach?» statt dessen.
+      'Bonsoir, bienvenue.',
+      'Buonasera, benvenuti.',
+      'Salü, no wach?',
     ],
   },
 ];

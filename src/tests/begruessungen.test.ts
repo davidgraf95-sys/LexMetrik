@@ -138,13 +138,13 @@ describe('Begrüssungs-Pools', () => {
     // Sprachen Abschiedsformeln und stehen darum weder hier noch im Pool.
     const FRANZOESISCH = [
       'Bonjour.', 'Bonjour à tous.', 'Bonjour à vous.', 'Bonjour et bienvenue.',
-      'Rebonjour.', 'Bonsoir.', 'Bonsoir à tous.', 'Bonsoir à vous.',
-      'Bienvenue.',
+      'Bonsoir.', 'Bonsoir à tous.', 'Bonsoir à vous.', 'Bonsoir, bienvenue.',
+      'Bienvenue.', 'Bienvenue à vous.',
     ];
     const ITALIENISCH = [
       'Buongiorno.', 'Buongiorno a voi.', 'Buongiorno a tutti.', 'Salve.',
       'Salve a tutti.', 'Buonasera.', 'Buonasera a tutti.', 'Buonasera a voi.',
-      'Benvenuti.',
+      'Buonasera, benvenuti.', 'Benvenuti.',
     ];
     for (const t of TAGESZEITEN) {
       expect(
