@@ -111,3 +111,13 @@ und [`alternativen-serverlos-2026-09-08.md`](alternativen-serverlos-2026-09-08.m
   (`netcup.com/en/server/root-server`) am 8.9.2026 erneut geprüft und bestätigt, keine Änderung nötig.
 - **Bestelltermin:** David, wörtlich 8.9.2026: «ich werde nächsten sonntag den server bestellen»
   (= Sonntag 13.9.2026).
+
+### Nachtrag 8.9.2026 (abends) — Betriebs-Checkliste ist Vorbedingung, nicht Nachtrag
+
+Lehre der Aufräum-Session 8.9.2026 (22 verwaiste Branches, 5 liegende Dependabot-PRs, ein nie
+gelandeter Risikopfad-Branch: Ursache «niemand zuständig»): Der Server bekommt VOR der ersten
+Nutzung eine Betriebs-Checkliste mit Zuständigkeit und Rhythmus — monatlich: Updates (unattended-
+upgrades-Log lesen), Backup-Wiederherstellung testen (Storage Box → Server), Plattenstand,
+Zertifikat, Nachtlauf-Protokolle (Stille ≠ Erfolg), Rechnung; jährlich: Laufzeit/Preis prüfen.
+Ohne Checkliste keine Freigabe des Serving-Bauschritts (QS-DATA E3). Ort der Checkliste:
+`bibliothek/betrieb/vps-betrieb-checkliste.md` (anlegen in der Server-Session).
