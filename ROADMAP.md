@@ -643,8 +643,8 @@ zgb-a36-anhang: Die ZGB-Gliederung zeigt 74 Artikel des Anhangs «Wortlaut der f
   Läuft unsere Automatik wirklich, und würde sie scheitern können? Offen: Turso-Wächter-Abdeckung +
   Wachstums-Schwellen.
   **Detail:** [FAHRPLAN-BASIS-AUSBAU.md](fahrplaene/FAHRPLAN-BASIS-AUSBAU.md) §1.
-  - [x] **Deploy-Job löscht alte Vercel-Stände** *(8.9.2026)* — die Nutzungsseite zeigte 261.91 GB Deployment Storage gegen die Hobby-Grenze von 10 GB (100 % Projekt `lexmetrik`, ein Stand = 738 MB bei 18 321 Dateien, 10–20 Landungen/Tag); die Aufbewahrungsfrist «1 day» allein reicht nicht, weil Vercel immer die letzten 20 Produktions- und die letzten 10 Deployments behält (~15 GB). Neuer Schritt hinter der Deploy-Nachkontrolle behält nur die 3 neuesten Produktions-Stände (`scripts/betrieb/vercel-aufraeumen.mjs`). **Wirkung auf der Nutzungsseite nach 48 h messen — Unsicherheit: ob gelöschte Stände in der 30-Tage-Wiederherstellungsfrist noch gegen das Kontingent zählen.**
-  - [ ] **Stand verkleinern — 455 MB Korpus aus jedem Deployment herausnehmen** *(Folgeschritt, 8.9.2026)* — `public/normtext` 146 MB, `public/rechtsprechung` 277 MB, `public/such-index` 25 MB liegen in JEDEM Stand; Weg: Blob/externer Speicher, §5 bleibt gewahrt (die Projektion wird nur anders ausgeliefert). Erst angehen, wenn der Aufräum-Schritt allein nicht unter 10 GB bringt.
+  - [x] **Deploy-Job löscht alte Vercel-Stände, 3 bleiben** *(8.9.2026, #774)* — 262 GB gegen 10 GB Hobby-Grenze; Retention allein reicht nicht. Nach 48 h Nutzungsseite messen (zählt die 30-Tage-Frist mit?).
+  - [ ] **455 MB Korpus aus jedem Deployment auslagern** — erst, wenn #774 allein nicht unter 10 GB bringt.
   - [ ] **§17 Plan-Buchung-Fallback akzeptiert den Roadmap-Block nur als letzten PR-Body-Absatz** *(#628 nicht gebucht, 2.9.2026)* — Wurzel-Kandidat: Block an beliebiger Stelle des Bodys akzeptieren oder `check:merge-schutz` prüft den PR-Body-Aufbau.
 
 - [ ] **Basis-Ausbau — Fundament** *(`QS-BASIS`, `[OF]`)*
