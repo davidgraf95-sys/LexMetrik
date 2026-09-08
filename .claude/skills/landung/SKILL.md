@@ -238,6 +238,10 @@ Landung als Cherry-Pick.
 - **Flacker-Wächter** `check:e2e-flake` (#779): ein Shard, der nur im Wiederholungsversuch grün
   wird, ist rot — ausser die Spec steht mit Datum/Grund in `e2e/flake-ausnahmen.json` (Verfall
   30 Tage). Flackern wird also einmal angeschaut, nie stillschweigend weggeklickt.
+  **Melde-Modus bis 22.9.2026** (`e2e/flake-modus.json`): Messung 8.9.2026 zeigte 6 verschiedene
+  flackernde Specs über drei Läufe (je Lauf andere) — bis zum Stichtag nur `::warning`, danach
+  automatisch hart; fehlende oder kaputte Modus-Datei ⇒ hart. Auftrag bis dahin: Wurzel je Spec
+  messen (Fehlerbuch FAHRPLAN-OFFENE-BEFUNDE §4), nicht Ausnahmen sammeln.
 - **Reine Doku-PRs** (Diff-Klasse «doku») überspringen `bau` und `e2e`; die Doku-Tore laufen
   weiter. Ein per `if:` übersprungener Pflicht-Job gilt bei GitHub als erfüllt — deshalb
   bleibt `tore` immer aktiv.
