@@ -1,4 +1,4 @@
-// @shard-gruppe: 1
+// @shard-gruppe: 3
 // ─── Ä76 (David 17.8.2026) · SUCHE BEI EINGEKLAPPTER GLIEDERUNG ──────────────
 //
 // BEFUND, wörtlich: «wenn die gliederung ausgeblendet ist funktioniert suche

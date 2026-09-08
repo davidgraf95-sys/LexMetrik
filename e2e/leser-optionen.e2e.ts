@@ -1,4 +1,4 @@
-// @shard-gruppe: 4
+// @shard-gruppe: 1
 import { test, expect, type Page } from '@playwright/test';
 import { F_MARKE } from './helpers/fassungsRubrik';
 import {

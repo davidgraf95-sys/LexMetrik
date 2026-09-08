@@ -1,4 +1,4 @@
-// @shard-gruppe: 4
+// @shard-gruppe: 2
 import { test, expect, type Page } from '@playwright/test'
 import { clsBeobachtenInstallieren, clsAuslesen } from './helpers/cls'
 import { DROSSEL } from './helpers/budgets'
