@@ -161,6 +161,8 @@ const ALLOWLIST_NUR_CI: Record<string, string> = {
     'vergleicht den GANZEN Feature-Branch (origin/main..HEAD) auf Gegenprüfungs-Verdikt + Register-Wachstum — während eines laufenden Risikopfad-Baus (vor Abschluss der Gegenprüfung) wäre es bei jedem WIP-Commit zwangsläufig rot. Das lokale Pendant ist die Gegenprüfung selbst (Skill `gegenpruefung`, dokumentiert per `gegenpruefung:ok`), nicht dieses Tor. Arbiter bleibt ci.yml (PR-Pfad).',
   'check:perf-budget':
     'braucht `dist/assets/` (Build-Artefakt aus `npm run build`) — kein Gate-Schritt baut vor jedem Lauf. Lokal bei Bedarf: `npm run build && npm run check:perf-budget`.',
+  'check:e2e-flake':
+    'braucht `playwright-report.json` — den erzeugt der JSON-Reporter laut playwright.config.ts NUR unter `CI`, und nur der Shard-Lauf selbst füllt ihn. Lokal fehlt die Datei, das Tor wäre bei jedem Gate-Lauf rot. Lokales Pendant ist der Verdikt-Test src/tests/e2e-flake-waechter.test.ts (läuft in check:seriell über die Vitest-Suite); Arbiter bleibt ci.yml (PR-Pfad, e2e-Job).',
   'check:perf-lighthouse':
     'braucht `dist/` (Build-Artefakt) und eine echte Chrome/Lighthouse-Messung über mehrere Läufe für den Median (mehrere Minuten) — ungeeignet für einen Gate-Lauf bei jedem WIP-Commit. Arbiter bleibt ci.yml (Job Perf, PR-Pfad).',
 };

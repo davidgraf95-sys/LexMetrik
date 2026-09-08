@@ -29,7 +29,7 @@
 //       WARNUNG + Fail NUR bei Verschlechterung (Baseline-Guard), damit das Tor
 //       auf dem IST-Stand grün ist, ohne die Risse zu verstecken.
 //
-// Lauf:  npm run check:farbwelt   (Teil von check:seriell → check-parallel → gate).
+// Lauf:  npm run check:farbwelt   (Teil von check:seriell → run-parallel → gate).
 import { readFileSync } from 'node:fs';
 import { calcAPCA } from 'apca-w3';
 // Farb-Maschine (Token-Auflösung, Kontrast, OKLCh) und Regelkorpus (WAS
