@@ -94,6 +94,47 @@
 # Bash im `diff`-Job (CODE_FERN_RE, bewusst NICHT ausgelagert — der Job bleibt
 # checkout-/npm-frei) UND als reine, Vitest-getestete Funktion in
 # scripts/ci/diff-klassieren.ts (§6.7-Beweis dort).
+# ─── Minuten-Sparplan (QS-CI-MINUTEN, 8.9.2026) ──────────────────────────────
+# Vollerhebung 8.8.–8.9.2026 (1998 Läufe, 15'647 Jobs, je Job aufgerundet =
+# GitHubs Abrechnungsmodell): 61'381 abgerechnete Minuten im Monat, davon
+# 97,5 % in DIESER Datei. Detail und Herleitung:
+# bibliothek/betrieb/ci-minuten-sparplan-2026-09-08.md. Umgesetzt sind drei
+# Massnahmen; KEIN Tor entfällt, keine Prüftiefe sinkt:
+#
+#   M1  Auf `push` nach main laufen `tore`, `e2e` und `merge-schutz` nicht
+#       erneut — aber NUR, wenn der Schritt «Push-Diät prüfen» (Job `diff`)
+#       hart belegt, dass genau dieser Baum als PR grün war. Jede Unsicherheit
+#       fällt auf den Volllauf. −29 % der Minuten. Auslöser `merge_group` und
+#       `workflow_dispatch` bleiben unberührt.
+#   M3  Browser-Shards 8 → 4. Je Shard-Job fallen gemessen 1.28 min Rüstzeit
+#       + 0.37 min Aufrundung an, unabhängig von der Testmenge; 8 Shards
+#       kosteten 46.7 abgerechnete Minuten für 33.3 min echte Testzeit.
+#       Identische Spec-Menge, der Union-Wächter beweist das vor jedem Lauf.
+#   M4  Bei art=doku bzw. art=code-fern werden `bau` und die Shard-Jobs GANZ
+#       übersprungen statt für eine echo-Zeile angeworfen (1 min
+#       Mindestabrechnung je Job). Ein per `if:` übersprungener Job erfüllt
+#       seinen Required-Kontext (Beleg: «Perf-Budget», seit 26.7.2026 auf
+#       jedem PR übersprungen) — anders als ein Workflow, der wegen
+#       `paths`-Filtern gar nicht erst startet (K3, siehe oben).
+#
+# EFFEKT MESSEN: `gh run list --event push --workflow CI --limit 20` und je
+# Lauf `gh run view <id>` — auf main dürfen nur noch `diff`, `bau`, `perf`
+# und `deploy` Zeit brennen; `gh api repos/{repo}/actions/runs/<id>/jobs`
+# zeigt die abgerechneten Dauern.
+#
+# JOB-MATRIX je Auslöser (Soll-Zustand nach M1/M3/M4):
+#   pull_request   diff · bau* · tore · e2e(4)* · merge-schutz
+#   push (Diät)    diff · bau · perf · deploy
+#   push (o. Diät) diff · bau* · tore · e2e(4)* · perf · deploy
+#   merge_group    diff · bau · tore · e2e(4) · perf · merge-schutz
+#   dispatch       diff · bau · tore · e2e(4) · perf · merge-schutz (+ deploy
+#                  nur bei probe=ohne-token)
+#   (* je nach Diff-Klasse: `bau` entfällt bei doku, `e2e` bei doku/code-fern)
+#
+# AUFLAGE (§6.7): M1 steht und fällt mit `required_status_checks.strict: true`
+# im Branch-Schutz von main (gemessen 8.9.2026). Wird `strict` abgeschaltet,
+# ist ein PR-Lauf kein Beleg mehr für den landenden Baum — dann muss die
+# Push-Diät zurückgebaut werden.
 name: CI
 
 on:
@@ -146,6 +187,7 @@ jobs:
       pull-requests: read
     outputs:
       art: ${{ steps.klassieren.outputs.art }}
+      push_diaet: ${{ steps.diaet.outputs.push_diaet }}
     steps:
       - name: PR-Diff klassieren
         id: klassieren
@@ -299,6 +341,87 @@ jobs:
             echo "Reine .md-Änderung (${anzahl} Datei(en)) — Merge-Schutz, check:plan, check:steuerdeckel und check:bibliothek laufen ECHT, restliche Code-Tore quittieren."
           fi
 
+      # ── Push-Diät (M1, QS-CI-MINUTEN, 8.9.2026) ──────────────────────────
+      # BEFUND der 30-Tage-Messung: 348 `push`-Läufe auf main à Ø 51.6 min =
+      # 17'951 min = 29 % ALLER CI-Minuten — und sie prüfen einen Baum, der
+      # Minuten zuvor als PR schon grün durchgelaufen ist. Der Branch-Schutz
+      # führt `strict: true` (ein PR muss vor dem Merge aktuell sein), und ein
+      # `pull_request`-Lauf testet den MERGE-Commit; der Baum, der auf main
+      # landet, ist damit derselbe. Ein zweiter Lauf liefert keine neue
+      # Information (§6: es ist derselbe Baum, Golden bleibt byte-gleich).
+      #
+      # DIESER SCHRITT IST DAS TOR DAZU (§6.7). Der Bericht verlangt, dass
+      # «Head-Commit ist Squash-Merge eines grünen PR» HART geprüft wird und
+      # jede Unsicherheit auf den Volllauf fällt — nicht per Kommentar
+      # behauptet. Geprüft wird darum, gegen die API:
+      #   1. Der gepushte Commit ist der `merge_commit_sha` GENAU EINES
+      #      gemergten PR gegen `main` (kein Direkt-Push, kein Force-Push,
+      #      keine fremde Nummer).
+      #   2. Am Kopf-Commit dieses PR trägt KEIN Check-Run ein anderes
+      #      Ergebnis als success/skipped/neutral.
+      #   3. Die beiden ereignisunabhängigen Pflicht-Kontexte «Tore …» und
+      #      «Merge-Schutz …» stehen dort ausdrücklich auf `success` (nicht
+      #      bloss «nicht rot» — ein fehlender Kontext wäre sonst grün).
+      # Jeder Fehlschlag, jede API-Störung, jeder unerwartete Wert ⇒ `false`
+      # ⇒ VOLLES Programm. Zu viel zu prüfen kostet Minuten, zu wenig lässt
+      # ungeprüften Code ausliefern (Vorfall #579).
+      #
+      # WAS DIESER SCHRITT NICHT PRÜFT: `strict: true` selbst. Die
+      # Branch-Schutz-API verlangt Admin-Rechte, die `GITHUB_TOKEN` nicht hat
+      # — eine Prüfung wäre immer rot und die Diät damit wirkungslos. Der
+      # Wert ist am 8.9.2026 gemessen (`branches/main/protection`,
+      # `required_status_checks.strict == true`) und steht als Auflage im
+      # Landungs-Protokoll: wird `strict` je abgeschaltet, MUSS diese Diät
+      # zurückgebaut werden, weil dann ein veralteter PR-Lauf grün wäre.
+      #
+      # EFFEKT MESSEN: `gh run list --event push --workflow CI --limit 20`
+      # zeigt danach nur noch `diff`, `bau`, `perf`, `deploy` je main-Push.
+      - name: Push-Diät prüfen (Head ist Squash-Merge eines grünen PR)
+        id: diaet
+        env:
+          GH_TOKEN: ${{ github.token }}
+          EVENT: ${{ github.event_name }}
+          REF: ${{ github.ref }}
+          REPO: ${{ github.repository }}
+          AFTER: ${{ github.event.after }}
+        run: |
+          set -uo pipefail
+          setze() {
+            echo "push_diaet=$1" >> "$GITHUB_OUTPUT"
+            echo "Push-Diät=$1 — $2"
+            exit 0
+          }
+          if [ "$EVENT" != "push" ] || [ "$REF" != "refs/heads/main" ]; then
+            setze false "kein main-Push (Event=${EVENT}, Ref=${REF}) — volles Programm."
+          fi
+          PRS=$(gh api "repos/${REPO}/commits/${AFTER}/pulls" \
+            --jq '[.[] | select(.merged_at != null and .merge_commit_sha == env.AFTER and .base.ref == "main")]') \
+            || setze false "commits/${AFTER}/pulls nicht auswertbar — volles Programm."
+          ANZAHL=$(echo "$PRS" | jq 'length')
+          if [ "$ANZAHL" != "1" ]; then
+            setze false "${ANZAHL} passende(r) gemergte(r) PR zu ${AFTER} (erwartet genau 1) — volles Programm."
+          fi
+          NUMMER=$(echo "$PRS" | jq -r '.[0].number')
+          KOPF=$(echo "$PRS" | jq -r '.[0].head.sha')
+          LAEUFE=$(gh api "repos/${REPO}/commits/${KOPF}/check-runs?per_page=100" \
+            --jq '.check_runs[] | "\(.conclusion // "offen")|\(.name)"') \
+            || setze false "check-runs am PR-Kopf ${KOPF} nicht auswertbar — volles Programm."
+          if [ -z "$LAEUFE" ]; then
+            setze false "keine Check-Runs am Kopf von PR #${NUMMER} — volles Programm."
+          fi
+          SCHLECHT=$(echo "$LAEUFE" | grep -vE '^(success|skipped|neutral)\|' || true)
+          if [ -n "$SCHLECHT" ]; then
+            echo "Nicht-grüne Check-Runs am Kopf von PR #${NUMMER}:"
+            echo "$SCHLECHT"
+            setze false "PR-Lauf nicht durchgehend grün — volles Programm."
+          fi
+          for pflicht in "Tore (Tests · Lint · Checks)" "Merge-Schutz (Required-Kontext)"; do
+            if ! echo "$LAEUFE" | grep -qxF "success|${pflicht}"; then
+              setze false "Pflicht-Kontext «${pflicht}» am PR-Kopf nicht auf success — volles Programm."
+            fi
+          done
+          setze true "PR #${NUMMER}, Kopf ${KOPF} durchgehend grün; Branch-Schutz strict:true ⇒ identischer Baum. Tore/e2e/Merge-Schutz laufen auf main nicht erneut."
+
   bau:
     name: Bau (dist-Artefakt)
     needs: diff
@@ -317,7 +440,11 @@ jobs:
     # jedem Event, die Klassierung entscheidet nur den Umfang.
     # Gemessen: 218 Doku-/code-ferne Läufe in 30 Tagen à ~15.1 min, fast nur
     # Runner-Anlauf (Mindestabrechnung 1 min je Job).
-    if: needs.diff.outputs.art != 'doku'
+    # `!cancelled()`: fällt `diff` aus, ist `art` leer — dann baut dieser Job
+    # (Fehlerseite = bauen und prüfen, nicht überspringen).
+    if: >-
+      !cancelled()
+      && needs.diff.outputs.art != 'doku'
     runs-on: ubuntu-latest
     env:
       TZ: Europe/Zurich
@@ -346,6 +473,18 @@ jobs:
   tore:
     name: Tore (Tests · Lint · Checks)
     needs: diff
+    # ── M1 (QS-CI-MINUTEN, 8.9.2026): kein zweiter Lauf auf main ────────────
+    # Auf `push` nach main läuft dieser Job nur noch, wenn die Push-Diät NICHT
+    # greift — also wenn der gepushte Baum NICHT nachweislich als grüner PR
+    # geprüft wurde (Direkt-Push, fremder Merge, rote/fehlende Check-Runs,
+    # API-Störung). Die harte Prüfung samt Fehlerseite sitzt im Schritt
+    # «Push-Diät prüfen» des `diff`-Jobs. `pull_request`, `merge_group` und
+    # `workflow_dispatch` sind unberührt und fahren unverändert voll.
+    # `!cancelled()` statt der Standard-Skip-Logik: fällt `diff` selbst aus,
+    # ist `push_diaet` leer — dann läuft dieser Job (Fehlerseite = prüfen).
+    if: >-
+      !cancelled()
+      && needs.diff.outputs.push_diaet != 'true'
     runs-on: ubuntu-latest
     env:
       # Produkt-Zeitzone: Engines geben teils Date-Instants zurück (z. B.
@@ -699,7 +838,18 @@ jobs:
     # vorher keine Browser-Tests (`code-fern`-Flächen berühren die
     # ausgelieferte App nachweislich nicht, Bau + alle Node-Tore laufen für sie
     # trotzdem voll).
-    if: needs.diff.outputs.art == 'code'
+    # Dazu die Push-Diät (M1): auf main läuft kein zweites Mal, was der
+    # PR-Lauf auf demselben Baum schon grün gefahren hat.
+    # Die Klassen stehen bewusst als NEGATIV-Liste (`!= doku`, `!= code-fern`)
+    # statt als `== code`: fällt `diff` aus, ist `art` leer — dann laufen die
+    # Shards (Fehlerseite = prüfen). `bau` muss erfolgreich sein, sonst gibt
+    # es kein dist-Artefakt.
+    if: >-
+      !cancelled()
+      && needs.bau.result == 'success'
+      && needs.diff.outputs.art != 'doku'
+      && needs.diff.outputs.art != 'code-fern'
+      && needs.diff.outputs.push_diaet != 'true'
     runs-on: ubuntu-latest
     # Harter Deckel je Shard (QS-E2E-STABIL, Beleg 7.8.2026). Ohne Angabe gilt der
     # GitHub-Default von 360 min — ein systemisch hängender Shard hätte also bis zu
@@ -832,8 +982,21 @@ jobs:
     # Datei fern und damit auch von hier. Ohne diese Bedingung liefe Lighthouse
     # (4× CPU, langsames 4G, eigener Chromium) für jede Roadmap-Pflege — und
     # zwar gegen ein dist, das der Doku-Pfad gar nicht gebaut hat.
-    if: github.event_name != 'pull_request' && needs.diff.outputs.art == 'code'
-    needs: [diff, tore, e2e]
+    # M1 (8.9.2026): `perf` BLEIBT auf main — das §15-Budget wird weiterhin je
+    # Deploy-Stand gemessen. Weil `tore`/`e2e` dort jetzt übersprungen sein
+    # KÖNNEN (Push-Diät), zieht die Standard-Skip-Logik `perf` sonst mit; die
+    # Gegenkopplung «erst bei grüner Treue» ist darum als explizite
+    # Ergebnis-Prüfung ausgeschrieben: rot oder abgebrochen ⇒ keine Messung,
+    # übersprungen ⇒ die Treue ist im PR-Lauf bewiesen. `bau` muss grün sein,
+    # sonst fehlt das dist-Artefakt.
+    if: >-
+      !cancelled()
+      && github.event_name != 'pull_request'
+      && needs.diff.outputs.art == 'code'
+      && needs.bau.result == 'success'
+      && (needs.tore.result == 'success' || needs.tore.result == 'skipped')
+      && (needs.e2e.result == 'success' || needs.e2e.result == 'skipped')
+    needs: [diff, bau, tore, e2e]
     runs-on: ubuntu-latest
     env:
       TZ: Europe/Zurich
@@ -871,6 +1034,14 @@ jobs:
   # erfolgt nach dem ersten grünen Lauf dieses Jobs (gh api PATCH).
   merge-schutz:
     name: Merge-Schutz (Required-Kontext)
+    # M1 (8.9.2026): auf `push` übersprungen — und zwar OHNE Push-Diät-Bedingung
+    # und bewusst OHNE `needs: diff`. Grund: `check:merge-schutz` bildet
+    # merge-base(origin/main, HEAD); auf main IST HEAD die Basis, der geprüfte
+    # Bereich also leer — der Job war dort schon vorher ein garantiert grüner
+    # Leerlauf (348 Läufe à 1.32 min in 30 Tagen). Seine Schutzwirkung entsteht
+    # ausschliesslich im PR (Vorfall #309). Kein `needs`, damit dieser Kontext
+    # als einziger auch dann gemeldet wird, wenn die Klassierung selbst ausfällt.
+    if: github.event_name != 'push'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
