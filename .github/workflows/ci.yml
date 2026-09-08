@@ -918,7 +918,14 @@ jobs:
     # ehrliche Arbeit nicht mehr hineinpasst. Sie passt.
     # ROT BLEIBT ROT: der Deckel bricht ab und meldet FEHLGESCHLAGEN — er macht
     # nichts grün, er kürzt nur die Brenndauer (§17: Wurzel-Deckel statt Umschiffen).
-    timeout-minutes: 25
+    # NACHTRAG (Opus-Gegenprüfung PR #785, read-only, 8.9.2026 — Auflage B1):
+    # scripts/ci/playwright-install.sh rechnet jetzt mit bis zu
+    # 2 × (30 s Sperre + 240 s Install + 15 s Kill-Kulanz) + 60 s
+    # dpkg-Configure-Vorlauf ≈ 630 s (10,5 min) Worst Case — Rechnung im
+    # Skript-Kopf. Das reisst die bisherige Reserve von 540 s (25 min − 16 min
+    # Regelfall Tests+Rüstzeit, s. oben): Deckel darum auf 28 min angehoben,
+    # neue Reserve 720 s ≥ 630 s Rechnung (Puffer 90 s).
+    timeout-minutes: 28
     env:
       TZ: Europe/Zurich
     strategy:
