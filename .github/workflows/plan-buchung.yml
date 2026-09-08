@@ -74,11 +74,6 @@ jobs:
           # anders als GITHUB_TOKEN wieder Workflows aus; darum trägt der
           # Buchungs-Commit unten [skip ci].
           token: ${{ secrets.PLAN_BUCHUNG_TOKEN || github.token }}
-      - uses: actions/setup-node@v5
-        with:
-          node-version: 22
-          cache: npm
-      - run: npx -y npm@11 ci
 
       # `%(trailers:key=…,valueonly)` liest nur echte Trailer-Zeilen am
       # Commit-Ende (wie check-merge-schutz.ts) — keine beiläufige Erwähnung
@@ -159,6 +154,32 @@ jobs:
             echo "PR #${PR_NUMMER} nicht bestätigt (state=${STATE:-leer}, mergeCommit=${OID:-leer}, erwartet=${GITHUB_SHA}) — kein Fallback."
             echo "bestaetigt=false" >> "$GITHUB_OUTPUT"
           fi
+
+      # ── Node-Umgebung ERST HIER (M5, QS-CI-MINUTEN, 8.9.2026) ──────────────
+      # BISHER standen `setup-node` + `npx -y npm@11 ci` direkt nach dem
+      # Checkout — also bei JEDEM main-Push, obwohl node_modules erst ab dem
+      # nächsten Schritt (`vite-node scripts/plan/buchung.ts`) gebraucht wird
+      # und «kein Buchungs-Trailer» der belegte Normalfall ist. Messung
+      # 8.9.2026 (bibliothek/betrieb/ci-minuten-sparplan-2026-09-08.md §2 M5):
+      # 299 Läufe à 1.14 min, davon der überwiegende Teil reine Installation
+      # für einen Job, der gleich darauf still mit Exit 0 endet.
+      # JETZT: nur, wenn wirklich gebucht wird — Commit-Trailer gefunden ODER
+      # PR-Body-Fallback bestätigt. Die drei Schritte davor brauchen kein Node
+      # (git bzw. `gh`, beide auf dem Runner vorinstalliert).
+      # KEIN Verhaltensunterschied: jeder Pfad, der buchen WILL, bekommt die
+      # Umgebung unverändert; die Fehlerseite (§6.7) ist unberührt, weil ein
+      # fehlender Trailer schon vorher still mit Exit 0 endete.
+      - uses: actions/setup-node@v5
+        if: >-
+          steps.trailer.outputs.vorhanden == 'true' ||
+          steps.pr_verify.outputs.bestaetigt == 'true'
+        with:
+          node-version: 22
+          cache: npm
+      - run: npx -y npm@11 ci
+        if: >-
+          steps.trailer.outputs.vorhanden == 'true' ||
+          steps.pr_verify.outputs.bestaetigt == 'true'
 
       # PR-Body ist FREMDTEXT (Daten, nie Code, §14.7 Dispatch-Klausel): er
       # fliesst nur über STDIN in buchung.ts und von dort — wie der

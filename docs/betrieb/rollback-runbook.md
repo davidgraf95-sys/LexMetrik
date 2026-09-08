@@ -26,6 +26,16 @@ wird **nicht** von Hand nachgeschoben, sondern per Re-Run des Deploy-Jobs
 (`gh run rerun <run-id> --job "Deploy (Prod, Vercel CLI)"`, Lauf des
 Merge-Commits auf `main`).
 
+**Seit 8.9.2026 gibt es nur noch die letzten DREI Produktions-Stände** (plus den
+eben ausgelieferten und den Alias-Träger): der Deploy-Job räumt nach jeder
+Auslieferung auf (`scripts/betrieb/vercel-aufraeumen.mjs`, QS-AUTOMATIK — Anlass:
+Deployment Storage 261.91 GB gegen die Hobby-Grenze von 10 GB). Für den Rückweg
+heisst das: **Weg A und B rollen nur noch auf einen dieser drei Stände.** Ältere
+sind gelöscht — sie bleiben aber **30 Tage** zurückholbar über
+Vercel → Settings → Security → **Recently Deleted**; erst zurückholen, dann
+rollen. Muss weiter zurück gerollt werden, ist Weg C (Revert-PR) der
+verlässlichere: er baut den heilen Stand neu, statt einen alten zu suchen.
+
 ## Weg A — Vercel-CLI (schnellster Rückweg)
 
 ```bash

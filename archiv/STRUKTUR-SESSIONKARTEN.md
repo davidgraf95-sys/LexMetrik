@@ -74,3 +74,25 @@ apca-w3/colorparsley, MCP-Server-Entscheid.
 **Nachtrag:** Weiterbau 2.9. nachmittags: QS-VERWENDEN V1b+V4 (#630), V3 Raw-Store
 (#631), V5 Feed + V6 valibot (#632, GP), V7 Feiertags-Gegenprobe (#633, 1 Skip GL
 2027 wartet auf David), V8 Spike (Notiz). Dossier #617 gelandet 442376f89.
+
+<!-- Rotation 8.9.2026 (abends, manuell, byte-genau) -->
+
+## Session 4./5.9.2026 (Nacht) — Nachtmandat «UI wirksam bis stop»: 12 UI-Befund-Batches, Design-Konsistenz R4–R7, Monitor-Rot behoben, 27 PRs
+
+**Auftrag David (4.9. abends):** «los» (rote Issues #597/#600), dann «ui wirksam arbeiten bis ich stop sage», «mindestens 10 Stunden», «spare Tokens», «effizient». Fable orchestrierte nur; Bau/Prüfung bei Opus/Sonnet (Weisung 1.9.2026).
+
+**Gelandet (Squash, Reihenfolge = Landung):** #668 BE 154.21 Snapshot (KDSG-Anpassung, Gegenprüfung 49/49 · Kanton-Filter `gen:pdf-quellen`) · #670 B14+B16 Kopfzeilen/Seitengerüst · #671 B9 Textsatz · #672 B19+B6+B7 Felder/Zustände · #673 B15 Tabs · #669 B11 Karten · #675 B12 Eingabefelder · #678 B18 Listen · #679 QS-UI Marken-Präfix (Label-Marken ohne «lit.», 550 Marken) · #680 D0 Deckkraft-Wächter (Bug war seit 8.8. behoben) · #688 §17 Hook prüft Merge-Schutz am **PR-Head** (Altfassung liess Risiko-Merges bei sauberem Checkout durch) · #674 B10+B17 Knöpfe · #681 B18-Logik LM-187 Treffer-Hervorhebung (Sonnet-Gegenprüfung) · #682 ⌘K ab erstem Paint (Shard-3-Flake, 0/20→20/20) · #687 Vernehmlassung VERN-2026-7 (Finding 7 heilt regulär; Opus 11/11) · #684 Daten-URL-Regel Sonderzeichen-Keys (Prod war nie kaputt, decode-once-Server; Opus 2 Durchgänge) · #694 GL-Dublette III B/7/1 dedupliziert + Dubletten-Tor je Kanton (Opus + Sonnet-Nach-Verdikt) · #695 Fedlex-Re-Pin DBG 2026-09-02 (nur IT-Berichtigung) + Reparatur-Arm-Fix (Register-Reihenfolge, `gen:feed`) · #691 Rubrum-Besetzung 309 BS-Entscheide ohne Leerzeichen vor Komma (Opus, Portal 3/3) · #676 B13 Formate · #686/#690/#692 Design-Konsistenz Runden 5–7 (Runde 7: 0 Neufunde; Dry nach §2 mit Runde 8) · #683 axe 7→62 Routen + aria-Zustandsnamen-Tor + Farbwelt 80→102 Paare · #685 konstante aria-Namen Topbar/Artikel · #689 Baum-Knopfnamen (falls gelandet, s. PR). Dazu #677 Runde 4 früh in der Nacht.
+
+**Befundliste W2·17:** von 105 offenen LM-Befunden alle 12 Batches abgearbeitet (gebaut/überholt/zurückgestellt je Batch im Fahrplan §7–§20); Rest = David-Entscheide (A3-Abnahme LM-032/066/083, LM-133 Ingress-Stand, LM-036 Listenhöhe) und Daten-Folgeschritte (Roadmap QS-KORPUS).
+
+**Issues:** #597 geschlossen (Monitor grün für BE); #600 offen — Monitor-Lauf 33936281247 zeigte 4 weitere Netz-Drifts (Vern → #687, Fedlex → #695, DBG-Revisionen + ESTV-MWST Branchen-Info 26 → Agent bei Session-Ende noch am Bauen, Worktree `LexMetrik-wt/monitor-estv-dbg`).
+
+**§17-Lehren verankert:** Hook-Prüffläche (#688) · CI apt-Stall mit timeout+Retry (#683) · Reparatur-Arm-Kette (#695) · Batch-Spec-Regeln (Scratchpad `ui-befunde-batch-spec.md`, Muster für künftige Batch-Nächte: Worktree je Agent, Vintage-Regel, keine Pipes auf Toren). Als Roadmap-Zeilen (QS-KORPUS/QS-MONITOR-ROT/W2·18/QS-UI/QS-EFFIZIENZ): Cache ohne Fassungsschlüssel, Konsistenz-Tor blind für Stand, stumme Löschung im Offline-Refresh, Finding 7 ohne Reparaturweg, OR-Leser-e2e-Timeouts, Projektionskette nach main-Merge (4 CI-Läufe verloren), `src/lib/suche` nicht im Risiko-Prädikat.
+
+**Wartet auf David:** Prototype Fund (6.9. Mitternacht!) · Steuerdeckel (Hooks 221 B, check-*.ts ~180 B Luft) · Design: ☰-Anatomie, Hover-Stufe, ⧉-Quittung · Baum-Namen-Fallback «1./2. Vorkommen» · A3-Abnahme · LM-133 · Lizenz-Ausnahmen, Näfelser Fahrt (aus 2.9.).
+
+**Morgen 5.9. (David wach, Auftrag «leg die drei Jules-Tickets an»):** #696–#698 → PRs #699–#701 in 33/40/52 min, alle landbar (Test-Split, Komponenten-Split mit expliziter Partition, Fixture-Split); Landungsquote seit 3.9. 9/10. §17: Grüne-Spur-Weiche jetzt im Dispatch-Generator (`npm run dispatch -- bau`), weil die Skill-Prosa in der Nacht kein einziges Mal feuerte. Claude-Nachzug offen: Wächter-Listen um Split-Geschwister, toter Re-Export, dupliziertes Fixture-Interface. `schlankheit:update` setzt alle Baseline-Zahlen still neu — nur gezielt nutzen (QS-EFFIZIENZ-Zeile).
+
+**Vormittag 5.9. (Jules 11–13b, David: «leg noch drei an»):** #710 Wizard-Split landbar (47 min), #709 Test-Split inhaltlich sauber, aber Betreff «refactor» ⇒ `check:testtreue` rot ⇒ Landung als #711 + Wurzelfix #712 (Testtreue im lokalen gate, Betreffregel in AGENTS.md/Vorlage), #707 gültige Entwurf-Antwort ⇒ Jules 13b (#708). Nachzug #702 (Wächter-Listen, Re-Export, Fixture-Typ). Monitor grün, #600 zu. Neue §17-Zeilen: Paritäts-Tor kennt nur die check:seriell-Kette; `schlankheit:update` nur gezielt.
+
+**Messung:** ~27 PRs in ~11 h, 0 Rollbacks; CI-Rot fast ausschliesslich Nachzug-Klassen (Projektionen, Test-Helfer, Runner-Stall), 1 echter Regressionsfang durch e2e (#674 aria-label).

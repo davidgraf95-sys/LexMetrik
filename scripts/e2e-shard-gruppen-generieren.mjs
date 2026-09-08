@@ -38,24 +38,18 @@
 import { readFileSync, readdirSync, writeFileSync, existsSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import { dirname, join } from 'node:path'
+import { gruppenAnzahl } from './e2e-shard-anzahl.mjs'
 
 const HIER = dirname(fileURLToPath(import.meta.url))
 const WURZEL = join(HIER, '..')
 const E2E_DIR = join(WURZEL, 'e2e')
 const GRUPPEN_JSON = join(WURZEL, 'e2e', 'shard-gruppen.json')
 
-// Anzahl der Shard-Gruppen. FIXPUNKT ist `.github/workflows/ci.yml` Zeile ~515
-// (`strategy.matrix.gruppe: [1, 2, 3, 4, 5, 6, 7, 8]`) — die Job-Matrix ist die
-// einzige Stelle, an der die Zahl tatsächlich etwas steuert (acht CI-Jobs).
-// `scripts/e2e-shard-gruppen.mjs` hat KEINEN eigenen Hardcode für die Anzahl
-// (es liest `Object.keys(gruppen)` dynamisch aus der JSON) — es bekommt seit
-// der Gegenprüfungs-Auflage 1 (14.8.2026) trotzdem dieselbe Konstante, weil es
-// die Gruppen-SCHLÜSSEL der JSON gegen eine Spanne validieren muss (Hand-Edit-
-// Schutz) und ein Import aus diesem Skript das dortige CLI-Dispatch am
-// Modul-Top ungewollt mitausführen würde (kein sauberer Re-Export ohne
-// Umbau). Bei einer Änderung der Gruppenzahl darum DREI Stellen anfassen:
-// ci.yml-Matrix, GRUPPEN_MAX hier, GRUPPEN_MAX in e2e-shard-gruppen.mjs.
-const GRUPPEN_MAX = 8
+// Anzahl der Shard-Gruppen: EINE Quelle, die Job-Matrix in ci.yml (§5).
+// Die frueheren Kopien dieser Zahl in diesem und im Nachbar-Skript sind mit
+// M3 (8 -> 4 Shards, QS-CI-MINUTEN, 8.9.2026) entfallen — Begruendung und
+// Fehlerseite in scripts/e2e-shard-anzahl.mjs. Nicht lesbare Matrix = rot.
+const GRUPPEN_MAX = gruppenAnzahl()
 
 // Annotation gilt nur als KOPF-Annotation, wenn sie in den ersten KOPF_ZEILEN
 // Zeilen der Spec steht (Konvention: Zeile 1, direkt über/unter einem

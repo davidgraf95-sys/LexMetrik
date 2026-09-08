@@ -1598,7 +1598,7 @@ sichtbar machen. `[OF]`. «Sichtbar» = verhaltensändernd → golden-gegated; b
 > `W2·5h`, M12 in `W2·5b`, `W2·13-KANTONE`) → **(3)** mit Priorität daneben:
 > **Verzahnungs-Fundament `W2·7-BEZUG`** (Gesetz ↔ Gerichtsentscheide = Kern-Differenzierung,
 > Wortlaut David «sehr gutes Feature, das ich mit Priorität einbauen will») und
-> **FINMA-Materialien `W2·6b-MAT-FINMA`** (Bewerbungs-Kontext: Bewerbung FINMA mit Verweis auf
+> **FINMA-Materialien `W2·6b-MAT-FINMA`** (Kontext: externer FINMA-Termin mit Verweis auf
 > LexMetrik — der Bereich muss vorzeigbar sein). **SSoT der Reihenfolge = `@queue`-Zeile oben** —
 > dieser Block ist die Begründung, nicht die Mechanik.
 > **Stand 31.7.2026 zu (3):** `W2·7-BEZUG` ist eingelöst und `done` (B1–B7, PRs #401–#406);
