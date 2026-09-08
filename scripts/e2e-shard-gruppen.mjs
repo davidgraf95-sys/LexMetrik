@@ -22,25 +22,17 @@ import { execFileSync, spawnSync } from 'node:child_process'
 import { readFileSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import { dirname, join } from 'node:path'
+import { gruppenAnzahl } from './e2e-shard-anzahl.mjs'
 
 const HIER = dirname(fileURLToPath(import.meta.url))
 const WURZEL = join(HIER, '..')
 const GRUPPEN_JSON = join(WURZEL, 'e2e', 'shard-gruppen.json')
 
-// Anzahl der Shard-Gruppen. FIXPUNKT ist `.github/workflows/ci.yml` Zeile ~515
-// (`strategy.matrix.gruppe: [1, 2, 3, 4, 5, 6, 7, 8]`). Dieses Skript hat
-// keinen eigenen strukturellen Bedarf für die Zahl (`ladeGruppen()` liest die
-// Schlüssel dynamisch aus der JSON), braucht sie aber seit der Gegenprüfungs-
-// Auflage 1 (14.8.2026) für `--pruefen`, um Gruppen-SCHLÜSSEL AUSSERHALB der
-// gültigen Spanne zu erkennen (Hand-Edit-Schutz — Annotationen allein prüft
-// nur der Generator). Bewusst als eigene Konstante statt Import aus
-// `e2e-shard-gruppen-generieren.mjs`: ein Import würde dessen `main()` am
-// Modul-Top nicht mitausführen (das Skript exportiert nichts, ruft aber am
-// Ende unbedingt `main()` auf) — ein sauberer Re-Export bräuchte einen
-// Umbau, den die Auflage ausdrücklich nicht verlangt. Bei einer Änderung der
-// Gruppenzahl darum DREI Stellen anfassen: ci.yml-Matrix, GRUPPEN_MAX hier,
-// GRUPPEN_MAX in e2e-shard-gruppen-generieren.mjs.
-const GRUPPEN_MAX = 8
+// Anzahl der Shard-Gruppen: EINE Quelle, die Job-Matrix in ci.yml (§5).
+// Die frueheren Kopien dieser Zahl in diesem und im Nachbar-Skript sind mit
+// M3 (8 -> 4 Shards, QS-CI-MINUTEN, 8.9.2026) entfallen — Begruendung und
+// Fehlerseite in scripts/e2e-shard-anzahl.mjs. Nicht lesbare Matrix = rot.
+const GRUPPEN_MAX = gruppenAnzahl()
 
 /** Gruppen-Definition laden: { "1": [datei, …], "2": […], "3": […] }. */
 function ladeGruppen() {
