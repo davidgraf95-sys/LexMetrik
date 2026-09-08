@@ -65,12 +65,11 @@ vps-bestellung-david: E3-Serving + E4-UI hängen an einer VPS-Bestellung (David,
 richter-analytik-gate: Richter-/Spruchkörper-Analytik (W3·15-RICHTER). GRENZE (20.7.2026): Filtern/Facette/Verlinkung sind FREI und gebaut (#309/#311); gesperrt bleiben allein RANKING und PROGNOSE. Nur deskriptiv; bewusste Freigabe Davids erforderlich (heikel: Standesrecht, Persönlichkeitsschutz, richterliche Unabhängigkeit)
 david-entscheid-org-umzug: QS-ORG-UMZUG — Repo-Transfer in eine Gratis-Organisation für die native Merge Queue (User-Konten haben keine); Infrastruktur-Entscheid mit ~1 h Nacharbeit (Vercel, Branch-Schutz, Secrets). Erst prüfen, ob der Auto-Nachzug (Checklisten-Zeile unter QS-AUTOMATIK) den BEHIND-Schmerz ausreichend dämpft (Entscheid David 7.8.2026: «B als Schritt, A parken»)
 zielbild-gesetzesleser: Zurückgestellt durch das Zielbild-Dekret 1.9.2026 (Gesetzesleser zuerst) — wieder öffnen, sobald die Queue-Blöcke 1–3 gelandet sind oder David einen Schritt ausdrücklich vorzieht (FINMA: vorziehen, wenn die Bewerbung terminlich drängt). Kein Bau-Blocker, reine Reihenfolge-Entscheidung.
-david-go-entstehung: W2·6c-ENTSTEHUNG-* (Entstehung am Artikel, Stufe 3) — Design freigegeben 6.9.2026, Spec §11 in drei Fassungen (5 Tiefen-Runden, 2 Kritiken, Runde 2 läuft); David 6.9.2026: «noch keinen Code, nur planen, anfangen erst auf mein Go». ECHTES David-Gate. Offene Entscheide: Fahrplan §11.9 (Go E1+E2 · Personendaten-Regel · SR ohne Zahl · Anker als Bonus · Abstimmungsresultate nur Link · Curia-Auflagen).
+david-go-entstehung: W2·6c-ENTSTEHUNG-* (Entstehung am Artikel, Stufe 3) — David 8.9.2026: «GO noch nicht, erst wieder am Freitag» (12.9.2026) — Design freigegeben 6.9.2026, Spec §11 in drei Fassungen (5 Tiefen-Runden, 2 Kritiken, Runde 2 läuft); David 6.9.2026: «noch keinen Code, nur planen, anfangen erst auf mein Go». ECHTES David-Gate. Offene Entscheide: Fahrplan §11.9 (Go E1+E2 · Personendaten-Regel · SR ohne Zahl · Anker als Bonus · Abstimmungsresultate nur Link · Curia-Auflagen).
 -->
 
 <!-- @david-fragen
 zgb-a36-anhang: Die ZGB-Gliederung zeigt 74 Artikel des Anhangs «Wortlaut der früheren Bestimmungen des sechsten Titels» bewusst NICHT (Alt-Kuration A36; es sind aufgehobene Alt-Fassungen, im Lesetext weiterhin vorhanden und verlinkbar). Deine Vorgabe 13.8. («Artikel-Ebene in allen Gesetzen») ist sonst korpusweit erfüllt. Sollen diese 74 Alt-Artikel AUCH in der Leiste erscheinen? Aufwand: eine Zeile. Empfehlung: Nein (Alt-Recht bläht die Navigation, Lesetext deckt es ab).
-ci-minuten-repo-privat: Repo privat schalten? Messung 8.9.2026: 61'381 CI-min/Monat, Sparplan senkt auf 37'081 (reicht für Free/Pro nicht). Weg A öffentlich + Sparplan (0 $, sofort) / Weg B privat + Self-hosted Runner (0 $ Minutenkosten, volle Prüftiefe) / Weg C privat + zahlen (~273 $/Mt). Empfehlung: A jetzt, B mit VPS-Entscheid. · quelle: bibliothek/betrieb/ci-minuten-sparplan-2026-09-08.md
 -->
 <!-- ^ Offene Fragen an David OHNE eigenen blockierten Schritt (sonst gehören sie in @blockers).
      Das Lagebild liest diesen Block mechanisch (davidFragen, scripts/plan/bildDaten.ts) —
@@ -737,6 +736,7 @@ ci-minuten-repo-privat: Repo privat schalten? Messung 8.9.2026: 61'381 CI-min/Mo
 
 - [ ] **Prüfstrasse sparsamer ohne Prüftiefe-Verlust** *(`QS-CI-MINUTEN`, Auftrag David 8.9.2026)*
   <!-- @meta id: QS-CI-MINUTEN · status: ready · blocker: null · dep: [] · feld: betrieb -->
+  **Entscheide David 8.9.2026:** Weg **A** (Repo bleibt öffentlich, Sparplan bauen; privat nur zusammen mit VPS/Self-hosted Runner) · **M2 freigegeben und gelandet** (Dependabot monatlich, `rebase-strategy: disabled`).
   Ziel: CI-Minuten senken, kein Tor entfällt, `check:e2e-shards` bleibt.
   **Detail:** [ci-minuten-sparplan-2026-09-08.md](bibliothek/betrieb/ci-minuten-sparplan-2026-09-08.md)
   — 61'381 min/Monat, `ci.yml` 97,5 %, Sparplan −24'300 ohne Prüftiefe-Verlust.
