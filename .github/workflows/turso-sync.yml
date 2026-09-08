@@ -121,7 +121,7 @@ jobs:
       - name: Cache HOT-Artefakt (DB-Dateien)
         id: db-cache
         if: steps.token.outputs.da == '1'
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: |
             daten/normtext.db
