@@ -72,6 +72,7 @@ david-go-entstehung: W2·6c-ENTSTEHUNG-* (Entstehung am Artikel, Stufe 3) — De
 
 <!-- @david-fragen
 zgb-a36-anhang: Die ZGB-Gliederung zeigt 74 Artikel des Anhangs «Wortlaut der früheren Bestimmungen des sechsten Titels» bewusst NICHT (Alt-Kuration A36; es sind aufgehobene Alt-Fassungen, im Lesetext weiterhin vorhanden und verlinkbar). Deine Vorgabe 13.8. («Artikel-Ebene in allen Gesetzen») ist sonst korpusweit erfüllt. Sollen diese 74 Alt-Artikel AUCH in der Leiste erscheinen? Aufwand: eine Zeile. Empfehlung: Nein (Alt-Recht bläht die Navigation, Lesetext deckt es ab).
+ci-minuten-repo-privat: Repo privat schalten? Messung 8.9.2026: 61'381 CI-min/Monat, Sparplan senkt auf 37'081 (reicht für Free/Pro nicht). Weg A öffentlich + Sparplan (0 $, sofort) / Weg B privat + Self-hosted Runner (0 $ Minutenkosten, volle Prüftiefe) / Weg C privat + zahlen (~273 $/Mt). Empfehlung: A jetzt, B mit VPS-Entscheid. · quelle: bibliothek/betrieb/ci-minuten-sparplan-2026-09-08.md
 -->
 <!-- ^ Offene Fragen an David OHNE eigenen blockierten Schritt (sonst gehören sie in @blockers).
      Das Lagebild liest diesen Block mechanisch (davidFragen, scripts/plan/bildDaten.ts) —
@@ -444,12 +445,6 @@ zgb-a36-anhang: Die ZGB-Gliederung zeigt 74 Artikel des Anhangs «Wortlaut der f
   (Mandat David 31.8.2026, Befunde direkt umsetzen).
   **Detail:** [FAHRPLAN-DESIGN-KONSISTENZ.md](fahrplaene/FAHRPLAN-DESIGN-KONSISTENZ.md) §1.
 
-- [x] **Startseite V4 «Werkbank»: Einstieg mit Gesetzes-Schwerpunkt, persönliche Begrüssung, Kopf- und Seitenleiste** *(`W2·23-STARTSEITE-V4`, Auftrag David 5.9.2026)*
-  <!-- @meta id: W2·23-STARTSEITE-V4 · status: done · blocker: null · dep: [] · feld: design · fahrplan: fahrplaene/FAHRPLAN-STARTSEITE-V4.md -->
-  ✅ gelandet 5.9.2026 (#730/#732) — Wortlaut: ROADMAP-CHRONIK.md, Umschichtung 7.9.2026. Der
-  Eintrag bleibt hier, bis `FAHRPLAN-STARTSEITE-V4.md` archiviert ist (einziger Link, `check:plan`).
-  **Detail:** [FAHRPLAN-STARTSEITE-V4.md](fahrplaene/FAHRPLAN-STARTSEITE-V4.md) §1.
-
 - [x] **Design-Identität: eigene Farb- und Schrift-Handschrift** *(`W2·24-DESIGN-IDENTITAET`, David 5.9.2026)*
   <!-- @meta id: W2·24-DESIGN-IDENTITAET · status: done · blocker: null · dep: [] · feld: design · fahrplan: fahrplaene/FAHRPLAN-DESIGN-IDENTITAET.md -->
   ✅ **erledigt 7.9.2026 (PR #739, e2ac7def9)** — Handschrift «Sammlung»: R1–R13 samt Nachzügen, Gesamtprüfung
@@ -738,6 +733,24 @@ zgb-a36-anhang: Die ZGB-Gliederung zeigt 74 Artikel des Anhangs «Wortlaut der f
   - [ ] **V10 Task-Graph + Remote-Cache** (Turborepo, Vercel Remote Cache gratis) — erst nach Messung, welche der 48 seriellen `check:*` die CI-Zeit kosten; Messung ist der Schritt, der Umbau folgt nur bei belegtem Gewinn. Quelle: Fremdquellen-Sichtung 2.9.2026 §1 #19.
   - [ ] **V11 Korpus-Stand zitierbar** — Zenodo-DOI (oder HF-CC0-Spiegel) je Korpus-Release aus dem Manifest; unveränderlicher Stand für Zitate in Schriftsätzen (§8). Quelle: Fremdquellen-Sichtung 2.9.2026 §2.
   - [ ] **V12 CKAN-Wächter** — `ckan.opendata.swiss/api/3/action/package_search` periodisch nach neuen amtlichen Rechtsdatensätzen (Gerichte, Erlasse, Gebühren) abfragen; Fund = Roadmap-Zeile, kein Auto-Import. Quelle: Fremdquellen-Sichtung 2.9.2026 §2.
+
+- [ ] **Prüfstrasse sparsamer ohne Prüftiefe-Verlust** *(`QS-CI-MINUTEN`, Auftrag David 8.9.2026)*
+  <!-- @meta id: QS-CI-MINUTEN · status: ready · blocker: null · dep: [] · feld: betrieb -->
+  Ziel: CI-Minuten senken, kein Tor entfällt, `check:e2e-shards` bleibt.
+  **Detail:** [ci-minuten-sparplan-2026-09-08.md](bibliothek/betrieb/ci-minuten-sparplan-2026-09-08.md)
+  — 61'381 min/Monat, `ci.yml` 97,5 %, Sparplan −24'300 ohne Prüftiefe-Verlust.
+  - [ ] **M1** main-Push-Lauf auf Bau/Perf/Deploy kürzen (−15'050/Mt,
+    Bauschritt + §6.7-Tor: `strict==true` + Head ist Squash-Merge eines
+    grünen PR, sonst Volllauf; Wurzel wie `QS-ORG-UMZUG` unten).
+  - [ ] **M2** Dependabot `rebase-strategy: disabled` + monatlich (−3'800,
+    sofort/Konfig, **David-Freigabe**).
+  - [ ] **M3** e2e-Shards 8 → 4 (−3'800, Bauschritt + Branch-Regel).
+  - [ ] **M4** Doku-Läufe: 8 Shard-Kontexte → 1 Sammel-Kontext (−1'500,
+    Bauschritt + Branch-Regel — **Fallstrick:** Required-Check-Name ändert,
+    `check:merge-schutz`-Liste im selben Schritt nachziehen).
+  - [ ] **M5** Plan-Buchung `npm ci` erst nach Trailer-Fund (−150,
+    sofort/Konfig, **David-Freigabe**).
+  - [ ] Wurzel `strict: true` ⇒ Merge Queue (`QS-ORG-UMZUG` unten, Gate G7).
 
 - [ ] **Repo in eine GitHub-Organisation überführen (Merge Queue)** *(`QS-ORG-UMZUG`)*
   <!-- @meta id: QS-ORG-UMZUG · status: blocked · blocker: david-entscheid-org-umzug · dep: [] · feld: betrieb -->
