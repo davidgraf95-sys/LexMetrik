@@ -16,14 +16,11 @@ import { parseRoadmap, type Einheit } from './parse';
 import { resolve, type Buckets } from './aufloesen';
 import {
   KANTONE,
-  bauPlaetze,
   baustellenInfo,
   blockerSeitTagen,
   branchNamen,
-  letzteCommits,
-  chronikErledigt,
   davidFragen,
-  ersterSatz,
+  davidFragenVerworfen,
   katalogGruppen,
   katalogZaehlung,
   mainAmpel,
@@ -34,34 +31,30 @@ import {
   rechtsprechungRegister,
   repoWebUrl,
   schrittInfoAusRoadmap,
-  selbstoptKennzahlen,
-  verknuepfungenAusEinheiten,
   worktreesUndBranches,
   zaehleNach,
+  zielSatz,
   zuletztGelandet,
   type NormErlass,
+  type PrInfo,
   type SchrittInfo,
-  type Verknuepfung,
 } from './bildDaten';
 import {
-  BEREICH_ERKLAERUNG,
-  UEBRIGE_TECHNIK,
-  WIRKUNGSBEREICHE,
-  bereichKlasse,
   bereichsBadges,
-  checklisteText,
   esc,
   fussnote,
-  feldPfade,
+  gateFeld,
+  istDavidGate,
+  istZurueckgestellt,
   kacheln,
+  klartextLabel,
+  lageSaetze,
+  type LageZahlen,
   rahmen,
-  schrittLabel,
+
   seitenDatei,
   seitenKopf,
   tabelle,
-  verknuepfungenZeile,
-  wasGeradePassiert,
-  wirkungsbereiche,
   type SeitenOpts,
 } from './bildHtml';
 
@@ -212,398 +205,399 @@ const GERICHTSTYP_NAME: Record<string, string> = {
 
 // ===========================================================================
 // 1. Lagebild (Index) — plan-bild.html
+//
+// FÜNF KLARTEXT-BLÖCKE (Umbau 8.9.2026, Auftrag David «mach es schlanker und
+// übersichtlicher für mich»). Die Seite beantwortet genau vier Fragen:
+//
+//   1 «Wo stehen wir»              — drei Sätze und eine Ampel (im Kopf)
+//   2 «Wartet auf dich»            — jeder offene Entscheid als Frage
+//   3 «Läuft gerade»               — höchstens fünf Zeilen
+//   4 «Als Nächstes»               — die ersten fünf der @queue
+//   5 «Seit deinem letzten Blick»  — fünf Einzeiler
+//
+// Vier Bauregeln tragen den Umbau:
+//
+//  * **Erheben und Formulieren sind getrennt.** `lagebildSicht()` fragt Plan,
+//    git und gh; `lagebildInhalt()` formuliert daraus und rührt NICHTS an der
+//    Aussenwelt an. Nur so ist das Wortbudget prüfbar, ohne dass der Test die
+//    Maschine misst, auf der er läuft (§6.7).
+//  * **Kein Kürzel im Fliesstext.** Titel im Klartext, die ID nur als
+//    `title`-Attribut (`klartextLabel`). Vorher stand alle 29 sichtbaren Wörter
+//    ein Kürzel. Wer sie BRAUCHT — Bau-Sessions — findet sie vollständig auf
+//    «Bau-Details» (`bildBau.ts`).
+//  * **Die Gate-Prosa wird gezeigt, nicht weggeworfen.** `parseRoadmap` liefert
+//    `blockers` mit dem VOLLEN Text jedes Gates; bis 8.9.2026 nahm diese Datei
+//    nur `{ einheiten, queue }` und zeigte David den blossen Registernamen
+//    («wartet auf: david-go-entstehung»), obwohl die ausformulierte Frage
+//    danebenlag. Gruppiert wird nach GATE, nicht nach Schritt — drei Pakete an
+//    einem Gate sind EINE Entscheidung, nicht drei.
+//  * **Was nicht gelesen werden kann, wird gemeldet.** Eine `@david-fragen`-
+//    Zeile ohne `· quelle:` fiel bisher stumm aus der Anzeige (verifiziert
+//    8.9.2026: die einzige eingetragene Frage war David nie sichtbar). Die
+//    Seite weist die Zahl der unlesbaren Zeilen jetzt aus (§8); der Regex-Fix
+//    selbst ist ein eigener, deklarierter Schritt.
 // ===========================================================================
-export function lagebildSeite(o: SeitenOpts): string {
+
+/** Ein Arbeitspaket, so wie die Hauptseite es nennt: Klartext-Titel, ID nur als Tooltip. */
+export interface PaketSicht {
+  titel: string;
+  id: string;
+  feld: string | null;
+}
+
+/** Ein Entscheid, der bei David liegt — gruppiert nach Gate, nicht nach Paket. */
+export interface GateSicht {
+  /** Register-Name aus `@blockers` (technischer Schlüssel, klein ausgewiesen). */
+  name: string;
+  /** Der VOLLE Wortlaut des Gates aus ROADMAP.md. */
+  text: string;
+  pakete: PaketSicht[];
+  /** Sagt das Gate selbst, dass es bewusst liegen bleibt? */
+  zurueck: boolean;
+  /** Wartezeit in Tagen; `null` = nicht erhoben oder bewusst zurückgestellt. */
+  tage: number | null;
+  /** Repo-relativer Fahrplan-Pfad des ersten Pakets, für den Detail-Verweis. */
+  fahrplanPfad: string | null;
+  fahrplanName: string | null;
+  par: string | null;
+}
+
+/** Eine Zeile in «Läuft gerade». `statuswort` ist bereits Klartext (§Kommunikation). */
+export interface LaufSicht {
+  titel: string;
+  /** Kürzel des Arbeitspakets; `null` bei einem PR ohne Schritt-Bezug. */
+  id: string | null;
+  feld: string | null;
+  statuswort: string;
+  /** Ampel-Punkt: läuft (wip), Problem (block), neutral (ready). */
+  punkt: 'wip' | 'block' | 'ready';
+  prNummer: number | null;
+  prUrl: string | null;
+}
+
+/** Eine Zeile in «Als Nächstes». */
+export interface NaechstSicht extends PaketSicht {
+  /** Ein-Satz-Ziel aus dem Auftrags-Wortlaut; `null`, wenn der Schritt keinen trägt. */
+  ziel: string | null;
+  status: 'baubar' | 'laeuft' | 'wartet';
+}
+
+/** Eine Zeile in «Seit deinem letzten Blick erledigt». */
+export interface ErledigtSicht {
+  titel: string;
+  wann: string;
+  nummer: number | null;
+  url: string | null;
+}
+
+/** Alles, was die Hauptseite anzeigt — bereits erhoben, nichts mehr zu holen. */
+export interface LagebildSicht {
+  zahlen: LageZahlen;
+  gates: GateSicht[];
+  fragen: { frage: string; quelle: string }[];
+  /** `@david-fragen`-Zeilen, die der Parser NICHT lesen konnte (§8: nicht verschweigen). */
+  fragenVerworfen: number;
+  laeuft: LaufSicht[];
+  /** Zeilen jenseits der fünf sichtbaren — sie stehen vollständig auf «Bau-Details». */
+  laeuftRest: number;
+  worktrees: string[];
+  altBranches: number;
+  /** Bau-Plätze, deren Schritt NICHT auf «wip» steht — Verdacht auf unangemeldeten Bau. */
+  unangemeldet: string[];
+  /** `true` = GitHub-Kommandozeile nicht verfügbar (Antrags-Status fehlt). */
+  ghFehlt: boolean;
+  naechste: NaechstSicht[];
+  queueRest: number;
+  /** `null` = nicht abfragbar (nicht: «nichts gelandet»). */
+  erledigt: ErledigtSicht[] | null;
+  bauLink: string;
+  methodeLink: string;
+  /** Erzeugungs-Zeitstempel und Selbst-Nachladen — nur für die Kopfzeile. */
+  stand: string;
+  watch: number | null;
+}
+
+/**
+ * Die fünf Blöcke als HTML — REIN: gleiche Sicht ergibt gleiches Dokument (§2),
+ * kein git, kein gh, keine Uhr. Das macht das Wortbudget prüfbar.
+ */
+export function lagebildInhalt(d: LagebildSicht): string {
+  const zeile = (punkt: string, inhalt: string) => `<li><span class="s ${punkt}"></span><div>${inhalt}</div></li>`;
+
+  // --- Block 2: Entscheide ---------------------------------------------------
+  const gateKarte = (g: GateSicht): string => {
+    const frage = gateFeld(g.text, 'frage');
+    const optionen = gateFeld(g.text, 'optionen');
+    const empfehlung = gateFeld(g.text, 'empfehlung');
+    const titel =
+      frage ??
+      (g.pakete.length
+        ? `Entscheid zu «${g.pakete[0].titel}»${g.pakete.length > 1 ? ` und ${g.pakete.length - 1} weiteren Paketen` : ''}`
+        : `Entscheid «${g.name}»`);
+    // Bei EINEM Paket wiederholte diese Zeile wörtlich die Überschrift — sie
+    // trägt erst ab zwei Paketen Information (Wortbudget).
+    const haengt = g.pakete.length > 1
+      ? `<p class="haengt">Daran hängen ${g.pakete.length} Arbeitspakete: ${g.pakete.map((p) => klartextLabel(p.titel, p.id, false)).join(' · ')}</p>`
+      : '';
+    // Detail-Verweis relativ zur Ausgabedatei in `tmp/` — funktioniert unter file://.
+    const detail = g.fahrplanPfad
+      ? `<a href="../${esc(g.fahrplanPfad)}">Detail: ${esc(g.fahrplanName ?? g.fahrplanPfad)}${g.par ? ` §${esc(g.par)}` : ''}</a> · `
+      : '';
+    const seit = g.tage !== null && g.tage > 0 ? `wartet seit ${g.tage} Tag${g.tage === 1 ? '' : 'en'} · ` : '';
+    return `<div class="gate">
+    <h3>${esc(titel)}</h3>
+    <p>${esc(g.text)}</p>
+    ${haengt}
+    ${optionen ? `<p><b>Optionen:</b> ${esc(optionen)}</p>` : ''}
+    ${empfehlung ? `<p><b>Empfehlung:</b> ${esc(empfehlung)}</p>` : ''}
+    <p class="quelle">${seit}${detail}Register-Name <span class="id">${esc(g.name)}</span></p>
+  </div>`;
+  };
+  const offeneGates = d.gates.filter((g) => !g.zurueck);
+  const ruhendeGates = d.gates.filter((g) => g.zurueck);
+  const nichtsOffen = offeneGates.length === 0 && d.fragen.length === 0 && d.fragenVerworfen === 0;
+
+  const block2 = `<section id="david">
+  <p class="eyebrow">Deine Entscheidungen</p>
+  <h2>Wartet auf dich</h2>
+  ${nichtsOffen ? '<p class="lede">Nichts — im Moment hält kein Arbeitspaket auf deine Entscheidung.</p>' : ''}
+  ${offeneGates.map(gateKarte).join('\n')}
+  ${d.fragen.map((f) => `<div class="gate"><h3>${esc(f.frage)}</h3><p class="quelle">Fundstelle: ${esc(f.quelle)}</p></div>`).join('\n')}
+  ${
+    d.fragenVerworfen > 0
+      ? `<p class="hinweis" style="color:var(--danger)">⚠ ${d.fragenVerworfen === 1 ? '1 Frage konnte nicht gelesen werden' : `${d.fragenVerworfen} Fragen konnten nicht gelesen werden`} (Formfehler im Block <span class="id">@david-fragen</span> in ROADMAP.md: es fehlt <span class="id">· quelle:</span>).</p>`
+      : ''
+  }
+  ${
+    ruhendeGates.length
+      ? `<details style="margin-top:1rem"><summary>${ruhendeGates.length === 1 ? '1 Entscheid ist bewusst zurückgestellt' : `${ruhendeGates.length} Entscheide sind bewusst zurückgestellt`} — anzeigen</summary>
+  ${ruhendeGates.map(gateKarte).join('\n')}</details>`
+      : ''
+  }
+</section>`;
+
+  // --- Block 3: was läuft ----------------------------------------------------
+  const prVerweis = (l: LaufSicht) =>
+    l.prNummer === null ? '' : l.prUrl ? ` · <a href="${esc(l.prUrl)}/pull/${l.prNummer}">Antrag #${l.prNummer}</a>` : ` · Antrag #${l.prNummer}`;
+  const laufZeilen = d.laeuft.map((l) =>
+    zeile(l.punkt, `${l.id ? klartextLabel(l.titel, l.id) : `<b>${esc(l.titel)}</b>`}${bereichsBadges(l.feld)}<br><span class="sub">${esc(l.statuswort)}${prVerweis(l)}</span>`),
+  );
+
+  const block3 = `<section id="laeuft">
+  <p class="eyebrow">Im Bau</p>
+  <h2>Läuft gerade</h2>
+  <ul class="zeilen">${laufZeilen.join('\n') || zeile('ready', 'Nichts — kein Arbeitspaket im Bau, kein offener Antrag.')}</ul>
+  ${d.laeuftRest > 0 ? `<p class="hinweis">… und ${d.laeuftRest} weitere unter <a href="${esc(d.bauLink)}">Bau-Details</a>.</p>` : ''}
+  ${d.worktrees.length ? `<p class="hinweis">Parallele Arbeitskopien: ${esc(d.worktrees.join(' · '))}${d.altBranches ? ` · dazu ${d.altBranches} ältere Zweige ohne Arbeitskopie` : ''}.</p>` : ''}
+  ${d.unangemeldet.length ? `<p class="hinweis" style="color:var(--warn)">⚠ Möglicherweise unangemeldeter Bau: ${esc(d.unangemeldet.join(' · '))}.</p>` : ''}
+  ${d.ghFehlt ? '<p class="hinweis">⚠ GitHub-Kommandozeile nicht verfügbar — der Antrags-Status fehlt in dieser Ansicht.</p>' : ''}
+</section>`;
+
+  // --- Block 4: als Nächstes -------------------------------------------------
+  const STATUSWORT: Record<NaechstSicht['status'], string> = { baubar: '', laeuft: ' <span class="chip wip">läuft</span>', wartet: ' <span class="chip block">wartet</span>' };
+  const naechste = d.naechste
+    .map((n) => `<li>${klartextLabel(n.titel, n.id)}${bereichsBadges(n.feld)}${STATUSWORT[n.status]}${n.ziel ? `<br><span class="sub">${esc(n.ziel)}</span>` : ''}</li>`)
+    .join('\n');
+
+  const block4 = `<section id="queue">
+  <p class="eyebrow">Reihenfolge</p>
+  <h2>Als Nächstes</h2>
+  <ol class="queue">${naechste || '<li>Die Warteschlange ist leer.</li>'}</ol>
+  <p class="hinweis">${d.queueRest > 0 ? `${d.queueRest} weitere warten · ` : ''}Alles Übrige: <a href="${esc(d.bauLink)}">Bau-Details</a>.</p>
+</section>`;
+
+  // --- Block 5: erledigt -----------------------------------------------------
+  const erledigtZeilen =
+    d.erledigt === null
+      ? [zeile('ready', 'Die Projekt-Geschichte lässt sich auf diesem Rechner gerade nicht abfragen (GitHub-Kommandozeile fehlt).')]
+      : d.erledigt.length === 0
+        ? [zeile('ready', 'Noch nichts fertig geworden.')]
+        : d.erledigt.map((e) =>
+            zeile('done', `${esc(e.titel)} <span class="quelle">${esc(e.wann)}${e.nummer !== null ? ` · ${e.url ? `<a href="${esc(e.url)}/pull/${e.nummer}">#${e.nummer}</a>` : `#${e.nummer}`}` : ''}</span>`),
+          );
+
+  const block5 = `<section id="erledigt">
+  <p class="eyebrow">Fertig</p>
+  <h2>Seit deinem letzten Blick erledigt</h2>
+  <ul class="zeilen">${erledigtZeilen.join('\n')}</ul>
+</section>`;
+
+  // --- Block 1: wo stehen wir (Kopf) ----------------------------------------
+  const a = d.zahlen.ampel;
+  const kopf = seitenKopf({
+    stand: d.stand,
+    watch: d.watch,
+    marke: 'Lagebild',
+    h1: 'LexMetrik — wo der Aufbau steht',
+    lede: '',
+    extra: `<p>${a ? (a.gruen ? '<span class="chip done">✓ Hauptstand gesund</span>' : '<span class="chip block">✗ Hauptstand ROT</span>') : '<span class="chip ready">Hauptstand unbekannt</span>'}</p>
+  <p class="lage">${esc(lageSaetze(d.zahlen).join(' '))}</p>
+  <nav class="springen">Springen zu: <a href="#david">Wartet auf dich</a> · <a href="#laeuft">Läuft gerade</a> · <a href="#queue">Als Nächstes</a> · <a href="#erledigt">Erledigt</a> · <a href="${esc(d.bauLink)}">Bau-Details</a> · <a href="${esc(d.methodeLink)}">Begriffe</a></nav>`,
+  });
+
+  return `${kopf}
+
+${block2}
+
+${block3}
+
+${block4}
+
+${block5}
+
+${fussnote(`Das Kürzel jedes Arbeitspakets steht als Tooltip an seinem Titel. Fachbegriffe: <a href="${esc(d.methodeLink)}">Arbeitsweise &amp; Glossar</a>.`)}`;
+}
+
+/** Erhebung für die Hauptseite — der einzige Ort mit Plan-, git- und gh-Zugriff. */
+export function lagebildSicht(o: SeitenOpts): LagebildSicht {
   const md = readFileSync('ROADMAP.md', 'utf8');
-  const { einheiten, queue } = parseRoadmap(md);
+  const { einheiten, blockers, queue } = parseRoadmap(md);
   const b: Buckets = resolve(einheiten, queue);
   const schritte = schrittInfoAusRoadmap(md);
   const t = (id: string) => schritte.get(id)?.titel ?? id;
   const byId = new Map(einheiten.map((e) => [e.id, e]));
-  // Verknüpfungen (dep, gleiches Baufeld, gleicher Fahrplan) — EINMAL für alle
-  // offenen Schritte berechnet, dann an jeder Anzeigestelle nur nachgeschlagen
-  // (Auftrag David 14.8.2026, Ziel 2).
-  const verkn = verknuepfungenAusEinheiten(einheiten);
-  const verknZeile = (v: Verknuepfung | undefined) => (v ? verknuepfungenZeile(v, t) : '');
+  const feldVon = (id: string) => byId.get(id)?.etikett.feld ?? null;
+  const paket = (id: string): PaketSicht => ({ titel: t(id), id, feld: feldVon(id) });
 
   const offen = einheiten.filter((e) => e.etikett.status !== 'done');
-  // `begleitend` ist mit dem Plan-Neuschnitt 29.8.2026 entfallen (kein
-  // «Querschnitt-Band» mehr — die ROADMAP gliedert nach Baufeldern). Die früher
-  // dort geführten Schritte stehen jetzt regulär in `readyNow`.
   const baubar = new Set(b.readyNow);
   const prs = offenePrs();
   const { worktrees, altBranches } = worktreesUndBranches();
   const web = repoWebUrl();
-  const prLink = (n: number, text: string) => (web ? `<a href="${web}/pull/${n}">${esc(text)}</a>` : esc(text));
-  const ampel = mainAmpel();
-  const chronik = chronikErledigt();
+  const gelandet = zuletztGelandet();
 
-  // Prompts je baubarem Schritt (JSON ins Dokument, Kopier-Knopf liest daraus).
-  // Priorität seit 8.8.2026 (Entscheid David, revidiert die Produkt-Phase vom
-  // Vormittag): PROZESS geht grundsätzlich vor — das Querschnitt-Band behält
-  // darum seine Kopier-Knöpfe. Die done-Menge speist die dep-Zeile (KLEIN 6).
-  const erledigt = new Set(einheiten.filter((e) => e.etikett.status === 'done').map((e) => e.id));
-  const prompts: Record<string, string> = {};
-  for (const id of baubar) {
-    const e = byId.get(id);
-    if (e) prompts[id] = bauPrompt(e, schritte.get(id), erledigt);
+  // --- Entscheide, gruppiert nach GATE --------------------------------------
+  const haengtAn = new Map<string, string[]>();
+  for (const x of b.blockiert) {
+    if (!haengtAn.has(x.blocker)) haengtAn.set(x.blocker, []);
+    haengtAn.get(x.blocker)!.push(x.id);
+  }
+  const gates: GateSicht[] = Object.entries(blockers)
+    .filter(([, text]) => istDavidGate(text))
+    .map(([name, text]) => {
+      const ids = haengtAn.get(name) ?? [];
+      const zurueck = istZurueckgestellt(text);
+      const fpPfad = ids.length ? (byId.get(ids[0])?.etikett.fahrplan ?? null) : null;
+      return {
+        name,
+        text,
+        pakete: ids.map(paket),
+        zurueck,
+        // Die Tages-Zählung kostet je Gate ein `git log -S` und erzeugt bei
+        // einem ausdrücklich zurückgestellten Gate falschen Druck — darum nur
+        // für die offenen Fragen erheben (Befund 8.9.2026).
+        tage: zurueck ? null : blockerSeitTagen(name),
+        fahrplanPfad: fpPfad,
+        fahrplanName: fpPfad ? baustellenInfo(fpPfad).name : null,
+        par: ids.length ? (schritte.get(ids[0])?.par ?? null) : null,
+      };
+    });
+
+  // --- Was läuft -------------------------------------------------------------
+  const laeuft: LaufSicht[] = b.inArbeit.map((id) => {
+    const pr = (prs ?? []).find((p) => p.roadmapId === id);
+    return {
+      titel: t(id),
+      id,
+      feld: feldVon(id),
+      statuswort: pr ? `läuft · ${pr.checks}` : 'läuft — noch kein offener Antrag',
+      punkt: pr?.checks === 'Checks ROT' ? 'block' : 'wip',
+      prNummer: pr?.number ?? null,
+      prUrl: web,
+    };
+  });
+  // Bibliotheks-Updates (Dependabot) sind keine Bauarbeit und werden zu EINER
+  // Zeile gebündelt — sonst stehen sie gleichrangig neben den Arbeitspaketen
+  // (Befund der Ist-Analyse 8.9.2026).
+  const fremde = (prs ?? []).filter((p) => !b.inArbeit.includes(p.roadmapId ?? ''));
+  const istBot = (p: PrInfo) => p.headRefName.startsWith('dependabot/') || /^(?:Bump|build\(deps)/i.test(p.title);
+  for (const p of fremde.filter((x) => !istBot(x))) {
+    laeuft.push({
+      titel: p.title,
+      id: p.roadmapId,
+      feld: p.roadmapId ? feldVon(p.roadmapId) : null,
+      statuswort: p.checks === 'Checks ROT' ? 'Problem: Prüfungen rot' : `läuft · ${p.checks}`,
+      punkt: p.checks === 'Checks ROT' ? 'block' : 'wip',
+      prNummer: p.number,
+      prUrl: web,
+    });
+  }
+  const bots = fremde.filter(istBot);
+  if (bots.length) {
+    laeuft.push({
+      titel: bots.length === 1 ? '1 Bibliotheks-Update wartet' : `${bots.length} Bibliotheks-Updates warten`,
+      id: null,
+      feld: null,
+      statuswort: `automatische Fremdpakete-Aktualisierung (${bots.map((p) => `#${p.number}`).join(' · ')}) — keine Bauarbeit`,
+      punkt: 'ready',
+      prNummer: null,
+      prUrl: null,
+    });
   }
 
-  // Bau-Bereiche (Auftrag David 8.8.2026, «grundlegend besser eingeteilt»):
-  // Gliederung nach Wirkungsbereich — DERSELBEN Ableitung wie die Badges
-  // (`wirkungsbereiche()`, §5), keine zweite Taxonomie. Ein Schritt mit
-  // mehreren Flächen zählt bei seinem HAUPT-Bereich (erste Fläche der
-  // Ableitungs-Reihenfolge); Schritte OHNE `feld:` bilden einen eigenen,
-  // ehrlichen Eimer (§8) statt still in «Übrige Technik» zu fallen.
-  const OHNE_FLAECHE = 'Ohne deklariertes Baufeld';
-  const bereichVon = (e: Einheit): string => wirkungsbereiche(feldPfade(e.etikett.feld))[0] ?? OHNE_FLAECHE;
-  const nachBereich = new Map<string, Einheit[]>();
-  for (const e of offen) {
-    const bz = bereichVon(e);
-    if (!nachBereich.has(bz)) nachBereich.set(bz, []);
-    nachBereich.get(bz)!.push(e);
-  }
-  const bereichsErklaerung = new Map<string, string>(BEREICH_ERKLAERUNG);
-  bereichsErklaerung.set(OHNE_FLAECHE, 'Schritte ohne feld:-Angabe im Etikett — Baufeld setzen, dann ordnen sie sich mechanisch ein (check:plan meldet sie ohnehin rot).');
-
-  const statusPunkt = (s: string) => (s === 'done' ? 'done' : s === 'wip' ? 'wip' : s === 'blocked' ? 'block' : 'ready');
-
-  // wip-Verstoss-Sonde: ein Bau-Platz (Worktree/Branch), dessen Name zu einem
-  // Schritt passt, der NICHT auf wip steht, deutet auf unangemeldeten Bau —
-  // genau die Lücke, die diese Anzeige sonst still falsch aussehen lässt.
+  // wip-Verstoss-Sonde: ein Bau-Platz, dessen Name zu einem Schritt passt, der
+  // NICHT auf wip steht, deutet auf unangemeldeten Bau — genau die Lücke, die
+  // diese Anzeige sonst still falsch aussehen lässt.
   const slug = (id: string) => id.toLowerCase().replace(/[^a-z0-9]+/g, '-');
   const alleNamen = [...worktrees, ...branchNamen()];
   const unangemeldet: string[] = [];
   for (const e of einheiten) {
     if (e.etikett.status === 'wip' || e.etikett.status === 'done') continue;
-    const s = slug(e.id);
-    const treffer = alleNamen.find((n) => n.toLowerCase().includes(s));
-    if (treffer) unangemeldet.push(`${e.id} (Bau-Platz «${treffer}», Status «${e.etikett.status}»)`);
+    const treffer = alleNamen.find((n) => n.toLowerCase().includes(slug(e.id)));
+    if (treffer) unangemeldet.push(`${t(e.id)} (Bau-Platz «${treffer}»)`);
   }
 
-  const imBau: string[] = [];
-  for (const id of b.inArbeit) {
-    const pr = prs?.find((p) => p.roadmapId === id);
-    imBau.push(`<li><span class="s wip"></span><div>${schrittLabel(t(id), id)}${bereichsBadges(byId.get(id)?.etikett.feld ?? null)}<br><span class="sub">${pr ? `${prLink(pr.number, `PR #${pr.number}`)} · ${esc(pr.checks)}` : 'im Bau (wip) — noch kein offener PR'}</span></div></li>`);
-  }
-  const fremdePrs = (prs ?? []).filter((p) => !b.inArbeit.includes(p.roadmapId ?? ''));
-  for (const p of fremdePrs) {
-    imBau.push(`<li><span class="s wip"></span><div><b>${prLink(p.number, `PR #${p.number}`)}: ${esc(p.title)}</b><br><span class="sub">${esc(p.checks)} · Branch ${esc(p.headRefName)}</span></div></li>`);
-  }
+  // --- Als Nächstes und Erledigtes ------------------------------------------
+  const naechste: NaechstSicht[] = queue.slice(0, 5).map((id) => {
+    return {
+      ...paket(id),
+      ziel: zielSatz(schritte.get(id)?.prosa ?? '', id),
+      status: byId.get(id)?.etikett.status === 'wip' ? 'laeuft' : baubar.has(id) ? 'baubar' : 'wartet',
+    };
+  });
 
-  const gelandet = zuletztGelandet();
-  const gelandetHtml = (gelandet ?? [])
-    .map((p) => {
-      const wann = new Date(p.mergedAt).toLocaleString('de-CH', { dateStyle: 'short', timeStyle: 'short' });
-      const schritt = p.roadmapId ? ` <span class="id">(${esc(p.roadmapId)})</span>` : '';
-      return `<li><span class="s done"></span><div>${prLink(p.number, `PR #${p.number}`)}: ${esc(p.title)}${schritt}<br><span class="sub">gelandet ${esc(wann)}</span></div></li>`;
-    })
-    .join('\n');
+  const kurzTitel = (s: string) => s.split(' — ')[0].replace(/\s*\(#\d+\)\s*$/, '').trim();
+  const tag = (iso: string) => new Date(iso).toLocaleDateString('de-CH', { day: '2-digit', month: '2-digit', year: 'numeric' });
+  const erledigt = gelandet === null ? null : gelandet.map((p) => ({ titel: kurzTitel(p.title), wann: tag(p.mergedAt), nummer: p.number, url: web }));
 
-  // Parallel-Start-Empfehlung: Lane 1 des Resolvers = untereinander
-  // Schritte verschiedener Baufelder; @queue-Rang steht darin vorn.
-  const laneEmpfehlung = (b.lanes[0] ?? []).filter((id) => prompts[id]).slice(0, 4);
-  const laneHtml = laneEmpfehlung
-    .map((id) => `<li>${schrittLabel(t(id), id)} <button class="kopier" data-id="${esc(id)}">Bau-Prompt kopieren</button></li>`)
-    .join('\n');
+  const fragen = davidFragen(md);
+  const erstes = gelandet?.[0] ?? null;
 
-  const schrittZeile = (e: Einheit) => {
-    const knopf = baubar.has(e.id)
-      ? ` <button class="kopier" data-id="${esc(e.id)}" title="Bau-Auftrag für eine neue Session kopieren">Bau-Prompt kopieren</button>`
-      : e.etikett.status === 'blocked'
-        ? ` <span class="sub">⛔ ${esc(e.etikett.blocker ?? 'blockiert')}</span>`
-        : e.etikett.status === 'wip'
-          ? ' <span class="sub">🔨 im Bau</span>'
-          : e.etikett.status === 'parked'
-            ? ' <span class="sub">⏸ geparkt</span>'
-            : '';
-    const chk = schritte.get(e.id)?.checkliste;
-    const chkTxt = checklisteText(chk);
-    const chkText = chkTxt ? ` <span class="sub">Checkliste: ${esc(chkTxt)}</span>` : '';
-    const fpName = e.etikett.fahrplan ? baustellenInfo(e.etikett.fahrplan).name : null;
-    return `<li><span class="s ${statusPunkt(e.etikett.status)}"></span><div>${schrittLabel(t(e.id), e.id, false)}${chkText}${knopf}${fpName ? `<br><span class="sub">Baustelle: ${esc(fpName)}</span>` : ''}${verknZeile(verkn.get(e.id))}</div></li>`;
-  };
-  const statusRang = (e: Einheit) => (e.etikett.status === 'wip' ? 0 : baubar.has(e.id) ? 1 : e.etikett.status === 'parked' ? 2 : e.etikett.status === 'blocked' ? 3 : 2);
-  // Innerhalb eines Bereichs zählt die QUEUE-Reihenfolge (readyNow-Rang), nicht
-  // die Dokument-Reihenfolge — sonst nennt eine Bereichs-Karte einen anderen
-  // «Nächsten Schritt» als die Empfehlung oben (zwei Wahrheiten, §5; Befund
-  // David 8.8.2026: KI-Karte bot den S-Schritt QS-TOK-DECKEL an, obwohl
-  // QS-SKILL-DIAET Queue-Spitze war).
-  const rangReady = new Map(b.readyNow.map((id, i) => [id, i]));
-  const karten = [...WIRKUNGSBEREICHE, UEBRIGE_TECHNIK, OHNE_FLAECHE]
-    .filter((bz) => nachBereich.has(bz))
-    .map((bz) => {
-      const es = [...nachBereich.get(bz)!].sort(
-        (a, b2) => statusRang(a) - statusRang(b2) || (rangReady.get(a.id) ?? Infinity) - (rangReady.get(b2.id) ?? Infinity),
-      );
-      const wip = es.filter((e) => e.etikett.status === 'wip').length;
-      const sofort = es.filter((e) => baubar.has(e.id)).length;
-      const blockiert = es.filter((e) => e.etikett.status === 'blocked').length;
-      const chip = wip
-        ? '<span class="chip wip">im Bau</span>'
-        : sofort
-          ? '<span class="chip ready">bereit</span>'
-          : blockiert
-            ? '<span class="chip block">teils blockiert</span>'
-            : '';
-      // Kopf-Knopf = erster baubarer Schritt des Bereichs. Der frühere
-      // S-Ausschluss («Kopf-Knopf nie auf einen S-Schritt», David 8.8.2026) ist
-      // mit dem Feld `groesse` entfallen (Steuerungs-Diät 29.8.2026): ohne
-      // Schätzfeld gibt es keine S-Schritte mehr zu meiden. Das Bündeln kleiner
-      // Punkte steuert seither die Checkliste des Dach-Schritts.
-      const naechster = es.find((e) => baubar.has(e.id));
-      return `<div class="card bz ${bereichKlasse(bz)}">
-  <div class="kopf"><h3>${esc(bz)}</h3>${chip}</div>
-  <p class="zweck">${esc(bereichsErklaerung.get(bz) ?? '')}</p>
-  <span class="fortschritt">${es.length} Schritt${es.length === 1 ? '' : 'e'} offen · ${sofort} sofort baubar${wip ? ` · ${wip} im Bau` : ''}${blockiert ? ` · ${blockiert} blockiert` : ''}</span>
-  ${naechster ? `<p class="next"><b>Nächster Schritt:</b> ${esc(t(naechster.id))} <button class="kopier" data-id="${esc(naechster.id)}">Bau-Prompt kopieren</button></p>` : ''}
-  <details><summary>Einzelschritte (${es.length})</summary><ul>${es.map(schrittZeile).join('\n')}</ul></details>
-</div>`;
-    })
-    .join('\n');
-
-  const queueHtml = queue
-    .map((id) => {
-      const e = byId.get(id);
-      const st = e?.etikett.status ?? '?';
-      const zusatz = st === 'wip' ? ' <span class="chip wip">im Bau</span>' : baubar.has(id) ? ` <button class="kopier" data-id="${esc(id)}">Bau-Prompt kopieren</button>` : '';
-      return `<li>${schrittLabel(t(id), id)}${bereichsBadges(e?.etikett.feld ?? null)}${zusatz}</li>`;
-    })
-    .join('\n');
-
-  // «Empfohlener nächster Bau» — der MECHANISCH oberste Schritt, also derselbe Wert,
-  // den `plan:next` als «OBERSTER offener Schritt» ausgibt (`resolve().readyNow[0]`),
-  // nicht `queue[0]`. Der Unterschied ist bewusst: ein Queue-Kopf, der blockiert oder
-  // dep-wartend wird, bliebe hier sonst als Empfehlung stehen, obwohl ihn niemand
-  // bauen kann — genau die Drift, die `check:plan` Regel 8.4 an der Prosa verhindert.
-  // Zwei Quellen für «der nächste Schritt» wären zwei Wahrheiten (§5).
-  const empfohlen = b.readyNow[0] ?? null;
-  const empfohlenChk = empfohlen ? checklisteText(schritte.get(empfohlen)?.checkliste) : null;
-  const empfohlenZiel = empfohlen ? schritte.get(empfohlen)?.prosa : undefined;
-  const empfohlenHtml = empfohlen
-    ? `<div class="empfehlung"><p class="lage" style="margin-top:0"><b>Empfohlener nächster Bau:</b> ${schrittLabel(t(empfohlen), empfohlen)}${bereichsBadges(byId.get(empfohlen)?.etikett.feld ?? null)}</p>
-  ${empfohlenChk ? `<p class="sub">Checkliste: ${esc(empfohlenChk)}</p>` : ''}
-  ${empfohlenZiel ? `<p class="zweck">${esc(ersterSatz(empfohlenZiel))}</p>` : ''}
-  ${verknZeile(verkn.get(empfohlen))}
-  ${prompts[empfohlen] ? `<p style="margin:.5rem 0 0"><button class="kopier" data-id="${esc(empfohlen)}">Bau-Prompt kopieren</button></p>` : ''}
-  <p class="sub" style="margin-top:.5rem">Dasselbe Ergebnis wie <span class="id">npm run plan:next</span> — die Reihenfolge steuert die <span class="id">@queue</span> in ROADMAP.md. Zwei Schritte desselben <b>Baufelds</b> laufen nie parallel; beim Dach-Schritt gibt die Checkliste die Auswahl vor.</p></div>`
-    : '<p class="lage"><b>Empfohlener nächster Bau:</b> keiner — kein Schritt ist gerade baubar.</p>';
-
-  // «Weitere sinnvolle nächste Schritte» — bis zu vier Kandidaten NACH dem
-  // Empfohlenen, in derselben Reihenfolge wie `plan:next` (@queue-Rang vor
-  // Dokumentreihenfolge, s. resolve()). Ersetzt die lange gleichförmige
-  // Warteschlangen-Liste als PRIMÄRE Ansicht (Auftrag David 14.8.2026, Ziel 1)
-  // — die vollständige Liste bleibt darunter, nur eingeklappt.
-  const naechsteKandidaten = b.readyNow.filter((id) => id !== empfohlen).slice(0, 4);
-  const naechsteHtml = naechsteKandidaten
-    .map((id) => {
-      const e = byId.get(id);
-      const info = schritte.get(id);
-      const chkTxt = checklisteText(info?.checkliste);
-      const ziel = info?.prosa ? ersterSatz(info.prosa) : '';
-      return `<div class="card">
-  <p style="margin:0">${schrittLabel(t(id), id)}${bereichsBadges(e?.etikett.feld ?? null)}</p>
-  ${chkTxt ? `<span class="fortschritt">Checkliste: ${esc(chkTxt)}</span>` : ''}
-  ${ziel ? `<p class="zweck">${esc(ziel)}</p>` : ''}
-  ${verknZeile(verkn.get(id))}
-  ${prompts[id] ? `<p style="margin:0"><button class="kopier" data-id="${esc(id)}">Bau-Prompt kopieren</button></p>` : ''}
-</div>`;
-    })
-    .join('\n');
-
-  // Fehlerbuch-Kasten (Entscheid David 8.8.2026): W2·18-FEHLERBUCH ist der
-  // stehende Sammel-Schritt für Alltags-Fehlerfunde — der Kasten zeigt die
-  // offenen Positionen bzw. erklärt den Melde-Weg, damit der Sammel-Mechanismus
-  // ohne ROADMAP-Lektüre nutzbar ist.
-  const fb = schritte.get('W2·18-FEHLERBUCH')?.checkliste ?? null;
-  const fbOffen = fb?.offen ?? 0;
-  const fehlerbuchHtml = `<div class="panel" style="margin-top:1.2rem;border-color:var(--slate);background:var(--slate-bg)">
-    <h3>Dein Fehlerbuch (W2·18-FEHLERBUCH)</h3>
-    ${
-      fbOffen > 0
-        ? `<p class="sub">${fbOffen} offene Position${fbOffen === 1 ? '' : 'en'} aus deiner täglichen Nutzung — eine Fix-Batch-Session arbeitet sie gebündelt ab (ein Branch, einmal Tore, eine Landung).</p>
-    <ul class="liste" style="margin-top:.6rem">${(fb?.offenTexte ?? []).map((x) => `<li><span class="s ready"></span><div>${esc(x)}</div></li>`).join('\n')}${fbOffen > (fb?.offenTexte.length ?? 0) ? `<li><span class="sub">… und ${fbOffen - (fb?.offenTexte.length ?? 0)} weitere in ROADMAP.md</span></li>` : ''}</ul>
-    ${prompts['W2·18-FEHLERBUCH'] ? `<p class="next"><button class="kopier" data-id="W2·18-FEHLERBUCH">Fix-Batch-Prompt kopieren</button></p>` : ''}`
-        : `<p class="sub">Keine offenen Positionen. Fällt dir bei der täglichen Nutzung ein Fehler auf, melde ihn einfach im Chat — die Session trägt ihn hier ein; behoben wird gebündelt statt einzeln.</p>`
-    }
-  </div>`;
-
-  const davidHtml = [
-    ...b.blockiert.map((x) => {
-      const tage = blockerSeitTagen(x.blocker);
-      const seit = tage !== null && tage > 0 ? ` <span class="quelle">— wartet seit ${tage} Tag${tage === 1 ? '' : 'en'}</span>` : '';
-      return `<li>${schrittLabel(t(x.id), x.id)}${bereichsBadges(byId.get(x.id)?.etikett.feld ?? null)} — wartet auf: <b>${esc(x.blocker)}</b>${seit}</li>`;
-    }),
-    ...davidFragen(md).map((f) => `<li>${esc(f.frage)} <span class="quelle">(${esc(f.quelle)})</span></li>`),
-  ].join('\n');
-
-  // Bau-Messreihe (Schritt QS-SELBSTOPT, Stufe 1 «erst messen»). Zeigt den
-  // letzten Snapshot von `messwerte/selbstopt-zeitreihe.json`.
-  //
-  // Der erklärende Satz darunter ist Absicht, nicht Zierde: eine Kachel mit
-  // einer Prozentzahl liest sich sonst wie eine Bewertung. Diese Zahlen SIND
-  // keine Bewertung — sie sind Beobachtungsgrössen und ausdrücklich nie ein
-  // Tor-Kriterium (Fahrplan-Spec). Wer das auf der Seite nicht dazuschreibt,
-  // erzeugt genau den Druck, das Gemessene statt der Sache zu verbessern.
-  const messreihe = selbstoptKennzahlen();
-  const messreiheHtml = messreihe
-    ? `${kacheln([
-        { wert: messreihe.ciFailure, label: 'der CI-Läufe MIT Ergebnis sind gescheitert' },
-        { wert: messreihe.ciAbgebrochen, label: 'der CI-Läufe wurden abgebrochen (ohne Ergebnis)' },
-        { wert: messreihe.ciRerun, label: 'der CI-Läufe waren Wiederholungen' },
-        { wert: `${messreihe.torRot}/${messreihe.torGesamt}`, label: 'Tor-Läufe rot seit der vorigen Messung' },
-        { wert: messreihe.rework, label: 'Quelltext-Commits mit Nacharbeit binnen 48 h' },
-        { wert: messreihe.snapshots, label: 'Messpunkte in der Reihe' },
-      ])}
-  <p class="hinweis">Stand ${esc(messreihe.stand)} · Quelle <span class="id">messwerte/selbstopt-zeitreihe.json</span>,
-  erhoben mit <span class="id">npm run selbstopt:erheben</span> aus git, der GitHub-API und dem lokalen Tor-Protokoll.
-  <b>Diese Zahlen bewerten nichts.</b> Sie sind Beobachtung: kein Prüf-Tor hängt an ihnen, und keines wird je an ihnen hängen —
-  sonst würde der Bau die Messung verbessern statt die Sache.${
-    messreihe.ausfaelle.length
-      ? ` <br>⚠ Bei der letzten Erhebung nicht verfügbar: ${esc(messreihe.ausfaelle.join(' · '))} (kein Fehler des Bau-Stands).`
-      : ''
-  }</p>`
-    : `<p class="hinweis">Noch keine Messreihe erhoben — <span class="id">npm run selbstopt:erheben</span> legt den ersten Messpunkt an.</p>`;
-
-  const lageSatz = `${offen.length} Schritte offen — ${baubar.size} davon sofort baubar, ${b.inArbeit.length} gerade im Bau, ${b.blockiert.length} warten auf dich.`;
-
-  const projektLink = esc(seitenDatei(o.indexPfad, 'projekt'));
-  const geschichteLink = esc(seitenDatei(o.indexPfad, 'geschichte'));
-  const methodeLink = esc(seitenDatei(o.indexPfad, 'methode'));
-
-  const kopf = seitenKopf({
+  return {
+    zahlen: {
+      offen: offen.length,
+      baubar: baubar.size,
+      imBau: b.inArbeit.length,
+      entscheide: gates.filter((g) => !g.zurueck).length + fragen.length,
+      ampel: mainAmpel(),
+      zuletzt: erstes ? { titel: kurzTitel(erstes.title), wann: tag(erstes.mergedAt) } : null,
+    },
+    gates,
+    fragen,
+    fragenVerworfen: davidFragenVerworfen(md),
+    laeuft: laeuft.slice(0, 5),
+    laeuftRest: Math.max(0, laeuft.length - 5),
+    worktrees,
+    altBranches,
+    unangemeldet,
+    ghFehlt: prs === null,
+    naechste,
+    queueRest: Math.max(0, queue.length - naechste.length),
+    erledigt,
+    bauLink: seitenDatei(o.indexPfad, 'bau'),
+    methodeLink: seitenDatei(o.indexPfad, 'methode'),
     stand: o.stand,
     watch: o.watch,
-    marke: 'Lagebild',
-    h1: 'LexMetrik — wo der Aufbau steht',
-    lede: `Bau-Steuerpult: mechanisch aus dem Steuerplan erzeugt (dieselbe Logik wie
-  <span class="id">npm run plan:next</span>) — nur bautechnische Information (Vorgabe David 8.8.2026).
-  Allgemeines zum Projekt: <a href="${projektLink}">Projekt &amp; Produkt</a> (dort auch die Gesamtkarte)
-  · <a href="${geschichteLink}">Geschichte</a> · <a href="${methodeLink}">Arbeitsweise &amp; Glossar</a>.`,
-    extra: `<p class="lage"><b>${esc(lageSatz)}</b></p>
-  ${ampel ? `<p>${ampel.gruen ? '<span class="chip done">✓ main gesund</span>' : '<span class="chip block">✗ main ROT</span>'} <span class="sub">letzter Lauf «${esc(ampel.name)}» ${esc(ampel.wann)}</span></p>` : ''}
-  <nav class="springen">Springen zu: <a href="#jetzt">Was gerade passiert</a> · <a href="#david">Wartet auf dich</a> · <a href="#imbau">Im Bau</a> · <a href="#gelandet">Zuletzt gelandet</a> · <a href="#queue">Warteschlange</a> · <a href="#baustellen">Bau-Bereiche</a> · <a href="#messreihe">Bau-Messreihe</a></nav>`,
-  });
+  };
+}
 
-  // Laien-Block «Was gerade passiert» (Schritt QS-PLAN-BILD-LAGE, Auftrag David
-  // 5.8.2026). Er steht VOR allen Fachsektionen und speist sich aus DENSELBEN
-  // Resolver-Daten wie sie — er übersetzt, er zählt nicht neu (§5).
-  //
-  // «Wartet auf David» ist mechanisch bestimmt: der Blocker-NAME enthält
-  // «david». Das ist die Register-Konvention der `@blockers`-Zeile
-  // (`vps-bestellung-david`, `entscheid-david-…`) und darum prüfbar — im
-  // Unterschied zu einer gepflegten Zweitliste, die still veralten würde.
-  // Die kuratierten DAVID_FRAGEN bleiben bewusst draussen: sie tragen keinen
-  // Schritt-Titel und stehen vollständig in der Sektion `#david` darunter.
-  const jetzt = wasGeradePassiert({
-    imBau: b.inArbeit.map((id) => ({ titel: t(id), id, feld: byId.get(id)?.etikett.feld ?? null })),
-    bauplaetze: bauPlaetze(),
-    gelandet: letzteCommits(5),
-    wartetAufDavid: b.blockiert
-      .filter((x) => x.blocker.toLowerCase().includes('david'))
-      .map((x) => ({ titel: t(x.id), id: x.id, blocker: x.blocker, feld: byId.get(x.id)?.etikett.feld ?? null })),
-    weitereBlockierte: b.blockiert.filter((x) => !x.blocker.toLowerCase().includes('david')).length,
-    methodeDatei: seitenDatei(o.indexPfad, 'methode'),
-    stand: o.stand,
-  });
-
-  const inhalt = `${kopf}
-
-${jetzt}
-
-<section id="david">
-  <p class="eyebrow">Engpass</p>
-  <div class="panel">
-    <h2>Wartet auf dich, David</h2>
-    <ul>${davidHtml || '<li>Nichts — kein Schritt wartet auf dich.</li>'}</ul>
-  </div>
-</section>
-
-<section id="imbau">
-  <p class="eyebrow">Gerade im Bau</p>
-  <h2>Was jetzt läuft</h2>
-  <ul class="liste">${imBau.join('\n') || '<li><span class="sub">Nichts im Bau (kein wip-Schritt, keine offenen PRs).</span></li>'}</ul>
-  ${worktrees.length ? `<p class="hinweis">Aktive Bau-Plätze (Worktrees): ${esc(worktrees.join(' · '))}${altBranches ? ` · dazu ${altBranches} ältere Branches ohne Bau-Platz (Aufräum-Kandidaten)` : ''}</p>` : ''}
-  ${unangemeldet.length ? `<p class="hinweis" style="color:var(--warn)">⚠ Möglicherweise unangemeldeter Bau (Bau-Platz existiert, Schritt steht nicht auf «wip»): ${esc(unangemeldet.join(' · '))} — die bauende Session sollte <span class="id">plan:set … status=wip</span> nachholen.</p>` : ''}
-  <p class="hinweis">${prs === null ? '⚠ GitHub-CLI (gh) nicht verfügbar — PR-Status entfällt in dieser Ansicht. ' : ''}Die Anzeige ist so aktuell wie die wip-Disziplin: Sessions setzen ihren Schritt vor Baubeginn auf «wip».</p>
-</section>
-
-<section id="gelandet">
-  <p class="eyebrow">Zuletzt gelandet</p>
-  <h2>Was kürzlich fertig wurde</h2>
-  <ul class="liste">${gelandetHtml || `<li><span class="sub">${gelandet === null ? '⚠ GitHub-CLI (gh) nicht verfügbar — Sektion entfällt.' : 'Keine kürzlich gemergten PRs.'}</span></li>`}</ul>
-</section>
-
-<section id="queue">
-  <p class="eyebrow">Reihenfolge</p>
-  <h2>Als Nächstes dran — deine Warteschlange</h2>
-  <p class="lede">Mit «Bau-Prompt kopieren» holst du dir den fertigen Auftrag für eine neue Claude-Code-Session
-  (enthält wip-Setzen, Worktree-Regel, Spec-Befehl, Definition of Done und die §14.7-Klausel).</p>
-  ${empfohlenHtml}
-  ${naechsteHtml ? `<h3 style="margin-top:1.4rem">Weitere sinnvolle nächste Schritte</h3>
-  <div class="cards">${naechsteHtml}</div>` : ''}
-  ${fehlerbuchHtml}
-  <details style="margin-top:1.4rem"><summary>Vollständige Warteschlange (${queue.length} Schritt${queue.length === 1 ? '' : 'e'})</summary>
-  <ol class="queue">${queueHtml}</ol></details>
-  ${laneEmpfehlung.length > 1 ? `<div class="panel" style="border-color:var(--sage);background:var(--sage-bg);margin-top:1.2rem">
-    <h3 style="color:var(--sage)">Jetzt parallel startbar — ohne Kollision</h3>
-    <p class="sub">Diese Schritte berühren getrennte Dateiflächen (Resolver-Lane 1): du kannst für jeden eine eigene Session starten, sie kommen sich nicht in die Quere.</p>
-    <ul class="liste" style="margin-top:.6rem">${laneHtml}</ul>
-  </div>` : ''}
-</section>
-
-<section id="baustellen">
-  <p class="eyebrow">Bau-Bereiche</p>
-  <h2>Alle offenen Schritte, nach Bereich gegliedert</h2>
-  <p class="lede">Dieselbe Einteilung wie die Bereichs-Badges (mechanisch aus den deklarierten Dateiflächen abgeleitet);
-  ein Schritt mit mehreren Flächen steht bei seinem Hauptbereich. Innerhalb: im Bau zuerst, dann sofort Baubares.
-  ${chronik !== null ? `Die ${chronik} bereits erledigten Arbeitspakete liegen im <a href="${geschichteLink}">Chronik-Archiv</a> und erscheinen hier nicht mehr.` : ''}</p>
-  <input id="filter" type="search" placeholder="Schritte filtern — z. B. «Kanton», «Design», «Suche» …" aria-label="Schritte filtern">
-  <div class="cards">${karten}</div>
-</section>
-
-<section id="messreihe">
-  <p class="eyebrow">Bau-Messreihe</p>
-  <h2>Wie rund der Bau läuft</h2>
-  <p class="lede">Seit August 2026 misst der Bau sich selbst: bei jedem Prüflauf wird festgehalten, welches Tor grün oder rot war,
-  und in Abständen kommen die Zahlen aus der Bau-Prüfstrasse (CI) und der Versionsgeschichte dazu. So lässt sich später belegen,
-  ob eine Prozessänderung etwas gebracht hat — statt es zu vermuten.</p>
-  ${messreiheHtml}
-</section>
-
-${fussnote('Klartext-Namen der Baustellen sind gepflegte Übersetzungen (@lagebild-Kopfzeile der Fahrpläne); alle Zahlen sind mechanisch.')}`;
-
-  const json = JSON.stringify(prompts).replace(/<\//g, '<\\/');
-  const skript = `  const PROMPTS = ${json};
-  let timer = null;
-  const filter = document.getElementById('filter');
-  if (filter) filter.addEventListener('input', () => {
-    const q = filter.value.trim().toLowerCase();
-    for (const card of document.querySelectorAll('.cards .card')) {
-      card.style.display = !q || card.textContent.toLowerCase().includes(q) ? '' : 'none';
-    }
-  });
-  document.addEventListener('click', (ev) => {
-    const b = ev.target.closest('.kopier');
-    if (!b) return;
-    const p = PROMPTS[b.dataset.id];
-    if (!p) return;
-    navigator.clipboard.writeText(p).then(() => {
-      const t = document.getElementById('toast');
-      t.style.opacity = '1';
-      clearTimeout(timer);
-      timer = setTimeout(() => { t.style.opacity = '0'; }, 2500);
-    });
-  });`;
-
+export function lagebildSeite(o: SeitenOpts): string {
   return rahmen({
     indexPfad: o.indexPfad,
     aktiv: 'lagebild',
     titel: `LexMetrik — Lagebild ${o.stand}`,
     watch: o.watch,
-    inhalt,
-    skript,
-    nachSpann: '<div id="toast" role="status">Bau-Prompt kopiert — in einer neuen Claude-Code-Session einfügen.</div>',
+    inhalt: lagebildInhalt(lagebildSicht(o)),
   });
 }
 

@@ -1,6 +1,6 @@
 import { useMemo, type ReactNode } from 'react';
 import { DatumsFeld } from '../DatumsFeld';
-import { Field, inputCls } from './ui';
+import { Checkbox, Field, inputCls } from './ui';
 import { NormText } from '../NormText';
 import { useWizardState } from './useWizardState';
 import { VorlagenWizardRahmen, VorschauPanel, ExportLeiste } from './wizard';
@@ -196,10 +196,12 @@ export function VorlagenSeite<
 
       <section className="lc-highlight space-y-3">
         {config.bestaetigung}
-        <label className={config.bestaetigungLabelCls ?? 'flex items-start gap-2 text-body-s cursor-pointer text-ink-900 font-medium pt-1'}>
-          <input type="checkbox" className="mt-0.5" checked={bestaetigt} onChange={(e) => setBestaetigt(e.target.checked)} />
-          {config.bestaetigungLabel}
-        </label>
+        <Checkbox
+          checked={bestaetigt}
+          onChange={setBestaetigt}
+          label={config.bestaetigungLabel}
+          className={config.bestaetigungLabelCls ?? 'text-ink-900 font-medium pt-1'}
+        />
       </section>
 
       <ExportLeiste ergebnis={ergebnis} deaktiviert={!bestaetigt || gates.blocker.length > 0}

@@ -1,4 +1,4 @@
-import { Field, inputCls } from '../../components/vorlagen/ui';
+import { Checkbox, Field, inputCls } from '../../components/vorlagen/ui';
 import { BetragsFeld } from '../../components/BetragsFeld';
 import { DatumsFeld } from '../../components/DatumsFeld';
 import { usePaneKlasse } from '../../components/layout/PaneKontext';
@@ -54,13 +54,13 @@ export function SchrittKonstellation({ ctx }: { ctx: AgSchrittCtx }) {
         </Field>
       </div>
       <div className="grid grid-cols-1 gap-y-2 text-body-s text-ink-700">
-        <label className="flex items-center gap-2"><input type="checkbox" checked={besondereVorteile} onChange={(e) => setBesondereVorteile(e.target.checked)} /> Besondere Vorteile für Gründer/Dritte</label>
-        <label className="flex items-center gap-2"><input type="checkbox" checked={inhaberaktien} onChange={(e) => setInhaberaktien(e.target.checked)} /> Inhaberaktien vorgesehen</label>
-        <label className="flex items-center gap-2"><input type="checkbox" checked={!eigeneBueros} onChange={(e) => setEigeneBueros(!e.target.checked)} /> c/o-Adresse (kein eigenes Büro)</label>
-        <label className="flex items-center gap-2"><input type="checkbox" checked={immobilienHauptzweck} onChange={(e) => setImmobilienHauptzweck(e.target.checked)} /> Immobilien-Haupttätigkeit</label>
-        <label className="flex items-center gap-2"><input type="checkbox" checked={fremdwaehrung} onChange={(e) => setFremdwaehrung(e.target.checked)} /> Aktienkapital in Fremdwährung</label>
-        <label className="flex items-center gap-2"><input type="checkbox" checked={!bankInUrkunde} onChange={(e) => setBankInUrkunde(!e.target.checked)} /> Bank wird in der Urkunde NICHT genannt</label>
-        <label className="flex items-center gap-2"><input type="checkbox" checked={chVertretung} onChange={(e) => setChVertretung(e.target.checked)} /> Vertretungsberechtigte Person mit CH-Wohnsitz vorhanden</label>
+        <Checkbox checked={besondereVorteile} onChange={setBesondereVorteile} label="Besondere Vorteile für Gründer/Dritte" />
+        <Checkbox checked={inhaberaktien} onChange={setInhaberaktien} label="Inhaberaktien vorgesehen" />
+        <Checkbox checked={!eigeneBueros} onChange={(v) => setEigeneBueros(!v)} label="c/o-Adresse (kein eigenes Büro)" />
+        <Checkbox checked={immobilienHauptzweck} onChange={setImmobilienHauptzweck} label="Immobilien-Haupttätigkeit" />
+        <Checkbox checked={fremdwaehrung} onChange={setFremdwaehrung} label="Aktienkapital in Fremdwährung" />
+        <Checkbox checked={!bankInUrkunde} onChange={(v) => setBankInUrkunde(!v)} label="Bank wird in der Urkunde NICHT genannt" />
+        <Checkbox checked={chVertretung} onChange={setChVertretung} label="Vertretungsberechtigte Person mit CH-Wohnsitz vorhanden" />
       </div>
       {checkliste.blocker.map((b) => (
         <div key={b} className="lc-notice-warn">
@@ -116,19 +116,10 @@ export function SchrittGesellschaft({ ctx }: { ctx: AgSchrittCtx }) {
           </p>
         </div>
       )}
-      <label className="flex items-center gap-2 text-body-s text-ink-700">
-        <input type="checkbox" checked={zweckErweiterung} onChange={(e) => setZweckErweiterung(e.target.checked)} />
-        Übliche Zweck-Erweiterungsklausel
-      </label>
+      <Checkbox checked={zweckErweiterung} onChange={setZweckErweiterung} label="Übliche Zweck-Erweiterungsklausel" />
       <div className="flex flex-wrap gap-x-6 gap-y-2 text-body-s text-ink-700">
-        <label className="flex items-center gap-2">
-          <input type="checkbox" checked={vinkulierung} onChange={(e) => setVinkulierung(e.target.checked)} />
-          Vinkulierung der Namenaktien (Art. 685a f. OR)
-        </label>
-        <label className="flex items-center gap-2">
-          <input type="checkbox" checked={virtuelleGv} onChange={(e) => setVirtuelleGv(e.target.checked)} />
-          Virtuelle/hybride Generalversammlung (Art. 701d OR)
-        </label>
+        <Checkbox checked={vinkulierung} onChange={setVinkulierung} label="Vinkulierung der Namenaktien (Art. 685a f. OR)" />
+        <Checkbox checked={virtuelleGv} onChange={setVirtuelleGv} label="Virtuelle/hybride Generalversammlung (Art. 701d OR)" />
         <label className="flex items-center gap-2">
           Statuten-Umfang:
           <select className={inputCls} value={statutenUmfang}
@@ -166,19 +157,13 @@ export function SchrittGesellschaft({ ctx }: { ctx: AgSchrittCtx }) {
       {/* Stufe 2 P3: Statuten-Zusatzklauseln */}
       <div className="rounded-md border border-line p-3 space-y-3">
         <p className="text-body-s font-medium text-ink-900">Statuten-Zusatzklauseln (optional)</p>
-        <label className="flex items-center gap-2 text-body-s text-ink-700">
-          <input type="checkbox" checked={schiedsklausel} onChange={(e) => setSchiedsklausel(e.target.checked)} />
-          Schiedsklausel (Art. 697n OR)
-        </label>
+        <Checkbox checked={schiedsklausel} onChange={setSchiedsklausel} label="Schiedsklausel (Art. 697n OR)" />
         {schiedsklausel && (
           <Field label="Sitz des Schiedsgerichts (Ort in der Schweiz)">
             <input className={inputCls} value={schiedsOrt} onChange={(e) => setSchiedsOrt(e.target.value)} placeholder="z. B. Zürich" />
           </Field>
         )}
-        <label className="flex items-center gap-2 text-body-s text-ink-700">
-          <input type="checkbox" checked={kapitalband} onChange={(e) => setKapitalband(e.target.checked)} />
-          Kapitalband (Art. 653s ff. OR — VR-Ermächtigung, max. 5 Jahre, ±½ des Kapitals)
-        </label>
+        <Checkbox checked={kapitalband} onChange={setKapitalband} label="Kapitalband (Art. 653s ff. OR — VR-Ermächtigung, max. 5 Jahre, ±½ des Kapitals)" />
         {kapitalband && (
           <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-2', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-2')}>
             <Field label="Richtung der Ermächtigung">
@@ -202,10 +187,7 @@ export function SchrittGesellschaft({ ctx }: { ctx: AgSchrittCtx }) {
             </Field>
           </div>
         )}
-        <label className="flex items-center gap-2 text-body-s text-ink-700">
-          <input type="checkbox" checked={bedingtesKapital} onChange={(e) => setBedingtesKapital(e.target.checked)} />
-          Bedingtes Kapital (Art. 653 ff. OR — Wandel-/Optionsrechte, max. ½ des Kapitals)
-        </label>
+        <Checkbox checked={bedingtesKapital} onChange={setBedingtesKapital} label="Bedingtes Kapital (Art. 653 ff. OR — Wandel-/Optionsrechte, max. ½ des Kapitals)" />
         {bedingtesKapital && (
           <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-2', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-2')}>
             <Field label={`Nennbetrag des bedingten Kapitals (${wc})`}>
@@ -218,11 +200,9 @@ export function SchrittGesellschaft({ ctx }: { ctx: AgSchrittCtx }) {
           </div>
         )}
         {statutenUmfang === 'lang' && (
-          <label className="flex items-center gap-2 text-body-s text-ink-700"
-            title="ZH-Langvorlage: «Bei Stimmengleichheit hat der Vorsitzende den Stichentscheid.» — abwählbar; ohne Klausel gilt: Stimmengleichheit = Antrag abgelehnt (SG-Default, Kantonsvergleich B8).">
-            <input type="checkbox" checked={stichentscheidGv} onChange={(e) => setStichentscheidGv(e.target.checked)} />
-            Stichentscheid des Vorsitzenden in der Generalversammlung (Langfassung)
-          </label>
+          <div title="ZH-Langvorlage: «Bei Stimmengleichheit hat der Vorsitzende den Stichentscheid.» — abwählbar; ohne Klausel gilt: Stimmengleichheit = Antrag abgelehnt (SG-Default, Kantonsvergleich B8).">
+            <Checkbox checked={stichentscheidGv} onChange={setStichentscheidGv} label="Stichentscheid des Vorsitzenden in der Generalversammlung (Langfassung)" />
+          </div>
         )}
       </div>
       <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-4', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-4')}>
@@ -283,16 +263,12 @@ export function SchrittWeiteres({ ctx }: { ctx: AgSchrittCtx }) {
       </div>
 
       <div className="flex flex-wrap gap-x-6 gap-y-2 text-body-s text-ink-700">
-        <label className="flex items-center gap-2"
-          title="Konstituierung, Zeichnungsberechtigung und Domizil werden in der Gründungsurkunde erklärt (ZH Ziff. VII, Bedingung: VR vollzählig anwesend) – das separate VR-Protokoll entfällt.">
-          <input type="checkbox" checked={konstituierungInUrkunde} onChange={(e) => setKonstituierungInUrkunde(e.target.checked)} />
-          Konstituierung in der Urkunde
-        </label>
-        <label className="flex items-center gap-2"
-          title="Das Domizil wird in der Urkunde weggelassen und steht nur in der HR-Anmeldung (ZH-Erläuterung zu Ziff. VII).">
-          <input type="checkbox" checked={domizilNurAnmeldung} onChange={(e) => setDomizilNurAnmeldung(e.target.checked)} />
-          Domizil nur in der Anmeldung
-        </label>
+        <div title="Konstituierung, Zeichnungsberechtigung und Domizil werden in der Gründungsurkunde erklärt (ZH Ziff. VII, Bedingung: VR vollzählig anwesend) – das separate VR-Protokoll entfällt.">
+          <Checkbox checked={konstituierungInUrkunde} onChange={setKonstituierungInUrkunde} label="Konstituierung in der Urkunde" />
+        </div>
+        <div title="Das Domizil wird in der Urkunde weggelassen und steht nur in der HR-Anmeldung (ZH-Erläuterung zu Ziff. VII).">
+          <Checkbox checked={domizilNurAnmeldung} onChange={setDomizilNurAnmeldung} label="Domizil nur in der Anmeldung" />
+        </div>
       </div>
 
       {/* Etappe 4.3: Lex-Koller-Erklärung (Art. 18 BewG; ZH-Formular) */}
@@ -300,28 +276,16 @@ export function SchrittWeiteres({ ctx }: { ctx: AgSchrittCtx }) {
         <div className="space-y-2">
           <p className="text-body-s font-medium text-ink-900">Lex-Koller-Erklärung (Erwerb von Grundstücken durch Personen im Ausland)</p>
           <div className="flex flex-col gap-1.5 text-body-s text-ink-700">
-            <label className="flex items-center gap-2">
-              <input type="checkbox" checked={lkAusland} onChange={(e) => setLkAusland(e.target.checked)} />
-              Personen im Ausland (Art. 5 BewG) sind an der Gesellschaft beteiligt
-            </label>
-            <label className="flex items-center gap-2">
-              <input type="checkbox" checked={lkNeuerwerb} onChange={(e) => setLkNeuerwerb(e.target.checked)} />
-              Personen im Ausland erwerben mit der Gründung neu eine Beteiligung
-            </label>
-            <label className="flex items-center gap-2">
-              <input type="checkbox" checked={lkGrundstueck} onChange={(e) => setLkGrundstueck(e.target.checked)} />
-              Bei Sacheinlage: Die Gesellschaft erwirbt Nicht-Betriebsstätte-Grundstücke in der Schweiz
-            </label>
+            <Checkbox checked={lkAusland} onChange={setLkAusland} label="Personen im Ausland (Art. 5 BewG) sind an der Gesellschaft beteiligt" />
+            <Checkbox checked={lkNeuerwerb} onChange={setLkNeuerwerb} label="Personen im Ausland erwerben mit der Gründung neu eine Beteiligung" />
+            <Checkbox checked={lkGrundstueck} onChange={setLkGrundstueck} label="Bei Sacheinlage: Die Gesellschaft erwirbt Nicht-Betriebsstätte-Grundstücke in der Schweiz" />
           </div>
         </div>
       )}
 
       {/* Etappe 4.4: Gründungs-Nachtrag (ZH-Vorlage 3.4; ENTWURF) */}
       <div className="space-y-2">
-        <label className="flex items-center gap-2 text-body-s text-ink-700">
-          <input type="checkbox" checked={nachtragAktiv} onChange={(e) => setNachtragAktiv(e.target.checked)} />
-          Nachtrag zur Gründungsurkunde vorbereiten (nach Beanstandung durch die Handelsregisterbehörde)
-        </label>
+        <Checkbox checked={nachtragAktiv} onChange={setNachtragAktiv} label="Nachtrag zur Gründungsurkunde vorbereiten (nach Beanstandung durch die Handelsregisterbehörde)" />
         {nachtragAktiv && (
           <div className="rounded-md border border-line p-3 space-y-2">
             <div className={pk('grid grid-cols-1 sm:grid-cols-2 gap-2', 'grid grid-cols-1 @lg/pane:grid-cols-2 gap-2')}>

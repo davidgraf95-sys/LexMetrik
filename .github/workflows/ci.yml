@@ -734,7 +734,7 @@ jobs:
           path: dist
       - name: Playwright-Browser-Cache
         if: needs.diff.outputs.art == 'code'
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: ~/.cache/ms-playwright
           key: playwright-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
@@ -849,7 +849,7 @@ jobs:
           name: dist
           path: dist
       - name: Playwright-Browser-Cache
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: ~/.cache/ms-playwright
           key: playwright-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
