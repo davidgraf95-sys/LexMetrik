@@ -21,7 +21,10 @@
 #      JSON-Report: ein Test, der erst im Retry grün wird, ist ROT — ausser
 #      die Spec steht mit Datum und Grund in `e2e/flake-ausnahmen.json`
 #      (verfällt nach 30 Tagen). Anlass: Lauf 34209371435 meldete «success»,
-#      obwohl `a-ueberlauf-ohne-scroller` im Erstversuch rot war;
+#      obwohl `a-ueberlauf-ohne-scroller` im Erstversuch rot war. MELDE-MODUS
+#      (Entscheid Orchestrator 8.9.2026, `e2e/flake-modus.json`): 6 wechselnde
+#      Specs im eigenen PR — bis 22.9.2026 nur `::warning`/Exit 0, danach hart;
+#      Wurzeln messen (FAHRPLAN-OFFENE-BEFUNDE §4), nicht Ausnahmen sammeln;
 #   3) `tore` fährt alle Node-Tore gegen das heruntergeladene dist —
 #      unverändert im Umfang (R1-Lehre: Tore streichen ist die falsche
 #      Vereinfachung), nur nicht mehr VOR den e2e-Shards;
@@ -1011,6 +1014,13 @@ jobs:
       # macht Flackern ROT — ausser die Spec steht mit Datum und Grund in
       # `e2e/flake-ausnahmen.json` (Höchstdauer 30 Tage, danach wieder rot).
       # Regel und Fehlerseite: scripts/check-e2e-flake.ts.
+      #
+      # MELDE-MODUS mit Stichtag (Entscheid Orchestrator 8.9.2026, gesteuert
+      # über `e2e/flake-modus.json`): Messung im eigenen PR #779 zeigte 6
+      # verschiedene, je Lauf wechselnde flackernde Specs — eine wachsende
+      # Ausnahmeliste wäre kein Wächter mehr. Bis zum 22.9.2026 meldet der
+      # Wächter Flackern nur (`::warning`, Exit 0); ab dem Stichtag gilt
+      # wieder die harte Regel oben. Fehlt die Modus-Datei, gilt hart.
       #
       # STELLUNG im Job: NACH dem Report-Upload — der Report bleibt als
       # Artefakt erhalten, auch wenn dieser Schritt rot wird.

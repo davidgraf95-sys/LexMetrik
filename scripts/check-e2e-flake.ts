@@ -12,10 +12,17 @@
 // 1.60.0, `JSONReport.stats.flaky` und `JSONReportTest.status … | 'flaky'`.
 // Der JSON-Reporter ist nur unter `CI` verdrahtet — darum steht das Tor
 // begründet auf `ALLOWLIST_NUR_CI` (scripts/check-tor-paritaet.ts).
+//
+// MELDE-MODUS (`e2e/flake-modus.json`, 8.9.2026): 6 wechselnde Specs im
+// eigenen PR — Ausnahmeliste würde nur wachsen. Bis `hart_ab` nur `::warning`
+// (Exit 0), danach hart wie oben; Modus-Datei fehlt/formwidrig ⇒ hart.
 import { readFileSync } from 'node:fs';
 
 /** Eintrag der Ausnahmeliste: Spec, Eintragungstag, Pflicht-Grund, letzter Geltungstag (ISO). */
 export type FlakeAusnahme = { spec: string; seit: string; grund: string; ablauf: string };
+
+/** `e2e/flake-modus.json`: bis `hart_ab` (ISO) nur Meldung, danach hart. */
+export type FlakeModus = { modus: 'melden' | 'hart'; hart_ab: string; grund: string };
 
 /** Flackernde Spec: Summe der Wiederholungen, Testtitel, greifende Ausnahme oder `null`. */
 export type FlackerFund = { spec: string; retries: number; titel: string[]; ausnahme: FlakeAusnahme | null };
@@ -36,6 +43,18 @@ function tag(wert: unknown): number | null {
   const ms = Date.parse(`${wert}T00:00:00Z`);
   if (Number.isNaN(ms)) return null;
   return new Date(ms).toISOString().slice(0, 10) === wert ? ms : null;
+}
+
+/** `flake-modus.json` parsen; formwidrig/fehlend ⇒ `null` (Aufrufer fällt auf hart zurück). */
+function modusLesen(roh: string | null | undefined): FlakeModus | null {
+  if (roh == null) return null;
+  try {
+    const g = JSON.parse(roh) as Record<string, unknown>;
+    if ((g.modus !== 'melden' && g.modus !== 'hart') || tag(g.hart_ab) === null) return null;
+    return { modus: g.modus, hart_ab: g.hart_ab as string, grund: typeof g.grund === 'string' ? g.grund : '' };
+  } catch {
+    return null;
+  }
 }
 
 /** `./e2e/x.e2e.ts`, `e2e/x.e2e.ts`, `x.e2e.ts` ⇒ `x.e2e.ts`. */
@@ -110,8 +129,73 @@ function flackerndeSammeln(suites: unknown, aus: Map<string, { retries: number; 
   }
 }
 
-/** Reine Verdikt-Funktion (§2). `null` als Rohtext heisst «Datei fehlt» und ist rot. */
+type BerichtErgebnis = { fehler: string } | { fehler: null; stats: { flaky: number }; suites: unknown };
+
+/** Report lesen: `null`-Fehler, unlesbares JSON und fehlender `stats.flaky` sind rot (beide Modi). */
+function berichtLesen(roh: string | null, pfad: string): BerichtErgebnis {
+  if (roh === null) return { fehler: `Flacker-Wächter: Playwright-Report ${pfad} fehlt — ein Lauf ohne Report ist nicht bewertbar (nie stilles Grün).` };
+  let report: unknown;
+  try {
+    report = JSON.parse(roh);
+  } catch (e) {
+    return { fehler: `Flacker-Wächter: ${pfad} ist kein lesbares JSON — ${(e as Error).message}` };
+  }
+  const stats = (report as { stats?: unknown })?.stats as { flaky?: unknown } | undefined;
+  if (typeof stats !== 'object' || stats === null || typeof stats.flaky !== 'number') {
+    return { fehler: `Flacker-Wächter: ${pfad} trägt keinen 'stats.flaky'-Zähler — Report-Format geändert? Bis zur Klärung rot.` };
+  }
+  return { fehler: null, stats: stats as { flaky: number }, suites: (report as { suites?: unknown }).suites };
+}
+
+/** Öffentlicher Einstieg: wählt Melde- oder Hart-Modus nach `e2e/flake-modus.json` + Stichtag. */
 export function flackerVerdikt(eingabe: {
+  reportRoh: string | null;
+  ausnahmenRoh: string | null;
+  heute: Date;
+  reportPfad?: string;
+  ausnahmenPfad?: string;
+  modusRoh?: string | null;
+}): Verdikt {
+  const modus = modusLesen(eingabe.modusRoh);
+  const heuteMs = tag(eingabe.heute.toISOString().slice(0, 10));
+  const hartAbMs = modus ? tag(modus.hart_ab) : null;
+  if (!modus || modus.modus !== 'melden' || hartAbMs === null || heuteMs === null || heuteMs >= hartAbMs) {
+    return verdiktHart(eingabe);
+  }
+  // Vor dem Stichtag: melden statt blocken; Report bleibt Pflicht, Ausnahmeliste nicht.
+  const reportPfad = eingabe.reportPfad ?? 'playwright-report.json';
+  const gelesen = berichtLesen(eingabe.reportRoh, reportPfad);
+  if (gelesen.fehler !== null) return meldeAbschluss(true, [], [`::error::${gelesen.fehler}`], modus.hart_ab);
+  const gesammelt = new Map<string, { retries: number; titel: string[] }>();
+  flackerndeSammeln(gelesen.suites, gesammelt);
+  if (gelesen.stats.flaky > 0 && gesammelt.size === 0) {
+    return meldeAbschluss(
+      true,
+      [],
+      [`::error::Flacker-Wächter: ${reportPfad} meldet stats.flaky=${gelesen.stats.flaky} ohne zuordenbaren Test — die Zuordnung schlägt fehl.`],
+      modus.hart_ab,
+    );
+  }
+  const funde: FlackerFund[] = [];
+  const meldungen: string[] = [];
+  for (const [spec, { retries, titel }] of [...gesammelt].sort((a, b) => a[0].localeCompare(b[0]))) {
+    funde.push({ spec, retries, titel, ausnahme: null });
+    meldungen.push(
+      `::warning file=e2e/${spec}::FLACKERT: ${spec} — ${retries}× Retry (${titel.join(' · ')}) — MELDE-MODUS bis ${modus.hart_ab}: ${modus.grund}`,
+    );
+  }
+  return meldeAbschluss(false, funde, meldungen, modus.hart_ab);
+}
+
+function meldeAbschluss(rot: boolean, funde: FlackerFund[], meldungen: string[], hartAb: string): Verdikt {
+  const zusammenfassung = rot
+    ? `Flacker-Wächter (MELDE-MODUS bis ${hartAb}): ROT (Report- oder Formfehler, s. oben)`
+    : `Flacker-Wächter (MELDE-MODUS bis ${hartAb}): ${funde.length} flackern · Stichtag hart ab ${hartAb}`;
+  return { rot, funde, meldungen: [...meldungen, zusammenfassung], zusammenfassung };
+}
+
+/** Reine Verdikt-Funktion (§2), Hart-Modus. `null` als Rohtext heisst «Datei fehlt» und ist rot. */
+function verdiktHart(eingabe: {
   reportRoh: string | null;
   ausnahmenRoh: string | null;
   heute: Date;
@@ -147,22 +231,12 @@ export function flackerVerdikt(eingabe: {
 
   // Report: jede Unklarheit endet hier, ohne Fund-Liste, aber als ROT.
   const abbruch = (grund: string): Verdikt => abschluss(true, [], [...meldungen, `::error::${grund}`], ausnahmen);
-  if (eingabe.reportRoh === null) {
-    return abbruch(`Flacker-Wächter: Playwright-Report ${reportPfad} fehlt — ein Lauf ohne Report ist nicht bewertbar (nie stilles Grün).`);
-  }
-  let report: unknown;
-  try {
-    report = JSON.parse(eingabe.reportRoh);
-  } catch (e) {
-    return abbruch(`Flacker-Wächter: ${reportPfad} ist kein lesbares JSON — ${(e as Error).message}`);
-  }
-  const stats = (report as { stats?: unknown })?.stats as { flaky?: unknown } | undefined;
-  if (typeof stats !== 'object' || stats === null || typeof stats.flaky !== 'number') {
-    return abbruch(`Flacker-Wächter: ${reportPfad} trägt keinen 'stats.flaky'-Zähler — Report-Format geändert? Bis zur Klärung rot.`);
-  }
+  const gelesen = berichtLesen(eingabe.reportRoh, reportPfad);
+  if (gelesen.fehler !== null) return abbruch(gelesen.fehler);
+  const stats = gelesen.stats;
 
   const gesammelt = new Map<string, { retries: number; titel: string[] }>();
-  flackerndeSammeln((report as { suites?: unknown }).suites, gesammelt);
+  flackerndeSammeln(gelesen.suites, gesammelt);
   if (stats.flaky > 0 && gesammelt.size === 0) {
     rot = true;
     meldungen.push(
@@ -231,6 +305,7 @@ if (!process.env.VITEST) {
     heute: new Date(),
     reportPfad,
     ausnahmenPfad,
+    modusRoh: lies('e2e/flake-modus.json'),
   });
   for (const z of verdikt.meldungen) console.log(z);
   process.exit(verdikt.rot ? 1 : 0);

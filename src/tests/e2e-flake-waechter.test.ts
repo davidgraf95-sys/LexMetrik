@@ -149,3 +149,56 @@ describe('Flacker-Wächter — Verdikt', () => {
     expect(v.rot).toBe(false);
   });
 });
+
+// Melde-Modus mit Stichtag (Entscheid Orchestrator 8.9.2026, e2e/flake-modus.json):
+// bis `hart_ab` wird Flackern nur gemeldet (::warning, Exit 0), ab dem Stichtag
+// gilt wieder die harte Ausnahme-Regel oben. Modus-Datei fehlt/formwidrig ⇒ hart.
+describe('Flacker-Wächter — Melde-Modus (Stichtag)', () => {
+  const modus = (hartAb: string): string =>
+    JSON.stringify({ modus: 'melden', hart_ab: hartAb, grund: 'Messung 8.9.2026: 6 Specs flackern, Wurzeln messen' });
+
+  it('melden vor dem Stichtag ⇒ 0 rot, Flackern nur als Warnung', () => {
+    const v = flackerVerdikt({
+      reportRoh: report({ flaky: 1 }),
+      ausnahmenRoh: '[]',
+      heute: new Date('2026-09-10T00:00:00Z'),
+      modusRoh: modus('2026-09-22'),
+    });
+    expect(v.rot).toBe(false);
+    expect(v.meldungen.some((m) => m.startsWith('::warning') && m.includes('FLACKERT'))).toBe(true);
+    expect(v.zusammenfassung).toBe('Flacker-Wächter (MELDE-MODUS bis 2026-09-22): 1 flackern · Stichtag hart ab 2026-09-22');
+  });
+
+  it('melden am/nach dem Stichtag ⇒ hart, rot ohne Ausnahme', () => {
+    const v = flackerVerdikt({
+      reportRoh: report({ flaky: 1 }),
+      ausnahmenRoh: '[]',
+      heute: new Date('2026-09-22T00:00:00Z'),
+      modusRoh: modus('2026-09-22'),
+    });
+    expect(v.rot).toBe(true);
+    expect(v.meldungen.some((m) => m.startsWith('::error') && m.includes('FLACKERT'))).toBe(true);
+  });
+
+  it('Modus-Datei fehlt ⇒ hart (bestehende Ausnahme-Logik unverändert)', () => {
+    const v = flackerVerdikt({
+      reportRoh: report({ flaky: 0 }),
+      ausnahmenRoh: '[]',
+      heute: new Date('2026-09-10T00:00:00Z'),
+      modusRoh: null,
+    });
+    expect(v.rot).toBe(false);
+    expect(v.zusammenfassung).toBe('Flacker-Wächter: 0 rot · 0 Ausnahmen (0 in der Liste)');
+  });
+
+  it('Report fehlt im Melde-Modus ⇒ rot (nie stilles Grün)', () => {
+    const v = flackerVerdikt({
+      reportRoh: null,
+      ausnahmenRoh: '[]',
+      heute: new Date('2026-09-10T00:00:00Z'),
+      modusRoh: modus('2026-09-22'),
+    });
+    expect(v.rot).toBe(true);
+    expect(v.meldungen.some((m) => m.startsWith('::error') && m.includes('fehlt'))).toBe(true);
+  });
+});

@@ -189,6 +189,8 @@ Die Liste steht wörtlich so, wie sie am 29.8.2026 in ROADMAP.md stand:
 
 - [ ] **Flackernde Browser-Tests, Wurzel messen** *(Fund des neuen Flacker-Wächters, Lauf 34231123731, 8.9.2026; Ausnahmen in `e2e/flake-ausnahmen.json` bis 8.10.2026)* — `leser-r1-r2.e2e.ts` «Ohne aktive Suche kein Zähler …» und `w224-reiterverhalten.e2e.ts` «(d) ⌘/Ctrl+Enter öffnet neuen Reiter» wurden nur im Wiederholungsversuch grün. Wurzel je Spec messen (Timing/Race, nicht «retry»), dann Ausnahme streichen; verfällt die Ausnahme ungemessen, wird der Wächter rot. Klasse wie «E2E-Flake Shard 2/8 — Wurzel messen statt neu starten».
 
+  **Nachtrag 8.9.2026 (Messung Orchestrator, drei Wächter-Läufe im eigenen PR #779):** die Browser-Suite flackert breit — 6 verschiedene Specs nur im Retry grün, je Lauf andere: `leser-r1-r2.e2e.ts`, `w224-reiterverhalten.e2e.ts`, `leser-v3-blatt.e2e.ts`, `leser-v3-suche-ohne-gliederung.e2e.ts`, `w224-r11-reiterleiste.e2e.ts`, `leser-v3-panel-zaehler.e2e.ts`. Ein harter Wächter mit Ausnahmeliste kann so nicht landen, ohne dass die Liste jeden Lauf wächst. **Entscheid (abweichend von «sofort rot», offengelegt):** Melde-Modus über `e2e/flake-modus.json` — bis dahin nur `::warning`/Exit 0, danach hart wie oben. **Stichtag hart 22.9.2026.** Auftrag: Wurzel je Spec messen (Race/Timing), nicht Ausnahmen sammeln.
+
 ## §5 — `QS-CODE-PROP` · Eigenschafts-Tests (property-based) für die Rechen-Engines
 
 Entscheid David 7.8.2026: je Engine ein Invarianten-Katalog («eine Frist endet nie vor ihrem
