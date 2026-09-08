@@ -30,6 +30,17 @@
 // Einträge im ganzen Bestand ausgedünnt — beides erzwingt je ein Wächter in
 // src/tests/begruessungen.test.ts.
 //
+// NUR ANKOMMEN 8.9.2026 (Entscheid David: «keine abschied. nur begrüssung»):
+// Ein Pool-Eintrag ist zulässig, wenn man ihn sagt, wenn jemand ANKOMMT oder
+// man ihm begegnet — Gruss, Willkommen, Wunsch für die JETZT laufende
+// Tageszeit, freundliche Ansprache; gestrichen ist alles, was man beim Gehen
+// oder zum Schlafengehen sagt oder was dem Nutzer den Abschied nahelegt (Adie ·
+// Gute Nacht · Bonne nuit · Buona serata · «Schönen Tag noch.» · Heimweg ·
+// Ausklang · «Akten dürfen ruhen»). Die romanischen Wunsch-Formen sind darum
+// durch echte Begrüssungen ersetzt (Bonjour · Bonsoir · Buongiorno · Buonasera ·
+// Salve), und das Nacht-Fenster grüsst Spätaufsteher, statt sie ins Bett zu
+// schicken; ein Wächter in src/tests/begruessungen.test.ts erzwingt das.
+//
 // KURATIERT, nicht 1:1 übernommen (§4-Auflage): Sprichwort-Fragmente («Der
 // frühe Vogel …», «Morgenstund hat Gold im Mund», «Schaffe, schaffe …») und
 // alles, was nach Werbung oder Kalauer klingt («Willkommen im Paragraphen-
@@ -187,9 +198,11 @@ export const TAGESZEITEN: readonly Tageszeit[] = [
       'En produktive Morge.',
       'Schöne Morge zäme.',
       'En guete Start id Tag.',
-      // Landessprachen und Schweizer Tagesrhythmus (Ausbau 8.9.2026).
-      'Bonne journée.',
-      'Buona giornata.',
+      // Landessprachen und Schweizer Tagesrhythmus (Ausbau 8.9.2026; die
+      // Wunsch-Formen «Bonne journée.»/«Buona giornata.» sind Abschiedsformeln
+      // und darum am 8.9.2026 durch Begrüssungen ersetzt).
+      'Bonjour à tous.',
+      'Buongiorno a voi.',
       'Grüezi und guete Morge.',
       'Zeit für ein Znüni.',
       'Bald ist Znüni.',
@@ -200,7 +213,6 @@ export const TAGESZEITEN: readonly Tageszeit[] = [
     id: 'vormittag', ab: 10, bis: 12, pool: [
       'Guten Tag.',
       'Schönen guten Tag.',
-      'Weiterhin guten Tag.',
       'Einen guten Vormittag.',
       'Schönen Vormittag.',
       'Einen ruhigen Vormittag.',
@@ -231,7 +243,7 @@ export const TAGESZEITEN: readonly Tageszeit[] = [
       'En schöne Vormittag.',
       'Schöne Vormittag zäme.',
       // Landessprachen und Schweizer Tagesrhythmus (Ausbau 8.9.2026).
-      'Bonne matinée.',
+      'Bonjour à vous.',
       'Buongiorno a tutti.',
       'Guete Daag.',
       'Guete Tag mitenand.',
@@ -276,6 +288,10 @@ export const TAGESZEITEN: readonly Tageszeit[] = [
       // Landessprachen und Schweizer Tagesrhythmus (Ausbau 8.9.2026).
       'Bon appétit.',
       'Buon appetito.',
+      // Reine Begrüssungsformen (8.9.2026) — «Bon appétit.»/«Buon appetito.»
+      // sind Tischwünsche, keine Grüsse, und zählen im Test nicht mit.
+      'Bonjour et bienvenue.',
+      'Salve.',
       'Zeit fürs Zmittag.',
       'Es Zmittag tuet guet.',
       'Nach em Zmittag witer.',
@@ -295,8 +311,6 @@ export const TAGESZEITEN: readonly Tageszeit[] = [
       'Auf die zweite Tageshälfte.',
       'Die zweite Hälfte läuft.',
       'Endspurt am Nachmittag.',
-      'Schönen Tag noch.',
-      'Einen guten Rest des Tages.',
       'Ein Käfeli gefällig?',
       'Weiterhin gute Aktenlage.',
       'Die Dossiers im Griff?',
@@ -306,24 +320,26 @@ export const TAGESZEITEN: readonly Tageszeit[] = [
       'Noch etwas Recherche?',
       'Die Frist ist gewahrt?',
       'Die Verhandlung ist durch?',
-      'Auf einen klaren Kopf noch.',
       'Weiter im Text.',
       'Guete Namittag.',
       'Guete Namittag zäme.',
       'En schöne Namittag.',
       'En ruhige Namittag.',
       'Schöne Namittag mitenand.',
-      'Witer en schöne Tag.',
-      // Landessprachen und Schweizer Tagesrhythmus (Ausbau 8.9.2026).
-      'Bon après-midi.',
-      'Buon pomeriggio.',
+      // Landessprachen und Schweizer Tagesrhythmus (Ausbau 8.9.2026;
+      // «Bon après-midi.»/«Buon pomeriggio.» sind Wunsch-Formen zum Abschied
+      // und am 8.9.2026 durch Begrüssungen ersetzt — «Rebonjour.» ist der
+      // Gruss beim Wiedersehen im Lauf des Tages).
+      'Rebonjour.',
+      'Salve a tutti.',
       'Zeit für ein Zvieri.',
       'Schöni Zvieri-Zyt.',
       'Bald ist Zvieri.',
     ],
   },
   {
-    // 17–19 · Dossier zu, letzte Frist, Heimweg.
+    // 17–19 · Feierabend-Stunde — gegrüsst wird, wer JETZT kommt; das
+    // Abschieds-Motiv (Dossier zu, Heimweg, Adie) ist am 8.9.2026 raus.
     id: 'feierabend', ab: 17, bis: 19, pool: [
       'Schönen Feierabend.',
       'Einen schönen Feierabend.',
@@ -332,39 +348,38 @@ export const TAGESZEITEN: readonly Tageszeit[] = [
       'Feierabend, wohlverdient.',
       'Feierabend naht.',
       'Bald ist Feierabend.',
-      'Das Dossier darf zu.',
-      'Die Akten dürfen ruhen.',
-      'Zeit, die Akten zu schliessen.',
-      'Ein letzter Blick ins Dossier.',
+      'Willkommen zum Feierabend.',
+      'Schon Feierabend?',
       'Noch schnell etwas nachsehen?',
       'Noch eine letzte Notiz?',
+      'Noch am Werk um diese Zeit?',
+      'Was steht noch an heute?',
+      'Noch eine Frage offen?',
+      'Zeit für eine Recherche?',
       'Die letzte Frist von heute.',
       'Der Schriftsatz ist raus?',
-      'Den Tag abschliessen.',
-      'Der Tag ist getan.',
       'Ein guter Tag fürs Recht.',
       'Die Kanzlei leert sich.',
-      'Der Weg nach Hause ruft.',
-      'Auf den Heimweg?',
-      'Schluss für heute?',
       'Einen guten Übergang.',
       'Auf einen ruhigen Abend.',
-      'Der Tag klingt aus.',
       'Guete Fyrabig.',
       'Schöne Fyrabig.',
       'En schöne Fyrabig.',
       'Schöne Fyrabig mitenand.',
       'Fyrabig zäme.',
-      // Landessprachen und Schweizer Tagesrhythmus (Ausbau 8.9.2026).
-      'Bonne fin de journée.',
-      'Buona serata.',
+      'Grüezi zum Fyrabig.',
+      'Grüessech am Aabig.',
+      // Landessprachen und Schweizer Tagesrhythmus (Ausbau 8.9.2026;
+      // «Bonne fin de journée.»/«Buona serata.» sind Abschiedsformeln und am
+      // 8.9.2026 durch Abend-Begrüssungen ersetzt).
+      'Bonsoir à tous.',
+      'Buonasera a tutti.',
       'Schöne Fyrabe.',
-      'Adie mitenand.',
       'Bald gits Znacht.',
     ],
   },
   {
-    // 19–22 · ausklingen lassen.
+    // 19–22 · Abendgruss für den, der jetzt kommt (kein Gute-Nacht-Motiv).
     id: 'abend', ab: 19, bis: 22, pool: [
       'Guten Abend.',
       'Einen schönen Abend.',
@@ -373,32 +388,28 @@ export const TAGESZEITEN: readonly Tageszeit[] = [
       'Einen stillen Abend.',
       'Einen geruhsamen Abend.',
       'Einen gemütlichen Abend.',
-      'Einen schönen Abendausklang.',
-      'Ein Abend in Ruhe.',
       'Ein Abend ohne Fristen.',
       'Schönen Abendgruss.',
-      'Lassen Sie den Tag ausklingen.',
+      'Willkommen am Abend.',
+      'Grüezi zum Abend.',
       'Der Abend gehört Ihnen.',
-      'Der Tag ist geschafft.',
-      'Der Tag darf enden.',
-      'Die Akten ruhen jetzt.',
-      'Die Paragraphen ruhen.',
-      'Ruhe nach dem Tagwerk.',
-      'Zeit zum Abschalten.',
-      'Noch ein Blick, dann Ruhe.',
+      'Der Abend ist noch jung.',
+      'Was suchen Sie heute Abend?',
+      'Noch eine Frist zu prüfen?',
       'Noch am Dossier?',
       'Abends noch am Werk?',
       'Guete Aabig.',
       'Guete Aabig mitenand.',
+      'Guete Aabig zäme.',
       'En schöne Aabig.',
       'En schöne Aabig zäme.',
       'En ruhige Aabig.',
       'En gmüetliche Aabig.',
       'Schöne Aabig zäme.',
       'Schönen Abend mitenand.',
-      // Landessprachen und Schweizer Tagesrhythmus (Ausbau 8.9.2026).
+      // Landessprachen und Schweizer Tagesrhythmus (Ausbau 8.9.2026;
+      // «Bonne soirée.» ist eine Abschiedsformel und am 8.9.2026 gestrichen).
       'Bonsoir.',
-      'Bonne soirée.',
       'Buonasera.',
       'Buna saira.',
       'Schöne Obig.',
@@ -406,46 +417,44 @@ export const TAGESZEITEN: readonly Tageszeit[] = [
     ],
   },
   {
-    // 22–5 · spät am Werk, Ruhe, überspannt Mitternacht.
+    // 22–5 · spät am Werk, überspannt Mitternacht. Das Fenster GRÜSST den
+    // Spätaufsteher (Entscheid David 8.9.2026) — es schickt ihn nicht ins Bett:
+    // Gute-Nacht-, Schlaf- und Ruhe-Formeln sind hier ersatzlos gestrichen.
     id: 'nacht', ab: 22, bis: 5, pool: [
-      'Gute Nacht.',
-      'Eine ruhige Nacht.',
-      'Eine geruhsame Nacht.',
-      'Eine stille Stunde.',
-      'Schlafen Sie gut.',
-      'Ruhen Sie sich aus.',
-      'Gönnen Sie sich Ruhe.',
-      'Zeit fürs Bett.',
-      'Einen ruhigen Ausklang.',
       'Schönen späten Abend.',
+      'Eine stille Stunde.',
+      'Willkommen zu später Stunde.',
+      'Willkommen in der Nacht.',
+      'Grüezi zu später Stunde.',
+      'Grüezi um diese Zeit.',
+      'Noch wach? Willkommen.',
+      'Spät, aber willkommen.',
+      'Nachtschicht? Willkommen.',
       'Noch spät am Werk?',
       'Noch wach über den Akten?',
       'Spät im Dossier?',
       'Nachtschicht?',
+      'Später Blick ins Dossier?',
+      'Um diese Zeit noch im Recht?',
+      'Noch eine Frage um diese Zeit?',
+      'Noch ein Paragraph?',
+      'Die Suche ist auch nachts da.',
+      'Nachts recherchiert sich gut.',
+      'Die Nacht ist Ihre Zeit?',
       'Die Kanzlei ist dunkel.',
-      'Die Nacht gehört der Ruhe.',
       'Nachts sind die Akten still.',
-      'Die Akten schlafen längst.',
-      'Paragraphen warten bis morgen.',
-      'Der Schriftsatz kann warten.',
-      'Der Fall läuft nicht davon.',
-      'Die Frist läuft auch morgen.',
-      'Morgen ist auch noch ein Tag.',
-      'Bis morgen früh.',
-      'Die Nacht ist zum Schlafen.',
-      'Gueti Nacht.',
-      'Gueti Nacht mitenand.',
-      'En schöni Nacht.',
-      'Schöni Nacht zäme.',
-      'Schlaf guet.',
       'No spaat dra?',
       'No wach?',
-      // Landessprachen und Schweizer Tagesrhythmus (Ausbau 8.9.2026).
-      'Bonne nuit.',
-      'Buonanotte.',
-      'Buon riposo.',
-      'Buna notg.',
-      'Es guets Nächtli.',
+      'No am Dossier?',
+      'No am Läse?',
+      'Guete spaate Aabig.',
+      'Schöne spaate Aabig.',
+      'Salü zu spaater Stund.',
+      // Landessprachen (Ausbau 8.9.2026; «Bonne nuit.», «Buonanotte.»,
+      // «Buon riposo.» und «Buna notg.» sind Abschiedsformeln und am 8.9.2026
+      // durch späte Begrüssungen ersetzt).
+      'Bonsoir à vous.',
+      'Buonasera a voi.',
     ],
   },
 ];

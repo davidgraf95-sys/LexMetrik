@@ -18,6 +18,15 @@ import {
 // kommt ein Wächter auf die gestrichenen Formen (§4-Auflage), der bisher nur
 // als Prosa im Kopfkommentar der Pool-Datei stand.
 //
+// NUR ANKOMMEN 8.9.2026 (dritter Schritt, DEKLARIERTE fachliche Änderung —
+// Entscheid David: «keine abschied. nur begrüssung»): ein Wächter mehr, der
+// Abschiedsformen mechanisch ausschliesst, und die Landessprachen-Liste trägt
+// nur noch reine BEGRÜSSUNGSformen (die romanischen Wunsch-Formen «Bonne
+// journée./soirée./nuit.», «Buona giornata./serata.», «Buonanotte.» sind im
+// Französischen und Italienischen Abschiedsformeln). Pool-Grössen, Doppelungs-,
+// Satzzeichen-, Längen-, Kaffee- und Lückenlosigkeits-Wächter bleiben Wort für
+// Wort, wie sie waren.
+//
 // SCHWEIZER BEZUG 8.9.2026 (zweiter Schritt, ebenfalls DEKLARIERTE fachliche
 // Änderung): zwei Wächter kommen dazu — einer deckelt die Kaffee-Häufung auf
 // höchstens zwei Einträge im ganzen Bestand («was soll das mit dem kaffee? sei
@@ -124,15 +133,18 @@ describe('Begrüssungs-Pools', () => {
     // Auftrag David 8.9.2026 «gerne schweizer bezug»: die Landessprachen sind
     // keine Dekoration eines einzelnen Fensters, sondern in allen acht da.
     // Gepflegte Liste statt Regex — nur Formen, die als gängig belegt sind.
+    // NUR ANKOMMEN 8.9.2026: die Liste führt ausschliesslich Begrüssungen —
+    // die Wunsch-Formen («Bonne journée.», «Buona serata.» …) sind in beiden
+    // Sprachen Abschiedsformeln und stehen darum weder hier noch im Pool.
     const FRANZOESISCH = [
-      'Bonjour.', 'Bonne journée.', 'Bonne matinée.', 'Bon appétit.',
-      'Bon après-midi.', 'Bonne fin de journée.', 'Bonsoir.', 'Bonne soirée.',
-      'Bonne nuit.', 'Bienvenue.',
+      'Bonjour.', 'Bonjour à tous.', 'Bonjour à vous.', 'Bonjour et bienvenue.',
+      'Rebonjour.', 'Bonsoir.', 'Bonsoir à tous.', 'Bonsoir à vous.',
+      'Bienvenue.',
     ];
     const ITALIENISCH = [
-      'Buongiorno.', 'Buongiorno a tutti.', 'Buona giornata.', 'Buon appetito.',
-      'Buon pomeriggio.', 'Buona serata.', 'Buonasera.', 'Buon riposo.',
-      'Buonanotte.', 'Benvenuti.',
+      'Buongiorno.', 'Buongiorno a voi.', 'Buongiorno a tutti.', 'Salve.',
+      'Salve a tutti.', 'Buonasera.', 'Buonasera a tutti.', 'Buonasera a voi.',
+      'Benvenuti.',
     ];
     for (const t of TAGESZEITEN) {
       expect(
@@ -144,9 +156,40 @@ describe('Begrüssungs-Pools', () => {
         `Pool ${t.id} ohne italienischen Gruss`,
       ).toBeGreaterThan(0);
     }
-    // Der Wächter kann scheitern (§6.7): Hochdeutsch zählt nicht mit.
+    // Der Wächter kann scheitern (§6.7): Hochdeutsch zählt nicht mit — und
+    // seit dem 8.9.2026 auch keine Abschiedsformel mehr.
     expect(FRANZOESISCH.includes('Guten Morgen.')).toBe(false);
     expect(ITALIENISCH.includes('Guten Abend.')).toBe(false);
+    expect(FRANZOESISCH.includes('Bonne nuit.')).toBe(false);
+    expect(ITALIENISCH.includes('Buona serata.')).toBe(false);
+  });
+
+  it('kein Gruss ist eine Abschiedsform — nur Ankommen (David 8.9.2026)', () => {
+    // «keine abschied. nur begrüssung»: behalten wird, was man sagt, wenn
+    // jemand ANKOMMT (Gruss, Willkommen, Wunsch für die laufende Tageszeit,
+    // freundliche Ansprache); gestrichen ist alles, was man beim Gehen oder
+    // zum Schlafengehen sagt. Der Wächter greift die mechanisch fassbaren
+    // Formen ab — die Beurteilung im Zweifel bleibt beim Kopfkommentar der
+    // Pool-Datei, die Regressionssperre steht hier.
+    const ABSCHIED =
+      /\bAdie\b|\bAdieu\b|\bTschüss\b|\bUf Widerluege\b|Gute Nacht|Gueti Nacht|schöni Nacht|Schlaf|Bonne nuit|Buonanotte|Buona notte|Buon riposo|Buna notg|Bonne soirée|Buona serata|Bonne journée|Buona giornata|fin de journée|noch\.$|ausklingen|Ausklang|Heimweg|Zeit fürs Bett|Ruhe\./i;
+    const treffer = ALLE.filter((g) => ABSCHIED.test(g));
+    expect(treffer, `Abschiedsformen im Pool: ${treffer.join(' · ')}`).toEqual([]);
+    // Der Wächter kann scheitern (§6.7) — die gestrichenen Originale zeigen es.
+    expect(ABSCHIED.test('Adie mitenand.')).toBe(true);
+    expect(ABSCHIED.test('Gueti Nacht mitenand.')).toBe(true);
+    expect(ABSCHIED.test('Schlaf guet.')).toBe(true);
+    expect(ABSCHIED.test('Bonne nuit.')).toBe(true);
+    expect(ABSCHIED.test('Buona giornata.')).toBe(true);
+    expect(ABSCHIED.test('Schönen Tag noch.')).toBe(true);
+    expect(ABSCHIED.test('Lassen Sie den Tag ausklingen.')).toBe(true);
+    expect(ABSCHIED.test('Gönnen Sie sich Ruhe.')).toBe(true);
+    // … und er darf die Begrüssungen NICHT fangen.
+    expect(ABSCHIED.test('Grüezi mitenand.')).toBe(false);
+    expect(ABSCHIED.test('Guten Abend.')).toBe(false);
+    expect(ABSCHIED.test('Schönen Feierabend.')).toBe(false);
+    expect(ABSCHIED.test('Willkommen zu später Stunde.')).toBe(false);
+    expect(ABSCHIED.test('Bonsoir à vous.')).toBe(false);
   });
 
   it('kein Gruss trägt eine der gestrichenen Formen (§4-Auflage)', () => {
