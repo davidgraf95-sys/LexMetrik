@@ -600,8 +600,8 @@ ci-minuten-repo-privat: Repo privat schalten? Messung 8.9.2026: 61'381 CI-min/Mo
   - [ ] **`scripts/tarif/**` in `istRisikoPfad()` aufnehmen** *(Nebenfund Nachzug 6.9.2026)* — die Drift-Logik fällt Rechtsdaten-Verdikte, liegt aber ausserhalb des Klassifikators in `scripts/gegenpruefung/kern.ts`; Rot-Beweis: Edit an `drift-logik.ts` muss `check:gegenpruefung` rot machen.
   - [ ] **WARTET AUF DAVID (fachlich, §7):** Verjährungsrevision 2020 (relative Frist 1→3 J.) als echte Weiche statt Nutzerwarnung (`verjaehrung.ts:547`).
 
-- [~] **Drift-Nachverifikation der Tarif-Stammdaten (34 Erlasse, 93 Einträge)** *(`W3-TARIF-NACHVERIFIKATION`, Auftrag David 6.9.2026, Befund Tor-Erstlauf `check:tarif-drift`)*
-  <!-- @meta id: W3-TARIF-NACHVERIFIKATION · status: wip · blocker: null · dep: [] · feld: werkzeuge -->
+- [x] **Drift-Nachverifikation der Tarif-Stammdaten (34 Erlasse, 93 Einträge)** *(`W3-TARIF-NACHVERIFIKATION`, Auftrag David 6.9.2026, Befund Tor-Erstlauf `check:tarif-drift`)*
+  <!-- @meta id: W3-TARIF-NACHVERIFIKATION · status: done · blocker: null · dep: [] · feld: werkzeuge -->
   ✅ Gelandet 8.9.2026 (PR #764, Gegenprüfung Opus bestanden: 4 Wertkorrekturen amtlich nachgerechnet, DRIFT 0, `check:tarif-drift` in der Netz-Kette; Drift-Tor: unerreichbar ⇒ rot). Ziel/Grenzen/Belegkette wörtlich: ROADMAP-CHRONIK.md, Umschichtung 8.9.2026 (Landung). Offene Folgeschritte unten.
   - [ ] **OW Beurkundungstarif Ziff. 35 lit. a/b — Zuordnungsverdacht** *(Nebenfund 6.9.2026)* — `beurkundung.ts` (OW) etikettiert die Staffel als lit. a; amtlich ist lit. a ein Rahmen 500–2000, und erst lit. b verweist auf Ziff. 31 Bst. a. Kodiert ist lit. b. Eigener Prüfschritt: Wert und Etikett zusammenführen.
   - [ ] **VS LTar Art. 15 — zwei Einträge, dieselbe Norm, verschiedene Begründung** *(§5, 6.9.2026)* — `schlichtung.ts` (50–500) und `nicht-vermoegensrechtlich.ts` (60–500) berufen sich beide auf Art. 15 mit demselben Hinweis-Baustein; amtlich sind Abs. 1 lit. a/b (170–350) und Abs. 2 (60–500) verschiedene Tatbestände. Klären, welcher Absatz je Rechner gilt, dann EINE Quelle.
