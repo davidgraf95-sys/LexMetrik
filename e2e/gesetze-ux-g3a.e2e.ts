@@ -1,4 +1,4 @@
-// @shard-gruppe: 4
+// @shard-gruppe: 3
 import { test, expect, type Page } from '@playwright/test';
 import { warteLeserBereit } from './helpers/leserBereit';
 

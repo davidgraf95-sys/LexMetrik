@@ -12,8 +12,8 @@
 # 11.8/15.5/21.0 min statt je ~7). Jetzt:
 #   1) `bau` baut dist EINMAL und lädt es als Artefakt hoch — mehr nicht.
 #      e2e-Shards und `tore` starten direkt danach PARALLEL;
-#   2) `e2e` fährt 8 dauer-balancierte Gruppen (LPT aus CI-GEMESSENEN
-#      Spec-Dauern, e2e/shard-gruppen.json, je ~5.4–6.4 min Testzeit).
+#   2) `e2e` fährt 4 dauer-balancierte Gruppen (LPT aus CI-GEMESSENEN
+#      Spec-Dauern, e2e/shard-gruppen.json, je ~7.8–8.6 min Testzeit).
 #      Der Union-Wächter (`check:e2e-shards`, auch in `check:seriell`) beweist
 #      vor den Shards: Gruppen == `playwright --list` — kein Test doppelt,
 #      keiner verloren. Reine Verteilung, kein Test/Timeout/Umfang (§6.3);
@@ -82,11 +82,11 @@
 # Programm. Fehlerseite unverändert (§6.7): jede Unsicherheit fällt auf `code`.
 #
 # ─── Dritte Klasse `code-fern` (QS-PLAN-EINFACH 14.8.2026, Punkt 3) ──────────
-# Die 8 Playwright-Browser-Shards sind gemessen 78 % der CI-Zeit. Rührt ein
+# Die Playwright-Browser-Shards sind gemessen 77–78 % der CI-Zeit. Rührt ein
 # Diff AUSSCHLIESSLICH Flächen an, die die ausgelieferte App nachweislich
 # nicht berühren (`**.md`, `scripts/plan/**`, `scripts/cowork/**`, `.claude/**`,
 # `docs/**`, `bibliothek/**`, `messwerte/**`, `archiv/**`), fahren Bau + alle
-# Node-Tore weiterhin VOLL — nur die 8 Browser-Shards werden übersprungen,
+# Node-Tore weiterhin VOLL — nur die 4 Browser-Shards werden übersprungen,
 # mit demselben Skip-Muster wie die bestehende `doku`-Klasse (Required-Check-
 # Semantik bleibt identisch). `Merge-Schutz` läuft für JEDE Klasse unverändert
 # echt. KONSERVATIV: jede weitere Datei (auch package.json, e2e/**, scripts/**
@@ -256,7 +256,7 @@ jobs:
                 grep -vE "$CODE_FERN_RE" -m 20 push-dateien.txt
               else
                 echo "art=code-fern" >> "$GITHUB_OUTPUT"
-                echo "Nur app-ferne Nicht-Doku-Dateien im Push (${anzahl} Datei(en)) — Bau + alle Node-Tore laufen VOLL, nur die 8 Browser-Shards werden übersprungen (gleiches Skip-Muster wie 'doku')."
+                echo "Nur app-ferne Nicht-Doku-Dateien im Push (${anzahl} Datei(en)) — Bau + alle Node-Tore laufen VOLL, nur die 4 Browser-Shards werden übersprungen (gleiches Skip-Muster wie 'doku')."
               fi
             else
               echo "art=doku" >> "$GITHUB_OUTPUT"
@@ -292,7 +292,7 @@ jobs:
               grep -vE "$CODE_FERN_RE" -m 20 pr-dateien.txt
             else
               echo "art=code-fern" >> "$GITHUB_OUTPUT"
-              echo "Nur app-ferne Nicht-.md-Dateien (${anzahl} Datei(en)) — Bau + alle Node-Tore laufen VOLL, nur die 8 Browser-Shards werden übersprungen."
+              echo "Nur app-ferne Nicht-.md-Dateien (${anzahl} Datei(en)) — Bau + alle Node-Tore laufen VOLL, nur die 4 Browser-Shards werden übersprungen."
             fi
           else
             echo "art=doku" >> "$GITHUB_OUTPUT"
@@ -683,15 +683,19 @@ jobs:
         run: echo "Kein Code im Diff — Merge-Schutz, check:plan, check:steuerdeckel und check:bibliothek sind oben ECHT gelaufen; die übrigen Code-Tore sind nicht betroffen."
 
   e2e:
-    name: Browser-Smoke Shard ${{ matrix.gruppe }}/8 (Playwright)
+    name: Browser-Smoke Shard ${{ matrix.gruppe }}/4 (Playwright)
     needs: [diff, bau]
     runs-on: ubuntu-latest
     # Harter Deckel je Shard (QS-E2E-STABIL, Beleg 7.8.2026). Ohne Angabe gilt der
     # GitHub-Default von 360 min — ein systemisch hängender Shard hätte also bis zu
     # SECHS Stunden Runner-Zeit gebrannt und die Merge-Kette so lange blockiert.
-    # Gemessen: ein grüner Shard braucht ~5.4–6.4 min Testzeit plus ~4 min Rüstzeit
-    # (npx -y npm@11 ci, Chromium, dist-Download). 25 min lassen dem langsamsten Runner das
-    # Doppelte an Luft und schlagen erst zu, wenn etwas grundsätzlich klemmt.
+    # Gemessen (M3, 8.9.2026): ein grüner Shard braucht ~7.8–8.6 min Testzeit plus
+    # ~1.3 min Rüstzeit (npx -y npm@11 ci, Chromium, dist-Download) — vor der
+    # Halbierung der Shard-Zahl waren es ~4.2 min Testzeit. 25 min bleiben
+    # UNVERÄNDERT (bewusst nicht angehoben, §17-Gegengewicht: einen Deckel
+    # lockert man nicht nebenbei): Worst case ist 10 min apt-Stall + 8.6 min
+    # Tests + 1.3 min Rüstzeit = 19.9 min, der Deckel schlägt also weiterhin
+    # nur zu, wenn etwas grundsätzlich klemmt.
     # ROT BLEIBT ROT: der Deckel bricht ab und meldet FEHLGESCHLAGEN — er macht
     # nichts grün, er kürzt nur die Brenndauer (§17: Wurzel-Deckel statt Umschiffen).
     timeout-minutes: 25
@@ -700,10 +704,10 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        gruppe: [1, 2, 3, 4, 5, 6, 7, 8]
+        gruppe: [1, 2, 3, 4]
     steps:
-      # Wie bei `bau`: der Job selbst läuft IMMER, damit die acht Required-
-      # Kontexte «Browser-Smoke Shard N/8 (Playwright)» ereignisunabhängig
+      # Wie bei `bau`: der Job selbst läuft IMMER, damit die vier Required-
+      # Kontexte «Browser-Smoke Shard N/4 (Playwright)» ereignisunabhängig
       # gemeldet werden. Bei art=doku ODER art=code-fern (Punkt 3,
       # QS-PLAN-EINFACH 14.8.2026 — 78 %-Messwert) bleibt davon eine
       # Kurzquittung: `code-fern`-Flächen berühren die ausgelieferte App
@@ -778,13 +782,13 @@ jobs:
       # `npm run preview` serviert das heruntergeladene dist/ (kein Rebuild);
       # jeder Job fährt nur die Specs SEINER dauer-gepackten Gruppe seriell
       # (workers:1 bleibt, damit die Contention NICHT in EINEN Runner zurückkehrt)
-      # → e2e-Wand geachtelt UND nach CI-Messwerten balanciert (~5.4–6.4 min).
-      - name: Browser-Smoke (Playwright, e2e/ gegen dist — Gruppe ${{ matrix.gruppe }}/8)
+      # → e2e-Wand geviertelt UND nach CI-Messwerten balanciert (~7.8–8.6 min).
+      - name: Browser-Smoke (Playwright, e2e/ gegen dist — Gruppe ${{ matrix.gruppe }}/4)
         if: needs.diff.outputs.art == 'code'
         run: npm run test:e2e:gruppe -- ${{ matrix.gruppe }}
       - name: Kurzquittung (Doku-/App-fern-/Leer-Diff)
         if: needs.diff.outputs.art != 'code'
-        run: echo "art=${{ needs.diff.outputs.art }} — Browser-Smoke Shard ${{ matrix.gruppe }}/8 nicht betroffen (bei code-fern liefen Bau + alle Node-Tore trotzdem voll)."
+        run: echo "art=${{ needs.diff.outputs.art }} — Browser-Smoke Shard ${{ matrix.gruppe }}/4 nicht betroffen (bei code-fern liefen Bau + alle Node-Tore trotzdem voll)."
       # Per-Spec-CI-Dauern sichern (auch bei rotem Shard — gerade dann sind sie
       # interessant). Damit lässt sich `e2e/shard-gruppen.json` künftig gegen
       # GEMESSENE CI-Zeiten packen statt gegen lokale, die nicht uniform skalieren
