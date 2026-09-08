@@ -71,7 +71,7 @@ function leseCheckKette(): string[] {
   const pkg = JSON.parse(readFileSync('package.json', 'utf8')) as { scripts?: Record<string, string> };
   const seriell = pkg.scripts?.['check:seriell'];
   if (!seriell) {
-    console.error('check-parallel: package.json enthält kein "check:seriell" — Kette unbekannt.');
+    console.error('run-parallel: package.json enthält kein "check:seriell" — Kette unbekannt.');
     process.exit(1);
   }
   const namen: string[] = [];
@@ -80,7 +80,7 @@ function leseCheckKette(): string[] {
     if (m) namen.push(m[1]);
   }
   if (namen.length === 0) {
-    console.error('check-parallel: keine "npm run check:*"-Glieder in check:seriell gefunden.');
+    console.error('run-parallel: keine "npm run check:*"-Glieder in check:seriell gefunden.');
     process.exit(1);
   }
   return namen;
@@ -113,7 +113,7 @@ function laufeCheck(name: string): Promise<CheckErgebnis> {
       resolve({ name, code: code ?? 1, ausgabe, dauerMs: performance.now() - start });
     });
     kind.on('error', (err) => {
-      ausgabe += `\n[check-parallel] Prozess-Fehler: ${err instanceof Error ? err.message : String(err)}\n`;
+      ausgabe += `\n[run-parallel] Prozess-Fehler: ${err instanceof Error ? err.message : String(err)}\n`;
       resolve({ name, code: 1, ausgabe, dauerMs: performance.now() - start });
     });
   });
@@ -125,7 +125,7 @@ async function main(): Promise<void> {
   const gesamtStart = performance.now();
   const verbose = Boolean(process.env.CI) || process.argv.includes('--verbose');
 
-  console.log(`check-parallel: ${kette.length} Sub-Checks, Concurrency ${concurrency} (CPU ${cpus().length}) …`);
+  console.log(`run-parallel: ${kette.length} Sub-Checks, Concurrency ${concurrency} (CPU ${cpus().length}) …`);
 
   // Einfacher Worker-Pool: nächster freier Slot nimmt den nächsten Namen.
   const ergebnisse = new Map<string, CheckErgebnis>();
@@ -157,7 +157,7 @@ async function main(): Promise<void> {
       console.error(`\n${'═'.repeat(72)}\nFEHLER in ${e.name} (Exit ${e.code}) — volle Ausgabe:\n${'═'.repeat(72)}`);
       console.error(e.ausgabe.trimEnd());
     }
-    console.error(`\ncheck-parallel: ${rote.length}/${kette.length} Sub-Check(s) ROT (${gesamtS}s): ${rote.map((e) => e.name).join(', ')}`);
+    console.error(`\nrun-parallel: ${rote.length}/${kette.length} Sub-Check(s) ROT (${gesamtS}s): ${rote.map((e) => e.name).join(', ')}`);
     process.exit(1);
   }
 
@@ -167,10 +167,10 @@ async function main(): Promise<void> {
     .slice(0, 3)
     .map((e) => `${e.name} ${(e.dauerMs / 1000).toFixed(1)}s`)
     .join(', ');
-  console.log(`\ncheck-parallel: alle ${kette.length} Sub-Checks GRÜN in ${gesamtS}s — langsamste: ${langsamste}`);
+  console.log(`\nrun-parallel: alle ${kette.length} Sub-Checks GRÜN in ${gesamtS}s — langsamste: ${langsamste}`);
 }
 
 main().catch((err) => {
-  console.error('check-parallel: unerwarteter Fehler:', err);
+  console.error('run-parallel: unerwarteter Fehler:', err);
   process.exit(1);
 });

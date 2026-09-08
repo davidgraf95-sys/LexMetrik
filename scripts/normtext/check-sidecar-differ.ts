@@ -30,7 +30,7 @@
  *
  * ─── Was dieses Skript IST und was nicht ──────────────────────────────────────
  * Es ist ein **Einmalbeweis-Skript, manuell gefahren** — KEIN Dauer-Tor: es
- * hängt nicht in `npm run gate`/`check-parallel` und läuft nicht in CI, weil es
+ * hängt nicht in `npm run gate`/`run-parallel` und läuft nicht in CI, weil es
  * einen VORZUSTAND braucht, den nur der Mensch benennen kann (welcher git-Ref ist
  * «alt»?). Es beweist eine konkrete Regeneration, nicht eine Invariante.
  * Verankert als `npm run normtext:sidecar-differ` (Gegenprüfungs-Befund B6:

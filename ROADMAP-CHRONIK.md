@@ -1,5 +1,51 @@
 # ROADMAP — Erledigt-Chronik (Detail-Archiv erledigter Schritte)
 
+## Umbenennungen 8.9.2026 — Nicht-Tore aus der Wächter-Fläche
+
+PR #779 (`feat/qs-ci-flake-waechter`) riss den Steuerungs-Deckel `scripts/check-*.ts`
+≤ 204 KB (Ist 212.1 KB). Entscheid Orchestrator: die Fläche zählte Dateien, die
+keine eigenständigen Tore sind — Fehlklassierung, kein Grund zur Deckel-Anhebung.
+Mechanisch umbenannt, je mit Beweis, damit es keine stille Umgehung des Deckels ist:
+
+- **`scripts/check-parallel.ts` → `scripts/run-parallel.ts`** — Runner, der die
+  `check:seriell`-Kette parallel abfährt und deren Sub-Check-Exitcodes 1:1
+  durchreicht; kein eigenständiges Prüfkriterium, taucht in `check-tor-paritaet.ts`
+  nirgends als Tor-Name auf, wird nur unter dem Script-Namen `check` (nicht
+  `check:parallel`) aufgerufen.
+- **`scripts/check-netz-alle.ts` → `scripts/run-netz-alle.ts`** — Runner der
+  `check:netz:kette`, fährt deren Glieder sequentiell statt `&&`-Abbruch beim
+  ersten Rot; ebenfalls kein eigener Tor-Name in `check-tor-paritaet.ts`, nur
+  unter `check:netz` aufgerufen.
+- **`scripts/check-zitatgraph-warnungen.ts` → `scripts/report-zitatgraph-warnungen.ts`**
+  — Datei-Kopf seit Bau wörtlich «BEWUSST KEIN TOR: Exit stets 0, nicht Teil von
+  `npm run gate`»; Code hat keinen `process.exit(1)`-Pfad.
+
+Script-**Namen** (`check`, `check:netz`, `check:zitatgraph`) bewusst unverändert
+gelassen — nur die Dateipfade geändert —, damit Skills/Doku, die den Script-Namen
+statt des Dateipfads zitieren, nicht brechen. Alle Datei-Referenzen nachgezogen
+(package.json, `.github/workflows/fedlex-frische.yml`, `.gitignore`,
+`DESIGN-REGLEMENT.md`, `fahrplaene/FAHRPLAN-EFFIZIENZ-CHECKLISTE.md`,
+`bibliothek/normen/hist-ansicht-h0-trennbarkeit.md`, sowie die Live-Code-Kommentare
+in `scripts/gate.sh`, `scripts/check-farbwelt.ts`, `scripts/plan/selbstoptKern.ts`,
+`scripts/normtext/check-sidecar-differ.ts`, `scripts/fedlex-zitatgraph.ts`,
+`scripts/zitatgraph-vergleich.ts`, inkl. der Runner-eigenen Log-Präfixe
+`check-parallel:`/`check-netz-alle:` → `run-parallel:`/`run-netz-alle:`).
+Dated historische Belege (ROADMAP-CHRONIK-Altbestand, `archiv/**`, `STRUKTUR.md`
+„Gelandet"-Liste, `BACKLOG-AUDIT-WERKZEUGE-2026-07.md`, `abnahme/design-d5/BERICHT.md`)
+**bewusst nicht** nachgeführt (§2b — Belege altern nicht).
+
+**`scripts/check-raw-store.ts` NICHT umbenannt**, stattdessen zum echten Tor
+gemacht: `.github/workflows/korpus-raw-release.yml` bekam einen neuen Schritt
+„Frischeprüfung — Release deckt alle aktuellen Pins (--streng)"
+(`npm run check:raw-store -- --streng`) direkt nach der Release-Veröffentlichung.
+Rot-Beweis **ohne Manipulation nötig** — der reale Ist-Zustand war beim Bau
+bereits rot: `npx vite-node scripts/check-raw-store.ts -- --streng` gegen den
+damals jüngsten Release `korpus-raw-20260902` meldete Pin `dbg` mit
+abweichendem Stand (Release 2026-01-01 vs. Pin 2026-09-02), Exit 1. Der
+Datenbefund selbst (warum `dbg` divergiert) ist Korpus-Territorium (§7,
+Gegenprüfungspflicht) und liegt ausserhalb dieser mechanischen Umbenennung —
+nicht mitgefixt, nur gemeldet.
+
 ## Zielbild-Dekret Gesetzesleser + Plan-Umbau 1.9.2026 *(Chat David, Session 1.9.2026)*
 
 **Wortlaut David (Chat, 1.9.2026):** «aktuell ist gesetzesleser im vordergrund. also ziel soll es

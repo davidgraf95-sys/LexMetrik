@@ -116,7 +116,7 @@ run() {
   fi
   # Präfix `gate:` trennt den Gate-SCHRITT vom einzelnen Tor: `npm run check`
   # erscheint hier als `gate:check`, seine 43 Sub-Tore protokolliert
-  # check-parallel.ts einzeln unter ihrem eigenen `check:*`-Namen. Ohne den
+  # run-parallel.ts einzeln unter ihrem eigenen `check:*`-Namen. Ohne den
   # Präfix zählte der Sammelschritt in derselben Namensmenge wie die Tore, die
   # er enthält — und jede Aggregation wäre doppelt.
   if [ "$code" -eq 0 ]; then ereignis "gate:$name" true; else ereignis "gate:$name" false; fi
