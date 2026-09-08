@@ -439,7 +439,7 @@ D-0).** F2 wird maschinell erzwungen: `scripts/check-farbwelt.ts` parst die
 `:root`- und `html.dark`-Token aus `src/index.css` (Werte) gegen die Name→`var()`-
 Abbildung in `tailwind.config.js` (No-op-Wächter, F7) und misst deterministisch
 (§2, kein Netz/keine Uhr) WCAG-Kontrast hell UND dunkel. Das Tor läuft in
-`check:seriell` → `check-parallel` → `gate` (nicht in CI-Workflows — Aufnahme
+`check:seriell` → `run-parallel` → `gate` (nicht in CI-Workflows — Aufnahme
 prüft der Orchestrator separat). Vier Klassen:
 
 1. **WCAG-Pflichtpaare (harter FAIL):** Text ≥ 4.5:1, Nicht-Text/Zustände ≥ 3:1 —
