@@ -302,41 +302,46 @@ jobs:
   bau:
     name: Bau (dist-Artefakt)
     needs: diff
+    # ── M4 (QS-CI-MINUTEN, 8.9.2026): Job-`if:` statt Leerlauf-Quittung ──────
+    # BISHER lief dieser Job auch bei art=doku, mit einer einzigen echo-Zeile.
+    # Begründung damals: ein übersprungenes `bau` zöge die e2e-Shards über
+    # `needs:` mit in den Skip, und deren Required-Kontexte «hingen wieder an
+    # einer Bedingung statt an einem Job». Diese Sorge ist EMPIRISCH widerlegt
+    # — und zwar in dieser Datei selbst: «Perf-Budget (§15 …)» ist ein
+    # Required-Kontext und wird durch sein Job-`if:` auf JEDEM PR-Lauf
+    # übersprungen; seit 26.7.2026 mergen trotzdem alle PRs. GitHub wertet
+    # einen per `if:` übersprungenen Job als erfüllt (er meldet `skipped`,
+    # nicht «expected»). Der K3-Defekt betraf etwas anderes: einen WORKFLOW,
+    # der wegen `paths`-Filtern gar nicht erst startete und darum GAR KEINEN
+    # Check-Run meldete. Das bleibt unverändert ausgeschlossen — CI läuft bei
+    # jedem Event, die Klassierung entscheidet nur den Umfang.
+    # Gemessen: 218 Doku-/code-ferne Läufe in 30 Tagen à ~15.1 min, fast nur
+    # Runner-Anlauf (Mindestabrechnung 1 min je Job).
+    if: needs.diff.outputs.art != 'doku'
     runs-on: ubuntu-latest
     env:
       TZ: Europe/Zurich
     steps:
-      # Der Job läuft IMMER (kein Job-`if:`) — sonst zöge ein übersprungenes
-      # `bau` die 8 e2e-Shards über `needs:` mit in den Skip, und die acht
-      # Required-Kontexte hingen wieder an einer Bedingung statt an einem Job.
-      # Bei art=doku ist er ein Leerlauf von Sekunden. `code-fern` (Punkt 3,
-      # QS-PLAN-EINFACH 14.8.2026) baut VOLL wie `code` — es überspringt nur
-      # die Browser-Shards weiter unten, Bau und Tore sind unverändert Pflicht.
+      # `code-fern` (Punkt 3, QS-PLAN-EINFACH 14.8.2026) baut VOLL wie `code` —
+      # es überspringt nur die Browser-Shards weiter unten, Bau und Tore sind
+      # unverändert Pflicht.
       - uses: actions/checkout@v7
-        if: needs.diff.outputs.art != 'doku'
       - uses: actions/setup-node@v5
-        if: needs.diff.outputs.art != 'doku'
         with:
           node-version: 22
           cache: npm
       - run: npx -y npm@11 ci
-        if: needs.diff.outputs.art != 'doku'
       # gen:suchindex + tsc -b + vite build + prerender — tsc-Fehler reissen
       # hier die ganze Kette, bevor tore/e2e überhaupt starten.
       - name: Build
-        if: needs.diff.outputs.art != 'doku'
         run: npm run build
       - name: dist-Artefakt hochladen (für tore + e2e-Shards + perf)
-        if: needs.diff.outputs.art != 'doku'
         uses: actions/upload-artifact@v7
         with:
           name: dist
           path: dist
           retention-days: 1
           include-hidden-files: true
-      - name: Kurzquittung (Doku-/Leer-Diff)
-        if: needs.diff.outputs.art == 'doku'
-        run: echo "Kein Code im Diff — kein Bau, kein dist-Artefakt (die e2e-Shards laden es folgerichtig auch nicht)."
 
   tore:
     name: Tore (Tests · Lint · Checks)
@@ -685,6 +690,16 @@ jobs:
   e2e:
     name: Browser-Smoke Shard ${{ matrix.gruppe }}/4 (Playwright)
     needs: [diff, bau]
+    # ── M4 (QS-CI-MINUTEN, 8.9.2026): Job-`if:` statt Leerlauf-Quittung ──────
+    # Bei art=doku ODER art=code-fern liefen die Shard-Jobs bisher nur an, um
+    # eine echo-Zeile zu melden — 4 × 1 min Mindestabrechnung je Lauf, ohne
+    # einen einzigen Test. Begründung und Beleg, warum ein per `if:`
+    # übersprungener Job den Required-Kontext trotzdem erfüllt: im `bau`-Job
+    # oben. Fachlich ändert sich NICHTS: bei doku/code-fern liefen hier auch
+    # vorher keine Browser-Tests (`code-fern`-Flächen berühren die
+    # ausgelieferte App nachweislich nicht, Bau + alle Node-Tore laufen für sie
+    # trotzdem voll).
+    if: needs.diff.outputs.art == 'code'
     runs-on: ubuntu-latest
     # Harter Deckel je Shard (QS-E2E-STABIL, Beleg 7.8.2026). Ohne Angabe gilt der
     # GitHub-Default von 360 min — ein systemisch hängender Shard hätte also bis zu
@@ -706,38 +721,25 @@ jobs:
       matrix:
         gruppe: [1, 2, 3, 4]
     steps:
-      # Wie bei `bau`: der Job selbst läuft IMMER, damit die vier Required-
-      # Kontexte «Browser-Smoke Shard N/4 (Playwright)» ereignisunabhängig
-      # gemeldet werden. Bei art=doku ODER art=code-fern (Punkt 3,
-      # QS-PLAN-EINFACH 14.8.2026 — 78 %-Messwert) bleibt davon eine
-      # Kurzquittung: `code-fern`-Flächen berühren die ausgelieferte App
-      # nachweislich nicht, Bau und alle Node-Tore liefen für sie trotzdem
-      # VOLL im `tore`-Job oben — nur die Browser-Shards sind hier verzichtbar.
       - uses: actions/checkout@v7
-        if: needs.diff.outputs.art == 'code'
       - uses: actions/setup-node@v5
-        if: needs.diff.outputs.art == 'code'
         with:
           node-version: 22
           cache: npm
       - run: npx -y npm@11 ci
-        if: needs.diff.outputs.art == 'code'
       # Union-Wächter VOR den Shards: beweist, dass die Gruppen in
       # e2e/shard-gruppen.json exakt die von Playwright gesammelte Spec-Menge
       # abdecken (kein Test doppelt, keiner verloren). Läuft in jedem Matrix-Job
       # (billig, `playwright --list` ohne Browser/Server) — reisst die Kette,
       # bevor eine unbalancierte oder lückenhafte Verteilung Tests verschluckt.
       - name: e2e-Shard-Union-Wächter (Gruppen == playwright --list)
-        if: needs.diff.outputs.art == 'code'
         run: npm run check:e2e-shards
       - name: dist-Artefakt herunterladen (aus `bau`, nicht neu bauen)
-        if: needs.diff.outputs.art == 'code'
         uses: actions/download-artifact@v8
         with:
           name: dist
           path: dist
       - name: Playwright-Browser-Cache
-        if: needs.diff.outputs.art == 'code'
         uses: actions/cache@v6
         with:
           path: ~/.cache/ms-playwright
@@ -763,7 +765,6 @@ jobs:
       # endet der Schritt rot mit ::error — die Schriftart-Pakete werden NICHT
       # übersprungen, weil fehlende Fonts die Pixel-Vergleiche still verschöben.
       - name: Playwright-Browser (Chromium)
-        if: needs.diff.outputs.art == 'code'
         run: |
           # apt geduldig, aber nicht endlos: Retries und Socket-Timeout greifen
           # bei STILLE. Gegen das Schneckentempo oben (15.3 kB/s bei fliessenden
@@ -784,17 +785,13 @@ jobs:
       # (workers:1 bleibt, damit die Contention NICHT in EINEN Runner zurückkehrt)
       # → e2e-Wand geviertelt UND nach CI-Messwerten balanciert (~7.8–8.6 min).
       - name: Browser-Smoke (Playwright, e2e/ gegen dist — Gruppe ${{ matrix.gruppe }}/4)
-        if: needs.diff.outputs.art == 'code'
         run: npm run test:e2e:gruppe -- ${{ matrix.gruppe }}
-      - name: Kurzquittung (Doku-/App-fern-/Leer-Diff)
-        if: needs.diff.outputs.art != 'code'
-        run: echo "art=${{ needs.diff.outputs.art }} — Browser-Smoke Shard ${{ matrix.gruppe }}/4 nicht betroffen (bei code-fern liefen Bau + alle Node-Tore trotzdem voll)."
       # Per-Spec-CI-Dauern sichern (auch bei rotem Shard — gerade dann sind sie
       # interessant). Damit lässt sich `e2e/shard-gruppen.json` künftig gegen
       # GEMESSENE CI-Zeiten packen statt gegen lokale, die nicht uniform skalieren
       # (a33: lokal 92 s, CI ~360 s). Begründung in playwright.config.ts.
       - name: Playwright-JSON-Report ablegen (Shard-Balancing-Datengrundlage)
-        if: always() && needs.diff.outputs.art == 'code'
+        if: always()
         uses: actions/upload-artifact@v7
         with:
           name: playwright-report-gruppe-${{ matrix.gruppe }}
@@ -815,7 +812,7 @@ jobs:
       # lädt NICHTS hoch. Retention 7 Tage wie beim Report — lang genug für die
       # Diagnose, kurz genug fürs Speicherkonto.
       - name: Playwright-Traces ablegen (nur bei rotem Shard)
-        if: failure() && needs.diff.outputs.art == 'code'
+        if: failure()
         uses: actions/upload-artifact@v7
         with:
           name: playwright-traces-gruppe-${{ matrix.gruppe }}
@@ -900,11 +897,19 @@ jobs:
   # Vercel parallel zur CI und konnte einen Stand ausliefern, dessen Tore noch
   # liefen oder rot wurden.
   #
-  # needs (§6.7-Fehlerseite): diff · tore · bau · e2e sind genau die Jobs, die
-  # OHNE Job-`if:` immer laufen (ihre Steps quittieren bei doku/code-fern
-  # innerlich). Ein Job mit eigenem `if:` — insbesondere `perf` — darf hier NICHT
-  # hinein: ein übersprungener `needs`-Job zieht den abhängigen Job in den Skip,
-  # ein `code-fern`-Merge würde also still NIE ausgeliefert.
+  # needs (§6.7-Fehlerseite): diff · tore · bau · e2e. BIS 8.9.2026 galt hier
+  # «nur Jobs OHNE eigenes Job-`if:` dürfen in needs», weil ein übersprungener
+  # needs-Job den abhängigen Job in den Skip zieht — ein `code-fern`-Merge wäre
+  # sonst still nie ausgeliefert worden. Mit M4/M1 (QS-CI-MINUTEN) haben `bau`,
+  # `tore` und `e2e` selbst ein Job-`if:`; die Regel wird darum durch eine
+  # EXPLIZITE Ergebnis-Prüfung ersetzt statt aufgegeben:
+  #   `!cancelled()` schaltet die Standard-Skip-Logik ab, danach wird jedes
+  #   `needs`-Ergebnis einzeln gefordert — `bau` MUSS erfolgreich sein (ohne
+  #   grünen Bau kein Deploy), `tore`/`e2e` dürfen `success` ODER `skipped`
+  #   sein, aber niemals `failure`/`cancelled`.
+  # Damit gilt unverändert: rote Treue ⇒ kein Deploy. Übersprungen ist genau
+  # dann zulässig, wenn die Klassierung (`code-fern`) oder die Push-Diät (M1,
+  # PR-Lauf hat denselben Baum schon grün gefahren) das begründet.
   #
   # BUILD-PARITÄT: `vercel pull` holt die Projekt-Einstellungen, `vercel build`
   # fährt `buildCommand` aus vercel.json — dort seit 17.8.2026 explizit
@@ -917,10 +922,17 @@ jobs:
     name: Deploy (Prod, Vercel CLI)
     needs: [diff, tore, bau, e2e]
     if: >-
-      (github.event_name == 'push' && github.ref == 'refs/heads/main'
-        && needs.diff.outputs.art != 'doku')
-      || (github.event_name == 'workflow_dispatch'
-        && github.event.inputs.probe == 'ohne-token')
+      !cancelled()
+      && needs.diff.result == 'success'
+      && needs.bau.result == 'success'
+      && (needs.tore.result == 'success' || needs.tore.result == 'skipped')
+      && (needs.e2e.result == 'success' || needs.e2e.result == 'skipped')
+      && (
+        (github.event_name == 'push' && github.ref == 'refs/heads/main'
+          && needs.diff.outputs.art != 'doku')
+        || (github.event_name == 'workflow_dispatch'
+          && github.event.inputs.probe == 'ohne-token')
+      )
     runs-on: ubuntu-latest
     timeout-minutes: 20
     permissions:
