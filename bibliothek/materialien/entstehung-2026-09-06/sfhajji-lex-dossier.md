@@ -10,7 +10,7 @@ Abrufdatum aller Web-Belege: **2026-09-06**. Quellen: `law.soufien.lu` (Dossier-
 3. **Stack:** C#/.NET (Lex.Ingest · Derive · Index · Temporal · Mcp · Ask · Web), SQLite FTS5 + optionale Vektoren, TS-Web; Azure Container Apps, ein Always-on-Replikat (`/built/limits`).
 4. **Betrieb:** drei Ebenen — nächtlicher Datenlauf, Release-Ebene mit signierter Evaluation, Laufzeit-Ebene, die nur zwei signierte Artefakte liest (`/built`).
 5. **Kosten:** keine Zahl; «Azure infrastructure I pay for out of pocket, and I maintain it on my own time» + Buy-me-a-coffee (`lex-git-lu/README.md:35-40`).
-6. **Status ehrlich: Portfolio eines Stellensuchenden.** GitHub-API `users/SFHAJJI`: `name:"HAJJI"`, **`hireable: true`**. `/about`: «Soufien Hajji, Lead Software & AI Engineer … based near Luxembourg», «Lex is a personal project, unaffiliated with any publisher or public body», daneben CV-PDFs + LinkedIn. Klarname damit **verifiziert** (Vorbefund liess ihn offen). 0 Forks, 9★, Repo erst 31.7.2026 angelegt.
+6. **Status ehrlich: Portfolio-Projekt.** GitHub-API `users/SFHAJJI`: `name:"HAJJI"`, ****. `/about`: «Soufien Hajji, Lead Software & AI Engineer … based near Luxembourg», «Lex is a personal project, unaffiliated with any publisher or public body», daneben CV-PDFs + LinkedIn. Klarname damit **verifiziert** (Vorbefund liess ihn offen). 0 Forks, 9★, Repo erst 31.7.2026 angelegt.
 
 ## B. Datenmodell für Zeit
 
@@ -76,7 +76,7 @@ Abrufdatum aller Web-Belege: **2026-09-06**. Quellen: `law.soufien.lu` (Dossier-
 - **Lizenz:** Code `lex` **Apache-2.0**; Daten (`lex-articles`, beide Korpora, `lex-git-lu`) **CC-BY-4.0**; `lex-ops` Apache-2.0 (Vorbefund, LICENSE-Volltext geprüft). Apache-2.0 verlangt Attribution + NOTICE bei Code-Übernahme.
 - **Stack-Fremdheit:** Extraktion, Index, Temporal-Logik und MCP sind C#/.NET auf Azure. Praktisch portierbar ist allein `web/src/diff.ts` (reines TS, Wort-LCS mit Absatz-Eskalation), bereits in §11.6 vermerkt; `web/src/temporal.ts` (40 Zeilen) ist Vorbild, nicht Code.
 - **LU vs. CH — der entscheidende Unterschied:** Legilux-Konsolidierungen sind **nicht authentisch** («consolidated texts have no legal effect, only the Journal officiel is authentic», Fusszeile jeder Seite). Fedlex' SR *ist* die amtliche systematische Sammlung. Also: Lex' Disclaimer-Rahmung **nicht** übernehmen (für CH falsch, untertreibt unsere Quelle), seine Methode schon. Ebenso adressiert Lex' aufwendige Lücken-Maschinerie (D57, `text_not_available`, 1 493 wortlose Snapshots, ≈24 579 nie konsolidierte Akte) ein LU-Problem, das wir nicht haben.
-- **Ein-Personen-Risiko:** `hireable: true`, ausdrücklich Portfolio, Hosting aus eigener Tasche, 0 Forks, 4 Follower, Repo seit 31.7.2026. **Folge: nie als Quelle oder Abhängigkeit einplanen** — weder Daten noch MCP-Endpunkt. Übernommen werden Ideen, kein Bezug.
+- **Ein-Personen-Risiko:** ausdrücklich Portfolio, Hosting aus eigener Tasche, 0 Forks, 4 Follower, Repo seit 31.7.2026. **Folge: nie als Quelle oder Abhängigkeit einplanen** — weder Daten noch MCP-Endpunkt. Übernommen werden Ideen, kein Bezug.
 - **Was ausserdem nicht passt:** eigene Konsolidierung (wir haben Fedlex), KI-Assistent und Evidence-Ledger (§2 will das nicht), Signatur-/Key-Vault-Infrastruktur, Container-Betrieb, semantische Vektoren, ein zweites «git-blame»-Repo (zweite Wahrheit, §5).
 
 ## G. Empfehlung an David
