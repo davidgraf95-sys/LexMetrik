@@ -1023,6 +1023,11 @@ jobs:
       # Summenzeile «Vercel-Aufräumen: …» im Log (Skill `landung` §4).
       - name: Vercel — alte Stände aufräumen (Deployment Storage)
         continue-on-error: true
+        # Der Job hat 20 min gesamt (siehe `timeout-minutes: 20` oben). Ein
+        # hängender Aufräumer darf den bereits live verifizierten Deploy
+        # nicht als Job-Timeout rot machen — darum ein eigenes, kleineres
+        # Zeitlimit für diesen Schritt (Auflage Gegenprüfung, PR #774).
+        timeout-minutes: 8
         env:
           AKTUELL_URL: ${{ steps.deploy.outputs.url }}
         run: node scripts/betrieb/vercel-aufraeumen.mjs
