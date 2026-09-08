@@ -252,6 +252,14 @@ Wächter: `npm run plan:next` zeigt Worktrees/Branches ohne Schritt-Bezug
    (erwartbar nur bei `art=doku`). Gegenprobe:
    `curl -s https://lexmetrik.vercel.app/ | grep lexmetrik-build` = Kurz-SHA.
    Realfälle + Historie (Vercel-Ära): `referenz-ci.md`.
+1b. **Aufräum-Summenzeile im Deploy-Log lesen** (seit 8.9.2026): der letzte
+   Schritt «Vercel — alte Stände aufräumen» loggt
+   `Vercel-Aufräumen: N gelöscht · M behalten · K übrig`. Er trägt
+   `continue-on-error: true`, ist also NIE am Job-Rot erkennbar — fehlt die
+   Zeile oder steht dort ein `::warning::`, ist das ein §17-Fall: das Team
+   hängt an der Hobby-Grenze von 10 GB Deployment Storage (Anlass 8.9.2026:
+   261.91 GB, ein Stand = 738 MB), und ohne diesen Lauf läuft sie in Tagen
+   wieder voll. Nicht liegen lassen.
 2. Asset-Hash live = lokal (index.html der Prod-URL gegen `dist/`).
 3. Kernrouten HTTP 200: `/`, `/rechner/tagerechner`, `/rechner/zustaendigkeit`,
    `/rechner/verjaehrung`, `/rechner/mietrecht`, `/vorlagen`, eine

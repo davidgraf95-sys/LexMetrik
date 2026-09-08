@@ -997,3 +997,32 @@ jobs:
           done
           echo "::error::Prod liefert '${ist:-<leer>}' statt '${soll}' — Deploy gemeldet, aber nicht live. Nicht mergen/weiterbauen, bis geklärt (docs/betrieb/rollback-runbook.md)."
           exit 1
+      # ── Deployment Storage aufräumen (QS-AUTOMATIK, 8.9.2026) ──────────────
+      # ANLASS: Vercel-Nutzungsseite Team `david-legal-projects` am 8.9.2026:
+      # Deployment Storage 261.91 GB gegen eine Hobby-Grenze von 10 GB, davon
+      # 100 % Projekt `lexmetrik`. Ein Stand (`dist`) wiegt 738 MB bei 18 321
+      # Dateien, bei 10–20 Landungen pro Tag. Vercel-Mail 8.9.2026 02:35:
+      # «100 % of Deployment Storage (10 GB) … Upgrade now to avoid service
+      # disruption».
+      #
+      # WARUM RETENTION ALLEIN NICHT REICHT: die Aufbewahrungsfrist des Projekts
+      # steht seit 8.9.2026 auf «1 day» (alle vier Arten). Vercel behält davon
+      # unabhängig IMMER die letzten 20 Produktions-Deployments UND die letzten
+      # 10 Deployments überhaupt — bei 738 MB je Stand rund 15 GB, also weiter
+      # über der Grenze. Wurzel-Fix (§17): dieser Schritt behält nur die 3
+      # neuesten Produktions-Stände (plus den eben ausgelieferten, den
+      # Alias-Träger und alles jünger als 1 h) und löscht den Rest.
+      #
+      # WIEDERHERSTELLUNG: gelöschte Stände bleiben 30 Tage zurückholbar über
+      # Vercel → Settings → Security → Recently Deleted.
+      #
+      # `continue-on-error: true` ist Absicht: der Deploy IST an dieser Stelle
+      # gelaufen und live verifiziert. Aufräumen ist Hausarbeit — ein roter Job
+      # hier würde einen gelungenen Deploy als gescheitert melden und die
+      # Landungs-Nachkontrolle in die Irre schicken. Der Befund steht in der
+      # Summenzeile «Vercel-Aufräumen: …» im Log (Skill `landung` §4).
+      - name: Vercel — alte Stände aufräumen (Deployment Storage)
+        continue-on-error: true
+        env:
+          AKTUELL_URL: ${{ steps.deploy.outputs.url }}
+        run: node scripts/betrieb/vercel-aufraeumen.mjs
