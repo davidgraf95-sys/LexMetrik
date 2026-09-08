@@ -61,11 +61,11 @@
   `W1·4`** (Entparkung 3.8.2026, David): erster Arbeitsschritt des Schrittes, kein Wartegrund.
 
 <!-- @blockers
-vps-bestellung-david: E3-Serving + E4-UI hängen an einer VPS-Bestellung (David, ~15 Min; Entscheid David 8.8.2026: «mach ich erst wenn UI noch optimierter wird» — bewusst zurückgestellt, nicht vergessen) — Dossier `bibliothek/betrieb/vps-bestell-dossier-2026-07-17.md` (PR #271). ECHTES David-Gate, kein Bau-Blocker. Bis dahin sind QS-DATA/W2·6-DATA nur im NICHT-VPS-Teil baubar (E0–E4 sind lokal fertig).
+vps-bestellung-david: E3-Serving + E4-UI hängen an einer VPS-Bestellung (David, ~15 Min; Entscheid David 8.8.2026: «mach ich erst wenn UI noch optimierter wird» — bewusst zurückgestellt, nicht vergessen) — Dossier `bibliothek/betrieb/vps-bestell-dossier-2026-07-17.md` (PR #271). ECHTES David-Gate, kein Bau-Blocker. Bis dahin sind QS-DATA/W2·6-DATA nur im NICHT-VPS-Teil baubar (E0–E4 sind lokal fertig). David 8.9.2026: Bestellung Sonntag 13.9.2026 (netcup RS 4000 G12 + Storage Box; Runner getrennt) — danach Bauschritte VPS-Grundeinrichtung + E3-Serving.
 richter-analytik-gate: Richter-/Spruchkörper-Analytik (W3·15-RICHTER). GRENZE (20.7.2026): Filtern/Facette/Verlinkung sind FREI und gebaut (#309/#311); gesperrt bleiben allein RANKING und PROGNOSE. Nur deskriptiv; bewusste Freigabe Davids erforderlich (heikel: Standesrecht, Persönlichkeitsschutz, richterliche Unabhängigkeit)
 david-entscheid-org-umzug: QS-ORG-UMZUG — Repo-Transfer in eine Gratis-Organisation für die native Merge Queue (User-Konten haben keine); Infrastruktur-Entscheid mit ~1 h Nacharbeit (Vercel, Branch-Schutz, Secrets). Erst prüfen, ob der Auto-Nachzug (Checklisten-Zeile unter QS-AUTOMATIK) den BEHIND-Schmerz ausreichend dämpft (Entscheid David 7.8.2026: «B als Schritt, A parken»)
 zielbild-gesetzesleser: Zurückgestellt durch das Zielbild-Dekret 1.9.2026 (Gesetzesleser zuerst) — wieder öffnen, sobald die Queue-Blöcke 1–3 gelandet sind oder David einen Schritt ausdrücklich vorzieht (FINMA: vorziehen, wenn ein externer Termin drängt). Kein Bau-Blocker, reine Reihenfolge-Entscheidung.
-david-go-entstehung: W2·6c-ENTSTEHUNG-* (Entstehung am Artikel, Stufe 3) — David 8.9.2026: «GO noch nicht, erst wieder am Freitag» (12.9.2026) — Design freigegeben 6.9.2026, Spec §11 in drei Fassungen (5 Tiefen-Runden, 2 Kritiken, Runde 2 läuft); David 6.9.2026: «noch keinen Code, nur planen, anfangen erst auf mein Go». ECHTES David-Gate. Offene Entscheide: Fahrplan §11.9 (Go E1+E2 · Personendaten-Regel · SR ohne Zahl · Anker als Bonus · Abstimmungsresultate nur Link · Curia-Auflagen).
+david-go-entstehung: W2·6c-ENTSTEHUNG-* — ECHTES David-Gate: «GO noch nicht, erst wieder am Freitag» (David 8.9.2026 ⇒ frühestens 12.9.2026); Design freigegeben 6.9.2026; offene Entscheide Fahrplan §11.9.
 -->
 
 <!-- @david-fragen
@@ -406,8 +406,10 @@ zgb-a36-anhang: Die ZGB-Gliederung zeigt 74 Artikel des Anhangs «Wortlaut der f
 
 - [ ] **Datenhaltung / VPS-Gate** *(`QS-DATA`)*
   <!-- @meta id: QS-DATA · status: blocked · blocker: vps-bestellung-david · dep: [] · feld: suche · fahrplan: fahrplaene/FAHRPLAN-DATENHALTUNG.md -->
+  Server-Session (Bestellung So 13.9.2026, NEUE Session): E3 Etappe 2 = Nachtlauf neue Entscheide (Status «entwurf», Morgenprotokoll, Stille ≠ Erfolg); Vercel bleibt für die Website, Prüfpunkt März 2027.
   Trägt nur das David-Gate: E3-Serving + E4-UI-Panels hängen an einer VPS-Bestellung (~15 Min
   David). Der Datenhaltungs-BAU selbst liegt in `W2·6-DATA`.
+  Vorbereitung bis 13.9.: Bestellanleitung aktualisiert (Dossier Nachtrag 8.9.), Setup-Plan §3 gilt; Runner NICHT auf diesem Host.
   **Detail:** [FAHRPLAN-DATENHALTUNG.md](fahrplaene/FAHRPLAN-DATENHALTUNG.md) §13.
 
 - [ ] **Ingest-Strecke ist in drei Tagen 3× langsamer geworden** *(`QS-DATA-INGEST-DRIFT`, gemessen 17.8.2026)*
@@ -736,6 +738,7 @@ zgb-a36-anhang: Die ZGB-Gliederung zeigt 74 Artikel des Anhangs «Wortlaut der f
 
 - [ ] **Prüfstrasse sparsamer ohne Prüftiefe-Verlust** *(`QS-CI-MINUTEN`, Auftrag David 8.9.2026)*
   <!-- @meta id: QS-CI-MINUTEN · status: ready · blocker: null · dep: [] · feld: betrieb -->
+  ✅ M2 (#767) · M1/M3/M4/M5 (#773) · Flacker-Wächter (#779) · Ergebnis-Job (#780); Regeln: Skill `landung` §«Prüfstrasse seit 8.9.2026». **Nachmessung 8.10.2026.** Offen: Merge Queue (Gate).
   **Entscheide David 8.9.2026:** Weg **A** (Repo bleibt öffentlich, Sparplan bauen; privat nur zusammen mit VPS/Self-hosted Runner) · **M2 freigegeben und gelandet** (Dependabot monatlich, `rebase-strategy: disabled`).
   Ziel: CI-Minuten senken, kein Tor entfällt, `check:e2e-shards` bleibt.
   **Detail:** [ci-minuten-sparplan-2026-09-08.md](bibliothek/betrieb/ci-minuten-sparplan-2026-09-08.md)

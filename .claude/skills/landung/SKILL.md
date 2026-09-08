@@ -219,6 +219,33 @@ Landung als Cherry-Pick.
 - Berufung auf die gestrichene §9-Zeile «Prod: `npx vercel --prod`».
 - Nach dem Merge «zur Sicherheit» manuell nachdeployen.
 
+### Prüfstrasse seit 8.9.2026 (QS-CI-MINUTEN, Sparplan M1–M5)
+
+- **Vier Browser-Shards** statt acht. Pflicht-Kontext im Branch-Schutz ist der Sammel-Job
+  «**Browser-Smoke (Ergebnis)**», nicht die einzelnen Shards (#780, 8.9.2026): Er ist grün bei
+  Shard-Erfolg oder begründetem Skip (Diff-Klasse doku/code-fern, Push-Diät) und **rot** bei jedem
+  Shard-Fehler und jedem unbegründeten Skip. Grund: ein per `if:` übersprungener **Matrix**-Job
+  meldet nur einen Check-Run mit unexpandiertem Namen — Shard-Kontexte würden nie gemeldet, der
+  PR hinge (K12-Falle). Die Shard-**Zahl** ist damit ohne Branch-Schutz-Anpassung änderbar;
+  einzige Quelle der Zahl ist die ci.yml-Matrix (`scripts/e2e-shard-anzahl.mjs`), Union-Wächter
+  `check:e2e-shards`. Pflicht-Kontexte abschliessend: Tore · Merge-Schutz · Perf-Budget ·
+  Browser-Smoke (Ergebnis).
+- **Flacker-Wächter** `check:e2e-flake` (#779): ein Shard, der nur im Wiederholungsversuch grün
+  wird, ist rot — ausser die Spec steht mit Datum/Grund in `e2e/flake-ausnahmen.json` (Verfall
+  30 Tage). Flackern wird also einmal angeschaut, nie stillschweigend weggeklickt.
+- **Reine Doku-PRs** (Diff-Klasse «doku») überspringen `bau` und `e2e`; die Doku-Tore laufen
+  weiter. Ein per `if:` übersprungener Pflicht-Job gilt bei GitHub als erfüllt — deshalb
+  bleibt `tore` immer aktiv.
+- **Push auf `main`** läuft nur noch `bau` + `deploy` («Push-Diät»), weil `strict: true` den
+  PR-Lauf auf exakt den landenden Baum zwingt; der `diff`-Job prüft das (grüner
+  PR-Check-Run für den Merge-Commit) und schaltet sonst das volle Programm ein.
+  **`strict: true` darf nicht fallen**, sonst wird main ungeprüft deployt.
+- **Dependabot** läuft monatlich ohne Auto-Rebase: die landende Session zieht offene
+  Dependabot-PRs per `gh pr update-branch` nach und setzt Auto-Merge (Patch/Minor), schliesst
+  Hauptversionen mit Begründung.
+- Messung/Nachmessung: `bibliothek/betrieb/ci-minuten-sparplan-2026-09-08.md` (61 381 min/30 Tage
+  vor dem Sparplan; Nachmessung fällig **8.10.2026**, gleiche Methode: Jobs je Lauf aufgerundet).
+
 ### Session-Ende: Bau-Flächen hinterlassen keine Zweige (Lehre 8.9.2026)
 
 Beleg: Aufräumen 8.9.2026 fand 22 Remote-Branches, 3 Worktrees, 5 Dependabot-PRs
