@@ -219,6 +219,26 @@ Landung als Cherry-Pick.
 - Berufung auf die gestrichene §9-Zeile «Prod: `npx vercel --prod`».
 - Nach dem Merge «zur Sicherheit» manuell nachdeployen.
 
+### Session-Ende: Bau-Flächen hinterlassen keine Zweige (Lehre 8.9.2026)
+
+Beleg: Aufräumen 8.9.2026 fand 22 Remote-Branches, 3 Worktrees, 5 Dependabot-PRs
+(seit 14.8.), einen fertigen, nie eröffneten Risikopfad-Branch (9 Commits) und
+einen Autopilot-Entwurf ohne Entscheid — niemand war zuständig. Regel:
+1. **Eigene Worktrees und Branches** verlassen die Session nur gemergt oder
+   gelöscht (`git worktree remove`, Branch lokal + remote). Fertige Arbeit
+   ohne Landung = PR eröffnen (Risikopfad: ohne `--auto`, Gegenprüfung nennen),
+   nie stumm liegen lassen.
+2. **Geparkte Stände sind Tags, keine Branches:** `git tag archiv/<slug>-<datum>
+   <sha>`, Tag pushen, Branch löschen; Wiederaufnahme aus dem Tag.
+3. **Dependabot je Session einordnen:** Patch/Minor-Bumps landen (Rebase +
+   Auto-Merge, kein Risikopfad), Hauptversionen schliessen mit Begründung —
+   nie liegen lassen (jeder liegende PR rebasiert bei jeder Landung mit,
+   Messung 8.9.2026: 113 CI-Läufe aus 13 Zweigen).
+4. **Autopilot-/Entwurfs-PRs** tragen ein Ablaufdatum in der Beschreibung;
+   danach schliessen oder entscheiden.
+Wächter: `npm run plan:next` zeigt Worktrees/Branches ohne Schritt-Bezug
+(Lage-Block) — am Session-Ende lesen, nicht nur am Anfang.
+
 ## 4 · Nachkontrolle
 
 0. **Kein main-Push vor grünem Deploy-Job (F13, 2.9.2026):** Beleg #629 — der
