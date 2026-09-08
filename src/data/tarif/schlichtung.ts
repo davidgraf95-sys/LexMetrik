@@ -64,14 +64,14 @@ export const SCHLICHTUNG: Record<KantonCode, KantonalerTarif> = {
   },
   OW: {
     kanton: 'OW', erlassName: 'Gebührenordnung für die Rechtspflege (GebOR)', erlassNr: 'GDB 134.15',
-    artikel: 'Art. 8', stand: '1.1.2011', verifiziert: 'doppelt',
+    artikel: 'Art. 8', stand: '1.3.2015', verifiziert: 'doppelt',
     quelleUrl: 'https://gdb.ow.ch/app/de/texts_of_law/134.15',
     hinweis: 'Gilt für Schlichtungs- und Entscheidverfahren.',
     regel: { typ: 'rahmen', vonChf: 100, bisChf: 1000 },
   },
   NW: {
     kanton: 'NW', erlassName: 'Prozesskostengesetz (PKoG)', erlassNr: 'NG 261.2',
-    artikel: 'Art. 6', stand: '1.1.2011', verifiziert: 'doppelt',
+    artikel: 'Art. 6', stand: '1.1.2016', verifiziert: 'doppelt',
     quelleUrl: 'https://gesetze.nw.ch/app/de/texts_of_law/261.2',
     hinweis: 'Streitwertgestuft; bei Entscheid/Urteilsvorschlag Erhöhung um bis zur Hälfte.',
     regel: { typ: 'staffel_rahmen', baender: [
@@ -82,14 +82,14 @@ export const SCHLICHTUNG: Record<KantonCode, KantonalerTarif> = {
   },
   GL: {
     kanton: 'GL', erlassName: 'Verordnung über die Prozesskosten in Zivil- und Strafsachen', erlassNr: 'GS III A/5',
-    artikel: 'Art. 2', stand: '1.1.2011', verifiziert: 'doppelt',
+    artikel: 'Art. 2', stand: '1.1.2026', verifiziert: 'doppelt',
     quelleUrl: 'https://gesetze.gl.ch/app/de/texts_of_law/III-A.5',
     hinweis: 'Pauschale.',
     regel: { typ: 'rahmen', vonChf: 100, bisChf: 800 },
   },
   ZG: {
     kanton: 'ZG', erlassName: 'Kostenverordnung Obergericht (KoV OG)', erlassNr: 'BGS 161.7',
-    artikel: '§ 10', stand: '1.1.2026', verifiziert: 'doppelt',
+    artikel: '§ 10', stand: '1.7.2026', verifiziert: 'doppelt',
     quelleUrl: 'https://bgs.zg.ch/app/de/texts_of_law/161.7',
     hinweis: 'Streitwertgestuft; bei Entscheid/Entscheidvorschlag zusätzlich CHF 100–800.',
     regel: { typ: 'staffel_rahmen', baender: [
@@ -115,7 +115,7 @@ export const SCHLICHTUNG: Record<KantonCode, KantonalerTarif> = {
   },
   BS: {
     kanton: 'BS', erlassName: 'Reglement über die Gerichtsgebühren (GGR)', erlassNr: 'SG 154.810',
-    artikel: '§ 3', stand: '11.9.2017', verifiziert: 'recherche',
+    artikel: '§ 3', stand: '3.6.2021', verifiziert: 'recherche',
     quelleUrl: 'https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.810',
     hinweis: 'CHF 100 bis höchstens 30 % der Entscheidgebühr (§ 5), maximal CHF 10 000 — relativer Tarif; angezeigt ist der absolute Rahmen.',
     regel: { typ: 'rahmen', vonChf: 100, bisChf: 10000, hinweis: 'CHF 100 bis höchstens 30 % der Entscheidgebühr, maximal CHF 10 000 (§ 3 GGR).' },
@@ -142,7 +142,7 @@ export const SCHLICHTUNG: Record<KantonCode, KantonalerTarif> = {
   },
   AR: {
     kanton: 'AR', erlassName: 'Gebührenordnung (Rechtskosten Zivil-/Strafrechtspflege)', erlassNr: 'bGS 233.3',
-    artikel: 'Art. 13', stand: '15.6.1981 (geltende Fassung)', verifiziert: 'doppelt',
+    artikel: 'Art. 13', stand: '1.12.2017', verifiziert: 'doppelt',
     quelleUrl: 'https://ar.clex.ch/app/de/texts_of_law/233.3',
     hinweis: 'NICHT kostenlos (ausser bundesrechtlich): Vermittler CHF 50–200 + CHF 100 je weitere Stunde; Verdoppelung möglich ab Streitwert CHF 100 000.',
     regel: { typ: 'rahmen', vonChf: 50, bisChf: 200 },
@@ -156,8 +156,8 @@ export const SCHLICHTUNG: Record<KantonCode, KantonalerTarif> = {
   },
   SG: {
     kanton: 'SG', erlassName: 'Gerichtskostenverordnung (GKV)', erlassNr: 'sGS 941.12',
-    artikel: 'Art. 8', stand: '1.3.2012 (Folgefassung 1.7.2026 wortgleich)', verifiziert: 'doppelt',
-    quelleUrl: 'https://www.gesetzessammlung.sg.ch/api/de/versions/2808/pdf_file',
+    artikel: 'Art. 8', stand: '1.7.2026', verifiziert: 'doppelt',
+    quelleUrl: 'https://www.gesetzessammlung.sg.ch/app/de/texts_of_law/941.12',
     hinweis: 'Klagebewilligung CHF 200–1000; Urteilsvorschlag/Entscheid 300–1000; Einigung/Säumnis/Rückzug 100–600.',
     regel: { typ: 'rahmen', vonChf: 100, bisChf: 1000 },
   },

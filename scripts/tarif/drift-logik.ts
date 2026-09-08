@@ -4,8 +4,14 @@
  * Getrennt vom Netz-Runner (`tarif-drift.ts`), damit die Entscheidungsregel
  * ohne Netz testbar ist — dasselbe Muster wie `scripts/normtext/drift-logik.ts`.
  *
- * §2: rein/deterministisch. §8: kein stilles Grün — «unklar» und «unerreichbar»
- * sind eigene Verdikte und zählen NIE als in Ordnung.
+ * §2: rein/deterministisch. §8: kein stilles Grün. Was das je Verdikt heisst:
+ *   · DRIFT        → Exit 1 (immer)
+ *   · unerreichbar → Exit 1 (immer; ein Netzausfall darf nie als Grün gelten —
+ *                    Gegenprüfung 7.9.2026, Befund 2)
+ *   · unklar       → Exit 0, ABER in der Ausgabe ausgewiesen: kein Beweis,
+ *                    sondern N ungeprüfte Einträge. Läuft grün mit, weil die
+ *                    fehlenden Adapter ein bekannter, geplanter Rückstand sind
+ *                    und kein Drift-Befund; kippt zusätzlich mit --streng.
  */
 
 import type { StandDatum } from './stand.ts';
@@ -135,13 +141,24 @@ export function zaehle(verdikte: readonly Verdikt[]): Record<Verdikt, number> {
 }
 
 /**
- * Exit-Code-Regel des Tors: DRIFT ist ein harter Fehler (Exit 1).
- * «unklar»/«unerreichbar» sind KEIN Grün, aber auch kein Beweis für Drift —
- * sie werden gezählt und sichtbar gemeldet (§8), und kippen das Tor nur im
- * strengen Modus (--streng), damit ein Netzausfall nicht als Rechtsdrift gilt.
+ * Exit-Code-Regel des Tors.
+ *
+ *   · DRIFT > 0        → 1. Die hinterlegte Fassung ist nachweislich überholt.
+ *   · unerreichbar > 0 → 1, AUCH ohne --streng. Ein nicht abgefragter Eintrag
+ *     ist ungeprüft; ein Grün darüber wäre eine Behauptung ohne Messung. Vor
+ *     der Gegenprüfung 7.9.2026 kippte «unerreichbar» nur mit --streng, und
+ *     `check:netz:kette` ruft das Tor ohne — ein totaler Netzausfall lief als
+ *     Grün durch (Befund 2, Rot-Beweis: 954 unerreichbar → Exit 0).
+ *   · unklar > 0       → 0, aber ausgewiesen. «unklar» heisst «kein Adapter /
+ *     kein entscheidbares Datum», also ein bekannter Rückstand an der
+ *     Werkzeug-Abdeckung, kein Befund über die Rechtslage. Es rot zu schalten
+ *     hiesse, das Tor dauerhaft rot zu lassen, bis die Adapter da sind — dann
+ *     sagt kein Lauf mehr etwas aus. Darum: grün, aber die Ausgabe nennt die
+ *     Zahl der ungeprüften Einträge. Mit --streng kippt auch das.
  */
 export function exitCode(z: Record<Verdikt, number>, streng: boolean): number {
   if (z.DRIFT > 0) return 1;
-  if (streng && (z.unklar > 0 || z.unerreichbar > 0)) return 1;
+  if (z.unerreichbar > 0) return 1;
+  if (streng && z.unklar > 0) return 1;
   return 0;
 }

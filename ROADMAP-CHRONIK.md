@@ -3192,3 +3192,58 @@ Elternschritte ist unangetastet.*
   - [x] **V6 valibot-Formprüfung** — ✅ (Wortlaut: ROADMAP-CHRONIK.md, Umschichtung 6.9.2026).
   - [x] **V8 pagefind-Spike** — ✅ (Wortlaut: ROADMAP-CHRONIK.md, Umschichtung 6.9.2026).
 
+
+# Umschichtung 8.9.2026 — erledigte Schritte aus dem Steuerungsplan
+
+*Anlass: Roadmap-Aufräumen (Auftrag David 8.9.2026, „kannst du auch noch roadmap aufräumen?").
+`W2·23-STARTSEITE-V4` behielt seit der Umschichtung 7.9.2026 einen ✅-Einzeiler samt `@meta` in
+`ROADMAP.md`, weil er der einzige Link auf `fahrplaene/FAHRPLAN-STARTSEITE-V4.md` war
+(`check:plan` Regel 7/9). Verify-then-archive (aufraeumen.md Ziff. 4): kein weiterer lebender
+Zeiger auf den Basenamen in ROADMAP.md, fahrplaene/, bibliothek/ oder docs/, keine `dep:`-Referenz
+auf die ID — Fahrplan nach `archiv/fahrplaene/FAHRPLAN-STARTSEITE-V4.md` verschoben, der
+verbliebene Rest-Stub darum jetzt vollständig geschlossen.*
+
+## W2·23-STARTSEITE-V4 — Rest-Stub, geschlossen mit Fahrplan-Archivierung *(done, verschoben 8.9.2026)*
+
+- [x] **Startseite V4 «Werkbank»: Einstieg mit Gesetzes-Schwerpunkt, persönliche Begrüssung, Kopf- und Seitenleiste** *(`W2·23-STARTSEITE-V4`, Auftrag David 5.9.2026)*
+  <!-- @meta id: W2·23-STARTSEITE-V4 · status: done · blocker: null · dep: [] · feld: design · fahrplan: fahrplaene/FAHRPLAN-STARTSEITE-V4.md -->
+  ✅ gelandet 5.9.2026 (#730/#732) — Wortlaut: ROADMAP-CHRONIK.md, Umschichtung 7.9.2026. Der
+  Eintrag bleibt hier, bis `FAHRPLAN-STARTSEITE-V4.md` archiviert ist (einziger Link, `check:plan`).
+  **Detail:** [FAHRPLAN-STARTSEITE-V4.md](fahrplaene/FAHRPLAN-STARTSEITE-V4.md) §1.
+
+# Umschichtung 8.9.2026 (Landung #764) — erledigte Prosa aus dem Steuerungsplan (wörtlich, Deckel 100 KB)
+
+## W3-TARIF-NACHVERIFIKATION — Drift-Nachverifikation der Tarif-Stammdaten (34 Erlasse, 93 Einträge), Auftrag David 6.9.2 *(verschoben 8.9.2026)*
+
+- [~] **Drift-Nachverifikation der Tarif-Stammdaten (34 Erlasse, 93 Einträge)** *(`W3-TARIF-NACHVERIFIKATION`, Auftrag David 6.9.2026, Befund Tor-Erstlauf `check:tarif-drift`)*
+  <!-- @meta id: W3-TARIF-NACHVERIFIKATION · status: wip · blocker: null · dep: [] · feld: werkzeuge -->
+  Ziel: jede DRIFT-Zeile des Tors wird an der **aktuellen amtlichen Fassung** nachverifiziert — Tarifwerte
+  der referenzierten Artikel vergleichen, bei Abweichung Wert + Norm-Anker + `quelleUrl`-Pin + `stand`
+  nachziehen (nie ohne Quelle), bei Gleichheit nur Pin/Stand; danach `check:tarif-drift` DRIFT 0 und
+  Verdrahtung in die Netz-Kette (`check:netz:kette`). **Grenzen:** `verifiziert` bleibt unverändert (§7:
+  «geprüft» setzt nur David); Golden-Änderung nur deklariert je Wert; Risikopfad ⇒ Gegenprüfung Pflicht;
+  keine Änderung an Engines. **Detail:** [rules-as-code-sichtung-2026-09-05.md](bibliothek/recherche/rules-as-code-sichtung-2026-09-05.md) §6 Ziff. 2 + Tor-Ausgabe.
+  **Belegkette:** [tarif-drift-nachverifikation-2026-09-06.md](bibliothek/kosten/tarif-drift-nachverifikation-2026-09-06.md) (drei Berichte wörtlich, Abruf 6.9.2026) — dort auch der Wortlaut zu den Folgezeilen.
+
+## W2·24 — Orchestrator-Entscheide vom Tag 7.9. (Unterzeile, wörtlich) *(verschoben 8.9.2026)*
+
+  - [x] **Orchestrator-Entscheide vom Tag 7.9. — David 7.9.2026 «alles bestätigt»:** Meta-Routen sind ebenfalls Reiter, «ohne Ausnahme» (R14b) · kein separater Fussnoten-Apparat-Schalter, die Dreier-Wahl deckt ihn ab (F3) · das Ansicht-Menü klebt am Griff und ragt 61 px über die Lesespalte (F4) · der Menü-Eintrag heisst «Alles ausblenden»/«Alles zeigen» statt «Nur Gesetzestext» (F2, Name vom Schriftregler belegt).
+
+## Blocker-Register — Streichungen 8.9.2026 (kein lebender Schritt referenziert das Token)
+
+- **`§4-lizenz`** — gestrichen 8.9.2026: von keinem `@meta blocker:` mehr referenziert; Wortlaut: `§4-lizenz: Live-Rechtsprechung — CC-BY-SA vs. Art. 5 URG, CORS/Rate-Limits unbestätigt`
+- **`zh-tranche-laeuft`** — gestrichen 8.9.2026: von keinem `@meta blocker:` mehr referenziert; Wortlaut: `zh-tranche-laeuft: W2·13-KANTONE-DATEN — ZH-Programm läuft (FAHRPLAN-KANTONE §5): Kern-Tranche gelandet, Tranchen A/B/C + 13 Runden folgen; Dach-Schritt bleibt offen bis Programm-Ende. Kein David-Gate — Sequenz-Marker für die Plan-Buchung.`
+
+## Datierte Teilerfolgs-Prosa und Präzisierungen aus offenen Schritten *(verschoben 8.9.2026, Landung #764)*
+
+### Nachtrag 31.8.2026 (N0b, an den Merge-Stand 1.9.2026 angepasst): die f
+
+        *Nachtrag 31.8.2026 (N0b, an den Merge-Stand 1.9.2026 angepasst): die fehlenden Bäume kosten messbar — Regenerat-Messung 1.9.2026: 65 Erlasse ohne `sachgebietKanton` (24 ZH Band-Zweig + 41 aus JU 7 · VD 7 · GL 5 · LU 5 · TI 5 · GE 4 · NE 4 · SZ 4); LU-Baum vorhanden, aber `index` führt Ordinalzahlen statt Systematik-Nummern (5 Erlasse offen). Der N0b-Befund «ZH nicht in kanton-systematik.json» galt für main VOR dieser Landung — der ZH-Baum kommt mit ihr. **Regenerat-Messung 1.9.2026: Join greift für ZH noch NICHT (0/24)** — der ZH-Baum schlüsselt über Ordner-BÄNDER (101–176 …), der N0b-Join über Nummern-PRÄFIXE; braucht den Band-Zweig (LU-Klasse). Gehört zu R9/N0-Nachzug.*
+
+### Teil-eingelöst 31.8.2026 (N0b): das deklarierte Feld existiert jetzt —
+
+        *Teil-eingelöst 31.8.2026 (N0b): das **deklarierte Feld** existiert jetzt — `sachgebietKanton` je kantonalem Erlass, aus dem amtlichen Systematik-Baum gejoint statt aus dem Titel geraten (1187/1231 = 96.4 %). Das ist die Datenseite. **Offen bleiben** die beiden anderen Hälften: (a) das Muster-Raten an den Bestandsstellen zurückbauen, die heute noch Titel lesen, (b) die David-Frage zur Kernklasse. Achtung bei (a): `sachgebietKanton` ist die AMTLICHE Ordnung des jeweiligen Kantons und damit **nicht kantonsübergreifend vergleichbar** — es ersetzt `rechtsgebiet` nicht, sondern steht daneben.*
+
+### K-16 Präzisierung 6.9.2026 (Wortlaut)
+
+**Präzisiert 6.9.2026 (David: «analog für Zürich» = ja, nach Bund):** Reihenfolge Bund (`W2·6c-*`) → BS (data.bs.ch CC BY 4.0, Gesetzesänderungen 100355 mit `change_date`/`version_id`) → ZH; ZH-Pendant = FAHRPLAN-KANTONE §5 Phase IV **R12b** (braucht R3/R7/R12; kein amtlicher Schlüssel Erlass ↔ Vorlage ⇒ Kante `maschinell`; zwei Handgriffe David/OGD-ZH: Feed-Lizenz, Schlüssel erfragen).

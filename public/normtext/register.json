@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-09-05",
+  "erzeugt": "2026-09-06",
   "erlasse": [
     {
       "key": "ZGB",
@@ -5031,6 +5031,34 @@
         "unter": {
           "nummer": "29",
           "name": "Advokatur – Notariat"
+        }
+      }
+    },
+    {
+      "key": "AG-725.110",
+      "ebene": "kanton",
+      "kanton": "AG",
+      "kuerzel": "Dekret über die Grundbuchgebühren",
+      "titel": "Dekret über die Grundbuchgebühren (SAR 725.110)",
+      "sr": "SAR 725.110",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "rang": 0,
+      "status": "snapshot",
+      "datei": "kanton/AG-725.110.json",
+      "artikelAnzahl": 26,
+      "stand": "2018-01-01",
+      "quelleUrl": "https://gesetzessammlungen.ag.ch/app/de/texts_of_law/725.110",
+      "fassungsToken": "fc6c28d8972f14f2186db8f062285241",
+      "pdfPfad": null,
+      "sachgebietKanton": {
+        "wurzel": {
+          "nummer": "7",
+          "name": "Raumplanung und Bauwesen – Enteignung – Strassen – Energie – Umweltschutz"
+        },
+        "unter": {
+          "nummer": "72",
+          "name": "Grundbuch"
         }
       }
     },

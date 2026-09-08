@@ -152,7 +152,7 @@ export const GERICHTSKOSTEN: Record<KantonCode, KantonalerTarif> = {
   },
   ZG: {
     kanton: 'ZG', erlassName: 'Kostenverordnung Obergericht (KoV OG)', erlassNr: 'BGS 161.7',
-    artikel: '§ 11 Abs. 1', stand: '1.1.2026', kriterien: ['Streitwert bzw. tatsächliches Streitinteresse', 'Bedeutung des Falls', 'Zeitaufwand', 'Schwierigkeit des Falls'],
+    artikel: '§ 11 Abs. 1', stand: '1.7.2026', kriterien: ['Streitwert bzw. tatsächliches Streitinteresse', 'Bedeutung des Falls', 'Zeitaufwand', 'Schwierigkeit des Falls'],
     kriterienNorm: '§ 3 Abs. 1 KoV OG',
     verifiziert: 'doppelt',
     quelleUrl: 'https://bgs.zg.ch/app/de/texts_of_law/161.7',
@@ -200,7 +200,7 @@ export const GERICHTSKOSTEN: Record<KantonCode, KantonalerTarif> = {
   },
   BS: {
     kanton: 'BS', erlassName: 'Reglement über die Gerichtsgebühren (GGR)', erlassNr: 'SG 154.810',
-    artikel: '§ 5', stand: 'Reglement v. 11.9.2017', kriterien: ['Bedeutung des Falles', 'Zeitaufwand des Gerichts', 'tatsächliche und rechtliche Komplexität', 'Streitwert bzw. tatsächliches Streitinteresse'],
+    artikel: '§ 5', stand: '3.6.2021', kriterien: ['Bedeutung des Falles', 'Zeitaufwand des Gerichts', 'tatsächliche und rechtliche Komplexität', 'Streitwert bzw. tatsächliches Streitinteresse'],
     kriterienNorm: '§ 2 Abs. 1 GGR',
     verifiziert: 'doppelt',
     quelleUrl: 'https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/154.810',
@@ -265,10 +265,10 @@ export const GERICHTSKOSTEN: Record<KantonCode, KantonalerTarif> = {
   },
   SG: {
     kanton: 'SG', erlassName: 'Gerichtskostenverordnung (GKV)', erlassNr: 'sGS 941.12',
-    artikel: 'Art. 10 (i.V.m. Art. 11)', stand: '1.3.2012 (Folgefassung 1.7.2026 wortgleich)', kriterien: ['Art des Falls', 'finanzielle Interessen der Beteiligten', 'Umtriebe', 'finanzielle Verhältnisse des Kostenpflichtigen', 'Art der Prozessführung'],
+    artikel: 'Art. 10 (i.V.m. Art. 11)', stand: '1.7.2026', kriterien: ['Art des Falls', 'finanzielle Interessen der Beteiligten', 'Umtriebe', 'finanzielle Verhältnisse des Kostenpflichtigen', 'Art der Prozessführung'],
     kriterienNorm: 'Art. 4 Abs. 2 GKV',
     verifiziert: 'doppelt',
-    quelleUrl: 'https://www.gesetzessammlung.sg.ch/api/de/versions/2808/pdf_file',
+    quelleUrl: 'https://www.gesetzessammlung.sg.ch/app/de/texts_of_law/941.12',
     hinweis: 'Reiner Rahmen (Einzelrichter CHF 500–5000); Art. 11 streitwertabhängige %-Decke (>50k 200 %, >100k 300 %, je +250k +100 %).',
     regel: { typ: 'rahmen', vonChf: 500, bisChf: 6000 },
   },

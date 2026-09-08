@@ -6,14 +6,14 @@
     "guards": 23
   },
   "korpus": {
-    "erlasse": 1565,
-    "eintraege": 60257,
-    "texte": 214321
+    "erlasse": 1566,
+    "eintraege": 60283,
+    "texte": 214362
   },
   "gesamt": {
-    "stellen": 36045,
+    "stellen": 36049,
     "self": 19651,
-    "fremd": 11360,
+    "fremd": 11364,
     "text": 5034,
     "selbstmarker": 927
   },
@@ -133,8 +133,8 @@
     {
       "klasse": "n2b-genitiv",
       "entscheid": "FREMD",
-      "stellen": 666,
-      "erlasse": 211,
+      "stellen": 667,
+      "erlasse": 212,
       "selbstmarker": 0,
       "was": "Form-B-Glied über kuratierten Kurztitel-Genitiv ohne Klammer («des Bankengesetzes», V-7a; Geltung je Ebene)"
     },
@@ -157,8 +157,8 @@
     {
       "klasse": "n2b-titel",
       "entscheid": "FREMD",
-      "stellen": 327,
-      "erlasse": 160,
+      "stellen": 330,
+      "erlasse": 161,
       "selbstmarker": 0,
       "was": "Form-B-Glied über amtlichen Volltitel «Bundesgesetzes/Verordnung [vom Datum] über …» (V-7b)"
     },

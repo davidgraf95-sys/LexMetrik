@@ -191,11 +191,11 @@ export const PARTEIENTSCHAEDIGUNG: Record<KantonCode, KantonalerTarif> = {
   },
   FR: {
     kanton: 'FR', erlassName: 'Règlement sur la justice (RJ)', erlassNr: 'RSF 130.11',
-    artikel: 'Art. 64–66', stand: '1.1.2018', kriterien: ['Art des Verfahrens', 'Schwierigkeit', 'Umfang', 'notwendiger Arbeitsaufwand', 'wirtschaftliches Interesse und Lage der Parteien'],
+    artikel: 'Art. 64–66', stand: '1.12.2025', kriterien: ['Art des Verfahrens', 'Schwierigkeit', 'Umfang', 'notwendiger Arbeitsaufwand', 'wirtschaftliches Interesse und Lage der Parteien'],
     kriterienNorm: 'Art. 63 RJ',
     verifiziert: 'doppelt',
     quelleUrl: 'https://bdlf.fr.ch/app/fr/texts_of_law/130.11',
-    hinweis: 'Aufwandbasiert: Stundenansatz CHF 250 + streitwertabhängiger Zuschlag (max 350 %). Pauschale ≤30k: max CHF 6000.',
+    hinweis: 'Aufwandbasiert: Stundenansatz CHF 250 + streitwertabhängiger Zuschlag (max 350 %). Pauschale ≤30k: max CHF 6000, ausser Scheidungsverfahren (Art. 274 ff. ZPO) — Ausnahme seit 1.12.2025.',
     regel: { typ: 'formel_extern', hinweis: 'Honorar = Zeitaufwand × CHF 250, zzgl. streitwertabhängiger Zuschlag (Art. 66); kein direkter Streitwert-Tarif.' },
   },
   SO: {
@@ -396,10 +396,10 @@ export const PARTEIENTSCHAEDIGUNG: Record<KantonCode, KantonalerTarif> = {
   },
   VS: {
     kanton: 'VS', erlassName: 'Gebührentarif (LTar)', erlassNr: 'SR 173.8',
-    artikel: 'Art. 32 (i.V.m. Art. 27/28)', stand: '1.1.2018', kriterien: ['Natur und Bedeutung der Sache', 'Schwierigkeit', 'Umfang der Arbeit', 'sinnvoll aufgewendete Zeit', 'finanzielle Lage der Partei'],
+    artikel: 'Art. 32 (i.V.m. Art. 27/28)', stand: '1.1.2025', kriterien: ['Natur und Bedeutung der Sache', 'Schwierigkeit', 'Umfang der Arbeit', 'sinnvoll aufgewendete Zeit', 'finanzielle Lage der Partei'],
     kriterienNorm: 'Art. 27 Abs. 1 LTar',
     verifiziert: 'doppelt', mwstInbegriffen: true,
-    hinweis: 'Rahmen je Band; >1 Mio: 3,3 % des Streitwerts, max CHF 140 000. Inkl. MwSt. Amtliche Verteidigung 70 %.',
+    hinweis: 'Rahmen je Band (amtliche Tabelle Art. 32 Abs. 1, alle 25 Streitwertstufen); >1 Mio: 3,3 % des Streitwerts, max CHF 140 000. Inkl. MwSt. Amtliche Verteidigung 70 %. Die beiden amtlichen Sprachfassungen der Version 3360 weichen in zwei Zellen voneinander ab: Streitwert 300’001–350’000 DE «bis 24’000» / FR «à 24’900», Streitwert 900’001–1’000’000 DE «von 33’100» / FR «de 33’300». Kodiert ist die französische Fassung, auf die die Quelle verweist.',
     quelleUrl: 'https://lex.vs.ch/app/fr/texts_of_law/173.8',
     regel: { typ: 'staffel_rahmen', baender: [
       { grenzeChf: 2000, minChf: 550, maxChf: 1400 },
@@ -407,10 +407,28 @@ export const PARTEIENTSCHAEDIGUNG: Record<KantonCode, KantonalerTarif> = {
       { grenzeChf: 15000, minChf: 2300, maxChf: 3300 },
       { grenzeChf: 20000, minChf: 2900, maxChf: 4000 },
       { grenzeChf: 30000, minChf: 3600, maxChf: 5400 },
+      { grenzeChf: 40000, minChf: 4700, maxChf: 6800 },
       { grenzeChf: 50000, minChf: 5800, maxChf: 8200 },
+      { grenzeChf: 60000, minChf: 6800, maxChf: 9200 },
+      { grenzeChf: 70000, minChf: 7600, maxChf: 10200 },
+      { grenzeChf: 80000, minChf: 8400, maxChf: 11300 },
+      { grenzeChf: 90000, minChf: 9100, maxChf: 12300 },
       { grenzeChf: 100000, minChf: 9900, maxChf: 13300 },
+      { grenzeChf: 150000, minChf: 11100, maxChf: 15400 },
       { grenzeChf: 200000, minChf: 12800, maxChf: 17600 },
+      { grenzeChf: 250000, minChf: 14400, maxChf: 19700 },
+      { grenzeChf: 300000, minChf: 16100, maxChf: 21900 },
+      // DE/FR-Divergenz der amtlichen Fassung 3360: DE «bis 24'000», FR «à 24'900».
+      // Massgeblich hier die Fassung, auf die quelleUrl zeigt (/fr/) — Entscheid David offen.
+      { grenzeChf: 350000, minChf: 17700, maxChf: 24900 },
+      { grenzeChf: 400000, minChf: 19400, maxChf: 26200 },
+      { grenzeChf: 450000, minChf: 21000, maxChf: 28300 },
       { grenzeChf: 500000, minChf: 22700, maxChf: 30500 },
+      { grenzeChf: 600000, minChf: 24500, maxChf: 30800 },
+      { grenzeChf: 700000, minChf: 26700, maxChf: 33400 },
+      { grenzeChf: 800000, minChf: 28900, maxChf: 36100 },
+      { grenzeChf: 900000, minChf: 31100, maxChf: 38500 },
+      // DE/FR-Divergenz: DE «von 33'100», FR «de 33'300» — hier FR (quelleUrl /fr/).
       { grenzeChf: 1000000, minChf: 33300, maxChf: 41200 },
       // >1 Mio: 3,3 % des Streitwerts, max CHF 140 000; Untergrenze = Anschluss-
       // Höchstbetrag des Vorbands (Monotonie, kein Wegfall der von-Grenze).

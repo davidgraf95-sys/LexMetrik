@@ -126,18 +126,27 @@ describe('sammleFallback', () => {
 // Fachliche Änderung (17.6.2026, Auftrag David «Volltext bei allen Kantonen»):
 // Neben SZ/VD/JU (m3-TI bleibt HTML) erschliesst der generische PDF-Adapter jetzt
 // die OrdoLex/gr-lex-Familie über ein «(Stand …)»/«(état …)»-Stand-Profil:
-// AR/GR/SG/FR/VS (olexAt) + LU (olexPar) via /api/versions/N/pdf_file, sowie
+// AR/GR/SG/VS (olexAt) + LU (olexPar) via /api/versions/N/pdf_file, sowie
 // TI-lexfind (125101/it, ti-Profil). NICHT erschlossen (kein Stand im PDF →
 // Fallback): GE-lexfind, SZ-/VS-lexfind, TI-125201.
+//
+// FR fiel am 6.9.2026 aus dieser Liste (W3-TARIF-NACHVERIFIKATION): die 11
+// FR-261.16-Tarifeinträge zeigten auf den Fassungs-Pin
+// «bdlf.fr.ch/api/fr/versions/8428/pdf_file» und tragen seither — wie die
+// übrigen 7 Einträge desselben Erlasses und wie FR 130.11/214.5.16/635.1.1 —
+// den kanonischen Erlass-Link «/app/fr/texts_of_law/261.16» (§5 eine
+// Konvention, §7 Bst. c Live-Link auf die geltende Fassung). Damit läuft FR
+// vollständig über den LexWork-Adapter (reicher als der PDF-Adapter); die
+// Zitat-Abdeckung von FR 261.16 bleibt über sammleKantonInventar geprüft.
 describe('sammlePdfInventar (PDF-Volltext-Quellen)', () => {
   const pdf = sammlePdfInventar();
 
   it('erfasst die erwarteten PDF-Kantone mit dem richtigen Profil', () => {
     const kantone = new Set(pdf.map((g) => g.kanton));
-    expect([...kantone].sort()).toEqual(['AR', 'FR', 'GR', 'JU', 'LU', 'SG', 'SZ', 'TI', 'VD', 'VS']);
+    expect([...kantone].sort()).toEqual(['AR', 'GR', 'JU', 'LU', 'SG', 'SZ', 'TI', 'VD', 'VS']);
     const profilVon: Record<string, string> = {
       SZ: 'sz', VD: 'vd', JU: 'ju', TI: 'ti',
-      AR: 'olexAt', GR: 'olexAt', SG: 'olexAt', FR: 'olexAt', VS: 'olexAt', LU: 'olexPar',
+      AR: 'olexAt', GR: 'olexAt', SG: 'olexAt', VS: 'olexAt', LU: 'olexPar',
     };
     for (const g of pdf) {
       // SZ kann sowohl sz.ch-PDF (sz) tragen; alle anderen genau ein Profil.

@@ -1,0 +1,517 @@
+{
+ "erzeugt": "2026-09-06",
+ "kopf": {
+  "titel": "Dekret über die Grundbuchgebühren",
+  "erlassdatum": "Vom 07.05.1980 (Stand 01.01.2018)",
+  "praeambel": [
+   {
+    "rolle": "autor",
+    "text": "Der Grosse Rat des Kantons Aargau,"
+   },
+   {
+    "rolle": "ingress",
+    "text": "gestützt auf Art. 954 des Schweizerischen Zivilgesetzbuches, § 82 Abs. 1 lit. f der Kantonsverfassung und § 39 der Grossratsverordnung vom 5. Juli 1911 über die Einführung des Grundbuches,",
+    "fnNrs": [
+     "1",
+     "2"
+    ]
+   },
+   {
+    "rolle": "verb",
+    "text": "beschliesst:"
+   }
+  ],
+  "fussnoten": [
+   {
+    "nr": "1",
+    "text": "SR 210",
+    "links": [
+     {
+      "label": "210",
+      "url": "https://db.clex.ch/link/Bund/210/de",
+      "intern": {
+       "ebene": "bund",
+       "key": "ZGB"
+      }
+     }
+    ],
+    "absatz": null,
+    "item": null
+   },
+   {
+    "nr": "2",
+    "text": "SAR 720.110",
+    "links": [
+     {
+      "label": "720.110",
+      "url": "https://gesetzessammlungen.ag.ch/data/720.110/de"
+     }
+    ],
+    "absatz": null,
+    "item": null
+   }
+  ]
+ },
+ "artikel": {
+  "1": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeine Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Grundsatz"
+   ]
+  },
+  "2": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeine Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Ersatz der Auslagen, Befreiung von Gebühren, etc."
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "SAR 725.100",
+     "links": [
+      {
+       "label": "725.100",
+       "url": "https://gesetzessammlungen.ag.ch/data/725.100/de",
+       "intern": {
+        "ebene": "kanton",
+        "key": "AG-725.100"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "3": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "1. Allgemeine Bestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Gebührenfestsetzung"
+   ]
+  },
+  "4": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Gebührenansätze"
+    },
+    {
+     "ebene": 2,
+     "label": "2.1. Vereinigung von Parzellen"
+    }
+   ],
+   "marginalie": [
+    "Vereinigung von Parzellen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "4",
+     "text": "SR 210",
+     "links": [
+      {
+       "label": "210",
+       "url": "https://db.clex.ch/link/Bund/210/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "ZGB"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "5": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Gebührenansätze"
+    },
+    {
+     "ebene": 2,
+     "label": "2.2. Änderung der Firmenbezeichnung und Namensänderung"
+    }
+   ],
+   "marginalie": [
+    "Änderung der Firmenbezeichnung"
+   ]
+  },
+  "6": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Gebührenansätze"
+    },
+    {
+     "ebene": 2,
+     "label": "2.3. Grundpfandrechte"
+    }
+   ],
+   "marginalie": [
+    "Gläubigerwechsel"
+   ]
+  },
+  "7": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Gebührenansätze"
+    },
+    {
+     "ebene": 2,
+     "label": "2.3. Grundpfandrechte"
+    }
+   ],
+   "marginalie": [
+    "Nachgangserklärungen von Dienstbarkeits- und Vormerkungsberechtigten"
+   ]
+  },
+  "8": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Gebührenansätze"
+    },
+    {
+     "ebene": 2,
+     "label": "2.3. Grundpfandrechte"
+    }
+   ],
+   "marginalie": [
+    "Löschung von Pfandrechten"
+   ]
+  },
+  "9": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Gebührenansätze"
+    },
+    {
+     "ebene": 2,
+     "label": "2.3. Grundpfandrechte"
+    }
+   ],
+   "marginalie": [
+    "Pfandentlassungen"
+   ]
+  },
+  "10": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Gebührenansätze"
+    },
+    {
+     "ebene": 2,
+     "label": "2.3. Grundpfandrechte"
+    }
+   ],
+   "marginalie": [
+    "Zins- und Zahlungsbestimmungen"
+   ]
+  },
+  "11": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Gebührenansätze"
+    },
+    {
+     "ebene": 2,
+     "label": "2.3. Grundpfandrechte"
+    }
+   ],
+   "marginalie": [
+    "Ausfertigung von Schuldbriefen"
+   ]
+  },
+  "12": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Gebührenansätze"
+    },
+    {
+     "ebene": 2,
+     "label": "2.3. Grundpfandrechte"
+    }
+   ],
+   "marginalie": [
+    "Titelnachtragungen"
+   ]
+  },
+  "13": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Gebührenansätze"
+    },
+    {
+     "ebene": 2,
+     "label": "2.4. Anmerkungen, Vormerkungen, Dienstbarkeiten und Grundlasten"
+    }
+   ],
+   "marginalie": [
+    "Andere Anmerkungen"
+   ]
+  },
+  "14": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Gebührenansätze"
+    },
+    {
+     "ebene": 2,
+     "label": "2.4. Anmerkungen, Vormerkungen, Dienstbarkeiten und Grundlasten"
+    }
+   ],
+   "marginalie": [
+    "Gewinnanteile der Miterben"
+   ]
+  },
+  "15": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Gebührenansätze"
+    },
+    {
+     "ebene": 2,
+     "label": "2.4. Anmerkungen, Vormerkungen, Dienstbarkeiten und Grundlasten"
+    }
+   ],
+   "marginalie": [
+    "Pfändungen und Arreste"
+   ]
+  },
+  "16": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Gebührenansätze"
+    },
+    {
+     "ebene": 2,
+     "label": "2.4. Anmerkungen, Vormerkungen, Dienstbarkeiten und Grundlasten"
+    }
+   ],
+   "marginalie": [
+    "Andere Vormerkungen"
+   ]
+  },
+  "17": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Gebührenansätze"
+    },
+    {
+     "ebene": 2,
+     "label": "2.4. Anmerkungen, Vormerkungen, Dienstbarkeiten und Grundlasten"
+    }
+   ],
+   "marginalie": [
+    "Übertragung von Dienstbarkeiten"
+   ]
+  },
+  "18": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Gebührenansätze"
+    },
+    {
+     "ebene": 2,
+     "label": "2.4. Anmerkungen, Vormerkungen, Dienstbarkeiten und Grundlasten"
+    }
+   ],
+   "marginalie": [
+    "Löschungen"
+   ]
+  },
+  "19": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Gebührenansätze"
+    },
+    {
+     "ebene": 2,
+     "label": "2.5. Kanzleigebühren"
+    }
+   ],
+   "marginalie": [
+    "Kanzleigebühren"
+   ]
+  },
+  "20": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Beschwerden gegen Gebührenrechnungen"
+   ]
+  },
+  "21": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Vollstreckbarkeit der Gebührenrechnungen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "7",
+     "text": "SR 281.1",
+     "links": [
+      {
+       "label": "281.1",
+       "url": "https://db.clex.ch/link/Bund/281.1/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "SCHKG"
+       }
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "22": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Aufhebung bisherigen Rechts"
+   ],
+   "fussnoten": [
+    {
+     "nr": "8",
+     "text": "AGS Bd. 7 S. 533; Bd. 10 S. 61",
+     "links": [],
+     "absatz": "1",
+     "item": null
+    }
+   ]
+  },
+  "23": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Inkrafttreten"
+   ]
+  },
+  "24": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "3. Schlussbestimmungen"
+    }
+   ],
+   "marginalie": [
+    "Übergangsbestimmung"
+   ],
+   "fussnoten": [
+    {
+     "nr": "9",
+     "text": "RRB vom 20. Oktober 1980 (AGS Bd. 10 S. 257).",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "4_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Gebührenansätze"
+    },
+    {
+     "ebene": 2,
+     "label": "2.1bis. Handänderungen bei Umstrukturierungen von Unternehmen"
+    }
+   ],
+   "marginalie": [
+    "Handänderungen bei Umstrukturierungen von Unternehmen"
+   ],
+   "fussnoten": [
+    {
+     "nr": "5",
+     "text": "SAR 651.100",
+     "links": [
+      {
+       "label": "651.100",
+       "url": "https://gesetzessammlungen.ag.ch/data/651.100/de"
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    },
+    {
+     "nr": "6",
+     "text": "SR 221.301",
+     "links": [
+      {
+       "label": "221.301",
+       "url": "https://db.clex.ch/link/Bund/221.301/de",
+       "intern": {
+        "ebene": "bund",
+        "key": "FUSG"
+       }
+      }
+     ],
+     "absatz": "2",
+     "item": null
+    }
+   ]
+  },
+  "6_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "2. Gebührenansätze"
+    },
+    {
+     "ebene": 2,
+     "label": "2.3. Grundpfandrechte"
+    }
+   ],
+   "marginalie": [
+    "Umwandlung bestehender Grundpfandrechte"
+   ]
+  }
+ }
+}

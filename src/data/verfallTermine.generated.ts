@@ -561,6 +561,14 @@ export const VERFALL_TERMINE: VerfallTermin[] = [
     "rhythmus": "einmalig — Fedlex-Konsolidierung, dann re-pinnen (§7)"
   },
   {
+    "label": "TG Steuergesetz (RB 640.1) — Handänderungssteuersatz",
+    "datum": "2028-10-01",
+    "quelle": "Tabelle",
+    "fundstelle": "`src/data/tarif/notariat-grundbuch.ts` (TG, § 140 Abs. 1: 1 %)",
+    "wert": "Geltende Fassung Version 2929, in Kraft seit 1.1.2025 und ausdrücklich befristet bis 31.12.2028 (`https://www.rechtsbuch.tg.ch/app/de/texts_of_law/640.1`, Abruf 6.9.2026, Beleg: `kosten/tarif-drift-nachverifikation-2026-09-06.md`). Läuft die Befristung aus, ohne dass eine Folgefassung gilt, zeigt der Eintrag einen Satz ohne geltende Grundlage",
+    "rhythmus": "vor dem 31.12.2028 prüfen, ob eine Folgefassung publiziert ist; laufend maschinell über `check:tarif-drift` (meldet die neue Fassungs-Id, sobald TG sie führt)"
+  },
+  {
     "label": "Künftige Fassung BV (SR 101)",
     "datum": "2029-01-01",
     "quelle": "Tabelle",
