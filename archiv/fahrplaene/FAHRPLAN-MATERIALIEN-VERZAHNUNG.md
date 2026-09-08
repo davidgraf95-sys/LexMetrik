@@ -419,7 +419,7 @@ sind davon unabhängig und sofort baubar.
 
 ## §9 · Stufe 2 — FINMA prioritär (`W2·6b-MAT-FINMA`, §14-Intake 24.7.2026)
 
-**Kontext (David, 24.7.2026):** David hat sich bei der **FINMA beworben** und in der Bewerbung auf
+**Kontext (David, 24.7.2026):** Externer Anlass im **FINMA-Umfeld**; dabei wurde auf
 LexMetrik verwiesen — der FINMA-Bereich soll vorzeigbar stark sein; FINMA-Materialien werden
 prioritär behandelt.
 

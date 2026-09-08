@@ -201,3 +201,9 @@ Wörtlich aus ROADMAP.md (Stand 29.8.2026):
 Runde 1 (erledigt, als Beleg belassen):
 
   - [x] Runde 1 gebaut 15.8.: 12 Engines, 81 Invarianten, 99 fast-check-Tests (7,6 s), Katalog `bibliothek/register/property-invarianten-2026-08-15.md`; 89/89 Rot-Beweise; **kein Engine-Defekt** — Fund schkgFristen: Art. 63 S. 2 SchKG («bis zum dritten Tag nach DEREN Ende» = Ende der Ferien) macht Fristende nicht-monoton, normkonform (Pin SF-8).
+
+## §N+ · Befunde 8.9.2026 (Session Aufräumen/Sparplan) — Korpus, Wächter
+
+- **Raw-Store-Release deckt Pin `dbg` nicht** *(Fund 8.9.2026 beim Verdrahten von `check:raw-store --streng` in `korpus-raw-release.yml`, PR #779)*: jüngster `korpus-raw-*`-Release trägt DBG mit Konsolidierungs-Stand 2026-01-01, der aktuelle Pin ist 2026-09-02 ⇒ `--streng` rot. Korpus-Territorium (§7): Release neu erzeugen oder Pin-Abgleich klären — eigener Auftrag mit Gegenprüfung, nicht mechanisch fixen.
+- **`AzRegister.tsx` Kommentar «Chevron-Feld drehneutral»** stimmt nur für 0°/90°; während der 150-ms-Drehung ist die Hülle bis 28,3 px breit (Ursache des R8-Flackerns, #778). Kommentar bei nächster Berührung präzisieren.
+- **Wächter-Fläche zählte Nicht-Tore** (`run-parallel`, `run-netz-alle`, `report-zitatgraph-warnungen` — umbenannt 8.9.2026, Chronik «Umbenennungen 8.9.2026»); Regel künftig: `check-*` nur für Skripte, die rot werden können.
