@@ -9,6 +9,30 @@ import {
 // Wächter für die vier Zusagen, die der Fahrplan an die Pools stellt: jeder Pool
 // gefüllt, keine Doppelung, Tageszeit-Abdeckung 0–23 lückenlos, und (als
 // Layout-Zusage) jeder Gruss kurz genug für eine Zeile auf 390 px.
+//
+// AUSBAU 8.9.2026 (Sidequest David, DEKLARIERTE fachliche Änderung — kein
+// Refactoring, §6.3): acht Tageszeit-Fenster statt fünf, je 30–45 Grüsse,
+// «immer» 30–40. Angepasst sind darum genau zwei Zusagen — die Pool-Grössen
+// und die Fenster-Grenzen. Doppelungs-, Satzzeichen-, Längen- und
+// Lückenlosigkeits-Wächter bleiben Wort für Wort, wie sie waren; neu dazu
+// kommt ein Wächter auf die gestrichenen Formen (§4-Auflage), der bisher nur
+// als Prosa im Kopfkommentar der Pool-Datei stand.
+//
+// NUR ANKOMMEN 8.9.2026 (dritter Schritt, DEKLARIERTE fachliche Änderung —
+// Entscheid David: «keine abschied. nur begrüssung»): ein Wächter mehr, der
+// Abschiedsformen mechanisch ausschliesst, und die Landessprachen-Liste trägt
+// nur noch reine BEGRÜSSUNGSformen (die romanischen Wunsch-Formen «Bonne
+// journée./soirée./nuit.», «Buona giornata./serata.», «Buonanotte.» sind im
+// Französischen und Italienischen Abschiedsformeln). Pool-Grössen, Doppelungs-,
+// Satzzeichen-, Längen-, Kaffee- und Lückenlosigkeits-Wächter bleiben Wort für
+// Wort, wie sie waren.
+//
+// SCHWEIZER BEZUG 8.9.2026 (zweiter Schritt, ebenfalls DEKLARIERTE fachliche
+// Änderung): zwei Wächter kommen dazu — einer deckelt die Kaffee-Häufung auf
+// höchstens zwei Einträge im ganzen Bestand («was soll das mit dem kaffee? sei
+// kreativ und nicht so plump»), der andere verlangt in JEDEM Fenster je einen
+// französischen und einen italienischen Gruss aus einer hier gepflegten Liste
+// gängiger Formen. Alle übrigen Zusagen bleiben Wort für Wort, wie sie waren.
 
 const ALLE = [...IMMER, ...TAGESZEITEN.flatMap((t) => t.pool)];
 
@@ -20,11 +44,16 @@ describe('Begrüssungs-Pools', () => {
     }
   });
 
-  it('jede Tageszeit trägt genügend Abwechslung (§4: ~15–25 je Fenster)', () => {
+  it('jede Tageszeit trägt genügend Abwechslung (Ausbau 8.9.2026: 30–45 je Fenster)', () => {
     for (const t of TAGESZEITEN) {
-      expect(t.pool.length, `Pool ${t.id}`).toBeGreaterThanOrEqual(15);
-      expect(t.pool.length, `Pool ${t.id}`).toBeLessThanOrEqual(25);
+      expect(t.pool.length, `Pool ${t.id}`).toBeGreaterThanOrEqual(30);
+      expect(t.pool.length, `Pool ${t.id}`).toBeLessThanOrEqual(45);
     }
+  });
+
+  it('der «immer»-Pool trägt 30–40 Grüsse', () => {
+    expect(IMMER.length).toBeGreaterThanOrEqual(30);
+    expect(IMMER.length).toBeLessThanOrEqual(40);
   });
 
   it('kein Gruss steht zweimal — auch nicht über Pool-Grenzen hinweg', () => {
@@ -46,14 +75,24 @@ describe('Begrüssungs-Pools', () => {
       expect(t, `Stunde ${h} ohne Tageszeit`).toBeTruthy();
       expect(begruessungsPool(h).length).toBeGreaterThan(IMMER.length);
     }
-    // Fenster-Grenzen explizit (die Nacht überspannt Mitternacht).
+    // Fenster-Grenzen explizit (die Nacht überspannt Mitternacht). Acht
+    // Fenster seit dem Ausbau 8.9.2026 — je erste UND letzte Stunde geprüft,
+    // damit eine verschobene Grenze nicht zwischen zwei Stichproben durchfällt.
     expect(tageszeitFuer(0).id).toBe('nacht');
     expect(tageszeitFuer(4).id).toBe('nacht');
-    expect(tageszeitFuer(5).id).toBe('morgen');
+    expect(tageszeitFuer(5).id).toBe('fruehmorgen');
+    expect(tageszeitFuer(6).id).toBe('fruehmorgen');
+    expect(tageszeitFuer(7).id).toBe('morgen');
     expect(tageszeitFuer(9).id).toBe('morgen');
-    expect(tageszeitFuer(10).id).toBe('tag');
+    expect(tageszeitFuer(10).id).toBe('vormittag');
+    expect(tageszeitFuer(11).id).toBe('vormittag');
+    expect(tageszeitFuer(12).id).toBe('mittag');
+    expect(tageszeitFuer(13).id).toBe('mittag');
     expect(tageszeitFuer(14).id).toBe('nachmittag');
-    expect(tageszeitFuer(18).id).toBe('abend');
+    expect(tageszeitFuer(16).id).toBe('nachmittag');
+    expect(tageszeitFuer(17).id).toBe('feierabend');
+    expect(tageszeitFuer(18).id).toBe('feierabend');
+    expect(tageszeitFuer(19).id).toBe('abend');
     expect(tageszeitFuer(21).id).toBe('abend');
     expect(tageszeitFuer(22).id).toBe('nacht');
     expect(tageszeitFuer(23).id).toBe('nacht');
@@ -75,6 +114,95 @@ describe('Begrüssungs-Pools', () => {
     for (const p of [0, 0.25, 0.5, 0.75, 0.99]) {
       expect(pool).toContain(waehleBegruessung(8, () => p));
     }
+  });
+
+  it('Kaffee bleibt die Ausnahme: höchstens zwei Grüsse im ganzen Bestand', () => {
+    // Entscheid David 8.9.2026: «was soll das mit dem kaffee? sei kreativ und
+    // nicht so plump». Der Wächter deckelt die HÄUFUNG, er verbietet das Motiv
+    // nicht — zwei Käfeli dürfen bleiben, ein drittes ist rot.
+    const KAFFEE = /kaffee|käfeli|espresso/i;
+    const treffer = ALLE.filter((g) => KAFFEE.test(g));
+    expect(treffer.length, `zu viele Kaffee-Grüsse: ${treffer.join(' · ')}`).toBeLessThanOrEqual(2);
+    // Der Wächter kann scheitern (§6.7) — die Muster zeigen es.
+    expect(KAFFEE.test('Ein Käfeli gefällig?')).toBe(true);
+    expect(KAFFEE.test('Erst Kaffee, dann Akten.')).toBe(true);
+    expect(KAFFEE.test('Zeit für ein Zvieri.')).toBe(false);
+  });
+
+  it('jedes Fenster trägt je einen französischen und einen italienischen Gruss', () => {
+    // Auftrag David 8.9.2026 «gerne schweizer bezug»: die Landessprachen sind
+    // keine Dekoration eines einzelnen Fensters, sondern in allen acht da.
+    // Gepflegte Liste statt Regex — nur Formen, die als gängig belegt sind.
+    // NUR ANKOMMEN 8.9.2026: die Liste führt ausschliesslich Begrüssungen —
+    // die Wunsch-Formen («Bonne journée.», «Buona serata.» …) sind in beiden
+    // Sprachen Abschiedsformeln und stehen darum weder hier noch im Pool.
+    const FRANZOESISCH = [
+      'Bonjour.', 'Bonjour à tous.', 'Bonjour à vous.', 'Bonjour et bienvenue.',
+      'Bonsoir.', 'Bonsoir à tous.', 'Bonsoir à vous.', 'Bonsoir, bienvenue.',
+      'Bienvenue.', 'Bienvenue à vous.',
+    ];
+    const ITALIENISCH = [
+      'Buongiorno.', 'Buongiorno a voi.', 'Buongiorno a tutti.', 'Salve.',
+      'Salve a tutti.', 'Buonasera.', 'Buonasera a tutti.', 'Buonasera a voi.',
+      'Buonasera, benvenuti.', 'Benvenuti.',
+    ];
+    for (const t of TAGESZEITEN) {
+      expect(
+        t.pool.filter((g) => FRANZOESISCH.includes(g)).length,
+        `Pool ${t.id} ohne französischen Gruss`,
+      ).toBeGreaterThan(0);
+      expect(
+        t.pool.filter((g) => ITALIENISCH.includes(g)).length,
+        `Pool ${t.id} ohne italienischen Gruss`,
+      ).toBeGreaterThan(0);
+    }
+    // Der Wächter kann scheitern (§6.7): Hochdeutsch zählt nicht mit — und
+    // seit dem 8.9.2026 auch keine Abschiedsformel mehr.
+    expect(FRANZOESISCH.includes('Guten Morgen.')).toBe(false);
+    expect(ITALIENISCH.includes('Guten Abend.')).toBe(false);
+    expect(FRANZOESISCH.includes('Bonne nuit.')).toBe(false);
+    expect(ITALIENISCH.includes('Buona serata.')).toBe(false);
+  });
+
+  it('kein Gruss ist eine Abschiedsform — nur Ankommen (David 8.9.2026)', () => {
+    // «keine abschied. nur begrüssung»: behalten wird, was man sagt, wenn
+    // jemand ANKOMMT (Gruss, Willkommen, Wunsch für die laufende Tageszeit,
+    // freundliche Ansprache); gestrichen ist alles, was man beim Gehen oder
+    // zum Schlafengehen sagt. Der Wächter greift die mechanisch fassbaren
+    // Formen ab — die Beurteilung im Zweifel bleibt beim Kopfkommentar der
+    // Pool-Datei, die Regressionssperre steht hier.
+    const ABSCHIED =
+      /\bAdie\b|\bAdieu\b|\bTschüss\b|\bUf Widerluege\b|Gute Nacht|Gueti Nacht|schöni Nacht|Schlaf|Bonne nuit|Buonanotte|Buona notte|Buon riposo|Buna notg|Bonne soirée|Buona serata|Bonne journée|Buona giornata|fin de journée|noch\.$|ausklingen|Ausklang|Heimweg|Zeit fürs Bett|Ruhe\./i;
+    const treffer = ALLE.filter((g) => ABSCHIED.test(g));
+    expect(treffer, `Abschiedsformen im Pool: ${treffer.join(' · ')}`).toEqual([]);
+    // Der Wächter kann scheitern (§6.7) — die gestrichenen Originale zeigen es.
+    expect(ABSCHIED.test('Adie mitenand.')).toBe(true);
+    expect(ABSCHIED.test('Gueti Nacht mitenand.')).toBe(true);
+    expect(ABSCHIED.test('Schlaf guet.')).toBe(true);
+    expect(ABSCHIED.test('Bonne nuit.')).toBe(true);
+    expect(ABSCHIED.test('Buona giornata.')).toBe(true);
+    expect(ABSCHIED.test('Schönen Tag noch.')).toBe(true);
+    expect(ABSCHIED.test('Lassen Sie den Tag ausklingen.')).toBe(true);
+    expect(ABSCHIED.test('Gönnen Sie sich Ruhe.')).toBe(true);
+    // … und er darf die Begrüssungen NICHT fangen.
+    expect(ABSCHIED.test('Grüezi mitenand.')).toBe(false);
+    expect(ABSCHIED.test('Guten Abend.')).toBe(false);
+    expect(ABSCHIED.test('Schönen Feierabend.')).toBe(false);
+    expect(ABSCHIED.test('Willkommen zu später Stunde.')).toBe(false);
+    expect(ABSCHIED.test('Bonsoir à vous.')).toBe(false);
+  });
+
+  it('kein Gruss trägt eine der gestrichenen Formen (§4-Auflage)', () => {
+    // Sprichwort-Fragmente, Anbiederndes und Werbe-Formeln — der Kopfkommentar
+    // der Pool-Datei zählt sie auf, hier stehen sie mechanisch. Emoji-Bereich
+    // mit dabei: die Zeile ist Literata-Fliesstext, kein Icon-Platz.
+    const GESTRICHEN =
+      /Hallöchen|Servus|Vogel|Morgenstund|Schaffe|Willkommen im|[\u{1F300}-\u{1FAFF}\u{2600}-\u{27BF}]/iu;
+    expect(ALLE.filter((g) => GESTRICHEN.test(g))).toEqual([]);
+    // Der Wächter kann scheitern (§6.7) — die gestrichenen Originale zeigen es.
+    expect(GESTRICHEN.test('Der frühe Vogel fängt den Wurm.')).toBe(true);
+    expect(GESTRICHEN.test('Willkommen im Paragraphendickicht.')).toBe(true);
+    expect(GESTRICHEN.test('Grüezi mitenand.')).toBe(false);
   });
 
   it('NEGATIV-KONTROLLE: die Wächter greifen bei den gestrichenen Formen', () => {
