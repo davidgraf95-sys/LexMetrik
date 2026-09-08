@@ -129,6 +129,6 @@ jobs:
             --notes "$notes"
 
       - name: Provenance-Attestation auf das Archiv
-        uses: actions/attest-build-provenance@v2
+        uses: actions/attest-build-provenance@v4
         with:
           subject-path: ${{ steps.archiv.outputs.datei }}
