@@ -286,7 +286,11 @@ Wächter: `npm run plan:next` zeigt Worktrees/Branches ohne Schritt-Bezug
    Zeile oder steht dort ein `::warning::`, ist das ein §17-Fall: das Team
    hängt an der Hobby-Grenze von 10 GB Deployment Storage (Anlass 8.9.2026:
    261.91 GB, ein Stand = 738 MB), und ohne diesen Lauf läuft sie in Tagen
-   wieder voll. Nicht liegen lassen.
+   wieder voll. Nicht liegen lassen. Offen seit 8.9.2026: 48 h nach der ersten
+   Landung die Vercel-Nutzungsseite (Deployment Storage, war 262 GB gegen
+   10 GB Hobby-Grenze) messen; bleibt sie über 10 GB, ist der nächste Schritt
+   das Auslagern der 455 MB Korpus-Dateien aus jedem Stand (Roadmap-Eintrag
+   anlegen, sobald der Deckel Luft hat).
 2. Asset-Hash live = lokal (index.html der Prod-URL gegen `dist/`).
 3. Kernrouten HTTP 200: `/`, `/rechner/tagerechner`, `/rechner/zustaendigkeit`,
    `/rechner/verjaehrung`, `/rechner/mietrecht`, `/vorlagen`, eine
