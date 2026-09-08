@@ -1,4 +1,4 @@
-// @shard-gruppe: 5
+// @shard-gruppe: 4
 // ─── H3 · Öffnen und Schliessen des Panels bewegt den Lesekörper nicht ───────
 //
 // WAS GEMESSEN WIRD, und warum GENAU das:

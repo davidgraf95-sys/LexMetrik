@@ -12,8 +12,8 @@
 # 11.8/15.5/21.0 min statt je ~7). Jetzt:
 #   1) `bau` baut dist EINMAL und lädt es als Artefakt hoch — mehr nicht.
 #      e2e-Shards und `tore` starten direkt danach PARALLEL;
-#   2) `e2e` fährt 8 dauer-balancierte Gruppen (LPT aus CI-GEMESSENEN
-#      Spec-Dauern, e2e/shard-gruppen.json, je ~5.4–6.4 min Testzeit).
+#   2) `e2e` fährt 4 dauer-balancierte Gruppen (LPT aus CI-GEMESSENEN
+#      Spec-Dauern, e2e/shard-gruppen.json, je ~7.8–8.6 min Testzeit).
 #      Der Union-Wächter (`check:e2e-shards`, auch in `check:seriell`) beweist
 #      vor den Shards: Gruppen == `playwright --list` — kein Test doppelt,
 #      keiner verloren. Reine Verteilung, kein Test/Timeout/Umfang (§6.3);
@@ -82,11 +82,11 @@
 # Programm. Fehlerseite unverändert (§6.7): jede Unsicherheit fällt auf `code`.
 #
 # ─── Dritte Klasse `code-fern` (QS-PLAN-EINFACH 14.8.2026, Punkt 3) ──────────
-# Die 8 Playwright-Browser-Shards sind gemessen 78 % der CI-Zeit. Rührt ein
+# Die Playwright-Browser-Shards sind gemessen 77–78 % der CI-Zeit. Rührt ein
 # Diff AUSSCHLIESSLICH Flächen an, die die ausgelieferte App nachweislich
 # nicht berühren (`**.md`, `scripts/plan/**`, `scripts/cowork/**`, `.claude/**`,
 # `docs/**`, `bibliothek/**`, `messwerte/**`, `archiv/**`), fahren Bau + alle
-# Node-Tore weiterhin VOLL — nur die 8 Browser-Shards werden übersprungen,
+# Node-Tore weiterhin VOLL — nur die 4 Browser-Shards werden übersprungen,
 # mit demselben Skip-Muster wie die bestehende `doku`-Klasse (Required-Check-
 # Semantik bleibt identisch). `Merge-Schutz` läuft für JEDE Klasse unverändert
 # echt. KONSERVATIV: jede weitere Datei (auch package.json, e2e/**, scripts/**
@@ -94,6 +94,47 @@
 # Bash im `diff`-Job (CODE_FERN_RE, bewusst NICHT ausgelagert — der Job bleibt
 # checkout-/npm-frei) UND als reine, Vitest-getestete Funktion in
 # scripts/ci/diff-klassieren.ts (§6.7-Beweis dort).
+# ─── Minuten-Sparplan (QS-CI-MINUTEN, 8.9.2026) ──────────────────────────────
+# Vollerhebung 8.8.–8.9.2026 (1998 Läufe, 15'647 Jobs, je Job aufgerundet =
+# GitHubs Abrechnungsmodell): 61'381 abgerechnete Minuten im Monat, davon
+# 97,5 % in DIESER Datei. Detail und Herleitung:
+# bibliothek/betrieb/ci-minuten-sparplan-2026-09-08.md. Umgesetzt sind drei
+# Massnahmen; KEIN Tor entfällt, keine Prüftiefe sinkt:
+#
+#   M1  Auf `push` nach main laufen `tore`, `e2e` und `merge-schutz` nicht
+#       erneut — aber NUR, wenn der Schritt «Push-Diät prüfen» (Job `diff`)
+#       hart belegt, dass genau dieser Baum als PR grün war. Jede Unsicherheit
+#       fällt auf den Volllauf. −29 % der Minuten. Auslöser `merge_group` und
+#       `workflow_dispatch` bleiben unberührt.
+#   M3  Browser-Shards 8 → 4. Je Shard-Job fallen gemessen 1.28 min Rüstzeit
+#       + 0.37 min Aufrundung an, unabhängig von der Testmenge; 8 Shards
+#       kosteten 46.7 abgerechnete Minuten für 33.3 min echte Testzeit.
+#       Identische Spec-Menge, der Union-Wächter beweist das vor jedem Lauf.
+#   M4  Bei art=doku bzw. art=code-fern werden `bau` und die Shard-Jobs GANZ
+#       übersprungen statt für eine echo-Zeile angeworfen (1 min
+#       Mindestabrechnung je Job). Ein per `if:` übersprungener Job erfüllt
+#       seinen Required-Kontext (Beleg: «Perf-Budget», seit 26.7.2026 auf
+#       jedem PR übersprungen) — anders als ein Workflow, der wegen
+#       `paths`-Filtern gar nicht erst startet (K3, siehe oben).
+#
+# EFFEKT MESSEN: `gh run list --event push --workflow CI --limit 20` und je
+# Lauf `gh run view <id>` — auf main dürfen nur noch `diff`, `bau`, `perf`
+# und `deploy` Zeit brennen; `gh api repos/{repo}/actions/runs/<id>/jobs`
+# zeigt die abgerechneten Dauern.
+#
+# JOB-MATRIX je Auslöser (Soll-Zustand nach M1/M3/M4):
+#   pull_request   diff · bau* · tore · e2e(4)* · merge-schutz
+#   push (Diät)    diff · bau · perf · deploy
+#   push (o. Diät) diff · bau* · tore · e2e(4)* · perf · deploy
+#   merge_group    diff · bau · tore · e2e(4) · perf · merge-schutz
+#   dispatch       diff · bau · tore · e2e(4) · perf · merge-schutz (+ deploy
+#                  nur bei probe=ohne-token)
+#   (* je nach Diff-Klasse: `bau` entfällt bei doku, `e2e` bei doku/code-fern)
+#
+# AUFLAGE (§6.7): M1 steht und fällt mit `required_status_checks.strict: true`
+# im Branch-Schutz von main (gemessen 8.9.2026). Wird `strict` abgeschaltet,
+# ist ein PR-Lauf kein Beleg mehr für den landenden Baum — dann muss die
+# Push-Diät zurückgebaut werden.
 name: CI
 
 on:
@@ -146,6 +187,7 @@ jobs:
       pull-requests: read
     outputs:
       art: ${{ steps.klassieren.outputs.art }}
+      push_diaet: ${{ steps.diaet.outputs.push_diaet }}
     steps:
       - name: PR-Diff klassieren
         id: klassieren
@@ -256,7 +298,7 @@ jobs:
                 grep -vE "$CODE_FERN_RE" -m 20 push-dateien.txt
               else
                 echo "art=code-fern" >> "$GITHUB_OUTPUT"
-                echo "Nur app-ferne Nicht-Doku-Dateien im Push (${anzahl} Datei(en)) — Bau + alle Node-Tore laufen VOLL, nur die 8 Browser-Shards werden übersprungen (gleiches Skip-Muster wie 'doku')."
+                echo "Nur app-ferne Nicht-Doku-Dateien im Push (${anzahl} Datei(en)) — Bau + alle Node-Tore laufen VOLL, nur die 4 Browser-Shards werden übersprungen (gleiches Skip-Muster wie 'doku')."
               fi
             else
               echo "art=doku" >> "$GITHUB_OUTPUT"
@@ -292,55 +334,157 @@ jobs:
               grep -vE "$CODE_FERN_RE" -m 20 pr-dateien.txt
             else
               echo "art=code-fern" >> "$GITHUB_OUTPUT"
-              echo "Nur app-ferne Nicht-.md-Dateien (${anzahl} Datei(en)) — Bau + alle Node-Tore laufen VOLL, nur die 8 Browser-Shards werden übersprungen."
+              echo "Nur app-ferne Nicht-.md-Dateien (${anzahl} Datei(en)) — Bau + alle Node-Tore laufen VOLL, nur die 4 Browser-Shards werden übersprungen."
             fi
           else
             echo "art=doku" >> "$GITHUB_OUTPUT"
             echo "Reine .md-Änderung (${anzahl} Datei(en)) — Merge-Schutz, check:plan, check:steuerdeckel und check:bibliothek laufen ECHT, restliche Code-Tore quittieren."
           fi
 
+      # ── Push-Diät (M1, QS-CI-MINUTEN, 8.9.2026) ──────────────────────────
+      # BEFUND der 30-Tage-Messung: 348 `push`-Läufe auf main à Ø 51.6 min =
+      # 17'951 min = 29 % ALLER CI-Minuten — und sie prüfen einen Baum, der
+      # Minuten zuvor als PR schon grün durchgelaufen ist. Der Branch-Schutz
+      # führt `strict: true` (ein PR muss vor dem Merge aktuell sein), und ein
+      # `pull_request`-Lauf testet den MERGE-Commit; der Baum, der auf main
+      # landet, ist damit derselbe. Ein zweiter Lauf liefert keine neue
+      # Information (§6: es ist derselbe Baum, Golden bleibt byte-gleich).
+      #
+      # DIESER SCHRITT IST DAS TOR DAZU (§6.7). Der Bericht verlangt, dass
+      # «Head-Commit ist Squash-Merge eines grünen PR» HART geprüft wird und
+      # jede Unsicherheit auf den Volllauf fällt — nicht per Kommentar
+      # behauptet. Geprüft wird darum, gegen die API:
+      #   1. Der gepushte Commit ist der `merge_commit_sha` GENAU EINES
+      #      gemergten PR gegen `main` (kein Direkt-Push, kein Force-Push,
+      #      keine fremde Nummer).
+      #   2. Am Kopf-Commit dieses PR trägt KEIN Check-Run ein anderes
+      #      Ergebnis als success/skipped/neutral.
+      #   3. Die beiden ereignisunabhängigen Pflicht-Kontexte «Tore …» und
+      #      «Merge-Schutz …» stehen dort ausdrücklich auf `success` (nicht
+      #      bloss «nicht rot» — ein fehlender Kontext wäre sonst grün).
+      # Jeder Fehlschlag, jede API-Störung, jeder unerwartete Wert ⇒ `false`
+      # ⇒ VOLLES Programm. Zu viel zu prüfen kostet Minuten, zu wenig lässt
+      # ungeprüften Code ausliefern (Vorfall #579).
+      #
+      # WAS DIESER SCHRITT NICHT PRÜFT: `strict: true` selbst. Die
+      # Branch-Schutz-API verlangt Admin-Rechte, die `GITHUB_TOKEN` nicht hat
+      # — eine Prüfung wäre immer rot und die Diät damit wirkungslos. Der
+      # Wert ist am 8.9.2026 gemessen (`branches/main/protection`,
+      # `required_status_checks.strict == true`) und steht als Auflage im
+      # Landungs-Protokoll: wird `strict` je abgeschaltet, MUSS diese Diät
+      # zurückgebaut werden, weil dann ein veralteter PR-Lauf grün wäre.
+      #
+      # EFFEKT MESSEN: `gh run list --event push --workflow CI --limit 20`
+      # zeigt danach nur noch `diff`, `bau`, `perf`, `deploy` je main-Push.
+      - name: Push-Diät prüfen (Head ist Squash-Merge eines grünen PR)
+        id: diaet
+        env:
+          GH_TOKEN: ${{ github.token }}
+          EVENT: ${{ github.event_name }}
+          REF: ${{ github.ref }}
+          REPO: ${{ github.repository }}
+          AFTER: ${{ github.event.after }}
+        run: |
+          set -uo pipefail
+          setze() {
+            echo "push_diaet=$1" >> "$GITHUB_OUTPUT"
+            echo "Push-Diät=$1 — $2"
+            exit 0
+          }
+          if [ "$EVENT" != "push" ] || [ "$REF" != "refs/heads/main" ]; then
+            setze false "kein main-Push (Event=${EVENT}, Ref=${REF}) — volles Programm."
+          fi
+          PRS=$(gh api "repos/${REPO}/commits/${AFTER}/pulls" \
+            --jq '[.[] | select(.merged_at != null and .merge_commit_sha == env.AFTER and .base.ref == "main")]') \
+            || setze false "commits/${AFTER}/pulls nicht auswertbar — volles Programm."
+          ANZAHL=$(echo "$PRS" | jq 'length')
+          if [ "$ANZAHL" != "1" ]; then
+            setze false "${ANZAHL} passende(r) gemergte(r) PR zu ${AFTER} (erwartet genau 1) — volles Programm."
+          fi
+          NUMMER=$(echo "$PRS" | jq -r '.[0].number')
+          KOPF=$(echo "$PRS" | jq -r '.[0].head.sha')
+          LAEUFE=$(gh api "repos/${REPO}/commits/${KOPF}/check-runs?per_page=100" \
+            --jq '.check_runs[] | "\(.conclusion // "offen")|\(.name)"') \
+            || setze false "check-runs am PR-Kopf ${KOPF} nicht auswertbar — volles Programm."
+          if [ -z "$LAEUFE" ]; then
+            setze false "keine Check-Runs am Kopf von PR #${NUMMER} — volles Programm."
+          fi
+          SCHLECHT=$(echo "$LAEUFE" | grep -vE '^(success|skipped|neutral)\|' || true)
+          if [ -n "$SCHLECHT" ]; then
+            echo "Nicht-grüne Check-Runs am Kopf von PR #${NUMMER}:"
+            echo "$SCHLECHT"
+            setze false "PR-Lauf nicht durchgehend grün — volles Programm."
+          fi
+          for pflicht in "Tore (Tests · Lint · Checks)" "Merge-Schutz (Required-Kontext)"; do
+            if ! echo "$LAEUFE" | grep -qxF "success|${pflicht}"; then
+              setze false "Pflicht-Kontext «${pflicht}» am PR-Kopf nicht auf success — volles Programm."
+            fi
+          done
+          setze true "PR #${NUMMER}, Kopf ${KOPF} durchgehend grün; Branch-Schutz strict:true ⇒ identischer Baum. Tore/e2e/Merge-Schutz laufen auf main nicht erneut."
+
   bau:
     name: Bau (dist-Artefakt)
     needs: diff
+    # ── M4 (QS-CI-MINUTEN, 8.9.2026): Job-`if:` statt Leerlauf-Quittung ──────
+    # BISHER lief dieser Job auch bei art=doku, mit einer einzigen echo-Zeile.
+    # Begründung damals: ein übersprungenes `bau` zöge die e2e-Shards über
+    # `needs:` mit in den Skip, und deren Required-Kontexte «hingen wieder an
+    # einer Bedingung statt an einem Job». Diese Sorge ist EMPIRISCH widerlegt
+    # — und zwar in dieser Datei selbst: «Perf-Budget (§15 …)» ist ein
+    # Required-Kontext und wird durch sein Job-`if:` auf JEDEM PR-Lauf
+    # übersprungen; seit 26.7.2026 mergen trotzdem alle PRs. GitHub wertet
+    # einen per `if:` übersprungenen Job als erfüllt (er meldet `skipped`,
+    # nicht «expected»). Der K3-Defekt betraf etwas anderes: einen WORKFLOW,
+    # der wegen `paths`-Filtern gar nicht erst startete und darum GAR KEINEN
+    # Check-Run meldete. Das bleibt unverändert ausgeschlossen — CI läuft bei
+    # jedem Event, die Klassierung entscheidet nur den Umfang.
+    # Gemessen: 218 Doku-/code-ferne Läufe in 30 Tagen à ~15.1 min, fast nur
+    # Runner-Anlauf (Mindestabrechnung 1 min je Job).
+    # `!cancelled()`: fällt `diff` aus, ist `art` leer — dann baut dieser Job
+    # (Fehlerseite = bauen und prüfen, nicht überspringen).
+    if: >-
+      !cancelled()
+      && needs.diff.outputs.art != 'doku'
     runs-on: ubuntu-latest
     env:
       TZ: Europe/Zurich
     steps:
-      # Der Job läuft IMMER (kein Job-`if:`) — sonst zöge ein übersprungenes
-      # `bau` die 8 e2e-Shards über `needs:` mit in den Skip, und die acht
-      # Required-Kontexte hingen wieder an einer Bedingung statt an einem Job.
-      # Bei art=doku ist er ein Leerlauf von Sekunden. `code-fern` (Punkt 3,
-      # QS-PLAN-EINFACH 14.8.2026) baut VOLL wie `code` — es überspringt nur
-      # die Browser-Shards weiter unten, Bau und Tore sind unverändert Pflicht.
+      # `code-fern` (Punkt 3, QS-PLAN-EINFACH 14.8.2026) baut VOLL wie `code` —
+      # es überspringt nur die Browser-Shards weiter unten, Bau und Tore sind
+      # unverändert Pflicht.
       - uses: actions/checkout@v7
-        if: needs.diff.outputs.art != 'doku'
       - uses: actions/setup-node@v5
-        if: needs.diff.outputs.art != 'doku'
         with:
           node-version: 22
           cache: npm
       - run: npx -y npm@11 ci
-        if: needs.diff.outputs.art != 'doku'
       # gen:suchindex + tsc -b + vite build + prerender — tsc-Fehler reissen
       # hier die ganze Kette, bevor tore/e2e überhaupt starten.
       - name: Build
-        if: needs.diff.outputs.art != 'doku'
         run: npm run build
       - name: dist-Artefakt hochladen (für tore + e2e-Shards + perf)
-        if: needs.diff.outputs.art != 'doku'
         uses: actions/upload-artifact@v7
         with:
           name: dist
           path: dist
           retention-days: 1
           include-hidden-files: true
-      - name: Kurzquittung (Doku-/Leer-Diff)
-        if: needs.diff.outputs.art == 'doku'
-        run: echo "Kein Code im Diff — kein Bau, kein dist-Artefakt (die e2e-Shards laden es folgerichtig auch nicht)."
 
   tore:
     name: Tore (Tests · Lint · Checks)
     needs: diff
+    # ── M1 (QS-CI-MINUTEN, 8.9.2026): kein zweiter Lauf auf main ────────────
+    # Auf `push` nach main läuft dieser Job nur noch, wenn die Push-Diät NICHT
+    # greift — also wenn der gepushte Baum NICHT nachweislich als grüner PR
+    # geprüft wurde (Direkt-Push, fremder Merge, rote/fehlende Check-Runs,
+    # API-Störung). Die harte Prüfung samt Fehlerseite sitzt im Schritt
+    # «Push-Diät prüfen» des `diff`-Jobs. `pull_request`, `merge_group` und
+    # `workflow_dispatch` sind unberührt und fahren unverändert voll.
+    # `!cancelled()` statt der Standard-Skip-Logik: fällt `diff` selbst aus,
+    # ist `push_diaet` leer — dann läuft dieser Job (Fehlerseite = prüfen).
+    if: >-
+      !cancelled()
+      && needs.diff.outputs.push_diaet != 'true'
     runs-on: ubuntu-latest
     env:
       # Produkt-Zeitzone: Engines geben teils Date-Instants zurück (z. B.
@@ -683,15 +827,56 @@ jobs:
         run: echo "Kein Code im Diff — Merge-Schutz, check:plan, check:steuerdeckel und check:bibliothek sind oben ECHT gelaufen; die übrigen Code-Tore sind nicht betroffen."
 
   e2e:
-    name: Browser-Smoke Shard ${{ matrix.gruppe }}/8 (Playwright)
+    name: Browser-Smoke Shard ${{ matrix.gruppe }}/4 (Playwright)
     needs: [diff, bau]
+    # ── M4 (QS-CI-MINUTEN, 8.9.2026): Job-`if:` statt Leerlauf-Quittung ──────
+    # Bei art=doku ODER art=code-fern liefen die Shard-Jobs bisher nur an, um
+    # eine echo-Zeile zu melden — 4 × 1 min Mindestabrechnung je Lauf, ohne
+    # einen einzigen Test. Begründung und Beleg, warum ein per `if:`
+    # übersprungener Job den Required-Kontext trotzdem erfüllt: im `bau`-Job
+    # oben. Fachlich ändert sich NICHTS: bei doku/code-fern liefen hier auch
+    # vorher keine Browser-Tests (`code-fern`-Flächen berühren die
+    # ausgelieferte App nachweislich nicht, Bau + alle Node-Tore laufen für sie
+    # trotzdem voll).
+    # Dazu die Push-Diät (M1): auf main läuft kein zweites Mal, was der
+    # PR-Lauf auf demselben Baum schon grün gefahren hat.
+    # Die Klassen stehen bewusst als NEGATIV-Liste (`!= doku`, `!= code-fern`)
+    # statt als `== code`: fällt `diff` aus, ist `art` leer — dann laufen die
+    # Shards (Fehlerseite = prüfen). `bau` muss erfolgreich sein, sonst gibt
+    # es kein dist-Artefakt.
+    if: >-
+      !cancelled()
+      && needs.bau.result == 'success'
+      && needs.diff.outputs.art != 'doku'
+      && needs.diff.outputs.art != 'code-fern'
+      && needs.diff.outputs.push_diaet != 'true'
     runs-on: ubuntu-latest
     # Harter Deckel je Shard (QS-E2E-STABIL, Beleg 7.8.2026). Ohne Angabe gilt der
     # GitHub-Default von 360 min — ein systemisch hängender Shard hätte also bis zu
     # SECHS Stunden Runner-Zeit gebrannt und die Merge-Kette so lange blockiert.
-    # Gemessen: ein grüner Shard braucht ~5.4–6.4 min Testzeit plus ~4 min Rüstzeit
-    # (npx -y npm@11 ci, Chromium, dist-Download). 25 min lassen dem langsamsten Runner das
-    # Doppelte an Luft und schlagen erst zu, wenn etwas grundsätzlich klemmt.
+    # Gemessen (M3, 8.9.2026): ein grüner Shard braucht ~7.8–8.6 min Testzeit plus
+    # ~1.3 min Rüstzeit (npx -y npm@11 ci, Chromium, dist-Download) — vor der
+    # Halbierung der Shard-Zahl waren es ~4.2 min Testzeit. 25 min bleiben
+    # UNVERÄNDERT (bewusst nicht angehoben, §17-Gegengewicht: einen Deckel
+    # lockert man nicht nebenbei): Worst case ist 10 min apt-Stall + 8.6 min
+    # Tests + 1.3 min Rüstzeit = 19.9 min, der Deckel schlägt also weiterhin
+    # nur zu, wenn etwas grundsätzlich klemmt.
+    # KORREKTUR-NACHTRAG 8.9.2026 (die M3-Zahl darüber bleibt als Beleg ihres
+    # Standes stehen, §0 Ziff. 2b — sie war eine Prognose aus dem 30-Tage-
+    # Durchschnitt und ist durch die Direktmessung überholt): der Durchschnitt
+    # war schon bei der Verschmelzung veraltet, weil die R8-/A11y-Specs vom
+    # 6./7.9. die Gesamt-Testzeit fast verdoppelt haben. GEMESSEN am grünen
+    # 8-Shard-Lauf 34209371435 (alle acht JSON-Reports, 152 Specs): 58.7 min
+    # Testzeit im Erstversuch — nicht ~33 min. Die M3-Gruppen liefen damit
+    # 13.8 / 25.8 / 11.5 / 12.6 min; Gruppe 2 riss den Deckel hier zweimal
+    # (Lauf 34208005217), und zwar VÖLLIG ZU RECHT: nicht der Deckel war zu
+    # eng, die Packung war schief. Nach der LPT-Neupackung (s. `_kommentar` in
+    # e2e/shard-gruppen.json) tragen alle vier Gruppen je 14.7 min.
+    # 25 min bleiben WEITERHIN unverändert: 14.7 min Tests + ~1.3 min Rüstzeit
+    # = 16 min, und selbst eine volle Wiederholung von kein-abschnitt.e2e.ts
+    # in Gruppe 2 landet bei 20.7 min. Ein Deckel wird nicht angehoben, damit
+    # etwas durchläuft — er wird angehoben, wenn die Messung zeigt, dass die
+    # ehrliche Arbeit nicht mehr hineinpasst. Sie passt.
     # ROT BLEIBT ROT: der Deckel bricht ab und meldet FEHLGESCHLAGEN — er macht
     # nichts grün, er kürzt nur die Brenndauer (§17: Wurzel-Deckel statt Umschiffen).
     timeout-minutes: 25
@@ -700,40 +885,27 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        gruppe: [1, 2, 3, 4, 5, 6, 7, 8]
+        gruppe: [1, 2, 3, 4]
     steps:
-      # Wie bei `bau`: der Job selbst läuft IMMER, damit die acht Required-
-      # Kontexte «Browser-Smoke Shard N/8 (Playwright)» ereignisunabhängig
-      # gemeldet werden. Bei art=doku ODER art=code-fern (Punkt 3,
-      # QS-PLAN-EINFACH 14.8.2026 — 78 %-Messwert) bleibt davon eine
-      # Kurzquittung: `code-fern`-Flächen berühren die ausgelieferte App
-      # nachweislich nicht, Bau und alle Node-Tore liefen für sie trotzdem
-      # VOLL im `tore`-Job oben — nur die Browser-Shards sind hier verzichtbar.
       - uses: actions/checkout@v7
-        if: needs.diff.outputs.art == 'code'
       - uses: actions/setup-node@v5
-        if: needs.diff.outputs.art == 'code'
         with:
           node-version: 22
           cache: npm
       - run: npx -y npm@11 ci
-        if: needs.diff.outputs.art == 'code'
       # Union-Wächter VOR den Shards: beweist, dass die Gruppen in
       # e2e/shard-gruppen.json exakt die von Playwright gesammelte Spec-Menge
       # abdecken (kein Test doppelt, keiner verloren). Läuft in jedem Matrix-Job
       # (billig, `playwright --list` ohne Browser/Server) — reisst die Kette,
       # bevor eine unbalancierte oder lückenhafte Verteilung Tests verschluckt.
       - name: e2e-Shard-Union-Wächter (Gruppen == playwright --list)
-        if: needs.diff.outputs.art == 'code'
         run: npm run check:e2e-shards
       - name: dist-Artefakt herunterladen (aus `bau`, nicht neu bauen)
-        if: needs.diff.outputs.art == 'code'
         uses: actions/download-artifact@v8
         with:
           name: dist
           path: dist
       - name: Playwright-Browser-Cache
-        if: needs.diff.outputs.art == 'code'
         uses: actions/cache@v6
         with:
           path: ~/.cache/ms-playwright
@@ -759,7 +931,6 @@ jobs:
       # endet der Schritt rot mit ::error — die Schriftart-Pakete werden NICHT
       # übersprungen, weil fehlende Fonts die Pixel-Vergleiche still verschöben.
       - name: Playwright-Browser (Chromium)
-        if: needs.diff.outputs.art == 'code'
         run: |
           # apt geduldig, aber nicht endlos: Retries und Socket-Timeout greifen
           # bei STILLE. Gegen das Schneckentempo oben (15.3 kB/s bei fliessenden
@@ -778,19 +949,15 @@ jobs:
       # `npm run preview` serviert das heruntergeladene dist/ (kein Rebuild);
       # jeder Job fährt nur die Specs SEINER dauer-gepackten Gruppe seriell
       # (workers:1 bleibt, damit die Contention NICHT in EINEN Runner zurückkehrt)
-      # → e2e-Wand geachtelt UND nach CI-Messwerten balanciert (~5.4–6.4 min).
-      - name: Browser-Smoke (Playwright, e2e/ gegen dist — Gruppe ${{ matrix.gruppe }}/8)
-        if: needs.diff.outputs.art == 'code'
+      # → e2e-Wand geviertelt UND nach CI-Messwerten balanciert (~7.8–8.6 min).
+      - name: Browser-Smoke (Playwright, e2e/ gegen dist — Gruppe ${{ matrix.gruppe }}/4)
         run: npm run test:e2e:gruppe -- ${{ matrix.gruppe }}
-      - name: Kurzquittung (Doku-/App-fern-/Leer-Diff)
-        if: needs.diff.outputs.art != 'code'
-        run: echo "art=${{ needs.diff.outputs.art }} — Browser-Smoke Shard ${{ matrix.gruppe }}/8 nicht betroffen (bei code-fern liefen Bau + alle Node-Tore trotzdem voll)."
       # Per-Spec-CI-Dauern sichern (auch bei rotem Shard — gerade dann sind sie
       # interessant). Damit lässt sich `e2e/shard-gruppen.json` künftig gegen
       # GEMESSENE CI-Zeiten packen statt gegen lokale, die nicht uniform skalieren
       # (a33: lokal 92 s, CI ~360 s). Begründung in playwright.config.ts.
       - name: Playwright-JSON-Report ablegen (Shard-Balancing-Datengrundlage)
-        if: always() && needs.diff.outputs.art == 'code'
+        if: always()
         uses: actions/upload-artifact@v7
         with:
           name: playwright-report-gruppe-${{ matrix.gruppe }}
@@ -811,7 +978,7 @@ jobs:
       # lädt NICHTS hoch. Retention 7 Tage wie beim Report — lang genug für die
       # Diagnose, kurz genug fürs Speicherkonto.
       - name: Playwright-Traces ablegen (nur bei rotem Shard)
-        if: failure() && needs.diff.outputs.art == 'code'
+        if: failure()
         uses: actions/upload-artifact@v7
         with:
           name: playwright-traces-gruppe-${{ matrix.gruppe }}
@@ -831,8 +998,21 @@ jobs:
     # Datei fern und damit auch von hier. Ohne diese Bedingung liefe Lighthouse
     # (4× CPU, langsames 4G, eigener Chromium) für jede Roadmap-Pflege — und
     # zwar gegen ein dist, das der Doku-Pfad gar nicht gebaut hat.
-    if: github.event_name != 'pull_request' && needs.diff.outputs.art == 'code'
-    needs: [diff, tore, e2e]
+    # M1 (8.9.2026): `perf` BLEIBT auf main — das §15-Budget wird weiterhin je
+    # Deploy-Stand gemessen. Weil `tore`/`e2e` dort jetzt übersprungen sein
+    # KÖNNEN (Push-Diät), zieht die Standard-Skip-Logik `perf` sonst mit; die
+    # Gegenkopplung «erst bei grüner Treue» ist darum als explizite
+    # Ergebnis-Prüfung ausgeschrieben: rot oder abgebrochen ⇒ keine Messung,
+    # übersprungen ⇒ die Treue ist im PR-Lauf bewiesen. `bau` muss grün sein,
+    # sonst fehlt das dist-Artefakt.
+    if: >-
+      !cancelled()
+      && github.event_name != 'pull_request'
+      && needs.diff.outputs.art == 'code'
+      && needs.bau.result == 'success'
+      && (needs.tore.result == 'success' || needs.tore.result == 'skipped')
+      && (needs.e2e.result == 'success' || needs.e2e.result == 'skipped')
+    needs: [diff, bau, tore, e2e]
     runs-on: ubuntu-latest
     env:
       TZ: Europe/Zurich
@@ -870,6 +1050,14 @@ jobs:
   # erfolgt nach dem ersten grünen Lauf dieses Jobs (gh api PATCH).
   merge-schutz:
     name: Merge-Schutz (Required-Kontext)
+    # M1 (8.9.2026): auf `push` übersprungen — und zwar OHNE Push-Diät-Bedingung
+    # und bewusst OHNE `needs: diff`. Grund: `check:merge-schutz` bildet
+    # merge-base(origin/main, HEAD); auf main IST HEAD die Basis, der geprüfte
+    # Bereich also leer — der Job war dort schon vorher ein garantiert grüner
+    # Leerlauf (348 Läufe à 1.32 min in 30 Tagen). Seine Schutzwirkung entsteht
+    # ausschliesslich im PR (Vorfall #309). Kein `needs`, damit dieser Kontext
+    # als einziger auch dann gemeldet wird, wenn die Klassierung selbst ausfällt.
+    if: github.event_name != 'push'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
@@ -896,11 +1084,19 @@ jobs:
   # Vercel parallel zur CI und konnte einen Stand ausliefern, dessen Tore noch
   # liefen oder rot wurden.
   #
-  # needs (§6.7-Fehlerseite): diff · tore · bau · e2e sind genau die Jobs, die
-  # OHNE Job-`if:` immer laufen (ihre Steps quittieren bei doku/code-fern
-  # innerlich). Ein Job mit eigenem `if:` — insbesondere `perf` — darf hier NICHT
-  # hinein: ein übersprungener `needs`-Job zieht den abhängigen Job in den Skip,
-  # ein `code-fern`-Merge würde also still NIE ausgeliefert.
+  # needs (§6.7-Fehlerseite): diff · tore · bau · e2e. BIS 8.9.2026 galt hier
+  # «nur Jobs OHNE eigenes Job-`if:` dürfen in needs», weil ein übersprungener
+  # needs-Job den abhängigen Job in den Skip zieht — ein `code-fern`-Merge wäre
+  # sonst still nie ausgeliefert worden. Mit M4/M1 (QS-CI-MINUTEN) haben `bau`,
+  # `tore` und `e2e` selbst ein Job-`if:`; die Regel wird darum durch eine
+  # EXPLIZITE Ergebnis-Prüfung ersetzt statt aufgegeben:
+  #   `!cancelled()` schaltet die Standard-Skip-Logik ab, danach wird jedes
+  #   `needs`-Ergebnis einzeln gefordert — `bau` MUSS erfolgreich sein (ohne
+  #   grünen Bau kein Deploy), `tore`/`e2e` dürfen `success` ODER `skipped`
+  #   sein, aber niemals `failure`/`cancelled`.
+  # Damit gilt unverändert: rote Treue ⇒ kein Deploy. Übersprungen ist genau
+  # dann zulässig, wenn die Klassierung (`code-fern`) oder die Push-Diät (M1,
+  # PR-Lauf hat denselben Baum schon grün gefahren) das begründet.
   #
   # BUILD-PARITÄT: `vercel pull` holt die Projekt-Einstellungen, `vercel build`
   # fährt `buildCommand` aus vercel.json — dort seit 17.8.2026 explizit
@@ -913,10 +1109,17 @@ jobs:
     name: Deploy (Prod, Vercel CLI)
     needs: [diff, tore, bau, e2e]
     if: >-
-      (github.event_name == 'push' && github.ref == 'refs/heads/main'
-        && needs.diff.outputs.art != 'doku')
-      || (github.event_name == 'workflow_dispatch'
-        && github.event.inputs.probe == 'ohne-token')
+      !cancelled()
+      && needs.diff.result == 'success'
+      && needs.bau.result == 'success'
+      && (needs.tore.result == 'success' || needs.tore.result == 'skipped')
+      && (needs.e2e.result == 'success' || needs.e2e.result == 'skipped')
+      && (
+        (github.event_name == 'push' && github.ref == 'refs/heads/main'
+          && needs.diff.outputs.art != 'doku')
+        || (github.event_name == 'workflow_dispatch'
+          && github.event.inputs.probe == 'ohne-token')
+      )
     runs-on: ubuntu-latest
     timeout-minutes: 20
     permissions:
