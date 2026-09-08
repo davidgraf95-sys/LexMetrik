@@ -1,8 +1,16 @@
-// src/tests/plan-bild-lage.test.ts — Laien-Block «Was gerade passiert» des
-// Lagebilds (Schritt QS-PLAN-BILD-LAGE, Auftrag David 5.8.2026).
+// src/tests/plan-bild-lage.test.ts — reine Bausteine des Lagebild-Generators
+// (Schritt QS-PLAN-BILD-LAGE, Auftrag David 5.8.2026).
+//
+// DEKLARIERTE ÄNDERUNG 8.9.2026 (kein Refactoring, §6.3): der Laien-Block
+// `wasGeradePassiert` ist mit dem Umbau «Lagebild schlank» ersatzlos
+// zurückgebaut (§17-Gegengewicht) — die Blöcke 1/3/5 der neuen Hauptseite
+// übernehmen seine Funktion, zwei Erzählungen derselben Lage wären zwei
+// Wahrheiten (§5). Seine 11 Tests sind mit ihm entfallen; was sie an anderen
+// Funktionen mitprüften (`flaechenKlartext`), steht weiterhin hier. Die
+// Nachfolge-Bausteine prüft `plan-bild-bloecke.test.ts`.
 //
 // Kein echter git-Aufruf: `bauPlaetze`/`letzteCommits` bekommen ihren
-// Kommando-Runner injiziert, `wasGeradePassiert`/`flaechenKlartext` sind rein.
+// Kommando-Runner injiziert, `flaechenKlartext` ist rein.
 // Sonst prüfte der Test die Maschine, auf der er läuft, statt den Code.
 import { bauPlaetze, davidFragen, letzteCommits, schrittInfoAusRoadmap, type SchrittInfo } from '../../scripts/plan/bildDaten';
 import { FELD_WERTE, type Etikett } from '../../scripts/plan/etikett';
@@ -15,9 +23,7 @@ import {
   feldPfade,
   flaechenKlartext,
   schrittLabel,
-  wasGeradePassiert,
   wirkungsbereiche,
-  type WasPassiert,
 } from '../../scripts/plan/bildHtml';
 import { bauPrompt, methodeSeite } from '../../scripts/plan/bildSeiten';
 import { readFileSync } from 'node:fs';
@@ -46,18 +52,6 @@ const LOG = [
   '04.08.2026\tQS-TOK T14 Stufe 1: inhalt.tsx in Aspekt-Module gesplittet (#458)',
 ].join('\n');
 
-function daten(p: Partial<WasPassiert> = {}): WasPassiert {
-  return {
-    imBau: [],
-    bauplaetze: 0,
-    gelandet: [],
-    wartetAufDavid: [],
-    weitereBlockierte: 0,
-    methodeDatei: 'plan-bild-methode.html',
-    stand: '5. Aug. 2026, 16:30',
-    ...p,
-  };
-}
 
 describe('flaechenKlartext — Pfad → Alltagsbegriff', () => {
   it('übersetzt bekannte Flächen und streift den Glob-Teil ab', () => {
@@ -97,6 +91,11 @@ describe('flaechenKlartext — Pfad → Alltagsbegriff', () => {
   it('leere Fläche ergibt leere Liste (der Block formuliert den Satz dazu)', () => {
     expect(flaechenKlartext([])).toEqual([]);
   });
+
+  it('übersetzt CLAUDE.md — im Bestand belegte Fläche', () => {
+    expect(flaechenKlartext(['CLAUDE.md'])).toEqual(['die Grundregeln des Projekts']);
+  });
+
 });
 
 describe('bauPlaetze', () => {
@@ -136,119 +135,6 @@ describe('letzteCommits', () => {
 
   it('leere Ausgabe → null (kein leeres «nichts ist fertig geworden»)', () => {
     expect(letzteCommits(5, runner({ 'git log': '' }))).toBeNull();
-  });
-});
-
-describe('wasGeradePassiert — Formatierung', () => {
-  it('nennt je wip-Schritt Titel und übersetzte Fläche', () => {
-    const html = wasGeradePassiert(
-      daten({
-        imBau: [
-          { titel: 'Lagebild-Einstieg in Laiensprache', id: 'QS-PLAN-BILD-LAGE', feld: 'betrieb' },
-          { titel: 'Token-Verbrauch minimieren', id: 'QS-TOK', feld: null },
-        ],
-      }),
-    );
-    expect(html).toContain('<b>Lagebild-Einstieg in Laiensprache</b>');
-    expect(html).toContain('Betrifft: die Prüfstrasse (automatische Kontrollen) · Werkzeuge der Bau-Planung · Arbeitsregeln der KI-Sessions');
-    expect(html).toContain('Betrifft: das ganze Projekt — für dieses Arbeitspaket ist kein Bereich eingegrenzt.');
-  });
-
-  it('kein wip-Schritt → ehrlicher Satz statt leerer Liste', () => {
-    expect(wasGeradePassiert(daten())).toContain('An keinem Arbeitspaket wird gerade gebaut.');
-  });
-
-  it('Bauplatz-Satz: keiner / einer / mehrere / nicht abfragbar', () => {
-    expect(wasGeradePassiert(daten({ bauplaetze: 0 }))).toContain('Sonst keine parallelen Bauplätze');
-    expect(wasGeradePassiert(daten({ bauplaetze: 1 }))).toContain('1 weiterer Bauplatz ist aktiv');
-    expect(wasGeradePassiert(daten({ bauplaetze: 3 }))).toContain('3 weitere Bauplätze sind aktiv');
-    expect(wasGeradePassiert(daten({ bauplaetze: null }))).toContain(
-      'Wie viele Bauplätze gerade offen sind, lässt sich auf diesem Rechner nicht abfragen.',
-    );
-  });
-
-  it('zeigt Commit-Betreffzeilen UNVERÄNDERT unter der Laien-Überschrift', () => {
-    const html = wasGeradePassiert(daten({ gelandet: [{ datum: '04.08.2026', betreff: 'QS-TOK T14 Stufe 1: Split (#458)' }] }));
-    expect(html).toContain('QS-TOK T14 Stufe 1: Split (#458)');
-    expect(html).toContain('fertig am 04.08.2026');
-    expect(html).toContain('Die letzten fünf gelandeten Arbeitspakete');
-  });
-
-  it('Fehlerpfad git → Hinweiszeile statt Leere oder Absturz', () => {
-    const html = wasGeradePassiert(daten({ gelandet: null }));
-    expect(html).toContain('lässt sich auf diesem Rechner gerade nicht abfragen (git nicht verfügbar)');
-    expect(html).not.toContain('Noch nichts fertig geworden.');
-  });
-
-  it('David-Blocker mit Titel und Blocker-Name; leer → ehrlicher Satz', () => {
-    const html = wasGeradePassiert(daten({ wartetAufDavid: [{ titel: 'Datenhaltung / VPS-Gate', id: 'QS-DATA', blocker: 'vps-bestellung-david', feld: null }] }));
-    expect(html).toContain('<b>Datenhaltung / VPS-Gate</b>');
-    expect(html).toContain('wartet auf deine Entscheidung: vps-bestellung-david');
-    expect(wasGeradePassiert(daten())).toContain('Nichts — im Moment hält kein Arbeitspaket auf deine Entscheidung.');
-  });
-
-  it('zählt Blockierte OHNE «david» im Namen mit, statt sie zu verschweigen', () => {
-    expect(wasGeradePassiert(daten({ weitereBlockierte: 0 }))).not.toContain('auf eine Klärung');
-    expect(wasGeradePassiert(daten({ weitereBlockierte: 1 }))).toContain('Dazu wartet 1 weiteres Arbeitspaket auf eine Klärung');
-    expect(wasGeradePassiert(daten({ weitereBlockierte: 2 }))).toContain('Dazu warten 2 weitere Arbeitspakete auf eine Klärung');
-  });
-
-  it('übersetzt CLAUDE.md — im Bestand belegte Fläche', () => {
-    expect(flaechenKlartext(['CLAUDE.md'])).toEqual(['die Grundregeln des Projekts']);
-  });
-
-  it('trägt die Stand-Zeile oben sichtbar und den Glossar-Verweis', () => {
-    const html = wasGeradePassiert(daten({ methodeDatei: 'plan-bild-methode.html', stand: '5. Aug. 2026, 16:30' }));
-    // Prominent oben: eigene Zeile in .lage, VOR der ersten Unterüberschrift.
-    expect(html).toContain('<p class="lage"><b>Stand: 5. Aug. 2026, 16:30</b></p>');
-    expect(html.indexOf('Stand: 5. Aug. 2026')).toBeLessThan(html.indexOf('<h3>Gerade im Bau</h3>'));
-    expect(html).toContain('Diese Angaben stammen vom letzten <span class="id">npm run plan:bild</span>-Lauf (5. Aug. 2026, 16:30).');
-    expect(html).toContain('<a href="plan-bild-methode.html">Arbeitsweise &amp; Glossar</a>');
-  });
-
-  it('zeigt Titel zuerst, Kürzel in Klammern dahinter — nie ID-first', () => {
-    const html = wasGeradePassiert(
-      daten({ imBau: [{ titel: 'Lagebild-Einstieg in Laiensprache', id: 'QS-PLAN-BILD-LAGE', feld: null }] }),
-    );
-    expect(html).toContain('<b>Lagebild-Einstieg in Laiensprache</b> <span class="id">(QS-PLAN-BILD-LAGE)</span>');
-    expect(html.indexOf('Lagebild-Einstieg')).toBeLessThan(html.indexOf('QS-PLAN-BILD-LAGE'));
-  });
-
-  it('setzt Wirkungsbereich-Badges an «Gerade im Bau» und «Wartet auf David»', () => {
-    const html = wasGeradePassiert(
-      daten({
-        imBau: [{ titel: 'A', id: 'QS-A', feld: 'design' }],
-        wartetAufDavid: [{ titel: 'B', id: 'QS-B', blocker: 'entscheid-david', feld: 'betrieb' }],
-      }),
-    );
-    // Farbcodierung je Bereich seit 8.8.2026 (Auftrag David «visuell klarer»).
-    expect(html).toContain('<span class="chip bz bz-ui" title="Wirkungsbereich">Benutzeroberfläche</span>');
-    expect(html).toContain('<span class="chip bz bz-ausl" title="Wirkungsbereich">Auslieferung &amp; Prüfstrasse</span>');
-  });
-
-  it('escapt Fremdtext aus Titel und Betreff (HTML-Injektion)', () => {
-    const html = wasGeradePassiert(
-      daten({
-        imBau: [{ titel: '<script>alert(1)</script>', id: 'QS-X', feld: null }],
-        gelandet: [{ datum: '01.01.2026', betreff: 'fix: A & B <b>' }],
-      }),
-    );
-    expect(html).toContain('&lt;script&gt;alert(1)&lt;/script&gt;');
-    expect(html).toContain('fix: A &amp; B &lt;b&gt;');
-  });
-
-  it('bleibt bei gleichen Daten byte-gleich (Determinismus, §2)', () => {
-    const d = daten({
-      imBau: [{ titel: 'A', id: 'QS-A', feld: 'werkzeuge' }],
-      bauplaetze: 2,
-      gelandet: [{ datum: '05.08.2026', betreff: 'B' }],
-      wartetAufDavid: [{ titel: 'C', id: 'QS-C', blocker: 'entscheid-david', feld: 'betrieb' }],
-    });
-    expect(wasGeradePassiert(d)).toBe(wasGeradePassiert(d));
-  });
-
-  it('steht als eigene Sektion mit Sprungmarke #jetzt', () => {
-    expect(wasGeradePassiert(daten()).startsWith('<section id="jetzt">')).toBe(true);
   });
 });
 
