@@ -114,6 +114,42 @@ const ALLE_ROUTEN: string[] = [
 
 test.describe.configure({ mode: 'serial' })
 
+// ── MESSBEDINGUNG: RUHENDES Layout, keine laufende Übergangs-Animation ──────
+// (Befund 8.9.2026, Wurzel des flackernden R8-Tors.)
+//
+// Der Geometrie-Sweep resized DIESELBE Seite durch 320 → 390 → 768 → 1024 →
+// 1280 → 1440 und wartet je 60 ms auf den Reflow. Eine CSS-TRANSITION dauert
+// länger: `--dur-base`/Tailwind liegen bei 150 ms. Wer nach 60 ms misst, misst
+// einen Zwischenframe — eine Geometrie, die nie zur Ruhe gekommen ist und die
+// kein Nutzer als «abgeschnitten» erlebt.
+//
+// KONKRET GEMESSEN: der A–Z-Kopf auf `/gesetze` klappt an der 640-px-Grenze
+// automatisch auf/zu (`AzRegister`, matchMedia), sein Chevron dreht dabei per
+// `rotate-90`. Ein 20×20-Quadrat ist im ENDzustand drehneutral (0°/90°) — auf
+// halbem Weg aber nicht: unter dem Winkel t misst die Hülle 20·(|cos t|+|sin t|),
+// bei 45° also 28,3 px, und der Überstand landet 1:1 im `scrollWidth` des `h2`.
+// Lokal nachgestellt (Resize 1280 → 320, 60 ms Wartezeit): h2 243/240, Chevron-
+// Hülle 25,2 px, `transform: matrix(0.951…, 0.308…)` — mitten in der Drehung.
+// Mit 400 ms Wartezeit: 240/240, Hülle 20 px, `transform: none`. Dieselben
+// Werte meldete die CI (Lauf 34209371435, Shard 8/8, Attempt 0: @320 hell
+// 244/240, @320 dunkel 243/240, @768 dunkel 683/680) — und Attempt 1 lief auf
+// identischem Stand grün: das Tor hing an der Scheduling-Laune des Runners.
+// Passend dazu trafen die Funde IMMER nur 320 und 768 — genau die beiden
+// Viewports, bei denen die Schleife die 640-px-Grenze kreuzt.
+//
+// Die Ruhigstellung geschieht über `prefers-reduced-motion: reduce`, das die
+// App bereits selbst bedient (`src/index.css`: `animation-duration` und
+// `transition-duration` auf .001ms). KEIN eigener Mechanismus, kein längeres
+// Warten geraten — der bestehende, im Produkt vorhandene Weg (§5).
+// KEINE VERBLENDUNG (§6.7): die Regel setzt ausschliesslich DAUERN auf ~0, sie
+// ändert weder Layout noch Sichtbarkeit noch Endzustände. Gemessen wird damit
+// exakt der ruhende Zustand, den R8 meint — eine echte Kappung steht dort
+// unverändert und wird unverändert gemeldet; nur der Zwischenframe entfällt.
+// (`reducedMotion` liegt in dieser Playwright-Fassung unter `contextOptions`;
+// die Konfiguration setzt `contextOptions` nirgends, hier wird also nichts
+// überschrieben.)
+test.use({ contextOptions: { reducedMotion: 'reduce' } })
+
 /** Modul-weiter Sammelpunkt — sicher, weil die ganze Datei seriell in EINEM
  *  Worker/Prozess läuft (s. Kopf-Kommentar). Wird am Dateiende geschrieben. */
 const GESAMMELTE_FUNDE: Fund[] = []
