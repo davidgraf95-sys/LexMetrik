@@ -127,14 +127,45 @@
 # und `deploy` Zeit brennen; `gh api repos/{repo}/actions/runs/<id>/jobs`
 # zeigt die abgerechneten Dauern.
 #
-# JOB-MATRIX je Auslöser (Soll-Zustand nach M1/M3/M4):
-#   pull_request   diff · bau* · tore · e2e(4)* · merge-schutz
-#   push (Diät)    diff · bau · perf · deploy
-#   push (o. Diät) diff · bau* · tore · e2e(4)* · perf · deploy
-#   merge_group    diff · bau · tore · e2e(4) · perf · merge-schutz
-#   dispatch       diff · bau · tore · e2e(4) · perf · merge-schutz (+ deploy
-#                  nur bei probe=ohne-token)
-#   (* je nach Diff-Klasse: `bau` entfällt bei doku, `e2e` bei doku/code-fern)
+# JOB-MATRIX je Auslöser (Soll-Zustand nach M1/M3/M4 + M4-Nachtrag):
+#   pull_request   diff · bau* · tore · e2e(4)* · e2e-ergebnis · merge-schutz
+#   push (Diät)    diff · bau · e2e-ergebnis · perf · deploy
+#   push (o. Diät) diff · bau* · tore · e2e(4)* · e2e-ergebnis · perf · deploy
+#   merge_group    diff · bau · tore · e2e(4) · e2e-ergebnis · perf · merge-schutz
+#   dispatch       diff · bau · tore · e2e(4) · e2e-ergebnis · perf · merge-schutz
+#                  (+ deploy nur bei probe=ohne-token)
+#   (* je nach Diff-Klasse: `bau` entfällt bei doku, `e2e` bei doku/code-fern;
+#      `e2e-ergebnis` läuft IMMER — er ist der Pflicht-Kontext der Browser-Tests)
+#
+# ─── PFLICHT-KONTEXTE (Branch-Schutz main), abschliessend ───────────────────
+#   «Tore (Tests · Lint · Checks)»
+#   «Merge-Schutz (Required-Kontext)»
+#   «Perf-Budget (§15 — nur bei grüner Treue)»
+#   «Browser-Smoke (Ergebnis)»
+# Die vier Shard-Kontexte «Browser-Smoke Shard N/4 (Playwright)» sind seit dem
+# M4-Nachtrag (8.9.2026) NICHT mehr Pflicht — nur ihr Sammel-Job ist es.
+#
+# ─── M4-NACHTRAG: der Sammel-Job (Befund PR #776/#777, 8.9.2026) ────────────
+# BEFUND: M4 wirkte fachlich (Diff-Klasse «doku» ⇒ `bau`/`e2e` übersprungen,
+# `tore`/`merge-schutz` grün) — aber die beiden reinen Doku-PRs blieben trotzdem
+# dauerhaft BLOCKED. Ursache ist eine bisher unbekannte Ausprägung von K12:
+# Für einen per Job-`if:` übersprungenen MATRIX-Job meldet GitHub genau EINEN
+# Check-Run, und zwar mit dem UNEXPANDIERTEN Namen
+#   «Browser-Smoke Shard ${{ matrix.gruppe }}/4 (Playwright)»
+# — die Matrix wird nie expandiert, weil der Job nie startet. Die vier
+# Pflicht-Kontexte «… Shard 1/4 …» bis «… Shard 4/4 …» werden damit NIE
+# gemeldet und stehen für immer auf «expected». Der Beleg aus dem `bau`-Job
+# («Perf-Budget wird übersprungen und mergt trotzdem») gilt also nur für
+# Jobs OHNE `strategy.matrix`; für Matrix-Jobs ist er falsch.
+#
+# FIX (Standardmuster): der Sammel-Job `e2e-ergebnis` («Browser-Smoke
+# (Ergebnis)») ist ein normaler Job ohne Matrix, läuft bei JEDEM Auslöser und
+# in JEDER Diff-Klasse (`if: !cancelled()`) und meldet den einen Pflicht-Kontext
+# der Browser-Tests. Er wertet `needs.e2e.result` gegen die Diff-Klasse:
+# grün nur bei bestandenen Shards ODER bei einem Skip, den `diff` begründet;
+# rot bei jedem anderen Skip (§6.7-Beweis am Job selbst). Nebeneffekt: die
+# Shard-ZAHL ist ab hier frei änderbar, ohne den Branch-Schutz nachzuziehen —
+# der bisherige Nachzieh-Zwang (K12) entfällt für die Browser-Tests ganz.
 #
 # AUFLAGE (§6.7): M1 steht und fällt mit `required_status_checks.strict: true`
 # im Branch-Schutz von main (gemessen 8.9.2026). Wird `strict` abgeschaltet,
@@ -1013,6 +1044,66 @@ jobs:
           path: test-results/
           retention-days: 7
           if-no-files-found: ignore
+
+  # ── Sammel-Kontext der Browser-Tests (M4-Nachtrag, 8.9.2026) ───────────────
+  # WARUM ES DIESEN JOB GIBT: siehe «M4-NACHTRAG» im Kopf. Kurz: ein per `if:`
+  # übersprungener MATRIX-Job meldet GitHub gegenüber genau einen Check-Run mit
+  # dem unexpandierten Namen «… Shard ${{ matrix.gruppe }}/4 …»; die vier
+  # Shard-Kontexte, die der Branch-Schutz als Pflicht führte, kamen nie an und
+  # jeder Doku-PR hing (PR #776/#777). Dieser Job hat KEINE Matrix, läuft immer
+  # und ist ab jetzt der EINZIGE Pflicht-Kontext der Browser-Tests.
+  #
+  # KOSTEN: kein Checkout, kein npm, kein dist — ein Runner-Anlauf und ein
+  # Shell-Vergleich (Mindestabrechnung 1 min je Lauf). Das ist der Preis dafür,
+  # dass die 4 Shard-Jobs bei doku/code-fern/Push-Diät GAR nicht mehr anlaufen
+  # (bisher 4 × 1 min je Lauf) — der Sparplan bleibt netto positiv.
+  #
+  # ROT-BEWEIS (§6.7): die Bedingung unterscheidet fünf Fälle, dokumentiert am
+  # Schritt. Ein Skip OHNE begründende Diff-Klasse ist ROT — sonst wäre dieser
+  # Job ein Tor, das nicht scheitern kann.
+  #   (1) e2e=success              → grün (Shards gelaufen und bestanden)
+  #   (2) e2e=skipped, art=doku    → grün (M4: Doku rührt die App nicht an)
+  #   (2b) e2e=skipped, art=code-fern → grün (QS-PLAN-EINFACH 14.8.2026)
+  #   (2c) e2e=skipped, push_diaet=true → grün (M1: derselbe Baum war als PR grün)
+  #   (3) e2e=skipped, art=code    → ROT (verirrter Skip, z. B. rotes `bau` oder
+  #                                  eine künftig falsch verdrahtete `if:`-Zeile)
+  #   (4) e2e=failure              → ROT
+  #   (5) e2e=cancelled            → ROT
+  # Fällt `diff` selbst aus, sind `art`/`push_diaet` LEER — dann greift keine
+  # Ausnahme und ein Skip ist rot (Fehlerseite = melden, nicht durchwinken).
+  #
+  # WARUM `bau` NICHT in `needs` steht: ein rotes `bau` liefert kein
+  # dist-Artefakt, worauf `tore` (Pflicht-Kontext) beim Download rot wird. Der
+  # Fall ist also schon gedeckt; hier bliebe er zusätzlich in Fall (3) hängen,
+  # weil ein rotes `bau` nur bei art=code/code-fern vorkommen kann und
+  # code-fern-Läufe ihre Shards ohnehin nie fahren.
+  e2e-ergebnis:
+    name: Browser-Smoke (Ergebnis)
+    needs: [diff, e2e]
+    # `!cancelled()`: läuft auch, wenn `e2e` rot oder übersprungen ist — genau
+    # dafür ist er da. Nur ein Abbruch des GANZEN Laufs überspringt ihn (dann
+    # meldet GitHub `skipped`, wie bei jedem anderen Job auch).
+    if: ${{ !cancelled() }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Shard-Ergebnis gegen die Diff-Klasse werten
+        env:
+          ERGEBNIS: ${{ needs.e2e.result }}
+          ART: ${{ needs.diff.outputs.art }}
+          DIAET: ${{ needs.diff.outputs.push_diaet }}
+        run: |
+          set -euo pipefail
+          echo "e2e=${ERGEBNIS} · art=${ART:-<leer>} · push_diaet=${DIAET:-<leer>}"
+          if [ "${ERGEBNIS}" = "success" ]; then
+            echo "Alle Browser-Shards grün."
+            exit 0
+          fi
+          if [ "${ERGEBNIS}" = "skipped" ] && { [ "${ART}" = "doku" ] || [ "${ART}" = "code-fern" ] || [ "${DIAET}" = "true" ]; }; then
+            echo "Browser-Shards planmässig übersprungen (art=${ART:-<leer>}, push_diaet=${DIAET:-<leer>}) — Begründung im Job \`diff\`."
+            exit 0
+          fi
+          echo "::error::Browser-Smoke nicht bestanden: needs.e2e.result=${ERGEBNIS}, art=${ART:-<leer>}, push_diaet=${DIAET:-<leer>}. Ein Skip ist nur bei art=doku, art=code-fern oder push_diaet=true zulässig."
+          exit 1
 
   perf:
     name: Perf-Budget (§15 — nur bei grüner Treue)
