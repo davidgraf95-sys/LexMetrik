@@ -99,7 +99,7 @@ tmp/
 
 # Tor-Ereignis-Log der Selbstoptimierungs-Messreihe (QS-SELBSTOPT): je Zeile ein
 # gelaufenes Tor {ts, tor, ok}, geschrieben von scripts/gate.sh und
-# scripts/check-parallel.ts. Bewusst LOKAL: es beschreibt die Läufe DIESER
+# scripts/run-parallel.ts. Bewusst LOKAL: es beschreibt die Läufe DIESER
 # Maschine, kollidierte bei jedem Parallel-PR und wäre committet ein
 # Merge-Konflikt-Generator. Was davon dauerhaft gilt, hält der jeweilige
 # Snapshot in der committeten messwerte/selbstopt-zeitreihe.json fest.
