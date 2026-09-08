@@ -81,3 +81,33 @@ cold-FTS = «VPS-Schritt, 58-GB-Klasse»). E4: `bibliothek/register/e4-lokal-202
 > **Kosten-Fazit:** ~**€ 40/Monat** (netcup RS 4000 G12) entsperrt E3-Serving + E4 + VZUI-V2 und
 > dient zugleich als Backup-Zweitziel — das günstigste Angebot, das die Anforderung mit Reserve trägt.
 </content>
+
+---
+
+## Nachtrag 8.9.2026 — Neuprüfung
+
+Auftrag David 8.9.2026 («eruier nochmals, was genau der beste VPS ist» / «gibt es keine anderen
+Techniken?»). Volle Neuprüfung inkl. serverloser Gegenrechnung: [`vps-auswahl-2026-09-08.md`](vps-auswahl-2026-09-08.md)
+und [`alternativen-serverlos-2026-09-08.md`](alternativen-serverlos-2026-09-08.md).
+
+- **Empfehlung bestätigt:** netcup RS 4000 G12 bleibt Erstwahl, Abstand zu Hetzner hat sich seit der
+  Hetzner-Preisrunde vom 15.6.2026 (CCX-Cloud ×2,2–2,7) sogar **vergrössert**.
+- **Preisstand 8.9.2026:** €33.55 netto/Mt ≈ **CHF 31.55/Mt** (Kurs EUR→CHF 0.9405), unverändert
+  gegenüber dem 17.7.2026-Abruf. Netto-Abrechnung für CH-Kunden weiterhin **nicht amtlich bestätigt**
+  gefunden — vor Bestellung mit CH-Adresse prüfen.
+- **Bezugsteuer CH 8,1 % unklar** — ob auf eine ausländische Server-Dienstleistung Schweizer
+  Bezugsteuer anfällt, ist im Bestellprozess bzw. mit der ESTV zu klären, nicht amtlich verifiziert.
+- **Alternative RS 8000 G12** (16 Kerne/64 GB/2 TB, €59.97 netto ≈ CHF 56.40/Mt) bleibt die
+  Ausweichoption, falls RS 4000 ausverkauft ist oder der Runner mit auf denselben Host soll.
+- **Storage Box als Pflicht-Drittziel:** Hetzner Storage Box BX11 (1 TB, CHF 3.01/Mt, rsync/Borg/
+  Restic über SSH) ist jetzt **Pflicht**-Backup-Ziel, anbieterfremd vom Serving-Host — ein Backup auf
+  demselben Host wie die Produktion zählt nicht als Backup.
+- **Runner getrennt:** der CI-Runner gehört **nicht** auf diesen Host, solange das Repo öffentlich
+  ist (GitHub warnt ausdrücklich vor Self-hosted-Runnern bei öffentlichen Repos — Fremd-PRs könnten
+  gefährlichen Code darauf ausführen) und würde bei CPU-Spitzen (4 parallele Playwright-Shards) die
+  FTS-Serving-Latenz stören. Details und Runner-Optionen bei privatem Repo: `vps-auswahl-2026-09-08.md`
+  §6.
+- **Bestellanleitung Ziff. 4 gilt weiter** — netcup-Produktname («RS 4000 G12») und URL
+  (`netcup.com/en/server/root-server`) am 8.9.2026 erneut geprüft und bestätigt, keine Änderung nötig.
+- **Bestelltermin:** David, wörtlich 8.9.2026: «ich werde nächsten sonntag den server bestellen»
+  (= Sonntag 13.9.2026).
