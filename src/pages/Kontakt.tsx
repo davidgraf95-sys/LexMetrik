@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Field, inputCls, KopierButton } from '../components/vorlagen/ui';
+import { Checkbox, Field, inputCls, KopierButton } from '../components/vorlagen/ui';
 import { SeitenKopf } from '../components/layout/SeitenKopf';
 import { KONTAKT_EMPFAENGER, kontaktMailto, type KontaktEingaben } from '../lib/kontakt';
 
@@ -64,13 +64,16 @@ export function Kontakt() {
           </div>
         </div>
 
-        <label className="flex items-start gap-2 text-body-s cursor-pointer text-ink-700">
-          <input type="checkbox" className="mt-0.5" checked={einwilligung} onChange={(ev) => { setBeruehrt(true); setEinwilligung(ev.target.checked); }} />
-          <span>
-            Ich willige ein, dass meine Angaben zur Bearbeitung der Anfrage verwendet werden.
-            Details in der <Link to="/datenschutz" className="text-brass-700 underline hover:text-brass-600">Datenschutzerklärung</Link>.
-          </span>
-        </label>
+        <Checkbox
+          checked={einwilligung}
+          onChange={(v) => { setBeruehrt(true); setEinwilligung(v); }}
+          label={
+            <span>
+              Ich willige ein, dass meine Angaben zur Bearbeitung der Anfrage verwendet werden.
+              Details in der <Link to="/datenschutz" className="text-brass-700 underline hover:text-brass-600">Datenschutzerklärung</Link>.
+            </span>
+          }
+        />
 
         {beruehrt && fehler.length > 0 && (
           <div role="alert" className="lc-notice lc-notice-danger space-y-0.5">

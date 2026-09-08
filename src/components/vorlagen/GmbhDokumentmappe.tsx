@@ -2,7 +2,7 @@ import { useMemo, useRef, useState } from 'react';
 import { NormText } from '../NormText';
 import { BetragsFeld } from '../BetragsFeld';
 import { DatumsFeld } from '../DatumsFeld';
-import { Field, inputCls, ListenEditor } from './ui';
+import { Checkbox, Field, inputCls, ListenEditor } from './ui';
 import { MappenAnsicht, MappenGates, NotariatsHinweis } from './Dokumentmappe';
 import type { PdfBanner } from '../../lib/vorlagen/banner';
 import type { GmbhGruendungEingaben } from '../../lib/gruendungsunterlagen';
@@ -125,10 +125,11 @@ export function GmbhDokumentmappe({ weichen, docxErlaubt }: {
         <textarea className={inputCls} rows={2} value={zweck} onChange={(e) => setZweck(e.target.value)}
           placeholder="z. B. die Erbringung von Treuhand- und Beratungsdienstleistungen" />
       </Field>
-      <label className="flex items-center gap-2 text-body-s text-ink-700">
-        <input type="checkbox" checked={zweckErweiterung} onChange={(e) => setZweckErweiterung(e.target.checked)} />
-        Übliche Zweck-Erweiterungsklausel (Zweigniederlassungen, Beteiligungen, Grundstücke, Finanzierungen)
-      </label>
+      <Checkbox
+        checked={zweckErweiterung}
+        onChange={setZweckErweiterung}
+        label="Übliche Zweck-Erweiterungsklausel (Zweigniederlassungen, Beteiligungen, Grundstücke, Finanzierungen)"
+      />
       <div className={pk('grid grid-cols-1 sm:grid-cols-3 gap-4', 'grid grid-cols-1 @xl/pane:grid-cols-3 gap-4')}>
         <Field label="Stammkapital (CHF, mind. 20'000)">
           {/* R2-E/F1-7: CHF-Beträge tragen das Haus-BetragsFeld (Tausender-
@@ -215,11 +216,12 @@ export function GmbhDokumentmappe({ weichen, docxErlaubt }: {
                   {ZEICHNUNGS_OPTIONEN.map((o) => <option key={o.id} value={o.id}>{o.label}</option>)}
                 </select>
               </Field>
-              <label className="flex items-center gap-1.5 text-body-s text-ink-700 pb-2">
-                <input type="checkbox" checked={g.vorsitz}
-                  onChange={(e) => setGfs((alt) => alt.map((x) => x.key === g.key ? { ...x, vorsitz: e.target.checked } : x))} />
-                Vorsitz
-              </label>
+              <Checkbox
+                checked={g.vorsitz}
+                onChange={(v) => setGfs((alt) => alt.map((x) => x.key === g.key ? { ...x, vorsitz: v } : x))}
+                label="Vorsitz"
+                className="pb-2"
+              />
             </div>
           )}
         />
@@ -332,10 +334,11 @@ export function GmbhDokumentmappe({ weichen, docxErlaubt }: {
           )}
         </div>
       )}
-      <label className="flex items-center gap-2 text-body-s text-ink-700">
-        <input type="checkbox" checked={virtuelleGv} onChange={(e) => setVirtuelleGv(e.target.checked)} />
-        Statutarische Grundlage für virtuelle/hybride Gesellschafterversammlungen (Art. 805 Abs. 5 Ziff. 2bis OR)
-      </label>
+      <Checkbox
+        checked={virtuelleGv}
+        onChange={setVirtuelleGv}
+        label="Statutarische Grundlage für virtuelle/hybride Gesellschafterversammlungen (Art. 805 Abs. 5 Ziff. 2bis OR)"
+      />
 
       <MappenGates gates={mappe.gates} />
 

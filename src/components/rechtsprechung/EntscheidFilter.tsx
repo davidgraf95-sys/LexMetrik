@@ -5,6 +5,7 @@ import type { BrowseEntscheid, RichterRegister } from '../../lib/rechtsprechung/
 import { RichterFilter } from './RichterFilter';
 import { FacettenGruppe } from '../ui/FacettenGruppe';
 import { SORT_LABEL } from './zustand';
+import { Checkbox } from '../vorlagen/ui';
 
 // Schlanke Steuerleiste der Übersicht /rechtsprechung (ersetzt den schweren
 // Filterblock): EINE Toolbar-Zeile (Suche + Sortierung + Dichte) + eine sichtbare
@@ -320,11 +321,12 @@ export function EntscheidFilter({
               tragen — diese Ausrichtung wird nicht gekippt (§0.2).
               NICHT gebaut: die 24-px-Zielfläche aus WCAG 2.5.8 — sie sprengte die
               36-px-Filterzeile; bedienbar ist ohnehin das ganze <label> (46 px). */}
-          <label className="flex items-center gap-2 self-end pb-1 text-body-s text-ink-700">
-            <input type="checkbox" className="h-4 w-4 shrink-0 accent-brass-600"
-              checked={!!werte.nurLeitentscheide} onChange={(e) => setze({ nurLeitentscheide: e.target.checked })} />
-            Nur Leitentscheide (amtliche BGE)
-          </label>
+          <Checkbox
+            checked={!!werte.nurLeitentscheide}
+            onChange={(v) => setze({ nurLeitentscheide: v })}
+            label="Nur Leitentscheide (amtliche BGE)"
+            className="self-end pb-1"
+          />
         </div>
       </details>
 
