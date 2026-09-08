@@ -1,4 +1,4 @@
-// @shard-gruppe: 2
+// @shard-gruppe: 4
 // ═══ W2·24 §5a Ziff. 3 + Befund F5 · WIE VIELE REITER EINE NAVIGATION KOSTET ═
 //
 // GEMESSENER ANLASS (6.9.2026, Preview 4335, gebautes dist/): drei Klicks über

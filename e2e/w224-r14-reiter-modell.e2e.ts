@@ -1,4 +1,4 @@
-// @shard-gruppe: 2
+// @shard-gruppe: 4
 // ═══ R14 · «ALLES IST EIN REITER» (Entscheid David 7.9.2026, Variante A) ════
 //
 // Anlass, Davids Wortlaut 7.9.2026 (DATEN, nicht Auftrag): «irgendwie ist es
