@@ -221,12 +221,18 @@ Landung als Cherry-Pick.
 
 ### Prüfstrasse seit 8.9.2026 (QS-CI-MINUTEN, Sparplan M1–M5)
 
-- **Vier Browser-Shards** statt acht; die Pflicht-Kontexte im Branch-Schutz heissen
-  «Browser-Smoke Shard N/4 (Playwright)». **Wer die Shard-Zahl ändert, zieht die
-  Pflicht-Kontexte im Branch-Schutz im selben Zug nach** (`gh api -X PATCH
-  repos/<owner>/<repo>/branches/main/protection/required_status_checks --input <json>`),
-  sonst hängt jeder PR auf nie gemeldeten Kontexten. Einzige Quelle der Zahl: die
-  ci.yml-Matrix (`scripts/e2e-shard-anzahl.mjs` liest sie); Union-Wächter `check:e2e-shards`.
+- **Vier Browser-Shards** statt acht. Pflicht-Kontext im Branch-Schutz ist der Sammel-Job
+  «**Browser-Smoke (Ergebnis)**», nicht die einzelnen Shards (#780, 8.9.2026): Er ist grün bei
+  Shard-Erfolg oder begründetem Skip (Diff-Klasse doku/code-fern, Push-Diät) und **rot** bei jedem
+  Shard-Fehler und jedem unbegründeten Skip. Grund: ein per `if:` übersprungener **Matrix**-Job
+  meldet nur einen Check-Run mit unexpandiertem Namen — Shard-Kontexte würden nie gemeldet, der
+  PR hinge (K12-Falle). Die Shard-**Zahl** ist damit ohne Branch-Schutz-Anpassung änderbar;
+  einzige Quelle der Zahl ist die ci.yml-Matrix (`scripts/e2e-shard-anzahl.mjs`), Union-Wächter
+  `check:e2e-shards`. Pflicht-Kontexte abschliessend: Tore · Merge-Schutz · Perf-Budget ·
+  Browser-Smoke (Ergebnis).
+- **Flacker-Wächter** `check:e2e-flake` (#779): ein Shard, der nur im Wiederholungsversuch grün
+  wird, ist rot — ausser die Spec steht mit Datum/Grund in `e2e/flake-ausnahmen.json` (Verfall
+  30 Tage). Flackern wird also einmal angeschaut, nie stillschweigend weggeklickt.
 - **Reine Doku-PRs** (Diff-Klasse «doku») überspringen `bau` und `e2e`; die Doku-Tore laufen
   weiter. Ein per `if:` übersprungener Pflicht-Job gilt bei GitHub als erfüllt — deshalb
   bleibt `tore` immer aktiv.
