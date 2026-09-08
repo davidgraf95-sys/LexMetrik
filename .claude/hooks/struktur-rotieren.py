@@ -38,7 +38,7 @@ from datetime import date
 # Grundlinie:
 #  · STRUKTUR.md 60 KB = §3 T1 DoD; nach der Rotation ~37 KB → Wächter schweigt,
 #    meldet erst echtes Re-Anschwellen.
-#  · ROADMAP.md 100 KB = Ceiling mit Luft über der Nach-T7-Grundlinie (~94 KB, PR #173).
+#  · ROADMAP.md 120 KB = Ceiling, 8.9.2026 von 100 gelockert (David; Grundlinie ~94 KB, PR #173).
 #    Das §3 T7 DoD-ZIEL «≤ ~65 KB» ist damit NOCH NICHT erreicht (weitere Chronik-
 #    Auslagerung offen, s. FAHRPLAN-TOKEN-OEKONOMIE §Stand) — aber das ist T7-/ROADMAP-
 #    Gebiet und kollidiert mit aktiven Parallel-Schreibern; der Wächter nörgelt darum
@@ -52,7 +52,7 @@ from datetime import date
 #    7.8.2026: neue Regeln nur als Tor/Hook, nie als Prosa).
 BUDGET = {
     "STRUKTUR.md": 60 * 1024,
-    "ROADMAP.md": 100 * 1024,
+    "ROADMAP.md": 120 * 1024,
     "CLAUDE.md": 14 * 1024,
 }
 # Steuerungs-Deckel (Auftrag David 15.8.2026, «Steuerungszuwachs minimieren, und
