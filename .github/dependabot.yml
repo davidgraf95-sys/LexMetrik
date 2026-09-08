@@ -1,6 +1,7 @@
 # Befund 4d Werkzeug-Analyse 14.8.2026 (offener Punkt A1, BACKLOG-AUDIT-WERKZEUGE-2026-07):
-# wöchentliche Abhängigkeits-PRs, klein gehalten — Auto-Merge gilt hier NICHT,
-# jede Landung läuft den normalen Weg (Skill landung).
+# Abhängigkeits-PRs klein gehalten. Landung (Skill landung §«Prüfstrasse seit
+# 8.9.2026»): Patch/Minor zieht die landende Session per `gh pr update-branch`
+# nach und setzt Auto-Merge; Hauptversionen werden mit Begründung geschlossen.
 version: 2
 updates:
   # Entscheid David 8.9.2026 (QS-CI-MINUTEN M2): monatlich statt wöchentlich und
