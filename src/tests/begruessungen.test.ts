@@ -17,6 +17,13 @@ import {
 // Lückenlosigkeits-Wächter bleiben Wort für Wort, wie sie waren; neu dazu
 // kommt ein Wächter auf die gestrichenen Formen (§4-Auflage), der bisher nur
 // als Prosa im Kopfkommentar der Pool-Datei stand.
+//
+// SCHWEIZER BEZUG 8.9.2026 (zweiter Schritt, ebenfalls DEKLARIERTE fachliche
+// Änderung): zwei Wächter kommen dazu — einer deckelt die Kaffee-Häufung auf
+// höchstens zwei Einträge im ganzen Bestand («was soll das mit dem kaffee? sei
+// kreativ und nicht so plump»), der andere verlangt in JEDEM Fenster je einen
+// französischen und einen italienischen Gruss aus einer hier gepflegten Liste
+// gängiger Formen. Alle übrigen Zusagen bleiben Wort für Wort, wie sie waren.
 
 const ALLE = [...IMMER, ...TAGESZEITEN.flatMap((t) => t.pool)];
 
@@ -98,6 +105,48 @@ describe('Begrüssungs-Pools', () => {
     for (const p of [0, 0.25, 0.5, 0.75, 0.99]) {
       expect(pool).toContain(waehleBegruessung(8, () => p));
     }
+  });
+
+  it('Kaffee bleibt die Ausnahme: höchstens zwei Grüsse im ganzen Bestand', () => {
+    // Entscheid David 8.9.2026: «was soll das mit dem kaffee? sei kreativ und
+    // nicht so plump». Der Wächter deckelt die HÄUFUNG, er verbietet das Motiv
+    // nicht — zwei Käfeli dürfen bleiben, ein drittes ist rot.
+    const KAFFEE = /kaffee|käfeli|espresso/i;
+    const treffer = ALLE.filter((g) => KAFFEE.test(g));
+    expect(treffer.length, `zu viele Kaffee-Grüsse: ${treffer.join(' · ')}`).toBeLessThanOrEqual(2);
+    // Der Wächter kann scheitern (§6.7) — die Muster zeigen es.
+    expect(KAFFEE.test('Ein Käfeli gefällig?')).toBe(true);
+    expect(KAFFEE.test('Erst Kaffee, dann Akten.')).toBe(true);
+    expect(KAFFEE.test('Zeit für ein Zvieri.')).toBe(false);
+  });
+
+  it('jedes Fenster trägt je einen französischen und einen italienischen Gruss', () => {
+    // Auftrag David 8.9.2026 «gerne schweizer bezug»: die Landessprachen sind
+    // keine Dekoration eines einzelnen Fensters, sondern in allen acht da.
+    // Gepflegte Liste statt Regex — nur Formen, die als gängig belegt sind.
+    const FRANZOESISCH = [
+      'Bonjour.', 'Bonne journée.', 'Bonne matinée.', 'Bon appétit.',
+      'Bon après-midi.', 'Bonne fin de journée.', 'Bonsoir.', 'Bonne soirée.',
+      'Bonne nuit.', 'Bienvenue.',
+    ];
+    const ITALIENISCH = [
+      'Buongiorno.', 'Buongiorno a tutti.', 'Buona giornata.', 'Buon appetito.',
+      'Buon pomeriggio.', 'Buona serata.', 'Buonasera.', 'Buon riposo.',
+      'Buonanotte.', 'Benvenuti.',
+    ];
+    for (const t of TAGESZEITEN) {
+      expect(
+        t.pool.filter((g) => FRANZOESISCH.includes(g)).length,
+        `Pool ${t.id} ohne französischen Gruss`,
+      ).toBeGreaterThan(0);
+      expect(
+        t.pool.filter((g) => ITALIENISCH.includes(g)).length,
+        `Pool ${t.id} ohne italienischen Gruss`,
+      ).toBeGreaterThan(0);
+    }
+    // Der Wächter kann scheitern (§6.7): Hochdeutsch zählt nicht mit.
+    expect(FRANZOESISCH.includes('Guten Morgen.')).toBe(false);
+    expect(ITALIENISCH.includes('Guten Abend.')).toBe(false);
   });
 
   it('kein Gruss trägt eine der gestrichenen Formen (§4-Auflage)', () => {

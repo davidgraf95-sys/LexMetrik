@@ -12,11 +12,23 @@
 // 18–22 · 22–5) sind ACHT geworden — fruehmorgen 5–7 · morgen 7–10 ·
 // vormittag 10–12 · mittag 12–14 · nachmittag 14–17 · feierabend 17–19 ·
 // abend 19–22 · nacht 22–5. Je Fenster stehen 30–45 Grüsse, im «immer»-Pool
-// 30–40; jedes Fenster trägt seinen eigenen Anlass (erster Kaffee · Termine ·
+// 30–40; jedes Fenster trägt seinen eigenen Anlass (erstes Licht · Termine ·
 // laufende Fristen · Pause · zweite Tageshälfte · Dossier zu · Ausklang ·
 // spät am Werk). Alle Alt-Einträge sind erhalten, nur ins passende feinere
 // Fenster einsortiert. Die Regeln unten gelten unverändert weiter und werden
 // von src/tests/begruessungen.test.ts erzwungen.
+//
+// SCHWEIZER BEZUG 8.9.2026 (Auftrag David: «auch simple begrüssungen ok»,
+// «gerne schweizer bezug»): Jedes Fenster trägt neben Hochdeutsch und regional
+// gestreuter Mundart (Zürich · Bern · Basel · Ostschweiz · Innerschweiz ·
+// Wallis) auch die vier Landessprachen — Französisch, Italienisch und, wo eine
+// gängige Form existiert, Rätoromanisch (Bun di · Buna saira · Buna notg ·
+// Allegra · Bainvegni) — dazu den Schweizer Tagesrhythmus zur passenden Stunde
+// (Zmorge · Znüni · Zmittag · Zvieri · Znacht). Juristischer Witz bleibt
+// draussen (Entscheid David 8.9.2026 zum Vorschlag eines Fachbegriff-Scherzes:
+// «nein gefällt mi nicht»), und die Kaffee-Häufung ist auf höchstens zwei
+// Einträge im ganzen Bestand ausgedünnt — beides erzwingt je ein Wächter in
+// src/tests/begruessungen.test.ts.
 //
 // KURATIERT, nicht 1:1 übernommen (§4-Auflage): Sprichwort-Fragmente («Der
 // frühe Vogel …», «Morgenstund hat Gold im Mund», «Schaffe, schaffe …») und
@@ -74,11 +86,14 @@ export const IMMER: readonly string[] = [
   'Womit fangen wir an?',
   'Was steht heute an?',
   'Zurück an die Arbeit?',
-  'Alles an einem Ort.',
   'Recht griffbereit.',
   'Die Suche steht bereit.',
-  'Ein Klick zum Erlass.',
   'Ihr Nachschlagewerk.',
+  // Landessprachen der Schweiz (Französisch · Italienisch · Rätoromanisch)
+  'Bienvenue.',
+  'Benvenuti.',
+  'Bainvegni.',
+  'Allegra.',
 ];
 
 export interface Tageszeit {
@@ -100,29 +115,25 @@ export interface Tageszeit {
 
 export const TAGESZEITEN: readonly Tageszeit[] = [
   {
-    // 5–7 · erster Kaffee, erster Blick, Stille vor dem Tag.
+    // 5–7 · erster Blick, Zmorge, Stille vor dem Tag.
     id: 'fruehmorgen', ab: 5, bis: 7, pool: [
       'Guten Morgen.',
       'Schönen guten Morgen.',
       'Einen guten Morgen Ihnen.',
       'Einen ruhigen Morgen.',
       'Einen stillen Morgen.',
-      'Einen wachen Morgen.',
       'Ein klarer Morgen.',
       'Ein ruhiger Start.',
       'Früh dran heute.',
       'Früh am Werk.',
       'Frühschicht im Recht.',
-      'Der erste Kaffee wartet.',
       'Ein Käfeli zum Start?',
-      'Erst Kaffee, dann Akten.',
       'Die Stille vor dem Tag.',
       'Noch ist es ruhig.',
       'Der Tag beginnt leise.',
       'Der Tag ist noch leer.',
       'Der erste Blick ins Dossier.',
       'Zeit für den ersten Blick.',
-      'Die Akten schlafen noch.',
       'Noch läuft keine Frist.',
       'Vor dem ersten Termin.',
       'Die Kanzlei erwacht.',
@@ -136,6 +147,12 @@ export const TAGESZEITEN: readonly Tageszeit[] = [
       'En ruhige Morge.',
       'Scho uf?',
       'Scho am Werk?',
+      // Landessprachen und Schweizer Tagesrhythmus (Ausbau 8.9.2026).
+      'Bonjour.',
+      'Buongiorno.',
+      'Bun di.',
+      'Zeit für ein Zmorge.',
+      'En guete Zmorge.',
     ],
   },
   {
@@ -144,9 +161,7 @@ export const TAGESZEITEN: readonly Tageszeit[] = [
       'Einen klaren Morgen.',
       'Einen produktiven Morgen.',
       'Einen guten Arbeitsmorgen.',
-      'Einen guten Aktenmorgen.',
       'Einen guten Start in den Tag.',
-      'Schönen Start in den Tag.',
       'Auf einen guten Morgen.',
       'Auf einen klaren Kopf.',
       'Auf eine gute Aktenlage.',
@@ -172,6 +187,12 @@ export const TAGESZEITEN: readonly Tageszeit[] = [
       'En produktive Morge.',
       'Schöne Morge zäme.',
       'En guete Start id Tag.',
+      // Landessprachen und Schweizer Tagesrhythmus (Ausbau 8.9.2026).
+      'Bonne journée.',
+      'Buona giornata.',
+      'Grüezi und guete Morge.',
+      'Zeit für ein Znüni.',
+      'Bald ist Znüni.',
     ],
   },
   {
@@ -184,7 +205,6 @@ export const TAGESZEITEN: readonly Tageszeit[] = [
       'Schönen Vormittag.',
       'Einen ruhigen Vormittag.',
       'Einen produktiven Vormittag.',
-      'Auf einen guten Vormittag.',
       'Mitten im Vormittag.',
       'Der Vormittag läuft rund?',
       'Ein Vormittag voller Termine.',
@@ -209,8 +229,14 @@ export const TAGESZEITEN: readonly Tageszeit[] = [
       'En guete Tag zäme.',
       'Guete Vormittag.',
       'En schöne Vormittag.',
-      'En produktive Vormittag.',
       'Schöne Vormittag zäme.',
+      // Landessprachen und Schweizer Tagesrhythmus (Ausbau 8.9.2026).
+      'Bonne matinée.',
+      'Buongiorno a tutti.',
+      'Guete Daag.',
+      'Guete Tag mitenand.',
+      'Nach dem Znüni weiter.',
+      'Tagwohl.',
     ],
   },
   {
@@ -219,7 +245,6 @@ export const TAGESZEITEN: readonly Tageszeit[] = [
       'Guten Mittag.',
       'Einen guten Mittag.',
       'Einen schönen Mittag.',
-      'Ein guter Mittag Ihnen.',
       'Schöne Mittagszeit.',
       'Eine ruhige Mittagsstunde.',
       'Etwas Ruhe zur Mittagszeit.',
@@ -233,7 +258,6 @@ export const TAGESZEITEN: readonly Tageszeit[] = [
       'Ein Moment ohne Akten.',
       'Die Kanzlei macht Pause.',
       'Mittagspause im Dossier.',
-      'Nach dem Essen weiter.',
       'Der Nachmittag kann warten.',
       'Die halbe Strecke ist da.',
       'Halbzeit im Tagwerk.',
@@ -241,7 +265,6 @@ export const TAGESZEITEN: readonly Tageszeit[] = [
       'Mitten in den Akten.',
       'Einen schönen Tag.',
       'Einen angenehmen Tag.',
-      'Einen produktiven Tag.',
       'En Guete.',
       'En Guete zäme.',
       'En Guete mitenand.',
@@ -250,17 +273,22 @@ export const TAGESZEITEN: readonly Tageszeit[] = [
       'En schöne Mittag.',
       'Schöne Mittag mitenand.',
       'En schöne Tag.',
+      // Landessprachen und Schweizer Tagesrhythmus (Ausbau 8.9.2026).
+      'Bon appétit.',
+      'Buon appetito.',
+      'Zeit fürs Zmittag.',
+      'Es Zmittag tuet guet.',
+      'Nach em Zmittag witer.',
     ],
   },
   {
-    // 14–17 · zweite Tageshälfte, Käfeli, Endspurt.
+    // 14–17 · zweite Tageshälfte, Zvieri, Endspurt.
     id: 'nachmittag', ab: 14, bis: 17, pool: [
       'Einen schönen Nachmittag.',
       'Schönen Nachmittag.',
       'Einen angenehmen Nachmittag.',
       'Einen ruhigen Nachmittag.',
       'Einen produktiven Nachmittag.',
-      'Auf einen guten Nachmittag.',
       'Ein klarer Nachmittag.',
       'Der Nachmittag läuft.',
       'Der Nachmittag gehört Ihnen.',
@@ -269,15 +297,12 @@ export const TAGESZEITEN: readonly Tageszeit[] = [
       'Endspurt am Nachmittag.',
       'Schönen Tag noch.',
       'Einen guten Rest des Tages.',
-      'Zeit für einen Kaffee?',
       'Ein Käfeli gefällig?',
-      'Ein Kaffee zur Halbzeit?',
       'Weiterhin gute Aktenlage.',
       'Die Dossiers im Griff?',
       'Das Dossier geht voran.',
       'Der Stapel schrumpft.',
       'Noch ein Schriftsatz heute?',
-      'Noch drei Stunden Akten.',
       'Noch etwas Recherche?',
       'Die Frist ist gewahrt?',
       'Die Verhandlung ist durch?',
@@ -289,6 +314,12 @@ export const TAGESZEITEN: readonly Tageszeit[] = [
       'En ruhige Namittag.',
       'Schöne Namittag mitenand.',
       'Witer en schöne Tag.',
+      // Landessprachen und Schweizer Tagesrhythmus (Ausbau 8.9.2026).
+      'Bon après-midi.',
+      'Buon pomeriggio.',
+      'Zeit für ein Zvieri.',
+      'Schöni Zvieri-Zyt.',
+      'Bald ist Zvieri.',
     ],
   },
   {
@@ -299,15 +330,12 @@ export const TAGESZEITEN: readonly Tageszeit[] = [
       'Einen ruhigen Feierabend.',
       'Einen erholsamen Feierabend.',
       'Feierabend, wohlverdient.',
-      'Feierabend im Anmarsch.',
       'Feierabend naht.',
       'Bald ist Feierabend.',
-      'Dossier zu, Feierabend auf.',
       'Das Dossier darf zu.',
       'Die Akten dürfen ruhen.',
       'Zeit, die Akten zu schliessen.',
       'Ein letzter Blick ins Dossier.',
-      'Ein Blick zum Abschluss.',
       'Noch schnell etwas nachsehen?',
       'Noch eine letzte Notiz?',
       'Die letzte Frist von heute.',
@@ -327,6 +355,12 @@ export const TAGESZEITEN: readonly Tageszeit[] = [
       'En schöne Fyrabig.',
       'Schöne Fyrabig mitenand.',
       'Fyrabig zäme.',
+      // Landessprachen und Schweizer Tagesrhythmus (Ausbau 8.9.2026).
+      'Bonne fin de journée.',
+      'Buona serata.',
+      'Schöne Fyrabe.',
+      'Adie mitenand.',
+      'Bald gits Znacht.',
     ],
   },
   {
@@ -338,11 +372,8 @@ export const TAGESZEITEN: readonly Tageszeit[] = [
       'Einen ruhigen Abend.',
       'Einen stillen Abend.',
       'Einen geruhsamen Abend.',
-      'Einen erholsamen Abend.',
       'Einen gemütlichen Abend.',
       'Einen schönen Abendausklang.',
-      'Ein guter Abend Ihnen.',
-      'Ein ruhiger Abend Ihnen.',
       'Ein Abend in Ruhe.',
       'Ein Abend ohne Fristen.',
       'Schönen Abendgruss.',
@@ -357,7 +388,6 @@ export const TAGESZEITEN: readonly Tageszeit[] = [
       'Noch ein Blick, dann Ruhe.',
       'Noch am Dossier?',
       'Abends noch am Werk?',
-      'Die Bürolampe brennt noch?',
       'Guete Aabig.',
       'Guete Aabig mitenand.',
       'En schöne Aabig.',
@@ -366,6 +396,13 @@ export const TAGESZEITEN: readonly Tageszeit[] = [
       'En gmüetliche Aabig.',
       'Schöne Aabig zäme.',
       'Schönen Abend mitenand.',
+      // Landessprachen und Schweizer Tagesrhythmus (Ausbau 8.9.2026).
+      'Bonsoir.',
+      'Bonne soirée.',
+      'Buonasera.',
+      'Buna saira.',
+      'Schöne Obig.',
+      'En Guete zum Znacht.',
     ],
   },
   {
@@ -374,20 +411,17 @@ export const TAGESZEITEN: readonly Tageszeit[] = [
       'Gute Nacht.',
       'Eine ruhige Nacht.',
       'Eine geruhsame Nacht.',
-      'Eine erholsame Nacht.',
       'Eine stille Stunde.',
       'Schlafen Sie gut.',
       'Ruhen Sie sich aus.',
       'Gönnen Sie sich Ruhe.',
       'Zeit fürs Bett.',
       'Einen ruhigen Ausklang.',
-      'Ein ruhiges Ende des Tages.',
       'Schönen späten Abend.',
       'Noch spät am Werk?',
       'Noch wach über den Akten?',
       'Spät im Dossier?',
       'Nachtschicht?',
-      'Ein ruhiger Nachtdienst?',
       'Die Kanzlei ist dunkel.',
       'Die Nacht gehört der Ruhe.',
       'Nachts sind die Akten still.',
@@ -406,6 +440,12 @@ export const TAGESZEITEN: readonly Tageszeit[] = [
       'Schlaf guet.',
       'No spaat dra?',
       'No wach?',
+      // Landessprachen und Schweizer Tagesrhythmus (Ausbau 8.9.2026).
+      'Bonne nuit.',
+      'Buonanotte.',
+      'Buon riposo.',
+      'Buna notg.',
+      'Es guets Nächtli.',
     ],
   },
 ];
