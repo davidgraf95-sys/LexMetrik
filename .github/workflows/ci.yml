@@ -1003,8 +1003,20 @@ jobs:
       # interessant). Damit lässt sich `e2e/shard-gruppen.json` künftig gegen
       # GEMESSENE CI-Zeiten packen statt gegen lokale, die nicht uniform skalieren
       # (a33: lokal 92 s, CI ~360 s). Begründung in playwright.config.ts.
+      # continue-on-error (QS-CI-MINUTEN, 8.9.2026): Lauf 34246217673, Job
+      # 102130311970 (Shard 3/4, PR #783) — Tests grün (2 flaky, Melde-Modus),
+      # der Upload aber rot mit «Failed to FinalizeArtifact: Received
+      # non-retryable error: Failed request: (403) Forbidden: Error from
+      # intermediary», während die drei anderen Shards mit demselben Token
+      # hochluden — transienter Speicherfehler des Anbieters. Diese Datei ist
+      # nur Datengrundlage fürs Shard-Balancing, kein Tor: der Flacker-Wächter
+      # oben liest `playwright-report.json` LOKAL im selben Shard, kein Job
+      # lädt dieses Artefakt herunter (die zwei `download-artifact`-Schritte
+      # im Workflow holen `dist`, nicht diesen Report). Ein Ablage-Fehler darf
+      # eine bestandene Prüfung nicht rot färben.
       - name: Playwright-JSON-Report ablegen (Shard-Balancing-Datengrundlage)
         if: always()
+        continue-on-error: true
         uses: actions/upload-artifact@v7
         with:
           name: playwright-report-gruppe-${{ matrix.gruppe }}
