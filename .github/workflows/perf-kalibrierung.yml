@@ -47,7 +47,7 @@ jobs:
       PERF_KALIBRIER_RUNS: ${{ github.event.inputs.kalibrier_runs || '3' }}
     steps:
       - uses: actions/checkout@v7
-      - uses: actions/setup-node@v5
+      - uses: actions/setup-node@v7
         with:
           node-version: 22
           cache: npm
