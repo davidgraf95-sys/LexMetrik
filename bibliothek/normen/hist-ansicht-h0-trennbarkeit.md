@@ -193,7 +193,7 @@ fehlende Klasse blendet also nie etwas aus (konservativ, §8).
 **Additivitäts-Beweis** — `npm run normtext:sidecar-differ` (Quelle
 `scripts/normtext/check-sidecar-differ.ts`). **Was das ist, genau:** ein
 **Einmalbeweis-Skript, manuell gefahren** — KEIN Dauer-Tor. Es hängt nicht in
-`npm run gate`/`check-parallel` und läuft nicht in CI, weil es einen VORZUSTAND
+`npm run gate`/`run-parallel` und läuft nicht in CI, weil es einen VORZUSTAND
 braucht, den nur der Mensch benennen kann (welcher git-Ref ist «alt»?). Es
 beweist eine konkrete Regeneration, nicht eine Invariante. *(Formulierung
 präzisiert nach Gegenprüfungs-Befund B6 — vorher stand hier «Tor», was mehr

@@ -246,7 +246,7 @@ jobs:
       # Nachtrag war nie der Fix (§17).
       #
       # `npm run check` fährt stattdessen die GANZE Tor-Menge aus
-      # `check:seriell` (heute 44, parallel über scripts/check-parallel.ts).
+      # `check:seriell` (heute 44, parallel über scripts/run-parallel.ts).
       # Damit deckt dieser Schritt jedes künftige Tor automatisch mit ab; die
       # Liste kann nicht mehr veralten, weil es keine mehr gibt.
       #

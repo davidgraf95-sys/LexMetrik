@@ -50,7 +50,7 @@ Runde 2 (5.9.2026, Token-Messung dieser Session als Anlass — je Punkt ein Comm
   und druckt nur Testnamen/Assertion/Ort/Summe (Messung: Vitest-Rot 800 Zeilen ≈ 25 000 Token, zweimal
   je Session über den Stop-Hook; Rot-Beweis 76 → 17 Zeilen). hooks-wache-Test fängt stderr (kein
   «SUBAGENT-WACHE»-Echo mehr in jeder Test-Ausgabe).
-- [x] **check-parallel leise bei Grün** — Kopf + Summe mit drei langsamsten Toren statt 48 Zeilen
+- [x] **run-parallel leise bei Grün** — Kopf + Summe mit drei langsamsten Toren statt 48 Zeilen
   (~600 Token je grünem Lauf); volle Liste bei `CI=1`/`--verbose`, Rot unverändert.
 - [x] **Fahrplan-§1-Kopie zurückgebaut** (9 KB → 3 KB, ~2 500 Token je Slice).
 - [x] **Landungs-Skill −3.5 KB** — Jules-Checkliste byte-treu nach `referenz-jules.md`, lädt nur bei

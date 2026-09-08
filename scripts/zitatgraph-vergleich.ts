@@ -3,7 +3,7 @@
 // Trennlinie wie bei `verweis-inventar-messung.ts` (Steuerungs-Flächendeckel
 // `scripts/check-*.ts`, aufraeumen.md §3): HIER steht, WIE VERGLICHEN WIRD —
 // die Leser-Ziele je Textstelle, die Klassenbildung, der Bericht-Satz. DORT
-// (`scripts/check-zitatgraph-warnungen.ts`) steht nur noch der Aufruf: lesen,
+// (`scripts/report-zitatgraph-warnungen.ts`) steht nur noch der Aufruf: lesen,
 // schreiben, ausgeben. Ohne Seiteneffekte beim Import.
 //
 // ZWECK. Das Z2-Artefakt (`messwerte/fedlex-zitatgraph.json`) trägt die AMTLICHE

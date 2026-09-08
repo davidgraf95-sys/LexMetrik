@@ -128,6 +128,21 @@ jobs:
             --title "Fedlex Raw-Store ${DATUM}" \
             --notes "$notes"
 
+      # QS-CI-MINUTEN 8.9.2026: `check:raw-store` war bisher NIE im Gate (nur
+      # Bericht, Exit stets 0 ohne --streng). Hier — direkt nach dem Release —
+      # wird es zum echten Tor: `--streng` lässt den Lauf rot enden, falls der
+      # gerade veröffentlichte Release NICHT jeden aktuellen Pin mit passendem
+      # Konsolidierungsstand trägt (z. B. wenn fedlex-cache.sh eine Datei still
+      # übersprungen oder gen-raw-manifest.ts falsch gezählt hätte). Rot-Beweis
+      # 8.9.2026 (lokal, `--streng` gegen den damals jüngsten Release
+      # korpus-raw-20260902): Pin `dbg` bereits real abweichend (Release-Stand
+      # 2026-01-01 vs. Pin 2026-09-02) → Exit 1 — der Datenbefund selbst ist
+      # Korpus-Territorium (§7/Gegenprüfung), nicht Teil dieser Umbenennung.
+      - name: Frischeprüfung — Release deckt alle aktuellen Pins (--streng)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: npm run check:raw-store -- --streng
+
       - name: Provenance-Attestation auf das Archiv
         uses: actions/attest-build-provenance@v2
         with:

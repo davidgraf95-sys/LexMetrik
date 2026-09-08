@@ -1,4 +1,4 @@
-// scripts/check-netz-alle.ts — Runner der Netz-Tor-Kette `check:netz` (§17, QS-MONITOR-ROT
+// scripts/run-netz-alle.ts — Runner der Netz-Tor-Kette `check:netz` (§17, QS-MONITOR-ROT
 // Verfahrens-Gap, 1.9.2026).
 //
 // WARUM: `check:netz` war eine `&&`-Kette von 12 `npm run check:*-netz`. Sie bricht beim ersten
@@ -21,7 +21,7 @@ function leseKette(): string[] {
     const pkg = JSON.parse(readFileSync('package.json', 'utf8')) as { scripts?: Record<string, string> };
     const k = pkg.scripts?.['check:netz:kette'];
     if (!k) {
-      console.error('check-netz-alle: package.json enthält kein "check:netz:kette" — Kette unbekannt.');
+      console.error('run-netz-alle: package.json enthält kein "check:netz:kette" — Kette unbekannt.');
       process.exit(1);
     }
     return k;
@@ -32,7 +32,7 @@ function leseKette(): string[] {
     if (m) namen.push(m[1]);
   }
   if (namen.length === 0) {
-    console.error('check-netz-alle: keine "npm run …"-Glieder in der Kette gefunden.');
+    console.error('run-netz-alle: keine "npm run …"-Glieder in der Kette gefunden.');
     process.exit(1);
   }
   return namen;

@@ -7,7 +7,7 @@
 // «Erlass A verweist an Stelle eId auf Erlass B» — er ersetzt LexMetriks
 // Verweis-Erkennung NICHT (§1/§5: die Erkennung bleibt die eine Wahrheit des
 // Lesers), sondern gibt ihr eine unabhängige Vergleichsgrösse. Der Vergleich
-// ist Z3 (`scripts/check-zitatgraph-warnungen.ts`), Bericht ohne Tor.
+// ist Z3 (`scripts/report-zitatgraph-warnungen.ts`), Bericht ohne Tor.
 //
 // ─── Live verifiziertes Datenmodell (2.9.2026, Sonden gegen den Endpunkt) ────
 //

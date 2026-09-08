@@ -19,7 +19,7 @@
 //    immer verloren, weil A das Watermark vorschiebt. `torRot` ist deshalb «was
 //    diese Maschinen gesehen haben», nie «was gelaufen ist». Für ein
 //    Verlaufs-Signal reicht das; für eine Absolutaussage über Tor-Läufe nicht.
-//  * **Zeitstempel-Auflösung.** `check-parallel.ts` stempelt mit echten
+//  * **Zeitstempel-Auflösung.** `run-parallel.ts` stempelt mit echten
 //    Millisekunden (`toISOString()`), `gate.sh` ebenso (s. dort). Ein Stempel
 //    ohne Millisekunden liesse Ereignisse derselben Sekunde unter das Watermark
 //    fallen (`e.ts > seit`) — deshalb ist die Auflösung an beiden Schreibstellen
