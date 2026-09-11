@@ -1,8 +1,7 @@
 // ── W2·24-R6c · DIE ZÄHL-DATEI SAGT DASSELBE WIE DIE SHARDS ────────────────
 //
 // Die Bezüge-Zeile am Artikelkopf (D20 (b)) nennt ihre Zahlen aus einer
-// buildseitigen Zähl-Datei je Erlass (`scripts/gen-bezuege-zaehler.ts` →
-// `public/verzahnung/bezuege-zaehler/<KEY>.json`), damit sie dastehen, bevor
+// buildseitigen Zählung (`scripts/gen-bezuege-zaehler.ts`), damit sie dastehen, bevor
 // irgendein Shard geladen ist, und damit die Rubrik «Materialien» überhaupt
 // möglich wird (ihr Shard kommt im Leser sonst nicht vor, §8).
 //
@@ -24,12 +23,22 @@ import { fileURLToPath } from 'node:url';
 import { normArtikelToken } from '../lib/rechtsprechung/norm-index';
 
 const wurzel = resolve(fileURLToPath(new URL('../..', import.meta.url)));
-const zaehlDatei = (key: string) =>
-  JSON.parse(readFileSync(resolve(wurzel, `public/verzahnung/bezuege-zaehler/${key}.json`), 'utf8')) as {
-    erlass: string; a: Record<string, [number, number]>;
-  };
 
-describe('W2·24-R6c · Bezüge-Zähl-Datei', () => {
+// W2·26-FUNKTIONSZEILE-ZAEHLER (11.9.2026): DER ORT der Zahlen hat gewechselt —
+// aus `public/verzahnung/bezuege-zaehler/<KEY>.json` wurde der Schlüssel
+// `zaehler` im Struktur-Sidecar des Erlasses (Begründung im Kopf von
+// `scripts/gen-bezuege-zaehler.ts`). Die vier Fälle unten prüfen unverändert
+// DIESELBEN Zusagen; nur dieser Zugriff zeigt woandershin (§6.3: die Änderung
+// am Test ist der Umzug der Datei, keine neue Erwartung).
+const zaehlDatei = (key: string) => {
+  const bund = resolve(wurzel, `public/normtext/struktur/bund/${key}.json`);
+  const pfad = existsSync(bund) ? bund : resolve(wurzel, `public/normtext/struktur/kanton/${key}.json`);
+  const doc = JSON.parse(readFileSync(pfad, 'utf8')) as { zaehler?: Record<string, [number, number]> };
+  expect(doc.zaehler, `${key}: Struktur-Sidecar ohne \`zaehler\`-Block`).toBeDefined();
+  return { a: doc.zaehler! };
+};
+
+describe('W2·24-R6c · Bezüge-Zähler', () => {
   it('Fall 1 — die Entscheid-Zahl ist die ungefilterte Bezugsgrösse des Shards', () => {
     const zaehler = zaehlDatei('OR');
     const shard = JSON.parse(

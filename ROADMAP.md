@@ -265,8 +265,8 @@ zgb-a36-anhang: Die ZGB-Gliederung zeigt 74 Artikel des Anhangs «Wortlaut der f
   Register-Ebene, kein Volltext-Nachbau). Kontext: externer Termin (FINMA-Bereich soll vorzeigbar sein).
   **Detail:** [FAHRPLAN-MATERIALIEN-VERZAHNUNG.md](fahrplaene/FAHRPLAN-MATERIALIEN-VERZAHNUNG.md) §10.
 
-- [ ] **Entstehung am Artikel — Daten: Verfahrens-Ereignisse, Historie-Kopf, Botschafts-Keys, Anker, Parlament** *(`W2·6c-ENTSTEHUNG-DATEN`, §14-Intake 6.9.2026, Design-Freigabe David 6.9.2026)*
-  <!-- @meta id: W2·6c-ENTSTEHUNG-DATEN · status: ready · blocker: null · dep: [] · feld: korpus · fahrplan: fahrplaene/FAHRPLAN-MATERIALIEN-VERZAHNUNG.md -->
+- [x] **Entstehung am Artikel — Daten: Verfahrens-Ereignisse, Historie-Kopf, Botschafts-Keys, Anker, Parlament** *(`W2·6c-ENTSTEHUNG-DATEN`, §14-Intake 6.9.2026, Design-Freigabe David 6.9.2026)*
+  <!-- @meta id: W2·6c-ENTSTEHUNG-DATEN · status: done · blocker: null · dep: [] · feld: korpus · fahrplan: fahrplaene/FAHRPLAN-MATERIALIEN-VERZAHNUNG.md -->
   Ziel: die Fassungskette je Artikel (liegt als G-HIST-Shard vor) mit der Verfahrenskette der Vorlage
   (Fedlex-Projektgraph, Curia Vista) und der Botschaft verbinden — ohne zweiten Parser, ohne Volltext,
   ohne Personendaten. Grenzen: Bund zuerst; Historie-Generator und -Shard bleiben unangetastet; Curia
@@ -480,8 +480,8 @@ zgb-a36-anhang: Die ZGB-Gliederung zeigt 74 Artikel des Anhangs «Wortlaut der f
   Aktionen nur bei Hover/Fokus/offener Rubrik, D45-Split, Umbenennung `BezuegeKopf` →
   `Funktionszeile`. **Detail:** [FAHRPLAN-DESIGN-IDENTITAET.md](fahrplaene/FAHRPLAN-DESIGN-IDENTITAET.md) §9.
 
-- [ ] **Bezüge-Zähler in den Erlass-Payload** *(`W2·26-FUNKTIONSZEILE-ZAEHLER`, D34-Nachfix)*
-  <!-- @meta id: W2·26-FUNKTIONSZEILE-ZAEHLER · status: ready · blocker: null · dep: [W2·26-FUNKTIONSZEILE] · feld: korpus · fahrplan: fahrplaene/FAHRPLAN-DESIGN-IDENTITAET.md -->
+- [x] **Bezüge-Zähler in den Erlass-Payload** *(`W2·26-FUNKTIONSZEILE-ZAEHLER`, D34-Nachfix)*
+  <!-- @meta id: W2·26-FUNKTIONSZEILE-ZAEHLER · status: done · blocker: null · dep: [W2·26-FUNKTIONSZEILE] · feld: korpus · fahrplan: fahrplaene/FAHRPLAN-DESIGN-IDENTITAET.md -->
   Bezüge-Zähler (Entscheide/Materialien/Verweise/Rechner) in den Erlass-Payload statt eigenem
   Fetch — heute entstehen die Fuss-Zeilen erst in der zweiten Render-Runde. Korpus/Generator ⇒
   **Gegenprüfung Pflicht**, Golden byte-gleich bzw. deklarierter Re-Bless.
