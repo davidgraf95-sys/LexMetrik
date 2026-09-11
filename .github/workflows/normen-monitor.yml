@@ -46,6 +46,12 @@ on:
     # 03:23 UTC — vor dem Reparatur-Arm (04:43) und dem Detektor (07:17), damit ein
     # Curia-PR nicht mit deren Läufen um dieselben Dateien streitet.
     - cron: '23 3 1 * *'
+    # MONATSLAUF BS-Grossratsgeschäfte (K-16, W2·13-KANTONE-DATEN). Eigener Job aus
+    # demselben Grund wie Curia: der Abgleich lädt drei Vollexporte von data.bs.ch
+    # (~31 MB, ~40 s) — das gehört nicht vor einen Merge, sondern einmal im Monat.
+    # Erster des Monats, 03:47 UTC: nach dem Curia-Lauf (03:23, andere Dateien, aber
+    # derselbe Branch-Raum) und vor dem Reparatur-Arm (04:43).
+    - cron: '47 3 1 * *'
   workflow_dispatch:
 
 env:
@@ -294,4 +300,73 @@ jobs:
             gh pr create --base main --head "$branch" \
               --title "chore(entstehung): Curia-Vista-Monatslauf ${DATUM}" \
               --body "Automatischer Monats-Vollabgleich der Parlaments-Etappen (W2·6c E4). KEIN Auto-Merge: die Curia-Shards liegen auf dem Risikopfad (istRisikoPfad), die adversariale Gegenpruefung ist nachgelagert."
+          fi
+
+  bs-grossrat:
+    name: Basel-Stadt — Monats-Vollabgleich (Grossratsgeschäfte)
+    if: github.event_name == 'workflow_dispatch' || github.event.schedule == '47 3 1 * *'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      TZ: Europe/Zurich
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Abrufdatum (Zürich, nie Date.now im Generator)
+        id: datum
+        run: echo "iso=$(date +%F)" >> "$GITHUB_OUTPUT"
+      - name: Vollabgleich data.bs.ch (Geschäfte · Dokumente · Gesetzessammlung)
+        run: npm run materialien:bs -- --datum=${{ steps.datum.outputs.iso }}
+      - name: Projektion + Zähler auf dem frischen Stand
+        run: npm run materialien -- --datum=${{ steps.datum.outputs.iso }}
+      - name: Zähler nachziehen
+        run: npm run gen:zaehler
+      - name: Offline-Tore auf dem frischen Stand
+        run: npm run check:bs-materialien && npm run check:materialien
+      - name: Datenhaltungs-Manifest
+        run: npm run datenhaltung:manifest && npm run check:datenhaltung
+      - name: Änderungen feststellen
+        id: diff
+        run: |
+          set -euo pipefail
+          if [ -n "$(git status --porcelain)" ]; then echo "geaendert=1" >> "$GITHUB_OUTPUT"; else echo "geaendert=0" >> "$GITHUB_OUTPUT"; fi
+      - name: PR eröffnen (NIE Auto-Merge — Risikopfad, Gegenprüfung nachgelagert)
+        if: steps.diff.outputs.geaendert == '1'
+        env:
+          GH_TOKEN: ${{ secrets.AUTOMERGE_TOKEN || github.token }}
+          DATUM: ${{ steps.datum.outputs.iso }}
+        run: |
+          set -euo pipefail
+          branch="chore/bs-grossrat-monatslauf-${DATUM}"
+          git config user.name  "bs-grossrat-monatslauf-bot"
+          git config user.email "noreply@anthropic.com"
+          git checkout -b "$branch"
+          git add -A
+          git commit -F - <<'EOF'
+          chore(materialien): BS-Grossrat-Monatslauf — kantonale Materialien nachgefuehrt
+
+          Automatischer Vollabgleich gegen data.bs.ch (OpenDataSoft Explore v2.1,
+          CC BY 4.0). Quelle: Kanton Basel-Stadt. Keine Personendaten — die
+          Abfrage waehlt die erlaubten Felder einzeln an, Namen und Parteien der
+          Vorstoss-Urheber werden nicht geholt.
+
+          Roadmap: W2·13-KANTONE-DATEN
+          Gegenpruefung: ausstehend — automatischer Lauf, adversariale Pruefung nachgelagert
+          Co-Authored-By: Claude Opus 5 (1M context) <noreply@anthropic.com>
+          EOF
+          git push -u origin "$branch"
+          offen=$(gh pr list --head "$branch" --state open --json number --jq '.[0].number // empty')
+          if [ -n "$offen" ]; then
+            echo "PR #${offen} für ${branch} ist bereits offen (idempotent)."
+          else
+            gh pr create --base main --head "$branch" \
+              --title "chore(materialien): BS-Grossrat-Monatslauf ${DATUM}" \
+              --body "Automatischer Monats-Vollabgleich der Basler Grossratsgeschaefte (K-16). KEIN Auto-Merge: die Materialien-Artefakte liegen auf dem Risikopfad (istRisikoPfad), die adversariale Gegenpruefung ist nachgelagert."
           fi

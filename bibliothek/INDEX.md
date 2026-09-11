@@ -154,6 +154,16 @@ alle `nur-live-link` (Erreichbarkeit 27.6.2026 geprüft). Beschaffungs-Regel (st
 URL vs. Direkt-Link), Determinismus/Tor, normKeys-Verzahnung, Pflegebedarf, P1-Backlog (SEM/BAG).
 Maschinell kuratiert; fachliche Abnahme David offen (Zeitsperre bis 1.12.2026).
 
+**Kantonale Materialien BS — Vormessung K-16 (W2·13-KANTONE-DATEN):** [materialien/2026-09-12-k16-bs-vormessung.md](materialien/2026-09-12-k16-bs-vormessung.md) —
+Quellen data.bs.ch 100311/100313/100354/100355 (CC BY 4.0, Abruf 12.9.2026) + LexWork-API der
+BS-Gesetzessammlung. Kernbefund zum Schlüssel Erlass ↔ Geschäft: ein amtlicher Schlüssel existiert
+(Fussnote «Ratschlag Nr. 06.1970.01» = `signatur_dok`, gegen 100313 verifiziert), deckt aber nur
+5 von 859 Korpus-Erlassen; `change_documents[].materials` der amtlichen Fassung ist leer (0/126);
+tragfähig bleiben zwei maschinelle Wege (SG-Nummer im Geschäftstitel 20 Erlasse; Erlassdatum +
+Titel/Stichwort genitiv-tolerant 37 Erlasse, 102 Kanten = 25,7 % der 136 adressierbaren Gesetze),
+Datum allein ist als Schlüssel widerlegt (Kollision 161.100/162.100). Geltung: nur BS; ZH offen.
+Pflegebedarf: Monatslauf ausserhalb der Gate-Kette. Maschinell; fachliche Abnahme David offen.
+
 **Botschaften / Entstehungsgeschichte (Fedlex-Portfolio Paket 2, W2·6):** [materialien/botschaften-2026-07-10.md](materialien/botschaften-2026-07-10.md) —
 401 Botschaften des Bundesrates über die 218 Bund-Volltext-Erlasse, automatisch über den
 Fedlex-Gesetzgebungs-Projekt-Graphen verknüpft (SPARQL-Reverse-Kette, `draftHasLegislativeTask`

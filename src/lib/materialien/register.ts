@@ -40,6 +40,12 @@ export const BEHOERDEN: ReadonlyArray<Behoerde> = [
   // die generierten Verfahren stehen hinter Botschaften; eröffnende Stelle (BR/Departement/
   // Kommission) variiert je Verfahren, daher generische Behörde statt 'BR'.
   { id: 'BUND', kuerzel: 'Bund', name: 'Bund (Vernehmlassungen)', rang: 9 },
+  // Grosser Rat Basel-Stadt: Ratschläge des Regierungsrats und Kommissionsberichte
+  // (K-16, W2·13-KANTONE-DATEN). rang zuletzt → die kantonalen Geschäfte stehen in der
+  // Browse-Rubrik hinter allen Bundes-Publikationen; getrennte Behörde statt 'BS',
+  // weil die Geschäftsdatenbank die des PARLAMENTS ist (sie führt auch die Vorlagen
+  // des Regierungsrats, aber als Geschäfte des Rates).
+  { id: 'BS-GR', kuerzel: 'GR BS', name: 'Grosser Rat des Kantons Basel-Stadt', rang: 10 },
 ];
 
 export const BEHOERDE_RANG: Record<BehoerdeId, number> = Object.fromEntries(
@@ -69,6 +75,13 @@ export const DOKTYPEN: ReadonlyArray<Doktyp> = [
   { id: 'taetigkeitsbericht', label: 'Tätigkeitsbericht' },
   { id: 'botschaft', label: 'Botschaft' },
   { id: 'vernehmlassung', label: 'Vernehmlassung' },
+  // K-16: die Etiketten sind die amtlichen Werte des Feldes `ga_rr_gr` WÖRTLICH
+  // (§1, Zitat statt Umschreibung). Die Behörden-Spalte nennt daneben «Grosser Rat
+  // des Kantons Basel-Stadt», der Kontext ist damit eindeutig.
+  { id: 'ratschlag', label: 'Ratschlag' },
+  { id: 'gr-bericht', label: 'Bericht' },
+  { id: 'gr-ausgabenbericht', label: 'Ausgabenbericht' },
+  { id: 'gr-initiative', label: 'Initiative' },
   { id: 'mitteilung', label: 'Praxismitteilung' },
 ];
 

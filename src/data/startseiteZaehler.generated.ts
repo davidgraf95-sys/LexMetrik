@@ -191,7 +191,7 @@ export const STARTSEITE_ZAEHLER: StartseiteZaehler = {
     }
   ],
   "rechtsprechungLeitentscheide": 1259,
-  "materialien": 1564,
+  "materialien": 1681,
   "materialienBehoerden": [
     {
       "id": "ESTV",
@@ -246,13 +246,19 @@ export const STARTSEITE_ZAEHLER: StartseiteZaehler = {
       "kuerzel": "Bund",
       "name": "Bund (Vernehmlassungen)",
       "anzahl": 831
+    },
+    {
+      "id": "BS-GR",
+      "kuerzel": "GR BS",
+      "name": "Grosser Rat des Kantons Basel-Stadt",
+      "anzahl": 117
     }
   ],
   "rechner": 23,
   "vorlagen": 26,
   "standGesetze": "2026-09-06",
   "standRechtsprechung": "2026-09-05",
-  "standMaterialien": "2026-09-11",
+  "standMaterialien": "2026-09-12",
   "juengsterGesetzStand": "2026-09-02",
   "juengsterEntscheid": "2026-07-08",
   "juengsteMaterialie": "2026-09-11"

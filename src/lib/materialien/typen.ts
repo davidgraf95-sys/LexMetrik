@@ -38,7 +38,8 @@ export type BehoerdeId =
   | 'BSV'    // Bundesamt für Sozialversicherungen
   | 'IGE'    // Eidg. Institut für Geistiges Eigentum
   | 'BR'     // Bundesrat (Botschaften / Bundesblatt — Paket 2, W2·6)
-  | 'BUND';  // Bund generisch (Vernehmlassungen: BR/Departemente ODER parl. Kommissionen — Paket 3, W3·11)
+  | 'BUND'   // Bund generisch (Vernehmlassungen: BR/Departemente ODER parl. Kommissionen — Paket 3, W3·11)
+  | 'BS-GR'; // Grosser Rat des Kantons Basel-Stadt (Geschäfte/Ratschläge — K-16, W2·13)
 
 export interface Behoerde {
   id: BehoerdeId;
@@ -67,6 +68,16 @@ export type DoktypId =
   | 'anleitung'
   | 'botschaft' // Botschaft des Bundesrates (Entstehungsgeschichte) — Paket 2, W2·6
   | 'vernehmlassung' // Vernehmlassung / Anhörung (Gesetzgebung in Arbeit) — Paket 3, W3·11
+  // K-16: je amtlicher Geschäftsart des Grossen Rates BS (`ga_rr_gr`) ein eigener
+  // Doktyp — nie zwei rechtlich verschiedene Vorlagen unter einem Etikett (§1).
+  // Befund der Gegenprüfung zu PR #799: eine binäre Ableitung «Ratschlag oder
+  // sonst Bericht» zeigte die Volksinitiative 21.1247 als «Bericht an den
+  // Grossen Rat» an. Die Zuordnung steht als feste Tabelle in
+  // scripts/materialien/bs-materialien.ts; eine unbekannte Art ist rot, nie geraten.
+  | 'ratschlag'          // amtlich «Ratschlag» — Vorlage des Regierungsrats (Botschafts-Pendant)
+  | 'gr-bericht'         // amtlich «Bericht»
+  | 'gr-ausgabenbericht' // amtlich «Ausgabenbericht»
+  | 'gr-initiative'      // amtlich «Initiative» (kantonale Volksinitiative)
   | 'mitteilung';
 
 // ── Vernehmlassungs-Status (amtliches Vokabular consultation-status/0–6, 1:1) ──
@@ -148,6 +159,25 @@ export interface MaterialRegistereintrag {
    * in register.json (in-Bundle-Sync-Pfad, kein Interna-Leak §15).
    */
   artikelBezuege?: ReadonlyArray<{ erlass: string; artikel: string }>;
+  /**
+   * K-16: die Herkunft JEDER einzelnen Erlass-Verknüpfung eines BS-Geschäfts
+   * (nur bei behoerde==='BS-GR'). `normKeys` sagt nur DASS verknüpft ist; hier steht
+   * WORAUF sich die Verknüpfung stützt — die Trennung ist der Kern von §8, weil zwei
+   * der drei Wege maschinell sind und nie wie ein amtlicher Beleg aussehen dürfen:
+   *   · quelle 'amtlich'    — regel 'fussnote': die Fussnote der BS-Gesetzessammlung
+   *     nennt die Geschäftsnummer wörtlich (beleg = die zitierte Nummer);
+   *   · quelle 'maschinell' — regel 'sg-nummer': der amtliche Geschäftstitel nennt die
+   *     SG-Nummer des Erlasses (beleg = die Nummer im Titel);
+   *   · quelle 'maschinell' — regel 'datum-titel': der Geschäftstitel nennt Erlassdatum
+   *     UND Titel/Stichwort des Erlasses (beleg = das gefundene Erlassdatum).
+   * Fachliche Abnahme der maschinellen Wege steht aus (§7).
+   */
+  bsKanten?: ReadonlyArray<{
+    erlass: string;
+    quelle: 'amtlich' | 'maschinell';
+    regel: 'fussnote' | 'sg-nummer' | 'datum-titel';
+    beleg: string;
+  }>;
 }
 
 // ── Browse-Manifest-Schema (generiert → public/materialien/register.json) ────
@@ -187,6 +217,13 @@ export interface BrowseMaterial {
     fristEnde?: string;
     projEli: string;
   };
+  /** K-16: Herkunft je Erlass-Verknüpfung (nur bei behoerde==='BS-GR' gesetzt). */
+  bsKanten?: ReadonlyArray<{
+    erlass: string;
+    quelle: 'amtlich' | 'maschinell';
+    regel: 'fussnote' | 'sg-nummer' | 'datum-titel';
+    beleg: string;
+  }>;
   /** sha-256 über die Identitätsfelder (Drift-/Provenienz-Token). */
   sha: string;
 }
