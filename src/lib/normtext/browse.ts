@@ -232,7 +232,14 @@ export interface ErlassKopf {
   fussnoten?: Fussnote[];
 }
 
-interface StrukturDoc { artikel?: StrukturMap; kopf?: ErlassKopf }
+/** Bezüge-Zähler je Artikel-Token: `[Entscheide, Materialien]`.
+ *  W2·26-FUNKTIONSZEILE-ZAEHLER — buildseitig von `scripts/gen-bezuege-zaehler.ts`
+ *  in DIESES Sidecar geschrieben, damit die Funktionszeile am Artikelende ihre
+ *  Zahlen ohne eigenen Fetch und ohne zweite Render-Runde hat. Herleitung und
+ *  die Wahl gerade dieser Datei stehen im Kopf des Generators. */
+export type ZaehlBlock = Record<string, [entscheide: number, materialien: number]>;
+
+interface StrukturDoc { artikel?: StrukturMap; kopf?: ErlassKopf; zaehler?: ZaehlBlock }
 const strukturCache = new Map<string, Promise<StrukturDoc | null>>();
 
 /** Lädt das Struktur-Sidecar-Dokument (Gliederung/Marginalien + Erlass-Kopf), lazy/gecacht.
@@ -264,6 +271,12 @@ export function ladeStruktur(ebene: string, key: string): Promise<StrukturMap | 
 /** Lädt den Erlass-Kopf (M5) aus demselben Sidecar (geteilter Cache, ein Fetch). */
 export function ladeErlassKopf(ebene: string, key: string): Promise<ErlassKopf | null> {
   return ladeStrukturDoc(ebene, key).then((d) => d?.kopf ?? null);
+}
+
+/** Lädt die Bezüge-Zähler aus demselben Sidecar (geteilter Cache, KEIN eigener
+ *  Fetch — genau das ist der Punkt von W2·26-FUNKTIONSZEILE-ZAEHLER). */
+export function ladeBezuegeZaehler(ebene: string, key: string): Promise<ZaehlBlock | null> {
+  return ladeStrukturDoc(ebene, key).then((d) => d?.zaehler ?? null);
 }
 
 /** Ein Knoten der amtlichen Gliederung (Teil → Titel → Abschnitt …). */
