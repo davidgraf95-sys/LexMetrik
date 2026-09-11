@@ -1,0 +1,85 @@
+{
+  "erlass": "GSCHG",
+  "profil": "entstehung-leser/1",
+  "abgerufen": "2026-09-05",
+  "aenderungen": {
+    "oc/2006/575": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2006/575/de",
+      "titel": "Bundesgesetz über den Schutz der Gewässer (Gewässerschutzgesetz, GSchG)",
+      "as": "AS 2006 3859",
+      "inkraft": "2006-10-01"
+    },
+    "oc/2006/656": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2006/656/de",
+      "titel": "Bundesgesetz über den Schutz der Gewässer (Gewässerschutzgesetz, GSchG)",
+      "as": "AS 2006 4287",
+      "inkraft": "2007-01-01",
+      "botschaft": "BOTSCHAFT-2005-114"
+    },
+    "oc/2010/620": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2010/620/de",
+      "titel": "Bundesgesetz über den Schutz der Gewässer (Gewässerschutzgesetz, GSchG) (Renaturierung)",
+      "as": "AS 2010 4285",
+      "inkraft": "2011-01-01"
+    },
+    "oc/2014/574": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2014/574/de",
+      "titel": "Bundesgesetz über den Schutz der Gewässer (Gewässerschutzgesetz, GSchG)",
+      "as": "AS 2014 3327",
+      "inkraft": "2016-01-01",
+      "botschaft": "BOTSCHAFT-2013-1031"
+    },
+    "oc/2015/569": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2015/569/de",
+      "titel": "Bundesgesetz über den Schutz der Gewässer (Gewässerschutzgesetz, GSchG) (Betrifft nur den französischen Text)",
+      "as": "AS 2015 3021",
+      "inkraft": "2015-09-08"
+    }
+  },
+  "botschaften": {
+    "BOTSCHAFT-2005-114": {
+      "titel": "Botschaft über die Änderung des Gewässerschutzgesetzes",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2005/114/de",
+      "stand": "2004-12-22",
+      "nummer": "04.086",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2004-12-22",
+          "res": "fga/2005/114"
+        },
+        {
+          "code": 300,
+          "datum": "2006-03-24",
+          "res": "fga/2006/378"
+        },
+        {
+          "code": 400,
+          "datum": "2006-07-13"
+        }
+      ]
+    },
+    "BOTSCHAFT-2013-1031": {
+      "titel": "Botschaft zur Änderung des Gewässerschutzgesetzes (Verursachergerechte Finanzierung der Elimination von Spurenstoffen im Abwasser)",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2013/1031/de",
+      "stand": "2013-06-26",
+      "nummer": "13.059",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2013-06-26",
+          "res": "fga/2013/1031"
+        },
+        {
+          "code": 300,
+          "datum": "2014-03-21",
+          "res": "fga/2014/510"
+        },
+        {
+          "code": 400,
+          "datum": "2014-07-10"
+        }
+      ]
+    }
+  }
+}

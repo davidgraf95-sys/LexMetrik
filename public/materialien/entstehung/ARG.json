@@ -1,0 +1,80 @@
+{
+  "erlass": "ARG",
+  "profil": "entstehung-leser/1",
+  "abgerufen": "2026-09-05",
+  "aenderungen": {
+    "oc/1966/57_57_57": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/1966/57_57_57/de",
+      "titel": "Bundesgesetz vom 13. März 1964 über die Arbeit in Industrie, Gewerbe und Handel (Arbeitsgesetz, ArG)",
+      "as": "AS 1966 57",
+      "inkraft": "1966-02-01"
+    },
+    "oc/2000/241": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2000/241/de",
+      "titel": "Bundesgesetz über die Arbeit in Industrie, Gewerbe und Handel (Arbeitsgesetz)",
+      "as": "AS 2000 1568",
+      "inkraft": "2000-08-01"
+    },
+    "oc/2000/242": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2000/242/de",
+      "titel": "Bundesgesetz über die Arbeit in Industrie, Gewerbe und Handel (Arbeitsgesetz)",
+      "as": "AS 2000 1569",
+      "inkraft": "2000-08-01"
+    },
+    "oc/2002/346": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2002/346/de",
+      "titel": "Bundesgesetz über die Arbeit in Industrie, Gewerbe und Handel (Arbeitsgesetz)",
+      "as": "AS 2002 2547",
+      "inkraft": "2005-01-01"
+    },
+    "oc/2006/173": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2006/173/de",
+      "titel": "Bundesgesetz über die Arbeit in Industrie, Gewerbe und Handel (Arbeitsgesetz)",
+      "as": "AS 2006 961",
+      "inkraft": "2006-04-01"
+    },
+    "oc/2007/691": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2007/691/de",
+      "titel": "Bundesgesetz über die Arbeit in Industrie, Gewerbe und Handel (Arbeitsgesetz)",
+      "as": "AS 2007 4957",
+      "inkraft": "2008-01-01",
+      "botschaft": "BOTSCHAFT-2004-1177"
+    },
+    "oc/2008/398": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2008/398/de",
+      "titel": "Bundesgesetz über die Arbeit in Industrie, Gewerbe und Handel (Arbeitsgesetz)",
+      "as": "AS 2008 2903",
+      "inkraft": "2008-07-01"
+    },
+    "oc/2013/746": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2013/746/de",
+      "titel": "Bundesgesetz über die Arbeit in Industrie, Gewerbe und Handel (Arbeitsgesetz, ArG)",
+      "as": "AS 2013 4081",
+      "inkraft": "2013-12-01"
+    }
+  },
+  "botschaften": {
+    "BOTSCHAFT-2004-1177": {
+      "titel": "Botschaft zur Änderung des Bundesgesetzes über die Arbeit in Industrie, Gewerbe und Handel (Arbeitsgesetz)",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2004/1177/de",
+      "stand": "2004-11-17",
+      "nummer": "04.073",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2004-11-17",
+          "res": "fga/2004/1177"
+        },
+        {
+          "code": 300,
+          "datum": "2006-06-23",
+          "res": "fga/2006/681"
+        },
+        {
+          "code": 400,
+          "datum": "2006-10-12"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "erlass": "VSTG",
+  "profil": "entstehung-leser/1",
+  "abgerufen": "2026-09-05",
+  "aenderungen": {
+    "oc/2000/458": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2000/458/de",
+      "titel": "Bundesgesetz über die Verrechnungssteuer (VStG)",
+      "as": "AS 2000 2741",
+      "inkraft": "2001-01-01"
+    },
+    "oc/2012/701": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2012/701/de",
+      "titel": "Bundesgesetz über die Verrechnungssteuer (VStG)",
+      "as": "AS 2012 5981",
+      "inkraft": "2013-01-01",
+      "botschaft": "BOTSCHAFT-2011-1054"
+    },
+    "oc/2016/583": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2016/583/de",
+      "titel": "Bundesgesetz über die Verrechnungssteuer (Verrechnungssteuergesetz, VStG)",
+      "as": "AS 2016 3451",
+      "inkraft": "2017-01-01",
+      "botschaft": "BOTSCHAFT-2015-1692"
+    },
+    "oc/2017/83": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2017/83/de",
+      "titel": "Bundesgesetz über die Verrechnungssteuer (Verrechnungssteuergesetz, VStG)",
+      "as": "AS 2017 497",
+      "inkraft": "2017-02-15"
+    },
+    "oc/2019/370": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2019/370/de",
+      "titel": "Bundesgesetz über Geldspiele (Geldspielgesetz, BGS) (Betrifft nur den französischen Text)",
+      "as": "AS 2019 2013",
+      "inkraft": "2019-07-02"
+    },
+    "oc/2019/76": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2019/76/de",
+      "titel": "Bundesgesetz über die Verrechnungssteuer (Verrechnungssteuergesetz, VStG)",
+      "as": "AS 2019 433",
+      "inkraft": "2019-01-01",
+      "botschaft": "BOTSCHAFT-2018-890"
+    }
+  },
+  "botschaften": {
+    "BOTSCHAFT-2011-1054": {
+      "titel": "Botschaft zur Änderung des Bundesgesetzes über die Verrechnungssteuer (Belebung des schweizerischen Kapitalmarktes)",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2011/1054/de",
+      "stand": "2011-08-24",
+      "nummer": "11.047",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2011-08-24",
+          "res": "fga/2011/1054"
+        },
+        {
+          "code": 300,
+          "datum": "2012-06-15",
+          "res": "fga/2012/935"
+        },
+        {
+          "code": 400,
+          "datum": "2012-10-04"
+        },
+        {
+          "code": 400
+        }
+      ]
+    },
+    "BOTSCHAFT-2015-1692": {
+      "titel": "Botschaft zu einer Änderung des Verrechnungssteuergesetzes",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2015/1692/de",
+      "stand": "2015-09-11",
+      "nummer": "15.060",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2015-09-11",
+          "res": "fga/2015/1692"
+        },
+        {
+          "code": 300,
+          "datum": "2016-03-18",
+          "res": "fga/2016/432"
+        },
+        {
+          "code": 400,
+          "datum": "2016-07-07"
+        }
+      ]
+    },
+    "BOTSCHAFT-2018-890": {
+      "titel": "Botschaft zu einer Änderung des Verrechnungssteuergesetzes",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2018/890/de",
+      "stand": "2018-03-28",
+      "nummer": "18.030",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2018-03-28",
+          "res": "fga/2018/890"
+        },
+        {
+          "code": 300,
+          "datum": "2018-09-28",
+          "res": "fga/2018/2141"
+        },
+        {
+          "code": 400,
+          "datum": "2019-01-17"
+        }
+      ]
+    }
+  }
+}

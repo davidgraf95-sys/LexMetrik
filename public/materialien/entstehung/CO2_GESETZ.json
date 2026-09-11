@@ -1,0 +1,50 @@
+{
+  "erlass": "CO2_GESETZ",
+  "profil": "entstehung-leser/1",
+  "abgerufen": "2026-09-05",
+  "aenderungen": {
+    "oc/2019/752": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2019/752/de",
+      "titel": "Bundesbeschluss über die Genehmigung des Abkommens zwischen der Schweiz und der Europäischen Union zur Verknüpfung der Emissionshandelssysteme und über seine Umsetzung (Änderung des CO2-Gesetzes)",
+      "as": "AS 2019 4327",
+      "inkraft": "2020-01-01",
+      "botschaft": "BOTSCHAFT-2018-109"
+    },
+    "oc/2022/262": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2022/262/de",
+      "titel": "Bundesgesetz über die Reduktion der CO2-Emissionen (CO2-Gesetz)",
+      "as": "AS 2022 262",
+      "inkraft": "2022-01-01"
+    },
+    "oc/2024/376": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2024/376/de",
+      "titel": "Bundesgesetz über die Reduktion der CO2-Emissionen (CO2-Gesetz)",
+      "as": "AS 2024 376",
+      "inkraft": "2025-01-01"
+    }
+  },
+  "botschaften": {
+    "BOTSCHAFT-2018-109": {
+      "titel": "Botschaft zur Genehmigung des Abkommens zwischen der Schweiz und der Europäischen Union zur Verknüpfung der Emissionshandelssysteme und über seine Umsetzung (Änderung des CO2-Gesetzes)",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2018/109/de",
+      "stand": "2017-12-01",
+      "nummer": "17.073",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2017-12-01",
+          "res": "fga/2018/109"
+        },
+        {
+          "code": 300,
+          "datum": "2019-03-22",
+          "res": "fga/2019/732"
+        },
+        {
+          "code": 400,
+          "datum": "2019-07-11"
+        }
+      ]
+    }
+  }
+}

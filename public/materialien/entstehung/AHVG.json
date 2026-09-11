@@ -1,0 +1,435 @@
+{
+  "erlass": "AHVG",
+  "profil": "entstehung-leser/1",
+  "abgerufen": "2026-09-05",
+  "aenderungen": {
+    "oc/2000/439": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2000/439/de",
+      "titel": "Bundesgesetz vom über die Alters- und Hinterlassenenversicherung (AHVG)",
+      "as": "AS 2000 2677",
+      "inkraft": "2001-01-01",
+      "botschaft": "BOTSCHAFT-1999-1_4983_4601_4303"
+    },
+    "oc/2000/461": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2000/461/de",
+      "titel": "Bundesgesetz über die Alters- und Hinterlassenenversicherung (AHVG)",
+      "as": "AS 2000 2749",
+      "inkraft": "2001-01-01",
+      "botschaft": "BOTSCHAFT-2000-99"
+    },
+    "oc/2006/741": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2006/741/de",
+      "titel": "Bundesgesetz über die Alters- und Hinterlassenenversicherung (AHVG)",
+      "as": "AS 2006 4817",
+      "inkraft": "2007-01-01",
+      "botschaft": "BOTSCHAFT-2002-1106"
+    },
+    "oc/2007/747": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2007/747/de",
+      "titel": "Bundesgesetz über die Alters- und Hinterlassenenversicherung (AHVG) (Neue AHV-Versichertennummer)",
+      "as": "AS 2007 5259",
+      "inkraft": "2007-12-01",
+      "botschaft": "BOTSCHAFT-2006-52"
+    },
+    "oc/2011/673": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2011/673/de",
+      "titel": "Bundesgesetz über die Alters- und Hinterlassenenversicherung (AHVG) (Verbesserung der Durchführung)",
+      "as": "AS 2011 4745",
+      "inkraft": "2012-01-01",
+      "botschaft": "BOTSCHAFT-2011-61"
+    },
+    "oc/2016/828": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2016/828/de",
+      "titel": "Bundesbeschluss über die Genehmigung und die Umsetzung des Protokolls zum Freizügigkeitsabkommen zwischen der Schweizerischen Eidgenossenschaft einerseits und der Europäischen Gemeinschaft sowie ihren Mitgliedstaaten andererseits betreffend die Ausdehnung auf die Republik Kroatien",
+      "as": "AS 2016 5233",
+      "inkraft": "2017-01-01",
+      "botschaft": "BOTSCHAFT-2016-467"
+    },
+    "oc/2021/758": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2021/758/de",
+      "titel": "Bundesgesetz über die Alters- und Hinterlassenenversicherung (AHVG) (Systematische Verwendung der AHV-Nummer durch Behörden)",
+      "as": "AS 2021 758",
+      "inkraft": "2022-01-01",
+      "botschaft": "BOTSCHAFT-2019-2681"
+    },
+    "oc/2023/688": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2023/688/de",
+      "titel": "Bundesgesetz über die Alters- und Hinterlassenenversicherung (AHVG) (Modernisierung der Aufsicht)",
+      "as": "AS 2023 688",
+      "inkraft": "2024-01-01",
+      "botschaft": "BOTSCHAFT-2020-1"
+    },
+    "oc/2023/92": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2023/92/de",
+      "titel": "Bundesgesetz über die Alters- und Hinterlassenenversicherung (AHVG) (AHV 21)",
+      "as": "AS 2023 92",
+      "inkraft": "2024-01-01",
+      "botschaft": "BOTSCHAFT-2019-2267"
+    },
+    "oc/2025/704": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2025/704/de",
+      "titel": "Bundesgesetz über die Alters- und Hinterlassenenversicherung (AHVG) (Umsetzung der 13. Altersrente)",
+      "as": "AS 2025 704",
+      "inkraft": "2026-01-01",
+      "botschaft": "BOTSCHAFT-2024-2747"
+    }
+  },
+  "botschaften": {
+    "BOTSCHAFT-1999-1_4983_4601_4303": {
+      "titel": "Botschaft zur Änderung des Bundesgesetzes über die Alters- und Hinterlassenenversicherung (Revision der freiwilligen Versicherung)",
+      "url": "https://www.fedlex.admin.ch/eli/fga/1999/1_4983_4601_4303/de",
+      "stand": "1999-04-28",
+      "nummer": "1999.038",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "1999-04-28",
+          "res": "fga/1999/1_4983_4601_4303"
+        },
+        {
+          "code": 300,
+          "datum": "2000-06-23",
+          "res": "fga/2000/746"
+        },
+        {
+          "code": 400,
+          "datum": "2000-10-12"
+        }
+      ]
+    },
+    "BOTSCHAFT-2000-99": {
+      "titel": "Botschaft über die Anpassung und Harmonisierung der gesetzlichen Grundlagen für die Bearbeitung von Personendaten in den Sozialversicherungen",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2000/99/de",
+      "stand": "1999-11-24",
+      "nummer": "1999.093",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "1999-11-24",
+          "res": "fga/2000/99"
+        },
+        {
+          "code": 300,
+          "datum": "2000-06-23",
+          "res": "fga/2000/747"
+        },
+        {
+          "code": 300,
+          "datum": "2000-06-23",
+          "res": "fga/2000/748"
+        },
+        {
+          "code": 300,
+          "datum": "2000-06-23",
+          "res": "fga/2000/749"
+        },
+        {
+          "code": 300,
+          "datum": "2000-06-23",
+          "res": "fga/2000/750"
+        },
+        {
+          "code": 300,
+          "datum": "2000-06-23",
+          "res": "fga/2000/751"
+        },
+        {
+          "code": 300,
+          "datum": "2000-06-23",
+          "res": "fga/2000/752"
+        },
+        {
+          "code": 300,
+          "datum": "2000-06-23",
+          "res": "fga/2000/753"
+        },
+        {
+          "code": 300,
+          "datum": "2000-06-23",
+          "res": "fga/2000/754"
+        },
+        {
+          "code": 300,
+          "datum": "2000-06-23",
+          "res": "fga/2000/755"
+        },
+        {
+          "code": 300,
+          "datum": "2000-06-23",
+          "res": "fga/2000/762"
+        },
+        {
+          "code": 400,
+          "datum": "2000-10-12"
+        }
+      ]
+    },
+    "BOTSCHAFT-2002-1106": {
+      "titel": "Botschaft zur Änderung des Asylgesetzes zur Änderung des Bundesgesetzes über die Krankenversicherung sowie zur Änderung des Bundesgesetzes über die Alters- und Hinterlassenenversicherung",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2002/1106/de",
+      "stand": "2002-09-04",
+      "nummer": "02.060",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2002-09-04",
+          "res": "fga/2002/1106"
+        },
+        {
+          "code": 300,
+          "datum": "2005-12-16",
+          "res": "fga/2005/1179"
+        },
+        {
+          "code": 300,
+          "datum": "2005-12-16",
+          "res": "fga/2005/1180"
+        },
+        {
+          "code": 300,
+          "datum": "2005-12-16",
+          "res": "fga/2005/1181"
+        },
+        {
+          "code": 400,
+          "datum": "2006-04-06"
+        },
+        {
+          "code": 480,
+          "datum": "2006-04-27",
+          "res": "fga/2006/490"
+        },
+        {
+          "code": 630,
+          "datum": "2006-05-12",
+          "res": "fga/2006/554"
+        },
+        {
+          "code": 650,
+          "datum": "2006-09-24",
+          "res": "fga/2006/1232"
+        }
+      ]
+    },
+    "BOTSCHAFT-2006-52": {
+      "titel": "Botschaft zur Änderung des Bundesgesetzes über die Alters- und Hinterlassenenversicherung (Neue AHV-Versichertennummer)",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2006/52/de",
+      "stand": "2005-11-23",
+      "nummer": "05.079",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2005-11-23",
+          "res": "fga/2006/52"
+        },
+        {
+          "code": 300,
+          "datum": "2006-06-23",
+          "res": "fga/2006/676"
+        },
+        {
+          "code": 400,
+          "datum": "2006-10-12"
+        }
+      ]
+    },
+    "BOTSCHAFT-2011-61": {
+      "titel": "Botschaft zur Änderung des Bundesgesetzes über die Alters- und Hinterlassenenversicherung (AHVG) (Verbesserung der Durchführung)",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2011/61/de",
+      "stand": "2010-12-03",
+      "nummer": "10.108",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2010-12-03",
+          "res": "fga/2011/61"
+        },
+        {
+          "code": 300,
+          "datum": "2011-06-17",
+          "res": "fga/2011/773"
+        },
+        {
+          "code": 400,
+          "datum": "2011-10-06"
+        }
+      ]
+    },
+    "BOTSCHAFT-2016-467": {
+      "titel": "Botschaft zur Ausdehnung des Freizügigkeitsabkommens auf Kroatien",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2016/467/de",
+      "stand": "2016-03-04",
+      "nummer": "16.028",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2016-03-04",
+          "res": "fga/2016/467"
+        },
+        {
+          "code": 300,
+          "datum": "2016-06-17",
+          "res": "fga/2016/1060"
+        },
+        {
+          "code": 400,
+          "datum": "2016-10-06"
+        }
+      ]
+    },
+    "BOTSCHAFT-2019-2267": {
+      "titel": "Botschaft zur Stabilisierung der AHV (AHV 21)",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2019/2267/de",
+      "stand": "2019-08-28",
+      "nummer": "19.050",
+      "ereignisse": [
+        {
+          "code": 8,
+          "datum": "2018-07-10",
+          "res": "fga/2018/1457"
+        },
+        {
+          "code": 200,
+          "datum": "2019-08-28",
+          "res": "fga/2019/2267"
+        },
+        {
+          "code": 300,
+          "datum": "2021-12-17",
+          "res": "fga/2021/2991"
+        },
+        {
+          "code": 300,
+          "datum": "2021-12-17",
+          "res": "fga/2021/2995"
+        },
+        {
+          "code": 400,
+          "datum": "2022-04-07"
+        },
+        {
+          "code": 480,
+          "datum": "2022-04-27",
+          "res": "fga/2022/1059"
+        },
+        {
+          "code": 630,
+          "datum": "2022-06-23",
+          "res": "fga/2022/1598"
+        },
+        {
+          "code": 9,
+          "datum": "2022-09-25",
+          "res": "fga/2023/486"
+        },
+        {
+          "code": 1,
+          "res": "dl/proj/6018/48/cons_1"
+        }
+      ]
+    },
+    "BOTSCHAFT-2019-2681": {
+      "titel": "Botschaft zur Änderung des Bundesgesetzes über die Alters- und Hinterlassenenversicherung (Systematische Verwendung der AHV-Nummer durch Behörden)",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2019/2681/de",
+      "stand": "2019-10-30",
+      "nummer": "19.057",
+      "ereignisse": [
+        {
+          "code": 8,
+          "datum": "2018-11-20",
+          "res": "fga/2018/2485"
+        },
+        {
+          "code": 200,
+          "datum": "2019-10-30",
+          "res": "fga/2019/2681"
+        },
+        {
+          "code": 300,
+          "datum": "2020-12-18",
+          "res": "fga/2020/2693"
+        },
+        {
+          "code": 400,
+          "datum": "2021-04-10"
+        },
+        {
+          "code": 1,
+          "res": "dl/proj/6018/78/cons_1"
+        }
+      ]
+    },
+    "BOTSCHAFT-2020-1": {
+      "titel": "Botschaft zur Änderung des Bundesgesetzes über die Alters- und Hinterlassenenversicherung (Modernisierung der Aufsicht in der 1. Säule und Optimierung in der 2. Säule der Alters-, Hinterlassenen- und Invalidenvorsorge)",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2020/1/de",
+      "stand": "2019-11-20",
+      "nummer": "19.080",
+      "ereignisse": [
+        {
+          "code": 4,
+          "datum": "2017-04-19",
+          "res": "fga/2017/655"
+        },
+        {
+          "code": 2,
+          "datum": "2019-11-20",
+          "res": "fga/2020/2"
+        },
+        {
+          "code": 200,
+          "datum": "2019-11-20",
+          "res": "fga/2020/1"
+        },
+        {
+          "code": 300,
+          "datum": "2022-06-17",
+          "res": "fga/2022/1563"
+        },
+        {
+          "code": 400,
+          "datum": "2022-10-06"
+        },
+        {
+          "code": 1,
+          "res": "dl/proj/6017/29/cons_1"
+        }
+      ]
+    },
+    "BOTSCHAFT-2024-2747": {
+      "titel": "Botschaft zur Umsetzung und Finanzierung der Initiative für eine 13. AHV-Rente",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2024/2747/de",
+      "stand": "2024-10-16",
+      "nummer": "24.073",
+      "ereignisse": [
+        {
+          "code": 4,
+          "datum": "2024-05-27",
+          "res": "fga/2024/1127"
+        },
+        {
+          "code": 2,
+          "datum": "2024-10-16",
+          "res": "fga/2024/1651"
+        },
+        {
+          "code": 200,
+          "datum": "2024-10-16",
+          "res": "fga/2024/2747"
+        },
+        {
+          "code": 300,
+          "datum": "2025-03-21",
+          "res": "fga/2025/1105"
+        },
+        {
+          "code": 400,
+          "datum": "2025-07-10"
+        },
+        {
+          "code": 1,
+          "res": "dl/proj/2024/28/cons_1"
+        }
+      ]
+    }
+  }
+}

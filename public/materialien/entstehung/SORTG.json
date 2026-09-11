@@ -1,0 +1,38 @@
+{
+  "erlass": "SORTG",
+  "profil": "entstehung-leser/1",
+  "abgerufen": "2026-09-05",
+  "aenderungen": {
+    "oc/2008/526": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2008/526/de",
+      "titel": "Bundesbeschluss über die Genehmigung des revidierten internationalen Übereinkommens zum Schutz von Pflanzenzüchtungen und die Änderung des Sortenschutzgesetzes und des Patentgesetzes",
+      "as": "AS 2008 3897",
+      "inkraft": "2008-09-01",
+      "botschaft": "BOTSCHAFT-2004-683"
+    }
+  },
+  "botschaften": {
+    "BOTSCHAFT-2004-683": {
+      "titel": "Botschaft über die Genehmigung des revidierten internationalen Übereinkommens zum Schutz von Pflanzenzüchtungen und die Änderung des Sortenschutzgesetzes",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2004/683/de",
+      "stand": "2004-06-23",
+      "nummer": "04.046",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2004-06-23",
+          "res": "fga/2004/683"
+        },
+        {
+          "code": 300,
+          "datum": "2007-10-05",
+          "res": "fga/2007/1087"
+        },
+        {
+          "code": 400,
+          "datum": "2008-01-24"
+        }
+      ]
+    }
+  }
+}

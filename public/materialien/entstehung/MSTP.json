@@ -1,0 +1,44 @@
+{
+  "erlass": "MSTP",
+  "profil": "entstehung-leser/1",
+  "abgerufen": "2026-09-05",
+  "aenderungen": {
+    "oc/2004/322": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2004/322/de",
+      "titel": "Militärstrafprozess (MStP)",
+      "as": "AS 2004 2691",
+      "inkraft": "2004-06-01",
+      "botschaft": "BOTSCHAFT-2003-143"
+    },
+    "oc/2018/625": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2018/625/de",
+      "titel": "Militärstrafprozess (MStP)",
+      "as": "AS 2018 3911",
+      "inkraft": "2019-01-01"
+    }
+  },
+  "botschaften": {
+    "BOTSCHAFT-2003-143": {
+      "titel": "Botschaft zur Änderung des Militärstrafprozesses (Zeugenschutz)",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2003/143/de",
+      "stand": "2003-01-22",
+      "nummer": "03.008",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2003-01-22",
+          "res": "fga/2003/143"
+        },
+        {
+          "code": 300,
+          "datum": "2003-12-19",
+          "res": "fga/2003/1412"
+        },
+        {
+          "code": 400,
+          "datum": "2004-04-08"
+        }
+      ]
+    }
+  }
+}

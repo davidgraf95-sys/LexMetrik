@@ -1,0 +1,58 @@
+{
+  "erlass": "FINFRAG",
+  "profil": "entstehung-leser/1",
+  "abgerufen": "2026-09-05",
+  "aenderungen": {
+    "oc/2023/731": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2023/731/de",
+      "titel": "Bundesgesetz über die Finanzmarktinfrastrukturen und das Marktverhalten im Effekten- und Derivatehandel (Finanzmarktinfrastrukturgesetz, FinfraG) (Anerkennung ausländischer Handelsplätze für den Handel mit Beteiligungspapieren von Gesellschaften mit Sitz in der Schweiz)",
+      "as": "AS 2023 731",
+      "inkraft": "2024-01-01",
+      "botschaft": "BOTSCHAFT-2022-1673"
+    },
+    "oc/2024/33": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2024/33/de",
+      "titel": "Bundesgesetz über die Finanzmarktinfrastrukturen und das Marktverhalten im Effekten- und Derivatehandel (Finanzmarktinfrastrukturgesetz, FinfraG)",
+      "as": "AS 2024 33",
+      "inkraft": "2024-02-01"
+    }
+  },
+  "botschaften": {
+    "BOTSCHAFT-2022-1673": {
+      "titel": "Botschaft zur Änderung des Finanzmarktinfrastrukturgesetzes (Anerkennung ausländischer Handelsplätze für den Handel mit Beteiligungspapieren von Gesellschaften mit Sitz in der Schweiz)",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2022/1673/de",
+      "stand": "2022-06-22",
+      "nummer": "22.050",
+      "ereignisse": [
+        {
+          "code": 4,
+          "datum": "2021-11-25",
+          "res": "fga/2021/2704"
+        },
+        {
+          "code": 2,
+          "datum": "2022-06-22",
+          "res": "fga/2022/1674"
+        },
+        {
+          "code": 200,
+          "datum": "2022-06-22",
+          "res": "fga/2022/1673"
+        },
+        {
+          "code": 300,
+          "datum": "2023-03-17",
+          "res": "fga/2023/788"
+        },
+        {
+          "code": 400,
+          "datum": "2023-07-06"
+        },
+        {
+          "code": 1,
+          "res": "dl/proj/2021/110/cons_1"
+        }
+      ]
+    }
+  }
+}

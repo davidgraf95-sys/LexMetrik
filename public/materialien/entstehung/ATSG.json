@@ -1,0 +1,56 @@
+{
+  "erlass": "ATSG",
+  "profil": "entstehung-leser/1",
+  "abgerufen": "2026-09-05",
+  "aenderungen": {
+    "oc/2019/519": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2019/519/de",
+      "titel": "Bundesgesetz über den Allgemeinen Teil des Sozialversicherungsrechts (ATSG) (Gesetzliche Grundlage für die Überwachung von Versicherten)",
+      "as": "AS 2019 2829",
+      "inkraft": "2019-10-01"
+    },
+    "oc/2020/892": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2020/892/de",
+      "titel": "Bundesgesetz über den Allgemeinen Teil des Sozialversicherungsrechts (ATSG)",
+      "as": "AS 2020 5137",
+      "inkraft": "2021-01-01",
+      "botschaft": "BOTSCHAFT-2018-671"
+    },
+    "oc/2021/358": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2021/358/de",
+      "titel": "Bundesgesetz über den Allgemeinen Teil des Sozialversicherungsrechts (ATSG). Berichtigung",
+      "as": "AS 2021 358",
+      "inkraft": "2021-06-18"
+    },
+    "oc/2021/658": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2021/658/de",
+      "titel": "Bundesgesetz über den Allgemeinen Teil des Sozialversicherungsrechts (ATSG). Berichtigung (Betrifft nur den italienischen Text)",
+      "as": "AS 2021 658",
+      "inkraft": "2021-11-03"
+    }
+  },
+  "botschaften": {
+    "BOTSCHAFT-2018-671": {
+      "titel": "Botschaft zur Änderung des Bundesgesetzes über den Allgemeinen Teil des Sozialversicherungsrechts",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2018/671/de",
+      "stand": "2018-03-02",
+      "nummer": "18.029",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2018-03-02",
+          "res": "fga/2018/671"
+        },
+        {
+          "code": 300,
+          "datum": "2019-06-21",
+          "res": "fga/2019/1585"
+        },
+        {
+          "code": 400,
+          "datum": "2019-10-10"
+        }
+      ]
+    }
+  }
+}

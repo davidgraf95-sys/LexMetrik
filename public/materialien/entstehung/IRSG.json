@@ -1,0 +1,92 @@
+{
+  "erlass": "IRSG",
+  "profil": "entstehung-leser/1",
+  "abgerufen": "2026-09-05",
+  "aenderungen": {
+    "oc/2002/498": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2002/498/de",
+      "titel": "Bundesgesetz über internationale Rechtshilfe in Strafsachen (Rechtshilfegesetz, IRSG)",
+      "as": "AS 2002 3333",
+      "inkraft": "2002-11-01",
+      "botschaft": "BOTSCHAFT-2002-672"
+    },
+    "oc/2004/621": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2004/621/de",
+      "titel": "Bundesbeschluss über die Genehmigung und die Umsetzung des Zusatzprotokolls zum Übereinkommen des Europarats über die Überstellung verurteilter Personen",
+      "as": "AS 2004 4161",
+      "inkraft": "2004-10-01",
+      "botschaft": "BOTSCHAFT-2002-672"
+    },
+    "oc/2021/233": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2021/233/de",
+      "titel": "Bundesgesetz über internationale Rechtshilfe in Strafsachen (Rechtshilfegesetz, IRSG)",
+      "as": "AS 2021 233",
+      "inkraft": "2021-06-01",
+      "botschaft": "BOTSCHAFT-2019-2683"
+    }
+  },
+  "botschaften": {
+    "BOTSCHAFT-2002-672": {
+      "titel": "* Botschaft betreffend das Zusatzprotokoll zum Übereinkommen des Europarats über die Überstellung verurteilter Personen und die Änderung des Rechtshilfegesetzes",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2002/672/de",
+      "stand": "2002-05-01",
+      "nummer": "02.035",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2002-05-01",
+          "res": "fga/2002/672"
+        },
+        {
+          "code": 300,
+          "datum": "2002-06-21",
+          "res": "fga/2002/699"
+        },
+        {
+          "code": 400,
+          "datum": "2002-10-17"
+        },
+        {
+          "code": 300,
+          "datum": "2003-12-19",
+          "res": "fga/2003/1416"
+        },
+        {
+          "code": 400,
+          "datum": "2004-04-08"
+        }
+      ]
+    },
+    "BOTSCHAFT-2019-2683": {
+      "titel": "Botschaft zur Änderung von Artikel 1 des Rechtshilfegesetzes",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2019/2683/de",
+      "stand": "2019-11-06",
+      "nummer": "19.063",
+      "ereignisse": [
+        {
+          "code": 8,
+          "datum": "2018-10-09",
+          "res": "fga/2018/2148"
+        },
+        {
+          "code": 200,
+          "datum": "2019-11-06",
+          "res": "fga/2019/2683"
+        },
+        {
+          "code": 300,
+          "datum": "2020-12-18",
+          "res": "fga/2020/2694"
+        },
+        {
+          "code": 400,
+          "datum": "2021-04-10"
+        },
+        {
+          "code": 1,
+          "res": "dl/proj/6018/67/cons_1"
+        }
+      ]
+    }
+  }
+}

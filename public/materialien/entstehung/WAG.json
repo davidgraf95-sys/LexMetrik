@@ -1,0 +1,50 @@
+{
+  "erlass": "WAG",
+  "profil": "entstehung-leser/1",
+  "abgerufen": "2026-09-05",
+  "aenderungen": {
+    "oc/2013/418": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2013/418/de",
+      "titel": "Bundesgesetz über den Wald (Waldgesetz, WaG)",
+      "as": "AS 2013 1981",
+      "inkraft": "2013-07-01"
+    },
+    "oc/2016/538": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2016/538/de",
+      "titel": "Bundesgesetz über den Wald (Waldgesetz, WaG)",
+      "as": "AS 2016 3207",
+      "inkraft": "2017-01-01",
+      "botschaft": "BOTSCHAFT-2014-1078"
+    },
+    "oc/2025/403": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2025/403/de",
+      "titel": "Bundesgesetz über den Wald (Waldgesetz, WaG)",
+      "as": "AS 2025 403",
+      "inkraft": "2025-08-01"
+    }
+  },
+  "botschaften": {
+    "BOTSCHAFT-2014-1078": {
+      "titel": "Botschaft zur Änderung des Bundesgesetzes über den Wald",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2014/1078/de",
+      "stand": "2014-05-21",
+      "nummer": "14.046",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2014-05-21",
+          "res": "fga/2014/1078"
+        },
+        {
+          "code": 300,
+          "datum": "2016-03-18",
+          "res": "fga/2016/436"
+        },
+        {
+          "code": 400,
+          "datum": "2016-07-07"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "erlass": "PUBLG",
+  "profil": "entstehung-leser/1",
+  "abgerufen": "2026-09-05",
+  "aenderungen": {
+    "oc/2015/669": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2015/669/de",
+      "titel": "Bundesgesetz über die Sammlungen des Bundesrechts und das Bundesblatt (Publikationsgesetz, PublG)",
+      "as": "AS 2015 3977",
+      "inkraft": "2016-01-01",
+      "botschaft": "BOTSCHAFT-2013-1331"
+    }
+  },
+  "botschaften": {
+    "BOTSCHAFT-2013-1331": {
+      "titel": "Botschaft zur Änderung des Publikationsgesetzes (Primatwechsel von der gedruckten zur elektronischen Version der amtlichen Veröffentlichungen)",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2013/1331/de",
+      "stand": "2013-08-28",
+      "nummer": "13.069",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2013-08-28",
+          "res": "fga/2013/1331"
+        },
+        {
+          "code": 300,
+          "datum": "2014-09-26",
+          "res": "fga/2014/1582"
+        },
+        {
+          "code": 400,
+          "datum": "2015-01-15"
+        }
+      ]
+    }
+  }
+}

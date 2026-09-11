@@ -1,0 +1,72 @@
+{
+  "erlass": "ENTSG",
+  "profil": "entstehung-leser/1",
+  "abgerufen": "2026-09-05",
+  "aenderungen": {
+    "oc/2017/184": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2017/184/de",
+      "titel": "Bundesgesetz über die flankierenden Massnahmen bei entsandten Arbeitnehmerinnen und Arbeitnehmern und über die Kontrolle der in Normalarbeitsverträgen vorgesehenen Mindestlöhne (Entsendegesetz, EntsG)",
+      "as": "AS 2017 2077",
+      "inkraft": "2017-04-01",
+      "botschaft": "BOTSCHAFT-2015-1362"
+    },
+    "oc/2023/641": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2023/641/de",
+      "titel": "Bundesgesetz über die flankierenden Massnahmen bei entsandten Arbeitnehmerinnen und Arbeitnehmern und über die Kontrolle der in Normalarbeitsverträgen vorgesehenen Mindestlöhne (Entsendegesetz, EntsG)",
+      "as": "AS 2023 641",
+      "inkraft": "2024-01-01",
+      "botschaft": "BOTSCHAFT-2022-3190"
+    }
+  },
+  "botschaften": {
+    "BOTSCHAFT-2015-1362": {
+      "titel": "Botschaft zur Änderung des Entsendegesetzes",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2015/1362/de",
+      "stand": "2015-07-01",
+      "nummer": "15.054",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2015-07-01",
+          "res": "fga/2015/1362"
+        },
+        {
+          "code": 300,
+          "datum": "2016-09-30",
+          "res": "fga/2016/1641"
+        },
+        {
+          "code": 400,
+          "datum": "2017-01-19"
+        }
+      ]
+    },
+    "BOTSCHAFT-2022-3190": {
+      "titel": "Botschaft zur Änderung des Entsendegesetzes",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2022/3190/de",
+      "stand": "2022-12-02",
+      "nummer": "22.080",
+      "ereignisse": [
+        {
+          "code": 2,
+          "datum": "2022-12-02",
+          "res": "fga/2022/3191"
+        },
+        {
+          "code": 200,
+          "datum": "2022-12-02",
+          "res": "fga/2022/3190"
+        },
+        {
+          "code": 300,
+          "datum": "2023-06-16",
+          "res": "fga/2023/1526"
+        },
+        {
+          "code": 400,
+          "datum": "2023-10-05"
+        }
+      ]
+    }
+  }
+}
