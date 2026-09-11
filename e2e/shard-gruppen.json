@@ -50,7 +50,6 @@
    "verzahnung.e2e.ts",
    "w223b-kopf-seitenleiste.e2e.ts",
    "w224-reiter-umordnen-d16.e2e.ts",
-   "leser-bezuege-zaehler.e2e.ts",
    "leser-links-p3.e2e.ts",
    "leser-bezuege-inhalt-d30.e2e.ts",
    "w224-ga-kopf.e2e.ts",
@@ -80,7 +79,8 @@
    "tagerechner-rechenweg-sync.e2e.ts",
    "verlauf-o1.e2e.ts",
    "verweis-u.e2e.ts",
-   "w226-funktionszeile.e2e.ts"
+   "w226-funktionszeile.e2e.ts",
+   "leser-funktionszeile-zaehler.e2e.ts"
   ],
   "3": [
    "leser-suche-a35-a40-a41.e2e.ts",

@@ -1,31 +1,39 @@
-// ─── Die Zähl-Datei je Erlass: Zahlen für die Bezüge-Zeile OHNE den Shard ────
+// ─── Die Bezüge-Zähler des Erlasses: Zahlen für die Funktionszeile ──────────
 //
-// W2·24-R6c, Prüfer-Befund R6 «ZÄHL-DATEI». Die Bezüge-Zeile am Artikelkopf
-// (D20 (b)) sagt «11 Entscheide · 1 Materialie · Rechner ›». Bis hierher
-// stammten die Entscheide aus dem vollen Bezugs-Shard (OR 2.2 MB roh) und
-// erschienen erst, wenn der ihn geladen hatte; die Rubrik MATERIALIEN fehlte
-// ganz, weil ihr Shard im Leser gar nicht vorkommt — eine Rubrik ohne Zahl wäre
-// eine Zusage ohne Deckung gewesen (§8, s. `parts/Funktionszeile.tsx`).
+// W2·24-R6c, Prüfer-Befund R6 «ZÄHL-DATEI». Die Funktionszeile am Artikelende
+// (`./parts/Funktionszeile.tsx`, bis D35-F1 `BezuegeKopf`) sagt «11 Entscheide ·
+// 1 Materialie · Rechner ›». Bis dahin stammten die Entscheide aus dem vollen
+// Bezugs-Shard (OR 2.2 MB roh) und erschienen erst, wenn der geladen war; die
+// Rubrik MATERIALIEN fehlte ganz, weil ihr Shard im Leser gar nicht vorkommt —
+// eine Rubrik ohne Zahl wäre eine Zusage ohne Deckung gewesen (§8).
 //
-// Beides löst eine buildseitige Zähl-Datei je Erlass
-// (`scripts/gen-bezuege-zaehler.ts` → `public/verzahnung/bezuege-zaehler/
-// <KEY>.json`, ø 289 B, grösste 5.8 KB beim OR). Sie trägt NUR Zahlen, keine
-// Kanten: das ÖFFNEN der Zeile lädt weiterhin lazy den vollen Apparat.
+// ── W2·26-FUNKTIONSZEILE-ZAEHLER (11.9.2026) · KEIN EIGENER FETCH MEHR ─────
+// R6c löste das mit einer eigenen buildseitigen Zähl-Datei je Erlass
+// (`public/verzahnung/bezuege-zaehler/<KEY>.json`, ø 289 B), die dieses Modul
+// IM LEERLAUF holte. Der Preis stand im D34-Nachfix (ROADMAP.md): die Zahlen
+// kamen erst NACH der Artikelliste, und im OR wuchsen 145 Funktionszeilen in
+// einer zweiten Render-Runde in den fertigen Lesekörper hinein.
 //
-// ── ABGRENZUNG ZU `bezuegeLaden.ts` (§5) ───────────────────────────────────
-// Das ist ein ZWEITER, viel kleinerer Lesepfad neben dem Shard-Pfad, kein
-// Ersatz und kein Eingriff in dessen Logik. Die beiden können nicht
-// auseinanderlaufen, weil die Zähl-Datei aus DEMSELBEN Shard erzeugt wird und
-// das Drift-Tor `check:bezuege-zaehler` sie gegeneinander hält.
+// Die Zahlen stehen seither im STRUKTUR-SIDECAR des Erlasses
+// (`public/normtext/struktur/<ebene>/<KEY>.json`, Schlüssel `zaehler`) — der
+// Datei, die der Leser für Gliederung, Marginalien und Erlass-Kopf ohnehin holt.
+// `ladeBezuegeZaehler` greift auf DENSELBEN gecachten Fetch zu wie
+// `ladeStruktur`/`ladeErlassKopf` in `../../lib/normtext/browse` (eine Promise,
+// eine Antwort); die eigene Datei, der eigene Cache und der `beiLeerlauf`-Aufschub
+// sind ersatzlos gefallen (§17-Gegengewicht). Warum gerade das Sidecar und nicht
+// der Snapshot: Kopf von `scripts/gen-bezuege-zaehler.ts`.
 //
-// ── EIN FETCH JE ERLASS, IM LEERLAUF (§15) ─────────────────────────────────
-// Dasselbe Muster wie beim Bezugs-/Historie-/Revisions-Shard: ein Fetch auf
-// Reader-Ebene, `beiLeerlauf`, Ergebnis als Prop an reine Renderer. 289 Byte im
-// Mittel liegen weit unter dem, was ein einzelner Artikel-Fetch je Zeile
-// gekostet hätte (der belegte Idle-Herden-Befund aus W2·7-VZUI).
+// ── EBENE: DIE EINE FALLE DIESES MODULS ────────────────────────────────────
+// Der geteilte Cache greift nur, wenn die URL ZEICHENGLEICH ist. `inhalt-hooks`
+// lädt mit `datenEbeneVonRoute(routenEbene)`, also der DATEN-Ebene; dieses Modul
+// bekommt darum `erlass.ebene` aus dem Browse-Manifest — dasselbe Feld, aus dem
+// die Datei-Ebene stammt (Befund 45: `/gesetze/international/CISG` liegt unter
+// `bund/`, und `BrowseErlass.ebene` ist dort 'bund'). Nähme man stattdessen die
+// Routen-Ebene, wäre das Ergebnis kein Fehler, sondern ein ZWEITER Fetch — also
+// still genau der Zustand, den dieser Umbau beseitigt hat.
 
 import { useEffect, useState } from 'react';
-import { beiLeerlauf } from '../../lib/leerlauf';
+import { ladeBezuegeZaehler, type ZaehlBlock } from '../../lib/normtext/browse';
 import { normArtikelToken } from '../../lib/rechtsprechung/norm-index';
 
 /** Zahlen EINES Artikels. */
@@ -36,61 +44,37 @@ export interface ArtikelZaehler {
   materialien: number;
 }
 
-/** Rohform der Datei — Paare sparen ein Drittel der Bytes (s. Generator). */
-interface ZaehlDatei {
-  erzeugt: string;
-  erlass: string;
-  a: Record<string, [entscheide: number, materialien: number]>;
-}
-
-/** Nachschlage-Funktion je Erlass. `null` = (noch) nichts geladen. */
+/** Nachschlage-Funktion je Erlass. `undefined` = (noch) nichts geladen. */
 export type ZaehlerNachschlag = (artikel: string) => ArtikelZaehler | undefined;
 
-const cache = new Map<string, ZaehlDatei | null>();
-
-async function lade(key: string): Promise<ZaehlDatei | null> {
-  if (cache.has(key)) return cache.get(key) ?? null;
-  try {
-    const res = await fetch(`/verzahnung/bezuege-zaehler/${encodeURIComponent(key)}.json`);
-    // 404 ist der NORMALFALL für einen Erlass ohne Bezüge — die Datei wird dann
-    // gar nicht erst erzeugt (§8: keine Datei mit lauter Nullen). Kein Fehler,
-    // kein Log, kein zweiter Versuch.
-    const d = res.ok ? ((await res.json()) as ZaehlDatei) : null;
-    cache.set(key, d);
-    return d;
-  } catch {
-    cache.set(key, null); // Netz weg ⇒ die Zeile zeigt dann eben keine Zahl
-    return null;
-  }
-}
+/** Was der Hook vom Erlass braucht: Daten-Ebene und Schlüssel (s. Falle oben). */
+export type ZaehlerErlass = { ebene: string; key: string };
 
 /**
- * Lädt die Zähl-Datei des Erlasses im Leerlauf und gibt die Nachschlage-
- * Funktion zurück. Vor dem Eintreffen liefert sie `undefined` — die Bezüge-Zeile
- * fällt dann auf das zurück, was der Artikel ohnehin führt.
+ * Gibt die Nachschlage-Funktion für die Zähler des Erlasses zurück. Der Fetch
+ * dahinter ist der Struktur-Sidecar-Fetch, den der Leser ohnehin absetzt —
+ * dieses Modul hängt sich nur an dessen Promise.
  */
-export function useBezuegeZaehler(erlassKey: string | undefined): ZaehlerNachschlag {
+export function useBezuegeZaehler(erlass: ZaehlerErlass | null | undefined): ZaehlerNachschlag {
   // Der Zustand trägt den SCHLÜSSEL mit, zu dem er gehört. Ohne ihn müsste der
   // Effekt beim Erlass-Wechsel erst `null` setzen (ein synchroner setState im
   // Effekt-Rumpf — Kaskaden-Render-Regel, `react-hooks/set-state-in-effect`) und
   // die Zeile zeigte dazwischen die Zahlen des VORIGEN Erlasses. Mit dem Paar
   // entscheidet der Vergleich beim Nachschlagen, und der Effekt schreibt nur
   // noch aus dem Callback.
-  const [stand, setStand] = useState<{ key: string; datei: ZaehlDatei | null } | null>(
-    () => (erlassKey && cache.has(erlassKey) ? { key: erlassKey, datei: cache.get(erlassKey) ?? null } : null),
-  );
+  const [stand, setStand] = useState<{ key: string; block: ZaehlBlock | null } | null>(null);
+  const ebene = erlass?.ebene;
+  const key = erlass?.key;
   useEffect(() => {
-    if (!erlassKey) return;
+    if (!ebene || !key) return;
     let lebt = true;
-    const abbrechen = beiLeerlauf(() => {
-      void lade(erlassKey).then((d) => { if (lebt) setStand({ key: erlassKey, datei: d }); });
-    });
-    return () => { lebt = false; abbrechen?.(); };
-  }, [erlassKey]);
+    void ladeBezuegeZaehler(ebene, key).then((b) => { if (lebt) setStand({ key, block: b }); });
+    return () => { lebt = false; };
+  }, [ebene, key]);
 
-  const datei = stand && stand.key === erlassKey ? stand.datei : null;
+  const block = stand && stand.key === key ? stand.block : null;
   return (artikel: string) => {
-    const paar = datei?.a[normArtikelToken(artikel)];
+    const paar = block?.[normArtikelToken(artikel)];
     return paar ? { entscheide: paar[0], materialien: paar[1] } : undefined;
   };
 }
