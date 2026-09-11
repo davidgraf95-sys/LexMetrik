@@ -257,7 +257,39 @@ export function wortlaut(bloecke: readonly SynopseBlock[]): string {
  * Bloecke bleiben unveraendert das, was gespeichert und angezeigt wird.
  */
 export function flachText(a: ArtikelFassung): string {
-  return reinerText(a.roh);
+  return reinerText(vergleichsRoh(a.roh));
+}
+
+/**
+ * Strukturelle Vorbehandlung NUR fuer den Vergleich (Profil `entstehung-norm/2`).
+ *
+ * Sie raeumt zwei Klassen von KONVERSIONS-Artefakten aus, die die Gegenpruefung zu
+ * PR #794 an vier Stellen belegt hat — beide sitzen an einer ELEMENTGRENZE, nie im
+ * Fliesstext, und beide lassen den gespeicherten (amtlichen) Wortlaut unberuehrt.
+ */
+export function vergleichsRoh(roh: string): string {
+  return roh
+    // (a) Satzzeichen unmittelbar VOR einer Aufzaehlung. Gemessen an zwei Faellen:
+    //   ARG Art. 12  (2021-01-01 -> 2023-09-01): derselbe Satz einmal als gewoehnlicher
+    //     `<p>` ohne Satzzeichen, einmal als `<listIntroduction>… werden:</listIntroduction>`.
+    //   EMRK Art. 44 (2022-02-01 -> 2022-09-16): `<p>… wird endgueltig,</p><blockList>`
+    //     wird zu `<blockList><listIntroduction>… wird endgueltig:</listIntroduction>`.
+    // Beide Male macht die Konversion aus «Satz + Liste» ein «Einleitung + Liste» und
+    // tauscht dabei das Schluss-Satzzeichen. Die Regel greift AUSSCHLIESSLICH an dieser
+    // Elementgrenze, nie im Fliesstext — ein Komma in einer Aufzaehlung kann den Sinn
+    // tragen (§1). Der GESPEICHERTE Wortlaut behaelt sein Satzzeichen; er ist amtlich.
+    .replace(/[,;:\s]*(<\/listIntroduction>)/g, '$1')
+    .replace(/[,;:]\s*(<\/p>\s*<blockList)/g, '$1')
+    // (b) Absatz-Etikett in Klammerform. Gemessen an UNO_PAKT_II Art. 24
+    // (2022-01-24 -> 2022-05-09): das Etikett steht im alten Stand als Text am Anfang
+    // des Absatzes (`<content><p>(l)  Jedes Kind …`, mit kleinem L statt Eins aus der
+    // Erstkonversion) und im neuen als eigenes Element (`<num>(1)</num><content><p>Jedes
+    // Kind …`). Etikett und Glyphe wandern, der Wortlaut nicht.
+    // ENG GEFASST: nur die Klammerform mit hoechstens vier alphanumerischen Zeichen und
+    // nur am BLOCKANFANG. «(Aufgehoben)» ist laenger und bleibt stehen, ein Querverweis
+    // «(2)» mitten im Satz ebenso.
+    .replace(/<num\b[^>]*>\s*\(\s*[0-9a-zA-Z]{1,4}\s*\)\s*<\/num>/g, '')
+    .replace(/(<p\b[^>]*>)\s*\(\s*[0-9a-zA-Z]{1,4}\s*\)\s*/g, '$1');
 }
 
 /**
@@ -272,27 +304,36 @@ export function flachText(a: ArtikelFassung): string {
  */
 export function normalisiere(s: string): string {
   return s
-    // unsichtbare Trenn-/Verbindungs-Codepunkte: Soft-Hyphen, Zero-Width-Space,
+    // (1) unsichtbare Trenn-/Verbindungs-Codepunkte: Soft-Hyphen, Zero-Width-Space,
     // ZWNJ/ZWJ, BOM — sie tragen keinen Wortlaut und wandern zwischen Generationen.
     .replace(/\u00AD/g, '')  // Soft-Hyphen
-    .replace(/\u200B/g, '') // Zero-Width-Space
-    .replace(/\u200C/g, '') // ZWNJ  (einzeln, nicht als Zeichenklasse: ZWJ/ZWNJ in
-    .replace(/\u200D/g, '') // ZWJ    einer Klasse waeren irrefuehrend, no-misleading-character-class)
-    .replace(/\uFEFF/g, '') // BOM
-    // geschützte Leerzeichen (NBSP, schmales NBSP, Figure-Space) zum Vergleich auf ' '.
-    .replace(/[\u00A0\u202F\u2007]/g, ' ')
-    // geschützter Bindestrich U+2011 -> gewöhnlicher Bindestrich. Gedankenstriche
-    // bleiben ABSICHTLICH unangetastet: sie sind Interpunktion, kein Rauschen.
-    .replace(/\u2011/g, '-')
-    // Auslassungspunkte: die Fedlex-Konversion schreibt denselben amtlichen Text
-    // einmal «...» und einmal «\u2026» (gemessen E5.0: ZGB Art. 107 Ziff. 4,
-    // Stand 2021-01-01 -> 2022-01-01, EINZIGE Abweichung, ohne Fussnoten-Ereignis).
+    .replace(/\u200B/g, '')  // Zero-Width-Space
+    .replace(/\u200C/g, '')  // ZWNJ  (einzeln, nicht als Zeichenklasse: ZWJ/ZWNJ in
+    .replace(/\u200D/g, '')  // ZWJ    einer Klasse waeren irrefuehrend, no-misleading-character-class)
+    .replace(/\uFEFF/g, '')  // BOM
+    // (2) Bindestrich-Varianten auf den gewoehnlichen Bindestrich. Gemessen an der
+    // Gegenpruefung zu PR #794 (ARG Art. 12): dieselbe Stelle steht in einer Generation
+    // mit «-», in der naechsten mit «\u2013». Der EM-DASH \u2014 bleibt ABSICHTLICH
+    // unangetastet — er ist Gedankenstrich, also Interpunktion, kein Trennzeichen.
+    .replace(/[\u2010\u2011\u2012\u2013]/g, '-')
+    // (3) Auslassungspunkte: dieselbe Stelle einmal «...», einmal «\u2026»
+    // (gemessen E5.0: ZGB Art. 107 Ziff. 4, 2021-01-01 -> 2022-01-01).
     .replace(/\.\.\./g, '\u2026')
-    .replace(/\s+/g, ' ')
-    // Unicode-Kanonik zuletzt: dieselbe Umlaut-Folge kommt je nach Artefakt-Generation
+    // (4) Unicode-Kanonik: dieselbe Umlaut-Folge kommt je nach Artefakt-Generation
     // zusammengesetzt oder zerlegt — reine Kodierung, nie Wortlaut.
     .normalize('NFC')
-    .trim();
+    // (5) ALLER Leerraum faellt weg — die staerkste Regel des Profils, und die, an der
+    // /1 gescheitert ist. Die Grenze zwischen `<num>` und `<content>` WANDERT durch das
+    // Ordnungs-Suffix: AHVG Art. 10 Abs. 2bis steht im Stand 2021-01-01 als
+    // `<num>2bis</num><content>Die \u2026`, im Stand 2022-01-01 als
+    // `<num>2b</num><content><sup>is</sup> Die \u2026`. Beide Male lautet der Wortlaut
+    // «2bis Die \u2026»; zwischen «2b» und «is» steht einmal eine Elementgrenze (= ein
+    // Leerzeichen) und einmal nicht. Eine Grammatik fuer «bis/ter/quater/\u2026» waere
+    // offen (§2) und truege nur diesen einen Fall; Leerraum ganz zu streichen traegt die
+    // ganze Klasse. Ein Unterschied, der NUR aus Leerraum besteht, ist nie eine
+    // Gesetzesaenderung — der gespeicherte Wortlaut bleibt davon unberuehrt, die Regel
+    // gilt allein fuers Matching.
+    .replace(/\s+/g, '');
 }
 
 export const NORMALISIERUNGS_PROFIL = NORM_PROFIL;

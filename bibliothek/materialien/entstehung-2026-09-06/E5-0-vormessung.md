@@ -129,6 +129,77 @@ Verbesserung heisst `/2` und entsteht daneben (Muster `soufien-lex.md`).
 AKN-XML: 16,9 % Roh-Falschtreffer und 1006 Schritte. Kein Widerspruch — andere
 Diff-Eingabe (XML statt HTML) und andere Zählgrundlage (XML- statt HTML-Stände).
 
+## 6b Nachtrag 11.9.2026 — Profil `/1` durchgefallen, `/2` gelandet
+
+Die Gegenprüfung zu PR #794 zog eine **eigene Stichprobe n = 13** — disjunkt zu der oben
+dokumentierten und **nur auf `ohne_ereignis`-Blöcken**, also der Klasse ohne doppelte
+Belegung. Ergebnis: **11/13 = 84,6 %, unter der Schwelle.** Zwei Falschtreffer, beide
+Artefakte der Fedlex-KONVERSION, beide von `/1` nicht erfasst:
+
+| Fall | Beobachtung im Roh-XML | Klasse |
+|---|---|---|
+| AHVG Art. 10 Abs. 2bis, 2021-01-01 → 2022-01-01 | `<num>2bis</num><content>Die …` wird zu `<num>2b</num><content><sup>is</sup> Die …` | Elementgrenze wandert durch das Ordnungs-Suffix |
+| ARG Art. 12, 2021-01-01 → 2023-09-01 | `<p>… überschritten werden</p><blockList>` wird zu `<listIntroduction>… überschritten werden:</listIntroduction>` | Satz + Liste wird Einleitung + Liste |
+
+Die Nachprüfung fand zwei weitere Fälle derselben zwei Klassen (eigene Stichprobe n = 13
+auf `ohne_ereignis`, 13 andere Erlasse): **EMRK Art. 44** (`… wird endgültig,</p><blockList>`
+→ `<listIntroduction>… wird endgültig:</listIntroduction>`) und **UNO_PAKT_II Art. 24**
+(`<content><p>(l)  Jedes Kind …` → `<num>(1)</num><content><p>Jedes Kind …`: Etikett wandert
+aus dem Text in ein eigenes Element und die Glyphe «l» wird zur Eins).
+
+**Profil `entstehung-norm/2`** (die Fassung `/1` ist nie gelandet, es gibt keinen Bestand,
+den die neue Nummer entwerten könnte):
+
+1. **Aller Leerraum fällt fürs Matching weg.** Trägt die ganze Klasse «Elementgrenze wandert
+   durch ein Etikett» — ohne eine offene Grammatik für «bis/ter/quater/…» (§2). Ein
+   Unterschied, der nur aus Leerraum besteht, ist nie eine Gesetzesänderung.
+2. **Bindestrich-Varianten** (U+2010/U+2011/U+2012/U+2013) auf «-». Der Gedankenstrich
+   U+2014 bleibt unangetastet — er ist Interpunktion.
+3. **Satzzeichen unmittelbar vor einer Aufzählung** (am Ende einer `listIntroduction` und am
+   Ende eines `<p>` direkt vor einem `<blockList>`) fallen fürs Matching weg. Nur an dieser
+   Elementgrenze, nie im Fliesstext — ein Komma in einer Aufzählung kann den Sinn tragen (§1).
+4. **Absatz-Etikett in Klammerform** am Blockanfang (`<num>(1)</num>` bzw. führendes «(1)» im
+   Text) fällt weg — eng gefasst auf höchstens vier alphanumerische Zeichen, damit
+   «(Aufgehoben)» stehen bleibt, und nur am Blockanfang, damit ein Querverweis «(2)» mitten
+   im Satz stehen bleibt.
+5. Unverändert aus `/1`: unsichtbare Codepunkte, Auslassungspunkte `...` → `…`, NFC.
+
+**Der gespeicherte Wortlaut ist von alledem unberührt** — die Regeln entscheiden allein über
+«geändert ja/nein» (Muster `soufien-lex.md`: normalisieren fürs Matching, nie für die Ablage).
+
+**Nachweis, dass `/2` nicht übersieht, was es soll:** AHVG Art. 10 im Folgeschritt
+2022-01-01 → 2023-01-01 meldet weiterhin die echte Änderung (Mindestbeitrag 413 → 422 Fr.,
+zweimal im Artikel), obwohl derselbe Absatz 2bis im selben Schritt sein Etikett zurücktauscht.
+
+**Neue Stichprobe n = 13 nach `/2`**, gezogen mit
+`npm run entstehung:synopse-stichprobe -- --n=13 --ohne=<26 bereits geprüfte Erlasse>`,
+also **disjunkt zu beiden früheren Stichproben**, 13 verschiedene Erlasse, ausschliesslich
+`ohne_ereignis`-Blöcke (Grundgesamtheit 654):
+
+| # | Fall | Befund |
+|---|---|---|
+| 1 | AIG art_103a 2021-10-02→2022-05-01 | echt: Artikel vollständig ersetzt (Grenzkontrolle → Informationssystem Einreiseverweigerungen) |
+| 2 | AVO art_186 2023-01-23→2024-01-01 | echt: neuer Regelungsgegenstand (Sitz/Wohnsitz statt finanzielle Sicherheiten) |
+| 3 | BETMKV art_10 2022-01-01→2022-08-01 | echt: «das Institut» → «die Swissmedic» |
+| 4 | BVV_2 art_3a 2022-01-01→2023-01-01 | echt: Grenzbeträge 21 510 → 22 050 und 358 → 367 Franken |
+| 5 | CO2_GESETZ art_48b 2022-01-01→2025-01-01 | echt: «im Inland» → «in der Schweiz» |
+| 6 | EPV art_64c 2021-02-04→2021-03-01 | echt: eine Pauschale wird zu einer Liste zweier Pauschalen |
+| 7 | ERV art_79 2024-01-01→2025-01-01 | echt: Artikel aufgehoben |
+| 8 | IVG art_68quater 2021-07-01→2022-01-01 | echt: «Bundesamt» → «BSV» |
+| 9 | KKV art_129a 2022-01-01→2024-03-01 | echt: «des Gesetzes» → «KAG» |
+| 10 | LSV art_37a 2021-07-01→2023-11-01 | echt: «Bundesamt für Umwelt» → «BAFU» |
+| 11 | MVV art_28a 2024-01-01→2025-01-01 | echt: Prämie 43 → 45 Franken |
+| 12 | URV art_20b 2022-01-01→2025-07-01 | echt: Absatz umformuliert (Behörde handelt → Betroffener beantragt) |
+| 13 | VVEA art_15 2023-09-26→2024-01-01 | echt: Verweis Anhang 2.6 Ziff. 2.2.4 → 2.2.2.2 |
+
+**13/13 = 100 % echte Abweichungen im amtlichen Wortlaut** (Schwelle ≥ 90 %). Alle 13 ohne
+Fussnoten-Ereignis am Stand-Datum — das belegt zugleich den Befund aus §5: der amtliche
+Fussnoten-Apparat weist Behördenumbenennungen, eingeführte Abkürzungen, Betragsanpassungen
+und Verweis-Korrekturen nicht durchgängig aus.
+
+**Wirkung auf die Zahlen:** 4770 → **4659 Alt-Blöcke** (111 Falschtreffer weniger, −2,3 %),
+davon `ohne_ereignis` 1286 → **1175**; Deckel 6739,2 → **6580,1 KB / 8192,0 KB (80 %)**.
+
 ## 7 Entscheid
 
 **BAU.** Alle drei Bedingungen des Auftrags sind erfüllt: Stichprobe 15/15 = 100 % ≥ 90 %,

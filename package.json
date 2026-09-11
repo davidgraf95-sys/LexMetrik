@@ -195,6 +195,7 @@
     "materialien:curia": "vite-node scripts/entstehung/curia-run.ts --",
     "entstehung:synopse-messung": "vite-node scripts/entstehung/synopse-messung.ts --",
     "entstehung:synopse": "vite-node scripts/entstehung/synopse-run.ts --",
+    "entstehung:synopse-stichprobe": "vite-node scripts/entstehung/synopse-stichprobe.ts --",
     "entstehung:entwurf": "vite-node scripts/entstehung/synopse-entwurf-run.ts --"
   },
   "dependencies": {

@@ -19,15 +19,26 @@
 // konstruiert), (c) `liveUrl` auf die amtliche Fassung dieses Stands, (d) zwei
 // Prüfsummen je Quelle und je Block als Drift-Erkennung.
 //
-// NORMALISIERUNGS-PROFIL: `entstehung-norm/1`. Das Profil wird NIE editiert — eine
-// Verbesserung heisst `/2` und entsteht daneben. Sonst entwertet jede Parser-Korrektur
-// rückwirkend alle Prüfsummen (Muster law.soufien.lu, Bibliothek `soufien-lex.md`).
+// NORMALISIERUNGS-PROFIL: `entstehung-norm/2`. Ein gelandetes Profil wird NIE editiert —
+// eine Verbesserung bekommt die nächste Nummer und entsteht daneben. Sonst entwertet jede
+// Parser-Korrektur rückwirkend alle Prüfsummen (Muster law.soufien.lu, `soufien-lex.md`).
 //
 // §3 Schichtentrennung: Typen + Lazy-Loader + reine Auswahl-Helfer. Keine UI, keine
 // Rechtslogik, kein Fetch im Lesefluss (der Shard lädt erst auf Klick, §15).
 
-/** Version des Normalisierungs-Profils (nie editieren, nur danebenlegen). */
-export const NORM_PROFIL = 'entstehung-norm/1';
+/**
+ * Version des Normalisierungs-Profils. Ein GELANDETES Profil wird nie editiert — eine
+ * Verbesserung bekommt eine neue Nummer und entsteht daneben, sonst entwertet sie
+ * rückwirkend jede gespeicherte Prüfsumme (Muster law.soufien.lu, `soufien-lex.md`).
+ *
+ * WARUM ES KEIN `/1` IM REPO GIBT: die Fassung /1 ist nie gelandet. Sie fiel in der
+ * Gegenprüfung zu PR #794 durch (Prüfer-Stichprobe n = 13 auf `ohne_ereignis`-Blöcken:
+ * 11/13 = 84,6 %, unter der Schwelle von 90 %) an zwei Artefakt-Klassen, die die
+ * Bau-Stichprobe nicht getroffen hatte — siehe `normalisiere()`. Es gibt also keinen
+ * Bestand, den /2 entwerten könnte; die Nummer wächst trotzdem, damit die Provenienz
+ * der Prüfsummen eindeutig bleibt.
+ */
+export const NORM_PROFIL = 'entstehung-norm/2';
 
 /** Frühester Stand mit maschinenlesbarem Volltext (R2 §1, gemessen 6.9.2026). */
 export const SYNOPSE_FENSTER_AB = '2021-01-01';
