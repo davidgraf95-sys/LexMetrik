@@ -191,7 +191,7 @@ export const STARTSEITE_ZAEHLER: StartseiteZaehler = {
     }
   ],
   "rechtsprechungLeitentscheide": 1259,
-  "materialien": 1561,
+  "materialien": 1564,
   "materialienBehoerden": [
     {
       "id": "ESTV",
@@ -245,15 +245,15 @@ export const STARTSEITE_ZAEHLER: StartseiteZaehler = {
       "id": "BUND",
       "kuerzel": "Bund",
       "name": "Bund (Vernehmlassungen)",
-      "anzahl": 828
+      "anzahl": 831
     }
   ],
   "rechner": 23,
   "vorlagen": 26,
   "standGesetze": "2026-09-06",
   "standRechtsprechung": "2026-09-05",
-  "standMaterialien": "2026-09-05",
+  "standMaterialien": "2026-09-11",
   "juengsterGesetzStand": "2026-09-02",
   "juengsterEntscheid": "2026-07-08",
-  "juengsteMaterialie": "2026-09-05"
+  "juengsteMaterialie": "2026-09-11"
 };
