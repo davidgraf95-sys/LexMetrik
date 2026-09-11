@@ -76,7 +76,7 @@ export function LeserLesespalte({ m, bezuege, weckeBezuege, oeffneBlatt, bezuege
   // aus dem 2.2-MB-Bezugs-Shard — Herleitung in `../bezuegeZaehler`. Der Hook
   // steht HIER und nicht im Modell: die Lesespalte ist sein einziger Konsument,
   // und das Modell hält damit seine §6.6-Schwelle (`leser-v3-fundament`).
-  const bezuegeZaehler = useBezuegeZaehler(erlass?.key);
+  const bezuegeZaehler = useBezuegeZaehler(erlass);
   // D30 · die Materialien-LISTE zur bereits gezählten Materialien-ZAHL. Wie der
   // Zähler: EIN Fetch je Erlass, im Leerlauf, hier und nicht im Modell (die
   // Lesespalte ist der einzige Konsument, §6.6-Schwelle des Modells).
