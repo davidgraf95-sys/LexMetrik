@@ -1,5 +1,34 @@
 # ROADMAP — Erledigt-Chronik (Detail-Archiv erledigter Schritte)
 
+## W2·26-FUNKTIONSZEILE-Planung 11.9.2026 — vier §8-Nachzüge umgebucht/entschieden
+
+Mandat David 11.9.2026 («überarbeite insgesamt die Funktionszeile am Artikelende … führe alles
+durch») löste vier offene Nachzüge aus `FAHRPLAN-DESIGN-IDENTITAET.md` §8 auf, die als
+ROADMAP-Unterpunkte unter `W2·24-DESIGN-IDENTITAET` standen. Wortlaut der erledigten/abgehakten
+Zeilen (Steuer-Doku §4 der ROADMAP):
+
+- **«Bezüge-Zeile: Kopfzähler gefiltert/ungefiltert» (R5-F1K §7; löst D20 ab)** — Kopfzähler =
+  Bezugsgrösse (Entscheid N1), Panel filtert; Anzeige beider Zahlen offen. → entschieden
+  11.9.2026: EINE Zahl, bei aktivem Filter die gefilterte, Gesamtzahl nur im `title`. Detail:
+  `FAHRPLAN-DESIGN-IDENTITAET.md` §9 Z3.
+- **«D45 · Entscheid-Klick in der Fusszeile öffnet daneben»** — heute navigiert er die ganze Seite
+  (`randNotizZiel` greift nur in `.lr-notiz`, `v3/LeserLesespalte.tsx`); Soll nach D30-Spec/
+  Split-Regel M3, ⌘-Klick neuer Reiter. → umgebucht 11.9.2026 nach `FAHRPLAN-DESIGN-IDENTITAET.md`
+  §9 Z5, Teil des Schritts `W2·26-FUNKTIONSZEILE`.
+- **«Bezüge-Zähler in den Erlass-Payload» (D34-Nachfix, Korpus ⇒ Gegenprüfung Pflicht)** — statt
+  eigenem Fetch; heute entstehen die 145 Fuss-Zeilen erst in der zweiten Render-Runde. → umgebucht
+  11.9.2026 als eigener Schritt `W2·26-FUNKTIONSZEILE-ZAEHLER` (`feld: korpus`).
+- **«OR-Leser trägt 15'239 Knöpfe im DOM» (§15, seit F1 sichtbar)** — 1686 Artikel × ~4 Aktionen;
+  Rollen-Abfragen und Screenreader werden teuer. Aktionen erst beim Aufklappen/Hover rendern oder
+  Ereignis-Delegation. → umgebucht 11.9.2026 nach `FAHRPLAN-DESIGN-IDENTITAET.md` §9 Z6.
+
+Zusätzlich aufgelöst (kein Umbuchen, sondern Widerspruch): der §8-Nachzug Nr. 12 «Daneben öffnen»
+mit `?r=`-Instanz (F1-Rest) stand im Widerspruch zu ROADMAP.md:464, wonach D44 (#760, 7.9.2026)
+die Aktion «⧉ Artikel daneben» bereits bewusst ersatzlos entfernt hatte — gestrichen, D44 gilt.
+
+Das David-Gate `david-go-entstehung` (ROADMAP.md §@blockers) wurde mit demselben Mandat erteilt;
+die drei `W2·6c-ENTSTEHUNG-*`-Schritte liefen von `blocked` auf `status: ready`.
+
 ## Umbenennungen 8.9.2026 — Nicht-Tore aus der Wächter-Fläche
 
 PR #779 (`feat/qs-ci-flake-waechter`) riss den Steuerungs-Deckel `scripts/check-*.ts`

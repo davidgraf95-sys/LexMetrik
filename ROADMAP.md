@@ -65,7 +65,7 @@ vps-bestellung-david: E3-Serving + E4-UI hängen an einer VPS-Bestellung (David,
 richter-analytik-gate: Richter-/Spruchkörper-Analytik (W3·15-RICHTER). GRENZE (20.7.2026): Filtern/Facette/Verlinkung sind FREI und gebaut (#309/#311); gesperrt bleiben allein RANKING und PROGNOSE. Nur deskriptiv; bewusste Freigabe Davids erforderlich (heikel: Standesrecht, Persönlichkeitsschutz, richterliche Unabhängigkeit)
 david-entscheid-org-umzug: QS-ORG-UMZUG — Repo-Transfer in eine Gratis-Organisation für die native Merge Queue (User-Konten haben keine); Infrastruktur-Entscheid mit ~1 h Nacharbeit (Vercel, Branch-Schutz, Secrets). Erst prüfen, ob der Auto-Nachzug (Checklisten-Zeile unter QS-AUTOMATIK) den BEHIND-Schmerz ausreichend dämpft (Entscheid David 7.8.2026: «B als Schritt, A parken»)
 zielbild-gesetzesleser: Zurückgestellt durch das Zielbild-Dekret 1.9.2026 (Gesetzesleser zuerst) — wieder öffnen, sobald die Queue-Blöcke 1–3 gelandet sind oder David einen Schritt ausdrücklich vorzieht (FINMA: vorziehen, wenn ein externer Termin drängt). Kein Bau-Blocker, reine Reihenfolge-Entscheidung.
-david-go-entstehung: W2·6c-ENTSTEHUNG-* — ECHTES David-Gate: «GO noch nicht, erst wieder am Freitag» (David 8.9.2026 ⇒ frühestens 12.9.2026); Design freigegeben 6.9.2026; offene Entscheide Fahrplan §11.9.
+david-go-entstehung: ERTEILT — Go David 11.9.2026 («führe alles durch»); die drei W2·6c-ENTSTEHUNG-*-Schritte stehen auf `status: ready`, Blocker entfernt. Design freigegeben 6.9.2026; §11.9 der Materialien-Spec bucht die Entscheide 1–6 als entschieden 11.9.2026 (Mandat), Nr. 7 (fachliche Abnahme) bleibt bei David.
 -->
 
 <!-- @david-fragen
@@ -266,7 +266,7 @@ zgb-a36-anhang: Die ZGB-Gliederung zeigt 74 Artikel des Anhangs «Wortlaut der f
   **Detail:** [FAHRPLAN-MATERIALIEN-VERZAHNUNG.md](fahrplaene/FAHRPLAN-MATERIALIEN-VERZAHNUNG.md) §10.
 
 - [ ] **Entstehung am Artikel — Daten: Verfahrens-Ereignisse, Historie-Kopf, Botschafts-Keys, Anker, Parlament** *(`W2·6c-ENTSTEHUNG-DATEN`, §14-Intake 6.9.2026, Design-Freigabe David 6.9.2026)*
-  <!-- @meta id: W2·6c-ENTSTEHUNG-DATEN · status: blocked · blocker: david-go-entstehung · dep: [] · feld: korpus · fahrplan: fahrplaene/FAHRPLAN-MATERIALIEN-VERZAHNUNG.md -->
+  <!-- @meta id: W2·6c-ENTSTEHUNG-DATEN · status: ready · blocker: null · dep: [] · feld: korpus · fahrplan: fahrplaene/FAHRPLAN-MATERIALIEN-VERZAHNUNG.md -->
   Ziel: die Fassungskette je Artikel (liegt als G-HIST-Shard vor) mit der Verfahrenskette der Vorlage
   (Fedlex-Projektgraph, Curia Vista) und der Botschaft verbinden — ohne zweiten Parser, ohne Volltext,
   ohne Personendaten. Grenzen: Bund zuerst; Historie-Generator und -Shard bleiben unangetastet; Curia
@@ -274,14 +274,17 @@ zgb-a36-anhang: Die ZGB-Gliederung zeigt 74 Artikel des Anhangs «Wortlaut der f
   **Detail:** [FAHRPLAN-MATERIALIEN-VERZAHNUNG.md](fahrplaene/FAHRPLAN-MATERIALIEN-VERZAHNUNG.md) §11.
 
 - [ ] **Entstehung am Artikel — Leser: Chip mit Fassungszahl, Karte mit Fassungsleiste und Begründung** *(`W2·6c-ENTSTEHUNG-LESER`, 6.9.2026)*
-  <!-- @meta id: W2·6c-ENTSTEHUNG-LESER · status: blocked · blocker: david-go-entstehung · dep: [W2·6c-ENTSTEHUNG-DATEN, W2·24-DESIGN-IDENTITAET] · feld: leser · fahrplan: fahrplaene/FAHRPLAN-MATERIALIEN-VERZAHNUNG.md -->
-  Chip in `parts/ArtikelHistorie.tsx` bleibt unverändert (Marginalie 150 px); Offen-Zustand nach
-  `parts/ArtikelLeser.tsx` gehoben, Karte in einem zweiten Slot der Textspalte; nichts lädt vor dem
-  Klick (Auflage David 6.9.2026). Wartet auf alle neun Slot-verlagernden W2·24-Branches.
+  <!-- @meta id: W2·6c-ENTSTEHUNG-LESER · status: ready · blocker: null · dep: [W2·6c-ENTSTEHUNG-DATEN, W2·24-DESIGN-IDENTITAET] · feld: leser · fahrplan: fahrplaene/FAHRPLAN-MATERIALIEN-VERZAHNUNG.md -->
+  **Nachgeführt 11.9.2026 (Sichtung §11 Fassung 5):** die Fassung ist seit D40 (#761, 7.9.2026)
+  eine Rubrik der Funktionszeile am Artikelende, der frühere Kopf-/Marginalie-Slot ist entfallen;
+  die Karte rendert im bestehenden Aufklapp-Block (`.lr7-bez-inhalt`, künftig `Funktionszeile.tsx`)
+  — **kein zweiter Slot nötig**, C5/C6 der alten Spec sind damit gegenstandslos. Nichts lädt vor
+  dem Klick (Auflage David 6.9.2026). Alle neun slot-verlagernden W2·24-Branches sind auf `main`
+  (geprüft 11.9.2026 gegen `git log origin/main`, PR #744–#761).
   Etappe E3. **Detail:** [FAHRPLAN-MATERIALIEN-VERZAHNUNG.md](fahrplaene/FAHRPLAN-MATERIALIEN-VERZAHNUNG.md) §11.
 
 - [ ] **Entstehung am Artikel — Synopse alt/neu ab 2021 und Entwurf↔Beschluss** *(`W2·6c-ENTSTEHUNG-SYNOPSE`, 6.9.2026; absorbiert den Datenanteil von M16)*
-  <!-- @meta id: W2·6c-ENTSTEHUNG-SYNOPSE · status: blocked · blocker: david-go-entstehung · dep: [W2·6c-ENTSTEHUNG-DATEN] · feld: korpus · fahrplan: fahrplaene/FAHRPLAN-MATERIALIEN-VERZAHNUNG.md -->
+  <!-- @meta id: W2·6c-ENTSTEHUNG-SYNOPSE · status: ready · blocker: null · dep: [W2·6c-ENTSTEHUNG-DATEN] · feld: korpus · fahrplan: fahrplaene/FAHRPLAN-MATERIALIEN-VERZAHNUNG.md -->
   Diff zweier Fedlex-Konsolidierungen je Artikel (HTML nur ab Stand 1.1.2021), gespeichert wird nur der
   Alt-Block als §7-Zitat mit Deckel 8 MB / 2 MB je Erlass; Vor-Messung E5.0 vor dem Bau. Etappen E5.0, E5, E6.
   **Detail:** [FAHRPLAN-MATERIALIEN-VERZAHNUNG.md](fahrplaene/FAHRPLAN-MATERIALIEN-VERZAHNUNG.md) §11.
@@ -453,22 +456,36 @@ zgb-a36-anhang: Die ZGB-Gliederung zeigt 74 Artikel des Anhangs «Wortlaut der f
   Tabelle Thema/PR/SHA/Protokoll in STRUKTUR.md, Abschnitt «Nachwünsche 7.9.» (zuletzt #761 ae32c5c4e).
   **Detail:** [FAHRPLAN-DESIGN-IDENTITAET.md](fahrplaene/FAHRPLAN-DESIGN-IDENTITAET.md) §1 — Stand je Runde dort in §6, Folgeschritte in §8.
   - [ ] **⚖ öffnet Entscheide im zweiten Pane** *(`W2·24-C`, Variante C zu D33)* — heute Variante A (überlagerndes Blatt, Δ=0); C = echtes zweites Pane (Split-Regel M3). **Zuerst prüfen, ob D35-F2 (#758, Erlass-Blatt) das schon abdeckt** — sonst doppelter Weg zum selben Inhalt. Fahrplan §8.
-  - [ ] **Bezüge-Zeile: Kopfzähler gefiltert/ungefiltert** *(R5-F1K §7; löst D20 ab)* — Kopfzähler = Bezugsgrösse (Entscheid N1), Panel filtert; Anzeige beider Zahlen offen.
+  - [x] **Bezüge-Zeile: Kopfzähler gefiltert/ungefiltert** — ✅ entschieden 11.9.2026 (Mandat David «führe alles durch»): EINE Zahl, gefiltert bei aktivem Filter, Gesamtzahl nur im `title`. Detail: `FAHRPLAN-DESIGN-IDENTITAET.md` §9 Z3.
   - [ ] **Nachzüge aus R13 und Gesamtprüfung** — R13-11 Reiter-Adress-Kern · Geschäftsnummer-Kurzform statt R8-Allowlist · `StatusBadge` «maschinell» (§8) · `qsui-hierarchie` Vorlagen-Schranke 1.2533. Fahrplan §8.
   - [x] **L6 · PaneKopf-Name** — ✅ gelandet 7.9.2026 (PR #746, `d32e5bf80`), Protokoll `L6-PANEKOPF.md`.
   - [x] **Leerer 34-px-Reiterstreifen auf «/»** — bleibt (David 7.9.2026, wie empfohlen).
   - [x] **ZGB-Reiter am Dokumentanfang** — «ZGB» bleibt (David 7.9.2026, wie empfohlen).
   - [x] **Orchestrator-Entscheide 7.9.2026 bestätigt** (D33 A · D32 · N1 · N4 · R13; David «alles wie empfohlen»).
   - [x] **Orchestrator-Entscheide vom Tag 7.9. — David 7.9.2026 «alles bestätigt»:** — ✅ (Wortlaut: ROADMAP-CHRONIK.md, Umschichtung 8.9.2026 (Landung)).
-  - [ ] **D45 · Entscheid-Klick in der Fusszeile öffnet daneben** — heute navigiert er die ganze Seite (`randNotizZiel` greift nur in `.lr-notiz`, `v3/LeserLesespalte.tsx`); Soll nach D30-Spec/Split-Regel M3, ⌘-Klick neuer Reiter.
+  - [x] **D45 · Entscheid-Klick in der Fusszeile öffnet daneben** — ✅ umgebucht 11.9.2026 nach `W2·26-FUNKTIONSZEILE`. Detail: `FAHRPLAN-DESIGN-IDENTITAET.md` §9 Z5.
   - [x] **«Daneben öffnen» in der Funktionszeile** — entfällt (David 7.9.2026, D44 #760: Aktion bewusst entfernt; Erlass-Kopf behält «Daneben öffnen»).
-  - [ ] **Bezüge-Zähler in den Erlass-Payload** *(D34-Nachfix, Korpus ⇒ **Gegenprüfung Pflicht**)* — statt eigenem Fetch; heute entstehen die 145 Fuss-Zeilen erst in der zweiten Render-Runde.
-  - [ ] **OR-Leser trägt 15'239 Knöpfe im DOM** *(§15, seit F1 sichtbar)* — 1686 Artikel × ~4 Aktionen; Rollen-Abfragen und Screenreader werden teuer. Aktionen erst beim Aufklappen/Hover rendern oder Ereignis-Delegation.
+  - [x] **Bezüge-Zähler in den Erlass-Payload** *(D34-Nachfix, Korpus ⇒ **Gegenprüfung Pflicht**)* — ✅ umgebucht 11.9.2026 als eigener Schritt `W2·26-FUNKTIONSZEILE-ZAEHLER`.
+  - [x] **OR-Leser trägt 15'239 Knöpfe im DOM** *(§15, seit F1 sichtbar)* — ✅ umgebucht 11.9.2026 nach `W2·26-FUNKTIONSZEILE`. Detail: `FAHRPLAN-DESIGN-IDENTITAET.md` §9 Z6.
   - [ ] **Rest-CLS 0.0003 im Leser-Kopf** — `LeserKopf.tsx:289` (`data-v3-kopf-griffe`, Klassenwechsel `gap`/`pl`); klein, aber der einzige verbliebene Sprung in `leser-r1-r2`.
   - [ ] **«OR» dreimal untereinander @1440** *(L6-Nebenbefund)* — Reiter · Pane-Titel · Leser-Kennung; der V3-Leser sollte sein Kürzel im Pane abgeben.
   - [ ] **Leser-Mount auf langsamem Netz messen** — Nachlauf zu #743/L2 (grosser Erlass: Ankersprung erst nach der zweiten Ladung, Anker-Oberkante 433 px statt 193 px).
   - [ ] **Budget-Entscheid Entry 99,5 %** (59.7 / 60.0 KB) — der nächste Kopf-Bau reisst das Budget: Lazy-Laden oder Budget-Hebung (§15). **Wartet auf David.**
   - [ ] **Jules-Kandidaten** (grüne Spur, nach Landung W2·24): toter CSS-Rückbau `[data-lr-spiegel]`/`.lr-notiz*`/alte Druckregeln in `index.css` · Typ-Härtungen `lib/tabs.ts`/`tabGruppen.ts` · Allowlist-Pflege `e2e/kein-abschnitt.allow.json`. Datei-Splits erledigt (ArtikelLeser R6F; `Reiterleiste.tsx` 7.9. gemessen 650 Z.).
+
+- [~] **Funktionszeile am Artikelende überarbeiten** *(`W2·26-FUNKTIONSZEILE`, Mandat David 11.9.2026)*
+  <!-- @meta id: W2·26-FUNKTIONSZEILE · status: wip · blocker: null · dep: [] · feld: leser · fahrplan: fahrplaene/FAHRPLAN-DESIGN-IDENTITAET.md -->
+  Bau läuft seit 11.9.2026 in Worktree `feat/w226-funktionszeile`. Fassung zugeklappt zeigt nur
+  «Gilt seit …», Akkordeon je Artikel, Fussnoten-Option blendet auch SR-Nummer-Fussnoten aus,
+  Aktionen nur bei Hover/Fokus/offener Rubrik, D45-Split, Umbenennung `BezuegeKopf` →
+  `Funktionszeile`. **Detail:** [FAHRPLAN-DESIGN-IDENTITAET.md](fahrplaene/FAHRPLAN-DESIGN-IDENTITAET.md) §9.
+
+- [ ] **Bezüge-Zähler in den Erlass-Payload** *(`W2·26-FUNKTIONSZEILE-ZAEHLER`, D34-Nachfix)*
+  <!-- @meta id: W2·26-FUNKTIONSZEILE-ZAEHLER · status: ready · blocker: null · dep: [W2·26-FUNKTIONSZEILE] · feld: korpus · fahrplan: fahrplaene/FAHRPLAN-DESIGN-IDENTITAET.md -->
+  Bezüge-Zähler (Entscheide/Materialien/Verweise/Rechner) in den Erlass-Payload statt eigenem
+  Fetch — heute entstehen die Fuss-Zeilen erst in der zweiten Render-Runde. Korpus/Generator ⇒
+  **Gegenprüfung Pflicht**, Golden byte-gleich bzw. deklarierter Re-Bless.
+  **Detail:** [FAHRPLAN-DESIGN-IDENTITAET.md](fahrplaene/FAHRPLAN-DESIGN-IDENTITAET.md) §9.
 
 - [ ] **Reiter anheften und Arbeitsmappe** *(`W2·25-ARBEITSMAPPE`, §5a Ziff. 5/9 · R11-M5)*
   <!-- @meta id: W2·25-ARBEITSMAPPE · status: ready · blocker: null · dep: [W2·24-DESIGN-IDENTITAET] · feld: design · fahrplan: fahrplaene/FAHRPLAN-DESIGN-IDENTITAET.md -->
