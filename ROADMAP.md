@@ -473,8 +473,8 @@ zgb-a36-anhang: Die ZGB-Gliederung zeigt 74 Artikel des Anhangs «Wortlaut der f
   - [ ] **Budget-Entscheid Entry 99,5 %** (59.7 / 60.0 KB) — der nächste Kopf-Bau reisst das Budget: Lazy-Laden oder Budget-Hebung (§15). **Wartet auf David.**
   - [ ] **Jules-Kandidaten** (grüne Spur, nach Landung W2·24): toter CSS-Rückbau `[data-lr-spiegel]`/`.lr-notiz*`/alte Druckregeln in `index.css` · Typ-Härtungen `lib/tabs.ts`/`tabGruppen.ts` · Allowlist-Pflege `e2e/kein-abschnitt.allow.json`. Datei-Splits erledigt (ArtikelLeser R6F; `Reiterleiste.tsx` 7.9. gemessen 650 Z.).
 
-- [~] **Funktionszeile am Artikelende überarbeiten** *(`W2·26-FUNKTIONSZEILE`, Mandat David 11.9.2026)*
-  <!-- @meta id: W2·26-FUNKTIONSZEILE · status: wip · blocker: null · dep: [] · feld: leser · fahrplan: fahrplaene/FAHRPLAN-DESIGN-IDENTITAET.md -->
+- [x] **Funktionszeile am Artikelende überarbeiten** *(`W2·26-FUNKTIONSZEILE`, Mandat David 11.9.2026)*
+  <!-- @meta id: W2·26-FUNKTIONSZEILE · status: done · blocker: null · dep: [] · feld: leser · fahrplan: fahrplaene/FAHRPLAN-DESIGN-IDENTITAET.md -->
   Bau läuft seit 11.9.2026 in Worktree `feat/w226-funktionszeile`. Fassung zugeklappt zeigt nur
   «Gilt seit …», Akkordeon je Artikel, Fussnoten-Option blendet auch SR-Nummer-Fussnoten aus,
   Aktionen nur bei Hover/Fokus/offener Rubrik, D45-Split, Umbenennung `BezuegeKopf` →
