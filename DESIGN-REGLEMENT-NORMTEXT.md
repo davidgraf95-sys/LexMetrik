@@ -264,14 +264,22 @@ Formen, gerechnet in `pages/gesetz-leser/v3/satzspiegel.ts` und am DOM als
   Form), auf schmalen Flächen, in der Trefferliste und ohne Rahmen-Provider.
 * `breit` — ab **28 rem** Lese-Zelle in Spalten-Lage: der Randtitel steht als
   kursive Literata-Zeile IM ARTIKELKOPF über der Artikelnummer, das Fassungs-
-  datum klein daneben (`.lr7-kopf`); die Bezüge stehen als EINE aufklappbare
-  Zeile darunter (`.lr7-bez`, `<details>` mit Registerfarben-Marken, Zustand in
-  `localStorage` gemerkt). Aufgeklappt erscheinen dieselben Blöcke, die sonst am
-  Artikelfuss stehen — nie beide zugleich (§5).
+  datum klein daneben (`.lr7-kopf`); der Kopf trägt seit D40 (#761, 7.9.2026)
+  **keine** Bezüge mehr.
+
+**Funktionszeile am Artikelende** (D34/D40, seit W2·26 in Überarbeitung — Zielbild
+`FAHRPLAN-DESIGN-IDENTITAET.md` §9): EINE aufklappbare Zeile mit Registerfarben-Marken
+(`.lr7-bez`, `parts/BezuegeKopf.tsx`, künftig `Funktionszeile.tsx`) je Artikel, unabhängig
+von `zeile`/`breit` — beide Satzspiegel-Formen tragen dieselbe Zeile am Artikelfuss statt im
+Kopf. Zustand lokal per `useState` (kein `<details>`, kein `localStorage`-Merker — jeder
+Artikel startet beim Laden zu, D35). Die Rubriken (Fassung · Entscheide · Materialien ·
+Verweise · Rechner) sind im Ansicht-Menü **einzeln** abwählbar (`leserOptionen.ts`,
+`v3/LeserRubrikenWahl.tsx`); eine offene Rubrik zeigt ihren Inhalt im selben Aufklapp-Block —
+nie zwei Blöcke zugleich (§5).
 
 Das Gewicht des Randtitel-Blatts bleibt die Ä7-Stufe (13 px semibold ink-800);
 kursiv und Serife kommen aus der Form, das Gewicht aus dem Entscheid. Im DRUCK
-trägt der Kopf den Randtitel, die Bezüge-Zeile ist ausgeblendet (`print:hidden`).
+trägt der Kopf den Randtitel, die Funktionszeile ist ausgeblendet (`print:hidden`).
 
 **Grösse und Zeilenhöhe des Fliesstexts: 18 px / 1.62** (`leser-text` in
 `tailwind.config.js`). Die Zeilenhöhe stammt aus dem freigegebenen Referenzbild

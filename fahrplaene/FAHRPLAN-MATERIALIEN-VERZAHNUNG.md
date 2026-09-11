@@ -69,17 +69,29 @@ Repo-Verifikation; jede Konsequenz nennt den Ziel-Abschnitt.
 
 ---
 
-## §11 · Entstehung am Artikel — Stufe 3 (Spec 6.9.2026, Fassung 4 nach Kritik A/B + Runde 2)
+## §11 · Entstehung am Artikel — Stufe 3 (Spec 6.9.2026, Fassung 5 nach Sichtung 11.9.2026)
 
 **Auftrag:** David 6.9.2026 — «Materialien und Wegleitungen maximal sinnvoll verzahnen … dass jemand
 noch besser versteht, wie ein Gesetz zustande gekommen ist». Design-Freigabe zum klickbaren Entwurf
 (Artefakt «Entstehung am Artikel», 6.9.2026) mit Auflagen: **das Gesetz nicht überladen, nur auf
-Wunsch sichtbar**; **zuerst Bundesebene**; **Bau erst auf Davids Go**. Grundlage:
+Wunsch sichtbar**; **zuerst Bundesebene**. **Go David 11.9.2026** («führe alles durch»,
+löst «Bau erst auf Davids Go» ab). Grundlage:
 `bibliothek/materialien/entstehung-2026-09-06/` (README, 7 Erst-Berichte, Tiefen-Runden R1–R5,
 Kritiken A/B, Gemini-Zweitquellen). Architektur-Detail für Bau-Agenten: `…/R5-architektur.md`.
 **Heimat:** ROADMAP `W2·6c-ENTSTEHUNG-DATEN` · `W2·6c-ENTSTEHUNG-LESER` · `W2·6c-ENTSTEHUNG-SYNOPSE`
-(angelegt 6.9.2026, `status: blocked · blocker: david-go-entstehung`).
+(angelegt 6.9.2026, seit 11.9.2026 `status: ready · blocker: null`).
 **Rahmen unverändert:** CLAUDE.md §2, §5, §7 a–d, §8, §15; Stufe-1-Regel «verankern, nicht kopieren».
+
+**Sichtung 11.9.2026 (Fassung 5, Befunde C1–C4 gegen den Ist-Stand des W2·26-Bau):** seit D40
+(#761, 7.9.2026, Wortlaut ROADMAP.md) ist die Fassung eine Rubrik der **Funktionszeile am
+Artikelende** — der frühere Kopf-/Marginalie-Slot (§11.5 «Rand-Spalte 150 px») ist entfallen. Die
+Karte für E3 rendert im **bestehenden** Aufklapp-Block der Funktionszeile (`.lr7-bez-inhalt`,
+`src/pages/gesetz-leser/parts/BezuegeKopf.tsx:213-236`, künftig nach `Funktionszeile.tsx`
+umbenannt — Detail `FAHRPLAN-DESIGN-IDENTITAET.md` §9 Z2/Z9). **Damit sind C5 und C6 aus §11.0
+Runde 2 gegenstandslos:** kein zweiter Slot in der Textspalte, kein Platzproblem in einer
+150-px-Marginalie — beides existiert nach W2·24 nicht mehr. Zugeklappt zeigt die Rubrik **nur**
+«Gilt seit …» (Spec Z2 in §9); die Fassungszahl und die Zeitleiste erscheinen erst aufgeklappt,
+im selben Block, den die spätere Entstehungs-Karte ergänzt.
 
 ### §11.0 Kritik-Einarbeitung (Kritik A = Opus, 20 Befunde · Kritik B = Sonnet, 5 Befunde; 6.9.2026)
 
@@ -225,7 +237,7 @@ Erstlast (feste Liste; Shard-Ordner bewacht `check:entstehung`).
 | **E0** ✅ 6.9. | ROADMAP-Heimat, M15 absorbiert, M16-Datenanteil → SYNOPSE | — | `check:plan` | — | — |
 | **E1** | Verfahrens-Ereignisse in der Botschaften-Query; Netz-Tor je fga, Mantelerlass als Rot-Beweis | 1–2 | Risikopfad ⇒ Gegenprüfung | keine | Zeitstrahl «Am Erlass» (ohne Parlament) |
 | **E2** | Anker-Sidecars (Bonus); `check:entstehung` (1)(2)(4) + `entstehung-deckung.json`; `kern.ts`/Ingest um `anker/**` erweitert; Konsumenten-Messung `artikel-revisionen` ⇒ Rückbau-Entscheid. **Historie-Generator und -Shard unangetastet** | 2 | Risikopfad ⇒ Gegenprüfung; Golden unberührt | nie parallel zu E1 | Daten |
-| **E3** | Chip unverändert; Offen-Zustand nach `ArtikelLeser` gehoben, zweiter Slot in der Textspalte; Karte mit Fassungsleiste, Zuständen, Praxis-Nachladen; Rückrichtung am Material; Playwright: zu ⇒ 0 Fetch, CLS 0 (Deep-Link, 320 px), Tastatur | 3 | UI; Golden byte-gleich (Prerender ohne Slot-Markup), rot ⇒ Abbruch, nie Test-Update | **wartet auf Landung aller neun Slot-verlagernden W2·24-Branches** (Sammelbranch trägt 5/9; `r6`, `r8-abschnitt`, `r10b`, `r5-f1b` separat; `r6` fasst `ArtikelHistorie.tsx` an und ist stale ⇒ rebasen) | die Sicht |
+| **E3** | Karte in der Funktionszeile am Artikelende, Rubrik «Fassung» (§9 Z2 in `FAHRPLAN-DESIGN-IDENTITAET.md`); kein zweiter Slot (C5/C6 gegenstandslos, Sichtung 11.9.2026); Zuständen, Praxis-Nachladen; Rückrichtung am Material; Playwright: zu ⇒ 0 Fetch, CLS 0 (Deep-Link, 320 px), Tastatur | 3 | UI; Golden byte-gleich (Prerender ohne Slot-Markup), rot ⇒ Abbruch, nie Test-Update | **Wartebedingung erfüllt** (Sichtung 11.9.2026): alle neun slot-verlagernden W2·24-Branches sind auf `main` (PR #744–#761, geprüft gegen `git log origin/main`) | die Sicht |
 | **E4** | Parlament: `Bill`→`Resolution`, `Preconsultation`, NR-Aggregat, `Objective`; Zustandsträger; Monatslauf; `curia/**` in `kern.ts`/Ingest; Decision-Code-Tabelle; UI-Block mit Quellenangabe | 3 | Extraktion ⇒ Gegenprüfung; Sprachmischung getestet; Personendaten-Regel als Tor (kein Namensfeld im Shard) | keine | Kommission, NR/SR-Kästen, NR-Zahl |
 | **E5.0** | Vor-Messung Synopse an 5–8 weiteren Erlassen (Volumen, Falschtreffer nach Normalisierung); **zwei Speicherformen messen:** Alt-Block je Diff-Schritt vs. distinkte Textzustände je eId + Gültigkeitsintervalle (Lex D53; Preis: Fassung wird im Browser zusammengesetzt) | 1 | Messung | keine | — |
 | **E5** | Synopse ab 2021 (nur Alt-Block), Shard je Erlass, Deckel; Gegenprobe jeder Block gegen sein Historie-Ereignis, Blöcke ohne Ereignis gelistet | 5–7 | Zitat §7 ⇒ Gegenprüfung; Golden | keine | zwei Spalten |
@@ -246,17 +258,22 @@ AS-Änderungserlassen (kein `<mod>`) · Synopse vor 2021, Botschaftsstelle vor 2
 Fussnoten-Parser · jede Änderung am Historie-Shard (`botschaftKey`, Kopf) und ein drittes Sidecar `botschaft-keys.json` (§5) · Point-in-time-Umschalter
 (verschoben, F2) · ZH vor BS · Gemeindereglemente.
 
-### §11.9 Offene David-Entscheide
+### §11.9 David-Entscheide (1–6 entschieden 11.9.2026, Mandat «führe alles durch»)
 
-1. **Go für E1+E2** (DATEN) — Empfehlung: ja, als Block der Gesetzesleser-Queue.
-2. **Personendaten-Regel** bestätigen: Voting nur aggregiert, keine Namen (Empfehlung: ja).
-3. Ständerat ohne Stimmenzahl akzeptieren (Empfehlung: ja).
-4. Botschafts-Anker (22 %) als Bonus in E2 behalten (Empfehlung: ja, klein) oder streichen.
-5. Externe Abstimmungsresultate — Empfehlung: erst Link.
-6. Curia-Auflagen (Quellenangabe, Änderungsverbot, Abrufdatum, Beschriftung «eigene Auszählung») — Bestätigung.
-7. Fachliche Abnahme der Stufe-1-Dossiers steht seit Juli aus.
+1. ~~**Go für E1+E2** (DATEN)~~ — **entschieden 11.9.2026: ja**, als Block der Gesetzesleser-Queue.
+2. ~~**Personendaten-Regel** bestätigen: Voting nur aggregiert, keine Namen~~ — **entschieden
+   11.9.2026: ja.**
+3. ~~Ständerat ohne Stimmenzahl akzeptieren~~ — **entschieden 11.9.2026: ja.**
+4. ~~Botschafts-Anker (22 %) als Bonus in E2 behalten oder streichen~~ — **entschieden 11.9.2026:
+   behalten** (klein).
+5. ~~Externe Abstimmungsresultate~~ — **entschieden 11.9.2026: erst Link.**
+6. ~~Curia-Auflagen (Quellenangabe, Änderungsverbot, Abrufdatum, Beschriftung «eigene
+   Auszählung»)~~ — **entschieden 11.9.2026: bestätigt.**
+7. Fachliche Abnahme der Stufe-1-Dossiers steht seit Juli aus. **Bleibt bei David** — das Mandat
+   11.9.2026 («führe alles durch») deckt Bau-/Prozessentscheide, nicht die fachlich-juristische
+   Abnahme (CLAUDE.md §7/§8).
 
-### §11.10 Korrektur-Log (Fassung 1 → 2 → 3)
+### §11.10 Korrektur-Log (Fassung 1 → 2 → 3 → 4 → 5)
 
 | Runde | Befund (belegt) | Konsequenz |
 |---|---|---|
@@ -268,6 +285,7 @@ Fussnoten-Parser · jede Änderung am Historie-Shard (`botschaftKey`, Kopf) und 
 | Kritik A (20) / B (5) | siehe §11.0; **R1 §3c falsifiziert** (fga-Altformat 18 %) | Fassung 3 |
 | Kritik Runde 2 (14) | Marginalie 150 px; kein Karten-Slot; 4/9 Branches ausserhalb des Sammelbranchs; Revisions-Sidecar trägt `botschaftKey` schon; Trailer offline unlesbar | Fassung 4: Chip unverändert, Historie-Shard unangetastet, kein drittes Sidecar, Deckungs-Register statt Trailer |
 | Gemini | zwei Kernaussagen widerlegt | Messtabelle FAHRPLAN-FREMDAGENTEN §5 |
+| **Sichtung 11.9.2026** | Alle neun W2·24-Branches sind seit 7.9.2026 auf `main` (PR #744–#761, geprüft gegen `git log origin/main`); D40 (#761) machte die Fassung zur Rubrik der Funktionszeile am Artikelende, der Marginalie-/Kopf-Slot entfiel ersatzlos | **Fassung 5: C5/C6 gegenstandslos** (kein zweiter Slot, kein 150-px-Platzproblem); E3-Wartebedingung erfüllt; §11.9 Nr. 1–6 entschieden (Mandat David 11.9.2026), Go erteilt |
 
 
 ---
