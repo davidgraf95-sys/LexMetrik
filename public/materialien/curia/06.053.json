@@ -1,0 +1,126 @@
+{
+  "nummer": "06.053",
+  "titel": "Einführung der allgemeinen Volksinitiative. Bundesgesetz",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2006-05-30",
+  "erstrat": "Nationalrat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20060053",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2006-05-30",
+      "name": "Staatspolitische Kommission Nationalrat",
+      "kuerzel": "SPK-N"
+    },
+    {
+      "datum": "2006-05-30",
+      "name": "Staatspolitische Kommission Ständerat",
+      "kuerzel": "SPK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2006-12-19",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Nichteintreten.",
+      "vorlage": 1
+    },
+    {
+      "datum": "2006-12-19",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Nichteintreten.",
+      "vorlage": 2
+    },
+    {
+      "datum": "2006-12-19",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 3
+    },
+    {
+      "datum": "2007-03-19",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Nichteintreten.",
+      "vorlage": 1
+    },
+    {
+      "datum": "2007-03-19",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Nichteintreten.",
+      "vorlage": 2
+    },
+    {
+      "datum": "2007-03-19",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 3
+    },
+    {
+      "datum": "2007-03-23",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 3
+    },
+    {
+      "datum": "2007-03-23",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 3
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2006-05-30",
+      "art": "Bundesblatt",
+      "jahr": "2006",
+      "nummer": "5261",
+      "text": "Botschaft vom 31. Mai 2006 über die Einführung der allgemeinen Volksinitiative und über weitere Änderungen der Bundesgesetzgebung über die politischen Rechte",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2006-05-30",
+      "art": "Bundesblatt",
+      "jahr": null,
+      "nummer": null,
+      "text": "Bundesgesetz betreffend die Änderung der Bundesgesetzgebung über die politischen Rechte",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2007-04-03",
+      "art": "Bundesblatt",
+      "jahr": "2007",
+      "nummer": "2293",
+      "text": null,
+      "referendumsfrist": "2007-07-12"
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2007-03-23",
+      "vorlage": 3,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 130,
+        "nein": 40,
+        "enthaltung": 23,
+        "anwesend": 0,
+        "nichtTeilgenommen": 6,
+        "entschuldigt": 0,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

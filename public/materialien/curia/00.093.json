@@ -1,0 +1,87 @@
+{
+  "nummer": "00.093",
+  "titel": "\"Für den Beitritt der Schweiz zur UNO\". Volksinitiative",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2000-12-04",
+  "erstrat": "Ständerat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20000093",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2000-12-04",
+      "name": "Aussenpolitische Kommission Nationalrat",
+      "kuerzel": "APK-N"
+    },
+    {
+      "datum": "2000-12-04",
+      "name": "Aussenpolitische Kommission Ständerat",
+      "kuerzel": "APK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2001-06-21",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss gemäss Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2001-09-19",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2001-10-04",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2001-10-05",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2001-10-05",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2000-12-04",
+      "art": "Bundesblatt",
+      "jahr": "2001",
+      "nummer": "1183",
+      "text": "Botschaft vom 4. Dezember 2000 über die Volksinitiative \"Für den Beitritt der Schweiz zur Organisation der Vereinten Nationen (UNO)\"",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2000-12-04",
+      "art": "Bundesblatt",
+      "jahr": null,
+      "nummer": null,
+      "text": "Bundesbeschluss über die Volksinitiative \"Für den Beitritt der Schweiz zur Organisation der Vereinten Nationen (UNO)\"",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2001-10-05",
+      "art": "Bundesblatt",
+      "jahr": "2001",
+      "nummer": "5731",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": []
+}

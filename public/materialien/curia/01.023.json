@@ -1,0 +1,675 @@
+{
+  "nummer": "01.023",
+  "titel": "Bundesrechtspflege. Totalrevision",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2001-02-28",
+  "erstrat": "Ständerat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20010023",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2001-02-28",
+      "name": "Kommission für Rechtsfragen Nationalrat",
+      "kuerzel": "RK-N"
+    },
+    {
+      "datum": "2001-02-28",
+      "name": "Kommission für Rechtsfragen Ständerat",
+      "kuerzel": "RK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2001-12-06",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 2
+    },
+    {
+      "datum": "2001-12-06",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 4
+    },
+    {
+      "datum": "2001-12-06",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Rückweisung an die Kommission",
+      "vorlage": 5
+    },
+    {
+      "datum": "2002-03-19",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 5
+    },
+    {
+      "datum": "2002-03-19",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss gemäss Antrag der Kommission.",
+      "vorlage": 6
+    },
+    {
+      "datum": "2002-03-19",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss abweichend vom Antrag der Kommission.",
+      "vorlage": 7
+    },
+    {
+      "datum": "2002-06-05",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss nach Entwurf der Kommission.",
+      "vorlage": 8
+    },
+    {
+      "datum": "2002-06-13",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 7
+    },
+    {
+      "datum": "2002-06-19",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 7
+    },
+    {
+      "datum": "2002-06-20",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 7
+    },
+    {
+      "datum": "2002-06-21",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 7
+    },
+    {
+      "datum": "2002-06-21",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 7
+    },
+    {
+      "datum": "2002-09-17",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 2
+    },
+    {
+      "datum": "2002-09-17",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 4
+    },
+    {
+      "datum": "2002-09-17",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 5
+    },
+    {
+      "datum": "2002-09-17",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Nichteintreten.",
+      "vorlage": 6
+    },
+    {
+      "datum": "2002-09-17",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 8
+    },
+    {
+      "datum": "2002-09-24",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 2
+    },
+    {
+      "datum": "2002-09-24",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 4
+    },
+    {
+      "datum": "2002-09-30",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 2
+    },
+    {
+      "datum": "2002-10-04",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 2
+    },
+    {
+      "datum": "2002-10-04",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 2
+    },
+    {
+      "datum": "2002-12-02",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 5
+    },
+    {
+      "datum": "2002-12-02",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Nichteintreten.",
+      "vorlage": 6
+    },
+    {
+      "datum": "2002-12-02",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 8
+    },
+    {
+      "datum": "2002-12-10",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 5
+    },
+    {
+      "datum": "2002-12-10",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 8
+    },
+    {
+      "datum": "2002-12-11",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 5
+    },
+    {
+      "datum": "2002-12-13",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 5
+    },
+    {
+      "datum": "2002-12-13",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 5
+    },
+    {
+      "datum": "2002-12-13",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 8
+    },
+    {
+      "datum": "2002-12-13",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Die Verordnung wird in der Schlussabstimmung angenommen.",
+      "vorlage": 8
+    },
+    {
+      "datum": "2002-12-24",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Diese Verordnung wird in der Amtlichen Sammlung veröffentlicht, sobald die entsprechende Rechtsgrundlage in Kraft tritt.",
+      "vorlage": 8
+    },
+    {
+      "datum": "2003-09-22",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 3
+    },
+    {
+      "datum": "2003-09-23",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2003-09-23",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss gemäss Entwurf der Kommission.",
+      "vorlage": 9
+    },
+    {
+      "datum": "2004-10-05",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2004-10-06",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 3
+    },
+    {
+      "datum": "2004-10-06",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 9
+    },
+    {
+      "datum": "2004-12-14",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss gemäss Entwurf",
+      "vorlage": 10
+    },
+    {
+      "datum": "2004-12-14",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss gemäss Entwurf",
+      "vorlage": 11
+    },
+    {
+      "datum": "2004-12-14",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss gemäss Entwurf",
+      "vorlage": 12
+    },
+    {
+      "datum": "2005-03-02",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 10
+    },
+    {
+      "datum": "2005-03-02",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 11
+    },
+    {
+      "datum": "2005-03-02",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 12
+    },
+    {
+      "datum": "2005-03-08",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2005-03-08",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 3
+    },
+    {
+      "datum": "2005-03-08",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 9
+    },
+    {
+      "datum": "2005-03-18",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 10
+    },
+    {
+      "datum": "2005-03-18",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 10
+    },
+    {
+      "datum": "2005-03-29",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Dieser Beschluss wird in der Amtlichen Sammlung des Bundesrechts veröffentlicht, sobald die entsprechende Rechtsgrundlage in Kraft tritt.",
+      "vorlage": 9
+    },
+    {
+      "datum": "2005-06-06",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2005-06-06",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 3
+    },
+    {
+      "datum": "2005-06-08",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2005-06-17",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2005-06-17",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2005-06-17",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 3
+    },
+    {
+      "datum": "2005-06-17",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 3
+    },
+    {
+      "datum": "2005-06-17",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 11
+    },
+    {
+      "datum": "2005-06-17",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 11
+    },
+    {
+      "datum": "2005-06-28",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Diese Verordnung wird in der Amtlichen Sammlung veröffentlicht, sobald die entsprechende Rechtsgrundlage in Kraft tritt.",
+      "vorlage": 11
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2001-02-28",
+      "art": "Bundesblatt",
+      "jahr": "2001",
+      "nummer": "4202",
+      "text": "Botschaft vom 28. Februar 2001 zur Totalrevision der Bundesrechtspflege",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2001-02-28",
+      "art": "Bundesblatt",
+      "jahr": null,
+      "nummer": null,
+      "text": "Bundesbeschluss über das teilweise Inkrafttreten der Justizreform vom 12. März 2000",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2001-09-28",
+      "art": "Bundesblatt",
+      "jahr": "2001",
+      "nummer": "6049",
+      "text": "Zusatzbotschaft vom 28. September 2001 zur Botschaft zur Totalrevision der Bundesrechtspflege",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2001-11-16",
+      "art": "Bundesblatt",
+      "jahr": "2002",
+      "nummer": "1181",
+      "text": null,
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2002-05-23",
+      "art": "Bundesblatt",
+      "jahr": "2002",
+      "nummer": "5903",
+      "text": null,
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2002-07-09",
+      "art": "Bundesblatt",
+      "jahr": "2002",
+      "nummer": "4456",
+      "text": null,
+      "referendumsfrist": "2002-10-17"
+    },
+    {
+      "datum": "2002-10-15",
+      "art": "Amtliche Sammlung",
+      "jahr": "2002",
+      "nummer": "3147",
+      "text": null,
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2002-10-15",
+      "art": "Bundesblatt",
+      "jahr": "2002",
+      "nummer": "6493",
+      "text": null,
+      "referendumsfrist": "2003-01-23"
+    },
+    {
+      "datum": "2003-07-22",
+      "art": "Amtliche Sammlung",
+      "jahr": "2003",
+      "nummer": "2133",
+      "text": null,
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2003-07-22",
+      "art": "Amtliche Sammlung",
+      "jahr": "2003",
+      "nummer": "2159",
+      "text": null,
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2003-07-22",
+      "art": "Amtliche Sammlung",
+      "jahr": "2003",
+      "nummer": "2163",
+      "text": null,
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2004-08-25",
+      "art": "Bundesblatt",
+      "jahr": "2004",
+      "nummer": "4787",
+      "text": "Zusatzbotschaft vom 25. August 2004 zum Aufbau des Bundesverwaltungsgerichts",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2005-03-29",
+      "art": "Amtliche Sammlung",
+      "jahr": "2005",
+      "nummer": "1475",
+      "text": null,
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2005-03-29",
+      "art": "Bundesblatt",
+      "jahr": "2005",
+      "nummer": "2277",
+      "text": null,
+      "referendumsfrist": "2005-07-07"
+    },
+    {
+      "datum": "2005-06-28",
+      "art": "Bundesblatt",
+      "jahr": "2005",
+      "nummer": "4045",
+      "text": null,
+      "referendumsfrist": "2005-10-06"
+    },
+    {
+      "datum": "2005-06-28",
+      "art": "Bundesblatt",
+      "jahr": "2005",
+      "nummer": "4093",
+      "text": null,
+      "referendumsfrist": "2005-10-06"
+    },
+    {
+      "datum": "2005-09-27",
+      "art": "Amtliche Sammlung",
+      "jahr": "2005",
+      "nummer": "4603",
+      "text": null,
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2006-04-04",
+      "art": "Amtliche Sammlung",
+      "jahr": "2006",
+      "nummer": "1059",
+      "text": null,
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2006-04-18",
+      "art": "Amtliche Sammlung",
+      "jahr": "2006",
+      "nummer": "1205",
+      "text": null,
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2006-06-13",
+      "art": "Amtliche Sammlung",
+      "jahr": "2006",
+      "nummer": "2197",
+      "text": null,
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2006-07-04",
+      "art": "Amtliche Sammlung",
+      "jahr": "2006",
+      "nummer": "2627",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2005-03-18",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 181,
+        "nein": 0,
+        "enthaltung": 0,
+        "anwesend": 0,
+        "nichtTeilgenommen": 12,
+        "entschuldigt": 5,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 1,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    },
+    {
+      "datum": "2005-06-17",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 183,
+        "nein": 0,
+        "enthaltung": 3,
+        "anwesend": 0,
+        "nichtTeilgenommen": 12,
+        "entschuldigt": 1,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    },
+    {
+      "datum": "2005-06-17",
+      "vorlage": 3,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 185,
+        "nein": 0,
+        "enthaltung": 1,
+        "anwesend": 0,
+        "nichtTeilgenommen": 12,
+        "entschuldigt": 1,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

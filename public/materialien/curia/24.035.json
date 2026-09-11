@@ -1,0 +1,116 @@
+{
+  "nummer": "24.035",
+  "titel": "Einsatz elektronischer Kommunikationsmittel in grenzüberschreitenden Zivilprozessen",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2024-03-15",
+  "erstrat": "Nationalrat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20240035",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2024-05-02",
+      "name": "Kommission für Rechtsfragen Nationalrat",
+      "kuerzel": "RK-N"
+    },
+    {
+      "datum": "2024-05-02",
+      "name": "Kommission für Rechtsfragen Ständerat",
+      "kuerzel": "RK-S"
+    },
+    {
+      "datum": "2024-06-21",
+      "name": "Kommission für Rechtsfragen Nationalrat",
+      "kuerzel": "RK-N"
+    },
+    {
+      "datum": "2024-06-21",
+      "name": "Kommission für Rechtsfragen Ständerat",
+      "kuerzel": "RK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2024-09-18",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss gemäss Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2024-12-16",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2024-12-20",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2024-12-20",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2024-03-15",
+      "art": "Bundesblatt",
+      "jahr": "2024",
+      "nummer": "792",
+      "text": "Botschaft vom 15. März 2024 zum Bundesbeschluss über den Einsatz elektronischer Kommunikationsmittel in grenzüberschreitenden Zivilprozessen",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2024-03-15",
+      "art": "Bundesblatt",
+      "jahr": "2024",
+      "nummer": "793",
+      "text": "Bundesbeschluss über den Einsatz elektronischer Kommunikationsmittel in grenzüberschreitenden Zivilprozessen",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2025-01-09",
+      "art": "Bundesblatt",
+      "jahr": "2025",
+      "nummer": "24",
+      "text": null,
+      "referendumsfrist": "2025-04-19"
+    },
+    {
+      "datum": "2025-11-07",
+      "art": "Amtliche Sammlung",
+      "jahr": "2025",
+      "nummer": "684",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2024-12-20",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 132,
+        "nein": 59,
+        "enthaltung": 6,
+        "anwesend": 0,
+        "nichtTeilgenommen": 0,
+        "entschuldigt": 2,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

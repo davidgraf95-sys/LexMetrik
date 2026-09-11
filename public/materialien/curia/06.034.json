@@ -1,0 +1,106 @@
+{
+  "nummer": "06.034",
+  "titel": "Bundesgesetz über die Bundesstrafrechtspflege. Änderung",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2006-05-03",
+  "erstrat": "Ständerat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20060034",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2006-05-03",
+      "name": "Kommission für Rechtsfragen Nationalrat",
+      "kuerzel": "RK-N"
+    },
+    {
+      "datum": "2006-05-03",
+      "name": "Kommission für Rechtsfragen Ständerat",
+      "kuerzel": "RK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2006-09-28",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss gemäss Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2007-03-15",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2007-03-23",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2007-03-23",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2006-05-03",
+      "art": "Bundesblatt",
+      "jahr": "2006",
+      "nummer": "4245",
+      "text": "Botschaft vom 3. Mai 2006 zur Änderung des Bundesgesetzes über die Bundestrafrechtspflege (Abgeltung ausserordentlicher Kosten kantonaler Organe bei ihrer Tätigkeit als gerichtliche Polizei des Bundes)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2006-05-03",
+      "art": "Bundesblatt",
+      "jahr": null,
+      "nummer": null,
+      "text": "Bundesgesetz über die Bundesstrafrechtspflege",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2007-04-03",
+      "art": "Bundesblatt",
+      "jahr": "2007",
+      "nummer": "2297",
+      "text": null,
+      "referendumsfrist": "2007-07-12"
+    },
+    {
+      "datum": "2007-12-11",
+      "art": "Amtliche Sammlung",
+      "jahr": "2007",
+      "nummer": "6087",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2007-03-23",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 194,
+        "nein": 0,
+        "enthaltung": 0,
+        "anwesend": 0,
+        "nichtTeilgenommen": 5,
+        "entschuldigt": 0,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

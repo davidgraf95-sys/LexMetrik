@@ -12,8 +12,10 @@
 // Norm ↔ Material (§5, eine Sachgebiets-Taxonomie für die ganze App).
 
 import type { Rechtsgebiet, Sprache } from '../normtext/register';
+import type { VerfahrensEreignis } from './verfahren';
 
 export type { Rechtsgebiet, Sprache };
+export type { VerfahrensEreignis, VerfahrensTyp } from './verfahren';
 
 // ── Status der In-App-Sicht ──────────────────────────────────────────────────
 // 'nur-live-link' = nur Link zur amtlichen Quelle (kein gespeicherter Inhalt);
@@ -122,6 +124,9 @@ export interface MaterialRegistereintrag {
   botschaftDate?: string;
   /** Grobe art_*-Zuordnung (Moat-Hebel 2, artikelweise Genese; heute meist leer). */
   artAnker?: string[];
+  /** E1 «Entstehung am Artikel» (§11.4): Verfahrenskette der Vorlage — amtliche
+   *  `type-projet`-Ereignisse am Projekt-Knoten, je fga vereinigt (Kritik A12). */
+  ereignisse?: VerfahrensEreignis[];
   // ── Vernehmlassungs-Zusatzfeld (Paket 3, W3·11; nur bei doktyp==='vernehmlassung') ──
   /** Verfahrens-Zustand + Frist + Projekt-Anker. status ist mutabel → Currency-Arbiter
    *  ist das Netz-Tor; die Offline-Assertion `laufend && fristEnde < heute ⇒ rot` schützt
@@ -173,6 +178,8 @@ export interface BrowseMaterial {
   ocUris?: string[];
   botschaftDate?: string;
   artAnker?: string[];
+  /** E1: Verfahrenskette der Vorlage (nur bei doktyp==='botschaft' gesetzt). */
+  ereignisse?: VerfahrensEreignis[];
   // ── Vernehmlassungs-Zusatzfeld (Paket 3; nur bei doktyp==='vernehmlassung' gesetzt) ──
   vernehmlassung?: {
     status: VernehmlassungStatus;

@@ -1,0 +1,134 @@
+{
+  "nummer": "16.027",
+  "titel": "Ausländergesetz. Steuerung der Zuwanderung und Vollzugsverbesserungen bei den Freizügigkeitsabkommen",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2016-03-04",
+  "erstrat": "Nationalrat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20160027",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2016-03-04",
+      "name": "Staatspolitische Kommission Nationalrat",
+      "kuerzel": "SPK-N"
+    },
+    {
+      "datum": "2016-03-04",
+      "name": "Staatspolitische Kommission Ständerat",
+      "kuerzel": "SPK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2016-09-21",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2016-11-30",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Diskussion",
+      "vorlage": 1
+    },
+    {
+      "datum": "2016-12-01",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2016-12-05",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2016-12-07",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2016-12-12",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2016-12-16",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2016-12-16",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2016-03-04",
+      "art": "Bundesblatt",
+      "jahr": "2016",
+      "nummer": "3007",
+      "text": "Botschaft vom 4. März 2016 zur Änderung des Ausländergesetzes (Steuerung der Zuwanderung und Vollzugsverbesserungen bei den Freizügigkeitsabkommen)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2016-03-04",
+      "art": "Bundesblatt",
+      "jahr": "2016",
+      "nummer": "3079",
+      "text": "Bundesgesetz über die Ausländerinnen und Ausländer (Ausländergesetz, AuG) (Steuerung der Zuwanderung und Vollzugsverbesserungen bei den Freizügigkeitsabkommen)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2016-12-28",
+      "art": "Bundesblatt",
+      "jahr": "2016",
+      "nummer": "8917",
+      "text": null,
+      "referendumsfrist": "2017-04-07"
+    },
+    {
+      "datum": "2018-02-20",
+      "art": "Amtliche Sammlung",
+      "jahr": "2018",
+      "nummer": "733",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2016-12-16",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 98,
+        "nein": 67,
+        "enthaltung": 33,
+        "anwesend": 0,
+        "nichtTeilgenommen": 1,
+        "entschuldigt": 0,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

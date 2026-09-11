@@ -1,0 +1,159 @@
+{
+  "nummer": "21.061",
+  "titel": "Militärgesetz und Armeeorganisation. Änderung",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2021-09-01",
+  "erstrat": "Nationalrat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20210061",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2021-09-01",
+      "name": "Sicherheitspolitische Kommission Nationalrat",
+      "kuerzel": "SiK-N"
+    },
+    {
+      "datum": "2021-09-01",
+      "name": "Sicherheitspolitische Kommission Ständerat",
+      "kuerzel": "SiK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2021-12-15",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss gemäss Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2021-12-15",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss gemäss Entwurf",
+      "vorlage": 2
+    },
+    {
+      "datum": "2022-03-01",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2022-03-01",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 2
+    },
+    {
+      "datum": "2022-03-18",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2022-03-18",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2022-03-18",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 2
+    },
+    {
+      "datum": "2022-03-18",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 2
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2021-09-01",
+      "art": "Bundesblatt",
+      "jahr": "2021",
+      "nummer": "2198",
+      "text": "Botschaft vom 1. September 2021 zur Änderung des Militärgesetzes und der Armeeorganisation",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2021-09-01",
+      "art": "Bundesblatt",
+      "jahr": "2021",
+      "nummer": "2199",
+      "text": "Bundesgesetz über die Armee und die Militärverwaltung (Militärgesetz, MG)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2021-09-01",
+      "art": "Bundesblatt",
+      "jahr": "2021",
+      "nummer": "2200",
+      "text": "Verordnung der Bundesversammlung über die Organisation der Armee (Armeeorganisation, AO)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2022-03-29",
+      "art": "Bundesblatt",
+      "jahr": "2022",
+      "nummer": "703",
+      "text": null,
+      "referendumsfrist": "2022-07-07"
+    },
+    {
+      "datum": "2022-03-29",
+      "art": "Bundesblatt",
+      "jahr": "2022",
+      "nummer": "715",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2022-03-18",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 187,
+        "nein": 0,
+        "enthaltung": 4,
+        "anwesend": 0,
+        "nichtTeilgenommen": 2,
+        "entschuldigt": 6,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    },
+    {
+      "datum": "2022-03-18",
+      "vorlage": 2,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 189,
+        "nein": 0,
+        "enthaltung": 2,
+        "anwesend": 0,
+        "nichtTeilgenommen": 2,
+        "entschuldigt": 6,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

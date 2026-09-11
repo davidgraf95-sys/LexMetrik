@@ -1,0 +1,113 @@
+{
+  "nummer": "17.033",
+  "titel": "Weiterentwicklung des Schengen-Besitzstands. Übernahme der Verordnung (EU) 2016/1624 über die Europäische Grenz- und Küstenwache",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2017-05-17",
+  "erstrat": "Nationalrat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20170033",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2017-05-17",
+      "name": "Sicherheitspolitische Kommission Nationalrat",
+      "kuerzel": "SiK-N"
+    },
+    {
+      "datum": "2017-05-17",
+      "name": "Sicherheitspolitische Kommission Ständerat",
+      "kuerzel": "SiK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2017-09-21",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2017-12-05",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2017-12-06",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2017-12-15",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2017-12-15",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2017-05-17",
+      "art": "Bundesblatt",
+      "jahr": "2017",
+      "nummer": "4155",
+      "text": "Botschaft vom 17. Mai 2017 zur Genehmigung und Umsetzung des Notenaustauschs zwischen der Schweiz und der Europäischen Union betreffend die Übernahme der Verordnung (EU) 2016/1624 über die Europäische Grenz- und Küstenwache (Weiterentwicklung des Schengen-Besitzstands)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2017-05-17",
+      "art": "Bundesblatt",
+      "jahr": "2017",
+      "nummer": "4195",
+      "text": "Bundesbeschluss über die Genehmigung und die Umsetzung des Notenaustauschs zwischen der Schweiz und der Europäischen Union betreffend die Übernahme der Verordnung (EU) 2016/1624 über die Europäische Grenz- und Küstenwache (Weiterentwicklung des Schengen-Besitzstands)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2017-05-17",
+      "art": "Bundesblatt",
+      "jahr": "2017",
+      "nummer": "4201",
+      "text": "Notenaustausch vom 14. Oktober 2016 zwischen der Schweiz und der Europäischen Union betreffend die Übernahme der Verordnung (EU) 2016/1624 über die Europäische Grenz- und Küstenwache (Weiterentwicklung des Schengen-Besitzstands)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2017-12-28",
+      "art": "Bundesblatt",
+      "jahr": "2017",
+      "nummer": "7925",
+      "text": null,
+      "referendumsfrist": "2018-04-07"
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2017-12-15",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 109,
+        "nein": 79,
+        "enthaltung": 4,
+        "anwesend": 0,
+        "nichtTeilgenommen": 4,
+        "entschuldigt": 3,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

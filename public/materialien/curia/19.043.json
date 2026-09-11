@@ -1,0 +1,127 @@
+{
+  "nummer": "19.043",
+  "titel": "Bekämpfung des missbräuchlichen Konkurses. Bundesgesetz",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2019-06-26",
+  "erstrat": "Ständerat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20190043",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2019-06-26",
+      "name": "Kommission für Rechtsfragen Nationalrat",
+      "kuerzel": "RK-N"
+    },
+    {
+      "datum": "2019-06-26",
+      "name": "Kommission für Rechtsfragen Ständerat",
+      "kuerzel": "RK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2021-05-31",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2021-09-30",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2021-12-01",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2022-03-02",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2022-03-07",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2022-03-18",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2022-03-18",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2019-06-26",
+      "art": "Bundesblatt",
+      "jahr": "2019",
+      "nummer": "5193",
+      "text": "Botschaft vom 26. Juni 2019 zum Bundesgesetz über die Bekämpfung des missbräuchlichen Konkurses (Änderung, des Bundesgesetzes über Schuldbetreibung und Konkurs, des Obligationenrechts, des Strafgesetzbuches, des Militärstrafgesetzes und des Strafregistergesetzes)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2019-06-26",
+      "art": "Bundesblatt",
+      "jahr": "2019",
+      "nummer": "5221",
+      "text": "Bundesgesetz über die Bekämpfung des missbräuchlichen Konkurses (Änderung des Bundesgesetzes über Schuldbetreibung und Konkurs, des Obligationenrechts, des Strafgesetzbuches, des Militärstrafgesetzes und des Strafregistergesetzes)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2022-03-29",
+      "art": "Bundesblatt",
+      "jahr": "2022",
+      "nummer": "702",
+      "text": null,
+      "referendumsfrist": "2022-07-07"
+    },
+    {
+      "datum": "2023-11-28",
+      "art": "Amtliche Sammlung",
+      "jahr": "2023",
+      "nummer": "628",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2022-03-18",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 141,
+        "nein": 48,
+        "enthaltung": 2,
+        "anwesend": 0,
+        "nichtTeilgenommen": 2,
+        "entschuldigt": 6,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

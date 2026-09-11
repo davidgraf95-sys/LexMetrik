@@ -1,0 +1,114 @@
+{
+  "nummer": "19.047",
+  "titel": "Übereinkommen des Europarats gegen den Handel mit menschlichen Organen. Genehmigung und Umsetzung (Änderung des Transplantationsgesetzes und des Humanforschungsgesetzes)",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2019-08-28",
+  "erstrat": "Nationalrat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20190047",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2019-08-28",
+      "name": "Kommission für soziale Sicherheit und Gesundheit Nationalrat",
+      "kuerzel": "SGK-N"
+    },
+    {
+      "datum": "2019-08-28",
+      "name": "Kommission für soziale Sicherheit und Gesundheit Ständerat",
+      "kuerzel": "SGK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2019-12-10",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2020-03-02",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2020-06-19",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2020-06-19",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2019-08-28",
+      "art": "Bundesblatt",
+      "jahr": "2019",
+      "nummer": "5971",
+      "text": "Botschaft vom 28. August 2019 zur Genehmigung des Übereinkommens des Europarats gegen den Handel mit menschlichen Organen und zu seiner Umsetzung (Änderung des Transplantationsgesetzes und des Humanforschungsgesetzes)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2019-08-28",
+      "art": "Bundesblatt",
+      "jahr": "2019",
+      "nummer": "6017",
+      "text": "Bundesbeschluss über die Genehmigung des Übereinkommens des Europarats gegen den Handel mit menschlichen Organen und über seine Umsetzung (Änderung des Transplantationsgesetzes und des Humanforschungsgesetzes)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2019-08-28",
+      "art": "Bundesblatt",
+      "jahr": "2019",
+      "nummer": "6021",
+      "text": "Übereinkommen des Europarats gegen den Handel mit menschlichen Organen",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2020-06-30",
+      "art": "Bundesblatt",
+      "jahr": "2020",
+      "nummer": "5721",
+      "text": null,
+      "referendumsfrist": "2020-10-08"
+    },
+    {
+      "datum": "2021-01-13",
+      "art": "Amtliche Sammlung",
+      "jahr": "2020",
+      "nummer": "6567",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2020-06-19",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 198,
+        "nein": 0,
+        "enthaltung": 0,
+        "anwesend": 0,
+        "nichtTeilgenommen": 0,
+        "entschuldigt": 0,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 199
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "nummer": "11.026",
+  "titel": "Direkte Steuern bei den natürlichen Personen. Zeitliche Bemessung",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2011-04-06",
+  "erstrat": "Nationalrat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20110026",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2011-04-06",
+      "name": "Kommission für Wirtschaft und Abgaben Nationalrat",
+      "kuerzel": "WAK-N"
+    },
+    {
+      "datum": "2011-04-06",
+      "name": "Kommission für Wirtschaft und Abgaben Ständerat",
+      "kuerzel": "WAK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2012-12-06",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2013-03-11",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2013-03-22",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2013-03-22",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2011-04-06",
+      "art": "Bundesblatt",
+      "jahr": "2011",
+      "nummer": "3593",
+      "text": "Botschaft vom 6. April 2011 zum Bundesgesetz über die formelle Bereinigung der zeitlichen Bemessung der direkten Steuern bei den natürlichen Personen",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2011-04-06",
+      "art": "Bundesblatt",
+      "jahr": "2011",
+      "nummer": "3605",
+      "text": "Bundesgesetz über die formelle Bereinigung der zeitlichen Bemessung der direkten Steuern bei den natürlichen Personen",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2013-04-04",
+      "art": "Bundesblatt",
+      "jahr": "2013",
+      "nummer": "2487",
+      "text": null,
+      "referendumsfrist": "2013-07-13"
+    },
+    {
+      "datum": "2013-07-30",
+      "art": "Amtliche Sammlung",
+      "jahr": "2013",
+      "nummer": "2397",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2013-03-22",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 188,
+        "nein": 0,
+        "enthaltung": 0,
+        "anwesend": 0,
+        "nichtTeilgenommen": 5,
+        "entschuldigt": 6,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

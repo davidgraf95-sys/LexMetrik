@@ -1,0 +1,111 @@
+{
+  "nummer": "24.016",
+  "titel": "Bundesgesetz über die Massnahmen zur Entlastung des Haushaltes ab 2025",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2024-03-01",
+  "erstrat": "Nationalrat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20240016",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2024-03-01",
+      "name": "Finanzkommission Nationalrat",
+      "kuerzel": "FK-N"
+    },
+    {
+      "datum": "2024-03-01",
+      "name": "Finanzkommission Ständerat",
+      "kuerzel": "FK-S"
+    },
+    {
+      "datum": "2024-03-28",
+      "name": "Kommission für soziale Sicherheit und Gesundheit Nationalrat",
+      "kuerzel": "SGK-N"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2024-06-04",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss gemäss Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2024-09-19",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2024-09-27",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2024-09-27",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2024-03-01",
+      "art": "Bundesblatt",
+      "jahr": "2024",
+      "nummer": "558",
+      "text": "Botschaft vom 1. März 2024 zum Bundesgesetz über die Massnahmen zur finanziellen und administrativen Entlastung ab 2025 (Teilrevision des Regierungs- und Verwaltungsorganisationsgesetzes und des Arbeitslosenversicherungsgesetzes)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2024-03-01",
+      "art": "Bundesblatt",
+      "jahr": "2024",
+      "nummer": "559",
+      "text": "Bundesgesetz über die Massnahmen zur finanziellen und administrativen Entlastung ab 2025",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2024-10-08",
+      "art": "Bundesblatt",
+      "jahr": "2024",
+      "nummer": "2494",
+      "text": null,
+      "referendumsfrist": "2025-01-16"
+    },
+    {
+      "datum": "2025-05-15",
+      "art": "Amtliche Sammlung",
+      "jahr": "2025",
+      "nummer": "196",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2024-09-27",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 133,
+        "nein": 62,
+        "enthaltung": 0,
+        "anwesend": 0,
+        "nichtTeilgenommen": 0,
+        "entschuldigt": 4,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

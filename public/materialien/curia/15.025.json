@@ -1,0 +1,148 @@
+{
+  "nummer": "15.025",
+  "titel": "Mehrwertsteuergesetz. Teilrevision",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2015-02-25",
+  "erstrat": "Nationalrat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20150025",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2015-02-25",
+      "name": "Kommission für Wirtschaft und Abgaben Nationalrat",
+      "kuerzel": "WAK-N"
+    },
+    {
+      "datum": "2015-02-25",
+      "name": "Kommission für Wirtschaft und Abgaben Ständerat",
+      "kuerzel": "WAK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2015-09-24",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2016-03-03",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2016-06-14",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2016-06-15",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2016-09-19",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2016-09-20",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2016-09-29",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss gemäss Antrag der Einigungskonferenz",
+      "vorlage": 1
+    },
+    {
+      "datum": "2016-09-29",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss gemäss Antrag der Einigungskonferenz",
+      "vorlage": 1
+    },
+    {
+      "datum": "2016-09-30",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2016-09-30",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2015-02-25",
+      "art": "Bundesblatt",
+      "jahr": "2015",
+      "nummer": "2615",
+      "text": "Botschaft vom 25. Februar 2015 zur Teilrevision des Mehrwertsteuergesetzes",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2015-02-25",
+      "art": "Bundesblatt",
+      "jahr": "2015",
+      "nummer": "2681",
+      "text": "Bundesgesetz über die Mehrwertsteuer (Mehrwertsteuergesetz, MWSTG)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2016-10-14",
+      "art": "Bundesblatt",
+      "jahr": "2016",
+      "nummer": "7631",
+      "text": null,
+      "referendumsfrist": "2017-01-19"
+    },
+    {
+      "datum": "2017-06-30",
+      "art": "Amtliche Sammlung",
+      "jahr": "2017",
+      "nummer": "3575",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2016-09-30",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 198,
+        "nein": 0,
+        "enthaltung": 0,
+        "anwesend": 0,
+        "nichtTeilgenommen": 0,
+        "entschuldigt": 1,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

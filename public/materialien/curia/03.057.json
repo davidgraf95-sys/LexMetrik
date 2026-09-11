@@ -1,0 +1,106 @@
+{
+  "nummer": "03.057",
+  "titel": "Luftfahrtgesetz. Änderung",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2003-09-10",
+  "erstrat": "Ständerat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20030057",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2003-09-10",
+      "name": "Kommission für Verkehr und Fernmeldewesen Nationalrat",
+      "kuerzel": "KVF-N"
+    },
+    {
+      "datum": "2003-09-10",
+      "name": "Kommission für Verkehr und Fernmeldewesen Ständerat",
+      "kuerzel": "KVF-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2003-12-11",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss gemäss Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2004-03-16",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2004-03-19",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2004-03-19",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2003-09-10",
+      "art": "Bundesblatt",
+      "jahr": "2003",
+      "nummer": "6241",
+      "text": "Botschaft vom 10. September 2003 zur Änderung des Luftfahrtgesetzes (Prüfung der Vereinbarkeit von staatlichen Beihilfen mit dem Luftverkehrsabkommen Schweiz-EG)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2003-09-10",
+      "art": "Bundesblatt",
+      "jahr": null,
+      "nummer": null,
+      "text": "Bundesgesetz über die Luftfahrt (Luftfahrtgesetz, LFG)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2004-03-30",
+      "art": "Bundesblatt",
+      "jahr": "2004",
+      "nummer": "1387",
+      "text": null,
+      "referendumsfrist": "2004-07-08"
+    },
+    {
+      "datum": "2004-08-24",
+      "art": "Amtliche Sammlung",
+      "jahr": "2004",
+      "nummer": "3867",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2004-03-19",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 194,
+        "nein": 0,
+        "enthaltung": 0,
+        "anwesend": 0,
+        "nichtTeilgenommen": 5,
+        "entschuldigt": 0,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

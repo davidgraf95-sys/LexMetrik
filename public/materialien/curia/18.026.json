@@ -1,0 +1,120 @@
+{
+  "nummer": "18.026",
+  "titel": "Ausländergesetz. Verfahrensregelungen und Informationssysteme",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2018-03-02",
+  "erstrat": "Ständerat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20180026",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2018-03-02",
+      "name": "Staatspolitische Kommission Nationalrat",
+      "kuerzel": "SPK-N"
+    },
+    {
+      "datum": "2018-03-02",
+      "name": "Staatspolitische Kommission Ständerat",
+      "kuerzel": "SPK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2018-06-11",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2018-09-27",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2018-11-28",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2018-12-12",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2018-12-14",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2018-12-14",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2018-03-02",
+      "art": "Bundesblatt",
+      "jahr": "2018",
+      "nummer": "1685",
+      "text": "Botschaft vom 2. März 2018 zur Revision des Ausländergesetzes (AuG) (Verfahrensnormen und Informationssysteme))",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2018-03-02",
+      "art": "Bundesblatt",
+      "jahr": "2018",
+      "nummer": "1769",
+      "text": "Bundesgesetz über die Ausländerinnen und Ausländer und über die Integration (Ausländer- und Integrationsgesetz, AIG) (Verfahrensregelungen und Informationssysteme)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2018-12-14",
+      "art": "Bundesblatt",
+      "jahr": "2018",
+      "nummer": "7879",
+      "text": null,
+      "referendumsfrist": "2019-04-07"
+    },
+    {
+      "datum": "2019-05-21",
+      "art": "Amtliche Sammlung",
+      "jahr": "2019",
+      "nummer": "1413",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2018-12-14",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 141,
+        "nein": 54,
+        "enthaltung": 1,
+        "anwesend": 0,
+        "nichtTeilgenommen": 1,
+        "entschuldigt": 2,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

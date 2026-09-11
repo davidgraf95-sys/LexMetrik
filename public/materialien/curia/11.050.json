@@ -1,0 +1,120 @@
+{
+  "nummer": "11.050",
+  "titel": "Bundesgesetz über die Börsen und den Effektenhandel. Änderung",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2011-08-31",
+  "erstrat": "Ständerat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20110050",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2011-08-31",
+      "name": "Kommission für Rechtsfragen Nationalrat",
+      "kuerzel": "RK-N"
+    },
+    {
+      "datum": "2011-08-31",
+      "name": "Kommission für Rechtsfragen Ständerat",
+      "kuerzel": "RK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2011-12-20",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss gemäss Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2012-06-14",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2012-09-13",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2012-09-18",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2012-09-28",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2012-09-28",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2011-08-31",
+      "art": "Bundesblatt",
+      "jahr": "2011",
+      "nummer": "6873",
+      "text": "Botschaft vom 31. August 2011 zur Änderung des Börsengesetzes (Börsendelikte und Marktmissbrauch)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2011-08-31",
+      "art": "Bundesblatt",
+      "jahr": "2011",
+      "nummer": "6915",
+      "text": "Bundesgesetz über die Börsen und den Effektenhandel (Börsengesetz, BEHG)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2012-10-09",
+      "art": "Bundesblatt",
+      "jahr": "2012",
+      "nummer": "8207",
+      "text": null,
+      "referendumsfrist": "2013-01-17"
+    },
+    {
+      "datum": "2013-04-23",
+      "art": "Amtliche Sammlung",
+      "jahr": "2013",
+      "nummer": "1103",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2012-09-28",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 186,
+        "nein": 0,
+        "enthaltung": 0,
+        "anwesend": 0,
+        "nichtTeilgenommen": 8,
+        "entschuldigt": 3,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 198
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

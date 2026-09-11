@@ -1,0 +1,113 @@
+{
+  "nummer": "12.026",
+  "titel": "KVG. Änderung",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2012-02-15",
+  "erstrat": "Ständerat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20120026",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2012-02-15",
+      "name": "Kommission für soziale Sicherheit und Gesundheit Nationalrat",
+      "kuerzel": "SGK-N"
+    },
+    {
+      "datum": "2012-02-15",
+      "name": "Kommission für soziale Sicherheit und Gesundheit Ständerat",
+      "kuerzel": "SGK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2013-09-17",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2014-03-05",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2014-03-11",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2014-03-21",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2014-03-21",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2012-02-15",
+      "art": "Bundesblatt",
+      "jahr": "2012",
+      "nummer": "1923",
+      "text": "Botschaft vom 15. Februar 2012 zur Änderung des Bundesgesetzes über die Krankenversicherung (Korrektur der zwischen 1996 und 2011 bezahlten Prämien)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2012-02-15",
+      "art": "Bundesblatt",
+      "jahr": "2012",
+      "nummer": "1939",
+      "text": "Bundesgesetz über die Krankenversicherung (KVG) (Prämienkorrektur)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2014-04-01",
+      "art": "Bundesblatt",
+      "jahr": "2014",
+      "nummer": "2865",
+      "text": null,
+      "referendumsfrist": "2014-07-10"
+    },
+    {
+      "datum": "2014-08-12",
+      "art": "Amtliche Sammlung",
+      "jahr": "2014",
+      "nummer": "2463",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2014-03-21",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 193,
+        "nein": 1,
+        "enthaltung": 0,
+        "anwesend": 0,
+        "nichtTeilgenommen": 3,
+        "entschuldigt": 2,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

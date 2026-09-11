@@ -1,0 +1,105 @@
+{
+  "nummer": "18.092",
+  "titel": "Erwerbsersatzgesetz. Mutterschaftsentschädigung bei längerem Spitalaufenthalt des Neugeborenen",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2018-11-30",
+  "erstrat": "Ständerat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20180092",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2018-11-30",
+      "name": "Kommission für soziale Sicherheit und Gesundheit Nationalrat",
+      "kuerzel": "SGK-N"
+    },
+    {
+      "datum": "2018-11-30",
+      "name": "Kommission für soziale Sicherheit und Gesundheit Ständerat",
+      "kuerzel": "SGK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2020-03-02",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2020-09-15",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2020-11-30",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2020-12-18",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2020-12-18",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2018-11-30",
+      "art": "Bundesblatt",
+      "jahr": "2019",
+      "nummer": "141",
+      "text": "Botschaft vom 30. November 2018 zur Änderung des Erwerbsersatzgesetzes (Mutterschaftsentschädigung bei längerem Spitalaufenthalt des Neugeborenen)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2018-11-30",
+      "art": "Bundesblatt",
+      "jahr": "2019",
+      "nummer": "173",
+      "text": "Bundesgesetz über den Erwerbsersatz für Dienstleistende und bei Mutterschaft (Erwerbsersatzgesetz, EOG)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2021-12-31",
+      "art": "Bundesblatt",
+      "jahr": "2020",
+      "nummer": "9947",
+      "text": null,
+      "referendumsfrist": "2021-04-10"
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2020-12-18",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 192,
+        "nein": 2,
+        "enthaltung": 0,
+        "anwesend": 0,
+        "nichtTeilgenommen": 1,
+        "entschuldigt": 4,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

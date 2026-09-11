@@ -1,0 +1,137 @@
+{
+  "nummer": "13.034",
+  "titel": "Bundesgesetz über den Natur- und Heimatschutz. Nagoya-Protokoll",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2013-04-10",
+  "erstrat": "Ständerat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20130034",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2013-04-10",
+      "name": "Kommission für Umwelt, Raumplanung und Energie Nationalrat",
+      "kuerzel": "UREK-N"
+    },
+    {
+      "datum": "2013-04-10",
+      "name": "Kommission für Umwelt, Raumplanung und Energie Ständerat",
+      "kuerzel": "UREK-S"
+    },
+    {
+      "datum": "2013-04-10",
+      "name": "Kommission für Wissenschaft, Bildung und Kultur Nationalrat",
+      "kuerzel": "WBK-N"
+    },
+    {
+      "datum": "2013-04-10",
+      "name": "Kommission für Wissenschaft, Bildung und Kultur Ständerat",
+      "kuerzel": "WBK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2013-12-03",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2014-03-03",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2014-03-13",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2014-03-17",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2014-03-20",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2014-03-21",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2014-03-21",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2013-04-10",
+      "art": "Bundesblatt",
+      "jahr": "2013",
+      "nummer": "3009",
+      "text": "Botschaft vom 10. April 2013 zur Genehmigung des Protokolls von Nagoya über den Zugang zu genetischen Ressourcen und die ausgewogene und gerechte Aufteilung der sich aus ihrer Nutzung ergebenden Vorteile (Nagoya-Protokoll) und dessen Umsetzung (Bundesgesetz über den Natur- und Heimatschutz)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2013-04-10",
+      "art": "Bundesblatt",
+      "jahr": "2013",
+      "nummer": "3057",
+      "text": "Bundesbeschluss über die Genehmigung des Protokolls von Nagoya über den Zugang zu genetischen Ressourcen und die ausgewogene und gerechte Aufteilung der sich aus ihrer Nutzung ergebenden Vorteile (Nagoya-Protokoll) und dessen Umsetzung (Bundesgesetz über den Natur- und Heimatschutz)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2014-04-01",
+      "art": "Bundesblatt",
+      "jahr": "2014",
+      "nummer": "2917",
+      "text": null,
+      "referendumsfrist": "2014-07-10"
+    },
+    {
+      "datum": "2014-09-02",
+      "art": "Amtliche Sammlung",
+      "jahr": "2014",
+      "nummer": "2629",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2014-03-21",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 115,
+        "nein": 72,
+        "enthaltung": 8,
+        "anwesend": 0,
+        "nichtTeilgenommen": 2,
+        "entschuldigt": 2,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

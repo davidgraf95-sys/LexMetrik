@@ -1,0 +1,156 @@
+{
+  "nummer": "16.028",
+  "titel": "Freizügigkeitsabkommen. Ausdehnung auf Kroatien",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2016-03-04",
+  "erstrat": "Nationalrat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20160028",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2016-03-04",
+      "name": "Aussenpolitische Kommission Nationalrat",
+      "kuerzel": "APK-N"
+    },
+    {
+      "datum": "2016-03-04",
+      "name": "Aussenpolitische Kommission Ständerat",
+      "kuerzel": "APK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2016-04-26",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss gemäss Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2016-06-02",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2016-06-08",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2016-06-13",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2016-06-14",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2016-06-15",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2016-06-16",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss gemäss Antrag der Einigungskonferenz",
+      "vorlage": 1
+    },
+    {
+      "datum": "2016-06-16",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss gemäss Antrag der Einigungskonferenz",
+      "vorlage": 1
+    },
+    {
+      "datum": "2016-06-17",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2016-06-17",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2016-03-04",
+      "art": "Bundesblatt",
+      "jahr": "2016",
+      "nummer": "2223",
+      "text": "Botschaft vom 4. März 2016 zur Ausdehnung des Freizügigkeitsabkommens auf Kroatien",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2016-03-04",
+      "art": "Bundesblatt",
+      "jahr": "2016",
+      "nummer": "2257",
+      "text": "Bundesbeschluss über die Genehmigung und die Umsetzung des Protokolls zum Freizügigkeitsabkommen zwischen der Schweizerischen Eidgenossenschaft einerseits und der Europäischen Gemeinschaft sowie ihren Mitgliedstaaten andererseits betreffend die Ausdehnung auf die Republik Kroatien",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2016-03-04",
+      "art": "Bundesblatt",
+      "jahr": "2016",
+      "nummer": "2275",
+      "text": "Protokoll zum Abkommen zwischen der Schweizerischen Eidgenossenschaft einerseits und der Europäischen Gemeinschaft und ihren Mitgliedstaaten andererseits über die Freizügigkeit im Hinblick auf die Aufnahme der Republik Kroatien als Vertragspartei infolge ihres Beitritts zur Europäischen Union",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2016-07-06",
+      "art": "Bundesblatt",
+      "jahr": "2016",
+      "nummer": "4999",
+      "text": null,
+      "referendumsfrist": "2016-10-06"
+    },
+    {
+      "datum": "2016-12-28",
+      "art": "Amtliche Sammlung",
+      "jahr": "2016",
+      "nummer": "5233",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2016-06-17",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 128,
+        "nein": 62,
+        "enthaltung": 2,
+        "anwesend": 0,
+        "nichtTeilgenommen": 4,
+        "entschuldigt": 3,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

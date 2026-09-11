@@ -1,0 +1,98 @@
+{
+  "nummer": "04.054",
+  "titel": "Für Lebensmittel aus gentechnikfreier Landwirtschaft. Volksinitiative",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2004-08-18",
+  "erstrat": "Ständerat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20040054",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2004-08-18",
+      "name": "Kommission für Wissenschaft, Bildung und Kultur Nationalrat",
+      "kuerzel": "WBK-N"
+    },
+    {
+      "datum": "2004-08-18",
+      "name": "Kommission für Wissenschaft, Bildung und Kultur Ständerat",
+      "kuerzel": "WBK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2005-03-15",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss gemäss Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2005-06-14",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2005-06-17",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2005-06-17",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2004-08-18",
+      "art": "Bundesblatt",
+      "jahr": "2004",
+      "nummer": "4937",
+      "text": "Botschaft vom 18. August 2004 über die Volksinitiative \"für Lebensmittel aus gentechnikfreier Landwirtschaft\"",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2004-08-18",
+      "art": "Bundesblatt",
+      "jahr": null,
+      "nummer": null,
+      "text": "Bundesbeschluss über die Volksinitiative \"für Lebensmittel aus gentechnikfreier Landwirtschaft\"",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2005-06-28",
+      "art": "Bundesblatt",
+      "jahr": "2005",
+      "nummer": "4039",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2005-06-17",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 93,
+        "nein": 92,
+        "enthaltung": 4,
+        "anwesend": 0,
+        "nichtTeilgenommen": 10,
+        "entschuldigt": 1,
+        "praesidiumStimmtNicht": 0,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

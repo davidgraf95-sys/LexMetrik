@@ -178,6 +178,17 @@ export function istRisikoPfad(p: string): boolean {
   if (p.startsWith('scripts/materialien/')) return true;
   if (/^public\/materialien\/[^/]+\.json$/.test(p)) return true;
   if (p.startsWith('public/materialien/kanten/')) return true;
+  // Entstehung am Artikel (W2·6c, §11.6, Kritik A8/C1-C4): die Anker-Sidecars behaupten
+  // «diese Stelle der Botschaft erläutert Art. N» und die Curia-Shards geben amtliche
+  // Parlaments-Beschlüsse wieder — beides Extraktion aus amtlichen Quellen, beides
+  // artikelscharf. Ohne diese zwei Zeilen fielen sie durch die Risiko-Klassifikation
+  // (Rot-Beweis im PR zu W2·6c-ENTSTEHUNG-DATEN: vorher false, nachher true).
+  if (p.startsWith('public/materialien/anker/')) return true;
+  if (p.startsWith('public/materialien/curia/')) return true;
+  // Die Generatoren + das Tor dieser Etappe liegen in scripts/entstehung/ (check-*-
+  // Basenames nimmt istPruefLogik wie üblich aus).
+  if (p.startsWith('scripts/entstehung/')) return true;
+  if (p.startsWith('src/lib/entstehung/')) return true;
   // Verzahnung V1c (FAHRPLAN-VERZAHNUNG-UI §V1c): der Normrevisions-Extrakt liest die
   // amtlichen Struktur-Fussnoten und leitet je Artikel das Revisionsdatum + AS ab =
   // Extraktions-Risiko. Der Generator, die reine Parser-Logik und die committete

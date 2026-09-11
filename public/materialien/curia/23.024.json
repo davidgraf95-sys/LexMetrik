@@ -1,0 +1,98 @@
+{
+  "nummer": "23.024",
+  "titel": "Eisenbahngesetz. Änderung (Umsetzung der technischen Säule des 4. EU-Eisenbahnpakets)",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2023-02-22",
+  "erstrat": "Ständerat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20230024",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2023-02-22",
+      "name": "Kommission für Verkehr und Fernmeldewesen Nationalrat",
+      "kuerzel": "KVF-N"
+    },
+    {
+      "datum": "2023-02-22",
+      "name": "Kommission für Verkehr und Fernmeldewesen Ständerat",
+      "kuerzel": "KVF-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2023-06-13",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss gemäss Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2023-09-12",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2023-09-29",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2023-09-29",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2023-02-22",
+      "art": "Bundesblatt",
+      "jahr": "2023",
+      "nummer": "703",
+      "text": "Botschaft vom 22. Februar 2023 zu einer Änderung des Eisenbahngesetzes (Umsetzung der technischen Säule des 4. EU-Eisenbahnpakets)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2023-02-22",
+      "art": "Bundesblatt",
+      "jahr": "2023",
+      "nummer": "704",
+      "text": "Eisenbahngesetz (EBG) (Umsetzung der technischen Säule des 4. EU-Eisenbahnpakets)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2023-10-10",
+      "art": "Bundesblatt",
+      "jahr": "2023",
+      "nummer": "2300",
+      "text": null,
+      "referendumsfrist": "2024-01-18"
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2023-09-29",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 195,
+        "nein": 0,
+        "enthaltung": 0,
+        "anwesend": 0,
+        "nichtTeilgenommen": 2,
+        "entschuldigt": 2,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

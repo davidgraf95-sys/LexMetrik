@@ -1,0 +1,106 @@
+{
+  "nummer": "12.047",
+  "titel": "Personenfreizügigkeitsabkommen. Änderung des Anhangs III",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2012-04-04",
+  "erstrat": "Ständerat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20120047",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2012-04-04",
+      "name": "Aussenpolitische Kommission Nationalrat",
+      "kuerzel": "APK-N"
+    },
+    {
+      "datum": "2012-04-04",
+      "name": "Aussenpolitische Kommission Ständerat",
+      "kuerzel": "APK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2012-09-25",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss gemäss Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2012-12-05",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2012-12-14",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2012-12-14",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2012-04-04",
+      "art": "Bundesblatt",
+      "jahr": "2012",
+      "nummer": "4401",
+      "text": "Botschaft vom 4. April 2012 zur Genehmigung des Beschlusses Nr. 2/2011 des Gemischten Ausschusses EU Schweiz zum Freizügigkeitsabkommen (Änderung von Anhang III des Abkommens, gegenseitige Anerkennung von Berufsqualifikationen) und zur Umsetzung des Beschlusses (Bundesgesetz über die Meldepflicht und die Nachprüfung der Berufsqualifikationen von Dienstleistungserbringerinnen und -erbringern in reglementierten Berufen)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2012-04-04",
+      "art": "Bundesblatt",
+      "jahr": "2012",
+      "nummer": "4431",
+      "text": "Bundesbeschluss über die Genehmigung des Beschlusses Nr. 2/2011 des Gemischten Ausschusses EU-Schweiz zum Freizügigkeitsabkommen (Änderung von Anhang III des Abkommens, gegenseitige Anerkennung von Berufsqualifikationen) und über die Umsetzung des Beschlusses (Bundesgesetz über die Meldepflicht und die Nachprüfung der Berufsqualifikationen von Dienstleistungserbringerinnen und -erbringern in reglementierten Berufen)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2012-12-28",
+      "art": "Bundesblatt",
+      "jahr": "2012",
+      "nummer": "9731",
+      "text": null,
+      "referendumsfrist": "2013-04-07"
+    },
+    {
+      "datum": "2013-07-30",
+      "art": "Amtliche Sammlung",
+      "jahr": "2013",
+      "nummer": "2415",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2012-12-14",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 189,
+        "nein": 5,
+        "enthaltung": 0,
+        "anwesend": 0,
+        "nichtTeilgenommen": 2,
+        "entschuldigt": 3,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

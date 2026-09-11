@@ -1,0 +1,113 @@
+{
+  "nummer": "13.044",
+  "titel": "Zusammenarbeit bei der Anwendung von Wettbewerbsrechten. Abkommen mit der EU",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2013-05-22",
+  "erstrat": "Nationalrat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20130044",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2013-05-22",
+      "name": "Kommission für Wirtschaft und Abgaben Nationalrat",
+      "kuerzel": "WAK-N"
+    },
+    {
+      "datum": "2013-05-22",
+      "name": "Kommission für Wirtschaft und Abgaben Ständerat",
+      "kuerzel": "WAK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2013-09-25",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss gemäss Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2014-06-05",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2014-06-12",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2014-06-20",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2014-06-20",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2013-05-22",
+      "art": "Bundesblatt",
+      "jahr": "2013",
+      "nummer": "3959",
+      "text": "Botschaft vom 22. Mai 2013 zur Genehmigung des Abkommens zwischen der Schweizerischen Eidgenossenschaft und der Europäischen Union über die Zusammenarbeit bei der Anwendung ihres Wettbewerbsrechts",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2013-05-22",
+      "art": "Bundesblatt",
+      "jahr": "2013",
+      "nummer": "3983",
+      "text": "Bundesbeschluss über die Genehmigung des Abkommens zwischen der Schweiz und der EU über die Zusammenarbeit bei der Anwendung ihres Wettbewerbsrechts und über die Umsetzung (Änderung des Kartellgesetzes)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2014-07-01",
+      "art": "Bundesblatt",
+      "jahr": "2014",
+      "nummer": "5205",
+      "text": null,
+      "referendumsfrist": "2014-10-09"
+    },
+    {
+      "datum": "2014-11-18",
+      "art": "Amtliche Sammlung",
+      "jahr": "2014",
+      "nummer": "3711",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2014-06-20",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 142,
+        "nein": 53,
+        "enthaltung": 3,
+        "anwesend": 0,
+        "nichtTeilgenommen": 1,
+        "entschuldigt": 0,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "nummer": "14.073",
+  "titel": "SchKG. Gewerbsmässige Vertretung im Zwangsvollstreckungsverfahren",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2014-10-29",
+  "erstrat": "Nationalrat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20140073",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2014-10-29",
+      "name": "Kommission für Rechtsfragen Nationalrat",
+      "kuerzel": "RK-N"
+    },
+    {
+      "datum": "2014-10-29",
+      "name": "Kommission für Rechtsfragen Ständerat",
+      "kuerzel": "RK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2015-06-08",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2015-09-10",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2015-09-25",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2015-09-25",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2014-10-29",
+      "art": "Bundesblatt",
+      "jahr": "2014",
+      "nummer": "8669",
+      "text": "Botschaft vom 29. Oktober 2014 zur Änderung des Bundesgesetzes über Schuldbetreibung und Konkurs (Gewerbsmässige Vertretung im Zwangsvollstreckungsverfahren)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2014-10-29",
+      "art": "Bundesblatt",
+      "jahr": "2014",
+      "nummer": "8681",
+      "text": "Bundesgesetz über Schuldbetreibung und Konkurs (SchKG) (Gewerbsmässige Vertretung im Zwangsvollstreckungsverfahren)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2015-10-06",
+      "art": "Bundesblatt",
+      "jahr": "2015",
+      "nummer": "7161",
+      "text": null,
+      "referendumsfrist": "2016-01-14"
+    },
+    {
+      "datum": "2016-11-04",
+      "art": "Amtliche Sammlung",
+      "jahr": "2016",
+      "nummer": "3643",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2015-09-25",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 194,
+        "nein": 0,
+        "enthaltung": 0,
+        "anwesend": 0,
+        "nichtTeilgenommen": 4,
+        "entschuldigt": 1,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

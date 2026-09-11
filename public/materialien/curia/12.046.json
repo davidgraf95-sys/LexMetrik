@@ -1,0 +1,155 @@
+{
+  "nummer": "12.046",
+  "titel": "StGB und MStG. Änderung des Sanktionenrechts",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2012-04-04",
+  "erstrat": "Nationalrat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20120046",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2012-04-04",
+      "name": "Kommission für Rechtsfragen Nationalrat",
+      "kuerzel": "RK-N"
+    },
+    {
+      "datum": "2012-04-04",
+      "name": "Kommission für Rechtsfragen Ständerat",
+      "kuerzel": "RK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2013-09-24",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Diskussion",
+      "vorlage": 1
+    },
+    {
+      "datum": "2013-09-25",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2014-06-18",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2014-09-24",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2014-11-26",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2015-03-04",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2015-06-03",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2015-06-08",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss gemäss Antrag der Einigungskonferenz",
+      "vorlage": 1
+    },
+    {
+      "datum": "2015-06-10",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss gemäss Antrag der Einigungskonferenz",
+      "vorlage": 1
+    },
+    {
+      "datum": "2015-06-19",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2015-06-19",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2012-04-04",
+      "art": "Bundesblatt",
+      "jahr": "2012",
+      "nummer": "4721",
+      "text": "Botschaft vom 4. April 2012 zur Änderung des Strafgesetzbuchs und des Militärstrafgesetzes (Änderungen des Sanktionenrechts)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2012-04-04",
+      "art": "Bundesblatt",
+      "jahr": "2012",
+      "nummer": "4757",
+      "text": "Schweizerisches Strafgesetzbuch und Militärstrafgesetz (Änderung des Sanktionenrechts)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2015-06-30",
+      "art": "Bundesblatt",
+      "jahr": "2015",
+      "nummer": "4899",
+      "text": null,
+      "referendumsfrist": "2015-10-08"
+    },
+    {
+      "datum": "2016-05-09",
+      "art": "Amtliche Sammlung",
+      "jahr": "2016",
+      "nummer": "1249",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2015-06-19",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 142,
+        "nein": 50,
+        "enthaltung": 1,
+        "anwesend": 0,
+        "nichtTeilgenommen": 3,
+        "entschuldigt": 3,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

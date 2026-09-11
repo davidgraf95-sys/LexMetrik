@@ -1,0 +1,120 @@
+{
+  "nummer": "11.049",
+  "titel": "Bundespersonalgesetz. Änderung",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2011-08-31",
+  "erstrat": "Ständerat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20110049",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2011-08-31",
+      "name": "Staatspolitische Kommission Nationalrat",
+      "kuerzel": "SPK-N"
+    },
+    {
+      "datum": "2011-08-31",
+      "name": "Staatspolitische Kommission Ständerat",
+      "kuerzel": "SPK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2012-03-13",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2012-09-17",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2012-12-04",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2012-12-06",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2012-12-14",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2012-12-14",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2011-08-31",
+      "art": "Bundesblatt",
+      "jahr": "2011",
+      "nummer": "6703",
+      "text": "Botschaft vom 31. August 2011 zu einer Änderung des Bundespersonalgesetzes",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2011-08-31",
+      "art": "Bundesblatt",
+      "jahr": "2011",
+      "nummer": "6733",
+      "text": "Bundespersonalgesetz (BPG)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2012-12-28",
+      "art": "Bundesblatt",
+      "jahr": "2012",
+      "nummer": "9705",
+      "text": null,
+      "referendumsfrist": "2013-04-07"
+    },
+    {
+      "datum": "2013-06-04",
+      "art": "Amtliche Sammlung",
+      "jahr": "2013",
+      "nummer": "1493",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2012-12-14",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 177,
+        "nein": 12,
+        "enthaltung": 0,
+        "anwesend": 0,
+        "nichtTeilgenommen": 7,
+        "entschuldigt": 3,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "nummer": "15.050",
+  "titel": "Für Ernährungssicherheit. Volksinitiative",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2015-06-24",
+  "erstrat": "Nationalrat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20150050",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2015-06-24",
+      "name": "Kommission für Wirtschaft und Abgaben Nationalrat",
+      "kuerzel": "WAK-N"
+    },
+    {
+      "datum": "2015-06-24",
+      "name": "Kommission für Wirtschaft und Abgaben Ständerat",
+      "kuerzel": "WAK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2016-03-09",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2016-11-29",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2016-11-29",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Fristverlängerung bis zum 8. Januar 2018.",
+      "vorlage": 1
+    },
+    {
+      "datum": "2016-11-29",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss gemäss Entwurf",
+      "vorlage": 2
+    },
+    {
+      "datum": "2016-12-13",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Fristverlängerung bis zum 8. Januar 2018.",
+      "vorlage": 1
+    },
+    {
+      "datum": "2017-03-07",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2017-03-07",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 2
+    },
+    {
+      "datum": "2017-03-14",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zurückgezogen",
+      "vorlage": 1
+    },
+    {
+      "datum": "2017-03-14",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 2
+    },
+    {
+      "datum": "2017-03-14",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 2
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2015-06-24",
+      "art": "Bundesblatt",
+      "jahr": "2015",
+      "nummer": "5753",
+      "text": "Botschaft vom 24. Juni 2015 zur Volksinitiative «Für Ernährungssicherheit»",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2015-06-24",
+      "art": "Bundesblatt",
+      "jahr": "2015",
+      "nummer": "5783",
+      "text": "Bundesbeschluss über die Volksinitiative «Für Ernährungssicherheit»",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2016-11-03",
+      "art": "Bundesblatt",
+      "jahr": null,
+      "nummer": null,
+      "text": "Bundesbeschluss über die Ernährungssicherheit (direkter Gegenentwurf zur Volksinitiative «Für Ernährungssicherheit»)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2017-03-14",
+      "art": "Bundesblatt",
+      "jahr": "2017",
+      "nummer": "2383",
+      "text": null,
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2017-12-12",
+      "art": "Amtliche Sammlung",
+      "jahr": "2017",
+      "nummer": "6735",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2017-03-14",
+      "vorlage": 2,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 175,
+        "nein": 5,
+        "enthaltung": 10,
+        "anwesend": 0,
+        "nichtTeilgenommen": 6,
+        "entschuldigt": 3,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

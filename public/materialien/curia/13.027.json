@@ -1,0 +1,106 @@
+{
+  "nummer": "13.027",
+  "titel": "AVIG. Deplafonierung des Solidaritätsprozents",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2013-02-27",
+  "erstrat": "Nationalrat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20130027",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2013-02-27",
+      "name": "Kommission für Wirtschaft und Abgaben Nationalrat",
+      "kuerzel": "WAK-N"
+    },
+    {
+      "datum": "2013-02-27",
+      "name": "Kommission für soziale Sicherheit und Gesundheit Ständerat",
+      "kuerzel": "SGK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2013-06-10",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss gemäss Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2013-06-17",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2013-06-21",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2013-06-21",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2013-02-27",
+      "art": "Bundesblatt",
+      "jahr": "2013",
+      "nummer": "1915",
+      "text": "Botschaft vom 27. Februar 2013 zur Deplafonierung Solidaritätsprozent in der Arbeitslosenversicherung",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2013-02-27",
+      "art": "Bundesblatt",
+      "jahr": "2013",
+      "nummer": "1923",
+      "text": "Bundesgesetz über die obligatorische Arbeitslosenversicherung und die Insolvenzentschädigung (Arbeitslosenversicherungsgesetz, AVIG)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2013-07-02",
+      "art": "Bundesblatt",
+      "jahr": "2013",
+      "nummer": "4827",
+      "text": null,
+      "referendumsfrist": "2013-10-10"
+    },
+    {
+      "datum": "2013-10-29",
+      "art": "Amtliche Sammlung",
+      "jahr": "2013",
+      "nummer": "3519",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2013-06-21",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 132,
+        "nein": 54,
+        "enthaltung": 2,
+        "anwesend": 0,
+        "nichtTeilgenommen": 8,
+        "entschuldigt": 3,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

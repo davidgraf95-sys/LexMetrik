@@ -26,6 +26,8 @@ import { writeFileSync, mkdirSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { sparqlBatch, type SparqlBinding, type FetchImpl } from '../fedlex-sparql.ts';
 import { ERLASS_REGISTER } from '../../src/lib/normtext/register.ts';
+import type { VerfahrensEreignis } from '../../src/lib/materialien/verfahren.ts';
+import { ereignisseJeBotschaft } from './verfahrens-ereignisse.ts';
 import type { Rechtsgebiet } from '../../src/lib/normtext/register.ts';
 
 const NOTATION_TYPE = '<https://fedlex.data.admin.ch/vocabulary/notation-type/id-systematique>';
@@ -67,6 +69,9 @@ export interface BotschaftEintrag {
   ocUris?: string[];    // die AS/oc-Erlasse dieses Projekts unter den normKeys-SR
   botschaftDate?: string; // = stand (redundant benannt für den Paket-5-Join)
   artAnker?: string[];  // grobe art_*-Zuordnung (Moat-Hebel 2; heute leer)
+  // ── E1 «Entstehung am Artikel» (§11.4/§11.7) ──
+  /** Verfahrenskette der Vorlage (type-projet-Ereignisse, je fga vereinigt — Kritik A12). */
+  ereignisse?: VerfahrensEreignis[];
 }
 
 const PROVENIENZ = 'Automatisch über den Fedlex-Projekt-Graphen zugeordnet; maschinell, fachlich nicht geprüft.';
@@ -96,7 +101,11 @@ function titelText(s: string): string {
  * sortierte Botschafts-Einträge. Dedupe über die fga-URI (eine Botschaft = ein Eintrag,
  * normKeys sammelt alle SR-Treffer = Mantelerlass-Feature). Kein Netz, kein Date.now.
  */
-export function baueBotschaften(bindings: SparqlBinding[], meta: ErlassMeta[]): BotschaftEintrag[] {
+export function baueBotschaften(
+  bindings: SparqlBinding[],
+  meta: ErlassMeta[],
+  ereignisseProProj?: Map<string, VerfahrensEreignis[]>,
+): BotschaftEintrag[] {
   const srNachErlass = new Map<string, ErlassMeta>();
   const metaNachKey = new Map<string, ErlassMeta>();
   for (const m of meta) { srNachErlass.set(m.sr, m); metaNachKey.set(m.key, m); }
@@ -175,6 +184,9 @@ export function baueBotschaften(bindings: SparqlBinding[], meta: ErlassMeta[]): 
       ocUris: r.ocUris.size ? [...r.ocUris].sort() : undefined,
       botschaftDate: iso,
       artAnker: undefined,
+      ereignisse: ereignisseProProj
+        ? (() => { const ev = ereignisseJeBotschaft([...r.projCuria.keys()], ereignisseProProj); return ev.length ? ev : undefined; })()
+        : undefined,
     });
   }
   // Deterministische Gesamtsortierung: Datum absteigend → key (byte-stabil).
@@ -194,6 +206,9 @@ export function shaBotschaft(e: BotschaftEintrag): string {
     e.key, e.behoerde, e.doktyp, e.titel, e.titelFr ?? '', e.titelIt ?? '', e.nummer ?? '',
     e.rechtsgebiet, e.status, e.quelleUrl, e.stand, e.normKeys.join(','),
     e.projEli ?? '', (e.ocUris ?? []).join(','),
+    // E1: die Verfahrenskette gehört zur Identität — sonst bliebe ein neuer
+    // Verfahrensschritt (Beschluss, Referendumsfrist) drift-unsichtbar.
+    (e.ereignisse ?? []).map((v) => `${v.code}:${v.datum ?? ''}:${v.res ?? ''}`).join(','),
   ].join('');
   return createHash('sha256').update(norm, 'utf8').digest('hex');
 }
@@ -281,6 +296,15 @@ export function serialisiere(eintraege: BotschaftEintrag[]): string {
     if (e.projEli) felder.push(`projEli: ${esc(e.projEli)}`);
     if (e.ocUris) felder.push(`ocUris: [${e.ocUris.map(esc).join(', ')}]`);
     if (e.botschaftDate) felder.push(`botschaftDate: ${esc(e.botschaftDate)}`);
+    if (e.ereignisse?.length) {
+      const ev = e.ereignisse.map((v) => {
+        const f = [`code: ${v.code}`];
+        if (v.datum) f.push(`datum: ${esc(v.datum)}`);
+        if (v.res) f.push(`res: ${esc(v.res)}`);
+        return `{ ${f.join(', ')} }`;
+      });
+      felder.push(`ereignisse: [${ev.join(', ')}]`);
+    }
     return `  { ${felder.join(', ')} },`;
   });
   return `// AUTO-GENERIERT von scripts/materialien/botschaften-generieren.ts — NICHT von Hand editieren.

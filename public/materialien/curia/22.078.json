@@ -1,0 +1,127 @@
+{
+  "nummer": "22.078",
+  "titel": "Patentgesetz. Änderung",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2022-11-16",
+  "erstrat": "Ständerat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20220078",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2022-11-16",
+      "name": "Kommission für Wissenschaft, Bildung und Kultur Nationalrat",
+      "kuerzel": "WBK-N"
+    },
+    {
+      "datum": "2022-11-16",
+      "name": "Kommission für Wissenschaft, Bildung und Kultur Ständerat",
+      "kuerzel": "WBK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2023-12-21",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2024-02-27",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2024-02-28",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2024-03-06",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2024-03-12",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2024-03-15",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2024-03-15",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2022-11-16",
+      "art": "Bundesblatt",
+      "jahr": "2023",
+      "nummer": "7",
+      "text": "Botschaft vom 16. November 2022 zur Änderung des Patentgesetzes",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2022-11-16",
+      "art": "Bundesblatt",
+      "jahr": "2023",
+      "nummer": "8",
+      "text": "Bundesgesetz über die Erfindungspatente (Patentgesetz, PatG)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2024-03-26",
+      "art": "Bundesblatt",
+      "jahr": "2024",
+      "nummer": "685",
+      "text": null,
+      "referendumsfrist": "2024-07-04"
+    },
+    {
+      "datum": "2026-05-21",
+      "art": "Amtliche Sammlung",
+      "jahr": "2026",
+      "nummer": "232",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2024-03-15",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 191,
+        "nein": 0,
+        "enthaltung": 0,
+        "anwesend": 0,
+        "nichtTeilgenommen": 1,
+        "entschuldigt": 7,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

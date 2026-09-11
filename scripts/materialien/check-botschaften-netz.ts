@@ -19,6 +19,8 @@
 import {
   grundmenge, holeBindings, baueBotschaften, type BotschaftEintrag, type ErlassMeta,
 } from './botschaften-generieren.ts';
+import { holeEreignisBindings, baueEreignisse } from './verfahrens-ereignisse.ts';
+import type { VerfahrensEreignis } from '../../src/lib/materialien/verfahren.ts';
 import { BOTSCHAFTEN } from '../../src/lib/materialien/botschaften.generated.ts';
 
 /** Intrinsische Signatur = NUR Felder am Botschafts-/Expression-Knoten selbst, die NICHT
@@ -27,8 +29,20 @@ import { BOTSCHAFTEN } from '../../src/lib/materialien/botschaften.generated.ts'
  *  (aus dem kleinsten proj über die abgefragten SR — bei Mantelerlassen sample-abhängig).
  *  Diese Felder deckt der Offline-Tor check:materialien intern ab; hier zählt Existenz/Titel/
  *  Datum/Link-Treue je Botschaft + die Mengen-Zugehörigkeit je Erlass. */
-function intrinsischeSig(b: { titel: string; titelFr?: string; titelIt?: string; stand: string; quelleUrl: string }): string {
-  return [b.titel, b.titelFr ?? '', b.titelIt ?? '', b.stand, b.quelleUrl].join('');
+//  E1 (§11.7, Kritik A12): die VERFAHRENSKETTE gehört in die Signatur — sonst bliebe ein
+//  neuer amtlicher Verfahrensschritt (Beschluss des Parlaments, Referendumsfrist,
+//  Abstimmung) drift-unsichtbar, dasselbe Loch wie die frühere 8-Key-Stichprobe.
+//  Vergleich JE FGA (nicht je proj): die Ereignisse ALLER Projekt-Knoten einer Botschaft
+//  sind vereinigt (ereignisseJeBotschaft) — sonst meldete jeder Mantelerlass Fehlalarm.
+function ereignisSig(ev: readonly VerfahrensEreignis[] | undefined): string {
+  return (ev ?? []).map((e) => `${e.code}:${e.datum ?? ''}:${e.res ?? ''}`).join(';');
+}
+
+function intrinsischeSig(b: {
+  titel: string; titelFr?: string; titelIt?: string; stand: string; quelleUrl: string;
+  ereignisse?: VerfahrensEreignis[];
+}): string {
+  return [b.titel, b.titelFr ?? '', b.titelIt ?? '', b.stand, b.quelleUrl, ereignisSig(b.ereignisse)].join('');
 }
 
 // Referenzfall (DoD, seit Paket 2): DSG → genau 2 Botschaften.
@@ -51,13 +65,17 @@ async function main(): Promise<void> {
   }
 
   let bindings;
+  let ereignisseProProj;
   try {
     bindings = await holeBindings(meta); // kein store-raw im Tor
+    // E1: zweiter Durchgang (derselbe Endpunkt) für die Verfahrenskette je Projekt-Knoten.
+    const projUris = [...new Set(bindings.map((b) => b.proj?.value).filter((v): v is string => !!v))].sort();
+    ereignisseProProj = baueEreignisse(await holeEreignisBindings(projUris));
   } catch (e) {
     console.error(`check:botschaften-netz: Netzfehler — ${(e as Error).message}`);
     process.exit(2);
   }
-  const live = baueBotschaften(bindings, meta);
+  const live = baueBotschaften(bindings, meta, ereignisseProProj);
 
   // committet: ALLE Botschaften (Vollabgleich) — die Grundmenge ist dieselbe wie im Generator.
   const committetRelevant = BOTSCHAFTEN;
@@ -77,7 +95,7 @@ async function main(): Promise<void> {
   // Intrinsische Drift (Datum/Curia/Titel/projEli/Link geändert) über die gemeinsamen Keys.
   for (const [k, s] of sigLive) {
     const sc = sigCommittet.get(k);
-    if (sc && sc !== s) fehler.push(`${k}: Inhalts-Drift (Datum/Curia/Titel/projEli/Link geändert) — Generator neu laufen.`);
+    if (sc && sc !== s) fehler.push(`${k}: Inhalts-Drift (Datum/Titel/Link/Verfahrenskette geändert) — Generator neu laufen.`);
   }
 
   // Referenzfall-Assertion (DoD): DSG → genau 2 Botschaften.
@@ -92,7 +110,8 @@ async function main(): Promise<void> {
     console.error(`\ncheck:botschaften-netz — ${fehler.length} Drift-Befund(e). 'npm run materialien:botschaften -- --datum=$(date +%F)' + 'npm run materialien -- …' neu laufen (nie Auto-Fix).`);
     process.exit(1);
   }
-  console.log(`check:botschaften-netz OK — Vollabgleich ${meta.length} Erlasse, ${committetRelevant.length} Botschaften drift-frei gegen den Fedlex-Projekt-Graphen (DSG-Referenz: ${REFERENZ_DSG}).`);
+  const evZahl = live.reduce((n: number, b: BotschaftEintrag) => n + (b.ereignisse?.length ?? 0), 0);
+  console.log(`check:botschaften-netz OK — Vollabgleich ${meta.length} Erlasse, ${committetRelevant.length} Botschaften, ${evZahl} Verfahrens-Ereignisse drift-frei gegen den Fedlex-Projekt-Graphen (DSG-Referenz: ${REFERENZ_DSG}).`);
 }
 
 main().catch((e) => {

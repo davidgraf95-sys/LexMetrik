@@ -1,0 +1,112 @@
+{
+  "nummer": "20.062",
+  "titel": "Kollektivanlagengesetz. Limited Qualified Investor Fund (L-QIF)",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2020-08-19",
+  "erstrat": "Ständerat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20200062",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2020-08-19",
+      "name": "Kommission für Wirtschaft und Abgaben Nationalrat",
+      "kuerzel": "WAK-N"
+    },
+    {
+      "datum": "2020-08-19",
+      "name": "Kommission für Wirtschaft und Abgaben Ständerat",
+      "kuerzel": "WAK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2021-06-09",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2021-12-09",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2021-12-13",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2021-12-14",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2021-12-17",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2021-12-17",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2020-08-19",
+      "art": "Bundesblatt",
+      "jahr": "2020",
+      "nummer": "6885",
+      "text": "Botschaft vom 19. August 2020 zur Änderung des Kollektivanlagengesetzes (Limited Qualified Investor Fund; L-QIF)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2020-08-19",
+      "art": "Bundesblatt",
+      "jahr": "2020",
+      "nummer": "6933",
+      "text": "Bundesgesetz über die kollektiven Kapitalanlagen (Kollektivanlagengesetz, KAG)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2021-12-28",
+      "art": "Bundesblatt",
+      "jahr": "2021",
+      "nummer": "3000",
+      "text": null,
+      "referendumsfrist": "2022-04-07"
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2021-12-17",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 122,
+        "nein": 68,
+        "enthaltung": 3,
+        "anwesend": 0,
+        "nichtTeilgenommen": 3,
+        "entschuldigt": 3,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

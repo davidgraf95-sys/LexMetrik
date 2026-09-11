@@ -1,0 +1,98 @@
+{
+  "nummer": "19.063",
+  "titel": "Rechtshilfegesetz. Änderung von Artikel 1",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2019-11-06",
+  "erstrat": "Nationalrat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20190063",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2019-11-06",
+      "name": "Kommission für Rechtsfragen Nationalrat",
+      "kuerzel": "RK-N"
+    },
+    {
+      "datum": "2019-11-06",
+      "name": "Kommission für Rechtsfragen Ständerat",
+      "kuerzel": "RK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2020-09-22",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss gemäss Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2020-12-03",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2020-12-18",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2020-12-18",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2019-11-06",
+      "art": "Bundesblatt",
+      "jahr": "2019",
+      "nummer": "7413",
+      "text": "Botschaft vom 6. November 2019 zur Änderung von Artikel 1 des Rechtshilfegesetzes",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2019-11-06",
+      "art": "Bundesblatt",
+      "jahr": "2019",
+      "nummer": "7429",
+      "text": "Bundesgesetz über internationale Rechtshilfe in Strafsachen (Rechtshilfegesetz, IRSG)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2020-12-31",
+      "art": "Bundesblatt",
+      "jahr": "2020",
+      "nummer": "9969",
+      "text": null,
+      "referendumsfrist": "2021-04-10"
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2020-12-18",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 141,
+        "nein": 54,
+        "enthaltung": 0,
+        "anwesend": 0,
+        "nichtTeilgenommen": 0,
+        "entschuldigt": 4,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

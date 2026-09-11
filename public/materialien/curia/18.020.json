@@ -1,0 +1,106 @@
+{
+  "nummer": "18.020",
+  "titel": "Berechnung des Beteiligungsabzugs bei Too-big-to-fail-Instrumenten. Bundesgesetz",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2018-02-14",
+  "erstrat": "Nationalrat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20180020",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2018-02-14",
+      "name": "Kommission für Wirtschaft und Abgaben Nationalrat",
+      "kuerzel": "WAK-N"
+    },
+    {
+      "datum": "2018-02-14",
+      "name": "Kommission für Wirtschaft und Abgaben Ständerat",
+      "kuerzel": "WAK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2018-09-20",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss gemäss Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2018-12-04",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2018-12-14",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2018-12-14",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2018-02-14",
+      "art": "Bundesblatt",
+      "jahr": "2018",
+      "nummer": "1263",
+      "text": "Botschaft vom 14. Februar 2018 zum Bundesgesetz über die Berechnung des Beteiligungsabzugs bei Too-big-to-fail-Instrumenten",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2018-02-14",
+      "art": "Bundesblatt",
+      "jahr": "2018",
+      "nummer": "1297",
+      "text": "Bundesgesetz über die Berechnung des Beteiligungsabzugs bei Too-big-to-fail-Instrumenten",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2018-12-14",
+      "art": "Bundesblatt",
+      "jahr": "2018",
+      "nummer": "7897",
+      "text": null,
+      "referendumsfrist": "2019-04-07"
+    },
+    {
+      "datum": "2019-04-16",
+      "art": "Amtliche Sammlung",
+      "jahr": "2019",
+      "nummer": "1207",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2018-12-14",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 197,
+        "nein": 0,
+        "enthaltung": 0,
+        "anwesend": 0,
+        "nichtTeilgenommen": 0,
+        "entschuldigt": 2,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "nummer": "21.077",
+  "titel": "Bundesgesetz über die Besteuerung von Leibrenten und ähnlichen Vorsorgeformen",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2021-11-24",
+  "erstrat": "Ständerat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20210077",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2021-11-24",
+      "name": "Kommission für Wirtschaft und Abgaben Nationalrat",
+      "kuerzel": "WAK-N"
+    },
+    {
+      "datum": "2021-11-24",
+      "name": "Kommission für Wirtschaft und Abgaben Ständerat",
+      "kuerzel": "WAK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2022-03-16",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2022-05-30",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2022-06-17",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2022-06-17",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2021-11-24",
+      "art": "Bundesblatt",
+      "jahr": "2021",
+      "nummer": "3028",
+      "text": "Botschaft vom 24.11.2021 zum Bundesgesetz über die Besteuerung von Leibrenten und ähnlichen Vorsorgeformen",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2021-11-24",
+      "art": "Bundesblatt",
+      "jahr": "2021",
+      "nummer": "3029",
+      "text": "Bundesgesetz über die Besteuerung von Leibrenten und ähnlichen Vorsorgeformen",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2022-06-28",
+      "art": "Bundesblatt",
+      "jahr": "2022",
+      "nummer": "1566",
+      "text": null,
+      "referendumsfrist": "2022-10-06"
+    },
+    {
+      "datum": "2023-04-18",
+      "art": "Amtliche Sammlung",
+      "jahr": "2023",
+      "nummer": "38",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2022-06-17",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 156,
+        "nein": 37,
+        "enthaltung": 4,
+        "anwesend": 0,
+        "nichtTeilgenommen": 0,
+        "entschuldigt": 2,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

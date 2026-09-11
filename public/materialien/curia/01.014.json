@@ -1,0 +1,88 @@
+{
+  "nummer": "01.014",
+  "titel": "ZGB. Änderung (Elektronische Führung der Personenstandsregister)",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2001-02-14",
+  "erstrat": "Ständerat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20010014",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2001-02-14",
+      "name": "Kommission für Rechtsfragen Nationalrat",
+      "kuerzel": "RK-N"
+    },
+    {
+      "datum": "2001-02-14",
+      "name": "Kommission für Rechtsfragen Ständerat",
+      "kuerzel": "RK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2001-06-12",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2001-09-20",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2001-10-05",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2001-10-05",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2001-02-14",
+      "art": "Bundesblatt",
+      "jahr": "2001",
+      "nummer": "1639",
+      "text": "Botschaft vom 14. Februar 2001 über die Änderung des Schweizerischen Zivilgesetzbuches (Elektronische Führung der Personenstandsregister)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2001-02-14",
+      "art": "Bundesblatt",
+      "jahr": null,
+      "nummer": null,
+      "text": "Schweizerisches Zivilgesetzbuch (Elektronische Führung der Personenstandsregister)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2001-10-05",
+      "art": "Bundesblatt",
+      "jahr": "2001",
+      "nummer": "5733",
+      "text": null,
+      "referendumsfrist": "2002-01-24"
+    },
+    {
+      "datum": "2004-06-22",
+      "art": "Amtliche Sammlung",
+      "jahr": "2004",
+      "nummer": "2911",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": []
+}

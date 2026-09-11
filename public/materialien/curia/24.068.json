@@ -1,0 +1,106 @@
+{
+  "nummer": "24.068",
+  "titel": "Bundespersonalgesetz (BPG). Änderung",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2024-08-28",
+  "erstrat": "Nationalrat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20240068",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2024-08-22",
+      "name": "Staatspolitische Kommission Nationalrat",
+      "kuerzel": "SPK-N"
+    },
+    {
+      "datum": "2024-08-22",
+      "name": "Staatspolitische Kommission Ständerat",
+      "kuerzel": "SPK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2025-03-06",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2025-06-10",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2025-06-20",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2025-06-20",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2024-08-28",
+      "art": "Bundesblatt",
+      "jahr": "2024",
+      "nummer": "2316",
+      "text": "Botschaft vom 28. August 2024 zur Änderung des Bundespersonalgesetzes",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2024-08-28",
+      "art": "Bundesblatt",
+      "jahr": "2024",
+      "nummer": "2317",
+      "text": "Bundespersonalgesetz (BPG)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2025-07-01",
+      "art": "Bundesblatt",
+      "jahr": "2025",
+      "nummer": "2028",
+      "text": null,
+      "referendumsfrist": "2025-10-09"
+    },
+    {
+      "datum": "2026-02-27",
+      "art": "Amtliche Sammlung",
+      "jahr": "2026",
+      "nummer": "96",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2025-06-20",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 194,
+        "nein": 1,
+        "enthaltung": 2,
+        "anwesend": 0,
+        "nichtTeilgenommen": 0,
+        "entschuldigt": 2,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

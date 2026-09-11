@@ -790,6 +790,13 @@ jobs:
       - name: Normtext-Struktur (Tabellen · Grundart · Invarianten)
         if: needs.diff.outputs.art != 'doku'
         run: npm run check:tabellen && npm run check:grundart && npm run check:invarianten
+      # Entstehung am Artikel (W2·6c, FAHRPLAN-MATERIALIEN-VERZAHNUNG §11.6): Deckel je
+      # Klasse, Anker-Provenienz, Curia-Zustandsträger, Deckungs-Diagnose je Erlass.
+      # Vollständig offline (~2 s) und deshalb PR-Pflicht — `check:tor-paritaet` verlangt
+      # für jedes Tor aus `check:seriell` eine pull_request-Deckung.
+      - name: Entstehung (Deckel · Anker-Provenienz · Deckung je Erlass)
+        if: needs.diff.outputs.art != 'doku'
+        run: npm run check:entstehung
       # ZH-Vollständigkeit, ARTEFAKT-Teil (ZH-Fix-Runde 3, B7). Das Tor hält den
       # Snapshot gegen das amtliche PDF; sein PDF-Teil braucht den Roh-PDF-Cache
       # `daten/pdf-cache-zh/` (gitignored) und läuft darum lokal im `gate` und

@@ -1,0 +1,114 @@
+{
+  "nummer": "23.045",
+  "titel": "Haager Gerichtsstandsübereinkommen. Genehmigung und Umsetzung",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2023-05-24",
+  "erstrat": "Ständerat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20230045",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2023-05-24",
+      "name": "Kommission für Rechtsfragen Nationalrat",
+      "kuerzel": "RK-N"
+    },
+    {
+      "datum": "2023-05-24",
+      "name": "Kommission für Rechtsfragen Ständerat",
+      "kuerzel": "RK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2023-09-27",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss gemäss Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2023-12-06",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2023-12-22",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2023-12-22",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2023-05-24",
+      "art": "Bundesblatt",
+      "jahr": "2023",
+      "nummer": "1460",
+      "text": "Botschaft vom 24. Mai 2023 zur Genehmigung und Umsetzung des Haager Übereinkommens über Gerichtsstandsvereinbarungen",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2023-05-24",
+      "art": "Bundesblatt",
+      "jahr": "2023",
+      "nummer": "1461",
+      "text": "Bundesbeschluss über die Genehmigung und die Umsetzung des Haager Übereinkommens über Gerichtsstandsvereinbarungen",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2023-05-24",
+      "art": "Bundesblatt",
+      "jahr": "2023",
+      "nummer": "1462",
+      "text": "Übereinkommen über Gerichtsstandsvereinbarungen",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2024-01-09",
+      "art": "Bundesblatt",
+      "jahr": "2024",
+      "nummer": "36",
+      "text": null,
+      "referendumsfrist": "2024-04-18"
+    },
+    {
+      "datum": "2025-05-15",
+      "art": "Amtliche Sammlung",
+      "jahr": "2024",
+      "nummer": "561",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2023-12-22",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 197,
+        "nein": 0,
+        "enthaltung": 0,
+        "anwesend": 0,
+        "nichtTeilgenommen": 1,
+        "entschuldigt": 1,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}
