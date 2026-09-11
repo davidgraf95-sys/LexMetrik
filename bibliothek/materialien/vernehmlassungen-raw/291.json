@@ -84,6 +84,35 @@
     },
     "cons": {
       "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/dl/proj/2026/89/cons_1"
+    },
+    "status": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/vocabulary/consultation-status/1"
+    },
+    "titelDe": {
+      "type": "literal",
+      "xml:lang": "de",
+      "value": "Totalrevision des Bundesgesetzes zum Haager Adoptionsübereinkommen und über Massnahmen zum Schutz des Kindes bei internationalen Adoptionen (BG-HAÜ)"
+    },
+    "titelFr": {
+      "type": "literal",
+      "xml:lang": "fr",
+      "value": "Révision totale de la loi fédérale relative à la Convention de La Haye sur l'adoption et aux mesures de protection de l'enfant en cas d'adoption internationale (LF-CLaH)"
+    },
+    "titelIt": {
+      "type": "literal",
+      "xml:lang": "it",
+      "value": "Revisione totale della legge federale relativa alla Convenzione dell’Aia sull’adozione e a provvedimenti per la protezione del minore nelle adozioni internazionali (LF-CAA)"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "291"
+    },
+    "cons": {
+      "type": "uri",
       "value": "https://fedlex.data.admin.ch/eli/dl/proj/2021/32/cons_1"
     },
     "status": {

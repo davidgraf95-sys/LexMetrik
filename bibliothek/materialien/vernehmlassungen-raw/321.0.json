@@ -400,7 +400,7 @@
     },
     "status": {
       "type": "uri",
-      "value": "https://fedlex.data.admin.ch/vocabulary/consultation-status/1"
+      "value": "https://fedlex.data.admin.ch/vocabulary/consultation-status/2"
     },
     "titelDe": {
       "type": "literal",
@@ -416,6 +416,16 @@
       "type": "literal",
       "xml:lang": "it",
       "value": "Revisione LM/OEs 2029"
+    },
+    "start": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2026-09-09"
+    },
+    "ende": {
+      "type": "typed-literal",
+      "datatype": "http://www.w3.org/2001/XMLSchema#date",
+      "value": "2026-12-11"
     }
   },
   {
@@ -624,7 +634,7 @@
     },
     "status": {
       "type": "uri",
-      "value": "https://fedlex.data.admin.ch/vocabulary/consultation-status/4"
+      "value": "https://fedlex.data.admin.ch/vocabulary/consultation-status/5"
     },
     "titelDe": {
       "type": "literal",
