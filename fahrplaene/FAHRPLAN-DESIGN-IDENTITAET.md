@@ -425,9 +425,9 @@ Gebucht in `ROADMAP.md` unter `W2·24-DESIGN-IDENTITAET` als eigene Zeilen; hier
    (überlagerndes Blatt, Δ=0 — gewählt, weil sie ohne Layout-Sprung auskommt). Variante C legt das
    Rechtsprechungs-Panel als echtes zweites Pane an (Split-Regel M3): Zustand in der Adresse,
    erneuter Klick schliesst, Reiter für beide Panes. Voraussetzung: Pane-Kopf-Name (L6) entschieden.
-2. **Bezüge-Zeile: Kopfzähler gefiltert vs. ungefiltert** (`R5-F1K` §7). Entscheid N1 vom 7.9.2026:
-   der Kopfzähler ist die Bezugsgrösse, gefiltert wird nur im Panel. Offen ist, ob beide Zahlen
-   sichtbar werden sollen («11 · 3 gefiltert») — Produktentscheid David. Löst den alten Punkt D20 ab.
+2. ~~**Bezüge-Zeile: Kopfzähler gefiltert vs. ungefiltert** (`R5-F1K` §7)~~ — **entschieden
+   11.9.2026** (Mandat David «führe alles durch»): EINE Zahl, bei aktivem Filter die gefilterte,
+   Gesamtzahl nur im `title` — kein zweites sichtbares Zahlenpaar. Detail: §9 Z3.
 3. **R13-11 · Reiter-Adress-Kern.** Reiter werden an mehreren Stellen über Pfad-Vergleiche
    identifiziert (Wiederherstellen, Dublettenerkennung, Kurzform, Lesestellung). Ein gemeinsamer
    Adress-/Identitäts-Kern macht die vier Stellen zu einer; verhaltensneutral (§6), Golden unberührt.
@@ -451,20 +451,15 @@ Gebucht in `ROADMAP.md` unter `W2·24-DESIGN-IDENTITAET` als eigene Zeilen; hier
 10. **OR-Erstsprung > 7 s auf Produktion** (Live-Sicht 7.9.): 2,2-MB-Erlass lädt vor dem Ankersprung
    vollständig — gehört zu `W2·24-PERF-REST` (Messung erst, dann Fix).
 
-11. **D45 · Entscheid-Klick in der Fusszeile öffnet daneben.** Heute navigiert er die ganze Seite:
-   `randNotizZiel` greift nur innerhalb `.lr-notiz` (`gesetz-leser/v3/LeserLesespalte.tsx`). Soll
-   nach D30-Spec und Split-Regel M3 — öffnet daneben wie die Randnotiz, ⌘-Klick neuer Reiter.
-   Nebenfund des D41-Fixers.
-12. **«Daneben öffnen» mit `?r=`-Instanz** (F1-Rest). Die Aktion fiel aus der Funktionszeile,
-   weil `istOffen()` den Hash streift und darum an jedem Artikel `false` liefert; sie braucht die
-   Instanz-Adresse statt des Hashs (R13-Adress-Kern, Nr. 3 — zusammen bauen).
-13. **Bezüge-Zähler in den Erlass-Payload** (D34-Nachfix). Heute holt die Funktionszeile die
-   Zähler per eigenem Fetch, weshalb die 145 Fuss-Zeilen erst in der zweiten Render-Runde
-   entstehen. Korpus/Generator ⇒ **Gegenprüfung Pflicht**, Golden byte-gleich bzw. deklarierter
-   Re-Bless.
-14. **OR-Leser trägt 15'239 Knöpfe im DOM** (§15, seit F1 sichtbar): 1686 Artikel × ~4 Aktionen.
-   Rollen-Abfragen und Screenreader werden teuer; Aktionen erst beim Aufklappen/Hover rendern
-   oder Ereignis-Delegation. Mit Logikverlust-Bewertung (§15) — keine Aktion darf verschwinden.
+11. ~~**D45 · Entscheid-Klick in der Fusszeile öffnet daneben.**~~ — **umgebucht 11.9.2026 nach
+   §9 Z5** (W2·26-FUNKTIONSZEILE). Wortlaut des Befunds bleibt dort erhalten.
+12. ~~**«Daneben öffnen» mit `?r=`-Instanz** (F1-Rest)~~ — **gestrichen 11.9.2026**: Widerspruch zu
+   ROADMAP.md:464 aufgelöst — D44 (#760, 7.9.2026) hat die Aktion «⧉ Artikel daneben» bewusst
+   ersatzlos entfernt, sie kehrt nicht über den Adress-Kern zurück.
+13. ~~**Bezüge-Zähler in den Erlass-Payload** (D34-Nachfix)~~ — **umgebucht 11.9.2026 in den eigenen
+   Schritt `W2·26-FUNKTIONSZEILE-ZAEHLER`** (`feld: korpus`, Gegenprüfung Pflicht).
+14. ~~**OR-Leser trägt 15'239 Knöpfe im DOM** (§15, seit F1 sichtbar)~~ — **umgebucht 11.9.2026 nach
+   §9 Z6** (W2·26-FUNKTIONSZEILE), mit Logikverlust-Bewertung: keiner (nur Render-Zeitpunkt).
 15. **Rest-CLS 0.0003 im Leser-Kopf**: `LeserKopf.tsx:289` (`data-v3-kopf-griffe`, Klassenwechsel
    `gap`/`pl`), der einzige verbliebene Sprung in `e2e/leser-r1-r2`.
 16. **«OR» dreimal untereinander @1440** (L6-Nebenbefund): Reiter · Pane-Titel · Leser-Kennung.
@@ -472,3 +467,85 @@ Gebucht in `ROADMAP.md` unter `W2·24-DESIGN-IDENTITAET` als eigene Zeilen; hier
 
 Ausserdem gebucht, aber eigene Schritte: `W2·25-ARBEITSMAPPE` (Anheften, §7 dieses Fahrplans) und
 `W2·24-PERF-REST` (`fremdRoutingFormB`/`artikelnPluralVerweise`, erst verifizieren, dann fixen).
+
+## §9 · W2·26 Funktionszeile am Artikelende — Überarbeitung (Mandat David 11.9.2026)
+
+Gebucht in `ROADMAP.md` unter `W2·26-FUNKTIONSZEILE` (Bau, `feld: leser`) und
+`W2·26-FUNKTIONSZEILE-ZAEHLER` (Korpus-Nachfix, `feld: korpus`); hier steht das Detail. Mandat
+(Chat 11.9.2026, wörtlich sinngemäss): «überarbeite insgesamt die Funktionszeile am Artikelende;
+Fassung soll nur ‹gilt seit XXX› zeigen, erst beim Aufklappen erscheinen die Angaben; Fussnoten,
+die z. B. nur eine SR-Nummer enthalten, müssen ebenfalls weg sein, wenn Fussnoten abgewählt sind;
+alles sauberer, übersichtlicher, besser bedienbar.» Dazu die offenen Nachzüge aus §8 (D45, Nr.
+13/14, LM-197-Anteil) und die Befunde C1–C4 der Sichtung 11.9.2026 (Materialien-Spec §11 veraltet,
+`DESIGN-REGLEMENT-NORMTEXT.md` veraltet, Komponentenname «BezuegeKopf»).
+
+**Ausgangslage (Code, Stand main 7f87ed0bb):** Mount `src/pages/gesetz-leser/parts/ArtikelLeser.tsx:697-702`;
+Container `parts/BezuegeKopf.tsx` (Markup `.lr7-bez-zeile` :207-211, Aufklapp-Block :213-236);
+Rubriken `parts/ArtikelLeser.bezuegeFuss.tsx` (`reg:'f'` Fassung :150-182, `'r'` Entscheide :184-217,
+`'m'` :231, `'g'` :254, `'w'` :267); Aktionen `parts/ArtikelAktionen.tsx` (Zitat :95, Link :98,
+Amtlich :104); Typ `BezugsMarke` (`BezuegeKopf.tsx:77-114`); Ansicht-Menü `leserOptionen.ts:122-124`
+(`FussRubrik = 'f'|'r'|'m'|'g'|'w'|'a'`), `v3/LeserRubrikenWahl.tsx:55-80`. Fassungs-Inhalt heute
+`<ArtikelHistorieZeile>` (`parts/ArtikelHistorie.tsx`).
+
+### Zielbild (verbindlich)
+
+Z1 **Eine ruhige Zeile.** Links die Rubriken, rechts die Aktionen. Das Wort «Bezüge» entfällt aus der
+Zeile (die Rubriken sprechen mit Zahl + Wort für sich); im Ansicht-Menü bleibt der Gruppenname.
+
+Z2 **Rubrik Fassung, zugeklappt:** nur `Gilt seit 1.1.2023 ›` — Datum der für diesen Artikel
+geltenden Fassung (Quelle: bestehende Historie-Daten, dasselbe Datum wie der bisherige Chip
+«Gilt seit …» in `ArtikelHistorie.tsx`). Keine Zahl davor, keine weiteren Angaben. Ist kein Datum
+bekannt: `Fassung ›`. **Aufgeklappt:** Fassungszahl («3 Fassungen»), Zeitleiste (bestehende
+`ArtikelHistorieZeile`), Platz für die spätere Entstehungs-Karte (W2·6c E3, Slot = derselbe
+Aufklapp-Block, kein zweiter Slot nötig — ersetzt C5/C6 der Materialien-Spec §11).
+
+Z3 **Zähler-Rubriken** (Entscheide · Materialien · Verweise · Rechner): `3 Entscheide ›`, bei 0
+unsichtbar (bestehend). **Entscheid Doppelzahl (R5-F1K §7):** EINE Zahl — bei aktivem Filter die
+gefilterte, Gesamtzahl nur im `title`. (Entschieden 11.9.2026, Mandat David «führe alles durch» —
+löst §8 Nr. 2/D20 ab.)
+
+Z4 **Bedienung:** Akkordeon je Artikel (höchstens eine Rubrik offen; Öffnen einer anderen schliesst
+die erste); Chevron zeigt den Zustand (`›` zu, gedreht offen); `aria-expanded`, `aria-controls`;
+Tastatur (Enter/Space, Escape schliesst); Fokus bleibt auf dem Griff. Beim Laden immer zu (D35).
+Zustand lokal (useState), kein localStorage.
+
+Z5 **D45 — Entscheid-Klick daneben.** In der offenen Rubrik «Entscheide» öffnet ein Klick auf einen
+Entscheid ihn daneben (Split nach D30-Spec / Regel M3, wie in `.lr-notiz` via `randNotizZiel`);
+⌘/Ctrl-Klick = neuer Reiter; der Neben-Griff «im Blatt öffnen ›» (D35-F2) bleibt als Weg zur
+Vollseite. Unter der Split-Breite (320 px-Mobil) navigiert der Klick wie heute. (Löst §8 Nr. 11 ab.)
+
+Z6 **§15 Knopfzahl.** Die drei Aktionen (Zitat · Link · Amtlich ↗) werden nur gerendert, wenn der
+Artikel Hover oder Fokus-within hat oder eine Rubrik offen ist; auf Geräten ohne Hover
+(`@media (hover: none)`) immer. Rubrik-Griffe bleiben immer im DOM. Logikverlust-Bewertung:
+keiner (nur Render-Zeitpunkt, kein Inhalt). Messung vorher/nachher am OR-Leser
+(`document.querySelectorAll('button').length`) im PR-Text; Tor `check:perf-budget` grün.
+(Löst §8 Nr. 14 ab.)
+
+Z7 **Zeichen-Kanon (LM-197, Fusszeile-Anteil):** in der Zeile nur `›` (aufklappen), `↗` (extern),
+`✓` (Rückmeldung «kopiert»). Sonst keine Symbole.
+
+Z8 **Fussnoten-Option:** Ist im Ansicht-Menü «Fussnoten» abgewählt, verschwinden ALLE Fussnoten
+inkl. Fussnoten-Marker im Text — auch solche, die nur eine SR-Nummer, ein Kürzel oder einen
+Kurzverweis tragen (heute bleiben diese stehen). Zuerst Nullprobe: Kommando + Ausgabe, welche
+Fussnoten-Klasse heute stehen bleibt und warum (eigener Render-Pfad?). Kein Inhalt geht verloren:
+Option an ⇒ alles wie heute.
+
+Z9 **Umbenennung:** `parts/BezuegeKopf.tsx` → `parts/Funktionszeile.tsx`, Komponente
+`Funktionszeile`, Typ `BezugsMarke` bleibt; Kommentar-Kopf mit Herkunft (D34/D40). CSS-Klassen
+`.lr7-bez*` bleiben (Golden/Prerender), nur TS-Bezeichner. Alle Importe/Tests nachziehen.
+
+Z10 **Druck:** Zeile bleibt `print:hidden`. Marginalie/Chip im Kopf: kein Rückbau-Rest zulässig.
+
+### Tore und Beweise
+- Unit: Fassungs-Label (Datum/kein Datum), Akkordeon-Reducer, Doppelzahl-Regel.
+- Playwright (`e2e/`): (a) Fassung zu zeigt nur «Gilt seit …», offen zeigt Zahl + Zeitleiste;
+  (b) Akkordeon; (c) Aktionen erscheinen bei Hover/Fokus, auf `hover:none` immer; (d) Fussnoten
+  aus ⇒ 0 Fussnoten-Marker im OR-Leser (heute > 0 ⇒ Test zeigt vorher rot); (e) D45 Split.
+  Playwright-Falle: `locator.filter({has})` einmal auflösen, `nth()` festhalten.
+- `npm run gate` grün; `check:perf-budget`; Golden der Prerender-Seiten byte-gleich, sofern die
+  Zeile nicht im Prerender liegt — liegt sie darin, Golden-Update als eigener, begründeter Commit.
+- Nach main-Merge im PR: `gen:e2e-shards` regenerieren.
+
+### Nicht-Ziele
+Keine Änderung an Zähl-Datei/Fetch (eigener Schritt `W2·26-FUNKTIONSZEILE-ZAEHLER`, korpus);
+keine Entstehungs-Karte (W2·6c E3, folgt); kein Eingriff in Rechtslogik/Korpus.
