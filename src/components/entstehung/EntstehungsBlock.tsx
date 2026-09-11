@@ -9,8 +9,8 @@ import {
   type EntstehungProjektion, type EntstehungAenderung, type EntstehungBotschaft,
 } from '../../lib/entstehung/projektion';
 import { ladeAnkerSidecar, ankerFuerToken, ankerUrl, type AnkerSidecar } from '../../lib/entstehung/anker';
+import { ladeKantenShard } from '../../lib/materialien/kanten-shard';
 import type { ArtikelHistorie, HistorieEreignis } from '../../lib/normtext/historie-laden';
-import type { MaterialBezug } from '../../lib/normtext/werkzeuge';
 
 // ═══ DIE ENTSTEHUNG AM ARTIKEL (W2·6c · E3) ═════════════════════════════════
 //
@@ -190,18 +190,12 @@ function Aenderungskarte({ e, a, projektion, anker, artikel, abgerufen }: {
  *
  * @param historie   Fassungshistorie dieses Artikels (erlass-lokaler Shard).
  * @param erlassKey  Kanonischer Erlass-Key — Adresse der Projektion.
- * @param artikel    Roher Artikel-Token («16_c») für den Anker-Sprung.
- * @param materialien Soft-Law-Kanten an diesem Artikel (Praxis-Zähler).
- * @param laedt      Der Kanten-Shard ist unterwegs ⇒ «lädt …» statt «keine».
- * @param onPraxis   Armiert den bestehenden Ladepfad der Kanten (D30/`weckeDaten`).
+ * @param artikel    Roher Artikel-Token («16_c») für Anker-Sprung und Praxis-Zähler.
  */
-export function EntstehungsBlock({ historie, erlassKey, artikel, materialien, laedt = false, onPraxis }: {
+export function EntstehungsBlock({ historie, erlassKey, artikel }: {
   historie?: ArtikelHistorie;
   erlassKey?: string;
   artikel: string;
-  materialien?: MaterialBezug[];
-  laedt?: boolean;
-  onPraxis?: () => void;
 }) {
   // `undefined` = noch unterwegs · `null` = keine Projektion für diesen Erlass.
   // OHNE Erlass-Key gibt es nichts zu holen — das ist ABGELEITET, kein Zustand:
@@ -213,6 +207,8 @@ export function EntstehungsBlock({ historie, erlassKey, artikel, materialien, la
   const [offen, setOffen] = useState<number | null>(null);
   /** Anker-Sidecars, die schon eingetroffen sind (je Botschafts-Key). */
   const [ankerCache, setAnkerCache] = useState<Record<string, AnkerSidecar | null>>({});
+  /** Wie viele Wegleitungen diesen Artikel nennen — `undefined` = noch unterwegs. */
+  const [praxis, setPraxis] = useState<number | undefined>(undefined);
   const kartenId = useId();
 
   // ── Der EINE Abruf dieser Karte, ausgelöst durch den Klick, der sie mountet ──
@@ -223,11 +219,29 @@ export function EntstehungsBlock({ historie, erlassKey, artikel, materialien, la
     return () => { lebt = false; };
   }, [erlassKey]);
 
-  // ── Praxis: der Kanten-Shard lädt ERST JETZT (§11.5 (4), Entscheid 28.7.2026:
-  //    «Facetten aus = null Byte» im Lesefluss). `onPraxis` ist derselbe Weg, den
-  //    die Rubriken «Entscheide»/«Materialien» beim Aufklappen nehmen — kein
-  //    zweiter Lader (§5, D30).
-  useEffect(() => { onPraxis?.(); }, [onPraxis]);
+  // ── Praxis: der KANTEN-SHARD lädt erst jetzt (§11.5 (4); Entscheid 28.7.2026,
+  //    «Facetten aus = null Byte» im Lesefluss).
+  //
+  //    GEMESSEN 11.9.2026, und darum genau dieser Weg: der bestehende
+  //    Aufklapp-Ladepfad der Rubriken «Entscheide»/«Materialien» (`weckeDaten`)
+  //    zieht `/materialien/register.json` mit — 2,1 MB, weil er die TITEL der
+  //    Dokumente braucht. Die Sonde `entstehung-karte-e3` (a) hat das rot
+  //    gezeigt, als diese Zeile noch `onPraxis?.()` rief. Für eine ZAHL braucht
+  //    es keine Titel: der erlass-lokale Kanten-Shard (ZPO: keiner ⇒ 404;
+  //    MWSTG 10 KB) trägt sie, und wer die Titel will, klickt die Rubrik
+  //    «Materialien» — die lädt sie wie bisher.
+  useEffect(() => {
+    if (!erlassKey) return;
+    let lebt = true;
+    void ladeKantenShard(erlassKey).then((shard) => {
+      if (!lebt) return;
+      // Ein Eintrag je DOKUMENT (nicht je Fundstelle) — dieselbe Entdopplung,
+      // die auch die Rubrik «Materialien» zeigt (§5, `projiziereMaterialien`).
+      const dok = new Set((shard?.kanten ?? []).filter((k) => k.artikel === artikel).map((k) => k.dok));
+      setPraxis(dok.size);
+    });
+    return () => { lebt = false; };
+  }, [erlassKey, artikel]);
 
   const ereignisse = historie?.ereignisse ?? [];
   const gewaehlt = offen !== null ? ereignisse[offen] : undefined;
@@ -252,7 +266,6 @@ export function EntstehungsBlock({ historie, erlassKey, artikel, materialien, la
     : null;
 
   const deckung = zaehleDeckung(ereignisse, projektion ?? null);
-  const praxisZahl = materialien?.length ?? 0;
 
   const zusatz = (e: HistorieEreignis, i: number): ReactNode => {
     const treffer = aenderungFuer(projektion, e.quellen);
@@ -296,13 +309,15 @@ export function EntstehungsBlock({ historie, erlassKey, artikel, materialien, la
       </p>
       <p className="lr8-entst-praxis" data-entstehung-praxis>
         <span className="text-ink-500">
-          {laedt && !materialien
+          {praxis === undefined
             ? 'Praxis: lädt …'
-            : praxisZahl === 0
+            : praxis === 0
+              // §8: «erfasst» ist der Kern des Satzes — er sagt etwas über
+              // unseren Bestand, nie über die Rechtswirklichkeit.
               ? 'Keine Wegleitung erfasst, die diesen Artikel nennt.'
-              : praxisZahl === 1
+              : praxis === 1
                 ? '1 Wegleitung nennt diesen Artikel — siehe Rubrik «Materialien».'
-                : `${praxisZahl} Wegleitungen nennen diesen Artikel — siehe Rubrik «Materialien».`}
+                : `${praxis} Wegleitungen nennen diesen Artikel — siehe Rubrik «Materialien».`}
         </span>
       </p>
     </div>

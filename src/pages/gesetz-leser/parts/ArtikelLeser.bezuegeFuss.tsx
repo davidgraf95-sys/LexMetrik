@@ -218,10 +218,7 @@ export function ArtikelBezuegeFuss({
          und kein zweiter Griff: der Rubrik-Griff, der diesen Block aufklappt,
          ist zugleich der Auslöser des EINEN Abrufs (Auflage David 6.9.2026,
          «nur auf Wunsch sichtbar»). */
-      inhalt: (
-        <EntstehungsBlock historie={historie} erlassKey={erlassKey} artikel={artikel}
-          materialien={materialien} laedt={laedt} onPraxis={onOeffnen} />
-      ),
+      inhalt: <EntstehungsBlock historie={historie} erlassKey={erlassKey} artikel={artikel} />,
     },
     {
       reg: 'r',

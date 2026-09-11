@@ -4418,3 +4418,15 @@ html[data-fuss-aus="frmgwa"] .lc-leser .lr7-bez {
   line-height: 1.35;
 }
 .lr8-entst-praxis { margin-top: 0.125rem; }
+
+/* Rückrichtung am Material («Erläutert diese Artikel», W2·6c-E3): eine Liste
+   mit Kante, dieselbe Anatomie wie die Verfahrenskette der Karte am Artikel. */
+.lr8-entst-anker {
+  display: grid;
+  gap: 0.125rem;
+  padding-left: 0.625rem;
+  border-left: 1px solid var(--rule-soft);
+  font-size: 0.75rem;
+  line-height: 1.4;
+  color: var(--ink-600);
+}

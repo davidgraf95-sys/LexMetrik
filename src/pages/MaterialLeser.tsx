@@ -4,6 +4,7 @@ import { KopfOverline, LeserKopfGeruest } from '../components/layout/LeserKopfGe
 import { SeitenTitel } from '../components/ui/SeitenTitel';
 import { ladeMaterial } from '../lib/materialien/browse';
 import { KontextPanel } from '../components/kontext/KontextPanel';
+import { MaterialEntstehung } from '../components/entstehung/MaterialEntstehung';
 import { StatusBadge } from '../components/verzahnung/StatusBadge';
 import { GEBIET_LABEL } from '../lib/normtext/register';
 import { MASSGEBLICH_SATZ } from '../lib/benennung';
@@ -178,6 +179,13 @@ export function MaterialLeser() {
           normKeys des Materials (Burggraben — Behördenpraxis an die Norm/den
           Entscheid gebunden). */}
       <KontextPanel typ="material" normKeys={m.normKeys} />
+
+      {/* W2·6c-E3 · DIE RÜCKRICHTUNG. Am Artikel führt die Entstehungs-Karte zu
+          dieser Botschaft; hier geht derselbe Weg zurück. Der Block rendert NUR
+          mit Anker-Sidecar (§11.5 «Am Material»; ohne ihn steht schon oben der
+          Live-Link) und holt ihn nur bei einer Botschaft — Herleitung in
+          `components/entstehung/MaterialEntstehung.tsx`. */}
+      <MaterialEntstehung materialKey={m.key} doktyp={m.doktyp} />
 
       {/* ── LM-137 (W2·17-UI-BEFUNDE/B16) · TRENNLINIEN DERSELBEN EBENE FLUCHTEN ─
           Diese Linie lief ungedeckelt über die volle Spalte. Gemessen 4.9.2026
