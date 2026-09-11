@@ -1,29 +1,37 @@
-// ─── Die EINE Vergleichsform der Synopse (Profil `entstehung-norm/3`) ────────
+// ─── Die EINE Vergleichsform der Synopse (Profil `entstehung-norm/4`) ────────
 //
 // Befund Bauer #796 (11.9.2026, FAHRPLAN-MATERIALIEN-VERZAHNUNG §11.6): der
 // Generator (`scripts/entstehung/synopse.ts`) und der Leser
 // (`src/lib/entstehung/synopse-diff.ts`) trugen bis Profil `/2` je eine EIGENE
 // Normalisierungsfunktion — `normalisiere()` beim Generator, `vergleichsform()`
-// beim Leser. Zwei Normalisierungen sind zwei Wahrheiten (§5): gemessen wurden
-// 70 gespeicherte Alt-Blöcke (36/3484 `belegt`, 34/999 `ohne_ereignis`), die der
-// Generator als «geändert» ablegte, während der Leser mit seiner eigenen
-// Vergleichsform «kein Unterschied erkennbar» zeigte.
+// beim Leser. Zwei Normalisierungen sind zwei Wahrheiten (§5). Diese Datei hält
+// seither die EINE Zeichen-Vergleichsform, die beide Seiten importieren.
 //
-// URSACHE (empirisch, nicht die Zeichen-Tabellen): in ALLEN 70 Fällen war der
-// Artikel-BODY (die gespeicherten `bloecke`) bereits nach der alten
-// Generator-Normalisierung `/2` identisch — der Unterschied, der «geändert»
-// auslöste, lag im `<heading>`/`<subheading>`-Randvermerk des AKN-Baums, den
-// der Generator in seinen Ganzer-Artikel-Vergleich einbezog, den die
-// STRUKTURELLE Extraktion (`zerlegeBloecke`, nur `<paragraph>`) aber NIE in
-// die gespeicherten Blöcke übernimmt und den der Leser folglich nie sieht.
-// Beleg: AVIV Art. 109b, 2021-04-01 → 2021-07-01 — der Artikeltext blieb
-// byte-gleich, der `<subheading>`-Querverweis wanderte von
-// «(Art. 83 Abs. 1 Bst. i und o AVIG)» zu «(Art. 83 Abs. 1bis AVIG)» (eine
-// Umnummerierung an ANDERER Stelle des Erlasses). Der Fix dafür sitzt im
-// Generator (`flachText` vergleicht nur noch `<paragraph>`-Inhalt, siehe
-// `scripts/entstehung/synopse.ts`); diese Datei liefert dazu die EINE
-// Zeichen-Vergleichsform, die beide Seiten importieren, damit kein künftiger
-// Zeichen-Fall wieder auseinanderlaufen kann.
+// STAND 12.9.2026 (Profil `/4`, Gegenprüfung PR #798 — die Zahlen des Profils `/3`
+// standen hier vorher und sind mit der Regenerierung überholt):
+//  · 186 Synopse-Shards, 945 Konsolidierungs-Schritte, 4651 gespeicherte Alt-Blöcke,
+//    davon 1176 `ohne_ereignis`.
+//  · Leer-Diff-Verletzungen (gespeicherter Block, den der Leser nicht zeigen kann):
+//    0 offen. 11 befristete, benannte Ausnahmen in
+//    `bibliothek/register/entstehung-leerdiff-ausnahmen.json` (10× CHEMRRV @2022-05-01 —
+//    die amtliche Konsolidierung führt dort nur 3 statt 25 `<article>`; AVIV 57b —
+//    Token-Kontinuität in `neuNach`). Die fünf Ausnahmen des Profils `/3` sind
+//    erledigt: ihre Ursache war die Storage-Lücke, nicht die Lineage.
+//  · 522 Alt-Blöcke tragen eine geänderte Sachüberschrift (`ueberschriftNeu`),
+//    31 davon OHNE Wortlaut-Unterschied — das ist der Leser-Zustand «nur die
+//    Sachüberschrift wurde geändert» (`nurTitelGeaendert`), der mit Profil `/3`
+//    fälschlich «kein Unterschied erkennbar» hiess.
+//  · Deckel: Synopse-Shards 6716,1 KB / 8192,0 KB (82 %).
+//
+// WO DER SCOPE SITZT — und warum er nicht hier sitzt: die STRUKTURELLEN Regeln
+// (was überhaupt verglichen und gespeichert wird: `<paragraph>`-Inhalt samt
+// Fliesstext vor/zwischen/nach einer `<blockList>`, plus die Sachüberschrift ohne
+// den Klammer-Randvermerk) stehen im Generator — `zerlegeBloecke`, `flachText`,
+// `titelFuerVergleich` in `scripts/entstehung/synopse.ts`. Diese Datei trägt
+// ausschliesslich die ZEICHEN-Ebene. Beleg dafür, dass beides nicht vermischt
+// werden darf: Profil `/3` hatte einen Speicherverlust (Fliesstext nach einer
+// Liste) mit einer Vergleichs-Regel zugedeckt und dabei vier echte
+// Wortlautänderungen von KLV Art. 12 Bst. e gelöscht.
 //
 // NORMALISIERT WIRD NUR FÜRS MATCHING, NIE FÜR SPEICHERUNG ODER ANZEIGE
 // (Muster law.soufien.lu, `soufien-lex.md`) — der gespeicherte und angezeigte

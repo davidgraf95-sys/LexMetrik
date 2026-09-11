@@ -230,8 +230,9 @@ function Vergleich({ treffer, shard, geltend, entwurf, aufgehoben }: {
       {!hatUnterschied(zeilen) && (nurTitelGeaendert(artikel, zeilen)
         ? <p className="lr8-syn-lage" data-synopse-lage="nur-titel">
             Am Wortlaut dieses Artikels ist zwischen den beiden Ständen kein Unterschied erkennbar —
-            geändert wurde nur die amtliche Sachüberschrift: «{artikel.ueberschrift}» wurde zu
-            «{artikel.ueberschriftNeu}».
+            geändert wurde nur die amtliche Sachüberschrift: {artikel.ueberschrift
+              ? <>«{artikel.ueberschrift}» wurde zu «{artikel.ueberschriftNeu}»</>
+              : <>der Artikel trägt neu die Sachüberschrift «{artikel.ueberschriftNeu}»</>}.
           </p>
         : <p className="lr8-syn-lage" data-synopse-lage="gleich">
             Zwischen den beiden Ständen ist am Wortlaut dieses Artikels kein Unterschied erkennbar.

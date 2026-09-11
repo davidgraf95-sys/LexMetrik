@@ -278,3 +278,94 @@ PARLG 13, VAM 51/76/77, ZSTV 17.
 **Determinismus:** zweiter Generator-Lauf (identischer XML-Cache, ohne
 `--parser-neu`) byte-gleich zum ersten — sha256 aller 186 Synopse-Shards und
 des Quell-Registers identisch.
+
+## 9 Nachtrag 12.9.2026 — Gegenprüfung PR #798 widerlegt Profil `/3`; Profil `entstehung-norm/4`
+
+§8 bleibt als Beleg seines Datums unverändert stehen. Die Gegenprüfung zu
+PR #798 hat zwei seiner Schlüsse widerlegt und einen dritten als Tor-Lücke
+beanstandet; hier steht, was gemessen wurde, und nicht, was §8 hätte sagen
+sollen.
+
+**A1 — «Text nach einer Liste» war kein Rausch-Fall, sondern ein
+Speicherverlust.** §8 Klasse 3 hat die Lücke in `zerlegeBloecke` richtig
+BESCHRIEBEN, sie aber im Vergleich zugedeckt statt im Speicher geschlossen
+(«Regel (c)»). Damit verschwanden vier ECHTE Wortlautänderungen von KLV
+Art. 12 Bst. e — die Kantonsliste der Früherkennungsprogramme, an der die
+Franchisebefreiung hängt (amtliche Konsolidierungen, Fedlex Filestore ELI
+`cc/1995/4964_4964_4964`, abgerufen 12.9.2026):
+
+| Schritt | Kantonsliste |
+|---|---|
+| 2021-11-04 → 2022-01-01 | «… Basel-Stadt, Freiburg, Genf …» → **«+ Bern, Luzern»** |
+| 2022-10-01 → 2023-01-01 | → **«+ Basel-Landschaft»** |
+| 2024-07-01 → 2025-01-01 | → **«+ Solothurn»** |
+| 2026-05-11 → 2026-07-01 | → **«+ Glarus»** |
+
+Gemessen am ganzen Korpus (12.9.2026): **651 Absätze je Stand** tragen
+Fliesstext nach der letzten `<blockList>`; `<item>` ausserhalb einer
+`<blockList>` gibt es **0**; verschachtelte `<blockList>` **4476** — deshalb
+sucht `blockListBereiche()` balanciert, nicht nicht-gierig. `zerlegeBloecke`
+speichert seither Vor-, Zwischen- und Nachlauftext; Regel (c) ist gestrichen;
+`flachText` delegiert an `zerlegeBloecke` (ein Scope, §5).
+
+**A2 — die Sachüberschrift gehört in den Vergleich, aber auch in den
+Speicher.** §8 Klasse 1 hat `<heading>` zusammen mit dem `<subheading>`-
+Randvermerk aus dem Vergleich genommen. Der Randvermerk ist Rauschen, die
+Sachüberschrift nicht: **35 Schritte** ändern NUR den amtlichen Randtitel
+(BVG Art. 33b «Erwerbstätigkeit nach dem ordentlichen Rentenalter» →
+«… nach dem Referenzalter», 2023-01-01 → 2024-01-01, ELI
+`cc/1983/797_797_797`; dazu STPO 55/431, HMG 41, HREGV 77, PARTG 10, AHVV 52a,
+EPV 90, VAG 84, FINFRAG 41 …). Der Leser bekam dort «kein Unterschied
+erkennbar» — eine falsche Auskunft über eine echte Änderung (§8 des
+Reglements). Die enge Rausch-Regel ist gemessen: **2096 von 2096**
+`<subheading>` im jüngsten Stand aller 186 Erlasse sind ein Klammer-
+Querverweis auf die Delegationsnorm (acht davon mit amtlichen Schreibfehlern
+in der Klammerung). Gespeichert wird seither BEIDES — `ueberschrift` (alt) und
+`ueberschriftNeu` (neu) —, weil der geltende Korpus-Snapshot den Artikel-Titel
+für Bundeserlasse fast nie führt (**7500 von 22 496** Artikeln stimmen überein,
+die übrigen tragen im Korpus gar keinen Titel): ein Leser, der den neuen Titel
+von dort holte, zeigte bei zwei Dritteln aller Artikel eine Titel-Streichung,
+die es nie gab.
+
+**A4 — der Leer-Diff-Wächter prüft `art: 'entfallen'` mit.** §8 hatte diese
+Blöcke ausgefiltert; mit Profil `/3` waren 160 Blöcke gerade erst von
+«geändert» zu «entfallen» gewechselt und damit aus dem Blick des Tors
+verschwunden (§6.7). Ausgenommen bleibt nur der Fall ohne Folgeschritt
+(`neu === null`) — dort sagt die Karte «Der Artikel ist mit diesem Stand
+entfallen», und das IST der Unterschied.
+
+**Ein Nebenbefund, der aus A1 folgt:** die fünf Ausnahmen des Profils `/3`
+(KLV 13, KLV 12_b, KLV 12_a ×2, VTS 136) waren **keine**
+Token-Kontinuitäts-Fälle, wie §8 vermutete — sie sind mit dem
+Speicher-Fix erledigt. Die Diagnose «Lineage» war für sie falsch.
+
+**Neuer Stand (12.9.2026, Profil `/4`):** 4651 Alt-Blöcke (Profil `/3`: 4529),
+davon 1176 `ohne_ereignis`; 326 `entfallen`; 522 Blöcke mit geänderter
+Sachüberschrift, davon 31 ohne Wortlaut-Unterschied (Leser-Zustand «nur die
+Sachüberschrift wurde geändert»); Deckel 6716,1 KB / 8192,0 KB (82 %);
+Leer-Diff-Verletzungen **0 offen**.
+
+**Offener Rest — 11 befristete Ausnahmen
+(`bibliothek/register/entstehung-leerdiff-ausnahmen.json`, Ablauf 2026-10-12):**
+
+1. **CHEMRRV 4/7/8/9/10/11/12/16/18/20 @2022-05-01 — defekte Quell-Struktur,
+   NICHT Lineage.** Die amtliche Konsolidierung vom 2022-05-01 (und
+   2022-10-01) führt im Artikelbaum nur `<article eId="art_1..art_3">`; die
+   Artikel 4–24 stehen in derselben 685-KB-Datei als
+   `<mod eId="annex_1_a/mod_uN"><quotedStructure>` eines Anhangs, ab
+   2022-10-06 wieder als 27 reguläre `<article>` (gemessen 12.9.2026 am
+   Filestore-XML, ELI `cc/2005/478`). Der Generator bucht sie darum als
+   «entfallen» und später als neu eingefügt, obwohl sie nie aufgehoben waren.
+2. **AVIV 57b @2021-07-01 — echte Token-Kontinuität**, wie in §8 beschrieben.
+
+Beide Klassen brauchen dieselbe Wurzel: eine **Lineage-Regel über die ganze
+Stände-Kette** statt des nächsten Token-Treffers in `neuNach()` — eine eId, die
+in EINEM Stand fehlt und danach unverändert zurückkehrt, ist eine strukturelle
+Lücke der Quelle und keine Aufhebung. Eigener Bauschritt; in PR #798 bewusst
+nicht mitgebaut (§6.7: ein Tor, das den eigenen Befund wegfiltert, ist
+gefährlicher als keines).
+
+**Determinismus:** dritter Generator-Lauf aus demselben XML-Cache byte-gleich
+zum zweiten — alle 186 Synopse-Shards identisch; einziger Unterschied ist der
+Provenienz-Vermerk `parserAenderung` im Quell-Register, den nur der
+ändernde Lauf schreibt (§7d).

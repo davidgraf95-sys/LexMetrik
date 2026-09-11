@@ -45,7 +45,7 @@ import type { SynopseArtikel, SynopseBlock, SynopseSchritt, SynopseShard, Synops
 import { SYNOPSE_FENSTER_AB } from './synopse';
 import { vergleichsform } from './normalisierung';
 
-// Rückwärtskompatibler Re-Export (Profil `entstehung-norm/3`, Befund #796): die EINE
+// Rückwärtskompatibler Re-Export (Profil `entstehung-norm/4`, Befund #796): die EINE
 // Vergleichsform lebt jetzt in `normalisierung.ts` — von hier importiert Generator UND
 // Leser. Weiterhin von hier exportiert, damit bestehende Importe (Tests, Komponenten)
 // nicht anfassen müssen (§5: genau ein Ort für die Definition, nicht für den Zugriff).

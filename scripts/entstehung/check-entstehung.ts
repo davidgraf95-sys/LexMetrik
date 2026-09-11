@@ -403,7 +403,7 @@ for (const [name, pfad, max, gzip] of DECKEL) {
       }
       // LEER-DIFF-WÄCHTER (Befund Bauer #796, 11.9.2026, §5/§1): kein gespeicherter
       // Alt-Block darf nach der Leser-Vergleichsform (`vergleichsform`/`synopseZeilen`,
-      // DIESELBE Funktion wie hier im Generator seit Profil `entstehung-norm/3`) «kein
+      // DIESELBE Funktion wie hier im Generator seit Profil `entstehung-norm/3`, Scope seit `/4`) «kein
       // Unterschied» zeigen — sonst speichert der Generator eine «Änderung», die der
       // Leser nie sehen kann (zwei Normalisierungen wären zwei Wahrheiten).
       //

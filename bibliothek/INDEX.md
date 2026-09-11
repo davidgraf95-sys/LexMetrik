@@ -237,6 +237,17 @@ für beide Seiten, `flachText`-Scope auf `<paragraph>` beschränkt, Fussnoten- u
 Nachlisten-Text aus dem Vergleich genommen. 70 → 10 Leer-Diff-Verletzungen
 (Rest: andere Fehlerklasse, Token-Kontinuität, dokumentiert im Nachtrag). Regel
 deterministisch (zweiter Lauf byte-gleich); fachliche Abnahme David offen.
+**Nachtrag 12.9.2026 (§9, Gegenprüfung PR #798): Profil `entstehung-norm/4`.**
+`/3` hatte einen SPEICHERverlust (Fliesstext nach `</blockList>`, 651 Absätze je
+Stand) mit einer Vergleichsregel zugedeckt und damit vier echte Änderungen von
+KLV Art. 12 Bst. e gelöscht; ausserdem machte es 35 reine Randtitel-Änderungen
+unsichtbar (BVG 33b «ordentliches Rentenalter» → «Referenzalter»). `/4`
+speichert Vor-/Zwischen-/Nachlauftext, vergleicht und speichert die
+Sachüberschrift (`ueberschriftNeu`, 522 Blöcke, 31 davon ohne
+Wortlaut-Unterschied) und prüft `art: 'entfallen'` im Leer-Diff-Wächter mit.
+4651 Alt-Blöcke, 0 offene Verletzungen, 11 befristete Ausnahmen (CHEMRRV: die
+Konsolidierung vom 2022-05-01 führt nur 3 statt 25 `<article>`; AVIV 57b:
+Token-Kontinuität). Regel deterministisch; fachliche Abnahme David offen.
 
 ## register/ — fortlaufend gepflegt
 
