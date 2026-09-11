@@ -13,6 +13,7 @@ import type { LeitfallRef } from '../../../lib/rechtsprechung/norm-index';
 import type { MaterialBezug, Werkzeug } from '../../../lib/normtext/werkzeuge';
 import type { ArtikelRevision } from '../../../lib/verzahnung/artikel-revisionen';
 import type { ArtikelHistorie } from '../../../lib/normtext/historie-laden';
+import type { NormSnapshot } from '../../../lib/normtext/typen';
 
 // ═══ Der BEZÜGE-FUSS des Artikels — EIN Baustein für BEIDE Formen ═══════════
 //
@@ -77,7 +78,7 @@ import type { ArtikelHistorie } from '../../../lib/normtext/historie-laden';
 
 export function ArtikelBezuegeFuss({
   bezuege, bezuegeImFuss, historie, leitfaelle, materialien, verweise, werkzeuge, zaehler,
-  zitat, revision, onOeffnen, laedt, aktionen, onImBlatt, erlassKey, artikel,
+  zitat, revision, onOeffnen, laedt, aktionen, onImBlatt, erlassKey, artikel, snapshot,
 }: {
   bezuege?: ArtikelBezuege;
   bezuegeImFuss?: ArtikelBezuege;
@@ -127,6 +128,14 @@ export function ArtikelBezuegeFuss({
   erlassKey?: string;
   /** W2·6c-E3 · Roher Artikel-Token («16_c») für den Anker-Sprung in die Botschaft. */
   artikel: string;
+  /**
+   * W2·6c-SYNOPSE-LESER · der Artikel selbst — die RECHTE Spalte des
+   * Fassungsvergleichs («was gilt heute?») samt ihrem Zitat-Nachweis (§7:
+   * Stand, Live-Link, Abrufdatum). Er wird DURCHGEREICHT, nicht neu geladen:
+   * der Leser hält den Eintrag ohnehin, und eine zweite Quelle für denselben
+   * Wortlaut wäre die zweite Wahrheit, die §5 verbietet.
+   */
+  snapshot?: NormSnapshot;
 }) {
   /** Die Zahlen der Funktionszeile — ausschliesslich aus Daten, die der Artikel
    *  ohnehin führt (§8: keine Rubrik ohne echte Zahl, keine neue Ladelogik). */
@@ -218,7 +227,7 @@ export function ArtikelBezuegeFuss({
          und kein zweiter Griff: der Rubrik-Griff, der diesen Block aufklappt,
          ist zugleich der Auslöser des EINEN Abrufs (Auflage David 6.9.2026,
          «nur auf Wunsch sichtbar»). */
-      inhalt: <EntstehungsBlock historie={historie} erlassKey={erlassKey} artikel={artikel} />,
+      inhalt: <EntstehungsBlock historie={historie} erlassKey={erlassKey} artikel={artikel} snapshot={snapshot} />,
     },
     {
       reg: 'r',

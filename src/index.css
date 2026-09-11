@@ -4430,3 +4430,168 @@ html[data-fuss-aus="frmgwa"] .lc-leser .lr7-bez {
   line-height: 1.4;
   color: var(--ink-600);
 }
+
+/* ═══ W2·6c-SYNOPSE-LESER · DER FASSUNGSVERGLEICH (Präfix `.lr8-syn`) ════════
+   Der Griff «Alt/Neu» an jedem Punkt der Fassungsleiste öffnet den Wortlaut von
+   damals neben dem Wortlaut von heute. Er lebt im selben Aufklapp-Block wie die
+   Entstehungs-Karte (`.lr8-entst`) und erbt deren Sprache: Linien statt Kästen
+   (F0.6), Radius 0 (F0.5), Registerfarbe der Gesetze als Kante (F0.2, `--reg-g`).
+
+   KEIN NEUES TOKEN (§13/F2, Tor `check:farbwelt`): die Hervorhebung des NEUEN
+   Wortlauts benutzt exakt das Paar, mit dem die Seite seit A35 Suchtreffer
+   markiert (`--brass-200` auf `--ink-900`) — EINE Markierung, die der Leser aus
+   der Volltextsuche wiedererkennt und die mit `html.dark` mitkippt. Der
+   GESTRICHENE Wortlaut bekommt gar keine Fläche, sondern den Durchstrich: eine
+   zweite Tönung wäre eine zweite Farbrolle, und «weg» ist ohnehin kein Zustand,
+   den man einfärbt. `<del>`/`<ins>` stehen dabei nicht aus Dekoration da — sie
+   sind die HTML-Semantik für genau diesen Fall und tragen sie an die
+   Vorlesehilfe weiter (WCAG 1.3.1). */
+.lr8-syn {
+  margin: 0.375rem 0 0.25rem;
+  padding-left: 0.5rem;
+  border-left: 2px solid var(--reg-g);
+  min-width: 0;
+}
+.lr8-syn-kopf { margin: 0 0 0.25rem; font-size: 0.6875rem; line-height: 1.35; }
+/* Zustände ohne Gegenüberstellung (§8): «erst ab 2021», «kein Stand
+   ausgewertet», «kein Unterschied erkennbar» — nie eine leere Karte. */
+.lr8-syn-lage,
+.lr8-syn-hinweis {
+  margin: 0.25rem 0;
+  font-size: 0.6875rem;
+  line-height: 1.4;
+  color: var(--ink-500);
+}
+.lr8-syn-warn { border-left-color: var(--warn-500); }
+
+.lr8-syn-zeilen {
+  margin: 0.25rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.5rem;
+  min-width: 0;
+}
+/* EINE Zeile = ein Absatz, eine Ziffer, ein Buchstabe. Zwei Spalten ab Tablet;
+   bei 320 px stapeln sie sich, und weil dann keine Kopfzeile mehr neben dem
+   Text steht, trägt JEDE Zelle ihr eigenes Etikett «Alt»/«Neu» (`.lr8-syn-seite`,
+   im Markup, nicht per CSS eingeblendet — bei einem Gesetzestext darf nie
+   zweifelhaft sein, welche Spalte gilt, §8). */
+/* SPALTIG GESCHRIEBEN, EINSPALTIG ZURÜCKGENOMMEN — und zwar nicht aus Geschmack:
+   der Wächter `src/tests/tap-ziel-token.test.ts` verbietet jede rohe
+   `min-width`-Zahl in dieser Datei (F9/D2, Trefferflächen kommen aus
+   `--tap-ziel`). Sein Muster trifft auch die BEDINGUNG einer Media-Query, also
+   jedes `@media (min-width: …)`. Die Regel dahinter ist richtig, ihr Muster eine
+   Spur zu weit; sie zu ändern wäre eine Test-Änderung ohne fachlichen Anlass
+   (§6.3). Der Umbau auf `max-width` kostet nichts und hält beide Seiten. */
+.lr8-syn-zeile {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 0.125rem 0.75rem;
+  padding-top: 0.375rem;
+  border-top: 1px solid var(--rule-soft);
+  min-width: 0;
+}
+.lr8-syn-marke { grid-column: 1 / -1; }
+@media (max-width: 47.99rem) {
+  .lr8-syn-zeile { grid-template-columns: minmax(0, 1fr); }
+}
+.lr8-syn-marke {
+  margin: 0;
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-size: 0.625rem;
+  line-height: 1.35;
+  color: var(--ink-600);
+}
+.lr8-syn-spalte { min-width: 0; }
+/* Unverändertes steht einmal über beide Spalten (Herleitung in `SynopseKarte.tsx`);
+   einspaltig ist `1 / -1` ohnehin die eine Spalte. */
+.lr8-syn-beide { grid-column: 1 / -1; }
+.lr8-syn-seite {
+  display: block;
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-size: 0.625rem;
+  line-height: 1.35;
+  color: var(--ink-400);
+}
+/* Der zitierte Wortlaut: Lese-Serife wie im Artikel selbst, damit der Vergleich
+   nicht wie ein Protokoll aussieht. `pre-line` hält die Absatzgrenzen, die beim
+   Verdichten etikettloser Blöcke entstehen (`synopse-diff.ts`). */
+.lr8-syn-text {
+  margin: 0;
+  font-size: 0.75rem;
+  line-height: 1.45;
+  color: var(--ink-700);
+  white-space: pre-line;
+  overflow-wrap: anywhere;
+}
+.lr8-syn-leer {
+  margin: 0;
+  font-size: 0.6875rem;
+  line-height: 1.4;
+  color: var(--ink-400);
+}
+.lr8-syn-text del {
+  text-decoration: line-through;
+  text-decoration-thickness: 1px;
+  color: var(--ink-500);
+}
+.lr8-syn-text ins {
+  text-decoration: none;
+  background-color: var(--brass-200);
+  color: var(--ink-900);
+  padding: 0 0.0625rem;
+}
+/* Ein GANZ neuer Block bekommt keine Fläche: die Markierung soll zeigen, WO in
+   einem Satz sich etwas geändert hat — steht daneben ohnehin «eingefügt» und ist
+   jedes Wort neu, wäre der ganze Absatz getönt und die Markierung sagte nichts
+   mehr (F0.2: Farbe als Marke, nie als Fläche). Der Durchstrich der gestrichenen
+   Seite bleibt, er IST die Aussage. */
+.lr8-syn-zeile[data-synopse-zeile="eingefuegt"] .lr8-syn-text ins {
+  background-color: transparent;
+  color: var(--ink-700);
+  padding: 0;
+}
+/* Entwurf ↔ Beschluss (E6): derselbe Apparat eine Stufe tiefer eingerückt — es
+   ist ein ZWEITER Vergleich innerhalb desselben Fassungspunkts, kein Nachtrag. */
+.lr8-syn-entwurf {
+  margin-top: 0.5rem;
+  padding-left: 0.5rem;
+  border-left: 1px solid var(--rule-soft);
+}
+/* Zitat-Nachweis (§7 a–d): Stand beider Fassungen, amtliche Quelle, Live-Link,
+   Abrufdatum, Profil der Normalisierung. Er steht in JEDER Karte, weil jede
+   Karte einen Gesetzestext zitiert. */
+.lr8-syn-fuss {
+  margin: 0.5rem 0 0;
+  padding: 0.375rem 0 0 0;
+  list-style: none;
+  border-top: 1px solid var(--rule-soft);
+  display: grid;
+  gap: 0.0625rem;
+  font-size: 0.6875rem;
+  line-height: 1.35;
+  color: var(--ink-500);
+}
+.lr8-syn-feld {
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-size: 0.625rem;
+  color: var(--ink-400);
+}
+/* Alt-Blöcke ohne Fussnoten-Ereignis: ein eigener Abschnitt unter der Leiste,
+   weil sie an keinem ihrer Punkte hängen (Herleitung in `synopse-diff.ts`). */
+.lr8-entst-ohne {
+  margin-top: 0.5rem;
+  font-size: 0.6875rem;
+  line-height: 1.4;
+  color: var(--ink-500);
+}
+.lr8-entst-ohne-kopf { margin: 0 0 0.125rem; }
+.lr8-entst-ohne ul {
+  margin: 0;
+  padding-left: 0.625rem;
+  list-style: none;
+  border-left: 1px solid var(--rule-soft);
+  display: grid;
+  gap: 0.125rem;
+}
