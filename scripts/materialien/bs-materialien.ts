@@ -19,6 +19,7 @@
 
 import type { VerfahrensEreignis } from '../../src/lib/materialien/verfahren.ts';
 import { bsCodeVonBezeichnung } from '../../src/lib/materialien/verfahren.ts';
+import type { DoktypId } from '../../src/lib/materialien/typen.ts';
 import type { Rechtsgebiet } from '../../src/lib/normtext/register.ts';
 import { kantonGebiet } from '../../src/lib/normtext/register.ts';
 import type { BsGeschaeft, BsDokument } from './adapter-bs-grossrat.ts';
@@ -36,6 +37,47 @@ export function cu(a: string, b: string): number {
 // sind KEINE Gesetzesmaterialien im hier gemeinten Sinn und tragen ausserdem als
 // einzige Namen von Ratsmitgliedern im Titel (Vormessung §4).
 export const GESCHAEFTSARTEN = ['Ratschlag', 'Bericht', 'Ausgabenbericht'] as const;
+
+/**
+ * Amtliche Geschäftsart (`ga_rr_gr`) → Doktyp. FESTE Tabelle, wie TYPE_PROJET in
+ * verfahren.ts — und aus demselben Grund.
+ *
+ * BEFUND der Gegenprüfung zu PR #799 (12.9.2026): hier stand vorher eine binäre
+ * Ableitung («Ratschlag» oder sonst «Bericht»). Geschäft 21.1247 ist amtlich eine
+ * «Initiative» — die kantonale Volksinitiative «1% gegen globale Armut», die über
+ * den amtlichen Fussnoten-Weg hereinkommt und darum NICHT der Artenliste oben
+ * unterliegt. Sie erschien im Register als «Bericht an den Grossen Rat»: eine
+ * Volksinitiative als Behördenvorlage etikettiert, also eine falsche Rechtsnatur
+ * direkt in der Karte (§1/§8).
+ *
+ * Erfasst sind die drei Vorlage-Arten plus jede Art, die über den Fussnoten-Weg
+ * belegt hereinkommt. Eine unbekannte Art wird NICHT geraten und NICHT eingereiht,
+ * sondern macht den Generator rot (§2) — dann gehört sie mit ihrem amtlichen
+ * Etikett in diese Tabelle und in DOKTYPEN, nicht in einen Sammeltopf.
+ */
+export const GESCHAEFTSART_DOKTYP: Readonly<Record<string, DoktypId>> = {
+  Ratschlag: 'ratschlag',
+  Bericht: 'gr-bericht',
+  Ausgabenbericht: 'gr-ausgabenbericht',
+  Initiative: 'gr-initiative',
+};
+
+/** Alle Doktypen, die ein BS-Eintrag tragen kann (Tor- und Testgrundmenge). */
+export const DOKTYP_BS: ReadonlyArray<DoktypId> = [...new Set(Object.values(GESCHAEFTSART_DOKTYP))];
+
+/** Amtliche Geschäftsart → Doktyp. Unbekannte Art ⇒ Fehler (§2: nie raten). */
+export function doktypVonGeschaeftsart(art: string | null | undefined): DoktypId {
+  const d = GESCHAEFTSART_DOKTYP[art ?? ''];
+  if (!d) {
+    throw new Error(
+      `bs-materialien: unbekannte Geschäftsart '${art ?? ''}' — Zuwachs im amtlichen Feld ga_rr_gr. `
+      + 'GESCHAEFTSART_DOKTYP in scripts/materialien/bs-materialien.ts und DOKTYPEN in '
+      + 'src/lib/materialien/register.ts um die Art mit ihrer amtlichen Bezeichnung ergänzen '
+      + '(nie in einen bestehenden Doktyp einsortieren, §1).',
+    );
+  }
+  return d;
+}
 
 /** Stammdaten eines BS-Korpus-Erlasses, wie der Runner sie aus den committeten
  *  Struktur-Sidecars + den amtlichen Metadaten der Gesetzessammlung zusammenträgt. */
@@ -69,7 +111,7 @@ export interface BsKante {
 export interface BsEintrag {
   key: string;
   behoerde: 'BS-GR';
-  doktyp: 'ratschlag' | 'gr-bericht';
+  doktyp: DoktypId;
   titel: string;
   nummer: string;
   rechtsgebiet: Rechtsgebiet;
@@ -364,7 +406,7 @@ export function baueBsEintraege(
     roh.push({
       key: keyAusSignatur(signatur),
       behoerde: 'BS-GR',
-      doktyp: g.ga_rr_gr === 'Ratschlag' ? 'ratschlag' : 'gr-bericht',
+      doktyp: doktypVonGeschaeftsart(g.ga_rr_gr),
       titel,
       nummer: signatur,
       rechtsgebiet: kantonGebiet(normKeys[0]),

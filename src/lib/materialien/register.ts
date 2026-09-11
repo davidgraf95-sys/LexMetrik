@@ -75,8 +75,13 @@ export const DOKTYPEN: ReadonlyArray<Doktyp> = [
   { id: 'taetigkeitsbericht', label: 'Tätigkeitsbericht' },
   { id: 'botschaft', label: 'Botschaft' },
   { id: 'vernehmlassung', label: 'Vernehmlassung' },
+  // K-16: die Etiketten sind die amtlichen Werte des Feldes `ga_rr_gr` WÖRTLICH
+  // (§1, Zitat statt Umschreibung). Die Behörden-Spalte nennt daneben «Grosser Rat
+  // des Kantons Basel-Stadt», der Kontext ist damit eindeutig.
   { id: 'ratschlag', label: 'Ratschlag' },
-  { id: 'gr-bericht', label: 'Bericht an den Grossen Rat' },
+  { id: 'gr-bericht', label: 'Bericht' },
+  { id: 'gr-ausgabenbericht', label: 'Ausgabenbericht' },
+  { id: 'gr-initiative', label: 'Initiative' },
   { id: 'mitteilung', label: 'Praxismitteilung' },
 ];
 

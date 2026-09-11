@@ -28,8 +28,8 @@ import { BS_GROSSRAT, bsCodeVonBezeichnung } from '../../src/lib/materialien/ver
 import type { MaterialManifest } from '../../src/lib/materialien/typen.ts';
 import {
   baueKanten, baueEreignisse, baueBsEintraege, serialisiere, fussnotenGeschaefte, cu,
-  datumsAngaben, normTitel, erlassDatum, GESCHAEFTSARTEN, VERBOTENE_FELDER, VORSTOSS_TITEL,
-  type BsErlassStamm,
+  datumsAngaben, normTitel, erlassDatum, GESCHAEFTSARTEN, GESCHAEFTSART_DOKTYP,
+  VERBOTENE_FELDER, VORSTOSS_TITEL, type BsErlassStamm,
 } from './bs-materialien.ts';
 
 import { FELDER_GESCHAEFT, FELDER_DOKUMENT, type BsGeschaeft, type BsDokument, type BsErlassMeta } from './adapter-bs-grossrat.ts';
@@ -121,9 +121,19 @@ function main(): void {
       fehler.push(`${e.key}: Titel beginnt wie ein Vorstoss ('${e.titel.slice(0, 40)}…') — Vorstösse tragen Personennamen im Titel.`);
     }
   }
+  // Geschäftsart → Doktyp: jede Art muss in der Tabelle stehen. FEHLER, nicht Hinweis
+  // (Gegenprüfung PR #799): eine unbekannte Art wurde vorher binär zum «Bericht», und
+  // ein Hinweis, den niemand liest, hätte genau das nicht verhindert (§6.7). Arten
+  // ausserhalb der drei Vorlage-Arten sind zulässig, aber NUR über den amtlichen
+  // Fussnoten-Weg — auch das wird hier geprüft, nicht bloss vermerkt.
+  const artJeGeschaeft = new Map(geschaefte.map((g) => [g.signatur_ges, g.ga_rr_gr ?? '']));
   for (const g of geschaefte) {
-    if (!(GESCHAEFTSARTEN as readonly string[]).includes(g.ga_rr_gr ?? '')) {
-      hinweise.push(`Roh-Ablage führt Geschäftsart '${g.ga_rr_gr}' (${g.signatur_ges}) — nur über den amtlichen Fussnoten-Weg zulässig.`);
+    const art = g.ga_rr_gr ?? '';
+    if (!(art in GESCHAEFTSART_DOKTYP)) {
+      fehler.push(
+        `${g.signatur_ges}: Geschäftsart '${art}' fehlt in GESCHAEFTSART_DOKTYP — `
+        + 'mit amtlicher Bezeichnung ergänzen, nie in einen bestehenden Doktyp einsortieren (§1).',
+      );
     }
   }
 
@@ -188,6 +198,17 @@ function main(): void {
       // `res` ist bei BS die amtliche URL, wörtlich — nie eine konstruierte (§7).
       if (v.res && !/^https:\/\/grosserrat\.bs\.ch\//.test(v.res)) {
         fehler.push(`${e.key}: Ereignis-Quelle '${v.res}' ist kein Live-Link des Grossen Rates.`);
+      }
+    }
+    const art = artJeGeschaeft.get(e.nummer ?? '');
+    if (art !== undefined) {
+      const erwartet = GESCHAEFTSART_DOKTYP[art];
+      if (erwartet && e.doktyp !== erwartet) {
+        fehler.push(`${e.key}: amtliche Art '${art}' ⇒ Doktyp '${erwartet}', gespeichert ist '${e.doktyp}' (§1).`);
+      }
+      if (!(GESCHAEFTSARTEN as readonly string[]).includes(art)
+        && !(e.bsKanten ?? []).some((k) => k.regel === 'fussnote')) {
+        fehler.push(`${e.key}: Art '${art}' liegt ausserhalb der Vorlage-Arten und hat keine Fussnoten-Kante (§8).`);
       }
     }
     if (!/^BS-GR-\d{2}\.\d{4}$/.test(e.key)) fehler.push(`${e.key}: Schlüssel nicht in der Form BS-GR-NN.NNNN.`);

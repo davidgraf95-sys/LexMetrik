@@ -68,8 +68,16 @@ export type DoktypId =
   | 'anleitung'
   | 'botschaft' // Botschaft des Bundesrates (Entstehungsgeschichte) — Paket 2, W2·6
   | 'vernehmlassung' // Vernehmlassung / Anhörung (Gesetzgebung in Arbeit) — Paket 3, W3·11
-  | 'ratschlag'  // Ratschlag des Regierungsrats BS ans Parlament (Botschafts-Pendant) — K-16
-  | 'gr-bericht' // Bericht/Ausgabenbericht an den Grossen Rat BS — K-16
+  // K-16: je amtlicher Geschäftsart des Grossen Rates BS (`ga_rr_gr`) ein eigener
+  // Doktyp — nie zwei rechtlich verschiedene Vorlagen unter einem Etikett (§1).
+  // Befund der Gegenprüfung zu PR #799: eine binäre Ableitung «Ratschlag oder
+  // sonst Bericht» zeigte die Volksinitiative 21.1247 als «Bericht an den
+  // Grossen Rat» an. Die Zuordnung steht als feste Tabelle in
+  // scripts/materialien/bs-materialien.ts; eine unbekannte Art ist rot, nie geraten.
+  | 'ratschlag'          // amtlich «Ratschlag» — Vorlage des Regierungsrats (Botschafts-Pendant)
+  | 'gr-bericht'         // amtlich «Bericht»
+  | 'gr-ausgabenbericht' // amtlich «Ausgabenbericht»
+  | 'gr-initiative'      // amtlich «Initiative» (kantonale Volksinitiative)
   | 'mitteilung';
 
 // ── Vernehmlassungs-Status (amtliches Vokabular consultation-status/0–6, 1:1) ──

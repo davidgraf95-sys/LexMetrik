@@ -11,7 +11,7 @@ import { describe, it, expect } from 'vitest';
 import {
   baueKanten, baueEreignisse, baueBsEintraege, serialisiere, flexMuster, normTitel,
   fussnotenGeschaefte, sgAngaben, datumsAngaben, erlassDatum, keyAusSignatur, standVon,
-  VERBOTENE_FELDER, VORSTOSS_TITEL, type BsErlassStamm,
+  VERBOTENE_FELDER, VORSTOSS_TITEL, doktypVonGeschaeftsart, DOKTYP_BS, type BsErlassStamm,
 } from '../../scripts/materialien/bs-materialien';
 import type { BsGeschaeft, BsDokument } from '../../scripts/materialien/adapter-bs-grossrat';
 import { FELDER_GESCHAEFT, FELDER_DOKUMENT } from '../../scripts/materialien/adapter-bs-grossrat';
@@ -121,6 +121,47 @@ describe('Herkunft — amtlich ist nur die Fussnote', () => {
     const ohne = erlass('BS-119.500', 'Gesetz über kantonale Volksinitiativen', 'Vom 1. Januar 1990 (Stand 2020)');
     const passend = geschaeft('21.1247', 'Änderung des Gesetzes über kantonale Volksinitiativen vom 1. Januar 1990', 'Initiative');
     expect(baueKanten([passend], [ohne])).toEqual([]);
+  });
+});
+
+describe('Doktyp — die amtliche Geschäftsart, nie binär (Gegenprüfung PR #799)', () => {
+  // BEFUND der Gegenprüfung 12.9.2026 (§1/§8): die Ableitung war
+  // `ga_rr_gr === 'Ratschlag' ? 'ratschlag' : 'gr-bericht'` — alles, was kein
+  // Ratschlag ist, wurde zum «Bericht». Geschäft 21.1247 ist amtlich eine
+  // «Initiative» («Kantonale Volksinitiative ‹1% gegen globale Armut›») und trug
+  // im Register das Etikett «Bericht an den Grossen Rat». Die Karte hätte dem
+  // Nutzer damit eine falsche Rechtsnatur angezeigt — §1: zwei rechtlich
+  // verschiedene Dinge nie stillschweigend gleich behandeln.
+  const initiativErlass = erlass('BS-119.500', 'Gesetz über die internationale Zusammenarbeit zwecks Armutsbekämpfung', 'Vom 14. Mai 2025 (Stand 2026)', {
+    fussnotenGeschaefte: ['21.1247'],
+  });
+  const initiative = geschaeft('21.1247', 'Kantonale Volksinitiative "1% gegen globale Armut"', 'Initiative');
+
+  it('führt eine Initiative als Initiative, nicht als Bericht', () => {
+    const e = baueBsEintraege([initiative], baueKanten([initiative], [initiativErlass]), baueEreignisse([dok('21.1247', 'Ratschlag des RR', '2022-05-04')]).jeGeschaeft);
+    expect(e).toHaveLength(1);
+    expect(e[0].doktyp).toBe('gr-initiative');
+  });
+
+  it('bildet jede belegte Geschäftsart auf einen eigenen Doktyp ab', () => {
+    expect(doktypVonGeschaeftsart('Ratschlag')).toBe('ratschlag');
+    expect(doktypVonGeschaeftsart('Bericht')).toBe('gr-bericht');
+    expect(doktypVonGeschaeftsart('Ausgabenbericht')).toBe('gr-ausgabenbericht');
+    expect(doktypVonGeschaeftsart('Initiative')).toBe('gr-initiative');
+  });
+
+  it('rät NICHT bei einer unbekannten Geschäftsart (§2: Vokabular-Zuwachs ist rot)', () => {
+    expect(() => doktypVonGeschaeftsart('Anzug')).toThrow(/unbekannte Geschäftsart/);
+    expect(() => doktypVonGeschaeftsart('')).toThrow(/unbekannte Geschäftsart/);
+  });
+
+  it('trägt im ausgelieferten Bestand je Eintrag den Doktyp seiner amtlichen Art', () => {
+    for (const m of BS_MATERIALIEN) {
+      expect(DOKTYP_BS, m.key).toContain(m.doktyp);
+    }
+    // Nulltest (§6.7): der Bestand enthält den Fall, um den es geht.
+    expect(BS_MATERIALIEN.map((m) => m.key)).toContain('BS-GR-21.1247');
+    expect(BS_MATERIALIEN.find((m) => m.key === 'BS-GR-21.1247')?.doktyp).toBe('gr-initiative');
   });
 });
 

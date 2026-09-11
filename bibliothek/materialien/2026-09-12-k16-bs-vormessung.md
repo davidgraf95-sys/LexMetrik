@@ -227,3 +227,23 @@ identisch, 14/14 Geschäftsart passend zum Doktyp**. Zusätzlich fährt
   belegt — sie bleiben ungeführt, bis die Bedeutung von «RA» amtlich belegt ist.
 - Entstehungs-Karte für BS: bleibt unmöglich, solange `historie/`+`revisionen/`
   keine kantonalen Sidecars führen (§3). Eigener Schritt.
+
+## 8 Nachtrag Gegenprüfung PR #799 (12.9.2026)
+
+Die adversariale Gegenprüfung bestätigte 34/34 geprüfte maschinelle Kanten, 8/8
+amtliche, 0 Personendaten, Determinismus und Tore — mit **einer Auflage**:
+
+Der Doktyp wurde binär abgeleitet («Ratschlag» oder sonst «Bericht»). Geschäft
+**21.1247** ist amtlich eine **Initiative** — die kantonale Volksinitiative «1%
+gegen globale Armut», die über den amtlichen Fussnoten-Weg hereinkommt und darum
+nicht der Artenliste der drei Vorlage-Arten unterliegt. Im Register stand sie als
+«Bericht an den Grossen Rat»: eine Volksinitiative als Behördenvorlage etikettiert,
+also eine **falsche Rechtsnatur direkt in der Karte** (§1/§8).
+
+Behoben mit einer festen Tabelle `GESCHAEFTSART_DOKTYP` (amtliche `ga_rr_gr` →
+Doktyp, Etikett = der amtliche Wert wörtlich); eine unbekannte Art macht den
+Generator rot statt sie einzusortieren (§2, Muster `TYPE_PROJET`). Ist-Verteilung
+danach: Ratschlag 84 · Bericht 32 · Initiative 1. Das Tor führt unbekannte Arten
+jetzt als **Fehler** statt als Hinweis und prüft zusätzlich, dass eine Art
+ausserhalb der Vorlage-Arten nur mit Fussnoten-Kante vorkommt.
+
