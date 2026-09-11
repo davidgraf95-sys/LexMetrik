@@ -174,6 +174,8 @@ Artikels (Fussnoten → AS → BBl, **liegt als G-HIST-Shard bereits vor**), Ver
 
 ### §11.5 Darstellung (Design-Freigabe 6.9.2026; gegen das Layout NACH W2·24)
 
+**Umsetzung des Synopse-Anteils (3) gebucht als eigener Roadmap-Schritt `W2·6c-ENTSTEHUNG-SYNOPSE-LESER`** (§14-Intake 11.9.2026, `feld: leser`, dep `[W2·6c-ENTSTEHUNG-SYNOPSE, W2·6c-ENTSTEHUNG-LESER]`) — Detail in diesem Abschnitt.
+
 **Zugeklappt (Default, überall):** **der bestehende Chip, unverändert** («Gilt seit 1.1.2024», bereits
 ein Button; Rand-Spalte 150 px, `--lr-marg`, kein Platz für ein zweites Segment — Kritik C5). Nichts
 Neues im Lesefluss, **kein Fetch, kein CLS, kein Element im Artikeltext**.
@@ -235,13 +237,13 @@ Erstlast (feste Liste; Shard-Ordner bewacht `check:entstehung`).
 | E | Inhalt | Sessions | Risiko/Tore | Konflikte | Nutzer sieht |
 |---|---|---|---|---|---|
 | **E0** ✅ 6.9. | ROADMAP-Heimat, M15 absorbiert, M16-Datenanteil → SYNOPSE | — | `check:plan` | — | — |
-| **E1** | Verfahrens-Ereignisse in der Botschaften-Query; Netz-Tor je fga, Mantelerlass als Rot-Beweis | 1–2 | Risikopfad ⇒ Gegenprüfung | keine | Zeitstrahl «Am Erlass» (ohne Parlament) |
-| **E2** | Anker-Sidecars (Bonus); `check:entstehung` (1)(2)(4) + `entstehung-deckung.json`; `kern.ts`/Ingest um `anker/**` erweitert; Konsumenten-Messung `artikel-revisionen` ⇒ Rückbau-Entscheid. **Historie-Generator und -Shard unangetastet** | 2 | Risikopfad ⇒ Gegenprüfung; Golden unberührt | nie parallel zu E1 | Daten |
-| **E3** | Karte in der Funktionszeile am Artikelende, Rubrik «Fassung» (§9 Z2 in `FAHRPLAN-DESIGN-IDENTITAET.md`); kein zweiter Slot (C5/C6 gegenstandslos, Sichtung 11.9.2026); Zuständen, Praxis-Nachladen; Rückrichtung am Material; Playwright: zu ⇒ 0 Fetch, CLS 0 (Deep-Link, 320 px), Tastatur | 3 | UI; Golden byte-gleich (Prerender ohne Slot-Markup), rot ⇒ Abbruch, nie Test-Update | **Wartebedingung erfüllt** (Sichtung 11.9.2026): alle neun slot-verlagernden W2·24-Branches sind auf `main` (PR #744–#761, geprüft gegen `git log origin/main`) | die Sicht |
-| **E4** | Parlament: `Bill`→`Resolution`, `Preconsultation`, NR-Aggregat, `Objective`; Zustandsträger; Monatslauf; `curia/**` in `kern.ts`/Ingest; Decision-Code-Tabelle; UI-Block mit Quellenangabe | 3 | Extraktion ⇒ Gegenprüfung; Sprachmischung getestet; Personendaten-Regel als Tor (kein Namensfeld im Shard) | keine | Kommission, NR/SR-Kästen, NR-Zahl |
-| **E5.0** | Vor-Messung Synopse an 5–8 weiteren Erlassen (Volumen, Falschtreffer nach Normalisierung); **zwei Speicherformen messen:** Alt-Block je Diff-Schritt vs. distinkte Textzustände je eId + Gültigkeitsintervalle (Lex D53; Preis: Fassung wird im Browser zusammengesetzt) | 1 | Messung | keine | — |
-| **E5** | Synopse ab 2021 (nur Alt-Block), Shard je Erlass, Deckel; Gegenprobe jeder Block gegen sein Historie-Ereignis, Blöcke ohne Ereignis gelistet | 5–7 | Zitat §7 ⇒ Gegenprüfung; Golden | keine | zwei Spalten |
-| **E6** | Entwurf ↔ Beschluss (Label-Join, ≥ 2025) | 2 | wie E5 | keine | «im Entwurf so?» |
+| **E1** ✅ #792 (`71db836ca`) | Verfahrens-Ereignisse in der Botschaften-Query; Netz-Tor je fga, Mantelerlass als Rot-Beweis | 1–2 | Risikopfad ⇒ Gegenprüfung | keine | Zeitstrahl «Am Erlass» (ohne Parlament) |
+| **E2** ✅ #792 (`71db836ca`) | Anker-Sidecars (Bonus); `check:entstehung` (1)(2)(4) + `entstehung-deckung.json`; `kern.ts`/Ingest um `anker/**` erweitert; Konsumenten-Messung `artikel-revisionen` ⇒ Rückbau-Entscheid. **Historie-Generator und -Shard unangetastet** | 2 | Risikopfad ⇒ Gegenprüfung; Golden unberührt | nie parallel zu E1 | Daten |
+| **E3** ✅ #793 (`f0c82ab74`) | Karte in der Funktionszeile am Artikelende, Rubrik «Fassung» (§9 Z2 in `FAHRPLAN-DESIGN-IDENTITAET.md`); kein zweiter Slot (C5/C6 gegenstandslos, Sichtung 11.9.2026); Zuständen, Praxis-Nachladen; Rückrichtung am Material; Playwright: zu ⇒ 0 Fetch, CLS 0 (Deep-Link, 320 px), Tastatur | 3 | UI; Golden byte-gleich (Prerender ohne Slot-Markup), rot ⇒ Abbruch, nie Test-Update | **Wartebedingung erfüllt** (Sichtung 11.9.2026): alle neun slot-verlagernden W2·24-Branches sind auf `main` (PR #744–#761, geprüft gegen `git log origin/main`) | die Sicht |
+| **E4** ✅ #792 (`71db836ca`) | Parlament: `Bill`→`Resolution`, `Preconsultation`, NR-Aggregat, `Objective`; Zustandsträger; Monatslauf; `curia/**` in `kern.ts`/Ingest; Decision-Code-Tabelle; UI-Block mit Quellenangabe | 3 | Extraktion ⇒ Gegenprüfung; Sprachmischung getestet; Personendaten-Regel als Tor (kein Namensfeld im Shard) | keine | Kommission, NR/SR-Kästen, NR-Zahl |
+| **E5.0** ⏳ #794 (offen, Stand 11.9.2026 20:49 CEST) | Vor-Messung Synopse an 5–8 weiteren Erlassen (Volumen, Falschtreffer nach Normalisierung); **zwei Speicherformen messen:** Alt-Block je Diff-Schritt vs. distinkte Textzustände je eId + Gültigkeitsintervalle (Lex D53; Preis: Fassung wird im Browser zusammengesetzt) | 1 | Messung | keine | — |
+| **E5** ⏳ #794 (offen, Stand 11.9.2026 20:49 CEST) | Synopse ab 2021 (nur Alt-Block), Shard je Erlass, Deckel; Gegenprobe jeder Block gegen sein Historie-Ereignis, Blöcke ohne Ereignis gelistet | 5–7 | Zitat §7 ⇒ Gegenprüfung; Golden | keine | zwei Spalten |
+| **E6** ⏳ #794 (offen, Stand 11.9.2026 20:49 CEST) | Entwurf ↔ Beschluss (Label-Join, ≥ 2025) | 2 | wie E5 | keine | «im Entwurf so?» |
 | später | Zeitreise-Umschalter je Erlass (F2, M16-UI; 57 künftige Stände liegen vor) · BGE → Botschaft · Wegleitungen BSV/BAG/BAZG/ESTV-VSt/WEKO · FINMA (§9/§10) | je eigen | — | — | — |
 | nach Bund | Kantone BS (data.bs.ch), VS (lex.vs.ch), ZH nur Rohfeed — erst nach E1–E5 Bund | je eigen | — | — | — |
 
@@ -286,6 +288,7 @@ Fussnoten-Parser · jede Änderung am Historie-Shard (`botschaftKey`, Kopf) und 
 | Kritik Runde 2 (14) | Marginalie 150 px; kein Karten-Slot; 4/9 Branches ausserhalb des Sammelbranchs; Revisions-Sidecar trägt `botschaftKey` schon; Trailer offline unlesbar | Fassung 4: Chip unverändert, Historie-Shard unangetastet, kein drittes Sidecar, Deckungs-Register statt Trailer |
 | Gemini | zwei Kernaussagen widerlegt | Messtabelle FAHRPLAN-FREMDAGENTEN §5 |
 | **Sichtung 11.9.2026** | Alle neun W2·24-Branches sind seit 7.9.2026 auf `main` (PR #744–#761, geprüft gegen `git log origin/main`); D40 (#761) machte die Fassung zur Rubrik der Funktionszeile am Artikelende, der Marginalie-/Kopf-Slot entfiel ersatzlos | **Fassung 5: C5/C6 gegenstandslos** (kein zweiter Slot, kein 150-px-Platzproblem); E3-Wartebedingung erfüllt; §11.9 Nr. 1–6 entschieden (Mandat David 11.9.2026), Go erteilt |
+| **Bau 11.9.2026** (Branch `feat/w26c-entstehung-synopse`, PR #794 — **Stand bei Redaktion dieser Zeile: offen, noch nicht gemergt**) | Gegenprüfungs-Auflage → Profil `entstehung-norm/2` (Prüfer-Stichprobe n=13 auf `ohne_ereignis`-Blöcken: 11/13 = 84,6 % unter der 90-%-Schwelle, zwei Fedlex-Konversionsartefakte; neue disjunkte Stichprobe n=13 nach /2: **13/13 = 100 %**); E6 deckt **10 statt 59** Vorlagen (nur ab BBl 2024 mit `type-projet/2` **und** `/300`); 63/1131 Stände ohne `-N`-Suffix, R2 §6d galt nur für die konstruierte Alias-URL — ersetzt durch eine Provenienz-Pfad-Prüfung | 4770 → 4659 Alt-Blöcke (111 Falschtreffer weniger), Deckel 82 % → 80 %; nächste Session: PR-Merge-Stand neu prüfen, diese Zeile bei Bedarf nachtragen |
 
 
 ---

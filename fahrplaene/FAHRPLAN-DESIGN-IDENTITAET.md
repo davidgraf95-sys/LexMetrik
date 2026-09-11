@@ -470,6 +470,8 @@ Ausserdem gebucht, aber eigene Schritte: `W2·25-ARBEITSMAPPE` (Anheften, §7 di
 
 ## §9 · W2·26 Funktionszeile am Artikelende — Überarbeitung (Mandat David 11.9.2026)
 
+**Status: erledigt** — `W2·26-FUNKTIONSZEILE` #788 (`efc7129b8`), `W2·26-FUNKTIONSZEILE-ZAEHLER` #791 (`5a09f161b`). Gemessen: Knöpfe im DOM (OR-Leser) **13 532 → 10 160** (−3 372, −24,9 %); sichtbare Fussnoten-Marker bei abgewählter Option **215 → 0**; Requests je Erlass (Snapshot+Sidecar statt Snapshot+Sidecar+Zähl-Datei) **3 → 2**.
+
 Gebucht in `ROADMAP.md` unter `W2·26-FUNKTIONSZEILE` (Bau, `feld: leser`) und
 `W2·26-FUNKTIONSZEILE-ZAEHLER` (Korpus-Nachfix, `feld: korpus`); hier steht das Detail. Mandat
 (Chat 11.9.2026, wörtlich sinngemäss): «überarbeite insgesamt die Funktionszeile am Artikelende;
