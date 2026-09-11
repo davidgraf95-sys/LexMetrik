@@ -21,6 +21,16 @@
 //
 // --schreibe bucht neue Erlasse und HÖHERE Quoten; eine Senkung schreibt es NIE von
 // selbst — die verlangt einen von Hand eingetragenen `grund` (Mensch-Entscheid, §8).
+//
+// LEER-DIFF-AUSNAHMELISTE (Auftrag Koordinator, Nachtrag 11.9.2026, Muster
+// Flacker-Wächter #779 `scripts/check-e2e-flake.ts`): eine Verletzung des
+// Leer-Diff-Wächters ist ROT, ausser der Fall steht mit Datum und Grund in
+// `bibliothek/register/entstehung-leerdiff-ausnahmen.json`; jeder Eintrag verfällt
+// nach höchstens 30 Tagen (Fang-Vermerk, keine Amnestie) — NIE das Tor selbst
+// abschwächen, nur einzelne, benannte, befristete Fälle. Eingetragen: die Wurzel
+// (Token-Kontinuität in `neuNach()` über echte Zwischenänderungen hinweg, siehe
+// Grund je Eintrag) ist eine Lineage-Frage, die `neuNach()` selbst betrifft — breiter
+// genutzt als dieses Tor, > 1 h von einem sicheren Fix entfernt, eigener Roadmap-Schritt.
 import { readFileSync, existsSync, readdirSync, writeFileSync, statSync, mkdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { gzipSync } from 'node:zlib';
@@ -58,9 +68,52 @@ if (schreibe && !/^\d{4}-\d{2}-\d{2}$/.test(heute)) {
   console.error('check:entstehung --schreibe verlangt --datum=YYYY-MM-DD (§2: kein Date.now).');
   process.exit(1);
 }
+// Nur für die Ausnahmelisten-Verfallsprüfung (Betriebslogik der CLI-Hülle, nicht die reine
+// Kernlogik oben) — `--datum` hat Vorrang, sonst der Kalendertag des Laufs (Muster
+// `scripts/check-e2e-flake.ts`: `new Date()` nur am imperativen Rand, nie in einer reinen Funktion).
+const heuteAusnahme = /^\d{4}-\d{2}-\d{2}$/.test(heute) ? heute : new Date().toISOString().slice(0, 10);
 
 const fehler: string[] = [];
 const zeilen: string[] = [];
+
+// ── Leer-Diff-Ausnahmeliste (Muster Flacker-Wächter #779) ─────────────────────
+interface LeerDiffAusnahme {
+  erlass: string; token: string; stand: string; zustand: string;
+  seit: string; grund: string; ablauf: string;
+}
+const LEERDIFF_AUSNAHME_PFAD = 'bibliothek/register/entstehung-leerdiff-ausnahmen.json';
+const LEERDIFF_AUSNAHME_TAGE_MAX = 30;
+const TAG_MS = 86_400_000;
+/** ISO-Tag → UTC-Zeitstempel; `null` bei falscher Form oder Kalenderwert (`2026-02-30`). */
+function isoTagMs(wert: unknown): number | null {
+  if (typeof wert !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(wert)) return null;
+  const ms = Date.parse(`${wert}T00:00:00Z`);
+  if (Number.isNaN(ms)) return null;
+  return new Date(ms).toISOString().slice(0, 10) === wert ? ms : null;
+}
+/** Greift eine Ausnahme für `(erlass, token, stand, zustand)` am Kalendertag `heuteIso`? */
+function leerDiffAusnahmeGueltig(
+  liste: readonly LeerDiffAusnahme[],
+  eintrag: { erlass: string; token: string; stand: string; zustand: string },
+  heuteIso: string,
+): boolean {
+  const heuteMs = isoTagMs(heuteIso);
+  if (heuteMs === null) return false;
+  return liste.some((a) => {
+    if (a.erlass !== eintrag.erlass || a.token !== eintrag.token || a.stand !== eintrag.stand
+      || a.zustand !== eintrag.zustand) return false;
+    if (typeof a.grund !== 'string' || a.grund.trim() === '') return false;
+    const seitMs = isoTagMs(a.seit);
+    const ablaufMs = isoTagMs(a.ablauf);
+    if (seitMs === null || ablaufMs === null) return false;
+    if (ablaufMs < seitMs) return false;
+    if (ablaufMs - seitMs > LEERDIFF_AUSNAHME_TAGE_MAX * TAG_MS) return false;
+    return heuteMs <= ablaufMs;
+  });
+}
+const leerDiffAusnahmen: LeerDiffAusnahme[] = existsSync(LEERDIFF_AUSNAHME_PFAD)
+  ? (JSON.parse(readFileSync(LEERDIFF_AUSNAHME_PFAD, 'utf8')) as LeerDiffAusnahme[])
+  : [];
 
 // ── (1) Deckel je Klasse, immer mit Ist-Wert ───────────────────────────────────
 /** [Bezeichnung, Pfad, Deckel in Bytes, gzip?] — Deckel aus §11.6, Ist-Werte gemessen 11.9.2026. */
@@ -269,6 +322,7 @@ for (const [name, pfad, max, gzip] of DECKEL) {
   let konflikte = 0;
   let staende = 0;
   let leerDiffGeprueft = 0;
+  let leerDiffAusgenommen = 0;
   if (register) {
     for (const f of dateien) {
       const key = f.slice(0, -'.json'.length);
@@ -372,11 +426,21 @@ for (const [name, pfad, max, gzip] of DECKEL) {
         return g;
       };
       for (const v of leerDiffVerletzungen(shard, geltendFuerToken)) {
+        const eintrag = { erlass: key, token: v.token, stand: v.stand, zustand: v.zustand };
+        if (leerDiffAusnahmeGueltig(leerDiffAusnahmen, eintrag, heuteAusnahme)) {
+          leerDiffAusgenommen += 1;
+          zeilen.push(
+            `check:entstehung — Leer-Diff-Ausnahme (befristet, Muster #779): ${key} Token `
+            + `${v.token} @${v.stand} (${v.zustand}) — siehe ${LEERDIFF_AUSNAHME_PFAD}.`,
+          );
+          continue;
+        }
         fehler.push(
           `Synopse ${f}: Alt-Block Token ${v.token} @${v.stand} (${v.zustand}) ist nach der `
           + 'Leser-Vergleichsform OHNE Unterschied zu seinem «Neu» — zwei Normalisierungen, '
           + 'zwei Wahrheiten (§5/§1). Generator neu laufen (npm run entstehung:synopse -- '
-          + '--datum=… --parser-neu="<Grund>").',
+          + '--datum=… --parser-neu="<Grund>"), oder befristete Ausnahme in '
+          + `${LEERDIFF_AUSNAHME_PFAD} eintragen (max. ${LEERDIFF_AUSNAHME_TAGE_MAX} Tage, Muster #779).`,
         );
       }
       leerDiffGeprueft += 1;
@@ -392,7 +456,8 @@ for (const [name, pfad, max, gzip] of DECKEL) {
     + `${bloecke} Alt-Blöcke (${ohneEreignis} ohne Fussnoten-Ereignis, ${konflikte} Fussnoten-Ereignisse ohne `
     + `beobachtete Textänderung — beides angezeigt, nie aufgelöst); grösster Erlass ${groesster[0]} `
     + `${kb(groesster[1])} / ${kb(JE_ERLASS)} (${((groesster[1] / JE_ERLASS) * 100).toFixed(0)} %); `
-    + `Leer-Diff-Wächter (§5, Profil ${NORM_PROFIL}) gegen ${leerDiffGeprueft} Erlass-Korpora geprüft.`,
+    + `Leer-Diff-Wächter (§5, Profil ${NORM_PROFIL}) gegen ${leerDiffGeprueft} Erlass-Korpora geprüft, `
+    + `${leerDiffAusgenommen} befristete Ausnahme(n) (Muster #779, ${LEERDIFF_AUSNAHME_PFAD}).`,
   );
 }
 

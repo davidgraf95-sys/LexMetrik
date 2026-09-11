@@ -5,7 +5,7 @@
     "AHVG": {
       "eli": "cc/63/837_843_843",
       "abgerufen": "2026-09-11",
-      "shardSha": "d907788f54e83efe7d5e8895b5045a166d3725a867587cdd1f31ca07204f5c0b",
+      "shardSha": "be82b861ac16a40ff1b6488ff89e61ca4fed8374a5120eac122827b737849b22",
       "bytes": 97804,
       "schritte": 6,
       "altBloecke": 71,
@@ -50,10 +50,10 @@
     "AHVV": {
       "eli": "cc/63/1185_1183_1185",
       "abgerufen": "2026-09-11",
-      "shardSha": "f18c22bc29d3ea1d235b65f320df9025836930cfd452adec16b59d1dbe4c204a",
-      "bytes": 132083,
+      "shardSha": "b15419b9c6ef51d6727a5254245c2de7884fb7db60f4d328b65875eee5d2e186",
+      "bytes": 133455,
       "schritte": 7,
-      "altBloecke": 127,
+      "altBloecke": 128,
       "staende": [
         {
           "datum": "2021-01-01",
@@ -100,8 +100,8 @@
     "AIG": {
       "eli": "cc/2007/758",
       "abgerufen": "2026-09-11",
-      "shardSha": "bd5bb6901c55dbe0e0272c6bd99a645a0812b53f2251c4cee3d8992a6d3d9395",
-      "bytes": 212686,
+      "shardSha": "0b96d4cff60cbefc176b2faa59e054ddf14bfa9ed9dc4f3339a2407a21314990",
+      "bytes": 212196,
       "schritte": 19,
       "altBloecke": 122,
       "staende": [
@@ -235,7 +235,7 @@
     "AMBV": {
       "eli": "cc/2018/786",
       "abgerufen": "2026-09-11",
-      "shardSha": "83cbdca4400881254ab2c94a1023b50894cbcefe83cdcadd7ffc8a8adf84bb09",
+      "shardSha": "06e51df6a7f17f07d0bdd0f8cbce780abf23416da23cf6c949deecd3a46cd6dc",
       "bytes": 10628,
       "schritte": 6,
       "altBloecke": 6,
@@ -360,7 +360,7 @@
     "ARGV2": {
       "eli": "cc/2000/244",
       "abgerufen": "2026-09-11",
-      "shardSha": "bc72d46138f3b52a68f332d9be32ea1d5b5e2b471160c7dcf3995e5310c41339",
+      "shardSha": "8eb6f1c4ed73dfe9055e0d19ce0d6a33b6ef47af7bbf4819ceb74e877fff7818",
       "bytes": 13373,
       "schritte": 5,
       "altBloecke": 9,
@@ -400,10 +400,10 @@
     "ASYLG": {
       "eli": "cc/1999/358",
       "abgerufen": "2026-09-11",
-      "shardSha": "e0d634eec1e7614b2b4be86f15cc278ec0f8992c36a555fb9225356c97397126",
-      "bytes": 72428,
+      "shardSha": "4c77aca37dbb4a0ff01c1c0848eead0a4ce68196b36d50cb5c5a64c20f1a9768",
+      "bytes": 71491,
       "schritte": 10,
-      "altBloecke": 55,
+      "altBloecke": 54,
       "staende": [
         {
           "datum": "2021-01-01",
@@ -465,7 +465,7 @@
     "ASYLV1": {
       "eli": "cc/1999/359",
       "abgerufen": "2026-09-11",
-      "shardSha": "9815c4cd91f62f4a46a4dd5d7449f18eba5a1aa59d0b5376e9b591d8a132710f",
+      "shardSha": "f823b4496aa24d07024313fee1b06cce25d8d1304f247647888cb6b051e0ec74",
       "bytes": 27307,
       "schritte": 13,
       "altBloecke": 14,
@@ -545,7 +545,7 @@
     "ASYLV2": {
       "eli": "cc/1999/360",
       "abgerufen": "2026-09-11",
-      "shardSha": "0413c9c39df14c9c19d94c3ea28d4ff1535eeca1598a9d92a043246a72c63fe3",
+      "shardSha": "ad6a769c57745a63775aef7bad55dfd7095a8d40df9cfe91eac9fd7cf6652ae8",
       "bytes": 41287,
       "schritte": 8,
       "altBloecke": 19,
@@ -725,7 +725,7 @@
     "AVIG": {
       "eli": "cc/1982/2184_2184_2184",
       "abgerufen": "2026-09-11",
-      "shardSha": "d895ec98c0d18af77e9b9a8afa5653031879506e1c1d9089a2e02764d726e091",
+      "shardSha": "eafbb617f2412da03f201a8a09b6c7da1043296f511dbd7ef90787fb799a5c8c",
       "bytes": 93644,
       "schritte": 10,
       "altBloecke": 49,
@@ -790,10 +790,10 @@
     "AVIV": {
       "eli": "cc/1983/1205_1205_1205",
       "abgerufen": "2026-09-11",
-      "shardSha": "15d50857306cd39cb14752f27720a1847f6bb1b1b6de6def5c054768734bc463",
-      "bytes": 110359,
+      "shardSha": "a6ed0014fb0ab37f605e014f40ed8b78c47af7f1e1374faaf316b9c71f2684ab",
+      "bytes": 108853,
       "schritte": 13,
-      "altBloecke": 108,
+      "altBloecke": 106,
       "staende": [
         {
           "datum": "2021-01-01",
@@ -870,7 +870,7 @@
     "AVO": {
       "eli": "cc/2005/735",
       "abgerufen": "2026-09-11",
-      "shardSha": "253e5ae41051f750d7a9cb0545899741e1bc7f02d24ebc7b8f9884fdc82bb247",
+      "shardSha": "270951b3cd4ff107b898acf697a3a59f1de03d31517902f218ac3df4d62d5cbe",
       "bytes": 93262,
       "schritte": 4,
       "altBloecke": 93,
@@ -905,7 +905,7 @@
     "BANKG": {
       "eli": "cc/51/117_121_129",
       "abgerufen": "2026-09-11",
-      "shardSha": "857d5bab58f58bcbf337327579ea0c7676015068c440d0c617fb7ec472ad0826",
+      "shardSha": "774123d18dcc922b6c322968d17ca0a09e0e1f07e519783d9cb2a92b1bbf9a81",
       "bytes": 34061,
       "schritte": 2,
       "altBloecke": 29,
@@ -930,7 +930,7 @@
     "BANKV": {
       "eli": "cc/2014/273",
       "abgerufen": "2026-09-11",
-      "shardSha": "f6a2271bcb17e1c4cfec2a3190a6ce4973738921be5024af4ef51862b009e36c",
+      "shardSha": "d52a57f6725e3079ccf5147d6301a380e5691b23c73d9cac705ee8e1b5b4aae6",
       "bytes": 14602,
       "schritte": 3,
       "altBloecke": 10,
@@ -960,7 +960,7 @@
     "BBG": {
       "eli": "cc/2003/674",
       "abgerufen": "2026-09-11",
-      "shardSha": "cc3c14b019da98882906824815d610a654bfdd4ad82e3b4c27eb52a3a230d5de",
+      "shardSha": "0a486e8668740d53df8bb07fed8cd9fe3340a06fd909a210ffbe53634a54a38d",
       "bytes": 9524,
       "schritte": 4,
       "altBloecke": 7,
@@ -1045,7 +1045,7 @@
     "BETMG": {
       "eli": "cc/1952/241_241_245",
       "abgerufen": "2026-09-11",
-      "shardSha": "62d1aba603b51d2c9f759efd4af3f850714ca80f35bc9882a3e206cf9f13a181",
+      "shardSha": "778a3bb05579a1aad2d634a03bdee94fd9ce60dcdd8cc83da9fb7652e4c25ecd",
       "bytes": 26368,
       "schritte": 4,
       "altBloecke": 21,
@@ -1080,7 +1080,7 @@
     "BETMKV": {
       "eli": "cc/2011/362",
       "abgerufen": "2026-09-11",
-      "shardSha": "75ea0283900cc6535e5286cacfba6a0c6026ccb93014746635abb4646a3f30f0",
+      "shardSha": "8a9e6f65bf73505c2f784b761d7305b236593d7ca67c87f15aa78fd23648e952",
       "bytes": 51156,
       "schritte": 2,
       "altBloecke": 52,
@@ -1170,10 +1170,10 @@
     "BGERR": {
       "eli": "cc/2006/834",
       "abgerufen": "2026-09-11",
-      "shardSha": "a8364187ae242b033285e7834457cd00051ae1177a7ca26b4fede339e4b5d419",
-      "bytes": 31461,
+      "shardSha": "fb4863bbf1522576d6291bc69dad228062ff86250128f4915d722cd552446c7c",
+      "bytes": 34864,
       "schritte": 7,
-      "altBloecke": 26,
+      "altBloecke": 28,
       "staende": [
         {
           "datum": "2021-01-01",
@@ -1245,10 +1245,10 @@
     "BGG": {
       "eli": "cc/2006/218",
       "abgerufen": "2026-09-11",
-      "shardSha": "4026630b32cf6f07726b9cb9e6aaf0de6a858e88447e6d4fa9c724cfe737a8b4",
-      "bytes": 14626,
+      "shardSha": "da95e2799cac1838b7853ae6e82fdad8c2c0fd587ddecdf535a7ff8802897930",
+      "bytes": 33771,
       "schritte": 7,
-      "altBloecke": 9,
+      "altBloecke": 12,
       "staende": [
         {
           "datum": "2021-01-01",
@@ -1410,7 +1410,7 @@
     "BPV": {
       "eli": "cc/2001/319",
       "abgerufen": "2026-09-11",
-      "shardSha": "7d30576e66c754d67697ab95e00ca76cbe9d1a3102dabe72c05801fc8e9f3776",
+      "shardSha": "0a6dde24f070718972415f343ab53c21766353d785a2b1c10b65b46ab9aa8c3c",
       "bytes": 89821,
       "schritte": 9,
       "altBloecke": 57,
@@ -1470,7 +1470,7 @@
     "BV": {
       "eli": "cc/1999/404",
       "abgerufen": "2026-09-11",
-      "shardSha": "73dbffe2d8d3604c107361bc5b730fce4a8954e49a0c657100859e9a3d13ee8d",
+      "shardSha": "35350b07d2d50f01f32f60900ffa78f454fd7a8fa499c1a2a0f388863eb3fe83",
       "bytes": 41051,
       "schritte": 5,
       "altBloecke": 9,
@@ -1600,10 +1600,10 @@
     "BVV_2": {
       "eli": "cc/1984/543_543_543",
       "abgerufen": "2026-09-11",
-      "shardSha": "18f4c4fb933d720548c3d5425ec4f9b1532854291de8174a07d76a7126604e4d",
-      "bytes": 33089,
+      "shardSha": "97e7ef2e32ba61fb7c7fefc10fff260a87ac43d0a8dd48cd0e66d1c70385f18c",
+      "bytes": 34254,
       "schritte": 5,
-      "altBloecke": 23,
+      "altBloecke": 24,
       "staende": [
         {
           "datum": "2021-01-01",
@@ -1640,10 +1640,10 @@
     "CHEMRRV": {
       "eli": "cc/2005/478",
       "abgerufen": "2026-09-11",
-      "shardSha": "901c2eaf2f436b607eee85d550a67ca38d1c23deb5c611ebc5131212fa3c8a63",
-      "bytes": 36742,
+      "shardSha": "769eb0ae15bf3cd1a25b0f41ad3d471d92a73846c0b0c7f4c2ddec5f9d74cfc7",
+      "bytes": 38765,
       "schritte": 24,
-      "altBloecke": 33,
+      "altBloecke": 36,
       "staende": [
         {
           "datum": "2021-01-01",
@@ -1775,10 +1775,10 @@
     "CHEMV": {
       "eli": "cc/2015/366",
       "abgerufen": "2026-09-11",
-      "shardSha": "deb0031797489638b95408701d8f17e955f7734f971d608595da684df4bdeaed",
-      "bytes": 60856,
+      "shardSha": "f038f3ff1702b107e5909d52ef320ffdcdb9c69b5e7ae85c0dddaf933d98fd75",
+      "bytes": 85450,
       "schritte": 14,
-      "altBloecke": 24,
+      "altBloecke": 31,
       "staende": [
         {
           "datum": "2021-09-01",
@@ -1880,7 +1880,7 @@
     "CO2_GESETZ": {
       "eli": "cc/2012/855",
       "abgerufen": "2026-09-11",
-      "shardSha": "299c05660630e04c585496cb4ac069a7109c7fb793190a95b304c86c1aa878a8",
+      "shardSha": "d8ffa42a9a0990e6427042330d5da54f8fe2d793f55fccbc1b3b0df2bd1ec0c4",
       "bytes": 56358,
       "schritte": 2,
       "altBloecke": 56,
@@ -1905,7 +1905,7 @@
     "DBG": {
       "eli": "cc/1991/1184_1184_1184",
       "abgerufen": "2026-09-11",
-      "shardSha": "a5f6c3f1fed81bb76bf3fd222c2add65c3f5fd317001bf98b44abb230f8ca5b2",
+      "shardSha": "559ec603e9950e7f5e4e6c45e91db0a06492d49c68056c3d904e86a8a81f8ddc",
       "bytes": 95567,
       "schritte": 9,
       "altBloecke": 40,
@@ -2075,7 +2075,7 @@
     "EBG": {
       "eli": "cc/1958/335_341_347",
       "abgerufen": "2026-09-11",
-      "shardSha": "378dfc93527945104ff9e2fb5d2faf3f1af69120a8e8f601a601864eb483ac9b",
+      "shardSha": "7f5c5923cbd5ae4fc97580a1945c1fbaa4908e498cf3491f3e2cc440dee44c22",
       "bytes": 36429,
       "schritte": 4,
       "altBloecke": 33,
@@ -2110,7 +2110,7 @@
     "ELG": {
       "eli": "cc/2007/804",
       "abgerufen": "2026-09-11",
-      "shardSha": "0f5b74e79415eab217e559fa9c37727557a909d7415ec4af13b89f82c88c1d19",
+      "shardSha": "ad8eb189d95f89f057bae0c318b3bee92720a055dac527d57358451b1995b59f",
       "bytes": 38862,
       "schritte": 5,
       "altBloecke": 13,
@@ -2215,7 +2215,7 @@
     "ENG": {
       "eli": "cc/2017/762",
       "abgerufen": "2026-09-11",
-      "shardSha": "fe687834238037fcf50a89e9e5ce5336eb74fe1abdb9aafac217ae19c14c7514",
+      "shardSha": "1cec38c2453443bcbeb6dfe1bc4df7e17ee44a4b5d32c6c2d0537608f7be5698",
       "bytes": 77055,
       "schritte": 10,
       "altBloecke": 55,
@@ -2380,7 +2380,7 @@
     "EPG": {
       "eli": "cc/2015/297",
       "abgerufen": "2026-09-11",
-      "shardSha": "7d9aeeaca6087d910dcb31ba28f3b89998b0e2cdd92a49ed828cd997efc969be",
+      "shardSha": "1a45e33cd0a9d581dd564f7f31750f4a7980553f8af25c334503e274c384f572",
       "bytes": 22854,
       "schritte": 5,
       "altBloecke": 11,
@@ -2420,10 +2420,10 @@
     "EPV": {
       "eli": "cc/2015/298",
       "abgerufen": "2026-09-11",
-      "shardSha": "9e10e14d264d69ec73b58a67ca694086890b8ff526b3079311342668e67e11fb",
-      "bytes": 92815,
+      "shardSha": "42e23208a2e5cc51aeaaa02cc570e0e97ff8c9cd88c97f67176d255203611e5a",
+      "bytes": 94218,
       "schritte": 20,
-      "altBloecke": 46,
+      "altBloecke": 47,
       "staende": [
         {
           "datum": "2021-01-04",
@@ -2535,7 +2535,7 @@
     "ERV": {
       "eli": "cc/2012/629",
       "abgerufen": "2026-09-11",
-      "shardSha": "ece29ad46fc6fbda4eec2a4e3b10ff1d10a7734edbb381372e6279bb8960b3d5",
+      "shardSha": "07d992f3b0d1333275a0df9679b7fbe00fbc77ecc183feb9c785633aad661ec2",
       "bytes": 117888,
       "schritte": 5,
       "altBloecke": 110,
@@ -2655,10 +2655,10 @@
     "FAV": {
       "eli": "cc/2016/24",
       "abgerufen": "2026-09-11",
-      "shardSha": "f8e0055d5e4e8e56403978ba064f6ad5701f6a0ac3d648f6eea95ab3dcd74c99",
-      "bytes": 31990,
+      "shardSha": "908c768db62e6595ff31d304f6768c4c0cdf93685acff2cc5c70c206859a7743",
+      "bytes": 37559,
       "schritte": 5,
-      "altBloecke": 19,
+      "altBloecke": 20,
       "staende": [
         {
           "datum": "2021-01-01",
@@ -2695,7 +2695,7 @@
     "FDV": {
       "eli": "cc/2007/166",
       "abgerufen": "2026-09-11",
-      "shardSha": "6c0ac5dd9a7c36de2fa62d742c6306d6320bd19af331a1e098d055a6aecc6f65",
+      "shardSha": "6814091f538a81245ad997b485d55d7eefe62c48b673c75a9a9b619574be4cf4",
       "bytes": 44799,
       "schritte": 10,
       "altBloecke": 31,
@@ -2760,10 +2760,10 @@
     "FIDLEG": {
       "eli": "cc/2019/758",
       "abgerufen": "2026-09-11",
-      "shardSha": "538bc693bde641afd5b7e6a6d3412669a036d073da062f18afe7404a07d9554c",
-      "bytes": 4945,
+      "shardSha": "92eb3154f6b19ff8ba46ec80e6991f00e00c00926d2a05111f41686c31ec37ff",
+      "bytes": 8082,
       "schritte": 2,
-      "altBloecke": 3,
+      "altBloecke": 4,
       "staende": [
         {
           "datum": "2021-02-01",
@@ -2870,10 +2870,10 @@
     "FINFRAV_FINMA": {
       "eli": "cc/2015/855",
       "abgerufen": "2026-09-11",
-      "shardSha": "eb7c21e4d901538fe70e7ba7b54c2bf5720c2f3e8ecbf5a5ed326bf523edcbd6",
-      "bytes": 3200,
+      "shardSha": "76f2ae7ce1a9b787008e56c2193df7c881ef451123dc6ac9ca601e43aa27d50c",
+      "bytes": 6865,
       "schritte": 2,
-      "altBloecke": 1,
+      "altBloecke": 2,
       "staende": [
         {
           "datum": "2021-01-01",
@@ -2895,7 +2895,7 @@
     "FINIG": {
       "eli": "cc/2018/801",
       "abgerufen": "2026-09-11",
-      "shardSha": "cb7e911fe75068277108a462f878d9e40f81fbc917c4999562d6e0cf9d739d3c",
+      "shardSha": "8e8f87479242bf3ab69152491d3e6954005d9aa4a6117c609032add5e37739dc",
       "bytes": 5410,
       "schritte": 2,
       "altBloecke": 6,
@@ -2920,7 +2920,7 @@
     "FINIV": {
       "eli": "cc/2019/763",
       "abgerufen": "2026-09-11",
-      "shardSha": "2e9082bd908e401682c7c2f2a241485de617261222c8569b43bbe084db6e661b",
+      "shardSha": "bdb9d01525bb35e366130bda2dd6356cbdbd85047ef830e68b78a8eb98a4b544",
       "bytes": 14938,
       "schritte": 4,
       "altBloecke": 9,
@@ -2990,10 +2990,10 @@
     "FINMA_GEBV": {
       "eli": "cc/2008/749",
       "abgerufen": "2026-09-11",
-      "shardSha": "d00f05dff9d30718e9b49482fa9195ecdf1035bfd35aa36862d849aa1065c47f",
-      "bytes": 15126,
+      "shardSha": "ed4b9ae01a1448330280796b36f23879877bb717102da85980d7280281ab4857",
+      "bytes": 17869,
       "schritte": 3,
-      "altBloecke": 11,
+      "altBloecke": 12,
       "staende": [
         {
           "datum": "2021-08-01",
@@ -3215,7 +3215,7 @@
     "GWG": {
       "eli": "cc/1998/892_892_892",
       "abgerufen": "2026-09-11",
-      "shardSha": "2c8f080485ec62cffd45aba4538afc1be63d412d2990fe92cc4d7f8695542c68",
+      "shardSha": "667e072131822f63b33076f80ddd463210b315ddbe0ade75e829bff8200845d0",
       "bytes": 56759,
       "schritte": 6,
       "altBloecke": 39,
@@ -3260,10 +3260,10 @@
     "GWV_FINMA": {
       "eli": "cc/2015/390",
       "abgerufen": "2026-09-11",
-      "shardSha": "0f6dcce88e703ef208e1c5b2fb4cbdd5e1a260ce26e1e416c7f988e6cd260597",
-      "bytes": 22072,
+      "shardSha": "c68ba4213c3fc062c7e08033b381822789f10e9b43797537e5fa63e9eb08a1b6",
+      "bytes": 25679,
       "schritte": 1,
-      "altBloecke": 19,
+      "altBloecke": 20,
       "staende": [
         {
           "datum": "2021-01-01",
@@ -3350,7 +3350,7 @@
     "HMG": {
       "eli": "cc/2001/422",
       "abgerufen": "2026-09-11",
-      "shardSha": "8cc6e8c63f596531cd601dfb369d4307b9ff114233875816d80d30f80dbd3922",
+      "shardSha": "17c551fed03522eb9ced6f65444e0bdaf1401669b7510de7c8000a074086989a",
       "bytes": 18621,
       "schritte": 5,
       "altBloecke": 10,
@@ -3390,10 +3390,10 @@
     "HREGV": {
       "eli": "cc/2007/686",
       "abgerufen": "2026-09-11",
-      "shardSha": "c20e9f4ade57720f17bcdcf05f51a653d28a0c421cab30ced71311e3c005322d",
-      "bytes": 109225,
+      "shardSha": "0d6e26608cbe2d2bfcf32a0df2e0e88b3ea118db7d8ba0b15e52def2fd9f2a34",
+      "bytes": 113372,
       "schritte": 6,
-      "altBloecke": 65,
+      "altBloecke": 67,
       "staende": [
         {
           "datum": "2021-01-01",
@@ -3470,7 +3470,7 @@
     "IPRG": {
       "eli": "cc/1988/1776_1776_1776",
       "abgerufen": "2026-09-11",
-      "shardSha": "2da6f2c1aee08e558695a6c9c82f3b46d9a4777d291ee396edbcc856d5bd59c7",
+      "shardSha": "1b74e8f85bc3e01ad3825023920581dde0defd23c4fa5cd464d243cb932e0b11",
       "bytes": 30396,
       "schritte": 6,
       "altBloecke": 37,
@@ -3515,7 +3515,7 @@
     "IRSG": {
       "eli": "cc/1982/846_846_846",
       "abgerufen": "2026-09-11",
-      "shardSha": "a1f646ffdd31f2673ec8fd57820254999a46be8ec9ef22c37c2354a0edfc85fd",
+      "shardSha": "152fd29208827cdbcb21bb00837bd83a5cbd95b3c8ec2043f40568b8d09285d7",
       "bytes": 43592,
       "schritte": 3,
       "altBloecke": 43,
@@ -3565,7 +3565,7 @@
     "IVG": {
       "eli": "cc/1959/827_857_845",
       "abgerufen": "2026-09-11",
-      "shardSha": "e6bb06aec60bc40216e3c887194e743f9d921ee501bdc0e8218855c375ee5b0d",
+      "shardSha": "b6880eb6a046d312fb0f5bd28919b405636501a988e426c85a950b35ee730cee",
       "bytes": 83942,
       "schritte": 6,
       "altBloecke": 64,
@@ -3610,7 +3610,7 @@
     "IVV": {
       "eli": "cc/1961/29_29_29",
       "abgerufen": "2026-09-11",
-      "shardSha": "0ef764206eda4454158de641798eacaf69a65c47a22e92983bcd748b39bf2ff5",
+      "shardSha": "7732467d6ba196ff6075f4b948a4f09f729fa4bfb4d60edbd66d6a3ddc3c86ae",
       "bytes": 106174,
       "schritte": 8,
       "altBloecke": 105,
@@ -3715,7 +3715,7 @@
     "KAG": {
       "eli": "cc/2006/822",
       "abgerufen": "2026-09-11",
-      "shardSha": "bc6d95a339318c1c96786f8ba7a8f73e472c1ce69f7170c2a078e9041f356305",
+      "shardSha": "9631f8a6bca7dde51454542c6f42039b435d569665f7def0f1266c12d4c48685",
       "bytes": 25348,
       "schritte": 1,
       "altBloecke": 20,
@@ -3780,10 +3780,10 @@
     "KLV": {
       "eli": "cc/1995/4964_4964_4964",
       "abgerufen": "2026-09-11",
-      "shardSha": "0fdaf867adf6e1c445842a5c9e16cf0d0b460e5d1abecee62731b8bbbe46822f",
-      "bytes": 95252,
+      "shardSha": "acb14a5c8053d24add1a4c243e1344d19eeb5c6233441addc251f7dd95840de9",
+      "bytes": 160751,
       "schritte": 28,
-      "altBloecke": 47,
+      "altBloecke": 72,
       "staende": [
         {
           "datum": "2021-01-01",
@@ -3960,7 +3960,7 @@
     "KVG": {
       "eli": "cc/1995/1328_1328_1328",
       "abgerufen": "2026-09-11",
-      "shardSha": "a667da90bd40e621dd53538d45d4fde4374c005ed0e3ebfe8856004f69ac4315",
+      "shardSha": "ef87583e9cd320c537962fac78e4b0b296bb0b7d8a9caf8cd7e9df3d6e62fff6",
       "bytes": 149574,
       "schritte": 15,
       "altBloecke": 78,
@@ -4050,7 +4050,7 @@
     "KVV": {
       "eli": "cc/1995/3867_3867_3867",
       "abgerufen": "2026-09-11",
-      "shardSha": "93d60b4d1adc9cc0550a6fda325402bb1d2881c63f34f82b6918003fec8e4fad",
+      "shardSha": "e5a24a9e49ee456f66ebe3ca6031b75de413e442de4c056e034b9327db7e3478",
       "bytes": 258971,
       "schritte": 18,
       "altBloecke": 181,
@@ -4155,7 +4155,7 @@
     "LFG": {
       "eli": "cc/1950/471_491_479",
       "abgerufen": "2026-09-11",
-      "shardSha": "c44c0f2053a296547e934754ebb1e5a436e51af805a921297273f92422e2b439",
+      "shardSha": "fb4fcb42cf44b0c014b0fb7938a1dd7543a8a9af46c533e79f15d707429df996",
       "bytes": 27979,
       "schritte": 8,
       "altBloecke": 24,
@@ -4210,7 +4210,7 @@
     "LMG": {
       "eli": "cc/2017/62",
       "abgerufen": "2026-09-11",
-      "shardSha": "991a48028da8a5ffd4808440c7f68c495ad22f655f543d5aeaed890159ab6c9c",
+      "shardSha": "fd709203f269bfe16ae6417c6155eb9bcb65387304d1eb46b2afa29e50364f29",
       "bytes": 7351,
       "schritte": 2,
       "altBloecke": 2,
@@ -4235,7 +4235,7 @@
     "LRV": {
       "eli": "cc/1986/208_208_208",
       "abgerufen": "2026-09-11",
-      "shardSha": "f14b5ab361bb29fa384e600cc12c463b776627d07f79d683d40f47491233a952",
+      "shardSha": "705ed12b5527788f49e9319c1b6a17226e101049b8faf49b46ad2cf1dfbc7044",
       "bytes": 14525,
       "schritte": 8,
       "altBloecke": 10,
@@ -4290,7 +4290,7 @@
     "LSV": {
       "eli": "cc/1987/338_338_338",
       "abgerufen": "2026-09-11",
-      "shardSha": "62a287997cdff3390469dd5539335deeb156aa23d992bd030c4674f4777e0d44",
+      "shardSha": "1b144a66d8d0e8435a7f17811b3124b5534dc0d8f538076c122fb754fb272c6e",
       "bytes": 28890,
       "schritte": 4,
       "altBloecke": 27,
@@ -4325,7 +4325,7 @@
     "MEPV": {
       "eli": "cc/2020/552",
       "abgerufen": "2026-09-11",
-      "shardSha": "fc55d18cb8378768f201a04cbace95f4cdec5a14850666c2ee3b1f92c5fc57d7",
+      "shardSha": "38e6e4409c2d11245dce12adc8cc70d127608eeb3db27b3a5e2543c3876dcb7c",
       "bytes": 54780,
       "schritte": 4,
       "altBloecke": 44,
@@ -4360,7 +4360,7 @@
     "MG": {
       "eli": "cc/1995/4093_4093_4093",
       "abgerufen": "2026-09-11",
-      "shardSha": "aa0c27edc69f7e4c3022e3d2499285838159a6bc1224735393fc8c4d60688999",
+      "shardSha": "7be26f0a7f4ec686c80f6f7ef31bf91c6a1565a78856add30d2ce0e7184ddd76",
       "bytes": 99851,
       "schritte": 7,
       "altBloecke": 80,
@@ -4495,10 +4495,10 @@
     "MSTG": {
       "eli": "cc/43/359_375_369",
       "abgerufen": "2026-09-11",
-      "shardSha": "7f8b1bdf07ff577601ffbe4c4e1e95a5f298e3f78a57468294c416ac137edd2c",
-      "bytes": 86179,
+      "shardSha": "2412be0e2e72d827377d30492b4264ece00cd792f21232eb6da7c076c64657a7",
+      "bytes": 89219,
       "schritte": 8,
-      "altBloecke": 73,
+      "altBloecke": 74,
       "staende": [
         {
           "datum": "2021-07-01",
@@ -4550,10 +4550,10 @@
     "MSTP": {
       "eli": "cc/1979/1059_1059_1059",
       "abgerufen": "2026-09-11",
-      "shardSha": "a4f4069b27f99847b93bad4f5fe09294f7faa41e0b94a224363e2297f6ee7815",
-      "bytes": 21892,
+      "shardSha": "ef53485ab56eff19366cba7898f5854acb597201a12a3ac745da2ceeadbc05aa",
+      "bytes": 20211,
       "schritte": 6,
-      "altBloecke": 15,
+      "altBloecke": 14,
       "staende": [
         {
           "datum": "2022-07-01",
@@ -4595,7 +4595,7 @@
     "MVG": {
       "eli": "cc/1993/3043_3043_3043",
       "abgerufen": "2026-09-11",
-      "shardSha": "680f634e38264d0403bab724ec3a1e7d0e5ca6eb2b5edee2adce46912ba2639a",
+      "shardSha": "a7549b7514ffadbaad56f2c75523f808c3b1864bbbc1d66d597adbc5e120e7b2",
       "bytes": 20316,
       "schritte": 4,
       "altBloecke": 14,
@@ -4675,10 +4675,10 @@
     "MWSTG": {
       "eli": "cc/2009/615",
       "abgerufen": "2026-09-11",
-      "shardSha": "8c8c97a7ccf092ee9a552c140ca1d26261c10398df101a3877f8d32c99516299",
-      "bytes": 74530,
+      "shardSha": "ded8e98b7aa8725f714446160ea6ecd593a0a23351822003fdb2ed6e76e7fc48",
+      "bytes": 80586,
       "schritte": 6,
-      "altBloecke": 34,
+      "altBloecke": 36,
       "staende": [
         {
           "datum": "2022-01-01",
@@ -4720,10 +4720,10 @@
     "MWSTV": {
       "eli": "cc/2009/828",
       "abgerufen": "2026-09-11",
-      "shardSha": "59a90ff592cd1bd5621fc65c82669aaee20f22de4f89e653403381ea36a069d7",
-      "bytes": 79327,
+      "shardSha": "1dd77a3ec19b029fc83f0a799b2b4c03c2706501f8bca1ee2b27b674cfead6dd",
+      "bytes": 81623,
       "schritte": 10,
-      "altBloecke": 61,
+      "altBloecke": 62,
       "staende": [
         {
           "datum": "2021-01-19",
@@ -4870,8 +4870,8 @@
     "OR": {
       "eli": "cc/27/317_321_377",
       "abgerufen": "2026-09-11",
-      "shardSha": "3dad32bd2953869fd358064306fc2ad87be3560f2f79deb16e7c8f087fcf147c",
-      "bytes": 237804,
+      "shardSha": "b345cdd2dba66cbe33d5b45231969355fe1ee97d508be0a96b995084b6e37e6f",
+      "bytes": 239340,
       "schritte": 12,
       "altBloecke": 267,
       "staende": [
@@ -4945,10 +4945,10 @@
     "PARLG": {
       "eli": "cc/2003/510",
       "abgerufen": "2026-09-11",
-      "shardSha": "62218a5fddb4a45e35f56452505655a294f9fb23ebbd7ca1520da28cc9713049",
-      "bytes": 34623,
+      "shardSha": "18d01d33c9750130e425c862285a2a1c2d4c4b6ecbb38686f2838d94d624b3c0",
+      "bytes": 33646,
       "schritte": 13,
-      "altBloecke": 24,
+      "altBloecke": 23,
       "staende": [
         {
           "datum": "2021-10-02",
@@ -5170,10 +5170,10 @@
     "RBUE": {
       "eli": "cc/1993/2659_2659_2659",
       "abgerufen": "2026-09-11",
-      "shardSha": "a56194cf8a1b496e8a8b94fbda0eee658223b7160b49ce36f087965fc9edf6a1",
-      "bytes": 8308,
+      "shardSha": "4fac42f69d502f7e9a80ca3404effa0fde859cdeab8bf76260ab7adcdc4d175c",
+      "bytes": 11409,
       "schritte": 1,
-      "altBloecke": 6,
+      "altBloecke": 7,
       "staende": [
         {
           "datum": "2021-09-24",
@@ -5230,7 +5230,7 @@
     "RPG": {
       "eli": "cc/1979/1573_1573_1573",
       "abgerufen": "2026-09-11",
-      "shardSha": "2d7eb4c8196db8736c39a2cef6e7aefc2843017cf3bc6da49e2f716025a71205",
+      "shardSha": "045f1d6d1ed6c13453e857bcfc23c8ac502cc36914ca780c53a2938b730e727a",
       "bytes": 8988,
       "schritte": 2,
       "altBloecke": 8,
@@ -5455,7 +5455,7 @@
     "SSV": {
       "eli": "cc/1979/1961_1961_1961",
       "abgerufen": "2026-09-11",
-      "shardSha": "3cfb5a4dda5f638c19075a9cf772f6de5fec69fdb19105ac215e2137128fa745",
+      "shardSha": "a045da1f21ed20efa1cdb148aa0b4db34051e16980a1f323b7e9b1c7535ffe57",
       "bytes": 122043,
       "schritte": 6,
       "altBloecke": 62,
@@ -5545,10 +5545,10 @@
     "STG": {
       "eli": "cc/1974/11_11_11",
       "abgerufen": "2026-09-11",
-      "shardSha": "340dedf98cef26a8b1a2569be49fc42dd7983c6a45c688c9054e2ce36b02e09b",
-      "bytes": 3821,
+      "shardSha": "bdd254220d6b7401f97a7a59ba89125e1a0833647383922a8bb85edb2d15c26b",
+      "bytes": 12310,
       "schritte": 2,
-      "altBloecke": 2,
+      "altBloecke": 4,
       "staende": [
         {
           "datum": "2022-01-01",
@@ -5570,10 +5570,10 @@
     "STGB": {
       "eli": "cc/54/757_781_799",
       "abgerufen": "2026-09-11",
-      "shardSha": "381d46eab69a1932ae51d66e411236800b69c7182a7922cd2419df7dcca72443",
-      "bytes": 192960,
+      "shardSha": "4a99918ee57043496c4a334b93292050bdce00b39697099c56065ff7da617756",
+      "bytes": 196010,
       "schritte": 15,
-      "altBloecke": 147,
+      "altBloecke": 148,
       "staende": [
         {
           "datum": "2021-07-01",
@@ -5660,7 +5660,7 @@
     "STHG": {
       "eli": "cc/1991/1256_1256_1256",
       "abgerufen": "2026-09-11",
-      "shardSha": "82d61f2b0f461b1a4d38ad6582be3f0c4aa7b055316d754a51913cddc973bee4",
+      "shardSha": "db3ef5d64aa4210637f2e7d7ad605172cbc45de1bada237db77741c9edcbbf4c",
       "bytes": 60513,
       "schritte": 6,
       "altBloecke": 41,
@@ -5765,10 +5765,10 @@
     "SVG": {
       "eli": "cc/1959/679_705_685",
       "abgerufen": "2026-09-11",
-      "shardSha": "44e2c73fb21ef4ffe3e5cf6558a16b7e72f5340e1095b428cb3977bb0ede0d70",
-      "bytes": 43095,
+      "shardSha": "83086548b95128fffeaa180c93c94dd2df5d91a545ca12425ed91df79c2a0b74",
+      "bytes": 44983,
       "schritte": 7,
-      "altBloecke": 23,
+      "altBloecke": 24,
       "staende": [
         {
           "datum": "2023-07-01",
@@ -5970,7 +5970,7 @@
     "USG": {
       "eli": "cc/1984/1122_1122_1122",
       "abgerufen": "2026-09-11",
-      "shardSha": "daf79a485cb48f9ef23bcd86586ad65f873d1990307a70d921fc243cd5d1634f",
+      "shardSha": "c6ea5238047d49345f52a37af54fd76c0cbfa2bb3e5f41cdb95f4fd67ed07814",
       "bytes": 55638,
       "schritte": 6,
       "altBloecke": 32,
@@ -6015,7 +6015,7 @@
     "UVG": {
       "eli": "cc/1982/1676_1676_1676",
       "abgerufen": "2026-09-11",
-      "shardSha": "295f89f6e9a296316ee071d2f276746d66084b8d21bd3327c7fae4f6af67060d",
+      "shardSha": "3bc4fab4e3499d9d8e97236b840a4fed18943991a7fb070fb011a4e80545d1d7",
       "bytes": 35621,
       "schritte": 6,
       "altBloecke": 21,
@@ -6125,10 +6125,10 @@
     "UWG": {
       "eli": "cc/1988/223_223_223",
       "abgerufen": "2026-09-11",
-      "shardSha": "93b1fc176f85230fd82d6ed3eba85a7ad85d50ea440738dee809fa01a54cc0b9",
-      "bytes": 3811,
+      "shardSha": "8a46937e7913dfc9d6b95e65d6d4ea37e38c5d4710c0fba6e1dbd6e48a3e6f8b",
+      "bytes": 11003,
       "schritte": 4,
-      "altBloecke": 1,
+      "altBloecke": 2,
       "staende": [
         {
           "datum": "2021-01-01",
@@ -6185,10 +6185,10 @@
     "VAM": {
       "eli": "cc/2018/588",
       "abgerufen": "2026-09-11",
-      "shardSha": "329f09c8083618081520f48b3cd1a40af132d2def27c4f57fe10a07e1502cad5",
-      "bytes": 19191,
+      "shardSha": "c322a353f2d42093e9b40db58e6d2ba6606e53f7f92545e92bee750d9daef1fe",
+      "bytes": 15711,
       "schritte": 11,
-      "altBloecke": 15,
+      "altBloecke": 12,
       "staende": [
         {
           "datum": "2021-02-01",
@@ -6255,10 +6255,10 @@
     "VEV": {
       "eli": "cc/2018/493",
       "abgerufen": "2026-09-11",
-      "shardSha": "560fcd09de3418ad811a676441eaf05b60484a2c49d3ff9c3850924135f8169a",
-      "bytes": 126829,
+      "shardSha": "b6bf2cbcf39d918583d51d6e37532c6d11aeadf7db1aac884f0eeaedd41569f5",
+      "bytes": 131336,
       "schritte": 23,
-      "altBloecke": 61,
+      "altBloecke": 63,
       "staende": [
         {
           "datum": "2021-01-01",
@@ -6415,10 +6415,10 @@
     "VGG": {
       "eli": "cc/2006/352",
       "abgerufen": "2026-09-11",
-      "shardSha": "e33ddb21d0f7c51b283115a63c92fea6a7b71ee01e7325cdcc28f0f07e4f4595",
-      "bytes": 9768,
+      "shardSha": "b83d7a60b382e0edfa05b050170359620444297b8dca7d475900c57392f363a1",
+      "bytes": 11617,
       "schritte": 5,
-      "altBloecke": 4,
+      "altBloecke": 5,
       "staende": [
         {
           "datum": "2021-01-01",
@@ -6495,10 +6495,10 @@
     "VIL": {
       "eli": "cc/1994/3050_3050_3050",
       "abgerufen": "2026-09-11",
-      "shardSha": "0b205992a280348e29acb24d8a1a10178363ca9a9d44a8f6f0b8ec8576a9c268",
-      "bytes": 7417,
+      "shardSha": "3cdc830693e7f63d8e466ef15ce9dad87c30135d0e799763256a63194f8e334b",
+      "bytes": 9636,
       "schritte": 5,
-      "altBloecke": 4,
+      "altBloecke": 5,
       "staende": [
         {
           "datum": "2021-01-01",
@@ -6575,7 +6575,7 @@
     "VMWG": {
       "eli": "cc/1990/835_835_835",
       "abgerufen": "2026-09-11",
-      "shardSha": "b96368d736ed9c156825fe0747525e2a92d7a9ddabca40a694952a9ca6086028",
+      "shardSha": "bd4bb43486962214555cff70ae793057d6766e62c757af38e99af2a70e8d41f6",
       "bytes": 3568,
       "schritte": 1,
       "altBloecke": 1,
@@ -6620,7 +6620,7 @@
     "VRV": {
       "eli": "cc/1962/1364_1409_1420",
       "abgerufen": "2026-09-11",
-      "shardSha": "c365d997b94a5e5030db69fbab51913df40317f23812062efc623bfb66b2ff3d",
+      "shardSha": "d29de3ddc7c2cbc946978f14d3575fca53235250dce27d04aa36c72e5d4bb9df",
       "bytes": 71428,
       "schritte": 9,
       "altBloecke": 31,
@@ -6680,7 +6680,7 @@
     "VSTG": {
       "eli": "cc/1966/371_385_384",
       "abgerufen": "2026-09-11",
-      "shardSha": "a6ed282f04211a0320844baa294008c6f46631043aa7e9e9e98c2a819001eebc",
+      "shardSha": "18cfbb0b4a8ee5883ec6fb11f87416005fe08b0affd2df40d9c6101ddf017073",
       "bytes": 14169,
       "schritte": 5,
       "altBloecke": 5,
@@ -6775,10 +6775,10 @@
     "VTS": {
       "eli": "cc/1995/4425_4425_4425",
       "abgerufen": "2026-09-11",
-      "shardSha": "98c6cc6807efbf00359d981a9ca78843e9e45cb4bd275c080de5579271ba39e1",
-      "bytes": 231883,
+      "shardSha": "433d3c2c90c048d2a05212b0bd4aa5f35296a58bfd06a26d1c670f6de76ea431",
+      "bytes": 244288,
       "schritte": 13,
-      "altBloecke": 124,
+      "altBloecke": 127,
       "staende": [
         {
           "datum": "2022-01-01",
@@ -6855,7 +6855,7 @@
     "VVEA": {
       "eli": "cc/2015/891",
       "abgerufen": "2026-09-11",
-      "shardSha": "284f29bdefe3a09efaf7ff1fe1d83ad21fe6e1dc4be1f6e55c25f935c97c304e",
+      "shardSha": "24527eb606b512dfaa4f65212579db5201c29e78b4b17434fe59805177bc81cd",
       "bytes": 43628,
       "schritte": 11,
       "altBloecke": 34,
@@ -7030,7 +7030,7 @@
     "VZAE": {
       "eli": "cc/2007/759",
       "abgerufen": "2026-09-11",
-      "shardSha": "ac9e642b5389b97165142db58ce62d392066709600731c5d0ad8589833034d85",
+      "shardSha": "1f78c1b9904afcde66bf0e8fb889abf6ec4276e47921607efdda83eeeb23d6c4",
       "bytes": 65216,
       "schritte": 14,
       "altBloecke": 33,
@@ -7115,10 +7115,10 @@
     "VZV": {
       "eli": "cc/1976/2423_2423_2423",
       "abgerufen": "2026-09-11",
-      "shardSha": "980672b724f4a3d212118e403e6d59a32881cf42e6aadf4033b37b04a329d423",
-      "bytes": 113961,
+      "shardSha": "097f905c81bde95f5334c53185b8473ec79f558d8536a579e0baff9a221ad69b",
+      "bytes": 124102,
       "schritte": 13,
-      "altBloecke": 59,
+      "altBloecke": 63,
       "staende": [
         {
           "datum": "2021-01-01",
@@ -7220,7 +7220,7 @@
     "WAV": {
       "eli": "cc/1992/2538_2538_2538",
       "abgerufen": "2026-09-11",
-      "shardSha": "16c7491d3332523d6af37f188f9d2ebb251fc6a810267ef88f7dd031b362d064",
+      "shardSha": "33a469b1813513f6bd3783d5b19a62a7ae64997a2837afc2fad0909ed3fed546",
       "bytes": 7743,
       "schritte": 2,
       "altBloecke": 5,
@@ -7245,10 +7245,10 @@
     "ZEMIS_V": {
       "eli": "cc/2006/303",
       "abgerufen": "2026-09-11",
-      "shardSha": "02f2b43098608e3eb8afcdfb3bb2841dfbe2f04ed53616b2738227d8557b8b0d",
-      "bytes": 68054,
+      "shardSha": "c449702f7c24b5ac614ef59b747c995452bde9d5339ebd73439721687f2d8d33",
+      "bytes": 107781,
       "schritte": 15,
-      "altBloecke": 27,
+      "altBloecke": 33,
       "staende": [
         {
           "datum": "2021-01-01",
@@ -7335,7 +7335,7 @@
     "ZENTV": {
       "eli": "cc/2002/29",
       "abgerufen": "2026-09-11",
-      "shardSha": "53b796e9bcce87c05054aa19fb62343de26c96903a08d83eef309ae0adb9217c",
+      "shardSha": "a4866979cd7eab602fb617891e718b14ac8697e8a7b10431d0caf0894c7bc8c0",
       "bytes": 18342,
       "schritte": 2,
       "altBloecke": 6,
@@ -7360,7 +7360,7 @@
     "ZGB": {
       "eli": "cc/24/233_245_233",
       "abgerufen": "2026-09-11",
-      "shardSha": "95c43005c337e2853a45634e82d46b44583d615a07a03348a0bdc7c9981593c8",
+      "shardSha": "48a04dd366c81d58c3f45896c2aa2945263cfa33a15328678eba1c95098d76f6",
       "bytes": 66054,
       "schritte": 9,
       "altBloecke": 54,
@@ -7420,10 +7420,10 @@
     "ZPO": {
       "eli": "cc/2010/262",
       "abgerufen": "2026-09-11",
-      "shardSha": "9ccbb27e118cd199edea7a8e922b3712899e34cdeaca4165fce6c01c4bf030cf",
-      "bytes": 85192,
+      "shardSha": "7f4dec3867bf8289ba5a458f131aa6c56144ecd3a56402cbade4394ff1957da8",
+      "bytes": 89593,
       "schritte": 6,
-      "altBloecke": 87,
+      "altBloecke": 88,
       "staende": [
         {
           "datum": "2021-01-01",
@@ -7465,10 +7465,10 @@
     "ZSTV": {
       "eli": "cc/2004/362",
       "abgerufen": "2026-09-11",
-      "shardSha": "776e6b873d6c59ade923f0e5232b69a5b7897296ff929a232de257e48fb5f288",
-      "bytes": 104892,
+      "shardSha": "6848b2ae22eaadc31686792fe42b8c1e3e2e3aac855540fa003e3048638d3660",
+      "bytes": 108074,
       "schritte": 8,
-      "altBloecke": 81,
+      "altBloecke": 82,
       "staende": [
         {
           "datum": "2021-04-01",

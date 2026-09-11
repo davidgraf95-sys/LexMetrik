@@ -481,21 +481,24 @@ export interface SynopseLeerDiff {
  * eigener Befund, hier bewusst nicht mitgelöst (§1: dieses Tor bewacht «zwei
  * Normalisierungen», nicht Token-Identität über grosse Zeiträume).
  *
- * OFFENER REST (Nachtrag 11.9.2026, NICHT ausgefiltert): dieselbe
- * Token-Kontinuitäts-Frage trifft auch `art: 'geaendert'`-Blöcke, wenn derselbe
- * Wortlaut nach einem grossen Zeitsprung zufällig wiederkehrt, OHNE dass der
- * Artikel zwischendurch `entfallen` war — Beleg AVIV Art. 57b: Alt @2021-07-01
- * lautet «… um sechs Abrechnungsperioden …», die nächste erfasste Berührung
- * desselben Tokens (@2025-11-01, über vier Jahre später) lautet WORTGLEICH
- * «… um sechs …», bevor sie zu «… um zwölf …» wechselt. `neuNach` findet den
- * nächsten Token-Treffer, nicht die nächste WORTLAUT-Änderung — für diese
- * verbleibenden Fälle (gemessen 11.9.2026: 10, u. a. AIG 93, ASYLG 6a, AVIV
- * 57b/1a, OR 652d, PARLG 13, VAM 51/76/77, ZSTV 17) bleibt das Tor ABSICHTLICH
- * rot: sie werden HIER NICHT stillschweigend ausgefiltert, weil das dieselbe
- * «Zwei-Wahrheiten»-Täuschung wäre, die dieses Tor gerade verhindern soll (§6.7
- * — ein Tor, das den eigenen Befund wegfiltert, ist gefährlicher als keines).
- * Der Fix gehört in `neuNach` selbst (eine Lineage-Regel über den Token hinaus,
- * z. B. via `oc`/eId-Kontinuität) — eigener Roadmap-Schritt, hier nicht gebaut.
+ * OFFENER REST (Nachtrag Auftrag Koordinator, 11.9.2026, NICHT hier ausgefiltert):
+ * dieselbe Token-Kontinuitäts-Frage trifft auch `art: 'geaendert'`-Blöcke, wenn
+ * derselbe Wortlaut nach echten Zwischenänderungen wieder auf einen früheren
+ * Stand zurückkehrt (Beleg KLV Art. 13/12: eine «Auflage 3 → 4 → 3»-Kette; VTS
+ * Art. 136 dieselbe Klasse) — `neuNach` findet den nächsten TOKEN-Treffer, nicht
+ * die nächste WORTLAUT-Änderung. Von den ursprünglich 10 gemessenen Fällen
+ * (11.9.2026) waren 9 KEINE Token-Kontinuitäts-Fälle, sondern zwei weitere
+ * Normalisierungs-Lücken (Inline-Auszeichnung vor der Satzzeichen-Regel; Alt hat
+ * Text, Neu wird leer) — beide inzwischen behoben (`vergleichsRoh`, `diffStaende`
+ * in `scripts/entstehung/synopse.ts`). Die verbleibenden 5 (KLV 13/12_b/12_a×2,
+ * VTS 136) bleiben ABSICHTLICH hier NICHT ausgefiltert — HIER stillschweigend zu
+ * filtern wäre dieselbe «Zwei-Wahrheiten»-Täuschung, die dieses Tor verhindern
+ * soll (§6.7 — ein Tor, das den eigenen Befund wegfiltert, ist gefährlicher als
+ * keines). Stattdessen trägt `check:entstehung`
+ * (`bibliothek/register/entstehung-leerdiff-ausnahmen.json`, Muster
+ * Flacker-Wächter #779) eine BEFRISTETE, benannte Ausnahmeliste — der Fix gehört
+ * in `neuNach` selbst (eine Lineage-Regel über den Token hinaus, z. B. via
+ * `oc`/eId-Kontinuität) — eigener Roadmap-Schritt, hier nicht gebaut.
  */
 export function leerDiffVerletzungen(
   shard: SynopseShard,

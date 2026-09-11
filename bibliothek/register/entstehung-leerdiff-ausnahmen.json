@@ -1,0 +1,47 @@
+[
+  {
+    "erlass": "KLV",
+    "token": "13",
+    "stand": "2022-01-01",
+    "zustand": "belegt",
+    "seit": "2026-09-11",
+    "grund": "Token-Kontinuitaet in neuNach(): Wortlaut kehrt nach echten Zwischenaenderungen (Auflage 3->4->3) auf denselben Stand zurueck; neuNach findet den naechsten Schritt-Treffer, nicht die naechste Wortlaut-Aenderung. Wurzel > 1h entfernt (Lineage-Regel ueber den Token hinaus noetig, betrifft neuNach() breit). Roadmap-Schritt noetig.",
+    "ablauf": "2026-10-11"
+  },
+  {
+    "erlass": "KLV",
+    "token": "12_b",
+    "stand": "2023-01-01",
+    "zustand": "belegt",
+    "seit": "2026-09-11",
+    "grund": "Dieselbe Ursache wie KLV 13: Token-Kontinuitaet in neuNach() ueber echte Zwischenaenderungen hinweg.",
+    "ablauf": "2026-10-11"
+  },
+  {
+    "erlass": "KLV",
+    "token": "12_a",
+    "stand": "2025-01-01",
+    "zustand": "ohne_ereignis",
+    "seit": "2026-09-11",
+    "grund": "Dieselbe Ursache wie KLV 13: Token-Kontinuitaet in neuNach() ueber echte Zwischenaenderungen hinweg.",
+    "ablauf": "2026-10-11"
+  },
+  {
+    "erlass": "KLV",
+    "token": "12_a",
+    "stand": "2025-03-01",
+    "zustand": "ohne_ereignis",
+    "seit": "2026-09-11",
+    "grund": "Dieselbe Ursache wie KLV 13: Token-Kontinuitaet in neuNach() ueber echte Zwischenaenderungen hinweg.",
+    "ablauf": "2026-10-11"
+  },
+  {
+    "erlass": "VTS",
+    "token": "136",
+    "stand": "2022-06-01",
+    "zustand": "ohne_ereignis",
+    "seit": "2026-09-11",
+    "grund": "Token-Kontinuitaet in neuNach(): derselbe Mechanismus wie KLV 13, ein anderer Erlass.",
+    "ablauf": "2026-10-11"
+  }
+]
