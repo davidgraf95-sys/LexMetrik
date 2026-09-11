@@ -1,0 +1,106 @@
+{
+  "nummer": "16.052",
+  "titel": "StHG. Änderung",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2016-06-17",
+  "erstrat": "Nationalrat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20160052",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2016-06-17",
+      "name": "Kommission für Wirtschaft und Abgaben Nationalrat",
+      "kuerzel": "WAK-N"
+    },
+    {
+      "datum": "2016-06-17",
+      "name": "Kommission für Wirtschaft und Abgaben Ständerat",
+      "kuerzel": "WAK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2016-12-15",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss gemäss Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2017-02-28",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2017-03-17",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2017-03-17",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2016-06-17",
+      "art": "Bundesblatt",
+      "jahr": "2016",
+      "nummer": "5357",
+      "text": "Botschaft vom 17. Juni 2016 zur Änderung des Bundesgesetzes über die Harmonisierung der direkten Steuern der Kantone und Gemeinden (StHG)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2016-06-17",
+      "art": "Bundesblatt",
+      "jahr": "2016",
+      "nummer": "5369",
+      "text": "Bundesgesetz über die Harmonisierung der direkten Steuern der Kantone und Gemeinden (StHG)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2017-03-17",
+      "art": "Bundesblatt",
+      "jahr": "2017",
+      "nummer": "2457",
+      "text": null,
+      "referendumsfrist": "2017-07-06"
+    },
+    {
+      "datum": "2017-09-29",
+      "art": "Amtliche Sammlung",
+      "jahr": "2017",
+      "nummer": "5039",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2017-03-17",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 197,
+        "nein": 0,
+        "enthaltung": 0,
+        "anwesend": 0,
+        "nichtTeilgenommen": 0,
+        "entschuldigt": 2,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

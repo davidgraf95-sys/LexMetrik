@@ -1,0 +1,113 @@
+{
+  "nummer": "03.072",
+  "titel": "Publikationsgesetz",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2003-10-22",
+  "erstrat": "Ständerat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20030072",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2003-10-22",
+      "name": "Staatspolitische Kommission Nationalrat",
+      "kuerzel": "SPK-N"
+    },
+    {
+      "datum": "2003-10-22",
+      "name": "Staatspolitische Kommission Ständerat",
+      "kuerzel": "SPK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2004-03-01",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2004-06-07",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2004-06-16",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2004-06-18",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2004-06-18",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2003-10-22",
+      "art": "Bundesblatt",
+      "jahr": "2003",
+      "nummer": "7711",
+      "text": "Botschaft vom 22. Oktober 2003 zum Bundesgesetz über die Sammlungen des Bundesrechts und das Bundesblatt (Publikationsgesetz, PublG)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2003-10-22",
+      "art": "Bundesblatt",
+      "jahr": null,
+      "nummer": null,
+      "text": "Bundesgesetz über die Sammlungen des Bundesrechts und das Bundesblatt (Publikationsgesetz, PublG)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2004-06-29",
+      "art": "Bundesblatt",
+      "jahr": "2004",
+      "nummer": "3121",
+      "text": null,
+      "referendumsfrist": "2004-10-07"
+    },
+    {
+      "datum": "2004-12-14",
+      "art": "Amtliche Sammlung",
+      "jahr": "2004",
+      "nummer": "4929",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2004-06-18",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 184,
+        "nein": 0,
+        "enthaltung": 0,
+        "anwesend": 0,
+        "nichtTeilgenommen": 15,
+        "entschuldigt": 0,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

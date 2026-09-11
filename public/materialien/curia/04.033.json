@@ -1,0 +1,163 @@
+{
+  "nummer": "04.033",
+  "titel": "Bundesgesetz über die Krankenversicherung. Teilrevision. Prämienverbilligung",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2004-05-26",
+  "erstrat": "Ständerat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20040033",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2004-05-26",
+      "name": "Kommission für soziale Sicherheit und Gesundheit Nationalrat",
+      "kuerzel": "SGK-N"
+    },
+    {
+      "datum": "2004-05-26",
+      "name": "Kommission für soziale Sicherheit und Gesundheit Ständerat",
+      "kuerzel": "SGK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2004-12-15",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2004-12-15",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 2
+    },
+    {
+      "datum": "2005-03-03",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2005-03-03",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Nichteintreten.",
+      "vorlage": 2
+    },
+    {
+      "datum": "2005-03-08",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Festhalten.",
+      "vorlage": 1
+    },
+    {
+      "datum": "2005-03-08",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Festhalten (bei der Abstimmung über die Ausgabenbremse wurde das qualifizierte Mehr erreicht).",
+      "vorlage": 2
+    },
+    {
+      "datum": "2005-03-10",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2005-03-10",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung (Abstimmung über die Ausgabenbremse: angenommen)",
+      "vorlage": 2
+    },
+    {
+      "datum": "2005-03-18",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2005-03-18",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2005-03-29",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Wird im Bundesblatt veröffentlicht, sobald die entsprechende Rechtsgrundlage in Kraft tritt.",
+      "vorlage": 2
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2004-05-26",
+      "art": "Bundesblatt",
+      "jahr": "2004",
+      "nummer": "4327",
+      "text": "Botschaft vom 26. Mai 2004 zur Änderung des Bundesgesetzes über die Krankenversicherung (Prämienverbilligung) und zum Bundesbeschluss über die Bundesbeiträge in der Krankenversicherung",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2004-05-26",
+      "art": "Bundesblatt",
+      "jahr": null,
+      "nummer": null,
+      "text": "Bundesbeschluss über die Bundesbeiträge in der Krankenversicherung",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2005-03-29",
+      "art": "Bundesblatt",
+      "jahr": "2005",
+      "nummer": "2271",
+      "text": null,
+      "referendumsfrist": "2005-07-07"
+    },
+    {
+      "datum": "2005-08-09",
+      "art": "Amtliche Sammlung",
+      "jahr": "2005",
+      "nummer": "3587",
+      "text": null,
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2005-08-09",
+      "art": "Bundesblatt",
+      "jahr": "2005",
+      "nummer": "4927",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2005-03-18",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 161,
+        "nein": 5,
+        "enthaltung": 18,
+        "anwesend": 0,
+        "nichtTeilgenommen": 9,
+        "entschuldigt": 5,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 1,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

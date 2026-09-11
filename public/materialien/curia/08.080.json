@@ -1,0 +1,139 @@
+{
+  "nummer": "08.080",
+  "titel": "Gegen die Abzockerei. Volksinitiative. OR. Änderung",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2008-12-05",
+  "erstrat": "Ständerat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20080080",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2008-12-05",
+      "name": "Kommission für Rechtsfragen Nationalrat",
+      "kuerzel": "RK-N"
+    },
+    {
+      "datum": "2008-12-05",
+      "name": "Kommission für Rechtsfragen Ständerat",
+      "kuerzel": "RK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2009-06-11",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss gemäss Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2010-03-17",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2010-06-01",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Die Behandlungsfrist der Volksinitiative wird um ein Jahr, d. h. bis am 26. August 2011 verlängert.",
+      "vorlage": 1
+    },
+    {
+      "datum": "2010-06-02",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Die Behandlungsfrist der Volksinitiative wird um ein Jahr, d. h. bis am 26. August 2011 verlängert.",
+      "vorlage": 1
+    },
+    {
+      "datum": "2010-12-16",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2011-06-01",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Die Behandlungsfrist für die Volksinitiative wird um ein weiteres Jahr, d.h. bis zum 26. August 2012, verlängert.",
+      "vorlage": 1
+    },
+    {
+      "datum": "2011-06-07",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Die Behandlungsfrist für die Volksinitiative wird um ein weiteres Jahr, d.h. bis zum 26. August 2012, verlängert.",
+      "vorlage": 1
+    },
+    {
+      "datum": "2012-03-06",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2012-05-31",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2012-06-15",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Ablehnung in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2012-06-15",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2008-12-05",
+      "art": "Bundesblatt",
+      "jahr": "2009",
+      "nummer": "299",
+      "text": "Botschaft vom 5. Dezember 2008 zur Volksinitiative \"Gegen die Abzockerei\" und zur Änderung des Obligationenrechts (Aktienrecht)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2008-12-05",
+      "art": "Bundesblatt",
+      "jahr": null,
+      "nummer": null,
+      "text": "Bundesbeschluss über die Volksinitiative \"Gegen die Abzockerei\"",
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2012-06-15",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 87,
+        "nein": 104,
+        "enthaltung": 4,
+        "anwesend": 0,
+        "nichtTeilgenommen": 2,
+        "entschuldigt": 1,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 199
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

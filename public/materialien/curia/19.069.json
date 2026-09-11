@@ -1,0 +1,114 @@
+{
+  "nummer": "19.069",
+  "titel": "Rechte der Bürgerinnen und Bürger. Abkommen mit dem Vereinigten Königreich von Grossbritannien und Nordirland",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2019-12-06",
+  "erstrat": "Nationalrat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20190069",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2019-12-06",
+      "name": "Aussenpolitische Kommission Nationalrat",
+      "kuerzel": "APK-N"
+    },
+    {
+      "datum": "2019-12-06",
+      "name": "Aussenpolitische Kommission Ständerat",
+      "kuerzel": "APK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2020-06-03",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss gemäss Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2020-09-08",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2020-09-25",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2020-09-25",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2019-12-06",
+      "art": "Bundesblatt",
+      "jahr": "2020",
+      "nummer": "1029",
+      "text": "Botschaft vom 6. Dezember 2019 zur Genehmigung und Umsetzung des Abkommens zwischen der Schweizerischen Eidgenossenschaft und dem Vereinigten Königreich von Grossbritannien und Nordirland über die Rechte der Bürgerinnen und Bürger infolge des Austritts des Vereinigten Königreichs aus der Europäischen Union und des Wegfalls des Freizügigkeitsabkommens",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2019-12-06",
+      "art": "Bundesblatt",
+      "jahr": "2020",
+      "nummer": "1081",
+      "text": "Bundesbeschluss über die Genehmigung und die Umsetzung des Abkommens zwischen der Schweizerischen Eidgenossenschaft und dem Vereinigten Königreich von Grossbritannien und Nordirland über die Rechte der Bürgerinnen und Bürger infolge des Austritts des Vereinigten Königreichs aus der Europäischen Union und des Wegfalls des Freizügigkeitsabkommens",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2019-12-06",
+      "art": "Bundesblatt",
+      "jahr": "2020",
+      "nummer": "1085",
+      "text": "Abkommen zwischen der Schweizerischen Eidgenossenschaft und dem Vereinigten Königreich von Grossbritannien und Nordirland über die Rechte der Bürgerinnen und Bürger infolge des Austritts des Vereinigten Königreichs aus der Europäischen Union und des Wegfalls des Freizügigkeitsabkommens",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2020-10-06",
+      "art": "Bundesblatt",
+      "jahr": "2020",
+      "nummer": "7907",
+      "text": null,
+      "referendumsfrist": "2021-01-14"
+    },
+    {
+      "datum": "2021-02-17",
+      "art": "Amtliche Sammlung",
+      "jahr": "2021",
+      "nummer": "85",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2020-09-25",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 195,
+        "nein": 0,
+        "enthaltung": 0,
+        "anwesend": 0,
+        "nichtTeilgenommen": 3,
+        "entschuldigt": 1,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

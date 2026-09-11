@@ -1,0 +1,148 @@
+{
+  "nummer": "14.061",
+  "titel": "Finanzmarktinfrastrukturgesetz (FinfraG)",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2014-09-03",
+  "erstrat": "Nationalrat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20140061",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2014-09-03",
+      "name": "Kommission für Wirtschaft und Abgaben Nationalrat",
+      "kuerzel": "WAK-N"
+    },
+    {
+      "datum": "2014-09-03",
+      "name": "Kommission für Wirtschaft und Abgaben Ständerat",
+      "kuerzel": "WAK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2015-03-18",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Diskussion",
+      "vorlage": 1
+    },
+    {
+      "datum": "2015-03-19",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Fortsetzung (bis und mit Artikel 143 behandelt).",
+      "vorlage": 1
+    },
+    {
+      "datum": "2015-03-20",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2015-06-02",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2015-06-15",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2015-06-16",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2015-06-17",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2015-06-17",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2015-06-19",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2015-06-19",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2014-09-03",
+      "art": "Bundesblatt",
+      "jahr": "2014",
+      "nummer": "7483",
+      "text": "Botschaft vom 3. September 2014 zum Finanzmarktinfrastrukturgesetz (FinfraG)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2014-09-03",
+      "art": "Bundesblatt",
+      "jahr": "2014",
+      "nummer": "7647",
+      "text": "Bundesgesetz über die Finanzmarktinfrastrukturen und das Marktverhalten im Effekten- und Derivatehandel (Finanzmarktinfrastrukturgesetz, FinfraG)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2015-06-30",
+      "art": "Bundesblatt",
+      "jahr": "2015",
+      "nummer": "4931",
+      "text": null,
+      "referendumsfrist": "2015-10-08"
+    },
+    {
+      "datum": "2015-12-16",
+      "art": "Amtliche Sammlung",
+      "jahr": "2015",
+      "nummer": "5339",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2015-06-19",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 137,
+        "nein": 54,
+        "enthaltung": 3,
+        "anwesend": 0,
+        "nichtTeilgenommen": 2,
+        "entschuldigt": 3,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

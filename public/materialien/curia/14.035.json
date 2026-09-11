@@ -1,0 +1,113 @@
+{
+  "nummer": "14.035",
+  "titel": "StGB. Korruptionsstrafrecht",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2014-04-30",
+  "erstrat": "Ständerat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20140035",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2014-04-30",
+      "name": "Kommission für Rechtsfragen Nationalrat",
+      "kuerzel": "RK-N"
+    },
+    {
+      "datum": "2014-04-30",
+      "name": "Kommission für Rechtsfragen Ständerat",
+      "kuerzel": "RK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2015-06-03",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2015-09-08",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2015-09-10",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2015-09-25",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2015-09-25",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2014-04-30",
+      "art": "Bundesblatt",
+      "jahr": "2014",
+      "nummer": "3591",
+      "text": "Botschaft vom 30. April 2014 über die Änderung des Strafgesetzbuchs (Korruptionsstrafrecht)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2014-04-30",
+      "art": "Bundesblatt",
+      "jahr": "2014",
+      "nummer": "3615",
+      "text": "Schweizerisches Strafgesetzbuch (Korruptionsstrafrecht)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2015-10-06",
+      "art": "Bundesblatt",
+      "jahr": "2015",
+      "nummer": "7165",
+      "text": "s",
+      "referendumsfrist": "2016-01-14"
+    },
+    {
+      "datum": "2016-05-10",
+      "art": "Amtliche Sammlung",
+      "jahr": "2016",
+      "nummer": "1287",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2015-09-25",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 141,
+        "nein": 53,
+        "enthaltung": 1,
+        "anwesend": 0,
+        "nichtTeilgenommen": 3,
+        "entschuldigt": 1,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

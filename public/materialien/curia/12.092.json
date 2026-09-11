@@ -1,0 +1,141 @@
+{
+  "nummer": "12.092",
+  "titel": "KVG. Teilrevision. Vorübergehende Wiedereinführung der bedarfsabhängigen Zulassung",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2012-11-21",
+  "erstrat": "Nationalrat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20120092",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2012-11-21",
+      "name": "Kommission für soziale Sicherheit und Gesundheit Nationalrat",
+      "kuerzel": "SGK-N"
+    },
+    {
+      "datum": "2012-11-21",
+      "name": "Kommission für soziale Sicherheit und Gesundheit Ständerat",
+      "kuerzel": "SGK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2013-03-06",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2013-03-12",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Eintreten, geht zur Detailberatung zurück an die SGK.",
+      "vorlage": 1
+    },
+    {
+      "datum": "2013-06-05",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2013-06-13",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2013-06-17",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2013-06-18",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme der Dringlichkeitsklausel",
+      "vorlage": 1
+    },
+    {
+      "datum": "2013-06-19",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme der Dringlichkeitsklausel",
+      "vorlage": 1
+    },
+    {
+      "datum": "2013-06-21",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2013-06-21",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2012-11-21",
+      "art": "Bundesblatt",
+      "jahr": "2012",
+      "nummer": "9439",
+      "text": "Botschaft vom 21. November 2012 zur Teilrevison des Krankversicherungsgesetzes (Vorübergehende Wiedereinführung der bedarfsabhängigen Zulassung)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2012-11-21",
+      "art": "Bundesblatt",
+      "jahr": "2012",
+      "nummer": "9453",
+      "text": "Bundesgesetz über die Krankenversicherung (KVG) (Vorübergehende Wiedereinführung der bedarfsabhängigen Zulassung)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2013-07-02",
+      "art": "Amtliche Sammlung",
+      "jahr": "2013",
+      "nummer": "2065",
+      "text": null,
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2013-07-02",
+      "art": "Bundesblatt",
+      "jahr": "2013",
+      "nummer": "4837",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2013-06-21",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 107,
+        "nein": 77,
+        "enthaltung": 5,
+        "anwesend": 0,
+        "nichtTeilgenommen": 7,
+        "entschuldigt": 3,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

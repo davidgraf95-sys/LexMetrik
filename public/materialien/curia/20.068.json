@@ -1,0 +1,98 @@
+{
+  "nummer": "20.068",
+  "titel": "Ja zum Schutz der Kinder und Jugendlichen vor Tabakwerbung (Kinder und Jugendliche ohne Tabakwerbung). Volksinitiative",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2020-08-26",
+  "erstrat": "Nationalrat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20200068",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2020-08-26",
+      "name": "Kommission für soziale Sicherheit und Gesundheit Nationalrat",
+      "kuerzel": "SGK-N"
+    },
+    {
+      "datum": "2020-08-26",
+      "name": "Kommission für soziale Sicherheit und Gesundheit Ständerat",
+      "kuerzel": "SGK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2021-03-17",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss gemäss Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2021-09-20",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2021-10-01",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2021-10-01",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2020-08-26",
+      "art": "Bundesblatt",
+      "jahr": "2020",
+      "nummer": "7049",
+      "text": "Botschaft zur Volksinitiative «Ja zum Schutz der Kinder und Jugendlichen vor Tabakwerbung (Kinder und Jugendliche ohne Tabakwerbung)»",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2020-08-26",
+      "art": "Bundesblatt",
+      "jahr": "2020",
+      "nummer": "7073",
+      "text": "Bundesbeschluss über die Volksinitiative «Ja zum Schutz der Kinder und Jugendlichen vor Tabakwerbung (Kinder und Jugendliche ohne Tabakwerbung)»",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2021-10-12",
+      "art": "Bundesblatt",
+      "jahr": "2021",
+      "nummer": "2315",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2021-10-01",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 101,
+        "nein": 88,
+        "enthaltung": 7,
+        "anwesend": 0,
+        "nichtTeilgenommen": 1,
+        "entschuldigt": 2,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

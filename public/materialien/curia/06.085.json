@@ -1,0 +1,113 @@
+{
+  "nummer": "06.085",
+  "titel": "Vereinfachung der Nachbesteuerung in Erbfällen und Einführung der straflosen Selbstanzeige. Bundesgesetz",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2006-10-18",
+  "erstrat": "Ständerat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20060085",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2006-10-18",
+      "name": "Kommission für Wirtschaft und Abgaben Nationalrat",
+      "kuerzel": "WAK-N"
+    },
+    {
+      "datum": "2006-10-18",
+      "name": "Kommission für Wirtschaft und Abgaben Ständerat",
+      "kuerzel": "WAK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2007-10-04",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2007-12-19",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2008-03-05",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2008-03-20",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2008-03-20",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2006-10-18",
+      "art": "Bundesblatt",
+      "jahr": "2006",
+      "nummer": "8795",
+      "text": "Botschaft vom 18. Oktober 2006 zum Bundesgesetz über die Vereinfachung der Nachbesteuerung in Erbfällen und Einführung der straflosen Selbstanzeige",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2006-10-18",
+      "art": "Bundesblatt",
+      "jahr": null,
+      "nummer": null,
+      "text": "Bundesgesetz über die Vereinfachung der Nachbesteuerung in Erbfällen und die Einführung der straflosen Selbstanzeige",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2008-04-01",
+      "art": "Bundesblatt",
+      "jahr": "2008",
+      "nummer": "2321",
+      "text": null,
+      "referendumsfrist": "2008-07-10"
+    },
+    {
+      "datum": "2008-09-30",
+      "art": "Amtliche Sammlung",
+      "jahr": "2008",
+      "nummer": "4453",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2008-03-20",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 127,
+        "nein": 66,
+        "enthaltung": 1,
+        "anwesend": 0,
+        "nichtTeilgenommen": 5,
+        "entschuldigt": 0,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

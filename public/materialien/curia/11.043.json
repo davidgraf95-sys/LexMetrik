@@ -1,0 +1,120 @@
+{
+  "nummer": "11.043",
+  "titel": "Besteuerung nach dem Aufwand. Bundesgesetz",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2011-06-29",
+  "erstrat": "Ständerat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20110043",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2011-06-29",
+      "name": "Kommission für Wirtschaft und Abgaben Nationalrat",
+      "kuerzel": "WAK-N"
+    },
+    {
+      "datum": "2011-06-29",
+      "name": "Kommission für Wirtschaft und Abgaben Ständerat",
+      "kuerzel": "WAK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2012-03-06",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2012-09-12",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2012-09-19",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2012-09-20",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2012-09-28",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2012-09-28",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2011-06-29",
+      "art": "Bundesblatt",
+      "jahr": "2011",
+      "nummer": "6021",
+      "text": "Botschaft vom 29. Juni 2011 zum Bundesgesetz über die Besteuerung nach dem Aufwand",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2011-06-29",
+      "art": "Bundesblatt",
+      "jahr": "2011",
+      "nummer": "6047",
+      "text": "Bundesgesetz über die Besteuerung nach dem Aufwand",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2012-10-09",
+      "art": "Bundesblatt",
+      "jahr": "2012",
+      "nummer": "8251",
+      "text": null,
+      "referendumsfrist": "2013-01-17"
+    },
+    {
+      "datum": "2013-03-12",
+      "art": "Amtliche Sammlung",
+      "jahr": "2013",
+      "nummer": "779",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2012-09-28",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 120,
+        "nein": 41,
+        "enthaltung": 16,
+        "anwesend": 0,
+        "nichtTeilgenommen": 17,
+        "entschuldigt": 3,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 198
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

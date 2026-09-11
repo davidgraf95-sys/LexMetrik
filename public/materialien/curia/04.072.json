@@ -1,0 +1,106 @@
+{
+  "nummer": "04.072",
+  "titel": "Strafrechts-Übereinkommen und Zusatzprotokoll des Europarates über Korruption",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2004-11-12",
+  "erstrat": "Ständerat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20040072",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2004-11-12",
+      "name": "Kommission für Rechtsfragen Nationalrat",
+      "kuerzel": "RK-N"
+    },
+    {
+      "datum": "2004-11-12",
+      "name": "Kommission für Rechtsfragen Ständerat",
+      "kuerzel": "RK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2005-03-08",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss gemäss Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2005-10-06",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2005-10-07",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2005-10-07",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2004-11-12",
+      "art": "Bundesblatt",
+      "jahr": "2004",
+      "nummer": "6983",
+      "text": "Botschaft vom 10. November 2004 über die Genehmigung und die Umsetzung des Strafrechts-Übereinkommens und zum Zusatzprotokoll des Europarates über Korruption (Änderung des Strafgesetzbuches und des Bundesgesetzes gegen den unlauteren Wettbewerb)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2004-11-12",
+      "art": "Bundesblatt",
+      "jahr": null,
+      "nummer": null,
+      "text": "Bundesbeschluss über die Genehmigung und die Umsetzung des Strafrechtsübereinkommens und des Zusatzprotokolls des Europarates über Korruption",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2005-10-18",
+      "art": "Bundesblatt",
+      "jahr": "2005",
+      "nummer": "5967",
+      "text": null,
+      "referendumsfrist": "2006-01-26"
+    },
+    {
+      "datum": "2006-06-20",
+      "art": "Amtliche Sammlung",
+      "jahr": "2006",
+      "nummer": "2371",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2005-10-07",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 175,
+        "nein": 0,
+        "enthaltung": 12,
+        "anwesend": 0,
+        "nichtTeilgenommen": 7,
+        "entschuldigt": 5,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

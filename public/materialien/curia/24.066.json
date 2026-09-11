@@ -1,0 +1,113 @@
+{
+  "nummer": "24.066",
+  "titel": "Bundesgesetz über die Invalidenversicherung IVG (Intensive Frühintervention bei Autismus-Spektrum-Störungen, IFI). Änderung",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2024-08-21",
+  "erstrat": "Nationalrat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20240066",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2024-08-22",
+      "name": "Kommission für soziale Sicherheit und Gesundheit Nationalrat",
+      "kuerzel": "SGK-N"
+    },
+    {
+      "datum": "2024-08-22",
+      "name": "Kommission für soziale Sicherheit und Gesundheit Ständerat",
+      "kuerzel": "SGK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2024-12-09",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2025-03-04",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2025-03-13",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2025-03-21",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2025-03-21",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2024-08-21",
+      "art": "Bundesblatt",
+      "jahr": "2024",
+      "nummer": "2242",
+      "text": "Botschaft vom 21. August 2024 zur Änderung des Bundesgesetzes über die Invalidenversicherung (Intensive Frühintervention bei Autismus-Spektrum-Störungen)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2024-08-21",
+      "art": "Bundesblatt",
+      "jahr": "2024",
+      "nummer": "2243",
+      "text": "Bundesgesetz über die Invalidenversicherung (IVG) (Intensive Frühintervention bei Autismus-Spektrum-Störungen)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2025-04-01",
+      "art": "Bundesblatt",
+      "jahr": "2025",
+      "nummer": "1106",
+      "text": null,
+      "referendumsfrist": "2025-07-10"
+    },
+    {
+      "datum": "2026-05-08",
+      "art": "Amtliche Sammlung",
+      "jahr": "2026",
+      "nummer": "204",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2025-03-21",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 128,
+        "nein": 58,
+        "enthaltung": 5,
+        "anwesend": 0,
+        "nichtTeilgenommen": 2,
+        "entschuldigt": 5,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 199
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

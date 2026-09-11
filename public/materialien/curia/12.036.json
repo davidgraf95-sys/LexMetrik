@@ -1,0 +1,127 @@
+{
+  "nummer": "12.036",
+  "titel": "DBG und StHG. Anpassung an die Allgemeinen Bestimmungen des StGB",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2012-03-02",
+  "erstrat": "Ständerat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20120036",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2012-03-02",
+      "name": "Kommission für Wirtschaft und Abgaben Nationalrat",
+      "kuerzel": "WAK-N"
+    },
+    {
+      "datum": "2012-03-02",
+      "name": "Kommission für Wirtschaft und Abgaben Ständerat",
+      "kuerzel": "WAK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2013-06-20",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2014-03-11",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Nichteintreten.",
+      "vorlage": 1
+    },
+    {
+      "datum": "2014-06-17",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Festhalten (= Eintreten).",
+      "vorlage": 1
+    },
+    {
+      "datum": "2014-09-16",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Eintreten; Beschluss abweichend vom Beschluss des Ständerates.",
+      "vorlage": 1
+    },
+    {
+      "datum": "2014-09-18",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2014-09-26",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2014-09-26",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2012-03-02",
+      "art": "Bundesblatt",
+      "jahr": "2012",
+      "nummer": "2869",
+      "text": "Botschaft vom 2. März 2012 zum Bundesgesetz über eine Anpassung des DBG und des StHG an die Allgemeinen Bestimmungen des StGB",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2012-03-02",
+      "art": "Bundesblatt",
+      "jahr": "2012",
+      "nummer": "2891",
+      "text": "Bundesgesetz über eine Anpassung des DBG und des StHG an die Allgemeinen Bestimmungen des StGB",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2014-10-07",
+      "art": "Bundesblatt",
+      "jahr": "2014",
+      "nummer": "7319",
+      "text": null,
+      "referendumsfrist": "2015-01-15"
+    },
+    {
+      "datum": "2015-03-17",
+      "art": "Amtliche Sammlung",
+      "jahr": "2015",
+      "nummer": "779",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2014-09-26",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 137,
+        "nein": 60,
+        "enthaltung": 1,
+        "anwesend": 0,
+        "nichtTeilgenommen": 1,
+        "entschuldigt": 0,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

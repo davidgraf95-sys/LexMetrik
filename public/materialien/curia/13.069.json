@@ -1,0 +1,106 @@
+{
+  "nummer": "13.069",
+  "titel": "Bundesgesetz über die Sammlungen des Bundesrechts und das Bundesblatt. Änderung",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2013-08-28",
+  "erstrat": "Nationalrat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20130069",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2013-08-28",
+      "name": "Staatspolitische Kommission Nationalrat",
+      "kuerzel": "SPK-N"
+    },
+    {
+      "datum": "2013-08-28",
+      "name": "Staatspolitische Kommission Ständerat",
+      "kuerzel": "SPK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2014-05-06",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2014-09-10",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2014-09-26",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2014-09-26",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2013-08-28",
+      "art": "Bundesblatt",
+      "jahr": "2013",
+      "nummer": "7057",
+      "text": "Botschaft vom 28. August 2013 zur Änderung des Bundesgesetzes über die Sammlungen des Bundesrechts und das Bundesbiatt",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2013-08-28",
+      "art": "Bundesblatt",
+      "jahr": "2013",
+      "nummer": "7099",
+      "text": "Bundesgesetz über die Sammlungen des Bundesrechts und das Bundesblatt (Publikationsgesetz, PublG)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2014-10-07",
+      "art": "Bundesblatt",
+      "jahr": "2014",
+      "nummer": "7255",
+      "text": null,
+      "referendumsfrist": "2015-01-15"
+    },
+    {
+      "datum": "2015-10-27",
+      "art": "Amtliche Sammlung",
+      "jahr": "2015",
+      "nummer": "3977",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2014-09-26",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 197,
+        "nein": 0,
+        "enthaltung": 0,
+        "anwesend": 0,
+        "nichtTeilgenommen": 2,
+        "entschuldigt": 0,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

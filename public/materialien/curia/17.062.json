@@ -1,0 +1,120 @@
+{
+  "nummer": "17.062",
+  "titel": "Schutz gewaltbetroffener Personen. Bundesgesetz",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2017-10-11",
+  "erstrat": "Ständerat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20170062",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2017-10-11",
+      "name": "Kommission für Rechtsfragen Nationalrat",
+      "kuerzel": "RK-N"
+    },
+    {
+      "datum": "2017-10-11",
+      "name": "Kommission für Rechtsfragen Ständerat",
+      "kuerzel": "RK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2018-06-11",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2018-09-18",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2018-11-28",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2018-12-03",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2018-12-14",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2018-12-14",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2017-10-11",
+      "art": "Bundesblatt",
+      "jahr": "2017",
+      "nummer": "7307",
+      "text": "Botschaft vom 11. Oktober 2017 zum Bundesgesetz über die Verbesserung des Schutzes gewaltbetroffener Personen",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2017-10-11",
+      "art": "Bundesblatt",
+      "jahr": "2017",
+      "nummer": "7397",
+      "text": "Bundesgesetz über die Verbesserung des Schutzes gewaltbetroffener Personen",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2018-12-14",
+      "art": "Bundesblatt",
+      "jahr": "2018",
+      "nummer": "7869",
+      "text": null,
+      "referendumsfrist": "2019-04-07"
+    },
+    {
+      "datum": "2019-07-30",
+      "art": "Amtliche Sammlung",
+      "jahr": "2019",
+      "nummer": "2273",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2018-12-14",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 195,
+        "nein": 2,
+        "enthaltung": 0,
+        "anwesend": 0,
+        "nichtTeilgenommen": 0,
+        "entschuldigt": 2,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

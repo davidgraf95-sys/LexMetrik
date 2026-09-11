@@ -1,0 +1,177 @@
+{
+  "nummer": "19.022",
+  "titel": "Armeebotschaft 2019",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2019-02-19",
+  "erstrat": "Nationalrat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20190022",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2019-02-19",
+      "name": "Finanzkommission Nationalrat",
+      "kuerzel": "FK-N"
+    },
+    {
+      "datum": "2019-02-19",
+      "name": "Sicherheitspolitische Kommission Nationalrat",
+      "kuerzel": "SiK-N"
+    },
+    {
+      "datum": "2019-02-19",
+      "name": "Sicherheitspolitische Kommission Ständerat",
+      "kuerzel": "SiK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2019-06-06",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss gemäss Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2019-06-06",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss gemäss Entwurf",
+      "vorlage": 2
+    },
+    {
+      "datum": "2019-06-06",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss gemäss Entwurf",
+      "vorlage": 3
+    },
+    {
+      "datum": "2019-06-06",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss gemäss Entwurf",
+      "vorlage": 4
+    },
+    {
+      "datum": "2019-09-24",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2019-09-24",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 2
+    },
+    {
+      "datum": "2019-09-24",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 3
+    },
+    {
+      "datum": "2019-09-24",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 4
+    },
+    {
+      "datum": "2019-09-27",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 4
+    },
+    {
+      "datum": "2019-09-27",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 4
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2019-02-19",
+      "art": "Bundesblatt",
+      "jahr": "2019",
+      "nummer": "2177",
+      "text": "Armeebotschaft 2019 vom 20. Februar 2019",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2019-02-19",
+      "art": "Bundesblatt",
+      "jahr": "2019",
+      "nummer": "2231",
+      "text": "Bundesbeschluss über das Rüstungsprogramm 2019",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2019-02-19",
+      "art": "Bundesblatt",
+      "jahr": "2019",
+      "nummer": "2233",
+      "text": "Bundesbeschluss über die Rahmenkredite für Armeematerial 2019",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2019-02-19",
+      "art": "Bundesblatt",
+      "jahr": "2019",
+      "nummer": "2235",
+      "text": "Bundesbeschluss über das Immobilienprogramm VBS 2019",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2019-02-19",
+      "art": "Bundesblatt",
+      "jahr": "2019",
+      "nummer": "2237",
+      "text": "Bundesgesetz über die Armee und die Militärverwaltung (Militärgesetz, MG)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2019-10-08",
+      "art": "Bundesblatt",
+      "jahr": "2019",
+      "nummer": "6595",
+      "text": null,
+      "referendumsfrist": "2020-01-16"
+    },
+    {
+      "datum": "2020-05-19",
+      "art": "Amtliche Sammlung",
+      "jahr": "2020",
+      "nummer": "1547",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2019-09-27",
+      "vorlage": 4,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 144,
+        "nein": 22,
+        "enthaltung": 31,
+        "anwesend": 0,
+        "nichtTeilgenommen": 0,
+        "entschuldigt": 1,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 199
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "nummer": "05.034",
+  "titel": "Bundesgesetz über die Invalidenversicherung (IVG). Massnahmen zur Verfahrensstraffung",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2005-05-04",
+  "erstrat": "Nationalrat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20050034",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2005-05-04",
+      "name": "Kommission für soziale Sicherheit und Gesundheit Nationalrat",
+      "kuerzel": "SGK-N"
+    },
+    {
+      "datum": "2005-05-04",
+      "name": "Kommission für soziale Sicherheit und Gesundheit Ständerat",
+      "kuerzel": "SGK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2005-10-04",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2005-12-06",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2005-12-16",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2005-12-16",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2005-05-04",
+      "art": "Bundesblatt",
+      "jahr": "2005",
+      "nummer": "3079",
+      "text": "Botschaft vom 4. Mai 2005 betreffend die Änderung des Bundesgesetzes über die Invalidenversicherung (Massnahmen zur Verfahrensstraffung)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2005-05-04",
+      "art": "Bundesblatt",
+      "jahr": null,
+      "nummer": null,
+      "text": "Bundesgesetz über die Invalidenversicherung (IVG)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2005-12-27",
+      "art": "Bundesblatt",
+      "jahr": "2005",
+      "nummer": "7285",
+      "text": null,
+      "referendumsfrist": "2006-04-06"
+    },
+    {
+      "datum": "2006-05-30",
+      "art": "Amtliche Sammlung",
+      "jahr": "2006",
+      "nummer": "2003",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2005-12-16",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 114,
+        "nein": 63,
+        "enthaltung": 4,
+        "anwesend": 0,
+        "nichtTeilgenommen": 17,
+        "entschuldigt": 1,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

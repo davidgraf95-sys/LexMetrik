@@ -1,0 +1,120 @@
+{
+  "nummer": "08.073",
+  "titel": "Schluss mit uferlosem Bau von Zweitwohnungen. Volksinitiative",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2008-10-29",
+  "erstrat": "Nationalrat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20080073",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2008-10-29",
+      "name": "Kommission für Umwelt, Raumplanung und Energie Nationalrat",
+      "kuerzel": "UREK-N"
+    },
+    {
+      "datum": "2008-10-29",
+      "name": "Kommission für Umwelt, Raumplanung und Energie Ständerat",
+      "kuerzel": "UREK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2009-06-04",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss gemäss Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2010-06-02",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Die Behandlungsfrist der Volksinitiative wird um ein Jahr, d. h. bis am 18. Juni 2011 verlängert.",
+      "vorlage": 1
+    },
+    {
+      "datum": "2010-06-10",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Die Behandlungsfrist der Volksinitiative wird um ein Jahr, d. h. bis am 18. Juni 2011 verlängert.",
+      "vorlage": 1
+    },
+    {
+      "datum": "2011-06-01",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2011-06-17",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2011-06-17",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2008-10-29",
+      "art": "Bundesblatt",
+      "jahr": "2008",
+      "nummer": "8757",
+      "text": "Botschaft vom 29. Oktober 2008 zur eidgenössischen Volksinitiative \"Schluss mit uferlosem Bau von Zweitwohnungen\"",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2008-10-29",
+      "art": "Bundesblatt",
+      "jahr": null,
+      "nummer": null,
+      "text": "Bundesbeschluss über die Volksinitiative \"Schluss mit uferlosem Bau von Zweitwohnungen!\"",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2011-06-28",
+      "art": "Bundesblatt",
+      "jahr": "2011",
+      "nummer": "4825",
+      "text": null,
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2012-07-03",
+      "art": "Amtliche Sammlung",
+      "jahr": "2012",
+      "nummer": "3627",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2011-06-17",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 123,
+        "nein": 61,
+        "enthaltung": 3,
+        "anwesend": 0,
+        "nichtTeilgenommen": 9,
+        "entschuldigt": 3,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

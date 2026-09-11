@@ -1,0 +1,120 @@
+{
+  "nummer": "12.044",
+  "titel": "Aarhus-Konvention. Genehmigung",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2012-03-28",
+  "erstrat": "Nationalrat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20120044",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2012-03-28",
+      "name": "Kommission für Umwelt, Raumplanung und Energie Nationalrat",
+      "kuerzel": "UREK-N"
+    },
+    {
+      "datum": "2012-03-28",
+      "name": "Kommission für Umwelt, Raumplanung und Energie Ständerat",
+      "kuerzel": "UREK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2012-09-13",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Eintreten.",
+      "vorlage": 1
+    },
+    {
+      "datum": "2013-03-04",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2013-06-13",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Eintreten. Das Geschäft geht für die Detailberatung an die Kommission zurück.",
+      "vorlage": 1
+    },
+    {
+      "datum": "2013-09-12",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2013-09-27",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2013-09-27",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2012-03-28",
+      "art": "Bundesblatt",
+      "jahr": "2012",
+      "nummer": "4323",
+      "text": "Botschaft vom 28. März 2012 zur Genehmigung und Umsetzung der Aarhus-Konvention und von deren Änderung",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2012-03-28",
+      "art": "Bundesblatt",
+      "jahr": "2012",
+      "nummer": "4363",
+      "text": "Bundesbeschluss über die Genehmigung und die Umsetzung der Aarhus-Konvention und von deren Änderung",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2013-10-08",
+      "art": "Bundesblatt",
+      "jahr": "2013",
+      "nummer": "7403",
+      "text": null,
+      "referendumsfrist": "2014-01-16"
+    },
+    {
+      "datum": "2014-05-13",
+      "art": "Amtliche Sammlung",
+      "jahr": "2014",
+      "nummer": "1021",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2013-09-27",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 99,
+        "nein": 92,
+        "enthaltung": 4,
+        "anwesend": 0,
+        "nichtTeilgenommen": 4,
+        "entschuldigt": 0,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

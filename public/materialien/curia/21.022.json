@@ -1,0 +1,127 @@
+{
+  "nummer": "21.022",
+  "titel": "Luftfahrtgesetz. Änderung",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2021-03-05",
+  "erstrat": "Nationalrat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20210022",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2021-03-05",
+      "name": "Kommission für Verkehr und Fernmeldewesen Nationalrat",
+      "kuerzel": "KVF-N"
+    },
+    {
+      "datum": "2021-03-05",
+      "name": "Kommission für Verkehr und Fernmeldewesen Ständerat",
+      "kuerzel": "KVF-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2021-06-03",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2021-09-13",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2021-11-30",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2021-12-07",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2021-12-09",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2021-12-17",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2021-12-17",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2021-03-05",
+      "art": "Bundesblatt",
+      "jahr": "2021",
+      "nummer": "626",
+      "text": "Botschaft vom 5. März 2021 zur Änderung des Luftfahrtgesetzes",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2021-03-05",
+      "art": "Bundesblatt",
+      "jahr": "2021",
+      "nummer": "627",
+      "text": "Bundesgesetz über die Luftfahrt (Luftfahrtgesetz)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2021-12-28",
+      "art": "Bundesblatt",
+      "jahr": "2021",
+      "nummer": "3005",
+      "text": null,
+      "referendumsfrist": "2022-04-07"
+    },
+    {
+      "datum": "2022-05-10",
+      "art": "Amtliche Sammlung",
+      "jahr": "2022",
+      "nummer": "229",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2021-12-17",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 195,
+        "nein": 0,
+        "enthaltung": 0,
+        "anwesend": 0,
+        "nichtTeilgenommen": 1,
+        "entschuldigt": 3,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

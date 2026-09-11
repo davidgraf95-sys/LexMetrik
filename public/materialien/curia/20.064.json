@@ -1,0 +1,167 @@
+{
+  "nummer": "20.064",
+  "titel": "Übernahme und Umsetzung der Verordnung (EU) 2019/1896 des Europäischen Parlaments und des Rates über die Europäische Grenz- und Küstenwache und zur Aufhebung der Verordnung (EU) 1052/2013 und (EU) 2016/1624 und zu einer Änderung des Asylgesetzes",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2020-08-26",
+  "erstrat": "Ständerat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20200064",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2020-08-26",
+      "name": "Sicherheitspolitische Kommission Nationalrat",
+      "kuerzel": "SiK-N"
+    },
+    {
+      "datum": "2020-08-26",
+      "name": "Sicherheitspolitische Kommission Ständerat",
+      "kuerzel": "SiK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2021-06-09",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2021-06-09",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 2
+    },
+    {
+      "datum": "2021-09-22",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2021-09-22",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 2
+    },
+    {
+      "datum": "2021-10-01",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2021-10-01",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2021-10-01",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 2
+    },
+    {
+      "datum": "2021-10-01",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 2
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2020-08-26",
+      "art": "Bundesblatt",
+      "jahr": "2020",
+      "nummer": "7105",
+      "text": "Botschaft vom 26. August 2020 zur Übernahme und Umsetzung der Verordnung (EU) 2019/1896 über die Europäische Grenz- und Küstenwache und zur Aufhebung der Verordnungen (EU) Nr. 1052/2013 und (EU) 2016/1624 (Weiterentwicklung des Schengen-Besitzstands) und zu einer Änderung des Asylgesetzes",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2020-08-26",
+      "art": "Bundesblatt",
+      "jahr": "2020",
+      "nummer": "7185",
+      "text": "Asylgesetz (AsylG)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2020-08-26",
+      "art": "Bundesblatt",
+      "jahr": "2020",
+      "nummer": "7187",
+      "text": "Bundesbeschluss über die Genehmigung und die Umsetzung des Notenaustausches zwischen der Schweiz und der EU betreffend die Übernahme der Verordnung (EU) 2019/1896 über die Europäische Grenz- und Küstenwache und zur Aufhebung der Verordnungen (EU) Nr. 1052/2013 und (EU) 2016/1624 (Weiterentwicklung des Schengen-Besitzstands)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2020-08-26",
+      "art": "Bundesblatt",
+      "jahr": "2020",
+      "nummer": "7191",
+      "text": "Notenaustausch vom 13. Dezember 2019 zwischen der Schweiz und der Europäischen Union betreffend die Übernahme der Verordnung (EU) 2019/1896 über die Europäische Grenz- und Küstenwache und zur Aufhebung der Verordnungen (EU) Nr. 1052/2013 (EU) 2016/1624 (Weiterentwicklung des Schengen-Besitzstands)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2021-10-12",
+      "art": "Bundesblatt",
+      "jahr": "2021",
+      "nummer": "2318",
+      "text": null,
+      "referendumsfrist": "2022-01-20"
+    },
+    {
+      "datum": "2021-10-12",
+      "art": "Bundesblatt",
+      "jahr": "2021",
+      "nummer": "2333",
+      "text": null,
+      "referendumsfrist": "2022-01-20"
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2021-10-01",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 139,
+        "nein": 55,
+        "enthaltung": 1,
+        "anwesend": 0,
+        "nichtTeilgenommen": 2,
+        "entschuldigt": 2,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    },
+    {
+      "datum": "2021-10-01",
+      "vorlage": 2,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 88,
+        "nein": 80,
+        "enthaltung": 28,
+        "anwesend": 0,
+        "nichtTeilgenommen": 1,
+        "entschuldigt": 2,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

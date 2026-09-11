@@ -1,0 +1,106 @@
+{
+  "nummer": "14.051",
+  "titel": "Steuerbefreiung von juristischen Personen mit ideellen Zwecken. Bundesgesetz",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2014-06-06",
+  "erstrat": "Ständerat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20140051",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2014-06-06",
+      "name": "Kommission für Wirtschaft und Abgaben Nationalrat",
+      "kuerzel": "WAK-N"
+    },
+    {
+      "datum": "2014-06-06",
+      "name": "Kommission für Wirtschaft und Abgaben Ständerat",
+      "kuerzel": "WAK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2014-09-10",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss gemäss Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2015-03-02",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2015-03-20",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2015-03-20",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2014-06-06",
+      "art": "Bundesblatt",
+      "jahr": "2014",
+      "nummer": "5369",
+      "text": "Botschaft vom 6. Juni 2014 zum Bundesgesetz über die Gewinnbesteuerung von juristischen Personen mit ideellen Zwecken",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2014-06-06",
+      "art": "Bundesblatt",
+      "jahr": "2014",
+      "nummer": "5383",
+      "text": "Bundesgesetz über die Gewinnbesteuerung von juristischen Personen mit ideellen Zwecken",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2015-03-31",
+      "art": "Bundesblatt",
+      "jahr": "2015",
+      "nummer": "2751",
+      "text": null,
+      "referendumsfrist": "2015-07-09"
+    },
+    {
+      "datum": "2015-09-09",
+      "art": "Amtliche Sammlung",
+      "jahr": "2015",
+      "nummer": "2947",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2015-03-20",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 120,
+        "nein": 72,
+        "enthaltung": 4,
+        "anwesend": 0,
+        "nichtTeilgenommen": 2,
+        "entschuldigt": 1,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

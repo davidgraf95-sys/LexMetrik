@@ -1,0 +1,106 @@
+{
+  "nummer": "09.061",
+  "titel": "Energiegesetz. Änderung",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2009-06-24",
+  "erstrat": "Ständerat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20090061",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2009-06-24",
+      "name": "Kommission für Umwelt, Raumplanung und Energie Nationalrat",
+      "kuerzel": "UREK-N"
+    },
+    {
+      "datum": "2009-06-24",
+      "name": "Kommission für Umwelt, Raumplanung und Energie Ständerat",
+      "kuerzel": "UREK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2009-11-30",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss gemäss Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2010-06-15",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2010-06-18",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2010-06-18",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2009-06-24",
+      "art": "Bundesblatt",
+      "jahr": "2009",
+      "nummer": "5317",
+      "text": "Botschaft 24. Juni 2009 zur Änderung des Energiegesetzes",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2009-06-24",
+      "art": "Bundesblatt",
+      "jahr": null,
+      "nummer": null,
+      "text": "Energiegesetz (EnG)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2010-06-29",
+      "art": "Bundesblatt",
+      "jahr": "2010",
+      "nummer": "4323",
+      "text": null,
+      "referendumsfrist": "2010-10-07"
+    },
+    {
+      "datum": "2010-11-16",
+      "art": "Amtliche Sammlung",
+      "jahr": "2010",
+      "nummer": "5065",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2010-06-18",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 136,
+        "nein": 53,
+        "enthaltung": 0,
+        "anwesend": 0,
+        "nichtTeilgenommen": 10,
+        "entschuldigt": 0,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

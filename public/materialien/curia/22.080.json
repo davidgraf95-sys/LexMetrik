@@ -1,0 +1,98 @@
+{
+  "nummer": "22.080",
+  "titel": "Entsendegesetz. Revision",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2022-12-02",
+  "erstrat": "Ständerat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20220080",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2022-12-02",
+      "name": "Kommission für Wirtschaft und Abgaben Nationalrat",
+      "kuerzel": "WAK-N"
+    },
+    {
+      "datum": "2022-12-02",
+      "name": "Kommission für Wirtschaft und Abgaben Ständerat",
+      "kuerzel": "WAK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2023-03-06",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss gemäss Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2023-05-30",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2023-06-16",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2023-06-16",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2022-12-02",
+      "art": "Bundesblatt",
+      "jahr": "2022",
+      "nummer": "3190",
+      "text": "Botschaft vom 2. Dezember 2022 zur Änderung des Entsendegesetzes",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2022-12-02",
+      "art": "Bundesblatt",
+      "jahr": "2022",
+      "nummer": "3191",
+      "text": "Bundesgesetz über die flankierenden Massnahmen bei entsandten Arbeitnehmerinnen und Arbeitnehmern und über die Kontrolle der in Normalarbeitsverträgen vorgesehenen Mindestlöhne (Entsendegesetz, EntsG)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2023-06-16",
+      "art": "Bundesblatt",
+      "jahr": "2023",
+      "nummer": "1526",
+      "text": null,
+      "referendumsfrist": "2023-10-05"
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2023-06-16",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 192,
+        "nein": 2,
+        "enthaltung": 0,
+        "anwesend": 0,
+        "nichtTeilgenommen": 2,
+        "entschuldigt": 3,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

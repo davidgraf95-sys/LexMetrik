@@ -1,0 +1,106 @@
+{
+  "nummer": "07.087",
+  "titel": "Militärstrafgesetz und Militärstrafprozess. Änderung",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2007-10-31",
+  "erstrat": "Ständerat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20070087",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2007-10-31",
+      "name": "Kommission für Rechtsfragen Nationalrat",
+      "kuerzel": "RK-N"
+    },
+    {
+      "datum": "2007-10-31",
+      "name": "Kommission für Rechtsfragen Ständerat",
+      "kuerzel": "RK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2008-06-11",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2008-09-29",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2008-10-03",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2008-10-03",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2007-10-31",
+      "art": "Bundesblatt",
+      "jahr": "2007",
+      "nummer": "8353",
+      "text": "Botschaft vom 31. Oktober 2007 zur Änderung des Militärstrafgesetzes und des Militärstrafprozesses (Korrekturen infolge der Revision AT MStG und weitere Anpassungen)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2007-10-31",
+      "art": "Bundesblatt",
+      "jahr": null,
+      "nummer": null,
+      "text": "Militärstrafgesetz und Militärstrafprozess (Korrekturen infolge der Revision des AT MStG und weitere Anpassungen)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2008-10-14",
+      "art": "Bundesblatt",
+      "jahr": "2008",
+      "nummer": "8257",
+      "text": null,
+      "referendumsfrist": "2009-01-22"
+    },
+    {
+      "datum": "2009-02-17",
+      "art": "Amtliche Sammlung",
+      "jahr": "2009",
+      "nummer": "701",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2008-10-03",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 188,
+        "nein": 0,
+        "enthaltung": 0,
+        "anwesend": 0,
+        "nichtTeilgenommen": 10,
+        "entschuldigt": 1,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

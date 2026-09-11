@@ -1,0 +1,98 @@
+{
+  "nummer": "24.077",
+  "titel": "Zivilgesetzbuch (Gewaltfreie Erziehung). Änderung",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2024-09-13",
+  "erstrat": "Nationalrat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20240077",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2024-08-22",
+      "name": "Kommission für Rechtsfragen Nationalrat",
+      "kuerzel": "RK-N"
+    },
+    {
+      "datum": "2024-08-22",
+      "name": "Kommission für Rechtsfragen Ständerat",
+      "kuerzel": "RK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2025-05-05",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss gemäss Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2025-09-09",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2025-09-26",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2025-09-26",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2024-09-13",
+      "art": "Bundesblatt",
+      "jahr": "2024",
+      "nummer": "2516",
+      "text": "Botschaft vom 13. September 2024 zur Änderung des Schweizerischen Zivilgesetzbuchs (Gewaltfreie Erziehung)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2024-09-13",
+      "art": "Bundesblatt",
+      "jahr": "2024",
+      "nummer": "2517",
+      "text": "Schweizerisches Zivilgesetzbuch (Gewaltfreie Erziehung)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2025-10-07",
+      "art": "Bundesblatt",
+      "jahr": "2025",
+      "nummer": "2892",
+      "text": null,
+      "referendumsfrist": "2026-01-15"
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2025-09-26",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 131,
+        "nein": 63,
+        "enthaltung": 2,
+        "anwesend": 0,
+        "nichtTeilgenommen": 0,
+        "entschuldigt": 2,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 199
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

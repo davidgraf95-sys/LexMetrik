@@ -1,0 +1,114 @@
+{
+  "nummer": "16.081",
+  "titel": "Europarats-Übereinkommen zur Verhütung und Bekämpfung von Gewalt gegen Frauen (Istanbul-Konvention). Genehmigung",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2016-12-02",
+  "erstrat": "Ständerat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20160081",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2016-12-02",
+      "name": "Kommission für Rechtsfragen Nationalrat",
+      "kuerzel": "RK-N"
+    },
+    {
+      "datum": "2016-12-02",
+      "name": "Kommission für Rechtsfragen Ständerat",
+      "kuerzel": "RK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2017-02-27",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss gemäss Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2017-05-31",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2017-06-16",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2017-06-16",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2016-12-02",
+      "art": "Bundesblatt",
+      "jahr": "2017",
+      "nummer": "185",
+      "text": "Botschaft vom 2. Dezember 2016 zur Genehmigung des Übereinkommens des Europarats zur Verhütung und Bekämpfung von Gewalt gegen Frauen und häuslicher Gewalt (Istanbul-Konvention)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2016-12-02",
+      "art": "Bundesblatt",
+      "jahr": "2017",
+      "nummer": "279",
+      "text": "Bundesbeschluss über die Genehmigung des Übereinkommens des Europarats zur Verhütung und Bekämpfung von Gewalt gegen Frauen und häuslicher Gewalt",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2016-12-02",
+      "art": "Bundesblatt",
+      "jahr": "2017",
+      "nummer": "281",
+      "text": "Übereinkommen des Europarats zur Verhütung und Bekämpfung von Gewalt gegen Frauen und häuslicher Gewalt (Istanbul-Konvention)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2017-06-30",
+      "art": "Bundesblatt",
+      "jahr": "2017",
+      "nummer": "4275",
+      "text": null,
+      "referendumsfrist": "2017-10-05"
+    },
+    {
+      "datum": "2018-03-20",
+      "art": "Amtliche Sammlung",
+      "jahr": "2018",
+      "nummer": "1117",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2017-06-16",
+      "vorlage": null,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 136,
+        "nein": 58,
+        "enthaltung": 1,
+        "anwesend": 0,
+        "nichtTeilgenommen": 3,
+        "entschuldigt": 1,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

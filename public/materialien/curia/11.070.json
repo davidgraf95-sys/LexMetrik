@@ -1,0 +1,134 @@
+{
+  "nummer": "11.070",
+  "titel": "Zivilgesetzbuch. Elterliche Sorge",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2011-11-16",
+  "erstrat": "Nationalrat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20110070",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2011-11-16",
+      "name": "Kommission für Rechtsfragen Nationalrat",
+      "kuerzel": "RK-N"
+    },
+    {
+      "datum": "2011-11-16",
+      "name": "Kommission für Rechtsfragen Ständerat",
+      "kuerzel": "RK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2012-09-25",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Diskussion",
+      "vorlage": 1
+    },
+    {
+      "datum": "2012-09-26",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2013-03-04",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2013-06-03",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2013-06-18",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2013-06-19",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2013-06-21",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2013-06-21",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2011-11-16",
+      "art": "Bundesblatt",
+      "jahr": "2011",
+      "nummer": "9077",
+      "text": "Botschaft vom 16. November 2011 zu einer Änderung des Schweizerischen Zivilgesetzbuches (Elterliche Sorge)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2011-11-16",
+      "art": "Bundesblatt",
+      "jahr": "2011",
+      "nummer": "9115",
+      "text": "Schweizerisches Zivilgesetzbuch (Elterliche Sorge)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2013-07-02",
+      "art": "Bundesblatt",
+      "jahr": "2013",
+      "nummer": "4763",
+      "text": null,
+      "referendumsfrist": "2013-10-10"
+    },
+    {
+      "datum": "2014-02-04",
+      "art": "Amtliche Sammlung",
+      "jahr": "2014",
+      "nummer": "357",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2013-06-21",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 160,
+        "nein": 13,
+        "enthaltung": 18,
+        "anwesend": 0,
+        "nichtTeilgenommen": 5,
+        "entschuldigt": 3,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

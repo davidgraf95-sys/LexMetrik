@@ -1,0 +1,105 @@
+{
+  "nummer": "18.095",
+  "titel": "Umweltschutzgesetz. Verbot des Inverkehrbringens von illegal geschlagenem Holz",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2018-12-07",
+  "erstrat": "Nationalrat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20180095",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2018-12-07",
+      "name": "Kommission für Umwelt, Raumplanung und Energie Nationalrat",
+      "kuerzel": "UREK-N"
+    },
+    {
+      "datum": "2018-12-07",
+      "name": "Kommission für Umwelt, Raumplanung und Energie Ständerat",
+      "kuerzel": "UREK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2019-06-05",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2019-09-10",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2019-09-12",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2019-09-27",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2019-09-27",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2018-12-07",
+      "art": "Bundesblatt",
+      "jahr": "2019",
+      "nummer": "1251",
+      "text": "Botschaft vom 7. Dezember 2018 zur Änderung des Umweltschutzgesetzes (Verbot des Inverkehrbringens von illegal geschlagenem Holz)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2018-12-07",
+      "art": "Bundesblatt",
+      "jahr": "2019",
+      "nummer": "1275",
+      "text": "Bundesgesetz über den Umweltschutz (Umweltschutzgesetz, USG)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2019-10-08",
+      "art": "Bundesblatt",
+      "jahr": "2019",
+      "nummer": "6603",
+      "text": null,
+      "referendumsfrist": "2019-01-16"
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2019-09-27",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 196,
+        "nein": 1,
+        "enthaltung": 0,
+        "anwesend": 0,
+        "nichtTeilgenommen": 0,
+        "entschuldigt": 1,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 199
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "nummer": "01.015",
+  "titel": "4. IV-Revision",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2001-02-21",
+  "erstrat": "Nationalrat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20010015",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2001-02-21",
+      "name": "Kommission für soziale Sicherheit und Gesundheit Nationalrat",
+      "kuerzel": "SGK-N"
+    },
+    {
+      "datum": "2001-02-21",
+      "name": "Kommission für soziale Sicherheit und Gesundheit Ständerat",
+      "kuerzel": "SGK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2001-12-13",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2001-12-13",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss gemäss Entwurf der Kommission.",
+      "vorlage": 2
+    },
+    {
+      "datum": "2002-09-26",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2002-09-26",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Nichteintreten",
+      "vorlage": 2
+    },
+    {
+      "datum": "2002-12-02",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2003-03-04",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Nichteintreten",
+      "vorlage": 2
+    },
+    {
+      "datum": "2003-03-10",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2003-03-12",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2003-03-21",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2003-03-21",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2001-02-21",
+      "art": "Bundesblatt",
+      "jahr": "2001",
+      "nummer": "3205",
+      "text": "Botschaft vom 21. Februar 2001 über die 4. Revision des Bundesgesetzes über die Invalidenversicherung",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2001-02-21",
+      "art": "Bundesblatt",
+      "jahr": null,
+      "nummer": null,
+      "text": "Bundesgesetz über die Invalidenversicherung (IVG)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2003-04-01",
+      "art": "Bundesblatt",
+      "jahr": "2003",
+      "nummer": "2745",
+      "text": null,
+      "referendumsfrist": "2003-07-10"
+    },
+    {
+      "datum": "2003-11-04",
+      "art": "Amtliche Sammlung",
+      "jahr": "2003",
+      "nummer": "3837",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": []
+}

@@ -1,0 +1,113 @@
+{
+  "nummer": "07.071",
+  "titel": "Ausserparlamentarische Kommissionen. Gesetzliche Neuordnung",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2007-09-12",
+  "erstrat": "Ständerat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20070071",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2007-09-12",
+      "name": "Staatspolitische Kommission Nationalrat",
+      "kuerzel": "SPK-N"
+    },
+    {
+      "datum": "2007-09-12",
+      "name": "Staatspolitische Kommission Ständerat",
+      "kuerzel": "SPK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2007-12-17",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2008-03-03",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2008-03-10",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2008-03-20",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2008-03-20",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2007-09-12",
+      "art": "Bundesblatt",
+      "jahr": "2007",
+      "nummer": "6641",
+      "text": "Botschaft vom 12. September 2007 über die Neuordnung der ausserparlamentarischen Kommissionen (Änderung des Regierungs- und Verwaltungsorganisationsgesetzes sowie weiterer Erlasse)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2007-09-12",
+      "art": "Bundesblatt",
+      "jahr": null,
+      "nummer": null,
+      "text": "Regierungs- und Verwaltungsorganisationsgesetz (RVOG) (Neuordnung der ausserparlamentarischen Kommissionen)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2008-04-01",
+      "art": "Bundesblatt",
+      "jahr": "2008",
+      "nummer": "2303",
+      "text": null,
+      "referendumsfrist": "2008-07-10"
+    },
+    {
+      "datum": "2008-12-16",
+      "art": "Amtliche Sammlung",
+      "jahr": "2008",
+      "nummer": "5941",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2008-03-20",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 194,
+        "nein": 0,
+        "enthaltung": 0,
+        "anwesend": 0,
+        "nichtTeilgenommen": 5,
+        "entschuldigt": 0,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

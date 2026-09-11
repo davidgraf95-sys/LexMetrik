@@ -1,0 +1,170 @@
+{
+  "nummer": "15.083",
+  "titel": "KVG. Stärkung von Qualität und Wirtschaftlichkeit",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2015-12-04",
+  "erstrat": "Ständerat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20150083",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2015-12-04",
+      "name": "Kommission für soziale Sicherheit und Gesundheit Nationalrat",
+      "kuerzel": "SGK-N"
+    },
+    {
+      "datum": "2015-12-04",
+      "name": "Kommission für soziale Sicherheit und Gesundheit Ständerat",
+      "kuerzel": "SGK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2016-06-16",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Nichteintreten.",
+      "vorlage": 1
+    },
+    {
+      "datum": "2016-06-16",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Nichteintreten.",
+      "vorlage": 2
+    },
+    {
+      "datum": "2018-06-11",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2018-06-11",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Eintreten",
+      "vorlage": 1
+    },
+    {
+      "datum": "2018-06-11",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 2
+    },
+    {
+      "datum": "2018-06-11",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Eintreten",
+      "vorlage": 2
+    },
+    {
+      "datum": "2019-03-05",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2019-03-05",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 2
+    },
+    {
+      "datum": "2019-06-05",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2019-06-05",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 2
+    },
+    {
+      "datum": "2019-06-21",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2019-06-21",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2015-12-04",
+      "art": "Bundesblatt",
+      "jahr": "2016",
+      "nummer": "257",
+      "text": "Botschaft vom 4. Dezember 2015 zur Änderung des Bundesgesetzes über die Krankenversicherung (Stärkung von Qualität und Wirtschaftlichkeit)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2015-12-04",
+      "art": "Bundesblatt",
+      "jahr": "2016",
+      "nummer": "305",
+      "text": "Bundesgesetz über die Krankenversicherung (KVG) (Stärkung von Qualität und Wirtschaftlichkeit)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2015-12-04",
+      "art": "Bundesblatt",
+      "jahr": "2016",
+      "nummer": "309",
+      "text": "Bundesbeschluss über den Gesamtkredit für Abgeltungen und Finanzhilfen zur Stärkung von Qualität und Wirtschaftlichkeit in der obligatorischen Krankenpflegeversicherung für die Jahre 2018–2021",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2019-06-15",
+      "art": "Bundesblatt",
+      "jahr": "2021",
+      "nummer": "546",
+      "text": null,
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2019-07-02",
+      "art": "Bundesblatt",
+      "jahr": "2019",
+      "nummer": "4469",
+      "text": null,
+      "referendumsfrist": "2019-10-10"
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2019-06-21",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 195,
+        "nein": 0,
+        "enthaltung": 0,
+        "anwesend": 0,
+        "nichtTeilgenommen": 1,
+        "entschuldigt": 2,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 199
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

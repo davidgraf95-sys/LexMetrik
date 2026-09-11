@@ -1,0 +1,106 @@
+{
+  "nummer": "22.032",
+  "titel": "Soziale Sicherheit. Abkommen mit dem Vereinigten Königreich",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2022-04-27",
+  "erstrat": "Nationalrat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20220032",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2022-04-27",
+      "name": "Kommission für soziale Sicherheit und Gesundheit Nationalrat",
+      "kuerzel": "SGK-N"
+    },
+    {
+      "datum": "2022-04-27",
+      "name": "Kommission für soziale Sicherheit und Gesundheit Ständerat",
+      "kuerzel": "SGK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2022-09-14",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss gemäss Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2022-11-29",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2022-12-16",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2022-12-16",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2022-04-27",
+      "art": "Bundesblatt",
+      "jahr": "2022",
+      "nummer": "1180",
+      "text": "Botschaft vom 27. April 2022 zur Genehmigung und Umsetzung des Abkommens zur Koordinierung der sozialen Sicherheit zwischen der Schweiz und dem Vereinigten Königreich",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2022-04-27",
+      "art": "Bundesblatt",
+      "jahr": "2022",
+      "nummer": "1181",
+      "text": "Bundesbeschluss über die Genehmigung und die Umsetzung des Abkommens zur Koordinierung der sozialen Sicherheit zwischen der Schweiz und dem Vereinigten Königreich",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2022-04-27",
+      "art": "Bundesblatt",
+      "jahr": "2022",
+      "nummer": "1182",
+      "text": "Abkommen zur Koordinierung der sozialen Sicherheit zwischen der Schweizerischen Eidgenossenschaft und dem Vereinigten Königreich von Grossbritannien und Nordirland",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2022-12-29",
+      "art": "Bundesblatt",
+      "jahr": "2022",
+      "nummer": "3211",
+      "text": null,
+      "referendumsfrist": "2023-04-08"
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2022-12-16",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 196,
+        "nein": 0,
+        "enthaltung": 0,
+        "anwesend": 0,
+        "nichtTeilgenommen": 1,
+        "entschuldigt": 2,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

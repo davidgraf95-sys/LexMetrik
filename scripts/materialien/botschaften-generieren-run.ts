@@ -5,10 +5,13 @@
 //
 // §2: --datum aus der Shell (kein Date.now). Netz-Lauf.
 // Aufruf: npm run materialien:botschaften -- --datum=$(date +%F)
-import { writeFileSync } from 'node:fs';
+import { writeFileSync, mkdirSync } from 'node:fs';
 import {
-  grundmenge, holeBindings, baueBotschaften, serialisiere,
+  grundmenge, holeBindings, baueBotschaften, serialisiere, sortiereBindings,
 } from './botschaften-generieren.ts';
+import {
+  holeEreignisBindings, baueEreignisse,
+} from './verfahrens-ereignisse.ts';
 
 const datumArg = process.argv.find((a) => a.startsWith('--datum='));
 const heute = datumArg ? datumArg.slice('--datum='.length) : '';
@@ -17,7 +20,19 @@ if (!/^\d{4}-\d{2}-\d{2}$/.test(heute)) { console.error('--datum=YYYY-MM-DD nöt
 const meta = grundmenge();
 console.log(`botschaften: Grundmenge ${meta.length} Bund-Volltext-Erlasse → SPARQL-Reverse-Kette …`);
 const bindings = await holeBindings(meta, fetch, 'bibliothek/materialien/botschaften-raw');
-const eintraege = baueBotschaften(bindings, meta);
+
+// E1 (§11.7): zweiter Durchgang gegen denselben Endpunkt — Verfahrenskette je
+// Projekt-Knoten. Die proj-Menge stammt aus dem ersten Durchgang (kein Raten).
+const projUris = [...new Set(bindings.map((b) => b.proj?.value).filter((v): v is string => !!v))].sort();
+console.log(`botschaften: ${projUris.length} Projekt-Knoten → Verfahrens-Ereignisse (type-projet) …`);
+const evBindings = await holeEreignisBindings(projUris);
+// store-raw (§11): EINE deterministisch sortierte Roh-Datei → Re-Parse ohne Re-Crawl.
+mkdirSync('bibliothek/materialien/verfahren-raw', { recursive: true });
+writeFileSync('bibliothek/materialien/verfahren-raw/ereignisse.json',
+  JSON.stringify(sortiereBindings(evBindings), null, 2) + '\n', 'utf8');
+const ereignisseProProj = baueEreignisse(evBindings);
+
+const eintraege = baueBotschaften(bindings, meta, ereignisseProProj);
 
 // Zukunfts-Guard (§8-Ehrlichkeit): kein stand > heute.
 const zukunft = eintraege.filter((e) => e.stand > heute);
@@ -30,3 +45,6 @@ const mantel = eintraege.filter((e) => e.normKeys.length > 1).length;
 const srMitTreffer = new Set(eintraege.flatMap((e) => e.normKeys)).size;
 console.log(`botschaften: ${eintraege.length} Botschaften → src/lib/materialien/botschaften.generated.ts`);
 console.log(`  Curia ${mitCuria}/${eintraege.length} · Mantelerlass ${mantel} · Erlasse mit ≥1 Botschaft ${srMitTreffer}/${meta.length}`);
+const mitEreignissen = eintraege.filter((e) => e.ereignisse?.length).length;
+const ereignisZahl = eintraege.reduce((n, e) => n + (e.ereignisse?.length ?? 0), 0);
+console.log(`  Verfahrens-Ereignisse ${ereignisZahl} über ${mitEreignissen}/${eintraege.length} Botschaften (${projUris.length} Projekt-Knoten)`);

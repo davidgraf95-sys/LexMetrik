@@ -1,0 +1,120 @@
+{
+  "nummer": "04.069",
+  "titel": "Bundesgesetz über die Börsen und den Effektenhandel. Internationale Amtshilfe",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2004-11-10",
+  "erstrat": "Nationalrat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20040069",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2004-11-10",
+      "name": "Kommission für Rechtsfragen Nationalrat",
+      "kuerzel": "RK-N"
+    },
+    {
+      "datum": "2004-11-10",
+      "name": "Kommission für Rechtsfragen Ständerat",
+      "kuerzel": "RK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2005-03-01",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss gemäss Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2005-05-31",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2005-09-19",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Festhalten.",
+      "vorlage": 1
+    },
+    {
+      "datum": "2005-09-28",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2005-10-07",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2005-10-07",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2004-11-10",
+      "art": "Bundesblatt",
+      "jahr": "2004",
+      "nummer": "6747",
+      "text": "Botschaft vom 10. November 2004 zur Änderung der Bestimmung über die internationale Amtshilfe im Bundesgesetz über die Börsen und den Effektenhandel",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2004-11-10",
+      "art": "Bundesblatt",
+      "jahr": null,
+      "nummer": null,
+      "text": "Bundesgesetz über die Börsen und den Effektenhandel (Börsengesetz, BEHG)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2005-10-18",
+      "art": "Bundesblatt",
+      "jahr": "2005",
+      "nummer": "5993",
+      "text": null,
+      "referendumsfrist": "2006-01-26"
+    },
+    {
+      "datum": "2006-12-10",
+      "art": "Amtliche Sammlung",
+      "jahr": "2006",
+      "nummer": "197",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2005-10-07",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 134,
+        "nein": 33,
+        "enthaltung": 16,
+        "anwesend": 0,
+        "nichtTeilgenommen": 11,
+        "entschuldigt": 5,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

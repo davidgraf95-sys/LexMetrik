@@ -1,0 +1,148 @@
+{
+  "nummer": "18.077",
+  "titel": "Raumplanungsgesetz. Teilrevision. 2. Etappe",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2018-10-31",
+  "erstrat": "Nationalrat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20180077",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2018-10-31",
+      "name": "Kommission für Umwelt, Raumplanung und Energie Nationalrat",
+      "kuerzel": "UREK-N"
+    },
+    {
+      "datum": "2018-10-31",
+      "name": "Kommission für Umwelt, Raumplanung und Energie Ständerat",
+      "kuerzel": "UREK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2019-12-03",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Nichteintreten",
+      "vorlage": 1
+    },
+    {
+      "datum": "2022-06-09",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beginn der Debatte",
+      "vorlage": 1
+    },
+    {
+      "datum": "2022-06-16",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2023-06-15",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2023-09-14",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2023-09-18",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2023-09-25",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2023-09-27",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2023-09-29",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2023-09-29",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2018-10-31",
+      "art": "Bundesblatt",
+      "jahr": "2018",
+      "nummer": "7443",
+      "text": "Botschaft vom 31. Oktober 2018 zur zweiten Etappe der Teilrevision des Raumplanungsgesetzes",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2018-10-31",
+      "art": "Bundesblatt",
+      "jahr": "2018",
+      "nummer": "7499",
+      "text": "Bundesgesetz über die Raumplanung (Raumplanungsgesetz, RPG)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2023-11-07",
+      "art": "Bundesblatt",
+      "jahr": "2023",
+      "nummer": "2488",
+      "text": null,
+      "referendumsfrist": "2024-02-15"
+    },
+    {
+      "datum": "2025-10-24",
+      "art": "Amtliche Sammlung",
+      "jahr": "2025",
+      "nummer": "640",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2023-09-29",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 196,
+        "nein": 0,
+        "enthaltung": 0,
+        "anwesend": 0,
+        "nichtTeilgenommen": 1,
+        "entschuldigt": 2,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

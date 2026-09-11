@@ -1,0 +1,122 @@
+{
+  "nummer": "17.053",
+  "titel": "Grenzüberschreitende Verwaltungszusammenarbeit. Übereinkommen Nr. 94 und 100 des Europarates. Genehmigung",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2017-08-30",
+  "erstrat": "Ständerat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20170053",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2017-08-30",
+      "name": "Kommission für Rechtsfragen Nationalrat",
+      "kuerzel": "RK-N"
+    },
+    {
+      "datum": "2017-08-30",
+      "name": "Kommission für Rechtsfragen Ständerat",
+      "kuerzel": "RK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2018-03-14",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2018-09-17",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2018-09-28",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2018-09-28",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2017-08-30",
+      "art": "Bundesblatt",
+      "jahr": "2017",
+      "nummer": "5947",
+      "text": "Botschaft vom 30. August 2017 zur Genehmigung und zur Umsetzung der Übereinkommen Nr. 94 und Nr. 100 des Europarates über die grenzüberschreitende Verwaltungszusammenarbeit.",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2017-08-30",
+      "art": "Bundesblatt",
+      "jahr": "2017",
+      "nummer": "5953",
+      "text": "Europäisches Übereinkommen über die Zustellung von Schriftstücken in Verwaltungssachen im Ausland",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2017-08-30",
+      "art": "Bundesblatt",
+      "jahr": "2017",
+      "nummer": "5977",
+      "text": "Bundesbeschluss über die Genehmigung und die Umsetzung des Übereinkommens Nr. 94 des Europarates über die Zustellung von Schriftstücken in Verwaltungssachen im Ausland",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2017-08-30",
+      "art": "Bundesblatt",
+      "jahr": "2017",
+      "nummer": "5991",
+      "text": "Europäisches Übereinkommen über die Erlangung von Auskünften und Beweisen in Verwaltungssachen im Ausland",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2018-10-12",
+      "art": "Bundesblatt",
+      "jahr": "2018",
+      "nummer": "6077",
+      "text": null,
+      "referendumsfrist": "2019-01-17"
+    },
+    {
+      "datum": "2019-03-26",
+      "art": "Amtliche Sammlung",
+      "jahr": "2019",
+      "nummer": "975",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2018-09-28",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 192,
+        "nein": 1,
+        "enthaltung": 0,
+        "anwesend": 0,
+        "nichtTeilgenommen": 3,
+        "entschuldigt": 3,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "nummer": "16.053",
+  "titel": "Neue Finanzordnung 2021",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2016-06-22",
+  "erstrat": "Nationalrat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20160053",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2016-06-22",
+      "name": "Kommission für Wirtschaft und Abgaben Nationalrat",
+      "kuerzel": "WAK-N"
+    },
+    {
+      "datum": "2016-06-22",
+      "name": "Kommission für Wirtschaft und Abgaben Ständerat",
+      "kuerzel": "WAK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2016-12-15",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss gemäss Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2017-05-30",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2017-06-16",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2017-06-16",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2016-06-22",
+      "art": "Bundesblatt",
+      "jahr": "2016",
+      "nummer": "6221",
+      "text": "Botschaft vom 22. Juni 2016 zur neuen Finanzordnung 2021",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2016-06-22",
+      "art": "Bundesblatt",
+      "jahr": "2016",
+      "nummer": "6239",
+      "text": "Bundesbeschluss über die neue Finanzordnung 2021",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2017-06-16",
+      "art": "Amtliche Sammlung",
+      "jahr": "2019",
+      "nummer": "769",
+      "text": null,
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2017-06-30",
+      "art": "Bundesblatt",
+      "jahr": "2017",
+      "nummer": "4205",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2017-06-16",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 196,
+        "nein": 0,
+        "enthaltung": 0,
+        "anwesend": 0,
+        "nichtTeilgenommen": 2,
+        "entschuldigt": 1,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

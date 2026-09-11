@@ -1,0 +1,106 @@
+{
+  "nummer": "05.017",
+  "titel": "Europäisches Polizeiamt (Europol) und Schweizerische Eidgenossenschaft. Abkommen",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2005-01-26",
+  "erstrat": "Ständerat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20050017",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2005-01-26",
+      "name": "Kommission für Rechtsfragen Nationalrat",
+      "kuerzel": "RK-N"
+    },
+    {
+      "datum": "2005-01-26",
+      "name": "Kommission für Rechtsfragen Ständerat",
+      "kuerzel": "RK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2005-06-15",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss gemäss Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2005-10-06",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2005-10-07",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2005-10-07",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2005-01-26",
+      "art": "Bundesblatt",
+      "jahr": "2005",
+      "nummer": "983",
+      "text": "Botschaft vom 26. Januar 2005 über das Abkommen zwischen der Schweizerischen Eidgenossenschaft und dem Europäischen Polizeiamt (Europol)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2005-01-26",
+      "art": "Bundesblatt",
+      "jahr": null,
+      "nummer": null,
+      "text": "Bundesbeschluss über die Genehmigung und die Umsetzung des Abkommens zwischen der Schweiz und dem Europäischen Polizeiamt",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2005-10-18",
+      "art": "Bundesblatt",
+      "jahr": "2005",
+      "nummer": "5971",
+      "text": null,
+      "referendumsfrist": "2006-01-26"
+    },
+    {
+      "datum": "2006-03-28",
+      "art": "Amtliche Sammlung",
+      "jahr": "2006",
+      "nummer": "1017",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2005-10-07",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 181,
+        "nein": 1,
+        "enthaltung": 4,
+        "anwesend": 0,
+        "nichtTeilgenommen": 8,
+        "entschuldigt": 5,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

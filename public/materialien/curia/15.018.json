@@ -1,0 +1,106 @@
+{
+  "nummer": "15.018",
+  "titel": "Freizügigkeitsgesetz. Ansprüche bei Wahl der Anlagestrategie durch die versicherte Person",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2015-02-11",
+  "erstrat": "Nationalrat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20150018",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2015-02-11",
+      "name": "Kommission für soziale Sicherheit und Gesundheit Nationalrat",
+      "kuerzel": "SGK-N"
+    },
+    {
+      "datum": "2015-02-11",
+      "name": "Kommission für soziale Sicherheit und Gesundheit Ständerat",
+      "kuerzel": "SGK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2015-09-22",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss gemäss Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2015-11-30",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2015-12-18",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2015-12-18",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2015-02-11",
+      "art": "Bundesblatt",
+      "jahr": "2015",
+      "nummer": "1793",
+      "text": "Botschaft vom 11. Februar 2015 zu einer Änderung des Freizügigkeitsgesetzes (Ansprüche bei Wahl der Anlagestrategie durch die versicherte Person)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2015-02-11",
+      "art": "Bundesblatt",
+      "jahr": "2015",
+      "nummer": "1805",
+      "text": "Bundesgesetz über die Freizügigkeit in der beruflichen Alters-, Hinterlassenen- und Invalidenvorsorge (Freizügigkeitsgesetz, FZG)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2016-01-04",
+      "art": "Bundesblatt",
+      "jahr": "2015",
+      "nummer": "9571",
+      "text": null,
+      "referendumsfrist": "2016-04-09"
+    },
+    {
+      "datum": "2017-09-22",
+      "art": "Amtliche Sammlung",
+      "jahr": "2017",
+      "nummer": "5019",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2015-12-18",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 193,
+        "nein": 0,
+        "enthaltung": 0,
+        "anwesend": 0,
+        "nichtTeilgenommen": 3,
+        "entschuldigt": 3,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

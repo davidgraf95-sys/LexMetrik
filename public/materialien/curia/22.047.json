@@ -1,0 +1,120 @@
+{
+  "nummer": "22.047",
+  "titel": "Gültigkeitsdauer der dringlichen Bestimmung zum Covid-19-Test bei der Ausschaffung (Art. 72 AIG). Verlängerung",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2022-06-03",
+  "erstrat": "Nationalrat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20220047",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2022-06-03",
+      "name": "Staatspolitische Kommission Nationalrat",
+      "kuerzel": "SPK-N"
+    },
+    {
+      "datum": "2022-06-03",
+      "name": "Staatspolitische Kommission Ständerat",
+      "kuerzel": "SPK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2022-09-22",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss gemäss Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2022-11-29",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2022-12-05",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme der Dringlichkeitsklausel",
+      "vorlage": 1
+    },
+    {
+      "datum": "2022-12-08",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme der Dringlichkeitsklausel",
+      "vorlage": 1
+    },
+    {
+      "datum": "2022-12-16",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2022-12-16",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2022-06-03",
+      "art": "Bundesblatt",
+      "jahr": "2022",
+      "nummer": "1359",
+      "text": "Botschaft vom 3. Juni 2022 zur Änderung des Ausländer- und Integrationsgesetzes (Verlängerung der Bestimmungen zum Covid-19-Test bei der Ausschaffung)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2022-06-03",
+      "art": "Bundesblatt",
+      "jahr": "2022",
+      "nummer": "1360",
+      "text": "Bundesgesetz über die Ausländerinnen und Ausländer und über die Integration (Ausländer- und Integrationsgesetz, AIG) (Covid-19-Test bei der Ausschaffung)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2022-12-20",
+      "art": "Bundesblatt",
+      "jahr": "2022",
+      "nummer": "3129",
+      "text": null,
+      "referendumsfrist": "2023-03-30"
+    },
+    {
+      "datum": "2023-01-01",
+      "art": "Amtliche Sammlung",
+      "jahr": "2022",
+      "nummer": "818",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2022-12-16",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 122,
+        "nein": 67,
+        "enthaltung": 6,
+        "anwesend": 0,
+        "nichtTeilgenommen": 2,
+        "entschuldigt": 2,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

@@ -38,6 +38,14 @@ on:
     # 10 Pins, 31.8.: StGB). Reihenfolge-Entscheid: erst reparieren, dann messen; der
     # Detektor prüft main, nicht den Reparatur-Branch.
     - cron: '17 7 * * 1'
+    # MONATSLAUF Curia Vista (W2·6c E4, FAHRPLAN-MATERIALIEN-VERZAHNUNG §11.6, Kritik B3).
+    # Bewusst NICHT in der Gate-Kette: ~8 Anfragen je Geschäft über ~400 Geschäfte bei
+    # <=2 Anfragen/s sind ~27 min — das ist keine Zahl, die vor einen Merge gehört, und
+    # ein Delta-Sync ist nicht möglich (`Modified` trug am 10.2.2026 für verschiedene
+    # Geschäfte denselben Zeitstempel = systemweiter Reindex, R4 §5). Erster des Monats,
+    # 03:23 UTC — vor dem Reparatur-Arm (04:43) und dem Detektor (07:17), damit ein
+    # Curia-PR nicht mit deren Läufen um dieselben Dateien streitet.
+    - cron: '23 3 1 * *'
   workflow_dispatch:
 
 env:
@@ -220,3 +228,70 @@ jobs:
           fi
           gh issue close "$offen" --reason completed --comment "🟢 Normen-Monitor wieder grün am $(date +%F) — alle Netz-Tore, Live-Site und Runtime-APIs bestanden. Zettel geschlossen; bei erneutem Rot legt der Monitor einen neuen an. Lauf: ${RUN_URL}"
           echo "Zettel #${offen} geschlossen (Monitor grün)."
+
+  # ── Curia-Vista-Monatslauf (W2·6c E4) ─────────────────────────────────────────
+  # Eigener Job, NICHT im Detektor-Job: er schreibt (Shards + Zustandsträger) und
+  # braucht darum andere Rechte und ein anderes Zeitbudget. Er läuft nur am
+  # Monats-Cron oder auf Zuruf — der wöchentliche Detektor bleibt unberührt.
+  curia:
+    name: Curia Vista — Monats-Vollabgleich (Parlaments-Etappen)
+    if: github.event_name == 'workflow_dispatch' || github.event.schedule == '23 3 1 * *'
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      TZ: Europe/Zurich
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Abrufdatum (Zürich, nie Date.now im Generator)
+        id: datum
+        run: echo "iso=$(date +%F)" >> "$GITHUB_OUTPUT"
+      - name: Vollabgleich Curia Vista (Beschlüsse · Kommissionen · NR-Aggregat)
+        run: npm run materialien:curia -- --datum=${{ steps.datum.outputs.iso }}
+      - name: Offline-Tore auf dem frischen Stand
+        run: npm run check:entstehung && npm run datenhaltung:manifest && npm run check:datenhaltung
+      - name: Änderungen feststellen
+        id: diff
+        run: |
+          set -euo pipefail
+          if [ -n "$(git status --porcelain)" ]; then echo "geaendert=1" >> "$GITHUB_OUTPUT"; else echo "geaendert=0" >> "$GITHUB_OUTPUT"; fi
+      - name: PR eröffnen (NIE Auto-Merge — Risikopfad, Gegenprüfung nachgelagert)
+        if: steps.diff.outputs.geaendert == '1'
+        env:
+          GH_TOKEN: ${{ secrets.AUTOMERGE_TOKEN || github.token }}
+          DATUM: ${{ steps.datum.outputs.iso }}
+        run: |
+          set -euo pipefail
+          branch="chore/curia-monatslauf-${DATUM}"
+          git config user.name  "curia-monatslauf-bot"
+          git config user.email "noreply@anthropic.com"
+          git checkout -b "$branch"
+          git add -A
+          git commit -F - <<'EOF'
+          chore(entstehung): Curia-Vista-Monatslauf — Parlaments-Etappen nachgeführt
+
+          Automatischer Vollabgleich gegen ws.parlament.ch (OData v3). Quelle:
+          Parlamentsdienste der Bundesversammlung, Bern. Keine Personendaten
+          (weder gespeichert noch abgefragt), Stimmenzahlen nur aggregiert und
+          als eigene Auszaehlung beschriftet.
+
+          Roadmap: W2·6c-ENTSTEHUNG-DATEN
+          Gegenpruefung: ausstehend — automatischer Lauf, adversariale Pruefung nachgelagert
+          Co-Authored-By: Claude Opus 5 (1M context) <noreply@anthropic.com>
+          EOF
+          git push -u origin "$branch"
+          offen=$(gh pr list --head "$branch" --state open --json number --jq '.[0].number // empty')
+          if [ -n "$offen" ]; then
+            echo "PR #${offen} für ${branch} ist bereits offen (idempotent)."
+          else
+            gh pr create --base main --head "$branch" \
+              --title "chore(entstehung): Curia-Vista-Monatslauf ${DATUM}" \
+              --body "Automatischer Monats-Vollabgleich der Parlaments-Etappen (W2·6c E4). KEIN Auto-Merge: die Curia-Shards liegen auf dem Risikopfad (istRisikoPfad), die adversariale Gegenpruefung ist nachgelagert."
+          fi

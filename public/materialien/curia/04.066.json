@@ -1,0 +1,113 @@
+{
+  "nummer": "04.066",
+  "titel": "Freizügigkeitsabkommen. Zusatzprotokoll",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2004-10-01",
+  "erstrat": "Ständerat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20040066",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2004-10-01",
+      "name": "Aussenpolitische Kommission Ständerat",
+      "kuerzel": "APK-S"
+    },
+    {
+      "datum": "2004-10-01",
+      "name": "Kommission 04.066-NR",
+      "kuerzel": "04.066-N"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2004-12-02",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss gemäss Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2004-12-13",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2004-12-14",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2004-12-17",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2004-12-17",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2004-10-01",
+      "art": "Bundesblatt",
+      "jahr": "2004",
+      "nummer": "5891",
+      "text": "Botschaft vom 1. Oktober 2004 zur Genehmigung des Protokolls zum Freizügigkeitsabkommen zwischen der Schweiz und der EG",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2004-10-01",
+      "art": "Bundesblatt",
+      "jahr": null,
+      "nummer": null,
+      "text": "Bundesbeschluss über die Genehmigung und Umsetzung des Protokolls über die Ausdehnung des Freizügigkeitsabkommens auf die neuen EG-Mitgliedstaaten zwischen der Schweizerischen Eidgenossenschaft einerseits und der Europäischen Gemeinschaft und ihren Mitgliedstaaten andererseits sowie über die Genehmigung der Revision der flankierenden Massnahmen zur Personenfreizügigkeit",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2004-12-21",
+      "art": "Bundesblatt",
+      "jahr": "2004",
+      "nummer": "7125",
+      "text": null,
+      "referendumsfrist": "2005-03-31"
+    },
+    {
+      "datum": "2006-03-28",
+      "art": "Amtliche Sammlung",
+      "jahr": "2006",
+      "nummer": "979",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2004-12-17",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 142,
+        "nein": 40,
+        "enthaltung": 8,
+        "anwesend": 0,
+        "nichtTeilgenommen": 8,
+        "entschuldigt": 1,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

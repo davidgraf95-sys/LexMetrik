@@ -1,0 +1,98 @@
+{
+  "nummer": "22.043",
+  "titel": "Für ein besseres Leben im Alter (Initiative für eine 13. AHV-Rente). Volksinitiative",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2022-05-25",
+  "erstrat": "Nationalrat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20220043",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2022-05-25",
+      "name": "Kommission für soziale Sicherheit und Gesundheit Nationalrat",
+      "kuerzel": "SGK-N"
+    },
+    {
+      "datum": "2022-05-25",
+      "name": "Kommission für soziale Sicherheit und Gesundheit Ständerat",
+      "kuerzel": "SGK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2022-12-14",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss gemäss Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2023-03-15",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2023-03-17",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2023-03-17",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2022-05-25",
+      "art": "Bundesblatt",
+      "jahr": "2022",
+      "nummer": "1485",
+      "text": "Botschaft vom 25. Mai 2022 zur Volksinitiative «Für ein besseres Leben im Alter (Initiative für eine 13. AHV-Rente)»",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2022-05-25",
+      "art": "Bundesblatt",
+      "jahr": "2022",
+      "nummer": "1486",
+      "text": "Bundesbeschluss über die Volksinitiative «Für ein besseres Leben im Alter (Initiative für eine 13. AHV-Rente)»",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2023-03-28",
+      "art": "Bundesblatt",
+      "jahr": "2023",
+      "nummer": "781",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2023-03-17",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 126,
+        "nein": 69,
+        "enthaltung": 2,
+        "anwesend": 0,
+        "nichtTeilgenommen": 0,
+        "entschuldigt": 2,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "nummer": "13.087",
+  "titel": "Steuererlassgesetz",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2013-10-23",
+  "erstrat": "Nationalrat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20130087",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2013-10-23",
+      "name": "Kommission für Wirtschaft und Abgaben Nationalrat",
+      "kuerzel": "WAK-N"
+    },
+    {
+      "datum": "2013-10-23",
+      "name": "Kommission für Wirtschaft und Abgaben Ständerat",
+      "kuerzel": "WAK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2014-03-11",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss gemäss Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2014-06-03",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2014-06-20",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2014-06-20",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2013-10-23",
+      "art": "Bundesblatt",
+      "jahr": "2013",
+      "nummer": "8435",
+      "text": "Botschaft vom 23. Oktober 2013 zum Steuererlassgesetz",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2013-10-23",
+      "art": "Bundesblatt",
+      "jahr": "2013",
+      "nummer": "8455",
+      "text": "Bundesgesetz über eine Neuregelung des Steuererlasses (Steuererlassgesetz)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2014-07-01",
+      "art": "Bundesblatt",
+      "jahr": "2014",
+      "nummer": "5169",
+      "text": null,
+      "referendumsfrist": "2014-10-09"
+    },
+    {
+      "datum": "2015-01-13",
+      "art": "Amtliche Sammlung",
+      "jahr": "2015",
+      "nummer": "9",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2014-06-20",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 198,
+        "nein": 0,
+        "enthaltung": 0,
+        "anwesend": 0,
+        "nichtTeilgenommen": 1,
+        "entschuldigt": 0,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

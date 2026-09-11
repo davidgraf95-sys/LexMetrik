@@ -1,0 +1,120 @@
+{
+  "nummer": "20.040",
+  "titel": "Dringliche Änderung des Epidemiengesetzes angesichts der COVID-19-Krise (Proximity-Tracing-System)",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2020-05-20",
+  "erstrat": "Ständerat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20200040",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2020-05-20",
+      "name": "Kommission für soziale Sicherheit und Gesundheit Nationalrat",
+      "kuerzel": "SGK-N"
+    },
+    {
+      "datum": "2020-05-20",
+      "name": "Kommission für soziale Sicherheit und Gesundheit Ständerat",
+      "kuerzel": "SGK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2020-06-03",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2020-06-08",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2020-06-10",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme der Dringlichkeitsklausel",
+      "vorlage": 1
+    },
+    {
+      "datum": "2020-06-11",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme der Dringlichkeitsklausel",
+      "vorlage": 1
+    },
+    {
+      "datum": "2020-06-19",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2020-06-19",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2020-05-20",
+      "art": "Bundesblatt",
+      "jahr": "2020",
+      "nummer": "4461",
+      "text": "Botschaft vom 20. Mai 2020 zu einer dringlichen Änderung des Epidemiengesetzes im Zusammenhang mit dem Coronavirus (Proximity-Tracing-System)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2020-05-20",
+      "art": "Bundesblatt",
+      "jahr": "2020",
+      "nummer": "4481",
+      "text": "Bundesgesetz über die Bekämpfung übertragbarer Krankheiten des Menschen (Epidemiengesetz, EpG)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2020-06-19",
+      "art": "Amtliche Sammlung",
+      "jahr": "2020",
+      "nummer": "2191",
+      "text": null,
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2020-06-30",
+      "art": "Bundesblatt",
+      "jahr": "2020",
+      "nummer": "5749",
+      "text": null,
+      "referendumsfrist": "2020-10-08"
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2020-06-19",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 154,
+        "nein": 23,
+        "enthaltung": 18,
+        "anwesend": 0,
+        "nichtTeilgenommen": 3,
+        "entschuldigt": 0,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 199
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

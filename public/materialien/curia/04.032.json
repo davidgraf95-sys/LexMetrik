@@ -1,0 +1,155 @@
+{
+  "nummer": "04.032",
+  "titel": "Bundesgesetz über die Krankenversicherung. Teilrevision. Vertragsfreiheit",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2004-05-26",
+  "erstrat": "Ständerat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20040032",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2004-05-26",
+      "name": "Kommission für soziale Sicherheit und Gesundheit Nationalrat",
+      "kuerzel": "SGK-N"
+    },
+    {
+      "datum": "2004-05-26",
+      "name": "Kommission für soziale Sicherheit und Gesundheit Ständerat",
+      "kuerzel": "SGK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2007-12-06",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss gemäss Entwurf",
+      "vorlage": 2
+    },
+    {
+      "datum": "2008-03-05",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Nichteintreten",
+      "vorlage": 2
+    },
+    {
+      "datum": "2008-05-27",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 2
+    },
+    {
+      "datum": "2008-06-04",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 2
+    },
+    {
+      "datum": "2008-06-05",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 2
+    },
+    {
+      "datum": "2008-06-10",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme der Dringlichkeitsklausel",
+      "vorlage": 2
+    },
+    {
+      "datum": "2008-06-11",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme der Dringlichkeitsklausel",
+      "vorlage": 2
+    },
+    {
+      "datum": "2008-06-13",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 2
+    },
+    {
+      "datum": "2008-06-13",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 2
+    },
+    {
+      "datum": "2008-12-18",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Nichteintreten.",
+      "vorlage": 1
+    },
+    {
+      "datum": "2010-06-16",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Nichteintreten.",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2004-05-26",
+      "art": "Bundesblatt",
+      "jahr": "2004",
+      "nummer": "4293",
+      "text": "Botschaft vom 26. Mai 2004 zur Änderung des Bundesgesetzes über die Krankenversicherung (Vertragsfreiheit)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2004-05-26",
+      "art": "Bundesblatt",
+      "jahr": null,
+      "nummer": null,
+      "text": "Bundesgesetz über die Krankenversicherung (KVG) (Bedarfsabhängige Zulassung)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2008-06-24",
+      "art": "Amtliche Sammlung",
+      "jahr": "2008",
+      "nummer": "2917",
+      "text": null,
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2008-06-24",
+      "art": "Bundesblatt",
+      "jahr": "2008",
+      "nummer": "5357",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2008-06-13",
+      "vorlage": 2,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 168,
+        "nein": 12,
+        "enthaltung": 4,
+        "anwesend": 0,
+        "nichtTeilgenommen": 15,
+        "entschuldigt": 0,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

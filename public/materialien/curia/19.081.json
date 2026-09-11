@@ -1,0 +1,126 @@
+{
+  "nummer": "19.081",
+  "titel": "ZGB. Änderung des Geschlechts im Personenstandsregister",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2019-12-06",
+  "erstrat": "Ständerat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20190081",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2019-12-06",
+      "name": "Kommission für Rechtsfragen Nationalrat",
+      "kuerzel": "RK-N"
+    },
+    {
+      "datum": "2019-12-06",
+      "name": "Kommission für Rechtsfragen Ständerat",
+      "kuerzel": "RK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2020-06-11",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss gemäss Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2020-09-24",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2020-12-01",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2020-12-07",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2020-12-10",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2020-12-16",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2020-12-18",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2020-12-18",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2019-12-06",
+      "art": "Bundesblatt",
+      "jahr": "2020",
+      "nummer": "799",
+      "text": "Botschaft vom 6. Dezember 2019 zur Änderung des Schweizerischen Zivilgesetzbuchs (Änderung des Geschlechts im Personenstandsregister)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2019-12-06",
+      "art": "Bundesblatt",
+      "jahr": "2020",
+      "nummer": "859",
+      "text": "Schweizerisches Zivilgesetzbuch (Änderung des Geschlechts im Personenstandsregister)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2020-12-31",
+      "art": "Bundesblatt",
+      "jahr": "2020",
+      "nummer": "9931",
+      "text": null,
+      "referendumsfrist": "2021-04-10"
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2020-12-18",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 128,
+        "nein": 54,
+        "enthaltung": 13,
+        "anwesend": 0,
+        "nichtTeilgenommen": 0,
+        "entschuldigt": 4,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

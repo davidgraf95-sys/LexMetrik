@@ -1,0 +1,113 @@
+{
+  "nummer": "14.063",
+  "titel": "Asylgesetz. Neustrukturierung des Asylbereichs",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2014-09-03",
+  "erstrat": "Ständerat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20140063",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2014-09-03",
+      "name": "Staatspolitische Kommission Nationalrat",
+      "kuerzel": "SPK-N"
+    },
+    {
+      "datum": "2014-09-03",
+      "name": "Staatspolitische Kommission Ständerat",
+      "kuerzel": "SPK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2015-06-15",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2015-09-09",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2015-09-22",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2015-09-25",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2015-09-25",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2014-09-03",
+      "art": "Bundesblatt",
+      "jahr": "2014",
+      "nummer": "7991",
+      "text": "Botschaft vom 3. September 2014 zur Änderung des Asylgesetzes (Neustrukturierung des Asylbereiches)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2014-09-03",
+      "art": "Bundesblatt",
+      "jahr": "2014",
+      "nummer": "8119",
+      "text": "Asylgesetz (AsylG)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2015-10-06",
+      "art": "Bundesblatt",
+      "jahr": "2015",
+      "nummer": "7181",
+      "text": null,
+      "referendumsfrist": "2016-01-14"
+    },
+    {
+      "datum": "2016-09-16",
+      "art": "Amtliche Sammlung",
+      "jahr": "2016",
+      "nummer": "3101",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2015-09-25",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 138,
+        "nein": 55,
+        "enthaltung": 1,
+        "anwesend": 0,
+        "nichtTeilgenommen": 4,
+        "entschuldigt": 1,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

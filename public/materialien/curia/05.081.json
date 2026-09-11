@@ -1,0 +1,113 @@
+{
+  "nummer": "05.081",
+  "titel": "StGB. Lebenslängliche Verwahrung extrem gefährlicher Straftäter",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2005-11-23",
+  "erstrat": "Ständerat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20050081",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2005-11-23",
+      "name": "Kommission für Rechtsfragen Nationalrat",
+      "kuerzel": "RK-N"
+    },
+    {
+      "datum": "2005-11-23",
+      "name": "Kommission für Rechtsfragen Ständerat",
+      "kuerzel": "RK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2006-06-20",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2007-09-17",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Eintreten; das Geschäft geht an die Kommission zurück zur Detailberatung.",
+      "vorlage": 1
+    },
+    {
+      "datum": "2007-12-18",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2007-12-21",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2007-12-21",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2005-11-23",
+      "art": "Bundesblatt",
+      "jahr": "2006",
+      "nummer": "889",
+      "text": "Botschaft vom 23. November 2005 zur Änderung des Schweizerischen Strafgesetzbuches in der Fassung vom 13. Dezember 2002 (Umsetzung von Artikel 123a der Bundesverfassung über die lebenslängliche Verwahrung extrem gefährlicher Straftäter)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2005-11-23",
+      "art": "Bundesblatt",
+      "jahr": null,
+      "nummer": null,
+      "text": "Schweizerisches Strafgesetzbuch (Lebenslängliche Verwahrung extrem gefährlicher Straftäter)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2008-01-08",
+      "art": "Bundesblatt",
+      "jahr": "2008",
+      "nummer": "23",
+      "text": null,
+      "referendumsfrist": "2008-04-17"
+    },
+    {
+      "datum": "2008-07-08",
+      "art": "Amtliche Sammlung",
+      "jahr": "2008",
+      "nummer": "2961",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2007-12-21",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 128,
+        "nein": 59,
+        "enthaltung": 8,
+        "anwesend": 0,
+        "nichtTeilgenommen": 4,
+        "entschuldigt": 0,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

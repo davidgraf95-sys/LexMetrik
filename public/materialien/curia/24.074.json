@@ -1,0 +1,106 @@
+{
+  "nummer": "24.074",
+  "titel": "UVG (Finanzierung der Stiftung Entschädigungsfonds für Asbestopfer). Änderung",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2024-09-13",
+  "erstrat": "Nationalrat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20240074",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2024-08-22",
+      "name": "Kommission für soziale Sicherheit und Gesundheit Nationalrat",
+      "kuerzel": "SGK-N"
+    },
+    {
+      "datum": "2024-08-22",
+      "name": "Kommission für soziale Sicherheit und Gesundheit Ständerat",
+      "kuerzel": "SGK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2025-03-03",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss gemäss Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2025-06-04",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2025-06-20",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2025-06-20",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2024-09-13",
+      "art": "Bundesblatt",
+      "jahr": "2024",
+      "nummer": "2479",
+      "text": "Botschaft vom 13. September 2024 zur Änderung des Bundesgesetzes über die Unfallversicherung (UVG) i.S. Finanzierung der Stiftung Entschädigungsfonds für Asbestopfer",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2024-09-13",
+      "art": "Bundesblatt",
+      "jahr": "2024",
+      "nummer": "2480",
+      "text": "Bundesgesetz über die Unfallversicherung (UVG) (Finanzierung der Stiftung Entschädigungsfonds für Asbestopfer)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2025-07-01",
+      "art": "Bundesblatt",
+      "jahr": "2025",
+      "nummer": "2040",
+      "text": null,
+      "referendumsfrist": "2025-10-09"
+    },
+    {
+      "datum": "2025-11-07",
+      "art": "Amtliche Sammlung",
+      "jahr": "2025",
+      "nummer": "685",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2025-06-20",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 131,
+        "nein": 66,
+        "enthaltung": 0,
+        "anwesend": 0,
+        "nichtTeilgenommen": 0,
+        "entschuldigt": 2,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

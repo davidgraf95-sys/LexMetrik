@@ -1,0 +1,167 @@
+{
+  "nummer": "05.040",
+  "titel": "Europäisches Patentsystem und Änderung des Patentgesetzes",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2005-05-18",
+  "erstrat": "Ständerat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20050040",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2005-05-18",
+      "name": "Kommission für Rechtsfragen Nationalrat",
+      "kuerzel": "RK-N"
+    },
+    {
+      "datum": "2005-05-18",
+      "name": "Kommission für Rechtsfragen Ständerat",
+      "kuerzel": "RK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2005-10-05",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss gemäss Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2005-10-05",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss gemäss Entwurf",
+      "vorlage": 2
+    },
+    {
+      "datum": "2005-12-15",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2005-12-15",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 2
+    },
+    {
+      "datum": "2005-12-16",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2005-12-16",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2005-12-16",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 2
+    },
+    {
+      "datum": "2005-12-16",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 2
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2005-05-18",
+      "art": "Bundesblatt",
+      "jahr": "2005",
+      "nummer": "3773",
+      "text": "Boschaft vom 18. Mai 2005 über die Genehmigung von zwei Abkommen betreffend das europäische Patentsystem und die Änderungen des Patentgesetzes",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2005-05-18",
+      "art": "Bundesblatt",
+      "jahr": null,
+      "nummer": null,
+      "text": "Bundesbeschluss über die Genehmigung des Übereinkommens über die Anwendung des Artikels 65 des Europäischen Patentübereinkommens und über die Änderung des Patentgesetzes",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2005-12-27",
+      "art": "Bundesblatt",
+      "jahr": "2005",
+      "nummer": "7489",
+      "text": null,
+      "referendumsfrist": "2006-04-06"
+    },
+    {
+      "datum": "2005-12-27",
+      "art": "Bundesblatt",
+      "jahr": "2005",
+      "nummer": "7495",
+      "text": null,
+      "referendumsfrist": "2006-04-06"
+    },
+    {
+      "datum": "2007-12-11",
+      "art": "Amtliche Sammlung",
+      "jahr": "2007",
+      "nummer": "6479",
+      "text": null,
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2008-04-15",
+      "art": "Amtliche Sammlung",
+      "jahr": "2008",
+      "nummer": "1739",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2005-12-16",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 131,
+        "nein": 17,
+        "enthaltung": 35,
+        "anwesend": 0,
+        "nichtTeilgenommen": 15,
+        "entschuldigt": 1,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    },
+    {
+      "datum": "2005-12-16",
+      "vorlage": 2,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 167,
+        "nein": 16,
+        "enthaltung": 1,
+        "anwesend": 0,
+        "nichtTeilgenommen": 14,
+        "entschuldigt": 1,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

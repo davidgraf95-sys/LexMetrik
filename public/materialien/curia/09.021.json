@@ -1,0 +1,106 @@
+{
+  "nummer": "09.021",
+  "titel": "Entscheidungen in Zivil- und Handelssachen. Genehmigung und Umsetzung des revidierten Lugano-Übereinkommens",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2009-02-18",
+  "erstrat": "Ständerat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20090021",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2009-02-18",
+      "name": "Kommission für Rechtsfragen Nationalrat",
+      "kuerzel": "RK-N"
+    },
+    {
+      "datum": "2009-02-18",
+      "name": "Kommission für Rechtsfragen Ständerat",
+      "kuerzel": "RK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2009-09-23",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss gemäss Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2009-11-26",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2009-12-11",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2009-12-11",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2009-02-18",
+      "art": "Bundesblatt",
+      "jahr": "2009",
+      "nummer": "1777",
+      "text": "Botschaft vom 18. Februar 2009 zum Bundesbeschluss über die Genehmigung und die Umsetzung des revidierten Übereinkommens von Lugano über die gerichtliche Zuständigkeit, die Anerkennung und die Vollstreckung gerichtlicher Entscheidungen in Zivil- und Handelssachen",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2009-02-18",
+      "art": "Bundesblatt",
+      "jahr": null,
+      "nummer": null,
+      "text": "Bundesbeschluss über die Genehmigung und die Umsetzung des Übereinkommens über die gerichtliche Zuständigkeit und die Anerkennung und Vollstreckung von Entscheidungen in Zivil- und Handelssachen (Lugano-Übereinkommen)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2009-12-22",
+      "art": "Bundesblatt",
+      "jahr": "2009",
+      "nummer": "8809",
+      "text": null,
+      "referendumsfrist": "2010-04-01"
+    },
+    {
+      "datum": "2010-12-07",
+      "art": "Amtliche Sammlung",
+      "jahr": "2010",
+      "nummer": "5601",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2009-12-11",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 192,
+        "nein": 1,
+        "enthaltung": 0,
+        "anwesend": 0,
+        "nichtTeilgenommen": 6,
+        "entschuldigt": 0,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

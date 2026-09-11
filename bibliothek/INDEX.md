@@ -161,6 +161,21 @@ statt STRSTARTS = 260× schneller). Behörde `BR`, Doktyp `botschaft`, `nur-live
 `projEli/ocUris/botschaftDate` für Paket 5; im Norm-Kontext-Bus «Entstehungsgeschichte» (Bridge B1).
 Drift-Tor `check:botschaften-netz`. Maschinell zugeordnet; fachliche Abnahme David offen.
 
+**Entstehung am Artikel — Daten-Etappen E1/E2 (W2·6c, Go David 11.9.2026):** [materialien/entstehung-daten-2026-09-11.md](materialien/entstehung-daten-2026-09-11.md) —
+Bau-Befunde zur Verzahnung Fassungskette ↔ Verfahrenskette: Vokabular `type-projet` vollständig
+26 Codes (Recherche 6.9. hatte 15), 1 609 Verfahrens-Ereignisse über 407/407 Botschaften, Botschafts-Anker
+4/43 HTML-Botschaften mit 189 eindeutigen Ankern (83 mehrdeutige eIds bewusst nicht ausgeliefert, §1),
+Deckungs-Diagnose 39,6 % gesamt bei Spanne 0–100 % je Erlass, Parlaments-Etappen aus Curia Vista
+(385/402 Geschäfte, 3 577 Rats-Beschlüsse, 790 Kommissions-Vorberatungen, 454 NR-Schlussabstimmungen
+nur aggregiert und ohne jede Personenabfrage), Rückbau-Prüfung `artikel-revisionen`
+(A13) mit Ergebnis **Behalt** (17 Konsumenten, andere Fachfrage). Tore `check:entstehung`,
+`check:botschaften-netz`. Gegenprüfung ausstehend; fachliche Abnahme David offen.
+
+**Curia Vista — `Voting.Decision`-Codes (W2·6c E4):** [register/curia-decision-codes.md](register/curia-decision-codes.md) —
+die acht amtlichen Codes samt Erhebungsmethode (je Code eine eigene Live-Abfrage) und Gegenprobe an
+der DSG-Schlussabstimmung. `$metadata` deklariert kein Enum; die Tabelle ist darum von Hand belegt,
+ein unbekannter Code macht den Generator rot. Schliesst den offenen Punkt 2 aus R4.
+
 **Änderungshistorie / Amtliche Sammlung (Fedlex-Portfolio Paket 5, W2·6-REV):** [normtext/revisionen-2026-07-10.md](normtext/revisionen-2026-07-10.md) —
 je Bund-Volltext-Erlass eine «Änderungen / Revisionen»-Timeline (3108 AS/RO-Änderungs-Einträge über
 218 Erlasse; SPARQL Pfad (b) über die SR-Taxonomie). RO-Fundstelle aus der oc-URI abgeleitet (100 %),
