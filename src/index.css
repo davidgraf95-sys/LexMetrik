@@ -989,7 +989,7 @@
   /* ── W2·24-D40 (David 7.9.2026) · DIESELBE WEICHE, ZWEI NEUE ORTE ────────
      Hier standen `[data-hist-slot]`-Selektoren. Den Slot gibt es nicht mehr:
      die Fassungs-Auskunft ist seit D40 die Rubrik `f` der Funktionszeile am
-     Artikelende (`parts/BezuegeKopf.tsx`), und der Druck bekommt sie aus
+     Artikelende (`parts/Funktionszeile.tsx`), und der Druck bekommt sie aus
      `[data-hist-druck]` (`parts/ArtikelLeser.tsx`). Die FRAGE ist unverändert
      die von D35-F3 — «gilt die Fassungs-Auskunft überhaupt?» —, und sie bleibt
      hier beantwortet: `f` im Ansicht-Menü wählt INNERHALB der Stellung
@@ -3663,7 +3663,7 @@ html[data-fuss-aus*="a"] .lc-leser .lr7-bez-aktionen {
    Die Frage lautet «ist von den GEZÄHLTEN Rubriken dieses Artikels noch eine
    sichtbar?», und sie hängt an zwei Dingen: an der Wahl (`data-fuss-aus`, am
    <html>) und am Bestand des Artikels (`data-bez-marken`, an der Zeile —
-   `parts/BezuegeKopf.tsx` schreibt die Buchstaben, die es wirklich gibt).
+   `parts/Funktionszeile.tsx` schreibt die Buchstaben, die es wirklich gibt).
    Als Ausschalt-Regel gefasst wären das die 16 Teilmengen von r/m/g/w, jede mit
    vier Klauseln; als Anschalt-Regel sind es VIER Zeilen, eine je Rubrik.
    `:has()` bleibt damit aussen vor — die Nachbarschafts-Anfrage über 1686
@@ -3679,7 +3679,7 @@ html[data-fuss-aus*="a"] .lc-leser .lr7-bez-aktionen {
    stand dort «Bezüge» allein neben den Aktionen — eine Überschrift über nichts.
    D40 · `f` STEHT ABSICHTLICH NICHT IN DIESER LISTE. «Fassung» ist keine
    Angabe ÜBER etwas anderes — sie sagt, seit wann dieser Artikel gilt. Sie
-   steht darum links VOR dem Wort (`parts/BezuegeKopf.tsx` teilt die Zeile in
+   steht darum links VOR dem Wort (`parts/Funktionszeile.tsx` teilt die Zeile in
    zwei Hälften), und ein Artikel, an dem nur noch sie sichtbar ist, zeigt
    folgerichtig kein «Bezüge» — dasselbe Kriterium wie unten, nur konsequent zu
    Ende gedacht (§8).
@@ -3742,7 +3742,7 @@ html[data-fuss-aus="frmgwa"] .lc-leser .lr7-bez {
 
 /* ── D30 (David 6.9.2026) · DER AUFGEKLAPPTE APPARAT ────────────────────────
    Befund: die Zeile zählte «11 Entscheide» und zeigte beim Aufklappen nur den
-   Rechnen-Block. Der Bau dazu steht in `parts/BezuegeKopf.tsx` und
+   Rechnen-Block. Der Bau dazu steht in `parts/Funktionszeile.tsx` und
    `v3/panelModell.ts`; hier steht nur, wie das Aufgeklappte AUSSIEHT.
 
    REGISTERSTRICH JE RUBRIK statt einem für alle: die Klammer links

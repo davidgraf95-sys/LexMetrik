@@ -513,7 +513,7 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
 
               AUF DEM PAPIER ÄNDERT SICH NICHTS, und das ist der Grund für dieses
               Element. Die Funktionszeile ist `print:hidden` (sie ist Bedienung,
-              `./BezuegeKopf.tsx`); ihr die Fassung zu überlassen hiesse, dem
+              `./Funktionszeile.tsx`); ihr die Fassung zu überlassen hiesse, dem
               Ausdruck den Stand des Artikels zu nehmen — die Auskunft, die ein
               Aktenstück am dringendsten braucht (§8, dieselbe Sorge wie die
               Stand-Zeile im Erlass-Kopf, `e2e/druck-fundstellen-z2`).
@@ -693,7 +693,7 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
             ein eingeklappter (typisch: aufgehobener) Artikel behält seine
             Bezüge-Zeile, und sie steht dann direkt unter dem Kopf, weil es
             dazwischen nichts gibt. Im Druck bleibt sie ausgeblendet
-            (`print:hidden` in `BezuegeKopf.tsx`). */}
+            (`print:hidden` in `Funktionszeile.tsx`). */}
         <ArtikelBezuegeFuss bezuege={bezuege} bezuegeImFuss={bezuegeImFuss}
           historie={historie} leitfaelle={leitfaelle} materialien={materialien} verweise={verweise}
           werkzeuge={werkzeuge} zaehler={zaehler} zitat={zitat} revision={revision}

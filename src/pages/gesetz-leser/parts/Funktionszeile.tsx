@@ -2,6 +2,18 @@ import { useState, type ReactNode } from 'react';
 
 // ═══ DIE FUNKTIONSZEILE AM ARTIKELENDE (Klassenpräfix `.lr7-bez`) ═══════════
 //
+// ── HERKUNFT DER DATEI (W2·26, 11.9.2026) ─────────────────────────────────
+// Diese Datei hiess bis W2·26 `parts/BezuegeKopf.tsx`; der Name stammte aus
+// D33, als die Zeile noch als KOPF unter der Artikelnummer stand und
+// ausschliesslich BEZÜGE trug. Beides gilt seit D34/D40 nicht mehr: der Ort ist
+// das Artikelende, und die Zeile trägt neben den Bezügen die Fassung (D40) und
+// die Artikel-Aktionen (D35-F1). Der Name benannte damit weder den Ort noch den
+// Inhalt — Umbenennung auf `Funktionszeile` (Komponente `Funktionszeile`).
+// Der Typ `BezugsMarke` und die CSS-Klassen `.lr7-bez*` BLEIBEN: die Klassen
+// sind der Vertrag zu Golden/Prerender und den Sonden, der Typ benennt weiterhin
+// genau eine Rubrik-Marke. Die datierten Belege unten sind unverändert stehen
+// geblieben (§0 Ziff. 2b) — sie beschreiben ihren Stand, nicht den Dateinamen.
+//
 // ── W2·24-D35-F1 (David 7.9.2026) · EINE ZEILE TRÄGT DEN ARTIKEL ───────────
 // Entscheid: Variante A des D35-Vorschlags, mit dem Nachtrag «das alles soll
 // dann nur auf klick aufklappbar sein». Die Zeile am Artikelende trägt LINKS
@@ -64,6 +76,9 @@ import { useState, type ReactNode } from 'react';
 // und die Rechnung der Zahlen (sie steht in `./ArtikelLeser.bezuegeFuss.tsx`,
 // nicht hier). Dateiname und Komponentenname bleiben ebenfalls: ein Umbenennen
 // hätte datierte Belege «nachgeführt», statt sie stehenzulassen (§2b).
+// [W2·26, 11.9.2026 — ERGÄNZUNG, nicht Nachführung: der Satz galt für D40, wo
+//  die Umbenennung ein Nebenprodukt gewesen wäre. Sie ist mit W2·26 ein eigener,
+//  verhaltensneutraler Schritt mit eigenem Commit; die Belege stehen unverändert.]
 //
 // ── WARUM DIE MARKEN `.lc-btn-mini` TRAGEN ─────────────────────────────────
 // Ein Griff muss als Griff erkennbar sein (LM-091, gemessen 22×13 px ohne
@@ -122,7 +137,7 @@ export interface BezugsMarke {
  *                  braucht; armiert den bestehenden Ladepfad (s. u.).
  * @param laedt     Der Apparat ist unterwegs ⇒ Skelett statt Leere.
  */
-export function BezuegeKopf({ marken, zitat, aktionen, onOeffnen, laedt = false }: {
+export function Funktionszeile({ marken, zitat, aktionen, onOeffnen, laedt = false }: {
   marken: readonly BezugsMarke[];
   zitat: string;
   aktionen?: ReactNode;

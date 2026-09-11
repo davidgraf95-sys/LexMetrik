@@ -33,7 +33,7 @@
 //
 // ROT ZU BEKOMMEN (§6.7), je einzeln belegt in
 // `abnahme/design-identitaet/D35-F1-FUSSZEILE.md`:
-//  · in `parts/BezuegeKopf.tsx` `useState({})` durch `useState({ r: true, m: true,
+//  · in `parts/Funktionszeile.tsx` `useState({})` durch `useState({ r: true, m: true,
 //    g: true, w: true })` ersetzen (= Auto-Aufklappen)            ⇒ (a) rot
 //  · dort `setOffen((s) => ({ ...s, [m.reg]: jetzt }))` durch
 //    `setOffen({ r: jetzt, m: jetzt, g: jetzt, w: jetzt })` ersetzen (= der

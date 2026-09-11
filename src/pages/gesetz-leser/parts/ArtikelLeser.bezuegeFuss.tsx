@@ -2,7 +2,7 @@ import type { ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import { NormChip } from '../../../components/vorlagen/NormChip';
 import { SUCH_META } from '../suchHighlight';
-import { BezuegeKopf, type BezugsMarke } from './BezuegeKopf';
+import { Funktionszeile, type BezugsMarke } from './Funktionszeile';
 import { BezuegeZeile } from './BezuegeZeile';
 import { LeitfallZeile } from './ArtikelLeser.leitfaelle';
 import { ArtikelHistorieZeile } from './ArtikelHistorie';
@@ -47,7 +47,7 @@ import type { ArtikelHistorie } from '../../../lib/normtext/historie-laden';
 // Wörtlich, Nachtrag zum Variante-A-Entscheid: «das alles soll dann nur auf
 // klick aufklappbar sein». Diese Datei RECHNET die Zahlen und liefert je Rubrik
 // den Inhalt, den ihr Griff aufklappt; die Zeile selbst (Griffe, Zustand,
-// Aktions-Slot) steht in `./BezuegeKopf.tsx`. Neu ist der Slot `aktionen`: die
+// Aktions-Slot) steht in `./Funktionszeile.tsx`. Neu ist der Slot `aktionen`: die
 // Artikel-Aktionen «Zitat · Link · Amtliche Fassung ↗» stehen seither RECHTS
 // in derselben Zeile und dauerhaft sichtbar, statt in der Artikel-Kopfzeile
 // unter `opacity-0` (Herleitung in `./ArtikelAktionen.tsx`; eine vierte
@@ -58,7 +58,7 @@ import type { ArtikelHistorie } from '../../../lib/normtext/historie-laden';
 // Wörtlich: «und wieso ist fassung nicht auch unten am artikel?». Diese Datei
 // bekommt dafür EINE neue Prop (`historie`) und baut daraus die erste Marke der
 // Zeile; die Zeile selbst hat davon nur den Buchstaben `f` erfahren
-// (`./BezuegeKopf.tsx`). Der Kopf-Slot, an dem die Auskunft bis D40 hing, ist
+// (`./Funktionszeile.tsx`). Der Kopf-Slot, an dem die Auskunft bis D40 hing, ist
 // ersatzlos gefallen — nicht zusätzlich bewacht (§17-Gegengewicht). Herleitung
 // von Zahl, Inhalt und Registerfarbe steht unten an der Marke selbst.
 //
@@ -157,7 +157,7 @@ export function ArtikelBezuegeFuss({
          nicht auseinanderlaufen; es ist dieselbe Länge, einmal gezählt und
          einmal gerendert.
 
-         0 ⇒ KEINE RUBRIK. `BezuegeKopf` filtert `anzahl > 0` heraus, und das
+         0 ⇒ KEINE RUBRIK. `Funktionszeile` filtert `anzahl > 0` heraus, und das
          ist hier keine Notlösung, sondern deckungsgleich mit dem Datenmodell:
          korpusweit gemessen (7.9.2026, alle 209 Shards, 13 093 Artikel mit
          Eintrag) trägt JEDER Eintrag mindestens ein Ereignis — 0 heisst also
@@ -217,7 +217,7 @@ export function ArtikelBezuegeFuss({
         : undefined,
     },
     // Die Rubrik erscheint NUR mit echter Zahl (`anzahl > 0` filtert sie sonst
-    // in `BezuegeKopf` heraus) — ohne Zähl-Datei steht sie also gar nicht da,
+    // in `Funktionszeile` heraus) — ohne Zähl-Datei steht sie also gar nicht da,
     // statt eine Null zu behaupten (§8). Dieselbe Deckungsgleichheit wie oben:
     // die Zähl-Datei entdoppelt die Material-Kanten nach Dokument, und genau so
     // baut `projiziereMaterialien` die Liste (ein Eintrag je Dokument).
@@ -286,7 +286,7 @@ export function ArtikelBezuegeFuss({
   ];
   return (
     <div {...{ [SUCH_META]: '' }}>
-      <BezuegeKopf marken={bezugsMarken} zitat={zitat} aktionen={aktionen}
+      <Funktionszeile marken={bezugsMarken} zitat={zitat} aktionen={aktionen}
         onOeffnen={onOeffnen} laedt={laedt} />
     </div>
   );

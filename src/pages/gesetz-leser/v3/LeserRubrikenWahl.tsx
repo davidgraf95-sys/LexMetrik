@@ -6,7 +6,7 @@ import { bestimmungDativ, type BestimmungsWort } from './erlassAnsicht';
 //
 // Davids Nachtrag zum Variante-A-Entscheid (7.9.2026), wörtlich: «man soll
 // mittels ansicht alles einzelne abwählen können». Gemeint ist die
-// Funktionszeile am Artikelende (D35-F1, `parts/BezuegeKopf.tsx`): sie trägt
+// Funktionszeile am Artikelende (D35-F1, `parts/Funktionszeile.tsx`): sie trägt
 // links die vier Rubriken dieses Artikels mit ihren Zahlen und rechts seine
 // Aktionen. Wer eine davon nicht braucht, wählt sie hier ab — Zähler UND
 // Inhalt verschwinden, nicht nur der Inhalt.
@@ -20,7 +20,7 @@ import { bestimmungDativ, type BestimmungsWort } from './erlassAnsicht';
 // `../leserOptionen`), und `src/index.css` blendet danach aus. Ein Abo je
 // Artikel wären im OR 1686 Abonnenten und 1686 Neu-Renderings je Klick —
 // dieselbe Rechnung, die schon den gemerkten Aufklapp-Zustand der Zeile
-// gekippt hat (`parts/BezuegeKopf.tsx`, D35-F1). Diese Datei rendert also nur
+// gekippt hat (`parts/Funktionszeile.tsx`, D35-F1). Diese Datei rendert also nur
 // die Schalter; sie kennt die Zeile nicht, und die Zeile kennt sie nicht.
 //
 // ── WARUM DAS ATTRIBUT DIE ABGEWÄHLTEN TRÄGT, NICHT DIE GEWÄHLTEN ──────────

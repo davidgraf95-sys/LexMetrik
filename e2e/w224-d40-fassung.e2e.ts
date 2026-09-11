@@ -36,7 +36,7 @@
 //  · in `parts/ArtikelLeser.bezuegeFuss.tsx` die Marke `reg: 'f'` aus
 //    `bezugsMarken` entfernen                                     ⇒ (a) rot
 //  · dort `anzahl: 1` statt der Ereignis-Länge setzen             ⇒ (a) rot
-//  · in `parts/BezuegeKopf.tsx` `useState` mit `{ f: true }` vorbelegen
+//  · in `parts/Funktionszeile.tsx` `useState` mit `{ f: true }` vorbelegen
 //    (= die Rubrik steht beim Laden offen)                        ⇒ (b) rot
 //  · in `src/index.css` die vier `data-fuss-aus*="f"`-Zeilen löschen ⇒ (c) rot
 //  · in `src/index.css` die `data-vermerke`-Zeilen für `[data-reg="f"]`

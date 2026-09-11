@@ -5,7 +5,7 @@
 // stammten die Entscheide aus dem vollen Bezugs-Shard (OR 2.2 MB roh) und
 // erschienen erst, wenn der ihn geladen hatte; die Rubrik MATERIALIEN fehlte
 // ganz, weil ihr Shard im Leser gar nicht vorkommt — eine Rubrik ohne Zahl wäre
-// eine Zusage ohne Deckung gewesen (§8, s. `parts/BezuegeKopf.tsx`).
+// eine Zusage ohne Deckung gewesen (§8, s. `parts/Funktionszeile.tsx`).
 //
 // Beides löst eine buildseitige Zähl-Datei je Erlass
 // (`scripts/gen-bezuege-zaehler.ts` → `public/verzahnung/bezuege-zaehler/

@@ -33,7 +33,7 @@ import { AMTLICHE_FASSUNG_NOMEN } from '../../../lib/benennung';
 // SEIT D40 ist der Ort ein anderer, und damit auch die CLS-Frage. Davids Frage
 // lautete «und wieso ist fassung nicht auch unten am artikel?»: die Zeile ist
 // jetzt der INHALT der Rubrik «Fassung» in der Funktionszeile am Artikelende
-// (`./BezuegeKopf.tsx`, `./ArtikelLeser.bezuegeFuss.tsx`). Sie wird deshalb auf
+// (`./Funktionszeile.tsx`, `./ArtikelLeser.bezuegeFuss.tsx`). Sie wird deshalb auf
 // dem Bildschirm ERST GERENDERT, wenn der Leser die Rubrik aufklappt — ein
 // Klick, also input-getrieben und per Definition kein unerwarteter Sprung.
 // Damit ist die 24-px-Reserve (`min-h-beiwerk`) ersatzlos entfallen: sie hatte
@@ -103,7 +103,7 @@ export const ArtikelHistorieZeile = memo(function ArtikelHistorieZeile({ histori
    * Bis D40 entschied das ein eigener Klapp-Knopf IN dieser Zeile («Gilt seit …
    * ▸»). Den gibt es nicht mehr: die Zeile ist seit D40 der Inhalt der Rubrik
    * «Fassung» in der Funktionszeile am Artikelende, und DEREN Griff klappt sie
-   * auf (`./BezuegeKopf.tsx`). Ein zweiter Knopf im aufgeklappten Block waere
+   * auf (`./Funktionszeile.tsx`). Ein zweiter Knopf im aufgeklappten Block waere
    * ein Griff, der dasselbe noch einmal tut (§5) — und der Nutzer haette nach
    * dem ersten Klick immer noch keine Zeitleiste gesehen.
    *

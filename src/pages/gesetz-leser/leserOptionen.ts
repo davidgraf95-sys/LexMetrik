@@ -81,7 +81,7 @@ type ZweiWert = 'an' | 'aus';
  * alles einzelne abwählen können».
  *
  * Die Buchstaben sind DIESELBEN wie das `data-reg` der Funktionszeile
- * (`parts/BezuegeKopf.tsx`, Registerfarben r/m/g/w) — eine Rubrik, ein
+ * (`parts/Funktionszeile.tsx`, Registerfarben r/m/g/w) — eine Rubrik, ein
  * Buchstabe, an beiden Enden derselbe (§5). `a` ist die Aktionsgruppe rechts
  * («Zitat · Link · Amtliche Fassung ↗», `parts/ArtikelAktionen.tsx` — eine
  * vierte Aktion «⧉ Artikel daneben» ist mit D44, David 7.9.2026, ersatzlos
@@ -111,7 +111,7 @@ type ZweiWert = 'an' | 'aus';
  *
  * `f` STEHT VORN, weil die Rubrik vorn steht: sie ist die Auskunft ueber den
  * Artikel SELBST, die vier danach zeigen von ihm weg (darum traegt sie das Wort
- * «Bezuege» auch nicht mit, `parts/BezuegeKopf.tsx`). Die Reihenfolge dieser
+ * «Bezuege» auch nicht mit, `parts/Funktionszeile.tsx`). Die Reihenfolge dieser
  * Konstante IST die Reihenfolge in der Zeile und im Menue (§5).
  *
  * WAS `f` NICHT ENTSCHEIDET: ob die Fassungs-Auskunft ueberhaupt gilt. Das

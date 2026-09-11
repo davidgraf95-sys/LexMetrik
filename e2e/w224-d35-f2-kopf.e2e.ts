@@ -135,7 +135,7 @@ test.describe('D35-F2 · Kopf-Entlastung und Rubriken-Wahl', () => {
     // Art. 272 führt GENAU EINE Rubrik («Entscheide»). Nach dem Abwählen stand
     // dort «Bezüge» allein neben den Aktionen — eine Überschrift über nichts
     // (§8). Rot zu bekommen: in `src/index.css` die vier Anschalt-Zeilen für
-    // `.lr7-bez-wort` löschen, oder in `parts/BezuegeKopf.tsx` das Attribut
+    // `.lr7-bez-wort` löschen, oder in `parts/Funktionszeile.tsx` das Attribut
     // `data-bez-marken` weglassen.
     await oeffne(page);
     const nur272 = page.locator('#art-272 .lr7-bez-wort');

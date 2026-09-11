@@ -163,7 +163,7 @@ test.describe('A7 — strukturiertes Verweis-Popover (Wortlaut → Entscheide �
     // Randspalte. Auf Auftrag David 6.9.2026 («der platz rechts und links neben
     // dem gesetz … nimmt viel platz vom gesetzestext weg») sind beide Randspuren
     // gefallen; die Bezüge stehen seither als EINE aufklappbare Zeile unter dem
-    // Artikelkopf (`parts/BezuegeKopf.tsx`, `<details>`). Eingeklappt ist der
+    // Artikelkopf (`parts/Funktionszeile.tsx`, `<details>`). Eingeklappt ist der
     // Chip nicht gerendert — `getByRole` fand darum nichts (gemessen: 0 statt 1;
     // der zweite Treffer «Art. 20 OR» im Fliesstext ist der EXTERNE Fedlex-Link
     // und trägt über `.lc-verweis-aussen::after` ein «↗» im Namen, passt also

@@ -44,7 +44,7 @@ function kante(key: string, status: BezugStatus, datum = '2022-03-14'): Bezug {
 // KEINE Zahl. Dass im Browser genau EIN Ort je Artikel eine Entscheid-Zahl
 // nennt, misst `e2e/w224-d35-f2-kopf.e2e.ts` (a); die §8-Schranke «keine Zahl,
 // die wir nicht haben» lebt unverändert an der Funktionszeile weiter
-// (`parts/BezuegeKopf.tsx`: `anzahl > 0` filtert die Rubrik heraus).
+// (`parts/Funktionszeile.tsx`: `anzahl > 0` filtert die Rubrik heraus).
 describe('OEFFNER_WORT / OEFFNER_NAME — der Kopf-Griff nennt den ERLASS', () => {
   it('das Wort am Knopf ist unveränderlich und heisst «Erlass»', () => {
     expect(OEFFNER_WORT).toBe('Erlass');
