@@ -126,7 +126,8 @@ export function abstractUri(eliKurz: string): string {
 export interface ArtikelFassung {
   eId: string;
   label: string;
-  ueberschrift: string | null;
+  /** Sachüberschrift; leerer String = keine. */
+  ueberschrift: string;
   bloecke: SynopseBlock[];
   /** Das rohe innere XML — Eingabe des UNNORMALISIERTEN Vergleichs (Mess-Referenz). */
   roh: string;
@@ -152,7 +153,7 @@ export function extrahiereArtikel(xml: string): Map<string, ArtikelFassung> {
     out.set(eId, {
       eId,
       label: reinerText(ersterTag(inner, 'num') ?? ''),
-      ueberschrift: reinerText(ersterTag(inner, 'heading') ?? '') || null,
+      ueberschrift: reinerText(ersterTag(inner, 'heading') ?? ''),
       bloecke: zerlegeBloecke(inner),
       roh: inner,
     });
@@ -181,26 +182,26 @@ export function zerlegeBloecke(inner: string): SynopseBlock[] {
       .replace(/<num\b[^>]*>[\s\S]*?<\/num>/, '')
       .replace(/<heading\b[^>]*>[\s\S]*?<\/heading>/, '');
     const t = reinerText(koerper);
-    if (t) out.push({ absatz: null, num: null, text: t });
+    if (t) out.push(['', '', t]);
     return out;
   }
   for (const p of paras) {
     const koerper = p[1];
-    const absatz = reinerText(ersterTag(koerper, 'num') ?? '') || null;
+    const absatz = reinerText(ersterTag(koerper, 'num') ?? '');
     const ohneNum = koerper.replace(/<num\b[^>]*>[\s\S]*?<\/num>/, '');
     const items = [...ohneNum.matchAll(/<item\b[^>]*>([\s\S]*?)<\/item>/g)];
     if (items.length === 0) {
       const t = reinerText(ohneNum);
-      if (t) out.push({ absatz, num: null, text: t });
+      if (t) out.push([absatz, '', t]);
       continue;
     }
     // Listeneinleitung («Dieses Gesetz regelt … für:») trägt das Absatz-Etikett.
     const intro = reinerText(ersterTag(ohneNum, 'listIntroduction') ?? '');
-    if (intro) out.push({ absatz, num: null, text: intro });
+    if (intro) out.push([absatz, '', intro]);
     for (const it of items) {
-      const num = reinerText(ersterTag(it[1], 'num') ?? '') || null;
+      const num = reinerText(ersterTag(it[1], 'num') ?? '');
       const t = reinerText(it[1].replace(/<num\b[^>]*>[\s\S]*?<\/num>/, ''));
-      if (t) out.push({ absatz, num, text: t });
+      if (t) out.push([absatz, num, t]);
     }
   }
   return out;
@@ -240,7 +241,7 @@ export function reinerText(s: string): string {
 
 /** Der gespeicherte Wortlaut eines Artikels als ein String (Anzeige-/Mass-Eingabe). */
 export function wortlaut(bloecke: readonly SynopseBlock[]): string {
-  return bloecke.map((b) => [b.absatz, b.num, b.text].filter(Boolean).join(' ')).join('\n');
+  return bloecke.map((b) => b.filter(Boolean).join(' ')).join('\n');
 }
 
 /**
@@ -316,6 +317,11 @@ export interface DiffErgebnis {
   geaendert: string[];
   /** stabile eIds mit verschiedenem ROHEM XML = Mess-Referenz vor der Normalisierung. */
   geaendertRoh: string[];
+  /** eIds, deren ALT-Fassung keinen Wortlaut trägt (blosse Hülse: `<num>Art. 222q</num>`
+   *  plus Fussnote «Tritt am … in Kraft», oder ein Artikel, dessen Änderung nur Etikett
+   *  bzw. Sachtitel betrifft) UND deren Neu-Fassung ebenfalls keinen trägt. Es gibt
+   *  nichts zu zeigen — gelistet statt gespeichert, damit nichts still verschwindet (§8). */
+  ohneAltText: string[];
 }
 
 /** REIN: zwei Stände vergleichen. Diff-Einheit ist die amtliche eId (nie der Text). */
@@ -328,9 +334,15 @@ export function diffStaende(
   const geaendert: string[] = [];
   const geaendertRoh: string[] = [];
   const erstBefuellt: string[] = [];
+  const ohneAltText: string[] = [];
+  const leer = (f: ArtikelFassung): boolean => wortlaut(f.bloecke).trim() === '';
   for (const eId of [...alt.keys()].sort()) {
     const n = neu.get(eId);
-    if (!n) { nurAlt.push(eId); continue; }
+    if (!n) {
+      // Entfallen — aber nur speicherbar, wenn die Alt-Fassung überhaupt Wortlaut trug.
+      if (leer(alt.get(eId)!)) ohneAltText.push(eId); else nurAlt.push(eId);
+      continue;
+    }
     stabil.push(eId);
     const a = alt.get(eId)!;
     if (a.roh !== n.roh) geaendertRoh.push(eId);
@@ -340,12 +352,17 @@ export function diffStaende(
     // Leere Alt-Fassung: der Artikel war im alten Stand nur als ANGEKUENDIGTE Huelse da
     // (`<num>Art. 222q</num>` + Fussnote «Tritt am 1. April 2024 in Kraft.», gemessen
     // E5.0 an VTS Art. 222q). Er ist kein geaenderter, sondern ein eingefuegter Artikel;
-    // ein leerer Alt-Block waere eine Synopse gegen nichts.
-    if (alt_ === '') { erstBefuellt.push(eId); continue; }
+    // ein leerer Alt-Block waere eine Synopse gegen nichts. Gemessen wird die Leere am
+    // BLOCK-Wortlaut, nicht am flachen Text: der traegt Etikett und Sachtitel mit und ist
+    // bei einer Huelse gerade nicht leer («Art. 222q»).
+    if (leer(a)) {
+      if (leer(n)) ohneAltText.push(eId); else erstBefuellt.push(eId);
+      continue;
+    }
     geaendert.push(eId);
   }
-  const nurNeu = [...neu.keys()].filter((e) => !alt.has(e)).sort().concat(erstBefuellt).sort();
-  return { stabil, nurAlt, nurNeu, geaendert, geaendertRoh };
+  const nurNeu = [...neu.keys()].filter((e) => !alt.has(e)).concat(erstBefuellt).sort();
+  return { stabil, nurAlt, nurNeu, geaendert, geaendertRoh, ohneAltText: ohneAltText.sort() };
 }
 
 /** eId → kanonischer Korpus-Token («art_38_a» → «38_a»); null = kein Artikel-Token. */
@@ -355,9 +372,18 @@ export function tokenAusEId(eId: string): string | null {
 
 // ── Serialisierung ────────────────────────────────────────────────────────────
 
-/** Kanonische Serialisierung eines Shards (byte-deterministisch, §2). */
+/**
+ * Kanonische Serialisierung eines Shards (byte-deterministisch, §2).
+ *
+ * KOMPAKT, anders als bei den Anker- und Curia-Sidecars: die sind wenige KB gross und
+ * profitieren von der Lesbarkeit im Diff. Hier hängen an jedem Alt-Block drei Schlüssel,
+ * und die Einrückung kostet gemessen (11.9.2026, STPO) 175,9 KB statt 120,8 KB — 46 %
+ * Aufschlag auf ein Artefakt, das korpusweit mehrere MB wiegt und über die Leitung geht
+ * (§15). Von Hand editiert wird ein Shard ohnehin nie: `check:entstehung` vergleicht ihn
+ * byte-genau mit dieser Funktion und wird rot, wenn jemand es doch tut.
+ */
 export function serialisiereShard(s: SynopseShard): string {
-  return JSON.stringify(s, null, 2) + '\n';
+  return `${JSON.stringify(s)}\n`;
 }
 
 /** sha256 über den serialisierten Shard — Determinismus-Wächter (§11.6 (5)). */

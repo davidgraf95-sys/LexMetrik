@@ -35,18 +35,24 @@ export const SYNOPSE_FENSTER_AB = '2021-01-01';
 /** Verzeichnis der Shards (öffentliche Auslieferung, lädt erst auf Klick). */
 export const SYNOPSE_DIR = 'public/materialien/synopse';
 
-/** Ein Block (Absatz, Ziffer, Buchstabe) der Alt-Fassung — Wortlaut amtlich.
- *  Beide Etiketten sind die LITERALEN `<num>` des AKN-Baums; es wird nie eines
- *  zusammengesetzt oder erfunden (Skill `scraping-swiss-official-sources`: Listen-
- *  Etiketten unterscheiden sich je Sprache und Erlass, `a.` vs. `abis` vs. Gedankenstrich). */
-export interface SynopseBlock {
-  /** `<num>` des umschliessenden `<paragraph>`, z. B. «1» — null bei absatzlosem Artikel. */
-  absatz: string | null;
-  /** `<num>` des Blocks selbst, wenn er ein `<item>` ist, z. B. «a. » — null beim Absatz selbst. */
-  num: string | null;
-  /** Wortlaut, verbatim aus dem AKN-XML (Fussnoten-Apparat entfernt, `<sup>` erhalten). */
-  text: string;
-}
+/**
+ * Ein Block (Absatz, Ziffer, Buchstabe) der Alt-Fassung als TUPEL
+ * `[absatz, num, text]` — Wortlaut amtlich.
+ *
+ * Beide Etiketten sind die LITERALEN `<num>` des AKN-Baums; es wird nie eines
+ * zusammengesetzt oder erfunden (Skill `scraping-swiss-official-sources`: Listen-
+ * Etiketten unterscheiden sich je Sprache und Erlass, `a.` vs. `abis` vs. Gedankenstrich).
+ * Leerer String = kein Etikett auf dieser Ebene.
+ *
+ * WARUM TUPEL statt Objekt: 33 000 Blöcke × drei Schlüsselnamen sind gemessen 0,6 MB
+ * reines Gerüst auf einem Artefakt mit 8-MB-Deckel (§11.6 — den Deckel hebt man nie an,
+ * man senkt die Nutzlast). `SynopseBlockIndex` benennt die Stellen, damit der Zugriff
+ * lesbar bleibt.
+ */
+export type SynopseBlock = readonly [absatz: string, num: string, text: string];
+
+/** Sprechende Indizes für `SynopseBlock` (nie Zahlen im Konsumenten-Code). */
+export const SynopseBlockIndex = { absatz: 0, num: 1, text: 2 } as const;
 
 /** Gültigkeits-Zustand eines Alt-Blocks gegen die Fussnoten-Historie (§8, nie still aufgelöst). */
 export type SynopseZustand =
@@ -63,8 +69,8 @@ export interface SynopseArtikel {
   token: string | null;
   /** Amtliches Artikel-Etikett der Alt-Fassung, z. B. «Art. 336c». */
   label: string;
-  /** Sachüberschrift der Alt-Fassung (amtlich zitiert), null wenn keine. */
-  ueberschrift: string | null;
+  /** Sachüberschrift der Alt-Fassung (amtlich zitiert); fehlt, wenn der Artikel keine hat. */
+  ueberschrift?: string;
   /** `geaendert` = eId in beiden Ständen, Wortlaut verschieden · `entfallen` = nur im Alt-Stand. */
   art: 'geaendert' | 'entfallen';
   /** Wortlaut der Alt-Fassung. */
@@ -77,8 +83,11 @@ export interface SynopseArtikel {
   shaNorm: string;
   /** Gültigkeits-Zustand gegen die Fussnoten-Historie. */
   zustand: SynopseZustand;
-  /** AS-ELIs der Fussnoten-Ereignisse dieses Stands (Ereignis-Schlüssel `datum + oc-ELI`). */
-  oc: string[];
+  /** AS-ELIs der Fussnoten-Ereignisse dieses Stands in Kurzform («oc/2023/750»; voller
+   *  ELI = `https://fedlex.data.admin.ch/eli/` + Kurzform, Repo-Konvention `eliKurz`).
+   *  Zusammen mit dem Stand-Datum der Ereignis-Schlüssel (§11.6, nie der Listenindex —
+   *  122 Fälle «zwei Erlasse am selben Datum im selben Artikel»). Fehlt bei `ohne_ereignis`. */
+  oc?: string[];
 }
 
 /** Ein Konsolidierungs-Schritt: von Stand `von` auf Stand `bis`. */
@@ -88,10 +97,13 @@ export interface SynopseSchritt {
   /** Stand der NEU-Konsolidierung (ISO) — das Datum, an dem die Änderung gilt. */
   bis: string;
   /** eIds, die nur im NEUEN Stand vorkommen (neu eingefügt) — nur Liste, kein Text. */
-  neuEIds: string[];
+  neuEIds?: string[];
+  /** eIds, deren Alt-Fassung keinen Wortlaut trug (blosse Hülse oder reine Etikett-/
+   *  Sachtitel-Änderung) — nichts zu zeigen, aber auch nichts zu verschweigen (§8). */
+  ohneAltText?: string[];
   /** Fussnoten-Ereignisse am Stand `bis`, zu denen KEINE Textänderung beobachtet wurde
    *  (Widerspruch, §11.6 `validity_conflict` — angezeigt, nie still aufgelöst). */
-  ereignisOhneAenderung: string[];
+  ereignisOhneAenderung?: string[];
   artikel: SynopseArtikel[];
 }
 
@@ -125,6 +137,12 @@ export interface SynopseShard {
   erzeugt: string;
   /** Früheste ausgewertete Konsolidierung (= `SYNOPSE_FENSTER_AB` oder später). */
   fensterAb: string;
+  /** Amtliche Stände, die am Erzeugungstag NOCH NICHT GALTEN (`dateApplicability` in der
+   *  Zukunft; korpusweit 57 belegt, R2 §7). Sie werden bewusst NICHT verglichen: der
+   *  «Alt»-Text eines künftigen Schritts ist der GELTENDE Text, und den hält der Korpus
+   *  schon (§5 — keine zweite Wahrheit). Die Daten stehen hier, damit die Zeitleiste
+   *  «tritt in Kraft am …» sagen kann, ohne dass die Synopse sie speichert (§11.5 B5). */
+  kuenftigeStaende: string[];
   staende: SynopseStand[];
   schritte: SynopseSchritt[];
 }

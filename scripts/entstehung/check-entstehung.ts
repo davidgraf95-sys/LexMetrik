@@ -9,6 +9,10 @@
 //  (4) DECKUNGS-DIAGNOSE je Erlass gegen den gebuchten Stand; Rückgang ohne benannten
 //      `grund` ⇒ rot (Kritik A7/C11: Korpus-Summe verdeckt den Erlass-Rückgang, und ein
 //      Offline-Tor kann keinen PR-Trailer lesen — der Stand lebt im Register).
+//  (7) SYNOPSE-SHARDS (E5): Deckel gesamt UND je Erlass mit Ist-Wert, Zitat-Merkmale
+//      §7 a–d je ausgewertetem Stand (Stand, Filestore-URL, Live-Link, Quell-sha),
+//      kanonische Serialisierung, Normalisierungs-Profil, und derselbe Determinismus-
+//      Wächter wie bei den Ankern: Shard geändert ohne Quell-Hash-Änderung ⇒ rot.
 //  (5) DETERMINISMUS-WÄCHTER: ein Sidecar darf sich nie ändern, ohne dass sich der
 //      Quell-Hash der amtlichen Manifestation geändert hat (§7d — Parser-Drift darf nie
 //      wie eine Gesetzesänderung aussehen; Muster Lex/SFHAJJI). Durchgesetzt in zwei
@@ -28,6 +32,11 @@ import {
   type DeckungRegister, type DeckungErlass,
 } from './deckung.ts';
 import { CURIA_DIR, CURIA_ZUSTAND_PFAD, leseCuriaZustand } from './curia-zustand.ts';
+import {
+  SYNOPSE_DIR, NORM_PROFIL, SynopseBlockIndex, type SynopseShard,
+} from '../../src/lib/entstehung/synopse.ts';
+import { serialisiereShard as serialisiereSynopse, shaShard as shaSynopse } from './synopse.ts';
+import { SYNOPSE_REGISTER_PFAD, type SynopseRegister } from './synopse-register.ts';
 import {
   VERBOTENE_FELDER, CURIA_QUELLENANGABE, AUSZAEHLUNG_HINWEIS, DECISION_CODES,
   serialisiereShard, shaShard, leeresAggregat, type CuriaShard,
@@ -58,6 +67,9 @@ const DECKEL: readonly (readonly [string, string, number, boolean])[] = [
   // browser-erreichbare Kanal der Verfahrensketten und wuchs durch E1 um 5 % gzip.
   // Ohne Deckel wächst er unbemerkt weiter; check:perf-budget führt ihn nicht.
   ['Materialien-Register  ', 'public/materialien/register.json', 400 * 1024, true],
+  // §11.6/A6: Synopse-Alt-Blöcke 8 MB gesamt. Ist-Prognose aus der Vor-Messung E5.0
+  // (11.9.2026): ~4,9 MB roh über 1006 Schritte in 187 Erlassen.
+  ['Synopse-Shards        ', SYNOPSE_DIR, 8 * 1024 * 1024, false],
 ];
 
 function groesse(pfad: string, gzip: boolean): number | null {
@@ -213,6 +225,119 @@ for (const [name, pfad, max, gzip] of DECKEL) {
   } else {
     zeilen.push('check:entstehung — Curia: kein Zustandsträger (Etappe E4 noch nicht gelaufen).');
   }
+}
+
+// ── (7) Synopse-Shards: Deckel je Erlass, Zitat-Merkmale, Determinismus (E5) ───
+{
+  const register: SynopseRegister | null = existsSync(SYNOPSE_REGISTER_PFAD)
+    ? (JSON.parse(readFileSync(SYNOPSE_REGISTER_PFAD, 'utf8')) as SynopseRegister)
+    : null;
+  const dateien = existsSync(SYNOPSE_DIR)
+    ? readdirSync(SYNOPSE_DIR).filter((f) => f.endsWith('.json')).sort()
+    : [];
+  if (dateien.length && !register) {
+    fehler.push(`${SYNOPSE_DIR} ist befüllt, aber ${SYNOPSE_REGISTER_PFAD} fehlt — ohne Quell-Register ist kein Alt-Block belegbar (§7d).`);
+  }
+  // §11.6: 2 MB JE ERLASS. Der Gesamt-Deckel oben verdeckt einen einzelnen Ausreisser
+  // (Kritik A7: die Korpus-Summe verdeckt den Erlass-Wert) — deshalb beide.
+  const JE_ERLASS = 2 * 1024 * 1024;
+  let groesster: [string, number] = ['—', 0];
+  let bloecke = 0;
+  let schritte = 0;
+  let ohneEreignis = 0;
+  let konflikte = 0;
+  let staende = 0;
+  if (register) {
+    for (const f of dateien) {
+      const key = f.slice(0, -'.json'.length);
+      const roh = readFileSync(join(SYNOPSE_DIR, f), 'utf8');
+      const bytes = Buffer.byteLength(roh, 'utf8');
+      if (bytes > groesster[1]) groesster = [key, bytes];
+      if (bytes > JE_ERLASS) {
+        fehler.push(`Deckel gerissen: Synopse ${f} ${kb(bytes)} > ${kb(JE_ERLASS)} je Erlass — nie den Deckel anheben, sondern das Fenster (§8/§15).`);
+      }
+      const eintrag = register.erlasse[key];
+      if (!eintrag) { fehler.push(`Synopse-Shard ${f} steht nicht im Quell-Register — Herkunft unbelegt (§7).`); continue; }
+      const shard = JSON.parse(roh) as SynopseShard;
+      if (roh !== serialisiereSynopse(shard)) {
+        fehler.push(`Synopse-Shard ${f} ist nicht kanonisch serialisiert — von Hand editiert? (Generator neu laufen.)`);
+      }
+      if (shaSynopse(shard) !== eintrag.shardSha) {
+        fehler.push(
+          `Synopse-Shard ${f}: sha weicht vom Quell-Register ab — der Alt-Wortlaut hat sich `
+          + 'geändert, ohne dass der Lauf ihn gebucht hätte (Determinismus-Wächter §11.6 (5)). '
+          + 'Generator neu laufen (npm run entstehung:synopse -- --datum=…).',
+        );
+      }
+      if (shard.normProfil !== NORM_PROFIL) {
+        fehler.push(
+          `Synopse-Shard ${f}: Normalisierungs-Profil «${shard.normProfil}» ≠ «${NORM_PROFIL}» — `
+          + 'ein gewechseltes Profil entwertet jede gespeicherte Prüfsumme; das Profil wird nie '
+          + 'editiert, ein besseres entsteht als /2 DANEBEN (soufien-lex.md).',
+        );
+      }
+      // ZITAT-MERKMALE §7 a–d je ausgewertetem Stand: ohne sie ist der gespeicherte
+      // Gesetzestext kein Zitat, sondern eine zweite Wahrheit (§5).
+      const registerStand = new Map(eintrag.staende.map((x) => [x.datum, x]));
+      for (const st of shard.staende) {
+        staende += 1;
+        if (!/^\d{4}-\d{2}-\d{2}$/.test(st.datum)) fehler.push(`Synopse ${f}: Stand «${st.datum}» ist kein ISO-Datum (§7a).`);
+        if (!st.xmlUrl.startsWith('https://fedlex.data.admin.ch/filestore/')) {
+          fehler.push(`Synopse ${f} Stand ${st.datum}: Quelle «${st.xmlUrl}» ist keine Filestore-URL — URLs werden nie konstruiert (§7b).`);
+        }
+        // PROVENIENZ-PFAD statt «-N»-Regel. R2 §6d belegt, dass die KONSTRUIERTE Alias-URL
+        // ohne «-N» ein Phantom ist (OR 1.7.2021: 1187 von 1528 eIds inhaltlich verschieden).
+        // Daraus folgt NICHT, dass jede suffixlose URL ein Phantom wäre: gemessen 11.9.2026
+        // liefert der Endpunkt für AHVG Stand 2027-01-01 ALS EINZIGE Manifestation
+        // `…-20270101-de-xml.xml` (449 896 B, 169 Artikel) — 63 der 1193 Stände sind so.
+        // Die Regel lautet «nie konstruieren, immer auflösen»; offline prüfbar ist davon
+        // der Pfad: ELI und Stand-Datum der URL müssen zum Shard und zum Stand passen.
+        const erwartet = `/eli/${shard.eli}/${st.datum.replace(/-/g, '')}/de/xml/`;
+        if (!st.xmlUrl.includes(erwartet)) {
+          fehler.push(
+            `Synopse ${f} Stand ${st.datum}: Quell-URL passt nicht zu «${erwartet}» — die `
+            + `Manifestation gehört zu einem anderen Erlass oder Stand (${st.xmlUrl}).`,
+          );
+        }
+        if (!st.liveUrl.startsWith('https://www.fedlex.admin.ch/eli/')) {
+          fehler.push(`Synopse ${f} Stand ${st.datum}: kein Live-Link zur geltenden amtlichen Fassung (§7c).`);
+        }
+        if (!/^[0-9a-f]{64}$/.test(st.sha)) fehler.push(`Synopse ${f} Stand ${st.datum}: Quell-sha fehlt oder ist kein sha256 (§7d).`);
+        if (!/^\d{4}-\d{2}-\d{2}$/.test(st.abgerufen)) fehler.push(`Synopse ${f} Stand ${st.datum}: Abrufdatum fehlt (§7a).`);
+        if (st.artikelZahl <= 0) fehler.push(`Synopse ${f} Stand ${st.datum}: 0 Artikel — Extraktion gescheitert, nie als «nichts geändert» buchen.`);
+        const rs = registerStand.get(st.datum);
+        if (!rs) fehler.push(`Synopse ${f} Stand ${st.datum}: steht nicht im Quell-Register (§7).`);
+        else if (rs.sha !== st.sha) fehler.push(`Synopse ${f} Stand ${st.datum}: Quell-sha weicht vom Register ab.`);
+      }
+      for (const sch of shard.schritte) {
+        schritte += 1;
+        konflikte += sch.ereignisOhneAenderung?.length ?? 0;
+        for (const a of sch.artikel) {
+          bloecke += 1;
+          if (a.zustand === 'ohne_ereignis') ohneEreignis += 1;
+          // Ein Alt-Block ohne Wortlaut wäre eine Synopse gegen nichts (E5.0: angekündigte,
+          // textlose Hülsen gehören in die Klasse «nur im neuen Stand», nicht hierher).
+          if (a.alt.length === 0 || a.alt.every((b) => b[SynopseBlockIndex.text].trim() === '')) {
+            fehler.push(`Synopse ${f} Schritt ${sch.von}→${sch.bis}: Alt-Block ${a.eId} ohne Wortlaut.`);
+          }
+          if (!/^[0-9a-f]{64}$/.test(a.shaNorm)) {
+            fehler.push(`Synopse ${f} Schritt ${sch.von}→${sch.bis}: Alt-Block ${a.eId} ohne shaNorm (§7d).`);
+          }
+        }
+      }
+    }
+    for (const key of Object.keys(register.erlasse)) {
+      if (!dateien.includes(`${key}.json`)) {
+        fehler.push(`Quell-Register nennt einen Synopse-Shard ${key}.json, der in ${SYNOPSE_DIR} fehlt — stiller Verlust.`);
+      }
+    }
+  }
+  zeilen.push(
+    `check:entstehung — Synopse: ${dateien.length} Erlass-Shard(s), ${staende} Stände, ${schritte} Schritte, `
+    + `${bloecke} Alt-Blöcke (${ohneEreignis} ohne Fussnoten-Ereignis, ${konflikte} Fussnoten-Ereignisse ohne `
+    + `beobachtete Textänderung — beides angezeigt, nie aufgelöst); grösster Erlass ${groesster[0]} `
+    + `${kb(groesster[1])} / ${kb(JE_ERLASS)} (${((groesster[1] / JE_ERLASS) * 100).toFixed(0)} %).`,
+  );
 }
 
 // ── (4) Deckungs-Diagnose je Erlass ────────────────────────────────────────────
