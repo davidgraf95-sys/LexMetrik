@@ -352,32 +352,34 @@ for (const [name, pfad, max, gzip] of DECKEL) {
       // DIESELBE Funktion wie hier im Generator seit Profil `entstehung-norm/3`) «kein
       // Unterschied» zeigen — sonst speichert der Generator eine «Änderung», die der
       // Leser nie sehen kann (zwei Normalisierungen wären zwei Wahrheiten).
+      //
+      // OHNE Korpus-Snapshot (`pdf-embed`-Erlasse wie EMRK/NYUE — Register-Status,
+      // `artikelAnzahl: 0`, kein `public/normtext/bund/<key>.json`) fällt `geltend` auf
+      // ein leeres Array zurück: harmlos, weil `neuNach` es nur erreicht, wenn ein
+      // Alt-Block art `geaendert` ohne Folgeschritt ist — dann zeigt der Vergleich gegen
+      // «nichts» IMMER einen Unterschied (jeder Wortlaut ≠ leer), nie fälschlich «gleich».
       const normtextPfad = `public/normtext/bund/${key}.json`;
-      if (existsSync(normtextPfad)) {
-        const snap = JSON.parse(readFileSync(normtextPfad, 'utf8')) as {
-          eintraege: { artikel: string; bloecke: unknown }[];
-        };
-        const geltendCache = new Map<string, SynopseBlock[]>();
-        const geltendFuerToken = (token: string): SynopseBlock[] => {
-          const cached = geltendCache.get(token);
-          if (cached) return cached;
-          const eintrag = snap.eintraege.find((e) => e.artikel === token);
-          const g = geltendeBloecke(eintrag?.bloecke as Parameters<typeof geltendeBloecke>[0]);
-          geltendCache.set(token, g);
-          return g;
-        };
-        for (const v of leerDiffVerletzungen(shard, geltendFuerToken)) {
-          fehler.push(
-            `Synopse ${f}: Alt-Block Token ${v.token} @${v.stand} (${v.zustand}) ist nach der `
-            + 'Leser-Vergleichsform OHNE Unterschied zu seinem «Neu» — zwei Normalisierungen, '
-            + 'zwei Wahrheiten (§5/§1). Generator neu laufen (npm run entstehung:synopse -- '
-            + '--datum=… --parser-neu="<Grund>").',
-          );
-        }
-        leerDiffGeprueft += 1;
-      } else {
-        fehler.push(`Synopse ${f}: kein Korpus-Snapshot ${normtextPfad} — Leer-Diff-Wächter kann nicht prüfen (§5).`);
+      const snap = existsSync(normtextPfad)
+        ? (JSON.parse(readFileSync(normtextPfad, 'utf8')) as { eintraege: { artikel: string; bloecke: unknown }[] })
+        : null;
+      const geltendCache = new Map<string, SynopseBlock[]>();
+      const geltendFuerToken = (token: string): SynopseBlock[] => {
+        const cached = geltendCache.get(token);
+        if (cached) return cached;
+        const eintrag = snap?.eintraege.find((e) => e.artikel === token);
+        const g = geltendeBloecke(eintrag?.bloecke as Parameters<typeof geltendeBloecke>[0]);
+        geltendCache.set(token, g);
+        return g;
+      };
+      for (const v of leerDiffVerletzungen(shard, geltendFuerToken)) {
+        fehler.push(
+          `Synopse ${f}: Alt-Block Token ${v.token} @${v.stand} (${v.zustand}) ist nach der `
+          + 'Leser-Vergleichsform OHNE Unterschied zu seinem «Neu» — zwei Normalisierungen, '
+          + 'zwei Wahrheiten (§5/§1). Generator neu laufen (npm run entstehung:synopse -- '
+          + '--datum=… --parser-neu="<Grund>").',
+        );
       }
+      leerDiffGeprueft += 1;
     }
     for (const key of Object.keys(register.erlasse)) {
       if (!dateien.includes(`${key}.json`)) {
