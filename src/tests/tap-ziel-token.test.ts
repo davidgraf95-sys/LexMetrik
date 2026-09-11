@@ -23,6 +23,25 @@ const CSS = readFileSync('src/index.css', 'utf8')
 // WCAG 2.2 SC 2.5.8 (AA) — die Untergrenze, die der Token nie unterschreiten darf.
 const WCAG_2_5_8_MIN_PX = 24
 
+/** Rohe min-*-ZAHLEN aus DEKLARATIONEN (F9/D2, B3 Bug-Check #428) — nicht aus
+ *  einer @media-/@container-BEDINGUNG. Kommentare vorher entfernen: sie
+ *  zitieren die Zahl 24 legitim als Beleg (§7) — verboten ist die Zahl in der
+ *  Deklaration, nicht im Kommentar.
+ *
+ *  Die negative Lookahead `(?!\s*\))` ist die Abgrenzung (Nachtrag PR #796,
+ *  Umweg `max-width: 47.99rem` in src/index.css): eine @media-/@container-
+ *  BEDINGUNG schliesst direkt nach der Einheit mit `)` — `(min-width: 48rem)`
+ *  — eine DEKLARATION nie (sie endet mit `;`, `}` oder weiterem Wert). Nur der
+ *  erste Fall wird ausgenommen. */
+function rohesMinMass(css: string): string[] {
+  const ohneKommentare = css.replace(/\/\*[\s\S]*?\*\//g, '')
+  return [
+    ...ohneKommentare.matchAll(
+      /min-(?:height|width|block-size|inline-size)\s*:\s*([0-9.]+)(px|rem|em)(?!\s*\))/g,
+    ),
+  ].map((t) => `min-…: ${t[1]}${t[2]}`)
+}
+
 describe('DESIGN-REGLEMENT F9 — Trefferflächen-Token', () => {
   it('definiert --tap-ziel genau einmal in :root', () => {
     const treffer = [...CSS.matchAll(/^\s*--tap-ziel\s*:/gm)]
@@ -37,16 +56,34 @@ describe('DESIGN-REGLEMENT F9 — Trefferflächen-Token', () => {
   })
 
   it('lässt keine rohe min-height/min-width-Zahl in den Komponenten-Klassen zu', () => {
-    // Kommentare vorher entfernen: sie zitieren die Zahl 24 legitim als Beleg
-    // (Norm-Nachweis, §7) — verboten ist die Zahl in der DEKLARATION.
-    const ohneKommentare = CSS.replace(/\/\*[\s\S]*?\*\//g, '')
-    // B3 (Bug-Check #428): auch logische Properties und em — sonst schlüpft
-    // min-block-size/min-inline-size bzw. eine em-Zahl am Wächter vorbei.
-    const roh = [...ohneKommentare.matchAll(/min-(?:height|width|block-size|inline-size)\s*:\s*([0-9.]+)(px|rem|em)/g)]
-      .map((t) => `min-…: ${t[1]}${t[2]}`)
     expect(
-      roh,
+      rohesMinMass(CSS),
       'Trefferflächen kommen aus var(--tap-ziel), nicht aus einer Zahl (F9/D2)',
+    ).toEqual([])
+  })
+
+  it('unterscheidet Element-Deklaration und @media-/@container-BEDINGUNG (Wächter-Fixture, F9-Nachtrag PR #796)', () => {
+    // Fixture, kein Produktverhalten (§6.3): zeigt, dass der Wächter eine rohe
+    // Element-min-width weiterhin fängt, eine @media-/@container-Bedingung
+    // `(min-width: …)` aber nicht mehr fälschlich als Deklaration liest — der
+    // Umweg auf `max-width: 47.99rem` in src/index.css war nur nötig, weil das
+    // alte Muster diese Bedingung mitgetroffen hat.
+    const elementDeklaration = '.tap-el { min-width: 44px; }'
+    expect(
+      rohesMinMass(elementDeklaration),
+      'eine rohe Element-min-width muss weiterhin auffallen',
+    ).toEqual(['min-…: 44px'])
+
+    const mediaBedingung = '@media (min-width: 48rem) { .tap-el { display: grid; } }'
+    expect(
+      rohesMinMass(mediaBedingung),
+      'eine @media-Bedingung ist keine Deklaration und darf nicht auffallen',
+    ).toEqual([])
+
+    const containerBedingung = '@container (min-width: 20rem) { .tap-el { display: grid; } }'
+    expect(
+      rohesMinMass(containerBedingung),
+      'eine @container-Bedingung ist keine Deklaration und darf nicht auffallen',
     ).toEqual([])
   })
 
