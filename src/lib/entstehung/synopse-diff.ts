@@ -282,6 +282,36 @@ function woerter(text: string): string[] {
 }
 
 /**
+ * Die amtliche Marken-Grammatik: Zahl mit Zusatz («1», «1bis», «16c») oder ein
+ * bis zwei Buchstaben mit Ordinal-Zusatz («a», «abis», «cquater»), je mit oder
+ * ohne schliessenden Punkt. Sie ist eng gefasst, damit sie kein gewöhnliches
+ * Wort erfasst: «Vertrag.» und «Vertrag» bleiben verschieden (§1 — ein
+ * Satzende ist Wortlaut, kein Etikett).
+ */
+const MARKE_RE = /^(?:\d+[a-zäöü]*|[a-zäöü]{1,2}(?:bis|ter|quater|quinquies|sexies|septies|octies|novies|decies)?)[.)]?$/i;
+
+/**
+ * Sind zwei Wörter dasselbe Wort?
+ *
+ * Über die Vergleichsform hinaus gilt EINE zusätzliche Gleichsetzung, und zwar
+ * dieselbe, die schon die Block-Ausrichtung kennt (`schluessel`): ein
+ * LISTEN-ETIKETT ohne Punkt ist dasselbe Etikett wie mit Punkt. Die
+ * AKN-Konsolidierung schreibt «a.», der Korpus-Adapter «a», das Bundesblatt
+ * mal so mal so — und ein Diff, der daraus eine Streichung macht, streicht dem
+ * Leser den Buchstaben durch, den das Parlament gar nicht angefasst hat (§1;
+ * sichtbar geworden an der Entwurfs-Synopse zu DBG 5, 11.9.2026).
+ *
+ * Eng gefasst über `MARKE_RE`: «Vertrag.» und «Vertrag» bleiben verschieden.
+ */
+function gleichesWort(a: string, b: string): boolean {
+  const x = vergleichsform(a);
+  const y = vergleichsform(b);
+  if (x === y) return true;
+  if (!MARKE_RE.test(x) || !MARKE_RE.test(y)) return false;
+  return x.replace(/[.)]$/, '') === y.replace(/[.)]$/, '');
+}
+
+/**
  * Längste gemeinsame Teilfolge als Index-Paare. Klassische DP-Tabelle, O(n·m) —
  * bei den hier auftretenden Grössen (Blöcke je Artikel, Wörter je Block) ist das
  * die schlichteste Fassung, die IMMER dasselbe Ergebnis liefert (§2). Die
@@ -326,7 +356,7 @@ export function wortDiff(alt: string, neu: string): { alt: DiffStueck[]; neu: Di
   const b = woerter(neu);
   if (a.length === 0 && b.length === 0) return { alt: [], neu: [] };
   if (a.length > WORT_DECKEL || b.length > WORT_DECKEL) return ganz(alt, neu);
-  const paare = lcs(a, b, (x, y) => vergleichsform(x) === vergleichsform(y));
+  const paare = lcs(a, b, gleichesWort);
   const gemeinsam = paare.length;
   if (gemeinsam / Math.max(a.length, b.length) < AEHNLICH_MIN) return ganz(alt, neu);
   const links: DiffStueck[] = [];
@@ -456,18 +486,4 @@ export function tokenAusLabel(label: string): string | null {
   if (!t) return null;
   const zusatz = t[2].toLowerCase();
   return zusatz ? `${t[1]}_${zusatz}` : t[1];
-}
-
-/**
- * Entwurf ↔ beschlossene Fassung als EINE Zeile.
- *
- * Der Entwurfs-Wortlaut im Bundesblatt ist nicht nach Absätzen ausgezeichnet
- * (`synopse-entwurf.ts`: ein `<article class="man-art-mod">` je Artikel, der
- * ganze Text darin) — es gibt also keine Etiketten, über die sich ausrichten
- * liesse. Der Vergleich läuft darum über den ganzen Artikel, und die Karte sagt
- * das (`ganzerArtikel`).
- */
-export function entwurfVergleich(entwurf: string, neu: readonly SynopseBlock[]): SynopseZeile {
-  const d = wortDiff(entwurf, neu.map((b) => b[2]).join('\n'));
-  return { art: 'geaendert', absatz: '', num: '', alt: d.alt, neu: d.neu, ganzerArtikel: true };
 }

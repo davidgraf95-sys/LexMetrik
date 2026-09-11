@@ -14,7 +14,7 @@
 import { describe, it, expect } from 'vitest';
 import {
   geltendeBloecke, lageFuerEreignis, ohneEreignisFuerArtikel, synopseZeilen,
-  tokenAusLabel, wortDiff, hatUnterschied, AEHNLICH_MIN,
+  tokenAusLabel, wortDiff, hatUnterschied, vergleichsform, AEHNLICH_MIN,
   type SynopseZeile,
 } from '../lib/entstehung/synopse-diff';
 import type { SynopseBlock, SynopseShard } from '../lib/entstehung/synopse';
@@ -145,6 +145,23 @@ describe('wortDiff', () => {
     expect(d.neu).toHaveLength(1);
     expect(d.neu[0].marke).toBe('neu');
     expect(AEHNLICH_MIN).toBeGreaterThan(0);
+  });
+
+  it('sieht durch Satz hindurch: geschütztes Leerzeichen ist keine Gesetzesänderung (BGÖ 13)', () => {
+    // Gemessen 11.9.2026: AKN schreibt «Artikel\u00a011», der Korpus «Artikel 11».
+    // Ohne diese Gleichsetzung stellte die Karte zweimal denselben Satz als
+    // «geändert» nebeneinander (§1).
+    const a = 'die nach Artikel\u00a011 angehört worden ist.';
+    const b = 'die nach Artikel 11 angehört worden ist.';
+    expect(vergleichsform(a)).toBe(vergleichsform(b));
+    expect(hatUnterschied(synopseZeilen([B('1', 'c.', a)], [B('1', 'c', b)]))).toBe(false);
+  });
+
+  it('setzt «a.» und «a» gleich — aber nie «Vertrag.» und «Vertrag»', () => {
+    const mitMarke = wortDiff('a. das Verbot;', 'a das Verbot;');
+    expect(mitMarke.alt.every((x) => x.marke === 'gleich')).toBe(true);
+    const satzende = wortDiff('Es gilt der Vertrag.', 'Es gilt der Vertrag');
+    expect(satzende.alt.some((x) => x.marke === 'weg')).toBe(true);
   });
 
   it('ist deterministisch (§2): zweimal dieselbe Eingabe, zweimal dasselbe Ergebnis', () => {

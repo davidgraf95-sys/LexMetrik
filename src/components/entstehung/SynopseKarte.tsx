@@ -3,7 +3,7 @@ import { AMTLICHE_FASSUNG_NOMEN } from '../../lib/benennung';
 import { standVon, type SynopseShard } from '../../lib/entstehung/synopse';
 import { entwurfUrl, type EntwurfArtikel, type EntwurfShard } from '../../lib/entstehung/synopse-entwurf';
 import {
-  entwurfVergleich, hatUnterschied, synopseZeilen,
+  hatUnterschied, synopseZeilen,
   type DiffStueck, type SynopseLage, type SynopseTreffer, type SynopseZeile,
 } from '../../lib/entstehung/synopse-diff';
 
@@ -230,7 +230,7 @@ function Vergleich({ treffer, shard, geltend, entwurf, aufgehoben }: {
         : <p className="lr8-syn-lage" data-synopse-lage="gleich">
             Zwischen den beiden Ständen ist am Wortlaut dieses Artikels kein Unterschied erkennbar.
           </p>}
-      {entwurf && neu && <EntwurfBlock fund={entwurf} neu={neu} />}
+      {entwurf && <EntwurfBlock fund={entwurf} />}
       <ul className="lr8-syn-fuss" data-synopse-fuss>
         <Nachweis wort="Alt" stand={schritt.von} liveUrl={altStand?.liveUrl}
           quelleUrl={altStand?.xmlUrl} abgerufen={altStand?.abgerufen} />
@@ -255,22 +255,45 @@ function Vergleich({ treffer, shard, geltend, entwurf, aufgehoben }: {
 /**
  * «Stand das im Entwurf auch schon so?» (E6).
  *
- * Verglichen wird der Entwurfs-Wortlaut des Bundesrats mit der Fassung, die aus
- * diesem Stand hervorging. Über den GANZEN Artikel, weil der Entwurfstext im
- * Bundesblatt nicht nach Absätzen ausgezeichnet ist (`lib/entstehung/
- * synopse-entwurf.ts`) — und der Join läuft über das Artikel-Label, nie über die
- * `mod_uN`-id (gemessen 7 von 41 Zuordnungen falsch).
+ * GEZEIGT WIRD DER ENTWURFS-WORTLAUT, NICHT EIN DIFF — und zwar nach einem
+ * Fehlversuch, den die Sichtprüfung am 11.9.2026 aufgedeckt hat: ein Wort-Diff
+ * gegen die konsolidierte Fassung markierte bei DBG 5 die Buchstaben b–e und
+ * Absatz 2 als «eingefügt». Sie sind nichts dergleichen — der Entwurf im
+ * Bundesblatt druckt nur die GEÄNDERTEN Teile eines Artikels ab, der Korpus
+ * führt den ganzen. Die beiden Texte haben also verschiedene Reichweiten, und
+ * ein Diff über verschieden weite Texte behauptet Änderungen, die es nicht gibt
+ * (§1). Die Reichweite maschinell zu bestimmen hiesse, das Etikett «Art. 5
+ * Abs. 1 Bst. a, abis und f» zu parsen — genau die offene Grammatik, die
+ * `lib/entstehung/synopse-entwurf.ts` aus §2-Gründen ablehnt.
+ *
+ * Also steht hier, was belegt ist: der Wortlaut des Entwurfs, die Einordnung des
+ * Label-Joins (`art`), beide Dokumente als Live-Link. Der beschlossene Wortlaut
+ * steht eine Handbreit darüber, in der Spalte «Neu» derselben Karte — der Leser
+ * vergleicht zwei Absätze weit auseinander, statt einer falschen Markierung zu
+ * glauben.
  */
-function EntwurfBlock({ fund, neu }: { fund: EntwurfFund; neu: NonNullable<SynopseTreffer['neu']> }) {
+function EntwurfBlock({ fund }: { fund: EntwurfFund }) {
   const { shard, artikel } = fund;
-  const zeile = entwurfVergleich(artikel.entwurf, neu);
   return (
     <div className="lr8-syn-entwurf" data-synopse-entwurf>
       <p className="lr8-syn-kopf">
         <span className="lc-overline"><span className="lc-punkt" aria-hidden />Entwurf des Bundesrats</span>{' '}
         <span className="text-ink-500">{artikel.label}</span>
       </p>
-      <Gegenueberstellung zeilen={[zeile]} altWort="Entwurf" neuWort="Beschlossen" />
+      <p className="lr8-syn-hinweis">
+        {artikel.art === 'nur_entwurf'
+          // §8 · «nur im Entwurf» heisst NICHT «gestrichen»: der Join läuft über
+          // das vollständige Etikett, und das Parlament ändert oft nur den
+          // Sachtitel (bei DBG 5 den Zusatz «Betrifft nur den französischen
+          // Text»). Beides steht da, entschieden wird nichts.
+          ? 'Unter diesem Etikett führt der Schlussabstimmungstext keinen Eintrag — der Artikel wurde im Parlament gestrichen oder anders betitelt.'
+          : 'Unter demselben Etikett weicht der Schlussabstimmungstext vom Entwurf ab.'}
+        {' '}Der Entwurf druckt nur die geänderten Teile des Artikels ab; was daraus wurde, steht oben in der Spalte «Neu».
+      </p>
+      <div className="lr8-syn-spalte">
+        <span className="lr8-syn-seite">Wortlaut im Entwurf</span>
+        <p className="lr8-syn-text">{artikel.entwurf}</p>
+      </div>
       <ul className="lr8-syn-fuss">
         <li>
           <span className="lr8-syn-feld">Entwurf</span>{' '}
@@ -288,8 +311,8 @@ function EntwurfBlock({ fund, neu }: { fund: EntwurfFund; neu: NonNullable<Synop
           <span className="text-ink-400"> · Abruf <span className="num">{datumCh(shard.abgerufen)}</span></span>
         </li>
         <li className="text-ink-400">
-          Zuordnung über das Artikel-Label: ändert das Parlament zugleich den Sachtitel, erscheint der
-          Artikel hier nicht — zwei ehrliche Lücken statt einer geratenen Zuordnung (§8).
+          Zuordnung über das Artikel-Label, nie über die Dokument-id — ein id-Abgleich ordnete
+          gemessen 7 von 41 Artikeln falsch zu.
         </li>
       </ul>
     </div>
