@@ -244,12 +244,15 @@ Erstlast (feste Liste; Shard-Ordner bewacht `check:entstehung`).
 | **E5.0** ⏳ #794 (offen, Stand 11.9.2026 20:49 CEST) | Vor-Messung Synopse an 5–8 weiteren Erlassen (Volumen, Falschtreffer nach Normalisierung); **zwei Speicherformen messen:** Alt-Block je Diff-Schritt vs. distinkte Textzustände je eId + Gültigkeitsintervalle (Lex D53; Preis: Fassung wird im Browser zusammengesetzt) | 1 | Messung | keine | — |
 | **E5** ⏳ #794 (offen, Stand 11.9.2026 20:49 CEST) | Synopse ab 2021 (nur Alt-Block), Shard je Erlass, Deckel; Gegenprobe jeder Block gegen sein Historie-Ereignis, Blöcke ohne Ereignis gelistet | 5–7 | Zitat §7 ⇒ Gegenprüfung; Golden | keine | zwei Spalten |
 | **E6** ⏳ #794 (offen, Stand 11.9.2026 20:49 CEST) | Entwurf ↔ Beschluss (Label-Join, ≥ 2025) | 2 | wie E5 | keine | «im Entwurf so?» |
+| **LESER-Synopse** ✅ #796 (`0a79eb68f`) | Griff «Alt/Neu ›» in der Funktionszeile neben «Warum?» (E3-Slot); Block-Ausrichtung über amtliche Etiketten + Wort-LCS, sieben ehrliche Zustände, Entwurf E6 als Wortlaut; nichts lädt vor dem Klick | 1 | UI; golden byte-gleich, e2e 1143 grün | dep E3 (Griff-Ort) + E5/E6 (Daten aus #794/#798) | «was stand vorher, was heute?» |
 | später | Zeitreise-Umschalter je Erlass (F2, M16-UI; 57 künftige Stände liegen vor) · BGE → Botschaft · Wegleitungen BSV/BAG/BAZG/ESTV-VSt/WEKO · FINMA (§9/§10) | je eigen | — | — | — |
 | nach Bund | Kantone BS (data.bs.ch), VS (lex.vs.ch), ZH nur Rohfeed — erst nach E1–E5 Bund | je eigen | — | — | — |
 
 ROADMAP-Schnitt: **DATEN** = E1+E2+E4 (`feld: korpus`) · **LESER** = E3 (`feld: leser`, dep DATEN +
 W2·24) · **SYNOPSE** = E5.0+E5+E6 (`feld: korpus`, dep DATEN). Reihenfolge: E1 → E2 → E4 → E3 (sobald
-W2·24 gelandet) → E5.0 → E5 → E6.
+W2·24 gelandet) → E5.0 → E5 → E6. **SYNOPSE-LESER** (`W2·6c-ENTSTEHUNG-SYNOPSE-LESER`, `feld: leser`,
+dep SYNOPSE+LESER) ist mit #796 erledigt (11.9.2026, §14-Intake), reiner Aufbau auf E3 — kein
+eigener Buchstabe im Etappenplan.
 
 ### §11.8 Abgesagt oder verschoben nach Prüfung
 
@@ -289,6 +292,8 @@ Fussnoten-Parser · jede Änderung am Historie-Shard (`botschaftKey`, Kopf) und 
 | Gemini | zwei Kernaussagen widerlegt | Messtabelle FAHRPLAN-FREMDAGENTEN §5 |
 | **Sichtung 11.9.2026** | Alle neun W2·24-Branches sind seit 7.9.2026 auf `main` (PR #744–#761, geprüft gegen `git log origin/main`); D40 (#761) machte die Fassung zur Rubrik der Funktionszeile am Artikelende, der Marginalie-/Kopf-Slot entfiel ersatzlos | **Fassung 5: C5/C6 gegenstandslos** (kein zweiter Slot, kein 150-px-Platzproblem); E3-Wartebedingung erfüllt; §11.9 Nr. 1–6 entschieden (Mandat David 11.9.2026), Go erteilt |
 | **Bau 11.9.2026** (Branch `feat/w26c-entstehung-synopse`, PR #794 — **Stand bei Redaktion dieser Zeile: offen, noch nicht gemergt**) | Gegenprüfungs-Auflage → Profil `entstehung-norm/2` (Prüfer-Stichprobe n=13 auf `ohne_ereignis`-Blöcken: 11/13 = 84,6 % unter der 90-%-Schwelle, zwei Fedlex-Konversionsartefakte; neue disjunkte Stichprobe n=13 nach /2: **13/13 = 100 %**); E6 deckt **10 statt 59** Vorlagen (nur ab BBl 2024 mit `type-projet/2` **und** `/300`); 63/1131 Stände ohne `-N`-Suffix, R2 §6d galt nur für die konstruierte Alias-URL — ersetzt durch eine Provenienz-Pfad-Prüfung | 4770 → 4659 Alt-Blöcke (111 Falschtreffer weniger), Deckel 82 % → 80 %; nächste Session: PR-Merge-Stand neu prüfen, diese Zeile bei Bedarf nachtragen |
+| **Bau 12.9.2026** (Branch `fix/synopse-normalisierung-gemeinsam`, PR #798, Profil `entstehung-norm/3` → `/4`) | A1 gelöschter Nachlauftext zurück (`zerlegeBloecke`/`blockListBereiche` balanciert statt Regel (c), 4 echte KLV-12e-Kantonslisten-Änderungen wiederhergestellt); A2 Sachüberschriften als Titel-Paar `ueberschrift`/`ueberschriftNeu` (522 Blöcke, 33 ohne Wortlaut-Unterschied); A4 `art:'entfallen'` jetzt vom Leer-Diff-Wächter mitgeprüft; A5 zweiter Tor-Ast `phantomVerletzungen()` gegen wandernde Elementgrenzen — 10 Phantom-Änderungen weg (u. a. FDV 36 ×2, HMG 9/67), 330 Etiketten korrigiert (**Gegenprüfungs-Runde 2 unterlief dabei selbst ein Messfehler bei FDV/HMG, in Runde 3 korrigiert — Lehre: Vollerhebung statt Stichprobe bei Verlust-Fragen, der Prüfer-Extraktor kann selbst falsch liegen**); Vollerhebung (kein Sample) gegen `ba3e52470`: 0 echte Änderung verloren, drei Gegenprüfungs-Runden bestanden | 4641 Alt-Blöcke, 0 offene Leer-Diffs, 0 offene Phantom-Fälle, 11 befristete Ausnahmen (Fassung 4 löst Fassung 3 ab: CHEMRRV-Quelllücke und AVIV-Token-Lücke als zwei getrennte Ursachen erkannt); Folgeschritt `W2·6c-ENTSTEHUNG-QUELLLUECKE` löst die Ausnahmeliste ab, fällig vor Verfall 2026-10-12 |
+| **K-16 BS 12.9.2026** (PR #799) | amtlicher Schlüssel Erlass↔Geschäft deckt nur **5 von 859** Korpus-Erlassen (8 Fussnoten-Referenzen); zwei maschinelle Wege (SG-Nummer, Erlassdatum+Titel) decken **25,7 %** der 136 adressierbaren Gesetze | 117 Register-Einträge, 122 Kanten (8 amtlich/114 maschinell), 409 Verfahrens-Ereignisse; Materialien-Register 332/400 KB gzip (83 %), Verfahrens-Ereignisse 85/100 KB (85 %) — Deckel-Reserve vor einem ZH-Schritt gleicher Grösse (R12b) knapp |
 
 
 ---

@@ -221,7 +221,10 @@ zgb-a36-anhang: Die ZGB-Gliederung zeigt 74 Artikel des Anhangs «Wortlaut der f
   - [ ] **Systematik-Upstream-Drift AG/BS** *(Befund 31.8.2026, bewusst nicht mitgenommen)* — ein frischer `kanton-systematik-run.ts` zeigt: AG verliert Knoten 401, BS gewinnt 731/788/RiE#731. Eigener Schritt, damit der ZH-Diff sortenrein bleibt. §1-A.
   - [ ] **`check:paritaet` ist gegen Datei-LÖSCHUNG blind** *(Nebenfund ZH-Fix-Runde 3, 31.8.2026 — bewusst NICHT hier gefixt, fremde Baufläche `scripts/datenhaltung/**`)* — Am Code belegt (`scripts/datenhaltung/check-paritaet.ts`, gelesen 31.8.2026): das Tor baut seine DB durch INGEST DER VORHANDENEN DATEIEN (`ingestNormtext(db)`) und vergleicht danach jeden Pfad, den diese DB kennt, byte-weise mit der Datei. Eine gelöschte Datei wird nie ingestiert, steht nie in `alleEintragPfade()` und wird nie verglichen — die Löschung ist für dieses Tor unsichtbar, nicht wegen eines Fehlers, sondern wegen der Richtung des Beweises. Auffallen kann sie nur einem Tor, das eine andere Frage stellt (`check:golden-normtext` vermisst die sha-Einträge). Nötig ist die Gegenrichtung im Paritäts-Tor: DB-Erlassmenge ⊆ Dateimenge. Fläche `scripts/datenhaltung/check-paritaet.ts`, zu bauen zusammen mit dem Datenhaltungs-Strang (§12: die beiden Stränge landen abwechselnd, nie gleichzeitig auf dieselben Artefakte).
   - [ ] **K-15 · Sprengel-Zuordnung BE aus amtlichen Geodaten** — opendata.swiss «Regionalgerichte»/«Regionale Staatsanwaltschaften» (Amt für Geoinformation BE, GPKG/Parquet) macht `zustaendigkeitKantone.ts` für BE deterministisch; Build-Zeit-Snapshot mit Stand. Quelle: Fremdquellen-Sichtung 2.9.2026 §1 #5.
-  - [ ] **K-16 · Kantonale Materialien BS/ZH an die Botschaften-Pipeline** — BS Grosser Rat (CSV/JSON/RDF), ZH `parlzhcdws.cmicloud.ch` (XML, Lizenz `None` → vorab klären); Erlass ↔ Vorstoss/Weisung wie `check:botschaften-netz` für den Bund. Quelle: Fremdquellen-Sichtung 2.9.2026 §1 #6. **Präzisiert 6.9.2026:** Bund → BS → ZH; ZH-Pendant FAHRPLAN-KANTONE §5 R12b (Wortlaut: Chronik, Umschichtung 8.9.2026).
+  - [x] **K-16 (BS-Teil) · Kantonale Materialien Basel-Stadt an die Botschaften-Pipeline** — erledigt 12.9.2026, PR #799 (`c83501304`): Grosser Rat (data.bs.ch, CC BY 4.0), 117 Geschäfte, 122 Kanten (8 amtlich, 114 maschinell gekennzeichnet), 409 Verfahrens-Ereignisse. ZH-Teil bleibt offen (Präzisierung 6.9.2026: Bund → BS → ZH; ZH-Pendant FAHRPLAN-KANTONE §5 R12b). Wortlaut: ROADMAP-CHRONIK.md, Umschichtung 12.9.2026.
+  - [ ] **K-16-Nachzug · CC-BY-Namensnennung data.bs.ch in der UI** (Entscheid David) — die 114 maschinell gekennzeichneten Kanten und die BS-Materialien stammen aus einer CC-BY-4.0-Quelle; wo/wie die Namensnennung im UI erscheint, ist offen.
+  - [ ] **K-16-Nachzug · Fachliche Abnahme der 114 maschinellen Kanten** (David, §7) — Erlass↔Vorstoss-Zuordnung ohne amtlichen Schlüssel (heuristisch, `quelle: maschinell`), Abnahme steht aus.
+  - [ ] **Deckel-Reserven vor ZH (R12b)** — Materialien-Register 332/400 KB gzip (83 %, gemessen 12.9.2026), Verfahrens-Ereignisse 85/100 KB (85 %, 407 Ketten); ein ZH-Schritt gleicher Grösse wie K-16 BS reisst beide Deckel. Deckel-Strategie (Shard je Kanton oder lazy Projektion) klären, bevor R12b baut.
 
   - [ ] **PDF-Pfad liest Ziffern-Tarife falsch** *(19B-Nachtrag 13.8.)* — SG-3849-Wurzel: generisches «Art. N»-Muster greift auch in Querverweisen; Regel «Nr. XX.YY am Zeilenanfang» nötig. §1-A.
   - [ ] **Fassungs-Drift PDF-erfasster Snapshots unbemerkt** *(§17-Wurzel-Fix)* — `fassungsToken` ändert sich nicht bei neuer Portal-Fassung (SG-2808 hängt an 2808/2012, amtlich gilt 3863). Nötig: Tor `current_version.id` ↔ Snapshot. §1-A.
@@ -298,6 +301,19 @@ zgb-a36-anhang: Die ZGB-Gliederung zeigt 74 Artikel des Anhangs «Wortlaut der f
   kein Prerender-Markup, CLS 0, Deckel unverändert. **Bau erst nach Merge von** `W2·6c-ENTSTEHUNG-SYNOPSE`
   **(PR #794, Stand 11.9.2026: offen).**
   **Detail:** [FAHRPLAN-MATERIALIEN-VERZAHNUNG.md](fahrplaene/FAHRPLAN-MATERIALIEN-VERZAHNUNG.md) §11.5.
+
+- [ ] **Entstehung am Artikel — Quelllücken in einzelnen Fedlex-Ständen ehrlich zeigen** *(`W2·6c-ENTSTEHUNG-QUELLLUECKE`, Auflage A6 Gegenprüfung PR #798, 12.9.2026)*
+  <!-- @meta id: W2·6c-ENTSTEHUNG-QUELLLUECKE · status: ready · blocker: null · dep: [W2·6c-ENTSTEHUNG-SYNOPSE] · feld: korpus · fahrplan: fahrplaene/FAHRPLAN-MATERIALIEN-VERZAHNUNG.md -->
+  Erkennt der Generator, dass eine eId in GENAU EINEM Stand fehlt und danach unverändert
+  zurückkehrt (Beleg CHEMRRV `cc/2005/478` @2022-05-01: Art. 4–24 stehen als
+  `<mod>`/`<quotedStructure>` eines Anhangs statt als `<article>`, 22 Blöcke darum fälschlich
+  «entfallen»/«neu»), bucht er «Quelle unvollständig» statt «entfallen»/«neu»; Karte
+  (`SynopseKarte.tsx`) zeigt den Zustand. Lineage-Regel in `neuNach()` über die ganze
+  Stände-Kette statt des nächsten Token-Treffers (zweite, andersartige Ursache in derselben
+  Ausnahmeliste: AVIV 57b @2021-07-01, echte Token-Kontinuität — bleibt dort, keine
+  Quelllücke). Löst die 11 befristeten Ausnahmen in
+  `bibliothek/register/entstehung-leerdiff-ausnahmen.json` ab — **fällig vor deren Verfall
+  2026-10-12**. **Detail:** [FAHRPLAN-MATERIALIEN-VERZAHNUNG.md](fahrplaene/FAHRPLAN-MATERIALIEN-VERZAHNUNG.md) §11.10.
 
 - [ ] **Watchlist & Änderungs-Signale** *(`W2·14-SIGNAL`, Ideen-Intake 20.7.2026)*
   <!-- @meta id: W2·14-SIGNAL · status: ready · blocker: null · dep: [] · feld: korpus · fahrplan: fahrplaene/FAHRPLAN-FEDLEX-PORTFOLIO.md -->
