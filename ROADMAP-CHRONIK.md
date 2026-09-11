@@ -1,5 +1,16 @@
 # ROADMAP — Erledigt-Chronik (Detail-Archiv erledigter Schritte)
 
+## K-16 (BS-Teil) — Kantonale Materialien Basel-Stadt an die Botschaften-Pipeline, erledigt 12.9.2026
+
+PR #799 (`c83501304`): Grosser Rat Basel-Stadt (data.bs.ch, CC BY 4.0) an die Botschaften-Pipeline
+angeschlossen — 117 Geschäfte, 122 Kanten (8 amtlich aus einem deklarierten Schlüssel, 114
+maschinell über Datum/Titel-Heuristik gekennzeichnet, `quelle: maschinell` §8), 409
+Verfahrens-Ereignisse. Gegenprüfung Sonnet mit Auflage doktyp bestanden. Zwei Punkte bleiben offen
+und stehen als eigene Unterpunkte unter `W2·13-KANTONE-DATEN`: CC-BY-Namensnennung von data.bs.ch
+in der UI (Entscheid David) und die fachliche Abnahme der 114 maschinellen Kanten (David, §7). Der
+ZH-Teil von K-16 ist NICHT Teil dieses Abschlusses — Präzisierung 6.9.2026 (Bund → BS → ZH),
+ZH-Pendant FAHRPLAN-KANTONE §5 R12b.
+
 ## W2·26-FUNKTIONSZEILE-Planung 11.9.2026 — vier §8-Nachzüge umgebucht/entschieden
 
 Mandat David 11.9.2026 («überarbeite insgesamt die Funktionszeile am Artikelende … führe alles

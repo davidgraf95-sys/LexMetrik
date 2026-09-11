@@ -33,6 +33,40 @@ falsch — korrigiert 30.8.2026). Karten abgeschlossener Sessions (älter als
 werden direkt unter dem KARTEN-Anker eingefügt (jüngste zuoberst).
 
 <!-- KARTEN -->
+## Session 12.9.2026 — Synopse-Leser + gemeinsame Normalisierung (Fortsetzung der Kette vom 11.9.)
+
+**Gelandet seit dem Doku-Abschluss #795:** #796 W2·6c-ENTSTEHUNG-SYNOPSE-LESER (`0a79eb68f`,
+Gegenprüfung Sonnet, 1 Hinweis nicht blockierend) — Griff «Alt/Neu ›» in der Funktionszeile, sieben
+ehrliche Zustände, nichts lädt vor dem Klick. #797 QS-UI Tap-Ziel-Wächter/@media-Schärfung +
+Synopse-Raster (`957bfdbaa`, fix(test): F9-Wächter unterscheidet `@media`/`@container`-Bedingung von
+Deklaration). #799 K-16 BS-Materialien (`c83501304`, Gegenprüfung Sonnet mit Auflage doktyp) — Grosser
+Rat Basel-Stadt an die Botschaften-Pipeline, 117 Geschäfte, 122 Kanten (8 amtlich/114 maschinell), 409
+Verfahrens-Ereignisse; amtlicher Schlüssel deckt nur 5/859 Erlasse, Deckel Materialien-Register 83 %.
+
+**#798 landet gerade** (Branch `fix/synopse-normalisierung-gemeinsam`, Profil `entstehung-norm/3` →
+`/4`, Stand bei Redaktion dieser Karte: `MERGEABLE`, CI läuft) — gemeinsame Normalisierung
+Generator+Leser über drei Gegenprüfungs-Runden (Sonnet): A1 gelöschter Nachlauftext zurück (4 echte
+KLV-12e-Änderungen), A2 Sachüberschriften als Titel-Paar (522 Blöcke), A4 `entfallen`-Wächter, A5
+zweiter Tor-Ast `phantomVerletzungen()` gegen wandernde Elementgrenzen (10 Phantom-Änderungen weg,
+u. a. FDV/HMG). Vollerhebung (kein Sample) gegen den Vorstand: **0 echte Änderung verloren**.
+Detail/Zahlen: `FAHRPLAN-MATERIALIEN-VERZAHNUNG.md` §11.10.
+
+**Lehre aus den drei Runden (kein `lehren`-Registereintrag — keine der bestehenden F-Klassen passt
+genau, Detail bleibt in §11.10 der Fahrplan-Datei):** Gegenprüfungs-Runde 2 unterlief bei FDV/HMG
+selbst ein Messfehler, erst Runde 3 (Vollerhebung statt Stichprobe) fand ihn. **Zwei Punkte:** (1) bei
+Verlust-/Vollständigkeits-Fragen («ist wirklich nichts verschwunden?») ist eine Vollerhebung über den
+ganzen Bestand einer Stichprobe vorzuziehen, sobald sie machbar ist — eine Stichprobe kann eine
+Restklasse systematisch verfehlen; (2) der Prüfer-Extraktor selbst kann falsch messen, nicht nur der
+Bauer — eine Gegenprüfung, die nur den Bau misstraut und sich selbst nicht, ist blind auf einem Auge.
+
+**Neuer Schritt angelegt:** `W2·6c-ENTSTEHUNG-QUELLLUECKE` (ready, feld: korpus, dep
+`[W2·6c-ENTSTEHUNG-SYNOPSE]`) — löst die 11 befristeten Ausnahmen in
+`entstehung-leerdiff-ausnahmen.json` ab (Auflage A6 aus #798), fällig vor deren Verfall 2026-10-12.
+
+**Wartet auf David:** CC-BY-Namensnennung data.bs.ch in der UI, fachliche Abnahme der 114
+maschinellen K-16-Kanten (§7) — beide unter `W2·13-KANTONE-DATEN` in `ROADMAP.md`. Wartet auf
+Fortsetzung: PR #798 CI/Merge, danach diese Karte und §11.10 bei Bedarf nachtragen.
+
 ## Session 11.9.2026 — W2·26 Funktionszeile + Kette «Entstehung am Artikel» (Daten → Leser → Synopse), acht PRs
 
 **Auftrag David (wörtlich):** «führe alles durch» (Go «Entstehung am Artikel» + §11.9-Entscheide 1–6,
