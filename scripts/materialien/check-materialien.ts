@@ -52,6 +52,9 @@ import {
 } from './soft-law-projektion.ts';
 import { wortfeldTreffer, wortfeldImQuellcode } from './wortfeld.ts';
 
+/** Kantonaler Normtext-Korpus: die Datei-Stämme sind die Erlass-Schlüssel (K-16). */
+const KANTON_KORPUS_DIR = join('public', 'normtext', 'kanton');
+
 // ══ Gate ════════════════════════════════════════════════════════════════════════
 const QUELLEN_ENUM = new Set(['amtlich', 'kuratiert', 'maschinell']);
 const VERN_STATUS = new Set([
@@ -80,6 +83,18 @@ function main(): void {
   const behoerdeIds = new Set(BEHOERDEN.map((b) => b.id));
   const doktypIds = new Set(DOKTYPEN.map((d) => d.id));
   const erlassKeys = new Set(ERLASS_REGISTER.map((e) => e.key));
+  // K-16: kantonale Erlasse stehen NICHT im ERLASS_REGISTER (das führt nur den Bund) —
+  // ihre Identität ist die committete Datei im Korpus (public/normtext/kanton/<KEY>.json,
+  // Index derselben Menge in kanton/index.json). Ohne diese Zeile wäre jede kantonale
+  // Verknüpfung ein «toter Cross-Link» und das Tor auf Dauerrot; mit ihr prüft es
+  // weiterhin gegen eine echte Existenz-Menge, nur gegen die richtige (§5).
+  const kantonKeys = new Set(
+    existsSync(KANTON_KORPUS_DIR)
+      ? readdirSync(KANTON_KORPUS_DIR)
+        .filter((f) => f.endsWith('.json') && f !== 'index.json')
+        .map((f) => f.slice(0, -'.json'.length))
+      : [],
+  );
   const kuratiertKeys = new Set(ALLE_MATERIALIEN.map((r) => r.key));
   const korpus = baueKorpusInfo();
 
@@ -102,7 +117,9 @@ function main(): void {
     if (!ISO.test(r.stand)) fehler.push(`${r.key}: stand kein ISO-Datum: ${r.stand}`);
     else if (heute && r.stand > heute) fehler.push(`${r.key}: stand ${r.stand} liegt in der Zukunft (> ${heute}).`);
     for (const nk of r.normKeys ?? []) {
-      if (!erlassKeys.has(nk)) fehler.push(`${r.key}: normKeys verweist auf unbekannten Erlass ${nk} (toter Cross-Link, §8).`);
+      if (!erlassKeys.has(nk) && !kantonKeys.has(nk)) {
+        fehler.push(`${r.key}: normKeys verweist auf unbekannten Erlass ${nk} (toter Cross-Link, §8).`);
+      }
     }
     if (r.status !== 'nur-live-link') {
       warn.push(`${r.key}: status '${r.status}' — pdf-embed/volltext brauchen gehosteten Inhalt + Drift-Tor (§7).`);

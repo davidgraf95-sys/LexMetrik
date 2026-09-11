@@ -27,11 +27,14 @@ import { BOTSCHAFTEN } from '../../src/lib/materialien/botschaften.generated.ts'
 // Vernehmlassungen (Paket 3, W3·11): analog zu den Botschaften nur hier gemerged (Build-Zeit),
 // nie im App-Bundle (§15). Fliessen in die lazy register.json-Projektion.
 import { VERNEHMLASSUNGEN } from '../../src/lib/materialien/vernehmlassungen.generated.ts';
+// Materialien des Grossen Rates Basel-Stadt (K-16, W2·13): wie Botschaften und
+// Vernehmlassungen NUR hier gemerged (Build-Zeit), nie im App-Bundle (§15).
+import { BS_MATERIALIEN } from '../../src/lib/materialien/bs-grossrat.generated.ts';
 
 /** Alle kuratierten + generierten Materialien-Register-Einträge (Build-Zeit-SSoT der
  *  Projektion). Botschaften + Vernehmlassungen nur hier, nie im App-Bundle (§15). */
 export const ALLE_MATERIALIEN: ReadonlyArray<MaterialRegistereintrag> = [
-  ...MATERIAL_REGISTER, ...BOTSCHAFTEN, ...VERNEHMLASSUNGEN,
+  ...MATERIAL_REGISTER, ...BOTSCHAFTEN, ...VERNEHMLASSUNGEN, ...BS_MATERIALIEN,
 ];
 
 export const REGISTER_PFAD = join('public', 'materialien', 'register.json');
@@ -58,6 +61,14 @@ export function shaEintrag(r: MaterialRegistereintrag): string {
     ...(r.behoerde === 'BUND'
       ? [r.titelFr ?? '', r.titelIt ?? '', r.vernehmlassung?.status ?? '',
          r.vernehmlassung?.fristStart ?? '', r.vernehmlassung?.fristEnde ?? '', r.vernehmlassung?.projEli ?? '']
+      : []),
+    // BS (K-16): Verfahrenskette + Herkunft jeder Erlass-Verknüpfung gehören zur
+    // Identität — sonst bliebe ein Wechsel von 'amtlich' auf 'maschinell' (oder ein
+    // neuer Kommissionsbericht) drift-unsichtbar. NUR für BS-GR anhängen → alle
+    // bestehenden Einträge byte-identisch.
+    ...(r.behoerde === 'BS-GR'
+      ? [(r.ereignisse ?? []).map((v) => `${v.code}:${v.datum ?? ''}:${v.res ?? ''}:${v.bez ?? ''}`).join(';'),
+         (r.bsKanten ?? []).map((k) => `${k.erlass}:${k.quelle}:${k.regel}:${k.beleg}`).join(';')]
       : []),
   ].join('');
   return createHash('sha256').update(norm, 'utf8').digest('hex');
@@ -87,6 +98,13 @@ function browseEintrag(r: MaterialRegistereintrag): BrowseMaterial {
         ...(r.vernehmlassung ? { vernehmlassung: r.vernehmlassung } : {}),
       }
     : {};
+  // BS-Zusatzfelder NUR für BS-GR emittieren (K-16) → bestehende Einträge byte-identisch.
+  const bsFelder = r.behoerde === 'BS-GR'
+    ? {
+        ...(r.ereignisse?.length ? { ereignisse: r.ereignisse } : {}),
+        ...(r.bsKanten?.length ? { bsKanten: r.bsKanten } : {}),
+      }
+    : {};
   return {
     key: r.key,
     behoerde: r.behoerde,
@@ -106,6 +124,7 @@ function browseEintrag(r: MaterialRegistereintrag): BrowseMaterial {
     hinweis: r.hinweis ?? null,
     ...botschaftsFelder,
     ...vernehmlassungsFelder,
+    ...bsFelder,
     sha: shaEintrag(r),
   };
 }
