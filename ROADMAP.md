@@ -273,8 +273,8 @@ zgb-a36-anhang: Die ZGB-Gliederung zeigt 74 Artikel des Anhangs «Wortlaut der f
   nur aggregiert, Monatslauf statt Gate-Kette. Etappen E1, E2, E4. **Bau erst auf Davids Go.**
   **Detail:** [FAHRPLAN-MATERIALIEN-VERZAHNUNG.md](fahrplaene/FAHRPLAN-MATERIALIEN-VERZAHNUNG.md) §11.
 
-- [ ] **Entstehung am Artikel — Leser: Chip mit Fassungszahl, Karte mit Fassungsleiste und Begründung** *(`W2·6c-ENTSTEHUNG-LESER`, 6.9.2026)*
-  <!-- @meta id: W2·6c-ENTSTEHUNG-LESER · status: ready · blocker: null · dep: [W2·6c-ENTSTEHUNG-DATEN, W2·24-DESIGN-IDENTITAET] · feld: leser · fahrplan: fahrplaene/FAHRPLAN-MATERIALIEN-VERZAHNUNG.md -->
+- [x] **Entstehung am Artikel — Leser: Chip mit Fassungszahl, Karte mit Fassungsleiste und Begründung** *(`W2·6c-ENTSTEHUNG-LESER`, 6.9.2026)*
+  <!-- @meta id: W2·6c-ENTSTEHUNG-LESER · status: done · blocker: null · dep: [W2·6c-ENTSTEHUNG-DATEN, W2·24-DESIGN-IDENTITAET] · feld: leser · fahrplan: fahrplaene/FAHRPLAN-MATERIALIEN-VERZAHNUNG.md -->
   **Nachgeführt 11.9.2026 (Sichtung §11 Fassung 5):** die Fassung ist seit D40 (#761, 7.9.2026)
   eine Rubrik der Funktionszeile am Artikelende, der frühere Kopf-/Marginalie-Slot ist entfallen;
   die Karte rendert im bestehenden Aufklapp-Block (`.lr7-bez-inhalt`, künftig `Funktionszeile.tsx`)

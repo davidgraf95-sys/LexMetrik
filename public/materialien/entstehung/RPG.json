@@ -1,0 +1,204 @@
+{
+  "erlass": "RPG",
+  "profil": "entstehung-leser/1",
+  "abgerufen": "2026-09-05",
+  "aenderungen": {
+    "oc/2000/309": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2000/309/de",
+      "titel": "Bundesgesetz über die Raumplanung (Raumplanungsgesetz, RPG)",
+      "as": "AS 2000 2042",
+      "inkraft": "2000-09-01"
+    },
+    "oc/2003/181": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2003/181/de",
+      "titel": "Bundesgesetz über die Raumplanung (Raumplanungsgesetz, RPG)",
+      "as": "AS 2003 1021",
+      "inkraft": "2003-06-01",
+      "botschaft": "BOTSCHAFT-2002-1110"
+    },
+    "oc/2007/452": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2007/452/de",
+      "titel": "Bundesgesetz über die Raumplanung (Raumplanungsgesetz, RPG)",
+      "as": "AS 2007 3637",
+      "inkraft": "2007-09-01",
+      "botschaft": "BOTSCHAFT-2005-1151"
+    },
+    "oc/2011/377": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2011/377/de",
+      "titel": "Bundesgesetz über die Raumplanung (Raumplanungsgesetz, RPG)",
+      "as": "AS 2011 2913",
+      "inkraft": "2011-07-01",
+      "botschaft": "BOTSCHAFT-2007-793"
+    },
+    "oc/2012/640": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2012/640/de",
+      "titel": "Bundesgesetz über die Raumplanung (Raumplanungsgesetz, RPG)",
+      "as": "AS 2012 5535",
+      "inkraft": "2012-11-01"
+    },
+    "oc/2014/197": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2014/197/de",
+      "titel": "Bundesgesetz über die Raumplanung (Raumplanungsgesetz, RPG)",
+      "as": "AS 2014 899",
+      "inkraft": "2014-05-01",
+      "botschaft": "BOTSCHAFT-2010-186"
+    },
+    "oc/2014/198": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2014/198/de",
+      "titel": "Bundesgesetz über die Raumplanung (Raumplanungsgesetz, RPG)",
+      "as": "AS 2014 905",
+      "inkraft": "2014-05-01"
+    },
+    "oc/2025/640": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2025/640/de",
+      "titel": "Bundesgesetz über die Raumplanung (Raumplanungsgesetz, RPG)",
+      "as": "AS 2025 640",
+      "inkraft": "2026-01-01",
+      "botschaft": "BOTSCHAFT-2018-2625"
+    }
+  },
+  "botschaften": {
+    "BOTSCHAFT-2002-1110": {
+      "titel": "Botschaft über die Massnahmen zur Entlastung des Bundeshaushaltes",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2002/1110/de",
+      "stand": "2002-09-30",
+      "nummer": "02.067",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2002-09-30",
+          "res": "fga/2002/1110"
+        },
+        {
+          "code": 300,
+          "datum": "2002-12-13",
+          "res": "fga/2002/1307"
+        },
+        {
+          "code": 400,
+          "datum": "2003-04-03"
+        }
+      ]
+    },
+    "BOTSCHAFT-2005-1151": {
+      "titel": "Botschaft zu einer Teilrevision des Raumplanungsgesetzes",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2005/1151/de",
+      "stand": "2005-12-02",
+      "nummer": "05.084",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2005-12-02",
+          "res": "fga/2005/1151"
+        },
+        {
+          "code": 300,
+          "datum": "2007-03-23",
+          "res": "fga/2007/364"
+        },
+        {
+          "code": 400,
+          "datum": "2007-07-12"
+        }
+      ]
+    },
+    "BOTSCHAFT-2007-793": {
+      "titel": "Botschaft zur Änderung des Bundesgesetzes über die Raumplanung (Flankierende Massnahmen zur Aufhebung des Bundesgesetzes über den Erwerb von Grundstücken durch Personen im Ausland)",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2007/793/de",
+      "stand": "2007-07-04",
+      "nummer": "07.062",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2007-07-04",
+          "res": "fga/2007/793"
+        },
+        {
+          "code": 300,
+          "datum": "2010-12-17",
+          "res": "fga/2010/1682"
+        },
+        {
+          "code": 400,
+          "datum": "2011-04-07"
+        }
+      ]
+    },
+    "BOTSCHAFT-2010-186": {
+      "titel": "Botschaft zu einer Teilrevision des Raumplanungsgesetzes",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2010/186/de",
+      "stand": "2010-01-20",
+      "nummer": "10.019",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2010-01-20",
+          "res": "fga/2010/186"
+        },
+        {
+          "code": 300,
+          "datum": "2012-06-15",
+          "res": "fga/2012/939"
+        },
+        {
+          "code": 400,
+          "datum": "2012-10-04"
+        },
+        {
+          "code": 480,
+          "datum": "2012-10-16",
+          "res": "fga/2012/1507"
+        },
+        {
+          "code": 630,
+          "datum": "2012-11-15",
+          "res": "fga/2012/1688"
+        },
+        {
+          "code": 650,
+          "datum": "2013-03-03",
+          "res": "fga/2013/646"
+        },
+        {
+          "code": 400
+        }
+      ]
+    },
+    "BOTSCHAFT-2018-2625": {
+      "titel": "Botschaft zur zweiten Etappe der Teilrevision des Raumplanungsgesetzes",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2018/2625/de",
+      "stand": "2018-10-31",
+      "nummer": "18.077",
+      "ereignisse": [
+        {
+          "code": 4,
+          "datum": "2017-07-04",
+          "res": "fga/2017/1140"
+        },
+        {
+          "code": 2,
+          "datum": "2018-10-31",
+          "res": "fga/2018/2626"
+        },
+        {
+          "code": 200,
+          "datum": "2018-10-31",
+          "res": "fga/2018/2625"
+        },
+        {
+          "code": 300,
+          "datum": "2023-09-29",
+          "res": "fga/2023/2488"
+        },
+        {
+          "code": 400,
+          "datum": "2024-02-15"
+        },
+        {
+          "code": 1,
+          "res": "dl/proj/6017/55/cons_1"
+        }
+      ]
+    }
+  }
+}

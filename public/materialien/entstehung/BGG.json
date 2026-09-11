@@ -1,0 +1,73 @@
+{
+  "erlass": "BGG",
+  "profil": "entstehung-leser/1",
+  "abgerufen": "2026-09-05",
+  "aenderungen": {
+    "oc/2006/634": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2006/634/de",
+      "titel": "Bundesgesetz über die Bereinigung und Aktualisierung der Totalrevision der Bundesrechtspflege",
+      "as": "AS 2006 4213",
+      "inkraft": "2007-01-01",
+      "botschaft": "BOTSCHAFT-2006-334"
+    },
+    "oc/2015/3": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2015/3/de",
+      "titel": "Bundesgesetz über eine Neuregelung des Steuererlasses (Steuererlassgesetz)",
+      "as": "AS 2015 9",
+      "inkraft": "2016-01-01",
+      "botschaft": "BOTSCHAFT-2013-1658"
+    },
+    "oc/2022/289": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2022/289/de",
+      "titel": "Bundesgesetz über das Bundesgericht (Bundesgerichtsgesetz, BGG)",
+      "as": "AS 2022 289",
+      "inkraft": "2022-07-01"
+    }
+  },
+  "botschaften": {
+    "BOTSCHAFT-2006-334": {
+      "titel": "Botschaft zum Bundesgesetz über die Bereinigung und Aktualisierung der Totalrevision der Bundesrechtspflege",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2006/334/de",
+      "stand": "2006-03-01",
+      "nummer": "06.023",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2006-03-01",
+          "res": "fga/2006/334"
+        },
+        {
+          "code": 300,
+          "datum": "2006-06-23",
+          "res": "fga/2006/678"
+        },
+        {
+          "code": 400,
+          "datum": "2006-10-12"
+        }
+      ]
+    },
+    "BOTSCHAFT-2013-1658": {
+      "titel": "Botschaft zum Steuererlassgesetz",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2013/1658/de",
+      "stand": "2013-10-23",
+      "nummer": "13.087",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2013-10-23",
+          "res": "fga/2013/1658"
+        },
+        {
+          "code": 300,
+          "datum": "2014-06-20",
+          "res": "fga/2014/1090"
+        },
+        {
+          "code": 400,
+          "datum": "2014-10-09"
+        }
+      ]
+    }
+  }
+}

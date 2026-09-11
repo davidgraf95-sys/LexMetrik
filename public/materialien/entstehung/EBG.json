@@ -1,0 +1,116 @@
+{
+  "erlass": "EBG",
+  "profil": "entstehung-leser/1",
+  "abgerufen": "2026-09-05",
+  "aenderungen": {
+    "oc/1998/2835_2835_2835": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/1998/2835_2835_2835/de",
+      "titel": "Eisenbahngesetz",
+      "as": "AS 1998 2835",
+      "inkraft": "1999-01-01"
+    },
+    "oc/2009/679": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2009/679/de",
+      "titel": "Bundesgesetz über die Bahnreform 2 (Revision der Erlasse über den öffentlichen Verkehr)",
+      "as": "AS 2009 5597",
+      "inkraft": "2010-01-01",
+      "botschaft": "BOTSCHAFT-2007-425"
+    },
+    "oc/2009/731": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2009/731/de",
+      "titel": "Bundesgesetz über Änderungen des Transportrechts",
+      "as": "AS 2009 5973",
+      "inkraft": "2010-01-01",
+      "botschaft": "BOTSCHAFT-2007-648"
+    },
+    "oc/2024/152": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2024/152/de",
+      "titel": "Eisenbahngesetz (EBG) (Umsetzung der technischen Säule des 4. EU-Eisenbahnpakets)",
+      "as": "AS 2024 152",
+      "inkraft": "2024-07-01",
+      "botschaft": "BOTSCHAFT-2023-703"
+    }
+  },
+  "botschaften": {
+    "BOTSCHAFT-2007-425": {
+      "titel": "Zusatzbotschaft zur Bahnreform 2 (Revision der Erlasse über den öffentlichen Verkehr)",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2007/425/de",
+      "stand": "2007-03-09",
+      "nummer": "05.028",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2007-03-09",
+          "res": "fga/2007/425"
+        },
+        {
+          "code": 300,
+          "datum": "2009-03-20",
+          "res": "fga/2009/417"
+        },
+        {
+          "code": 400,
+          "datum": "2009-07-09"
+        }
+      ]
+    },
+    "BOTSCHAFT-2007-648": {
+      "titel": "Botschaft zur Güterverkehrsvorlage",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2007/648/de",
+      "stand": "2007-06-08",
+      "nummer": "07.047",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2007-06-08",
+          "res": "fga/2007/648"
+        },
+        {
+          "code": 300,
+          "datum": "2008-12-19",
+          "res": "fga/2009/11"
+        },
+        {
+          "code": 400,
+          "datum": "2009-04-16"
+        }
+      ]
+    },
+    "BOTSCHAFT-2023-703": {
+      "titel": "Botschaft zu einer Änderung des Eisenbahngesetzes (Umsetzung der technischen Säule des 4. EU-Eisenbahnpakets)",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2023/703/de",
+      "stand": "2023-02-22",
+      "nummer": "23.024",
+      "ereignisse": [
+        {
+          "code": 4,
+          "datum": "2021-12-27",
+          "res": "fga/2021/2985"
+        },
+        {
+          "code": 2,
+          "datum": "2023-02-22",
+          "res": "fga/2023/704"
+        },
+        {
+          "code": 200,
+          "datum": "2023-02-22",
+          "res": "fga/2023/703"
+        },
+        {
+          "code": 300,
+          "datum": "2023-09-29",
+          "res": "oc/2024/152"
+        },
+        {
+          "code": 400,
+          "datum": "2024-01-18"
+        },
+        {
+          "code": 1,
+          "res": "dl/proj/2021/124/cons_1"
+        }
+      ]
+    }
+  }
+}

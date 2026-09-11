@@ -1,0 +1,67 @@
+{
+  "erlass": "GLG",
+  "profil": "entstehung-leser/1",
+  "abgerufen": "2026-09-05",
+  "aenderungen": {
+    "oc/2005/123": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2005/123/de",
+      "titel": "Bundesgesetz über die Gleichstellung von Frau und Mann (Gleichstellungsgesetz, GlG)",
+      "as": "AS 2005 1023",
+      "inkraft": "2005-03-01",
+      "botschaft": "BOTSCHAFT-2003-1299"
+    },
+    "oc/2019/515": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2019/515/de",
+      "titel": "Bundesgesetz über die Gleichstellung von Frau und Mann (Gleichstellungsgesetz, GlG)",
+      "as": "AS 2019 2815",
+      "inkraft": "2020-07-01",
+      "botschaft": "BOTSCHAFT-2017-1455"
+    }
+  },
+  "botschaften": {
+    "BOTSCHAFT-2003-1299": {
+      "titel": "Botschaft über die Änderung des Gleichstellungsgesetzes (Schlichtungsverfahren)",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2003/1299/de",
+      "stand": "2003-11-05",
+      "nummer": "03.071",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2003-11-05",
+          "res": "fga/2003/1299"
+        },
+        {
+          "code": 300,
+          "datum": "2004-10-08",
+          "res": "fga/2004/988"
+        },
+        {
+          "code": 400,
+          "datum": "2005-01-27"
+        }
+      ]
+    },
+    "BOTSCHAFT-2017-1455": {
+      "titel": "Botschaft zur Änderung des Bundesgesetzes über die Gleichstellung von Frau und Mann (Gleichstellungsgesetz, GlG)",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2017/1455/de",
+      "stand": "2017-07-05",
+      "nummer": "17.047",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2017-07-05",
+          "res": "fga/2017/1455"
+        },
+        {
+          "code": 300,
+          "datum": "2018-12-14",
+          "res": "fga/2018/2814"
+        },
+        {
+          "code": 400,
+          "datum": "2019-04-07"
+        }
+      ]
+    }
+  }
+}

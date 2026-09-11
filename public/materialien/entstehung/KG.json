@@ -1,0 +1,105 @@
+{
+  "erlass": "KG",
+  "profil": "entstehung-leser/1",
+  "abgerufen": "2026-09-05",
+  "aenderungen": {
+    "oc/2004/172": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2004/172/de",
+      "titel": "Bundesgesetz über Kartelle und andere Wettbewerbsbeschränkungen (Kartellgesetz, KG)",
+      "as": "AS 2004 1385",
+      "inkraft": "2004-04-01",
+      "botschaft": "BOTSCHAFT-2002-265"
+    },
+    "oc/2014/645": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2014/645/de",
+      "titel": "Bundesbeschluss über die Genehmigung des Abkommens zwischen der Schweiz und der EU über die Zusammenarbeit bei der Anwendung ihres Wettbewerbsrechts und über die Umsetzung (Änderung des Kartellgesetzes)",
+      "as": "AS 2014 3711",
+      "inkraft": "2014-12-01",
+      "botschaft": "BOTSCHAFT-2013-859"
+    },
+    "oc/2021/576": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2021/576/de",
+      "titel": "Bundesgesetz über Kartelle und andere Wettbewerbsbeschränkungen (Kartellgesetz, KG)",
+      "as": "AS 2021 576",
+      "inkraft": "2022-01-01",
+      "botschaft": "BOTSCHAFT-2019-1720"
+    }
+  },
+  "botschaften": {
+    "BOTSCHAFT-2002-265": {
+      "titel": "Botschaft über die Änderung des Kartellgesetzes",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2002/265/de",
+      "stand": "2001-11-07",
+      "nummer": "01.071",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2001-11-07",
+          "res": "fga/2002/265"
+        },
+        {
+          "code": 300,
+          "datum": "2003-06-20",
+          "res": "fga/2003/686"
+        },
+        {
+          "code": 400,
+          "datum": "2003-10-09"
+        }
+      ]
+    },
+    "BOTSCHAFT-2013-859": {
+      "titel": "Botschaft zur Genehmigung des Abkommens zwischen der Schweiz und der Europäischen Union über die Zusammenarbeit bei der Anwendung ihres Wettbewerbsrechts",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2013/859/de",
+      "stand": "2013-05-22",
+      "nummer": "13.044",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2013-05-22",
+          "res": "fga/2013/859"
+        },
+        {
+          "code": 300,
+          "datum": "2014-06-20",
+          "res": "fga/2014/1096"
+        },
+        {
+          "code": 400,
+          "datum": "2014-10-09"
+        }
+      ]
+    },
+    "BOTSCHAFT-2019-1720": {
+      "titel": "Botschaft zur Volksinitiative «Stop der Hochpreisinsel  für faire Preise (Fair-Preis-Initiative)» und zum indirekten Gegenvorschlag (Änderung des Kartellgesetzes)",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2019/1720/de",
+      "stand": "2019-05-29",
+      "nummer": "19.037",
+      "ereignisse": [
+        {
+          "code": 8,
+          "datum": "2018-08-28",
+          "res": "fga/2018/1804"
+        },
+        {
+          "code": 200,
+          "datum": "2019-05-29",
+          "res": "fga/2019/1720"
+        },
+        {
+          "code": 300,
+          "datum": "2021-03-19",
+          "res": "fga/2021/757"
+        },
+        {
+          "code": 400,
+          "datum": "2021-07-19"
+        },
+        {
+          "code": 1,
+          "res": "dl/proj/6018/58/cons_1"
+        }
+      ]
+    }
+  }
+}

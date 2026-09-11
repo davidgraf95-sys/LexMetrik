@@ -1,0 +1,73 @@
+{
+  "erlass": "BPG",
+  "profil": "entstehung-leser/1",
+  "abgerufen": "2026-09-05",
+  "aenderungen": {
+    "oc/2011/785": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2011/785/de",
+      "titel": "Bundesgesetz über Optimierungen bei der Verwaltung von Personaldaten und bei den Anlagen von PUBLICA",
+      "as": "AS 2011 5583",
+      "inkraft": "2012-01-01",
+      "botschaft": "BOTSCHAFT-2010-1290"
+    },
+    "oc/2013/352": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2013/352/de",
+      "titel": "Bundespersonalgesetz (BPG)",
+      "as": "AS 2013 1493",
+      "inkraft": "2013-07-01",
+      "botschaft": "BOTSCHAFT-2011-1076"
+    },
+    "oc/2015/197": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2015/197/de",
+      "titel": "Bundespersonalgesetz (BPG) (Betrifft nur den italienischen Text)",
+      "as": "AS 2015 1021",
+      "inkraft": "2015-04-09"
+    }
+  },
+  "botschaften": {
+    "BOTSCHAFT-2010-1290": {
+      "titel": "Botschaft zum Bundesgesetz über das Konsolidierungsprogramm 20122013 (KOPG 12/13) sowie zum Bundesgesetz über Optimierungen bei der Verwaltung von Personaldaten und bei den Anlagen von PUBLICA",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2010/1290/de",
+      "stand": "2010-09-01",
+      "nummer": "10.075",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2010-09-01",
+          "res": "fga/2010/1290"
+        },
+        {
+          "code": 300,
+          "datum": "2011-06-17",
+          "res": "fga/2011/783"
+        },
+        {
+          "code": 400,
+          "datum": "2011-10-06"
+        }
+      ]
+    },
+    "BOTSCHAFT-2011-1076": {
+      "titel": "Botschaft zu einer Änderung des Bundespersonalgesetzes",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2011/1076/de",
+      "stand": "2011-08-31",
+      "nummer": "11.049",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2011-08-31",
+          "res": "fga/2011/1076"
+        },
+        {
+          "code": 300,
+          "datum": "2012-12-14",
+          "res": "fga/2012/1794"
+        },
+        {
+          "code": 400,
+          "datum": "2013-04-07"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "erlass": "BGFA",
+  "profil": "entstehung-leser/1",
+  "abgerufen": "2026-09-05",
+  "aenderungen": {
+    "oc/2002/318": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2002/318/de",
+      "titel": "Bundesgesetz über die Freizügigkeit der Anwältinnen und Anwälte (Anwaltsgesetz, BGFA)",
+      "as": "AS 2002 2134",
+      "inkraft": "2002-08-01",
+      "botschaft": "BOTSCHAFT-2002-337"
+    },
+    "oc/2006/668": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2006/668/de",
+      "titel": "Bundesgesetz über die Freizügigkeit der Anwältinnen und Anwälte (Anwaltsgesetz, BGFA)",
+      "as": "AS 2006 4399",
+      "inkraft": "2007-01-01",
+      "botschaft": "BOTSCHAFT-2005-1029"
+    },
+    "oc/2025/478": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2025/478/de",
+      "titel": "Bundesbeschluss über die Genehmigung des Abkommens zwischen der Schweiz und dem Vereinigten Königreich über die Anerkennung von Berufsqualifikationen und über dessen Umsetzung (Änderung des Anwaltsgesetzes)",
+      "as": "AS 2025 478",
+      "inkraft": "2025-07-01",
+      "botschaft": "BOTSCHAFT-2024-460"
+    }
+  },
+  "botschaften": {
+    "BOTSCHAFT-2002-337": {
+      "titel": "Botschaft zur Änderung des Bundesgesetzes über die Freizügigkeit der Anwältinnen und Anwälte",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2002/337/de",
+      "stand": "2002-01-30",
+      "nummer": "02.015",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2002-01-30",
+          "res": "fga/2002/337"
+        },
+        {
+          "code": 300,
+          "datum": "2002-03-22",
+          "res": "fga/2002/373"
+        },
+        {
+          "code": 400,
+          "datum": "2002-07-18"
+        }
+      ]
+    },
+    "BOTSCHAFT-2005-1029": {
+      "titel": "Botschaft zur Änderung des Bundesgesetzes über die Freizügigkeit der Anwältinnen und Anwälte",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2005/1029/de",
+      "stand": "2005-10-26",
+      "nummer": "05.075",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2005-10-26",
+          "res": "fga/2005/1029"
+        },
+        {
+          "code": 300,
+          "datum": "2006-06-23",
+          "res": "fga/2006/679"
+        },
+        {
+          "code": 400,
+          "datum": "2006-10-12"
+        }
+      ]
+    },
+    "BOTSCHAFT-2024-460": {
+      "titel": "Botschaft zur Genehmigung des Abkommens zwischen der Schweiz und dem Vereinigten Königreich über die Anerkennung von Berufsqualifikationen und zu dessen Umsetzung (Änderung des Anwaltsgesetzes) sowie zur Delegation der Kompetenz an den Bundesrat, völkerrechtliche Verträge über die Anerkennung von Berufsqualifikationen im Anwendungsbereich des Medizinalberufegesetzes, des Gesundheitsberufegesetzes, des Anwaltsgesetzes und des Psychologieberufegesetzes abzuschliessen",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2024/460/de",
+      "stand": "2024-02-14",
+      "nummer": "24.030",
+      "ereignisse": [
+        {
+          "code": 4,
+          "datum": "2023-06-22",
+          "res": "fga/2023/1497"
+        },
+        {
+          "code": 2,
+          "datum": "2024-02-14",
+          "res": "fga/2024/461"
+        },
+        {
+          "code": 200,
+          "datum": "2024-02-14",
+          "res": "fga/2024/460"
+        },
+        {
+          "code": 300,
+          "datum": "2024-09-27",
+          "res": "fga/2024/461"
+        },
+        {
+          "code": 400,
+          "datum": "2025-01-16"
+        },
+        {
+          "code": 1,
+          "res": "dl/proj/2023/28/cons_1"
+        }
+      ]
+    }
+  }
+}

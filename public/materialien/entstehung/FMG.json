@@ -1,0 +1,67 @@
+{
+  "erlass": "FMG",
+  "profil": "entstehung-leser/1",
+  "abgerufen": "2026-09-05",
+  "aenderungen": {
+    "oc/2007/165": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2007/165/de",
+      "titel": "Fernmeldegesetz (FMG)",
+      "as": "AS 2007 921",
+      "inkraft": "2007-04-01",
+      "botschaft": "BOTSCHAFT-2003-1351"
+    },
+    "oc/2020/1019": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2020/1019/de",
+      "titel": "Fernmeldegesetz (FMG)",
+      "as": "AS 2020 6159",
+      "inkraft": "2021-01-01",
+      "botschaft": "BOTSCHAFT-2017-1933"
+    }
+  },
+  "botschaften": {
+    "BOTSCHAFT-2003-1351": {
+      "titel": "Botschaft zur Änderung des Fernmeldegesetzes (FMG)",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2003/1351/de",
+      "stand": "2003-11-12",
+      "nummer": "03.073",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2003-11-12",
+          "res": "fga/2003/1351"
+        },
+        {
+          "code": 300,
+          "datum": "2006-03-24",
+          "res": "fga/2006/376"
+        },
+        {
+          "code": 400,
+          "datum": "2006-07-13"
+        }
+      ]
+    },
+    "BOTSCHAFT-2017-1933": {
+      "titel": "Botschaft zur Revision des Fernmeldegesetzes",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2017/1933/de",
+      "stand": "2017-09-06",
+      "nummer": "17.058",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2017-09-06",
+          "res": "fga/2017/1933"
+        },
+        {
+          "code": 300,
+          "datum": "2019-03-22",
+          "res": "fga/2019/731"
+        },
+        {
+          "code": 400,
+          "datum": "2019-07-11"
+        }
+      ]
+    }
+  }
+}

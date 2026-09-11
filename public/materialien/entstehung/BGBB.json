@@ -1,0 +1,83 @@
+{
+  "erlass": "BGBB",
+  "profil": "entstehung-leser/1",
+  "abgerufen": "2026-09-05",
+  "aenderungen": {
+    "oc/1998/3009_3009_3009": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/1998/3009_3009_3009/de",
+      "titel": "Bundesgesetz über das bäuerliche Bodenrecht (BGBB)",
+      "as": "AS 1998 3009",
+      "inkraft": "1999-01-01"
+    },
+    "oc/2003/614": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2003/614/de",
+      "titel": "Bundesgesetz über das bäuerliche Bodenrecht (BGBB)",
+      "as": "AS 2003 4123",
+      "inkraft": "2004-01-01",
+      "botschaft": "BOTSCHAFT-2002-780"
+    },
+    "oc/2008/462": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2008/462/de",
+      "titel": "Bundesgesetz über das bäuerliche Bodenrecht (BGBB)",
+      "as": "AS 2008 3585",
+      "inkraft": "2008-09-01",
+      "botschaft": "BOTSCHAFT-2006-775"
+    }
+  },
+  "botschaften": {
+    "BOTSCHAFT-2002-780": {
+      "titel": "Teil III: Änderungen im bäuerlichen Bodenrecht (BGBB) und im landwirtschaftlichen Pachtrecht (LPG) sowie Anpassung des Immobiliarsachenrechts im Schweizerischen Zivilgesetzbuch (ZGB)",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2002/780/de",
+      "stand": "2002-05-29",
+      "nummer": "02.046",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2002-05-29",
+          "res": "fga/2002/780"
+        },
+        {
+          "code": 300,
+          "datum": "2003-06-20",
+          "res": "fga/2003/689"
+        },
+        {
+          "code": 300,
+          "datum": "2003-06-20",
+          "res": "fga/2003/694"
+        },
+        {
+          "code": 400,
+          "datum": "2003-10-09"
+        }
+      ]
+    },
+    "BOTSCHAFT-2006-775": {
+      "titel": "Botschaft zur Weiterentwicklung der Agrarpolitik (Agrarpolitik 2011)",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2006/775/de",
+      "stand": "2006-05-17",
+      "nummer": "06.038",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2006-05-17",
+          "res": "fga/2006/775"
+        },
+        {
+          "code": 300,
+          "datum": "2007-10-05",
+          "res": "fga/2007/1081"
+        },
+        {
+          "code": 300,
+          "datum": "2007-10-05",
+          "res": "fga/2007/1084"
+        },
+        {
+          "code": 400,
+          "datum": "2008-01-24"
+        }
+      ]
+    }
+  }
+}

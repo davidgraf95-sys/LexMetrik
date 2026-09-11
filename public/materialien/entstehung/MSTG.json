@@ -1,0 +1,85 @@
+{
+  "erlass": "MSTG",
+  "profil": "entstehung-leser/1",
+  "abgerufen": "2026-09-05",
+  "aenderungen": {
+    "oc/2004/107": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2004/107/de",
+      "titel": "Militärstrafgesetz (Revision der Disziplinarstrafordnung)",
+      "as": "AS 2004 921",
+      "inkraft": "2004-03-01",
+      "botschaft": "BOTSCHAFT-2002-1270"
+    },
+    "oc/2006/538": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2006/538/de",
+      "titel": "Militärstrafgesetz (MStG)",
+      "as": "AS 2006 3389",
+      "inkraft": "2007-01-01"
+    },
+    "oc/2009/117": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2009/117/de",
+      "titel": "Militärstrafgesetz und Militärstrafprozess (Korrekturen infolge der Revision des AT MStG und weitere Anpassungen)",
+      "as": "AS 2009 701",
+      "inkraft": "2009-03-01",
+      "botschaft": "BOTSCHAFT-2007-1322"
+    },
+    "oc/2023/538": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2023/538/de",
+      "titel": "Bundesgesetz über die Harmonisierung der Strafrahmen. Berichtigung (Betrifft nur den italienischen Text)",
+      "as": "AS 2023 538",
+      "inkraft": "2023-09-25"
+    },
+    "oc/2026/284": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2026/284/de",
+      "titel": "Bundesgesetz über die Armee und die Militärverwaltung (Militärgesetz, MG). Berichtigung",
+      "as": "AS 2026 284",
+      "inkraft": "2026-06-08"
+    }
+  },
+  "botschaften": {
+    "BOTSCHAFT-2002-1270": {
+      "titel": "Botschaft zur Revision des Militärstrafgesetzes (Disziplinarstrafordnung)",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2002/1270/de",
+      "stand": "2002-11-13",
+      "nummer": "02.081",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2002-11-13",
+          "res": "fga/2002/1270"
+        },
+        {
+          "code": 300,
+          "datum": "2003-10-03",
+          "res": "fga/2003/1104"
+        },
+        {
+          "code": 400,
+          "datum": "2004-01-22"
+        }
+      ]
+    },
+    "BOTSCHAFT-2007-1322": {
+      "titel": "Botschaft zur Änderung des Militärstrafgesetzes und des Militärstrafprozesses (Korrekturen infolge der Revision AT MStG und weitere Anpassungen)",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2007/1322/de",
+      "stand": "2007-10-31",
+      "nummer": "07.087",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2007-10-31",
+          "res": "fga/2007/1322"
+        },
+        {
+          "code": 300,
+          "datum": "2008-10-03",
+          "res": "fga/2008/1408"
+        },
+        {
+          "code": 400,
+          "datum": "2009-01-22"
+        }
+      ]
+    }
+  }
+}

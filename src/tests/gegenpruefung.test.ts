@@ -187,6 +187,10 @@ describe('Risiko-/Prüflogik-Prädikate', () => {
     expect(istRisikoPfad('public/materialien/register.json')).toBe(true);
     expect(istRisikoPfad('public/materialien/kanten/MWSTG.json')).toBe(true);
     expect(istRisikoPfad('public/materialien/kanten/MWSTG/1.json')).toBe(true);
+    // W2·6c-E3: die Entstehungs-Projektion sagt am Artikel «diese Änderung geht
+    // auf jene Botschaft zurück» (Rot-Beweis 11.9.2026: ohne die kern.ts-Zeile
+    // liefert dieselbe Abfrage false).
+    expect(istRisikoPfad('public/materialien/entstehung/OR.json')).toBe(true);
     // public/materialien nur EINE Ebene für nackte *.json (kanten/** separat als Präfix)
     expect(istRisikoPfad('public/materialien/liesmich.md')).toBe(false);
   });

@@ -1,0 +1,79 @@
+{
+  "erlass": "UWG",
+  "profil": "entstehung-leser/1",
+  "abgerufen": "2026-09-05",
+  "aenderungen": {
+    "oc/2006/366": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2006/366/de",
+      "titel": "Bundesbeschluss über die Genehmigung und die Umsetzung des Strafrechtsübereinkommens und des Zusatzprotokolls des Europarates über Korruption",
+      "as": "AS 2006 2371",
+      "inkraft": "2006-07-01",
+      "botschaft": "BOTSCHAFT-2004-1217"
+    },
+    "oc/2011/703": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2011/703/de",
+      "titel": "Bundesgesetz gegen den unlauteren Wettbewerb (UWG)",
+      "as": "AS 2011 4909",
+      "inkraft": "2012-04-01",
+      "botschaft": "BOTSCHAFT-2009-1106"
+    },
+    "oc/2015/933": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2015/933/de",
+      "titel": "Bundesbeschluss über die Genehmigung und die Umsetzung des Strafrechtsübereinkommens und des Zusatzprotokolls des Europarates über Korruption (Betrifft nur den italienischen Text)",
+      "as": "AS 2015 5999",
+      "inkraft": "2015-12-31"
+    },
+    "oc/2022/690": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2022/690/de",
+      "titel": "Bundesgesetz gegen den unlauteren Wettbewerb (UWG)",
+      "as": "AS 2022 690",
+      "inkraft": "2022-12-01"
+    }
+  },
+  "botschaften": {
+    "BOTSCHAFT-2004-1217": {
+      "titel": "Botschaft über die Genehmigung und die Umsetzung des Strafrechts-Übereinkommens und des Zusatzprotokoll des Europarates über Korruption (Änderung des Strafgesetzbuches und des Bundesgesetzes gegen den unlauteren Wettbewerb)",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2004/1217/de",
+      "stand": "2004-11-10",
+      "nummer": "04.072",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2004-11-10",
+          "res": "fga/2004/1217"
+        },
+        {
+          "code": 300,
+          "datum": "2005-10-07",
+          "res": "fga/2005/959"
+        },
+        {
+          "code": 400,
+          "datum": "2006-01-26"
+        }
+      ]
+    },
+    "BOTSCHAFT-2009-1106": {
+      "titel": "Botschaft zur Änderung des Bundesgesetzes gegen den unlauteren Wettbewerb (UWG)",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2009/1106/de",
+      "stand": "2009-09-02",
+      "nummer": "09.069",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2009-09-02",
+          "res": "fga/2009/1106"
+        },
+        {
+          "code": 300,
+          "datum": "2011-06-17",
+          "res": "fga/2011/786"
+        },
+        {
+          "code": 400,
+          "datum": "2011-10-06"
+        }
+      ]
+    }
+  }
+}

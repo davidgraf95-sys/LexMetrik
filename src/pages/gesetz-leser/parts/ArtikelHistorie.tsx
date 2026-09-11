@@ -1,4 +1,4 @@
-import { memo } from 'react';
+import { memo, type ReactNode } from 'react';
 import type { ArtikelHistorie, HistorieEreignis, HistorieTyp } from '../../../lib/normtext/historie-laden';
 import { formatiereDatum } from '../helpers';
 import { fassungsSchild } from '../fassungsEtikett';
@@ -95,7 +95,16 @@ function Quellen({ quellen }: { quellen: HistorieEreignis['quellen'] }) {
   );
 }
 
-export const ArtikelHistorieZeile = memo(function ArtikelHistorieZeile({ historie, zeitleiste = false }: {
+// ── NACHTRAG W2·6c-E3 (11.9.2026) · §0 Ziff. 2b: ERGAENZT, nicht nachgefuehrt ──
+// Die Zeitleiste ist seit E3 zugleich die FASSUNGSLEISTE der Entstehungs-Karte
+// (FAHRPLAN-MATERIALIEN-VERZAHNUNG §11.5 (1): «ein Punkt je datiertem Ereignis»).
+// Sie bekommt dafuer KEINE zweite Liste daneben — eine zweite Aufzaehlung
+// derselben Ereignisse waere die zweite Wahrheit, die §5 verbietet — sondern
+// einen SLOT je Punkt (`zusatz`). Was darin steht, entscheidet der Aufrufer
+// (`components/entstehung/EntstehungsBlock.tsx`); diese Datei bleibt reine
+// Darstellung (§3) und rendert ohne `zusatz` Zeichen fuer Zeichen wie bisher.
+
+export const ArtikelHistorieZeile = memo(function ArtikelHistorieZeile({ historie, zeitleiste = false, zusatz }: {
   /** Historie dieses Artikels aus dem erlass-lokalen Shard; undefined = kein Eintrag ⇒ still. */
   historie?: ArtikelHistorie;
   /**
@@ -114,6 +123,15 @@ export const ArtikelHistorieZeile = memo(function ArtikelHistorieZeile({ histori
    * nachgefuehrt, er wird gehalten).
    */
   zeitleiste?: boolean;
+  /**
+   * W2·6c-E3 · Was AM ENDE eines Zeitleisten-Punkts zusaetzlich steht.
+   *
+   * Der Punkt bleibt, was er ist (Typ · Skopus · Datum · Fundstellen); der Slot
+   * traegt den Griff «Warum?» und — aufgeklappt — die Aenderungskarte. `undefined`
+   * (Druckfall, Tests, jeder Aufrufer ausserhalb des Lesers) laesst die Liste
+   * unveraendert: kein Element, kein Attribut, kein Byte mehr als bisher.
+   */
+  zusatz?: (e: HistorieEreignis, i: number) => ReactNode;
 }) {
   // §8: ohne datierten Stand UND ohne Ereignis nichts anzeigen (kein leerer Kasten, §13).
   if (!historie) return null;
@@ -159,6 +177,7 @@ export const ArtikelHistorieZeile = memo(function ArtikelHistorieZeile({ histori
                   <span> · {e.wirkung ? 'mit Wirkung seit' : 'in Kraft seit'} <span className="num text-ink-600">{formatiereDatum(e.datum)}</span></span>
                 )}
                 {e.quellen.length > 0 && <span> · <Quellen quellen={e.quellen} /></span>}
+                {zusatz?.(e, i)}
               </li>
             );
           })}

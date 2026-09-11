@@ -191,6 +191,12 @@ export function istRisikoPfad(p: string): boolean {
   // (vorher false, nachher true).
   if (p.startsWith('public/materialien/synopse/')) return true;
   if (p.startsWith('public/materialien/synopse-entwurf/')) return true;
+  // E3 (W2·6c-ENTSTEHUNG-LESER): die Entstehungs-Projektion sagt am Artikel «diese
+  // Änderung geht auf jene Botschaft zurück» — eine artikelnahe Rechtsaussage aus
+  // amtlichen Quellen, auch wenn sie nur eine SICHT auf bereits geprüfte Artefakte
+  // ist. Ohne diese Zeile fiele der ganze Ordner durch die Klassifikation
+  // (Rot-Beweis im PR: vorher false, nachher true).
+  if (p.startsWith('public/materialien/entstehung/')) return true;
   // Die Generatoren + das Tor dieser Etappe liegen in scripts/entstehung/ (check-*-
   // Basenames nimmt istPruefLogik wie üblich aus).
   if (p.startsWith('scripts/entstehung/')) return true;

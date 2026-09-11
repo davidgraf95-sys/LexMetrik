@@ -1,0 +1,169 @@
+{
+  "erlass": "BANKG",
+  "profil": "entstehung-leser/1",
+  "abgerufen": "2026-09-05",
+  "aenderungen": {
+    "oc/1999/368": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/1999/368/de",
+      "titel": "Bundesgesetz über die Banken und Sparkassen",
+      "as": "AS 1999 2405",
+      "inkraft": "1999-10-01"
+    },
+    "oc/2004/340": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2004/340/de",
+      "titel": "Bundesgesetz über die Banken und Sparkassen (Bankengesetz, BankG)",
+      "as": "AS 2004 2767",
+      "inkraft": "2004-07-01",
+      "botschaft": "BOTSCHAFT-2002-1290"
+    },
+    "oc/2011/559": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2011/559/de",
+      "titel": "Bundesgesetz über die Banken und Sparkassen (Bankengesetz, BankG) (Sicherung der Einlagen)",
+      "as": "AS 2011 3919",
+      "inkraft": "2011-09-01",
+      "botschaft": "BOTSCHAFT-2010-655"
+    },
+    "oc/2012/126": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2012/126/de",
+      "titel": "Bundesgesetz über die Banken und Sparkassen (Bankengesetz, BankG) (Stärkung der Stabilität im Finanzsektor; too big to fail)",
+      "as": "AS 2012 811",
+      "inkraft": "2012-03-01",
+      "botschaft": "BOTSCHAFT-2011-762"
+    },
+    "oc/2014/272": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2014/272/de",
+      "titel": "Bundesgesetz über die Banken und Sparkassen (Bankengesetz, BankG) (Nachrichtenlose Vermögenswerte)",
+      "as": "AS 2014 1267",
+      "inkraft": "2015-01-01",
+      "botschaft": "BOTSCHAFT-2010-1348"
+    },
+    "oc/2022/732": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2022/732/de",
+      "titel": "Bundesgesetz über die Banken und Sparkassen (Bankengesetz, BankG) (Insolvenz und Einlagensicherung)",
+      "as": "AS 2022 732",
+      "inkraft": "2023-01-01",
+      "botschaft": "BOTSCHAFT-2020-1555"
+    }
+  },
+  "botschaften": {
+    "BOTSCHAFT-2002-1290": {
+      "titel": "Botschaft zur Änderung des Bundesgesetzes über die Banken und Sparkassen",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2002/1290/de",
+      "stand": "2002-11-20",
+      "nummer": "02.084",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2002-11-20",
+          "res": "fga/2002/1290"
+        },
+        {
+          "code": 300,
+          "datum": "2003-10-03",
+          "res": "fga/2003/1106"
+        },
+        {
+          "code": 400,
+          "datum": "2004-01-22"
+        }
+      ]
+    },
+    "BOTSCHAFT-2010-1348": {
+      "titel": "Zusatzbotschaft zur Änderung des Bankengesetzes (Nachrichtenlose Vermögenswerte)",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2010/1348/de",
+      "stand": "2010-10-01",
+      "nummer": "10.049",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2010-10-01",
+          "res": "fga/2010/1348"
+        },
+        {
+          "code": 300,
+          "datum": "2013-03-22",
+          "res": "fga/2013/428"
+        },
+        {
+          "code": 400,
+          "datum": "2013-07-13"
+        }
+      ]
+    },
+    "BOTSCHAFT-2010-655": {
+      "titel": "Botschaft zur Änderung des Bankengesetzes (Sicherung der Einlagen)",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2010/655/de",
+      "stand": "2010-05-12",
+      "nummer": "10.049",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2010-05-12",
+          "res": "fga/2010/655"
+        },
+        {
+          "code": 300,
+          "datum": "2011-03-18",
+          "res": "fga/2011/389"
+        },
+        {
+          "code": 400,
+          "datum": "2011-07-07"
+        }
+      ]
+    },
+    "BOTSCHAFT-2011-762": {
+      "titel": "Botschaft zur Änderung des Bankengesetzes (Stärkung der Stabilität im Finanzsektor; too big to fail)",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2011/762/de",
+      "stand": "2011-04-20",
+      "nummer": "11.028",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2011-04-20",
+          "res": "fga/2011/762"
+        },
+        {
+          "code": 300,
+          "datum": "2011-09-30",
+          "res": "fga/2011/1227"
+        },
+        {
+          "code": 400,
+          "datum": "2012-01-19"
+        }
+      ]
+    },
+    "BOTSCHAFT-2020-1555": {
+      "titel": "Botschaft zur Änderung des Bankengesetzes (BankG) (Insolvenz, Einlagensicherung, Segregierung)",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2020/1555/de",
+      "stand": "2020-06-19",
+      "nummer": "20.059",
+      "ereignisse": [
+        {
+          "code": 8,
+          "datum": "2019-03-19",
+          "res": "fga/2019/630"
+        },
+        {
+          "code": 200,
+          "datum": "2020-06-19",
+          "res": "fga/2020/1555"
+        },
+        {
+          "code": 300,
+          "datum": "2021-12-17",
+          "res": "fga/2021/3001"
+        },
+        {
+          "code": 400,
+          "datum": "2022-04-07"
+        },
+        {
+          "code": 1,
+          "res": "dl/proj/6019/11/cons_1"
+        }
+      ]
+    }
+  }
+}

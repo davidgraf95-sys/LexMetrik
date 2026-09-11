@@ -1,0 +1,408 @@
+{
+  "erlass": "ASYLG",
+  "profil": "entstehung-leser/1",
+  "abgerufen": "2026-09-05",
+  "aenderungen": {
+    "oc/2006/727": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2006/727/de",
+      "titel": "Asylgesetz (AsylG)",
+      "as": "AS 2006 4745",
+      "inkraft": "2007-01-01",
+      "botschaft": "BOTSCHAFT-2002-1106"
+    },
+    "oc/2011/137": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2011/137/de",
+      "titel": "Bundesgesetz über die Koordination des Asyl- und des Auslieferungsverfahrens",
+      "as": "AS 2011 925",
+      "inkraft": "2011-04-01",
+      "botschaft": "BOTSCHAFT-2010-264"
+    },
+    "oc/2012/612": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2012/612/de",
+      "titel": "Asylgesetz (AsylG)",
+      "as": "AS 2012 5359",
+      "inkraft": "2012-09-29",
+      "botschaft": "BOTSCHAFT-2010-794"
+    },
+    "oc/2013/778": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2013/778/de",
+      "titel": "Asylgesetz (AsylG)",
+      "as": "AS 2013 4375",
+      "inkraft": "2014-01-01",
+      "botschaft": "BOTSCHAFT-2011-1209"
+    },
+    "oc/2015/360": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2015/360/de",
+      "titel": "Asylgesetz (AsylG)",
+      "as": "AS 2015 1871",
+      "inkraft": "2015-07-01",
+      "botschaft": "BOTSCHAFT-2014-708"
+    },
+    "oc/2015/379": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2015/379/de",
+      "titel": "Asylgesetz (AsylG) (Verlängerung der dringlichen Änderungen des Asylgesetzes)",
+      "as": "AS 2015 2047",
+      "inkraft": "2015-09-29",
+      "botschaft": "BOTSCHAFT-2014-405"
+    },
+    "oc/2016/521": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2016/521/de",
+      "titel": "Asylgesetz (AsylG)",
+      "as": "AS 2016 3101",
+      "inkraft": "2016-10-01",
+      "botschaft": "BOTSCHAFT-2014-1715"
+    },
+    "oc/2020/742": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2020/742/de",
+      "titel": "Asylgesetz (AsylG)",
+      "as": "AS 2020 3989",
+      "inkraft": "2020-11-01",
+      "botschaft": "BOTSCHAFT-2018-2305"
+    },
+    "oc/2022/459": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2022/459/de",
+      "titel": "Asylgesetz (AsylG)",
+      "as": "AS 2022 459",
+      "inkraft": "2022-09-01",
+      "botschaft": "BOTSCHAFT-2020-1902"
+    },
+    "oc/2024/189": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2024/189/de",
+      "titel": "Asylgesetz (AsylG)",
+      "as": "AS 2024 189",
+      "inkraft": "2025-04-01"
+    },
+    "oc/2026/192": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2026/192/de",
+      "titel": "Asylgesetz (AsylG) (Sicherheit und Betrieb in den Zentren des Bundes)",
+      "as": "AS 2026 192",
+      "inkraft": "2026-06-01",
+      "botschaft": "BOTSCHAFT-2024-1107"
+    }
+  },
+  "botschaften": {
+    "BOTSCHAFT-2002-1106": {
+      "titel": "Botschaft zur Änderung des Asylgesetzes zur Änderung des Bundesgesetzes über die Krankenversicherung sowie zur Änderung des Bundesgesetzes über die Alters- und Hinterlassenenversicherung",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2002/1106/de",
+      "stand": "2002-09-04",
+      "nummer": "02.060",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2002-09-04",
+          "res": "fga/2002/1106"
+        },
+        {
+          "code": 300,
+          "datum": "2005-12-16",
+          "res": "fga/2005/1179"
+        },
+        {
+          "code": 300,
+          "datum": "2005-12-16",
+          "res": "fga/2005/1180"
+        },
+        {
+          "code": 300,
+          "datum": "2005-12-16",
+          "res": "fga/2005/1181"
+        },
+        {
+          "code": 400,
+          "datum": "2006-04-06"
+        },
+        {
+          "code": 480,
+          "datum": "2006-04-27",
+          "res": "fga/2006/490"
+        },
+        {
+          "code": 630,
+          "datum": "2006-05-12",
+          "res": "fga/2006/554"
+        },
+        {
+          "code": 650,
+          "datum": "2006-09-24",
+          "res": "fga/2006/1232"
+        }
+      ]
+    },
+    "BOTSCHAFT-2010-264": {
+      "titel": "Botschaft zum Bundesgesetz über die Koordination des Asyl- und des Auslieferungsverfahrens",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2010/264/de",
+      "stand": "2010-02-24",
+      "nummer": "10.031",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2010-02-24",
+          "res": "fga/2010/264"
+        },
+        {
+          "code": 300,
+          "datum": "2010-10-01",
+          "res": "fga/2010/1155"
+        },
+        {
+          "code": 400,
+          "datum": "2011-01-20"
+        }
+      ]
+    },
+    "BOTSCHAFT-2010-794": {
+      "titel": "Botschaft zur Änderung des Asylgesetzes",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2010/794/de",
+      "stand": "2010-05-26",
+      "nummer": "10.052",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2010-05-26",
+          "res": "fga/2010/794"
+        },
+        {
+          "code": 400,
+          "datum": "2013-01-17"
+        },
+        {
+          "code": 480,
+          "datum": "2013-01-22",
+          "res": "fga/2013/140"
+        },
+        {
+          "code": 630,
+          "datum": "2013-03-07",
+          "res": "fga/2013/331"
+        },
+        {
+          "code": 650,
+          "datum": "2013-06-09",
+          "res": "fga/2013/1180"
+        }
+      ]
+    },
+    "BOTSCHAFT-2011-1209": {
+      "titel": "Zusatzbotschaft zur Änderung des Asylgesetzes (Kurzfristige Massnahmen)",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2011/1209/de",
+      "stand": "2011-09-23",
+      "nummer": "10.052",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2011-09-23",
+          "res": "fga/2011/1209"
+        },
+        {
+          "code": 300,
+          "datum": "2012-12-14",
+          "res": "fga/2012/1793"
+        },
+        {
+          "code": 400,
+          "datum": "2013-04-07"
+        }
+      ]
+    },
+    "BOTSCHAFT-2014-1715": {
+      "titel": "Botschaft zur Änderung des Asylgesetzes (Neustrukturierung des Asylbereichs)",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2014/1715/de",
+      "stand": "2014-09-03",
+      "nummer": "14.063",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2014-09-03",
+          "res": "fga/2014/1715"
+        },
+        {
+          "code": 300,
+          "datum": "2015-09-25",
+          "res": "fga/2015/1704"
+        },
+        {
+          "code": 400,
+          "datum": "2016-01-14"
+        },
+        {
+          "code": 480,
+          "datum": "2016-01-25",
+          "res": "fga/2016/113"
+        },
+        {
+          "code": 630,
+          "datum": "2016-03-01",
+          "res": "fga/2016/337"
+        },
+        {
+          "code": 650,
+          "datum": "2016-08-15",
+          "res": "fga/2016/1355"
+        }
+      ]
+    },
+    "BOTSCHAFT-2014-405": {
+      "titel": "Botschaft zur Änderung des Asylgesetzes (Verlängerung der dringlichen Änderungen des Asylgesetzes)",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2014/405/de",
+      "stand": "2014-02-26",
+      "nummer": "14.025",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2014-02-26",
+          "res": "fga/2014/405"
+        },
+        {
+          "code": 300,
+          "datum": "2014-09-26",
+          "res": "fga/2014/1589"
+        },
+        {
+          "code": 400,
+          "datum": "2015-01-15"
+        }
+      ]
+    },
+    "BOTSCHAFT-2014-708": {
+      "titel": "Botschaft über die Genehmigung und die Umsetzung des Notenaustausches zwischen der Schweiz und der EU betreffend die Übernahme der Verordnung (EU) Nr. 1051/2013 zur Änderung des Schengener Grenzkodex zwecks Festlegung einer gemeinsamen Regelung für die vorübergehende Wiedereinführung von Kontrollen an den Binnengrenzen (Weiterentwicklung des Schengen-Besitzstands) sowie zu weiteren Änderungen im Asyl- und Ausländerrecht",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2014/708/de",
+      "stand": "2014-04-09",
+      "nummer": "14.032",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2014-04-09",
+          "res": "fga/2014/708"
+        },
+        {
+          "code": 300,
+          "datum": "2014-09-26",
+          "res": "fga/2014/1587"
+        },
+        {
+          "code": 300,
+          "datum": "2014-09-26",
+          "res": "fga/2014/1588"
+        },
+        {
+          "code": 300,
+          "datum": "2014-09-26",
+          "res": "fga/2014/1597"
+        },
+        {
+          "code": 400,
+          "datum": "2015-01-15"
+        }
+      ]
+    },
+    "BOTSCHAFT-2018-2305": {
+      "titel": "Botschaft zur Änderung des Asylgesetzes (Kompetenz des Bundesrates zum Abschluss völkerrechtlicher Verträge über die Ausrichtung von Beiträgen an ausgewählte EU-Mitgliedstaaten oder an internationale Organisationen)",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2018/2305/de",
+      "stand": "2018-09-28",
+      "nummer": "18.068",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2018-09-28",
+          "res": "fga/2018/2305"
+        },
+        {
+          "code": 300,
+          "datum": "2019-12-20",
+          "res": "fga/2019/2992"
+        },
+        {
+          "code": 400,
+          "datum": "2020-04-09"
+        }
+      ]
+    },
+    "BOTSCHAFT-2020-1902": {
+      "titel": "Botschaft zur Übernahme und Umsetzung der Verordnung (EU) 2019/1896 über die Europäische Grenz- und Küstenwache und zur Aufhebung der Verordnungen (EU) Nr. 1052/2013 und (EU) 2016/1624 (Weiterentwicklung des Schengen-Besitzstands) und zu einer Änderung des Asylgesetzes",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2020/1902/de",
+      "stand": "2020-08-26",
+      "nummer": "20.064",
+      "ereignisse": [
+        {
+          "code": 8,
+          "datum": "2019-12-24",
+          "res": "fga/2019/2936"
+        },
+        {
+          "code": 200,
+          "datum": "2020-08-26",
+          "res": "fga/2020/1902"
+        },
+        {
+          "code": 300,
+          "datum": "2021-10-01",
+          "res": "fga/2021/2318"
+        },
+        {
+          "code": 300,
+          "datum": "2021-10-01",
+          "res": "fga/2021/2333"
+        },
+        {
+          "code": 400,
+          "datum": "2022-01-20"
+        },
+        {
+          "code": 480,
+          "datum": "2022-03-14",
+          "res": "fga/2022/641"
+        },
+        {
+          "code": 630,
+          "datum": "2022-03-21",
+          "res": "fga/2022/666"
+        },
+        {
+          "code": 9,
+          "datum": "2022-05-15",
+          "res": "fga/2022/2010"
+        },
+        {
+          "code": 1,
+          "res": "dl/proj/6019/86/cons_1"
+        }
+      ]
+    },
+    "BOTSCHAFT-2024-1107": {
+      "titel": "Botschaft zur Änderung des Asylgesetzes (Sicherheit und Betrieb in den Zentren des Bundes)",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2024/1107/de",
+      "stand": "2024-04-24",
+      "nummer": "24.038",
+      "ereignisse": [
+        {
+          "code": 4,
+          "datum": "2023-02-01",
+          "res": "fga/2023/218"
+        },
+        {
+          "code": 2,
+          "datum": "2024-04-24",
+          "res": "fga/2024/1108"
+        },
+        {
+          "code": 200,
+          "datum": "2024-04-24",
+          "res": "fga/2024/1107"
+        },
+        {
+          "code": 300,
+          "datum": "2025-03-21",
+          "res": "fga/2025/1094"
+        },
+        {
+          "code": 400,
+          "datum": "2025-07-10"
+        },
+        {
+          "code": 1,
+          "res": "dl/proj/2022/85/cons_1"
+        }
+      ]
+    }
+  }
+}
