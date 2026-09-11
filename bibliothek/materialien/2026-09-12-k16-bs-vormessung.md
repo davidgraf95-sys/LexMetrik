@@ -183,3 +183,47 @@ Netz-Tor vergleicht die committeten Einträge stichprobenweise gegen data.bs.ch.
   entscheidet David — die UI war in diesem Auftrag gesperrt.
 - **Fachliche Abnahme** der maschinellen Zuordnungen (§7) ist offen; die Einträge
   tragen den Hinweis «maschinell zugeordnet, fachlich nicht geprüft».
+
+---
+
+## 7 Ergebnis des Baus (12.9.2026, nachgetragen)
+
+Gebaut wie unter §3 entschieden. Ist-Zahlen des Laufs vom 12.9.2026:
+
+| Grösse | Wert |
+|---|---|
+| Register-Einträge (Geschäfte mit ≥ 1 Kante) | **117** |
+| Kanten | **122** — Fussnote 8 (amtlich) · SG-Nummer 23 · Datum+Titel 91 |
+| verknüpfte BS-Erlasse | **53** |
+| Verfahrens-Ereignisse | **409** aus 440 amtlichen Dokumenten |
+| nicht klassierte Dokument-Bezeichnungen | 29 (Synopsen, Gesetzestexte, RA-Altnummern) — gezählt und ausgewiesen, nie geraten |
+| register.json | 2 115 → 2 326 KB roh · 303 → 324 KB gzip (Deckel `check:entstehung`: 400 KB gzip, damit bei 83 %) |
+
+**Stichprobe gegen die Amtsquelle** (Einzelabfragen `100311/records?where=signatur_ges=…`,
+also ein anderer Endpunkt als der Vollexport des Generators): 14 Geschäfte —
+alle 8 Fussnoten-Kanten plus 6 gestreute maschinelle — **14/14 Titel wörtlich
+identisch, 14/14 Geschäftsart passend zum Doktyp**. Zusätzlich fährt
+`check:bs-grossrat-netz` den Vollabgleich: 117/117 deckungsgleich.
+
+**Zwei Befunde, die erst der Bau gezeigt hat** (beide behoben, beide neu bewacht):
+
+1. `signatur_dok` ist in Basel-Stadt **kein URL-Schlüssel**. 16 der 440 Dokumente
+   tragen dort zwei Nummern («18.0110.01 18.0112.01» — ein Bericht zu zwei
+   Geschäften) oder einen Zusatz («04.2014.01 (RA 9424)»); ihre amtliche Adresse
+   ist ein direkter PDF-Pfad, nicht `?dnr=`. Eine konstruierte URL wäre still tot
+   gewesen. Gespeichert wird jetzt die amtliche URL wörtlich (§7: nie konstruieren).
+2. Die amtlichen Geschäftstitel schreiben das Erlassdatum **uneinheitlich**
+   («vom 12.Oktober 1967», ohne Leerzeichen, belegt an 04.0801). Der Kanten-Beleg
+   ist darum das Erlassdatum in ISO und kein nachgebauter Titel-Ausschnitt — ein
+   Nachbau wäre ein falsches Zitat. Das Tor rechnet den Beleg inhaltlich nach.
+
+**Offen für die Gegenprüfung / Folgeschritte:**
+
+- Der gzip-Deckel des Materialien-Registers steht nach diesem Schritt bei 83 %.
+  Ein ZH-Schritt derselben Grössenordnung reisst ihn — vor K-17 ist entweder der
+  Deckel zu begründen oder das Register zu teilen (je Behörde/Ebene).
+- Die 29 unklassierten Dokument-Bezeichnungen enthalten «RA <Nummer>»-Formen, die
+  plausibel Ratschläge unter historischer Nummerierung sind. Plausibel ist nicht
+  belegt — sie bleiben ungeführt, bis die Bedeutung von «RA» amtlich belegt ist.
+- Entstehungs-Karte für BS: bleibt unmöglich, solange `historie/`+`revisionen/`
+  keine kantonalen Sidecars führen (§3). Eigener Schritt.

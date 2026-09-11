@@ -797,6 +797,17 @@ jobs:
       - name: Entstehung (Deckel · Anker-Provenienz · Deckung je Erlass)
         if: needs.diff.outputs.art != 'doku'
         run: npm run check:entstehung
+      # Kantonale Materialien BS (K-16, W2·13-KANTONE-DATEN): Personendaten-Verbot,
+      # Herkunft jeder Erlass-Verknüpfung (amtlich nur aus der Fussnote), byte-gleiche
+      # Reproduktion des Generats aus der committeten Roh-Ablage, Deckel. Vollständig
+      # offline (~2 s, keine DB, kein Netz) — anders als `check:materialien`, das für
+      # die Byte-Reprojektion `daten/*.db` braucht und darum auf der Allowlist von
+      # check:tor-paritaet steht. Hier gibt es keinen Grund für eine Ausnahme: ein
+      # Tor, das eine maschinelle Zuordnung als amtlich entlarvt, gehört VOR den
+      # Merge, nicht in einen Wächter danach (#425).
+      - name: Kantonale Materialien BS (Herkunft · Personendaten · Reproduktion)
+        if: needs.diff.outputs.art != 'doku'
+        run: npm run check:bs-materialien
       # ZH-Vollständigkeit, ARTEFAKT-Teil (ZH-Fix-Runde 3, B7). Das Tor hält den
       # Snapshot gegen das amtliche PDF; sein PDF-Teil braucht den Roh-PDF-Cache
       # `daten/pdf-cache-zh/` (gitignored) und läuft darum lokal im `gate` und
