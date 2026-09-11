@@ -84,6 +84,27 @@ export interface BsEintrag {
   bsKanten: BsKante[];
 }
 
+/**
+ * Feldnamen der Quelle, die niemals in einem unserer Artefakte auftauchen dürfen:
+ * Namen, Vornamen, Anreden, Parteien und Mitglieder-Nummern der Urheberinnen und
+ * Urheber von Vorstössen. Der Adapter holt sie gar nicht erst (Positivliste
+ * `FELDER_GESCHAEFT`); diese Liste ist der zweite Zaun, den `check:bs-materialien`
+ * und der Unit-Test gegen das Ergebnis ziehen.
+ */
+export const VERBOTENE_FELDER = [
+  'name_urheber', 'vorname_urheber', 'name_vorname_urheber', 'anrede_urheber',
+  'partei_kname_urheber', 'nr_urheber', 'url_urheber', 'url_urheber_ratsmitgl',
+  'gremientyp_urheber',
+  'name_miturheber', 'vorname_miturheber', 'name_vorname_miturheber', 'anrede_miturheber',
+  'partei_kname_miturheber', 'nr_miturheber', 'url_miturheber', 'url_miturheber_ratsmitgl',
+  'gremientyp_miturheber',
+];
+
+/** Titelform der Vorstösse («Anzug Bülent Pekerman und Konsorten betreffend …»).
+ *  Ein Treffer im Bestand hiesse: ein Vorstoss ist hineingerutscht und trägt einen
+ *  Personennamen im Titel. */
+export const VORSTOSS_TITEL = /^(Anzug|Interpellation|Motion|Schriftliche Anfrage|Kleine Anfrage|Petition|Budgetpostulat|Planungsanzug|Resolution)\b/;
+
 // ── Schritt 1: Muster je Erlass (deterministisch, ohne Scoring) ──────────────
 
 const MONATE = [
@@ -226,12 +247,16 @@ export function baueKanten(
       const d = e.datum;
       if (!daten.some((x) => x.tag === d.tag && x.monat === d.monat && x.jahr === d.jahr)) continue;
       if (!e.muster.some((m) => m.test(tn))) continue;
+      // Beleg = das Erlassdatum in ISO, NICHT ein nachgebauter Titel-Ausschnitt: die
+      // amtlichen Titel schreiben es uneinheitlich («vom 12.Oktober 1967» ohne
+      // Leerzeichen, belegt an 04.0801), ein Nachbau wäre ein falsches Zitat. Das Tor
+      // prüft dafür inhaltlich nach (Datum muss im Titel stehen), nicht per Textsuche.
       merke({
         geschaeft: g.signatur_ges,
         erlass: e.key,
         quelle: 'maschinell',
         regel: 'datum-titel',
-        beleg: `vom ${d.tag}. ${d.monat.charAt(0).toUpperCase()}${d.monat.slice(1)} ${d.jahr}`,
+        beleg: `${d.jahr}-${String(MONATE.indexOf(d.monat) + 1).padStart(2, '0')}-${String(d.tag).padStart(2, '0')}`,
       });
     }
   }
@@ -264,7 +289,8 @@ export function baueEreignisse(dokumente: readonly BsDokument[]): EreignisErgebn
     if (code === null) { unklar.set(bez, (unklar.get(bez) ?? 0) + 1); continue; }
     if (!d.dokudatum) continue;
     const e: VerfahrensEreignis = { code, datum: d.dokudatum, vok: 'bs-gr', bez };
-    if (d.signatur_dok) e.res = d.signatur_dok;
+    // Die amtliche URL wörtlich; nie aus der Signatur gebaut (s. verfahren.ts zu `res`).
+    if (d.url_dok && /^https:\/\/grosserrat\.bs\.ch\//.test(d.url_dok)) e.res = d.url_dok;
     const liste = jeGeschaeft.get(sig) ?? [];
     liste.push(e);
     jeGeschaeft.set(sig, liste);

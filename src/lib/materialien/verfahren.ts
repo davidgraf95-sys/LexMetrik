@@ -59,7 +59,12 @@ export interface VerfahrensEreignis {
   /** `jolux:decisionDate` ISO (fehlt bei undatierten Schritten, z. B. Typ 1). */
   datum?: string;
   /** ELI-Kurzform der Publikation dieses Schritts («fga/2017/2057»), ohne Host.
-   *  Bei `vok: 'bs-gr'` stattdessen die amtliche Dokument-Signatur («06.1970.01»). */
+   *  Bei `vok: 'bs-gr'` stattdessen die amtliche Dokument-URL, WÖRTLICH übernommen.
+   *  Warum nicht die Signatur: `signatur_dok` ist in Basel-Stadt kein Schlüssel, aus
+   *  dem sich eine URL bauen liesse — 16 der 440 Dokumente tragen dort zwei Nummern
+   *  («18.0110.01 18.0112.01», ein Bericht zu zwei Geschäften) oder einen Zusatz
+   *  («04.2014.01 (RA 9424)»), und ihre amtliche Adresse ist ein direkter PDF-Pfad.
+   *  Eine konstruierte `?dnr=`-URL wäre dort still tot (§7: URL nie konstruieren). */
   res?: string;
   /** Vokabular des `code`. Fehlt = Bund/`type-projet` (alle Bestandsdaten, §6 byte-gleich).
    *  'bs-gr' = Grosser Rat Basel-Stadt (K-16) — ZWEI Vokabulare, nie ein gemeinsamer
@@ -199,9 +204,9 @@ export function verfahrensLabel(e: VerfahrensEreignis): string {
 }
 
 /** Live-Link zur Publikation eines Schritts (§7c), null ohne `res`.
- *  Bund: Fedlex-ELI · BS: Dokument-Signatur am Geschäftsportal des Grossen Rates. */
+ *  Bund: Fedlex-ELI aus der Kurzform · BS: die amtliche URL, unverändert. */
 export function verfahrensQuelleUrl(e: VerfahrensEreignis): string | null {
   if (!e.res) return null;
-  if (e.vok === 'bs-gr') return `https://grosserrat.bs.ch/?dnr=${e.res}`;
+  if (e.vok === 'bs-gr') return e.res;
   return `https://www.fedlex.admin.ch/eli/${e.res}/de`;
 }
