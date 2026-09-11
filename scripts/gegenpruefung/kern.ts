@@ -185,6 +185,12 @@ export function istRisikoPfad(p: string): boolean {
   // (Rot-Beweis im PR zu W2·6c-ENTSTEHUNG-DATEN: vorher false, nachher true).
   if (p.startsWith('public/materialien/anker/')) return true;
   if (p.startsWith('public/materialien/curia/')) return true;
+  // Synopse-Shards (E5, §11.6): sie halten GESPEICHERTEN Gesetzestext einer historischen
+  // Konsolidierung — der schwerste Fall des Zitat-Regimes (§7 a–d). Ein Fehler hier zeigt
+  // dem Leser einen Wortlaut, der nie galt. Rot-Beweis im PR zu W2·6c-ENTSTEHUNG-SYNOPSE
+  // (vorher false, nachher true).
+  if (p.startsWith('public/materialien/synopse/')) return true;
+  if (p.startsWith('public/materialien/synopse-entwurf/')) return true;
   // E3 (W2·6c-ENTSTEHUNG-LESER): die Entstehungs-Projektion sagt am Artikel «diese
   // Änderung geht auf jene Botschaft zurück» — eine artikelnahe Rechtsaussage aus
   // amtlichen Quellen, auch wenn sie nur eine SICHT auf bereits geprüfte Artefakte
