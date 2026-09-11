@@ -1234,6 +1234,35 @@
     },
     "cons": {
       "type": "uri",
+      "value": "https://fedlex.data.admin.ch/eli/dl/proj/2026/91/cons_1"
+    },
+    "status": {
+      "type": "uri",
+      "value": "https://fedlex.data.admin.ch/vocabulary/consultation-status/1"
+    },
+    "titelDe": {
+      "type": "literal",
+      "xml:lang": "de",
+      "value": "Änderung des Asylgesetzes und des Ausländer- und Integrationsgesetzes sowie der Verordnung über Zulassung, Aufenthalt und Erwerbstätigkeit (Asylstrategie 2027)"
+    },
+    "titelFr": {
+      "type": "literal",
+      "xml:lang": "fr",
+      "value": "Modification de la loi sur l'asile et de la loi sur les étrangers et l'intégration ainsi que de l’ordonnance relative à l’admission, au séjour et à l’exercice d’une activité lucrative (Stratégie en matière d'asile 2027)"
+    },
+    "titelIt": {
+      "type": "literal",
+      "xml:lang": "it",
+      "value": "Modifica della legge sull’asilo e della legge sugli stranieri e sull’integrazione nonché dell’ ordinanza sull’ammissione, il soggiorno e l’attività lucrativa (Strategia in materia di asilo 2027)"
+    }
+  },
+  {
+    "sr": {
+      "type": "literal",
+      "value": "832.10"
+    },
+    "cons": {
+      "type": "uri",
       "value": "https://fedlex.data.admin.ch/eli/dl/proj/2026/56/cons_1"
     },
     "status": {
