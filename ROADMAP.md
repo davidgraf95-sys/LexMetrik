@@ -480,8 +480,8 @@ zgb-a36-anhang: Die ZGB-Gliederung zeigt 74 Artikel des Anhangs «Wortlaut der f
   Aktionen nur bei Hover/Fokus/offener Rubrik, D45-Split, Umbenennung `BezuegeKopf` →
   `Funktionszeile`. **Detail:** [FAHRPLAN-DESIGN-IDENTITAET.md](fahrplaene/FAHRPLAN-DESIGN-IDENTITAET.md) §9.
 
-- [ ] **Bezüge-Zähler in den Erlass-Payload** *(`W2·26-FUNKTIONSZEILE-ZAEHLER`, D34-Nachfix)*
-  <!-- @meta id: W2·26-FUNKTIONSZEILE-ZAEHLER · status: ready · blocker: null · dep: [W2·26-FUNKTIONSZEILE] · feld: korpus · fahrplan: fahrplaene/FAHRPLAN-DESIGN-IDENTITAET.md -->
+- [x] **Bezüge-Zähler in den Erlass-Payload** *(`W2·26-FUNKTIONSZEILE-ZAEHLER`, D34-Nachfix)*
+  <!-- @meta id: W2·26-FUNKTIONSZEILE-ZAEHLER · status: done · blocker: null · dep: [W2·26-FUNKTIONSZEILE] · feld: korpus · fahrplan: fahrplaene/FAHRPLAN-DESIGN-IDENTITAET.md -->
   Bezüge-Zähler (Entscheide/Materialien/Verweise/Rechner) in den Erlass-Payload statt eigenem
   Fetch — heute entstehen die Fuss-Zeilen erst in der zweiten Render-Runde. Korpus/Generator ⇒
   **Gegenprüfung Pflicht**, Golden byte-gleich bzw. deklarierter Re-Bless.
