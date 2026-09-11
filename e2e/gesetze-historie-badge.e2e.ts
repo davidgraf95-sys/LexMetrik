@@ -125,9 +125,15 @@ test('Badge zeigt das In-Kraft-Datum der aktuellen Fassung (BGBM Art. 2)', async
   await art.scrollIntoViewIfNeeded();
   // D40: die Marke wächst mit dem idle-Shard-Resolve in die Funktionszeile ein
   // und nennt die Zahl der Fassungen; das Datum steht im Block darunter.
+  // §6.3-DEKLARATION (W2·26/Z2, Mandat David 11.9.2026): «Fassung soll nur
+  // ‹gilt seit XXX› zeigen, erst beim Aufklappen erscheinen die Angaben». Die
+  // Marke liest zugeklappt darum den STAND, aufgeklappt die ZAHL. Die Zusage
+  // dieses Falls — das In-Kraft-Datum der aktuellen Fassung steht am Artikel —
+  // ist unverändert und wird jetzt an BEIDEN Zuständen geprüft, also strenger.
   const marke = await fassungsMarke(art);
-  await expect(marke).toHaveText(/\d+\s*Fassung(en)?/);
+  await expect(marke).toHaveText(/^Gilt seit\s+01\.01\.2025\s*›$/);
   const zeile = await fassungAufklappen(art);
+  await expect(marke).toHaveText(/^\d+\s*Fassung(en)?\s*›$/);
   await expect(zeile.getByText('Fassung', { exact: true })).toBeVisible();
   await expect(zeile.getByText(/Gilt seit\s+01\.01\.2025/)).toBeVisible();
 });

@@ -36,7 +36,7 @@
 //  · in `parts/ArtikelLeser.bezuegeFuss.tsx` die Marke `reg: 'f'` aus
 //    `bezugsMarken` entfernen                                     ⇒ (a) rot
 //  · dort `anzahl: 1` statt der Ereignis-Länge setzen             ⇒ (a) rot
-//  · in `parts/BezuegeKopf.tsx` `useState` mit `{ f: true }` vorbelegen
+//  · in `parts/Funktionszeile.tsx` `useState` mit `{ f: true }` vorbelegen
 //    (= die Rubrik steht beim Laden offen)                        ⇒ (b) rot
 //  · in `src/index.css` die vier `data-fuss-aus*="f"`-Zeilen löschen ⇒ (c) rot
 //  · in `src/index.css` die `data-vermerke`-Zeilen für `[data-reg="f"]`
@@ -78,14 +78,29 @@ test.describe('D40 · Fassung als Rubrik der Funktionszeile', () => {
     // Auch der Artikelkopf der Breitform trägt nichts Fassungsartiges mehr.
     await expect(page.locator(`#art-${ART} .lr7-fassung`)).toHaveCount(0);
 
-    // Die Marke steht LINKS vom Wort «Bezüge»: «Fassung» ist die Auskunft über
-    // DIESEN Artikel, die vier danach zeigen von ihm weg (§8).
+    // Die Marke steht ZUERST: «Fassung» ist die Auskunft über DIESEN Artikel,
+    // die vier danach zeigen von ihm weg (§8).
+    //
+    // §6.3-DEKLARATION (W2·26/Z1, 11.9.2026): hier stand zusätzlich
+    // `expect(reihenfolge[1]).toBe('lr7-bez-wort')` — das Wort «Bezüge» stand
+    // zwischen der Fassung und den Bezugs-Rubriken. Es ist mit Z1 ersatzlos
+    // gestrichen; die REIHENFOLGE-Zusage bleibt Wort für Wort, nur ohne das
+    // Wort dazwischen (der Satz oben ist ergänzt, nicht nachgeführt).
     const reihenfolge = await page.locator(`#art-${ART} .lr7-bez-zeile`).evaluate((z) => (
       [...z.children].map((c) => (c as HTMLElement).dataset.reg ?? c.className.split(' ').pop() ?? '')
     ));
     expect(reihenfolge[0], `Reihenfolge der Zeile: ${reihenfolge.join(' · ')}`).toBe('f');
-    expect(reihenfolge[1], 'das Wort «Bezüge» steht nicht vor den vier Bezugs-Rubriken')
-      .toBe('lr7-bez-wort');
+    expect(reihenfolge[1], 'nach der Fassung kommen sofort die Bezugs-Rubriken').toBe('r');
+
+    // §6.3-DEKLARATION (W2·26/Z2): ZUGEKLAPPT liest die Marke seit dem Mandat
+    // vom 11.9.2026 den STAND («Gilt seit 01.01.2025»), nicht die Zahl — David:
+    // «Fassung soll nur ‹gilt seit XXX› zeigen, erst beim Aufklappen erscheinen
+    // die Angaben». Die ZUSAGE dieses Falls («die Zahl ist gezählt und deckt
+    // sich mit der Zeitleiste») ist unverändert; sie wird jetzt am
+    // AUFGEKLAPPTEN Zustand gemessen, weil dort die Zahl steht.
+    await expect(page.locator(MARKE)).toHaveText(/^Gilt seit \d{2}\.\d{2}\.\d{4}\s*›$/);
+    await page.locator(MARKE).click();
+    await expect(page.locator(MARKE)).toHaveAttribute('aria-expanded', 'true');
 
     // Die ZAHL ist gezählt: sie deckt sich mit den Einträgen der Zeitleiste.
     const text = (await page.locator(MARKE).innerText()).trim();
@@ -99,7 +114,6 @@ test.describe('D40 · Fassung als Rubrik der Funktionszeile', () => {
     expect(await page.locator(MARKE).getAttribute('aria-label'))
       .toBe(`${zahl} ${zahl === 1 ? 'Fassung' : 'Fassungen'} zu Art. ${ART} ZPO`);
 
-    await page.locator(MARKE).click();
     await expect(page.locator(BLOCK)).toBeVisible();
     await expect(page.locator(`${BLOCK} ol > li`)).toHaveCount(zahl);
     // Und es ist DIESELBE Auskunft wie bisher: Overline «Fassung» + «Gilt seit …».

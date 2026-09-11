@@ -73,6 +73,12 @@ test.describe('E6/A37 — Zitat-Link fluchtet mit der Textkante (kein toter Steg
   for (const key of ['OR', 'ZGB'] as const) {
     test(`${key}: «Zitat/Link»-Gruppe steht bündig zur rechten Textkante`, async ({ page }) => {
       await ladeReader(page, key);
+      // §6.3-DEKLARATION (W2·26/Z6, Mandat David 11.9.2026): die Aktionsgruppe
+      // wird erst gerendert, wenn der Artikel Hover oder Fokus hat oder eine
+      // Rubrik offen ist (auf Geräten ohne Hover immer; Anlass §15, 13 532
+      // Knöpfe im OR-Leser). Die GEMESSENE Sache — ihre Rechtskante fluchtet mit
+      // der Textkante — ist unverändert; die Vorbedingung ist jetzt ausgesprochen.
+      await page.locator('article[id^="art-"] .lr7-bez').first().hover();
       const geo = await ersterArtikelGeo(page);
       expect(geo, `${key}: Artikel-Geometrie messbar`).not.toBeNull();
       // Kernkorrektur A37: die Aktionsgruppe fliesst NICHT mehr weit rechts in den

@@ -223,6 +223,13 @@ test('«Zitat kopieren»: deterministisches Zitat (Kürzel + SR + Stand) in die 
   await page.waitForTimeout(400);
   // A27: die «Zitat kopieren»-Aktion steht je Artikel in der Artikelnummer-Zeile
   // (ArtikelLeser) — identisches baueZitat-Voll-Zitat wie zuvor im Kontextkopf.
+  // §6.3-DEKLARATION (W2·26/Z6, 11.9.2026): die Aktion steht in der
+  // Funktionszeile am Artikelende und wird erst gerendert, wenn der Artikel
+  // Hover/Fokus hat oder eine Rubrik offen ist (auf Geräten ohne Hover immer;
+  // Anlass: 13 532 Knöpfe im OR-Leser, §15). Die Zusage dieses Falls — das
+  // deterministische Zitat in der Zwischenablage — ist unverändert; nur die
+  // Vorbedingung ist jetzt ausgesprochen.
+  await page.locator('#art-8 .lr7-bez').hover();
   await page.locator('#art-8').getByRole('button', { name: /Zitat kopieren:/ }).click();
   const clip = await page.evaluate(() => navigator.clipboard.readText());
   // Deterministisches Format: «… BV, SR 101 (Stand dd.mm.yyyy)».
