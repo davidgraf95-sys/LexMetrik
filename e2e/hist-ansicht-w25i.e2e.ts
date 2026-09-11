@@ -41,6 +41,28 @@ import {
 // steht in «fussnoten»), und die Drei-Stellungs-Matrix unten prüft alle
 // Stellungen gegen alle Klassen zugleich.
 //
+// ── STUFE 3 (§6.3), 11.9.2026 · W2·26/Z8 ────────────────────────────────────
+// DAVIDS BEFUND, wörtlich: «Fussnoten, die z. B. nur eine SR-Nummer enthalten,
+// müssen ebenfalls weg sein, wenn Fussnoten abgewählt sind.» NULLPROBE dazu
+// (OR-Leser, Vorgabestellung «Fassung», 11.9.2026): 215 von 847 Markern und 194
+// von 595 Apparat-Kästen standen sichtbar da — darunter 75 Einträge der Klasse
+// `V`, die nichts als «SR 943.03» tragen, und 97 Marker aus dem Erlass-Kopf und
+// den Randtiteln, die gar kein `data-fn-klasse` setzen und darum von keiner
+// Klassen-Regel je erreicht wurden.
+//
+// DIE MATRIX SEITHER — die Wahl kennt KEINE Klassen mehr:
+//   fassung    Fassungs-Zeile DA · Apparat und Marker am Bildschirm AUS
+//   fussnoten  voller amtlicher Apparat (alle Klassen) · Fassungs-Zeile aus
+//   aus        weder noch
+// Am Bildschirm; der AUSDRUCK behält den Apparat in jeder Stellung (@media
+// screen, §7/§8), und nichts verlässt das DOM (A1-Mechanik).
+//
+// WAS DAS FÜR DIESE DATEI HEISST: die Zusage «verlustfrei» ist für die zwei
+// Nicht-Fussnoten-Stellungen aufgehoben — sie wird nicht weggelassen, sondern
+// UMGEKEHRT geprüft (ein Tor, das nur noch weniger behauptet, prüfte weniger,
+// §6.7). Jede Zusicherung bleibt ZWEISEITIG: der Apparat verschwindet in
+// «fassung»/«aus» UND kehrt in «fussnoten» vollständig zurück.
+//
 // ── DIE NICHT VERHANDELBARE AUFLAGE ─────────────────────────────────────────
 // H0-Auflage 1 (Vollbericht `bibliothek/normen/hist-ansicht-h0-trennbarkeit.md`,
 // Nachtrag 17.8.2026): `A` ist die EINZIGE Klasse, welche die Änderungs-Ansicht
@@ -48,6 +70,13 @@ import {
 // Unklares (U) und alles OHNE Klasse bleiben unberührt. Genau das ist seit
 // D35-F3 die Verlustfreiheit, und geprüft wird darum nicht nur, DASS eine
 // Stellung etwas dämpft, sondern dass sie NUR `A` dämpft.
+// [W2·26/Z8, 11.9.2026 — ERGÄNZUNG: H0-Auflage 1 ist nicht verletzt, sondern
+//  GEGENSTANDSLOS geworden. Sie bindet die ÄNDERUNGS-Ansicht an die Klasse `A`;
+//  seit Z8 dämpft keine Klasse mehr etwas — der Schalter fasst den Apparat als
+//  Ganzes, und genau dafür hat H0 ihn vorgesehen («wer auch den nicht sehen
+//  will, hat den Fussnoten-Schalter»). Der Wächter dazu ist strenger geworden:
+//  `src/tests/fussnoten-toggle-huellenneutral.test.ts` verlangt, dass KEIN
+//  Selektor in `src/index.css` eine `kl`-Klasse nennt — auch `A` nicht.]
 //
 // Erlass-Wahl BGBM (16 Artikel, ~21 KB Snapshot) = derselbe kleine Träger wie in
 // `leser-optionen.e2e.ts`: die Semantik ist seitengrössen-unabhängig (Attribut +
@@ -129,12 +158,20 @@ test('Grundzustand: «Fassung» ist Vorgabe, Attribut am <html>, DREI Stellungen
   await expect(page.locator('[data-hist-wahl]')).toHaveCount(0);
 });
 
-test('VERLUSTFREI: keine Stellung blendet V oder Z aus — nur A wechselt', async ({ page }) => {
+test('GANZ ODER GAR NICHT: in «Fassung»/«aus» geht der Apparat vollständig — auch V und Z', async ({ page }) => {
   // ── DEKLARIERTE ÄNDERUNG (§6.3, Entscheid David 7.9.2026) ──────────────────
   // Bis 7.9. prüfte dieser Fall, dass der VERMERKE-Schalter gar keine Fussnote
   // anfasst und der FUSSNOTEN-Schalter alle. Den zweiten gibt es nicht mehr:
   // amtlicher Nicht-Änderungs-Apparat wird nie versteckt. Geprüft wird jetzt die
   // engere Zusage — `A` wechselt mit der Stellung, V und Z nie.
+  //
+  // ── DEKLARIERTE ÄNDERUNG (§6.3, Mandat David 11.9.2026 · W2·26/Z8) ─────────
+  // Beide Sätze oben bleiben als Beleg ihres Standes stehen (§0 Ziff. 2b). Seit
+  // dem Mandat geht der Apparat GANZ: «Fussnoten, die z. B. nur eine SR-Nummer
+  // enthalten» — das ist genau die Klasse `V`, im BGBM die Zeile fn 13 mit
+  // «SR 0.142.112.681» — «müssen ebenfalls weg sein». Der Fall prüft darum
+  // dasselbe Element mit umgekehrtem Vorzeichen, und ZWEISEITIG: alles weg in
+  // «fassung»/«aus», alles zurück in «fussnoten», nichts je aus dem DOM.
   await warteReader(page, '/gesetze/bund/BGBM', 'art-4');
 
   const a12 = apparatZeile(page, '4', '12');       // A — Änderungsvermerk
@@ -169,40 +206,51 @@ test('VERLUSTFREI: keine Stellung blendet V oder Z aus — nur A wechselt', asyn
 
   for (const stellung of ['fassung', 'aus'] as const) {
     await waehle(page, stellung);
-    // DER KERN DER VERLUSTFREIHEIT: V und Z stehen in JEDER Stellung.
-    await expect(v13, `${stellung}: V-Eintrag verschwindet`).toBeVisible();
-    await expect(z15, `${stellung}: Z-Eintrag verschwindet`).toBeVisible();
-    await expect(v16, `${stellung}: V-Eintrag verschwindet`).toBeVisible();
-    // ZWEISEITIG: A ist sehr wohl gedämpft. Ohne diese Gegenprobe wäre die
-    // Zusage oben mit «nichts ist je ausblendbar» erfüllbar (§6.7).
+    // DER KERN VON Z8: der Apparat geht GANZ — die reine SR-Zeile mit.
+    await expect(v13, `${stellung}: V-Eintrag steht weiter da`).toBeHidden();
+    await expect(z15, `${stellung}: Z-Eintrag steht weiter da`).toBeHidden();
+    await expect(v16, `${stellung}: V-Eintrag steht weiter da`).toBeHidden();
     await expect(a12, `${stellung}: A-Eintrag steht weiter da`).toBeHidden();
     await expect(a14, `${stellung}: A-Eintrag steht weiter da`).toBeHidden();
     // R9/§8-DOM-Beweis: nicht gelöscht, nur weggeschaltet (Popover-Quelle,
     // Ctrl+F-Neutralität, vollständige Wiederherstellung).
     expect((await a12.textContent())?.trim() ?? '').toContain('Aufgehoben durch');
     expect(await a12.count()).toBe(1);
+    expect((await v13.textContent())?.trim() ?? '').toContain('0.142.112.681');
+    expect(await v13.count()).toBe(1);
   }
 
-  // Und der NORMTEXT ist von keiner Regel erfasst — Ctrl+F-Beweis: der amtliche
-  // Wortlaut des Artikels bleibt sichtbar und findbar, samt V-Fussnote.
+  // Und der NORMTEXT ist von keiner Regel erfasst — das ist die Grenze, die
+  // auch Z8 nicht überschreitet (§1/R9): der amtliche Wortlaut des Artikels
+  // bleibt sichtbar und findbar, in JEDER Stellung.
   const artikel = page.locator('#art-4');
   await expect(artikel).toBeVisible();
   const sichtbarerText = await artikel.evaluate((el) => (el as HTMLElement).innerText);
   expect(sichtbarerText.length).toBeGreaterThan(20);
-  expect(sichtbarerText).toContain('0.142.112.681');
 
-  // POSITIV zurück: «Fussnoten» stellt den Apparat vollständig wieder her.
+  // POSITIV zurück: «Fussnoten» stellt den Apparat vollständig wieder her —
+  // ohne diese Hälfte wäre die Zusage oben mit «alles ist immer weg» erfüllbar.
   await waehle(page, 'fussnoten');
-  await expect(a12).toBeVisible();
-  await expect(a14).toBeVisible();
+  for (const l of [a12, v13, a14, z15, v16]) {
+    await l.scrollIntoViewIfNeeded();
+    await expect(l).toBeVisible();
+  }
+  expect((await artikel.evaluate((el) => (el as HTMLElement).innerText)))
+    .toContain('0.142.112.681');
 });
 
-test('Die A-MARKER im Wortlaut folgen der Wahl, die V-Marker nie', async ({ page }) => {
+test('ALLE Marker im Wortlaut folgen der Wahl — A wie V', async ({ page }) => {
   // ── DEKLARIERTE ÄNDERUNG (§6.3) ───────────────────────────────────────────
   // Bis 7.9. hingen ALLE Marker am Fussnoten-Schalter und keiner am
   // Vermerke-Schalter. Jetzt hängt genau die A-Marke an der Wahl — sie ist der
   // Zeiger auf die Änderungshistorie, und ihn stehen zu lassen, während der
   // Eintrag gedämpft ist, wäre ein Zeiger ins Nichts (§8).
+  //
+  // ── DEKLARIERTE ÄNDERUNG (§6.3, W2·26/Z8, 11.9.2026) ──────────────────────
+  // Der Satz oben bleibt stehen (§0 Ziff. 2b) und gilt seither für JEDE Marke:
+  // ein Zeiger auf einen ausgeblendeten Eintrag ist ein Zeiger ins Nichts,
+  // gleich welcher Klasse. Die Zusicherung ist damit dieselbe, nur ohne
+  // Klassen-Ausnahme.
   await warteReader(page, '/gesetze/bund/BGBM', 'art-4');
   const aMarker = page.locator('.lc-leser [data-fn-klasse="A"] [data-fn-ref]');
   const vMarker = page.locator('.lc-leser [data-fn-klasse="V"] [data-fn-ref]');
@@ -219,7 +267,7 @@ test('Die A-MARKER im Wortlaut folgen der Wahl, die V-Marker nie', async ({ page
 
   await waehle(page, 'fassung');
   await expect(aMarker.first(), '«Fassung» lässt die A-Marke stehen').toBeHidden();
-  await expect(vMarker.first(), '«Fassung» nimmt die V-Marke mit').toBeVisible();
+  await expect(vMarker.first(), '«Fassung» lässt die V-Marke stehen').toBeHidden();
   // DOM unverändert vollständig (A1-Mechanik).
   expect(await aMarker.count()).toBe(aAnzahl);
   expect(await vMarker.count()).toBe(vAnzahl);
@@ -238,9 +286,18 @@ test('DREI-STELLUNGS-MATRIX: Bund mit Klassen · Kanton ohne Klassifikation', as
   // Wahl wird darum gar nicht erst angeboten (D1), und der Apparat steht
   // vollständig. Drei Stellungen mit identischer Wirkung anzubieten wäre genau
   // das tote Steuerelement, das D1 abgeschafft hat.
+  //
+  // ── DEKLARIERTE ÄNDERUNG (§6.3, W2·26/Z8, 11.9.2026) ──────────────────────
+  // Beide Absätze bleiben als Beleg ihres Standes stehen (§0 Ziff. 2b). Seit dem
+  // Mandat gilt: (1) die Wahl nimmt den Apparat GANZ, nicht nur die A-Zeilen;
+  // (2) sie wird auch auf dem klassenlosen Kanton ANGEBOTEN — dort hat sie jetzt
+  // eine Wirkung, und eine Vorgabestellung, die den Apparat versteckt, ohne den
+  // Weg zurück anzubieten, wäre der §8-Bruch (Herleitung an
+  // `bieteAenderungsvermerkeSchalter`). Die Matrix prüft darum BEIDE Erlasse
+  // gegen dieselbe Regel — das ist strenger als vorher, nicht lockerer.
   for (const [pfad, artId, name, mitWahl] of [
     ['/gesetze/bund/BGBM', 'art-4', 'BGBM (Bund, mit Klassen)', true],
-    ['/gesetze/kanton/BS-640.100', 'art-1', 'BS-640.100 (Kanton, klassenlos)', false],
+    ['/gesetze/kanton/BS-640.100', 'art-1', 'BS-640.100 (Kanton, klassenlos)', true],
   ] as const) {
     await warteReader(page, pfad, artId);
 
@@ -264,14 +321,11 @@ test('DREI-STELLUNGS-MATRIX: Bund mit Klassen · Kanton ohne Klassifikation', as
     const wahlDa = (await page.locator(ANSICHT_PANEL).getByRole(WAHL_ROLLE).count()) > 0;
     expect(wahlDa, `${name}: Wahl angeboten?`).toBe(mitWahl);
 
-    if (!mitWahl) {
-      // Ohne Wahl kann nichts gedämpft sein — der Apparat steht vollständig.
-      const alles = await zaehle();
-      expect(alles.apparat, `${name}: keine Apparat-Zeilen sichtbar`).toBeGreaterThan(0);
-      expect(alles.nichtA, `${name}: klassenlose Zeilen sind alle nicht-A`).toBe(alles.apparat);
-      expect(alles.marker, `${name}: keine Marker sichtbar`).toBeGreaterThan(0);
-      continue;
-    }
+    // W2·26/Z8: hier stand der Zweig `if (!mitWahl)` für den klassenlosen
+    // Kanton — «ohne Wahl kann nichts gedämpft sein, der Apparat steht
+    // vollständig». Er ist gegenstandslos, seit die Wahl auf JEDEM Erlass mit
+    // Fussnoten angeboten wird; die Vorbedingung `mitWahl` bleibt als
+    // Zusicherung oben stehen und ist für beide Erlasse `true`.
 
     // Stellung «Fussnoten» = der volle Apparat. POSITIV-Vorbedingung: ohne
     // Apparat und Marker prüfte die Matrix nichts (§6.7).
@@ -279,19 +333,16 @@ test('DREI-STELLUNGS-MATRIX: Bund mit Klassen · Kanton ohne Klassifikation', as
     const voll = await zaehle();
     expect(voll.apparat, `${name}: keine Apparat-Zeilen sichtbar`).toBeGreaterThan(0);
     expect(voll.marker, `${name}: keine Marker sichtbar`).toBeGreaterThan(0);
-    expect(voll.apparat - voll.nichtA, `${name}: keine A-Zeilen — die Matrix prüfte nichts`)
-      .toBeGreaterThan(0);
     expect(voll.fassung, `${name}: «Fussnoten» lässt die Fassungs-Zeile stehen`).toBe(0);
 
     for (const stellung of ['fassung', 'aus'] as const) {
       await waehle(page, stellung);
       const m = await zaehle();
-      // A ist weg …
-      expect(m.apparat, `${name}/${stellung}: A-Zeilen stehen weiter da`).toBe(voll.nichtA);
-      // … und JEDE nicht-A-Zeile steht: das ist die Verlustfreiheit als Zahl.
-      expect(m.nichtA, `${name}/${stellung}: eine nicht-A-Zeile ist mit verschwunden`)
-        .toBe(voll.nichtA);
-      expect(m.marker, `${name}/${stellung}: Marker-Zahl stimmt nicht`).toBeLessThan(voll.marker);
+      // W2·26/Z8: der Apparat geht GANZ — keine Zeile, kein Marker, gleich
+      // welcher Klasse. Das ist die Matrix als Zahl.
+      expect(m.apparat, `${name}/${stellung}: Apparat-Zeilen stehen weiter da`).toBe(0);
+      expect(m.nichtA, `${name}/${stellung}: nicht-A-Zeilen stehen weiter da`).toBe(0);
+      expect(m.marker, `${name}/${stellung}: Marker stehen weiter da`).toBe(0);
       expect(m.fassung, `${name}/${stellung}: Fassungs-Zeile`)
         .toBe(stellung === 'fassung' ? voll.fassung || m.fassung : 0);
     }
@@ -342,12 +393,21 @@ test('«Fassung» zeigt die Fassungs-Spur, «Fussnoten» und «aus» nehmen sie 
   const markeText = (await fassung.textContent())?.trim() ?? '';
   expect(markeText, 'die Marke nennt keine Fassungs-Zahl').toMatch(/\d+\s*Fassung/);
 
-  // Art. 9 trägt AUSSCHLIESSLICH A-Fussnoten — der schärfste Fall: sein Apparat
-  // hat in «Fassung»/«aus» keine einzige Zeile mehr zu zeigen und verschwindet
-  // darum samt Rahmen (`data-fn-nur-a`, in React entschieden statt per `:has()`).
+  // Art. 9 trägt AUSSCHLIESSLICH A-Fussnoten — bis W2·26 der schärfste Fall:
+  // sein Apparat hatte in «Fassung»/«aus» keine einzige Zeile mehr zu zeigen und
+  // verschwand darum samt Rahmen (`data-fn-nur-a`, in React entschieden statt
+  // per `:has()`).
+  //
+  // §6.3-DEKLARATION (W2·26/Z8, 11.9.2026): `data-fn-nur-a` ist ERSATZLOS
+  // gestrichen. Es beantwortete die Frage «trägt dieser Apparat NUR A-Zeilen?»,
+  // damit kein leerer Rahmen stehen blieb — seit Z8 geht der Apparat ohnehin
+  // ganz, und was nicht mehr scheitern kann, wird gestrichen statt bewacht
+  // (§17-Gegengewicht). Die ZUSAGE dieses Falls ist unverändert und gilt jetzt
+  // für jeden Apparat, nicht nur für den A-only: kein leerer Rahmen, keine
+  // nackte Haarlinie.
   const apparat9 = page.locator('#art-9 [data-fn-apparat]');
   await page.locator('#art-9').scrollIntoViewIfNeeded();
-  await expect(apparat9).toHaveAttribute('data-fn-nur-a', '');
+  await expect(apparat9).toHaveCount(1);
 
   await waehle(page, 'fussnoten');
   await page.locator('#art-9').scrollIntoViewIfNeeded();
@@ -363,10 +423,10 @@ test('«Fassung» zeigt die Fassungs-Spur, «Fussnoten» und «aus» nehmen sie 
   await art2.scrollIntoViewIfNeeded();
   await expect(fassung).toBeVisible();
   await expect(slot).toBeVisible();
-  // … und die A-Spur ist weg, samt dem leer gewordenen Rahmen. Ohne die
-  // Rahmen-Zusicherung bliebe eine nackte Haarlinie über nichts stehen.
+  // … und der Apparat ist weg, samt Rahmen. Ohne die Rahmen-Zusicherung bliebe
+  // eine nackte Haarlinie über nichts stehen.
   await page.locator('#art-9').scrollIntoViewIfNeeded();
-  await expect(apparat9, 'A-only-Apparat steht als leerer Kasten da').toBeHidden();
+  await expect(apparat9, 'Apparat steht als leerer Kasten da').toBeHidden();
   expect(await aMarkerSichtbar(), 'A-Marker stehen in «Fassung» weiter da').toBe(0);
 
   await waehle(page, 'aus');
@@ -432,9 +492,13 @@ test('Persistenz + Pre-Paint: die Wahl übersteht den Reload ohne Flackern', asy
   // das Attribut steht VOR dem ersten Paint — kein Flash der Fassungs-Zeile.
   await expect(page.locator('html')).toHaveAttribute('data-vermerke', 'aus');
   await expect(page.locator('#art-4')).toBeVisible();
-  // Verlustfrei auch nach dem Reload: V und Z stehen, A ist gedämpft.
-  await expect(apparatZeile(page, '4', '13')).toBeVisible();
+  // §6.3-DEKLARATION (W2·26/Z8, 11.9.2026): hier stand «Verlustfrei auch nach
+  // dem Reload: V und Z stehen, A ist gedämpft». Seit dem Mandat nimmt «aus»
+  // den Apparat GANZ — geprüft wird darum, dass auch die V-Zeile nach dem
+  // Reload weg ist (und beide im DOM bleiben, A1-Mechanik).
+  await expect(apparatZeile(page, '4', '13')).toBeHidden();
   await expect(apparatZeile(page, '4', '12')).toBeHidden();
+  await expect(apparatZeile(page, '4', '13')).toHaveCount(1);
   // D40: die Fassungs-Spur nach dem Reload ist die Rubrik-Marke; «aus» nimmt sie.
   // KEINE Zähl-Zusicherung: die A1-Mechanik lässt das Element im DOM stehen
   // (David 5.7.2026, `display:none` statt löschen) — gezählt wird, was der
@@ -473,12 +537,20 @@ test('MIGRATION im Browser: ein gespeichertes «chronologie» steht als «Fassun
   await fassungsMarke(page.locator('#art-2'));
 });
 
-test('H0-Auflage 1: KEINE Klasse ausser A folgt der Wahl — A, G und U auf einem Artikel', async ({ page }) => {
+test('W2·26/Z8: JEDE Klasse folgt der Wahl — A, G und U auf einem Artikel', async ({ page }) => {
   // Gegenprüfungs-Befund B5 (26.7.2026) in seiner D35-F3-Fassung. Die Sonde ist
   // dieselbe, ihre Richtung ist wieder die ursprüngliche: sie bewacht, dass der
   // CSS-Selektor nicht von `[data-fn-klasse="A"]` auf `[data-fn-klasse]`
   // verbreitert wird. Würde er es, wäre die Verlustfreiheit dahin, und genau
   // hier wird es rot.
+  //
+  // ── §6.3-DEKLARATION (W2·26/Z8, Mandat David 11.9.2026) ───────────────────
+  // Der Absatz oben bleibt als Beleg seines Standes stehen (§0 Ziff. 2b). Das
+  // Mandat kehrt die Richtung um: «Fussnoten, die z. B. nur eine SR-Nummer
+  // enthalten, müssen ebenfalls weg sein». Die Wahl kennt seither keine Klassen
+  // — die Sonde bewacht jetzt, dass WIRKLICH jede folgt, an demselben Artikel,
+  // der A, G und U zugleich trägt. ZWEISEITIG bleibt sie: «Fussnoten» stellt
+  // alle drei wieder her.
   //
   // ELG Art. 10 trägt A, G UND U auf EINEM Artikel (verifiziert am Sidecar
   // 26.7.2026): fn34 = A · fn35 = U («Beträge angepasst gemäss …») · fn41 = G
@@ -495,19 +567,21 @@ test('H0-Auflage 1: KEINE Klasse ausser A folgt der Wahl — A, G und U auf eine
 
   for (const stellung of ['fassung', 'aus'] as const) {
     await waehle(page, stellung);
-    await expect(u35, `${stellung}: U folgt der Wahl`).toBeVisible();
-    await expect(g41, `${stellung}: G folgt der Wahl`).toBeVisible();
-    // Und ihr Inhalt ist unverändert lesbar (nicht bloss ein leeres sichtbares Element).
-    await expect(u35).toContainText('Beträge angepasst');
-    await expect(g41).toContainText('Siehe auch die UeB');
-    // ZWEISEITIG: A folgt ihr sehr wohl (§6.7 — sonst wäre die Zusicherung oben
-    // mit «nichts ist je ausblendbar» erfüllbar).
+    await expect(u35, `${stellung}: U folgt der Wahl nicht`).toBeHidden();
+    await expect(g41, `${stellung}: G folgt der Wahl nicht`).toBeHidden();
     await expect(a34, `${stellung}: A folgt der Wahl nicht`).toBeHidden();
+    // R9/§8: weggeschaltet, nicht gelöscht — der Wortlaut bleibt abfragbar.
+    expect((await u35.textContent()) ?? '').toContain('Beträge angepasst');
+    expect((await g41.textContent()) ?? '').toContain('Siehe auch die UeB');
   }
 
+  // ZWEISEITIG (§6.7): «Fussnoten» stellt alle drei Klassen wieder her — sonst
+  // wäre die Zusicherung oben mit «nichts ist je sichtbar» erfüllbar.
   await waehle(page, 'fussnoten');
   await expect(a34).toBeVisible();
   await expect(a34).toContainText('Fassung gemäss');
+  await expect(u35).toBeVisible();
+  await expect(g41).toBeVisible();
 });
 
 test('axe: das offene Panel mit der Dreier-Wahl ist sauber', async ({ page }, testInfo) => {

@@ -77,7 +77,6 @@ export interface LeserV3Modell {
   /** D1 · trägt dieser Erlass überhaupt Änderungsvermerke? Geteilte Quelle mit V1 (§5). */
   hatAenderungsvermerke: boolean;
   /** D35-F3 · `kl:'A'`-Fussnoten; `null` = noch nicht geladen, `0` = keine klassifizierte Historie. */
-  aenderungsFussnoten: number | null;
   kantonErlassAnzahl: number | null;
   nichtKonsolidiert: boolean;
   /** S3/F5-Nachzug: ISO-Datum des frühesten nicht konsolidierten Inkrafttretens
@@ -397,7 +396,7 @@ export function useLeserV3Modell({ ebene: routenSegment, schluessel }: { ebene: 
     modell: {
       erlass, eintraege, struktur, kopf, currency, fehler, manifest, kantonSys, kantonLuecken,
       sektionen, ohneGliederung, gliederung, alleKnotenIds,
-      gliederungsTiefe, fussnotenAnzahl, hatAenderungsvermerke, aenderungsFussnoten, kantonErlassAnzahl,
+      gliederungsTiefe, fussnotenAnzahl, hatAenderungsvermerke, kantonErlassAnzahl,
       nichtKonsolidiert, nichtKonsolidiertSeit,
       vorher, nachher,
       sekPos, artIndex, sektionMeta, margAnzeige, internRefs,

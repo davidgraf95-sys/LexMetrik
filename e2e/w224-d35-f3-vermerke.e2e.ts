@@ -26,7 +26,7 @@
 //     gesetzt» und «↑/↓ erreichen die Wahl» werden rot;
 //   · in `leserOptionen.ts` in `ausAltenSchaltern` die zwei Zeilen tauschen
 //     ⇒ die Migrations-Tabelle wird rot;
-//   · in `LeserAenderungsWahl` `ohneKlassifikation` fest auf `false`
+//   · (bis W2·26/Z8: `ohneKlassifikation` fest auf `false` — Prop gestrichen)
 //     ⇒ der MONTREAL-Fall wird rot.
 import { test, expect, type Page } from '@playwright/test';
 import { F_MARKE } from './helpers/fassungsRubrik';
@@ -191,33 +191,47 @@ test.describe('D35-F3 — §8: ein Erlass ohne kl-Klassifikation sagt es hin', (
     const gruppe = panel.locator('[data-v3-vermerke-wahl]');
     await expect(gruppe).toHaveCount(1);
 
-    // DER HINWEIS: sichtbar UND als Beschreibung der Gruppe verknüpft. Ein
-    // sichtbarer Satz, den ein Screenreader nicht erreicht, ist die halbe
-    // Auskunft (§8).
-    const hinweis = gruppe.getByText('keine klassifizierten Änderungs-Fussnoten');
-    await expect(hinweis).toBeVisible();
-    const beschrieben = await gruppe.getAttribute('aria-describedby');
-    expect(beschrieben, 'die Wahl verweist nicht auf ihren Hinweis').toBeTruthy();
+    // ── §6.3-DEKLARATION (W2·26/Z8, Mandat David 11.9.2026) ────────────────
+    // HIER STAND DER HINWEIS-TEIL: «Dieser Erlass führt keine klassifizierten
+    // Änderungs-Fussnoten; ‹Fassung› und ‹Fussnoten› unterscheiden sich hier
+    // nur in der Fassungs-Zeile» — sichtbar UND per `aria-describedby`
+    // verknüpft. Der Satz war für seinen Stand richtig (§0 Ziff. 2b) und ist
+    // mit Z8 ersatzlos gefallen: seit dem Mandat nimmt «Fassung»/«aus» den
+    // Apparat KLASSENBLIND, also auf MONTREAL genau so wie überall sonst. Ein
+    // Hinweis auf eine Wirkungs-Gleichheit, die es nicht mehr gibt, wäre eine
+    // Behauptung über die Oberfläche (§8) — darum ist er weg, und mit ihm die
+    // Durchreiche `aenderungsFussnoten` (`v3/LeserAenderungsWahl.tsx`).
+    await expect(
+      gruppe.getByText('keine klassifizierten Änderungs-Fussnoten'),
+      'der Klassifikations-Hinweis steht noch — er hat seit Z8 keinen Gegenstand',
+    ).toHaveCount(0);
     expect(
-      await page.locator(`[id="${beschrieben}"]`).count(),
-      'die Beschreibungs-Id zeigt ins Leere',
-    ).toBe(1);
+      await gruppe.getAttribute('aria-describedby'),
+      'die Wahl trägt noch eine Beschreibung',
+    ).toBeNull();
 
-    // Und der Hinweis stimmt: der Apparat steht in ALLEN drei Stellungen
-    // vollständig, weil es keine dämpfbare Klasse gibt.
+    // DIE NEUE ZUSAGE: auch der klassenlose Apparat folgt der Wahl — ganz.
     const sichtbar = () => page.evaluate(() => [...document.querySelectorAll(
       '.lc-leser [data-fn-apparat] > p')].filter((e) => (e as HTMLElement).checkVisibility()).length);
     await page.keyboard.press('Escape');
-    const grund = await sichtbar();
-    expect(grund, 'MONTREAL zeigt Apparat-Zeilen').toBeGreaterThan(0);
+    await ansichtAuf(page);
+    await panel.getByRole(WAHL_ROLLE, { name: FUSSNOTEN_WAHL_NAME }).click();
+    await expect(page.locator('html')).toHaveAttribute('data-vermerke', 'fussnoten');
+    const voll = await sichtbar();
+    expect(voll, 'MONTREAL zeigt in der Stellung «Fussnoten» keine Apparat-Zeilen')
+      .toBeGreaterThan(0);
     for (const [name, wert] of [
-      [FUSSNOTEN_WAHL_NAME, 'fussnoten'], [AUS_WAHL_NAME, 'aus'], [VERMERKE_SCHALTER_NAME, 'fassung'],
+      [AUS_WAHL_NAME, 'aus'], [VERMERKE_SCHALTER_NAME, 'fassung'],
     ] as const) {
       await ansichtAuf(page);
       await panel.getByRole(WAHL_ROLLE, { name }).click();
       await expect(page.locator('html')).toHaveAttribute('data-vermerke', wert);
-      expect(await sichtbar(), `${wert}: der klassenlose Apparat wurde angetastet`).toBe(grund);
+      expect(await sichtbar(), `${wert}: der Apparat steht weiter da`).toBe(0);
     }
+    // A1-Mechanik: «Fussnoten» stellt vollständig wieder her.
+    await ansichtAuf(page);
+    await panel.getByRole(WAHL_ROLLE, { name: FUSSNOTEN_WAHL_NAME }).click();
+    expect(await sichtbar(), 'der Apparat kehrt nicht vollständig zurück').toBe(voll);
 
     // Was die Wahl hier SEHR WOHL tut: die Fassungs-Zeile. Ohne diese Hälfte
     // wäre die Wahl an MONTREAL wirkungslos und dürfte nach D1 gar nicht
@@ -226,6 +240,11 @@ test.describe('D35-F3 — §8: ein Erlass ohne kl-Klassifikation sagt es hin', (
     // der Funktionszeile am Artikelende, nicht mehr der Kopf-Slot. Die Zusage
     // ist unverändert — die Wahl muss an MONTREAL etwas bewirken.
     const slot = page.locator(`.lc-leser ${F_MARKE}`).first();
+    // Die Schleife darüber endet in «Fussnoten» — dort ist die Fassungs-Spur
+    // per Definition aus. Erst in «Fassung» ist sie der Gegenstand.
+    await ansichtAuf(page);
+    await panel.getByRole(WAHL_ROLLE, { name: VERMERKE_SCHALTER_NAME }).click();
+    await expect(page.locator('html')).toHaveAttribute('data-vermerke', 'fassung');
     await expect(slot).toBeVisible({ timeout: 15_000 });
     await ansichtAuf(page);
     await panel.getByRole(WAHL_ROLLE, { name: AUS_WAHL_NAME }).click();

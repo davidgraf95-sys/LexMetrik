@@ -265,23 +265,39 @@ test('A1-Mechanik: die Wahl VERSCHWINDET die A-Spur (display:none), der Text ble
     }).observe({ type: 'layout-shift' });
   });
 
-  // NEGATIV: «Fassung» → A-Marker visuell WEG (display:none am Vorfahren), aber
-  // im DOM (Text abfragbar), niemals gelöscht. Die V-Zeile bleibt sichtbar.
+  // NEGATIV: «Fassung» → Marker visuell WEG (display:none am Vorfahren), aber
+  // im DOM (Text abfragbar), niemals gelöscht.
+  //
+  // §6.3-DEKLARATION (W2·26/Z8, Mandat David 11.9.2026): hier stand zusätzlich
+  // «die V-Zeile bleibt sichtbar» — die Verlustfreiheits-Hälfte von D35-F3. Sie
+  // ist mit dem Mandat aufgehoben: «Fussnoten, die z. B. nur eine SR-Nummer
+  // enthalten, müssen ebenfalls weg sein, wenn Fussnoten abgewählt sind.» Die
+  // V-Zeile GEHT jetzt mit, und das ist die neue Zusage — sie wird darum
+  // umgekehrt geprüft, nicht weggelassen (ein Tor, das nur noch weniger
+  // behauptet, prüfte weniger, §6.7).
+  // WAS DIESER FALL PRÜFT, BLEIBT: die A1-MECHANIK (David 5.7.2026) —
+  // `display:none`, nie gelöscht, vollständige Wiederherstellung, CLS 0.
   await ansichtOeffnen(page);
   await page.getByRole(WAHL_ROLLE, { name: VERMERKE_SCHALTER_NAME }).click();
   await expect(page.locator('html')).toHaveAttribute('data-vermerke', 'fassung');
   await expect(aMarker).toBeHidden();
-  expect(await aMarker.evaluate(
-    (el) => getComputedStyle(el.closest('[data-fn-klasse]') as Element).display,
-  )).toBe('none');
+  // §6.3-DEKLARATION (W2·26/Z8): bis hierher sass `display:none` am
+  // KLASSEN-Wrapper (`[data-fn-klasse]`), weil die Regel nach Klasse griff.
+  // Seit Z8 greift sie am Marker selbst (`[data-fn-ref]`) und am Träger
+  // (`[data-fn-marker]`) — klassenblind. Die Zusage bleibt Wort für Wort:
+  // `display:none`, nicht gelöscht, nicht bloss transparent.
+  expect(await aMarker.evaluate((el) => getComputedStyle(el).display)).toBe('none');
   expect((await aMarker.textContent())?.trim()).toBe(nrText);
-  await expect(vZeile, 'die V-Zeile ist mit verschwunden — Substanzverlust').toBeVisible();
+  await expect(vZeile, 'die V-Zeile steht noch — Z8 nimmt den Apparat ganz').toBeHidden();
+  // R9/§8: weggeschaltet, nicht gelöscht — der Text der V-Zeile bleibt abfragbar.
+  expect(((await vZeile.textContent()) ?? '').trim().length).toBeGreaterThan(0);
 
   // POSITIV zurück: «Fussnoten» → Marker wieder sichtbar (Wiederherstellung).
   await ansichtOeffnen(page);
   await page.getByRole(WAHL_ROLLE, { name: /^Fussnoten/ }).click();
   await expect(page.locator('html')).toHaveAttribute('data-vermerke', 'fussnoten');
   await expect(aMarker).toBeVisible();
+  await expect(vZeile, 'die V-Zeile kehrt nicht zurück — keine Wiederherstellung').toBeVisible();
 
   // CLS über beide Umschaltungen == 0 (input-exkludiert): kein Layout-Sprung.
   expect(await page.evaluate(() => (window as unknown as { __cls: number }).__cls)).toBe(0);

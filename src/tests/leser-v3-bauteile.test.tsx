@@ -72,14 +72,20 @@ function renderKopf(props: Partial<Parameters<typeof LeserKopf>[0]> & { stufe: K
       {/* D27 (6.9.2026): die Prop `aktArtikel` ist weg — der laufende Artikel
           steht im Reiter, nicht mehr in dieser Zeile (Herleitung in
           `v3/LeserKopf.tsx`). */}
-      {/* D35-F3: `aenderungsFussnoten` reicht der Kopf ebenso nur durch — hier
+      {/* D35-F3: `aenderungsFussnoten` reichte der Kopf ebenso nur durch — hier
           ein Erlass MIT klassifizierter Historie, damit die Fälle unten die
-          Dreier-Wahl ohne den §8-Hinweis sehen. */}
+          Dreier-Wahl ohne den §8-Hinweis sehen.
+          §6.3-DEKLARATION (W2·26/Z8, 11.9.2026): die Durchreiche ist ersatzlos
+          gefallen. Seit dem Mandat kennt die Wahl keine Fussnoten-KLASSEN mehr
+          (sie zeigt den Apparat ganz oder gar nicht), damit hat der §8-Hinweis
+          «hier unterscheiden sich zwei Stellungen nur in der Fassungs-Zeile»
+          keinen Gegenstand mehr — und die Zahl, die ihn auslöste, keinen Leser
+          (§17-Gegengewicht). Die Fälle unten sind unberührt. */}
       {/* D35-F2 (7.9.2026): `bestimmungsWort` reicht der Kopf ebenfalls nur
           durch — hier «Artikel» (Bund). Dass ein §-Erlass «Paragraphen»
           bekommt, prüft `leser-v3-erlassansicht.test.ts` an der einen
           Ableitung; hier stünde sonst eine zweite Wahrheit (§5/B8). */}
-      <LeserKopf erlass={ERLASS} fussnotenAnzahl={3} aenderungsFussnoten={2}
+      <LeserKopf erlass={ERLASS} fussnotenAnzahl={3}
         bestimmungsWort="Artikel" hatAenderungsvermerke {...props} />
     </MemoryRouter>,
   );
