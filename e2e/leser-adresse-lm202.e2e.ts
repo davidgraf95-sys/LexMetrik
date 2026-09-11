@@ -1,3 +1,4 @@
+// @shard-gruppe: 3
 // ── §6.3-DEKLARATION (W2·26/Z6, Mandat David 11.9.2026) ─────────────────────
 // Die drei Artikel-Aktionen («Zitat», «Link», «Amtliche Fassung ↗») stehen
 // unverändert in der Funktionszeile am Artikelende, werden aber erst GERENDERT,
@@ -9,7 +10,6 @@
 // Vorbedingung jetzt aus (`.lr7-bez` hovern), statt sie stillschweigend
 // vorauszusetzen.
 import { LESER_SUCHFELD_NAME } from './helpers/leserBeschriftung';
-// @shard-gruppe: 3
 // W2·10-UI-NAV-URL — Adress-Modell des Gesetzes-Lesers (LM-202).
 //
 // David-Entscheid 3.8.2026, wörtlich:
