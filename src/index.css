@@ -4477,17 +4477,24 @@ html[data-fuss-aus="frmgwa"] .lc-leser .lr7-bez {
    Text steht, trägt JEDE Zelle ihr eigenes Etikett «Alt»/«Neu» (`.lr8-syn-seite`,
    im Markup, nicht per CSS eingeblendet — bei einem Gesetzestext darf nie
    zweifelhaft sein, welche Spalte gilt, §8). */
+/* SPALTIG GESCHRIEBEN, EINSPALTIG ZURÜCKGENOMMEN — und zwar nicht aus Geschmack:
+   der Wächter `src/tests/tap-ziel-token.test.ts` verbietet jede rohe
+   `min-width`-Zahl in dieser Datei (F9/D2, Trefferflächen kommen aus
+   `--tap-ziel`). Sein Muster trifft auch die BEDINGUNG einer Media-Query, also
+   jedes `@media (min-width: …)`. Die Regel dahinter ist richtig, ihr Muster eine
+   Spur zu weit; sie zu ändern wäre eine Test-Änderung ohne fachlichen Anlass
+   (§6.3). Der Umbau auf `max-width` kostet nichts und hält beide Seiten. */
 .lr8-syn-zeile {
   display: grid;
-  grid-template-columns: minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 0.125rem 0.75rem;
   padding-top: 0.375rem;
   border-top: 1px solid var(--rule-soft);
   min-width: 0;
 }
-@media (min-width: 48rem) {
-  .lr8-syn-zeile { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
-  .lr8-syn-marke { grid-column: 1 / -1; }
+.lr8-syn-marke { grid-column: 1 / -1; }
+@media (max-width: 47.99rem) {
+  .lr8-syn-zeile { grid-template-columns: minmax(0, 1fr); }
 }
 .lr8-syn-marke {
   margin: 0;
@@ -4497,10 +4504,9 @@ html[data-fuss-aus="frmgwa"] .lc-leser .lr7-bez {
   color: var(--ink-600);
 }
 .lr8-syn-spalte { min-width: 0; }
-/* Unverändertes steht einmal über beide Spalten (Herleitung in `SynopseKarte.tsx`). */
-@media (min-width: 48rem) {
-  .lr8-syn-beide { grid-column: 1 / -1; }
-}
+/* Unverändertes steht einmal über beide Spalten (Herleitung in `SynopseKarte.tsx`);
+   einspaltig ist `1 / -1` ohnehin die eine Spalte. */
+.lr8-syn-beide { grid-column: 1 / -1; }
 .lr8-syn-seite {
   display: block;
   font-family: var(--font-sans), system-ui, sans-serif;
