@@ -698,6 +698,7 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
             dazwischen nichts gibt. Im Druck bleibt sie ausgeblendet
             (`print:hidden` in `Funktionszeile.tsx`). */}
         <ArtikelBezuegeFuss bezuege={bezuege} bezuegeImFuss={bezuegeImFuss}
+          erlassKey={erlass?.key} artikel={e.artikel}
           historie={historie} leitfaelle={leitfaelle} materialien={materialien} verweise={verweise}
           werkzeuge={werkzeuge} zaehler={zaehler} zitat={zitat} revision={revision}
           onOeffnen={onBezuegeOeffnen} onImBlatt={onImBlatt} laedt={bezuegeLaedt && !bezuege}
