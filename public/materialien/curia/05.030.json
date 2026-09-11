@@ -1,0 +1,106 @@
+{
+  "nummer": "05.030",
+  "titel": "Strafnorm über den Menschenhandel (Kinderrechtskonvention). Änderung",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2005-03-11",
+  "erstrat": "Nationalrat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20050030",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2005-03-11",
+      "name": "Kommission für Rechtsfragen Nationalrat",
+      "kuerzel": "RK-N"
+    },
+    {
+      "datum": "2005-03-11",
+      "name": "Kommission für Rechtsfragen Ständerat",
+      "kuerzel": "RK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2005-12-13",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2006-03-20",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2006-03-24",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2006-03-24",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2005-03-11",
+      "art": "Bundesblatt",
+      "jahr": "2005",
+      "nummer": "2807",
+      "text": "Botschaft vom 11. März 2005 über die Genehmigung des Fakultativprotokolls vom 25. Mai 2000 zum Übereinkommen über die Rechte des Kindes, betreffend den Verkauf von Kindern, die Kinderprostitution und die Kinderpornografie, und über die entsprechende Änderung der Strafnorm über den Menschenhandel",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2005-03-11",
+      "art": "Bundesblatt",
+      "jahr": null,
+      "nummer": null,
+      "text": "Bundesbeschluss über die Genehmigung und die Umsetzung des Fakultativprotokolls vom 25. Mai 2000 zum Übereinkommen über die Rechte des Kindes, betreffend den Verkauf von Kindern, die Kinderprostitution und die Kinderpornografie",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2006-04-04",
+      "art": "Bundesblatt",
+      "jahr": "2006",
+      "nummer": "3643",
+      "text": null,
+      "referendumsfrist": "2006-07-13"
+    },
+    {
+      "datum": "2006-12-19",
+      "art": "Amtliche Sammlung",
+      "jahr": "2006",
+      "nummer": "5437",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2006-03-24",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 192,
+        "nein": 0,
+        "enthaltung": 1,
+        "anwesend": 0,
+        "nichtTeilgenommen": 6,
+        "entschuldigt": 0,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

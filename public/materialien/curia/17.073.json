@@ -1,0 +1,114 @@
+{
+  "nummer": "17.073",
+  "titel": "Abkommen zwischen der Schweiz und der EU über die Verknüpfung der Emissionshandelssysteme. Genehmigung und Umsetzung (Änderung des CO2-Gesetzes)",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2017-12-01",
+  "erstrat": "Nationalrat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20170073",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2017-12-01",
+      "name": "Kommission für Umwelt, Raumplanung und Energie Nationalrat",
+      "kuerzel": "UREK-N"
+    },
+    {
+      "datum": "2017-12-01",
+      "name": "Kommission für Umwelt, Raumplanung und Energie Ständerat",
+      "kuerzel": "UREK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2018-12-03",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2019-03-07",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2019-03-22",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2019-03-22",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2017-12-01",
+      "art": "Bundesblatt",
+      "jahr": "2018",
+      "nummer": "411",
+      "text": "Botschaft vom 1. Dezember 2017 zur Genehmigung des Abkommens zwischen der Schweiz und der Europäischen Union über die Verknüpfung der Emissionshandelssysteme und zu seiner Umsetzung (Änderung des CO2-Gesetzes )",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2017-12-01",
+      "art": "Bundesblatt",
+      "jahr": "2018",
+      "nummer": "461",
+      "text": "Bundesbeschluss über die Genehmigung des Abkommens zwischen der Schweiz und der Europäischen Union zur Verknüpfung der Emissionshandelssysteme und über seine Umsetzung (Änderung des CO2-Gesetzes)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2017-12-01",
+      "art": "Bundesblatt",
+      "jahr": "2018",
+      "nummer": "467",
+      "text": "Abkommen zwischen der Schweizerischen Eidgenossenschaft und der Europäischen Union zur Verknüpfung ihrer jeweiligen Systeme für den Handel mit Treibhausgasemissionen",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2019-04-02",
+      "art": "Bundesblatt",
+      "jahr": "2019",
+      "nummer": "2643",
+      "text": null,
+      "referendumsfrist": "2019-07-11"
+    },
+    {
+      "datum": "2019-12-17",
+      "art": "Amtliche Sammlung",
+      "jahr": "2019",
+      "nummer": "4327",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2019-03-22",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 118,
+        "nein": 78,
+        "enthaltung": 0,
+        "anwesend": 0,
+        "nichtTeilgenommen": 0,
+        "entschuldigt": 3,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

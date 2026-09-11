@@ -1,0 +1,127 @@
+{
+  "nummer": "07.064",
+  "titel": "Umsetzung der revidierten Empfehlungen der Groupe d'action financière",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2007-06-15",
+  "erstrat": "Ständerat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20070064",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2007-06-15",
+      "name": "Kommission für Rechtsfragen Nationalrat",
+      "kuerzel": "RK-N"
+    },
+    {
+      "datum": "2007-06-15",
+      "name": "Kommission für Rechtsfragen Ständerat",
+      "kuerzel": "RK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2008-03-05",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2008-06-11",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2008-09-23",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2008-09-24",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2008-09-30",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2008-10-03",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2008-10-03",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2007-06-15",
+      "art": "Bundesblatt",
+      "jahr": "2007",
+      "nummer": "6269",
+      "text": "Botschaft vom 15. Juni 2007 zur Umsetzung der revidierten Empfehlungen der Groupe d'action financière (GAFI)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2007-06-15",
+      "art": "Bundesblatt",
+      "jahr": null,
+      "nummer": null,
+      "text": "Bundesgesetz zur Umsetzung der revidierten Empfehlungen der Groupe d'action financière",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2008-10-14",
+      "art": "Bundesblatt",
+      "jahr": "2008",
+      "nummer": "8313",
+      "text": null,
+      "referendumsfrist": "2009-01-22"
+    },
+    {
+      "datum": "2009-01-27",
+      "art": "Amtliche Sammlung",
+      "jahr": "2009",
+      "nummer": "361",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2008-10-03",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 175,
+        "nein": 17,
+        "enthaltung": 0,
+        "anwesend": 0,
+        "nichtTeilgenommen": 6,
+        "entschuldigt": 1,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

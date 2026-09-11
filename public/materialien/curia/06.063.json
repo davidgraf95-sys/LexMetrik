@@ -1,0 +1,120 @@
+{
+  "nummer": "06.063",
+  "titel": "ZGB. Erwachsenenschutz, Personenrecht und Kindesrecht",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2006-06-28",
+  "erstrat": "Ständerat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20060063",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2006-06-28",
+      "name": "Kommission für Rechtsfragen Nationalrat",
+      "kuerzel": "RK-N"
+    },
+    {
+      "datum": "2006-06-28",
+      "name": "Kommission für Rechtsfragen Ständerat",
+      "kuerzel": "RK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2007-09-27",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2008-10-03",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2008-12-04",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2008-12-11",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2008-12-19",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2008-12-19",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2006-06-28",
+      "art": "Bundesblatt",
+      "jahr": "2006",
+      "nummer": "7001",
+      "text": "Botschaft vom 28. Juni 2006 zur Änderung des Schweizerischen Zivilgesetzbuches (Erwachsenenschutz, Personenrecht und Kindesrecht)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2006-06-28",
+      "art": "Bundesblatt",
+      "jahr": null,
+      "nummer": null,
+      "text": "Schweizerisches Zivilgesetzbuch (Erwachsenenschutz, Personenrecht und Kindesrecht)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2009-01-06",
+      "art": "Bundesblatt",
+      "jahr": "2009",
+      "nummer": "141",
+      "text": null,
+      "referendumsfrist": "2009-04-16"
+    },
+    {
+      "datum": "2011-03-01",
+      "art": "Amtliche Sammlung",
+      "jahr": "2011",
+      "nummer": "725",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2008-12-19",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 191,
+        "nein": 2,
+        "enthaltung": 0,
+        "anwesend": 0,
+        "nichtTeilgenommen": 6,
+        "entschuldigt": 0,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

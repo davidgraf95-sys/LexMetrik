@@ -1,0 +1,127 @@
+{
+  "nummer": "11.023",
+  "titel": "Aus- und Weiterbildungskosten. Steuerliche Behandlung. Bundesgesetz",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2011-03-04",
+  "erstrat": "Ständerat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20110023",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2011-03-04",
+      "name": "Kommission für Wirtschaft und Abgaben Nationalrat",
+      "kuerzel": "WAK-N"
+    },
+    {
+      "datum": "2011-03-04",
+      "name": "Kommission für Wirtschaft und Abgaben Ständerat",
+      "kuerzel": "WAK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2011-06-16",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2013-03-05",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2013-06-04",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2013-06-06",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2013-09-10",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2013-09-27",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2013-09-27",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2011-03-04",
+      "art": "Bundesblatt",
+      "jahr": "2011",
+      "nummer": "2607",
+      "text": "Botschaft vom 4. März 2011 zum Bundesgesetz über die steuerliche Behandlung der berufsorientierten Aus- und Weiterbildungskosten",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2011-03-04",
+      "art": "Bundesblatt",
+      "jahr": "2011",
+      "nummer": "2639",
+      "text": "Bundesgesetz über die steuerliche Behandlung der berufsorientierten Aus- und Weiterbildungskosten",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2013-10-08",
+      "art": "Bundesblatt",
+      "jahr": "2013",
+      "nummer": "7385",
+      "text": null,
+      "referendumsfrist": "2014-01-16"
+    },
+    {
+      "datum": "2014-05-20",
+      "art": "Amtliche Sammlung",
+      "jahr": "2014",
+      "nummer": "1105",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2013-09-27",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 161,
+        "nein": 10,
+        "enthaltung": 23,
+        "anwesend": 0,
+        "nichtTeilgenommen": 5,
+        "entschuldigt": 0,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

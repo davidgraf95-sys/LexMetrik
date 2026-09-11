@@ -1,0 +1,112 @@
+{
+  "nummer": "23.027",
+  "titel": "BVG. Änderung (Anlage von Freizügigkeitsgeldern der Auffangeinrichtung)",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2023-02-01",
+  "erstrat": "Ständerat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20230027",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2023-02-01",
+      "name": "Kommission für soziale Sicherheit und Gesundheit Nationalrat",
+      "kuerzel": "SGK-N"
+    },
+    {
+      "datum": "2023-02-01",
+      "name": "Kommission für soziale Sicherheit und Gesundheit Ständerat",
+      "kuerzel": "SGK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2023-05-30",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss gemäss Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2023-06-05",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2023-06-08",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme der Dringlichkeitsklausel",
+      "vorlage": 1
+    },
+    {
+      "datum": "2023-06-14",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme der Dringlichkeitsklausel",
+      "vorlage": 1
+    },
+    {
+      "datum": "2023-06-16",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2023-06-16",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2023-02-01",
+      "art": "Bundesblatt",
+      "jahr": "2023",
+      "nummer": "391",
+      "text": "Botschaft vom 1. Februar 2023 zur Änderung des Bundesgesetzes über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVG) (Anlage von Freizügigkeitsgeldern der Auffangeinrichtung)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2023-02-01",
+      "art": "Bundesblatt",
+      "jahr": "2023",
+      "nummer": "392",
+      "text": "Bundesgesetz über die berufliche Alters-, Hinterlassenen- und Invalidenvorsorge (BVG)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2023-06-16",
+      "art": "Bundesblatt",
+      "jahr": "2023",
+      "nummer": "1531",
+      "text": null,
+      "referendumsfrist": "2023-10-05"
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2023-06-16",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 192,
+        "nein": 0,
+        "enthaltung": 0,
+        "anwesend": 0,
+        "nichtTeilgenommen": 4,
+        "entschuldigt": 3,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

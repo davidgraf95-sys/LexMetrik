@@ -1,0 +1,134 @@
+{
+  "nummer": "23.057",
+  "titel": "ZGB. Änderung (Massnahmen gegen Minderjährigenheiraten)",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2023-08-23",
+  "erstrat": "Ständerat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20230057",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2023-08-28",
+      "name": "Kommission für Rechtsfragen Nationalrat",
+      "kuerzel": "RK-N"
+    },
+    {
+      "datum": "2023-08-28",
+      "name": "Kommission für Rechtsfragen Ständerat",
+      "kuerzel": "RK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2024-03-12",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2024-05-27",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2024-05-29",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2024-06-06",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2024-06-12",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2024-06-12",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2024-06-14",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2024-06-14",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2023-08-23",
+      "art": "Bundesblatt",
+      "jahr": "2023",
+      "nummer": "2128",
+      "text": "Schweizerisches Zivilgesetzbuch (Massnahmen gegen Minderjährigenheiraten)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2023-08-28",
+      "art": "Bundesblatt",
+      "jahr": "2023",
+      "nummer": "2127",
+      "text": "Botschaft vom 23. August 2023 zur Änderung des Schweizerischen Zivilgesetzbuchs (Massnahmen gegen Minderjährigenheiraten)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2024-06-25",
+      "art": "Bundesblatt",
+      "jahr": "2024",
+      "nummer": "1451",
+      "text": null,
+      "referendumsfrist": "2024-10-03"
+    },
+    {
+      "datum": "2025-05-15",
+      "art": "Amtliche Sammlung",
+      "jahr": "2024",
+      "nummer": "590",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2024-06-14",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 198,
+        "nein": 0,
+        "enthaltung": 0,
+        "anwesend": 0,
+        "nichtTeilgenommen": 0,
+        "entschuldigt": 1,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

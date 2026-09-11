@@ -1,0 +1,134 @@
+{
+  "nummer": "06.062",
+  "titel": "Schweizerische Zivilprozessordnung",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2006-06-28",
+  "erstrat": "Ständerat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20060062",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2006-06-28",
+      "name": "Kommission für Rechtsfragen Nationalrat",
+      "kuerzel": "RK-N"
+    },
+    {
+      "datum": "2006-06-28",
+      "name": "Kommission für Rechtsfragen Ständerat",
+      "kuerzel": "RK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2007-06-21",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2008-05-29",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Behandlung der Vorlage bis Art. 111.",
+      "vorlage": 1
+    },
+    {
+      "datum": "2008-06-12",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2008-09-29",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2008-12-02",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2008-12-04",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2008-12-19",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2008-12-19",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2006-06-28",
+      "art": "Bundesblatt",
+      "jahr": "2006",
+      "nummer": "7221",
+      "text": "Botschaft vom 28. Juni 2006 zur Schweizerischen Zivilprozessordnung",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2006-06-28",
+      "art": "Bundesblatt",
+      "jahr": null,
+      "nummer": null,
+      "text": "Schweizerische Zivilprozessordnung (Zivilprozessordnung, ZPO)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2009-01-06",
+      "art": "Bundesblatt",
+      "jahr": "2009",
+      "nummer": "21",
+      "text": null,
+      "referendumsfrist": "2009-04-16"
+    },
+    {
+      "datum": "2010-05-11",
+      "art": "Amtliche Sammlung",
+      "jahr": "2010",
+      "nummer": "1739",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2008-12-19",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 187,
+        "nein": 1,
+        "enthaltung": 1,
+        "anwesend": 0,
+        "nichtTeilgenommen": 10,
+        "entschuldigt": 0,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "nummer": "20.026",
+  "titel": "Zivilprozessordnung. Änderung",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2020-02-26",
+  "erstrat": "Ständerat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20200026",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2020-02-26",
+      "name": "Kommission für Rechtsfragen Nationalrat",
+      "kuerzel": "RK-N"
+    },
+    {
+      "datum": "2020-02-26",
+      "name": "Kommission für Rechtsfragen Ständerat",
+      "kuerzel": "RK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2021-06-16",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2022-05-10",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2022-09-12",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2022-12-12",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2023-02-27",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2023-03-06",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2023-03-15",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss gemäss Antrag der Einigungskonferenz",
+      "vorlage": 1
+    },
+    {
+      "datum": "2023-03-15",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss gemäss Antrag der Einigungskonferenz",
+      "vorlage": 1
+    },
+    {
+      "datum": "2023-03-17",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2020-02-26",
+      "art": "Bundesblatt",
+      "jahr": "2020",
+      "nummer": "2697",
+      "text": "Botschaft vom 26. Februar 2020 zur Änderung der Schweizerischen Zivilprozessordnung (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2020-02-26",
+      "art": "Bundesblatt",
+      "jahr": "2020",
+      "nummer": "2785",
+      "text": "Schweizerische Zivilprozessordnung (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2023-03-28",
+      "art": "Bundesblatt",
+      "jahr": "2023",
+      "nummer": "786",
+      "text": null,
+      "referendumsfrist": "2023-07-06"
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2023-03-17",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 139,
+        "nein": 53,
+        "enthaltung": 2,
+        "anwesend": 0,
+        "nichtTeilgenommen": 3,
+        "entschuldigt": 2,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

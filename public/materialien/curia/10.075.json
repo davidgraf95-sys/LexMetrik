@@ -1,0 +1,120 @@
+{
+  "nummer": "10.075",
+  "titel": "Konsolidierungsprogramm 2012-2013",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2010-09-02",
+  "erstrat": "Ständerat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20100075",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2010-09-02",
+      "name": "Finanzkommission Nationalrat",
+      "kuerzel": "FK-N"
+    },
+    {
+      "datum": "2010-09-02",
+      "name": "Finanzkommission Ständerat",
+      "kuerzel": "FK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2011-03-17",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Nichteintreten",
+      "vorlage": 1
+    },
+    {
+      "datum": "2011-03-17",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss gemäss Entwurf",
+      "vorlage": 2
+    },
+    {
+      "datum": "2011-05-30",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Nichteintreten.",
+      "vorlage": 1
+    },
+    {
+      "datum": "2011-05-30",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 2
+    },
+    {
+      "datum": "2011-06-17",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 2
+    },
+    {
+      "datum": "2011-06-17",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 2
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2010-09-02",
+      "art": "Bundesblatt",
+      "jahr": "2010",
+      "nummer": "7095",
+      "text": "Botschaft vom 1. September 2010 zum Konsolidierungsprogramm 2012-2013 für den Bundeshaushalt sowie zu Optimierungen bei der Verwaltung von Personaldaten und bei den Anlagen von PUBLICA (KOP12/13)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2010-09-02",
+      "art": "Bundesblatt",
+      "jahr": null,
+      "nummer": null,
+      "text": "Bundesgesetz über das Konsolidierungsprogramm 2012-2013 (KOPG 12/13)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2011-06-28",
+      "art": "Bundesblatt",
+      "jahr": "2011",
+      "nummer": "4915",
+      "text": null,
+      "referendumsfrist": "2011-10-06"
+    },
+    {
+      "datum": "2011-12-06",
+      "art": "Amtliche Sammlung",
+      "jahr": "2011",
+      "nummer": "5583",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2011-06-17",
+      "vorlage": 2,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 188,
+        "nein": 0,
+        "enthaltung": 0,
+        "anwesend": 0,
+        "nichtTeilgenommen": 8,
+        "entschuldigt": 3,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

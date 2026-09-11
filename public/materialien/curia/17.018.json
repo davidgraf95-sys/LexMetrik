@@ -1,0 +1,106 @@
+{
+  "nummer": "17.018",
+  "titel": "Bundesgesetz über die Stempelabgaben. Änderung",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2017-02-15",
+  "erstrat": "Nationalrat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20170018",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2017-02-15",
+      "name": "Kommission für Wirtschaft und Abgaben Nationalrat",
+      "kuerzel": "WAK-N"
+    },
+    {
+      "datum": "2017-02-15",
+      "name": "Kommission für Wirtschaft und Abgaben Ständerat",
+      "kuerzel": "WAK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2017-06-14",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss gemäss Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2017-09-12",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2017-09-29",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2017-09-29",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2017-02-15",
+      "art": "Bundesblatt",
+      "jahr": "2017",
+      "nummer": "1511",
+      "text": "Botschaft vom 15. Februar 2017 zur Änderung des Bundesgesetzes über die Stempelabgaben",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2017-02-15",
+      "art": "Bundesblatt",
+      "jahr": "2017",
+      "nummer": "1523",
+      "text": "Bundesgesetz über die Stempelabgaben (StG)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2017-09-29",
+      "art": "Bundesblatt",
+      "jahr": "2017",
+      "nummer": "6297",
+      "text": null,
+      "referendumsfrist": "2018-01-18"
+    },
+    {
+      "datum": "2018-02-13",
+      "art": "Amtliche Sammlung",
+      "jahr": "2018",
+      "nummer": "705",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2017-09-29",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 194,
+        "nein": 0,
+        "enthaltung": 0,
+        "anwesend": 0,
+        "nichtTeilgenommen": 4,
+        "entschuldigt": 1,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

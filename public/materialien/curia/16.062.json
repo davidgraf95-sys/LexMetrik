@@ -1,0 +1,120 @@
+{
+  "nummer": "16.062",
+  "titel": "Luftfahrtgesetz. Teilrevision 1+",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2016-08-31",
+  "erstrat": "Nationalrat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20160062",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2016-08-31",
+      "name": "Kommission für Verkehr und Fernmeldewesen Nationalrat",
+      "kuerzel": "KVF-N"
+    },
+    {
+      "datum": "2016-08-31",
+      "name": "Kommission für Verkehr und Fernmeldewesen Ständerat",
+      "kuerzel": "KVF-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2016-12-14",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2017-03-15",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2017-05-29",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2017-06-07",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2017-06-16",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2017-06-16",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2016-08-31",
+      "art": "Bundesblatt",
+      "jahr": "2016",
+      "nummer": "7133",
+      "text": "Botschaft vom 31. August 2016 zur Teilrevision 1+ des Luftfahrtgesetzes (LFG 1 +)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2016-08-31",
+      "art": "Bundesblatt",
+      "jahr": "2016",
+      "nummer": "7177",
+      "text": "Bundesgesetz über die Luftfahrt (Luftfahrtgesetz, LFG)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2017-06-30",
+      "art": "Bundesblatt",
+      "jahr": "2017",
+      "nummer": "4257",
+      "text": null,
+      "referendumsfrist": "2017-10-05"
+    },
+    {
+      "datum": "2017-10-31",
+      "art": "Amtliche Sammlung",
+      "jahr": "2017",
+      "nummer": "5607",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2017-06-16",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 184,
+        "nein": 0,
+        "enthaltung": 11,
+        "anwesend": 0,
+        "nichtTeilgenommen": 3,
+        "entschuldigt": 1,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

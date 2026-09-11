@@ -1,0 +1,155 @@
+{
+  "nummer": "14.034",
+  "titel": "ZGB. Beurkundung des Personenstands und Grundbuch",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2014-04-16",
+  "erstrat": "Nationalrat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20140034",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2014-04-16",
+      "name": "Kommission für Rechtsfragen Nationalrat",
+      "kuerzel": "RK-N"
+    },
+    {
+      "datum": "2014-04-16",
+      "name": "Kommission für Rechtsfragen Ständerat",
+      "kuerzel": "RK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2016-04-26",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2016-06-14",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Rückweisung an den Bundesrat",
+      "vorlage": 2
+    },
+    {
+      "datum": "2016-12-14",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2016-12-14",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Nichteintreten.",
+      "vorlage": 2
+    },
+    {
+      "datum": "2017-05-31",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Rückweisung an die Kommission",
+      "vorlage": 1
+    },
+    {
+      "datum": "2017-05-31",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Rückweisung an die Kommission",
+      "vorlage": 2
+    },
+    {
+      "datum": "2017-11-28",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2017-11-28",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Nichteintreten.",
+      "vorlage": 2
+    },
+    {
+      "datum": "2017-12-07",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2017-12-15",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2017-12-15",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2014-04-16",
+      "art": "Bundesblatt",
+      "jahr": "2014",
+      "nummer": "3551",
+      "text": "Botschaft vom 16. April 2014 zur Änderung des Schweizerischen Zivilgesetzbuches (Beurkundung des Personenstands und Grundbuch)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2014-04-16",
+      "art": "Bundesblatt",
+      "jahr": "2014",
+      "nummer": "3587",
+      "text": "Schweizerisches Zivilgesetzbuch (Beurkundung des Personenstands und Grundbuch)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2014-05-12",
+      "art": "Bundesblatt",
+      "jahr": null,
+      "nummer": null,
+      "text": "Schweizerisches Zivilgesetzbuch (Elektronischer Zugriff auf das Grundbuch) (Entwurf der RK-N vom 12. Mai 2016)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2017-12-28",
+      "art": "Bundesblatt",
+      "jahr": "2017",
+      "nummer": "7899",
+      "text": null,
+      "referendumsfrist": "2018-04-07"
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2017-12-15",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 182,
+        "nein": 1,
+        "enthaltung": 8,
+        "anwesend": 0,
+        "nichtTeilgenommen": 5,
+        "entschuldigt": 3,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

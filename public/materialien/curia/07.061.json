@@ -1,0 +1,127 @@
+{
+  "nummer": "07.061",
+  "titel": "ZGB. Register-Schuldbrief und weitere Änderungen im Sachenrecht",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2007-06-27",
+  "erstrat": "Ständerat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20070061",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2007-06-27",
+      "name": "Kommission für Rechtsfragen Nationalrat",
+      "kuerzel": "RK-N"
+    },
+    {
+      "datum": "2007-06-27",
+      "name": "Kommission für Rechtsfragen Ständerat",
+      "kuerzel": "RK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2008-06-04",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2009-04-27",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2009-09-22",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2009-11-26",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2009-12-03",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2009-12-11",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2009-12-11",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2007-06-27",
+      "art": "Bundesblatt",
+      "jahr": "2007",
+      "nummer": "5283",
+      "text": "Botschaft vom 27. Juni 2007 zur Änderung des Schweizerischen Zivilgesetzbuches (Register-Schuldbrief und weitere Änderungen im Sachenrecht)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2007-06-27",
+      "art": "Bundesblatt",
+      "jahr": null,
+      "nummer": null,
+      "text": "Schweizerisches Zivilgesetzbuch (Register-Schuldbrief und weitere Änderungen im Sachenrecht)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2009-12-22",
+      "art": "Bundesblatt",
+      "jahr": "2009",
+      "nummer": "8779",
+      "text": null,
+      "referendumsfrist": "2010-04-01"
+    },
+    {
+      "datum": "2011-11-01",
+      "art": "Amtliche Sammlung",
+      "jahr": "2011",
+      "nummer": "4637",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2009-12-11",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 183,
+        "nein": 10,
+        "enthaltung": 1,
+        "anwesend": 0,
+        "nichtTeilgenommen": 5,
+        "entschuldigt": 0,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

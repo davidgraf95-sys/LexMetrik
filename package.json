@@ -190,7 +190,8 @@
     "perf:leser-lcp": "vite-node scripts/perf/leser-lcp.ts --",
     "materialien:anker": "vite-node scripts/entstehung/anker-run.ts --",
     "check:entstehung": "vite-node scripts/entstehung/check-entstehung.ts",
-    "entstehung:deckung": "vite-node scripts/entstehung/check-entstehung.ts -- --schreibe"
+    "entstehung:deckung": "vite-node scripts/entstehung/check-entstehung.ts -- --schreibe",
+    "materialien:curia": "vite-node scripts/entstehung/curia-run.ts --"
   },
   "dependencies": {
     "@fontsource-variable/archivo": "^5.3.0",

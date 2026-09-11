@@ -1,0 +1,134 @@
+{
+  "nummer": "08.076",
+  "titel": "Bankengesetz. Änderung",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2008-11-05",
+  "erstrat": "Ständerat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20080076",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2008-11-05",
+      "name": "Kommission für Wirtschaft und Abgaben Nationalrat",
+      "kuerzel": "WAK-N"
+    },
+    {
+      "datum": "2008-11-05",
+      "name": "Kommission für Wirtschaft und Abgaben Ständerat",
+      "kuerzel": "WAK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2008-12-02",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2008-12-08",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2008-12-09",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2008-12-11",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2008-12-15",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung; die Dringlichkeitsklausel wird angenommen.",
+      "vorlage": 1
+    },
+    {
+      "datum": "2008-12-16",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Die Dringlichkeitsklausel wird angenommen.",
+      "vorlage": 1
+    },
+    {
+      "datum": "2008-12-19",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2008-12-19",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2008-11-05",
+      "art": "Bundesblatt",
+      "jahr": "2008",
+      "nummer": "8841",
+      "text": "Botschaft vom 5. November 2008 zur Änderung des Bundesgesetzes über die Banken und Sparkassen (Bankengesetz)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2008-11-05",
+      "art": "Bundesblatt",
+      "jahr": null,
+      "nummer": null,
+      "text": "Bundesgesetz über die Banken und Sparkassen (Bankengesetz, BankG) (Verstärkung des Einlegerschutzes)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2009-01-06",
+      "art": "Amtliche Sammlung",
+      "jahr": "2009",
+      "nummer": "55",
+      "text": null,
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2009-01-06",
+      "art": "Bundesblatt",
+      "jahr": "2009",
+      "nummer": "243",
+      "text": null,
+      "referendumsfrist": "2009-04-16"
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2008-12-19",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 192,
+        "nein": 0,
+        "enthaltung": 1,
+        "anwesend": 0,
+        "nichtTeilgenommen": 6,
+        "entschuldigt": 0,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "nummer": "20.048",
+  "titel": "Lissabonner Abkommen über Ursprungsbezeichnungen und geografische Angaben. Genehmigung",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2020-06-05",
+  "erstrat": "Ständerat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20200048",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2020-06-05",
+      "name": "Kommission für Wissenschaft, Bildung und Kultur Nationalrat",
+      "kuerzel": "WBK-N"
+    },
+    {
+      "datum": "2020-06-05",
+      "name": "Kommission für Wissenschaft, Bildung und Kultur Ständerat",
+      "kuerzel": "WBK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2020-09-08",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss gemäss Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2021-03-03",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2021-03-19",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2021-03-19",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2020-06-05",
+      "art": "Bundesblatt",
+      "jahr": "2020",
+      "nummer": "5827",
+      "text": "Botschaft vom 5. Juni 2020 zur Genehmigung der Genfer Akte des Lissabonner Abkommens über Ursprungsbezeichnungen und geografische Angaben und zu ihrer Umsetzung (Änderung des Markenschutzgesetzes)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2020-06-05",
+      "art": "Bundesblatt",
+      "jahr": "2020",
+      "nummer": "5879",
+      "text": "Bundesbeschluss über die Genehmigung der Genfer Akte des Lissabonner Abkommens über Ursprungsbezeichnungen und geografische Angaben und über ihre Umsetzung (Änderung des Markenschutzgesetzes)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2020-06-05",
+      "art": "Bundesblatt",
+      "jahr": "2020",
+      "nummer": "5885",
+      "text": "Genfer Akte des Lissabonner Abkommens über Ursprungsbezeichnungen und geografische Angaben",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2020-06-05",
+      "art": "Bundesblatt",
+      "jahr": "2020",
+      "nummer": "5905",
+      "text": "Gemeinsame Ausführungsordnung zum Lissabonner Abkommen über den Schutz der Ursprungsbezeichnungen und ihre internationale Registrierung und zur Genfer Akte des Lissabonner Abkommens über Ursprungsbezeichnungen und geografische Angaben",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2021-03-30",
+      "art": "Bundesblatt",
+      "jahr": "2021",
+      "nummer": "675",
+      "text": null,
+      "referendumsfrist": "2021-07-08"
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2021-03-19",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 194,
+        "nein": 1,
+        "enthaltung": 0,
+        "anwesend": 0,
+        "nichtTeilgenommen": 1,
+        "entschuldigt": 3,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

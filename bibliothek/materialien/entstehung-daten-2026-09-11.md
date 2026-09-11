@@ -95,6 +95,55 @@ Historie-Daten zur Teilmenge und könne zurückgebaut werden. **Gemessen: nein.*
   Entscheid ↔ Artikelfassung), 17 lebende Konsumenten, kein Duplikat der Historie.
   (§17-Gegengewicht verlangt den Rückbau nur, wo dieselbe Sorge doppelt getragen wird.)
 
+## 4a · Parlaments-Etappen (E4) — Curia Vista im Vollabgleich
+
+| Messung 11.9.2026 | Wert |
+|---|---|
+| Curia-Nummern aus dem Botschaften-Register | 402 |
+| davon mit `Business`-Datensatz | **385** (95,8 %) |
+| Rats-Beschlüsse (`Resolution`, über ALLE Vorlagen) | **3 577** |
+| Kommissions-Vorberatungen (`Preconsultation`, Organ) | **790** |
+| Schlussabstimmungen mit NR-Aggregat | **454** |
+| Shard-Volumen | 1 492 KB über 385 Dateien (~3,9 KB je Geschäft; Deckel 2 MB = 73 %) |
+| Laufzeit Vollabgleich | ~25 min (3 216 Anfragen, global ≤ 2/s) |
+
+**17 Nummern ohne `Business`-Datensatz** — und das ist ein Muster, kein Zufall:
+`09.095-2`, `zu 08.047`, `zu 13.075` (abgeleitete Geschäftsformen) sowie dreizehn
+Legacy-Nummern mit vierstelligem Jahr (`1998.075`, `1999.026` … `2000.045`). Curia Vista
+führt diese Vorgänge nicht unter der Nummer, die der Fedlex-Graph als
+`parliamentDraftId` trägt. Für sie zeigt die Oberfläche nur den Fedlex-Link, nie einen
+leeren Parlaments-Block (§8).
+
+**Drei Befunde, die R4 (6.9.2026) korrigieren bzw. schliessen** — R4 bleibt als datierte
+Stichprobe stehen und wird ERGÄNZT:
+
+1. **`Resolution`-Abdeckung.** R4 §4 mass 6/15 = 40 % und markierte das selbst als
+   methodisch verzerrt (Join nur über die ERSTE `Bill`). Über alle `Bill`-IDs gejoint
+   ergeben sich **3 577 Beschlüsse über 385 Geschäfte**; DSG (17.059) allein hat 20
+   statt der 0, die der naive Join lieferte. R4s Verdacht war richtig, die Zahl war es nicht.
+2. **Decision-Codeliste vollständig.** R4 kannte fünf Codes (1, 2, 5, 6, 7). Live erhoben
+   sind es **acht** — neu: 3 «Enthaltung», 4 «Anwesend», 8 «Demissioniert». Die Codes 0, 9,
+   10 liefern keine Zeile. Details, Erhebungsmethode und Gegenprobe:
+   [`register/curia-decision-codes.md`](../register/curia-decision-codes.md).
+3. **Latenz statt Rate ist der Engpass.** Die Planannahme «~2 300 Anfragen bei ≤ 2/s
+   ⇒ ~20 min» unterstellt, die Pause zwischen den Anfragen bestimme die Dauer. Gemessen
+   antwortet der Endpunkt mit **~3,5 s Latenz**; streng seriell dauerte der Lauf **~3,5 h**
+   (erster Anlauf: 25 Geschäfte in 13 min). Mit acht gleichzeitigen Geschäften und EINEM
+   gemeinsamen Takt vor jedem Absenden bleibt die Rate bei ≤ 2 Anfragen/s und die Dauer
+   fällt auf ~25 min. Wer künftig eine Crawl-Dauer schätzt: die Pause ist eine Obergrenze
+   der Rate, keine Vorhersage der Dauer.
+
+**Personendaten — die Grenze wirkt in der Abfrage, nicht erst im Artefakt.** Die
+Voting-Abfrage nennt über `$select` genau `IdVote,Decision,DecisionText`. Namen,
+`PersonNumber`, Fraktion und Kanton verlassen den Endpunkt nicht; die Aggregation ist
+keine nachträgliche Anonymisierung, sondern die einzige Form, in der die Einzelstimmen je
+gesehen werden. `check:entstehung` prüft zusätzlich die ausgelieferten Shards gegen eine
+Sperrliste von 14 Feldnamen (Rot-Beweis im PR).
+
+**Ständerat:** `Voting` trägt kein `Council`-Feld; der Rat wird nur über die Zeilenzahl
+plausibilisiert (150–200 ⇒ Nationalrat). Für den Ständerat steht `rat: null` und nie eine
+Zahl — Entscheid David 11.9.2026 Nr. 3.
+
 ## 5 · Pflegebedarf
 
 | Was | Wann | Wie |

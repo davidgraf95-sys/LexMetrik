@@ -1,0 +1,106 @@
+{
+  "nummer": "13.059",
+  "titel": "Gewässerschutzgesetz. Änderung",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2013-06-26",
+  "erstrat": "Ständerat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20130059",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2013-06-26",
+      "name": "Kommission für Umwelt, Raumplanung und Energie Nationalrat",
+      "kuerzel": "UREK-N"
+    },
+    {
+      "datum": "2013-06-26",
+      "name": "Kommission für Umwelt, Raumplanung und Energie Ständerat",
+      "kuerzel": "UREK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2013-12-10",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2014-03-03",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2014-03-21",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2014-03-21",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2013-06-26",
+      "art": "Bundesblatt",
+      "jahr": "2013",
+      "nummer": "5549",
+      "text": "Botschaft vom 26. Juni 2013 zur Änderung des Gewässerschutzgesetzes (Verursachergerechte Finanzierung der Elimination von Spurenstoffen im Abwasser)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2013-06-26",
+      "art": "Bundesblatt",
+      "jahr": "2013",
+      "nummer": "5569",
+      "text": "Bundesgesetz über den Schutz der Gewässer (Gewässerschutzgesetz, GSchG)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2014-04-01",
+      "art": "Bundesblatt",
+      "jahr": "2014",
+      "nummer": "2911",
+      "text": null,
+      "referendumsfrist": "2014-07-10"
+    },
+    {
+      "datum": "2014-10-28",
+      "art": "Amtliche Sammlung",
+      "jahr": "2014",
+      "nummer": "3327",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2014-03-21",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 137,
+        "nein": 55,
+        "enthaltung": 3,
+        "anwesend": 0,
+        "nichtTeilgenommen": 2,
+        "entschuldigt": 2,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

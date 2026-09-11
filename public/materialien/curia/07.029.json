@@ -1,0 +1,113 @@
+{
+  "nummer": "07.029",
+  "titel": "Haager Übereinkommen über den Schutz von Kindern. Kindsentführungen",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2007-02-28",
+  "erstrat": "Nationalrat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20070029",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2007-02-28",
+      "name": "Kommission für Rechtsfragen Nationalrat",
+      "kuerzel": "RK-N"
+    },
+    {
+      "datum": "2007-02-28",
+      "name": "Kommission für Rechtsfragen Ständerat",
+      "kuerzel": "RK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2007-10-03",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2007-12-11",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2007-12-18",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2007-12-21",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2007-12-21",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2007-02-28",
+      "art": "Bundesblatt",
+      "jahr": "2007",
+      "nummer": "2595",
+      "text": "Botschaft vom 28. Februar 2007 zur Umsetzung über internationale Kindesentführungen sowie zur Genehmigung und Umsetzung der Haager Übereinkommen über den Schutz von Kindern und Erwachsenen",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2007-02-28",
+      "art": "Bundesblatt",
+      "jahr": null,
+      "nummer": null,
+      "text": "Bundesbeschluss über die Umsetzung der Übereinkommen über internationale Kindesentführung sowie die Genehmigung und Umsetzung der Haager Übereinkommen über den Schutz von Kindern und Erwachsenen",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2008-01-08",
+      "art": "Bundesblatt",
+      "jahr": "2008",
+      "nummer": "33",
+      "text": null,
+      "referendumsfrist": "2008-04-17"
+    },
+    {
+      "datum": "2009-06-23",
+      "art": "Amtliche Sammlung",
+      "jahr": "2009",
+      "nummer": "3077",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2007-12-21",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 198,
+        "nein": 0,
+        "enthaltung": 0,
+        "anwesend": 0,
+        "nichtTeilgenommen": 1,
+        "entschuldigt": 0,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

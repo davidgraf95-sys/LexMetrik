@@ -28,6 +28,10 @@ import {
   type DeckungRegister, type DeckungErlass,
 } from './deckung.ts';
 import { CURIA_DIR, CURIA_ZUSTAND_PFAD, leseCuriaZustand } from './curia-zustand.ts';
+import {
+  VERBOTENE_FELDER, CURIA_QUELLENANGABE, AUSZAEHLUNG_HINWEIS, DECISION_CODES,
+  serialisiereShard, shaShard, leeresAggregat, type CuriaShard,
+} from './curia.ts';
 
 const schreibe = process.argv.includes('--schreibe');
 const datumArg = process.argv.find((a) => a.startsWith('--datum='));
@@ -155,7 +159,57 @@ for (const [name, pfad, max, gzip] of DECKEL) {
     for (const f of shards) {
       if (!bekannt.has(f)) fehler.push(`Curia-Shard ${f} steht nicht im Zustandsträger — Herkunft unbelegt (§7).`);
     }
-    zeilen.push(`check:entstehung — Curia: ${zustand.length} Geschäft(e) im Zustandsträger, ${shards.length} Shard(s), verlustfrei.`);
+    // ── (6) PERSONENDATEN-TOR (§11.8, Kritik B1, Entscheid David 11.9.2026 Nr. 2) ──
+    // Kein Namensfeld, keine PersonNumber, keine Fraktion, kein Kanton — weder als
+    // Schlüssel noch als Wert. Das Tor prüft die AUSGELIEFERTEN Artefakte, nicht bloss
+    // die Absicht des Generators: eine künftige Erweiterung, die ein Personenfeld
+    // durchreicht, wird hier rot, nicht erst in der Gegenprüfung.
+    const zustandSha = new Map(zustand.map((z) => [z.nummer, z.sha]));
+    let summenProben = 0;
+    for (const f of shards) {
+      const roh = readFileSync(join(CURIA_DIR, f), 'utf8');
+      for (const verboten of VERBOTENE_FELDER) {
+        if (new RegExp(`"${verboten}"\\s*:`).test(roh)) {
+          fehler.push(`Curia-Shard ${f} trägt das Personendaten-Feld «${verboten}» — §11.8 verbietet jede Speicherung von Personendaten.`);
+        }
+      }
+      const shard = JSON.parse(roh) as CuriaShard;
+      if (roh !== serialisiereShard(shard)) {
+        fehler.push(`Curia-Shard ${f} ist nicht kanonisch serialisiert — von Hand editiert? (Generator neu laufen.)`);
+      }
+      const sha = zustandSha.get(shard.nummer);
+      if (sha && shaShard(shard) !== sha) {
+        fehler.push(`Curia-Shard ${f}: sha weicht vom Zustandsträger ab — nachträglich verändert (§7).`);
+      }
+      // Nutzungsauflage der Parlamentsdienste: Quellenangabe + Abrufdatum je Datensatz.
+      if (shard.quellenangabe !== CURIA_QUELLENANGABE) {
+        fehler.push(`Curia-Shard ${f}: Quellenangabe fehlt oder weicht ab — Nutzungsauflage der Parlamentsdienste (§7c).`);
+      }
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(shard.abgerufen)) {
+        fehler.push(`Curia-Shard ${f}: Abrufdatum fehlt oder ist nicht ISO — Nutzungsauflage (§7a).`);
+      }
+      for (const sa of shard.schlussabstimmungen ?? []) {
+        // Summenprobe: die Einzelzähler müssen die Gesamtzahl ergeben — sonst hat ein
+        // unbekannter Decision-Code Stimmen verschluckt (Kritik A18).
+        const felder = Object.keys(leeresAggregat()).filter((k) => k !== 'total') as (keyof typeof sa.aggregat)[];
+        const summe = felder.reduce((n, k) => n + (sa.aggregat[k] ?? 0), 0);
+        if (summe !== sa.aggregat.total) {
+          fehler.push(`Curia-Shard ${f}: Stimm-Summe ${summe} ≠ total ${sa.aggregat.total} — ein Decision-Code fehlt in der Tabelle (§2).`);
+        }
+        if (!sa.beschriftung.startsWith(AUSZAEHLUNG_HINWEIS)) {
+          fehler.push(`Curia-Shard ${f}: Schlussabstimmung ohne die Pflicht-Beschriftung «${AUSZAEHLUNG_HINWEIS}» (§8/Curia-Auflage).`);
+        }
+        if (sa.rat !== null && sa.rat !== 'Nationalrat') {
+          fehler.push(`Curia-Shard ${f}: Rat «${String(sa.rat)}» behauptet — Voting hat kein Council-Feld, nur der Nationalrat ist über die Grösse belegbar (§8).`);
+        }
+        summenProben += 1;
+      }
+    }
+    zeilen.push(
+      `check:entstehung — Curia: ${zustand.length} Geschäft(e) im Zustandsträger, ${shards.length} Shard(s), verlustfrei; `
+      + `${summenProben} Schlussabstimmung(en) summenrein, ${Object.keys(DECISION_CODES).length} geprüfte Decision-Codes, `
+      + '0 Personendaten-Felder.',
+    );
   } else {
     zeilen.push('check:entstehung — Curia: kein Zustandsträger (Etappe E4 noch nicht gelaufen).');
   }

@@ -1,0 +1,119 @@
+{
+  "nummer": "20.063",
+  "titel": "Ausländer- und Integrationsgesetz. Änderung",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2020-08-26",
+  "erstrat": "Nationalrat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20200063",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2020-08-26",
+      "name": "Staatspolitische Kommission Nationalrat",
+      "kuerzel": "SPK-N"
+    },
+    {
+      "datum": "2020-08-26",
+      "name": "Staatspolitische Kommission Ständerat",
+      "kuerzel": "SPK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2020-12-16",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Nichteintreten",
+      "vorlage": 1
+    },
+    {
+      "datum": "2021-03-17",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Eintreten",
+      "vorlage": 1
+    },
+    {
+      "datum": "2021-06-15",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2021-09-15",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2021-12-06",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2021-12-17",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2021-12-17",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2020-08-26",
+      "art": "Bundesblatt",
+      "jahr": "2020",
+      "nummer": "7457",
+      "text": "Botschaft vom 26. August 2020  zur Änderung des Ausländer- und Integrationsgesetzes (Einschränkungen für Reisen ins Ausland und Anpassungen des Status der vorläufigen Aufnahme)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2020-08-26",
+      "art": "Bundesblatt",
+      "jahr": "2020",
+      "nummer": "7509",
+      "text": "Bundesgesetz über die Ausländerinnen und Ausländer und über die Integration (Ausländer- und Integrationsgesetz, AIG) (Einschränkungen für Reisen ins Ausland und Anpassungen des Status der vorläufigen Aufnahme)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2021-12-28",
+      "art": "Bundesblatt",
+      "jahr": "2021",
+      "nummer": "2999",
+      "text": null,
+      "referendumsfrist": "2022-04-07"
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2021-12-17",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 111,
+        "nein": 80,
+        "enthaltung": 2,
+        "anwesend": 0,
+        "nichtTeilgenommen": 3,
+        "entschuldigt": 3,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

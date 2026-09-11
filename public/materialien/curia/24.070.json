@@ -1,0 +1,120 @@
+{
+  "nummer": "24.070",
+  "titel": "Bundesgesetz über die Ergänzungsleistungen zur AHV/IV (Leistungen für Hilfe und Betreuung zu Hause). Änderung",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2024-09-13",
+  "erstrat": "Nationalrat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20240070",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2024-08-22",
+      "name": "Kommission für soziale Sicherheit und Gesundheit Nationalrat",
+      "kuerzel": "SGK-N"
+    },
+    {
+      "datum": "2024-08-22",
+      "name": "Kommission für soziale Sicherheit und Gesundheit Ständerat",
+      "kuerzel": "SGK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2024-12-19",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2025-06-04",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2025-06-11",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2025-06-12",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2025-06-20",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2025-06-20",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2024-09-13",
+      "art": "Bundesblatt",
+      "jahr": "2024",
+      "nummer": "2448",
+      "text": "Botschaft vom 13. September 2024 zur Änderung des Bundesgesetzes über Ergänzungsleistungen zur Alters-, Hinterlassenen- und Invalidenversicherung. Leistungen für Hilfe und Betreuung zu Hause für Bezügerinnen und Bezüger von Ergänzungsleistungen zur AHV/IV",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2024-09-13",
+      "art": "Bundesblatt",
+      "jahr": "2024",
+      "nummer": "2449",
+      "text": "Bundesgesetz über Ergänzungsleistungen zur Alters-, Hinterlassenen- und Invalidenversicherung (ELG)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2025-07-01",
+      "art": "Bundesblatt",
+      "jahr": "2025",
+      "nummer": "2039",
+      "text": null,
+      "referendumsfrist": "2025-10-09"
+    },
+    {
+      "datum": "2026-08-27",
+      "art": "Amtliche Sammlung",
+      "jahr": "2026",
+      "nummer": "434",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2025-06-20",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 131,
+        "nein": 65,
+        "enthaltung": 1,
+        "anwesend": 0,
+        "nichtTeilgenommen": 0,
+        "entschuldigt": 2,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

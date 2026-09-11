@@ -165,9 +165,16 @@ Drift-Tor `check:botschaften-netz`. Maschinell zugeordnet; fachliche Abnahme Dav
 Bau-Befunde zur Verzahnung Fassungskette ↔ Verfahrenskette: Vokabular `type-projet` vollständig
 26 Codes (Recherche 6.9. hatte 15), 1 609 Verfahrens-Ereignisse über 407/407 Botschaften, Botschafts-Anker
 4/43 HTML-Botschaften mit 189 eindeutigen Ankern (83 mehrdeutige eIds bewusst nicht ausgeliefert, §1),
-Deckungs-Diagnose 39,6 % gesamt bei Spanne 0–100 % je Erlass, Rückbau-Prüfung `artikel-revisionen`
+Deckungs-Diagnose 39,6 % gesamt bei Spanne 0–100 % je Erlass, Parlaments-Etappen aus Curia Vista
+(385/402 Geschäfte, 3 577 Rats-Beschlüsse, 790 Kommissions-Vorberatungen, 454 NR-Schlussabstimmungen
+nur aggregiert und ohne jede Personenabfrage), Rückbau-Prüfung `artikel-revisionen`
 (A13) mit Ergebnis **Behalt** (17 Konsumenten, andere Fachfrage). Tore `check:entstehung`,
 `check:botschaften-netz`. Gegenprüfung ausstehend; fachliche Abnahme David offen.
+
+**Curia Vista — `Voting.Decision`-Codes (W2·6c E4):** [register/curia-decision-codes.md](register/curia-decision-codes.md) —
+die acht amtlichen Codes samt Erhebungsmethode (je Code eine eigene Live-Abfrage) und Gegenprobe an
+der DSG-Schlussabstimmung. `$metadata` deklariert kein Enum; die Tabelle ist darum von Hand belegt,
+ein unbekannter Code macht den Generator rot. Schliesst den offenen Punkt 2 aus R4.
 
 **Änderungshistorie / Amtliche Sammlung (Fedlex-Portfolio Paket 5, W2·6-REV):** [normtext/revisionen-2026-07-10.md](normtext/revisionen-2026-07-10.md) —
 je Bund-Volltext-Erlass eine «Änderungen / Revisionen»-Timeline (3108 AS/RO-Änderungs-Einträge über

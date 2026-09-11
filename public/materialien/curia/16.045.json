@@ -1,0 +1,194 @@
+{
+  "nummer": "16.045",
+  "titel": "Stabilisierungsprogramm 2017-2019",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2016-05-25",
+  "erstrat": "Ständerat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20160045",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2016-05-25",
+      "name": "Finanzkommission Nationalrat",
+      "kuerzel": "FK-N"
+    },
+    {
+      "datum": "2016-05-25",
+      "name": "Finanzkommission Ständerat",
+      "kuerzel": "FK-S"
+    },
+    {
+      "datum": "2016-09-12",
+      "name": "Kommission für Rechtsfragen Nationalrat",
+      "kuerzel": "RK-N"
+    },
+    {
+      "datum": "2016-09-12",
+      "name": "Kommission für Rechtsfragen Ständerat",
+      "kuerzel": "RK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2016-09-28",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2016-11-28",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Diskussion",
+      "vorlage": 1
+    },
+    {
+      "datum": "2016-11-29",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Fortsetzung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2016-11-30",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2016-12-12",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2017-02-27",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2017-03-09",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2017-03-14",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2017-03-15",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss gemäss Antrag der Einigungskonferenz",
+      "vorlage": 1
+    },
+    {
+      "datum": "2017-03-15",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss gemäss Antrag der Einigungskonferenz",
+      "vorlage": 1
+    },
+    {
+      "datum": "2017-03-17",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2017-03-17",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2017-06-13",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Nichteintreten.",
+      "vorlage": 2
+    },
+    {
+      "datum": "2017-12-11",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Nichteintreten.",
+      "vorlage": 2
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2016-05-25",
+      "art": "Bundesblatt",
+      "jahr": "2016",
+      "nummer": "4691",
+      "text": "Botschaft vom 25. Mai 2016 zum Bundesgesetz über das Stabilisierungsprogramm 2017—2019 sowie zum Bundesgesetz über Aufgaben, Organisation und Finanzierung der Eidgenössischen Stiftungsaufsicht",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2016-05-25",
+      "art": "Bundesblatt",
+      "jahr": "2016",
+      "nummer": "4825",
+      "text": "Bundesgesetz über das Stabilisierungsprogramm 2017-2019",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2016-05-25",
+      "art": "Bundesblatt",
+      "jahr": "2016",
+      "nummer": "4833",
+      "text": "Bundesgesetz über Aufgaben, Organisation und Finanzierung der Eidgenössischen Stiftungsaufsicht (ESAG)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2017-03-17",
+      "art": "Bundesblatt",
+      "jahr": "2017",
+      "nummer": "2447",
+      "text": null,
+      "referendumsfrist": "2017-07-06"
+    },
+    {
+      "datum": "2017-10-17",
+      "art": "Amtliche Sammlung",
+      "jahr": "2017",
+      "nummer": "5205",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2017-03-17",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 139,
+        "nein": 55,
+        "enthaltung": 3,
+        "anwesend": 0,
+        "nichtTeilgenommen": 0,
+        "entschuldigt": 2,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

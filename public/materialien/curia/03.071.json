@@ -1,0 +1,106 @@
+{
+  "nummer": "03.071",
+  "titel": "Gleichstellungsgesetz (Schlichtungsverfahren). Änderung",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2003-11-05",
+  "erstrat": "Ständerat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20030071",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2003-11-05",
+      "name": "Kommission für Rechtsfragen Nationalrat",
+      "kuerzel": "RK-N"
+    },
+    {
+      "datum": "2003-11-05",
+      "name": "Kommission für Rechtsfragen Ständerat",
+      "kuerzel": "RK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2004-06-02",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss gemäss Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2004-09-29",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2004-10-08",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2004-10-08",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2003-11-05",
+      "art": "Bundesblatt",
+      "jahr": "2003",
+      "nummer": "7809",
+      "text": "Botschaft vom 5. November 2003 über die Änderung des Gleichstellungsgesetzes (Schlichtungsverfahren)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2003-11-05",
+      "art": "Bundesblatt",
+      "jahr": null,
+      "nummer": null,
+      "text": "Bundesgesetz über die Gleichstellung von Frau und Mann (Gleichstellungsgesetz, GIG)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2004-10-19",
+      "art": "Bundesblatt",
+      "jahr": "2004",
+      "nummer": "5451",
+      "text": null,
+      "referendumsfrist": "2005-01-27"
+    },
+    {
+      "datum": "2005-02-22",
+      "art": "Amtliche Sammlung",
+      "jahr": "2005",
+      "nummer": "1023",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2004-10-08",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 129,
+        "nein": 49,
+        "enthaltung": 8,
+        "anwesend": 0,
+        "nichtTeilgenommen": 9,
+        "entschuldigt": 4,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "nummer": "18.057",
+  "titel": "Bundesgesetz über die Enteignung. Änderung",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2018-06-01",
+  "erstrat": "Nationalrat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20180057",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2018-06-01",
+      "name": "Kommission für Rechtsfragen Nationalrat",
+      "kuerzel": "RK-N"
+    },
+    {
+      "datum": "2018-06-01",
+      "name": "Kommission für Rechtsfragen Ständerat",
+      "kuerzel": "RK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2019-06-03",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2019-12-05",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2020-03-10",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2020-06-03",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2020-06-19",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2020-06-19",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2018-06-01",
+      "art": "Bundesblatt",
+      "jahr": "2018",
+      "nummer": "4713",
+      "text": "Botschaft vom 1. Juni 2018 zur Änderung des Bundesgesetzes über die Enteignung",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2018-06-01",
+      "art": "Bundesblatt",
+      "jahr": "2018",
+      "nummer": "4771",
+      "text": "Bundesgesetz über die Enteignung (EntG)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2020-06-30",
+      "art": "Bundesblatt",
+      "jahr": "2020",
+      "nummer": "5693",
+      "text": null,
+      "referendumsfrist": "2020-10-08"
+    },
+    {
+      "datum": "2020-10-13",
+      "art": "Amtliche Sammlung",
+      "jahr": "2020",
+      "nummer": "4085",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2020-06-19",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 158,
+        "nein": 27,
+        "enthaltung": 13,
+        "anwesend": 0,
+        "nichtTeilgenommen": 0,
+        "entschuldigt": 0,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 199
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

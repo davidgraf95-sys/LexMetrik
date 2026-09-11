@@ -1,0 +1,106 @@
+{
+  "nummer": "13.109",
+  "titel": "Verbesserungen beim Informationsaustausch zwischen Behörden im Umgang mit Waffen. Bundesgesetz",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2013-12-13",
+  "erstrat": "Nationalrat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20130109",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2013-12-13",
+      "name": "Sicherheitspolitische Kommission Nationalrat",
+      "kuerzel": "SiK-N"
+    },
+    {
+      "datum": "2013-12-13",
+      "name": "Sicherheitspolitische Kommission Ständerat",
+      "kuerzel": "SiK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2015-05-05",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2015-09-24",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2015-09-25",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2015-09-25",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2013-12-13",
+      "art": "Bundesblatt",
+      "jahr": "2014",
+      "nummer": "303",
+      "text": "Botschaft vom 13. Dezember 2013 zum Bundesgesetz über Verbesserungen beim Informationsaustausch zwischen Behörden im Umgang mit Waffen",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2013-12-13",
+      "art": "Bundesblatt",
+      "jahr": "2014",
+      "nummer": "347",
+      "text": "Bundesgesetz über Verbesserungen beim Informationsaustausch zwischen Behörden im Umgang mit Waffen",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2015-10-06",
+      "art": "Bundesblatt",
+      "jahr": "2015",
+      "nummer": "7169",
+      "text": null,
+      "referendumsfrist": "2016-01-14"
+    },
+    {
+      "datum": "2016-06-17",
+      "art": "Amtliche Sammlung",
+      "jahr": "2016",
+      "nummer": "1831",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2015-09-25",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 189,
+        "nein": 4,
+        "enthaltung": 3,
+        "anwesend": 0,
+        "nichtTeilgenommen": 2,
+        "entschuldigt": 1,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "nummer": "24.024",
+  "titel": "Bundesgesetz über die Besteuerung der Telearbeit im internationalen Verhältnis",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2024-03-01",
+  "erstrat": "Nationalrat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20240024",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2024-03-01",
+      "name": "Kommission für Wirtschaft und Abgaben Nationalrat",
+      "kuerzel": "WAK-N"
+    },
+    {
+      "datum": "2024-03-01",
+      "name": "Kommission für Wirtschaft und Abgaben Ständerat",
+      "kuerzel": "WAK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2024-04-15",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss gemäss Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2024-05-30",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2024-06-14",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2024-06-14",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2024-03-01",
+      "art": "Bundesblatt",
+      "jahr": "2024",
+      "nummer": "650",
+      "text": "Botschaft vom 1. März 2024 zum Bundesgesetz über die Besteuerung der Telearbeit im internationalen Verhältnis",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2024-03-01",
+      "art": "Bundesblatt",
+      "jahr": "2024",
+      "nummer": "651",
+      "text": "Bundesgesetz über die Besteuerung der Telearbeit im internationalen Verhältnis",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2024-06-25",
+      "art": "Bundesblatt",
+      "jahr": "2024",
+      "nummer": "1453",
+      "text": null,
+      "referendumsfrist": "2024-10-03"
+    },
+    {
+      "datum": "2025-05-15",
+      "art": "Amtliche Sammlung",
+      "jahr": "2024",
+      "nummer": "573",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2024-06-14",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 195,
+        "nein": 1,
+        "enthaltung": 0,
+        "anwesend": 0,
+        "nichtTeilgenommen": 2,
+        "entschuldigt": 1,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

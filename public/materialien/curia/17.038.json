@@ -1,0 +1,120 @@
+{
+  "nummer": "17.038",
+  "titel": "Bundesgesetz über das Internationale Privatrecht. 11. Kapitel: Konkurs und Nachlassvertrag",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2017-05-24",
+  "erstrat": "Ständerat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20170038",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2017-05-24",
+      "name": "Kommission für Rechtsfragen Nationalrat",
+      "kuerzel": "RK-N"
+    },
+    {
+      "datum": "2017-05-24",
+      "name": "Kommission für Rechtsfragen Ständerat",
+      "kuerzel": "RK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2017-12-13",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2018-03-07",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2018-03-13",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2018-03-15",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2018-03-16",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2018-03-16",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2017-05-24",
+      "art": "Bundesblatt",
+      "jahr": "2017",
+      "nummer": "4125",
+      "text": "Botschaft vom 24. Mai 2017 zur Änderung des Bundesgesetzes über das Internationale Privatrecht (11. Kapitel: Konkurs und Nachlassvertrag)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2017-05-24",
+      "art": "Bundesblatt",
+      "jahr": "2017",
+      "nummer": "4149",
+      "text": "Bundesgesetz über das Internationale Privatrecht (IPRG)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2018-03-27",
+      "art": "Bundesblatt",
+      "jahr": "2018",
+      "nummer": "1505",
+      "text": null,
+      "referendumsfrist": "2018-07-05"
+    },
+    {
+      "datum": "2018-10-02",
+      "art": "Amtliche Sammlung",
+      "jahr": "2018",
+      "nummer": "3263",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2018-03-16",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 191,
+        "nein": 0,
+        "enthaltung": 0,
+        "anwesend": 0,
+        "nichtTeilgenommen": 4,
+        "entschuldigt": 4,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

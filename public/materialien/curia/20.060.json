@@ -1,0 +1,106 @@
+{
+  "nummer": "20.060",
+  "titel": "Betäubungsmittelgesetz. Änderung (Cannabisarzneimittel)",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2020-06-24",
+  "erstrat": "Nationalrat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20200060",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2020-06-24",
+      "name": "Kommission für soziale Sicherheit und Gesundheit Nationalrat",
+      "kuerzel": "SGK-N"
+    },
+    {
+      "datum": "2020-06-24",
+      "name": "Kommission für soziale Sicherheit und Gesundheit Ständerat",
+      "kuerzel": "SGK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2020-12-08",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2021-03-08",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2021-03-19",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2021-03-19",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2020-06-24",
+      "art": "Bundesblatt",
+      "jahr": "2020",
+      "nummer": "6069",
+      "text": "Botschaft vom 24. Juni 2020 zur Änderung des Betäubungsmittelgesetzes (Cannabisarzneimittel)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2020-06-24",
+      "art": "Bundesblatt",
+      "jahr": "2020",
+      "nummer": "6109",
+      "text": "Bundesgesetz über die Betäubungsmittel und die psychotropen Stoffe (Betäubungsmittelgesetz, BetmG)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2021-03-30",
+      "art": "Bundesblatt",
+      "jahr": "2021",
+      "nummer": "666",
+      "text": null,
+      "referendumsfrist": "2021-07-08"
+    },
+    {
+      "datum": "2022-07-11",
+      "art": "Amtliche Sammlung",
+      "jahr": "2022",
+      "nummer": "385",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2021-03-19",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 136,
+        "nein": 52,
+        "enthaltung": 7,
+        "anwesend": 0,
+        "nichtTeilgenommen": 1,
+        "entschuldigt": 3,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

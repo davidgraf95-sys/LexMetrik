@@ -1,0 +1,148 @@
+{
+  "nummer": "22.085",
+  "titel": "Umweltschutzgesetz. Änderung",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2022-12-16",
+  "erstrat": "Ständerat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20220085",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2022-12-16",
+      "name": "Kommission für Umwelt, Raumplanung und Energie Nationalrat",
+      "kuerzel": "UREK-N"
+    },
+    {
+      "datum": "2022-12-16",
+      "name": "Kommission für Umwelt, Raumplanung und Energie Ständerat",
+      "kuerzel": "UREK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2023-12-06",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beginn der Debatte",
+      "vorlage": 1
+    },
+    {
+      "datum": "2023-12-07",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2024-03-04",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beginn der Debatte",
+      "vorlage": 1
+    },
+    {
+      "datum": "2024-03-11",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2024-05-28",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2024-09-10",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2024-09-17",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2024-09-23",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2024-09-27",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2024-09-27",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2022-12-16",
+      "art": "Bundesblatt",
+      "jahr": "2023",
+      "nummer": "239",
+      "text": "Botschaft vom 16. Dezember 2022 zur Änderung des Umweltschutzgesetzes (Lärm, Altlasten, Lenkungsabgaben, Finanzierung von Aus- und Weiterbildungskursen, Informations- und Dokumentationssysteme, Strafrecht)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2022-12-16",
+      "art": "Bundesblatt",
+      "jahr": "2023",
+      "nummer": "240",
+      "text": "Bundesgesetz über den Umweltschutz (Umweltschutzgesetz, USG)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2024-10-08",
+      "art": "Bundesblatt",
+      "jahr": "2024",
+      "nummer": "2502",
+      "text": null,
+      "referendumsfrist": "2025-01-16"
+    },
+    {
+      "datum": "2025-05-15",
+      "art": "Amtliche Sammlung",
+      "jahr": "2025",
+      "nummer": "178",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2024-09-27",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 131,
+        "nein": 61,
+        "enthaltung": 3,
+        "anwesend": 0,
+        "nichtTeilgenommen": 0,
+        "entschuldigt": 4,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

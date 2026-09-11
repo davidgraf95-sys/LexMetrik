@@ -1,0 +1,106 @@
+{
+  "nummer": "04.081",
+  "titel": "RVOG (Genehmigung kantonaler Erlasse, Information über Verträge der Kantone unter sich oder mit dem Ausland)",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2004-12-03",
+  "erstrat": "Ständerat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20040081",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2004-12-03",
+      "name": "Staatspolitische Kommission Nationalrat",
+      "kuerzel": "SPK-N"
+    },
+    {
+      "datum": "2004-12-03",
+      "name": "Staatspolitische Kommission Ständerat",
+      "kuerzel": "SPK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2005-03-07",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2005-09-19",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2005-10-07",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2005-10-07",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2004-12-03",
+      "art": "Bundesblatt",
+      "jahr": "2004",
+      "nummer": "7103",
+      "text": "Botschaft vom 3. Dezember 2004 zur Änderung des Regierungs- und Verwaltungsorganisationsgesetzes (Genehmigung kantonaler Erlasse, Information über Verträge der Kantone unter sich oder mit dem Ausland)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2004-12-03",
+      "art": "Bundesblatt",
+      "jahr": null,
+      "nummer": null,
+      "text": "Regierungs- und Verwaltungsorganisationsgesetz (RVOG)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2005-10-18",
+      "art": "Bundesblatt",
+      "jahr": "2005",
+      "nummer": "5959",
+      "text": null,
+      "referendumsfrist": "2006-01-26"
+    },
+    {
+      "datum": "2006-04-25",
+      "art": "Amtliche Sammlung",
+      "jahr": "2006",
+      "nummer": "1265",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2005-10-07",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 184,
+        "nein": 0,
+        "enthaltung": 3,
+        "anwesend": 0,
+        "nichtTeilgenommen": 7,
+        "entschuldigt": 5,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

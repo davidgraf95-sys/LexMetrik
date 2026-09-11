@@ -1,0 +1,148 @@
+{
+  "nummer": "18.082",
+  "titel": "Umsetzung der Empfehlungen des Globalen Forums über Transparenz und Informationsaustausch für Steuerzwecke",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2018-11-21",
+  "erstrat": "Nationalrat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20180082",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2018-11-21",
+      "name": "Kommission für Wirtschaft und Abgaben Nationalrat",
+      "kuerzel": "WAK-N"
+    },
+    {
+      "datum": "2018-11-21",
+      "name": "Kommission für Wirtschaft und Abgaben Ständerat",
+      "kuerzel": "WAK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2019-03-20",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2019-06-05",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2019-06-12",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2019-06-13",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2019-06-17",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2019-06-18",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2019-06-19",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss gemäss Antrag der Einigungskonferenz",
+      "vorlage": 1
+    },
+    {
+      "datum": "2019-06-19",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss gemäss Antrag der Einigungskonferenz",
+      "vorlage": 1
+    },
+    {
+      "datum": "2019-06-21",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2019-06-21",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2018-11-21",
+      "art": "Bundesblatt",
+      "jahr": "2019",
+      "nummer": "279",
+      "text": "Botschaft vom 21. November 2018 zur Umsetzung der Empfehlungen des Global Forum über die Transparenz juristischer Personen und den Informationsaustausch im Bericht zur Phase 2 der Schweiz",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2018-11-21",
+      "art": "Bundesblatt",
+      "jahr": "2019",
+      "nummer": "339",
+      "text": "Bundesgesetz zur Umsetzung von Empfehlungen des Globalen Forums über Transparenz und Informationsaustausch für Steuerzwecke",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2019-07-02",
+      "art": "Bundesblatt",
+      "jahr": "2019",
+      "nummer": "4489",
+      "text": null,
+      "referendumsfrist": "2019-10-10"
+    },
+    {
+      "datum": "2019-10-22",
+      "art": "Amtliche Sammlung",
+      "jahr": "2019",
+      "nummer": "3161",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2019-06-21",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 127,
+        "nein": 69,
+        "enthaltung": 0,
+        "anwesend": 0,
+        "nichtTeilgenommen": 0,
+        "entschuldigt": 2,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 199
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

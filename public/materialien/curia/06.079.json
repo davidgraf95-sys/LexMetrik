@@ -1,0 +1,106 @@
+{
+  "nummer": "06.079",
+  "titel": "Anpassung der Unvereinbarkeitsregelung. Änderung des Parlamentsgesetzes",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2006-09-22",
+  "erstrat": "Ständerat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20060079",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2006-09-22",
+      "name": "Staatspolitische Kommission Nationalrat",
+      "kuerzel": "SPK-N"
+    },
+    {
+      "datum": "2006-09-22",
+      "name": "Staatspolitische Kommission Ständerat",
+      "kuerzel": "SPK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2006-12-20",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2007-03-05",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2007-03-23",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2007-03-23",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2006-09-22",
+      "art": "Bundesblatt",
+      "jahr": "2006",
+      "nummer": "8009",
+      "text": "Botschaft vom 22. September 2006 über die Änderung des Parlamentsgesetzes (Unvereinbarkeit mit Mitgliedschaft in ausserparlamentarischen Kommissionen)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2006-09-22",
+      "art": "Bundesblatt",
+      "jahr": null,
+      "nummer": null,
+      "text": "Bundesgesetz über die Bundesversammlung (Parlamentsgesetz, ParlG)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2007-04-03",
+      "art": "Bundesblatt",
+      "jahr": "2007",
+      "nummer": "2291",
+      "text": null,
+      "referendumsfrist": "2007-07-12"
+    },
+    {
+      "datum": "2007-09-04",
+      "art": "Amtliche Sammlung",
+      "jahr": "2007",
+      "nummer": "4129",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2007-03-23",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 168,
+        "nein": 12,
+        "enthaltung": 12,
+        "anwesend": 0,
+        "nichtTeilgenommen": 7,
+        "entschuldigt": 0,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

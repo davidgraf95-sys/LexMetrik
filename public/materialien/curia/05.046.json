@@ -1,0 +1,167 @@
+{
+  "nummer": "05.046",
+  "titel": "Europäische Agentur für Flugsicherheit (EASA). Beitritt der Schweiz",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2005-05-25",
+  "erstrat": "Ständerat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20050046",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2005-05-25",
+      "name": "Kommission für Verkehr und Fernmeldewesen Nationalrat",
+      "kuerzel": "KVF-N"
+    },
+    {
+      "datum": "2005-05-25",
+      "name": "Kommission für Verkehr und Fernmeldewesen Ständerat",
+      "kuerzel": "KVF-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2005-10-04",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2005-10-04",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss gemäss Entwurf",
+      "vorlage": 2
+    },
+    {
+      "datum": "2005-12-13",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2005-12-13",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 2
+    },
+    {
+      "datum": "2005-12-16",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2005-12-16",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2005-12-16",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 2
+    },
+    {
+      "datum": "2005-12-16",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 2
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2005-05-25",
+      "art": "Bundesblatt",
+      "jahr": "2005",
+      "nummer": "3857",
+      "text": "Botschaft vom 25. Mai 2005 über die Teilnahme der Schweiz an der Europäischen Agentur für Flugsicherheit EASA",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2005-05-25",
+      "art": "Bundesblatt",
+      "jahr": null,
+      "nummer": null,
+      "text": "Bundesgesetz über die Luftfahrt (Luftfahrtgesetz, LFG)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2005-12-27",
+      "art": "Bundesblatt",
+      "jahr": "2005",
+      "nummer": "7481",
+      "text": null,
+      "referendumsfrist": "2006-04-06"
+    },
+    {
+      "datum": "2005-12-27",
+      "art": "Bundesblatt",
+      "jahr": "2005",
+      "nummer": "7497",
+      "text": null,
+      "referendumsfrist": "2006-04-06"
+    },
+    {
+      "datum": "2006-05-23",
+      "art": "Amtliche Sammlung",
+      "jahr": "2006",
+      "nummer": "1989",
+      "text": null,
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2007-05-22",
+      "art": "Amtliche Sammlung",
+      "jahr": "2007",
+      "nummer": "2265",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2005-12-16",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 183,
+        "nein": 0,
+        "enthaltung": 0,
+        "anwesend": 0,
+        "nichtTeilgenommen": 15,
+        "entschuldigt": 1,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    },
+    {
+      "datum": "2005-12-16",
+      "vorlage": 2,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 184,
+        "nein": 0,
+        "enthaltung": 0,
+        "anwesend": 0,
+        "nichtTeilgenommen": 14,
+        "entschuldigt": 1,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

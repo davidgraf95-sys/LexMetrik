@@ -1,0 +1,106 @@
+{
+  "nummer": "10.031",
+  "titel": "Koordination des Asyl- und Auslieferungsverfahrens. Bundesgesetz",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2010-02-24",
+  "erstrat": "Ständerat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20100031",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2010-02-24",
+      "name": "Staatspolitische Kommission Nationalrat",
+      "kuerzel": "SPK-N"
+    },
+    {
+      "datum": "2010-02-24",
+      "name": "Staatspolitische Kommission Ständerat",
+      "kuerzel": "SPK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2010-06-14",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss gemäss Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2010-09-20",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2010-10-01",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2010-10-01",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2010-02-24",
+      "art": "Bundesblatt",
+      "jahr": "2010",
+      "nummer": "1467",
+      "text": "Botschaft vom 24. Februar 2010 zum Bundesgesetz über die Koordination des Asyl- und Auslieferungsverfahrens",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2010-02-24",
+      "art": "Bundesblatt",
+      "jahr": null,
+      "nummer": null,
+      "text": "Bundesgesetz über die Koordination des Asyl- und des Auslieferungsverfahrens",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2010-10-12",
+      "art": "Bundesblatt",
+      "jahr": "2010",
+      "nummer": "6575",
+      "text": null,
+      "referendumsfrist": "2011-01-20"
+    },
+    {
+      "datum": "2011-03-15",
+      "art": "Amtliche Sammlung",
+      "jahr": "2011",
+      "nummer": "925",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2010-10-01",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 132,
+        "nein": 61,
+        "enthaltung": 0,
+        "anwesend": 0,
+        "nichtTeilgenommen": 6,
+        "entschuldigt": 0,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

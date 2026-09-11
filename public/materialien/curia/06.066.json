@@ -1,0 +1,119 @@
+{
+  "nummer": "06.066",
+  "titel": "Ja zur Komplementärmedizin. Volksinitiative",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2006-08-30",
+  "erstrat": "Nationalrat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20060066",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2006-08-30",
+      "name": "Kommission für soziale Sicherheit und Gesundheit Nationalrat",
+      "kuerzel": "SGK-N"
+    },
+    {
+      "datum": "2006-08-30",
+      "name": "Kommission für soziale Sicherheit und Gesundheit Ständerat",
+      "kuerzel": "SGK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2007-09-19",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss gemäss Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2007-12-13",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichend. Fristverlängerung bis 14. März 2009.",
+      "vorlage": 1
+    },
+    {
+      "datum": "2007-12-19",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Fristverlängerung bis 14. März 2009.",
+      "vorlage": 1
+    },
+    {
+      "datum": "2008-09-17",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2008-10-03",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2008-10-03",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2008-10-15",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Mit Erklärung vom 15. Oktober 2008 gibt das Initiativkomitee der Bundeskanzlei davon Kenntnis, dass die Initiative mit der nötigen Mehrheit zurückgezogen worden ist (BBl 2008 8605).",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2006-08-30",
+      "art": "Bundesblatt",
+      "jahr": "2006",
+      "nummer": "7591",
+      "text": "Botschaft vom 30. August 2006 über die Volksinitiative \"Ja zur Komplementärmedizin\"",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2006-08-30",
+      "art": "Bundesblatt",
+      "jahr": null,
+      "nummer": null,
+      "text": "Bundesbeschluss über die Volksinitiative \"Ja zur Komplementärmedizin\"",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2008-10-14",
+      "art": "Bundesblatt",
+      "jahr": "2008",
+      "nummer": "8229",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2008-10-03",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 152,
+        "nein": 16,
+        "enthaltung": 24,
+        "anwesend": 0,
+        "nichtTeilgenommen": 6,
+        "entschuldigt": 1,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

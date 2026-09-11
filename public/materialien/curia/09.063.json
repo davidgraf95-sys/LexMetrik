@@ -1,0 +1,113 @@
+{
+  "nummer": "09.063",
+  "titel": "Militärgesetz. Änderung",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2009-08-19",
+  "erstrat": "Ständerat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20090063",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2009-08-19",
+      "name": "Sicherheitspolitische Kommission Nationalrat",
+      "kuerzel": "SiK-N"
+    },
+    {
+      "datum": "2009-08-19",
+      "name": "Sicherheitspolitische Kommission Ständerat",
+      "kuerzel": "SiK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2009-12-09",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2010-03-09",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2010-03-16",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2010-03-19",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2010-03-19",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2009-08-19",
+      "art": "Bundesblatt",
+      "jahr": "2009",
+      "nummer": "5917",
+      "text": "Botschaft vom 19. August 2009 zur Änderung des Militärgesetzes",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2009-08-19",
+      "art": "Bundesblatt",
+      "jahr": null,
+      "nummer": null,
+      "text": "Bundesgesetz über die Armee und die Militärverwaltung (Militärgesetz, MG)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2010-03-30",
+      "art": "Bundesblatt",
+      "jahr": "2010",
+      "nummer": "2065",
+      "text": null,
+      "referendumsfrist": "2010-07-08"
+    },
+    {
+      "datum": "2010-12-21",
+      "art": "Amtliche Sammlung",
+      "jahr": "2010",
+      "nummer": "6015",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2010-03-19",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 158,
+        "nein": 2,
+        "enthaltung": 31,
+        "anwesend": 0,
+        "nichtTeilgenommen": 8,
+        "entschuldigt": 0,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

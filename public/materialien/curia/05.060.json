@@ -1,0 +1,120 @@
+{
+  "nummer": "05.060",
+  "titel": "StGB und MStG. Korrekturen am Sanktions- und Strafregisterrecht",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2005-06-29",
+  "erstrat": "Ständerat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20050060",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2005-06-29",
+      "name": "Kommission für Rechtsfragen Nationalrat",
+      "kuerzel": "RK-N"
+    },
+    {
+      "datum": "2005-06-29",
+      "name": "Kommission für Rechtsfragen Ständerat",
+      "kuerzel": "RK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2005-12-14",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2006-03-09",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Eintretensdebatte.",
+      "vorlage": 1
+    },
+    {
+      "datum": "2006-03-15",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2006-03-22",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2006-03-24",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2006-03-24",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2005-06-29",
+      "art": "Bundesblatt",
+      "jahr": "2005",
+      "nummer": "4689",
+      "text": "Botschaft vom 29. Juni 2005 zur Änderung des Strafgesetzbuches in der Fassung vom 13. Dezember 2002 und des Militärstrafgesetzes in der Fassung vom 21. März 2003",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2005-06-29",
+      "art": "Bundesblatt",
+      "jahr": null,
+      "nummer": null,
+      "text": "Schweizerisches Strafgesetzbuch und Militärstrafgesetz (Korrekturen am Sanktions- und Strafregisterrecht)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2006-04-04",
+      "art": "Bundesblatt",
+      "jahr": "2006",
+      "nummer": "3557",
+      "text": null,
+      "referendumsfrist": "2006-07-13"
+    },
+    {
+      "datum": "2006-09-05",
+      "art": "Amtliche Sammlung",
+      "jahr": "2006",
+      "nummer": "3539",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2006-03-24",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 129,
+        "nein": 64,
+        "enthaltung": 0,
+        "anwesend": 0,
+        "nichtTeilgenommen": 6,
+        "entschuldigt": 0,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

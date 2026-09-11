@@ -1,0 +1,98 @@
+{
+  "nummer": "12.098",
+  "titel": "Gegen Masseneinwanderung. Volksinitiative",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2012-12-07",
+  "erstrat": "Nationalrat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20120098",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2012-12-07",
+      "name": "Staatspolitische Kommission Nationalrat",
+      "kuerzel": "SPK-N"
+    },
+    {
+      "datum": "2012-12-07",
+      "name": "Staatspolitische Kommission Ständerat",
+      "kuerzel": "SPK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2013-06-20",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss gemäss Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2013-09-19",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2013-09-27",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2013-09-27",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2012-12-07",
+      "art": "Bundesblatt",
+      "jahr": "2013",
+      "nummer": "291",
+      "text": "Botschaft vom 7. Dezember 2012 zur Volksinitiative «Gegen Masseneinwanderung»",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2012-12-07",
+      "art": "Bundesblatt",
+      "jahr": "2013",
+      "nummer": "345",
+      "text": "Bundesbeschluss über die Volksinitiative «Gegen Masseneinwanderung»",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2013-10-08",
+      "art": "Bundesblatt",
+      "jahr": "2013",
+      "nummer": "7351",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2013-09-27",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 140,
+        "nein": 54,
+        "enthaltung": 1,
+        "anwesend": 0,
+        "nichtTeilgenommen": 4,
+        "entschuldigt": 0,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

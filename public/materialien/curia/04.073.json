@@ -1,0 +1,106 @@
+{
+  "nummer": "04.073",
+  "titel": "Arbeitsgesetz. Änderung",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2004-11-17",
+  "erstrat": "Ständerat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20040073",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2004-11-17",
+      "name": "Kommission für Wirtschaft und Abgaben Nationalrat",
+      "kuerzel": "WAK-N"
+    },
+    {
+      "datum": "2004-11-17",
+      "name": "Kommission für Wirtschaft und Abgaben Ständerat",
+      "kuerzel": "WAK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2005-03-15",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss gemäss Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2006-06-15",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2006-06-23",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2006-06-23",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2004-11-17",
+      "art": "Bundesblatt",
+      "jahr": "2004",
+      "nummer": "6773",
+      "text": "Botschaft vom 17. November 2004 zur Änderung des Bundesgesetzes über die Arbeit in Industrie, Gewerbe und Handel (Arbeitsgesetz)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2004-11-17",
+      "art": "Bundesblatt",
+      "jahr": null,
+      "nummer": null,
+      "text": "Bundesgesetz über die Arbeit in Industrie, Gewerbe und Handel (Arbeitsgesetz)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2006-07-04",
+      "art": "Bundesblatt",
+      "jahr": "2006",
+      "nummer": "5861",
+      "text": null,
+      "referendumsfrist": "2006-10-12"
+    },
+    {
+      "datum": "2007-10-30",
+      "art": "Amtliche Sammlung",
+      "jahr": "2007",
+      "nummer": "4957",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2006-06-23",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 114,
+        "nein": 74,
+        "enthaltung": 1,
+        "anwesend": 0,
+        "nichtTeilgenommen": 10,
+        "entschuldigt": 0,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "nummer": "22.044",
+  "titel": "Ausländer- und Integrationsgesetz. Finanzielle Unterstützung von Kantonen mit Ausreisezentren an der Grenze. Änderung",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2022-05-18",
+  "erstrat": "Nationalrat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20220044",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2022-05-18",
+      "name": "Staatspolitische Kommission Nationalrat",
+      "kuerzel": "SPK-N"
+    },
+    {
+      "datum": "2022-05-18",
+      "name": "Staatspolitische Kommission Ständerat",
+      "kuerzel": "SPK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2022-09-22",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2022-11-29",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2022-12-12",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2022-12-16",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2022-12-16",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2022-05-18",
+      "art": "Bundesblatt",
+      "jahr": "2022",
+      "nummer": "1312",
+      "text": "Botschaft vom 18. Mai 2022 zur Änderung des Ausländer- und Integrationsgesetzes (Finanzielle Unterstützung von Kantonen mit Ausreisezentren an der Grenze)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2022-05-18",
+      "art": "Bundesblatt",
+      "jahr": "2022",
+      "nummer": "1313",
+      "text": "Bundesgesetz über die Ausländerinnen und Ausländer und über die Integration (Ausländer- und Integrationsgesetz, AIG) (Finanzielle Unterstützung von Kantonen mit Ausreisezentren an der Grenze)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2022-12-29",
+      "art": "Bundesblatt",
+      "jahr": "2022",
+      "nummer": "3208",
+      "text": null,
+      "referendumsfrist": "2023-04-08"
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2022-12-16",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 194,
+        "nein": 1,
+        "enthaltung": 1,
+        "anwesend": 0,
+        "nichtTeilgenommen": 1,
+        "entschuldigt": 2,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

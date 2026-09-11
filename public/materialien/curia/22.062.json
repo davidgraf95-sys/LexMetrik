@@ -1,0 +1,148 @@
+{
+  "nummer": "22.062",
+  "titel": "KVG. Änderung (Massnahmen zur Kostendämpfung – Paket 2)",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2022-09-07",
+  "erstrat": "Nationalrat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20220062",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2022-09-07",
+      "name": "Kommission für soziale Sicherheit und Gesundheit Nationalrat",
+      "kuerzel": "SGK-N"
+    },
+    {
+      "datum": "2022-09-07",
+      "name": "Kommission für soziale Sicherheit und Gesundheit Ständerat",
+      "kuerzel": "SGK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2023-09-28",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2024-06-13",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2024-12-09",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2025-03-04",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2025-03-13",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2025-03-18",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2025-03-19",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss gemäss Antrag der Einigungskonferenz",
+      "vorlage": 1
+    },
+    {
+      "datum": "2025-03-20",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss gemäss Antrag der Einigungskonferenz",
+      "vorlage": 1
+    },
+    {
+      "datum": "2025-03-21",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2025-03-21",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2022-09-07",
+      "art": "Bundesblatt",
+      "jahr": "2022",
+      "nummer": "2427",
+      "text": "Botschaft vom 7. September 2022 zur Änderung des Bundesgesetzes über die Krankenversicherung (Massnahmen zur Kostendämpfung – Paket 2)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2022-09-07",
+      "art": "Bundesblatt",
+      "jahr": "2022",
+      "nummer": "2428",
+      "text": "Bundesgesetz über die Krankenversicherung (KVG) (Massnahmen zur Kostendämpfung – Paket 2)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2025-04-01",
+      "art": "Bundesblatt",
+      "jahr": "2025",
+      "nummer": "1108",
+      "text": null,
+      "referendumsfrist": "2025-07-10"
+    },
+    {
+      "datum": "2026-06-09",
+      "art": "Amtliche Sammlung",
+      "jahr": "2026",
+      "nummer": "294",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2025-03-21",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 183,
+        "nein": 0,
+        "enthaltung": 8,
+        "anwesend": 0,
+        "nichtTeilgenommen": 2,
+        "entschuldigt": 5,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 199
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

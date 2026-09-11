@@ -1,0 +1,106 @@
+{
+  "nummer": "18.091",
+  "titel": "Bundesgesetz über die Familienzulagen. Änderung",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2018-11-30",
+  "erstrat": "Nationalrat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20180091",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2018-11-30",
+      "name": "Kommission für soziale Sicherheit und Gesundheit Nationalrat",
+      "kuerzel": "SGK-N"
+    },
+    {
+      "datum": "2018-11-30",
+      "name": "Kommission für soziale Sicherheit und Gesundheit Ständerat",
+      "kuerzel": "SGK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2019-03-19",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss gemäss Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2019-09-19",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2019-09-27",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2019-09-27",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2018-11-30",
+      "art": "Bundesblatt",
+      "jahr": "2019",
+      "nummer": "1019",
+      "text": "Botschaft vom 30. November 2018 zur Änderung des Familienzulagengesetzes",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2018-11-30",
+      "art": "Bundesblatt",
+      "jahr": "2019",
+      "nummer": "1065",
+      "text": "Bundesgesetz über die Familienzulagen (Familienzulagengesetz, FamZG)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2019-10-08",
+      "art": "Bundesblatt",
+      "jahr": "2019",
+      "nummer": "6563",
+      "text": null,
+      "referendumsfrist": "2020-01-16"
+    },
+    {
+      "datum": "2020-07-07",
+      "art": "Amtliche Sammlung",
+      "jahr": "2020",
+      "nummer": "2775",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2019-09-27",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 196,
+        "nein": 1,
+        "enthaltung": 0,
+        "anwesend": 0,
+        "nichtTeilgenommen": 0,
+        "entschuldigt": 1,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 199
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

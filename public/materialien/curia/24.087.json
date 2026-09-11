@@ -1,0 +1,106 @@
+{
+  "nummer": "24.087",
+  "titel": "Weiterentwicklung des Schengen-Besitzstands. Digitalisierung des Visumverfahrens. Genehmigung und Umsetzung ",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2024-11-13",
+  "erstrat": "Nationalrat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20240087",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2024-11-14",
+      "name": "Staatspolitische Kommission Nationalrat",
+      "kuerzel": "SPK-N"
+    },
+    {
+      "datum": "2024-11-14",
+      "name": "Staatspolitische Kommission Ständerat",
+      "kuerzel": "SPK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2025-06-17",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Beschluss gemäss Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2025-09-09",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2025-09-26",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2025-09-26",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2023-12-13",
+      "art": "Bundesblatt",
+      "jahr": "2024",
+      "nummer": "3276",
+      "text": "Notenaustausch vom 13. Dezember 2023 zwischen der Schweiz und der Europäischen Union betreffend die Übernahme der Verordnung (EU) 2023/2667 zur Änderung der Verordnungen (EG) Nr. 767/2008, (EG) Nr. 810/2009, (EU) 2017/2226, (EG) Nr. 693/2003 und (EG) Nr. 694/2003 und des Übereinkommens zur Durchführung des Übereinkommens von Schengen in Hinblick auf die Digitalisierung des Visumverfahrens (Weiterentwicklung des Schengen-Besitzstands)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2024-11-13",
+      "art": "Bundesblatt",
+      "jahr": "2024",
+      "nummer": "3274",
+      "text": "Botschaft vom 13. November 2024 zur Genehmigung und Umsetzung des Notenaustauschs zwischen der Schweiz und der EU betreffend die Übernahme der Verordnung (EU) 2023/2667 zur Änderung mehrerer Rechtsakte der EU im Hinblick auf die Digitalisierung des Visumverfahrens (Weiterentwicklung des Schengen-Besitzstands)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2024-11-13",
+      "art": "Bundesblatt",
+      "jahr": "2024",
+      "nummer": "3275",
+      "text": "Bundesbeschluss über die Genehmigung und die Umsetzung des Notenaustauschs zwischen der Schweiz und der EU betreffend die Übernahme der Verordnung (EU) 2023/2667 zur Änderung mehrerer Rechtsakte im Hinblick auf die Digitalisierung des Visumverfahrens (Weiterentwicklung des Schengen-Besitzstands)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2025-10-07",
+      "art": "Bundesblatt",
+      "jahr": "2025",
+      "nummer": "2901",
+      "text": null,
+      "referendumsfrist": "2026-01-15"
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2025-09-26",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 133,
+        "nein": 63,
+        "enthaltung": 0,
+        "anwesend": 0,
+        "nichtTeilgenommen": 0,
+        "entschuldigt": 2,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 199
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

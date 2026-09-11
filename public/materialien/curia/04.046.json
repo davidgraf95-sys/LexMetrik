@@ -1,0 +1,120 @@
+{
+  "nummer": "04.046",
+  "titel": "Bundesgesetz über den Schutz von Pflanzenzüchtungen. Revision und internationales Übereinkommen",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2004-06-23",
+  "erstrat": "Ständerat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20040046",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2004-06-23",
+      "name": "Kommission für Wirtschaft und Abgaben Nationalrat",
+      "kuerzel": "WAK-N"
+    },
+    {
+      "datum": "2004-06-23",
+      "name": "Kommission für Wirtschaft und Abgaben Ständerat",
+      "kuerzel": "WAK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2005-06-06",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2007-06-12",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2007-09-18",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Abweichung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2007-09-20",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2007-10-05",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2007-10-05",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2004-06-23",
+      "art": "Bundesblatt",
+      "jahr": "2004",
+      "nummer": "4155",
+      "text": "Botschaft vom 23. Juni 2004 über die Genehmigung des revidierten internationalen Übereinkommens zum Schutz von Pflanzenzüchtungen und die Änderung des Sortenschutzgesetzes",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2004-06-23",
+      "art": "Bundesblatt",
+      "jahr": null,
+      "nummer": null,
+      "text": "Bundesbeschluss über die Genehmigung des revidierten internationalen Übereinkommens zum Schutz von Pflanzenzüchtungen und die Änderung des Sortenschutzgesetzes und des Patentgesetzes",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2007-10-16",
+      "art": "Bundesblatt",
+      "jahr": "2007",
+      "nummer": "7207",
+      "text": null,
+      "referendumsfrist": "2008-01-24"
+    },
+    {
+      "datum": "2008-08-19",
+      "art": "Amtliche Sammlung",
+      "jahr": "2008",
+      "nummer": "3897",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2007-10-05",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 184,
+        "nein": 0,
+        "enthaltung": 0,
+        "anwesend": 0,
+        "nichtTeilgenommen": 13,
+        "entschuldigt": 2,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "nummer": "13.049",
+  "titel": "ZGB. Vorsorgeausgleich bei Scheidung",
+  "geschaeftstyp": "Geschäft des Bundesrates",
+  "status": "Erledigt",
+  "eingereicht": "2013-05-29",
+  "erstrat": "Ständerat",
+  "quelleUrl": "https://www.parlament.ch/de/ratsbetrieb/suche-curia-vista/geschaeft?AffairId=20130049",
+  "quellenangabe": "Parlamentsdienste der Bundesversammlung, Bern",
+  "abgerufen": "2026-09-11",
+  "kommissionen": [
+    {
+      "datum": "2013-05-29",
+      "name": "Kommission für Rechtsfragen Nationalrat",
+      "kuerzel": "RK-N"
+    },
+    {
+      "datum": "2013-05-29",
+      "name": "Kommission für Rechtsfragen Ständerat",
+      "kuerzel": "RK-S"
+    }
+  ],
+  "beschluesse": [
+    {
+      "datum": "2014-06-12",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Beschluss abweichend vom Entwurf",
+      "vorlage": 1
+    },
+    {
+      "datum": "2015-06-01",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Zustimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2015-06-19",
+      "rat": "Nationalrat",
+      "ratKuerzel": "NR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    },
+    {
+      "datum": "2015-06-19",
+      "rat": "Ständerat",
+      "ratKuerzel": "SR",
+      "text": "Annahme in der Schlussabstimmung",
+      "vorlage": 1
+    }
+  ],
+  "publikationen": [
+    {
+      "datum": "2013-05-29",
+      "art": "Bundesblatt",
+      "jahr": "2013",
+      "nummer": "4887",
+      "text": "Botschaft vom 29. Mai 2013 zur Änderung des Schweizerischen Zivilgesetzbuches (Vorsorgeausgleich bei Scheidung)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2013-05-29",
+      "art": "Bundesblatt",
+      "jahr": "2013",
+      "nummer": "4959",
+      "text": "Schweizerisches Zivilgesetzbuch (Vorsorgeausgleich bei Scheidung)",
+      "referendumsfrist": null
+    },
+    {
+      "datum": "2015-06-30",
+      "art": "Bundesblatt",
+      "jahr": "2015",
+      "nummer": "4883",
+      "text": null,
+      "referendumsfrist": "2015-10-08"
+    },
+    {
+      "datum": "2016-07-08",
+      "art": "Amtliche Sammlung",
+      "jahr": "2016",
+      "nummer": "2313",
+      "text": null,
+      "referendumsfrist": null
+    }
+  ],
+  "schlussabstimmungen": [
+    {
+      "datum": "2015-06-19",
+      "vorlage": 1,
+      "rat": "Nationalrat",
+      "aggregat": {
+        "ja": 139,
+        "nein": 52,
+        "enthaltung": 3,
+        "anwesend": 0,
+        "nichtTeilgenommen": 2,
+        "entschuldigt": 3,
+        "praesidiumStimmtNicht": 1,
+        "demissioniert": 0,
+        "total": 200
+      },
+      "beschriftung": "eigene Auszählung der amtlichen Einzelstimmen, Abruf 2026-09-11"
+    }
+  ]
+}
