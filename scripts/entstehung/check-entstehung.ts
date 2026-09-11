@@ -46,7 +46,7 @@ import {
   SYNOPSE_DIR, NORM_PROFIL, SynopseBlockIndex, type SynopseShard, type SynopseBlock,
 } from '../../src/lib/entstehung/synopse.ts';
 import { serialisiereShard as serialisiereSynopse, shaShard as shaSynopse } from './synopse.ts';
-import { geltendeBloecke, leerDiffVerletzungen } from '../../src/lib/entstehung/synopse-diff.ts';
+import { geltendeBloecke, leerDiffVerletzungen, phantomVerletzungen } from '../../src/lib/entstehung/synopse-diff.ts';
 import { SYNOPSE_REGISTER_PFAD, type SynopseRegister } from './synopse-register.ts';
 import { ENTWURF_DIR, type EntwurfShard } from '../../src/lib/entstehung/synopse-entwurf.ts';
 import { serialisiereEntwurfShard, shaEntwurfShard } from './synopse-entwurf.ts';
@@ -323,6 +323,7 @@ for (const [name, pfad, max, gzip] of DECKEL) {
   let staende = 0;
   let leerDiffGeprueft = 0;
   let leerDiffAusgenommen = 0;
+  let phantomAusgenommen = 0;
   if (register) {
     for (const f of dateien) {
       const key = f.slice(0, -'.json'.length);
@@ -443,6 +444,29 @@ for (const [name, pfad, max, gzip] of DECKEL) {
           + `${LEERDIFF_AUSNAHME_PFAD} eintragen (max. ${LEERDIFF_AUSNAHME_TAGE_MAX} Tage, Muster #779).`,
         );
       }
+      // ZWEITER AST (Auflage A5): der ERFUNDENE Unterschied — Alt und Neu sind nach der
+      // gemeinsamen Vergleichsform identisch, das Titel-Paar gleich, und der Block steht
+      // trotzdem im Shard. Dieselbe Ausnahmeliste, dieselbe Frist.
+      for (const v of phantomVerletzungen(shard, geltendFuerToken)) {
+        const eintrag = { erlass: key, token: v.token, stand: v.stand, zustand: v.zustand };
+        if (leerDiffAusnahmeGueltig(leerDiffAusnahmen, eintrag, heuteAusnahme)) {
+          phantomAusgenommen += 1;
+          zeilen.push(
+            `check:entstehung — Phantom-Ausnahme (befristet, Muster #779): ${key} Token `
+            + `${v.token} @${v.stand} (${v.zustand}) — siehe ${LEERDIFF_AUSNAHME_PFAD}.`,
+          );
+          continue;
+        }
+        fehler.push(
+          `Synopse ${f}: Alt-Block Token ${v.token} @${v.stand} (${v.zustand}) ist nach der `
+          + 'gemeinsamen Vergleichsform IDENTISCH mit seinem «Neu» (Titel-Paar gleich) — der '
+          + 'Shard behauptet eine Änderung, die es amtlich nicht gibt (§1/§8: erfundene '
+          + 'Änderung). Ursache ist in aller Regel eine wandernde Elementgrenze (Ordnungs-'
+          + 'Suffix «bis»/«quater», Absatz-Etikett im Text statt im <num>). Generator neu '
+          + 'laufen (npm run entstehung:synopse -- --datum=… --parser-neu="<Grund>"), oder '
+          + `befristete Ausnahme in ${LEERDIFF_AUSNAHME_PFAD} (max. ${LEERDIFF_AUSNAHME_TAGE_MAX} Tage).`,
+        );
+      }
       leerDiffGeprueft += 1;
     }
     for (const key of Object.keys(register.erlasse)) {
@@ -456,8 +480,9 @@ for (const [name, pfad, max, gzip] of DECKEL) {
     + `${bloecke} Alt-Blöcke (${ohneEreignis} ohne Fussnoten-Ereignis, ${konflikte} Fussnoten-Ereignisse ohne `
     + `beobachtete Textänderung — beides angezeigt, nie aufgelöst); grösster Erlass ${groesster[0]} `
     + `${kb(groesster[1])} / ${kb(JE_ERLASS)} (${((groesster[1] / JE_ERLASS) * 100).toFixed(0)} %); `
-    + `Leer-Diff-Wächter (§5, Profil ${NORM_PROFIL}) gegen ${leerDiffGeprueft} Erlass-Korpora geprüft, `
-    + `${leerDiffAusgenommen} befristete Ausnahme(n) (Muster #779, ${LEERDIFF_AUSNAHME_PFAD}).`,
+    + `Leer-Diff- UND Phantom-Wächter (§5/§1, Profil ${NORM_PROFIL}) gegen ${leerDiffGeprueft} Erlass-Korpora `
+    + `geprüft, ${leerDiffAusgenommen} + ${phantomAusgenommen} befristete Ausnahme(n) `
+    + `(Muster #779, ${LEERDIFF_AUSNAHME_PFAD}).`,
   );
 }
 

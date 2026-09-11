@@ -257,6 +257,92 @@ describe('vergleichsFolge — ein aufgeteilter Block ist keine Änderung (SSV Ar
   });
 });
 
+describe('Phantom-Änderungen: wandernde Elementgrenzen sind keine Gesetzesänderung (Auflage A5)', () => {
+  // Alle vier Fixtures sind gekürzte, strukturell unveränderte Ausschnitte der amtlichen
+  // AKN-Konsolidierungen (Fedlex Filestore, abgerufen 12.9.2026). Profil `/4` hat sie vor
+  // dieser Auflage als Änderung gebucht, obwohl der Wortlaut Zeichen für Zeichen derselbe
+  // ist — der Leser sah eine Gesetzesänderung, die es nie gab (§1/§8).
+
+  it('Ordnungs-Suffix wandert aus dem Text in das <num> (GEBV_SchKG Art. 9 Abs. 1bis)', () => {
+    // 2022-01-01: `<num>1</num><p><sup>bis</sup> Erfordert …` — das Etikett «1» ist
+    // dasselbe wie beim Absatz davor, das «bis» klebt am Textanfang.
+    // 2026-01-01: `<num>1<sup>bis</sup></num><p> Erfordert …`.
+    const bau = (absatzBis: string, textBis: string) => dok(
+      '<article eId="art_9"><num>Art. 9</num><heading>Schriftstücke</heading>'
+      + '<paragraph eId="art_9/para_1"><num>1</num><content><blockList>'
+      + '<listIntroduction>Die Gebühr beträgt:</listIntroduction>'
+      + '<item><num>a. </num><p>8 Franken je Seite;</p></item>'
+      + '</blockList></content></paragraph>'
+      + `<paragraph eId="art_9/para_1_bis"><num>1${absatzBis}</num><content><p>${textBis} Erfordert die `
+      + 'Erstellung mehr als eine Stunde, so erhöht sich die Gebühr.</p></content></paragraph></article>',
+    );
+    const alt = bau('', '<sup>bis</sup>');
+    const neu = bau('<sup>bis</sup>', '');
+    expect(normalisiere(flachText(artikel(alt, 'art_9')))).toBe(normalisiere(flachText(artikel(neu, 'art_9'))));
+    expect(diffStaende(extrahiereArtikel(alt), extrahiereArtikel(neu)).geaendert).toEqual([]);
+  });
+
+  it('dasselbe in der Listeneinleitung (KLV Art. 7 Abs. 2bis) und im Fliesstext (VRV Art. 67 Abs. 1quater)', () => {
+    // Der VORANGEHENDE Absatz trägt dasselbe Etikett «2» bzw. «1» — genau daran ist die
+    // Regel «Etikett nur beim Wechsel» gescheitert (Auflage A5).
+    const klv = (absatzBis: string, introBis: string) => dok(
+      '<article eId="art_7"><num>Art. 7</num>'
+      + '<paragraph eId="art_7/para_2"><num>2</num><content><p>Die Bedarfsabklärung erfolgt.</p></content></paragraph>'
+      + `<paragraph eId="art_7/para_2_bis"><num>2${absatzBis}</num><content>`
+      + `<blockList><listIntroduction>${introBis} Die folgenden Voraussetzungen müssen erfüllt sein:</listIntroduction>`
+      + '<item><num>a. </num><p>Die Leistungen sind nötig.</p></item></blockList></content></paragraph></article>',
+    );
+    expect(diffStaende(
+      extrahiereArtikel(klv('', '<sup>bis</sup>')),
+      extrahiereArtikel(klv('<sup>bis</sup>', '')),
+    ).geaendert).toEqual([]);
+    const vrv = (absatzQ: string, textQ: string) => dok(
+      '<article eId="art_67"><num>Art. 67</num>'
+      + '<paragraph eId="art_67/para_1"><num>1</num><content><p>Das Betriebsgewicht darf höchstens betragen: 40,00 t.</p></content></paragraph>'
+      + `<paragraph eId="art_67/para_1_quater"><num>1${absatzQ}</num><content>`
+      + `<p>${textQ} Das Betriebsgewicht darf um das Mehrgewicht höher sein.</p></content></paragraph></article>`,
+    );
+    expect(diffStaende(
+      extrahiereArtikel(vrv('', '<sup>quater</sup>')),
+      extrahiereArtikel(vrv('<sup>quater</sup>', '')),
+    ).geaendert).toEqual([]);
+  });
+
+  it('Absatz-Etikett wandert aus dem Text in ein eigenes <num>, ein Absatz wird zu zweien (MWSTG Art. 97)', () => {
+    // 2023-09-01: der GANZE Artikel ist EIN `<paragraph eId="art_97/para">`, die
+    // Absatz-Ziffern stehen im Text. 2024-01-01: zwei Absätze mit eigenem `<num>`.
+    const alt = dok(
+      '<article eId="art_97"><num>Art. 97</num><heading>Strafzumessung</heading>'
+      + '<paragraph eId="art_97/para"><content><p>1 Die Busse wird bemessen.</p>'
+      + '<blockList><listIntroduction eId="art_97/para/listintro">2 Als erschwerende Umstände gelten:</listIntroduction>'
+      + '<item eId="art_97/para/lbl_a"><num>a. </num><p>das Anwerben einer Person;</p></item>'
+      + '</blockList></content></paragraph></article>',
+    );
+    const neu = dok(
+      '<article eId="art_97"><num>Art. 97</num><heading>Strafzumessung</heading>'
+      + '<paragraph eId="art_97/para_1"><num>1</num><content><p> Die Busse wird bemessen.</p></content></paragraph>'
+      + '<paragraph eId="art_97/para_2"><num>2</num><content><blockList>'
+      + '<listIntroduction eId="art_97/para_2/listintro"> Als erschwerende Umstände gelten:</listIntroduction>'
+      + '<item eId="art_97/para_2/lbl_a"><num>a. </num><p>das Anwerben einer Person;</p></item>'
+      + '</blockList></content></paragraph></article>',
+    );
+    expect(diffStaende(extrahiereArtikel(alt), extrahiereArtikel(neu)).geaendert).toEqual([]);
+    // UND: der Listenpunkt behält sein amtliches Etikett «a.» — die alte, ungezielte
+    // `<num>`-Entfernung hatte es dem Absatz zugeschlagen und aus dem Block gelöscht.
+    const bloecke = artikel(alt, 'art_97').bloecke;
+    expect(bloecke.some((b) => b[1] === 'a.' && b[2] === 'das Anwerben einer Person;')).toBe(true);
+    expect(bloecke.every((b) => b[0] === '')).toBe(true); // dieser Absatz führt kein eigenes <num>
+  });
+
+  it('lässt eine ECHTE Absatz-Umbenennung weiterhin durch (Abs. 2 → Abs. 1, gleicher Wortlaut)', () => {
+    const mit = (nummer: string) => dok(
+      `<article eId="art_5"><num>Art. 5</num><paragraph eId="art_5/para"><num>${nummer}</num><content>`
+      + '<p>Unveränderter Wortlaut.</p></content></paragraph></article>',
+    );
+    expect(diffStaende(extrahiereArtikel(mit('2')), extrahiereArtikel(mit('1'))).geaendert).toEqual(['art_5']);
+  });
+});
+
 describe('Sachüberschrift: eine Randtitel-Änderung ist eine Änderung (Auflage A2, Profil /4)', () => {
   // BVG Art. 33b, 2023-01-01 → 2024-01-01 (amtliche Konsolidierungen, Fedlex Filestore
   // ELI cc/1983/797_797_797, abgerufen 12.9.2026, real und ungekürzt): der Randtitel

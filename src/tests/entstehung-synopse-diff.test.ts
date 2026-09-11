@@ -14,7 +14,7 @@
 import { describe, it, expect } from 'vitest';
 import {
   geltendeBloecke, lageFuerEreignis, ohneEreignisFuerArtikel, synopseZeilen,
-  tokenAusLabel, wortDiff, hatUnterschied, vergleichsform, leerDiffVerletzungen, nurTitelGeaendert, AEHNLICH_MIN,
+  tokenAusLabel, wortDiff, hatUnterschied, vergleichsform, leerDiffVerletzungen, phantomVerletzungen, nurTitelGeaendert, AEHNLICH_MIN,
   type SynopseZeile,
 } from '../lib/entstehung/synopse-diff';
 import type { SynopseBlock, SynopseShard } from '../lib/entstehung/synopse';
@@ -319,6 +319,58 @@ describe('leerDiffVerletzungen — der Leer-Diff-Wächter von check:entstehung (
       })),
     };
     expect(leerDiffVerletzungen(manipuliert, () => GELTEND)).toEqual([]);
+  });
+});
+
+describe('phantomVerletzungen — der erfundene Unterschied (Auflage A5)', () => {
+  it('meldet nichts, solange jeder gespeicherte Block wirklich einen anderen Wortlaut trägt', () => {
+    expect(phantomVerletzungen(SHARD, () => GELTEND)).toEqual([]);
+  });
+
+  it('Rot-Beweis: Alt und Neu identisch nach der Vergleichsform, Titel-Paar gleich ⇒ Phantom', () => {
+    // Die Klasse aus der Neuprüfung: der Wortlaut ist derselbe, nur die Blockgrenze wandert
+    // (hier: das Ordnungs-Suffix «bis» steht einmal im Etikett, einmal am Textanfang).
+    // `synopseZeilen` richtet über die Etiketten aus und zeigt darum einen Unterschied —
+    // der Leer-Diff-Ast kann das nicht fangen, dieser Ast schon.
+    const manipuliert = {
+      ...SHARD,
+      schritte: SHARD.schritte.map((s, i) => (i !== 1 ? s : {
+        ...s,
+        artikel: s.artikel.map((a) => (a.eId !== 'art_7' ? a : {
+          ...a, alt: [B('1', '', 'bis Dritte Fassung des Absatzes.')],
+        })),
+      })),
+    };
+    const geltend = [B('1bis', '', 'Dritte Fassung des Absatzes.')];
+    expect(hatUnterschied(synopseZeilen(manipuliert.schritte[1].artikel[1].alt, geltend))).toBe(true);
+    expect(phantomVerletzungen(manipuliert, () => geltend))
+      .toEqual([{ token: '7', stand: '2023-01-01', zustand: 'ohne_ereignis' }]);
+  });
+
+  it('lässt eine ECHTE Absatz-Umbenennung unangetastet (Abs. 2 → Abs. 1, gleicher Wortlaut)', () => {
+    const manipuliert = {
+      ...SHARD,
+      schritte: SHARD.schritte.map((s, i) => (i !== 1 ? s : {
+        ...s,
+        artikel: s.artikel.map((a) => (a.eId !== 'art_7' ? a : {
+          ...a, alt: [B('2', '', 'Dritte Fassung des Absatzes.')],
+        })),
+      })),
+    };
+    expect(phantomVerletzungen(manipuliert, () => [B('1', '', 'Dritte Fassung des Absatzes.')])).toEqual([]);
+  });
+
+  it('meldet nichts, wo sich die Sachüberschrift geändert hat — dann GIBT es eine Änderung', () => {
+    const manipuliert = {
+      ...SHARD,
+      schritte: SHARD.schritte.map((s, i) => (i !== 1 ? s : {
+        ...s,
+        artikel: s.artikel.map((a) => (a.eId !== 'art_7' ? a : {
+          ...a, ueberschrift: 'Alt', ueberschriftNeu: 'Neu', alt: [B('1', '', 'Dritte Fassung des Absatzes.')],
+        })),
+      })),
+    };
+    expect(phantomVerletzungen(manipuliert, () => GELTEND)).toEqual([]);
   });
 });
 

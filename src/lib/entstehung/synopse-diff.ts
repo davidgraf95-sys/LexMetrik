@@ -43,7 +43,7 @@
 import { istAufgehoben } from '../normtext/darstellung';
 import type { SynopseArtikel, SynopseBlock, SynopseSchritt, SynopseShard, SynopseZustand } from './synopse';
 import { SYNOPSE_FENSTER_AB } from './synopse';
-import { vergleichsform } from './normalisierung';
+import { vergleichsform, vergleichsformLeerraumBlind } from './normalisierung';
 
 // Rückwärtskompatibler Re-Export (Profil `entstehung-norm/4`, Befund #796): die EINE
 // Vergleichsform lebt jetzt in `normalisierung.ts` — von hier importiert Generator UND
@@ -521,6 +521,53 @@ export interface SynopseLeerDiff {
  * in `neuNach` selbst (eine Lineage-Regel über den Token hinaus, z. B. via
  * `oc`/eId-Kontinuität) — eigener Roadmap-Schritt, hier nicht gebaut.
  */
+/**
+ * ZWEITER AST DESSELBEN WÄCHTERS (Auflage A5, Gegenprüfung PR #798, 12.9.2026): der
+ * ERFUNDENE Unterschied — das Spiegelbild des Leer-Diffs.
+ *
+ * `leerDiffVerletzungen` fragt «zeigt der Leser zu wenig?». Diese Funktion fragt «zeigt er
+ * etwas, das es nicht gibt?»: Alt und Neu sind nach der gemeinsamen, leerraum-blinden
+ * Vergleichsform Zeichen für Zeichen dasselbe, das Titel-Paar ist gleich — und trotzdem
+ * steht der Block im Shard und die Karte malt eine Änderung. Der Leer-Diff-Ast KANN diese
+ * Klasse nicht fangen: dort unterscheiden sich die gespeicherten Blöcke ja wirklich, nur
+ * eben in der STRUKTUR (ein Ordnungs-Suffix «bis»/«quater», das zwischen `<num>` und dem
+ * Textanfang wandert, oder ein Absatz-Etikett, das eine Generation im Text und die
+ * nächste als Element führt).
+ *
+ * Vier Fälle im Bestand belegt (Profil `/4` vor dem Fix, gemessen 12.9.2026):
+ * MWSTG Art. 97 @2024-01-01, KLV Art. 7 @2025-07-01, GEBV_SCHKG Art. 9 @2026-01-01,
+ * VRV Art. 67 @2025-07-01 — alle vier amtlich wortgleich.
+ *
+ * ECHTE ETIKETT-ÄNDERUNGEN BLEIBEN SICHTBAR: eine Absatz-Umbenennung (Abs. 2 → Abs. 1 bei
+ * gleichem Wortlaut) ist nach dieser Vergleichsform NICHT identisch («2Text» ≠ «1Text») —
+ * sie wird also nie als Phantom gemeldet (§1; die Grenze selbst ist in `schluessel`
+ * dokumentiert).
+ */
+export function phantomVerletzungen(
+  shard: SynopseShard,
+  geltendFuerToken: (token: string) => readonly SynopseBlock[],
+): SynopseLeerDiff[] {
+  const out: SynopseLeerDiff[] = [];
+  for (const schritt of shard.schritte) {
+    for (const artikel of schritt.artikel) {
+      if (artikel.zustand !== 'belegt' && artikel.zustand !== 'ohne_ereignis') continue;
+      if (!artikel.token) continue;
+      if (artikel.ueberschriftNeu) continue; // Titel-Paar verschieden ⇒ es GIBT eine Änderung
+      const { neu } = neuNach(shard, artikel.token, schritt, artikel, geltendFuerToken(artikel.token));
+      if (neu === null) continue;
+      if (vergleichsformLeerraumBlind(alsText(artikel.alt)) === vergleichsformLeerraumBlind(alsText(neu))) {
+        out.push({ token: artikel.token, stand: schritt.bis, zustand: artikel.zustand });
+      }
+    }
+  }
+  return out;
+}
+
+/** Blockfolge als ein Vergleichstext — Etiketten mit, Reihenfolge amtlich. */
+function alsText(bloecke: readonly SynopseBlock[]): string {
+  return bloecke.map((b) => b.filter(Boolean).join(' ')).join('\n');
+}
+
 export function leerDiffVerletzungen(
   shard: SynopseShard,
   geltendFuerToken: (token: string) => readonly SynopseBlock[],

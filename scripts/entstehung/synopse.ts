@@ -197,39 +197,75 @@ export function zerlegeBloecke(inner: string): SynopseBlock[] {
     if (t) out.push(['', '', t]);
     return out;
   }
-  for (const p of paras) {
-    const koerper = p[1];
-    const absatz = reinerText(ersterTag(koerper, 'num') ?? '');
-    const ohneNum = koerper.replace(/<num\b[^>]*>[\s\S]*?<\/num>/, '');
-    const listen = blockListBereiche(ohneNum);
-    if (listen.length === 0) {
-      const t = reinerText(ohneNum);
-      if (t) out.push([absatz, '', t]);
-      continue;
-    }
-    // Fliesstext AUSSERHALB der Aufzählungen — Vorlauf, Zwischentext und NACHLAUF —
-    // trägt das Absatz-Etikett und sonst keines (Gegenprüfung PR #798, Auflage A1).
-    let pos = 0;
-    const fliesstext = (bis: number): void => {
-      const t = reinerText(ohneNum.slice(pos, bis));
-      if (t) out.push([absatz, '', t]);
-    };
-    for (const [von, bis] of listen) {
-      fliesstext(von);
-      const liste = ohneNum.slice(von, bis);
-      // Listeneinleitung («Dieses Gesetz regelt … für:») trägt das Absatz-Etikett.
-      const intro = reinerText(ersterTag(liste, 'listIntroduction') ?? '');
-      if (intro) out.push([absatz, '', intro]);
-      for (const it of liste.matchAll(/<item\b[^>]*>([\s\S]*?)<\/item>/g)) {
-        const num = reinerText(ersterTag(it[1], 'num') ?? '');
-        const t = reinerText(it[1].replace(/<num\b[^>]*>[\s\S]*?<\/num>/, ''));
-        if (t) out.push([absatz, num, t]);
-      }
-      pos = bis;
-    }
-    fliesstext(ohneNum.length);
-  }
+  for (const p of paras) out.push(...zerlegeAbsatz(p[1]));
   return out;
+}
+
+/**
+ * EIN `<paragraph>` → seine Blöcke. Herausgelöst (Auflage A5), weil `flachText` die
+ * Absatz-Grenze kennen muss: das Absatz-Etikett gehört im Vergleich GENAU EINMAL JE
+ * ABSATZ hingeschrieben, nicht je Block und nicht je Etikett-Wechsel (siehe `flachText`).
+ */
+function zerlegeAbsatz(koerper: string): SynopseBlock[] {
+  const out: SynopseBlock[] = [];
+  const { absatz, rumpf: ohneNum } = absatzKopf(koerper);
+  const listen = blockListBereiche(ohneNum);
+  if (listen.length === 0) {
+    const t = reinerText(ohneNum);
+    if (t) out.push([absatz, '', t]);
+    return out;
+  }
+  // Fliesstext AUSSERHALB der Aufzählungen — Vorlauf, Zwischentext und NACHLAUF —
+  // trägt das Absatz-Etikett und sonst keines (Gegenprüfung PR #798, Auflage A1).
+  let pos = 0;
+  const fliesstext = (bis: number): void => {
+    const t = reinerText(ohneNum.slice(pos, bis));
+    if (t) out.push([absatz, '', t]);
+  };
+  for (const [von, bis] of listen) {
+    fliesstext(von);
+    const liste = ohneNum.slice(von, bis);
+    // Listeneinleitung («Dieses Gesetz regelt … für:») trägt das Absatz-Etikett.
+    const intro = reinerText(ersterTag(liste, 'listIntroduction') ?? '');
+    if (intro) out.push([absatz, '', intro]);
+    for (const it of liste.matchAll(/<item\b[^>]*>([\s\S]*?)<\/item>/g)) {
+      const num = reinerText(ersterTag(it[1], 'num') ?? '');
+      const t = reinerText(it[1].replace(/<num\b[^>]*>[\s\S]*?<\/num>/, ''));
+      if (t) out.push([absatz, num, t]);
+    }
+    pos = bis;
+  }
+  fliesstext(ohneNum.length);
+  return out;
+}
+
+/**
+ * Das EIGENE Etikett eines Absatzes — und niemals das eines Listenpunkts (Auflage A5,
+ * Gegenprüfung PR #798, 12.9.2026). Zurück kommt das Etikett UND der Rumpf ohne genau
+ * dieses eine `<num>`.
+ *
+ * Im AKN-Baum steht das Absatz-Etikett vor dem Inhalt: `<paragraph><num>1</num><content>…`.
+ * Führt eine Konsolidierungs-Generation das Etikett NICHT als Element, sondern am
+ * Textanfang, dann hat der Absatz gar kein eigenes `<num>` — gemessen an MWSTG Art. 97:
+ * im Stand 2023-09-01 ist der GANZE Artikel EIN `<paragraph eId="art_97/para">` mit
+ * «1 Die Busse …» und «2 Bei erschwerenden Umständen …» im Text, im Stand 2024-01-01 sind
+ * es zwei Absätze mit `<num>1</num>` bzw. `<num>2</num>`.
+ *
+ * Die alte, ungezielte Suche hat dort zweierlei falsch gemacht: sie nahm als
+ * Absatz-Etikett das ERSTE `<num>` des ganzen Absatzes — also das eines Listenpunkts
+ * weiter unten («a.») — und sie LÖSCHTE dieses `<num>` zugleich aus dem Rumpf, sodass der
+ * betroffene Listenpunkt sein amtliches Etikett verlor. Beides schrieb dem gespeicherten
+ * Block eine Angabe zu, die die amtliche Quelle an dieser Stelle nicht kennt (§7).
+ */
+function absatzKopf(koerper: string): { absatz: string; rumpf: string } {
+  const bisInhalt = koerper.search(/<(?:content|blockList|item|p)\b/);
+  const kopf = bisInhalt >= 0 ? koerper.slice(0, bisInhalt) : koerper;
+  const num = /<num\b[^>]*>[\s\S]*?<\/num>/.exec(kopf);
+  if (!num) return { absatz: '', rumpf: koerper };
+  return {
+    absatz: reinerText(num[0]),
+    rumpf: koerper.slice(0, num.index) + koerper.slice(num.index + num[0].length),
+  };
 }
 
 /**
@@ -372,40 +408,41 @@ export function wortlaut(bloecke: readonly SynopseBlock[]): string {
  */
 export function flachText(a: ArtikelFassung): string {
   const vorbehandelt = vergleichsRoh(a.roh);
-  return [
-    titelFuerVergleich(vorbehandelt),
-    vergleichsFolge(zerlegeBloecke(vorbehandelt)),
-  ].filter(Boolean).join('\n');
+  const paras = [...vorbehandelt.matchAll(PARAGRAPH_RE)];
+  const koerper = paras.length === 0
+    ? vergleichsFolge(zerlegeBloecke(vorbehandelt), '')
+    : paras.map((p) => vergleichsFolge(zerlegeAbsatz(p[1]), absatzKopf(p[1]).absatz)).join('\n');
+  return [titelFuerVergleich(vorbehandelt), koerper].filter(Boolean).join('\n');
 }
 
 /**
- * Die Blockfolge als EIN Vergleichstext — mit den Etiketten, aber das ABSATZ-Etikett nur
- * beim Wechsel (Profil `/4`, Gegenprüfung PR #798).
+ * Die Blöcke EINES Absatzes als Vergleichstext: das Absatz-Etikett GENAU EINMAL vorn, dann
+ * je Block Listen-Etikett und Text (Profil `/4`, Gegenprüfung PR #798, Auflagen A2/A5).
  *
  * WARUM DIE ETIKETTEN MIT MÜSSEN: die AKN-Elementgrenze zwischen `<num>` und `<content>`
  * wandert zwischen zwei Generationen — AVIV Art. 120a Bst. b steht einmal als
  * `<num>[tab]</num><p>b. AHV-Nummer …</p>`, einmal als `<num>b. </num><p>AHV-Nummer …</p>`
  * (E5.0). Nur die Aneinanderreihung von Etikett und Text ist über diese Grenze hinweg
- * stabil.
+ * stabil — und weil `normalisiere` leerraum-blind ist, trägt schon die blosse Reihung.
  *
- * WARUM DAS ABSATZ-ETIKETT NUR BEIM WECHSEL: ein Absatz kann in der einen Generation EINEN
- * Block tragen und in der nächsten ZWEI, weil die Konversion an einer Interpunktion
- * trennt — SSV Art. 24 Abs. 1 Bst. a, 2024-04-08 → 2025-01-01: «… (2.33): Der Führer muss
- * …» wird zu «… (2.33):» + eigener Block «Der Führer muss …» (gemessen 12.9.2026). Würde
- * das Absatz-Etikett «1» je Block wiederholt, sähe der Vergleich dort ein zusätzliches
- * Wort und buchte eine Änderung, die der Leser nicht zeigen kann — genau der
- * Zwei-Wahrheiten-Fehler, den der Leer-Diff-Wächter verbietet (§5). Im alten,
- * paragraph-weisen `flachText` stand das Etikett aus demselben Grund genau einmal je
- * Absatz: es kam aus dem einen `<num>` des `<paragraph>`.
+ * WARUM GENAU EINMAL JE ABSATZ — und nicht je Block, nicht je Etikett-Wechsel:
+ *  · JE BLOCK wäre falsch, wenn die Konversion EINEN Block in ZWEI teilt (SSV Art. 24
+ *    Abs. 1 Bst. a, 2024-04-08 → 2025-01-01: «… (2.33): Der Führer …» wird zu «… (2.33):»
+ *    plus eigener Block). Das Etikett stünde dann einmal mehr im Vergleich.
+ *  · JE ETIKETT-WECHSEL wäre falsch, wenn das ORDNUNGS-SUFFIX über die Grenze `<num>`/Text
+ *    wandert: GEBV_SchKG Art. 9 Abs. 1bis steht 2022-01-01 als `<num>1</num><p><sup>bis</sup>
+ *    Erfordert …` und 2026-01-01 als `<num>1<sup>bis</sup></num><p> Erfordert …`. In der
+ *    alten Fassung hiess das Etikett «1» wie im Absatz davor und wurde unterdrückt, in der
+ *    neuen «1bis» — der Vergleich sah ein «1» Unterschied, wo die amtliche Fassung Zeichen
+ *    für Zeichen dieselbe ist (dieselbe Klasse: KLV Art. 7 Abs. 2bis, VRV Art. 67 Abs.
+ *    1quater, MWSTG Art. 97 Abs. 1, FDV Art. 36, HMG Art. 67 — alle 12.9.2026 gemessen).
+ *  · EINMAL JE ABSATZ entspricht genau dem, was im XML steht: ein `<paragraph>` trägt EIN
+ *    `<num>`. Echte Absatz-Umbenennungen (Abs. 2 → Abs. 1 bei gleichem Wortlaut) bleiben
+ *    damit sichtbar — «2Text» ist nicht «1Text».
  */
-function vergleichsFolge(bloecke: readonly SynopseBlock[]): string {
-  const teile: string[] = [];
-  let letzterAbsatz: string | null = null;
+function vergleichsFolge(bloecke: readonly SynopseBlock[], absatz: string): string {
+  const teile: string[] = absatz ? [absatz] : [];
   for (const b of bloecke) {
-    if (b[0] !== letzterAbsatz) {
-      if (b[0]) teile.push(b[0]);
-      letzterAbsatz = b[0];
-    }
     const rest = [b[1], b[2]].filter(Boolean).join(' ');
     if (rest) teile.push(rest);
   }
