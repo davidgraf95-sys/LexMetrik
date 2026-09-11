@@ -453,6 +453,22 @@ export function hatUnterschied(zeilen: readonly SynopseZeile[]): boolean {
   return zeilen.some((z) => z.art !== 'gleich');
 }
 
+/**
+ * Der Leser-Zustand «nur die Sachüberschrift wurde geändert» (Profil `/4`, Auflage A2).
+ *
+ * Zwischen zwei Ständen kann sich ausschliesslich der amtliche Randtitel ändern — gemessen
+ * 12.9.2026 über alle 186 Shards in 35 Schritten (BVG Art. 33b «ordentliches Rentenalter»
+ * → «Referenzalter», STPO Art. 55/431, HMG Art. 41, HREGV Art. 77, PARTG Art. 10 …). Die
+ * Karte darf dort NICHT «kein Unterschied erkennbar» sagen: das wäre für den Leser eine
+ * falsche Auskunft über eine echte Änderung (§8).
+ */
+export function nurTitelGeaendert(
+  artikel: Pick<SynopseArtikel, 'ueberschriftNeu'>,
+  zeilen: readonly SynopseZeile[],
+): boolean {
+  return !!artikel.ueberschriftNeu && !hatUnterschied(zeilen);
+}
+
 /** Ein gespeicherter Alt-Block, der nach der Leser-Vergleichsform «kein Unterschied» zeigt (§5). */
 export interface SynopseLeerDiff {
   token: string;
@@ -470,16 +486,21 @@ export interface SynopseLeerDiff {
  * zwei Wahrheiten). `geltendFuerToken` liefert den geltenden Korpus-Wortlaut für
  * den Fall, dass ein Alt-Block der letzte Schritt vor dem geltenden Stand ist.
  *
- * `art: 'entfallen'` ABSICHTLICH AUSSER ACHT: Gemessen 11.9.2026 (CHEMRRV, zehn
- * Artikel-Token um den 2022-05-01 herum) sucht `neuNach` bei einem entfallenen
- * Artikel weiterhin über ALLE Folgeschritte nach dem GLEICHEN Token — findet ein
- * numerisch späterer, sachlich unverwandter Artikel zufällig (oder durch eine
- * spätere Rück-Umnummerierung) denselben Token, wird dessen Wortlaut als «Neu»
- * gegen das entfallene Original gestellt. Das ist eine TOKEN-KONTINUITÄTS-Frage
- * (gehört ein Artikel, der Jahre später unter derselben Nummer wieder auftaucht,
- * zur selben Norm-Linie?), keine Normalisierungs-Lücke — anderer Fehlerklasse,
- * eigener Befund, hier bewusst nicht mitgelöst (§1: dieses Tor bewacht «zwei
- * Normalisierungen», nicht Token-Identität über grosse Zeiträume).
+ * `art: 'entfallen'` WIRD SEIT PROFIL `/4` MITGEPRÜFT (Gegenprüfung PR #798, Auflage A4).
+ * Bis dahin übersprang der Wächter jeden entfallenen Artikel — 160 Alt-Blöcke, die mit
+ * `/3` gerade erst von «geändert» zu «entfallen» gewechselt hatten, verliessen damit
+ * still seinen Blick (ein Tor, das seinen eigenen Befund wegfiltert, §6.7). Der Prüfsatz
+ * ist für beide Arten derselbe: WAS DER LESER SIEHT, MUSS EIN UNTERSCHIED SEIN. Hat der
+ * entfallene Artikel keinen Folgeschritt, liefert `neuNach` `null` — die Karte sagt dann
+ * «Der Artikel ist mit diesem Stand entfallen», ein Unterschied, den kein Textvergleich
+ * tragen muss; dieser Fall bleibt darum ausgenommen. Findet `neuNach` dagegen einen
+ * späteren Schritt mit demselben Token, ist dessen Wortlaut die rechte Spalte — und sie
+ * muss sich vom entfallenen Text unterscheiden.
+ *
+ * TITEL-ÄNDERUNG IST EIN UNTERSCHIED (Auflage A2): trägt der Block ein
+ * `ueberschriftNeu`, zeigt die Karte die geänderte Sachüberschrift. Ein solcher Block
+ * ist kein Leer-Diff, auch wenn der Wortlaut Zeile für Zeile gleich bleibt — genau dafür
+ * wird der neue Titel gespeichert.
  *
  * OFFENER REST (Nachtrag Auftrag Koordinator, 11.9.2026, NICHT hier ausgefiltert):
  * dieselbe Token-Kontinuitäts-Frage trifft auch `art: 'geaendert'`-Blöcke, wenn
@@ -508,8 +529,9 @@ export function leerDiffVerletzungen(
   for (const schritt of shard.schritte) {
     for (const artikel of schritt.artikel) {
       if (artikel.zustand !== 'belegt' && artikel.zustand !== 'ohne_ereignis') continue;
-      if (artikel.art === 'entfallen') continue;
       if (!artikel.token) continue;
+      // Die geänderte Sachüberschrift IST der sichtbare Unterschied (Profil `/4`).
+      if (artikel.ueberschriftNeu) continue;
       const { neu } = neuNach(shard, artikel.token, schritt, artikel, geltendFuerToken(artikel.token));
       if (neu === null) continue;
       if (!hatUnterschied(synopseZeilen(artikel.alt, neu))) {

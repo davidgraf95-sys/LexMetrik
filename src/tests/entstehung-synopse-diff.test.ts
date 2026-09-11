@@ -14,7 +14,7 @@
 import { describe, it, expect } from 'vitest';
 import {
   geltendeBloecke, lageFuerEreignis, ohneEreignisFuerArtikel, synopseZeilen,
-  tokenAusLabel, wortDiff, hatUnterschied, vergleichsform, leerDiffVerletzungen, AEHNLICH_MIN,
+  tokenAusLabel, wortDiff, hatUnterschied, vergleichsform, leerDiffVerletzungen, nurTitelGeaendert, AEHNLICH_MIN,
   type SynopseZeile,
 } from '../lib/entstehung/synopse-diff';
 import type { SynopseBlock, SynopseShard } from '../lib/entstehung/synopse';
@@ -31,7 +31,7 @@ const B = (absatz: string, num: string, text: string): SynopseBlock => [absatz, 
 
 /** Minimaler Shard mit zwei Schritten am selben Artikel. */
 const SHARD: SynopseShard = {
-  erlass: 'TEST', eli: 'cc/2000/1', normProfil: 'entstehung-norm/3', erzeugt: '2026-09-11',
+  erlass: 'TEST', eli: 'cc/2000/1', normProfil: 'entstehung-norm/4', erzeugt: '2026-09-11',
   fensterAb: '2021-01-01', kuenftigeStaende: [],
   staende: [
     { datum: '2021-01-01', xmlUrl: 'x1', liveUrl: 'l1', sha: 's1', bytes: 1, abgerufen: '2026-09-11', artikelZahl: 1 },
@@ -268,11 +268,31 @@ describe('leerDiffVerletzungen — der Leer-Diff-Wächter von check:entstehung (
     expect(verletzungen).toEqual([{ token: '5', stand: '2022-01-01', zustand: 'belegt' }]);
   });
 
-  it('lässt `art: entfallen` bewusst aus (Token-Kontinuität ist eine andere Fehlerklasse, Befund #796 CHEMRRV)', () => {
-    // Gemessen 11.9.2026: neuNach() sucht bei einem entfallenen Artikel weiterhin über
-    // ALLE Folgeschritte nach demselben Token — findet ein Jahre späterer, per Zufall
-    // oder Rück-Umnummerierung gleich nummerierter Artikel denselben Wortlaut, wäre das
-    // sonst ein falscher Leer-Diff-Treffer, der eine ANDERE Baustelle betrifft.
+  // §6.3-BEGRÜNDUNG FÜR DIE ÄNDERUNG DIESES TESTS: bis Profil `/3` stand hier die
+  // Erwartung `toEqual([])` — der Wächter liess `art: entfallen` aus. Die Gegenprüfung zu
+  // PR #798 (Auflage A4) hat das als Tor-Lücke beanstandet: mit `/3` wechselten 160
+  // Alt-Blöcke von «geändert» zu «entfallen» und verliessen damit den Blick des Wächters
+  // (§6.7). Die Erwartung ist deshalb FACHLICH umgedreht, nicht angepasst.
+  it('Rot-Beweis: auch ein `art: entfallen`-Block ohne sichtbaren Unterschied wird gemeldet (Auflage A4)', () => {
+    // Der entfallene Artikel taucht unter DEMSELBEN Token in einem späteren Schritt
+    // wieder auf (die CHEMRRV-Klasse) — `neuNach` stellt dessen Wortlaut als «Neu»
+    // daneben. Ist er derselbe, sieht der Leser nichts, und genau das muss das Tor sagen.
+    const manipuliert = {
+      ...SHARD,
+      schritte: SHARD.schritte.map((s, i) => (i !== 0 ? s : {
+        ...s,
+        artikel: s.artikel.map((a) => ({
+          ...a, art: 'entfallen' as const, alt: [B('1', '', 'Zweite Fassung des Absatzes.')],
+        })),
+      })),
+    };
+    expect(leerDiffVerletzungen(manipuliert, () => GELTEND))
+      .toEqual([{ token: '5', stand: '2022-01-01', zustand: 'belegt' }]);
+  });
+
+  it('meldet einen entfallenen Artikel OHNE Folgeschritt nicht — «entfallen» ist selbst der Unterschied', () => {
+    // `neuNach` liefert dort `neu === null`; die Karte sagt «Der Artikel ist mit diesem
+    // Stand entfallen». Ein Textvergleich muss diesen Unterschied nicht tragen.
     const manipuliert = {
       ...SHARD,
       schritte: SHARD.schritte.map((s, i) => (i !== 1 ? s : {
@@ -283,6 +303,45 @@ describe('leerDiffVerletzungen — der Leer-Diff-Wächter von check:entstehung (
       })),
     };
     expect(leerDiffVerletzungen(manipuliert, () => GELTEND)).toEqual([]);
+  });
+
+  it('meldet einen Block mit geänderter Sachüberschrift nicht — der Titel IST der Unterschied (Auflage A2)', () => {
+    const manipuliert = {
+      ...SHARD,
+      schritte: SHARD.schritte.map((s, i) => (i !== 1 ? s : {
+        ...s,
+        artikel: s.artikel.map((a) => (a.eId !== 'art_7' ? a : {
+          ...a,
+          ueberschrift: 'Erwerbstätigkeit nach dem ordentlichen Rentenalter',
+          ueberschriftNeu: 'Erwerbstätigkeit nach dem Referenzalter',
+          alt: [B('1', '', 'Dritte Fassung des Absatzes.')],
+        })),
+      })),
+    };
+    expect(leerDiffVerletzungen(manipuliert, () => GELTEND)).toEqual([]);
+  });
+});
+
+describe('nurTitelGeaendert — der Leser-Zustand «nur die Sachüberschrift» (Auflage A2, BVG Art. 33b)', () => {
+  // BVG Art. 33b, Schritt 2023-01-01 → 2024-01-01 (amtliche Konsolidierungen, Fedlex
+  // Filestore, abgerufen 12.9.2026): der Randtitel «Erwerbstätigkeit nach dem
+  // ordentlichen Rentenalter» wird zu «Erwerbstätigkeit nach dem Referenzalter»; der
+  // Absatzwortlaut bleibt Zeichen für Zeichen derselbe. Mit Profil `/3` sagte die Karte
+  // dazu «kein Unterschied erkennbar» — falsch (§8).
+  const gleich = [B('', '', 'Der Arbeitgeber kann in Abrede stellen, dass …')];
+  it('erkennt den Fall, wenn der Wortlaut gleich bleibt und der Titel wechselt', () => {
+    const zeilen = synopseZeilen(gleich, gleich);
+    expect(hatUnterschied(zeilen)).toBe(false);
+    expect(nurTitelGeaendert({ ueberschriftNeu: 'Erwerbstätigkeit nach dem Referenzalter' }, zeilen)).toBe(true);
+  });
+
+  it('sagt nichts über den Titel, wo sich auch der Wortlaut unterscheidet', () => {
+    const zeilen = synopseZeilen(gleich, [B('', '', 'Anderer Wortlaut.')]);
+    expect(nurTitelGeaendert({ ueberschriftNeu: 'Neuer Titel' }, zeilen)).toBe(false);
+  });
+
+  it('bleibt falsch, wo kein neuer Titel gespeichert ist', () => {
+    expect(nurTitelGeaendert({}, synopseZeilen(gleich, gleich))).toBe(false);
   });
 });
 

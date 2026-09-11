@@ -127,7 +127,8 @@ export function abstractUri(eliKurz: string): string {
 export interface ArtikelFassung {
   eId: string;
   label: string;
-  /** Sachüberschrift; leerer String = keine. */
+  /** Sachüberschrift der Vergleichs- UND Speicherform (`titelFuerVergleich`);
+   *  leerer String = keine. */
   ueberschrift: string;
   bloecke: SynopseBlock[];
   /** Das rohe innere XML — Eingabe des UNNORMALISIERTEN Vergleichs (Mess-Referenz). */
@@ -163,7 +164,7 @@ export function extrahiereArtikel(xml: string): Map<string, ArtikelFassung> {
     out.set(eId, {
       eId,
       label: reinerText(ersterTag(inner, 'num') ?? ''),
-      ueberschrift: reinerText(ersterTag(inner, 'heading') ?? ''),
+      ueberschrift: titelFuerVergleich(inner),
       bloecke: zerlegeBloecke(inner),
       roh: inner,
     });
@@ -200,23 +201,102 @@ export function zerlegeBloecke(inner: string): SynopseBlock[] {
     const koerper = p[1];
     const absatz = reinerText(ersterTag(koerper, 'num') ?? '');
     const ohneNum = koerper.replace(/<num\b[^>]*>[\s\S]*?<\/num>/, '');
-    const items = [...ohneNum.matchAll(/<item\b[^>]*>([\s\S]*?)<\/item>/g)];
-    if (items.length === 0) {
+    const listen = blockListBereiche(ohneNum);
+    if (listen.length === 0) {
       const t = reinerText(ohneNum);
       if (t) out.push([absatz, '', t]);
       continue;
     }
-    // Listeneinleitung («Dieses Gesetz regelt … für:») trägt das Absatz-Etikett.
-    const intro = reinerText(ersterTag(ohneNum, 'listIntroduction') ?? '');
-    if (intro) out.push([absatz, '', intro]);
-    for (const it of items) {
-      const num = reinerText(ersterTag(it[1], 'num') ?? '');
-      const t = reinerText(it[1].replace(/<num\b[^>]*>[\s\S]*?<\/num>/, ''));
-      if (t) out.push([absatz, num, t]);
+    // Fliesstext AUSSERHALB der Aufzählungen — Vorlauf, Zwischentext und NACHLAUF —
+    // trägt das Absatz-Etikett und sonst keines (Gegenprüfung PR #798, Auflage A1).
+    let pos = 0;
+    const fliesstext = (bis: number): void => {
+      const t = reinerText(ohneNum.slice(pos, bis));
+      if (t) out.push([absatz, '', t]);
+    };
+    for (const [von, bis] of listen) {
+      fliesstext(von);
+      const liste = ohneNum.slice(von, bis);
+      // Listeneinleitung («Dieses Gesetz regelt … für:») trägt das Absatz-Etikett.
+      const intro = reinerText(ersterTag(liste, 'listIntroduction') ?? '');
+      if (intro) out.push([absatz, '', intro]);
+      for (const it of liste.matchAll(/<item\b[^>]*>([\s\S]*?)<\/item>/g)) {
+        const num = reinerText(ersterTag(it[1], 'num') ?? '');
+        const t = reinerText(it[1].replace(/<num\b[^>]*>[\s\S]*?<\/num>/, ''));
+        if (t) out.push([absatz, num, t]);
+      }
+      pos = bis;
     }
+    fliesstext(ohneNum.length);
   }
   return out;
 }
+
+/**
+ * Die `<blockList>`-Bereiche eines Absatz-Innenraums als `[von, bis)`-Paare — VERSCHACHTELUNG
+ * ZÄHLT MIT: eine Unter-Aufzählung innerhalb eines `<item>` schliesst den äusseren Bereich
+ * nicht (gemessen 12.9.2026 über den ganzen Korpus: 4476 Absätze mit verschachtelter
+ * `<blockList>`; ein nicht-gieriges `<blockList>…</blockList>` hätte dort mitten im Baum
+ * geschnitten und den Rest der äusseren Liste zu «Fliesstext» erklärt).
+ *
+ * WARUM ÜBERHAUPT BEREICHE: `zerlegeBloecke` erfasste bis Profil `/3` je Absatz nur die
+ * ERSTE `<listIntroduction>` und die `<item>`, nie den Text davor, dazwischen oder DANACH —
+ * ein struktureller Speicherverlust (gemessen 12.9.2026: 651 Absätze je Stand tragen
+ * Fliesstext nach der letzten Aufzählung). Beleg für den Schaden: KLV Art. 12 Bst. e, wo
+ * genau dieser Nachlauf-Satz die Kantonsliste der Früherkennungsprogramme trägt und ihre
+ * vier Erweiterungen (2022-01-01, 2023-01-01, 2025-01-01, 2026-07-01) in KEINER Generation
+ * in `bloecke` landeten — der Generator buchte «geändert», der Leser sah nichts (§5).
+ *
+ * `<item>` AUSSERHALB einer `<blockList>` gibt es im Korpus nicht (gemessen 12.9.2026:
+ * 0 Absätze); die Item-Suche läuft darum bewusst NUR innerhalb der Bereiche.
+ */
+function blockListBereiche(s: string): [number, number][] {
+  const out: [number, number][] = [];
+  const re = /<blockList\b[^>]*>|<\/blockList>/g;
+  let tiefe = 0;
+  let start = -1;
+  let m: RegExpExecArray | null;
+  while ((m = re.exec(s)) !== null) {
+    if (m[0].startsWith('</')) {
+      if (tiefe === 0) continue; // unbalancierter Schluss-Tag: ignorieren, nie Text verlieren
+      tiefe -= 1;
+      if (tiefe === 0) { out.push([start, m.index + m[0].length]); start = -1; }
+    } else {
+      if (tiefe === 0) start = m.index;
+      tiefe += 1;
+    }
+  }
+  // Unbalancierter Öffnungs-Tag (im Korpus nie gemessen): der Rest gilt als Liste, damit
+  // sein `<item>`-Inhalt erfasst bleibt statt als Fliesstext doppelt zu erscheinen.
+  if (tiefe > 0 && start >= 0) out.push([start, s.length]);
+  return out;
+}
+
+/**
+ * Der VERGLEICHS- UND SPEICHER-TITEL eines Artikels: die amtliche Sachüberschrift
+ * (`<heading>`), ergänzt um einen `<subheading>`, der KEIN blosser Norm-Querverweis ist.
+ *
+ * WARUM DER RANDVERMERK AUSSEN BLEIBT (enge, gemessene Regel — Gegenprüfung PR #798,
+ * Auflage A2): `<subheading>` trägt in der AKN-Konsolidierung des Bundes den Randvermerk
+ * in Klammerform, also den Hinweis auf die Delegationsnorm — «(Art. 83 Abs. 1 Bst. i und o
+ * AVIG)». Gemessen 12.9.2026 über den jüngsten Stand aller 186 Erlasse: 2096 Artikel
+ * tragen einen `<subheading>`, und ALLE 2096 sind ein solcher Klammer-Querverweis (die
+ * acht Ausreisser der ersten Regel-Fassung waren amtliche Schreibfehler in der Klammerung:
+ * «(Art 17 …)» ohne Punkt, «(17 und 20 VAG)» ohne «Art.», «Art. 18 … MWSTG)» ohne
+ * öffnende Klammer — inhaltlich dieselbe Sorte). Ändert sich NUR dieser Verweis, ist das
+ * eine Umnummerierung ANDERSWO im Erlass, keine Änderung dieses Artikels (Beleg AVIV
+ * Art. 109b 2021-04-01 → 2021-07-01, BPV Art. 88d 2023-01-01 — zusammen 8 Fälle im
+ * Korpus). Ein `<subheading>`, der KEINE solche Klammer ist, zählt darum weiterhin zum
+ * Titel — die Regel filtert eine belegte Form, nicht ein ganzes AKN-Element (§8).
+ */
+export function titelFuerVergleich(inner: string): string {
+  const heading = reinerText(ersterTag(inner, 'heading') ?? '');
+  const sub = reinerText(ersterTag(inner, 'subheading') ?? '');
+  return [heading, sub && !RANDVERMERK_QUERVERWEIS.test(sub) ? sub : ''].filter(Boolean).join(' ');
+}
+
+/** Randvermerk in Klammerform mit Norm-Querverweis — siehe `titelFuerVergleich`. */
+const RANDVERMERK_QUERVERWEIS = /^\(?\s*(?:Art\.?|Ziff\.?|Abs\.?|Bst\.?|Anhang|\d)[^()]*\)$/;
 
 /**
  * Markup weg, Entities aufgelöst, ASCII-Leerraum kollabiert — das Zitat bleibt Zitat.
@@ -267,50 +347,50 @@ export function wortlaut(bloecke: readonly SynopseBlock[]): string {
  * Deshalb entscheidet ueber «geaendert ja/nein» ausschliesslich der flache Text; die
  * Bloecke bleiben unveraendert das, was gespeichert und angezeigt wird.
  *
- * SCOPE SEIT PROFIL /3 (Befund #796, 11.9.2026): NUR `<paragraph>`-Inhalt — exakt
- * dieselbe Quelle wie `zerlegeBloecke` (Konstante `PARAGRAPH_RE`). VORHER floss der
- * GANZE Artikel-Innenraum ein, inklusive `<heading>` (Sachüberschrift) und
- * `<subheading>` (Randvermerk, oft ein Querverweis auf einen ANDEREN Artikel). Ein
- * Randvermerk-Update wegen Umnummerierung anderswo liess `flachText` eine Änderung
- * sehen, obwohl der gespeicherte Artikelkörper (`bloecke`) byte-gleich blieb — 70
- * Alt-Blöcke waren so gespeichert, aber für den Leser ohne Unterschied (Messung
- * 11.9.2026: 36/3484 `belegt`, 34/999 `ohne_ereignis`). Beleg: AVIV Art. 109b,
- * 2021-04-01 → 2021-07-01 — der `<subheading>` wanderte von
- * «(Art. 83 Abs. 1 Bst. i und o AVIG)» zu «(Art. 83 Abs. 1bis AVIG)», der Artikeltext
- * blieb Zeichen für Zeichen derselbe.
+ * SCOPE SEIT PROFIL /4 (Gegenprüfung PR #798, Auflagen A1/A2, 12.9.2026): GENAU das,
+ * was auch gespeichert wird — `titelFuerVergleich` (Sachüberschrift ohne den
+ * Klammer-Randvermerk) plus `wortlaut(zerlegeBloecke(…))`. Vergleichs- und Speicher-Scope
+ * sind damit dieselbe Funktion und können nicht mehr auseinanderlaufen (§5).
  *
- * BEWUSST KEINE VOLLE DELEGATION AN `zerlegeBloecke` (versucht und wieder verworfen,
- * 11.9.2026): `zerlegeBloecke` selbst kennt nur `listIntroduction` + `item` — ein
- * blosser `<p>`-Satz VOR einem sibling `<blockList>` (die ARG-12/EMRK-44-Struktur aus
- * PR #794, «Satz + Liste» statt «Einleitung + Liste») wird von `zerlegeBloecke` NIE
- * als Block erfasst. Ein `flachText`, das `zerlegeBloecke` aufruft, hätte also
- * GENAU DAS Gegenprüfungs-Fixture wieder falsch beurteilt (Rot-Beweis reproduziert,
- * 11.9.2026: `d.geaendert` enthielt `art_12`/`art_44`, obwohl es KEINE Änderung gibt).
- * `flachText` bleibt darum die EIGENE, reine Tag-Strip-Extraktion (`reinerText`) über
- * den `<paragraph>`-Scope — sie ist absichtlich TOLERANTER als `zerlegeBloecke` (sieht
- * Fliesstext unabhängig von seiner Element-Rolle), nur eben genauso `<paragraph>`-
- * begrenzt. Regel (c) unten schliesst die verbleibende Lücke (Text NACH einer Liste,
- * KLV-Klasse) gezielt, statt die ganze Extraktion zu ersetzen.
+ * VORGESCHICHTE, damit die Grenze nicht wieder verrutscht:
+ *  · `/2` verglich den GANZEN Artikel-Innenraum — ein Randvermerk-Update ohne
+ *    Textänderung buchte «geändert», der Leser sah nichts (70 Alt-Blöcke, 11.9.2026).
+ *  · `/3` schnitt darum auf `<paragraph>`-Inhalt zurück und liess Titel UND
+ *    Sachüberschrift ganz aussen vor. Das ging zu weit: 45 echte Randtitel-Änderungen
+ *    (BVG Art. 33b «ordentliches Rentenalter» → «Referenzalter», STPO Art. 55/431,
+ *    HMG Art. 41, HREGV Art. 77, PARTG Art. 10, AHVV Art. 52a, EPV Art. 90, VAG Art. 84,
+ *    FINFRAG Art. 41 …) wurden dadurch UNSICHTBAR — der Leser bekam «kein Unterschied
+ *    erkennbar» zu sehen, obwohl sich die amtliche Sachüberschrift geändert hatte (§8).
+ *  · `/4` nimmt den Titel wieder auf, aber als GESPEICHERTEN Teil (siehe
+ *    `SynopseArtikel.ueberschrift`/`ueberschriftNeu`), nicht als unsichtbares
+ *    Vergleichs-Beiwerk — gemessen 12.9.2026: 35 Schritte ändern NUR den Titel,
+ *    666 Schritte ändern Titel UND Wortlaut.
+ *  · `/3` delegierte nicht an `zerlegeBloecke`, weil dieses den `<p>`-Satz VOR einer
+ *    `<blockList>` (ARG 12 / EMRK 44, PR #794) nicht kannte. Seit Auflage A1 erfasst
+ *    `zerlegeBloecke` Vor-, Zwischen- und Nachlauftext — die Delegation ist damit möglich
+ *    und Regel (c) («Text nach `</blockList>` wegwerfen») ersatzlos gestrichen.
  */
 export function flachText(a: ArtikelFassung): string {
   const vorbehandelt = vergleichsRoh(a.roh);
-  const paras = [...vorbehandelt.matchAll(PARAGRAPH_RE)];
-  if (paras.length === 0) {
-    const koerper = vorbehandelt
-      .replace(/<num\b[^>]*>[\s\S]*?<\/num>/g, '')
-      .replace(/<heading\b[^>]*>[\s\S]*?<\/heading>/g, '')
-      .replace(/<subheading\b[^>]*>[\s\S]*?<\/subheading>/g, '');
-    return reinerText(koerper);
-  }
-  return reinerText(paras.map((m) => m[1]).join(' '));
+  return [
+    titelFuerVergleich(vorbehandelt),
+    wortlaut(zerlegeBloecke(vorbehandelt)),
+  ].filter(Boolean).join('\n');
 }
 
 /**
- * Strukturelle Vorbehandlung NUR fuer den Vergleich (Profil `entstehung-norm/3`).
+ * Strukturelle Vorbehandlung NUR fuer den Vergleich (Profil `entstehung-norm/4`).
  *
- * Sie raeumt zwei Klassen von KONVERSIONS-Artefakten aus, die die Gegenpruefung zu
- * PR #794 an vier Stellen belegt hat — beide sitzen an einer ELEMENTGRENZE, nie im
- * Fliesstext, und beide lassen den gespeicherten (amtlichen) Wortlaut unberuehrt.
+ * Sie raeumt KONVERSIONS-Artefakte aus, die an einer ELEMENTGRENZE sitzen, nie im
+ * Fliesstext, und die den gespeicherten (amtlichen) Wortlaut unberuehrt lassen.
+ *
+ * REGEL (c) IST SEIT PROFIL `/4` ERSATZLOS GESTRICHEN (Gegenpruefung PR #798, Auflage
+ * A1): sie warf den Fliesstext nach `</blockList>` aus dem VERGLEICH, statt die
+ * STORAGE-Luecke zu schliessen — und loeschte damit vier echte Wortlautaenderungen von
+ * KLV Art. 12 Bst. e (Kantonsliste der Frueherkennungsprogramme, Schritte 2021-11-04 →
+ * 2022-01-01, 2022-10-01 → 2023-01-01, 2024-07-01 → 2025-01-01, 2026-05-11 →
+ * 2026-07-01). Die Luecke sitzt jetzt dort, wo sie hingehoert: `zerlegeBloecke`
+ * erfasst Vor-, Zwischen- und Nachlauftext.
  */
 export function vergleichsRoh(roh: string): string {
   return roh
@@ -354,33 +434,11 @@ export function vergleichsRoh(roh: string): string {
     // nur am BLOCKANFANG. «(Aufgehoben)» ist laenger und bleibt stehen, ein Querverweis
     // «(2)» mitten im Satz ebenso.
     .replace(/<num\b[^>]*>\s*\(\s*[0-9a-zA-Z]{1,4}\s*\)\s*<\/num>/g, '')
-    .replace(/(<p\b[^>]*>)\s*\(\s*[0-9a-zA-Z]{1,4}\s*\)\s*/g, '$1')
-    // (c) EIN Fliesstext-Satz UNMITTELBAR NACH einer Aufzaehlung (Befund #796, Nachtrag
-    // 11.9.2026). Beleg: KLV Art. 12 Bst. e, 2021-11-04 -> 2022-01-01 — ein Satz DIREKT
-    // nach `</blockList>` (in einer Tabellenzelle: `</blockList><p>Findet die
-    // Untersuchung … in den Kantonen … statt …</p></td></tr></table>`) traegt eine ECHTE
-    // Aenderung (Kantonsliste um Bern/Luzern erweitert) — aber `zerlegeBloecke` kennt
-    // nach einer `<blockList>` nur `listIntroduction` + `item`, nie Text DANACH, und
-    // speichert diesen Satz darum in KEINER Generation. Ohne diese Regel saehe
-    // `flachText` die Aenderung, `bloecke` nie — ein Alt-Block waere "geaendert" gebucht,
-    // dessen gespeicherter Wortlaut sich nie unterscheidet (§5). Die Regel faellt bewusst
-    // NICHT mit der STORAGE-Luecke selbst zusammen (die bleibt, ist ein eigener,
-    // separater Befund) — sie synchronisiert nur die VERGLEICHS-Entscheidung mit dem, was
-    // ohnehin gespeichert wird.
-    //
-    // ENG GEFASST auf EINEN unmittelbar angrenzenden `<p>`, NICHT «alles bis zum
-    // Absatzende» (Rot-Beweis OR Art. 652d, 2023-09-01 -> 2024-01-01, Regression bei der
-    // ersten Fassung dieser Regel behoben): ein Absatz kann MEHRERE `<blockList>`-
-    // Elemente als Geschwister tragen (`</blockList><blockList eId="…list_u2">…</blockList>`,
-    // AKN teilt eine durchlaufende Aufzaehlung manchmal so auf) — «alles bis
-    // `</content>`/`</paragraph>`» verschluckte dort die ZWEITE Liste mitsamt ihres
-    // `<item>`-Inhalts. Die enge Fassung endet an der naechsten `<blockList>`, wenn eine
-    // folgt, und ruehrt eine echte zweite Liste nie an.
-    .replace(/(<\/blockList>)\s*<p\b[^>]*>[\s\S]*?<\/p>(?!\s*<blockList\b)/g, '$1');
+    .replace(/(<p\b[^>]*>)\s*\(\s*[0-9a-zA-Z]{1,4}\s*\)\s*/g, '$1');
 }
 
 /**
- * Profil `entstehung-norm/3` (Befund Bauer #796, 11.9.2026) — NUR fürs Matching.
+ * Profil `entstehung-norm/4` (Gegenprüfung PR #798, 12.9.2026) — NUR fürs Matching.
  * Dünner Wrapper um die EINE geteilte Vergleichsform
  * (`src/lib/entstehung/normalisierung.ts`, dort auch von `synopse-diff.ts`/dem
  * Leser importiert — «genau ein Ort», §5) MIT der generator-eigenen
@@ -456,6 +514,17 @@ export function diffStaende(
     const alt_ = normalisiere(flachText(a));
     const neu_ = normalisiere(flachText(n));
     if (alt_ === neu_) continue;
+    // ORDNUNGS-SUFFIX WANDERT UEBER DIE ELEMENTGRENZE `<num>`/`<heading>` (Profil `/4`,
+    // Gegenpruefung PR #798): RPV Art. 32bis steht am 2026-05-11 als
+    // `<num>Art. 32</num><heading><sup>bis</sup> Buendelung von Infrastrukturanlagen</heading>`
+    // und am 2026-05-20 als `<num>Art. 32<sup>bis</sup></num><heading>Buendelung …</heading>`.
+    // Etikett und Titel zusammen sind Zeichen fuer Zeichen dieselben — nur die Grenze
+    // zwischen beiden Elementen ist gewandert. Dieselbe Klasse wie AHVG Art. 10 Abs. 2bis
+    // (R2 §6b), nur eine Ebene hoeher; `normalisiere` ist leerraum-blind, darum traegt die
+    // blosse Aneinanderreihung den Vergleich. SIE UNTERDRUECKT NUR — eine Etikett-Aenderung
+    // allein bucht nie eine Aenderung (§1: sonst staende ein Alt-Block ohne sichtbaren
+    // Unterschied im Shard).
+    if (normalisiere(a.label + flachText(a)) === normalisiere(n.label + flachText(n))) continue;
     // Leere Alt-Fassung: der Artikel war im alten Stand nur als ANGEKUENDIGTE Huelse da
     // (`<num>Art. 222q</num>` + Fussnote «Tritt am 1. April 2024 in Kraft.», gemessen
     // E5.0 an VTS Art. 222q). Er ist kein geaenderter, sondern ein eingefuegter Artikel;
@@ -481,6 +550,21 @@ export function diffStaende(
   }
   const nurNeu = [...neu.keys()].filter((e) => !alt.has(e)).concat(erstBefuellt).sort();
   return { stabil, nurAlt, nurNeu, geaendert, geaendertRoh, ohneAltText: ohneAltText.sort() };
+}
+
+/**
+ * Hat sich die SACHUEBERSCHRIFT zwischen zwei Fassungen desselben Artikels geaendert?
+ *
+ * Massgeblich ist die Vergleichsform des Profils (`normalisiere`, leerraum-blind) UND
+ * derselbe Ordnungs-Suffix-Escape wie in `diffStaende`: wandert das «bis»/«ter» eines
+ * Artikel-Etiketts ueber die Grenze `<num>`/`<heading>` (RPV Art. 32bis), ist der Titel
+ * unveraendert. Grundlage von `SynopseArtikel.ueberschriftNeu` — gespeichert wird der
+ * neue Titel nur, wenn er sich wirklich unterscheidet (§8: nie eine Aenderung behaupten,
+ * die keine ist).
+ */
+export function titelGeaendert(a: ArtikelFassung, n: ArtikelFassung): boolean {
+  if (normalisiere(a.ueberschrift) === normalisiere(n.ueberschrift)) return false;
+  return normalisiere(a.label + a.ueberschrift) !== normalisiere(n.label + n.ueberschrift);
 }
 
 /** eId → kanonischer Korpus-Token («art_38_a» → «38_a»); null = kein Artikel-Token. */

@@ -19,7 +19,7 @@
 // konstruiert), (c) `liveUrl` auf die amtliche Fassung dieses Stands, (d) zwei
 // Prüfsummen je Quelle und je Block als Drift-Erkennung.
 //
-// NORMALISIERUNGS-PROFIL: `entstehung-norm/3`. Ein gelandetes Profil wird NIE editiert —
+// NORMALISIERUNGS-PROFIL: `entstehung-norm/4`. Ein gelandetes Profil wird NIE editiert —
 // eine Verbesserung bekommt die nächste Nummer und entsteht daneben. Sonst entwertet jede
 // Parser-Korrektur rückwirkend alle Prüfsummen (Muster law.soufien.lu, `soufien-lex.md`).
 //
@@ -54,8 +54,28 @@
  * `vergleichsform`/`vergleichsformLeerraumBlind`) statt aus einer zweiten,
  * eigenständigen Zeichenliste. Der gespeicherte Wortlaut (`bloecke`) ist von alledem
  * unberührt — nur die Entscheidung «geändert ja/nein» wird geschärft.
+ *
+ * `/4` (Gegenprüfung PR #798, 12.9.2026 — `/3` ist NIE GELANDET und wird darum wie `/1`
+ * ersetzt statt editiert): die Gegenprüfung hat an `/3` zwei Fehler belegt.
+ *  (A1) `zerlegeBloecke` kannte je Absatz nur `listIntroduction` + `item`, nie den
+ *       Fliesstext davor, dazwischen oder DANACH (gemessen 12.9.2026: 651 Absätze je
+ *       Stand mit Nachlauftext). `/3` hat diese STORAGE-Lücke nicht geschlossen, sondern
+ *       den Nachlauftext aus dem VERGLEICH geworfen («Regel (c)») — und damit vier echte
+ *       Wortlautänderungen von KLV Art. 12 Bst. e gelöscht (Kantonsliste der
+ *       Früherkennungsprogramme: «Basel-Stadt, Freiburg, Genf …» wird um Bern und Luzern
+ *       erweitert, Schritte 2021-11-04 → 2022-01-01, 2022-10-01 → 2023-01-01,
+ *       2024-07-01 → 2025-01-01, 2026-05-11 → 2026-07-01). `/4` erfasst den Text im
+ *       SPEICHER und vergleicht ihn darum wieder.
+ *  (A2) `/3` nahm die Sachüberschrift ganz aus dem Vergleich — damit wurden 35 Schritte
+ *       unsichtbar, in denen sich NUR der amtliche Randtitel änderte (BVG Art. 33b
+ *       «Erwerbstätigkeit nach dem ordentlichen Rentenalter» → «… nach dem
+ *       Referenzalter», STPO Art. 55/431, HMG Art. 41, HREGV Art. 77, PARTG Art. 10,
+ *       AHVV Art. 52a, EPV Art. 90, VAG Art. 84, FINFRAG Art. 41 …). Der Leser sagte
+ *       «kein Unterschied erkennbar», und das war falsch (§8). `/4` vergleicht den Titel
+ *       wieder — aber er wird auch GESPEICHERT (`ueberschrift`/`ueberschriftNeu`), damit
+ *       der Leser den Unterschied sehen kann statt ihn nur zu erben (§5).
  */
-export const NORM_PROFIL = 'entstehung-norm/3';
+export const NORM_PROFIL = 'entstehung-norm/4';
 
 /** Frühester Stand mit maschinenlesbarem Volltext (R2 §1, gemessen 6.9.2026). */
 export const SYNOPSE_FENSTER_AB = '2021-01-01';
@@ -97,8 +117,21 @@ export interface SynopseArtikel {
   token: string | null;
   /** Amtliches Artikel-Etikett der Alt-Fassung, z. B. «Art. 336c». */
   label: string;
-  /** Sachüberschrift der Alt-Fassung (amtlich zitiert); fehlt, wenn der Artikel keine hat. */
+  /** Sachüberschrift der Alt-Fassung (amtlich zitiert); fehlt, wenn der Artikel keine hat.
+   *  Ohne den Klammer-Randvermerk des AKN-`<subheading>` — der ist ein Querverweis auf die
+   *  Delegationsnorm und ändert sich mit Umnummerierungen ANDERSWO (`titelFuerVergleich`
+   *  in `scripts/entstehung/synopse.ts`, 2096 von 2096 gemessen). */
   ueberschrift?: string;
+  /** Sachüberschrift der NEU-Fassung dieses Schritts — nur gesetzt, wenn sie sich von
+   *  `ueberschrift` unterscheidet (Profil `/4`, Gegenprüfung PR #798 Auflage A2).
+   *
+   *  WARUM DER GENERATOR BEIDE SEITEN SPEICHERT statt den Leser den neuen Titel aus dem
+   *  Korpus holen zu lassen: der geltende Korpus-Snapshot führt für Bundeserlasse fast nie
+   *  einen Artikel-`titel` (gemessen 12.9.2026: 7500 von 22 496 Artikeln stimmen überein,
+   *  die übrigen tragen im Korpus GAR KEINEN Titel). Ein Leser, der den neuen Titel von
+   *  dort nähme, zeigte bei zwei Dritteln aller Artikel eine Titel-Streichung, die es nie
+   *  gab (§1). Die beiden amtlichen Konsolidierungen kennt dagegen der Generator. */
+  ueberschriftNeu?: string;
   /** `geaendert` = eId in beiden Ständen, Wortlaut verschieden · `entfallen` = nur im Alt-Stand. */
   art: 'geaendert' | 'entfallen';
   /** Wortlaut der Alt-Fassung. */

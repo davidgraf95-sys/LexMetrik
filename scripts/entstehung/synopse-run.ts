@@ -18,7 +18,7 @@ import { join } from 'node:path';
 import { sparqlBatch } from '../fedlex-sparql.ts';
 import {
   baueStaendeQuery, baueStaende, extrahiereArtikel, diffStaende, flachText,
-  normalisiere, eliKurzAusUrl, abstractUri, liveUrlFuerStand, tokenAusEId, sha256,
+  normalisiere, eliKurzAusUrl, abstractUri, liveUrlFuerStand, tokenAusEId, sha256, titelGeaendert,
   serialisiereShard, shaShard, type ArtikelFassung,
 } from './synopse.ts';
 import {
@@ -106,9 +106,16 @@ function ocAus(quellen: readonly { url: string }[]): string[] {
   )].sort();
 }
 
-/** Ein Artikel der Alt-Fassung → Shard-Eintrag (Gegenprobe gegen die Fussnoten-Historie). */
+/**
+ * Ein Artikel der Alt-Fassung → Shard-Eintrag (Gegenprobe gegen die Fussnoten-Historie).
+ *
+ * `n` ist die Fassung desselben Artikels im Ziel-Stand (`null` bei `entfallen`) — sie
+ * liefert `ueberschriftNeu`, damit der Leser eine reine Randtitel-Änderung ZEIGEN kann
+ * und nicht «kein Unterschied erkennbar» behauptet (Profil `/4`, Auflage A2).
+ */
 function baueArtikel(
   a: ArtikelFassung,
+  n: ArtikelFassung | null,
   art: 'geaendert' | 'entfallen',
   hist: HistorieShard | null,
   bis: string,
@@ -121,6 +128,7 @@ function baueArtikel(
     token,
     label: a.label,
     ...(a.ueberschrift ? { ueberschrift: a.ueberschrift } : {}),
+    ...(n && titelGeaendert(a, n) ? { ueberschriftNeu: n.ueberschrift } : {}),
     art,
     alt: a.bloecke,
     shaNorm: sha256(normalisiere(flachText(a))),
@@ -177,8 +185,8 @@ for (const e of erlasse) {
       const bis = liste[i].datum;
       const d = diffStaende(vorher, artikel);
       const eintraege: SynopseArtikel[] = [
-        ...d.geaendert.map((id) => baueArtikel(vorher!.get(id)!, 'geaendert', hist, bis)),
-        ...d.nurAlt.map((id) => baueArtikel(vorher!.get(id)!, 'entfallen', hist, bis)),
+        ...d.geaendert.map((id) => baueArtikel(vorher!.get(id)!, artikel.get(id) ?? null, 'geaendert', hist, bis)),
+        ...d.nurAlt.map((id) => baueArtikel(vorher!.get(id)!, null, 'entfallen', hist, bis)),
       ].sort((a, b) => (a.eId < b.eId ? -1 : a.eId > b.eId ? 1 : 0));
       // Gegenprobe in der anderen Richtung: Fussnoten-Ereignisse am Ziel-Stand, zu denen
       // KEINE Textänderung beobachtet wurde. Der Widerspruch wird gelistet, nie aufgelöst.

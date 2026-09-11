@@ -1,4 +1,4 @@
-// ─── W2·6c-SYNOPSE · Generator-seitige Normalisierung (Profil `entstehung-norm/3`) ──
+// ─── W2·6c-SYNOPSE · Generator-seitige Normalisierung (Profil `entstehung-norm/4`) ──
 //
 // Geprüft wird `scripts/entstehung/synopse.ts` — insbesondere `flachText`,
 // `zerlegeBloecke`, `diffStaende` und `normalisiere` — sowie die EINE geteilte
@@ -22,7 +22,7 @@
 // `bibliothek/materialien/entstehung-2026-09-06/E5-0-vormessung.md` §6b).
 import { describe, it, expect } from 'vitest';
 import {
-  extrahiereArtikel, flachText, normalisiere, diffStaende, tokenAusEId,
+  extrahiereArtikel, flachText, normalisiere, diffStaende, tokenAusEId, titelGeaendert,
 } from '../../scripts/entstehung/synopse';
 import { vergleichsform, vergleichsformLeerraumBlind } from '../lib/entstehung/normalisierung';
 import { vergleichsform as vergleichsformAusLeser } from '../lib/entstehung/synopse-diff';
@@ -37,7 +37,14 @@ function artikel(xml: string, eId: string) {
   return gefunden;
 }
 
-describe('flachText — Scope seit Profil /3: nur <paragraph>, nie <heading>/<subheading>', () => {
+// §6.3-BEGRÜNDUNG: der Scope dieses describe hat sich mit Profil `/4` fachlich
+// geändert (Gegenprüfung PR #798, Auflage A2) — die SACHÜBERSCHRIFT (`<heading>`)
+// gehört wieder in den Vergleich, weil ihre Änderung eine echte, dem Leser
+// geschuldete Änderung ist. UNVERÄNDERT bleibt der Befund dieses Fixtures: der
+// `<subheading>`-RANDVERMERK in Klammerform ist ein Querverweis auf die
+// Delegationsnorm und bleibt draussen. Die drei Erwartungen unten gelten darum
+// unverändert weiter.
+describe('flachText — Scope seit Profil /4: <paragraph> + Sachüberschrift, nie der Klammer-Randvermerk', () => {
   // AVIV Art. 109b, 2021-04-01 -> 2021-07-01 (Fedlex Filestore, real, gekürzt um
   // Fussnoten-Text der authorialNote — reinerText entfernt sie ohnehin vollständig).
   const VOR = dok(
@@ -130,13 +137,17 @@ describe('vergleichsRoh — Fussnote vor der Satzzeichen-Regel weg (Befund #796,
     expect(normalisiere(flachText(a))).toBe(normalisiere(flachText(b)));
   });
 
-  // KLV Art. 12 Bst. e, 2021-11-04 -> 2022-01-01 (real, gekürzt): eine Tabellenzelle
-  // trägt eine `<blockList>`, GEFOLGT von einem Fliesstext-Satz — `zerlegeBloecke`
-  // speichert nach einer Liste nur `listIntroduction` + `item`, nie Text danach, in
-  // KEINER Generation. Ohne Regel (c) sah `flachText` die Kantonsliste (Bern/Luzern
-  // ergänzt), `bloecke` nie — ein Alt-Block wurde "geändert" gebucht, dessen Wortlaut
-  // sich nie unterschied.
-  it('ignoriert Fliesstext NACH einer Liste — er landet ohnehin nie in bloecke', () => {
+  // §6.3-BEGRÜNDUNG FÜR DIE UMKEHR DIESES TESTS: bis Profil `/3` stand hier die
+  // Erwartung, `flachText` möge den Fliesstext NACH einer Liste ignorieren, weil
+  // `zerlegeBloecke` ihn ohnehin nie speichere. Die Gegenprüfung zu PR #798 (Auflage A1)
+  // hat belegt, dass damit VIER echte Wortlautänderungen von KLV Art. 12 Bst. e gelöscht
+  // wurden (Kantonsliste der Früherkennungsprogramme: 2021-11-04 → 2022-01-01 «+ Bern,
+  // Luzern», 2022-10-01 → 2023-01-01 «+ Basel-Landschaft», 2024-07-01 → 2025-01-01
+  // «+ Solothurn», 2026-05-11 → 2026-07-01 «+ Glarus»; amtliche Konsolidierungen, Fedlex
+  // Filestore ELI cc/1995/4964_4964_4964, abgerufen 12.9.2026). Die Wurzel sass in der
+  // STORAGE-Lücke, nicht im Vergleich — sie ist jetzt dort geschlossen, und die Erwartung
+  // ist fachlich umgedreht.
+  it('speichert Fliesstext NACH einer Liste als Block und sieht die Änderung darin (Auflage A1)', () => {
     const bau = (kantone: string) => dok(
       '<article eId="art_12_e"><num><b>Art. 12</b><i>e</i></num>'
       + '<paragraph eId="art_12_e/para"><num>a.</num><content><table><tr><td>'
@@ -149,8 +160,128 @@ describe('vergleichsRoh — Fussnote vor der Satzzeichen-Regel weg (Befund #796,
     const mitBernLuzern = bau('Basel-Stadt, Bern, Freiburg, Genf, Luzern');
     const a = artikel(ohneBernLuzern, 'art_12_e');
     const b = artikel(mitBernLuzern, 'art_12_e');
-    expect(a.bloecke).toEqual(b.bloecke); // die Kantonsliste landet in KEINER Generation in bloecke
-    expect(normalisiere(flachText(a))).toBe(normalisiere(flachText(b)));
+    const nachlauf = (x: typeof a) => x.bloecke.filter((bl) => bl[2].startsWith('Findet die Untersuchung'));
+    expect(nachlauf(a)).toHaveLength(1); // der Satz IST jetzt ein gespeicherter Block …
+    expect(nachlauf(a)[0][0]).toBe('a.'); // … und trägt das Absatz-Etikett des Absatzes
+    expect(nachlauf(a)[0][2]).not.toBe(nachlauf(b)[0][2]); // … und unterscheidet sich wirklich
+    expect(normalisiere(flachText(a))).not.toBe(normalisiere(flachText(b)));
+    const d = diffStaende(extrahiereArtikel(ohneBernLuzern), extrahiereArtikel(mitBernLuzern));
+    expect(d.geaendert).toEqual(['art_12_e']);
+  });
+
+  it('erfasst auch den Fliesstext VOR und ZWISCHEN zwei Aufzählungen (nichts geht mehr verloren, §8)', () => {
+    const xml = dok(
+      '<article eId="art_9"><num>Art. 9</num>'
+      + '<paragraph eId="art_9/para_2"><num>2</num><content>'
+      + '<p>Vorlaufsatz vor der ersten Liste.</p>'
+      + '<blockList><item><num>a. </num><p>erstens;</p></item></blockList>'
+      + '<p>Zwischentext zwischen den Listen.</p>'
+      + '<blockList><item><num>b. </num><p>zweitens.</p></item></blockList>'
+      + '<p>Nachlaufsatz nach der letzten Liste.</p>'
+      + '</content></paragraph></article>',
+    );
+    expect(artikel(xml, 'art_9').bloecke).toEqual([
+      ['2', '', 'Vorlaufsatz vor der ersten Liste.'],
+      ['2', 'a.', 'erstens;'],
+      ['2', '', 'Zwischentext zwischen den Listen.'],
+      ['2', 'b.', 'zweitens.'],
+      ['2', '', 'Nachlaufsatz nach der letzten Liste.'],
+    ]);
+  });
+
+  it('schneidet eine VERSCHACHTELTE Aufzählung nicht auf (4476 Absätze im Korpus, 12.9.2026)', () => {
+    // Ein nicht-gieriges `<blockList>…</blockList>` hätte am ERSTEN inneren Schluss-Tag
+    // geschnitten und den Rest der äusseren Liste zu «Fliesstext nach der Liste» erklärt —
+    // die Unterpunkte wären doppelt erschienen (einmal als Item, einmal im Fliesstext).
+    const xml = dok(
+      '<article eId="art_3"><num>Art. 3</num>'
+      + '<paragraph eId="art_3/para_1"><num>1</num><content>'
+      + '<blockList><listIntroduction>Es gelten:</listIntroduction>'
+      + '<item><num>a. </num><p>erstens, nämlich:</p>'
+      + '<blockList><item><num>1. </num><p>Unterpunkt eins;</p></item></blockList></item>'
+      + '<item><num>b. </num><p>zweitens.</p></item>'
+      + '</blockList></content></paragraph></article>',
+    );
+    const bloecke = artikel(xml, 'art_3').bloecke;
+    expect(bloecke[0]).toEqual(['1', '', 'Es gelten:']);
+    expect(bloecke.filter((b) => b[2].includes('Unterpunkt eins'))).toHaveLength(1);
+    expect(bloecke.some((b) => b[1] === 'b.' && b[2] === 'zweitens.')).toBe(true);
+  });
+});
+
+describe('Sachüberschrift: eine Randtitel-Änderung ist eine Änderung (Auflage A2, Profil /4)', () => {
+  // BVG Art. 33b, 2023-01-01 → 2024-01-01 (amtliche Konsolidierungen, Fedlex Filestore
+  // ELI cc/1983/797_797_797, abgerufen 12.9.2026, real und ungekürzt): der Randtitel
+  // «Erwerbstätigkeit nach dem ordentlichen Rentenalter» wird mit der AHV-Reform zu
+  // «Erwerbstätigkeit nach dem Referenzalter»; der Absatzwortlaut bleibt Zeichen für
+  // Zeichen derselbe. Mit Profil `/3` verschwand dieser Schritt vollständig — der Leser
+  // bekam «kein Unterschied erkennbar» (§8: falsche Auskunft über eine echte Änderung).
+  // Korpusweit 35 solche Schritte (Messung 12.9.2026).
+  const bvg = (titel: string) => dok(
+    '<article eId="art_33_b"><num><b>Art. 33</b><i>b</i></num>'
+    + `<heading>${titel}</heading>`
+    + '<paragraph eId="art_33_b/para"><content><p>Die Vorsorgeeinrichtung kann in ihrem '
+    + 'Reglement vorsehen, dass auf Verlangen der versicherten Person deren Vorsorge bis zum '
+    + 'Ende der Erwerbstätigkeit, höchstens jedoch bis zur Vollendung des 70. Altersjahres, '
+    + 'weitergeführt wird.</p></content></paragraph></article>',
+  );
+  const VOR = bvg('Erwerbstätigkeit nach dem ordentlichen Rentenalter');
+  const NACH = bvg('Erwerbstätigkeit nach dem Referenzalter');
+
+  it('bucht den Schritt, obwohl der Absatzwortlaut byte-gleich bleibt', () => {
+    const a = artikel(VOR, 'art_33_b');
+    const n = artikel(NACH, 'art_33_b');
+    expect(a.bloecke).toEqual(n.bloecke);
+    expect(diffStaende(extrahiereArtikel(VOR), extrahiereArtikel(NACH)).geaendert).toEqual(['art_33_b']);
+    expect(titelGeaendert(a, n)).toBe(true);
+    expect(n.ueberschrift).toBe('Erwerbstätigkeit nach dem Referenzalter');
+  });
+
+  it('hält den Klammer-Randvermerk weiterhin draussen (AVIV Art. 109b, 8 Fälle im Korpus)', () => {
+    const mit = (sub: string) => dok(
+      '<article eId="art_109_b"><num><b>Art. 109</b><i>b</i></num>'
+      + '<heading>Prüfung der EDV-Anwendungen</heading>'
+      + `<subheading fedlex:role="reference"> ${sub}</subheading>`
+      + '<paragraph eId="art_109_b/para"><content><p>Die Ausgleichsstelle prüft periodisch '
+      + 'die EDV-Anwendungen.</p></content></paragraph></article>',
+    );
+    const a = artikel(mit('(Art. 83 Abs. 1 Bst. i und o AVIG)'), 'art_109_b');
+    const n = artikel(mit('(Art. 83 Abs. 1bis AVIG)'), 'art_109_b');
+    expect(titelGeaendert(a, n)).toBe(false);
+    expect(diffStaende(
+      extrahiereArtikel(mit('(Art. 83 Abs. 1 Bst. i und o AVIG)')),
+      extrahiereArtikel(mit('(Art. 83 Abs. 1bis AVIG)')),
+    ).geaendert).toEqual([]);
+  });
+
+  it('nimmt einen <subheading>, der KEIN Klammer-Querverweis ist, in den Titel auf (§8: enge Regel)', () => {
+    const mit = (sub: string) => dok(
+      `<article eId="art_2"><num>Art. 2</num><heading>Zweck</heading><subheading>${sub}</subheading>`
+      + '<paragraph eId="art_2/para"><content><p>Unveränderter Satz.</p></content></paragraph></article>',
+    );
+    const a = artikel(mit('Erster Abschnitt: Allgemeines'), 'art_2');
+    const n = artikel(mit('Zweiter Abschnitt: Besonderes'), 'art_2');
+    expect(a.ueberschrift).toBe('Zweck Erster Abschnitt: Allgemeines');
+    expect(titelGeaendert(a, n)).toBe(true);
+  });
+
+  it('bucht keine Änderung, wenn nur das Ordnungs-Suffix über die Grenze <num>/<heading> wandert (RPV Art. 32bis)', () => {
+    // RPV Art. 32bis, 2026-05-11 → 2026-05-20 (real): einmal steht das «bis» im
+    // `<heading>`, einmal im `<num>`. Etikett und Titel zusammen sind identisch — es
+    // gibt nichts zu zeigen, und ein Alt-Block ohne sichtbaren Unterschied wäre genau
+    // der Fehler, den der Leer-Diff-Wächter verbietet (§5).
+    const VOR_R = dok(
+      '<article eId="art_32_bis"><num>Art. 32</num>'
+      + '<heading><sup>bis</sup> Bündelung von Infrastrukturanlagen</heading>'
+      + '<paragraph eId="art_32_bis/para"><content><p>Unveränderter Satz.</p></content></paragraph></article>',
+    );
+    const NACH_R = dok(
+      '<article eId="art_32_bis"><num>Art. 32<sup>bis</sup></num>'
+      + '<heading>Bündelung von Infrastrukturanlagen</heading>'
+      + '<paragraph eId="art_32_bis/para"><content><p>Unveränderter Satz.</p></content></paragraph></article>',
+    );
+    expect(titelGeaendert(artikel(VOR_R, 'art_32_bis'), artikel(NACH_R, 'art_32_bis'))).toBe(false);
+    expect(diffStaende(extrahiereArtikel(VOR_R), extrahiereArtikel(NACH_R)).geaendert).toEqual([]);
   });
 });
 

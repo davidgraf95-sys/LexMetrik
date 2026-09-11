@@ -3,7 +3,7 @@ import { AMTLICHE_FASSUNG_NOMEN } from '../../lib/benennung';
 import { standVon, type SynopseShard } from '../../lib/entstehung/synopse';
 import { entwurfUrl, type EntwurfArtikel, type EntwurfShard } from '../../lib/entstehung/synopse-entwurf';
 import {
-  hatUnterschied, synopseZeilen,
+  hatUnterschied, nurTitelGeaendert, synopseZeilen,
   type DiffStueck, type SynopseLage, type SynopseTreffer, type SynopseZeile,
 } from '../../lib/entstehung/synopse-diff';
 
@@ -202,6 +202,7 @@ function Vergleich({ treffer, shard, geltend, entwurf, aufgehoben }: {
         <span className="text-ink-500">
           {artikel.label}
           {artikel.ueberschrift && <> · {artikel.ueberschrift}</>}
+          {artikel.ueberschriftNeu && <> → {artikel.ueberschriftNeu}</>}
           {' · '}Stand <span className="num">{datumCh(schritt.von)}</span> gegenüber{' '}
           <span className="num">{datumCh(schritt.bis)}</span>
         </span>
@@ -225,11 +226,16 @@ function Vergleich({ treffer, shard, geltend, entwurf, aufgehoben }: {
           nicht sicher einem einzelnen Erlass.
         </p>
       )}
-      {hatUnterschied(zeilen)
-        ? <Gegenueberstellung zeilen={zeilen} altWort={altWort} neuWort={neuWort} />
+      {hatUnterschied(zeilen) && <Gegenueberstellung zeilen={zeilen} altWort={altWort} neuWort={neuWort} />}
+      {!hatUnterschied(zeilen) && (nurTitelGeaendert(artikel, zeilen)
+        ? <p className="lr8-syn-lage" data-synopse-lage="nur-titel">
+            Am Wortlaut dieses Artikels ist zwischen den beiden Ständen kein Unterschied erkennbar —
+            geändert wurde nur die amtliche Sachüberschrift: «{artikel.ueberschrift}» wurde zu
+            «{artikel.ueberschriftNeu}».
+          </p>
         : <p className="lr8-syn-lage" data-synopse-lage="gleich">
             Zwischen den beiden Ständen ist am Wortlaut dieses Artikels kein Unterschied erkennbar.
-          </p>}
+          </p>)}
       {entwurf && <EntwurfBlock fund={entwurf} />}
       <ul className="lr8-syn-fuss" data-synopse-fuss>
         <Nachweis wort="Alt" stand={schritt.von} liveUrl={altStand?.liveUrl}
