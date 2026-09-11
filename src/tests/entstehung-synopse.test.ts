@@ -99,6 +99,38 @@ describe('zerlegeBloecke — Fallback ohne <paragraph>: <subheading> fällt wie 
   });
 });
 
+describe('vergleichsRoh — Fussnote vor der Satzzeichen-Regel weg (Befund #796, Nachtrag)', () => {
+  // BGOE Art. 13, 2023-09-01 -> 2023-11-01 (Fedlex Filestore, real, gekürzt): eine
+  // Berichtigungs-Fussnote sitzt in EINER Generation zwischen dem Doppelpunkt und
+  // </listIntroduction>, in der anderen nicht — ohne den Fix griff die Regel (a) nur
+  // in der fussnotenlosen Generation und liess das Fussnoten-Artefakt wie eine
+  // Wortlaut-Änderung aussehen.
+  it('lässt eine Fussnote VOR </listIntroduction> die Satzzeichen-Regel nicht blockieren', () => {
+    const mitFussnote = dok(
+      '<article eId="art_13">'
+      + '<num><b>Art. 13</b></num><heading>Schlichtung</heading>'
+      + '<paragraph eId="art_13/para_1"><num>1</num><content><blockList>'
+      + '<listIntroduction eId="art_13/para_1/listintro"> Einen Schlichtungsantrag stellen '
+      + 'kann eine Person:<authorialNote><p> Die Berichtigung vom 30. Sept. 2022.</p></authorialNote>'
+      + '</listIntroduction>'
+      + '<item eId="art_13/para_1/lbl_a"><num>a. </num><p>deren Zugang eingeschränkt wird.</p></item>'
+      + '</blockList></content></paragraph></article>',
+    );
+    const ohneFussnote = dok(
+      '<article eId="art_13">'
+      + '<num><b>Art. 13</b></num><heading>Schlichtung</heading>'
+      + '<paragraph eId="art_13/para_1"><num>1</num><content><blockList>'
+      + '<listIntroduction eId="art_13/para_1/listintro"> Einen Schlichtungsantrag stellen '
+      + 'kann eine Person:</listIntroduction>'
+      + '<item eId="art_13/para_1/lbl_a"><num>a. </num><p>deren Zugang eingeschränkt wird.</p></item>'
+      + '</blockList></content></paragraph></article>',
+    );
+    const a = artikel(mitFussnote, 'art_13');
+    const b = artikel(ohneFussnote, 'art_13');
+    expect(normalisiere(flachText(a))).toBe(normalisiere(flachText(b)));
+  });
+});
+
 describe('Gegenprobe PR #794 — bleibt bestehen (Profil /3 darf keine echte Struktur-Klasse verlernen)', () => {
   it('ARG Art. 12: Satzzeichen tauscht an der Elementgrenze Satz→Listeneinleitung — KEINE Änderung', () => {
     const vor = dok(

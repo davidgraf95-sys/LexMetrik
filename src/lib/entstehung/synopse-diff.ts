@@ -464,6 +464,17 @@ export interface SynopseLeerDiff {
  * eine «Änderung», die niemand sehen kann (§1, §5: zwei Normalisierungen wären
  * zwei Wahrheiten). `geltendFuerToken` liefert den geltenden Korpus-Wortlaut für
  * den Fall, dass ein Alt-Block der letzte Schritt vor dem geltenden Stand ist.
+ *
+ * `art: 'entfallen'` ABSICHTLICH AUSSER ACHT: Gemessen 11.9.2026 (CHEMRRV, zehn
+ * Artikel-Token um den 2022-05-01 herum) sucht `neuNach` bei einem entfallenen
+ * Artikel weiterhin über ALLE Folgeschritte nach dem GLEICHEN Token — findet ein
+ * numerisch späterer, sachlich unverwandter Artikel zufällig (oder durch eine
+ * spätere Rück-Umnummerierung) denselben Token, wird dessen Wortlaut als «Neu»
+ * gegen das entfallene Original gestellt. Das ist eine TOKEN-KONTINUITÄTS-Frage
+ * (gehört ein Artikel, der Jahre später unter derselben Nummer wieder auftaucht,
+ * zur selben Norm-Linie?), keine Normalisierungs-Lücke — anderer Fehlerklasse,
+ * eigener Befund, hier bewusst nicht mitgelöst (§1: dieses Tor bewacht «zwei
+ * Normalisierungen», nicht Token-Identität über grosse Zeiträume).
  */
 export function leerDiffVerletzungen(
   shard: SynopseShard,
@@ -473,9 +484,10 @@ export function leerDiffVerletzungen(
   for (const schritt of shard.schritte) {
     for (const artikel of schritt.artikel) {
       if (artikel.zustand !== 'belegt' && artikel.zustand !== 'ohne_ereignis') continue;
+      if (artikel.art === 'entfallen') continue;
       if (!artikel.token) continue;
       const { neu } = neuNach(shard, artikel.token, schritt, artikel, geltendFuerToken(artikel.token));
-      if (neu === null) continue; // 'entfallen' — kein Vergleich möglich, kein Fall dieser Klasse.
+      if (neu === null) continue;
       if (!hatUnterschied(synopseZeilen(artikel.alt, neu))) {
         out.push({ token: artikel.token, stand: schritt.bis, zustand: artikel.zustand });
       }

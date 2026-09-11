@@ -252,6 +252,23 @@ describe('leerDiffVerletzungen — der Leer-Diff-Wächter von check:entstehung (
     const verletzungen = leerDiffVerletzungen(manipuliert, () => GELTEND);
     expect(verletzungen).toEqual([{ token: '5', stand: '2022-01-01', zustand: 'belegt' }]);
   });
+
+  it('lässt `art: entfallen` bewusst aus (Token-Kontinuität ist eine andere Fehlerklasse, Befund #796 CHEMRRV)', () => {
+    // Gemessen 11.9.2026: neuNach() sucht bei einem entfallenen Artikel weiterhin über
+    // ALLE Folgeschritte nach demselben Token — findet ein Jahre späterer, per Zufall
+    // oder Rück-Umnummerierung gleich nummerierter Artikel denselben Wortlaut, wäre das
+    // sonst ein falscher Leer-Diff-Treffer, der eine ANDERE Baustelle betrifft.
+    const manipuliert = {
+      ...SHARD,
+      schritte: SHARD.schritte.map((s, i) => (i !== 1 ? s : {
+        ...s,
+        artikel: s.artikel.map((a) => (a.eId !== 'art_7' ? a : {
+          ...a, art: 'entfallen' as const, alt: [B('1', '', 'Dritte Fassung des Absatzes.')],
+        })),
+      })),
+    };
+    expect(leerDiffVerletzungen(manipuliert, () => GELTEND)).toEqual([]);
+  });
 });
 
 describe('tokenAusLabel (Entwurf ↔ Beschluss)', () => {

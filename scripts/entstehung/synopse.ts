@@ -309,6 +309,17 @@ export function flachText(a: ArtikelFassung): string {
  */
 export function vergleichsRoh(roh: string): string {
   return roh
+    // (a0) Fussnoten-Apparat WEG, BEVOR die Satzzeichen-Regel (a) unten prueft, ob ein
+    // Satzzeichen unmittelbar vor der Elementgrenze steht (Befund #796, 11.9.2026).
+    // Gemessen an BGOE Art. 13 (2023-09-01 -> 2023-11-01) und VEV Art. 4 (2026-04-08 ->
+    // 2026-06-12): eine `<authorialNote>` (Berichtigungs- bzw. «Fassung gemaess…»-Hinweis)
+    // schiebt sich in EINER Generation zwischen das Satzzeichen und `</listIntroduction>`
+    // (`…Person:<authorialNote>…</authorialNote></listIntroduction>`), in der anderen steht
+    // sie nicht dort — die Regel (a) griff nur in der fussnotenlosen Generation und liess
+    // ein reines Fussnoten-Artefakt wie eine Wortlaut-Aenderung aussehen (kein gespeicherter
+    // Block betroffen: `reinerText` entfernt `<authorialNote>` ohnehin vollstaendig, nur
+    // die VERGLEICHS-Reihenfolge war falsch). Dieselbe Regex wie in `reinerText`.
+    .replace(/<authorialNote\b[^>]*>[\s\S]*?<\/authorialNote>/g, '')
     // (a) Satzzeichen unmittelbar VOR einer Aufzaehlung. Gemessen an zwei Faellen:
     //   ARG Art. 12  (2021-01-01 -> 2023-09-01): derselbe Satz einmal als gewoehnlicher
     //     `<p>` ohne Satzzeichen, einmal als `<listIntroduction>… werden:</listIntroduction>`.
