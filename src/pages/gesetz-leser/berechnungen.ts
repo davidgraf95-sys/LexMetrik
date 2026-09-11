@@ -303,13 +303,32 @@ export function zaehleAenderungsvermerke(struktur: StrukturMap | null | undefine
  * bei geladenem Erlass heisst dagegen: gar keine Fussnoten, also auch keine
  * Vermerke — das ist Wissen, keine Unwissenheit.
  */
+// ── W2·26/Z8-NACHZUG (Mandat David 11.9.2026): EIN DRITTER TRÄGER ───────────
+//
+// Seit W2·26 nimmt die Stellung «Fassung»/«aus» den Fussnoten-Apparat als
+// GANZES (`src/index.css`, Herleitung samt Nullprobe dort) — nicht mehr nur die
+// Klasse `A`. Damit hat die Wahl auf JEDEM Erlass mit Fussnoten eine Wirkung,
+// auch dort, wo es weder eine `kl`-Klassifikation noch eine Fassungszeile gibt.
+//
+// DAS IST KEIN KOMFORT, SONDERN DIE PFLICHT ZUM RÜCKWEG (§8): die VORGABE ist
+// «Fassung», und sie gilt erlass-übergreifend aus dem geteilten Speicher. Ohne
+// diese dritte Bedingung hätte ein Erlass ohne Vermerke seinen Apparat versteckt
+// und den Schalter, mit dem man ihn zurückholt, gar nicht erst angeboten —
+// genau der Treuebruch vom 16.8.2026 (H2), nur eine Ebene höher.
+//
+// GEMESSEN (11.9.2026, alle 1531 Struktur-Sidecars): 1088 tragen Artikel-
+// Fussnoten, 253 tragen NUR Kopf-Fussnoten (CISG, VRK, STAATENLOSE, AR-131.13
+// u. a.), 190 gar keine. Die 253 sind genau die Menge, die ohne diesen Nachzug
+// durchgefallen wäre — darum zählt der Aufrufer Kopf- UND Artikel-Fussnoten
+// (`v3/leserV3Modell.ts`).
 export function bieteAenderungsvermerkeSchalter(
   vermerke: number | null,
   hatFassungsZeile: boolean,
   erlassGeladen: boolean,
+  fussnoten: number | null = null,
 ): boolean {
   if (vermerke === null && !erlassGeladen) return true;
-  return (vermerke ?? 0) > 0 || hatFassungsZeile;
+  return (vermerke ?? 0) > 0 || hatFassungsZeile || (fussnoten ?? 0) > 0;
 }
 
 /** Fussnoten-Nummer → Sortierschlüssel [Zahl, Suffix]; unparsbar ⇒ ans Ende. */

@@ -2,6 +2,7 @@
 import { test, expect } from '@playwright/test';
 import { fehlerSammeln } from './helpers/fehlerSammeln';
 import { DROSSEL } from './helpers/budgets';
+import { vollerApparat } from './helpers/vollerApparat';
 
 // ─── W2·5d U-VERWEIS (A7 + A10 + A11 + A13) — Browser-Beweise ────────────────
 // P2 (§10.2): (1) MWSTG Art. 5 verbatim = 5 Links (art_31/35/37/38/45);
@@ -95,6 +96,15 @@ test.describe('FN-3 — Präambel-Fussnoten inline (Marker + Kopf-Apparat-Anker)
   ]) {
     test(`${key}-Ingress: Marker ${nr} verlinkt auf Kopf-Apparat #fn-kopf-${nr}`, async ({ page }) => {
       const fehler = fehlerSammeln(page);
+      // §6.3-DEKLARATION (W2·26/Z8, 11.9.2026): die Vorgabestellung «Fassung»
+      // nimmt seither den GANZEN Fussnoten-Apparat, auch den des Erlass-Kopfs
+      // (der bis dahin als einziger Pfad überhaupt keine Regel traf — er setzt
+      // kein `data-fn-klasse`; gemessen 97 sichtbare Kopf-/Randtitel-Marker im
+      // OR). Diese Sonde prüft die EXTRAKTION («sitzt der Marker in der
+      // Präambel-Zeile, zeigt er auf `#fn-kopf-n`?»), nicht die Ansicht — sie
+      // stellt den vollen Apparat darum über den Haus-Weg her. Zusage, Anker
+      // und Popover-Prüfung unverändert.
+      await vollerApparat(page);
       await page.goto(`/gesetze/bund/${key}`);
       const ingress = page.locator('section[aria-label="Ingress"]');
       await expect(ingress).toBeVisible({ timeout: 15_000 });
@@ -163,7 +173,7 @@ test.describe('A7 — strukturiertes Verweis-Popover (Wortlaut → Entscheide �
     // Randspalte. Auf Auftrag David 6.9.2026 («der platz rechts und links neben
     // dem gesetz … nimmt viel platz vom gesetzestext weg») sind beide Randspuren
     // gefallen; die Bezüge stehen seither als EINE aufklappbare Zeile unter dem
-    // Artikelkopf (`parts/BezuegeKopf.tsx`, `<details>`). Eingeklappt ist der
+    // Artikelkopf (`parts/Funktionszeile.tsx`, `<details>`). Eingeklappt ist der
     // Chip nicht gerendert — `getByRole` fand darum nichts (gemessen: 0 statt 1;
     // der zweite Treffer «Art. 20 OR» im Fliesstext ist der EXTERNE Fedlex-Link
     // und trägt über `.lc-verweis-aussen::after` ein «↗» im Namen, passt also

@@ -513,7 +513,7 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
 
               AUF DEM PAPIER ÄNDERT SICH NICHTS, und das ist der Grund für dieses
               Element. Die Funktionszeile ist `print:hidden` (sie ist Bedienung,
-              `./BezuegeKopf.tsx`); ihr die Fassung zu überlassen hiesse, dem
+              `./Funktionszeile.tsx`); ihr die Fassung zu überlassen hiesse, dem
               Ausdruck den Stand des Artikels zu nehmen — die Auskunft, die ein
               Aktenstück am dringendsten braucht (§8, dieselbe Sorge wie die
               Stand-Zeile im Erlass-Kopf, `e2e/druck-fundstellen-z2`).
@@ -628,17 +628,20 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
               der data-fussnoten-CSS-Toggle dämpft ihn bei «AUS» (data-fn-apparat),
               versteckt ihn nie. Marker + Apparat = EINE Bedienung (Options-Leiste). */}
           {fussAnzeige.length > 0 && (
-            /* D35-F3 (7.9.2026) · `data-fn-nur-a`: trägt dieser Apparat AUSSCHLIESSLICH
-               Änderungs-Fussnoten? Dann nimmt die Wahl «Fassung»/«aus» den ganzen
-               Kasten mit, statt eine nackte Haarlinie über nichts stehen zu lassen.
-               Die Frage wird HIER beantwortet und nicht per `:has()` in der CSS —
-               eine Nachbarschafts-Anfrage über bis zu 1686 Artikel ist genau die
-               Bauart, die W2·19-GLIEDERUNG/F1 als Scroll-Bremse nachgewiesen hat
-               (§15, dieselbe Begründung wie bei `randInhalt` oben).
-               `undefined` statt `false`: React lässt das Attribut dann ganz weg —
-               ein `data-fn-nur-a="false"` wäre für den Attribut-Selektor ein
-               TREFFER und blendete jeden Apparat aus. */
-            <div data-fn-apparat data-fn-nur-a={fussAnzeige.every((f) => f.kl === 'A') ? '' : undefined}
+            /* D35-F3 (7.9.2026) · HIER STAND `data-fn-nur-a` — ERSATZLOS GESTRICHEN
+               (W2·26/Z8, 11.9.2026). Das Attribut beantwortete die Frage «trägt
+               dieser Apparat AUSSCHLIESSLICH Änderungs-Fussnoten?», damit die Wahl
+               «Fassung»/«aus» den ganzen Kasten mitnehmen konnte, statt eine nackte
+               Haarlinie über nichts stehen zu lassen. Seit Z8 nimmt diese Wahl den
+               Apparat ohnehin als Ganzes (`src/index.css`), und die Frage hat keinen
+               Leser mehr — was nicht mehr scheitern kann, wird gestrichen statt
+               bewacht (§17-Gegengewicht). Die Herleitung (kein `:has()` über 1686
+               Artikel, `undefined` statt `false`) bleibt als datierter Beleg im
+               Git-Verlauf dieser Datei stehen (§0 Ziff. 2b).
+               `data-fn-klasse` an den Einträgen BLEIBT: es ist die build-seitige
+               Klassifikation im DOM, und `src/tests/fussnoten-toggle-huellenneutral.test.ts`
+               belegt daran, dass KEIN Selektor mehr nach Klasse dämpft (H0-Auflage 1). */
+            <div data-fn-apparat
               className="mt-3 border-t border-rule-artikel pt-2 space-y-1">
               {fussAnzeige.map((fn, i) => (
                 <p key={i} id={fn.nr ? `fn-${e.artikel}-${fn.nr}` : undefined} data-fn-klasse={fn.kl}
@@ -693,7 +696,7 @@ export const ArtikelLeser = memo(function ArtikelLeser({ e, erlass, basisPfad, f
             ein eingeklappter (typisch: aufgehobener) Artikel behält seine
             Bezüge-Zeile, und sie steht dann direkt unter dem Kopf, weil es
             dazwischen nichts gibt. Im Druck bleibt sie ausgeblendet
-            (`print:hidden` in `BezuegeKopf.tsx`). */}
+            (`print:hidden` in `Funktionszeile.tsx`). */}
         <ArtikelBezuegeFuss bezuege={bezuege} bezuegeImFuss={bezuegeImFuss}
           historie={historie} leitfaelle={leitfaelle} materialien={materialien} verweise={verweise}
           werkzeuge={werkzeuge} zaehler={zaehler} zitat={zitat} revision={revision}

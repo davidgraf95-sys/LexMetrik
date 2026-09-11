@@ -130,31 +130,41 @@ test.describe('D35-F2 · Kopf-Entlastung und Rubriken-Wahl', () => {
     await expect(page.locator(`#art-${ART} .lr7-bez-aktionen`).first()).toBeVisible();
   });
 
-  test('(b) das Wort «Bezüge» steht nur, solange es etwas benennt', async ({ page }) => {
-    // BEFUND, gemessen 7.9.2026 an der ersten Fassung (Bild `d35-f2-c`): ZPO
-    // Art. 272 führt GENAU EINE Rubrik («Entscheide»). Nach dem Abwählen stand
-    // dort «Bezüge» allein neben den Aktionen — eine Überschrift über nichts
-    // (§8). Rot zu bekommen: in `src/index.css` die vier Anschalt-Zeilen für
-    // `.lr7-bez-wort` löschen, oder in `parts/BezuegeKopf.tsx` das Attribut
-    // `data-bez-marken` weglassen.
+  // ── §6.3-DEKLARATION (W2·26/Z1, Mandat David 11.9.2026) ───────────────────
+  // Hier stand «das Wort ‹Bezüge› steht nur, solange es etwas benennt» — die
+  // Sonde zum BEFUND vom 7.9.2026 (Bild `d35-f2-c`): ZPO Art. 272 führt genau
+  // eine Rubrik, und nach deren Abwahl stand «Bezüge» allein neben den
+  // Aktionen, eine Überschrift über nichts (§8). Der Befund und die Regel, die
+  // er erzwang, waren richtig — für ihren Stand (§0 Ziff. 2b).
+  //
+  // DAS WORT GIBT ES SEIT W2·26 NICHT MEHR: es benannte vier Marken, die ihren
+  // Gegenstand schon im Wort tragen. Mit dem Wort fällt die Regel, und mit der
+  // Regel diese Sonde — was nicht mehr scheitern kann, wird gestrichen statt
+  // bewacht (§17-Gegengewicht). An ihre Stelle tritt die UMGEKEHRTE Zusage: das
+  // Wort ist wirklich weg, und die Auskunft, die es gebraucht hat, steht weiter
+  // maschinenlesbar am Element.
+  test('(b) W2·26/Z1: das Wort «Bezüge» ist fort, `data-bez-marken` bleibt', async ({ page }) => {
     await oeffne(page);
-    const nur272 = page.locator('#art-272 .lr7-bez-wort');
-    // Vorbedingung: Art. 272 führt genau eine Rubrik, und es ist «Entscheide».
+    // Nirgends im Leser, nicht nur an diesem Artikel — eine verbliebene Stelle
+    // wäre die zweite Wahrheit, die Z1 gerade abräumt (§5).
+    await expect(page.locator('.lc-leser .lr7-bez-wort')).toHaveCount(0);
+    await expect(page.locator(ZEILE)).not.toContainText('Bezüge');
+    // Die Auskunft «welche Rubriken führt dieser Artikel» bleibt: ZPO Art. 272
+    // führt genau eine, und es ist «Entscheide» (dieselbe Vorbedingung, die der
+    // gestrichene Fall benutzt hat).
     await expect(page.locator('#art-272 .lr7-bez')).toHaveAttribute('data-bez-marken', 'r');
-    await expect(nur272).toBeVisible();
-
-    await menueAuf(page);
-    await page.locator('[data-v3-fussrubrik="r"]').click();
-    await page.keyboard.press('Escape');
-
-    await expect(nur272, '«Bezüge» steht über einer leeren Rubrik-Liste').toBeHidden();
-    // Art. 271 führt daneben noch «Verweise» — dort BLEIBT das Wort stehen,
-    // sonst wäre die Regel ein pauschales Ausblenden statt einer Aussage.
-    await expect(page.locator(`#art-${ART} .lr7-bez-wort`)).toBeVisible();
   });
 
   test('(b) auch die Aktionsgruppe ist eine Rubrik', async ({ page }) => {
     await oeffne(page);
+    // W2·26/Z6 (§6.3, fachlich): die Aktionen werden erst gerendert, wenn der
+    // Artikel Hover/Fokus hat oder eine Rubrik offen ist. Hier wird eine Rubrik
+    // GEÖFFNET statt gehovert — der Zustand überlebt den Weg zum Ansicht-Menü,
+    // eine Mausposition nicht, und ein `toBeHidden()` auf ein Element, das
+    // inzwischen aus einem anderen Grund fehlt, wäre ein Tor ohne Aussage
+    // (§6.7). Die ZUSAGE des Falls ist unverändert: der Schalter «Aktionen»
+    // nimmt die Gruppe, die Rubrik-Griffe bleiben.
+    await page.locator(`#art-${ART} .lr7-bez-marke[data-reg="r"]`).click();
     await expect(page.locator(`#art-${ART} .lr7-bez-aktionen`).first()).toBeVisible();
     await menueAuf(page);
     await page.locator('[data-v3-fussrubrik="a"]').click();

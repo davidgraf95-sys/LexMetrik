@@ -64,7 +64,7 @@ import { MenueRegler, MenueTitel } from '../../../components/ui/Menue';
 // Gruppen bauen ihre Zeilen in eigenen Dateien (`./LeserAenderungsWahl`,
 // `./LeserRubrikenWahl`) und ziehen `MenueSchalter` dort direkt.
 
-export function LeserAnsichtV3({ kompakt, fussnotenAnzahl, hatAenderungsvermerke, aenderungsFussnoten, bestimmungsWort }: {
+export function LeserAnsichtV3({ kompakt, fussnotenAnzahl, hatAenderungsvermerke, bestimmungsWort }: {
   /** `true` = Handy-Zuschnitt: der Öffner zeigt «···» statt «Ansicht ▾»
    *  (Fahrplan Kap. 4a). Reine Beschriftung — der Accessible-Name bleibt in
    *  beiden Zuschnitten «Ansicht», und die Elemente des Panels sind identisch. */
@@ -81,18 +81,6 @@ export function LeserAnsichtV3({ kompakt, fussnotenAnzahl, hatAenderungsvermerke
    * zweite Wahrheit, und sie liefe beim ersten Nachjustieren auseinander.
    */
   hatAenderungsvermerke: boolean;
-  /**
-   * D35-F3 (7.9.2026) · Zahl der als `kl:'A'` klassifizierten Fussnoten des
-   * Erlasses (`zaehleAenderungsvermerke`, `../berechnungen` — dieselbe Quelle,
-   * aus der `hatAenderungsvermerke` mitgespeist wird, §5). `null` = Struktur
-   * noch nicht geladen, bewusst UNTERSCHIEDEN von 0.
-   *
-   * Gebraucht wird sie für genau eine Aussage: `0` heisst «dieser Erlass führt
-   * keine klassifizierte Änderungshistorie» — auf Kantonsrecht der Regelfall
-   * (`lib/normtext/browse.ts`) —, und dann dämpft die Stellung «Fassung» nichts.
-   * Das sagt das Menü hin (§8), statt es den Nutzer ausprobieren zu lassen.
-   */
-  aenderungsFussnoten: number | null;
   /** D35-F2 · «Artikel» oder «Paragraphen» für den Kopf der Rubriken-Gruppe.
    *  Durchgereicht aus `./erlassAnsicht.bestimmungsWort` — die EINE Ableitung
    *  (B8/C1); hier steht keine zweite. */
@@ -257,8 +245,7 @@ export function LeserAnsichtV3({ kompakt, fussnotenAnzahl, hatAenderungsvermerke
               Der Wert im geteilten Store bleibt dabei unberührt: nicht angeboten
               heisst nicht zurückgesetzt (`leser-v3-umschalten` (a3)). */}
           {hatAenderungsvermerke && (
-            <LeserAenderungsWahl wahl={opt.vermerke} fussnotenAnzahl={fussnotenAnzahl}
-              ohneKlassifikation={aenderungsFussnoten === 0} />
+            <LeserAenderungsWahl wahl={opt.vermerke} fussnotenAnzahl={fussnotenAnzahl} />
           )}
           {/* ── D35-F2 (Entscheid David 7.9.2026) · HIER STAND DIE GRUPPE
                  «RECHTSPRECHUNG» ─────────────────────────────────────────────

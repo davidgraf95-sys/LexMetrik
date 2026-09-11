@@ -85,7 +85,7 @@ import { kopfGriffKlassen } from './kopfStufen';
  * 7.9.2026 — bleibt als Beleg ihres Datums in der Historie dieser Datei stehen
  * (§0 Ziff. 2b) und ist mit dem Wegfall der Zahl gegenstandslos: was nicht mehr
  * gerendert wird, kann nicht mehr schieben. Der CLS-Grund GILT WEITER für die
- * Stelle, die die Zahl übernommen hat (`parts/BezuegeKopf.tsx` — dort steht sie
+ * Stelle, die die Zahl übernommen hat (`parts/Funktionszeile.tsx` — dort steht sie
  * in einer Zeile, die nicht klebt und beim Scrollen nicht wechselt).
  *
  * WAS BLEIBT UND WARUM:

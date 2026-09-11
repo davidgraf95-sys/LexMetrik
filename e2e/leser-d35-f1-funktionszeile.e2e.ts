@@ -33,7 +33,7 @@
 //
 // ROT ZU BEKOMMEN (§6.7), je einzeln belegt in
 // `abnahme/design-identitaet/D35-F1-FUSSZEILE.md`:
-//  · in `parts/BezuegeKopf.tsx` `useState({})` durch `useState({ r: true, m: true,
+//  · in `parts/Funktionszeile.tsx` `useState({})` durch `useState({ r: true, m: true,
 //    g: true, w: true })` ersetzen (= Auto-Aufklappen)            ⇒ (a) rot
 //  · dort `setOffen((s) => ({ ...s, [m.reg]: jetzt }))` durch
 //    `setOffen({ r: jetzt, m: jetzt, g: jetzt, w: jetzt })` ersetzen (= der
@@ -134,6 +134,19 @@ test.describe('D35-F1 · die Funktionszeile am Artikelende', () => {
   test('(d) die Aktionen stehen sichtbar in der Zeile — und nur dort', async ({ page }) => {
     await oeffne(page);
     const artikel = page.locator(`#art-${ART}`);
+    // ── §6.3-DEKLARATION (W2·26/Z6, Mandat David 11.9.2026) ─────────────────
+    // Der Satz «ohne jede Maus-Berührung sichtbar» unten beschreibt den Stand
+    // vom 7.9.2026 und bleibt stehen (§0 Ziff. 2b). Seit Z6 werden die drei
+    // Aktionen erst GERENDERT, wenn der Artikel Hover oder Fokus hat oder eine
+    // Rubrik offen ist — auf Geräten OHNE Hover unverändert immer (eigene
+    // Sonde: `e2e/w226-funktionszeile`, Fall (c2)). Anlass war die Knopfzahl:
+    // gemessen 13 532 Knöpfe im OR-Leser, davon 3 372 Aktions-Knöpfe, die
+    // niemand sieht (§15).
+    // WAS DIESER FALL PRÜFT, BLEIBT WORT FÜR WORT: genau einmal je Artikel,
+    // volle Deckkraft über die ganze Vorfahrenkette, WCAG-2.5.8-Trefferfläche,
+    // Lage am Artikelende. Nur die Vorbedingung ist jetzt ausgesprochen.
+    await artikel.locator('.lr7-bez').hover();
+    await expect(artikel.locator('.lr7-bez-aktionen')).toHaveCount(1);
     // GENAU EINMAL je Artikel: die Kopf-Variante ist gelöscht, nicht gedoppelt.
     // D44 (David 7.9.2026): die vierte Aktion «⧉ Artikel daneben»
     // (`/^Artikel .* daneben stellen$/`) ist ersatzlos gestrichen — sie stand
@@ -236,6 +249,13 @@ test.describe('D35-F1 · die Funktionszeile am Artikelende', () => {
     // stand am Artikel bis D34 gar keine Bezugs-Zeile (D35-Untersuchung 1c).
     expect(await page.locator(`#art-${ART} .lr7-bez-marke[aria-expanded="true"]`).count()).toBe(0);
     await expect(page.locator(`#art-${ART} .lr7-bez-marke`).first()).toBeVisible();
+    // §6.3-DEKLARATION (W2·26/Z6): `setViewportSize` macht ein SCHMALES FENSTER,
+    // kein Telefon — Chromium meldet hier weiter `(hover: fine)`, also gilt die
+    // Hover-Bedingung. Das ECHTE Telefon (isMobile ⇒ `(hover: none)`) prüft
+    // `e2e/w226-funktionszeile`, Fall (c2): dort stehen die Aktionen dauerhaft.
+    // Die Zusage dieses Falls — @390 dieselbe Zeile, derselbe Baustein, kein
+    // Überlauf — ist unberührt.
+    await page.locator(`#art-${ART} .lr7-bez`).hover();
     await expect(page.locator(`#art-${ART} .lr7-bez-aktionen`)).toBeVisible();
     // Kein waagrechter Überlauf durch die Zeile.
     const ueber = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);

@@ -1,4 +1,3 @@
-import { useId } from 'react';
 import { MenueGruppe, MenueSchalter, MenueTitel } from '../../../components/ui/Menue';
 import { setzeVermerke, type VermerkeWahl } from '../leserOptionen';
 
@@ -33,32 +32,59 @@ import { setzeVermerke, type VermerkeWahl } from '../leserOptionen';
 // `role="switch"` mit, hier wird daraus `menuitemradio`; die FORM der Marke ist
 // `punkt` — der Kreis, den D35-F4 für genau diesen Fall vorgesehen hat («damit
 // ein künftiges Menü mit Dreier-Wahl (F1/F3) ohne Umbau hineinpasst», index.css).
+//
+// ═══ W2·26/Z8 (Mandat David 11.9.2026) · DIE WAHL IST NICHT MEHR VERLUSTFREI ═
+//
+// Wörtlich: «Fussnoten, die z. B. nur eine SR-Nummer enthalten, müssen ebenfalls
+// weg sein, wenn Fussnoten abgewählt sind.» Die Matrix oben beschreibt den Stand
+// vom 7.9.2026 und bleibt Wort für Wort stehen (§0 Ziff. 2b). SEITHER gilt:
+//
+//   Fassung    «Gilt seit …» + Zeitleiste · KEIN Fussnoten-Apparat, keine Marker
+//   Fussnoten  voller amtlicher Apparat (alle Klassen) · Fassungs-Zeile aus
+//   aus        weder noch
+//
+// Die Wahl kennt damit keine Klassen mehr — sie zeigt den Apparat ganz oder gar
+// nicht. Am Bildschirm; der AUSDRUCK behält ihn in jeder Stellung (§7/§8, ein
+// Dokument ohne amtlichen Apparat wäre unvollständig), und nichts verlässt das
+// DOM (A1-Mechanik, David 5.7.2026).
+//
+// ZWEI DINGE SIND DAMIT ERSATZLOS GEFALLEN (§17-Gegengewicht):
+//  · die Prop `ohneKlassifikation` und die Hinweiszeile «Dieser Erlass führt
+//    keine klassifizierten Änderungs-Fussnoten; ‹Fassung› und ‹Fussnoten›
+//    unterscheiden sich hier nur in der Fassungs-Zeile.» Sie erklärte, warum
+//    sich zwei Stellungen auf einem klassenlosen Erlass gleich verhalten — seit
+//    Z8 verhalten sie sich dort GENAU SO verschieden wie überall sonst, und der
+//    Satz wäre eine Behauptung über eine Wirkung, die es nicht mehr gibt (§8).
+//    Mit ihr fällt die Durchreiche `aenderungsFussnoten` durch drei Dateien.
+//  · die Klassen-Klauseln in den drei Tooltips.
+// H0-Auflage 1 ist nicht verletzt, sondern gegenstandslos: sie bindet die
+// ÄNDERUNGS-Ansicht an die Klasse `A`; hier dämpft keine Klasse mehr etwas
+// (Herleitung am Regelblock in `src/index.css`).
 
 /** Beschriftung, Tooltip und Stellung — die Reihenfolge IST die Menü-Ordnung. */
 const STELLUNGEN: ReadonlyArray<{ wert: VermerkeWahl; label: string; titel: string }> = [
   {
     wert: 'fassung',
     label: 'Fassung',
-    titel: 'Zeigt die Fassungs-Zeile «Gilt seit …» samt Zeitleiste. Die amtlichen '
-      + 'Änderungs-Fussnoten sind dann gedämpft — Verweis- und Nachweis-Fussnoten '
-      + 'bleiben in jeder Stellung sichtbar.',
+    titel: 'Zeigt die Fassungs-Zeile «Gilt seit …» samt Zeitleiste; der '
+      + 'Fussnoten-Apparat und seine Marken sind dann am Bildschirm aus. Im '
+      + 'Ausdruck bleibt der amtliche Apparat vollständig.',
   },
   {
     wert: 'fussnoten',
     label: 'Fussnoten',
-    titel: 'Zeigt den vollständigen amtlichen Fussnoten-Apparat samt '
-      + 'Änderungsvermerken; die abgeleitete Fassungs-Zeile ist dann aus.',
+    titel: 'Zeigt den vollständigen amtlichen Fussnoten-Apparat samt Marken im '
+      + 'Text; die abgeleitete Fassungs-Zeile ist dann aus.',
   },
   {
     wert: 'aus',
     label: 'aus',
-    titel: 'Weder Fassungs-Zeile noch Änderungs-Fussnoten. Verweis- und '
-      + 'Nachweis-Fussnoten bleiben sichtbar — amtlicher Nicht-Änderungs-Apparat '
-      + 'wird nie ausgeblendet.',
+    titel: 'Weder Fassungs-Zeile noch Fussnoten-Apparat — nur der Gesetzestext. '
+      + 'Im Ausdruck bleibt der amtliche Apparat vollständig.',
   },
 ];
 
-export function LeserAenderungsWahl({ wahl, fussnotenAnzahl, ohneKlassifikation }: {
+export function LeserAenderungsWahl({ wahl, fussnotenAnzahl }: {
   /** Die gesetzte Stellung aus dem geteilten Store. */
   wahl: VermerkeWahl;
   /**
@@ -67,27 +93,12 @@ export function LeserAenderungsWahl({ wahl, fussnotenAnzahl, ohneKlassifikation 
    * Accessible Name und im Tooltip, nie die nackte Zahl.
    */
   fussnotenAnzahl: number | null;
-  /**
-   * §8 · Trägt der Apparat dieses Erlasses gar keine `kl`-Klassifikation?
-   *
-   * Kantonssidecars tragen sie nicht (`lib/normtext/browse.ts`: «fehlt das Feld
-   * …, bleibt die Fussnote in JEDER Ansicht sichtbar»). Dort dämpft «Fassung»
-   * nichts, und die drei Stellungen unterscheiden sich nur noch in der
-   * Fassungs-Zeile. Das MENÜ sagt das hin, statt eine Wirkung zu behaupten, die
-   * es auf diesem Erlass nicht gibt — dieselbe Ehrlichkeit, aus der D1 den
-   * Schalter auf vermerkfreien Erlassen gar nicht erst anbietet.
-   */
-  ohneKlassifikation: boolean;
 }) {
-  const hinweisId = useId();
   const zahl = fussnotenAnzahl != null && fussnotenAnzahl > 0 ? fussnotenAnzahl : null;
   return (
     <MenueGruppe attrs={{
       role: 'group',
       'aria-label': 'Änderungen anzeigen als',
-      // Der Hinweis gehört zur GRUPPE, nicht zu einer Stellung: er erklärt, warum
-      // sich zwei der drei Stellungen auf diesem Erlass gleich verhalten.
-      'aria-describedby': ohneKlassifikation ? hinweisId : undefined,
       'data-v3-vermerke-wahl': '',
     }}>
       <MenueTitel>Änderungen anzeigen als</MenueTitel>
@@ -105,15 +116,6 @@ export function LeserAenderungsWahl({ wahl, fussnotenAnzahl, ohneKlassifikation 
           attrs={{ role: 'menuitemradio', 'data-v3-vermerke': s.wert }}
         />
       ))}
-      {ohneKlassifikation && (
-        /* Kein `.lc-menu-zeile`: der Hinweis ist keine Bedienung, und die
-           Zeilenhöhen-Sonde (`e2e/w224-d35-f4-menue.e2e.ts`) misst nur Zeilen,
-           die eine sind. */
-        <p id={hinweisId} className="px-3 pb-1.5 text-micro leading-snug text-ink-500">
-          Dieser Erlass führt keine klassifizierten Änderungs-Fussnoten;
-          «Fassung» und «Fussnoten» unterscheiden sich hier nur in der Fassungs-Zeile.
-        </p>
-      )}
     </MenueGruppe>
   );
 }

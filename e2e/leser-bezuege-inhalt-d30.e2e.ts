@@ -21,7 +21,7 @@
 //
 // ROT ZU BEKOMMEN (§6.7), je einzeln belegt in `abnahme/design-identitaet/R5-F1K.md`:
 //  · in `v3/LeserLesespalte.tsx` `onBezuegeOeffnen` weglassen  ⇒ (a)(b)(c) rot
-//  · in `parts/BezuegeKopf.tsx` den `ref`-Ruf entfernen        ⇒ (a) rot bei
+//  · in `parts/Funktionszeile.tsx` den `ref`-Ruf entfernen        ⇒ (a) rot bei
 //    gemerkt offener Zeile
 //    (D35-F1, 7.9.2026: dieser Rot-Weg ist GEGENSTANDSLOS geworden — der
 //    gemerkte Zustand `lm.leser.bezuege-offen` ist ersatzlos gelöscht, die

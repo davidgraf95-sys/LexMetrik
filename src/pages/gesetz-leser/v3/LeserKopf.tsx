@@ -88,7 +88,7 @@ import { kopfElemente, type KopfStufe } from './kopfStufen';
 // je Kopfzeile» in `./kopfStufen` ist unberührt.
 
 export function LeserKopf({
-  erlass, fussnotenAnzahl, hatAenderungsvermerke, aenderungsFussnoten, bestimmungsWort, stufe, gliederungKnopf,
+  erlass, fussnotenAnzahl, hatAenderungsvermerke, bestimmungsWort, stufe, gliederungKnopf,
   panelOeffner, suchZone, suchInZeile, tocOffen, onGliederungZu,
 }: {
   erlass: BrowseErlass;
@@ -101,7 +101,6 @@ export function LeserKopf({
   hatAenderungsvermerke: boolean;
   /** D35-F3 · durchgereicht ans Ansicht-Menü (§8-Hinweis auf unklassifizierten
    *  Erlassen). Der Kopf wertet sie nicht aus — er ist die Leitung, nicht der Ort. */
-  aenderungsFussnoten: number | null;
   /** D35-F2 · durchgereicht ans Ansicht-Menü (Kopf der Rubriken-Gruppe). Der
    *  Kopf leitet nichts ab — er ist die Leitung, nicht der Ort (§5/B8). */
   bestimmungsWort: BestimmungsWort;
@@ -301,7 +300,7 @@ export function LeserKopf({
           {panelOeffner}
           {gliederungKnopf}
           <LeserAnsichtV3 kompakt={stufe === 'mini'} fussnotenAnzahl={fussnotenAnzahl}
-            hatAenderungsvermerke={hatAenderungsvermerke} aenderungsFussnoten={aenderungsFussnoten}
+            hatAenderungsvermerke={hatAenderungsvermerke}
             bestimmungsWort={bestimmungsWort} />
         </div>
       </div>

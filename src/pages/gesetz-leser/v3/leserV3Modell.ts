@@ -77,7 +77,6 @@ export interface LeserV3Modell {
   /** D1 · trägt dieser Erlass überhaupt Änderungsvermerke? Geteilte Quelle mit V1 (§5). */
   hatAenderungsvermerke: boolean;
   /** D35-F3 · `kl:'A'`-Fussnoten; `null` = noch nicht geladen, `0` = keine klassifizierte Historie. */
-  aenderungsFussnoten: number | null;
   kantonErlassAnzahl: number | null;
   nichtKonsolidiert: boolean;
   /** S3/F5-Nachzug: ISO-Datum des frühesten nicht konsolidierten Inkrafttretens
@@ -262,9 +261,10 @@ export function useLeserV3Modell({ ebene: routenSegment, schluessel }: { ebene: 
   }, [struktur]);
   // D1/D35-F3: EINE Zählung, zwei Leser (§5) — «wird die Wahl angeboten?» und «dämpft «Fassung» hier etwas?».
   const aenderungsFussnoten = useMemo(() => zaehleAenderungsvermerke(struktur), [struktur]);
+  // W2·26/Z8 · dritter Träger «trägt der Erlass überhaupt Fussnoten?», Kopf mitgezählt (253 Erlasse führen NUR Kopf-Fussnoten, 11.9.2026); Herleitung an `bieteAenderungsvermerkeSchalter`.
   const hatAenderungsvermerke = useMemo(() => bieteAenderungsvermerkeSchalter(aenderungsFussnoten,
-    (eintraege ?? []).some((e) => historieFuer(e.artikel) !== undefined), eintraege !== null),
-  [aenderungsFussnoten, eintraege, historieFuer]);
+    (eintraege ?? []).some((e) => historieFuer(e.artikel) !== undefined), eintraege !== null,
+    struktur || kopf ? (fussnotenAnzahl ?? 0) + (kopf?.fussnoten?.length ?? 0) : null), [aenderungsFussnoten, eintraege, historieFuer, struktur, kopf, fussnotenAnzahl]);
 
   // ── A-2 · DIE MELDUNG AN DIE APP-LEISTE IST WEG (David 17.8.2026) ──────────
   // Hier stand bis 17.8. ein Effekt, der Krume · Stand · laufenden Artikel an
@@ -397,7 +397,7 @@ export function useLeserV3Modell({ ebene: routenSegment, schluessel }: { ebene: 
     modell: {
       erlass, eintraege, struktur, kopf, currency, fehler, manifest, kantonSys, kantonLuecken,
       sektionen, ohneGliederung, gliederung, alleKnotenIds,
-      gliederungsTiefe, fussnotenAnzahl, hatAenderungsvermerke, aenderungsFussnoten, kantonErlassAnzahl,
+      gliederungsTiefe, fussnotenAnzahl, hatAenderungsvermerke, kantonErlassAnzahl,
       nichtKonsolidiert, nichtKonsolidiertSeit,
       vorher, nachher,
       sekPos, artIndex, sektionMeta, margAnzeige, internRefs,

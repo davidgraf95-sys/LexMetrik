@@ -29,6 +29,7 @@
 // vor dem Fix) ⇒ (a) und (b) fallen in beiden Themes. Belegt in
 // `abnahme/design-identitaet/R5-F1K.md`.
 import { test, expect, type Locator } from '@playwright/test';
+import { vollerApparat } from './helpers/vollerApparat';
 
 /** rgb(a)-Zeichenkette → Kanäle + Alpha. */
 function kanaele(farbe: string): { r: number; g: number; b: number; a: number } {
@@ -82,6 +83,19 @@ for (const thema of ['light', 'dark'] as const) {
     // laufenden Gesetzestext aufgeht. Sie ist zugleich der schärfste Prüfstein
     // für (b) — hinter ihr liegt garantiert Text.
     test('(a)+(b)+(c) Fussnoten-Popover über dem Gesetzestext', async ({ page }) => {
+      // ── §6.3-DEKLARATION (W2·26/Z8, Mandat David 11.9.2026) ────────────
+      // Seit dem Mandat nimmt die Vorgabestellung «Fassung» den Fussnoten-
+      // Apparat GANZ, nicht mehr nur `kl:'A'` — gemessen im OR-Leser: 215
+      // sichtbare Marker vorher, 0 nachher. Der Absatz darunter beschreibt den
+      // Stand vom 7.9.2026 und bleibt stehen (§0 Ziff. 2b); seine Lösung
+      // («nimm den ersten SICHTBAREN Marker») trägt nicht mehr, weil es im
+      // Grundzustand keinen gibt.
+      // DIE ZUSAGE DIESER SONDE IST UNVERÄNDERT — «ein Popover deckt und ist
+      // lesbar» ist eine Aussage über die FLÄCHE, nicht über die Ansicht.
+      // `vollerApparat` ist der Haus-Weg dafür (helpers/vollerApparat.ts, für
+      // genau diese Sondenklasse gebaut): eine Stellung, einmal gesetzt, ohne
+      // die Sonde an eine Bedienung zu koppeln, die sie nicht prüft.
+      await vollerApparat(page);
       await page.goto('/gesetze/bund/OR#art-336_c');
       await expect(page.locator('#art-1')).toBeVisible({ timeout: 20_000 });
       // ── D35-F3 (Entscheid David 7.9.2026, §6.3 DEKLARIERT) · DER GRUNDZUSTAND

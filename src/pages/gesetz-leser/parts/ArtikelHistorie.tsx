@@ -1,6 +1,7 @@
 import { memo } from 'react';
 import type { ArtikelHistorie, HistorieEreignis, HistorieTyp } from '../../../lib/normtext/historie-laden';
 import { formatiereDatum } from '../helpers';
+import { fassungsSchild } from '../fassungsEtikett';
 import { AMTLICHE_FASSUNG_NOMEN } from '../../../lib/benennung';
 
 // G-HIST-UI — Per-Artikel-«Gilt seit»-Badge + aufklappbare Fassungs-Timeline.
@@ -33,7 +34,7 @@ import { AMTLICHE_FASSUNG_NOMEN } from '../../../lib/benennung';
 // SEIT D40 ist der Ort ein anderer, und damit auch die CLS-Frage. Davids Frage
 // lautete «und wieso ist fassung nicht auch unten am artikel?»: die Zeile ist
 // jetzt der INHALT der Rubrik «Fassung» in der Funktionszeile am Artikelende
-// (`./BezuegeKopf.tsx`, `./ArtikelLeser.bezuegeFuss.tsx`). Sie wird deshalb auf
+// (`./Funktionszeile.tsx`, `./ArtikelLeser.bezuegeFuss.tsx`). Sie wird deshalb auf
 // dem Bildschirm ERST GERENDERT, wenn der Leser die Rubrik aufklappt — ein
 // Klick, also input-getrieben und per Definition kein unerwarteter Sprung.
 // Damit ist die 24-px-Reserve (`min-h-beiwerk`) ersatzlos entfallen: sie hatte
@@ -103,7 +104,7 @@ export const ArtikelHistorieZeile = memo(function ArtikelHistorieZeile({ histori
    * Bis D40 entschied das ein eigener Klapp-Knopf IN dieser Zeile («Gilt seit …
    * ▸»). Den gibt es nicht mehr: die Zeile ist seit D40 der Inhalt der Rubrik
    * «Fassung» in der Funktionszeile am Artikelende, und DEREN Griff klappt sie
-   * auf (`./BezuegeKopf.tsx`). Ein zweiter Knopf im aufgeklappten Block waere
+   * auf (`./Funktionszeile.tsx`). Ein zweiter Knopf im aufgeklappten Block waere
    * ein Griff, der dasselbe noch einmal tut (§5) — und der Nutzer haette nach
    * dem ersten Klick immer noch keine Zeitleiste gesehen.
    *
@@ -123,11 +124,13 @@ export const ArtikelHistorieZeile = memo(function ArtikelHistorieZeile({ histori
   // Badge-Text (§8, nie erfunden): aufgehobener Artikel zeigt den Wirkungs-Stand,
   // sonst das In-Kraft-Datum der aktuellen Fassung; fehlt beides, ein neutraler
   // Titel für die reine Ereignis-Historie.
-  const badgeText = historie.aufgehobenSeit
-    ? `Aufgehoben seit ${formatiereDatum(historie.aufgehobenSeit)}`
-    : historie.giltSeit
-      ? `Gilt seit ${formatiereDatum(historie.giltSeit)}`
-      : 'Fassungshistorie';
+  //
+  // W2·26/Z2 (11.9.2026): die Rechnung steht seither in `../fassungsEtikett` —
+  // Wort für Wort dieselbe, nur an EINEM Ort. Grund: seit David «Fassung soll
+  // nur ‹gilt seit XXX› zeigen» liest DERSELBE Stand auch als Marke in der
+  // Funktionszeile, und zwei Formulierungen desselben Datums wären zwei
+  // Wahrheiten (§5). Hier stand bis dahin die Original-Kette aus G-HIST-UI.
+  const badgeText = fassungsSchild(historie);
 
   return (
     // Kein eigener Aussenabstand mehr: den trägt der reservierte Slot in

@@ -2,7 +2,9 @@ import type { ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import { NormChip } from '../../../components/vorlagen/NormChip';
 import { SUCH_META } from '../suchHighlight';
-import { BezuegeKopf, type BezugsMarke } from './BezuegeKopf';
+import { Funktionszeile, type BezugsMarke } from './Funktionszeile';
+import { fassungsMarkeEtikett } from '../fassungsEtikett';
+import { entscheidZahl } from '../entscheidZahl';
 import { BezuegeZeile } from './BezuegeZeile';
 import { LeitfallZeile } from './ArtikelLeser.leitfaelle';
 import { ArtikelHistorieZeile } from './ArtikelHistorie';
@@ -47,7 +49,7 @@ import type { ArtikelHistorie } from '../../../lib/normtext/historie-laden';
 // Wörtlich, Nachtrag zum Variante-A-Entscheid: «das alles soll dann nur auf
 // klick aufklappbar sein». Diese Datei RECHNET die Zahlen und liefert je Rubrik
 // den Inhalt, den ihr Griff aufklappt; die Zeile selbst (Griffe, Zustand,
-// Aktions-Slot) steht in `./BezuegeKopf.tsx`. Neu ist der Slot `aktionen`: die
+// Aktions-Slot) steht in `./Funktionszeile.tsx`. Neu ist der Slot `aktionen`: die
 // Artikel-Aktionen «Zitat · Link · Amtliche Fassung ↗» stehen seither RECHTS
 // in derselben Zeile und dauerhaft sichtbar, statt in der Artikel-Kopfzeile
 // unter `opacity-0` (Herleitung in `./ArtikelAktionen.tsx`; eine vierte
@@ -58,7 +60,7 @@ import type { ArtikelHistorie } from '../../../lib/normtext/historie-laden';
 // Wörtlich: «und wieso ist fassung nicht auch unten am artikel?». Diese Datei
 // bekommt dafür EINE neue Prop (`historie`) und baut daraus die erste Marke der
 // Zeile; die Zeile selbst hat davon nur den Buchstaben `f` erfahren
-// (`./BezuegeKopf.tsx`). Der Kopf-Slot, an dem die Auskunft bis D40 hing, ist
+// (`./Funktionszeile.tsx`). Der Kopf-Slot, an dem die Auskunft bis D40 hing, ist
 // ersatzlos gefallen — nicht zusätzlich bewacht (§17-Gegengewicht). Herleitung
 // von Zahl, Inhalt und Registerfarbe steht unten an der Marke selbst.
 //
@@ -145,6 +147,18 @@ export function ArtikelBezuegeFuss({
   // Menge als das, was daneben steht. (Bis D34 hiess die Prop
   // `bezuegeImKopf`; der Ort hat gewechselt, die Rangfolge nicht.)
   const b = bezuegeImFuss ?? bezuege;
+  // ── W2·26/Z3 · EINE ZAHL, NICHT ZWEI (Mandat David 11.9.2026) ────────────
+  // Die Regel steht als reine Funktion in `../entscheidZahl` — dort auch der
+  // Befund, der sie ausgelöst hat, und die Herleitung der Rangfolge. Hier wird
+  // sie nur gerufen (§3: diese Datei rechnet die Marken, sie formuliert keine
+  // Regel zweimal), und genau darum ist sie direkt prüfbar
+  // (`src/tests/entscheid-zahl.test.ts`, Zweitblick-Auflage zu PR #788).
+  const entscheide = entscheidZahl(
+    b ? { kanten: b.kanten.length, zeitAktiv: b.zeitAktiv, kantonAktiv: b.kantonAktiv } : null,
+    zaehler ? zaehler.entscheide : null,
+    leitfaelle?.length ?? 0,
+    zitat,
+  );
   const bezugsMarken: BezugsMarke[] = [
     // ── D40 (David 7.9.2026) · «wieso ist fassung nicht auch unten am artikel?»
     {
@@ -157,7 +171,7 @@ export function ArtikelBezuegeFuss({
          nicht auseinanderlaufen; es ist dieselbe Länge, einmal gezählt und
          einmal gerendert.
 
-         0 ⇒ KEINE RUBRIK. `BezuegeKopf` filtert `anzahl > 0` heraus, und das
+         0 ⇒ KEINE RUBRIK. `Funktionszeile` filtert `anzahl > 0` heraus, und das
          ist hier keine Notlösung, sondern deckungsgleich mit dem Datenmodell:
          korpusweit gemessen (7.9.2026, alle 209 Shards, 13 093 Artikel mit
          Eintrag) trägt JEDER Eintrag mindestens ein Ereignis — 0 heisst also
@@ -173,6 +187,16 @@ export function ArtikelBezuegeFuss({
          Herleitung am gefallenen Kopf-Slot in `./ArtikelLeser.tsx`). */
       anzahl: historie?.ereignisse?.length ?? 0,
       wort: ['Fassung', 'Fassungen'],
+      /* W2·26/Z2 (David 11.9.2026): «Fassung soll nur ‹gilt seit XXX› zeigen,
+         erst beim Aufklappen erscheinen die Angaben». ZUGEKLAPPT liest die
+         Marke darum den STAND dieses Artikels, nicht die Zahl seiner
+         Änderungsstände — das ist die Auskunft, die man am Artikel sucht.
+         Aufgeklappt steht die Zahl wieder da (`parts/Funktionszeile.tsx`), denn
+         dann ist die Zeitleiste der Gegenstand. Die Zeichenkette kommt aus
+         `../fassungsEtikett` — DIESELBE, die das Schild im Block darunter
+         trägt (§5), und ohne datierten Stand schlicht «Fassung» (§8: nie ein
+         Datum erfinden). */
+      etikett: fassungsMarkeEtikett(historie),
       /* GLEICHE KOMPONENTE, KEIN DUPLIKAT (§5): das ist dieselbe
          `ArtikelHistorieZeile`, die bis D40 im Kopf-Slot stand — «Fassung ·
          Gilt seit …» und darunter die Zeitleiste. Neu ist nur, dass sie ihre
@@ -183,8 +207,11 @@ export function ArtikelBezuegeFuss({
     },
     {
       reg: 'r',
-      anzahl: zaehler ? zaehler.entscheide : (b ? b.kanten.length : (leitfaelle?.length ?? 0)),
+      anzahl: entscheide.anzahl,
       wort: ['Entscheid', 'Entscheide'],
+      /* Z3 · die Grundgesamtheit, wenn die sichtbare Zahl gefiltert ist —
+         nie verschwiegen, nur nicht in der Zeile (`../entscheidZahl`). */
+      titel: entscheide.titel,
       brauchtDaten: true,
       /* ── D30 · DIE ENTSCHEIDE, DIE DER ZÄHLER VERSPRICHT ─────────
          `form="rand"`: senkrecht gestapelte Zeilen mit Zitierung und
@@ -217,7 +244,7 @@ export function ArtikelBezuegeFuss({
         : undefined,
     },
     // Die Rubrik erscheint NUR mit echter Zahl (`anzahl > 0` filtert sie sonst
-    // in `BezuegeKopf` heraus) — ohne Zähl-Datei steht sie also gar nicht da,
+    // in `Funktionszeile` heraus) — ohne Zähl-Datei steht sie also gar nicht da,
     // statt eine Null zu behaupten (§8). Dieselbe Deckungsgleichheit wie oben:
     // die Zähl-Datei entdoppelt die Material-Kanten nach Dokument, und genau so
     // baut `projiziereMaterialien` die Liste (ein Eintrag je Dokument).
@@ -286,7 +313,7 @@ export function ArtikelBezuegeFuss({
   ];
   return (
     <div {...{ [SUCH_META]: '' }}>
-      <BezuegeKopf marken={bezugsMarken} zitat={zitat} aktionen={aktionen}
+      <Funktionszeile marken={bezugsMarken} zitat={zitat} aktionen={aktionen}
         onOeffnen={onOeffnen} laedt={laedt} />
     </div>
   );
