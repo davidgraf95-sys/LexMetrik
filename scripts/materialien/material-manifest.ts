@@ -47,7 +47,10 @@ export function shaEintrag(r: MaterialRegistereintrag): string {
     // Botschaften-Zusatzfelder NUR für BR anhängen → bestehende Einträge byte-identisch
     // (Drift-Token deckt titel_fr/it + Paket-5-Join-Felder mit ab).
     ...(r.behoerde === 'BR'
-      ? [r.titelFr ?? '', r.titelIt ?? '', r.projEli ?? '', (r.ocUris ?? []).join(',')]
+      ? [r.titelFr ?? '', r.titelIt ?? '', r.projEli ?? '', (r.ocUris ?? []).join(','),
+         // E1: Verfahrenskette im Drift-Token — ein neuer Verfahrensschritt ändert
+         // das sha und wird so vom Register-Tor gesehen.
+         (r.ereignisse ?? []).map((v) => `${v.code}:${v.datum ?? ''}:${v.res ?? ''}`).join(';')]
       : []),
     // Vernehmlassungen (Paket 3, BUND): Titel FR/IT + Verfahrens-Zustand (Status/Frist/projEli)
     // im Drift-Token — Currency-Token für den mutablen Status. NUR für BUND anhängen →
@@ -72,6 +75,7 @@ function browseEintrag(r: MaterialRegistereintrag): BrowseMaterial {
         ...(r.ocUris ? { ocUris: r.ocUris } : {}),
         ...(r.botschaftDate ? { botschaftDate: r.botschaftDate } : {}),
         ...(r.artAnker ? { artAnker: r.artAnker } : {}),
+        ...(r.ereignisse?.length ? { ereignisse: r.ereignisse } : {}),
       }
     : {};
   // Vernehmlassungs-Zusatzfelder NUR für BUND emittieren (Paket 3) → bestehende Einträge
