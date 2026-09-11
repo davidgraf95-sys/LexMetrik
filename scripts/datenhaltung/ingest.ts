@@ -73,6 +73,16 @@ export const MATERIALIEN_MANIFESTE = [
   'bibliothek/register/soft-law-zustand.jsonl',
 ];
 export const MATERIALIEN_KANTEN_DIR = 'public/materialien/kanten';
+// Entstehung am Artikel (W2·6c, §11.6, Kritik A8/C4): Anker-Sidecars und Parlaments-Shards
+// samt ihren committeten Zustandsträgern. Ohne diese Zeilen lägen zwei Extraktions-
+// Artefakte ausserhalb der Paritäts-Kette — genau die Lücke, die A8 benannte.
+export const ENTSTEHUNG_ANKER_DIR = 'public/materialien/anker';
+export const ENTSTEHUNG_CURIA_DIR = 'public/materialien/curia';
+export const ENTSTEHUNG_TRAEGER = [
+  'bibliothek/register/entstehung-anker.json',
+  'bibliothek/register/entstehung-deckung.json',
+  'bibliothek/register/curia-zustand.jsonl',
+];
 
 export interface Eintrag {
   id?: string;
@@ -273,9 +283,20 @@ export function ingestSoftLaw(db: DatabaseSync): Zaehler {
   ingestDokumente(db, MATERIALIEN_MANIFESTE, 'materialien-manifest');
   const kanten = existsSync(MATERIALIEN_KANTEN_DIR) ? jsonRekursiv(MATERIALIEN_KANTEN_DIR) : [];
   ingestDokumente(db, kanten, 'materialien-kanten');
+  // W2·6c: Anker-/Curia-Shards + ihre Zustandsträger (variable Menge, existsSync-Guard —
+  // vor Etappe E4 gibt es das Curia-Verzeichnis noch nicht).
+  const anker = existsSync(ENTSTEHUNG_ANKER_DIR) ? jsonRekursiv(ENTSTEHUNG_ANKER_DIR) : [];
+  const curia = existsSync(ENTSTEHUNG_CURIA_DIR) ? jsonRekursiv(ENTSTEHUNG_CURIA_DIR) : [];
+  const traeger = ENTSTEHUNG_TRAEGER.filter((f) => existsSync(f));
+  ingestDokumente(db, anker, 'entstehung-anker');
+  ingestDokumente(db, curia, 'entstehung-curia');
+  ingestDokumente(db, traeger, 'entstehung-traeger');
   return {
     Materialien: 1,
     'Soft-Law-Zustand': 1,
     'Materialien-Kanten': kanten.length,
+    'Entstehung-Anker': anker.length,
+    'Entstehung-Curia': curia.length,
+    'Entstehung-Träger': traeger.length,
   };
 }

@@ -1,0 +1,493 @@
+{
+  "botschaft": "BOTSCHAFT-2024-1607",
+  "fga": "fga/2024/1607",
+  "quelleUrl": "https://www.fedlex.admin.ch/eli/fga/2024/1607/de",
+  "htmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/fga/2024/1607/de/html/fedlex-data-admin-ch-eli-fga-2024-1607-de-html-2.html",
+  "sha": "4d434aa0ea896017e74ef0bce663c8272b9ec74259321714b29267bb68983953",
+  "lastModified": "Wed, 06 May 2026 12:01:43 GMT",
+  "contentLength": 198807,
+  "abgerufen": "2026-09-11",
+  "erlassKeys": [
+    "GWG"
+  ],
+  "mantel": false,
+  "mehrdeutig": [
+    "art_1",
+    "art_14",
+    "art_17",
+    "art_18",
+    "art_2",
+    "art_23",
+    "art_24",
+    "art_29",
+    "art_35",
+    "art_37",
+    "art_46",
+    "art_8",
+    "art_9_a"
+  ],
+  "anker": [
+    {
+      "eId": "art_10",
+      "token": "10",
+      "ueberschrift": "Art. 10 Meldung von Änderungen",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_10_a",
+      "token": "10_a",
+      "ueberschrift": "Art. 10a Abs. 5",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_11",
+      "token": "11",
+      "ueberschrift": "Art. 11 Verfahren zur Meldung an das Handelsregister",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_11_a",
+      "token": "11_a",
+      "ueberschrift": "Art. 11a Abs. 1–4",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_12",
+      "token": "12",
+      "ueberschrift": "Art. 12 Verantwortlichkeit für die Meldungen ans Register",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_12_a",
+      "token": "12_a",
+      "ueberschrift": "Art. 12a Koordination der Aufsicht",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_13",
+      "token": "13",
+      "ueberschrift": "Art. 13 Pflichten der Inhaberinnen und Inhaber von Anteilen",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_14_b",
+      "token": "14_b",
+      "ueberschrift": "Art. 14b",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_15",
+      "token": "15",
+      "ueberschrift": "Art. 15 Treuhandverhältnis",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_16",
+      "token": "16",
+      "ueberschrift": "Art. 16 Meldung von Treuhandverhältnissen an die Gesellschaft",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_18_a",
+      "token": "18_a",
+      "ueberschrift": "Art. 18a Wahrung des Berufsgeheimnisses",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_18_b",
+      "token": "18_b",
+      "ueberschrift": "Art. 18b Öffentliches Verzeichnis",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_19",
+      "token": "19",
+      "ueberschrift": "Art. 19 Wirtschaftlich berechtigte Personen von Stiftungen und Vereinen",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_20",
+      "token": "20",
+      "ueberschrift": "Art. 20 Pflichten der Stiftungen und Vereine",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_21",
+      "token": "21",
+      "ueberschrift": "Art. 21 Meldung an das Register",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_22",
+      "token": "22",
+      "ueberschrift": "Art. 22 Pflichten der wirtschaftlich Berechtigten und anderer betroffener Dritter",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_22_a",
+      "token": "22_a",
+      "ueberschrift": "Art. 22a Abs. 2 Bst. c",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_22_i_bis",
+      "token": "22_i_bis",
+      "ueberschrift": "Art. 22ibis",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_23_a",
+      "token": "23_a",
+      "ueberschrift": "Art. 23a",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_25",
+      "token": "25",
+      "ueberschrift": "Art. 25 Pflichten der juristischen Personen ausländischen Rechts",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_26",
+      "token": "26",
+      "ueberschrift": "Art. 26 Zusätzliche Pflichten für juristische Personen und andere Rechtseinheiten ausländischen Rechts mit tatsächlicher Verwaltung in der Schweiz",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_27",
+      "token": "27",
+      "ueberschrift": "Art. 27 Vereinfachte Regeln für bestimmte Arten von juristischen Personen",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_28",
+      "token": "28",
+      "ueberschrift": "Art. 28 Führung und Form",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_29_a",
+      "token": "29_a",
+      "ueberschrift": "Art. 29a Abs. 4 erster Satz, 30 Abs. 2 Bst. a, 32 Abs. 3 und 34 Abs. 1",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_29_c",
+      "token": "29_c",
+      "ueberschrift": "Art. 29c",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_2_b",
+      "token": "2_b",
+      "ueberschrift": "Art. 2b Materiellrechtliche Koordination",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_3",
+      "token": "3",
+      "ueberschrift": "Art. 3 Ausnahmen",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_30",
+      "token": "30",
+      "ueberschrift": "Art. 30 Elektronisches Meldeverfahren",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_31",
+      "token": "31",
+      "ueberschrift": "Art. 31 Wirkungen",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_32",
+      "token": "32",
+      "ueberschrift": "Art. 32 Löschung",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_327_327_a",
+      "token": "327_327_a",
+      "ueberschrift": "Art. 327 und 327a",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_33",
+      "token": "33",
+      "ueberschrift": "Art. 33 Recht der Kontrollstelle auf Online-Abruf",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_34",
+      "token": "34",
+      "ueberschrift": "Art. 34 Recht der Behörden auf Online-Abruf",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_36",
+      "token": "36",
+      "ueberschrift": "Art. 36 Transparenzregisterauszug",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_38",
+      "token": "38",
+      "ueberschrift": "Art. 38 Meldung von Unterschieden durch Finanzintermediäre",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_39",
+      "token": "39",
+      "ueberschrift": "Art. 39 Meldung von Unterschieden durch Behörden",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_4",
+      "token": "4",
+      "ueberschrift": "Art. 4 Allgemeine Definition",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_40",
+      "token": "40",
+      "ueberschrift": "Art. 40 Prüfung der Meldungen durch die registerführende Behörde",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_41",
+      "token": "41",
+      "ueberschrift": "Art. 41 Bearbeitung von Meldungen von Unterschieden und Vermerk im Transparenzregister",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_42",
+      "token": "42",
+      "ueberschrift": "Art. 42 Prüfung der Informationen im Transparenzregister durch die Kontrollstelle",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_43",
+      "token": "43",
+      "ueberschrift": "Art. 43 Kontrollen aufgrund eines Vermerks",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_44",
+      "token": "44",
+      "ueberschrift": "Art. 44 Auskunftspflicht der Rechtseinheiten und betroffener Dritter",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_45",
+      "token": "45",
+      "ueberschrift": "Art. 45 Massnahmen bei unrichtigen, unvollständigen oder nicht aktuellen Einträgen",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_46_a",
+      "token": "46_a",
+      "ueberschrift": "Art. 46a",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_47",
+      "token": "47",
+      "ueberschrift": "Art. 47 Eintragung im Grundbuch",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_48",
+      "token": "48",
+      "ueberschrift": "Art. 48 Gebühren",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_49",
+      "token": "49",
+      "ueberschrift": "Art. 49 Amtshilfe",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_5",
+      "token": "5",
+      "ueberschrift": "Art. 5 Wirtschaftlich berechtigte Person einer SICAV",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_50",
+      "token": "50",
+      "ueberschrift": "Art. 50 Verletzung der Melde- und Auskunftspflichten",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_51",
+      "token": "51",
+      "ueberschrift": "Art. 51 Missachten von Verfügungen",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_52",
+      "token": "52",
+      "ueberschrift": "Art. 52 Zuständigkeit und Verfolgung",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_53",
+      "token": "53",
+      "ueberschrift": "Art. 53 Datenschutz",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_54",
+      "token": "54",
+      "ueberschrift": "Art. 54 Ausführungsbestimmungen",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_55",
+      "token": "55",
+      "ueberschrift": "Art. 55 Änderung anderer Erlasse",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_56",
+      "token": "56",
+      "ueberschrift": "Art. 56 Übergangsbestimmungen zu den Pflichten der Aktionärinnen und Aktionäre sowie der Gesellschafterinnen und Gesellschafter",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_57",
+      "token": "57",
+      "ueberschrift": "Art. 57 Übergangsbestimmung zur Aufbewahrung der Verzeichnisse der wirtschaftlich berechtigten Personen und der Belege",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_58",
+      "token": "58",
+      "ueberschrift": "Art. 58 Übergangsbestimmung zur Meldepflicht der juristischen Personen schweizerischen Privatrechts",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_59",
+      "token": "59",
+      "ueberschrift": "Art. 59 Übergangsbestimmung zur Information der Handelsregisterbehörden",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_6",
+      "token": "6",
+      "ueberschrift": "Art. 6 Indirekte Kontrolle und Kontrolle auf andere Weise",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_60",
+      "token": "60",
+      "ueberschrift": "Art. 60 Übergangsbestimmung zur Meldepflicht von juristischen Personen ausländischen Rechts",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_61",
+      "token": "61",
+      "ueberschrift": "Art. 61 Übergangsbestimmung für die Pflicht zur Meldung von Unterschieden durch Finanzintermediäre",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_61_a",
+      "token": "61_a",
+      "ueberschrift": "Art. 61a Informationsaustausch zwischen der FINMA und den Aufsichtsorganisationen",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_62",
+      "token": "62",
+      "ueberschrift": "Art. 62 Übergangsbestimmung für die Meldepflicht von Treuhandverhältnissen",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_656_b",
+      "token": "656_b",
+      "ueberschrift": "Art. 656b Abs. 4 Ziff. 3, 697j, 697l und 697m",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_7",
+      "token": "7",
+      "ueberschrift": "Art. 7 Identifikation und Überprüfung der wirtschaftlich berechtigten Personen",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_718",
+      "token": "718",
+      "ueberschrift": "Art. 718 Abs. 4 dritter Satz",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_731_b",
+      "token": "731_b",
+      "ueberschrift": "Art. 731b Abs. 1 Ziff. 3",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_747",
+      "token": "747",
+      "ueberschrift": "Art. 747",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_790_a",
+      "token": "790_a",
+      "ueberschrift": "Art. 790a",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_814",
+      "token": "814",
+      "ueberschrift": "Art. 814 Abs. 3 dritter Satz",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_88",
+      "token": "88",
+      "ueberschrift": "Art. 88 Informationsaustausch",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_8_a",
+      "token": "8_a",
+      "ueberschrift": "Art. 8a Abs. 2bis, 2ter, 3, 4 und 5 zweiter Satz",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_8_b",
+      "token": "8_b",
+      "ueberschrift": "Art. 8b Sorgfaltspflichten",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_8_c",
+      "token": "8_c",
+      "ueberschrift": "Art. 8c Vereinfachte oder erhöhte Sorgfaltspflichten",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_8_d",
+      "token": "8_d",
+      "ueberschrift": "Art. 8d Organisatorische Massnahmen",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_9",
+      "token": "9",
+      "ueberschrift": "Art. 9 Meldung an das Transparenzregister",
+      "quelle": "amtlich"
+    },
+    {
+      "eId": "art_9_b",
+      "token": "9_b",
+      "ueberschrift": "Art. 9b Abs. 2bis",
+      "quelle": "amtlich"
+    }
+  ]
+}
