@@ -137,13 +137,11 @@ export interface ArtikelFassung {
 const ARTIKEL_RE = /<article\b[^>]*\beId="([^"]+)"[^>]*>([\s\S]*?)<\/article>/g;
 
 /**
- * `<paragraph>`-Elemente eines Artikel-Innenraums — die EINZIGE Quelle sowohl der
- * gespeicherten Blöcke (`zerlegeBloecke`) ALS AUCH des Vergleichstexts (`flachText`,
- * Befund #796). Vorher zog `flachText` den GANZEN Artikel-Innenraum heran (inklusive
- * `<heading>`/`<subheading>`) — ein Randvermerk-Update (Querverweis, wegen
- * Umnummerierung anderswo) liess den Generator «geändert» buchen, obwohl der
- * gespeicherte Artikelkörper byte-gleich blieb und der Leser folgerichtig «kein
- * Unterschied» zeigte (§5: zwei Vergleichs-Scopes wären zwei Wahrheiten).
+ * `<paragraph>`-Elemente eines Artikel-Innenraums — die EINZIGE Struktur-Quelle der
+ * gespeicherten Blöcke (`zerlegeBloecke`). `flachText` (Befund #796) liest seit
+ * Profil `/3` nichts mehr direkt aus dieser Konstante — es ruft `zerlegeBloecke`
+ * selbst auf (`wortlaut(zerlegeBloecke(vergleichsRoh(roh)))`), damit Vergleichs- und
+ * Speicher-Scope NIE wieder auseinanderlaufen können (§5).
  */
 const PARAGRAPH_RE = /<paragraph\b[^>]*>([\s\S]*?)<\/paragraph>/g;
 
@@ -279,13 +277,20 @@ export function wortlaut(bloecke: readonly SynopseBlock[]): string {
  * 11.9.2026: 36/3484 `belegt`, 34/999 `ohne_ereignis`). Beleg: AVIV Art. 109b,
  * 2021-04-01 → 2021-07-01 — der `<subheading>` wanderte von
  * «(Art. 83 Abs. 1 Bst. i und o AVIG)» zu «(Art. 83 Abs. 1bis AVIG)», der Artikeltext
- * blieb Zeichen für Zeichen derselbe. `vergleichsRoh` wird weiterhin auf den GANZEN
- * `roh`-String angewandt (seine beiden Regeln — Satzzeichen vor Aufzählung,
- * Klammer-Etikett — treffen ausschliesslich `<num>`/`<p>`/`<listIntroduction>`/
- * `<blockList>` INNERHALB eines Absatzes, siehe dort), erst danach schneidet
- * `PARAGRAPH_RE` auf den Absatz-Scope zurück. Kein Artikel ohne `<paragraph>` war
- * unter den 70 Fällen betroffen; der Fallback bleibt trotzdem konsistent (auch dort
- * fällt `<subheading>` jetzt weg, siehe `zerlegeBloecke`).
+ * blieb Zeichen für Zeichen derselbe.
+ *
+ * BEWUSST KEINE VOLLE DELEGATION AN `zerlegeBloecke` (versucht und wieder verworfen,
+ * 11.9.2026): `zerlegeBloecke` selbst kennt nur `listIntroduction` + `item` — ein
+ * blosser `<p>`-Satz VOR einem sibling `<blockList>` (die ARG-12/EMRK-44-Struktur aus
+ * PR #794, «Satz + Liste» statt «Einleitung + Liste») wird von `zerlegeBloecke` NIE
+ * als Block erfasst. Ein `flachText`, das `zerlegeBloecke` aufruft, hätte also
+ * GENAU DAS Gegenprüfungs-Fixture wieder falsch beurteilt (Rot-Beweis reproduziert,
+ * 11.9.2026: `d.geaendert` enthielt `art_12`/`art_44`, obwohl es KEINE Änderung gibt).
+ * `flachText` bleibt darum die EIGENE, reine Tag-Strip-Extraktion (`reinerText`) über
+ * den `<paragraph>`-Scope — sie ist absichtlich TOLERANTER als `zerlegeBloecke` (sieht
+ * Fliesstext unabhängig von seiner Element-Rolle), nur eben genauso `<paragraph>`-
+ * begrenzt. Regel (c) unten schliesst die verbleibende Lücke (Text NACH einer Liste,
+ * KLV-Klasse) gezielt, statt die ganze Extraktion zu ersetzen.
  */
 export function flachText(a: ArtikelFassung): string {
   const vorbehandelt = vergleichsRoh(a.roh);
@@ -340,7 +345,20 @@ export function vergleichsRoh(roh: string): string {
     // nur am BLOCKANFANG. «(Aufgehoben)» ist laenger und bleibt stehen, ein Querverweis
     // «(2)» mitten im Satz ebenso.
     .replace(/<num\b[^>]*>\s*\(\s*[0-9a-zA-Z]{1,4}\s*\)\s*<\/num>/g, '')
-    .replace(/(<p\b[^>]*>)\s*\(\s*[0-9a-zA-Z]{1,4}\s*\)\s*/g, '$1');
+    .replace(/(<p\b[^>]*>)\s*\(\s*[0-9a-zA-Z]{1,4}\s*\)\s*/g, '$1')
+    // (c) Fliesstext NACH einer Aufzaehlung, innerhalb desselben Absatzes (Befund #796,
+    // Nachtrag 11.9.2026). Beleg: KLV Art. 12 Bst. e, 2021-11-04 -> 2022-01-01 — ein
+    // Satz NACH `</blockList>` (in einer Tabellenzelle: `</blockList><p>Findet die
+    // Untersuchung … in den Kantonen … statt …</p></td></tr></table>`) traegt eine
+    // ECHTE Aenderung (Kantonsliste um Bern/Luzern erweitert) — aber `zerlegeBloecke`
+    // kennt nach einer `<blockList>` nur `listIntroduction` + `item`, nie Text DANACH,
+    // und speichert diesen Satz darum in KEINER Generation. Ohne diese Regel saehe
+    // `flachText` die Aenderung, `bloecke` nie — ein Alt-Block waere "geaendert"
+    // gebucht, dessen gespeicherter Wortlaut sich nie unterscheidet (§5). Die Regel
+    // faellt bewusst NICHT mit der STORAGE-Luecke selbst zusammen (die bleibt, ist ein
+    // eigener, separater Befund) — sie synchronisiert nur die VERGLEICHS-Entscheidung
+    // mit dem, was ohnehin gespeichert wird.
+    .replace(/(<\/blockList>)[\s\S]*?(<\/content>|<\/paragraph>)/g, '$1$2');
 }
 
 /**

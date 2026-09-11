@@ -129,6 +129,29 @@ describe('vergleichsRoh — Fussnote vor der Satzzeichen-Regel weg (Befund #796,
     const b = artikel(ohneFussnote, 'art_13');
     expect(normalisiere(flachText(a))).toBe(normalisiere(flachText(b)));
   });
+
+  // KLV Art. 12 Bst. e, 2021-11-04 -> 2022-01-01 (real, gekürzt): eine Tabellenzelle
+  // trägt eine `<blockList>`, GEFOLGT von einem Fliesstext-Satz — `zerlegeBloecke`
+  // speichert nach einer Liste nur `listIntroduction` + `item`, nie Text danach, in
+  // KEINER Generation. Ohne Regel (c) sah `flachText` die Kantonsliste (Bern/Luzern
+  // ergänzt), `bloecke` nie — ein Alt-Block wurde "geändert" gebucht, dessen Wortlaut
+  // sich nie unterschied.
+  it('ignoriert Fliesstext NACH einer Liste — er landet ohnehin nie in bloecke', () => {
+    const bau = (kantone: string) => dok(
+      '<article eId="art_12_e"><num><b>Art. 12</b><i>e</i></num>'
+      + '<paragraph eId="art_12_e/para"><num>a.</num><content><table><tr><td>'
+      + '<blockList><item eId="art_12_e/lbl_1"><num>– </num><p>Koloskopie, alle 10 Jahre.</p></item></blockList>'
+      + `<p>Findet die Untersuchung im Rahmen der Früherkennungsprogramme in den Kantonen ${kantone} statt, `
+      + 'wird auf der Leistung keine Franchise erhoben.</p>'
+      + '</td></tr></table></content></paragraph></article>',
+    );
+    const ohneBernLuzern = bau('Basel-Stadt, Freiburg, Genf');
+    const mitBernLuzern = bau('Basel-Stadt, Bern, Freiburg, Genf, Luzern');
+    const a = artikel(ohneBernLuzern, 'art_12_e');
+    const b = artikel(mitBernLuzern, 'art_12_e');
+    expect(a.bloecke).toEqual(b.bloecke); // die Kantonsliste landet in KEINER Generation in bloecke
+    expect(normalisiere(flachText(a))).toBe(normalisiere(flachText(b)));
+  });
 });
 
 describe('Gegenprobe PR #794 — bleibt bestehen (Profil /3 darf keine echte Struktur-Klasse verlernen)', () => {
