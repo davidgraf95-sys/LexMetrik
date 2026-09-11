@@ -289,6 +289,16 @@ zgb-a36-anhang: Die ZGB-Gliederung zeigt 74 Artikel des Anhangs «Wortlaut der f
   Alt-Block als §7-Zitat mit Deckel 8 MB / 2 MB je Erlass; Vor-Messung E5.0 vor dem Bau. Etappen E5.0, E5, E6.
   **Detail:** [FAHRPLAN-MATERIALIEN-VERZAHNUNG.md](fahrplaene/FAHRPLAN-MATERIALIEN-VERZAHNUNG.md) §11.
 
+- [ ] **Entstehung am Artikel — Synopse alt/neu in der Änderungskarte** *(`W2·6c-ENTSTEHUNG-SYNOPSE-LESER`, §14-Intake 11.9.2026)*
+  <!-- @meta id: W2·6c-ENTSTEHUNG-SYNOPSE-LESER · status: ready · blocker: null · dep: [W2·6c-ENTSTEHUNG-SYNOPSE, W2·6c-ENTSTEHUNG-LESER] · feld: leser · fahrplan: fahrplaene/FAHRPLAN-MATERIALIEN-VERZAHNUNG.md -->
+  Ziel: in der Änderungskarte (E3, `EntstehungsBlock.tsx`) je Fassungspunkt den alten Wortlaut aus
+  `public/materialien/synopse/<KEY>.json` gegen den geltenden zeigen, nachgeladen erst beim Klick,
+  Zustände ehrlich (`ohne_ereignis`-Blöcke als «ohne Fussnoten-Ereignis» gekennzeichnet), §7-Merkmale
+  sichtbar (Stand, Quelle, Live-Link), Entwurf↔Beschluss aus `synopse-entwurf/` wo vorhanden. Grenzen:
+  kein Prerender-Markup, CLS 0, Deckel unverändert. **Bau erst nach Merge von** `W2·6c-ENTSTEHUNG-SYNOPSE`
+  **(PR #794, Stand 11.9.2026: offen).**
+  **Detail:** [FAHRPLAN-MATERIALIEN-VERZAHNUNG.md](fahrplaene/FAHRPLAN-MATERIALIEN-VERZAHNUNG.md) §11.5.
+
 - [ ] **Watchlist & Änderungs-Signale** *(`W2·14-SIGNAL`, Ideen-Intake 20.7.2026)*
   <!-- @meta id: W2·14-SIGNAL · status: ready · blocker: null · dep: [] · feld: korpus · fahrplan: fahrplaene/FAHRPLAN-FEDLEX-PORTFOLIO.md -->
   «Sag mir, wenn sich Norm Y ändert.» **Baut ausschliesslich auf vorhandenen Signalen**
@@ -318,6 +328,13 @@ zgb-a36-anhang: Die ZGB-Gliederung zeigt 74 Artikel des Anhangs «Wortlaut der f
   - [ ] **Golden-Token blind für Randtitel** *(Befund PR #668, 4.9.2026)* — `sha256Bloecke` (`scripts/normtext/sha-bloecke.ts`) hasht weder `titel` noch `absatz` (Gegenprüfung 4.9.2026: `sha-bloecke.ts:50`); eine reine Randtitel-Revision (BE 154.21 Art. 31) bewegt den Golden-Index nicht. Wurzel-Fix korpusweit (~60k Hashes) als eigener Schritt mit Gegenprüfung.
   - [ ] **`public/normtext/confidence.json` veraltet** *(Befund PR #668, 4.9.2026)* — erzeugt 23.6.2026 mit 150 Erlassen, heutiger Lauf liefert 1566 (196 Quarantäne); eigener Schritt: neu erzeugen, Quarantäne-Liste sichten, `report:confidence` als Tor oder Wächter-Zeile.
   - [ ] **Nebenfunde Nacht 5.9.2026** (7 Zeilen: Cache ohne Fassungsschlüssel, struktur-Filter, stumme Löschung, GL-Kanonik, Kanton-Drift, Fedlex-Trenner, standRechtsprechung) — Fahrplan §1.
+  - [ ] **Deckungs-Seite «was wir nicht haben» offen** *(§11.5 FAHRPLAN-MATERIALIEN-VERZAHNUNG.md, Befund 11.9.2026)* — 1286 von 4770 Synopse-Alt-Blöcken (27 %) tragen kein Fussnoten-Ereignis;
+    Stichprobe belegt echte Änderungen ohne Fussnote (Berichtigungen, Terminologie), Quote aber
+    nicht erlassweise geprüft — eigener Schritt zur Vollständigkeit des amtlichen
+    Fussnoten-Apparats wert.
+  - [ ] **`public/normtext/historie/**` ausserhalb des Paritäts-Ingest** *(Kritik C9, FAHRPLAN-MATERIALIEN-VERZAHNUNG.md §11.0, unverändert offen)* — `check:paritaet` prüft den
+    Historie-Shard nicht mit; bewusst nicht Teil von W2·6c (Historie-Generator/-Shard bleiben
+    unangetastet), aber als Lücke im Paritäts-Netz weiterhin unbehoben.
   - [ ] **Zitat-Extraktion dreistufig trennen** — Erkennen (Tokenizer) · Auflösen (Resolver gegen Register) · Annotieren, mit Konfidenz je Treffer; Phantom-Kanten fallen dann im Resolver statt im Generator. Architektur-Muster `freelawproject/eyecite` (BSD-2), kein Code-Import (US-Stil). Nach dem Filter oben, Risikopfad. Quelle: Rules-as-Code-Sichtung 5.9.2026 §8.
   - [ ] **Testdaten für die Zitat-Extraktion aus `rcds/*` (Hugging Face)** — swiss_leading_decisions/swiss_doc2doc_ir als Fixture-Quelle (nie Produktquelle); Lizenz je Datensatzkarte (Snippet: CC-BY-4.0) vor Übernahme einzeln belegen. Quelle: Fremdnutzen-Suchrunde 2 (6.9.2026) §2 #5.
   - [ ] **LexWork-Standlesung kennt «in Vollzug seit» nicht** *(§17-Befund 6.9.2026)* — `inKraftSeit()` in `scripts/normtext/adapter-lexwork.ts` liest nur «in Kraft seit»/«en vigueur»; SG schreibt «Aktuelle Fassung in Vollzug seit: 01.07.2026», der Stand fällt auf `enactment` zurück (`register.json` führt SG-2808 mit stand 2012-03-01, amtlich V3863 seit 2026-07-01). Variante ergänzen + betroffene Kanton-Snapshots neu ziehen; Risikopfad.
@@ -503,6 +520,8 @@ zgb-a36-anhang: Die ZGB-Gliederung zeigt 74 Artikel des Anhangs «Wortlaut der f
   weg?), dann fixen; ohne Verifikation kein Eingriff (§7). Risikopfad (`src/lib/fedlex`) ⇒
   **Gegenprüfung Pflicht**, Merge gesperrt bis Verdikt. Messregel: nie neben laufendem Build
   oder e2e (Skill `perf` Bauregel 7).
+  - [ ] **`check:perf-budget` deckt die Struktur-Sidecars nicht** *(Befund 11.9.2026, #791)* — `public/normtext/**/struktur/*.json` (vorbestehend, seit #791 um die Zähler-Nutzlast
+    gewachsen) läuft ausserhalb der festen Deckel-Liste; eigene Zusicherung nachziehen.
 
 - [ ] **UI-Befundliste extern (210 Befunde, Cowork 29.7.2026)** *(`W2·17-UI-BEFUNDE`)*
   <!-- @meta id: W2·17-UI-BEFUNDE · status: ready · blocker: null · dep: [] · feld: design · fahrplan: fahrplaene/FAHRPLAN-UI-BEFUNDE.md -->
@@ -603,6 +622,8 @@ zgb-a36-anhang: Die ZGB-Gliederung zeigt 74 Artikel des Anhangs «Wortlaut der f
   - [ ] **Monatsend-Arithmetik der Fristen-Engine explizit** — Prüfauftrag, ob `fristenEngine.ts`/`datumsUtils.ts` bei «31.1. + 1 Monat» und Schaltjahr stillschweigend rundet; Ergebnis als Property-Test mit belegter Norm (Art. 77 OR / Art. 142 ZPO) und ausdrücklicher Rundungsregel statt date-fns-Default. Muster Catala `dates-calc` (Apache-2.0, Namensnennung). Quelle: Rules-as-Code-Sichtung 5.9.2026 §2/§5.
   - [ ] **Rechenweg-Vollständigkeit als Invariante** — jede `status: 'ok'`-Antwort trägt ≥1 `Rechenschritt` mit Norm-Anker; heute leere `rechenweg: []`-Pfade in `beurkundung.ts`, `lohnfortzahlung.ts`, `grundbuchgebuehren.ts`, kein Rechenweg in `emissionsabgabe.ts`. Muster Catala `--trace`/GoRules-Trace (Regel → Artikel → Zwischenwert). Quelle: Rules-as-Code-Sichtung 5.9.2026 §5/§8.
   - [ ] **WARTET AUF DAVID (fachlich, §7):** SF-F1 (Art.-63-Verlängerung bei gehemmter Frist?) und SF-F2 (Wartefrist-Ablauf in den Betreibungsferien) — Katalog-Zeilen «fachlich vorzulegen».
+  - [ ] **`scripts/materialien/check-botschaften-netz.ts` nutzt literales U+0001 als Join-Trenner** *(Befund 11.9.2026, W2·6c-ENTSTEHUNG-DATEN)* — Steuerzeichen im String-Join
+    statt einer benannten Konstante/eines strukturierten Schlüssels; ersetzen.
 
 - [x] **Tarif-Stammdaten: Stand maschinenlesbar + Drift-Tor** *(`W3-TARIF-STAND`, Rules-as-Code-Sichtung 5.9.2026, Entscheid David 5.9.2026)*
   <!-- @meta id: W3-TARIF-STAND · status: done · blocker: null · dep: [] · feld: werkzeuge -->
@@ -772,6 +793,10 @@ zgb-a36-anhang: Die ZGB-Gliederung zeigt 74 Artikel des Anhangs «Wortlaut der f
   - [ ] **M5** Plan-Buchung `npm ci` erst nach Trailer-Fund (−150,
     sofort/Konfig, **David-Freigabe**).
   - [ ] Wurzel `strict: true` ⇒ Merge Queue (`QS-ORG-UMZUG` unten, Gate G7).
+  - [ ] **Plan-Buchungs-Commit macht jede wartende PR BEHIND** *(Befund 11.9.2026, #791/#793)* — der automatische `docs(plan): … [skip ci]`-Commit nach jedem Merge zieht jeden offenen
+    Branch hinter `origin/main` zurück ⇒ ein zusätzlicher CI-Lauf je Landung, bevor gemergt
+    werden kann. Wurzel-Optionen: GitHub Merge Queue (Repo-Setting, David) oder die Buchung
+    im PR selbst statt danach.
 
 - [ ] **Repo in eine GitHub-Organisation überführen (Merge Queue)** *(`QS-ORG-UMZUG`)*
   <!-- @meta id: QS-ORG-UMZUG · status: blocked · blocker: david-entscheid-org-umzug · dep: [] · feld: betrieb -->

@@ -33,6 +33,59 @@ falsch — korrigiert 30.8.2026). Karten abgeschlossener Sessions (älter als
 werden direkt unter dem KARTEN-Anker eingefügt (jüngste zuoberst).
 
 <!-- KARTEN -->
+## Session 11.9.2026 — W2·26 Funktionszeile + Kette «Entstehung am Artikel» (Daten → Leser → Synopse), acht PRs
+
+**Auftrag David (wörtlich):** «führe alles durch» (Go «Entstehung am Artikel» + §11.9-Entscheide 1–6,
+Mandat 11.9.2026) · «bau und verbessere bis stop». Orchestrator Fable, Bau/Prüfung Opus/Sonnet.
+
+**Gelandet (Squash-Merges auf main, je mit Roadmap-Trailer, Status per Auto-Buchung):** #787 Doku
+W2·26-Plan (`dc12e6ab9`) · #790 Lagebild-Selbsttest Rot-Beweis ROADMAP-unabhängig (`c589feb40`,
+QS-LAGEBILD) · #788 W2·26-FUNKTIONSZEILE (`efc7129b8`) · #789 Vernehmlassungs-Register 11.9. nachgeführt
+(`e1e0e708e`, QS-DATA-INGEST-DRIFT, Gegenprüfung Opus) · #792 W2·6c-ENTSTEHUNG-DATEN (`71db836ca`,
+Gegenprüfung Sonnet) · #791 W2·26-FUNKTIONSZEILE-ZAEHLER (`5a09f161b`, Gegenprüfung Sonnet) · #793
+W2·6c-ENTSTEHUNG-LESER (`f0c82ab74`, Gegenprüfung Sonnet).
+
+**Kette Funktionszeile → Zähler → Entstehung-Daten → Leser → Synopse:** #788 baute die Funktionszeile
+neu (Z1–Z10: Wort «Bezüge» weg, Rubrik Fassung zu = nur «Gilt seit …», Akkordeon mit Tastatur/Escape,
+D45 Entscheid-Klick daneben, Knopfzahl **13 532 → 10 160** (−3 372, −24,9 %, Logikverlust keiner),
+Fussnoten-Option nimmt jetzt ALLE Marker (**215 → 0** sichtbar bei abgewählt, vorher blieben reine
+SR-Verweise stehen)). #791 zog die Bezüge-Zähler aus einer eigenen Datei in den ohnehin geladenen
+Struktur-Sidecar — ein Fetch weniger, **Requests 3 → 2** je Erlass, Erlass-Payload-Zuwachs praktisch
+null (+0,04–0,06 % gzip; eigener Ordner ersatzlos gelöscht, §17-Gegengewicht). #792 lieferte die
+Entstehungs-Daten E1/E2/E4 (1609 Verfahrens-Ereignisse über 407/407 Botschaften, 189 Botschafts-Anker,
+385/402 Curia-Geschäfte, Historie-Shard unangetastet). #793 baute die Leser-Karte E3 (Rubrik «Fassung»,
+«Warum?»-Griff je Fassungspunkt öffnet die Änderungskarte, 185 Erlass-Dateien à 692,3 KB gesamt, nichts
+lädt vor dem Klick). **#789** nebenbei: SPARQL-Vollauf gegen 227 Bund-Erlasse für das
+Vernehmlassungs-Register, 7 Status-Übergänge + 3 neue Verfahren, Stichprobe VERN-2026-19 gegen die
+amtliche Fedlex-Quelle bestätigt.
+
+**#794 W2·6c-ENTSTEHUNG-SYNOPSE (E5.0/E5/E6) — NICHT Teil der obigen Liste.** Geprüft 11.9.2026, 20:49
+CEST (`gh pr view 794`): Status **OPEN**, `mergeStateStatus BLOCKED`, Required-Checks «Merge-Schutz»
+und «Tore» **rot** (Lauf 34634994397), vier Browser-Smoke-Shards `pending` — eine andere Session
+bearbeitet den Branch `feat/w26c-entstehung-synopse` (eigener Worktree `w26c-synopse`) aktiv. Diese
+Karte hält nur den PR-Inhalt fest (186 Erlass-Shards, 1131 Stände, 4770 Alt-Blöcke E5; 10/59 Vorlagen
+E6), **nicht** einen Merge — Beleg §14.7: kein Erfolgsbericht ohne geprüftes Artefakt. Nächste Session:
+`gh pr view 794 --json state,mergedAt` neu prüfen, bei Merge PR-Nummer/SHA hier und in
+`FAHRPLAN-MATERIALIEN-VERZAHNUNG.md` §11.7/§11.10 nachtragen.
+
+**Nachtrag §17 (Prozessbefund, kein Fix in diesem PR):** Plan-Buchungs-Commit nach jedem Merge (der
+automatische `docs(plan): … [skip ci]`-Commit) macht jede wartende Branch/PR BEHIND ⇒ ein zusätzlicher
+CI-Lauf je nachfolgender Landung (Beleg 11.9.2026: #791 und #793 mussten je einmal gegen `origin/main`
+nachziehen) — als Unterpunkt unter `QS-CI-MINUTEN` in `ROADMAP.md` verankert, zwei Wurzel-Optionen
+offen (GitHub Merge Queue vs. Buchung im PR).
+
+**Nebenfund PR #790:** Der Rot-Beweis-Selbsttest `plan-bild-bloecke.test.ts` baute seine überschwere
+Eingabe aus der echten `ROADMAP.md` und wurde durch die ROADMAP-Kürzung in #787 selbst rot — der
+Wächter war defekt, nicht das Produktiv-Tor; Fix: synthetische, deterministische Eingabe (§6.3
+fachlich begründete Teständerung, kein stilles Nachführen).
+
+**Neuer Schritt angelegt:** `W2·6c-ENTSTEHUNG-SYNOPSE-LESER` (ready, feld: leser, dep
+`[W2·6c-ENTSTEHUNG-SYNOPSE, W2·6c-ENTSTEHUNG-LESER]`) — Synopse alt/neu in der Änderungskarte;
+Bau erst nach Merge von #794 UND separatem Go.
+
+**Wartet auf David:** nichts Neues (Mandat «führe alles durch»/«bau bis stop» deckte diese Session
+vollständig). Wartet auf Fortsetzung: PR #794 (Fremdsession, s.o.).
+
 ## Session 8.9.2026 — Aufräumen «nur noch ein main» (22 → 0 Branches), 8 PRs gelandet, Lagebild schlank (#765), Tarif-Nachverifikation gelandet (#764, Gegenprüfung Opus), CI-Vollmessung 61 381 min, Spec §11 Fassung 4 + Lex-Übernahmen (#763)
 **Auftrag David (wörtlich):** «räum alles auf nur noch ein main» · «andere session ist fertig» · «alle wie empfohlen, #727 lande» · «kannst du auch noch roadmap aufräumen?» · «vorallem auch das lagebild lexmetrik verbessern … schlanker und übersichtlicher für mich» → «ja» · «ich will nicht das man mein github repo findet» → «miss» · «können wir die prüfstrasse ohne qualitätsverlust senken?».
 **Aufräumen:** 22 Remote-Branches/3 Worktrees → nur `main`; gemergte Branches lokal weg, Branches geschlossener PRs gelöscht (Commits im PR), geparkte Stände als Tags `archiv/r6-legaldefinitionen-2026-09-01`, `archiv/r8-abkuerzungen-2026-09-01`, `archiv/w219-runde4-2026-09-01`; PRs #503 (Tailwind 4, Migrationsprojekt), #525 (Konflikt), #591 (Autopilot) geschlossen; #526/#527/#646 (Dependabot) + #727 (Konflikt Kontakt.tsx gelöst) seriell gelandet. **Lehre §17** (Skill `landung` §«Session-Ende»): Bau-Flächen hinterlassen keine Zweige; geparkt = Tag; Dependabot je Session einordnen.
