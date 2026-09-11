@@ -1,0 +1,242 @@
+// @shard-gruppe: 2
+// ═══ W2·6c-SYNOPSE-LESER · DER WORTLAUT VON DAMALS ══════════════════════════
+//
+// Die Fassungs-Rubrik sagte seit E3, WARUM sich ein Artikel geändert hat. Sie
+// sagt jetzt auch, WAS sich geändert hat: zu jedem Punkt der Fassungsleiste
+// den Wortlaut vorher neben dem Wortlaut nachher (FAHRPLAN-MATERIALIEN-
+// VERZAHNUNG §11.5 (3), Daten aus E5/E6, PR #794).
+//
+// FÜNF ZUSAGEN, je einzeln messbar:
+//
+//  (a) NICHTS LÄDT VOR DEM KLICK. Aufgeklappte Rubrik: NULL Abrufe unter
+//      `/materialien/synopse/`. Erst «Alt/Neu» holt den Shard — genau EINEN,
+//      den des geöffneten Erlasses, und auch für den zweiten Artikel keinen
+//      zweiten (Auflage David 6.9.2026, §15).
+//
+//  (b) DER VERGLEICH ZEIGT DIE WÖRTER. DBG 5 lit. a zum 1.1.2025: aus «eine
+//      Erwerbstätigkeit» wurde «eine selbstständige oder unselbstständige
+//      Erwerbstätigkeit» — genau diese drei Wörter stehen als `<ins>` da, der
+//      Rest des Satzes nicht. Und §7 steht im Fuss JEDER Karte: Stand beider
+//      Fassungen, amtliche Quelle, Live-Link, Abrufdatum, Profil-ID.
+//
+//  (c) WO NICHTS IST, SAGT SIE DAS. Derselbe Artikel führt einen Punkt von
+//      2013 — davor gibt es keinen maschinenlesbaren Volltext, und die Karte
+//      sagt «erst für Stände ab 01.01.2021» statt zu schweigen (§8). Und die
+//      Alt-Fassungen, die an keinem Punkt hängen (BGÖ 13: Wortlaut-Unterschied
+//      ohne Fussnoten-Ereignis), stehen als eigener Abschnitt da.
+//
+//  (d) KEIN SPRUNG, KEIN ÜBERLAUF @320 px. Zwei Spalten werden dort zu einer;
+//      die Artikel ÜBER dem geöffneten dürfen sich beim Aufbau nicht bewegen.
+//
+//  (e) TASTATUR. «Alt/Neu» ist ein echter Knopf mit `aria-expanded` und
+//      `aria-controls` auf die Karte, die wirklich im DOM steht (WCAG 4.1.2).
+//
+// ROT ZU BEKOMMEN (§6.7) — je einzeln gefahren, Protokoll im PR-Body:
+//  · in `EntstehungsBlock.tsx` die Bedingung `synOffen === null` aus dem
+//    Lade-Effekt streichen (lädt dann beim Aufklappen)            ⇒ (a) rot
+//  · in `SynopseKarte.tsx` `<ins>`/`<del>` durch `<span>` ersetzen ⇒ (b) rot
+//  · dort den Satz für `vor_fenster` leeren                       ⇒ (c) rot
+//  · in `src/index.css` `.lr8-syn-zeile` fest auf zwei Spalten zwingen
+//    und `white-space: nowrap` setzen                             ⇒ (d) rot
+//  · am Griff `aria-expanded` weglassen                           ⇒ (e) rot
+import { test, expect, type Page } from '@playwright/test';
+import { F_BLOCK, F_MARKE } from './helpers/fassungsRubrik';
+
+// DBG 5 ist der einzige Artikel im Bestand, der alle drei Schichten an EINEM
+// Punkt trägt (gemessen 11.9.2026): Alt-Fassung ab 2021, erfasste Botschaft UND
+// einen Entwurfs-Shard der Vorlage. Dazu ein Punkt von 2013 vor dem Fenster.
+const ORT = '/gesetze/bund/DBG';
+const ART = '5';
+const BLOCK = `#art-${ART} ${F_BLOCK}`;
+const GRIFF = `${BLOCK} [data-synopse-griff]`;
+const KARTE = `${BLOCK} [data-synopse-karte]`;
+
+async function oeffneRubrik(page: Page, ort = ORT, art = ART): Promise<void> {
+  await page.goto(ort);
+  await expect(page.locator('#art-1')).toBeVisible({ timeout: 20_000 });
+  await page.locator(`#art-${art}`).scrollIntoViewIfNeeded();
+  const marke = page.locator(`#art-${art} ${F_MARKE}`);
+  await expect(marke).toBeVisible({ timeout: 20_000 });
+  await marke.click();
+  await expect(page.locator(`#art-${art} ${F_BLOCK}`)).toBeVisible();
+}
+
+/** Alle Abrufe zählen, die dieser Griff auslösen könnte. */
+function abrufe(page: Page): { synopse: string[]; entwurf: string[]; register: string[] } {
+  const gezaehlt = { synopse: [] as string[], entwurf: [] as string[], register: [] as string[] };
+  page.on('request', (r) => {
+    const u = r.url();
+    if (u.includes('/materialien/synopse/')) gezaehlt.synopse.push(u);
+    if (u.includes('/materialien/synopse-entwurf/')) gezaehlt.entwurf.push(u);
+    if (u.includes('/materialien/register.json')) gezaehlt.register.push(u);
+  });
+  return gezaehlt;
+}
+
+test.describe('W2·6c-SYNOPSE-LESER · Fassungsvergleich am Artikel', () => {
+  test.use({ viewport: { width: 1440, height: 900 } });
+
+  test('(a) aufgeklappt null Abrufe, erst «Alt/Neu» holt genau einen Shard', async ({ page }) => {
+    const gezaehlt = abrufe(page);
+    await oeffneRubrik(page);
+    // Die Rubrik steht offen, die Entstehungs-Projektion ist unterwegs — und der
+    // Synopse-Shard (DBG: 132 KB) trotzdem nicht angefasst.
+    await page.waitForTimeout(1200);
+    expect(gezaehlt.synopse, `vor dem Klick geladen: ${gezaehlt.synopse.join(' · ')}`).toHaveLength(0);
+    expect(gezaehlt.entwurf, `Entwurf vor dem Klick geladen: ${gezaehlt.entwurf.join(' · ')}`).toHaveLength(0);
+
+    // Playwright-Falle (Auflage): den Griff EINMAL auflösen und festhalten.
+    const griffe = page.locator(GRIFF);
+    await expect(griffe.first()).toBeVisible({ timeout: 10_000 });
+    const ersterGriff = griffe.nth(0);
+    await ersterGriff.click();
+    await expect(page.locator(KARTE)).toHaveCount(1);
+    await expect
+      .poll(() => gezaehlt.synopse.length, { timeout: 10_000, message: 'der Shard wurde nie geholt' })
+      .toBeGreaterThan(0);
+    await page.waitForTimeout(600);
+    expect(gezaehlt.synopse).toHaveLength(1);
+    expect(gezaehlt.synopse[0]).toContain('/materialien/synopse/DBG.json');
+    expect(gezaehlt.register, 'das 2,1-MB-Register ist nicht der Kanal dieser Karte').toHaveLength(0);
+
+    // Ein zweiter Punkt und ein zweiter Artikel holen NICHTS nach (gecachte
+    // Promise). DBG 9 ist der nächste Artikel mit Fassungs-Rubrik — sie steht
+    // nur, wo der Historie-Shard einen Eintrag führt (§8), nicht an jedem Artikel.
+    await griffe.nth(1).click();
+    await page.locator('#art-9').scrollIntoViewIfNeeded();
+    await page.locator(`#art-9 ${F_MARKE}`).click();
+    const zweiterGriff = page.locator(`#art-9 ${F_BLOCK} [data-synopse-griff]`).nth(0);
+    await expect(zweiterGriff).toBeVisible({ timeout: 10_000 });
+    await zweiterGriff.click();
+    await page.waitForTimeout(800);
+    expect(gezaehlt.synopse).toHaveLength(1);
+  });
+
+  test('(b) der Vergleich zeigt die geänderten Wörter — und seinen Zitat-Nachweis', async ({ page }) => {
+    await oeffneRubrik(page);
+    const griffe = page.locator(GRIFF);
+    await expect(griffe.first()).toBeVisible({ timeout: 10_000 });
+    await griffe.nth(0).click();
+    const karte = page.locator(KARTE);
+    await expect(karte).toHaveCount(1);
+    await expect(karte).toContainText('Fassungsvergleich');
+    // Beide Stände stehen im Kopf — nie nur einer (§7a).
+    await expect(karte).toContainText(/Stand\s+16\.05\.2024 gegenüber\s+01\.01\.2025/);
+
+    // Die drei eingefügten Wörter, und NUR sie.
+    const zeile = karte.locator('[data-synopse-zeile="geaendert"]').first();
+    await expect(zeile.locator('ins')).toContainText('selbstständige oder unselbstständige');
+    await expect(zeile.locator('.lr8-syn-text').first())
+      .toContainText('in der Schweiz eine Erwerbstätigkeit ausüben;');
+
+    // §7 a–d im Fuss: Stand beider Fassungen, Quelle, Live-Link, Abruf, Profil.
+    const fuss = karte.locator('[data-synopse-fuss]').first();
+    await expect(fuss).toContainText('entstehung-norm/2');
+    await expect(fuss).toContainText(/Abruf\s+\d{2}\.\d{2}\.\d{4}/);
+    await expect(fuss).toContainText('massgeblich bleibt');
+    await expect(fuss.locator('a[href*="fedlex.admin.ch"]').first()).toBeVisible();
+
+    // E6 · «stand das im Entwurf auch schon so?» — nur wo eine Vorlage erfasst ist.
+    const entwurf = karte.locator('[data-synopse-entwurf]');
+    await expect(entwurf).toHaveCount(1);
+    await expect(entwurf).toContainText('Entwurf des Bundesrats');
+    await expect(entwurf).toContainText('fga/2024/651');
+  });
+
+  test('(c) vor 2021 und ohne Fussnoten-Ereignis sagt die Karte genau das', async ({ page }) => {
+    await oeffneRubrik(page);
+    const griffe = page.locator(GRIFF);
+    await expect(griffe.first()).toBeVisible({ timeout: 10_000 });
+    // Der dritte Punkt von DBG 5 datiert auf den 1.1.2013 — vor dem Fenster.
+    await griffe.nth(2).click();
+    const karte = page.locator(KARTE);
+    await expect(karte).toHaveCount(1);
+    await expect(karte.locator('[data-synopse-lage="vor_fenster"]'))
+      .toContainText(/Fassungsvergleich erst für Stände ab\s+01\.01\.2021/);
+
+    // BGÖ 13: ein Wortlaut-Unterschied, den der amtliche Fussnoten-Apparat nicht
+    // führt. Er hängt an keinem Punkt der Leiste und steht darum eigens da (§8).
+    await oeffneRubrik(page, '/gesetze/bund/BGOE', '13');
+    const block = page.locator(`#art-13 ${F_BLOCK}`);
+    const bgoeGriffe = block.locator('[data-synopse-griff]');
+    await expect(bgoeGriffe.first()).toBeVisible({ timeout: 10_000 });
+    await bgoeGriffe.nth(0).click();
+    const abschnitt = block.locator('[data-entstehung-ohne-ereignis]');
+    await expect(abschnitt).toHaveCount(1);
+    await expect(abschnitt).toContainText('ohne Fussnoten-Ereignis im amtlichen Apparat');
+    const ohneGriff = abschnitt.locator('[data-synopse-griff]').nth(0);
+    await ohneGriff.click();
+    await expect(abschnitt.locator('[data-synopse-ohne-ereignis]')).toContainText('kein Änderungs-Ereignis');
+  });
+
+  test('(d) @320 px: eine Spalte, kein Überlauf, kein Sprung der Artikel darüber', async ({ page }) => {
+    await page.setViewportSize({ width: 320, height: 720 });
+    await oeffneRubrik(page);
+    const griffe = page.locator(GRIFF);
+    await expect(griffe.first()).toBeVisible({ timeout: 10_000 });
+    await page.evaluate(() => document.fonts?.ready);
+    await page.waitForTimeout(400);
+
+    // NUR die Artikel ÜBER dem geöffneten: die Karte wächst nach unten in den
+    // offenen Block hinein, und dass der nächste Artikel dabei nachrückt, ist
+    // kein Layout-Sprung, sondern der Sinn eines Aufklapp-Blocks. Gemessen wird,
+    // was der Leser gerade liest — und das steht darüber.
+    const geometrie = () => page.evaluate(() => {
+      const o: Record<string, number> = {};
+      for (const a of [...document.querySelectorAll('article[id^="art-"]')].slice(0, 4)) {
+        o[a.id] = Math.round(a.getBoundingClientRect().y);
+      }
+      return o;
+    });
+    const vorher = await geometrie();
+    await griffe.nth(0).click();
+    await expect(page.locator(KARTE)).toHaveCount(1);
+    await page.waitForTimeout(500);
+    expect(await geometrie()).toEqual(vorher);
+
+    // Untereinander, nicht nebeneinander: eine Spalte im Raster.
+    const spalten = await page.locator(`${KARTE} [data-synopse-zeile]`).first()
+      .evaluate((el) => getComputedStyle(el).gridTemplateColumns.split(' ').length);
+    expect(spalten, 'die Synopse steht bei 320 px zweispaltig').toBe(1);
+
+    // DREI Messungen (Herleitung in `entstehung-karte-e3`): Seite, Kastenrand
+    // und INHALT — die ersten beiden verschlucken einen echten Überlauf.
+    const ueberlauf = await page.evaluate(() => {
+      const breite = document.documentElement.clientWidth;
+      const k = document.querySelector('[data-synopse-karte]');
+      let innen = 0;
+      let schuldig = '';
+      for (const el of k ? [k, ...k.querySelectorAll('*')] : []) {
+        const d = el.scrollWidth - el.clientWidth;
+        if (d > innen) { innen = d; schuldig = el.className || el.tagName; }
+      }
+      return {
+        seite: document.documentElement.scrollWidth - breite,
+        karte: k ? Math.round(k.getBoundingClientRect().right - breite) : -1,
+        innen, schuldig,
+      };
+    });
+    expect(ueberlauf.seite, 'die Seite scrollt waagrecht').toBeLessThanOrEqual(1);
+    expect(ueberlauf.karte, 'die Karte ragt aus dem Viewport').toBeLessThanOrEqual(1);
+    expect(ueberlauf.innen, `Inhalt ragt aus «${ueberlauf.schuldig}»`).toBeLessThanOrEqual(1);
+  });
+
+  test('(e) Tastatur: Enter öffnet, aria sagt den Zustand und zeigt auf die Karte', async ({ page }) => {
+    await oeffneRubrik(page);
+    const griff = page.locator(GRIFF).nth(0);
+    await expect(griff).toBeVisible({ timeout: 10_000 });
+    await expect(griff).toHaveAttribute('aria-expanded', 'false');
+    await griff.focus();
+    await page.keyboard.press('Enter');
+    await expect(griff).toHaveAttribute('aria-expanded', 'true');
+
+    const ziel = await griff.getAttribute('aria-controls');
+    expect(ziel, 'kein aria-controls am geöffneten Griff').toBeTruthy();
+    // Attribut-Selektor statt `#id`: `useId()` vergibt Namen mit Doppelpunkten.
+    await expect(page.locator(`[id="${ziel}"]`)).toHaveCount(1);
+
+    await page.keyboard.press('Enter');
+    await expect(griff).toHaveAttribute('aria-expanded', 'false');
+    await expect(page.locator(KARTE)).toHaveCount(0);
+  });
+});
