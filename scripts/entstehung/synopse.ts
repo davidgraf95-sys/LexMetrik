@@ -374,8 +374,42 @@ export function flachText(a: ArtikelFassung): string {
   const vorbehandelt = vergleichsRoh(a.roh);
   return [
     titelFuerVergleich(vorbehandelt),
-    wortlaut(zerlegeBloecke(vorbehandelt)),
+    vergleichsFolge(zerlegeBloecke(vorbehandelt)),
   ].filter(Boolean).join('\n');
+}
+
+/**
+ * Die Blockfolge als EIN Vergleichstext — mit den Etiketten, aber das ABSATZ-Etikett nur
+ * beim Wechsel (Profil `/4`, Gegenprüfung PR #798).
+ *
+ * WARUM DIE ETIKETTEN MIT MÜSSEN: die AKN-Elementgrenze zwischen `<num>` und `<content>`
+ * wandert zwischen zwei Generationen — AVIV Art. 120a Bst. b steht einmal als
+ * `<num>[tab]</num><p>b. AHV-Nummer …</p>`, einmal als `<num>b. </num><p>AHV-Nummer …</p>`
+ * (E5.0). Nur die Aneinanderreihung von Etikett und Text ist über diese Grenze hinweg
+ * stabil.
+ *
+ * WARUM DAS ABSATZ-ETIKETT NUR BEIM WECHSEL: ein Absatz kann in der einen Generation EINEN
+ * Block tragen und in der nächsten ZWEI, weil die Konversion an einer Interpunktion
+ * trennt — SSV Art. 24 Abs. 1 Bst. a, 2024-04-08 → 2025-01-01: «… (2.33): Der Führer muss
+ * …» wird zu «… (2.33):» + eigener Block «Der Führer muss …» (gemessen 12.9.2026). Würde
+ * das Absatz-Etikett «1» je Block wiederholt, sähe der Vergleich dort ein zusätzliches
+ * Wort und buchte eine Änderung, die der Leser nicht zeigen kann — genau der
+ * Zwei-Wahrheiten-Fehler, den der Leer-Diff-Wächter verbietet (§5). Im alten,
+ * paragraph-weisen `flachText` stand das Etikett aus demselben Grund genau einmal je
+ * Absatz: es kam aus dem einen `<num>` des `<paragraph>`.
+ */
+function vergleichsFolge(bloecke: readonly SynopseBlock[]): string {
+  const teile: string[] = [];
+  let letzterAbsatz: string | null = null;
+  for (const b of bloecke) {
+    if (b[0] !== letzterAbsatz) {
+      if (b[0]) teile.push(b[0]);
+      letzterAbsatz = b[0];
+    }
+    const rest = [b[1], b[2]].filter(Boolean).join(' ');
+    if (rest) teile.push(rest);
+  }
+  return teile.join('\n');
 }
 
 /**

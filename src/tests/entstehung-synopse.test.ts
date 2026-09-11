@@ -209,6 +209,54 @@ describe('vergleichsRoh — Fussnote vor der Satzzeichen-Regel weg (Befund #796,
   });
 });
 
+describe('vergleichsFolge — ein aufgeteilter Block ist keine Änderung (SSV Art. 24, Profil /4)', () => {
+  // SSV Art. 24 Abs. 1 Bst. a, 2024-04-08 → 2025-01-01 (amtliche Konsolidierungen, Fedlex
+  // Filestore ELI cc/1979/1961_1961_1961, abgerufen 12.9.2026): die Konversion trennt den
+  // Buchstaben an der Interpunktion in ZWEI Blöcke. Der Wortlaut ist Zeichen für Zeichen
+  // derselbe; nur die Blockgrenze wandert. Würde das Absatz-Etikett je Block wiederholt,
+  // stünde im Vergleich ein zusätzliches «1» — eine Änderung, die der Leser nicht zeigen
+  // kann (der Leer-Diff-Wächter hat genau das gemeldet, bevor `vergleichsFolge` das
+  // Etikett nur noch beim Wechsel setzt).
+  const ungeteilt = dok(
+    '<article eId="art_24"><num>Art. 24</num><heading>Vorgeschriebene Fahrtrichtung</heading>'
+    + '<paragraph eId="art_24/para_1"><num>1</num><content><blockList>'
+    + '<listIntroduction>Es werden folgende Signale verwendet:</listIntroduction>'
+    + '<item><num>a. </num><p>«Fahrtrichtung rechts» (2.32): Der Führer muss abbiegen;</p></item>'
+    + '</blockList></content></paragraph></article>',
+  );
+  const geteilt = dok(
+    '<article eId="art_24"><num>Art. 24</num><heading>Vorgeschriebene Fahrtrichtung</heading>'
+    + '<paragraph eId="art_24/para_1"><num>1</num><content><blockList>'
+    + '<listIntroduction>Es werden folgende Signale verwendet:</listIntroduction>'
+    + '<item><num>a. </num><p>«Fahrtrichtung rechts» (2.32):</p></item>'
+    + '</blockList><p>Der Führer muss abbiegen;</p></content></paragraph></article>',
+  );
+  it('bucht die Aufteilung nicht als Wortlaut-Änderung', () => {
+    expect(normalisiere(flachText(artikel(ungeteilt, 'art_24'))))
+      .toBe(normalisiere(flachText(artikel(geteilt, 'art_24'))));
+    expect(diffStaende(extrahiereArtikel(ungeteilt), extrahiereArtikel(geteilt)).geaendert).toEqual([]);
+  });
+
+  it('hält dabei die Etiketten im Vergleich — die Grenze <num>/<content> wandert (AVIV Art. 120a Bst. b)', () => {
+    // Gegenprobe zum Test oben: WEIL das Etikett im Vergleich steht, ist «b.» im `<num>`
+    // dasselbe wie «b.» am Textanfang (E5.0, gemessen). Ohne Etikett wären beide
+    // Fassungen verschieden — die Sparsamkeit beim ABSATZ-Etikett darf nicht zur
+    // Etikettlosigkeit werden.
+    const imNum = dok(
+      '<article eId="art_120_a"><num>Art. 120a</num><paragraph eId="art_120_a/para"><content><blockList>'
+      + '<item><num>b. </num><p>AHV-Nummer der versicherten Person;</p></item>'
+      + '</blockList></content></paragraph></article>',
+    );
+    const imText = dok(
+      '<article eId="art_120_a"><num>Art. 120a</num><paragraph eId="art_120_a/para"><content><blockList>'
+      + '<item><num> </num><p>b. AHV-Nummer der versicherten Person;</p></item>'
+      + '</blockList></content></paragraph></article>',
+    );
+    expect(normalisiere(flachText(artikel(imNum, 'art_120_a'))))
+      .toBe(normalisiere(flachText(artikel(imText, 'art_120_a'))));
+  });
+});
+
 describe('Sachüberschrift: eine Randtitel-Änderung ist eine Änderung (Auflage A2, Profil /4)', () => {
   // BVG Art. 33b, 2023-01-01 → 2024-01-01 (amtliche Konsolidierungen, Fedlex Filestore
   // ELI cc/1983/797_797_797, abgerufen 12.9.2026, real und ungekürzt): der Randtitel
