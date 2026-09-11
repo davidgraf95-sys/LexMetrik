@@ -265,8 +265,8 @@ zgb-a36-anhang: Die ZGB-Gliederung zeigt 74 Artikel des Anhangs «Wortlaut der f
   Register-Ebene, kein Volltext-Nachbau). Kontext: externer Termin (FINMA-Bereich soll vorzeigbar sein).
   **Detail:** [FAHRPLAN-MATERIALIEN-VERZAHNUNG.md](fahrplaene/FAHRPLAN-MATERIALIEN-VERZAHNUNG.md) §10.
 
-- [ ] **Entstehung am Artikel — Daten: Verfahrens-Ereignisse, Historie-Kopf, Botschafts-Keys, Anker, Parlament** *(`W2·6c-ENTSTEHUNG-DATEN`, §14-Intake 6.9.2026, Design-Freigabe David 6.9.2026)*
-  <!-- @meta id: W2·6c-ENTSTEHUNG-DATEN · status: ready · blocker: null · dep: [] · feld: korpus · fahrplan: fahrplaene/FAHRPLAN-MATERIALIEN-VERZAHNUNG.md -->
+- [x] **Entstehung am Artikel — Daten: Verfahrens-Ereignisse, Historie-Kopf, Botschafts-Keys, Anker, Parlament** *(`W2·6c-ENTSTEHUNG-DATEN`, §14-Intake 6.9.2026, Design-Freigabe David 6.9.2026)*
+  <!-- @meta id: W2·6c-ENTSTEHUNG-DATEN · status: done · blocker: null · dep: [] · feld: korpus · fahrplan: fahrplaene/FAHRPLAN-MATERIALIEN-VERZAHNUNG.md -->
   Ziel: die Fassungskette je Artikel (liegt als G-HIST-Shard vor) mit der Verfahrenskette der Vorlage
   (Fedlex-Projektgraph, Curia Vista) und der Botschaft verbinden — ohne zweiten Parser, ohne Volltext,
   ohne Personendaten. Grenzen: Bund zuerst; Historie-Generator und -Shard bleiben unangetastet; Curia
