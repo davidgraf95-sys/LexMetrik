@@ -16,8 +16,10 @@
 // Bis hierher schrieb das Skript eine EIGENE Datei je Erlass
 // (`public/verzahnung/bezuege-zaehler/<KEY>.json`, ø 289 B), und der Leser holte
 // sie mit einem eigenen Fetch IM LEERLAUF — also erst, nachdem die Artikelliste
-// schon stand. Im OR wuchsen dadurch 145 Funktionszeilen in einer ZWEITEN
-// Render-Runde in den fertigen Lesekörper hinein (D34-Nachfix, ROADMAP.md).
+// schon stand. Im OR wuchsen dadurch Funktionszeilen in einer ZWEITEN
+// Render-Runde in den fertigen Lesekörper hinein (D34-Nachfix, ROADMAP.md, dort
+// «145»; nachgemessen am Bestand 11.9.2026 tragen 469 OR-Artikel Zahlen — die
+// Roadmap-Zahl bleibt für ihren Stand stehen, §0 Ziff. 2b).
 //
 // Die Zahlen reisen seither IM STRUKTUR-SIDECAR des Erlasses
 // (`public/normtext/struktur/<ebene>/<KEY>.json`, neuer Top-Level-Schlüssel

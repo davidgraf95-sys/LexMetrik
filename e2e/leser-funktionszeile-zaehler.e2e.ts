@@ -16,13 +16,15 @@
 //
 // BEFUND D34-NACHFIX (ROADMAP `W2·26-FUNKTIONSZEILE-ZAEHLER`): genau dieser
 // eigene, aufgeschobene Fetch ist der Rest des Problems. Er kommt NACH der
-// Artikelliste, und im OR wachsen dadurch 145 Funktionszeilen in einer zweiten
-// Render-Runde in den fertigen Lesekörper. GEBAUT: die Zahlen reisen im
+// Artikelliste, und im OR wachsen dadurch Funktionszeilen in einer zweiten
+// Render-Runde in den fertigen Lesekörper (ROADMAP nennt 145; NACHGEMESSEN am
+// Bestand 11.9.2026 tragen 469 OR-Artikel Zahlen — die Roadmap-Zahl bleibt für
+// ihren Stand stehen, §0 Ziff. 2b, gemessen ist die grössere). GEBAUT: die Zahlen reisen im
 // Struktur-Sidecar mit (`public/normtext/struktur/<ebene>/<KEY>.json`,
 // Schlüssel `zaehler`) — der Datei, die der Leser ohnehin holt und die er VOR
 // den Einträgen bekommt.
 //
-// VIER ZUSAGEN:
+// VIER ZUSAGEN (die vierte zusätzlich auf dem Kanton-Pfad, s. dort):
 //  (a) Die Zahl steht da — und sie ist die richtige (OR 336c: 11 Entscheide,
 //      dieselbe Zahl, die der Shard ungefiltert führt).                 [R6c a]
 //  (b) Die Rubrik «Materialie» ist da, wo es eine gibt (ARG 15a).       [R6c b]
@@ -111,6 +113,30 @@ test.describe('W2·26 · Funktionszeile zählt aus dem Struktur-Sidecar', () => 
     // auslösen können, existiert nicht mehr.
     const cls = await page.evaluate(() => (window as unknown as { __cls: number }).__cls);
     expect(cls, `CLS ${cls}`).toBeLessThanOrEqual(0.001);
+  });
+
+  // Die Kanton-Probe ist KEIN Duplikat der beiden oberen: sie prüft die eine
+  // Falle des Umbaus (Kopf von `../src/pages/gesetz-leser/bezuegeZaehler.ts`).
+  // Der geteilte Sidecar-Cache greift nur bei ZEICHENGLEICHER URL. Bund und
+  // Kanton bilden die Daten-Ebene verschieden ab; nähme der Zähler-Zugriff die
+  // falsche, wäre das Ergebnis kein sichtbarer Fehler, sondern ein stiller
+  // ZWEITER Fetch — also genau der Zustand, den dieser Bau beseitigt hat.
+  test('(d) Kanton: BS-154.100 Art. 92 zählt aus demselben Sidecar-Fetch', async ({ page }) => {
+    const zaehl = zaehlSonde(page);
+    const strukturFetches: string[] = [];
+    page.on('request', (r) => {
+      if (r.url().includes('/normtext/struktur/')) strukturFetches.push(r.url());
+    });
+    await page.goto('/gesetze/kanton/BS-154.100#art-92');
+    await expect(page.locator('#art-92')).toBeVisible({ timeout: 30_000 });
+    const marke = page.locator('#art-92 .lr7-bez-marke[data-reg="r"]');
+    expect(await marke.count(), 'Entscheid-Marke an BS-154.100 Art. 92 in der ersten Runde').toBe(1);
+    expect((await marke.first().innerText()).replace(/\s+/g, ' ')).toMatch(/1312\s*Entscheide/);
+    await page.waitForTimeout(1_500);
+    expect(zaehl, `Zähl-Fetches: ${zaehl.join(', ')}`).toEqual([]);
+    // EIN Sidecar-Fetch, nicht zwei — der Beweis, dass der Zähler am selben
+    // Cache-Eintrag hängt wie Gliederung und Erlass-Kopf.
+    expect(strukturFetches, `Sidecar-Fetches: ${strukturFetches.join(', ')}`).toHaveLength(1);
   });
 
   test('(b)+(c)+(d) ARG 15a nennt «1 Materialie» in der ersten Runde', async ({ page }) => {

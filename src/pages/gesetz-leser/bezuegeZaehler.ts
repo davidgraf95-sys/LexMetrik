@@ -11,7 +11,8 @@
 // R6c löste das mit einer eigenen buildseitigen Zähl-Datei je Erlass
 // (`public/verzahnung/bezuege-zaehler/<KEY>.json`, ø 289 B), die dieses Modul
 // IM LEERLAUF holte. Der Preis stand im D34-Nachfix (ROADMAP.md): die Zahlen
-// kamen erst NACH der Artikelliste, und im OR wuchsen 145 Funktionszeilen in
+// kamen erst NACH der Artikelliste, und im OR wuchsen die Funktionszeilen von
+// 469 Artikeln (Bestand 11.9.2026; ROADMAP.md nennt für ihren Stand 145) in
 // einer zweiten Render-Runde in den fertigen Lesekörper hinein.
 //
 // Die Zahlen stehen seither im STRUKTUR-SIDECAR des Erlasses
