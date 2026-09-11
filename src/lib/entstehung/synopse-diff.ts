@@ -34,6 +34,11 @@
 // verschweigen — sie sind ein Grund, die Karte sagen zu lassen, dass der
 // Unterschied den ganzen STAND betrifft und nicht zwingend diesen einen Erlass
 // (§8, Flag `mehrdeutig`).
+//
+// GRENZE (Gegenprüfung PR #796): Identität ist das AMTLICHE Etikett
+// (`schluessel` — Absatz + Listen-Marke), nie Textähnlichkeit — wechselt bei
+// sonst identischem Wortlaut nur die Ziffer (z. B. Abs. 2 → Abs. 1), zeigt die
+// Synopse dokumentiert Streichung + Einfügung statt «gleich».
 
 import { istAufgehoben } from '../normtext/darstellung';
 import type { SynopseArtikel, SynopseBlock, SynopseSchritt, SynopseShard, SynopseZustand } from './synopse';

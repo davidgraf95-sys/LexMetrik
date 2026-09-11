@@ -289,8 +289,8 @@ zgb-a36-anhang: Die ZGB-Gliederung zeigt 74 Artikel des Anhangs «Wortlaut der f
   Alt-Block als §7-Zitat mit Deckel 8 MB / 2 MB je Erlass; Vor-Messung E5.0 vor dem Bau. Etappen E5.0, E5, E6.
   **Detail:** [FAHRPLAN-MATERIALIEN-VERZAHNUNG.md](fahrplaene/FAHRPLAN-MATERIALIEN-VERZAHNUNG.md) §11.
 
-- [ ] **Entstehung am Artikel — Synopse alt/neu in der Änderungskarte** *(`W2·6c-ENTSTEHUNG-SYNOPSE-LESER`, §14-Intake 11.9.2026)*
-  <!-- @meta id: W2·6c-ENTSTEHUNG-SYNOPSE-LESER · status: ready · blocker: null · dep: [W2·6c-ENTSTEHUNG-SYNOPSE, W2·6c-ENTSTEHUNG-LESER] · feld: leser · fahrplan: fahrplaene/FAHRPLAN-MATERIALIEN-VERZAHNUNG.md -->
+- [x] **Entstehung am Artikel — Synopse alt/neu in der Änderungskarte** *(`W2·6c-ENTSTEHUNG-SYNOPSE-LESER`, §14-Intake 11.9.2026)*
+  <!-- @meta id: W2·6c-ENTSTEHUNG-SYNOPSE-LESER · status: done · blocker: null · dep: [W2·6c-ENTSTEHUNG-SYNOPSE, W2·6c-ENTSTEHUNG-LESER] · feld: leser · fahrplan: fahrplaene/FAHRPLAN-MATERIALIEN-VERZAHNUNG.md -->
   Ziel: in der Änderungskarte (E3, `EntstehungsBlock.tsx`) je Fassungspunkt den alten Wortlaut aus
   `public/materialien/synopse/<KEY>.json` gegen den geltenden zeigen, nachgeladen erst beim Klick,
   Zustände ehrlich (`ohne_ereignis`-Blöcke als «ohne Fussnoten-Ereignis» gekennzeichnet), §7-Merkmale

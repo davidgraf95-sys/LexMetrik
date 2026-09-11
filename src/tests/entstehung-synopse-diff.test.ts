@@ -219,6 +219,21 @@ describe('synopseZeilen: die Gegenüberstellung', () => {
     const gleich = [B('1', '', 'Unveränderter Wortlaut.')];
     expect(hatUnterschied(synopseZeilen(gleich, gleich))).toBe(false);
   });
+
+  it('dokumentiert die Grenze: identischer Wortlaut mit gewechseltem Etikett gilt als entfernt+eingefügt (Gegenprüfung PR #796)', () => {
+    // Kein Bug, dokumentiertes Verhalten (`schluessel`, §11.6): Identität ist
+    // das AMTLICHE Etikett, nie Textähnlichkeit. Wechselt nur die Ziffer
+    // (Abs. 2 → Abs. 1) bei sonst identischem Wortlaut, findet die Ausrichtung
+    // keinen gemeinsamen Schlüssel und zeigt Streichung + Einfügung statt
+    // «gleich» — dieser Test hält das aktuelle Verhalten fest, damit eine
+    // künftige Änderung daran bewusst getroffen wird.
+    const alt = [B('1', '', 'Einleitung.'), B('1', '2', 'Identischer Wortlaut.')];
+    const neu = [B('1', '', 'Einleitung.'), B('1', '1', 'Identischer Wortlaut.')];
+    const z = synopseZeilen(alt, neu);
+    expect(z.map((x) => x.art)).toEqual(['gleich', 'entfernt', 'eingefuegt']);
+    expect(verkettet(z[1], 'alt')).toBe('Identischer Wortlaut.');
+    expect(verkettet(z[2], 'neu')).toBe('Identischer Wortlaut.');
+  });
 });
 
 describe('leerDiffVerletzungen — der Leer-Diff-Wächter von check:entstehung (Befund #796)', () => {
