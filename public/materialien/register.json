@@ -26848,38 +26848,6 @@
       "sha": "7256dcdc1dcfb864af68833bf8ae4d7dcd35538eded6d9518cdca10d42af1a74"
     },
     {
-      "key": "VERN-2026-65",
-      "behoerde": "BUND",
-      "behoerdeName": "Bund (Vernehmlassungen)",
-      "behoerdeKuerzel": "Bund",
-      "doktyp": "vernehmlassung",
-      "doktypLabel": "Vernehmlassung",
-      "titel": "MG/AO-Revision 2029",
-      "nummer": null,
-      "rechtsgebiet": "sozialversicherung",
-      "sprache": "de",
-      "status": "nur-live-link",
-      "quelleUrl": "https://www.fedlex.admin.ch/eli/dl/proj/2026/65/cons_1/de",
-      "stand": "2026-09-11",
-      "rang": 79738789,
-      "normKeys": [
-        "EOG",
-        "MG",
-        "MSTG",
-        "MSTP"
-      ],
-      "hinweis": "Automatisch über den Fedlex-Gesetzgebungs-Graphen zugeordnet; maschinell, fachlich nicht geprüft. Die Zuordnung zum Erlass kann grob sein (Mantelvorlagen betreffen mehrere Gesetze).",
-      "titelFr": "Révision LAAM/OOrgA 2029",
-      "titelIt": "Revisione LM/OEs 2029",
-      "vernehmlassung": {
-        "status": "laufend",
-        "fristStart": "2026-09-09",
-        "fristEnde": "2026-12-11",
-        "projEli": "https://fedlex.data.admin.ch/eli/dl/proj/2026/65"
-      },
-      "sha": "7256dcdc1dcfb864af68833bf8ae4d7dcd35538eded6d9518cdca10d42af1a74"
-    },
-    {
       "key": "VERN-2026-71",
       "behoerde": "BUND",
       "behoerdeName": "Bund (Vernehmlassungen)",
