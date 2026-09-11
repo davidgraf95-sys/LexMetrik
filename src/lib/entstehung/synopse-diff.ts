@@ -253,6 +253,29 @@ function verdichte(bloecke: readonly SynopseBlock[]): SynopseBlock[] {
   return out;
 }
 
+/**
+ * Vergleichsform eines Wortlauts — NUR fürs Matching, nie für die Anzeige.
+ *
+ * GEMESSEN 11.9.2026 (BGÖ 13, und der Fall ist typisch): die AKN-Konsolidierung
+ * schreibt «Artikel\u00a011» mit geschütztem Leerzeichen, der Korpus-Adapter mit
+ * gewöhnlichem. Zeichenweise verglichen sind das zwei verschiedene Wortlaute —
+ * auf dem Bildschirm sind sie identisch. Ohne diese Normalisierung meldete die
+ * Karte «geändert» und stellte zweimal denselben Satz nebeneinander: eine
+ * behauptete Gesetzesänderung, die es nie gegeben hat (§1). Geschützte und
+ * schmale Leerzeichen, weiche Trennstriche und Mehrfach-Leerraum sind Satz, nie
+ * Recht.
+ *
+ * ANGEZEIGT WIRD IMMER DAS ORIGINAL (Muster law.soufien.lu, `soufien-lex.md`:
+ * «Normalisierung nur fürs Matching, nie für Hash/Speicherung»).
+ */
+export function vergleichsform(text: string): string {
+  return text
+    .replace(/[\u00ad\u200b]/g, '')
+    .replace(/[\u00a0\u202f\u2007\u2009\u2060]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
 /** Wörter samt ihrem nachfolgenden Trennraum — die Verkettung ergibt das Original. */
 function woerter(text: string): string[] {
   return text.match(/\S+\s*/g) ?? [];
@@ -303,7 +326,7 @@ export function wortDiff(alt: string, neu: string): { alt: DiffStueck[]; neu: Di
   const b = woerter(neu);
   if (a.length === 0 && b.length === 0) return { alt: [], neu: [] };
   if (a.length > WORT_DECKEL || b.length > WORT_DECKEL) return ganz(alt, neu);
-  const paare = lcs(a, b, (x, y) => x.trim() === y.trim());
+  const paare = lcs(a, b, (x, y) => vergleichsform(x) === vergleichsform(y));
   const gemeinsam = paare.length;
   if (gemeinsam / Math.max(a.length, b.length) < AEHNLICH_MIN) return ganz(alt, neu);
   const links: DiffStueck[] = [];
@@ -393,7 +416,7 @@ export function synopseZeilen(
       zeilen.push(neuTot
         ? { art: 'entfernt', absatz: a[0], num: a[1], alt: [{ marke: 'weg', text: a[2] }], neu: null }
         : { art: 'eingefuegt', absatz: b[0], num: b[1], alt: null, neu: [{ marke: 'neu', text: b[2] }] });
-    } else if (a[2] === b[2] || (altTot && neuTot)) {
+    } else if (vergleichsform(a[2]) === vergleichsform(b[2]) || (altTot && neuTot)) {
       zeilen.push({ art: 'gleich', absatz: b[0], num: b[1], alt: [{ marke: 'gleich', text: a[2] }], neu: [{ marke: 'gleich', text: b[2] }] });
     } else {
       const d = wortDiff(a[2], b[2]);
@@ -433,4 +456,18 @@ export function tokenAusLabel(label: string): string | null {
   if (!t) return null;
   const zusatz = t[2].toLowerCase();
   return zusatz ? `${t[1]}_${zusatz}` : t[1];
+}
+
+/**
+ * Entwurf ↔ beschlossene Fassung als EINE Zeile.
+ *
+ * Der Entwurfs-Wortlaut im Bundesblatt ist nicht nach Absätzen ausgezeichnet
+ * (`synopse-entwurf.ts`: ein `<article class="man-art-mod">` je Artikel, der
+ * ganze Text darin) — es gibt also keine Etiketten, über die sich ausrichten
+ * liesse. Der Vergleich läuft darum über den ganzen Artikel, und die Karte sagt
+ * das (`ganzerArtikel`).
+ */
+export function entwurfVergleich(entwurf: string, neu: readonly SynopseBlock[]): SynopseZeile {
+  const d = wortDiff(entwurf, neu.map((b) => b[2]).join('\n'));
+  return { art: 'geaendert', absatz: '', num: '', alt: d.alt, neu: d.neu, ganzerArtikel: true };
 }

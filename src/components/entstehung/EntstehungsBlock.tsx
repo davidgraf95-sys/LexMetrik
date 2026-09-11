@@ -5,11 +5,20 @@ import { datumCh } from '../../lib/normtext/erlassKopfText';
 import { AMTLICHE_FASSUNG_NOMEN } from '../../lib/benennung';
 import { verfahrensLabel, verfahrensQuelleUrl } from '../../lib/materialien/verfahren';
 import {
-  ladeEntstehungProjektion, aenderungFuer,
+  ladeEntstehungProjektion, aenderungFuer, ocKurzform,
   type EntstehungProjektion, type EntstehungAenderung, type EntstehungBotschaft,
 } from '../../lib/entstehung/projektion';
 import { ladeAnkerSidecar, ankerFuerToken, ankerUrl, type AnkerSidecar } from '../../lib/entstehung/anker';
+import { ladeSynopseShard, type SynopseShard } from '../../lib/entstehung/synopse';
+import { ladeEntwurfShard } from '../../lib/entstehung/synopse-entwurf';
+import {
+  geltendeBloecke, lageFuerEreignis, ohneEreignisFuerArtikel, tokenAusLabel,
+  type SynopseLage,
+} from '../../lib/entstehung/synopse-diff';
+import { SynopseKarte, type EntwurfFund } from './SynopseKarte';
 import { ladeKantenShard } from '../../lib/materialien/kanten-shard';
+import { artikelGanzAufgehoben } from '../../lib/normtext/darstellung';
+import type { NormSnapshot } from '../../lib/normtext/typen';
 import type { ArtikelHistorie, HistorieEreignis } from '../../lib/normtext/historie-laden';
 
 // ═══ DIE ENTSTEHUNG AM ARTIKEL (W2·6c · E3) ═════════════════════════════════
@@ -55,6 +64,19 @@ import type { ArtikelHistorie, HistorieEreignis } from '../../lib/normtext/histo
 //                         Botschaft, Kritik A3/C8).
 //   · «keine Fundstelle» — die Fussnote nennt keine ⇒ die Karte sagt genau das.
 // Und über allem der Vorbehalt: massgeblich bleibt die amtliche Fassung (§7).
+//
+// ── NACHTRAG W2·6c-SYNOPSE-LESER (11.9.2026) · DER WORTLAUT VON DAMALS ───────
+// Jeder Punkt der Fassungsleiste trägt seither einen ZWEITEN Griff, «Alt/Neu».
+// Er beantwortet die Frage, die am Artikel noch offen war: nicht WARUM sich
+// etwas geändert hat, sondern WAS. Der Alt-Wortlaut kommt aus den E5-Shards
+// (`/materialien/synopse/<KEY>.json`, ab Stand 1.1.2021), das «Neu» aus dem
+// Folgestand oder — wenn es keinen mehr gibt — aus dem geltenden Korpus-Text.
+//
+// ZWEI GRIFFE, NICHT EINER IN DEM ANDEREN: der Fassungsvergleich hängt NICHT in
+// der Änderungskarte, sondern neben ihr. Sonst käme er nur dort vor, wo eine
+// Änderung überhaupt erfasst ist (gemessen ein Drittel der Ereignisse trifft
+// eine erfasste Botschaft) — und die Frage «was stand vorher?» ist von der
+// Frage «warum?» unabhängig.
 
 /** Wie viele Punkte dieses Artikels eine erfasste Begründung tragen (§8). */
 function zaehleDeckung(ereignisse: readonly HistorieEreignis[], p: EntstehungProjektion | null) {
@@ -192,10 +214,15 @@ function Aenderungskarte({ e, a, projektion, anker, artikel, abgerufen }: {
  * @param erlassKey  Kanonischer Erlass-Key — Adresse der Projektion.
  * @param artikel    Roher Artikel-Token («16_c») für Anker-Sprung und Praxis-Zähler.
  */
-export function EntstehungsBlock({ historie, erlassKey, artikel }: {
+export function EntstehungsBlock({ historie, erlassKey, artikel, snapshot }: {
   historie?: ArtikelHistorie;
   erlassKey?: string;
   artikel: string;
+  /** Der geltende Artikel — die RECHTE Spalte des Fassungsvergleichs und ihr
+   *  Zitat-Nachweis (§7: Stand, Live-Link, Abrufdatum). Fehlt er (Tests, Druck,
+   *  Zeilenform ohne Snapshot), bleibt die Karte auf den Alt-Fassungen der
+   *  Shards — sie behauptet nie einen geltenden Wortlaut, den sie nicht hat. */
+  snapshot?: NormSnapshot;
 }) {
   // `undefined` = noch unterwegs · `null` = keine Projektion für diesen Erlass.
   // OHNE Erlass-Key gibt es nichts zu holen — das ist ABGELEITET, kein Zustand:
@@ -210,6 +237,13 @@ export function EntstehungsBlock({ historie, erlassKey, artikel }: {
   /** Wie viele Wegleitungen diesen Artikel nennen — `undefined` = noch unterwegs. */
   const [praxis, setPraxis] = useState<number | undefined>(undefined);
   const kartenId = useId();
+  /** Welcher Fassungsvergleich steht offen? `p<i>` = Punkt i der Leiste,
+   *  `o<i>` = Eintrag i des Abschnitts «ohne Fussnoten-Ereignis». */
+  const [synOffen, setSynOffen] = useState<string | null>(null);
+  /** `undefined` = noch nicht geholt · `null` = für diesen Erlass gibt es keinen. */
+  const [synShard, setSynShard] = useState<SynopseShard | null | undefined>(undefined);
+  /** Entwurf↔Beschluss-Shards je Botschafts-Schlüssel (E6). */
+  const [entwurfCache, setEntwurfCache] = useState<Record<string, EntwurfFund['shard'] | null>>({});
 
   // ── Der EINE Abruf dieser Karte, ausgelöst durch den Klick, der sie mountet ──
   useEffect(() => {
@@ -243,6 +277,18 @@ export function EntstehungsBlock({ historie, erlassKey, artikel }: {
     return () => { lebt = false; };
   }, [erlassKey, artikel]);
 
+  // ── Der Fassungsvergleich lädt ERST auf «Alt/Neu» ──────────────────────────
+  //    Ein Klick, ein Shard, je Erlass einmal (die Promise im Loader ist
+  //    gecacht). Auch für Punkte VOR dem Fenster 2021 wird er geholt: erst der
+  //    Shard sagt, ob dieser Artikel Alt-Blöcke ohne Fussnoten-Ereignis trägt —
+  //    und die stünden sonst nirgends (§8). Sonde: `entstehung-synopse-leser` (a).
+  useEffect(() => {
+    if (!erlassKey || synOffen === null) return;
+    let lebt = true;
+    void ladeSynopseShard(erlassKey).then((sh) => { if (lebt) setSynShard(sh); });
+    return () => { lebt = false; };
+  }, [erlassKey, synOffen]);
+
   const ereignisse = historie?.ereignisse ?? [];
   const gewaehlt = offen !== null ? ereignisse[offen] : undefined;
   const gewaehlteAenderung = gewaehlt ? aenderungFuer(projektion, gewaehlt.quellen) : null;
@@ -267,25 +313,104 @@ export function EntstehungsBlock({ historie, erlassKey, artikel }: {
 
   const deckung = zaehleDeckung(ereignisse, projektion ?? null);
 
+  // ── Der geltende Wortlaut als rechte Spalte (§5: keine zweite Ablage) ──────
+  const geltend = geltendeBloecke(snapshot?.bloecke);
+  const geltendAufgehoben = snapshot ? artikelGanzAufgehoben(snapshot.bloecke, snapshot.aufgehoben) : false;
+  const geltendQuelle = {
+    stand: snapshot?.stand, quelleUrl: snapshot?.quelleUrl, abgerufen: snapshot?.abgerufen,
+  };
+  /** Alt-Blöcke dieses Artikels ohne Fussnoten-Ereignis — sie hängen an keinem Punkt. */
+  const ohneEreignis = ohneEreignisFuerArtikel(synShard, artikel, geltend);
+
+  // ── Entwurf ↔ Beschluss: nur, wo er überhaupt sein kann (E6) ───────────────
+  //    Die zehn ausgelieferten Entwurfs-Shards gehören zu Vorlagen von 2024/2025
+  //    (gemessen 11.9.2026); für ältere Botschaften gäbe es nichts zu holen
+  //    ausser einem 404 je geöffneter Karte (§15). Der Filter liest das Jahr aus
+  //    dem amtlichen Botschafts-Schlüssel — er RÄT nichts, er lässt aus.
+  const offeneBotschaft = (() => {
+    if (synOffen === null || !synOffen.startsWith('p')) return undefined;
+    const e = ereignisse[Number(synOffen.slice(1))];
+    const k = e ? aenderungFuer(projektion, e.quellen)?.a.botschaft : undefined;
+    return k && /^BOTSCHAFT-(20[2-9]\d)-/.test(k) ? k : undefined;
+  })();
+  useEffect(() => {
+    if (!offeneBotschaft) return;
+    let lebt = true;
+    void ladeEntwurfShard(offeneBotschaft).then((sh) => {
+      if (lebt) setEntwurfCache((a) => ({ ...a, [offeneBotschaft]: sh }));
+    });
+    return () => { lebt = false; };
+  }, [offeneBotschaft]);
+
+  /** Der Entwurfs-Eintrag zu DIESEM Artikel, sofern die Vorlage einen führt. */
+  const entwurfFund: EntwurfFund | null = (() => {
+    const sh = offeneBotschaft ? entwurfCache[offeneBotschaft] : null;
+    if (!sh) return null;
+    const a = sh.artikel.find((x) => tokenAusLabel(x.label) === artikel);
+    return a ? { shard: sh, artikel: a } : null;
+  })();
+
+  /**
+   * Die Karte zu einem Fassungspunkt — oder zu einem Alt-Block ohne Ereignis.
+   *
+   * Solange der Shard unterwegs ist, steht «lädt …» da und nicht «kein
+   * Fassungsvergleich erfasst»: das eine ist ein Zwischenstand, das andere eine
+   * Aussage über unseren Bestand, und die beiden zu verwechseln wäre genau die
+   * Unehrlichkeit, die §8 verbietet.
+   */
+  const synopseKarte = (schluessel: string, e?: HistorieEreignis) => {
+    const id = `${kartenId}-syn-${schluessel}`;
+    if (synShard === undefined) {
+      return <p className="lr8-syn lr8-syn-lage" id={id} data-synopse-karte data-synopse-lage="laedt">Fassungsvergleich: lädt …</p>;
+    }
+    let lage: SynopseLage;
+    if (e) {
+      const ocs = e.quellen.map((q) => ocKurzform(q.url)).filter((x): x is string => !!x);
+      lage = lageFuerEreignis(synShard, artikel, e.datum, ocs, geltend);
+    } else {
+      const treffer = ohneEreignis[Number(schluessel.slice(1))];
+      if (!treffer) return null;
+      lage = { art: 'vergleich', treffer };
+    }
+    return <SynopseKarte id={id} lage={lage} shard={synShard} geltend={geltendQuelle}
+      entwurf={e ? entwurfFund : null} aufgehoben={geltendAufgehoben} />;
+  };
+
   const zusatz = (e: HistorieEreignis, i: number): ReactNode => {
     const treffer = aenderungFuer(projektion, e.quellen);
-    if (!treffer) return null;
     const auf = offen === i;
+    const synSchluessel = `p${i}`;
+    const synAuf = synOffen === synSchluessel;
     return (
       <>
+        {treffer && (
+          <>
+            {' '}
+            <button type="button" className="lc-btn-mini lr8-entst-griff text-micro"
+              aria-expanded={auf} aria-controls={auf ? `${kartenId}-${i}` : undefined}
+              data-entstehung-griff
+              onClick={() => setOffen(auf ? null : i)}>
+              Warum?<span aria-hidden className="lr7-bez-pfeil">&nbsp;›</span>
+            </button>
+          </>
+        )}
         {' '}
+        {/* Der zweite Griff: WAS stand vorher. Er steht an JEDEM Punkt, auch
+            ohne erfasste Änderung — die Frage ist von der Frage «warum?»
+            unabhängig, und die Antwort («erst ab 2021») ist auch eine. */}
         <button type="button" className="lc-btn-mini lr8-entst-griff text-micro"
-          aria-expanded={auf} aria-controls={auf ? `${kartenId}-${i}` : undefined}
-          data-entstehung-griff
-          onClick={() => setOffen(auf ? null : i)}>
-          Warum?<span aria-hidden className="lr7-bez-pfeil">&nbsp;›</span>
+          aria-expanded={synAuf} aria-controls={synAuf ? `${kartenId}-syn-${synSchluessel}` : undefined}
+          data-synopse-griff
+          onClick={() => setSynOffen(synAuf ? null : synSchluessel)}>
+          Alt/Neu<span aria-hidden className="lr7-bez-pfeil">&nbsp;›</span>
         </button>
-        {auf && projektion && (
+        {auf && treffer && projektion && (
           <div id={`${kartenId}-${i}`}>
             <Aenderungskarte e={e} a={treffer.a} projektion={projektion} anker={anker}
               artikel={artikel} abgerufen={projektion.abgerufen} />
           </div>
         )}
+        {synAuf && synopseKarte(synSchluessel, e)}
       </>
     );
   };
@@ -307,6 +432,37 @@ export function EntstehungsBlock({ historie, erlassKey, artikel }: {
           </span>
         )}
       </p>
+      {ohneEreignis.length > 0 && (
+        // §8 · Diese Alt-Fassungen stehen in den amtlichen Konsolidierungen,
+        // aber an keinem Punkt der Fassungsleiste: der Fussnoten-Apparat führt
+        // zu ihrem Stand kein Ereignis an diesem Artikel (gemessen 11.9.2026:
+        // 1175 solcher Blöcke, 0 davon auf einem Datum mit Ereignis). Sie
+        // deshalb wegzulassen hiesse, einen belegten Wortlaut zu verschweigen.
+        <div className="lr8-entst-ohne" data-entstehung-ohne-ereignis>
+          <p className="lr8-entst-ohne-kopf">
+            Wortlaut-Änderungen ohne Fussnoten-Ereignis im amtlichen Apparat:
+          </p>
+          <ul>
+            {ohneEreignis.map((t, i) => {
+              const k = `o${i}`;
+              const auf = synOffen === k;
+              return (
+                <li key={k}>
+                  <span className="text-ink-600">Stand <span className="num">{datumCh(t.schritt.bis)}</span></span>
+                  {' '}
+                  <button type="button" className="lc-btn-mini lr8-entst-griff text-micro"
+                    aria-expanded={auf} aria-controls={auf ? `${kartenId}-syn-${k}` : undefined}
+                    data-synopse-griff
+                    onClick={() => setSynOffen(auf ? null : k)}>
+                    Alt/Neu<span aria-hidden className="lr7-bez-pfeil">&nbsp;›</span>
+                  </button>
+                  {auf && synopseKarte(k)}
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      )}
       <p className="lr8-entst-praxis" data-entstehung-praxis>
         <span className="text-ink-500">
           {praxis === undefined
