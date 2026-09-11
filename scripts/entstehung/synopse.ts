@@ -496,6 +496,21 @@ export function vergleichsRoh(roh: string): string {
     // tragen (§1). Der GESPEICHERTE Wortlaut behaelt sein Satzzeichen; er ist amtlich.
     .replace(/[,;:\s]*(<\/listIntroduction>)/g, '$1')
     .replace(/[,;:]\s*(<\/p>\s*<blockList)/g, '$1')
+    // (a2) Dieselbe Elementgrenze, nur ohne Listen-Element: eine Generation setzt die
+    // Aufzählung als `<blockList>`, die andere als Folge gewöhnlicher `<p>` mit dem
+    // Buchstaben IM TEXT (BVV 2 Art. 55, 2024-01-01 -> 2025-01-01, gemessen 12.9.2026:
+    // `<p>… folgende Begrenzungen:</p><p>a. 50 Prozent: …` gegen
+    // `<listIntroduction>… folgende Begrenzungen:</listIntroduction><item><num>a. </num>…`).
+    // Regel (a) nimmt das Schluss-Satzzeichen nur auf der Listen-Seite weg; ohne diesen
+    // Zwilling bleibt der Doppelpunkt auf der `<p>`-Seite stehen und der Vergleich meldet
+    // eine Aenderung, die es amtlich nicht gibt (Auflage A5).
+    // ENG GEFASST auf die EINLEITUNG einer Aufzaehlung: der folgende Absatz muss mit der
+    // ERSTEN Aufzaehlungsmarke beginnen («a.», «A.», «1.», «i.», auch mit Klammer). Das
+    // Satzzeichen ZWISCHEN zwei Listenpunkten bleibt stehen — auf der `<blockList>`-Seite
+    // steht es dort ebenfalls, im `<item>`-Text (erste, zu gierige Fassung dieser Regel
+    // strich auch die Strichpunkte nach «… behandelt;» und erzeugte damit einen neuen
+    // Unterschied statt keinen; Rot-Beweis 12.9.2026 an BVV 2 Art. 55).
+    .replace(/[,;:]\s*(<\/p>\s*<p\b[^>]*>\s*(?:[aA1]|[iI])[.)]\s)/g, '$1')
     // (b) Absatz-Etikett in Klammerform. Gemessen an UNO_PAKT_II Art. 24
     // (2022-01-24 -> 2022-05-09): das Etikett steht im alten Stand als Text am Anfang
     // des Absatzes (`<content><p>(l)  Jedes Kind …`, mit kleinem L statt Eins aus der

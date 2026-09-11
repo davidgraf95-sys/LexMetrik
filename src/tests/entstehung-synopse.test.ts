@@ -334,6 +334,31 @@ describe('Phantom-Änderungen: wandernde Elementgrenzen sind keine Gesetzesände
     expect(bloecke.every((b) => b[0] === '')).toBe(true); // dieser Absatz führt kein eigenes <num>
   });
 
+  it('Aufzählung einmal als <blockList>, einmal als <p>-Folge mit Buchstaben im Text (BVV 2 Art. 55)', () => {
+    // 2024-01-01 → 2025-01-01 (real, gekürzt): die Konversion macht aus einer Folge
+    // gewöhnlicher `<p>` eine `<blockList>`. Die Satzzeichen-Regel (a) nahm den
+    // Doppelpunkt nur auf der Listen-Seite weg — der Vergleich sah einen Unterschied, den
+    // die amtliche Fassung nicht kennt. Das Satzzeichen ZWISCHEN den Punkten («…
+    // behandelt;») muss dabei auf beiden Seiten stehen bleiben.
+    const alsAbsaetze = dok(
+      '<article eId="art_55"><num>Art. 55</num><heading>Kategoriebegrenzungen</heading>'
+      + '<paragraph eId="art_55/para"><content>'
+      + '<p>Für die einzelnen Anlagekategorien gelten folgende Begrenzungen:</p>'
+      + '<p>a. 50 Prozent: für schweizerische Grundpfandtitel;</p>'
+      + '<p>b. 50 Prozent: für Anlagen in Aktien;</p>'
+      + '</content></paragraph></article>',
+    );
+    const alsListe = dok(
+      '<article eId="art_55"><num>Art. 55</num><heading>Kategoriebegrenzungen</heading>'
+      + '<paragraph eId="art_55/para"><content><blockList>'
+      + '<listIntroduction eId="art_55/para/listintro">Für die einzelnen Anlagekategorien gelten folgende Begrenzungen:</listIntroduction>'
+      + '<item eId="art_55/para/lbl_a"><num>a. </num><p>50 Prozent: für schweizerische Grundpfandtitel;</p></item>'
+      + '<item eId="art_55/para/lbl_b"><num>b. </num><p>50 Prozent: für Anlagen in Aktien;</p></item>'
+      + '</blockList></content></paragraph></article>',
+    );
+    expect(diffStaende(extrahiereArtikel(alsAbsaetze), extrahiereArtikel(alsListe)).geaendert).toEqual([]);
+  });
+
   it('lässt eine ECHTE Absatz-Umbenennung weiterhin durch (Abs. 2 → Abs. 1, gleicher Wortlaut)', () => {
     const mit = (nummer: string) => dok(
       `<article eId="art_5"><num>Art. 5</num><paragraph eId="art_5/para"><num>${nummer}</num><content>`

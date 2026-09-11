@@ -5,8 +5,8 @@
     "AHVG": {
       "eli": "cc/63/837_843_843",
       "abgerufen": "2026-09-12",
-      "shardSha": "f97867ad27c53ee4a27f9947755f6eec954f94eef45c6aa0b4718cb95f567307",
-      "bytes": 98683,
+      "shardSha": "02118ccbcd1fd4c3fb1d17bc6f1980ea23bc94d0d376b36f3a13f293de4b877c",
+      "bytes": 98649,
       "schritte": 6,
       "altBloecke": 71,
       "staende": [
@@ -45,14 +45,13 @@
           "sha": "92acf599e5ad9b43b2e31e01527a907d2c763795e7d61e6e323593bf56ab415c",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/63/837_843_843/20260101/de/xml/fedlex-data-admin-ch-eli-cc-63-837_843_843-20260101-de-xml-1.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "AHVV": {
       "eli": "cc/63/1185_1183_1185",
       "abgerufen": "2026-09-12",
-      "shardSha": "4d13f4afe48b67e3c953f14d4188a4e5fc3d3608a47ec935ed7d624fb8f48d1b",
-      "bytes": 135454,
+      "shardSha": "72246fb1d4592f44a6227854e0c4c0bf4e0b3cf96a1e484e4811ee7de901205c",
+      "bytes": 135350,
       "schritte": 7,
       "altBloecke": 129,
       "staende": [
@@ -97,13 +96,13 @@
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/63/1185_1183_1185/20260101/de/xml/fedlex-data-admin-ch-eli-cc-63-1185_1183_1185-20260101-de-xml.xml"
         }
       ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      "parserAenderung": "Profil entstehung-norm/4, Auflage A5 (Neupruefung PR #798): Absatz-Etikett nur aus dem <num> VOR dem Inhalt und im Vergleich genau einmal je Absatz; Satzzeichen-Regel auch fuer Aufzaehlungen ohne blockList (Regel a2)"
     },
     "AIG": {
       "eli": "cc/2007/758",
       "abgerufen": "2026-09-12",
-      "shardSha": "21e32749a4fae3db301444664eb3e757ca5bfe8b6989bb30b7591701d17de862",
-      "bytes": 214555,
+      "shardSha": "eace20e2d3b528d04891b54ed359ba783cd96658de6620a7c06c1dc4f02fc044",
+      "bytes": 214503,
       "schritte": 19,
       "altBloecke": 123,
       "staende": [
@@ -207,8 +206,7 @@
           "sha": "9320af88b37e7b7b3eaf9cc7d05346722f6bd9342efa442d73a7ddfb1cf4f7d7",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2007/758/20260612/de/xml/fedlex-data-admin-ch-eli-cc-2007-758-20260612-de-xml-3.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "AKKBV": {
       "eli": "cc/1996/1904_1904_1904",
@@ -233,14 +231,13 @@
           "sha": "737151d8eaf4a2ccdce1c638ee395ab7cec016950dd7ba097919e39be83eceb2",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1996/1904_1904_1904/20250101/de/xml/fedlex-data-admin-ch-eli-cc-1996-1904_1904_1904-20250101-de-xml-7.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "AMBV": {
       "eli": "cc/2018/786",
       "abgerufen": "2026-09-12",
-      "shardSha": "baf760af11f60a0fcaea99d707c4e776bf94a5b5266884b21b970a28620e125a",
-      "bytes": 10628,
+      "shardSha": "779c47e1177c356ce78af8eaaeb6ec8bbc8fb1351167bffdc3f6cbb26497e7c3",
+      "bytes": 10624,
       "schritte": 6,
       "altBloecke": 6,
       "staende": [
@@ -279,8 +276,7 @@
           "sha": "b785595b2fd54c853e4eb3ca4429d0a7da084ea62642f0a68e4cccf9555674d9",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2018/786/20250315/de/xml/fedlex-data-admin-ch-eli-cc-2018-786-20250315-de-xml-1.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "APOSTILLE": {
       "eli": "cc/1973/348_347_349",
@@ -320,14 +316,13 @@
           "sha": "4c852a649f7fe5d85818fd3010f2fdd13b322d100e4d9a6a0a7b52770dc12682",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1966/57_57_57/20230901/de/xml/fedlex-data-admin-ch-eli-cc-1966-57_57_57-20230901-de-xml-6.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "ARGV1": {
       "eli": "cc/2000/243",
       "abgerufen": "2026-09-12",
-      "shardSha": "4adcbcf6ab75bf9e981d0ba47d630d58164c6bdf586b91c2d8c8793b13798154",
-      "bytes": 14456,
+      "shardSha": "085688ffd49b340c990ea3ae032a404929547264654bfdc890232ce9eb27e520",
+      "bytes": 14440,
       "schritte": 5,
       "altBloecke": 9,
       "staende": [
@@ -361,8 +356,7 @@
           "sha": "0e1c767f6063b5550238d9b821100b93a9531a45a05a32ee4c12c54f8d04f840",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2000/243/20240901/de/xml/fedlex-data-admin-ch-eli-cc-2000-243-20240901-de-xml-3.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "ARGV2": {
       "eli": "cc/2000/244",
@@ -402,14 +396,13 @@
           "sha": "2a490108ce7ee70eaf5e09b2a570e956662dfb866d34f4d12dfb47eb9090345d",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2000/244/20260201/de/xml/fedlex-data-admin-ch-eli-cc-2000-244-20260201-de-xml.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "ASYLG": {
       "eli": "cc/1999/358",
       "abgerufen": "2026-09-12",
-      "shardSha": "1307ffc68a187b391561d4ea801e853ede6b1a9624ca21fe952575be6293ea90",
-      "bytes": 72067,
+      "shardSha": "2d19266101b559b349445ce864eaec49998ab3b7c105610839f563bde9dc9112",
+      "bytes": 72059,
       "schritte": 10,
       "altBloecke": 54,
       "staende": [
@@ -468,14 +461,13 @@
           "sha": "07d0a377c5110c975946baf455cedc530bd5872f4a69d19eebe2d32d092c59b1",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/358/20260612/de/xml/fedlex-data-admin-ch-eli-cc-1999-358-20260612-de-xml.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "ASYLV1": {
       "eli": "cc/1999/359",
       "abgerufen": "2026-09-12",
-      "shardSha": "eb995925b10532e302dee8694f2f311fe093088f662c26f4cf7915238144fa59",
-      "bytes": 27457,
+      "shardSha": "73c05871f6d63e453a6c0fa259650208427af9af42f6e815babb0fc9cdedac4a",
+      "bytes": 27447,
       "schritte": 13,
       "altBloecke": 14,
       "staende": [
@@ -549,14 +541,13 @@
           "sha": "46d3f6acb99ac6fe1a1b41711c074e3acf6a8bab8f883a5825dabfdc9d5cf936",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/359/20260612/de/xml/fedlex-data-admin-ch-eli-cc-1999-359-20260612-de-xml.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "ASYLV2": {
       "eli": "cc/1999/360",
       "abgerufen": "2026-09-12",
-      "shardSha": "fc037120c979c1cbcfec6ba2e7e48bd2c3c38d85e0fafdf27c39a77c65619404",
-      "bytes": 41704,
+      "shardSha": "9d6ec1c272a8c1d2210c60db51be82ee99a59a34c2a0f520100a75f9e676bd1e",
+      "bytes": 41670,
       "schritte": 8,
       "altBloecke": 19,
       "staende": [
@@ -605,14 +596,13 @@
           "sha": "58ec9a4e6cbe74ea307e970c7751c0a6431fa4620656b3d3eb1da6254735c534",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/360/20260714/de/xml/fedlex-data-admin-ch-eli-cc-1999-360-20260714-de-xml-2.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "ASYLV3": {
       "eli": "cc/1999/361",
       "abgerufen": "2026-09-12",
-      "shardSha": "6d6ab4e95c97b3740baf65d9bff17bed195159835da556e7b786430065dcafdd",
-      "bytes": 26244,
+      "shardSha": "7a03404e6816dcf614e966497c9ccfae44029122d183c42a9b32faf76c30769a",
+      "bytes": 26162,
       "schritte": 8,
       "altBloecke": 17,
       "staende": [
@@ -661,8 +651,7 @@
           "sha": "bb062fbb2f85677bde01f22e2fac03e3feb08d1d42dbc5e3e036719e831c53f4",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/361/20260612/de/xml/fedlex-data-admin-ch-eli-cc-1999-361-20260612-de-xml.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "ATSG": {
       "eli": "cc/2002/510",
@@ -697,8 +686,7 @@
           "sha": "9c3f463d0403101f7c567b37b2fdf53c9f8889bb8a26a9629ef077592829288c",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2002/510/20240101/de/xml/fedlex-data-admin-ch-eli-cc-2002-510-20240101-de-xml-4.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "ATSV": {
       "eli": "cc/2002/569",
@@ -733,14 +721,13 @@
           "sha": "ad0bd201007fb916035ea54d15e76660c10aee62b28cf69259b1fc69be7bcd6e",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2002/569/20240101/de/xml/fedlex-data-admin-ch-eli-cc-2002-569-20240101-de-xml-2.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "AVIG": {
       "eli": "cc/1982/2184_2184_2184",
       "abgerufen": "2026-09-12",
-      "shardSha": "120a4eca559d2dc39f14f65f55792e8ef7d443caa29cc6350540738f6260f118",
-      "bytes": 93778,
+      "shardSha": "1443db4e91695a392a45e59619968b6e8e2f344fafa1b97f8b26d287cfcdbf18",
+      "bytes": 93732,
       "schritte": 10,
       "altBloecke": 49,
       "staende": [
@@ -799,14 +786,13 @@
           "sha": "0e6df9120acc98d859ece90883a4d768ab98032efc93db41d1da718007bd0411",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1982/2184_2184_2184/20260101/de/xml/fedlex-data-admin-ch-eli-cc-1982-2184_2184_2184-20260101-de-xml-1.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "AVIV": {
       "eli": "cc/1983/1205_1205_1205",
       "abgerufen": "2026-09-12",
-      "shardSha": "e45a5479898ecce1c37506e96087a4f927a234dbea47059fb6168d945884d473",
-      "bytes": 112396,
+      "shardSha": "a8f19e417efe794b93f412d5048502ddd195b199a4c9ab5119a6fbf7e3ee70ae",
+      "bytes": 112390,
       "schritte": 13,
       "altBloecke": 108,
       "staende": [
@@ -880,14 +866,13 @@
           "sha": "5357eb9666f0294d5adcf738e449e1516e965296346b4f0128f1434194f8937b",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1983/1205_1205_1205/20260801/de/xml/fedlex-data-admin-ch-eli-cc-1983-1205_1205_1205-20260801-de-xml.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "AVO": {
       "eli": "cc/2005/735",
       "abgerufen": "2026-09-12",
-      "shardSha": "e151a71d40d4090238915606827a9cb076ec7d4660deb91b494f505977949577",
-      "bytes": 95283,
+      "shardSha": "768ef58fcd166e92625f711bc2e52406fdd368311fe60296a3a52ad0a8748481",
+      "bytes": 95255,
       "schritte": 4,
       "altBloecke": 93,
       "staende": [
@@ -916,14 +901,13 @@
           "sha": "9faa31707f54a5772c96b20230376d0ec447621c2067ad85f844f6bbb743ef35",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2005/735/20260226/de/xml/fedlex-data-admin-ch-eli-cc-2005-735-20260226-de-xml.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "BANKG": {
       "eli": "cc/51/117_121_129",
       "abgerufen": "2026-09-12",
-      "shardSha": "7861f77582818c27dbbd0696dd69f3a02ab4c0c023c64a0170049ef7f3bd9cb5",
-      "bytes": 34638,
+      "shardSha": "7daf26e57c8d2b4dffa43881295c1e2ddafc641f65e5630eb92087ce073357dc",
+      "bytes": 34626,
       "schritte": 2,
       "altBloecke": 29,
       "staende": [
@@ -942,14 +926,13 @@
           "sha": "3bbe1ce96291ddefd9dce2fc54bd41abde0b57ef59089917fadbd1b5a4e82a3f",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/51/117_121_129/20240101/de/xml/fedlex-data-admin-ch-eli-cc-51-117_121_129-20240101-de-xml-6.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "BANKV": {
       "eli": "cc/2014/273",
       "abgerufen": "2026-09-12",
-      "shardSha": "27ef4cf714af00033ad3bc9231562203852b0de7e0b818f1abf91f8d1bc97e94",
-      "bytes": 14823,
+      "shardSha": "3b0f81b23cd92a2dc00de91007288edad54268d7a94094cf7810782c74aad1fd",
+      "bytes": 14804,
       "schritte": 3,
       "altBloecke": 10,
       "staende": [
@@ -973,8 +956,7 @@
           "sha": "2a64925975fdfe51c7e54d16cf8ea781cdc9ce4e4869474578a427c8947ad293",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2014/273/20250101/de/xml/fedlex-data-admin-ch-eli-cc-2014-273-20250101-de-xml-10.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "BBG": {
       "eli": "cc/2003/674",
@@ -1009,8 +991,7 @@
           "sha": "9998748a5c548cc747b9d497a9b042e935d1c0bfd34651ae2731ced8799e94ee",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2003/674/20250301/de/xml/fedlex-data-admin-ch-eli-cc-2003-674-20250301-de-xml-3.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "BBV": {
       "eli": "cc/2003/748",
@@ -1040,8 +1021,7 @@
           "sha": "ea1819bb34a6eff42adfc5bdc2cb73ea73258c7f66d353630426da9fff2cc555",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2003/748/20250301/de/xml/fedlex-data-admin-ch-eli-cc-2003-748-20250301-de-xml-2.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "BEG": {
       "eli": "cc/2009/450",
@@ -1061,13 +1041,12 @@
           "sha": "5226a54cd5d077e5ef5820a932ff1051074363a553f14aa1a7c4e5631f1c00b3",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2009/450/20230101/de/xml/fedlex-data-admin-ch-eli-cc-2009-450-20230101-de-xml-8.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "BETMG": {
       "eli": "cc/1952/241_241_245",
       "abgerufen": "2026-09-12",
-      "shardSha": "c768c7dd1ac1c976c02b3acdbc5376fa5b6a01facd1b8713b4908b861ecb8678",
+      "shardSha": "5577e47e41d8ac58fa5f95914173806ebfa12743f50aa191b404a400cc5c3ee7",
       "bytes": 26368,
       "schritte": 4,
       "altBloecke": 21,
@@ -1097,14 +1076,13 @@
           "sha": "c9f87018439fba704fbcedff776a7083a29c766baec2d2718138acadedec056a",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1952/241_241_245/20230901/de/xml/fedlex-data-admin-ch-eli-cc-1952-241_241_245-20230901-de-xml-14.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "BETMKV": {
       "eli": "cc/2011/362",
       "abgerufen": "2026-09-12",
-      "shardSha": "339ca3e6354cc09d982ab5103b0bf4502989c8f401403705908a335321670405",
-      "bytes": 51484,
+      "shardSha": "2402ccfc21fc29f41d9fe3e27185850a97af2efa1d37c95e41c167e41d04fcd7",
+      "bytes": 51470,
       "schritte": 2,
       "altBloecke": 52,
       "staende": [
@@ -1123,8 +1101,7 @@
           "sha": "f5e971fee945448f37a8d2b751ee73a5e837af200c23bc30dd27f5edde86725e",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2011/362/20230123/de/xml/fedlex-data-admin-ch-eli-cc-2011-362-20230123-de-xml-3.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "BEWG": {
       "eli": "cc/1984/1148_1148_1148",
@@ -1169,8 +1146,7 @@
           "sha": "e24968ecba7b452681f04e55141dcf6cb90fc7611f079b6f2f89afbb52469beb",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1984/1164_1164_1164/20240301/de/xml/fedlex-data-admin-ch-eli-cc-1984-1164_1164_1164-20240301-de-xml-4.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "BGBM": {
       "eli": "cc/1996/1738_1738_1738",
@@ -1195,8 +1171,8 @@
     "BGERR": {
       "eli": "cc/2006/834",
       "abgerufen": "2026-09-12",
-      "shardSha": "a03068526b036904aaecfe681da8cf34ed0f936ffc1eea635b63537dab09a019",
-      "bytes": 35249,
+      "shardSha": "cbefc27c5544f4dcb043dc2a58527532d5f85b2c82b75369c749ddccc8e1f657",
+      "bytes": 35159,
       "schritte": 7,
       "altBloecke": 28,
       "staende": [
@@ -1240,8 +1216,7 @@
           "sha": "645dcdb6ebf43d242dfc97d419b3305c499ad1ed127a4cd35a1beb759e223b9c",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2006/834/20260201/de/xml/fedlex-data-admin-ch-eli-cc-2006-834-20260201-de-xml.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "BGFA": {
       "eli": "cc/2002/153",
@@ -1266,14 +1241,13 @@
           "sha": "afcee430e7fe64745352c2962ee2a5dd9bc667e8cdcafa81d321fbfcb72427eb",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2002/153/20250701/de/xml/fedlex-data-admin-ch-eli-cc-2002-153-20250701-de-xml-1.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "BGG": {
       "eli": "cc/2006/218",
       "abgerufen": "2026-09-12",
-      "shardSha": "d02adc14599ab297c4c92a219e3d65ef0f5dadda920d72c1530ab2137024c603",
-      "bytes": 33771,
+      "shardSha": "beb87be7cbc5f20f0adbdea97632b0b1b82453ad659fb59b7f903706681b32ac",
+      "bytes": 33531,
       "schritte": 7,
       "altBloecke": 12,
       "staende": [
@@ -1317,8 +1291,7 @@
           "sha": "86ebcdeaa19de6c733287bebcea559ecce2c9338ed391567a221043b674487d9",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2006/218/20260401/de/xml/fedlex-data-admin-ch-eli-cc-2006-218-20260401-de-xml-2.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "BGOE": {
       "eli": "cc/2006/355",
@@ -1338,8 +1311,7 @@
           "sha": "f04249ce76ebe47c899c4de2c8fb964bcb21ea67b742d185d07e0487520c4a54",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2006/355/20231101/de/xml/fedlex-data-admin-ch-eli-cc-2006-355-20231101-de-xml-7.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "BKV": {
       "eli": "cc/1993/1363_1363_1363",
@@ -1364,14 +1336,13 @@
           "sha": "a11ebd81f790b6f2d9fa28734894b87cdd7b10870af946831780e4c637c2df08",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1993/1363_1363_1363/20260101/de/xml/fedlex-data-admin-ch-eli-cc-1993-1363_1363_1363-20260101-de-xml.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "BOEB": {
       "eli": "cc/2020/126",
       "abgerufen": "2026-09-12",
-      "shardSha": "383956f20fdc3750dfa83398acefb65af81ebf11bd41a2988c72f970a9cee744",
-      "bytes": 9517,
+      "shardSha": "f861e59147ee217943e55d706912709d187e8b6498b32cb04243a121a8afbdbf",
+      "bytes": 9507,
       "schritte": 5,
       "altBloecke": 3,
       "staende": [
@@ -1405,8 +1376,7 @@
           "sha": "58b651d7fdea9f19d63e5c473fe5c64d90a4003c022579bf235af46743e11791",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2020/126/20260101/de/xml/fedlex-data-admin-ch-eli-cc-2020-126-20260101-de-xml-1.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "BPG": {
       "eli": "cc/2001/123",
@@ -1436,14 +1406,13 @@
           "sha": "db28cc4de28ebaa851af541a8db693f6678eacc6b50cafbd2437f5dac2ef8a49",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2001/123/20240101/de/xml/fedlex-data-admin-ch-eli-cc-2001-123-20240101-de-xml-7.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "BPV": {
       "eli": "cc/2001/319",
       "abgerufen": "2026-09-12",
-      "shardSha": "bf5faaf46338a9472a97c3382b2523d8a8f7eb4094eb4216c84da1a109f8e41c",
-      "bytes": 90462,
+      "shardSha": "6412542a16b953bf2dcb1e743910f68687e0111eafc6a3656491f830d5b2305b",
+      "bytes": 90432,
       "schritte": 9,
       "altBloecke": 57,
       "staende": [
@@ -1497,14 +1466,13 @@
           "sha": "5de0f8fb236e419e0d3f4e6c856ad93886bea84a49d8b9b67953539819e118fb",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2001/319/20260701/de/xml/fedlex-data-admin-ch-eli-cc-2001-319-20260701-de-xml.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "BV": {
       "eli": "cc/1999/404",
       "abgerufen": "2026-09-12",
-      "shardSha": "4404967257f8a1279aae15649fc2b388ee3f29599427699414596d313a089b41",
-      "bytes": 42405,
+      "shardSha": "28ce13bbed787d93045efecc271e8f831a4e6ad009ff441efc0c20a4ef86ac7a",
+      "bytes": 42385,
       "schritte": 5,
       "altBloecke": 10,
       "staende": [
@@ -1538,14 +1506,13 @@
           "sha": "573c1a869c9f327f247f0f45b8bed10f5babb17c8228a306a0ee87f6b3929c8b",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/404/20240303/de/xml/fedlex-data-admin-ch-eli-cc-1999-404-20240303-de-xml-10.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "BVG": {
       "eli": "cc/1983/797_797_797",
       "abgerufen": "2026-09-12",
-      "shardSha": "7235a8077af0bf37ac9feb003c24a7b69292aabc2a11cdd52adb081d2238f804",
-      "bytes": 85827,
+      "shardSha": "fd073967316144b5b3f7d619f64e9aff694cc3ba12a5ec4bd42888b1ce3cbee1",
+      "bytes": 85787,
       "schritte": 9,
       "altBloecke": 61,
       "staende": [
@@ -1599,8 +1566,7 @@
           "sha": "84ca9774ceb0186d9088e62466d93c787c0e3187b524c041d279044255e5e0d9",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1983/797_797_797/20250101/de/xml/fedlex-data-admin-ch-eli-cc-1983-797_797_797-20250101-de-xml-13.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "BVV3": {
       "eli": "cc/1985/1778_1778_1778",
@@ -1630,16 +1596,15 @@
           "sha": "a1da3a3eecfed84531ef41dbe60f3013056dfe81817e93202124275fe90e2ca4",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1985/1778_1778_1778/20250101/de/xml/fedlex-data-admin-ch-eli-cc-1985-1778_1778_1778-20250101-de-xml-5.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "BVV_2": {
       "eli": "cc/1984/543_543_543",
       "abgerufen": "2026-09-12",
-      "shardSha": "b652648fe018eb687b127ffab1a3a0599c76ae09e795dd9f319e59d971ebd4c3",
-      "bytes": 34935,
+      "shardSha": "9244ccaf17a257775475e7a6623df7d5663fe172e234c57e045da028816a1a8a",
+      "bytes": 33995,
       "schritte": 5,
-      "altBloecke": 24,
+      "altBloecke": 23,
       "staende": [
         {
           "datum": "2021-01-01",
@@ -1672,13 +1637,13 @@
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1984/543_543_543/20260801/de/xml/fedlex-data-admin-ch-eli-cc-1984-543_543_543-20260801-de-xml.xml"
         }
       ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      "parserAenderung": "Profil entstehung-norm/4, Auflage A5 (Neupruefung PR #798): Absatz-Etikett nur aus dem <num> VOR dem Inhalt und im Vergleich genau einmal je Absatz; Satzzeichen-Regel auch fuer Aufzaehlungen ohne blockList (Regel a2)"
     },
     "CHEMRRV": {
       "eli": "cc/2005/478",
       "abgerufen": "2026-09-12",
-      "shardSha": "cdc70acb2cf8bab2aef6152291927eb3efd1ece9110a4f0abbae0dda4db97f2a",
-      "bytes": 41943,
+      "shardSha": "3b153de6b9022e528a6d55d5a448f0626678df988448cbec1380912a66bb9efe",
+      "bytes": 41875,
       "schritte": 24,
       "altBloecke": 36,
       "staende": [
@@ -1807,14 +1772,13 @@
           "sha": "d3ee596d3721f98d495208c6395d11b398aaba7e7d716d0f98d4b1072c321ec2",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2005/478/20260716/de/xml/fedlex-data-admin-ch-eli-cc-2005-478-20260716-de-xml-1.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "CHEMV": {
       "eli": "cc/2015/366",
       "abgerufen": "2026-09-12",
-      "shardSha": "13d2a98bdf98e32b032aaf3e041ad757082295e9ca50e0b55f85e1af6e49912d",
-      "bytes": 86000,
+      "shardSha": "23eba9a3751bd71e32be1e758e0816bbb9d561dec27c4214a50da68efe156f14",
+      "bytes": 85877,
       "schritte": 14,
       "altBloecke": 32,
       "staende": [
@@ -1893,8 +1857,7 @@
           "sha": "ff4fb107366069df6e27ce81c1fd04c827ec63f49aa26a62a734b668de688ad9",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2015/366/20260424/de/xml/fedlex-data-admin-ch-eli-cc-2015-366-20260424-de-xml.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "CISG": {
       "eli": "cc/1991/307_307_307",
@@ -1919,8 +1882,8 @@
     "CO2_GESETZ": {
       "eli": "cc/2012/855",
       "abgerufen": "2026-09-12",
-      "shardSha": "f1a42bedc68fde474ab043da32ab7d4244b57783941563d8b2246e38e95f79c9",
-      "bytes": 57077,
+      "shardSha": "ee20d709b4d28be9b55fc0f0c4ff6faa0188c725784f8b44bad160433bc23090",
+      "bytes": 57073,
       "schritte": 2,
       "altBloecke": 56,
       "staende": [
@@ -1939,14 +1902,13 @@
           "sha": "addae868f37379964f73fcb246fed61cff2ccae49b27ddb4d60d3555b65768e6",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2012/855/20250101/de/xml/fedlex-data-admin-ch-eli-cc-2012-855-20250101-de-xml-6.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "DBG": {
       "eli": "cc/1991/1184_1184_1184",
       "abgerufen": "2026-09-12",
-      "shardSha": "6b5a4b31dc4825db948bff8a2c1b25c3562e8943b094d0db70b36593b761cbeb",
-      "bytes": 95611,
+      "shardSha": "75156f81d35582e4f7b9fea2231398502b28fac30c8d6c270ba004f61d711e4a",
+      "bytes": 95473,
       "schritte": 9,
       "altBloecke": 40,
       "staende": [
@@ -2000,8 +1962,7 @@
           "sha": "fa8b8259befc73a1e86d03622f523bf688200a99c0f02909cb4392acc0f1d971",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1991/1184_1184_1184/20260902/de/xml/fedlex-data-admin-ch-eli-cc-1991-1184_1184_1184-20260902-de-xml-1.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "DESG": {
       "eli": "cc/2002/226",
@@ -2026,8 +1987,7 @@
           "sha": "cda6caa4394077cb2b7e81032a61b580d8a380f24f9f45d19edd042216fc3dd2",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2002/226/20250701/de/xml/fedlex-data-admin-ch-eli-cc-2002-226-20250701-de-xml-4.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "DESV": {
       "eli": "cc/2002/183",
@@ -2077,8 +2037,7 @@
           "sha": "a99bce3dc59a5c3f25e69ed5e483380c0f1a9b57ec452fedb62e0e68b7baabef",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2022/491/20250707/de/xml/fedlex-data-admin-ch-eli-cc-2022-491-20250707-de-xml-1.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "DSV": {
       "eli": "cc/2022/568",
@@ -2113,14 +2072,13 @@
           "sha": "2308c11aca82391b375d2c54805743a8367c54cfe0404a068358280d3c43e3ce",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2022/568/20251201/de/xml/fedlex-data-admin-ch-eli-cc-2022-568-20251201-de-xml-2.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "EBG": {
       "eli": "cc/1958/335_341_347",
       "abgerufen": "2026-09-12",
-      "shardSha": "6bf30be67add0f8ff1a467cb28dc7bd311681db9b6a5d210362fc701ddd5884d",
-      "bytes": 36842,
+      "shardSha": "98778a9a29a8d99ae876f49d49de9d509afaeb388004f78bdf95fc80c9873fc9",
+      "bytes": 36836,
       "schritte": 4,
       "altBloecke": 33,
       "staende": [
@@ -2149,8 +2107,7 @@
           "sha": "6f7304a295350215bd8220641e7d79c94e7a13a285b01f6910f2908a3872b888",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1958/335_341_347/20260101/de/xml/fedlex-data-admin-ch-eli-cc-1958-335_341_347-20260101-de-xml.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "ELG": {
       "eli": "cc/2007/804",
@@ -2190,14 +2147,13 @@
           "sha": "e39f79e9aca4d307abb28f01adfd2a6cff1f37f902fd7e8ad18533c2980604f0",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2007/804/20260101/de/xml/fedlex-data-admin-ch-eli-cc-2007-804-20260101-de-xml-3.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "ELV": {
       "eli": "cc/1971/37_37_37",
       "abgerufen": "2026-09-12",
-      "shardSha": "9b3af01fd43b26864522719837bec04d4dd78347f96a7df0bfa827678497a02a",
-      "bytes": 16225,
+      "shardSha": "322ea2956596ff619baef70d1ab7e894acc0c5332f8ab9b436ef21aa5e7dd6d3",
+      "bytes": 16219,
       "schritte": 5,
       "altBloecke": 14,
       "staende": [
@@ -2231,13 +2187,12 @@
           "sha": "441cc531e5476a88546a23754986a552e8fb061350b61b7bab6df55ce05928a5",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1971/37_37_37/20250101/de/xml/fedlex-data-admin-ch-eli-cc-1971-37_37_37-20250101-de-xml-8.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "EMRK": {
       "eli": "cc/1974/2151_2151_2151",
       "abgerufen": "2026-09-12",
-      "shardSha": "8e6f79b14008a86d981631e9be2803948952099f521873bd515f56a5e2426c29",
+      "shardSha": "6b43b05d4b72b39539518f2659fdd4bc55bfaace5f2368b48c6fa906b74ed8f2",
       "bytes": 3177,
       "schritte": 2,
       "altBloecke": 1,
@@ -2257,14 +2212,13 @@
           "sha": "61dcd29b0309b046702bcfa44961972fc32ae4166f2c20a11c27919b2afe4e5c",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1974/2151_2151_2151/20220916/de/xml/fedlex-data-admin-ch-eli-cc-1974-2151_2151_2151-20220916-de-xml-8.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "ENG": {
       "eli": "cc/2017/762",
       "abgerufen": "2026-09-12",
-      "shardSha": "d1c2709c0452efed187d2b9c3549a75b3eb4fbcd5a5552d90e190465d0848334",
-      "bytes": 77908,
+      "shardSha": "6905b13e277c36822fede04c352011bdae0d4cb406d9d1238a4f00ebce68f736",
+      "bytes": 77902,
       "schritte": 10,
       "altBloecke": 55,
       "staende": [
@@ -2323,8 +2277,7 @@
           "sha": "2316af164e3e90977fa5ef2a69591fc773d70401eb16ae66d63097e3f578d54a",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2017/762/20260401/de/xml/fedlex-data-admin-ch-eli-cc-2017-762-20260401-de-xml-1.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "EOG": {
       "eli": "cc/1952/1021_1046_1050",
@@ -2379,14 +2332,13 @@
           "sha": "061e1327d1117bb82640efba2a4b91f05b626160596416e9ee0f72a4a522aa18",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1952/1021_1046_1050/20260601/de/xml/fedlex-data-admin-ch-eli-cc-1952-1021_1046_1050-20260601-de-xml-1.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "EOV": {
       "eli": "cc/2005/187",
       "abgerufen": "2026-09-12",
-      "shardSha": "d8afa0a86f56fec85cc29acc4574fefaa92b112ee8a8c58bec31d95a5e595b87",
-      "bytes": 50969,
+      "shardSha": "3e555e50732f0af1aebbc5b8eae53a1c79a2affc15e53693dd17e890ef8d3518",
+      "bytes": 50947,
       "schritte": 6,
       "altBloecke": 46,
       "staende": [
@@ -2425,14 +2377,13 @@
           "sha": "23a5298bdc465483b4b11494d0f737b57eea67a56baff27e08dc7ac24acc8a15",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2005/187/20260601/de/xml/fedlex-data-admin-ch-eli-cc-2005-187-20260601-de-xml.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "EPG": {
       "eli": "cc/2015/297",
       "abgerufen": "2026-09-12",
-      "shardSha": "9de1646c1bff71f01ef34ff45437550df2992232f02a291daff85a58ec44a052",
-      "bytes": 23056,
+      "shardSha": "29b16c33f51ddd4a823ebea1cb3cb5af72612abc11a4c02968f45a15a69ffdc1",
+      "bytes": 23048,
       "schritte": 5,
       "altBloecke": 11,
       "staende": [
@@ -2466,14 +2417,13 @@
           "sha": "04bdbe6462fbe727a3f7811e1d1eea36ecc97e34752fe0f3cff823170ef3b94b",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2015/297/20250801/de/xml/fedlex-data-admin-ch-eli-cc-2015-297-20250801-de-xml-2.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "EPV": {
       "eli": "cc/2015/298",
       "abgerufen": "2026-09-12",
-      "shardSha": "d5893f2669bc91460769dcdbe0ec0653ff098b790f729d0c4e9ad8c7018ebea8",
-      "bytes": 95380,
+      "shardSha": "5e10223961032b9592da497cd7367785e424f7fecbc7ef9cb18f7493bc43069a",
+      "bytes": 95327,
       "schritte": 20,
       "altBloecke": 48,
       "staende": [
@@ -2582,14 +2532,13 @@
           "sha": "812136ff7756997a08fc6a225b1e9b8a3419e149ff7083e156a3b7a4ede232f0",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2015/298/20250101/de/xml/fedlex-data-admin-ch-eli-cc-2015-298-20250101-de-xml-2.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "ERV": {
       "eli": "cc/2012/629",
       "abgerufen": "2026-09-12",
-      "shardSha": "8b37daf78225726c574136a3a7aec373794b4d3696dcf1f1ccb2f8c370345285",
-      "bytes": 121095,
+      "shardSha": "bd7058b9b4cce878c5a7868d9aa6a7c0eba90fa22ff50abbbb13aa48c72ef796",
+      "bytes": 120999,
       "schritte": 5,
       "altBloecke": 110,
       "staende": [
@@ -2623,14 +2572,13 @@
           "sha": "cfb397976a3c210859dbf62cf48ff932824beef7ef85502a499ec54a1efad189",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2012/629/20250124/de/xml/fedlex-data-admin-ch-eli-cc-2012-629-20250124-de-xml-7.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "FAMZG": {
       "eli": "cc/2008/51",
       "abgerufen": "2026-09-12",
-      "shardSha": "a8ba2b575f8a01bb9451b11e91848ab690270ff077911a344b24bedfaa9bee55",
-      "bytes": 9933,
+      "shardSha": "07c4fefb1a6931498a2c570e18db764d42025603c56fb080e45257b2f9e34088",
+      "bytes": 9889,
       "schritte": 4,
       "altBloecke": 9,
       "staende": [
@@ -2659,14 +2607,13 @@
           "sha": "cc46809b6110357c899f54ace16be0e27753e949bbf3f860c2052b14967bafbd",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2008/51/20260101/de/xml/fedlex-data-admin-ch-eli-cc-2008-51-20260101-de-xml-1.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "FAMZV": {
       "eli": "cc/2008/52",
       "abgerufen": "2026-09-12",
-      "shardSha": "8d1a5d9e506e3f842c49a35097c91b8cde8d5410ce97ae1b29a828810b24c6e8",
-      "bytes": 13292,
+      "shardSha": "61df877e0dbfe35b5f61a100c6b5951e1aec793eeae61daa5ba20030d5f320a2",
+      "bytes": 13282,
       "schritte": 6,
       "altBloecke": 9,
       "staende": [
@@ -2705,14 +2652,13 @@
           "sha": "9910aa38ae4997cf1022d995db7e2e4d394776bb2351d9f49db747219fb6e6ce",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2008/52/20250101/de/xml/fedlex-data-admin-ch-eli-cc-2008-52-20250101-de-xml-6.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "FAV": {
       "eli": "cc/2016/24",
       "abgerufen": "2026-09-12",
-      "shardSha": "829f444ec64eee95177348cef4444b71b29b3f71873475fd8a95183b2d0d04a1",
-      "bytes": 37671,
+      "shardSha": "ffbaae2071de6a93c2e246d89291ce82361c797b3f413fe1900f1096d9472b6d",
+      "bytes": 37663,
       "schritte": 5,
       "altBloecke": 20,
       "staende": [
@@ -2746,16 +2692,15 @@
           "sha": "f314878c9e5da129189b5b02114a1731c990316c537b828ad019aa978baa2ba4",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2016/24/20240815/de/xml/fedlex-data-admin-ch-eli-cc-2016-24-20240815-de-xml-10.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "FDV": {
       "eli": "cc/2007/166",
       "abgerufen": "2026-09-12",
-      "shardSha": "726342a1346be94eb065400174d3f81cbcfa2b854cb55156caa775c00a4a5b0b",
-      "bytes": 51355,
+      "shardSha": "1ea4e1e6a3d9d68c10b5da3ca1e935233a2a188502b2d73f8d8c4db31d9f7a3d",
+      "bytes": 48770,
       "schritte": 10,
-      "altBloecke": 35,
+      "altBloecke": 33,
       "staende": [
         {
           "datum": "2021-01-01",
@@ -2812,14 +2757,13 @@
           "sha": "2a996ce2d41475f1d8a3666f93a5cc682df19441c824ba6997cf341412b8e675",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2007/166/20260701/de/xml/fedlex-data-admin-ch-eli-cc-2007-166-20260701-de-xml-1.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "FIDLEG": {
       "eli": "cc/2019/758",
       "abgerufen": "2026-09-12",
-      "shardSha": "6825a43034dcd3cf70cf489641529ad1f7a8b061ba1b3bc09dc88459e78761d7",
-      "bytes": 8082,
+      "shardSha": "5c48403b0124938acc77090b3db7f35334ad909020dcf7ad3b66bdaea6d97f3b",
+      "bytes": 8043,
       "schritte": 2,
       "altBloecke": 4,
       "staende": [
@@ -2838,14 +2782,13 @@
           "sha": "c6f9590b2cb332763be7935ad2ec86df0933d43618cb83a0ada41737f77277da",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2019/758/20240301/de/xml/fedlex-data-admin-ch-eli-cc-2019-758-20240301-de-xml-4.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "FIDLEV": {
       "eli": "cc/2019/759",
       "abgerufen": "2026-09-12",
-      "shardSha": "34697cc31e9457432542f70ef794b0efe9dc88e91da9bc5cfcb70f7f0e474aa5",
-      "bytes": 2998,
+      "shardSha": "10b286bdf96d790251dfe041f7177a36fc9b00ce2bc398c6c0b595ed59b24476",
+      "bytes": 2994,
       "schritte": 1,
       "altBloecke": 2,
       "staende": [
@@ -2859,8 +2802,7 @@
           "sha": "f2b74dc76a2e16391f871f91c000653ce106f8ee112f4732cc4a98ccb8f112a1",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2019/759/20220101/de/xml/fedlex-data-admin-ch-eli-cc-2019-759-20220101-de-xml-9.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "FINFRAG": {
       "eli": "cc/2015/853",
@@ -2890,8 +2832,7 @@
           "sha": "4a79ae613fe7fdface196c27d0c3a4783accaaea82120947ae8c966e3d530d8d",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2015/853/20240201/de/xml/fedlex-data-admin-ch-eli-cc-2015-853-20240201-de-xml-5.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "FINFRAV": {
       "eli": "cc/2015/854",
@@ -2926,8 +2867,7 @@
           "sha": "6961afba2a2a4a1d6039298b14a9afd16631a1d41768f23ccc40ec1009d60129",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2015/854/20250101/de/xml/fedlex-data-admin-ch-eli-cc-2015-854-20250101-de-xml-4.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "FINFRAV_FINMA": {
       "eli": "cc/2015/855",
@@ -2952,14 +2892,13 @@
           "sha": "6f56bb362b8fe36adc945792de150b507fb5d2e8a90bf602a0f6d20a3903cd68",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2015/855/20230201/de/xml/fedlex-data-admin-ch-eli-cc-2015-855-20230201-de-xml-5.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "FINIG": {
       "eli": "cc/2018/801",
       "abgerufen": "2026-09-12",
-      "shardSha": "7cbc060c4a3c5588a556692fb09b1eb8f2be61219e4e26d47ef6299c6c5dd3f3",
-      "bytes": 5410,
+      "shardSha": "66c3d05e388e7e338e8e177caee155e82b64a8dc8a721128d756f0e8cf0aba2f",
+      "bytes": 5402,
       "schritte": 2,
       "altBloecke": 6,
       "staende": [
@@ -2978,8 +2917,7 @@
           "sha": "c82cd66263b9d695f4199df7f16eca02dbd41a59ddf21ee28988468697860ab4",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2018/801/20240301/de/xml/fedlex-data-admin-ch-eli-cc-2018-801-20240301-de-xml-4.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "FINIV": {
       "eli": "cc/2019/763",
@@ -3014,14 +2952,13 @@
           "sha": "c5dfe77bdfddc5820676b313192c1d90c91d537c3dc9c05bb043c89de0c4ab34",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2019/763/20250101/de/xml/fedlex-data-admin-ch-eli-cc-2019-763-20250101-de-xml-4.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "FINMAG": {
       "eli": "cc/2008/736",
       "abgerufen": "2026-09-12",
-      "shardSha": "e141b6032c134a3c52330eb71ac9100436e64c0859568fb80e56e6daf960a3d8",
-      "bytes": 10894,
+      "shardSha": "f8a3200505dc83b0795ac95bd9979560311d5cd91d3a4f0aaf32f5270c6a1ae0",
+      "bytes": 10888,
       "schritte": 4,
       "altBloecke": 7,
       "staende": [
@@ -3050,14 +2987,13 @@
           "sha": "1d75e17f05d904045f4c2527637943ea73e3888b7cba9cd67ff4bfa13705504b",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2008/736/20250401/de/xml/fedlex-data-admin-ch-eli-cc-2008-736-20250401-de-xml-2.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "FINMA_GEBV": {
       "eli": "cc/2008/749",
       "abgerufen": "2026-09-12",
-      "shardSha": "9a49362f625009548489a4b1651007ed373aaab2cd629c7893c556cb69f49651",
-      "bytes": 17969,
+      "shardSha": "d2a37e5d0c485e277a100594c1d0a5a2f611614f4140ed8986264b77ee899250",
+      "bytes": 17965,
       "schritte": 3,
       "altBloecke": 12,
       "staende": [
@@ -3081,8 +3017,7 @@
           "sha": "4f18d492d5920714c221d3507e852c323c6281c56730122b1aa505e95a6b000c",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2008/749/20240301/de/xml/fedlex-data-admin-ch-eli-cc-2008-749-20240301-de-xml-17.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "FMG": {
       "eli": "cc/1997/2187_2187_2187",
@@ -3112,14 +3047,13 @@
           "sha": "9bbdc256a2edb4be92b41080355b40bf1e3d6bdd958ac1827b9331fd36a7c0d4",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1997/2187_2187_2187/20260601/de/xml/fedlex-data-admin-ch-eli-cc-1997-2187_2187_2187-20260601-de-xml-2.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "FZG": {
       "eli": "cc/1994/2386_2386_2386",
       "abgerufen": "2026-09-12",
-      "shardSha": "797fe0363522cb03f217a4e78bb0db99538fccc3ba69fff43610116e99b2a5a9",
-      "bytes": 12563,
+      "shardSha": "bc04ec52a9d8ad45b600b3d891810bae28e30b619ad51b6de5d5e89b0d23b781",
+      "bytes": 12555,
       "schritte": 2,
       "altBloecke": 10,
       "staende": [
@@ -3138,8 +3072,7 @@
           "sha": "617802dbac3f86b03e4355f2cb8207ccad6da3dfe244c4ac9d9f8712a5f5000b",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1994/2386_2386_2386/20240101/de/xml/fedlex-data-admin-ch-eli-cc-1994-2386_2386_2386-20240101-de-xml-3.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "FZV": {
       "eli": "cc/1994/2399_2399_2399",
@@ -3169,8 +3102,7 @@
           "sha": "ac7beacd00fc657c8cc56624650d35514cc6aa2d370141f8059325032498c57f",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1994/2399_2399_2399/20260801/de/xml/fedlex-data-admin-ch-eli-cc-1994-2399_2399_2399-20260801-de-xml.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "GBV": {
       "eli": "cc/2011/667",
@@ -3195,10 +3127,10 @@
     "GEBV_SCHKG": {
       "eli": "cc/1996/2937_2937_2937",
       "abgerufen": "2026-09-12",
-      "shardSha": "8eb494f6700ceed6fbcf09b3f6a0ed43c817a15d83d87dbb23ee74e1113bde88",
-      "bytes": 4363,
+      "shardSha": "60752ba9852dee98fbb17b16387e9cda1daa7c15a844a1b6a167ca19a1c23d94",
+      "bytes": 3459,
       "schritte": 1,
-      "altBloecke": 3,
+      "altBloecke": 2,
       "staende": [
         {
           "datum": "2022-01-01",
@@ -3210,14 +3142,13 @@
           "sha": "88a6c1995ce081f317f0407361561e0bd223276e06d796d43fba799a1af50e22",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1996/2937_2937_2937/20260101/de/xml/fedlex-data-admin-ch-eli-cc-1996-2937_2937_2937-20260101-de-xml.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "GSCHG": {
       "eli": "cc/1992/1860_1860_1860",
       "abgerufen": "2026-09-12",
-      "shardSha": "7f1ec4362249bfaa72d8de24992928631bf3ee64ec357e5bd770695d33c10327",
-      "bytes": 11013,
+      "shardSha": "7160311de01327a365d3092f5ef77b6b94c6a6f333165372d94d87e224489168",
+      "bytes": 10989,
       "schritte": 3,
       "altBloecke": 7,
       "staende": [
@@ -3241,14 +3172,13 @@
           "sha": "b6712dab3a6596a4cecb6bc66179a317df1de3663c479269eeb51266ef09f3a2",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1992/1860_1860_1860/20250801/de/xml/fedlex-data-admin-ch-eli-cc-1992-1860_1860_1860-20250801-de-xml-5.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "GSCHV": {
       "eli": "cc/1998/2863_2863_2863",
       "abgerufen": "2026-09-12",
-      "shardSha": "b9b7e47d9e454197c772c6609ed6bf893b2c90d83f1ac6bffde696f5b3520a99",
-      "bytes": 9590,
+      "shardSha": "a85c0f77e436f25442a37946e896e99c86b132ba89ba16f53e595e975d30a384",
+      "bytes": 9586,
       "schritte": 5,
       "altBloecke": 5,
       "staende": [
@@ -3282,14 +3212,13 @@
           "sha": "33ee8862ddb7dd418ed68f45c6de0c4cc3bef50b59022d54cd4dd025c5633005",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1998/2863_2863_2863/20251201/de/xml/fedlex-data-admin-ch-eli-cc-1998-2863_2863_2863-20251201-de-xml-1.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "GWG": {
       "eli": "cc/1998/892_892_892",
       "abgerufen": "2026-09-12",
-      "shardSha": "c7909a2512f8d0ffcc637fdb5a294cf9cfbca0a8e934f7f4fb1519c856b08e8d",
-      "bytes": 57078,
+      "shardSha": "e564b55c28c6d48607c5d84f06fe603b0dceaa6e30f10229f1019ccddef9333f",
+      "bytes": 57050,
       "schritte": 6,
       "altBloecke": 39,
       "staende": [
@@ -3328,14 +3257,13 @@
           "sha": "1479bbac9a23db0e1d2435fec6a5798eaaccf2c4f1d1f99b90b04a19fb26a310",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1998/892_892_892/20240301/de/xml/fedlex-data-admin-ch-eli-cc-1998-892_892_892-20240301-de-xml-7.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "GWV_FINMA": {
       "eli": "cc/2015/390",
       "abgerufen": "2026-09-12",
-      "shardSha": "e854298d25de828cc1509967be9aebce73c2b59a2bfd0c3866cf904686f46fbd",
-      "bytes": 27081,
+      "shardSha": "4bad19b6e7830b6b4b8ade0c358ce56accffe9dd4e1184ccd874aceb52024482",
+      "bytes": 27056,
       "schritte": 1,
       "altBloecke": 21,
       "staende": [
@@ -3349,8 +3277,7 @@
           "sha": "6abd807d6e316866a9b3289d6f129a4f2ea2aa5699d035c5b099d10fa099f6c8",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2015/390/20230101/de/xml/fedlex-data-admin-ch-eli-cc-2015-390-20230101-de-xml-10.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "HAUE": {
       "eli": "cc/2003/99",
@@ -3425,10 +3352,10 @@
     "HMG": {
       "eli": "cc/2001/422",
       "abgerufen": "2026-09-12",
-      "shardSha": "216958d401dbf54b9ff13a5159305a406301d0a5d8c781ed7ae24e9b04175649",
-      "bytes": 26461,
+      "shardSha": "c7e1907bfaffb8bbd4038aa9e5c12559e7aa8dff036ccf07a28dd40470cadece",
+      "bytes": 19166,
       "schritte": 5,
-      "altBloecke": 13,
+      "altBloecke": 11,
       "staende": [
         {
           "datum": "2021-05-26",
@@ -3460,14 +3387,13 @@
           "sha": "56d669d9be42b1bd711bcd87f77ec3fcea2fcc063571b84335fa3afba96f6801",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2001/422/20250101/de/xml/fedlex-data-admin-ch-eli-cc-2001-422-20250101-de-xml-7.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "HREGV": {
       "eli": "cc/2007/686",
       "abgerufen": "2026-09-12",
-      "shardSha": "f8a950b9a8bc82e2afa0d527de20f96a25b3f6d37167f1760a1d9667e84e7dd3",
-      "bytes": 114350,
+      "shardSha": "a798f8803651f4a1206a43c32ff08660ea2bfe771eb02610e4ffe10953132287",
+      "bytes": 114091,
       "schritte": 6,
       "altBloecke": 68,
       "staende": [
@@ -3506,14 +3432,13 @@
           "sha": "4652cb4314b4e1c699ae5b08b52e18683c2e90493e48398a1689506eef3db755",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2007/686/20250101/de/xml/fedlex-data-admin-ch-eli-cc-2007-686-20250101-de-xml-6.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "ICAO": {
       "eli": "cc/63/1377_1378_1381",
       "abgerufen": "2026-09-12",
-      "shardSha": "a8410ca6ddeb82b6c1a5eb1245e900516680960d82d99261bc35d1b2427046a6",
-      "bytes": 4600,
+      "shardSha": "b41f7251d0241b01f3a0c2d00361d324a7970dd977d81272cf6294125f76b163",
+      "bytes": 4596,
       "schritte": 4,
       "altBloecke": 2,
       "staende": [
@@ -3542,14 +3467,13 @@
           "sha": "653b3d2da30ad69abf8e94c8ed13f3a0d4222e4d6d8897a752d57ac942bd97ce",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/63/1377_1378_1381/20260612/de/xml/fedlex-data-admin-ch-eli-cc-63-1377_1378_1381-20260612-de-xml-2.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "IPRG": {
       "eli": "cc/1988/1776_1776_1776",
       "abgerufen": "2026-09-12",
-      "shardSha": "7b299e66a9ee715e4997e7ec591f3274be03b8058dfdd51676594e1bd1c5df65",
-      "bytes": 30396,
+      "shardSha": "e81e6f9596346af1b69ec0ec1d21c8cfb0b0323169c3ea4ea4b2c0187e234e12",
+      "bytes": 30380,
       "schritte": 6,
       "altBloecke": 37,
       "staende": [
@@ -3588,14 +3512,13 @@
           "sha": "3651f38282edcb4c40feb1527588ca9df531e262b2472bd9300fda00a6eee680",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1988/1776_1776_1776/20260101/de/xml/fedlex-data-admin-ch-eli-cc-1988-1776_1776_1776-20260101-de-xml-3.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "IRSG": {
       "eli": "cc/1982/846_846_846",
       "abgerufen": "2026-09-12",
-      "shardSha": "84067eeb1c8473e1239f5224a78777fc944e0fa7fd8e7be1d38bc0bdf483584a",
-      "bytes": 43629,
+      "shardSha": "42a8b996d02a003151aaccd8aeb1c82c44a5d47c939fef317e8afd8c37927f56",
+      "bytes": 43619,
       "schritte": 3,
       "altBloecke": 43,
       "staende": [
@@ -3619,8 +3542,7 @@
           "sha": "bf163f56c395cda621c3a45db45f2e5a7004c55f340b9a2895fa23ec16b2909f",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1982/846_846_846/20240101/de/xml/fedlex-data-admin-ch-eli-cc-1982-846_846_846-20240101-de-xml-9.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "ISTANBUL": {
       "eli": "cc/2018/168",
@@ -3685,14 +3607,13 @@
           "sha": "7a7643e5a42176cad041ad3bd1c20852d222f0bc4c962681ba33374647947451",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1959/827_857_845/20260101/de/xml/fedlex-data-admin-ch-eli-cc-1959-827_857_845-20260101-de-xml-8.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "IVV": {
       "eli": "cc/1961/29_29_29",
       "abgerufen": "2026-09-12",
-      "shardSha": "7cafca22d5276a01c38b5950c1f8e5fc8ca48cfd896ed550ece538a2a193cb88",
-      "bytes": 107909,
+      "shardSha": "dfe0a8eeb9e383a260d338806663abe4babac6f179a7086624c59f3298bbe937",
+      "bytes": 107871,
       "schritte": 8,
       "altBloecke": 106,
       "staende": [
@@ -3741,8 +3662,7 @@
           "sha": "8703bb62541a6908faa5aee5b8ea184d64adb0bde583114b9fec749110efdb3f",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1961/29_29_29/20250601/de/xml/fedlex-data-admin-ch-eli-cc-1961-29_29_29-20250601-de-xml.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "JSTG": {
       "eli": "cc/2006/551",
@@ -3772,8 +3692,7 @@
           "sha": "2261591db48f80f5d28dee2c712a883ea4324c81249a5d0d807cf1b37d77b531",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2006/551/20250701/de/xml/fedlex-data-admin-ch-eli-cc-2006-551-20250701-de-xml-4.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "JSTPO": {
       "eli": "cc/2010/226",
@@ -3813,8 +3732,7 @@
           "sha": "073fb75502f8b9bee1986516491fbadcf57734fc11e26dd48dd8c41f15885c16",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2006/822/20240301/de/xml/fedlex-data-admin-ch-eli-cc-2006-822-20240301-de-xml-7.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "KG": {
       "eli": "cc/1996/546_546_546",
@@ -3839,8 +3757,8 @@
     "KKV": {
       "eli": "cc/2006/859",
       "abgerufen": "2026-09-12",
-      "shardSha": "0fd9e8991957a4b3e28cb282b9fabf754683f57200f6ee859260b7531394fc3d",
-      "bytes": 59057,
+      "shardSha": "24003e662f63f799b7f9d680a67522ad99a43a038ecec710b361722c16323860",
+      "bytes": 59035,
       "schritte": 2,
       "altBloecke": 43,
       "staende": [
@@ -3859,16 +3777,15 @@
           "sha": "c4cca60b3c7995e9f83743174a048436a3b6dbe7810855a55dcebd8eb0678239",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2006/859/20251125/de/xml/fedlex-data-admin-ch-eli-cc-2006-859-20251125-de-xml-5.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "KLV": {
       "eli": "cc/1995/4964_4964_4964",
       "abgerufen": "2026-09-12",
-      "shardSha": "441ba98dfec182f76bf9cb5efdd0953eeaa8bb65c4af06b8195b7f1489622f92",
-      "bytes": 234481,
+      "shardSha": "ebc6aadc4f87df732693acc6a90005f30b4b9185eb69ce85a647f711b8c76dab",
+      "bytes": 227688,
       "schritte": 28,
-      "altBloecke": 77,
+      "altBloecke": 76,
       "staende": [
         {
           "datum": "2021-01-01",
@@ -4015,8 +3932,7 @@
           "sha": "b61a18e3d47cdddbe6572aa7ce227c2abbaee4a937271036f8d3b1eefba23828",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1995/4964_4964_4964/20260801/de/xml/fedlex-data-admin-ch-eli-cc-1995-4964_4964_4964-20260801-de-xml.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "KRK": {
       "eli": "cc/1998/2055_2055_2055",
@@ -4046,8 +3962,8 @@
     "KVG": {
       "eli": "cc/1995/1328_1328_1328",
       "abgerufen": "2026-09-12",
-      "shardSha": "994c8b3e4c5220f494ab00510399175d8ceba649d47ef6aa69f9aac8298733f9",
-      "bytes": 154316,
+      "shardSha": "73d1ab75f59f91567faa5314f348d9d6daa63e7067af3b4f84aad799d4305e63",
+      "bytes": 154256,
       "schritte": 15,
       "altBloecke": 81,
       "staende": [
@@ -4131,14 +4047,13 @@
           "sha": "32b0745cd3827c26d6ad5a0789d45269509e980a671afc70fdcbade07f64f8b9",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1995/1328_1328_1328/20260701/de/xml/fedlex-data-admin-ch-eli-cc-1995-1328_1328_1328-20260701-de-xml-1.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "KVV": {
       "eli": "cc/1995/3867_3867_3867",
       "abgerufen": "2026-09-12",
-      "shardSha": "ec6f714cadef3610554ac79742e8b203e7f0ddfa5ae8519061291008b8d85754",
-      "bytes": 260997,
+      "shardSha": "7e221c35e5fd5e77da90b5d9657c250c539b8db236d5fd67338a6fef7dfdabed",
+      "bytes": 260676,
       "schritte": 18,
       "altBloecke": 181,
       "staende": [
@@ -4237,14 +4152,13 @@
           "sha": "1aed66cafd38b948c417b11a467117092bf45287685448dc70bcb3fa16cda653",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1995/3867_3867_3867/20260801/de/xml/fedlex-data-admin-ch-eli-cc-1995-3867_3867_3867-20260801-de-xml.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "LFG": {
       "eli": "cc/1950/471_491_479",
       "abgerufen": "2026-09-12",
-      "shardSha": "b1274c42ba0599a946535ec9185d0cd3f854bbd2beb0afe473d66d413a3991fc",
-      "bytes": 27979,
+      "shardSha": "98d03aab3ad8332aba20f0a858d6f1ad791ccc7fe1788a95a49558e75dfeb627",
+      "bytes": 27975,
       "schritte": 8,
       "altBloecke": 24,
       "staende": [
@@ -4293,8 +4207,7 @@
           "sha": "b480e99ae88f9e2e8f795b3ac7b596d12e191ed37fb79e473c7e237e1b775ce7",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1950/471_491_479/20260101/de/xml/fedlex-data-admin-ch-eli-cc-1950-471_491_479-20260101-de-xml.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "LMG": {
       "eli": "cc/2017/62",
@@ -4319,8 +4232,7 @@
           "sha": "1e58219a505d16cf50f14ba7f8f80c1e74ab2ddd9842f55a54826d59e4c82277",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2017/62/20241001/de/xml/fedlex-data-admin-ch-eli-cc-2017-62-20241001-de-xml-5.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "LRV": {
       "eli": "cc/1986/208_208_208",
@@ -4375,8 +4287,7 @@
           "sha": "146e27d69e7fe871b3d6050d34a1e5430a059eb8592af0e8056d953f0c40e7d3",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1986/208_208_208/20260801/de/xml/fedlex-data-admin-ch-eli-cc-1986-208_208_208-20260801-de-xml-2.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "LSV": {
       "eli": "cc/1987/338_338_338",
@@ -4411,8 +4322,7 @@
           "sha": "2206b71234847ad2e5313ced37c0102bcb4544315471425a0cd09080ffceb5e8",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1987/338_338_338/20260401/de/xml/fedlex-data-admin-ch-eli-cc-1987-338_338_338-20260401-de-xml-1.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "MEPV": {
       "eli": "cc/2020/552",
@@ -4447,14 +4357,13 @@
           "sha": "163a392ee05a316a22004f1599bbe1014a4aec5fce1b50e6c8a0f8be9af8b50a",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2020/552/20260701/de/xml/fedlex-data-admin-ch-eli-cc-2020-552-20260701-de-xml-2.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "MG": {
       "eli": "cc/1995/4093_4093_4093",
       "abgerufen": "2026-09-12",
-      "shardSha": "0c0364da0b2bc308ace4cfce15c4a2a4534a5c318df8cf3e73fce1c6f13e095e",
-      "bytes": 101096,
+      "shardSha": "8afc390e6e5a4d4574bbd72fd53aff95831cc2020bf92349afc067730f7e9e61",
+      "bytes": 101066,
       "schritte": 7,
       "altBloecke": 81,
       "staende": [
@@ -4498,14 +4407,13 @@
           "sha": "4b7d718fbb7adc2d27c489b705e2beeec255f3a9f5d078de9f05b61257ac18a8",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1995/4093_4093_4093/20260601/de/xml/fedlex-data-admin-ch-eli-cc-1995-4093_4093_4093-20260601-de-xml-1.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "MONTREAL": {
       "eli": "cc/2005/566",
       "abgerufen": "2026-09-12",
-      "shardSha": "1ed7d0746c0030d1191c1fac26ca0d9d08bee2f0464d36939ed102b1410bd54a",
-      "bytes": 9254,
+      "shardSha": "7eebd0395cef5e3c197cf90ec6c3e0bb8ea801273c6ee124bd3c0f99e92028b1",
+      "bytes": 9241,
       "schritte": 3,
       "altBloecke": 3,
       "staende": [
@@ -4529,8 +4437,7 @@
           "sha": "5f513cc21896198b4393a3210f3f2bc1e58a7d241e40feee5173d75ac78e6890",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2005/566/20260407/de/xml/fedlex-data-admin-ch-eli-cc-2005-566-20260407-de-xml.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "MSCHG": {
       "eli": "cc/1993/274_274_274",
@@ -4560,8 +4467,7 @@
           "sha": "d138c6589b386550c64fad7923bdfa1d724a670954df55fa1cbe4c3863e960c0",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1993/274_274_274/20250701/de/xml/fedlex-data-admin-ch-eli-cc-1993-274_274_274-20250701-de-xml-3.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "MSCHV": {
       "eli": "cc/1993/296_296_296",
@@ -4641,14 +4547,13 @@
           "sha": "992e2ea3f7ba8360081ffcccc8fdda33ee121aa8b6092c6247868b084008295b",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/43/359_375_369/20260608/de/xml/fedlex-data-admin-ch-eli-cc-43-359_375_369-20260608-de-xml.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "MSTP": {
       "eli": "cc/1979/1059_1059_1059",
       "abgerufen": "2026-09-12",
-      "shardSha": "3e48d8bd5077f187861ab08b78eaf741bdbb179107dbf1ebc8f7a144e729c3e4",
-      "bytes": 22159,
+      "shardSha": "0ad95f0241f2558bce8056f4aa9ed2095618ea5146a224509420cfd67d38dd70",
+      "bytes": 22139,
       "schritte": 6,
       "altBloecke": 15,
       "staende": [
@@ -4687,14 +4592,13 @@
           "sha": "025bbb6a67a0b03469961da0e5a9ecbf98ebac3e2755b4b96fdefc502fcf65e8",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1979/1059_1059_1059/20240701/de/xml/fedlex-data-admin-ch-eli-cc-1979-1059_1059_1059-20240701-de-xml-4.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "MVG": {
       "eli": "cc/1993/3043_3043_3043",
       "abgerufen": "2026-09-12",
-      "shardSha": "5c33cc39d2ead27a06131075a0895d9ff41d1d200100c16afaf807b8a6323e6f",
-      "bytes": 20316,
+      "shardSha": "15de0765387e18eb246d19935c131d67863ae830bcc21f8793e0740574a41ddf",
+      "bytes": 20296,
       "schritte": 4,
       "altBloecke": 14,
       "staende": [
@@ -4723,8 +4627,7 @@
           "sha": "a0269ec2fe8606f6858da9462260678055e418cea6c2e348f1f8b91f8c448e32",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1993/3043_3043_3043/20240101/de/xml/fedlex-data-admin-ch-eli-cc-1993-3043_3043_3043-20240101-de-xml-3.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "MVV": {
       "eli": "cc/1993/3080_3080_3080",
@@ -4769,16 +4672,15 @@
           "sha": "e480ae0b662e58f4540c87fe51b5faba6695e4f12c0fd855ef3d9db71326c83d",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1993/3080_3080_3080/20260101/de/xml/fedlex-data-admin-ch-eli-cc-1993-3080_3080_3080-20260101-de-xml.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "MWSTG": {
       "eli": "cc/2009/615",
       "abgerufen": "2026-09-12",
-      "shardSha": "4bbe62090cd145fade3c0ebad530ecff1ed8c5dbc53370163f8f63e207cd6a47",
-      "bytes": 81605,
+      "shardSha": "66e9565221950469e019a16ce66a2f92842afad4f672b3d0b7c8d7c0bc68ff8d",
+      "bytes": 80548,
       "schritte": 6,
-      "altBloecke": 37,
+      "altBloecke": 36,
       "staende": [
         {
           "datum": "2022-01-01",
@@ -4815,14 +4717,13 @@
           "sha": "3eb05b4d9b2860839cd442c22c61940049fe5c6c6507c77bdaba4b9c366d038d",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2009/615/20250331/de/xml/fedlex-data-admin-ch-eli-cc-2009-615-20250331-de-xml-4.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "MWSTV": {
       "eli": "cc/2009/828",
       "abgerufen": "2026-09-12",
-      "shardSha": "b078399c266432c7bb99f9d526a48155bb428ca1c5c96e88843100169a2c7120",
-      "bytes": 83148,
+      "shardSha": "51fd55b95417c28a36dc6ee9d502c17a654d23b48bdc7f92345cb3e646a0e7a5",
+      "bytes": 83094,
       "schritte": 10,
       "altBloecke": 64,
       "staende": [
@@ -4881,8 +4782,7 @@
           "sha": "b701be424b49855623f978021459ddae8c56234622ae7a01336792df2416313b",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2009/828/20250101/de/xml/fedlex-data-admin-ch-eli-cc-2009-828-20250101-de-xml-11.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "NBV": {
       "eli": "cc/2004/233",
@@ -4907,8 +4807,7 @@
           "sha": "2e33c7f40783882c3808995b99dcdd69d5361a31bafe05e0204f8bdc2a137f9e",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2004/233/20240701/de/xml/fedlex-data-admin-ch-eli-cc-2004-233-20240701-de-xml-4.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "NHG": {
       "eli": "cc/1966/1637_1694_1679",
@@ -4928,8 +4827,7 @@
           "sha": "2814688aed09c22db1810528131daf5377d9d67bf9ab44ff7fdae5e1a6af9949",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1966/1637_1694_1679/20250801/de/xml/fedlex-data-admin-ch-eli-cc-1966-1637_1694_1679-20250801-de-xml-2.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "NYUE": {
       "eli": "cc/1965/795_799_793",
@@ -4969,14 +4867,13 @@
           "sha": "bf988bb1788993441c747cc7909cc22523cd53039565e3f1a7eb9e5d7e5dca12",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2008/232/20250101/de/xml/fedlex-data-admin-ch-eli-cc-2008-232-20250101-de-xml-5.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "OR": {
       "eli": "cc/27/317_321_377",
       "abgerufen": "2026-09-12",
-      "shardSha": "b004b53eade02efc864cad98d480d945dc55474f41eeccdba7c0a9c9e9297b50",
-      "bytes": 239616,
+      "shardSha": "6b3a0ace95f86302596d32b99c601c46330157578563411a6776200522ecc226",
+      "bytes": 239474,
       "schritte": 12,
       "altBloecke": 267,
       "staende": [
@@ -5045,8 +4942,7 @@
           "sha": "1e09d9259fa20e01e2c303a623c1ecfc90e79ebfb292abc23ecc4ce16361ee44",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/27/317_321_377/20260101/de/xml/fedlex-data-admin-ch-eli-cc-27-317_321_377-20260101-de-xml-12.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "PARLG": {
       "eli": "cc/2003/510",
@@ -5126,8 +5022,7 @@
           "sha": "c521d06b0a2c0aa24cac27a9d9bc2b3023b349beb12ad3e8785251bfc7d6d760",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2003/510/20260302/de/xml/fedlex-data-admin-ch-eli-cc-2003-510-20260302-de-xml-2.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "PARTG": {
       "eli": "cc/2005/782",
@@ -5152,8 +5047,7 @@
           "sha": "eb3ea13c4b7b0a91036e473d2628b9b398dd93e1a55e88a5b440ed299203d494",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2005/782/20250101/de/xml/fedlex-data-admin-ch-eli-cc-2005-782-20250101-de-xml-2.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "PATG": {
       "eli": "cc/1955/871_893_899",
@@ -5238,14 +5132,13 @@
           "sha": "569bd17f8b63e4740d3dd4a0c82f7d700ab946448c41fcdc23e0c728a0b0e7a6",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1970/620_620_620/20240109/de/xml/fedlex-data-admin-ch-eli-cc-1970-620_620_620-20240109-de-xml-6.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "QSTV": {
       "eli": "cc/2018/274",
       "abgerufen": "2026-09-12",
-      "shardSha": "a6853cbf922dfddddaf9da27ae82decf67678b634f5dd485b5bda52a9d35ac48",
-      "bytes": 7282,
+      "shardSha": "c30d55728cc88c0675e8476035859747332d161e054a5751b8af2298fb327807",
+      "bytes": 7261,
       "schritte": 4,
       "altBloecke": 3,
       "staende": [
@@ -5274,14 +5167,13 @@
           "sha": "8a65fe09b79a1844f819eb1f29ee58504287d3978af53a270016992993c8efc7",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2018/274/20250110/de/xml/fedlex-data-admin-ch-eli-cc-2018-274-20250110-de-xml-1.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "RBUE": {
       "eli": "cc/1993/2659_2659_2659",
       "abgerufen": "2026-09-12",
-      "shardSha": "0d354a889bd79461683537e851730a5bbee7b47116a7086f26b98e6dfae8d6ec",
-      "bytes": 28757,
+      "shardSha": "11ee3000621b28202f0f15306ff179bf35270811173dbdd45b59361812ea216a",
+      "bytes": 28569,
       "schritte": 1,
       "altBloecke": 10,
       "staende": [
@@ -5295,8 +5187,7 @@
           "sha": "87359b89f162750eb03a0cb402360fdf41f87e603e94cf435cfabed38959aaec",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1993/2659_2659_2659/20240606/de/xml/fedlex-data-admin-ch-eli-cc-1993-2659_2659_2659-20240606-de-xml-2.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "RDV": {
       "eli": "cc/2012/713",
@@ -5336,8 +5227,7 @@
           "sha": "9306680b15528970267df6fece615db08250480285d23579ec83aa6a7bb4cb99",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2012/713/20260820/de/xml/fedlex-data-admin-ch-eli-cc-2012-713-20260820-de-xml-1.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "RPG": {
       "eli": "cc/1979/1573_1573_1573",
@@ -5362,14 +5252,13 @@
           "sha": "b5aed2bb5a21838b59df5fd23a0dfb55a1028a2fa1ceca82f3f2d9cd5d049b06",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1979/1573_1573_1573/20260701/de/xml/fedlex-data-admin-ch-eli-cc-1979-1573_1573_1573-20260701-de-xml-3.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "RPV": {
       "eli": "cc/2000/310",
       "abgerufen": "2026-09-12",
-      "shardSha": "24018199d7b3c0bf74e385198200b2aff77fdba5bc488554279ece42df70428e",
-      "bytes": 26304,
+      "shardSha": "0d5a7fd49271ef801c6889b010e8e05e56030147b3dd9f5646dcbc3cd6a815e6",
+      "bytes": 26294,
       "schritte": 4,
       "altBloecke": 14,
       "staende": [
@@ -5398,8 +5287,7 @@
           "sha": "897fdaf0399951a0fa4b6232ec8f5d434d6e3aca7798607e5c3a54360b5431c4",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2000/310/20260701/de/xml/fedlex-data-admin-ch-eli-cc-2000-310-20260701-de-xml-2.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "RVOG": {
       "eli": "cc/1997/2022_2022_2022",
@@ -5419,8 +5307,7 @@
           "sha": "70a7aa65b2f40449cc73ea3ae21d6bddafbc7564b290a0469575440e9ddd479b",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1997/2022_2022_2022/20250501/de/xml/fedlex-data-admin-ch-eli-cc-1997-2022_2022_2022-20250501-de-xml-3.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "RVOV": {
       "eli": "cc/1999/170",
@@ -5505,14 +5392,13 @@
           "sha": "ef16e40b56b7ff4717e7e10baaeabe28c44fa05e013ae01e41ef21b23fffa28b",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1999/170/20260301/de/xml/fedlex-data-admin-ch-eli-cc-1999-170-20260301-de-xml-3.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "SCHKG": {
       "eli": "cc/11/529_488_529",
       "abgerufen": "2026-09-12",
-      "shardSha": "8d944cedb5a97b21d7c4a3f1b8342733d0d53c94fecb8220a98ea781a46e8dca",
-      "bytes": 13847,
+      "shardSha": "b70ba30dfc25ee0eb84a46c8dc1c6356496bb7f60798b30abbb17ec90812e5e0",
+      "bytes": 13833,
       "schritte": 4,
       "altBloecke": 13,
       "staende": [
@@ -5541,8 +5427,7 @@
           "sha": "cc7ef0971b4a63f66cffb656fb98b785a6a72fbc37ab6ac4dcfea178f68aaeb2",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/11/529_488_529/20260101/de/xml/fedlex-data-admin-ch-eli-cc-11-529_488_529-20260101-de-xml-3.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "SKV": {
       "eli": "cc/2007/296",
@@ -5567,14 +5452,13 @@
           "sha": "5dd12ec4ae9455142717a97579c824e3bc9e91af5ca648595e130cd27105f1d7",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2007/296/20260101/de/xml/fedlex-data-admin-ch-eli-cc-2007-296-20260101-de-xml-1.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "SSV": {
       "eli": "cc/1979/1961_1961_1961",
       "abgerufen": "2026-09-12",
-      "shardSha": "128a2adbb192274a259e603d275d511b4ac92e3003fbe4ddcd3c17a26ee5d26a",
-      "bytes": 124839,
+      "shardSha": "822d0daaec86f9151faa0d3d62f7871ef7c9ee460e66c555500b38aa0ac9354c",
+      "bytes": 124803,
       "schritte": 6,
       "altBloecke": 62,
       "staende": [
@@ -5613,8 +5497,7 @@
           "sha": "b0a4709f68f1c980840855a8c0feb0b5fe28a57c37ea4daf10ba041022b85d57",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1979/1961_1961_1961/20260701/de/xml/fedlex-data-admin-ch-eli-cc-1979-1961_1961_1961-20260701-de-xml-14.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "STAATENLOSE": {
       "eli": "cc/1972/2320_2374_2150",
@@ -5659,8 +5542,7 @@
           "sha": "4a6e484227284ed6a6b4e12fc5b76b0ccb7f0a1190bbd14ab17e3e4aedac209e",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2010/444/20240101/de/xml/fedlex-data-admin-ch-eli-cc-2010-444-20240101-de-xml-2.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "STG": {
       "eli": "cc/1974/11_11_11",
@@ -5685,14 +5567,13 @@
           "sha": "ac29dc90fd897854e501af23ed03a0e1323d260029c20aefa7791f2fa6ddbe6d",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1974/11_11_11/20240101/de/xml/fedlex-data-admin-ch-eli-cc-1974-11_11_11-20240101-de-xml-3.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "STGB": {
       "eli": "cc/54/757_781_799",
       "abgerufen": "2026-09-12",
-      "shardSha": "714b0ff33f3c69f651b31b03df29ae928b4fdef8947cbd1c6e534efd9965b6a5",
-      "bytes": 196191,
+      "shardSha": "4a58538aa847f9dcac7260e98431fb3a3e1475f423ba3d53e5e281ba8c2dcd9d",
+      "bytes": 196181,
       "schritte": 15,
       "altBloecke": 148,
       "staende": [
@@ -5776,16 +5657,15 @@
           "sha": "a8fb7d83f0b82d10c806e319cf3401e5ffd7df39b4ecba39240329067d8920a4",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/54/757_781_799/20260612/de/xml/fedlex-data-admin-ch-eli-cc-54-757_781_799-20260612-de-xml-4.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "STHG": {
       "eli": "cc/1991/1256_1256_1256",
       "abgerufen": "2026-09-12",
-      "shardSha": "99f1ca14cba621e368dd189713538b3197f1c8ef05511b2fd06f30810592607f",
-      "bytes": 60513,
+      "shardSha": "8adb664b6230ba5439de2acd4f50044355c27f9ae293fb471c52d3a2f0c67a0f",
+      "bytes": 57720,
       "schritte": 6,
-      "altBloecke": 41,
+      "altBloecke": 40,
       "staende": [
         {
           "datum": "2021-01-01",
@@ -5823,13 +5703,13 @@
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1991/1256_1256_1256/20250101/de/xml/fedlex-data-admin-ch-eli-cc-1991-1256_1256_1256-20250101-de-xml-11.xml"
         }
       ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      "parserAenderung": "Profil entstehung-norm/4, Auflage A5 (Neupruefung PR #798): Absatz-Etikett nur aus dem <num> VOR dem Inhalt und im Vergleich genau einmal je Absatz; Satzzeichen-Regel auch fuer Aufzaehlungen ohne blockList (Regel a2)"
     },
     "STPO": {
       "eli": "cc/2010/267",
       "abgerufen": "2026-09-12",
-      "shardSha": "b409717d74640844d4c46437bac24f6efcafe2a22ad1f96ee5f3b90483b4d33b",
-      "bytes": 109853,
+      "shardSha": "c8cecc0dfa87f46267629f0150237764f92eb353c086517a151989ae1fdba266",
+      "bytes": 109841,
       "schritte": 9,
       "altBloecke": 80,
       "staende": [
@@ -5883,14 +5763,13 @@
           "sha": "2d6437c9f55c37064483abd7aaf65bc30963cbf2e37ed2f1fdbc7dc0116b815e",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2010/267/20250401/de/xml/fedlex-data-admin-ch-eli-cc-2010-267-20250401-de-xml-4.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "SVG": {
       "eli": "cc/1959/679_705_685",
       "abgerufen": "2026-09-12",
-      "shardSha": "adcf7c7d61b15f9871209eacb7aa7c360a534d74dc33003b7c625ee1c59587ef",
-      "bytes": 44983,
+      "shardSha": "5e8b9dbddd09b97fc8e43b9d55ad7d549459af9eab167ae3063252b93a23718e",
+      "bytes": 44888,
       "schritte": 7,
       "altBloecke": 24,
       "staende": [
@@ -5934,8 +5813,7 @@
           "sha": "cfac881d29ba5184941297bb95060875bb2f22d5d094c8232490a24bd44eb040",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1959/679_705_685/20260701/de/xml/fedlex-data-admin-ch-eli-cc-1959-679_705_685-20260701-de-xml.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "TGBV": {
       "eli": "cc/2013/3",
@@ -6030,7 +5908,7 @@
     "UNO_PAKT_II": {
       "eli": "cc/1993/750_750_750",
       "abgerufen": "2026-09-12",
-      "shardSha": "264cf094e612bb30a6d91ddeca2ab1ad0345a031e65bf94ad8cb6dff11237d6a",
+      "shardSha": "b5aa11f8daf007cac2890688040e76f73de3a97d019a612c0edd9c284d285c2c",
       "bytes": 2603,
       "schritte": 1,
       "altBloecke": 1,
@@ -6045,8 +5923,7 @@
           "sha": "d34c647a9006cbacb514fdbe1da64cb0cad11d706f35e6f5e0f443b8302a9829",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1993/750_750_750/20220509/de/xml/fedlex-data-admin-ch-eli-cc-1993-750_750_750-20220509-de-xml-14.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "URG": {
       "eli": "cc/1993/1798_1798_1798",
@@ -6071,8 +5948,7 @@
           "sha": "4f98ae50ab3d5e7b91c1b26692a3fd208a1db725ad4d446dd206c8c3e698e7cb",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1993/1798_1798_1798/20250701/de/xml/fedlex-data-admin-ch-eli-cc-1993-1798_1798_1798-20250701-de-xml-7.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "URV": {
       "eli": "cc/1993/1821_1821_1821",
@@ -6097,8 +5973,8 @@
     "USG": {
       "eli": "cc/1984/1122_1122_1122",
       "abgerufen": "2026-09-12",
-      "shardSha": "d88ed466f0b3c2b374e41c9d5ab189467c820845d6bf255239ad2509e3e873d5",
-      "bytes": 55908,
+      "shardSha": "3af4cb065d7293129406ae96668236021d6e83fcaa10c5d61f8b703f4db582e2",
+      "bytes": 55904,
       "schritte": 6,
       "altBloecke": 32,
       "staende": [
@@ -6137,14 +6013,13 @@
           "sha": "886eab78a8ac78342050792b52681108359ec7f859af682c2f5473e117e103bb",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1984/1122_1122_1122/20260801/de/xml/fedlex-data-admin-ch-eli-cc-1984-1122_1122_1122-20260801-de-xml-3.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "UVG": {
       "eli": "cc/1982/1676_1676_1676",
       "abgerufen": "2026-09-12",
-      "shardSha": "c834bb866c2b83f85664c15d8e0d5bdef1d02cb7518293e4d711c847f032af02",
-      "bytes": 35724,
+      "shardSha": "9caad27665971a34b360f7a592043ab63a9b9bd3a318d602cfd8a647e5a63259",
+      "bytes": 35696,
       "schritte": 6,
       "altBloecke": 21,
       "staende": [
@@ -6183,8 +6058,7 @@
           "sha": "b7a794b65ff58d82d6e2113439048e0b4acc9ee27ca782e3aa5412c45090b167",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1982/1676_1676_1676/20260101/de/xml/fedlex-data-admin-ch-eli-cc-1982-1676_1676_1676-20260101-de-xml.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "UVPV": {
       "eli": "cc/1988/1931_1931_1931",
@@ -6249,8 +6123,7 @@
           "sha": "f62af52638a2e4477ee35dcc3bf15ff9780782c95c238a1f95d6587eccae43e3",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1983/38_38_38/20260101/de/xml/fedlex-data-admin-ch-eli-cc-1983-38_38_38-20260101-de-xml.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "UWG": {
       "eli": "cc/1988/223_223_223",
@@ -6285,8 +6158,7 @@
           "sha": "e19f38c30775f808bdb43a7225fb982e6ceb83d31749009c1f818f9759360489",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1988/223_223_223/20250101/de/xml/fedlex-data-admin-ch-eli-cc-1988-223_223_223-20250101-de-xml-5.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "VAG": {
       "eli": "cc/2005/734",
@@ -6311,14 +6183,13 @@
           "sha": "6c7238fb44d0e8a2fd6a2b15700d842859b2edb6bcfa8526cd7573a42f50e29f",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2005/734/20240901/de/xml/fedlex-data-admin-ch-eli-cc-2005-734-20240901-de-xml-6.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "VAM": {
       "eli": "cc/2018/588",
       "abgerufen": "2026-09-12",
-      "shardSha": "ede90b7d64094e982376d900e0f0c256ed9fc741223f36f2bca6bcb22c2ccf14",
-      "bytes": 15711,
+      "shardSha": "11ca766141a9aa90f9459c51278384123b297f10b945f00e420d055dc70aedbd",
+      "bytes": 15707,
       "schritte": 11,
       "altBloecke": 12,
       "staende": [
@@ -6382,14 +6253,13 @@
           "sha": "6c88f4076e2baffc6e4a2916aee2c48ce29f82fedcd365424a0a9c06761108fa",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2018/588/20260101/de/xml/fedlex-data-admin-ch-eli-cc-2018-588-20260101-de-xml.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "VEV": {
       "eli": "cc/2018/493",
       "abgerufen": "2026-09-12",
-      "shardSha": "a30e1fa725d739bec44e9000e2e90b41a2014e15ea9d1691e8794f237b5f570c",
-      "bytes": 131975,
+      "shardSha": "ef705e417cb06568fb3f81040aca54a39116a3e83d4f758d2e24e2a555a9f443",
+      "bytes": 131889,
       "schritte": 23,
       "altBloecke": 63,
       "staende": [
@@ -6514,7 +6384,7 @@
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2018/493/20260612/de/xml/fedlex-data-admin-ch-eli-cc-2018-493-20260612-de-xml-1.xml"
         }
       ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      "parserAenderung": "Profil entstehung-norm/4, Auflage A5 (Neupruefung PR #798): Absatz-Etikett nur aus dem <num> VOR dem Inhalt und im Vergleich genau einmal je Absatz; Satzzeichen-Regel auch fuer Aufzaehlungen ohne blockList (Regel a2)"
     },
     "VFV": {
       "eli": "cc/1961/419_429_439",
@@ -6544,14 +6414,13 @@
           "sha": "5ec57458ece19934756fdd40c6ea036ef82e2ed172b5751bd0ae2927c68a7e79",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1961/419_429_439/20250101/de/xml/fedlex-data-admin-ch-eli-cc-1961-419_429_439-20250101-de-xml-5.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "VGG": {
       "eli": "cc/2006/352",
       "abgerufen": "2026-09-12",
-      "shardSha": "2f5796bb9b8904ec74cd8fa94f06ae82de848c36ab6d175782dee5003a48b4d6",
-      "bytes": 11617,
+      "shardSha": "2980bd2308fa07d413fba78700f2af31ff22726a9f071889fd18a482aba58a96",
+      "bytes": 11563,
       "schritte": 5,
       "altBloecke": 5,
       "staende": [
@@ -6585,14 +6454,13 @@
           "sha": "48ae533810371c8fd35512b56ecbeefff5e9bb836394a582d205ecbac17731ee",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2006/352/20260612/de/xml/fedlex-data-admin-ch-eli-cc-2006-352-20260612-de-xml-2.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "VGR": {
       "eli": "cc/2008/320",
       "abgerufen": "2026-09-12",
-      "shardSha": "23cb74633077b84062ae9310d2a5198a6e5551f050a5f39ae0fa1a41d6c948be",
-      "bytes": 11076,
+      "shardSha": "ba7eb65df6eda979c5b351a3eff91205cdf4a98c328e6cde8bbff1c2f2d53174",
+      "bytes": 11054,
       "schritte": 5,
       "altBloecke": 7,
       "staende": [
@@ -6626,8 +6494,7 @@
           "sha": "d825f7b5d429073ce15c590e4f3e506619dcf85a93e0b6083d445176082fdade",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2008/320/20230601/de/xml/fedlex-data-admin-ch-eli-cc-2008-320-20230601-de-xml-3.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "VIL": {
       "eli": "cc/1994/3050_3050_3050",
@@ -6667,8 +6534,7 @@
           "sha": "44404ef8910b9453c14b4284f89427c7fd28f0275770da8bbaea7f2c243ac5a8",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1994/3050_3050_3050/20260701/de/xml/fedlex-data-admin-ch-eli-cc-1994-3050_3050_3050-20260701-de-xml.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "VINTA": {
       "eli": "cc/2018/511",
@@ -6728,8 +6594,7 @@
           "sha": "f84d456982ad377770b3d41f5e810fe73508dc60ece34b7ed3de916e8b862e11",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1990/835_835_835/20251001/de/xml/fedlex-data-admin-ch-eli-cc-1990-835_835_835-20251001-de-xml.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "VOEB": {
       "eli": "cc/2020/127",
@@ -6754,16 +6619,15 @@
           "sha": "643fe74f5a94273ac42bdfe6a5f400dbacffa1e83a6ba6782807f12df92b9c45",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2020/127/20230901/de/xml/fedlex-data-admin-ch-eli-cc-2020-127-20230901-de-xml-8.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "VRV": {
       "eli": "cc/1962/1364_1409_1420",
       "abgerufen": "2026-09-12",
-      "shardSha": "e25767573300a76e7ffd9981365166dd542265d2239a82004c160cb511714cee",
-      "bytes": 78289,
+      "shardSha": "e8e5d8c737a492fd979cb1a5de0edfb2abafea944b52183ad5ba4630de911b59",
+      "bytes": 72609,
       "schritte": 9,
-      "altBloecke": 32,
+      "altBloecke": 31,
       "staende": [
         {
           "datum": "2021-01-01",
@@ -6815,8 +6679,7 @@
           "sha": "4c7d32a29cf38ce1b456e3ee84774ec31a4dc202afd505cd47357954b5a92fd5",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1962/1364_1409_1420/20260701/de/xml/fedlex-data-admin-ch-eli-cc-1962-1364_1409_1420-20260701-de-xml-8.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "VSTG": {
       "eli": "cc/1966/371_385_384",
@@ -6856,8 +6719,7 @@
           "sha": "afdc571c7fd9783e93c1685dd0192407d1d6cd4dbff95c671de862b8c0a1a8c2",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1966/371_385_384/20250101/de/xml/fedlex-data-admin-ch-eli-cc-1966-371_385_384-20250101-de-xml-11.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "VSTRR": {
       "eli": "cc/1974/1857_1857_1857",
@@ -6882,8 +6744,8 @@
     "VSTV": {
       "eli": "cc/1966/1585_1641_1624",
       "abgerufen": "2026-09-12",
-      "shardSha": "3a9eeac4c0f7cd0579d7eff8e4d10154796d7e313e8455970830ff7cb98920f8",
-      "bytes": 75039,
+      "shardSha": "d258f73fe0b9ba9d86a47048290f94ba335152f23fb811b9871d1f5a5b2e279b",
+      "bytes": 75031,
       "schritte": 4,
       "altBloecke": 69,
       "staende": [
@@ -6912,14 +6774,13 @@
           "sha": "6c61ccdcfea3674d222a97352ec28ce83a8ef83a89751065c1d208e7df170642",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1966/1585_1641_1624/20250101/de/xml/fedlex-data-admin-ch-eli-cc-1966-1585_1641_1624-20250101-de-xml-6.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "VTS": {
       "eli": "cc/1995/4425_4425_4425",
       "abgerufen": "2026-09-12",
-      "shardSha": "c048b335cdaadbe8612f1babbf2681244464f21e21fcd3e66d1e8cf9a6a50465",
-      "bytes": 246617,
+      "shardSha": "d348ebb5da024657f01e5a04bb919ffa4322524e6f9d3f4baf2a3bcb68121876",
+      "bytes": 246576,
       "schritte": 13,
       "altBloecke": 127,
       "staende": [
@@ -6993,14 +6854,13 @@
           "sha": "a797d43cbe2055410fbcd82e0045b0b309d39d279974aa017e29b1247b2c9e4d",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1995/4425_4425_4425/20260701/de/xml/fedlex-data-admin-ch-eli-cc-1995-4425_4425_4425-20260701-de-xml.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "VVEA": {
       "eli": "cc/2015/891",
       "abgerufen": "2026-09-12",
-      "shardSha": "71ae28d7339528d1c59a000c768ff0facb7432e741946bed0f148f29fae60b0a",
-      "bytes": 43701,
+      "shardSha": "f88c219829854ad2553f49ef9416a52bbae1b7499919724dc5e10e429ae8c76a",
+      "bytes": 43654,
       "schritte": 11,
       "altBloecke": 34,
       "staende": [
@@ -7064,8 +6924,7 @@
           "sha": "f7660c3d55f96f76818a29a1daf7e6e5d9afd0a97350f83a62ceedea1f0c000b",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2015/891/20260801/de/xml/fedlex-data-admin-ch-eli-cc-2015-891-20260801-de-xml-4.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "VVG": {
       "eli": "cc/24/719_735_717",
@@ -7090,8 +6949,7 @@
           "sha": "8b98e586f17c8ddb5eb01e71e0ad5217fdc9c15b0c0b1c0decb04eeb93fa219a",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/24/719_735_717/20240101/de/xml/fedlex-data-admin-ch-eli-cc-24-719_735_717-20240101-de-xml-14.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "VVK": {
       "eli": "cc/2007/101",
@@ -7151,8 +7009,7 @@
           "sha": "c4cad31c840ab36178d4c4be962012cd9e6dc58720ed487b930dfa1c74a38530",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1959/1271_1321_1317/20260101/de/xml/fedlex-data-admin-ch-eli-cc-1959-1271_1321_1317-20260101-de-xml-1.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "VWVG": {
       "eli": "cc/1969/737_757_755",
@@ -7172,14 +7029,13 @@
           "sha": "d8cd2e21deafd15414329ef564a685b630f4d18aef5488149ef459e61018e687",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1969/737_757_755/20220701/de/xml/fedlex-data-admin-ch-eli-cc-1969-737_757_755-20220701-de-xml-15.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "VZAE": {
       "eli": "cc/2007/759",
       "abgerufen": "2026-09-12",
-      "shardSha": "c7d7bd95ec87a53cbca06d3333445fd342e37b4d44db273bc2e9cc52d00d0f39",
-      "bytes": 65788,
+      "shardSha": "35b1e57e6c3b21d4cec8a8ed680b665d0a96a78c3978330cc61ec6c0e541e0da",
+      "bytes": 65752,
       "schritte": 14,
       "altBloecke": 33,
       "staende": [
@@ -7258,8 +7114,7 @@
           "sha": "785549861cbb1313a16f2a7f073c412031e7bc84b18277b7fe7c99bfd29ff71d",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2007/759/20260612/de/xml/fedlex-data-admin-ch-eli-cc-2007-759-20260612-de-xml-2.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "VZV": {
       "eli": "cc/1976/2423_2423_2423",
@@ -7339,8 +7194,7 @@
           "sha": "f80631be3ac2a7baac9f0d08901973aa7674174cbc56bec5abf336181ddd4361",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1976/2423_2423_2423/20260101/de/xml/fedlex-data-admin-ch-eli-cc-1976-2423_2423_2423-20260101-de-xml-3.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "WAG": {
       "eli": "cc/1992/2521_2521_2521",
@@ -7365,8 +7219,7 @@
           "sha": "8a6b01902d42c936ff6f125b38f9b86b02812dba41abbb59e4250a1c9e0e1d62",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1992/2521_2521_2521/20250801/de/xml/fedlex-data-admin-ch-eli-cc-1992-2521_2521_2521-20250801-de-xml-3.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "WAV": {
       "eli": "cc/1992/2538_2538_2538",
@@ -7391,14 +7244,13 @@
           "sha": "6bd415f8fbcec7339cb9f8634f5be21575fe5bf49a8b8b6ebb6c7cdbac69474f",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1992/2538_2538_2538/20250801/de/xml/fedlex-data-admin-ch-eli-cc-1992-2538_2538_2538-20250801-de-xml-2.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "ZEMIS_V": {
       "eli": "cc/2006/303",
       "abgerufen": "2026-09-12",
-      "shardSha": "d4a1a277f6bb3bc48137d457a47fdc8076d25666cd50e2cbb4dccb041480f1a4",
-      "bytes": 108152,
+      "shardSha": "dee772537575fc02a1f9dcf1a2a46b6ce7dcb80b09da8d1b707b5382717d5466",
+      "bytes": 107483,
       "schritte": 15,
       "altBloecke": 33,
       "staende": [
@@ -7482,14 +7334,13 @@
           "sha": "6ad682b958e3a77b152aa7bc22f720c15442476c69184d23df1505dc8040544a",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2006/303/20260801/de/xml/fedlex-data-admin-ch-eli-cc-2006-303-20260801-de-xml.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "ZENTV": {
       "eli": "cc/2002/29",
       "abgerufen": "2026-09-12",
-      "shardSha": "440b727dc77e5aa69a6c95c9feb45db1c1b382101596eb15bd4defe276a8cab9",
-      "bytes": 19046,
+      "shardSha": "e7a48015953bb72daa8b723314e152782fa11c7c456260ae194e99cb41bd3506",
+      "bytes": 19034,
       "schritte": 2,
       "altBloecke": 6,
       "staende": [
@@ -7508,14 +7359,13 @@
           "sha": "30a975ed830a8d4430b8564c4539aadf08c06a41b4cc4f066c558462bef9e5b1",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2002/29/20230901/de/xml/fedlex-data-admin-ch-eli-cc-2002-29-20230901-de-xml-5.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "ZGB": {
       "eli": "cc/24/233_245_233",
       "abgerufen": "2026-09-12",
-      "shardSha": "2a24bf1fec62ec12dfc17328961d4c1c595ad8dc807254e94d9b3375148da93e",
-      "bytes": 66054,
+      "shardSha": "0dc66745f65f6df851875bfd86b296dd305aa3b2a02a2426668f16730b308f6d",
+      "bytes": 66020,
       "schritte": 9,
       "altBloecke": 54,
       "staende": [
@@ -7569,14 +7419,13 @@
           "sha": "d0fe55605574de9403685c13836afb0db4212a4b88deb458cf2fe798c45bb694",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/24/233_245_233/20260701/de/xml/fedlex-data-admin-ch-eli-cc-24-233_245_233-20260701-de-xml-2.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "ZPO": {
       "eli": "cc/2010/262",
       "abgerufen": "2026-09-12",
-      "shardSha": "aaf4cd57bb66cb0bda3e8a41cd6fa4ed5739ddeb59d441d21adc5a7b33489bc8",
-      "bytes": 89783,
+      "shardSha": "9c7af27620ef8dd43db2f81df45bdf88fe3e3d31209671e51a2472f1b72a450c",
+      "bytes": 89458,
       "schritte": 6,
       "altBloecke": 88,
       "staende": [
@@ -7615,14 +7464,13 @@
           "sha": "a942f0f285dce56d7454434eb3ed8dba467dc92375da6c9ad25740faf341b354",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2010/262/20260701/de/xml/fedlex-data-admin-ch-eli-cc-2010-262-20260701-de-xml-1.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     },
     "ZSTV": {
       "eli": "cc/2004/362",
       "abgerufen": "2026-09-12",
-      "shardSha": "a902fea6440216164ab996d9a1cdcf83f37ce8f0cf408887a7b91ce9f5e314f5",
-      "bytes": 108352,
+      "shardSha": "b706858a1a0843d1cad47e64a881bf102c4363e1a4c68810c69fb75d21ebb1e1",
+      "bytes": 108128,
       "schritte": 8,
       "altBloecke": 82,
       "staende": [
@@ -7671,8 +7519,7 @@
           "sha": "3ec97bc76a9557173a1e1f65a3d326193017f5adf134ed0b858aca6e73a09a11",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2004/362/20250601/de/xml/fedlex-data-admin-ch-eli-cc-2004-362-20250601-de-xml-5.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798, Auflagen A1/A2/A4): zerlegeBloecke erfasst Fliesstext vor/zwischen/nach blockList; Sachueberschrift zurueck in Vergleich und Speicher; Absatz-Etikett im Vergleich nur beim Wechsel; Regel (c) gestrichen"
+      ]
     }
   }
 }
