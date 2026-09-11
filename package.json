@@ -190,6 +190,7 @@
     "perf:leser-lcp": "vite-node scripts/perf/leser-lcp.ts --",
     "materialien:anker": "vite-node scripts/entstehung/anker-run.ts --",
     "check:entstehung": "vite-node scripts/entstehung/check-entstehung.ts",
+    "gen:entstehung-projektion": "vite-node scripts/entstehung/entstehung-projektion-run.ts --",
     "entstehung:deckung": "vite-node scripts/entstehung/check-entstehung.ts -- --schreibe",
     "materialien:curia": "vite-node scripts/entstehung/curia-run.ts --"
   },

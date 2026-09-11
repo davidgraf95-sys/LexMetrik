@@ -1,0 +1,116 @@
+{
+  "erlass": "ZPO",
+  "profil": "entstehung-leser/1",
+  "abgerufen": "2026-09-05",
+  "aenderungen": {
+    "oc/2010/262": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2010/262/de",
+      "titel": "Schweizerische Zivilprozessordnung (Zivilprozessordnung, ZPO)",
+      "as": "AS 2010 1739",
+      "inkraft": "2011-01-01",
+      "botschaft": "BOTSCHAFT-2006-914"
+    },
+    "oc/2010/800": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2010/800/de",
+      "titel": "Bundesbeschluss über die Genehmigung und die Umsetzung des Übereinkommens über die gerichtliche Zuständigkeit und die Anerkennung und Vollstreckung von Entscheidungen in Zivil- und Handelssachen (Lugano-Übereinkommen)",
+      "as": "AS 2010 5601",
+      "inkraft": "2011-01-01",
+      "botschaft": "BOTSCHAFT-2009-402"
+    },
+    "oc/2013/178": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2013/178/de",
+      "titel": "Schweizerische Zivilprozessordnung und Schweizerische Strafprozessordnung (Protokollierungsvorschriften)",
+      "as": "AS 2013 851",
+      "inkraft": "2013-05-01"
+    },
+    "oc/2023/491": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2023/491/de",
+      "titel": "Schweizerische Zivilprozessordnung (Zivilprozessordnung, ZPO) (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung)",
+      "as": "AS 2023 491",
+      "inkraft": "2025-01-01",
+      "botschaft": "BOTSCHAFT-2020-653"
+    }
+  },
+  "botschaften": {
+    "BOTSCHAFT-2006-914": {
+      "titel": "Botschaft zur Schweizerischen Zivilprozessordnung (ZPO)",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2006/914/de",
+      "stand": "2006-06-28",
+      "nummer": "06.062",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2006-06-28",
+          "res": "fga/2006/914"
+        },
+        {
+          "code": 300,
+          "datum": "2008-12-19",
+          "res": "fga/2009/6"
+        },
+        {
+          "code": 400,
+          "datum": "2009-04-16"
+        }
+      ]
+    },
+    "BOTSCHAFT-2009-402": {
+      "titel": "Botschaft zum Bundesbeschluss über die Genehmigung und die Umsetzung des revidierten Übereinkommens von Lugano über die gerichtliche Zuständigkeit, die Anerkennung und die Vollstreckung gerichtlicher Entscheidungen in Zivil- und Handelssachen",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2009/402/de",
+      "stand": "2009-02-18",
+      "nummer": "09.021",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2009-02-18",
+          "res": "fga/2009/402"
+        },
+        {
+          "code": 300,
+          "datum": "2009-12-11",
+          "res": "fga/2009/1497"
+        },
+        {
+          "code": 400,
+          "datum": "2010-04-01"
+        }
+      ]
+    },
+    "BOTSCHAFT-2020-653": {
+      "titel": "Botschaft zur Änderung der Schweizerischen Zivilprozessordnung (Verbesserung der Praxistauglichkeit und der Rechtsdurchsetzung)",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2020/653/de",
+      "stand": "2020-02-26",
+      "nummer": "20.026",
+      "ereignisse": [
+        {
+          "code": 8,
+          "datum": "2018-03-13",
+          "res": "fga/2018/471"
+        },
+        {
+          "code": 2,
+          "datum": "2020-02-26",
+          "res": "fga/2020/654"
+        },
+        {
+          "code": 200,
+          "datum": "2020-02-26",
+          "res": "fga/2020/653"
+        },
+        {
+          "code": 300,
+          "datum": "2023-03-17",
+          "res": "fga/2023/786"
+        },
+        {
+          "code": 400,
+          "datum": "2023-07-06"
+        },
+        {
+          "code": 1,
+          "res": "dl/proj/6018/18/cons_1"
+        }
+      ]
+    }
+  }
+}

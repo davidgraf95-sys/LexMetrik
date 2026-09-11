@@ -1,0 +1,44 @@
+{
+  "erlass": "STHG",
+  "profil": "entstehung-leser/1",
+  "abgerufen": "2026-09-05",
+  "aenderungen": {
+    "oc/2015/186": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2015/186/de",
+      "titel": "Bundesgesetz über die steuerliche Behandlung der berufsorientierten Aus- und Weiterbildungskosten",
+      "as": "AS 2015 993",
+      "inkraft": "2016-01-01"
+    },
+    "oc/2017/547": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2017/547/de",
+      "titel": "Bundesgesetz über die Harmonisierung der direkten Steuern der Kantone und Gemeinden (StHG)",
+      "as": "AS 2017 5039",
+      "inkraft": "2019-01-01",
+      "botschaft": "BOTSCHAFT-2016-1165"
+    }
+  },
+  "botschaften": {
+    "BOTSCHAFT-2016-1165": {
+      "titel": "Botschaft zur zur Änderung des Bundesgesetzes über die Harmonisierung der direkten Steuern der Kantone und Gemeinden",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2016/1165/de",
+      "stand": "2016-06-17",
+      "nummer": "16.052",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2016-06-17",
+          "res": "fga/2016/1165"
+        },
+        {
+          "code": 300,
+          "datum": "2017-03-17",
+          "res": "fga/2017/473"
+        },
+        {
+          "code": 400,
+          "datum": "2017-07-06"
+        }
+      ]
+    }
+  }
+}

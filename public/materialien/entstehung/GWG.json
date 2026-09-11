@@ -1,0 +1,76 @@
+{
+  "erlass": "GWG",
+  "profil": "entstehung-leser/1",
+  "abgerufen": "2026-09-05",
+  "aenderungen": {
+    "oc/2013/648": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2013/648/de",
+      "titel": "Bundesgesetz über die Bekämpfung der Geldwäscherei und der Terrorismusfinanzierung im Finanzsektor (Geldwäschereigesetz, GwG)",
+      "as": "AS 2013 3493",
+      "inkraft": "2013-11-01",
+      "botschaft": "BOTSCHAFT-2012-1031"
+    },
+    "oc/2021/656": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2021/656/de",
+      "titel": "Bundesgesetz über die Bekämpfung der Geldwäscherei und der Terrorismusfinanzierung (Geldwäschereigesetz, GwG)",
+      "as": "AS 2021 656",
+      "inkraft": "2022-01-01",
+      "botschaft": "BOTSCHAFT-2019-1932"
+    }
+  },
+  "botschaften": {
+    "BOTSCHAFT-2012-1031": {
+      "titel": "Botschaft zur Änderung des Geldwäschereigesetzes",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2012/1031/de",
+      "stand": "2012-06-27",
+      "nummer": "12.065",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2012-06-27",
+          "res": "fga/2012/1031"
+        },
+        {
+          "code": 300,
+          "datum": "2013-06-21",
+          "res": "fga/2013/907"
+        },
+        {
+          "code": 400,
+          "datum": "2013-10-10"
+        }
+      ]
+    },
+    "BOTSCHAFT-2019-1932": {
+      "titel": "Botschaft zur Änderung des Geldwäschereigesetzes",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2019/1932/de",
+      "stand": "2019-06-26",
+      "nummer": "19.044",
+      "ereignisse": [
+        {
+          "code": 8,
+          "datum": "2018-06-12",
+          "res": "fga/2018/1210"
+        },
+        {
+          "code": 200,
+          "datum": "2019-06-26",
+          "res": "fga/2019/1932"
+        },
+        {
+          "code": 300,
+          "datum": "2021-03-19",
+          "res": "fga/2021/668"
+        },
+        {
+          "code": 400,
+          "datum": "2021-07-08"
+        },
+        {
+          "code": 1,
+          "res": "dl/proj/6018/38/cons_1"
+        }
+      ]
+    }
+  }
+}

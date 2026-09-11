@@ -1,0 +1,257 @@
+{
+  "erlass": "STG",
+  "profil": "entstehung-leser/1",
+  "abgerufen": "2026-09-05",
+  "aenderungen": {
+    "oc/1999/171": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/1999/171/de",
+      "titel": "Bundesbeschluss über dringliche Massnahmen im Bereich der Umsatzabgabe",
+      "as": "AS 1999 1287",
+      "inkraft": "1999-04-01"
+    },
+    "oc/2000/541": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2000/541/de",
+      "titel": "Bundesgesetz über neue dringliche Massnahmen im Bereich der Umsatzabgabe",
+      "as": "AS 2000 2991",
+      "inkraft": "2001-01-01",
+      "botschaft": "BOTSCHAFT-2000-1253"
+    },
+    "oc/2000/62": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2000/62/de",
+      "titel": "Bundesgesetz über die Stempelabgaben (StG)",
+      "as": "AS 2000 322",
+      "inkraft": "2000-01-01",
+      "botschaft": "BOTSCHAFT-1999-1_7922_7145_6784"
+    },
+    "oc/2005/520": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2005/520/de",
+      "titel": "Bundesgesetz über die Stempelabgaben (StG)",
+      "as": "AS 2005 3577",
+      "inkraft": "2006-01-01",
+      "botschaft": "BOTSCHAFT-2004-878"
+    },
+    "oc/2008/397": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2008/397/de",
+      "titel": "Bundesgesetz über die Verbesserung der steuerlichen Rahmenbedingungen für unternehmerische Tätigkeiten und Investitionen (Unternehmenssteuerreformgesetz II)",
+      "as": "AS 2008 2893",
+      "inkraft": "2009-01-01",
+      "botschaft": "BOTSCHAFT-2005-737"
+    },
+    "oc/2010/447": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2010/447/de",
+      "titel": "Bundesgesetz über die Stempelabgaben (StG)",
+      "as": "AS 2010 3317",
+      "inkraft": "2010-07-01"
+    },
+    "oc/2018/84": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2018/84/de",
+      "titel": "Bundesgesetz über die Stempelabgaben (StG)",
+      "as": "AS 2018 705",
+      "inkraft": "2018-03-01",
+      "botschaft": "BOTSCHAFT-2017-281"
+    },
+    "oc/2021/673": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2021/673/de",
+      "titel": "Bundesgesetz vom 18. Juni 2021 über elektronische Verfahren im Steuerbereich",
+      "as": "AS 2021 673",
+      "inkraft": "2022-01-01",
+      "botschaft": "BOTSCHAFT-2020-1111"
+    }
+  },
+  "botschaften": {
+    "BOTSCHAFT-1999-1_7922_7145_6784": {
+      "titel": "Botschaft über die Inkraftsetzung der neuen Bundesverfassung und die notwendige Anpassung der Gesetzgebung",
+      "url": "https://www.fedlex.admin.ch/eli/fga/1999/1_7922_7145_6784/de",
+      "stand": "1999-08-11",
+      "nummer": "1999.057",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "1999-08-11",
+          "res": "fga/1999/1_7922_7145_6784"
+        },
+        {
+          "code": 300,
+          "datum": "1999-10-08",
+          "res": "fga/1999/1_8664_7863_7485"
+        },
+        {
+          "code": 300,
+          "datum": "1999-10-08",
+          "res": "fga/1999/1_8678_7878_7499"
+        },
+        {
+          "code": 300,
+          "datum": "1999-10-08",
+          "res": "fga/1999/1_8680_7880_7501"
+        },
+        {
+          "code": 300,
+          "datum": "1999-10-08",
+          "res": "fga/1999/1_8683_7883_7504"
+        },
+        {
+          "code": 300,
+          "datum": "1999-10-08",
+          "res": "fga/1999/1_8711_7909_7531"
+        },
+        {
+          "code": 400,
+          "datum": "2000-02-03"
+        },
+        {
+          "code": 300,
+          "datum": "2000-06-23",
+          "res": "fga/2000/757"
+        },
+        {
+          "code": 300,
+          "datum": "2000-06-23",
+          "res": "fga/2000/758"
+        },
+        {
+          "code": 400,
+          "datum": "2000-10-12"
+        }
+      ]
+    },
+    "BOTSCHAFT-2000-1253": {
+      "titel": "Botschaft über ein Bundesgesetz über neue dringliche Massnahmen im Bereich der Umsatzabgabe",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2000/1253/de",
+      "stand": "2000-10-02",
+      "nummer": "00.076",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2000-10-02",
+          "res": "fga/2000/1253"
+        }
+      ]
+    },
+    "BOTSCHAFT-2004-878": {
+      "titel": "Botschaft zur Änderung des Bundesgesetzes über die Stempelabgaben",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2004/878/de",
+      "stand": "2004-08-18",
+      "nummer": "04.051",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2004-08-18",
+          "res": "fga/2004/878"
+        },
+        {
+          "code": 300,
+          "datum": "2005-03-18",
+          "res": "fga/2005/292"
+        },
+        {
+          "code": 400,
+          "datum": "2005-07-07"
+        }
+      ]
+    },
+    "BOTSCHAFT-2005-737": {
+      "titel": "Botschaft zum Bundesgesetz über die Verbesserung der steuerlichen Rahmenbedingungen für unternehmerische Tätigkeiten und Investitionen (Unternehmenssteuerreformgesetz II)",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2005/737/de",
+      "stand": "2005-06-22",
+      "nummer": "05.058",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2005-06-22",
+          "res": "fga/2005/737"
+        },
+        {
+          "code": 300,
+          "datum": "2006-06-23"
+        },
+        {
+          "code": 300,
+          "datum": "2006-06-23",
+          "res": "fga/2006/674"
+        },
+        {
+          "code": 400,
+          "datum": "2006-10-12"
+        },
+        {
+          "code": 300,
+          "datum": "2007-03-23",
+          "res": "fga/2007/361"
+        },
+        {
+          "code": 400,
+          "datum": "2007-07-12"
+        },
+        {
+          "code": 480,
+          "datum": "2007-08-03",
+          "res": "fga/2007/855"
+        },
+        {
+          "code": 630,
+          "datum": "2007-10-16",
+          "res": "fga/2007/1162"
+        },
+        {
+          "code": 650,
+          "datum": "2008-02-24",
+          "res": "fga/2008/613"
+        }
+      ]
+    },
+    "BOTSCHAFT-2017-281": {
+      "titel": "Botschaft zur Änderung des Bundesgesetzes über die Stempelabgaben",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2017/281/de",
+      "stand": "2017-02-15",
+      "nummer": "17.018",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2017-02-15",
+          "res": "fga/2017/281"
+        },
+        {
+          "code": 300,
+          "datum": "2017-09-29",
+          "res": "fga/2017/1778"
+        },
+        {
+          "code": 400,
+          "datum": "2018-01-18"
+        }
+      ]
+    },
+    "BOTSCHAFT-2020-1111": {
+      "titel": "Botschaft zum Bundesgesetz über elektronische Verfahren im Steuerbereich",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2020/1111/de",
+      "stand": "2020-05-20",
+      "nummer": "20.051",
+      "ereignisse": [
+        {
+          "code": 8,
+          "datum": "2019-07-02",
+          "res": "fga/2019/1607"
+        },
+        {
+          "code": 200,
+          "datum": "2020-05-20",
+          "res": "fga/2020/1111"
+        },
+        {
+          "code": 300,
+          "datum": "2021-06-18",
+          "res": "fga/2021/1499"
+        },
+        {
+          "code": 400,
+          "datum": "2021-10-07"
+        },
+        {
+          "code": 1,
+          "res": "dl/proj/6019/49/cons_1"
+        }
+      ]
+    }
+  }
+}

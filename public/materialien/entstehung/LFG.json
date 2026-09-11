@@ -1,0 +1,228 @@
+{
+  "erlass": "LFG",
+  "profil": "entstehung-leser/1",
+  "abgerufen": "2026-09-05",
+  "aenderungen": {
+    "oc/1998/2566_2566_2566": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/1998/2566_2566_2566/de",
+      "titel": "Bundesgesetz über die Luftfahrt (Luftfahrtgesetz, LFG)",
+      "as": "AS 1998 2566",
+      "inkraft": "1998-11-15"
+    },
+    "oc/2001/257": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2001/257/de",
+      "titel": "Bundesgesetz über die Luftfahrt (Luftfahrtgesetz, LFG)",
+      "as": "AS 2001 1678",
+      "inkraft": "2001-08-01"
+    },
+    "oc/2004/534": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2004/534/de",
+      "titel": "Bundesgesetz über die Luftfahrt (Luftfahrtgesetz, LFG)",
+      "as": "AS 2004 3867",
+      "inkraft": "2004-09-01",
+      "botschaft": "BOTSCHAFT-2003-998"
+    },
+    "oc/2006/305": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2006/305/de",
+      "titel": "Bundesgesetz über die Luftfahrt (Luftfahrtgesetz, LFG)",
+      "as": "AS 2006 1989",
+      "inkraft": "2006-06-01",
+      "botschaft": "BOTSCHAFT-2005-561"
+    },
+    "oc/2011/165": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2011/165/de",
+      "titel": "Bundesgesetz über die Luftfahrt (Luftfahrtgesetz, LFG)",
+      "as": "AS 2011 1119",
+      "inkraft": "2011-04-01",
+      "botschaft": "BOTSCHAFT-2009-850"
+    },
+    "oc/2017/605": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2017/605/de",
+      "titel": "Bundesgesetz über die Luftfahrt (Luftfahrtgesetz, LFG)",
+      "as": "AS 2017 5607",
+      "inkraft": "2018-01-01",
+      "botschaft": "BOTSCHAFT-2016-1536"
+    },
+    "oc/2020/295": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2020/295/de",
+      "titel": "Bundesgesetz über die Luftfahrt (Luftfahrtgesetz, LFG)",
+      "as": "AS 2020 1493",
+      "inkraft": "2020-05-07",
+      "botschaft": "BOTSCHAFT-2020-864"
+    },
+    "oc/2021/468": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2021/468/de",
+      "titel": "Bundesbeschluss vom 18. Dezember 2020 über die Genehmigung des Protokolls zur Änderung des Abkommens über strafbare und bestimmte andere an Bord von Luftfahrzeugen begangene Handlungen (Abkommen von Tokio) und über seine Umsetzung (Änderung des Luftfahrtgesetzes)",
+      "as": "AS 2021 468",
+      "inkraft": "2021-08-01",
+      "botschaft": "BOTSCHAFT-2020-1224"
+    },
+    "oc/2022/229": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2022/229/de",
+      "titel": "Bundesgesetz über die Luftfahrt (Luftfahrtgesetz, LFG)",
+      "as": "AS 2022 229",
+      "inkraft": "2022-05-01",
+      "botschaft": "BOTSCHAFT-2021-626"
+    }
+  },
+  "botschaften": {
+    "BOTSCHAFT-2003-998": {
+      "titel": "Botschaft zur Änderung des Luftfahrtgesetzes (Prüfung der Vereinbarkeit von staatlichen Beihilfen mit dem Luftverkehrsabkommen Schweiz-EG)",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2003/998/de",
+      "stand": "2003-09-10",
+      "nummer": "03.057",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2003-09-10",
+          "res": "fga/2003/998"
+        },
+        {
+          "code": 300,
+          "datum": "2004-03-19",
+          "res": "fga/2004/260"
+        },
+        {
+          "code": 400,
+          "datum": "2004-07-08"
+        }
+      ]
+    },
+    "BOTSCHAFT-2005-561": {
+      "titel": "Botschaft über die Teilnahme der Schweiz an der Europäischen Agentur für Flugsicherheit EASA (Änderung des Anhangs zum Luftverkehrsabkommen Schweiz-EG und des Luftfahrtgesetzes)",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2005/561/de",
+      "stand": "2005-05-25",
+      "nummer": "05.046",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2005-05-25",
+          "res": "fga/2005/561"
+        },
+        {
+          "code": 300,
+          "datum": "2005-12-16",
+          "res": "fga/2005/1186"
+        },
+        {
+          "code": 400,
+          "datum": "2006-04-06"
+        }
+      ]
+    },
+    "BOTSCHAFT-2009-850": {
+      "titel": "Botschaft zur Teilrevision 1 des Luftfahrtgesetzes",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2009/850/de",
+      "stand": "2009-05-20",
+      "nummer": "09.047",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2009-05-20",
+          "res": "fga/2009/850"
+        },
+        {
+          "code": 300,
+          "datum": "2010-10-01",
+          "res": "fga/2010/1157"
+        },
+        {
+          "code": 400,
+          "datum": "2011-01-20"
+        }
+      ]
+    },
+    "BOTSCHAFT-2016-1536": {
+      "titel": "Botschaft zur Teilrevision 1+ des Luftfahrtgesetzes (LFG 1+)",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2016/1536/de",
+      "stand": "2016-08-31",
+      "nummer": "16.062",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2016-08-31",
+          "res": "fga/2016/1536"
+        },
+        {
+          "code": 300,
+          "datum": "2017-06-16",
+          "res": "fga/2017/1069"
+        },
+        {
+          "code": 400,
+          "datum": "2017-10-05"
+        }
+      ]
+    },
+    "BOTSCHAFT-2020-1224": {
+      "titel": "Botschaft zur Genehmigung und Umsetzung des Protokolls zur Änderung des Abkommens über strafbare und bestimmte andere an Bord von Luftfahrzeugen begangene Handlungen (Änderung des Luftfahrtgesetzes)",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2020/1224/de",
+      "stand": "2020-05-27",
+      "nummer": "20.054",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2020-05-27",
+          "res": "fga/2020/1224"
+        },
+        {
+          "code": 300,
+          "datum": "2020-12-18",
+          "res": "fga/2020/2701"
+        },
+        {
+          "code": 400,
+          "datum": "2021-04-10"
+        }
+      ]
+    },
+    "BOTSCHAFT-2020-864": {
+      "titel": "Botschaft zu einer dringlichen Änderung des Luftfahrtgesetzes angesichts der COVID-19-Krise",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2020/864/de",
+      "stand": "2020-04-29",
+      "nummer": "20.039",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2020-04-29",
+          "res": "fga/2020/864"
+        },
+        {
+          "code": 400,
+          "datum": "2020-09-11"
+        }
+      ]
+    },
+    "BOTSCHAFT-2021-626": {
+      "titel": "Botschaft zur Änderung des Luftfahrtgesetzes",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2021/626/de",
+      "stand": "2021-03-05",
+      "nummer": "21.022",
+      "ereignisse": [
+        {
+          "code": 8,
+          "datum": "2020-06-16",
+          "res": "fga/2020/1172"
+        },
+        {
+          "code": 200,
+          "datum": "2021-03-05",
+          "res": "fga/2021/626"
+        },
+        {
+          "code": 300,
+          "datum": "2021-12-17",
+          "res": "fga/2021/3005"
+        },
+        {
+          "code": 400,
+          "datum": "2022-04-07"
+        },
+        {
+          "code": 1,
+          "res": "dl/proj/6020/31/cons_1"
+        }
+      ]
+    }
+  }
+}

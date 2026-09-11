@@ -32,6 +32,11 @@ import {
   VERBOTENE_FELDER, CURIA_QUELLENANGABE, AUSZAEHLUNG_HINWEIS, DECISION_CODES,
   serialisiereShard, shaShard, leeresAggregat, type CuriaShard,
 } from './curia.ts';
+import {
+  baueProjektion, serialisiereProjektion, PROJEKTION_DIR,
+  type BotschaftQuelle, type HistorieQuelle, type RevisionsQuelle,
+} from './entstehung-projektion.ts';
+import { BOTSCHAFTEN } from '../../src/lib/materialien/botschaften.generated.ts';
 
 const schreibe = process.argv.includes('--schreibe');
 const datumArg = process.argv.find((a) => a.startsWith('--datum='));
@@ -58,7 +63,17 @@ const DECKEL: readonly (readonly [string, string, number, boolean])[] = [
   // browser-erreichbare Kanal der Verfahrensketten und wuchs durch E1 um 5 % gzip.
   // Ohne Deckel wächst er unbemerkt weiter; check:perf-budget führt ihn nicht.
   ['Materialien-Register  ', 'public/materialien/register.json', 400 * 1024, true],
+  // E3 (§11.6): die Entstehungs-Projektion ist der Ladekanal der Karte am Artikel —
+  // sie existiert nur, WEIL das Register als Kanal zu schwer ist. Ohne eigenen Deckel
+  // könnte sie unbemerkt dorthin zurückwachsen (Ist 11.9.2026: 692 KB über 185 Erlasse,
+  // ø 3,7 KB; grösste Datei AIG 43,6 KB — je Datei bewacht die Zeile darunter).
+  ['Entstehungs-Projektion', PROJEKTION_DIR, 1536 * 1024, false],
 ];
+
+/** §15/§11.6 · Deckel JE ERLASS für die Projektion: die Karte lädt genau EINE
+ *  dieser Dateien je Klick, und die Summe verdeckt einen Ausreisser (Kritik A7 —
+ *  dieselbe Denkart wie bei der Deckung: Korpus-Summe ist keine Diagnose). */
+const PROJEKTION_DECKEL_DATEI = 96 * 1024;
 
 function groesse(pfad: string, gzip: boolean): number | null {
   if (!existsSync(pfad)) return null;
@@ -262,6 +277,70 @@ for (const [name, pfad, max, gzip] of DECKEL) {
     + `(${summe ? ((treffer / summe) * 100).toFixed(1) : '0.0'} % gesamt; Spanne ${min ? `${min.erlass} ${(min.quote * 100).toFixed(1)} %` : '—'} … `
     + `${max ? `${max.erlass} ${(max.quote * 100).toFixed(1)} %` : '—'}; ${gesunken} gesunken).`,
   );
+}
+
+// ── (6) Entstehungs-Projektion: je-Erlass-Deckel + Determinismus (E3) ──────────
+// Die Projektion ist eine SICHT auf Bestehendes (Historie-Shard, Revisions-Sidecar,
+// Botschaften-Quelle). Sie darf deshalb niemals etwas anderes sagen als ihre Quellen —
+// dieselbe Zusicherung wie bei den Anker-Sidecars (§11.6 (5)), nur offline vollständig
+// nachrechenbar: das Tor baut die Datei neu und vergleicht Byte für Byte.
+{
+  const HIST = 'public/normtext/historie';
+  const REV = 'public/normtext/revisionen';
+  if (!existsSync(PROJEKTION_DIR)) {
+    zeilen.push('check:entstehung — Projektion: keine Dateien (Etappe E3 noch nicht gelaufen).');
+  } else {
+    const botschaften = new Map<string, BotschaftQuelle>();
+    for (const b of BOTSCHAFTEN) {
+      if (b.doktyp !== 'botschaft') continue;
+      botschaften.set(b.key, {
+        key: b.key, titel: b.titel, nummer: b.nummer, quelleUrl: b.quelleUrl,
+        stand: b.stand, ereignisse: b.ereignisse,
+      });
+    }
+    const ankerKeys = new Set<string>(
+      existsSync(ANKER_DIR)
+        ? readdirSync(ANKER_DIR).filter((f) => f.endsWith('.json')).map((f) => f.slice(0, -5))
+        : [],
+    );
+    const dateien = readdirSync(PROJEKTION_DIR).filter((f) => f.endsWith('.json')).sort();
+    let groesste = 0;
+    let groessteDatei = '\u2014';
+    let abweichend = 0;
+    for (const datei of dateien) {
+      const ziel = join(PROJEKTION_DIR, datei);
+      const ist = statSync(ziel).size;
+      if (ist > groesste) { groesste = ist; groessteDatei = datei; }
+      if (ist > PROJEKTION_DECKEL_DATEI) {
+        fehler.push(`Projektion zu gross: ${ziel} ${kb(ist)} > ${kb(PROJEKTION_DECKEL_DATEI)} je Erlass (§15).`);
+      }
+      const erlass = decodeURIComponent(datei.slice(0, -5));
+      const histPfad = join(HIST, datei);
+      if (!existsSync(histPfad)) {
+        fehler.push(`Projektion ohne Quelle: ${ziel} — kein Historie-Shard ${histPfad} (§8).`);
+        continue;
+      }
+      const historie = JSON.parse(readFileSync(histPfad, 'utf8')) as HistorieQuelle;
+      const revPfad = join(REV, datei);
+      const revisionen = existsSync(revPfad)
+        ? JSON.parse(readFileSync(revPfad, 'utf8')) as RevisionsQuelle
+        : null;
+      const neuGebaut = baueProjektion(erlass, historie, revisionen, botschaften, ankerKeys);
+      const soll = neuGebaut ? serialisiereProjektion(neuGebaut) : null;
+      if (soll !== readFileSync(ziel, 'utf8')) abweichend += 1;
+    }
+    if (abweichend > 0) {
+      fehler.push(
+        `${abweichend} Projektions-Datei(en) decken sich nicht mit der Neuberechnung aus ihren Quellen — `
+        + 'entweder von Hand geändert oder die Quelle bewegte sich ohne Generator-Lauf. '
+        + '«npm run gen:entstehung-projektion» ausführen und den Diff prüfen (§2/§5).',
+      );
+    }
+    zeilen.push(
+      `check:entstehung — Projektion: ${dateien.length} Erlasse, grösste ${groessteDatei} ${kb(groesste)} `
+      + `/ ${kb(PROJEKTION_DECKEL_DATEI)} je Erlass; ${abweichend} Abweichung(en) zur Neuberechnung.`,
+    );
+  }
 }
 
 for (const z of zeilen) console.log(z);

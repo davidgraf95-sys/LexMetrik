@@ -1,0 +1,82 @@
+{
+  "erlass": "BEWG",
+  "profil": "entstehung-leser/1",
+  "abgerufen": "2026-09-05",
+  "aenderungen": {
+    "oc/2002/325": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2002/325/de",
+      "titel": "Bundesgesetz über den Erwerb von Grundstücken durch Personen im Ausland (BewG)",
+      "as": "AS 2002 2467",
+      "inkraft": "2002-09-01"
+    },
+    "oc/2005/204": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2005/204/de",
+      "titel": "Bundesgesetz über den Erwerb von Grundstücken durch Personen im Ausland (BewG)",
+      "as": "AS 2005 1337",
+      "inkraft": "2005-04-01",
+      "botschaft": "BOTSCHAFT-2003-674"
+    },
+    "oc/2021/85": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2021/85/de",
+      "titel": "Bundesbeschluss vom 25. September 2020 über die Genehmigung und die Umsetzung des Abkommens zwischen der Schweiz und dem Vereinigten Königreich über die Rechte der Bürgerinnen und Bürger infolge des Austritts des Vereinigten Königreichs aus der Europäischen Union und des Wegfalls des Freizügigkeitsabkommens",
+      "as": "AS 2021 85",
+      "inkraft": "2021-03-01",
+      "botschaft": "BOTSCHAFT-2020-226"
+    }
+  },
+  "botschaften": {
+    "BOTSCHAFT-2003-674": {
+      "titel": "Botschaft zu einer Änderung des Bundesgesetzes über den Erwerb von Grundstücken durch Personen im Ausland",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2003/674/de",
+      "stand": "2003-05-28",
+      "nummer": "03.039",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2003-05-28",
+          "res": "fga/2003/674"
+        },
+        {
+          "code": 300,
+          "datum": "2004-10-08",
+          "res": "fga/2004/992"
+        },
+        {
+          "code": 400,
+          "datum": "2005-01-27"
+        }
+      ]
+    },
+    "BOTSCHAFT-2020-226": {
+      "titel": "Botschaft zur Genehmigung und Umsetzung des Abkommens zwischen der Schweizerischen Eidgenossenschaft und dem Vereinigten Königreich von Grossbritannien und Nordirland über die Rechte der Bürgerinnen und Bürger infolge des Austritts des Vereinigten Königreichs aus der Europäischen Union und des Wegfalls des Freizügigkeitsabkommens",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2020/226/de",
+      "stand": "2019-12-06",
+      "nummer": "19.069",
+      "ereignisse": [
+        {
+          "code": 8,
+          "datum": "2019-04-02",
+          "res": "fga/2019/739"
+        },
+        {
+          "code": 200,
+          "datum": "2019-12-06",
+          "res": "fga/2020/226"
+        },
+        {
+          "code": 300,
+          "datum": "2020-09-25",
+          "res": "fga/2020/2017"
+        },
+        {
+          "code": 400,
+          "datum": "2021-01-14"
+        },
+        {
+          "code": 1,
+          "res": "dl/proj/6019/16/cons_1"
+        }
+      ]
+    }
+  }
+}

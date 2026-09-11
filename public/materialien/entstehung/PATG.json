@@ -1,0 +1,146 @@
+{
+  "erlass": "PATG",
+  "profil": "entstehung-leser/1",
+  "abgerufen": "2026-09-05",
+  "aenderungen": {
+    "oc/1999/193": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/1999/193/de",
+      "titel": "Bundesgesetz über die Erfindungspatente (Patentgesetz, PatG)",
+      "as": "AS 1999 1363",
+      "inkraft": "1999-05-01"
+    },
+    "oc/2007/848": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2007/848/de",
+      "titel": "Bundesbeschluss über die Genehmigung der Akte zur Revision des Europäischen Patentübereinkommens und über die Änderung des Patentgesetzes",
+      "as": "AS 2007 6479",
+      "inkraft": "2007-12-13",
+      "botschaft": "BOTSCHAFT-2005-556"
+    },
+    "oc/2008/251": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2008/251/de",
+      "titel": "Bundesbeschluss über die Genehmigung des Übereinkommens über die Anwendung des Artikels 65 des Europäischen Patentübereinkommens und über die Änderung des Patentgesetzes",
+      "as": "AS 2008 1739",
+      "inkraft": "2008-05-01",
+      "botschaft": "BOTSCHAFT-2005-556"
+    },
+    "oc/2008/366": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2008/366/de",
+      "titel": "Bundesgesetz über die Erfindungspatente (Patentgesetz, PatG)",
+      "as": "AS 2008 2551",
+      "inkraft": "2008-07-01",
+      "botschaft": "BOTSCHAFT-2006-1"
+    },
+    "oc/2008/374": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2008/374/de",
+      "titel": "Bundesbeschluss über die Genehmigung des Patentrechtsvertrags und der Ausführungsordnung",
+      "as": "AS 2008 2677",
+      "inkraft": "2008-07-01",
+      "botschaft": "BOTSCHAFT-2006-1"
+    },
+    "oc/2009/349": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2009/349/de",
+      "titel": "Bundesgesetz über die Erfindungspatente (Patentgesetz, PatG)",
+      "as": "AS 2009 2615",
+      "inkraft": "2009-07-01",
+      "botschaft": "BOTSCHAFT-2008-109"
+    }
+  },
+  "botschaften": {
+    "BOTSCHAFT-2005-556": {
+      "titel": "Botschaft über die Genehmigung von zwei Abkommen betreffend das europäische Patentsystem und über die Änderung des Patentgesetzes",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2005/556/de",
+      "stand": "2005-05-18",
+      "nummer": "05.040",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2005-05-18",
+          "res": "fga/2005/556"
+        },
+        {
+          "code": 300,
+          "datum": "2005-12-16",
+          "res": "fga/2005/1190"
+        },
+        {
+          "code": 300,
+          "datum": "2005-12-16",
+          "res": "fga/2005/1191"
+        },
+        {
+          "code": 400,
+          "datum": "2006-04-06"
+        }
+      ]
+    },
+    "BOTSCHAFT-2006-1": {
+      "titel": "Botschaft zur Änderung des Patentgesetzes und zum Bundesbeschluss über die Genehmigung des Patentrechtsvertrags und der Ausführungsordnung",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2006/1/de",
+      "stand": "2005-11-23",
+      "nummer": "04.054",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2004-08-18",
+          "res": "fga/2004/882"
+        },
+        {
+          "code": 300,
+          "datum": "2005-06-17",
+          "res": "fga/2005/591"
+        },
+        {
+          "code": 630,
+          "datum": "2005-09-21",
+          "res": "fga/2005/924"
+        },
+        {
+          "code": 200,
+          "datum": "2005-11-23",
+          "res": "fga/2006/1"
+        },
+        {
+          "code": 650,
+          "datum": "2005-11-27",
+          "res": "fga/2006/1"
+        },
+        {
+          "code": 300,
+          "datum": "2007-06-22",
+          "res": "fga/2007/659"
+        },
+        {
+          "code": 300,
+          "datum": "2007-06-22",
+          "res": "fga/2007/665"
+        },
+        {
+          "code": 400,
+          "datum": "2007-10-11"
+        }
+      ]
+    },
+    "BOTSCHAFT-2008-109": {
+      "titel": "Botschaft zur Änderung des Patentgesetzes (Systementscheid bei der Erschöpfung im Patentrecht)",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2008/109/de",
+      "stand": "2007-12-21",
+      "nummer": "08.010",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2007-12-21",
+          "res": "fga/2008/109"
+        },
+        {
+          "code": 300,
+          "datum": "2008-12-19",
+          "res": "fga/2009/8"
+        },
+        {
+          "code": 400,
+          "datum": "2009-04-16"
+        }
+      ]
+    }
+  }
+}

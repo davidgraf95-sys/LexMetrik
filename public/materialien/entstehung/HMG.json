@@ -1,0 +1,108 @@
+{
+  "erlass": "HMG",
+  "profil": "entstehung-leser/1",
+  "abgerufen": "2026-09-05",
+  "aenderungen": {
+    "oc/2008/682": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2008/682/de",
+      "titel": "Bundesgesetz über Arzneimittel und Medizinprodukte (Heilmittelgesetz, HMG)",
+      "as": "AS 2008 4873",
+      "inkraft": "2009-01-01",
+      "botschaft": "BOTSCHAFT-2007-384"
+    },
+    "oc/2013/761": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2013/761/de",
+      "titel": "Bundesgesetz über Arzneimittel und Medizinprodukte (Heilmittelgesetz, HMG)",
+      "as": "AS 2013 4137",
+      "inkraft": "2014-01-01"
+    },
+    "oc/2017/280": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2017/280/de",
+      "titel": "Bundesgesetz über Arzneimittel und Medizinprodukte (Heilmittelgesetz, HMG)",
+      "as": "AS 2017 2745",
+      "inkraft": "2018-01-01",
+      "botschaft": "BOTSCHAFT-2013-1"
+    },
+    "oc/2020/550": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2020/550/de",
+      "titel": "Bundesgesetz über Arzneimittel und Medizinprodukte (Heilmittelgesetz, HMG)",
+      "as": "AS 2020 2961",
+      "inkraft": "2020-08-01",
+      "botschaft": "BOTSCHAFT-2019-1"
+    },
+    "oc/2024/534": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2024/534/de",
+      "titel": "Bundesgesetz über Arzneimittel und Medizinprodukte (Heilmittelgesetz, HMG) (Anpassungen der Bestimmungen zur Blutspende)",
+      "as": "AS 2024 534",
+      "inkraft": "2025-01-01"
+    }
+  },
+  "botschaften": {
+    "BOTSCHAFT-2007-384": {
+      "titel": "Botschaft zur Änderung des Heilmittelgesetzes (Spitalpräparate)",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2007/384/de",
+      "stand": "2007-02-28",
+      "nummer": "07.030",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2007-02-28",
+          "res": "fga/2007/384"
+        },
+        {
+          "code": 300,
+          "datum": "2008-06-13",
+          "res": "fga/2008/937"
+        },
+        {
+          "code": 400,
+          "datum": "2008-10-02"
+        }
+      ]
+    },
+    "BOTSCHAFT-2013-1": {
+      "titel": "Botschaft zur Änderung des Heilmittelgesetzes",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2013/1/de",
+      "stand": "2012-11-07",
+      "nummer": "12.080",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2012-11-07",
+          "res": "fga/2013/1"
+        },
+        {
+          "code": 300,
+          "datum": "2016-03-18",
+          "res": "fga/2016/426"
+        },
+        {
+          "code": 400,
+          "datum": "2016-07-07"
+        }
+      ]
+    },
+    "BOTSCHAFT-2019-1": {
+      "titel": "Botschaft zur Änderung des Heilmittelgesetzes (neue Medizinprodukte-Regulierung)",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2019/1/de",
+      "stand": "2018-11-30",
+      "nummer": "18.081",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2018-11-30",
+          "res": "fga/2019/1"
+        },
+        {
+          "code": 300,
+          "datum": "2019-03-22",
+          "res": "fga/2019/728"
+        },
+        {
+          "code": 400,
+          "datum": "2019-07-11"
+        }
+      ]
+    }
+  }
+}

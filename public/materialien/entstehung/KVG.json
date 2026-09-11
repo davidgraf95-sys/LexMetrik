@@ -1,0 +1,731 @@
+{
+  "erlass": "KVG",
+  "profil": "entstehung-leser/1",
+  "abgerufen": "2026-09-05",
+  "aenderungen": {
+    "oc/1999/319": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/1999/319/de",
+      "titel": "Bundesgesetz über die Krankenversicherung (KVG)",
+      "as": "AS 1999 2041",
+      "inkraft": "1999-07-01"
+    },
+    "oc/2000/365": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2000/365/de",
+      "titel": "Bundesgesetz über die Krankenversicherung (KVG)",
+      "as": "AS 2000 2305",
+      "inkraft": "2000-10-01"
+    },
+    "oc/2000/463": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2000/463/de",
+      "titel": "Bundesgesetz über die Krankenversicherung (KVG)",
+      "as": "AS 2000 2755",
+      "inkraft": "2001-01-01",
+      "botschaft": "BOTSCHAFT-2000-99"
+    },
+    "oc/2002/151": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2002/151/de",
+      "titel": "Bundesgesetz über die Krankenversicherung (KVG)",
+      "as": "AS 2002 858",
+      "inkraft": "2002-06-01",
+      "botschaft": "BOTSCHAFT-2000-875"
+    },
+    "oc/2005/139": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2005/139/de",
+      "titel": "Bundesgesetz über die Krankenversicherung (KVG) (Gesamtstrategie und Risikoausgleich)",
+      "as": "AS 2005 1071",
+      "inkraft": "2005-01-01",
+      "botschaft": "BOTSCHAFT-2004-706"
+    },
+    "oc/2005/523": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2005/523/de",
+      "titel": "Bundesgesetz über die Krankenversicherung (KVG) (Prämienverbilligung)",
+      "as": "AS 2005 3587",
+      "inkraft": "2006-01-01",
+      "botschaft": "BOTSCHAFT-2004-711"
+    },
+    "oc/2006/743": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2006/743/de",
+      "titel": "Bundesgesetz über die Krankenversicherung (KVG)",
+      "as": "AS 2006 4823",
+      "inkraft": "2007-01-01",
+      "botschaft": "BOTSCHAFT-2002-1106"
+    },
+    "oc/2008/291": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2008/291/de",
+      "titel": "Bundesgesetz über die Krankenversicherung (KVG) (Spitalfinanzierung)",
+      "as": "AS 2008 2049",
+      "inkraft": "2009-01-01",
+      "botschaft": "BOTSCHAFT-2004-1024"
+    },
+    "oc/2009/559": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2009/559/de",
+      "titel": "Bundesgesetz über die Krankenversicherung (KVG) (Risikoausgleich)",
+      "as": "AS 2009 4755",
+      "inkraft": "2011-01-01",
+      "botschaft": "BOTSCHAFT-2004-1024"
+    },
+    "oc/2011/476": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2011/476/de",
+      "titel": "Bundesgesetz über die Krankenversicherung (KVG)",
+      "as": "AS 2011 3523",
+      "inkraft": "2012-01-01"
+    },
+    "oc/2012/472": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2012/472/de",
+      "titel": "Bundesgesetz über die Krankenversicherung (KVG)",
+      "as": "AS 2012 4085",
+      "inkraft": "2013-01-01"
+    },
+    "oc/2012/473": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2012/473/de",
+      "titel": "Bundesgesetz über die Krankenversicherung (KVG)",
+      "as": "AS 2012 4087",
+      "inkraft": "2013-01-01"
+    },
+    "oc/2014/431": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2014/431/de",
+      "titel": "Bundesgesetz über die Krankenversicherung (KVG) (Prämienkorrektur)",
+      "as": "AS 2014 2463",
+      "inkraft": "2015-01-01",
+      "botschaft": "BOTSCHAFT-2012-350"
+    },
+    "oc/2014/56": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2014/56/de",
+      "titel": "Bundesgesetz über die Krankenversicherung (KVG)",
+      "as": "AS 2014 387",
+      "inkraft": "2014-03-01"
+    },
+    "oc/2014/580": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2014/580/de",
+      "titel": "Bundesgesetz über die Krankenversicherung (KVG)",
+      "as": "AS 2014 3345",
+      "inkraft": "2017-01-01"
+    },
+    "oc/2017/748": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2017/748/de",
+      "titel": "Bundesgesetz über die Krankenversicherung (KVG) (Anpassung von Bestimmungen mit internationalem Bezug)",
+      "as": "AS 2017 6717",
+      "inkraft": "2018-01-01",
+      "botschaft": "BOTSCHAFT-2016-1"
+    },
+    "oc/2018/276": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2018/276/de",
+      "titel": "Bundesgesetz über die Krankenversicherung (KVG)",
+      "as": "AS 2018 1843",
+      "inkraft": "2019-01-01"
+    },
+    "oc/2018/457": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2018/457/de",
+      "titel": "Bundesgesetz über die Krankenversicherung (KVG)",
+      "as": "AS 2018 2989",
+      "inkraft": "2019-01-01"
+    },
+    "oc/2021/151": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2021/151/de",
+      "titel": "Bundesgesetz über die Krankenversicherung (KVG) (Stärkung von Qualität und Wirtschaftlichkeit)",
+      "as": "AS 2021 151",
+      "inkraft": "2021-04-01",
+      "botschaft": "BOTSCHAFT-2016-65"
+    },
+    "oc/2021/345": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2021/345/de",
+      "titel": "Bundesgesetz über die Krankenversicherung (KVG) (Vergütung des Pflegematerials)",
+      "as": "AS 2021 345",
+      "inkraft": "2021-10-01",
+      "botschaft": "BOTSCHAFT-2020-1157"
+    },
+    "oc/2021/413": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2021/413/de",
+      "titel": "Bundesgesetz über die Krankenversicherung (KVG) (Zulassung von Leistungserbringern)",
+      "as": "AS 2021 413",
+      "inkraft": "2021-07-01",
+      "botschaft": "BOTSCHAFT-2018-1205"
+    },
+    "oc/2021/837": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2021/837/de",
+      "titel": "Bundesgesetz über die Krankenversicherung (KVG) (Massnahmen zur Kostendämpfung – Paket 1a)",
+      "as": "AS 2021 837",
+      "inkraft": "2022-01-01",
+      "botschaft": "BOTSCHAFT-2019-2216"
+    },
+    "oc/2022/731": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2022/731/de",
+      "titel": "Bundesgesetz über die Datenweitergabe der Versicherer in der obligatorischen Krankenpflegeversicherung",
+      "as": "AS 2022 731",
+      "inkraft": "2023-01-01"
+    },
+    "oc/2023/134": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2023/134/de",
+      "titel": "Bundesgesetz über die Krankenversicherung (KVG) (Ausnahmen von der Pflicht einer dreijährigen Tätigkeit)",
+      "as": "AS 2023 134",
+      "inkraft": "2023-03-18"
+    },
+    "oc/2023/630": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2023/630/de",
+      "titel": "Bundesgesetz über die Krankenversicherung (KVG) (Massnahmen zur Kostendämpfung – Paket 1b)",
+      "as": "AS 2023 630",
+      "inkraft": "2024-01-01",
+      "botschaft": "BOTSCHAFT-2019-2216"
+    },
+    "oc/2023/678": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2023/678/de",
+      "titel": "Bundesgesetz über die Krankenversicherung (KVG) (Vollstreckung der Prämienzahlungspflicht)",
+      "as": "AS 2023 678",
+      "inkraft": "2024-01-01"
+    },
+    "oc/2024/74": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2024/74/de",
+      "titel": "Bundesbeschluss über die Genehmigung und die Umsetzung des Abkommens zur Koordinierung der sozialen Sicherheit zwischen der Schweiz und dem Vereinigten Königreich",
+      "as": "AS 2024 74",
+      "inkraft": "2024-03-01",
+      "botschaft": "BOTSCHAFT-2022-1180"
+    },
+    "oc/2025/568": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2025/568/de",
+      "titel": "Bundesgesetz über die Krankenversicherung (KVG) (Prämienverbilligung)",
+      "as": "AS 2025 568",
+      "inkraft": "2026-01-01",
+      "botschaft": "BOTSCHAFT-2021-2383"
+    },
+    "oc/2025/769": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2025/769/de",
+      "titel": "Bundesgesetz über die Krankenversicherung (KVG) (Massnahmen zur Kostendämpfung – Vorgabe von Kostenzielen)",
+      "as": "AS 2025 769",
+      "inkraft": "2026-01-01",
+      "botschaft": "BOTSCHAFT-2021-2819"
+    },
+    "oc/2026/294": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2026/294/de",
+      "titel": "Bundesgesetz über die Krankenversicherung (KVG) (Massnahmen zur Kostendämpfung – Paket 2)",
+      "as": "AS 2026 294",
+      "inkraft": "2026-07-01",
+      "botschaft": "BOTSCHAFT-2022-2427"
+    }
+  },
+  "botschaften": {
+    "BOTSCHAFT-2000-875": {
+      "titel": "Botschaft betreffend die Änderung des Bundesgesetzes über die Krankenversicherung",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2000/875/de",
+      "stand": "2000-05-31",
+      "nummer": "00.047",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2000-05-31",
+          "res": "fga/2000/875"
+        },
+        {
+          "code": 300,
+          "datum": "2000-10-06",
+          "res": "fga/2000/1091"
+        },
+        {
+          "code": 400,
+          "datum": "2001-01-25"
+        }
+      ]
+    },
+    "BOTSCHAFT-2000-99": {
+      "titel": "Botschaft über die Anpassung und Harmonisierung der gesetzlichen Grundlagen für die Bearbeitung von Personendaten in den Sozialversicherungen",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2000/99/de",
+      "stand": "1999-11-24",
+      "nummer": "1999.093",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "1999-11-24",
+          "res": "fga/2000/99"
+        },
+        {
+          "code": 300,
+          "datum": "2000-06-23",
+          "res": "fga/2000/747"
+        },
+        {
+          "code": 300,
+          "datum": "2000-06-23",
+          "res": "fga/2000/748"
+        },
+        {
+          "code": 300,
+          "datum": "2000-06-23",
+          "res": "fga/2000/749"
+        },
+        {
+          "code": 300,
+          "datum": "2000-06-23",
+          "res": "fga/2000/750"
+        },
+        {
+          "code": 300,
+          "datum": "2000-06-23",
+          "res": "fga/2000/751"
+        },
+        {
+          "code": 300,
+          "datum": "2000-06-23",
+          "res": "fga/2000/752"
+        },
+        {
+          "code": 300,
+          "datum": "2000-06-23",
+          "res": "fga/2000/753"
+        },
+        {
+          "code": 300,
+          "datum": "2000-06-23",
+          "res": "fga/2000/754"
+        },
+        {
+          "code": 300,
+          "datum": "2000-06-23",
+          "res": "fga/2000/755"
+        },
+        {
+          "code": 300,
+          "datum": "2000-06-23",
+          "res": "fga/2000/762"
+        },
+        {
+          "code": 400,
+          "datum": "2000-10-12"
+        }
+      ]
+    },
+    "BOTSCHAFT-2002-1106": {
+      "titel": "Botschaft zur Änderung des Asylgesetzes zur Änderung des Bundesgesetzes über die Krankenversicherung sowie zur Änderung des Bundesgesetzes über die Alters- und Hinterlassenenversicherung",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2002/1106/de",
+      "stand": "2002-09-04",
+      "nummer": "02.060",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2002-09-04",
+          "res": "fga/2002/1106"
+        },
+        {
+          "code": 300,
+          "datum": "2005-12-16",
+          "res": "fga/2005/1179"
+        },
+        {
+          "code": 300,
+          "datum": "2005-12-16",
+          "res": "fga/2005/1180"
+        },
+        {
+          "code": 300,
+          "datum": "2005-12-16",
+          "res": "fga/2005/1181"
+        },
+        {
+          "code": 400,
+          "datum": "2006-04-06"
+        },
+        {
+          "code": 480,
+          "datum": "2006-04-27",
+          "res": "fga/2006/490"
+        },
+        {
+          "code": 630,
+          "datum": "2006-05-12",
+          "res": "fga/2006/554"
+        },
+        {
+          "code": 650,
+          "datum": "2006-09-24",
+          "res": "fga/2006/1232"
+        }
+      ]
+    },
+    "BOTSCHAFT-2004-1024": {
+      "titel": "Botschaft betreffend die Änderung des Bundesgesetzes über die Krankenversicherung (Spitalfinanzierung)",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2004/1024/de",
+      "stand": "2004-09-15",
+      "nummer": "04.061",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2004-09-15",
+          "res": "fga/2004/1024"
+        },
+        {
+          "code": 300,
+          "datum": "2007-12-21",
+          "res": "fga/2007/4"
+        },
+        {
+          "code": 300,
+          "datum": "2007-12-21",
+          "res": "fga/2008/5"
+        },
+        {
+          "code": 400,
+          "datum": "2008-04-17"
+        }
+      ]
+    },
+    "BOTSCHAFT-2004-706": {
+      "titel": "Botschaft betreffend die Teilrevision des Bundesgesetzes über die Krankenversicherung (Strategie und dringliche Punkte)",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2004/706/de",
+      "stand": "2004-05-26",
+      "nummer": "04.031",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2004-05-26",
+          "res": "fga/2004/706"
+        },
+        {
+          "code": 300,
+          "datum": "2004-10-08",
+          "res": "fga/2004/990"
+        },
+        {
+          "code": 400,
+          "datum": "2005-01-27"
+        }
+      ]
+    },
+    "BOTSCHAFT-2004-711": {
+      "titel": "Botschaft betreffend die Teilrevision des Bundesgesetzes über die Krankenversicherung (Prämienverbilligung) und den Bundesbeschluss über die Bundesbeiträge in der Krankenversicherung",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2004/711/de",
+      "stand": "2004-05-26",
+      "nummer": "04.033",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2004-05-26",
+          "res": "fga/2004/711"
+        },
+        {
+          "code": 300,
+          "datum": "2005-03-18",
+          "res": "fga/2005/289"
+        },
+        {
+          "code": 400,
+          "datum": "2005-07-07"
+        }
+      ]
+    },
+    "BOTSCHAFT-2012-350": {
+      "titel": "Botschaft zur Änderung des Bundesgesetzes über die Krankenversicherung (Korrektur der zwischen 1996 und 2011 bezahlten Prämien)",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2012/350/de",
+      "stand": "2012-02-15",
+      "nummer": "12.026",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2012-02-15",
+          "res": "fga/2012/350"
+        },
+        {
+          "code": 300,
+          "datum": "2014-03-21",
+          "res": "fga/2014/505"
+        },
+        {
+          "code": 400,
+          "datum": "2014-07-10"
+        }
+      ]
+    },
+    "BOTSCHAFT-2016-1": {
+      "titel": "Botschaft zur Änderung des Bundesgesetzes über die Krankenversicherung. (Anpassung von Bestimmungen mit internationalem Bezug)",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2016/1/de",
+      "stand": "2015-11-18",
+      "nummer": "15.078",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2015-11-18",
+          "res": "fga/2016/1"
+        },
+        {
+          "code": 300,
+          "datum": "2016-09-30",
+          "res": "fga/2016/1631"
+        },
+        {
+          "code": 400,
+          "datum": "2017-01-19"
+        }
+      ]
+    },
+    "BOTSCHAFT-2016-65": {
+      "titel": "Botschaft zur Änderung des Bundesgesetzes über die Krankenversicherung (Stärkung von Qualität und Wirtschaftlichkeit)",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2016/65/de",
+      "stand": "2015-12-04",
+      "nummer": "15.083",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2015-12-04",
+          "res": "fga/2016/65"
+        },
+        {
+          "code": 300,
+          "datum": "2019-06-21",
+          "res": "fga/2019/1584"
+        },
+        {
+          "code": 400,
+          "datum": "2019-10-10"
+        }
+      ]
+    },
+    "BOTSCHAFT-2018-1205": {
+      "titel": "Botschaft zur Änderung des Bundesgesetzes über die Krankenversicherung (Zulassung von Leistungserbringern)",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2018/1205/de",
+      "stand": "2018-05-09",
+      "nummer": "18.047",
+      "ereignisse": [
+        {
+          "code": 8,
+          "datum": "2017-07-11",
+          "res": "fga/2017/1197"
+        },
+        {
+          "code": 200,
+          "datum": "2018-05-09",
+          "res": "fga/2018/1205"
+        },
+        {
+          "code": 300,
+          "datum": "2020-06-19",
+          "res": "fga/2020/1298"
+        },
+        {
+          "code": 400,
+          "datum": "2020-10-08"
+        },
+        {
+          "code": 1,
+          "res": "dl/proj/6017/63/cons_1"
+        }
+      ]
+    },
+    "BOTSCHAFT-2019-2216": {
+      "titel": "Botschaft zur Änderung des Bundesgesetzes über die Krankenversicherung (Massnahmen zur Kostendämpfung  Paket 1)",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2019/2216/de",
+      "stand": "2019-08-21",
+      "nummer": "19.046",
+      "ereignisse": [
+        {
+          "code": 4,
+          "datum": "2018-09-25",
+          "res": "fga/2018/2055"
+        },
+        {
+          "code": 8,
+          "datum": "2018-09-25",
+          "res": "fga/2018/2054"
+        },
+        {
+          "code": 2,
+          "datum": "2019-08-21",
+          "res": "fga/2019/2217"
+        },
+        {
+          "code": 200,
+          "datum": "2019-08-21",
+          "res": "fga/2019/2216"
+        },
+        {
+          "code": 300,
+          "datum": "2021-06-18",
+          "res": "fga/2021/1496"
+        },
+        {
+          "code": 400,
+          "datum": "2021-10-07"
+        },
+        {
+          "code": 300,
+          "datum": "2022-09-30",
+          "res": "fga/2022/2405"
+        },
+        {
+          "code": 400,
+          "datum": "2023-01-19"
+        },
+        {
+          "code": 1,
+          "res": "dl/proj/6018/62/cons_1"
+        },
+        {
+          "code": 1,
+          "res": "dl/proj/6018/63/cons_1"
+        }
+      ]
+    },
+    "BOTSCHAFT-2020-1157": {
+      "titel": "Botschaft zur Änderung des Bundesgesetzes über die Krankenversicherung (Vergütung des Pflegematerials)",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2020/1157/de",
+      "stand": "2020-05-27",
+      "nummer": "20.046",
+      "ereignisse": [
+        {
+          "code": 8,
+          "datum": "2019-12-17",
+          "res": "fga/2019/2849"
+        },
+        {
+          "code": 200,
+          "datum": "2020-05-27",
+          "res": "fga/2020/1157"
+        },
+        {
+          "code": 300,
+          "datum": "2020-12-18",
+          "res": "fga/2020/2691"
+        },
+        {
+          "code": 400,
+          "datum": "2021-04-10"
+        },
+        {
+          "code": 1,
+          "res": "dl/proj/6019/79/cons_1"
+        }
+      ]
+    },
+    "BOTSCHAFT-2021-2383": {
+      "titel": "Botschaft zur Volksinitiative «Maximal 10 % des Einkommens für die Krankenkassenprämien (Prämien-Entlastungs-Initiative)» und zum indirekten Gegenvorschlag (Änderung des Krankenversicherungsgesetzes)",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2021/2383/de",
+      "stand": "2021-09-17",
+      "nummer": "21.063",
+      "ereignisse": [
+        {
+          "code": 4,
+          "datum": "2020-10-27",
+          "res": "fga/2020/2200"
+        },
+        {
+          "code": 2,
+          "datum": "2021-09-17",
+          "res": "fga/2021/2385"
+        },
+        {
+          "code": 200,
+          "datum": "2021-09-17",
+          "res": "fga/2021/2383"
+        },
+        {
+          "code": 300,
+          "datum": "2023-09-29",
+          "res": "fga/2024/2413"
+        },
+        {
+          "code": 400,
+          "datum": "2025-01-09"
+        },
+        {
+          "code": 1,
+          "res": "dl/proj/6020/60/cons_1"
+        }
+      ]
+    },
+    "BOTSCHAFT-2021-2819": {
+      "titel": "Botschaft zur Volksinitiative «Für tiefere Prämien – Kostenbremse im Gesundheitswesen (Kostenbremse-Initiative)» und zum indirekten Gegenvorschlag (Änderung des Bundesgesetzes über die Krankenversicherung)",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2021/2819/de",
+      "stand": "2021-11-10",
+      "nummer": "21.067",
+      "ereignisse": [
+        {
+          "code": 4,
+          "datum": "2020-09-01",
+          "res": "fga/2020/1773"
+        },
+        {
+          "code": 2,
+          "datum": "2021-11-10",
+          "res": "fga/2021/2821"
+        },
+        {
+          "code": 200,
+          "datum": "2021-11-10",
+          "res": "fga/2021/2819"
+        },
+        {
+          "code": 300,
+          "datum": "2023-09-29",
+          "res": "fga/2021/2821"
+        },
+        {
+          "code": 400,
+          "datum": "2025-01-09"
+        },
+        {
+          "code": 1,
+          "res": "dl/proj/6020/45/cons_1"
+        }
+      ]
+    },
+    "BOTSCHAFT-2022-1180": {
+      "titel": "Botschaft zur Genehmigung und Umsetzung des Abkommens zur Koordinierung der sozialen Sicherheit zwischen der Schweiz und dem Vereinigten Königreich",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2022/1180/de",
+      "stand": "2022-04-27",
+      "nummer": "22.032",
+      "ereignisse": [
+        {
+          "code": 2,
+          "datum": "2022-02-27",
+          "res": "fga/2022/1181"
+        },
+        {
+          "code": 200,
+          "datum": "2022-02-27",
+          "res": "fga/2022/1180"
+        },
+        {
+          "code": 300,
+          "datum": "2022-12-16",
+          "res": "fga/2022/3211"
+        },
+        {
+          "code": 400,
+          "datum": "2023-04-08"
+        }
+      ]
+    },
+    "BOTSCHAFT-2022-2427": {
+      "titel": "Botschaft zur Änderung des Bundesgesetzes über die Krankenversicherung (Massnahmen zur Kostendämpfung – Paket 2)",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2022/2427/de",
+      "stand": "2022-09-07",
+      "nummer": "22.062",
+      "ereignisse": [
+        {
+          "code": 4,
+          "datum": "2020-09-01",
+          "res": "fga/2020/1773"
+        },
+        {
+          "code": 2,
+          "datum": "2022-09-07",
+          "res": "fga/2022/2428"
+        },
+        {
+          "code": 200,
+          "datum": "2022-09-07",
+          "res": "fga/2022/2427"
+        },
+        {
+          "code": 300,
+          "datum": "2025-03-21",
+          "res": "fga/2025/1108"
+        },
+        {
+          "code": 400,
+          "datum": "2025-07-10"
+        },
+        {
+          "code": 1,
+          "res": "dl/proj/6020/45/cons_1"
+        }
+      ]
+    }
+  }
+}

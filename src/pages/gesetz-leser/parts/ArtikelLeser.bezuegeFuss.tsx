@@ -7,7 +7,7 @@ import { fassungsMarkeEtikett } from '../fassungsEtikett';
 import { entscheidZahl } from '../entscheidZahl';
 import { BezuegeZeile } from './BezuegeZeile';
 import { LeitfallZeile } from './ArtikelLeser.leitfaelle';
-import { ArtikelHistorieZeile } from './ArtikelHistorie';
+import { EntstehungsBlock } from '../../../components/entstehung/EntstehungsBlock';
 import type { ArtikelBezuege } from '../bezuegeLaden';
 import type { LeitfallRef } from '../../../lib/rechtsprechung/norm-index';
 import type { MaterialBezug, Werkzeug } from '../../../lib/normtext/werkzeuge';
@@ -77,7 +77,7 @@ import type { ArtikelHistorie } from '../../../lib/normtext/historie-laden';
 
 export function ArtikelBezuegeFuss({
   bezuege, bezuegeImFuss, historie, leitfaelle, materialien, verweise, werkzeuge, zaehler,
-  zitat, revision, onOeffnen, laedt, aktionen, onImBlatt,
+  zitat, revision, onOeffnen, laedt, aktionen, onImBlatt, erlassKey, artikel,
 }: {
   bezuege?: ArtikelBezuege;
   bezuegeImFuss?: ArtikelBezuege;
@@ -119,6 +119,14 @@ export function ArtikelBezuegeFuss({
    * Schritt gerade abräumt (§8).
    */
   onImBlatt?: () => void;
+  /**
+   * W2·6c-E3 · Kanonischer Erlass-Key — die Adresse der Entstehungs-Projektion
+   * (`/materialien/entstehung/<KEY>.json`). Fehlt er, zeigt die Rubrik «Fassung»
+   * die Zeitleiste wie bisher und die Karte sagt «keine Entstehung erfasst» (§8).
+   */
+  erlassKey?: string;
+  /** W2·6c-E3 · Roher Artikel-Token («16_c») für den Anker-Sprung in die Botschaft. */
+  artikel: string;
 }) {
   /** Die Zahlen der Funktionszeile — ausschliesslich aus Daten, die der Artikel
    *  ohnehin führt (§8: keine Rubrik ohne echte Zahl, keine neue Ladelogik). */
@@ -202,8 +210,15 @@ export function ArtikelBezuegeFuss({
          Gilt seit …» und darunter die Zeitleiste. Neu ist nur, dass sie ihre
          Leiste OFFEN zeigt: der Rubrik-Griff hat sie gerade aufgeklappt, ein
          zweiter Knopf darin täte dasselbe noch einmal (Herleitung an der Prop
-         `zeitleiste`). */
-      inhalt: <ArtikelHistorieZeile historie={historie} zeitleiste />,
+         `zeitleiste`).
+
+         W2·6c-E3 (11.9.2026): dieselbe Zeile steht jetzt IM `EntstehungsBlock` —
+         er rendert sie unverändert und hängt die Entstehungs-Auskunft in ihre
+         Punkte (Herleitung dort im Kopf). Kein zweiter Slot in der Textspalte
+         und kein zweiter Griff: der Rubrik-Griff, der diesen Block aufklappt,
+         ist zugleich der Auslöser des EINEN Abrufs (Auflage David 6.9.2026,
+         «nur auf Wunsch sichtbar»). */
+      inhalt: <EntstehungsBlock historie={historie} erlassKey={erlassKey} artikel={artikel} />,
     },
     {
       reg: 'r',

@@ -1,0 +1,50 @@
+{
+  "erlass": "NHG",
+  "profil": "entstehung-leser/1",
+  "abgerufen": "2026-09-05",
+  "aenderungen": {
+    "oc/2014/467": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2014/467/de",
+      "titel": "Bundesbeschluss über die Genehmigung des Protokolls von Nagoya über den Zugang zu genetischen Ressourcen und die ausgewogene und gerechte Aufteilung der sich aus ihrer Nutzung ergebenden Vorteile (Nagoya-Protokoll) und dessen Umsetzung (Bundesgesetz über den Natur- und Heimatschutz)",
+      "as": "AS 2014 2629",
+      "inkraft": "2014-09-01",
+      "botschaft": "BOTSCHAFT-2013-611"
+    },
+    "oc/2020/229": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2020/229/de",
+      "titel": "Bundesgesetz über den Natur- und Heimatschutz (NHG)",
+      "as": "AS 2020 1217",
+      "inkraft": "2020-04-01"
+    },
+    "oc/2025/429": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2025/429/de",
+      "titel": "Bundesgesetz über den Natur- und Heimatschutz (NHG)",
+      "as": "AS 2025 429",
+      "inkraft": "2025-08-01"
+    }
+  },
+  "botschaften": {
+    "BOTSCHAFT-2013-611": {
+      "titel": "Botschaft zur Genehmigung des Protokolls von Nagoya über den Zugang zu genetischen Ressourcen und die ausgewogene und gerechte Aufteilung der sich aus ihrer Nutzung ergebenden Vorteile (Nagoya-Protokoll) und dessen Umsetzung (Bundesgesetz über den Natur- und Heimatschutz)",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2013/611/de",
+      "stand": "2013-04-10",
+      "nummer": "13.034",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2013-04-10",
+          "res": "fga/2013/611"
+        },
+        {
+          "code": 300,
+          "datum": "2014-03-21",
+          "res": "fga/2014/513"
+        },
+        {
+          "code": 400,
+          "datum": "2014-07-10"
+        }
+      ]
+    }
+  }
+}

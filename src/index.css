@@ -4315,3 +4315,118 @@ html[data-fuss-aus="frmgwa"] .lc-leser .lr7-bez {
 }
 .lc-wahl-zeile:hover { border-top-color: var(--reg-w); }
 .lc-wahl-zeile-gewaehlt { box-shadow: inset 3px 0 0 var(--reg-w); border-top-color: var(--reg-w); }
+
+/* ═══ W2·6c-E3 · DIE ENTSTEHUNG AM ARTIKEL (Präfix `.lr8-entst`) ══════════════
+   Auftrag David 6.9.2026 («wie ein Gesetz zustande gekommen ist»), Auflage:
+   das Gesetz NICHT überladen. Der ganze Block lebt darum im Aufklapp-Block der
+   Rubrik «Fassung» (`.lr7-bez-block[data-reg="f"]`) — im Lesefluss ist er nicht
+   vorhanden, nicht bloss unsichtbar (die Funktionszeile rendert einen
+   zugeklappten Block gar nicht, D35-F1).
+
+   KEIN NEUES TOKEN, KEINE NEUE FARBE (§13/F0.1–F0.8): Linien statt Kästen
+   (`--rule-soft`), Radius 0, Registerfarbe der Gesetze (`--reg-g`) als Kante —
+   dieselbe, die die Rubrik «Fassung» an ihrer Marke trägt (Herleitung am Typ
+   `BezugsMarke.reg` in `parts/Funktionszeile.tsx`). Schriftstufen sind die der
+   Zeitleiste, in der die Karte steht (micro/xs).
+   Additiv am Dateiende, wie die `.lr6-`/`.ub-`-Blöcke darüber. */
+.lr8-entst { min-width: 0; }
+
+/* Der Griff «Warum?» am Punkt der Fassungsleiste. Er erbt die Anatomie der
+   Mini-Griffe (`.lc-btn-mini`: Haarlinie, `--tap-ziel` als Mindesthöhe, WCAG
+   2.5.8) und steht in der Zeile des Punktes — nicht darunter: er gehört zu
+   DIESEM Ereignis, und eine eigene Zeile machte aus einem Punkt zwei. */
+.lr8-entst-griff { margin-left: 0.25rem; vertical-align: baseline; }
+.lr8-entst-griff[aria-expanded="true"] { color: var(--ink-900); }
+.lr8-entst-griff[aria-expanded="true"] .lr7-bez-pfeil { transform: rotate(90deg); }
+
+/* Die Änderungskarte: eine eingerückte Spalte mit Kante — dieselbe Sprache wie
+   der Rubrik-Block, eine Stufe tiefer (F0.6: Trennung über Linien). */
+.lr8-entst-karte {
+  margin: 0.375rem 0 0.25rem;
+  padding-left: 0.5rem;
+  border-left: 2px solid var(--reg-g);
+  display: grid;
+  gap: 0.1875rem;
+  min-width: 0;
+}
+.lr8-entst-zeile {
+  display: grid;
+  grid-template-columns: minmax(0, 7.5rem) minmax(0, 1fr);
+  gap: 0.125rem 0.5rem;
+  align-items: baseline;
+  min-width: 0;
+}
+/* @390 bricht die Karte auf eine Spalte um — das Feldwort steht dann ÜBER
+   seinem Wert, statt ihn auf 3 Zeichen Breite zu quetschen (320-px-Messung der
+   Sonde `entstehung-karte-e3`). */
+@media (max-width: 30rem) {
+  .lr8-entst-zeile { grid-template-columns: minmax(0, 1fr); }
+}
+.lr8-entst-feld {
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-size: 0.6875rem;
+  line-height: 1.35;
+  color: var(--ink-400);
+}
+
+/* Die Verfahrenskette der Vorlage: amtliche Etiketten, chronologisch. Kein
+   eigener Rahmen — sie ist der Fuss der Begründung, nicht ein zweiter Kasten. */
+.lr8-entst-kette {
+  margin: 0.25rem 0 0;
+  padding-left: 0.625rem;
+  border-left: 1px solid var(--rule-soft);
+  display: grid;
+  gap: 0.0625rem;
+  font-size: 0.6875rem;
+  line-height: 1.35;
+  color: var(--ink-500);
+}
+.lr8-entst-mehr {
+  display: inline-flex;
+  margin-top: 0.25rem;
+  font-size: 0.6875rem;
+  color: var(--ink-500);
+}
+.lr8-entst-mehr:hover { color: var(--brass-700); }
+
+/* Provenienz-Fuss der Karte (§7 a/c: Quelle, Abrufdatum, Vorbehalt). Er steht
+   in JEDER Karte, weil jede Karte eine eigene Rechtsaussage trägt. */
+.lr8-entst-fuss {
+  margin: 0.25rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.6875rem;
+  line-height: 1.35;
+}
+/* Der Anker-Sprung ist ein LINK in Chip-Gestalt (er verlässt die Seite) — die
+   Tick-Farbe sagt «Gesetzes-Register», der Pfeil sagt «extern» (Z7-Kanon). */
+.lr8-entst-sprung { border-left-color: var(--reg-g); text-decoration: none; }
+.lr8-entst-sprung:hover { color: var(--brass-700); }
+/* Die benannte Lücke (§8): «Botschaft nicht erfasst» ist eine Auskunft über
+   unseren Bestand, kein Rechtsstatus — darum der Status-Tick `warn`, nicht
+   `danger` (B3: keine Ad-hoc-Farbe). */
+.lr8-entst-luecke { border-left-color: var(--warn-500); }
+
+/* Zustands- und Praxis-Zeile am Fuss des Blocks: sie sagen, WIE VIEL erfasst
+   ist — nie, dass es nichts gibt (§8). */
+.lr8-entst-stand,
+.lr8-entst-praxis {
+  margin: 0.5rem 0 0;
+  font-size: 0.6875rem;
+  line-height: 1.35;
+}
+.lr8-entst-praxis { margin-top: 0.125rem; }
+
+/* Rückrichtung am Material («Erläutert diese Artikel», W2·6c-E3): eine Liste
+   mit Kante, dieselbe Anatomie wie die Verfahrenskette der Karte am Artikel. */
+.lr8-entst-anker {
+  display: grid;
+  gap: 0.125rem;
+  padding-left: 0.625rem;
+  border-left: 1px solid var(--rule-soft);
+  font-size: 0.75rem;
+  line-height: 1.4;
+  color: var(--ink-600);
+}

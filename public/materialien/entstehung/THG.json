@@ -1,0 +1,72 @@
+{
+  "erlass": "THG",
+  "profil": "entstehung-leser/1",
+  "abgerufen": "2026-09-05",
+  "aenderungen": {
+    "oc/2002/155": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2002/155/de",
+      "titel": "Bundesgesetz über die technischen Handelshemmnisse (THG)",
+      "as": "AS 2002 883",
+      "inkraft": "2002-06-01",
+      "botschaft": "BOTSCHAFT-2001-845"
+    },
+    "oc/2010/349": {
+      "url": "https://www.fedlex.admin.ch/eli/oc/2010/349/de",
+      "titel": "Bundesgesetz über die technischen Handelshemmnisse (THG)",
+      "as": "AS 2010 2617",
+      "inkraft": "2010-07-01",
+      "botschaft": "BOTSCHAFT-2008-1231"
+    }
+  },
+  "botschaften": {
+    "BOTSCHAFT-2001-845": {
+      "titel": "Botschaft zur Genehmigung des Abkommens vom 21. Juni zur Änderung des Übereinkommens vom 4. Januar 1960 zur Errichtung der Europäischen Freihandelsassoziation (EFTA)",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2001/845/de",
+      "stand": "2001-09-12",
+      "nummer": "01.058",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2001-09-12",
+          "res": "fga/2001/845"
+        },
+        {
+          "code": 300,
+          "datum": "2001-12-14",
+          "res": "fga/2001/1119"
+        },
+        {
+          "code": 300,
+          "datum": "2001-12-14",
+          "res": "fga/2001/1120"
+        },
+        {
+          "code": 400,
+          "datum": "2002-04-07"
+        }
+      ]
+    },
+    "BOTSCHAFT-2008-1231": {
+      "titel": "Botschaft zur Teilrevision des Bundesgesetzes über die technischen Handelshemmnisse",
+      "url": "https://www.fedlex.admin.ch/eli/fga/2008/1231/de",
+      "stand": "2008-06-25",
+      "nummer": "08.054",
+      "ereignisse": [
+        {
+          "code": 200,
+          "datum": "2008-06-25",
+          "res": "fga/2008/1231"
+        },
+        {
+          "code": 300,
+          "datum": "2009-06-12",
+          "res": "fga/2009/785"
+        },
+        {
+          "code": 400,
+          "datum": "2009-10-01"
+        }
+      ]
+    }
+  }
+}
