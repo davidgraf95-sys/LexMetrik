@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-09-11",
+  "erzeugt": "2026-09-12",
   "materialien": [
     {
       "key": "ESTV-KS-DBG-5A",
@@ -51317,6 +51317,6283 @@
         "projEli": "https://fedlex.data.admin.ch/eli/dl/proj/2025/86"
       },
       "sha": "1e2ce2a81ec7910518c4152459be402cae2b86685d4eb94da0b94d82066be4e1"
+    },
+    {
+      "key": "BS-GR-24.1692",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag betreffend Änderung des Gesetzes über Wahlen und Abstimmungen vom 21. April 1994 (Wahlgesetz) und weiterer Erlasse",
+      "nummer": "24.1692",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=24.1692",
+      "stand": "2026-08-12",
+      "rang": 1,
+      "normKeys": [
+        "BS-132.100"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2026-08-12",
+          "res": "24.1692.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2026-09-09",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-132.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 21. April 1994"
+        }
+      ],
+      "sha": "0e013b4bf99d941ce11140a804caa9d525b1166c41eeb3acec883f019da7394a"
+    },
+    {
+      "key": "BS-GR-26.0600",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Teilrevision des Gesetzes über die direkten Steuern vom 12. April 2000 (Steuergesetz, StG) (Veranlagung mithilfe algorithmischer Systeme)",
+      "nummer": "26.0600",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=26.0600",
+      "stand": "2026-06-17",
+      "rang": 2,
+      "normKeys": [
+        "BS-640.100"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2026-06-17",
+          "res": "26.0600.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2026-09-09",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-640.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 12. April 2000"
+        }
+      ],
+      "sha": "f0c31da61a1be2efcc2106ac80747fc21bcbd9a7448ab17aecba8fff86d8d1b2"
+    },
+    {
+      "key": "BS-GR-26.0321",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Teilrevision des Gesetzes über die Wohnraumförderung vom 5. Juni 2013",
+      "nummer": "26.0321",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=26.0321",
+      "stand": "2026-04-29",
+      "rang": 3,
+      "normKeys": [
+        "BS-861.500"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2026-04-29",
+          "res": "26.0321.01 26.0331.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2026-06-03",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-861.500",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 5. Juni 2013"
+        }
+      ],
+      "sha": "597cf9b4869f322f7afe4e1b76c6f564cb99cd0d27604bac3905a1c66317cfa5"
+    },
+    {
+      "key": "BS-GR-26.0508",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Teilrevision des Kulturfördergesetzes vom 21. Oktober 2009 (Stand Mai 2022); Übertragung von Aufgaben an Dritte",
+      "nummer": "26.0508",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=26.0508",
+      "stand": "2026-04-15",
+      "rang": 4,
+      "normKeys": [
+        "BS-494.300"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2026-04-15",
+          "res": "26.0508.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2026-05-06",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1030,
+          "datum": "2026-08-18",
+          "res": "26.0508.02",
+          "vok": "bs-gr",
+          "bez": "Bericht der BKK"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-494.300",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 21. Oktober 2009"
+        }
+      ],
+      "sha": "e629294d599a6b4161043e1f5cd75a3a9a6d20f72ded1a3a11a06a1def8a891a"
+    },
+    {
+      "key": "BS-GR-25.1222",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Teilrevision des Staatsbeitragsgesetzes vom 11. Dezember 2013 (StBG)",
+      "nummer": "25.1222",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=25.1222",
+      "stand": "2025-10-15",
+      "rang": 5,
+      "normKeys": [
+        "BS-610.500"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2025-10-15",
+          "res": "25.1222.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2025-11-12",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1050,
+          "datum": "2026-01-14",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-610.500",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 11. Dezember 2013"
+        }
+      ],
+      "sha": "a68a8e9801361b89b2316b64e696ddf05810f3da9c7787fe07324d5cc28b67c2"
+    },
+    {
+      "key": "BS-GR-25.1370",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "gr-bericht",
+      "doktypLabel": "Bericht an den Grossen Rat",
+      "titel": "Teilrevision des Personalgesetzes vom 17. November 1999 (SG 162.100) betreffend Kündigungsmodalitäten",
+      "nummer": "25.1370",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=25.1370",
+      "stand": "2025-09-17",
+      "rang": 6,
+      "normKeys": [
+        "BS-162.100"
+      ],
+      "hinweis": "Zuordnung maschinell über die SG-Nummer im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2025-09-17",
+          "res": "25.1370.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2025-10-15",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-162.100",
+          "quelle": "maschinell",
+          "regel": "sg-nummer",
+          "beleg": "SG 162.100"
+        }
+      ],
+      "sha": "727b58f88fbedf397abfba4b1bc4d9f731d07abe72d8db713e54d61c67e29a5b"
+    },
+    {
+      "key": "BS-GR-25.0675",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Teilrevision des Lohngesetzes vom 18. Januar 1995 (LG, SG 164.100) betreffend Anpassung der Lohnkurve und Aufhebung der Degression beim Teuerungsausgleich",
+      "nummer": "25.0675",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=25.0675",
+      "stand": "2025-05-28",
+      "rang": 7,
+      "normKeys": [
+        "BS-164.100"
+      ],
+      "hinweis": "Zuordnung maschinell über die SG-Nummer im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2025-05-28",
+          "res": "25.0675.01 25.0674.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2025-06-25",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1030,
+          "datum": "2026-03-26",
+          "res": "25.0675.02 25.0674.02",
+          "vok": "bs-gr",
+          "bez": "Bericht der WAK"
+        },
+        {
+          "code": 1050,
+          "datum": "2026-04-22",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1030,
+          "datum": "2026-05-04",
+          "res": "25.0675.03 25.0674.03",
+          "vok": "bs-gr",
+          "bez": "Bericht des Ratsbüros"
+        },
+        {
+          "code": 1050,
+          "datum": "2026-05-06",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1050,
+          "datum": "2026-05-20",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-164.100",
+          "quelle": "maschinell",
+          "regel": "sg-nummer",
+          "beleg": "SG 164.100"
+        }
+      ],
+      "sha": "868fceac73add4b4701f6c4d6bbabbd84093a6a15bc02572187910a836581203"
+    },
+    {
+      "key": "BS-GR-25.0082",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Änderung des Schulgesetzes vom 4. April 1929 betreffend das alters- und niveaudurchmischte Lernen und die Spitalschulung sowie Beitritt zur Interkantonalen Spitalschulvereinbarung (ISV)",
+      "nummer": "25.0082",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=25.0082",
+      "stand": "2025-02-05",
+      "rang": 8,
+      "normKeys": [
+        "BS-410.100"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2025-02-05",
+          "res": "25.0082.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2025-03-19",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1030,
+          "datum": "2025-08-21",
+          "res": "25.0082.02",
+          "vok": "bs-gr",
+          "bez": "Bericht der BKK"
+        },
+        {
+          "code": 1050,
+          "datum": "2025-10-22",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-410.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 4. April 1929"
+        }
+      ],
+      "sha": "867ebc937aaa08f10446f76201c12d73e3dfdd1badc50c0071502f343f21d430"
+    },
+    {
+      "key": "BS-GR-24.1746",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Teilrevision Einführungsgesetz zum Bundesgesetz über die Familienzulagen vom 4. Juni 2008 (Familienzulagengesetz; EG FamZG) betreffend Einführung voller Lastenausgleich und Höhe der Ansätze der Familienzulagen",
+      "nummer": "24.1746",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=24.1746",
+      "stand": "2024-12-11",
+      "rang": 9,
+      "normKeys": [
+        "BS-820.100"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2024-12-11",
+          "res": "24.1746.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2025-01-15",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1030,
+          "datum": "2025-06-26",
+          "res": "24.1746.02",
+          "vok": "bs-gr",
+          "bez": "Bericht der WAK"
+        },
+        {
+          "code": 1050,
+          "datum": "2025-09-10",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-820.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 4. Juni 2008"
+        }
+      ],
+      "sha": "6130cf2ef49012ce8a09cfd97623922852186e00dc29feaa319d490f278b5961"
+    },
+    {
+      "key": "BS-GR-24.0748",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Teilrevision des Gesetzes betreffend Einreihung und Entlöhnung der Mitarbeiterinnen und Mitarbeiter des Kantons Basel-Stadt vom 18. Januar 1995 (Lohngesetz, SG 164.100) betreffend gesetzliche Grundlage für Lohnnebenleistungen",
+      "nummer": "24.0748",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=24.0748",
+      "stand": "2024-06-05",
+      "rang": 10,
+      "normKeys": [
+        "BS-164.100"
+      ],
+      "hinweis": "Zuordnung maschinell über die SG-Nummer im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2024-06-05",
+          "res": "24.0748.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2024-09-11",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1030,
+          "datum": "2024-11-20",
+          "res": "24.0748.02",
+          "vok": "bs-gr",
+          "bez": "Bericht der WAK"
+        },
+        {
+          "code": 1050,
+          "datum": "2024-12-18",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-164.100",
+          "quelle": "maschinell",
+          "regel": "sg-nummer",
+          "beleg": "SG 164.100"
+        }
+      ],
+      "sha": "65397accee048b63db1e5f0ec06086d8ae3d99a092354d4687b6ceedfedc58e3"
+    },
+    {
+      "key": "BS-GR-21.1247",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "gr-bericht",
+      "doktypLabel": "Bericht an den Grossen Rat",
+      "titel": "Kantonale Volksinitiative \"1% gegen globale Armut\"",
+      "nummer": "21.1247",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=21.1247",
+      "stand": "2024-04-10",
+      "rang": 11,
+      "normKeys": [
+        "BS-119.500"
+      ],
+      "hinweis": "Zuordnung amtlich: die Fussnote der Gesetzessammlung Basel-Stadt nennt dieses Geschäft.",
+      "ereignisse": [
+        {
+          "code": 1020,
+          "datum": "2021-11-24",
+          "res": "21.1247.01",
+          "vok": "bs-gr",
+          "bez": "Bericht des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2022-01-12",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1020,
+          "datum": "2022-05-18",
+          "res": "21.1247.02",
+          "vok": "bs-gr",
+          "bez": "Bericht des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2022-06-01",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1020,
+          "datum": "2023-04-19",
+          "res": "21.1247.03",
+          "vok": "bs-gr",
+          "bez": "Bericht des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2023-06-07",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1020,
+          "datum": "2024-02-07",
+          "res": "21.1247.04",
+          "vok": "bs-gr",
+          "bez": "Bericht des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2024-03-06",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1010,
+          "datum": "2024-04-10",
+          "res": "21.1247.05",
+          "vok": "bs-gr",
+          "bez": "Ratschlag und Bericht des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2024-05-15",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1030,
+          "datum": "2024-09-09",
+          "res": "21.1247.06",
+          "vok": "bs-gr",
+          "bez": "Bericht der RegioKo"
+        },
+        {
+          "code": 1050,
+          "datum": "2024-10-16",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1030,
+          "datum": "2025-04-15",
+          "res": "21.1247.07",
+          "vok": "bs-gr",
+          "bez": "Bericht der RegioKo"
+        },
+        {
+          "code": 1050,
+          "datum": "2025-05-14",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-119.500",
+          "quelle": "amtlich",
+          "regel": "fussnote",
+          "beleg": "21.1247"
+        }
+      ],
+      "sha": "ce5621696761eb3117388e390c90e481d3cd1ff012a183288a56c69d739e70fb"
+    },
+    {
+      "key": "BS-GR-23.0859",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "gr-bericht",
+      "doktypLabel": "Bericht an den Grossen Rat",
+      "titel": "Teilrevision des Gesundheitsgesetzes vom 21. September 2011 (GesG) betreffend Zulassung von Leistungserbringern zur Tätigkeit zulasten der obligatorischen Krankenpflegeversicherung",
+      "nummer": "23.0859",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=23.0859",
+      "stand": "2023-11-15",
+      "rang": 12,
+      "normKeys": [
+        "BS-300.100"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2023-11-15",
+          "res": "23.0859.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2024-01-10",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1030,
+          "datum": "2024-03-01",
+          "res": "23.0859.02",
+          "vok": "bs-gr",
+          "bez": "Bericht der GSK"
+        },
+        {
+          "code": 1050,
+          "datum": "2024-04-10",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-300.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 21. September 2011"
+        }
+      ],
+      "sha": "357dd67416fa69222be0d992bcc79257f6f0dd04cefa335da30a5b8ee3279e8e"
+    },
+    {
+      "key": "BS-GR-23.1410",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "gr-bericht",
+      "doktypLabel": "Bericht an den Grossen Rat",
+      "titel": "Anpassung des Schulgesetzes vom 4. April 1929; Änderung §63b Förderangebote",
+      "nummer": "23.1410",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=23.1410",
+      "stand": "2023-10-18",
+      "rang": 13,
+      "normKeys": [
+        "BS-410.100"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2023-10-18",
+          "res": "23.1410.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2023-12-06",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1030,
+          "datum": "2024-06-03",
+          "res": "23.1410.02",
+          "vok": "bs-gr",
+          "bez": "Bericht der BKK"
+        },
+        {
+          "code": 1030,
+          "datum": "2024-06-27",
+          "res": "23.1410.03",
+          "vok": "bs-gr",
+          "bez": "Bericht der BKK"
+        },
+        {
+          "code": 1050,
+          "datum": "2024-09-18",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-410.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 4. April 1929"
+        }
+      ],
+      "sha": "edddbef38f2cdceab5f3f0e7d303f991e8ed38f0742a56bce8e37be4c2baa2ba"
+    },
+    {
+      "key": "BS-GR-23.1307",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Anpassung des Schulgesetzes vom 4. April 1929",
+      "nummer": "23.1307",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=23.1307",
+      "stand": "2023-09-13",
+      "rang": 14,
+      "normKeys": [
+        "BS-410.100"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2023-09-13",
+          "res": "23.1307.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2023-10-18",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1030,
+          "datum": "2024-01-24",
+          "res": "23.1307.02",
+          "vok": "bs-gr",
+          "bez": "Bericht der BKK"
+        },
+        {
+          "code": 1050,
+          "datum": "2024-03-06",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-410.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 4. April 1929"
+        }
+      ],
+      "sha": "ab21e7aecca24fe9c2e4e89735dcc477718ec6b6fdbeb52db8258eb043ca8652"
+    },
+    {
+      "key": "BS-GR-22.1784",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag zu einer Teilrevision des Gesetzes über die direkten Steuern vom 12. April 2000 (Steuergesetz, StG)",
+      "nummer": "22.1784",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=22.1784",
+      "stand": "2023-01-11",
+      "rang": 15,
+      "normKeys": [
+        "BS-640.100"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2023-01-11",
+          "res": "22.1784.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2023-02-08",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1050,
+          "datum": "2023-03-22",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-640.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 12. April 2000"
+        }
+      ],
+      "sha": "acb79bd180fe12fd5bb51509c4040a33228cdf79e8b78ec64d6552a9d81aa303"
+    },
+    {
+      "key": "BS-GR-22.0538",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag betreffend 9. Rahmenausgabenbewilligung für Staatsbeiträge in den Jahren 2022-2025 gemäss Gesetz über den Denkmalschutz vom 20. März 1980",
+      "nummer": "22.0538",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=22.0538",
+      "stand": "2022-05-04",
+      "rang": 16,
+      "normKeys": [
+        "BS-497.100"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2022-05-04",
+          "res": "22.0538.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2022-06-01",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1050,
+          "datum": "2022-06-23",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-497.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 20. März 1980"
+        }
+      ],
+      "sha": "68d3caf4b0dc4ffc60d333125df9d36678bcdcb63b9a186fb8f7f756571be96e"
+    },
+    {
+      "key": "BS-GR-22.0168",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag Einführung eines elektronischen Logiernächtemanagements im Tourismus; Anpassung von § 35 des Gastgewerbegesetzes vom 15. September 2004 (SG 563.100)",
+      "nummer": "22.0168",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=22.0168",
+      "stand": "2022-02-23",
+      "rang": 17,
+      "normKeys": [
+        "BS-563.100"
+      ],
+      "hinweis": "Zuordnung maschinell über die SG-Nummer im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2022-02-23",
+          "res": "22.0168.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2022-04-27",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1050,
+          "datum": "2022-06-23",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-563.100",
+          "quelle": "maschinell",
+          "regel": "sg-nummer",
+          "beleg": "SG 563.100"
+        }
+      ],
+      "sha": "2866180c494903bb7d88a109e9b3471a519e8f54730c64a9182d4faf74fa60f3"
+    },
+    {
+      "key": "BS-GR-21.1809",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "gr-bericht",
+      "doktypLabel": "Bericht an den Grossen Rat",
+      "titel": "Teilrevision des Gesetzes über die Basler Kantonalbank vom 9. Dezember 2015",
+      "nummer": "21.1809",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=21.1809",
+      "stand": "2022-01-19",
+      "rang": 18,
+      "normKeys": [
+        "BS-915.200"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2022-01-19",
+          "res": "21.1809.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2022-03-16",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1030,
+          "datum": "2024-04-02",
+          "res": "21.1809.02",
+          "vok": "bs-gr",
+          "bez": "Bericht der FKom"
+        },
+        {
+          "code": 1050,
+          "datum": "2024-05-16",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-915.200",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 9. Dezember 2015"
+        }
+      ],
+      "sha": "48038edbb57635500930858684b6560eeac7819b7f3ada5ea3ba4d189cbce490"
+    },
+    {
+      "key": "BS-GR-21.1696",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag betreffend Teilrevision des Gesetzes über die Industriellen Werke Basel (IWB-Gesetz) vom 11. Februar 2009 zur Anpassung des Gasversorgungsauftrags",
+      "nummer": "21.1696",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=21.1696",
+      "stand": "2021-12-08",
+      "rang": 19,
+      "normKeys": [
+        "BS-772.300"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2021-12-08",
+          "res": "21.1696.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2022-01-12",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1030,
+          "datum": "2022-12-12",
+          "res": "21.1696.02",
+          "vok": "bs-gr",
+          "bez": "Bericht der UVEK"
+        },
+        {
+          "code": 1050,
+          "datum": "2023-01-11",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-772.300",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 11. Februar 2009"
+        }
+      ],
+      "sha": "70579b57254f4034938df2d12578699fd592718399b6e8ab2c8632d504077c2c"
+    },
+    {
+      "key": "BS-GR-21.1239",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag zu einer Änderung des Gesetzes über die Information und den Datenschutz vom 9. Juni 2010 (Informations- und Datenschutzgesetz, IDG) und weiterer Gesetze (Anpassung an die europäischen Datenschutzreformen und weitere Anpassungen)",
+      "nummer": "21.1239",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=21.1239",
+      "stand": "2021-09-29",
+      "rang": 20,
+      "normKeys": [
+        "BS-153.260"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2021-09-29",
+          "res": "21.1239.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2021-10-20",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1030,
+          "datum": "2022-09-20",
+          "res": "21.1239.02",
+          "vok": "bs-gr",
+          "bez": "Bericht der JSSK"
+        },
+        {
+          "code": 1050,
+          "datum": "2022-10-20",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-153.260",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 9. Juni 2010"
+        }
+      ],
+      "sha": "92a3eab180df8220f5435f6353df8e2f9e96950028c09f8b767a94a78483e089"
+    },
+    {
+      "key": "BS-GR-20.1675",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "gr-bericht",
+      "doktypLabel": "Bericht an den Grossen Rat",
+      "titel": "Ratschlag betreffend Teilrevision des Vertrags zwischen den Kantonen Basel-Landschaft und Basel-Stadt über die gemeinsame Trägerschaft der Universität Basel vom 27. Juni 2006; Partnerschaftliches Geschäft",
+      "nummer": "20.1675",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=20.1675",
+      "stand": "2021-05-26",
+      "rang": 21,
+      "normKeys": [
+        "BS-442.400"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2021-05-26",
+          "res": "20.1675.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2021-06-23",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1030,
+          "datum": "2021-09-20",
+          "res": "20.1675.02 20.1189.02",
+          "vok": "bs-gr",
+          "bez": "Bericht der BKK"
+        },
+        {
+          "code": 1050,
+          "datum": "2021-10-27",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-442.400",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 27. Juni 2006"
+        }
+      ],
+      "sha": "7129d0790548b772c977a84de0f63ed6dd1755709b7c448c0225ee1e39c3a952"
+    },
+    {
+      "key": "BS-GR-21.0550",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag betreffend Änderung des Sportgesetzes vom 18. Mai 2011 sowie Ausgabenbewilligung für eine jährliche Sportmillion für die Sportvereine des Kantons Basel-Stadt für die Jahre 2022 bis 2025",
+      "nummer": "21.0550",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=21.0550",
+      "stand": "2021-05-12",
+      "rang": 22,
+      "normKeys": [
+        "BS-371.100"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2021-05-12",
+          "res": "21.0550.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2021-06-02",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1050,
+          "datum": "2021-06-24",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-371.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 18. Mai 2011"
+        }
+      ],
+      "sha": "8fd20f1515385fd9636456cc9738f25dd8bd8c91cb45f9dbd27c2ffd4a2b2316"
+    },
+    {
+      "key": "BS-GR-21.0406",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag zu einer Teilrevision des Gesetzes über die direkten Steuern vom 12. April 2000 (Steuergesetz, STG)",
+      "nummer": "21.0406",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=21.0406",
+      "stand": "2021-04-21",
+      "rang": 23,
+      "normKeys": [
+        "BS-640.100"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2021-04-21",
+          "res": "21.0406.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2021-06-02",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1050,
+          "datum": "2021-09-08",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-640.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 12. April 2000"
+        }
+      ],
+      "sha": "61bb14313d6ff07f8bb5bd8df0dfaaa1507a5345e8b41dba7ec048248fb4d66b"
+    },
+    {
+      "key": "BS-GR-20.1734",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "gr-bericht",
+      "doktypLabel": "Bericht an den Grossen Rat",
+      "titel": "Ratschlag zu Änderungen des Gesetzes betreffend die Kantonspolizei Basel-Stadt (Polizeigesetz, PolG) vom 13. November 1996 - mehrheitlich formellen Anpassungen",
+      "nummer": "20.1734",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=20.1734",
+      "stand": "2020-12-16",
+      "rang": 24,
+      "normKeys": [
+        "BS-510.100"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2020-12-16",
+          "res": "20.1734.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2021-02-03",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1030,
+          "datum": "2021-04-19",
+          "res": "20.1734.02",
+          "vok": "bs-gr",
+          "bez": "Bericht der JSSK"
+        },
+        {
+          "code": 1050,
+          "datum": "2021-05-19",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-510.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 13. November 1996"
+        }
+      ],
+      "sha": "4182428dc0dc7ce4eaeb4a4ca94c3c2cb1607c866141a9b4e8ef1abb034c3867"
+    },
+    {
+      "key": "BS-GR-20.0651",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag zu einer Teilrevision des Gesetzes über die direkten Steuern vom 12. April 2000 (Steuergesetz)",
+      "nummer": "20.0651",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=20.0651",
+      "stand": "2020-08-26",
+      "rang": 25,
+      "normKeys": [
+        "BS-640.100"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2020-08-26",
+          "res": "20.0651.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2020-10-14",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1030,
+          "datum": "2021-01-13",
+          "res": "20.0651.02",
+          "vok": "bs-gr",
+          "bez": "Bericht der WAK"
+        },
+        {
+          "code": 1050,
+          "datum": "2021-03-17",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1030,
+          "datum": "2022-01-19",
+          "res": "20.0651.03",
+          "vok": "bs-gr",
+          "bez": "Bericht der WAK"
+        },
+        {
+          "code": 1050,
+          "datum": "2022-03-23",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-640.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 12. April 2000"
+        }
+      ],
+      "sha": "c078a3ec22a4adc7d00852db778af03c90c889b52445d31caab2263fbe4f8fca"
+    },
+    {
+      "key": "BS-GR-20.1038",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag betreffend Teilrevision des Gesetzes über die direkten Steuern vom 12. April 2000 (Steuergesetz); Dividendenbesteuerung",
+      "nummer": "20.1038",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=20.1038",
+      "stand": "2020-08-12",
+      "rang": 26,
+      "normKeys": [
+        "BS-640.100"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2020-08-12",
+          "res": "20.1038.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2020-09-09",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1050,
+          "datum": "2020-10-14",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-640.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 12. April 2000"
+        }
+      ],
+      "sha": "eb029811ec733cbc93d91f81492cbcf2815adbb6b9a6cc00e47636962794c050"
+    },
+    {
+      "key": "BS-GR-20.0944",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag zu einer Teilrevision des Staatsbeitragsgesetzes vom 11. Dezember 2013",
+      "nummer": "20.0944",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=20.0944",
+      "stand": "2020-06-01",
+      "rang": 27,
+      "normKeys": [
+        "BS-610.500"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2020-06-01",
+          "res": "20.0944.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2020-09-09",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1030,
+          "datum": "2020-11-20",
+          "res": "20.0944.02",
+          "vok": "bs-gr",
+          "bez": "Bericht der FKom"
+        },
+        {
+          "code": 1050,
+          "datum": "2020-12-16",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-610.500",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 11. Dezember 2013"
+        }
+      ],
+      "sha": "0ad6c67d7bccda33c386ee017ebe4d353b2287ec7006db6e3addc49218e37e8f"
+    },
+    {
+      "key": "BS-GR-20.0533",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag zu einer Teilrevision des Gesetzes über die direkten Steuern vom 12. April 2000 (Steuergesetz) betreffend Revision der Quellenbesteuerung des Erwerbseinkommens",
+      "nummer": "20.0533",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=20.0533",
+      "stand": "2020-04-08",
+      "rang": 28,
+      "normKeys": [
+        "BS-640.100"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2020-04-08",
+          "res": "20.0533.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2020-05-13",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1050,
+          "datum": "2020-09-09",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-640.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 12. April 2000"
+        }
+      ],
+      "sha": "aa57b2fead91d8598cf5ba9577680bee93ea69eb3fc828f3fe8e5b4d742a4122"
+    },
+    {
+      "key": "BS-GR-19.1830",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag betreffend Teilrevision des Gesetzes über die direkten Steuern vom 12. April 2000 (Steuergesetz)",
+      "nummer": "19.1830",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=19.1830",
+      "stand": "2020-01-08",
+      "rang": 29,
+      "normKeys": [
+        "BS-640.100"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2020-01-08",
+          "res": "19.1830.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2020-02-12",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1050,
+          "datum": "2020-06-25",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-640.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 12. April 2000"
+        }
+      ],
+      "sha": "4c6a635186f35a3c7aece72333dfe350882a8c0a8448838cba16adfcbc6a43c1"
+    },
+    {
+      "key": "BS-GR-19.1517",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag zu einem Einführungsgesetz zum Bundesgesetz über Geldspiele (EG BGS) sowie zum Gesamtschweizerischen Geldspielkonkordat (GSK) und zur Interkantonalen Vereinbarung betreffend die gemeinsame Durchführung von Lotterien (IKV 2020)",
+      "nummer": "19.1517",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=19.1517",
+      "stand": "2019-11-06",
+      "rang": 30,
+      "normKeys": [
+        "BS-561.100"
+      ],
+      "hinweis": "Zuordnung amtlich: die Fussnote der Gesetzessammlung Basel-Stadt nennt dieses Geschäft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2019-11-06",
+          "res": "19.1517.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2019-12-11",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1030,
+          "datum": "2020-05-12",
+          "res": "19.1517.02",
+          "vok": "bs-gr",
+          "bez": "Bericht der FKom"
+        },
+        {
+          "code": 1050,
+          "datum": "2020-06-24",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-561.100",
+          "quelle": "amtlich",
+          "regel": "fussnote",
+          "beleg": "19.1517"
+        }
+      ],
+      "sha": "a7c9e58e79d27f0bde1087429ee6aec15974a0033514320f4d6d46d4344adfc7"
+    },
+    {
+      "key": "BS-GR-19.0843",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag zu einer Teilrevision des Gesetzes über die direkten Steuern vom 12. April 2000 (Steuergesetz, StG)",
+      "nummer": "19.0843",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=19.0843",
+      "stand": "2019-06-19",
+      "rang": 31,
+      "normKeys": [
+        "BS-640.100"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2019-06-19",
+          "res": "19.0843.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2019-10-16",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-640.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 12. April 2000"
+        }
+      ],
+      "sha": "92623dca8ed621169e65d7592f9b28a5a41c56a9b67804ad5ace3b8e500c427e"
+    },
+    {
+      "key": "BS-GR-18.0206",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "gr-bericht",
+      "doktypLabel": "Bericht an den Grossen Rat",
+      "titel": "Ratschlag betreffend eine Teilrevision des Umweltschutzgesetzes Basel-Stadt vom 13. März 1991, § 20a Stadtsauberkeit und Abfallvermeidung",
+      "nummer": "18.0206",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=18.0206",
+      "stand": "2018-12-12",
+      "rang": 32,
+      "normKeys": [
+        "BS-780.100"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2018-12-12",
+          "res": "18.0206.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2019-01-09",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1030,
+          "datum": "2019-02-27",
+          "res": "18.0206.02",
+          "vok": "bs-gr",
+          "bez": "Bericht der UVEK"
+        },
+        {
+          "code": 1050,
+          "datum": "2019-04-10",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-780.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 13. März 1991"
+        }
+      ],
+      "sha": "a9a05735a1c331c0f5df53481edbb1bf38f2740aeb2bf40a938b891cc6f2c581"
+    },
+    {
+      "key": "BS-GR-18.1625",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "gr-bericht",
+      "doktypLabel": "Bericht an den Grossen Rat",
+      "titel": "Vierter Bericht über die Leistungs-, Kosten- und Prämienentwicklung sowie die Massnahmen zur Dämpfung der Höhe der Gesundheitskosten gemäss § 67 Abs. 2 des Gesundheitsgesetzes (SG 300.100)",
+      "nummer": "18.1625",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=18.1625",
+      "stand": "2018-11-28",
+      "rang": 33,
+      "normKeys": [
+        "BS-300.100"
+      ],
+      "hinweis": "Zuordnung maschinell über die SG-Nummer im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1020,
+          "datum": "2018-11-28",
+          "res": "18.1625.01",
+          "vok": "bs-gr",
+          "bez": "Bericht des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2019-01-09",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1030,
+          "datum": "2019-03-27",
+          "res": "18.1625.02",
+          "vok": "bs-gr",
+          "bez": "Bericht der GSK"
+        },
+        {
+          "code": 1050,
+          "datum": "2019-05-08",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-300.100",
+          "quelle": "maschinell",
+          "regel": "sg-nummer",
+          "beleg": "SG 300.100"
+        }
+      ],
+      "sha": "1bebef3999639471f47a3e396441b909f385b94409dda9926668c9445ffc427b"
+    },
+    {
+      "key": "BS-GR-18.0919",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "gr-bericht",
+      "doktypLabel": "Bericht an den Grossen Rat",
+      "titel": "Ratschlag zu einer Teilrevision des Gesetzes über die direkten Steuern vom 12. April 2000 (Steuergesetz, StG)",
+      "nummer": "18.0919",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=18.0919",
+      "stand": "2018-07-04",
+      "rang": 34,
+      "normKeys": [
+        "BS-640.100"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2018-07-04",
+          "res": "18.0919.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2018-09-12",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1030,
+          "datum": "2018-10-17",
+          "res": "18.0919.02",
+          "vok": "bs-gr",
+          "bez": "Bericht der WAK"
+        },
+        {
+          "code": 1050,
+          "datum": "2018-11-14",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-640.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 12. April 2000"
+        }
+      ],
+      "sha": "30ef2419fb93aec2a417a1bde9cde6bdd76b37129e8e7ca685b22704f68d2e10"
+    },
+    {
+      "key": "BS-GR-18.0541",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag betreffend 8. Rahmenausgabenbewilligung für Staatsbeiträge in den Jahren 2018-2021 gemäss Gesetz über den Denkmalschutz vom 20. März 1980",
+      "nummer": "18.0541",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=18.0541",
+      "stand": "2018-05-09",
+      "rang": 35,
+      "normKeys": [
+        "BS-497.100"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2018-05-09",
+          "res": "18.0541.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2018-06-06",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1050,
+          "datum": "2018-11-14",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-497.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 20. März 1980"
+        }
+      ],
+      "sha": "2205ea904a7e4da51ee5b2a0e642e8dde05ec7cf626776f9a48ef49b2a1d8e8c"
+    },
+    {
+      "key": "BS-GR-18.0110",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "gr-bericht",
+      "doktypLabel": "Bericht an den Grossen Rat",
+      "titel": "Teilrevision des Gesetzes über die öffentlichen Spitäler des Kantons Basel-Stadt (Öffentliche Spitäler-Gesetz, ÖSpG) vom 16. Februar 2011 (SG 331.100)",
+      "nummer": "18.0110",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=18.0110",
+      "stand": "2018-02-07",
+      "rang": 36,
+      "normKeys": [
+        "BS-331.100"
+      ],
+      "hinweis": "Zuordnung maschinell über die SG-Nummer im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2018-02-07",
+          "res": "18.0110.01 18.0112.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2018-03-14",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1030,
+          "datum": "2018-06-29",
+          "res": "18.0110.02 18.0112.02",
+          "vok": "bs-gr",
+          "bez": "Bericht der GSK"
+        },
+        {
+          "code": 1050,
+          "datum": "2018-09-12",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-331.100",
+          "quelle": "maschinell",
+          "regel": "sg-nummer",
+          "beleg": "SG 331.100"
+        }
+      ],
+      "sha": "0609f647e6ac4e1564d693f10324642870eaceb3b7655ef5984daa4c74d0f243"
+    },
+    {
+      "key": "BS-GR-18.0111",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "gr-bericht",
+      "doktypLabel": "Bericht an den Grossen Rat",
+      "titel": "Teilrevision des Gesundheitsgesetzes des Kantons Basel-Stadt (GesG) vom 21. September 2011 (SG 300.100)",
+      "nummer": "18.0111",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=18.0111",
+      "stand": "2018-02-07",
+      "rang": 37,
+      "normKeys": [
+        "BS-300.100"
+      ],
+      "hinweis": "Zuordnung maschinell über die SG-Nummer im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2018-02-07",
+          "res": "18.0111.01 18.0113.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2018-03-14",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1030,
+          "datum": "2018-06-29",
+          "res": "18.0111.02 18.0113.02",
+          "vok": "bs-gr",
+          "bez": "Bericht der GSK"
+        },
+        {
+          "code": 1050,
+          "datum": "2018-09-12",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-300.100",
+          "quelle": "maschinell",
+          "regel": "sg-nummer",
+          "beleg": "SG 300.100"
+        }
+      ],
+      "sha": "fb23bd0ce24c37d3cb8aed0a6bc96b2532948257ddda7f941c4135fac79b5544"
+    },
+    {
+      "key": "BS-GR-17.1961",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag betreffend Teilrevision des Gesetzes über die Industriellen Werke Basel (IWB-Gesetz) vom 11. Februar 2009 - Einführung datenschutzrechtlicher Grundlagen",
+      "nummer": "17.1961",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=17.1961",
+      "stand": "2017-12-20",
+      "rang": 38,
+      "normKeys": [
+        "BS-772.300"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2017-12-20",
+          "res": "17.1961.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2018-01-10",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1030,
+          "datum": "2018-08-15",
+          "res": "17.1961.02",
+          "vok": "bs-gr",
+          "bez": "Bericht der UVEK"
+        },
+        {
+          "code": 1050,
+          "datum": "2018-09-19",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-772.300",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 11. Februar 2009"
+        }
+      ],
+      "sha": "bf50139de3aefaf831fef69cdd693e13d4c65c6c2b34332b68501abee524b4f6"
+    },
+    {
+      "key": "BS-GR-17.0752",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "gr-bericht",
+      "doktypLabel": "Bericht an den Grossen Rat",
+      "titel": "Ratschlag betreffend Teilrevision des Gesetzes über die Industriellen Werke Basel (IWB-Gesetz) vom 11. Februar 2009 - Neuregelung der Bestimmungen zur IWB-Konzessionsgebühr und Einführung datenschutzrechtlicher Grundlagen",
+      "nummer": "17.0752",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=17.0752",
+      "stand": "2017-10-31",
+      "rang": 39,
+      "normKeys": [
+        "BS-772.300"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2017-10-31",
+          "res": "17.0752.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2017-12-06",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1050,
+          "datum": "2017-12-14",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-772.300",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 11. Februar 2009"
+        }
+      ],
+      "sha": "576872ffed1ddca15aa276813c32eb0cadeeb01cc2a53e7193f261e18b0a84cd"
+    },
+    {
+      "key": "BS-GR-17.1203",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag betreffend Anpassung des Gesetzes über die direkten Steuern (Steuergesetz) vom 12. April 2000 zur Einführung einer Kapitaltaxe für Unternehmen im Schweizer Sektor des Flughafens Basel-Mülhausen",
+      "nummer": "17.1203",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=17.1203",
+      "stand": "2017-08-21",
+      "rang": 40,
+      "normKeys": [
+        "BS-640.100"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2017-08-21",
+          "res": "17.1203.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2017-09-13",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1050,
+          "datum": "2017-11-08",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-640.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 12. April 2000"
+        }
+      ],
+      "sha": "3f3a00a91ef6d915980413d91057efa3a0eab06ffa5b95c66956dbe39b9f87f1"
+    },
+    {
+      "key": "BS-GR-17.0998",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag zu einer Änderung des Gesetzes über die Information und den Datenschutz vom 9. Juni 2010 (Informations- und Datenschutzgesetz, IDG)",
+      "nummer": "17.0998",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=17.0998",
+      "stand": "2017-07-05",
+      "rang": 41,
+      "normKeys": [
+        "BS-153.260"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2017-07-05",
+          "res": "17.0998.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2017-09-13",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1050,
+          "datum": "2017-11-08",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-153.260",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 9. Juni 2010"
+        }
+      ],
+      "sha": "a28e8d626db590e81854d056d2ef95efeae06feab444ce066c2047930835fb21"
+    },
+    {
+      "key": "BS-GR-17.0670",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag zu einer Teilrevision des Gesetzes über die direkten Steuern vom 12. April 2000 (Steuergesetz, StG)",
+      "nummer": "17.0670",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=17.0670",
+      "stand": "2017-05-03",
+      "rang": 42,
+      "normKeys": [
+        "BS-640.100"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2017-05-03",
+          "res": "17.0670.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2017-06-07",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1050,
+          "datum": "2017-11-08",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-640.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 12. April 2000"
+        }
+      ],
+      "sha": "be23c5d463ad6542ccaaaddd78f40669b17d8399514c174cbde861070f57edb4"
+    },
+    {
+      "key": "BS-GR-17.0347",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag und Gesetzesentwurf zu einer Teilrevision des Gesetzes über die direkten Steuern vom 12. April 2000 (Steuergesetz, StG) betreffend Lohnabzugsverfahren",
+      "nummer": "17.0347",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=17.0347",
+      "stand": "2017-03-10",
+      "rang": 43,
+      "normKeys": [
+        "BS-640.100"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2017-03-10",
+          "res": "17.0347.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2017-04-05",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1030,
+          "datum": "2017-11-01",
+          "res": "17.0347.02",
+          "vok": "bs-gr",
+          "bez": "Bericht der WAK"
+        },
+        {
+          "code": 1050,
+          "datum": "2017-12-06",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-640.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 12. April 2000"
+        }
+      ],
+      "sha": "f2b9df618e8fe9eb92d5931aad1f262f9b3973058bfdb6ab52e090321a9eb611"
+    },
+    {
+      "key": "BS-GR-17.0067",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag und Entwurf einer Änderung des Gesetzes über öffentliche Ruhetage und Ladenöffnung (RLG) vom 29. Juni 2005",
+      "nummer": "17.0067",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=17.0067",
+      "stand": "2017-01-18",
+      "rang": 44,
+      "normKeys": [
+        "BS-811.100"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2017-01-18",
+          "res": "17.0067.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2017-02-08",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1030,
+          "datum": "2017-05-10",
+          "res": "17.0067.02",
+          "vok": "bs-gr",
+          "bez": "Bericht der WAK"
+        },
+        {
+          "code": 1050,
+          "datum": "2017-06-07",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1030,
+          "datum": "2018-04-25",
+          "res": "17.0067.03",
+          "vok": "bs-gr",
+          "bez": "Bericht der WAK"
+        },
+        {
+          "code": 1050,
+          "datum": "2018-06-06",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-811.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 29. Juni 2005"
+        }
+      ],
+      "sha": "38a8acfd56d8ba9eee4a0955f60dddfbdaffa233d55211dc78f6846bbf184b20"
+    },
+    {
+      "key": "BS-GR-16.1509",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "gr-bericht",
+      "doktypLabel": "Bericht an den Grossen Rat",
+      "titel": "Zweiter Bericht über die Leistungs-, Kosten- und Prämienentwicklung sowie die Massnahmen zur Dämpfung der Höhe der Gesundheitskosten gemäss § 67 Abs. 2 des Gesundheitsgesetzes (SG 300.100)",
+      "nummer": "16.1509",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=16.1509",
+      "stand": "2016-09-28",
+      "rang": 45,
+      "normKeys": [
+        "BS-300.100"
+      ],
+      "hinweis": "Zuordnung maschinell über die SG-Nummer im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1020,
+          "datum": "2016-09-28",
+          "res": "16.1509.01",
+          "vok": "bs-gr",
+          "bez": "Bericht des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2016-10-19",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1050,
+          "datum": "2017-01-11",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-300.100",
+          "quelle": "maschinell",
+          "regel": "sg-nummer",
+          "beleg": "SG 300.100"
+        }
+      ],
+      "sha": "d30c36d3c728ca09e1cf9f73e45aecf630bda8cbb80dd4eddfe80d40e59f78e0"
+    },
+    {
+      "key": "BS-GR-16.0736",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag und Bericht zur Änderung des Personalgesetzes vom 17. November 1999; Einschub eines neuen § 16a Personalgesetz (Verjährung von Ansprüchen aus dem öffentlich-rechtlichen Arbeitsverhältnis)",
+      "nummer": "16.0736",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=16.0736",
+      "stand": "2016-05-24",
+      "rang": 46,
+      "normKeys": [
+        "BS-162.100"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2016-05-24",
+          "res": "16.0736.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2016-06-29",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1050,
+          "datum": "2016-10-19",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-162.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 17. November 1999"
+        }
+      ],
+      "sha": "5c2f006ce85715e7ae9db0712dc9b300c09b5f423d74daeb13d4beee98433a9b"
+    },
+    {
+      "key": "BS-GR-16.0479",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag und Entwurf betreffend Gesetz über Publikationen im Kantonsblatt und über die Gesetzessammlung des Kantons Basel-Stadt (Publikationsgesetz)",
+      "nummer": "16.0479",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=16.0479",
+      "stand": "2016-04-26",
+      "rang": 47,
+      "normKeys": [
+        "BS-151.200"
+      ],
+      "hinweis": "Zuordnung amtlich: die Fussnote der Gesetzessammlung Basel-Stadt nennt dieses Geschäft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2016-04-26",
+          "res": "16.0479.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2016-06-08",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1030,
+          "datum": "2016-09-19",
+          "res": "16.0479.02",
+          "vok": "bs-gr",
+          "bez": "Bericht der JSSK"
+        },
+        {
+          "code": 1050,
+          "datum": "2016-10-19",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-151.200",
+          "quelle": "amtlich",
+          "regel": "fussnote",
+          "beleg": "16.0479"
+        }
+      ],
+      "sha": "454ce1f0d5aa2a7c050795d29c5c8fc6ce00231b4143a99df9e38200cdb3f873"
+    },
+    {
+      "key": "BS-GR-16.0252",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag betreffend Änderung des Sportgesetzes vom 18. Mai 2011",
+      "nummer": "16.0252",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=16.0252",
+      "stand": "2016-03-01",
+      "rang": 48,
+      "normKeys": [
+        "BS-371.100"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2016-03-01",
+          "res": "16.0252.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2016-04-13",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1030,
+          "datum": "2016-06-29",
+          "res": "16.0252.02",
+          "vok": "bs-gr",
+          "bez": "Bericht der JSSK"
+        },
+        {
+          "code": 1050,
+          "datum": "2016-09-21",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-371.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 18. Mai 2011"
+        }
+      ],
+      "sha": "d123d4599549b9287165127d621148bc4c960a9552cb5d016750466be50c45d0"
+    },
+    {
+      "key": "BS-GR-16.0031",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag zu einer Änderung des Gesetzes über Wahlen und Abstimmungen vom 21. April 1994 (Wahlgesetz)",
+      "nummer": "16.0031",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=16.0031",
+      "stand": "2016-01-12",
+      "rang": 49,
+      "normKeys": [
+        "BS-132.100"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2016-01-12",
+          "res": "16.0031.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2016-02-03",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1030,
+          "datum": "2016-02-09",
+          "res": "16.0031.02",
+          "vok": "bs-gr",
+          "bez": "Bericht der JSSK"
+        },
+        {
+          "code": 1050,
+          "datum": "2016-03-09",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-132.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 21. April 1994"
+        }
+      ],
+      "sha": "91fd054364ca5b5ac02353f3710cbef5685b7c48d05554ef55486b4a04ad4b2e"
+    },
+    {
+      "key": "BS-GR-15.1353",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag betreffend Anpassung des Wahlgesetzes (Quorum): Änderung des Gesetzes über Wahlen und Abstimmungen vom 21. April 1994",
+      "nummer": "15.1353",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=15.1353",
+      "stand": "2015-09-29",
+      "rang": 50,
+      "normKeys": [
+        "BS-132.100"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2015-09-29",
+          "res": "15.1353.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2015-10-21",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1030,
+          "datum": "2016-03-09",
+          "res": "15.1353.02",
+          "vok": "bs-gr",
+          "bez": "Bericht der JSSK"
+        },
+        {
+          "code": 1050,
+          "datum": "2016-04-13",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-132.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 21. April 1994"
+        }
+      ],
+      "sha": "44b81b15913cd44a919f1db25e37dd7667dcfc8aaba07f900bf14250302d245c"
+    },
+    {
+      "key": "BS-GR-15.1308",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag zur Änderung des Kantonalen Gesetzes über die Berufsbildung vom 12. September 2007 (Berufsbildungsgesetz, SG 420.200) betreffend zusätzlichen Kantonsbeitrag II an die überbetrieblichen Kurse (üK)",
+      "nummer": "15.1308",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=15.1308",
+      "stand": "2015-09-09",
+      "rang": 51,
+      "normKeys": [
+        "BS-420.200"
+      ],
+      "hinweis": "Zuordnung maschinell über die SG-Nummer im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2015-09-09",
+          "res": "15.1308.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2015-10-21",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1030,
+          "datum": "2016-03-14",
+          "res": "15.1308.02",
+          "vok": "bs-gr",
+          "bez": "Bericht der BKK"
+        },
+        {
+          "code": 1050,
+          "datum": "2016-04-13",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-420.200",
+          "quelle": "maschinell",
+          "regel": "sg-nummer",
+          "beleg": "SG 420.200"
+        }
+      ],
+      "sha": "230c9e04d0baedba3f79cb7ad806a4315035b887403a40a7820fa5626ecce72b"
+    },
+    {
+      "key": "BS-GR-15.1315",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag zur \"Änderung des Schulgesetzes vom 4. April 1929 (SG 410.100) betreffend die Anpassung des Beginns der Altersentlastung der Lehrpersonen an die Erhöhung des Pensionierungsalters\"",
+      "nummer": "15.1315",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=15.1315",
+      "stand": "2015-09-02",
+      "rang": 52,
+      "normKeys": [
+        "BS-410.100"
+      ],
+      "hinweis": "Zuordnung maschinell über die SG-Nummer im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2015-09-02",
+          "res": "15.1315.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2015-10-21",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1030,
+          "datum": "2016-03-14",
+          "res": "15.1315.02",
+          "vok": "bs-gr",
+          "bez": "Bericht der BKK"
+        },
+        {
+          "code": 1050,
+          "datum": "2016-04-13",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-410.100",
+          "quelle": "maschinell",
+          "regel": "sg-nummer",
+          "beleg": "SG 410.100"
+        }
+      ],
+      "sha": "85aa9accb1671a6e106839d6b0b3e5e7d9601501e007b1169885f70d47d0f10d"
+    },
+    {
+      "key": "BS-GR-15.1159",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "gr-bericht",
+      "doktypLabel": "Bericht an den Grossen Rat",
+      "titel": "Erster Bericht über die Leistungs-, Kosten- und Prämienentwicklung sowie die Massnahmen zur Dämpfung der Höhe der Gesundheitskosten gemäss § 67 Abs. 2 des Gesundheitsgesetzes (SG 300.100)",
+      "nummer": "15.1159",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=15.1159",
+      "stand": "2015-08-18",
+      "rang": 53,
+      "normKeys": [
+        "BS-300.100"
+      ],
+      "hinweis": "Zuordnung maschinell über die SG-Nummer im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1020,
+          "datum": "2015-08-18",
+          "res": "15.1159.01",
+          "vok": "bs-gr",
+          "bez": "Bericht des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2015-09-09",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1050,
+          "datum": "2016-01-06",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-300.100",
+          "quelle": "maschinell",
+          "regel": "sg-nummer",
+          "beleg": "SG 300.100"
+        }
+      ],
+      "sha": "d786f42fbede5961b399075563e113cbc08f43868fc15468af8a6c53009a03d7"
+    },
+    {
+      "key": "BS-GR-14.1792",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag zu einer Teilrevision des Gesetzes über die direkten Steuern vom 12. April 2000 (Steuergesetz, StG)",
+      "nummer": "14.1792",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=14.1792",
+      "stand": "2015-01-27",
+      "rang": 54,
+      "normKeys": [
+        "BS-640.100"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2015-01-27",
+          "res": "14.1792.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2015-03-11",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1030,
+          "datum": "2015-06-22",
+          "res": "14.1792.02",
+          "vok": "bs-gr",
+          "bez": "Bericht der WAK"
+        },
+        {
+          "code": 1050,
+          "datum": "2015-09-16",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-640.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 12. April 2000"
+        }
+      ],
+      "sha": "c0dcf466fb7c057f4ba7f1752d85017011de5fcb229218317217f7c79d3a1472"
+    },
+    {
+      "key": "BS-GR-14.1864",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag und Entwurf einer Änderung des Gesetzes über öffentliche Ruhetage und Ladenöffnung (RLG) vom 29. Juni 2005",
+      "nummer": "14.1864",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=14.1864",
+      "stand": "2015-01-14",
+      "rang": 55,
+      "normKeys": [
+        "BS-811.100"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2015-01-14",
+          "res": "14.1864.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2015-02-04",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1050,
+          "datum": "2015-04-15",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-811.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 29. Juni 2005"
+        }
+      ],
+      "sha": "eb4e492c6046808bade6dd2138153de21be724d82deed4ffb2416b92d157c200"
+    },
+    {
+      "key": "BS-GR-14.1710",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag zu einer Änderung des Gesetzes über das Universitätsgut (Universitätsgutsgesetz) vom 16. Juni 1999",
+      "nummer": "14.1710",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=14.1710",
+      "stand": "2014-12-09",
+      "rang": 56,
+      "normKeys": [
+        "BS-440.400"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2014-12-09",
+          "res": "14.1710.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2015-01-07",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1050,
+          "datum": "2015-03-11",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-440.400",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 16. Juni 1999"
+        }
+      ],
+      "sha": "4bebd84d8b2a961c8196c66bb225a00dc30fa1af2f03c37c1d40757014078da4"
+    },
+    {
+      "key": "BS-GR-14.1218",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag zur Änderung des Organisationsgesetzes der Basler Verkehrs-Betriebe vom 10. März 2004 betreffend Anpassung an die Richtlinien zu Public Corporate Governance des Regierungsrates vom 14. September 2010",
+      "nummer": "14.1218",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=14.1218",
+      "stand": "2014-09-02",
+      "rang": 57,
+      "normKeys": [
+        "BS-953.100"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2014-09-02",
+          "res": "14.1218.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2014-10-22",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1030,
+          "datum": "2015-11-09",
+          "res": "14.1218.02",
+          "vok": "bs-gr",
+          "bez": "Bericht der GPK"
+        },
+        {
+          "code": 1050,
+          "datum": "2015-12-09",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-953.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 10. März 2004"
+        }
+      ],
+      "sha": "2aaab3a2cef03b4f513de5a41c6243e579b66ca93b2fd4d32bbd37b2e95aa51d"
+    },
+    {
+      "key": "BS-GR-14.0923",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag zu einer Änderung des Gemeindegesetzes vom 17. Oktober 1984",
+      "nummer": "14.0923",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=14.0923",
+      "stand": "2014-08-20",
+      "rang": 58,
+      "normKeys": [
+        "BS-170.100"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2014-08-20",
+          "res": "14.0923.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2014-09-10",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1050,
+          "datum": "2014-10-22",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-170.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 17. Oktober 1984"
+        }
+      ],
+      "sha": "0f3e49f1dfede0dc3afc5477a080570b62701e498679b7e8e4777e442c781897"
+    },
+    {
+      "key": "BS-GR-14.0386",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag \"Änderung des Schulgesetzes vom 4. April 1929 betreffend Nachvollzug der Reorganisation im Erziehungsdepartement, personalrechtliche Anpassungen, Fachgruppen und Fachkonferenzen, Privatschulen, HSK-Unterricht und Privatunterricht, Unterstützungsangebote sowie weitere Anpassungen\"",
+      "nummer": "14.0386",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=14.0386",
+      "stand": "2014-04-02",
+      "rang": 59,
+      "normKeys": [
+        "BS-410.100"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2014-04-02",
+          "res": "14.0386.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2014-05-14",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1030,
+          "datum": "2014-09-03",
+          "res": "14.0386.03",
+          "vok": "bs-gr",
+          "bez": "Bericht der BKK"
+        },
+        {
+          "code": 1050,
+          "datum": "2014-10-22",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-410.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 4. April 1929"
+        }
+      ],
+      "sha": "5b55f266f5ecfe47f64c60d279006a27a17d0d696f47064c3c6d22a2eea01fa6"
+    },
+    {
+      "key": "BS-GR-13.0779",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag zu einer Teilrevision des Gesetzes über die direkten Steuern vom 12. April 2000 (Steuergesetz, StG)",
+      "nummer": "13.0779",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=13.0779",
+      "stand": "2013-05-28",
+      "rang": 60,
+      "normKeys": [
+        "BS-640.100"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2013-05-28",
+          "res": "13.0779.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2013-06-26",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1030,
+          "datum": "2013-09-18",
+          "res": "13.0779.02",
+          "vok": "bs-gr",
+          "bez": "Bericht der WAK"
+        },
+        {
+          "code": 1050,
+          "datum": "2013-10-23",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-640.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 12. April 2000"
+        }
+      ],
+      "sha": "3edff1569448ed0e3d26fb077bdef919c7592ce90942305868b99ab4822a6b25"
+    },
+    {
+      "key": "BS-GR-13.0303",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag zu einer Änderung der Verfassung des Kantons Basel-Stadt vom 23. März 2005 und einer Änderung des Gesetzes über Wahlen und Abstimmungen vom 21. April 1994",
+      "nummer": "13.0303",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=13.0303",
+      "stand": "2013-04-09",
+      "rang": 61,
+      "normKeys": [
+        "BS-111.100",
+        "BS-132.100"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2013-04-09",
+          "res": "13.0303.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2013-05-15",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1030,
+          "datum": "2013-10-16",
+          "res": "13.0303.02",
+          "vok": "bs-gr",
+          "bez": "Bericht der JSSK"
+        },
+        {
+          "code": 1050,
+          "datum": "2013-11-13",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-111.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 23. März 2005"
+        },
+        {
+          "erlass": "BS-132.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 21. April 1994"
+        }
+      ],
+      "sha": "8565c5643ea415dc4d3e5f67839a121e215956cf58b05aa484c15e19ab35af01"
+    },
+    {
+      "key": "BS-GR-13.0434",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag und Entwurf einer Änderung des Gesetzes über öffentliche Ruhetage und Ladenöffnung (RLG) vom 29. Juni 2005",
+      "nummer": "13.0434",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=13.0434",
+      "stand": "2013-03-27",
+      "rang": 62,
+      "normKeys": [
+        "BS-811.100"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2013-03-27",
+          "res": "13.0434.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2013-05-15",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-811.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 29. Juni 2005"
+        }
+      ],
+      "sha": "63c58b24f138b851ab5f7f78002d1fb46728f393c8ef3a7b9ae0cc40d7f36493"
+    },
+    {
+      "key": "BS-GR-13.0334",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag Änderung des Schulgesetzes vom 4. April 1929 (SG 410.100) betreffend Zulassungsbeschränkungen, Ausschluss vom Schuldienst, staatliche Schulsynode und weitere Anpassungen",
+      "nummer": "13.0334",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=13.0334",
+      "stand": "2013-03-19",
+      "rang": 63,
+      "normKeys": [
+        "BS-410.100"
+      ],
+      "hinweis": "Zuordnung maschinell über die SG-Nummer im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2013-03-19",
+          "res": "13.0334.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2013-04-10",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1030,
+          "datum": "2013-05-08",
+          "res": "13.0334.02",
+          "vok": "bs-gr",
+          "bez": "Bericht der BKK"
+        },
+        {
+          "code": 1050,
+          "datum": "2013-06-26",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-410.100",
+          "quelle": "maschinell",
+          "regel": "sg-nummer",
+          "beleg": "SG 410.100"
+        }
+      ],
+      "sha": "4daf4fc93046ba6875571f72dec251a98924315af35f2874c931f0e8cd3b2c94"
+    },
+    {
+      "key": "BS-GR-12.2084",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag Änderung des Gesetzes über die Begnadigung vom 13. Dezember 2007 (Begnadigungsgesetz) sowie Änderung des Gesetzes betreffend die Kantonspolizei des Kantons Basel-Stadt vom 13. November 1996 (Polizeigesetz)",
+      "nummer": "12.2084",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=12.2084",
+      "stand": "2013-01-15",
+      "rang": 64,
+      "normKeys": [
+        "BS-258.100",
+        "BS-510.100"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2013-01-15",
+          "res": "12.2084.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2013-02-06",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1050,
+          "datum": "2013-04-10",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-258.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 13. Dezember 2007"
+        },
+        {
+          "erlass": "BS-510.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 13. November 1996"
+        }
+      ],
+      "sha": "d5976fc78c7e2b2b01161e40a6792d3d26c06fab5b5708d132f3ce43c1f78b9d"
+    },
+    {
+      "key": "BS-GR-12.2005",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag und Bericht betreffend einer Änderung des Personalgesetzes vom 17. November 1999; Schaffung einer Gesetzesbestimmung zur Meldung von Missständen (Whistleblowing)",
+      "nummer": "12.2005",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=12.2005",
+      "stand": "2012-12-18",
+      "rang": 65,
+      "normKeys": [
+        "BS-162.100"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2012-12-18",
+          "res": "12.2005.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2013-02-06",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1050,
+          "datum": "2013-04-10",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-162.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 17. November 1999"
+        }
+      ],
+      "sha": "a637e21f9f65382fc598935ee9b403249a6978ede7ded50f17c3cfeaac2003b5"
+    },
+    {
+      "key": "BS-GR-12.1414",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag betreffend 7. Rahmenausgabenbewilligung für Staatsbeiträge in den Jahren 2013 - 2017 gemäss Gesetz über den Denkmalschutz vom 20. März 1980",
+      "nummer": "12.1414",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=12.1414",
+      "stand": "2012-09-11",
+      "rang": 66,
+      "normKeys": [
+        "BS-497.100"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2012-09-11",
+          "res": "12.1414.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2012-10-17",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1050,
+          "datum": "2013-01-09",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-497.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 20. März 1980"
+        }
+      ],
+      "sha": "366f396febba9da64db4b607cbbf62a7bcd4228484a835bed874c9cedff82f2c"
+    },
+    {
+      "key": "BS-GR-12.0895",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag zu einer Teilrevision des Gesetzes über die direkten Steuern vom 12. April 2000 (Steuergesetz, StG) betreffend Besteuerung von Mitarbeiterbeteiligungen und Steuerbefreiung des Feuerwehrsoldes",
+      "nummer": "12.0895",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=12.0895",
+      "stand": "2012-06-12",
+      "rang": 67,
+      "normKeys": [
+        "BS-640.100"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2012-06-12",
+          "res": "12.0895.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2012-09-12",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1050,
+          "datum": "2012-10-24",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-640.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 12. April 2000"
+        }
+      ],
+      "sha": "75956f28e2c8293c1dd539b2064139920158942030a764465391bbae6db61c5c"
+    },
+    {
+      "key": "BS-GR-12.0652",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag Teilrevision des Gesetzes betreffend die Kantonspolizei des Kantons Basel-Stadt (Polizeigesetz, PolG) vom 13. November 1996; Ergänzung mit Normen zur verdeckten Fahndung und zur verdeckten Ermittlung",
+      "nummer": "12.0652",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=12.0652",
+      "stand": "2012-05-23",
+      "rang": 68,
+      "normKeys": [
+        "BS-510.100"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2012-05-23",
+          "res": "12.0652.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2012-06-27",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1030,
+          "datum": "2012-12-12",
+          "res": "12.0652.02",
+          "vok": "bs-gr",
+          "bez": "Bericht der JSSK"
+        },
+        {
+          "code": 1050,
+          "datum": "2013-01-16",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-510.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 13. November 1996"
+        }
+      ],
+      "sha": "6bfc40e000689131a100b1458a05b52997a7b971ddc1f367845ba8849bad7f5c"
+    },
+    {
+      "key": "BS-GR-12.0697",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag zu einer Änderung des Gesetzes betreffend die Einführung des Schweizerischen Zivilgesetzbuches vom 27. April 1911",
+      "nummer": "12.0697",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=12.0697",
+      "stand": "2012-05-08",
+      "rang": 69,
+      "normKeys": [
+        "BS-211.100"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2012-05-08",
+          "res": "12.0697.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2012-06-06",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1050,
+          "datum": "2012-09-12",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-211.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 27. April 1911"
+        }
+      ],
+      "sha": "b7753dbd075b4421c68ad50dd005f5b874e41e9ad89265b91634abb468f0cc52"
+    },
+    {
+      "key": "BS-GR-12.0472",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag zu einer Teilrevision des Gesetzes über die direkten Steuern vom 12. April 2000 (Steuergesetz, StG) betreffend Abschaffung der Aufwandbesteuerung",
+      "nummer": "12.0472",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=12.0472",
+      "stand": "2012-04-24",
+      "rang": 70,
+      "normKeys": [
+        "BS-640.100"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2012-04-24",
+          "res": "12.0472.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2012-06-06",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1030,
+          "datum": "2012-06-28",
+          "res": "12.0472.02",
+          "vok": "bs-gr",
+          "bez": "Bericht der WAK"
+        },
+        {
+          "code": 1050,
+          "datum": "2012-09-19",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-640.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 12. April 2000"
+        }
+      ],
+      "sha": "e74b4a865ccb80a225d9e617a5fbb675fdc9d0e958c23fd2103fa39845804089"
+    },
+    {
+      "key": "BS-GR-12.0199",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag zu einer Änderung des Gesetzes betreffend Initiative und Referendum vom 16. Januar 1991 (IRG)",
+      "nummer": "12.0199",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=12.0199",
+      "stand": "2012-02-14",
+      "rang": 71,
+      "normKeys": [
+        "BS-131.100"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2012-02-14",
+          "res": "12.0199.01 10.5134.03",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2012-03-14",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1050,
+          "datum": "2012-04-18",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-131.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 16. Januar 1991"
+        }
+      ],
+      "sha": "a4fd9203504de8025c358101c063316a6bfac85e3a82a0449ddef3cf9472bbcb"
+    },
+    {
+      "key": "BS-GR-11.1996",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag und Entwurf einer Änderung des Gesetzes über öffentliche Ruhetage und Ladenöffnung (RLG) vom 29. Juni 2005",
+      "nummer": "11.1996",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=11.1996",
+      "stand": "2011-12-06",
+      "rang": 72,
+      "normKeys": [
+        "BS-811.100"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2011-12-06",
+          "res": "11.1996.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2012-01-11",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1030,
+          "datum": "2012-05-21",
+          "res": "11.1996.02",
+          "vok": "bs-gr",
+          "bez": "Bericht der WAK"
+        },
+        {
+          "code": 1050,
+          "datum": "2012-06-27",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-811.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 29. Juni 2005"
+        }
+      ],
+      "sha": "88d51ffd24d9c4ff53affcc463f02b130640b49636e2f09145969c9244332dc6"
+    },
+    {
+      "key": "BS-GR-11.1520",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag Revision des Gesetzes über die direkten Steuern vom 12. April 2000 (Steuergesetz, StG); Senkung der Gewinnsteuer bei den juristischen Personen",
+      "nummer": "11.1520",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=11.1520",
+      "stand": "2011-09-28",
+      "rang": 73,
+      "normKeys": [
+        "BS-640.100"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2011-09-28",
+          "res": "11.1520.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2011-10-19",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1030,
+          "datum": "2012-01-12",
+          "res": "11.1520.02",
+          "vok": "bs-gr",
+          "bez": "Bericht der WAK"
+        },
+        {
+          "code": 1050,
+          "datum": "2012-03-14",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-640.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 12. April 2000"
+        }
+      ],
+      "sha": "a90ff9af32bdbb857274e61674596a9d2f3d34263a7b0eb0ba052d1be76cdda4"
+    },
+    {
+      "key": "BS-GR-11.1273",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag betreffend Kantonalen Finanzhaushalt (Finanzhaushaltgesetz); Totalrevision zur Umsetzung von HRM2 in Anbindung an IPSAS",
+      "nummer": "11.1273",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=11.1273",
+      "stand": "2011-09-20",
+      "rang": 74,
+      "normKeys": [
+        "BS-610.100"
+      ],
+      "hinweis": "Zuordnung amtlich: die Fussnote der Gesetzessammlung Basel-Stadt nennt dieses Geschäft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2011-09-20",
+          "res": "11.1273.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2011-10-19",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1030,
+          "datum": "2012-02-09",
+          "res": "11.1273.02",
+          "vok": "bs-gr",
+          "bez": "Bericht der FKom"
+        },
+        {
+          "code": 1050,
+          "datum": "2012-03-14",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-610.100",
+          "quelle": "amtlich",
+          "regel": "fussnote",
+          "beleg": "11.1273"
+        }
+      ],
+      "sha": "4b987fb5d354aff3f102dfb7f48e519961955d27b5e0e1add81b547a6661852b"
+    },
+    {
+      "key": "BS-GR-11.0152",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag zu einer Teilrevision des Gesetzes über die direkten Steuern vom 12. April 2000 betreffend Parteispendenabzug, Verlängerung der Antragsfrist für Tarifkorrekturen bei der Quellensteuer, Steuerbefreiung von konzessionierten Transportunternehmen, neue AHV-Nummer",
+      "nummer": "11.0152",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=11.0152",
+      "stand": "2011-05-18",
+      "rang": 75,
+      "normKeys": [
+        "BS-640.100"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2011-05-18",
+          "res": "10.1152.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2011-06-08",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1050,
+          "datum": "2011-09-21",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-640.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 12. April 2000"
+        }
+      ],
+      "sha": "7b73bbcd7aa120a0ec6fd29709148a3938c26c719728e822246300f7ea7ee197"
+    },
+    {
+      "key": "BS-GR-10.1642",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag Teilrevision des Gesetzes über die direkten Steuern vom 12. April 2000 betreffend familienrelevante Steuerabzüge: Neuregelung des Kinder- und Kinderbetreuungskostenabzugs sowie Einführung eines Unterstützungsabzugs für Konkubinatspaare mit Kindern",
+      "nummer": "10.1642",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=10.1642",
+      "stand": "2010-09-22",
+      "rang": 76,
+      "normKeys": [
+        "BS-640.100"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2010-09-22",
+          "res": "10.1642.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2010-11-10",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1030,
+          "datum": "2011-01-26",
+          "res": "10.1642.02",
+          "vok": "bs-gr",
+          "bez": "Bericht der WAK"
+        },
+        {
+          "code": 1050,
+          "datum": "2011-03-02",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-640.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 12. April 2000"
+        }
+      ],
+      "sha": "3b750d7ae3daa49213e53d6f455b811479a7be44ac6b910f1eda4b6a17fe2820"
+    },
+    {
+      "key": "BS-GR-10.1600",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag zu einer Änderung des Gesetzes über Wahlen und Abstimmungen (Wahlgesetz) vom 21. April 1994",
+      "nummer": "10.1600",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=10.1600",
+      "stand": "2010-09-15",
+      "rang": 77,
+      "normKeys": [
+        "BS-132.100"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2010-09-15",
+          "res": "10.1600.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2010-11-10",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1030,
+          "datum": "2011-06-30",
+          "res": "10.1600.02",
+          "vok": "bs-gr",
+          "bez": "Bericht der JSSK"
+        },
+        {
+          "code": 1050,
+          "datum": "2011-09-21",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-132.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 21. April 1994"
+        }
+      ],
+      "sha": "efb802d7aed7f8301063678f6bfbb1c6a7de1201ef6a2548f035c99135a53024"
+    },
+    {
+      "key": "BS-GR-10.1162",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag Änderung des Lohngesetzes vom 18. Januar 1995; Einschub eines neuen § 21a Lohngesetz (Ferienlohn/Schichtzulagen)",
+      "nummer": "10.1162",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=10.1162",
+      "stand": "2010-06-30",
+      "rang": 78,
+      "normKeys": [
+        "BS-164.100"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2010-06-30",
+          "res": "10.1162.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2010-09-08",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1050,
+          "datum": "2010-12-08",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-164.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 18. Januar 1995"
+        }
+      ],
+      "sha": "63628e232ff2c1f1b12815ad9e79fec210841a7ff2153ba36cfd01de645c952b"
+    },
+    {
+      "key": "BS-GR-10.0902",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag zu einer Teilrevision des Gesetzes über die direkten Steuern vom 12. April 2000 (Steuergesetz, StG): Senkung der Gewinnsteuer der juristischen Personen",
+      "nummer": "10.0902",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=10.0902",
+      "stand": "2010-05-19",
+      "rang": 79,
+      "normKeys": [
+        "BS-640.100"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2010-05-19",
+          "res": "10.0902.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2010-06-09",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1030,
+          "datum": "2010-10-14",
+          "res": "10.0902.02",
+          "vok": "bs-gr",
+          "bez": "Bericht der WAK"
+        },
+        {
+          "code": 1050,
+          "datum": "2010-11-12",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-640.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 12. April 2000"
+        }
+      ],
+      "sha": "98681b25b897fb1c583f9e87c7402305d41bcdf81ce87fa098198590626e0bd8"
+    },
+    {
+      "key": "BS-GR-10.0197",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag zu einer Teilrevision des Gesetzes über die direkten Steuern (Steuergesetz, StG) vom 12. April 2000 betreffend Verfahren vor der Steuerrekurskommission",
+      "nummer": "10.0197",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=10.0197",
+      "stand": "2010-03-03",
+      "rang": 80,
+      "normKeys": [
+        "BS-640.100"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2010-03-03",
+          "res": "10.0197.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2010-04-14",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1030,
+          "datum": "2010-08-09",
+          "res": "10.0197.02",
+          "vok": "bs-gr",
+          "bez": "Bericht der WAK"
+        },
+        {
+          "code": 1050,
+          "datum": "2010-09-08",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-640.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 12. April 2000"
+        }
+      ],
+      "sha": "e56a2d822fabc4cbbb5e0a331ad354d4f2a836ba8b56c46dd3e6d290088cfabf"
+    },
+    {
+      "key": "BS-GR-09.0594",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag zu einer Teilrevision des Gesetzes über die direkten Steuern vom 12. April 2000 (Steuergesetz, StG): Anpassungen des kantonalen Rechts an das Bundesrecht (Unternehmenssteuerreform II, Vereinfachte Nachbesteuerung in Erbfällen und straflose Selbstanzeige, Abschaffung der Dumont-Praxis, Gaststaatgesetz); Amtshilfe an Behörden anderer Kantone; Vorverlegung des allgemeinen Fälligkeitstermins beim Steuerbezug",
+      "nummer": "09.0594",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=09.0594",
+      "stand": "2009-04-23",
+      "rang": 81,
+      "normKeys": [
+        "BS-640.100"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2009-04-23",
+          "res": "09.0594.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2009-06-03",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1030,
+          "datum": "2009-09-18",
+          "res": "09.0594.02",
+          "vok": "bs-gr",
+          "bez": "Bericht der WAK"
+        },
+        {
+          "code": 1050,
+          "datum": "2009-11-11",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-640.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 12. April 2000"
+        }
+      ],
+      "sha": "165d81cd3b13c833a02a389969ce3490ef979a9a3ad8808a1009740f3f324eaf"
+    },
+    {
+      "key": "BS-GR-08.1776",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag zu einer Änderung des Einführungsgesetzes zum Bundesgesetz über die Hilfe an Opfer von Straftaten sowie Genehmigung einer Änderung des Vertrages der Kantone Basel-Stadt und Basel-Landschaft über die Opferberatungsstellen beider Basel / PARTNERSCHAFTLICHES GESCHÄFT",
+      "nummer": "08.1776",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=08.1776",
+      "stand": "2008-11-19",
+      "rang": 82,
+      "normKeys": [
+        "BS-257.900"
+      ],
+      "hinweis": "Zuordnung amtlich: die Fussnote der Gesetzessammlung Basel-Stadt nennt dieses Geschäft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2008-11-19",
+          "res": "08.1776.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2008-12-10",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1050,
+          "datum": "2009-04-22",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-257.900",
+          "quelle": "amtlich",
+          "regel": "fussnote",
+          "beleg": "08.1776"
+        }
+      ],
+      "sha": "d016d311dd45e82548b378127d71ee7d9199a50fa2cf51f324b0be403b00f294"
+    },
+    {
+      "key": "BS-GR-08.1828",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag \"Änderungen des Schulgesetzes\", des \"Gesetzes betreffend die Allgemeine Gewerbeschule Basel\" und des \"Gesetzes betreffend die Berufs- und Frauenfachschule\" zur Anpassung verschiedener personalrechtlicher Kompetenzen an den Weiterführenden Schulen, zur Vereinheitlichung von Zuständigkeiten, Strukturen und Begriffen namentlich an den Weiterführenden Schulen, zur rechtlichen Verankerung der Schule für Gestaltung sowie zur Anpassung und Aufhebung überholter Bestimmungen im Bereich der berufsbildenden Schulen",
+      "nummer": "08.1828",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=08.1828",
+      "stand": "2008-11-12",
+      "rang": 83,
+      "normKeys": [
+        "BS-410.100"
+      ],
+      "hinweis": "Zuordnung amtlich: die Fussnote der Gesetzessammlung Basel-Stadt nennt dieses Geschäft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2008-11-12",
+          "res": "08.1828.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2008-12-10",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1050,
+          "datum": "2009-01-14",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-410.100",
+          "quelle": "amtlich",
+          "regel": "fussnote",
+          "beleg": "08.1828"
+        }
+      ],
+      "sha": "5bd9d1343c7fd64e493524c846e1cafae50e0c251604dbb1804f6536df559df4"
+    },
+    {
+      "key": "BS-GR-07.1956",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "gr-bericht",
+      "doktypLabel": "Bericht an den Grossen Rat",
+      "titel": "Ratschlag betreffend Schaffung der gesetzlichen Grundlage für die elektronische Stimmabgabe: Revision des Gesetzes über Wahlen und Abstimmungen (Wahlgesetz) vom 21. April 1994",
+      "nummer": "07.1956",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=07.1956",
+      "stand": "2008-07-09",
+      "rang": 84,
+      "normKeys": [
+        "BS-132.100"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2008-07-09",
+          "res": "07.1956.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2008-09-10",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1030,
+          "datum": "2008-10-28",
+          "res": "07.1956.02",
+          "vok": "bs-gr",
+          "bez": "Bericht JSSK"
+        },
+        {
+          "code": 1050,
+          "datum": "2008-12-10",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-132.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 21. April 1994"
+        }
+      ],
+      "sha": "24e18f1212fa554f1cb7d582207fe265a3f7d9852669afc2b5a34925bc313261"
+    },
+    {
+      "key": "BS-GR-08.0948",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag betreffend Änderung des Personalgesetzes vom 17. November 1999 (Anpassung der Ferienregelung)",
+      "nummer": "08.0948",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=08.0948",
+      "stand": "2008-06-25",
+      "rang": 85,
+      "normKeys": [
+        "BS-162.100"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2008-06-25",
+          "res": "08.0948.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2008-09-10",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1030,
+          "datum": "2008-11-26",
+          "res": "08.0948.02",
+          "vok": "bs-gr",
+          "bez": "Bericht der WAK"
+        },
+        {
+          "code": 1050,
+          "datum": "2009-01-14",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-162.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 17. November 1999"
+        }
+      ],
+      "sha": "e81dcca9f45d903859837b5030b78af89205adbeb30ebffd2c9edca21d620aa8"
+    },
+    {
+      "key": "BS-GR-06.1706",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "gr-bericht",
+      "doktypLabel": "Bericht an den Grossen Rat",
+      "titel": "Ratschlag betreffend Änderung des Sozialhilfegesetzes vom 29. Juni 2000",
+      "nummer": "06.1706",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=06.1706",
+      "stand": "2007-10-16",
+      "rang": 86,
+      "normKeys": [
+        "BS-890.100"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2007-10-16",
+          "res": "06.1706.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2007-11-07",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1030,
+          "datum": "2008-03-12",
+          "res": "06.1706.02",
+          "vok": "bs-gr",
+          "bez": "Bericht GSK und FKom"
+        },
+        {
+          "code": 1040,
+          "datum": "2008-04-02",
+          "res": "06.1706.03",
+          "vok": "bs-gr",
+          "bez": "Schreiben des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2008-04-09",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1050,
+          "datum": "2008-04-09",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-890.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 29. Juni 2000"
+        }
+      ],
+      "sha": "5ba0bc1fda427340128aa741318d71941a1b03ed5563337d875adbffef886b84"
+    },
+    {
+      "key": "BS-GR-07.0128",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag betreffend Änderung des Gesetzes über die Krankenversicherung im Kanton Basel-Stadt (GKV) vom 15. November 1989",
+      "nummer": "07.0128",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=07.0128",
+      "stand": "2007-09-25",
+      "rang": 87,
+      "normKeys": [
+        "BS-834.400"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2007-09-25",
+          "res": "07.0128.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2007-11-07",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1030,
+          "datum": "2008-01-23",
+          "res": "07.0128.02",
+          "vok": "bs-gr",
+          "bez": "Bericht der GSK inkl. Mitbericht FKom"
+        },
+        {
+          "code": 1050,
+          "datum": "2008-02-20",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-834.400",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 15. November 1989"
+        }
+      ],
+      "sha": "a87185edb8c814bef449e303ad778c7ee7785d047043a49e5f2c2e84138d8b83"
+    },
+    {
+      "key": "BS-GR-07.0972",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "gr-bericht",
+      "doktypLabel": "Bericht an den Grossen Rat",
+      "titel": "Ratschlag betreffend Änderung des Gesetzes betreffend die Baurekurskommission (BRKG, SG 790.100).",
+      "nummer": "07.0972",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=07.0972",
+      "stand": "2007-06-27",
+      "rang": 88,
+      "normKeys": [
+        "BS-790.100"
+      ],
+      "hinweis": "Zuordnung maschinell über die SG-Nummer im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2007-06-27",
+          "res": "07.0972.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2007-09-12",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-790.100",
+          "quelle": "maschinell",
+          "regel": "sg-nummer",
+          "beleg": "SG 790.100"
+        }
+      ],
+      "sha": "1499a93abccdc953f739a6ad80af3d91a1e753a0bd4d2237cbd90d36b6eb62b1"
+    },
+    {
+      "key": "BS-GR-07.0904",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "gr-bericht",
+      "doktypLabel": "Bericht an den Grossen Rat",
+      "titel": "Ratschlag betreffend Bewilligung eines Rahmenkredits für Staatsbeiträge in den Jahren 2008 - 2012 gemäss Gesetz über den Denkmalschutz vom 20. März 1980 (6. Rahmenkredit)",
+      "nummer": "07.0904",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=07.0904",
+      "stand": "2007-06-20",
+      "rang": 89,
+      "normKeys": [
+        "BS-497.100"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2007-06-20",
+          "res": "07.0904.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2007-09-12",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-497.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 20. März 1980"
+        }
+      ],
+      "sha": "ab065d90ed14c0ce930602b128b17c13f859489995ecc0d5a45ab523efe0fc7e"
+    },
+    {
+      "key": "BS-GR-06.1970",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag und Entwurf zu Änderungen des Gesetzes über Wahlen und Abstimmungen; Änderungen des Gesetzes über die Geschäftsordnung des Grossen Rates",
+      "nummer": "06.1970",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=06.1970",
+      "stand": "2007-03-06",
+      "rang": 90,
+      "normKeys": [
+        "BS-132.100"
+      ],
+      "hinweis": "Zuordnung amtlich: die Fussnote der Gesetzessammlung Basel-Stadt nennt dieses Geschäft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2007-03-06",
+          "res": "06.1970.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2007-04-18",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1030,
+          "datum": "2007-05-30",
+          "res": "06.1970.02",
+          "vok": "bs-gr",
+          "bez": "Bericht SpezKo Verfassung"
+        },
+        {
+          "code": 1050,
+          "datum": "2007-06-27",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-132.100",
+          "quelle": "amtlich",
+          "regel": "fussnote",
+          "beleg": "06.1970"
+        }
+      ],
+      "sha": "5f3b2b2954c351ac0e9991121b9da53d85fa98578a494efaa4337b4d3e3d1fed"
+    },
+    {
+      "key": "BS-GR-05.1156",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "gr-bericht",
+      "doktypLabel": "Bericht an den Grossen Rat",
+      "titel": "Ratschlag und Entwurf Anpassungen von Gesetzen an die Bundesgesetzgebung über die eingetragene Partnerschaft gleichgeschlechtlicher Paare (Partnerschaftsgesetz)",
+      "nummer": "05.1156",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=05.1156",
+      "stand": "2006-07-12",
+      "rang": 91,
+      "normKeys": [
+        "BS-211.100"
+      ],
+      "hinweis": "Zuordnung amtlich: die Fussnote der Gesetzessammlung Basel-Stadt nennt dieses Geschäft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2006-07-12",
+          "res": "05.1156.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2006-09-13",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1050,
+          "datum": "2006-10-18",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-211.100",
+          "quelle": "amtlich",
+          "regel": "fussnote",
+          "beleg": "05.1156"
+        }
+      ],
+      "sha": "9f0aadef4e31607a460f9021ea1b9a331b6d646127a8235d12dc5bef09775d1d"
+    },
+    {
+      "key": "BS-GR-05.0699",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "gr-bericht",
+      "doktypLabel": "Bericht an den Grossen Rat",
+      "titel": "Ratschlag und Entwurf zu Änderungen diverser Gesetze (IRG, Wahlgesetz, Gesetz Tagesbetreuung, Haftungsgesetz) (Anpassungen der Gesetzgebung an die neue Verfassung des Kantons Basel-Stadt vom 23. März 2005)",
+      "nummer": "05.0699",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=05.0699",
+      "stand": "2006-05-08",
+      "rang": 92,
+      "normKeys": [
+        "BS-111.100"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2006-05-08",
+          "res": "05.0699.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2006-06-07",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1030,
+          "datum": "2006-09-27",
+          "res": "05.0699.02",
+          "vok": "bs-gr",
+          "bez": "Bericht Spezialkommission"
+        },
+        {
+          "code": 1050,
+          "datum": "2006-11-15",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1020,
+          "datum": "2007-01-22",
+          "res": "05.0699.03",
+          "vok": "bs-gr",
+          "bez": "Bericht des RR (Verwaltungsreorganisation)"
+        },
+        {
+          "code": 1050,
+          "datum": "2007-03-21",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-111.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 23. März 2005"
+        }
+      ],
+      "sha": "342ab6e4c5c68a3afe3cacb542b1cf253cde30e6633373a777c2d7d221dcc83c"
+    },
+    {
+      "key": "BS-GR-05.1161",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "gr-bericht",
+      "doktypLabel": "Bericht an den Grossen Rat",
+      "titel": "Ratschlag betreffend Beitritt des Kantons Basel-Stadt zur Rahmenvereinbarung für die interkantonale Zusammenarbeit mit Lastenausgleich IRV vom 24. Juni 2005",
+      "nummer": "05.1161",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=05.1161",
+      "stand": "2006-03-17",
+      "rang": 93,
+      "normKeys": [
+        "BS-670.100"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2006-03-17",
+          "res": "05.1161.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2006-04-05",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1030,
+          "datum": "2006-05-08",
+          "res": "05.1161.02",
+          "vok": "bs-gr",
+          "bez": "Bericht der FKom"
+        },
+        {
+          "code": 1050,
+          "datum": "2006-06-07",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-670.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 24. Juni 2005"
+        }
+      ],
+      "sha": "ec3db32bf0ac5b87287519b02035eabd066315938235848e45ed242c13e11070"
+    },
+    {
+      "key": "BS-GR-05.8376",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "gr-bericht",
+      "doktypLabel": "Bericht an den Grossen Rat",
+      "titel": "Bericht und Antrag des Büros des Grossen Rates zu einer Änderung der Ausführungsbestimmungen der GO (SG 152.100) (Akkreditierung der Medienschaffenden und Zutritt zum Grossen Rat)",
+      "nummer": "05.8376",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=05.8376",
+      "stand": "2005-11-09",
+      "rang": 94,
+      "normKeys": [
+        "BS-152.100"
+      ],
+      "hinweis": "Zuordnung maschinell über die SG-Nummer im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1050,
+          "datum": "2005-11-09",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1050,
+          "datum": "2005-12-07",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-152.100",
+          "quelle": "maschinell",
+          "regel": "sg-nummer",
+          "beleg": "SG 152.100"
+        }
+      ],
+      "sha": "6dba3accf51ef04124a6a1bf5ad83809937cde0c3f41b5cc8b914785797cf0cb"
+    },
+    {
+      "key": "BS-GR-04.0683",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "gr-bericht",
+      "doktypLabel": "Bericht an den Grossen Rat",
+      "titel": "Ratschlag und Entwurf betreffend Änderung des Personalgesetzes vom 17. November 1999",
+      "nummer": "04.0683",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=04.0683",
+      "stand": "2005-09-14",
+      "rang": 95,
+      "normKeys": [
+        "BS-162.100"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2005-09-14",
+          "res": "04.0683.01",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2005-10-19",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1050,
+          "datum": "2006-01-18",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-162.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 17. November 1999"
+        }
+      ],
+      "sha": "3c6b1e9a1b1b60676db83a903bad8d23302daee689a86abdff987e6c7b92ae9c"
+    },
+    {
+      "key": "BS-GR-04.2014",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag betreffend Änderung des Gesetzes über die Museen des Kantons Basel-Stadt (Museumsgesetz) vom 16. Juni 1999",
+      "nummer": "04.2014",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=04.2014",
+      "stand": "2004-12-22",
+      "rang": 96,
+      "normKeys": [
+        "BS-451.100"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2004-12-22",
+          "res": "04.2014.01 (RA 9424)",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2005-02-02",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-451.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 16. Juni 1999"
+        }
+      ],
+      "sha": "6d271e5413eb34e64abbb2acc72267febf69bf3358b59a566b3fa656727c17d8"
+    },
+    {
+      "key": "BS-GR-04.8107",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "gr-bericht",
+      "doktypLabel": "Bericht an den Grossen Rat",
+      "titel": "Bericht des Büros des Grossen Rates zu einer Revision der Ausführungsbestimmungen zum Gesetz über die Geschäftsordnung des Grossen Rates vom 24. März 1988 (SG 152.110) sowie zu einer Revision des Finanzkontrollgesetzes (FKG) vom 17. September 2003 (SG 610.200)",
+      "nummer": "04.8107",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=04.8107",
+      "stand": "2004-12-16",
+      "rang": 97,
+      "normKeys": [
+        "BS-152.110",
+        "BS-610.200"
+      ],
+      "hinweis": "Zuordnung maschinell über die SG-Nummer im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1030,
+          "datum": "2004-12-16",
+          "vok": "bs-gr",
+          "bez": "Bericht des Büros Nr. 9418"
+        },
+        {
+          "code": 1050,
+          "datum": "2005-01-12",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1050,
+          "datum": "2005-01-12",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-152.110",
+          "quelle": "maschinell",
+          "regel": "sg-nummer",
+          "beleg": "SG 152.110"
+        },
+        {
+          "erlass": "BS-610.200",
+          "quelle": "maschinell",
+          "regel": "sg-nummer",
+          "beleg": "SG 610.200"
+        }
+      ],
+      "sha": "75d7193e112e46c5f32ee06179e939775a746773afd6b014fa9995e5440fb67a"
+    },
+    {
+      "key": "BS-GR-03.2068",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "gr-bericht",
+      "doktypLabel": "Bericht an den Grossen Rat",
+      "titel": "Bericht betreffend Zweites Massnahmenpaket zur Reduktion der Aufgaben und Leistungen (A&L 2) und Ratschläge betreffend A) Änderung des Gesetzes betreffend die Einreihung und Entlöhnung der Mitarbeiterinnen und Mitarbeiter des Kantons Basel-Stadt (Lohngesetz) B) Teilrevision des Schulgesetzes betreffend Klassengrössen an der Weiterbildungsschule C) Änderung des Gesetzes über die Krankenversicherung im Kanton Basel-Stadt (GKV) vom 15. November 1989 D) Änderung des Gesetzes über die direkten Steuern vom 12. April 2000 betreffend Lohnmeldepflicht für Arbeitgeber",
+      "nummer": "03.2068",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=03.2068",
+      "stand": "2004-10-20",
+      "rang": 98,
+      "normKeys": [
+        "BS-640.100",
+        "BS-834.400"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1050,
+          "datum": "2004-10-20",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1050,
+          "datum": "2004-11-10",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1050,
+          "datum": "2004-11-10",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1050,
+          "datum": "2004-11-10",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1030,
+          "datum": "2004-11-24",
+          "vok": "bs-gr",
+          "bez": "Bericht der WAK Nr. 9405 (zu 9374A)"
+        },
+        {
+          "code": 1030,
+          "datum": "2004-12-01",
+          "vok": "bs-gr",
+          "bez": "Bericht der WAK Nr. 9411 (zu 9374D)"
+        },
+        {
+          "code": 1050,
+          "datum": "2004-12-08",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1050,
+          "datum": "2004-12-08",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1050,
+          "datum": "2005-01-12",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-640.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 12. April 2000"
+        },
+        {
+          "erlass": "BS-834.400",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 15. November 1989"
+        }
+      ],
+      "sha": "0df20381acfdefd9e3b6ca47f6cb3716fc66ab21fc7783f5f3323dd1ed018df6"
+    },
+    {
+      "key": "BS-GR-03.0728",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "gr-bericht",
+      "doktypLabel": "Bericht an den Grossen Rat",
+      "titel": "Ratschlag betreffend MitarbeiterInnengesprächunterlagen;, Stellenbewerberlisten; Ausnahme von Archivierungspflicht (Änderung §7 des Archivgesetzes vom 11. September 1996)",
+      "nummer": "03.0728",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=03.0728",
+      "stand": "2004-07-07",
+      "rang": 99,
+      "normKeys": [
+        "BS-153.600"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2004-07-07",
+          "res": "03.0728.01 (RA 9358)",
+          "vok": "bs-gr",
+          "bez": "Ratschlag RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2004-09-08",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1030,
+          "datum": "2004-12-08",
+          "res": "03.0728.01 (9420)",
+          "vok": "bs-gr",
+          "bez": "Bericht der JSSK"
+        },
+        {
+          "code": 1050,
+          "datum": "2005-01-12",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-153.600",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 11. September 1996"
+        }
+      ],
+      "sha": "13d169f1a019b2d56e9f4842caa0372571e873bd0a2df79be4e5c24af9de690b"
+    },
+    {
+      "key": "BS-GR-04.0801",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag zur Änderung des Gesetzes betreffend Ausbildungsbeiträge vom 12.Oktober 1967",
+      "nummer": "04.0801",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=04.0801",
+      "stand": "2004-06-23",
+      "rang": 100,
+      "normKeys": [
+        "BS-491.100"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1050,
+          "datum": "2004-06-23",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-491.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 12. Oktober 1967"
+        }
+      ],
+      "sha": "fa32ad8b6ac71c78fd63e18dc0660c2ab800843d8568e90fc97bbe6808a66f97"
+    },
+    {
+      "key": "BS-GR-04.0869",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag und Entwurf zu einer Änderung des Gesetzes über die direkten Steuern vom 12. April 2000 sowie zu einer Änderung des Gesetzes über die Handänderungssteuer vom 26. Juni 1996 betreffend Unternehmensumstrukturierungen",
+      "nummer": "04.0869",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=04.0869",
+      "stand": "2004-06-23",
+      "rang": 101,
+      "normKeys": [
+        "BS-640.100",
+        "BS-650.100"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1050,
+          "datum": "2004-06-23",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1050,
+          "datum": "2004-10-21",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-640.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 12. April 2000"
+        },
+        {
+          "erlass": "BS-650.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 26. Juni 1996"
+        }
+      ],
+      "sha": "f7a195be56ebbe1c873a58bd196909bb5335cc241dffff03e3549201df4d650a"
+    },
+    {
+      "key": "BS-GR-04.0707",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag betreffend Teilrevision des Gesetzes über die Verwaltungsrechtspflege (VRPG) vom 14.06.1928 (SG 270.100)",
+      "nummer": "04.0707",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=04.0707",
+      "stand": "2004-06-02",
+      "rang": 102,
+      "normKeys": [
+        "BS-270.100"
+      ],
+      "hinweis": "Zuordnung maschinell über die SG-Nummer im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2004-06-02",
+          "res": "04.0707.01 (RA 9347)",
+          "vok": "bs-gr",
+          "bez": "Ratschlag RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2004-06-23",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1030,
+          "datum": "2004-12-08",
+          "res": "04.0707.01",
+          "vok": "bs-gr",
+          "bez": "Bericht der JSSK Nr. 9421"
+        },
+        {
+          "code": 1050,
+          "datum": "2005-01-12",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-270.100",
+          "quelle": "maschinell",
+          "regel": "sg-nummer",
+          "beleg": "SG 270.100"
+        }
+      ],
+      "sha": "1ff05b373c12c482fa2f69b2d2f2a266aa33692edeca7a7db23073e7ddbaec67"
+    },
+    {
+      "key": "BS-GR-03.1945",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag und Entwurf zu einer Änderung des Gesetzes über die direkten Steuern vom 12. April 2000; Lotterie- und Spielbankengewinne; Behinderungskostenabzug; Ausgleich der kalten Progression: Zeitliche Grundlagen",
+      "nummer": "03.1945",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=03.1945",
+      "stand": "2003-12-03",
+      "rang": 103,
+      "normKeys": [
+        "BS-640.100"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1050,
+          "datum": "2003-12-03",
+          "vok": "bs-gr",
+          "bez": "Beschlussdokument"
+        },
+        {
+          "code": 1030,
+          "datum": "2004-01-16",
+          "vok": "bs-gr",
+          "bez": "Bericht der WAK Nr. 9307"
+        },
+        {
+          "code": 1050,
+          "datum": "2004-02-18",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-640.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 12. April 2000"
+        }
+      ],
+      "sha": "c343992174b004a41307fc0e71c10ec06731e24f6bb1caa0c67d79a8cd158482"
+    },
+    {
+      "key": "BS-GR-03.1560",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag und Entwurf zur Ergänzung des kantonalen Übertretungsstrafrechts vom 15.06.78 (SG 253.100) mit einer Norm betreffend Verbot der Plakatwerbung für Alkohol und Tabak auf privatem Grund, welcher öffentlich einsehbar ist",
+      "nummer": "03.1560",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=03.1560",
+      "stand": "2003-11-12",
+      "rang": 104,
+      "normKeys": [
+        "BS-253.100"
+      ],
+      "hinweis": "Zuordnung maschinell über die SG-Nummer im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1050,
+          "datum": "2003-11-12",
+          "vok": "bs-gr",
+          "bez": "Beschlussdokument"
+        },
+        {
+          "code": 1050,
+          "datum": "2004-11-10",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-253.100",
+          "quelle": "maschinell",
+          "regel": "sg-nummer",
+          "beleg": "SG 253.100"
+        }
+      ],
+      "sha": "0f0331773b269c2a138acea94b38a9b3edde33ebf693bfafbbde7b75722bac4f"
+    },
+    {
+      "key": "BS-GR-03.1858",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "gr-bericht",
+      "doktypLabel": "Bericht an den Grossen Rat",
+      "titel": "Ratschlag betreffend Änderung des Energiegesetzes zur Vermeidung von Mehrwertsteuerbelastungen auf der Förderabgabe (SG 772.100)",
+      "nummer": "03.1858",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=03.1858",
+      "stand": "2003-11-12",
+      "rang": 105,
+      "normKeys": [
+        "BS-772.100"
+      ],
+      "hinweis": "Zuordnung maschinell über die SG-Nummer im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1050,
+          "datum": "2003-11-12",
+          "vok": "bs-gr",
+          "bez": "Beschlussdokument"
+        },
+        {
+          "code": 1050,
+          "datum": "2004-01-07",
+          "vok": "bs-gr",
+          "bez": "Beschlussdokument"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-772.100",
+          "quelle": "maschinell",
+          "regel": "sg-nummer",
+          "beleg": "SG 772.100"
+        }
+      ],
+      "sha": "0f03c6d306d5c4d1815ce0407ef0fc175bb3923b6cdfefe63cd7bc19eac1fcda"
+    },
+    {
+      "key": "BS-GR-03.1561",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag und Entwurf zu einer Änderung des Gesetzes betreffend den Fonds zur Bekämpfung der Arbeitslosigkeit vom 6. Dezember 1995",
+      "nummer": "03.1561",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=03.1561",
+      "stand": "2003-10-22",
+      "rang": 106,
+      "normKeys": [
+        "BS-835.200"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1050,
+          "datum": "2003-10-22",
+          "vok": "bs-gr",
+          "bez": "Beschlussdokument"
+        },
+        {
+          "code": 1050,
+          "datum": "2003-12-03",
+          "vok": "bs-gr",
+          "bez": "Beschlussdokument"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-835.200",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 6. Dezember 1995"
+        }
+      ],
+      "sha": "5fbe343da0dc66de18d63e73d0e9a9b4429e4564853d68c4bb59a269ee361399"
+    },
+    {
+      "key": "BS-GR-03.1361",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "gr-bericht",
+      "doktypLabel": "Bericht an den Grossen Rat",
+      "titel": "Ratschlag und Entwurf zu einer Änderung des Gesetzes über die direkten Steuern vom 12. April 2000 (Grundstückgewinnsteuer: Reduktion des Spekulationszuschlages bei Bauinvestitionen)",
+      "nummer": "03.1361",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=03.1361",
+      "stand": "2003-09-10",
+      "rang": 107,
+      "normKeys": [
+        "BS-640.100"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1050,
+          "datum": "2003-09-10",
+          "vok": "bs-gr",
+          "bez": "Beschlussdokument"
+        },
+        {
+          "code": 1050,
+          "datum": "2003-10-22",
+          "vok": "bs-gr",
+          "bez": "Beschlussdokument"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-640.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 12. April 2000"
+        }
+      ],
+      "sha": "ffc8bf1c0be3555f1a1c16153710ec6d9988146f7e1aeb11f1836461efda0854"
+    },
+    {
+      "key": "BS-GR-03.0267",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "gr-bericht",
+      "doktypLabel": "Bericht an den Grossen Rat",
+      "titel": "Ratschlag und Entwurf zu einer Änderung des Gesetzes über die direkten Steuern vom 12. April 2000 (Besserstellung von nichtehelichen Zusammenlebensformen bei der Erbschafts- und Schenkungssteuer)",
+      "nummer": "03.0267",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=03.0267",
+      "stand": "2003-03-19",
+      "rang": 108,
+      "normKeys": [
+        "BS-640.100"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1050,
+          "datum": "2003-03-19",
+          "vok": "bs-gr",
+          "bez": "Beschlussdokument"
+        },
+        {
+          "code": 1050,
+          "datum": "2003-05-21",
+          "vok": "bs-gr",
+          "bez": "Beschlussdokument"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-640.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 12. April 2000"
+        }
+      ],
+      "sha": "d7801f31a84d56f787f4096866d61933affa7ab538dd53cfe915c55203a57c48"
+    },
+    {
+      "key": "BS-GR-02.2030",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "gr-bericht",
+      "doktypLabel": "Bericht an den Grossen Rat",
+      "titel": "Ratschlag betreffend Staatsbeiträge gemäss Gesetz über den Denkmalschutz vom 20. März 1980",
+      "nummer": "02.2030",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=02.2030",
+      "stand": "2003-01-08",
+      "rang": 109,
+      "normKeys": [
+        "BS-497.100"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1050,
+          "datum": "2003-01-08",
+          "vok": "bs-gr",
+          "bez": "Beschlussdokument"
+        },
+        {
+          "code": 1050,
+          "datum": "2003-02-12",
+          "vok": "bs-gr",
+          "bez": "Beschlussdokument"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-497.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 20. März 1980"
+        }
+      ],
+      "sha": "d2b4d9e2719d59497b22f4db67c9081a1286498b322e929482a42c5539a4138c"
+    },
+    {
+      "key": "BS-GR-02.2427",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag betreffend Strukturänderung an der Weiterbildungsschule (Änderung des Schulgesetzes vom 4. April 1929, § 36)",
+      "nummer": "02.2427",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=02.2427",
+      "stand": "2002-12-18",
+      "rang": 110,
+      "normKeys": [
+        "BS-410.100"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2002-12-18",
+          "res": "02.2427.01 (RA 9213)",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2003-02-12",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1030,
+          "datum": "2003-05-21",
+          "res": "02.2427.02 (BER 9246)",
+          "vok": "bs-gr",
+          "bez": "Bericht der BKK"
+        },
+        {
+          "code": 1050,
+          "datum": "2003-06-11",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        },
+        {
+          "code": 1010,
+          "datum": "2008-11-26",
+          "res": "02.2427.02",
+          "vok": "bs-gr",
+          "bez": "Ratschlag des RR"
+        },
+        {
+          "code": 1050,
+          "datum": "2009-02-11",
+          "vok": "bs-gr",
+          "bez": "GR Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-410.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 4. April 1929"
+        }
+      ],
+      "sha": "31c240828c24b9afede5a451974476e0485d556aa9d420989a683c37619b509f"
+    },
+    {
+      "key": "BS-GR-02.0403",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "gr-bericht",
+      "doktypLabel": "Bericht an den Grossen Rat",
+      "titel": "Ratschlag und Entwurf betreffend Änderung des Gerichtsorganisationsgesetzes, Änderung der Verordnung betreffend die Gewerblichen Schiedsgerichte vom 19. September 1989 (SG 154.130), Änderung der Gruppeneinteilung und der Zahl der Richterinnen und Richter sowie Änderung der Verordnung betreffend Richterentschädigungen vom 6. Februar 1973",
+      "nummer": "02.0403",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=02.0403",
+      "stand": "2002-03-11",
+      "rang": 111,
+      "normKeys": [
+        "BS-154.130"
+      ],
+      "hinweis": "Zuordnung maschinell über die SG-Nummer im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2002-03-11",
+          "vok": "bs-gr",
+          "bez": "Ratschlag 9150"
+        },
+        {
+          "code": 1050,
+          "datum": "2002-04-10",
+          "vok": "bs-gr",
+          "bez": "Beschlussdokument"
+        },
+        {
+          "code": 1050,
+          "datum": "2002-06-27",
+          "vok": "bs-gr",
+          "bez": "Beschlussdokument"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-154.130",
+          "quelle": "maschinell",
+          "regel": "sg-nummer",
+          "beleg": "SG 154.130"
+        }
+      ],
+      "sha": "6284cccef71355adbf392ab3b82f312d5754cd115d45288c1ba7917892fc94a8"
+    },
+    {
+      "key": "BS-GR-01.0353",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlagsentwurf zu einem Gesetz betreffend Änderung von §§ 13 und 79 Abs. 2 des Gesetzes über Wahlen und Abstimmungen vom 21. April 1994 (Wahlgesetz)",
+      "nummer": "01.0353",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=01.0353",
+      "stand": "2001-03-13",
+      "rang": 112,
+      "normKeys": [
+        "BS-132.100"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2001-03-13",
+          "vok": "bs-gr",
+          "bez": "Ratschlag 9073"
+        },
+        {
+          "code": 1050,
+          "datum": "2001-04-25",
+          "vok": "bs-gr",
+          "bez": "Beschluss"
+        },
+        {
+          "code": 1050,
+          "datum": "2001-09-12",
+          "vok": "bs-gr",
+          "bez": "Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-132.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 21. April 1994"
+        }
+      ],
+      "sha": "befabf2a839fbb5a40b176665e538c32438ef51aa2682869c80099c847000d43"
+    },
+    {
+      "key": "BS-GR-01.0221",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag und Entwurf zu einer Änderung des §68 des Polizeigesetzes vom 13. November 1996 (SG 510.100)",
+      "nummer": "01.0221",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=01.0221",
+      "stand": "2001-02-20",
+      "rang": 113,
+      "normKeys": [
+        "BS-510.100"
+      ],
+      "hinweis": "Zuordnung maschinell über die SG-Nummer im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "2001-02-20",
+          "vok": "bs-gr",
+          "bez": "Ratschlag 9077"
+        },
+        {
+          "code": 1050,
+          "datum": "2001-04-25",
+          "vok": "bs-gr",
+          "bez": "Beschluss"
+        },
+        {
+          "code": 1030,
+          "datum": "2001-11-28",
+          "vok": "bs-gr",
+          "bez": "Bericht 9125"
+        },
+        {
+          "code": 1050,
+          "datum": "2002-01-23",
+          "vok": "bs-gr",
+          "bez": "Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-510.100",
+          "quelle": "maschinell",
+          "regel": "sg-nummer",
+          "beleg": "SG 510.100"
+        }
+      ],
+      "sha": "2aebaa71ea6d7d06e4a76f470a17b37b0061bda5238a42ee4e3aeeecf3a63315"
+    },
+    {
+      "key": "BS-GR-96.1713",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "gr-bericht",
+      "doktypLabel": "Bericht an den Grossen Rat",
+      "titel": "Ratschlag betreffend Aufhebung des Grossratsbeschlusses betreffend Vollziehung des Bundesgesetzes betreffend den Verkehr mit Lebensmitteln und Gebrauchsgegenständen vom 8. Dezember 1905 (vom 17. Juni 1909) (SG 351.100),",
+      "nummer": "96.1713",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=96.1713",
+      "stand": "1996-03-12",
+      "rang": 114,
+      "normKeys": [
+        "BS-351.100"
+      ],
+      "hinweis": "Zuordnung maschinell über die SG-Nummer im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "ereignisse": [
+        {
+          "code": 1010,
+          "datum": "1996-03-12",
+          "vok": "bs-gr",
+          "bez": "Ratschlag 8656"
+        },
+        {
+          "code": 1050,
+          "datum": "1996-04-17",
+          "vok": "bs-gr",
+          "bez": "Beschluss"
+        }
+      ],
+      "bsKanten": [
+        {
+          "erlass": "BS-351.100",
+          "quelle": "maschinell",
+          "regel": "sg-nummer",
+          "beleg": "SG 351.100"
+        }
+      ],
+      "sha": "87ae17bfcfe7d8d072ea7cfc0f7e702ea341b27b765fceaa85a8ef818efc3909"
+    },
+    {
+      "key": "BS-GR-93.1135",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag und Entwurf zu einer Aenderung des Gesetzes betreffend die Einführung des Schweizerischen Zivilgesetzbuches vom 27. April 1911 (EG ZGB); Beglaubigung von Unterschriften in den Landgemeinden",
+      "nummer": "93.1135",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=93.1135",
+      "stand": "1993-12-31",
+      "rang": 115,
+      "normKeys": [
+        "BS-211.100"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "bsKanten": [
+        {
+          "erlass": "BS-211.100",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 27. April 1911"
+        }
+      ],
+      "sha": "f0afc69727ff158283581de87bc9d2bcc0cc79e4b31549155c0b349f9a7236d9"
+    },
+    {
+      "key": "BS-GR-93.1938",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "Ratschlag und Entwurf zu einer Aenderung des Gesetzes betreffend das Gantwesen (SG 230.900); Anpassung der Gebühren an den tatsächlichen Verwaltungsaufwand",
+      "nummer": "93.1938",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=93.1938",
+      "stand": "1993-12-31",
+      "rang": 116,
+      "normKeys": [
+        "BS-230.900"
+      ],
+      "hinweis": "Zuordnung maschinell über die SG-Nummer im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "bsKanten": [
+        {
+          "erlass": "BS-230.900",
+          "quelle": "maschinell",
+          "regel": "sg-nummer",
+          "beleg": "SG 230.900"
+        }
+      ],
+      "sha": "501e95efdcca4a4c7bba6e2b5c36a61e0cc653e3995193dcf3fa00046d996c06"
+    },
+    {
+      "key": "BS-GR-85.0123",
+      "behoerde": "BS-GR",
+      "behoerdeName": "Grosser Rat des Kantons Basel-Stadt",
+      "behoerdeKuerzel": "GR BS",
+      "doktyp": "ratschlag",
+      "doktypLabel": "Ratschlag",
+      "titel": "RA 7852 und Entwurf zu einem Gesetz betr. Aenderung des Gesetzes über die Besteuerung der Motorfahrzeuge vom 17. November 1966",
+      "nummer": "85.0123",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "status": "nur-live-link",
+      "quelleUrl": "https://grosserrat.bs.ch/?gnr=85.0123",
+      "stand": "1985-01-30",
+      "rang": 117,
+      "normKeys": [
+        "BS-650.500"
+      ],
+      "hinweis": "Zuordnung maschinell über Erlassdatum und Titel im amtlichen Geschäftstitel; fachlich nicht geprüft.",
+      "bsKanten": [
+        {
+          "erlass": "BS-650.500",
+          "quelle": "maschinell",
+          "regel": "datum-titel",
+          "beleg": "vom 17. November 1966"
+        }
+      ],
+      "sha": "c7f122dc5d16e8b54412b1c8e469eff973e68ef2b96a949b4fece3c695596901"
     }
   ]
 }

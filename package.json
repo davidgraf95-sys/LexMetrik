@@ -88,6 +88,7 @@
     "materialien": "vite-node scripts/materialien/soft-law-projektion-run.ts --",
     "materialien:kaskade": "vite-node scripts/materialien/kaskade-run.ts --",
     "materialien:botschaften": "vite-node scripts/materialien/botschaften-generieren-run.ts --",
+    "materialien:bs": "vite-node scripts/materialien/bs-materialien-run.ts --",
     "normtext:revisionen": "vite-node scripts/normtext/revisionen-generieren-run.ts --",
     "check:revisionen": "vite-node scripts/normtext/check-revisionen.ts",
     "check:revisionen-netz": "vite-node scripts/normtext/check-revisionen.ts -- --netz",
