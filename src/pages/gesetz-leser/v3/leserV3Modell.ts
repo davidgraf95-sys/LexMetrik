@@ -261,7 +261,8 @@ export function useLeserV3Modell({ ebene: routenSegment, schluessel }: { ebene: 
   }, [struktur]);
   // D1/D35-F3: EINE Zählung, zwei Leser (§5) — «wird die Wahl angeboten?» und «dämpft «Fassung» hier etwas?».
   const aenderungsFussnoten = useMemo(() => zaehleAenderungsvermerke(struktur), [struktur]);
-  const hatAenderungsvermerke = useMemo(() => bieteAenderungsvermerkeSchalter(aenderungsFussnoten, // W2·26/Z8 · dritter Träger (Kopf-Fussnoten mitgezählt), Herleitung + Messung an `bieteAenderungsvermerkeSchalter`
+  // W2·26/Z8 · dritter Träger «trägt der Erlass überhaupt Fussnoten?», Kopf mitgezählt (253 Erlasse führen NUR Kopf-Fussnoten, 11.9.2026); Herleitung an `bieteAenderungsvermerkeSchalter`.
+  const hatAenderungsvermerke = useMemo(() => bieteAenderungsvermerkeSchalter(aenderungsFussnoten,
     (eintraege ?? []).some((e) => historieFuer(e.artikel) !== undefined), eintraege !== null,
     struktur || kopf ? (fussnotenAnzahl ?? 0) + (kopf?.fussnoten?.length ?? 0) : null), [aenderungsFussnoten, eintraege, historieFuer, struktur, kopf, fussnotenAnzahl]);
 
