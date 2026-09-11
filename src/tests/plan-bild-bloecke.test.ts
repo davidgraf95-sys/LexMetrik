@@ -389,8 +389,25 @@ describe(`Wortbudget der Hauptseite — höchstens ${WORTBUDGET} sichtbare Wört
   });
 
   it('das Budget KANN reissen — ein Tor, das nicht scheitern kann, wäre keines (§6.7)', () => {
-    const aufgeblaeht = sichtAusEchterRoadmap();
-    aufgeblaeht.gates = [...aufgeblaeht.gates, ...aufgeblaeht.gates];
+    // Bewusst NICHT sichtAusEchterRoadmap(): dieser Rot-Beweis prüft die
+    // Mechanik des Tors (überschreitet lagebildInhalt() bei genug Text das
+    // Budget?), nicht den Tagesstand von ROADMAP.md. Mit den echten Gates
+    // hing der Beweis am Umfang der Roadmap-Prosa — nach deren Kürzung in
+    // #787 (1714 → 537 sichtbare Wörter im Vollausbau) blieb selbst die
+    // verdoppelte Gate-Liste unter 600 Wörtern und der Rot-Beweis erlosch
+    // (Befund 11.9.2026). Die synthetische Belegung unten trägt ihr Wortmass
+    // in sich selbst — 40 Gates × 20 generierte Wörter Prosa sind bei JEDEM
+    // Repo-Stand weit über dem Budget.
+    const langerText = (praefix: string, anzahl: number) =>
+      Array.from({ length: anzahl }, (_, i) => `${praefix}-wort${i}`).join(' ');
+    const vieleGates: GateSicht[] = Array.from({ length: 40 }, (_, i) =>
+      gate({
+        name: `synthetisches-gate-${i}`,
+        text: `Synthetisches David-Gate Nr. ${i}: ${langerText(`g${i}`, 20)}.`,
+        pakete: [{ titel: `Synthetisches Paket ${i}`, id: `SYN-${i}`, feld: 'korpus' }],
+      }),
+    );
+    const aufgeblaeht = sicht({ gates: vieleGates });
     expect(sichtbareWorte(lagebildInhalt(aufgeblaeht))).toBeGreaterThan(WORTBUDGET);
   });
 });
