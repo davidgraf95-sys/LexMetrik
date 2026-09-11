@@ -210,3 +210,71 @@ Kein Umfangs-Rückbau nötig, keine Offenlegung nach §7 erforderlich. Speicherf
 Konsolidierungen nachträglich korrigiert, ist mit einem Stichtag nicht entscheidbar —
 genau dafür führt der Shard je Stand den Quell-`sha`, und `check:entstehung` verweigert
 eine Shard-Änderung ohne Quell-Hash-Änderung.
+
+## 8 Nachtrag 11.9.2026 — Befund #796: Generator und Leser trugen zwei Normalisierungen, Profil `entstehung-norm/3`
+
+**Befund (Bauer #796):** der Generator (`normalisiere()`, `flachText()` in
+`scripts/entstehung/synopse.ts`) und der Leser (`vergleichsform()` in
+`src/lib/entstehung/synopse-diff.ts`) trugen bis Profil `/2` je eine EIGENE
+Zeichen- und Struktur-Normalisierung. Gemessen (Stand vor dem Fix, 11.9.2026,
+über alle 186 Synopse-Shards): **70 gespeicherte Alt-Blöcke** (36/3484
+`belegt`, 34/999 `ohne_ereignis`) zeigten dem Leser «kein Unterschied
+erkennbar», obwohl der Generator sie als «geändert» ablegte — Rot-Beweis: ein
+neu gebauter Leer-Diff-Wächter in `check:entstehung` fand diese 70 Fälle exakt
+(Kommando `npm run check:entstehung` gegen die unregenerierten Profil-`/2`-
+Artefakte).
+
+**Ursachen, je Klasse (empirisch, nicht die Zeichentabellen allein):**
+
+1. **Randvermerk-Scope** (51 der 70 Fälle): `flachText` verglich den GANZEN
+   Artikel-Innenraum inklusive `<heading>`/`<subheading>` — ein Querverweis
+   («(Art. 83 Abs. 1 Bst. i und o AVIG)» → «(Art. 83 Abs. 1bis AVIG)», wegen
+   Umnummerierung an ANDERER Stelle des Erlasses) löste «geändert» aus, obwohl
+   der Artikeltext (`bloecke`, alles was gespeichert und angezeigt wird)
+   byte-gleich blieb. Beleg: AVIV Art. 109b, 2021-04-01 → 2021-07-01.
+2. **Fussnote vor der Satzzeichen-Regel** (die restlichen 19 der 70, alle
+   NBSP-Rauschen im Body als Nebeneffekt): eine `<authorialNote>`
+   (Berichtigungs- bzw. «Fassung gemäss …»-Hinweis) schob sich in EINER
+   Konsolidierungs-Generation zwischen ein Satzzeichen und
+   `</listIntroduction>` — die Satzzeichen-Regel aus PR #794 griff nur in der
+   fussnotenlosen Generation. Beleg: BGOE Art. 13, 2023-09-01 → 2023-11-01;
+   VEV Art. 4, 2026-04-08 → 2026-06-12.
+3. **Text nach einer Liste** (bei der Regenerierung neu aufgetreten, 18
+   weitere Fälle): `zerlegeBloecke` kennt nach einer `<blockList>` nur
+   `listIntroduction` + `item`, nie Text DANACH — ein Satz in einer
+   Tabellenzelle nach der Liste trug in einem Fall sogar eine ECHTE Änderung
+   (Kantonsliste um Bern/Luzern erweitert), landete aber in KEINER Generation
+   in `bloecke`. Beleg: KLV Art. 12 Bst. e, 2021-11-04 → 2022-01-01.
+
+**Fix (Profil `entstehung-norm/3`):** die Zeichen-Normalisierung lebt jetzt an
+GENAU EINEM Ort (`src/lib/entstehung/normalisierung.ts`, `vergleichsform`),
+von Generator UND Leser importiert; `flachText` ist auf den `<paragraph>`-Scope
+beschränkt (Klasse 1); `vergleichsRoh()` entfernt `<authorialNote>` VOR der
+Satzzeichen-Regel (Klasse 2) und ignoriert Text nach `</blockList>` (Klasse 3).
+Die Gegenprobe aus PR #794 (ARG 12, EMRK 44, UNO_PAKT_II 24, AHVG 10
+Elementgrenze UND die echte 413→422-Änderung im selben Schritt) ist jetzt ein
+dauerhafter Unit-Test (`src/tests/entstehung-synopse.test.ts`), vorher nur ein
+einmaliger Gegenprüfungs-Befund.
+
+**Wirkung auf die Zahlen:** 4659 → **4529 Alt-Blöcke** (−130, −2,8 %), davon
+`ohne_ereignis` 1175 → **1140**; Deckel 6580,1 → **6544,2 KB / 8192,0 KB
+(80 %)**; Leer-Diff-Verletzungen 70 → **10** (−86 %).
+
+**Offener Rest (10 Fälle, andere Fehlerklasse, NICHT Normalisierung):**
+Token-Kontinuität über grosse Zeitspannen — `neuNach()`
+(`src/lib/entstehung/synopse-diff.ts`) sucht den nächsten Schritt mit
+DEMSELBEN Token, nicht die nächste WORTLAUT-Änderung. Fällt der Wortlaut nach
+Jahren zufällig auf den Ausgangswert zurück (Beleg: AVIV Art. 57b — «… um
+sechs Abrechnungsperioden …» @2021-07-01, wortgleich wieder @2025-11-01, erst
+danach «… um zwölf …»), zeigt der Leser «kein Unterschied». Dieselbe Klasse
+trifft `art: 'entfallen'`-Artikel noch deutlicher (CHEMRRV, zehn Token um den
+2022-05-01 — dort bereits durch `leerDiffVerletzungen()` ausgefiltert, siehe
+Docstring dort). Bewusst NICHT stillschweigend gelöst (§6.7): `check:entstehung`
+bleibt für diese 10 Fälle rot, bis ein eigener Roadmap-Schritt `neuNach` um eine
+Lineage-Regel über den Token hinaus ergänzt (z. B. `oc`/eId-Kontinuität statt
+reiner Token-Gleichheit). Betroffen: AIG 93, ASYLG 6a, AVIV 57b/1a, OR 652d,
+PARLG 13, VAM 51/76/77, ZSTV 17.
+
+**Determinismus:** zweiter Generator-Lauf (identischer XML-Cache, ohne
+`--parser-neu`) byte-gleich zum ersten — sha256 aller 186 Synopse-Shards und
+des Quell-Registers identisch.

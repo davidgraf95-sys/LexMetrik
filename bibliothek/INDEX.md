@@ -229,7 +229,14 @@ disjunkte Stichprobe n=13 über 13 Erlasse: 13/13 echt. Volumen nur-Alt korpuswe
 Erlassen (Deckel 8 MB / 2 MB je Erlass). Geltung: Bund, Fenster ab Stand
 1.1.2021 — davor gibt es amtlich nur `doc`/`pdf-a`. Pflegebedarf: Nachlauf je
 neuer Konsolidierung; Drift-Wächter in `check:entstehung`. Maschinell gemessen;
-fachliche Abnahme David offen.
+fachliche Abnahme David offen. **Nachtrag 11.9.2026 (§8, Befund Bauer #796):**
+Generator und Leser trugen bis `/2` je eine eigene Normalisierung — 70 Alt-Blöcke
+galten dem Leser als «kein Unterschied» trotz gebuchtem «geändert». Profil
+`entstehung-norm/3`: EINE Vergleichsform (`src/lib/entstehung/normalisierung.ts`)
+für beide Seiten, `flachText`-Scope auf `<paragraph>` beschränkt, Fussnoten- und
+Nachlisten-Text aus dem Vergleich genommen. 70 → 10 Leer-Diff-Verletzungen
+(Rest: andere Fehlerklasse, Token-Kontinuität, dokumentiert im Nachtrag). Regel
+deterministisch (zweiter Lauf byte-gleich); fachliche Abnahme David offen.
 
 ## register/ — fortlaufend gepflegt
 
