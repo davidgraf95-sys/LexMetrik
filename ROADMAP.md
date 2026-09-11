@@ -283,8 +283,8 @@ zgb-a36-anhang: Die ZGB-Gliederung zeigt 74 Artikel des Anhangs «Wortlaut der f
   (geprüft 11.9.2026 gegen `git log origin/main`, PR #744–#761).
   Etappe E3. **Detail:** [FAHRPLAN-MATERIALIEN-VERZAHNUNG.md](fahrplaene/FAHRPLAN-MATERIALIEN-VERZAHNUNG.md) §11.
 
-- [ ] **Entstehung am Artikel — Synopse alt/neu ab 2021 und Entwurf↔Beschluss** *(`W2·6c-ENTSTEHUNG-SYNOPSE`, 6.9.2026; absorbiert den Datenanteil von M16)*
-  <!-- @meta id: W2·6c-ENTSTEHUNG-SYNOPSE · status: ready · blocker: null · dep: [W2·6c-ENTSTEHUNG-DATEN] · feld: korpus · fahrplan: fahrplaene/FAHRPLAN-MATERIALIEN-VERZAHNUNG.md -->
+- [x] **Entstehung am Artikel — Synopse alt/neu ab 2021 und Entwurf↔Beschluss** *(`W2·6c-ENTSTEHUNG-SYNOPSE`, 6.9.2026; absorbiert den Datenanteil von M16)*
+  <!-- @meta id: W2·6c-ENTSTEHUNG-SYNOPSE · status: done · blocker: null · dep: [W2·6c-ENTSTEHUNG-DATEN] · feld: korpus · fahrplan: fahrplaene/FAHRPLAN-MATERIALIEN-VERZAHNUNG.md -->
   Diff zweier Fedlex-Konsolidierungen je Artikel (HTML nur ab Stand 1.1.2021), gespeichert wird nur der
   Alt-Block als §7-Zitat mit Deckel 8 MB / 2 MB je Erlass; Vor-Messung E5.0 vor dem Bau. Etappen E5.0, E5, E6.
   **Detail:** [FAHRPLAN-MATERIALIEN-VERZAHNUNG.md](fahrplaene/FAHRPLAN-MATERIALIEN-VERZAHNUNG.md) §11.
