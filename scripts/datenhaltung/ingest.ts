@@ -81,10 +81,12 @@ export const ENTSTEHUNG_CURIA_DIR = 'public/materialien/curia';
 // E5: Synopse-Shards je Erlass (Alt-Wortlaut historischer Konsolidierungen) samt ihrem
 // Quell-Register — dieselbe Lücke wie bei anker/** und curia/**, nur mit Gesetzestext drin.
 export const ENTSTEHUNG_SYNOPSE_DIR = 'public/materialien/synopse';
+export const ENTSTEHUNG_ENTWURF_DIR = 'public/materialien/synopse-entwurf';
 export const ENTSTEHUNG_TRAEGER = [
   'bibliothek/register/entstehung-anker.json',
   'bibliothek/register/entstehung-deckung.json',
   'bibliothek/register/entstehung-synopse.json',
+  'bibliothek/register/entstehung-entwurf.json',
   'bibliothek/register/curia-zustand.jsonl',
 ];
 
@@ -292,10 +294,12 @@ export function ingestSoftLaw(db: DatabaseSync): Zaehler {
   const anker = existsSync(ENTSTEHUNG_ANKER_DIR) ? jsonRekursiv(ENTSTEHUNG_ANKER_DIR) : [];
   const curia = existsSync(ENTSTEHUNG_CURIA_DIR) ? jsonRekursiv(ENTSTEHUNG_CURIA_DIR) : [];
   const synopse = existsSync(ENTSTEHUNG_SYNOPSE_DIR) ? jsonRekursiv(ENTSTEHUNG_SYNOPSE_DIR) : [];
+  const entwurf = existsSync(ENTSTEHUNG_ENTWURF_DIR) ? jsonRekursiv(ENTSTEHUNG_ENTWURF_DIR) : [];
   const traeger = ENTSTEHUNG_TRAEGER.filter((f) => existsSync(f));
   ingestDokumente(db, anker, 'entstehung-anker');
   ingestDokumente(db, curia, 'entstehung-curia');
   ingestDokumente(db, synopse, 'entstehung-synopse');
+  ingestDokumente(db, entwurf, 'entstehung-entwurf');
   ingestDokumente(db, traeger, 'entstehung-traeger');
   return {
     Materialien: 1,
@@ -304,6 +308,7 @@ export function ingestSoftLaw(db: DatabaseSync): Zaehler {
     'Entstehung-Anker': anker.length,
     'Entstehung-Curia': curia.length,
     'Entstehung-Synopse': synopse.length,
+    'Entstehung-Entwurf': entwurf.length,
     'Entstehung-Träger': traeger.length,
   };
 }

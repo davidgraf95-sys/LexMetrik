@@ -37,6 +37,9 @@ import {
 } from '../../src/lib/entstehung/synopse.ts';
 import { serialisiereShard as serialisiereSynopse, shaShard as shaSynopse } from './synopse.ts';
 import { SYNOPSE_REGISTER_PFAD, type SynopseRegister } from './synopse-register.ts';
+import { ENTWURF_DIR, type EntwurfShard } from '../../src/lib/entstehung/synopse-entwurf.ts';
+import { serialisiereEntwurfShard, shaEntwurfShard } from './synopse-entwurf.ts';
+import { ENTWURF_REGISTER_PFAD, type EntwurfRegister } from './synopse-entwurf-register.ts';
 import {
   VERBOTENE_FELDER, CURIA_QUELLENANGABE, AUSZAEHLUNG_HINWEIS, DECISION_CODES,
   serialisiereShard, shaShard, leeresAggregat, type CuriaShard,
@@ -70,6 +73,8 @@ const DECKEL: readonly (readonly [string, string, number, boolean])[] = [
   // §11.6/A6: Synopse-Alt-Blöcke 8 MB gesamt. Ist-Prognose aus der Vor-Messung E5.0
   // (11.9.2026): ~4,9 MB roh über 1006 Schritte in 187 Erlassen.
   ['Synopse-Shards        ', SYNOPSE_DIR, 8 * 1024 * 1024, false],
+  // §11.6: Entwurf/Beschluss-Diff < 3 MB.
+  ['Entwurf-Beschluss     ', ENTWURF_DIR, 3 * 1024 * 1024, false],
 ];
 
 function groesse(pfad: string, gzip: boolean): number | null {
@@ -337,6 +342,78 @@ for (const [name, pfad, max, gzip] of DECKEL) {
     + `${bloecke} Alt-Blöcke (${ohneEreignis} ohne Fussnoten-Ereignis, ${konflikte} Fussnoten-Ereignisse ohne `
     + `beobachtete Textänderung — beides angezeigt, nie aufgelöst); grösster Erlass ${groesster[0]} `
     + `${kb(groesster[1])} / ${kb(JE_ERLASS)} (${((groesster[1] / JE_ERLASS) * 100).toFixed(0)} %).`,
+  );
+}
+
+// ── (8) Entwurf↔Beschluss-Shards: Provenienz, Join-Regel, Determinismus (E6) ───
+{
+  const register: EntwurfRegister | null = existsSync(ENTWURF_REGISTER_PFAD)
+    ? (JSON.parse(readFileSync(ENTWURF_REGISTER_PFAD, 'utf8')) as EntwurfRegister)
+    : null;
+  const dateien = existsSync(ENTWURF_DIR)
+    ? readdirSync(ENTWURF_DIR).filter((f) => f.endsWith('.json')).sort()
+    : [];
+  if (dateien.length && !register) {
+    fehler.push(`${ENTWURF_DIR} ist befüllt, aber ${ENTWURF_REGISTER_PFAD} fehlt — ohne Quell-Register ist kein Entwurfs-Wortlaut belegbar (§7d).`);
+  }
+  let artikel = 0;
+  let unveraendert = 0;
+  if (register) {
+    for (const f of dateien) {
+      const key = f.slice(0, -'.json'.length);
+      const roh = readFileSync(join(ENTWURF_DIR, f), 'utf8');
+      const eintrag = register.vorlagen[key];
+      if (!eintrag) { fehler.push(`Entwurf-Shard ${f} steht nicht im Quell-Register — Herkunft unbelegt (§7).`); continue; }
+      const shard = JSON.parse(roh) as EntwurfShard;
+      if (roh !== serialisiereEntwurfShard(shard)) {
+        fehler.push(`Entwurf-Shard ${f} ist nicht kanonisch serialisiert — von Hand editiert? (Generator neu laufen.)`);
+      }
+      if (shaEntwurfShard(shard) !== eintrag.shardSha) {
+        fehler.push(
+          `Entwurf-Shard ${f}: sha weicht vom Quell-Register ab — der Entwurfs-Wortlaut hat sich `
+          + 'geändert, ohne dass der Lauf ihn gebucht hätte (Determinismus-Wächter §11.6 (5)).',
+        );
+      }
+      if (shard.normProfil !== NORM_PROFIL) {
+        fehler.push(`Entwurf-Shard ${f}: Normalisierungs-Profil «${shard.normProfil}» ≠ «${NORM_PROFIL}».`);
+      }
+      for (const [rolle, dok, sha] of [
+        ['Entwurf', shard.entwurfDok, eintrag.entwurfSha],
+        ['Beschluss', shard.beschlussDok, eintrag.beschlussSha],
+      ] as const) {
+        if (!dok.htmlUrl.startsWith('https://fedlex.data.admin.ch/filestore/')) {
+          fehler.push(`Entwurf-Shard ${f} (${rolle}): Quelle «${dok.htmlUrl}» ist keine Filestore-URL — URLs werden nie konstruiert (§7b).`);
+        }
+        if (!dok.liveUrl.startsWith('https://www.fedlex.admin.ch/eli/')) {
+          fehler.push(`Entwurf-Shard ${f} (${rolle}): kein Live-Link zur amtlichen Fassung (§7c).`);
+        }
+        if (!/^[0-9a-f]{64}$/.test(dok.sha) || dok.sha !== sha) {
+          fehler.push(`Entwurf-Shard ${f} (${rolle}): Quell-sha fehlt oder weicht vom Register ab (§7d).`);
+        }
+        if (dok.bloecke <= 0) fehler.push(`Entwurf-Shard ${f} (${rolle}): 0 Änderungsblöcke — Extraktion gescheitert.`);
+      }
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(shard.abgerufen)) fehler.push(`Entwurf-Shard ${f}: Abrufdatum fehlt (§7a).`);
+      for (const a of shard.artikel) {
+        artikel += 1;
+        if (a.entwurf.trim() === '') fehler.push(`Entwurf-Shard ${f}: Artikel ${a.id} ohne Entwurfs-Wortlaut.`);
+        if (!/^[0-9a-f]{64}$/.test(a.shaNorm)) fehler.push(`Entwurf-Shard ${f}: Artikel ${a.id} ohne shaNorm (§7d).`);
+        // JOIN-REGEL (R3): der Schlüssel ist das normalisierte LABEL, nie die sequenzielle
+        // `mod_uN`-id — ein id-Join ordnete gemessen 17 % der Artikel falsch zu.
+        if (/^mod_u\d+$/.test(a.schluessel)) {
+          fehler.push(`Entwurf-Shard ${f}: Artikel ${a.id} ist über die id gejoint statt über das Label (§11.4, R3: 7/41 falsch).`);
+        }
+      }
+      unveraendert += shard.unveraendert;
+    }
+    for (const key of Object.keys(register.vorlagen)) {
+      if (!dateien.includes(`${key}.json`)) {
+        fehler.push(`Quell-Register nennt einen Entwurf-Shard ${key}.json, der in ${ENTWURF_DIR} fehlt — stiller Verlust.`);
+      }
+    }
+  }
+  zeilen.push(
+    `check:entstehung — Entwurf↔Beschluss: ${dateien.length} Vorlage(n), ${artikel} im Parlament `
+    + `veränderte oder gestrichene Entwurfs-Artikel, ${unveraendert} unverändert übernommen.`,
   );
 }
 

@@ -190,6 +190,7 @@ export function istRisikoPfad(p: string): boolean {
   // dem Leser einen Wortlaut, der nie galt. Rot-Beweis im PR zu W2·6c-ENTSTEHUNG-SYNOPSE
   // (vorher false, nachher true).
   if (p.startsWith('public/materialien/synopse/')) return true;
+  if (p.startsWith('public/materialien/synopse-entwurf/')) return true;
   // Die Generatoren + das Tor dieser Etappe liegen in scripts/entstehung/ (check-*-
   // Basenames nimmt istPruefLogik wie üblich aus).
   if (p.startsWith('scripts/entstehung/')) return true;
