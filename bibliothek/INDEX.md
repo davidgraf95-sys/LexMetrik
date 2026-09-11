@@ -247,7 +247,14 @@ Sachüberschrift (`ueberschriftNeu`, 522 Blöcke, 31 davon ohne
 Wortlaut-Unterschied) und prüft `art: 'entfallen'` im Leer-Diff-Wächter mit.
 4651 Alt-Blöcke, 0 offene Verletzungen, 11 befristete Ausnahmen (CHEMRRV: die
 Konsolidierung vom 2022-05-01 führt nur 3 statt 25 `<article>`; AVIV 57b:
-Token-Kontinuität). Regel deterministisch; fachliche Abnahme David offen.
+Token-Kontinuität). **Nachtrag 12.9.2026 (§10, Auflage A5 der Neuprüfung):** `/4` buchte
+zehn PHANTOM-Änderungen (amtlich wortgleich, nur die Elementgrenzen wandern — MWSTG 97,
+KLV 7, GEBV_SchKG 9, VRV 67, FDV 36 ×2, HMG 9/67, STHG 25, BVV 2 55); Wurzeln: das
+Absatz-Etikett kam aus einem Listenpunkt, und das Ordnungs-Suffix «bis»/«quater» wandert
+zwischen `<num>` und Textanfang. Neu: `absatzKopf()`, Etikett im Vergleich genau einmal je
+Absatz, Satzzeichen-Regel (a2), und als zweiter Tor-Ast `phantomVerletzungen()`.
+Vollerhebung: 10 Blöcke weg, 0 neu, 330 Etiketten korrigiert; Stand 4641 Alt-Blöcke.
+Regel deterministisch; fachliche Abnahme David offen.
 
 ## register/ — fortlaufend gepflegt
 

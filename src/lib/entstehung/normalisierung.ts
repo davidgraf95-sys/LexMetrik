@@ -7,10 +7,10 @@
 // beim Leser. Zwei Normalisierungen sind zwei Wahrheiten (§5). Diese Datei hält
 // seither die EINE Zeichen-Vergleichsform, die beide Seiten importieren.
 //
-// STAND 12.9.2026 (Profil `/4`, Gegenprüfung PR #798 — die Zahlen des Profils `/3`
-// standen hier vorher und sind mit der Regenerierung überholt):
-//  · 186 Synopse-Shards, 945 Konsolidierungs-Schritte, 4651 gespeicherte Alt-Blöcke,
-//    davon 1176 `ohne_ereignis`.
+// STAND 12.9.2026 (Profil `/4` nach Auflage A5 der Neuprüfung PR #798 — die Zahlen der
+// Profile `/3` und der ersten `/4`-Regenerierung sind damit überholt):
+//  · 186 Synopse-Shards, 945 Konsolidierungs-Schritte, 4641 gespeicherte Alt-Blöcke,
+//    davon 1166 `ohne_ereignis`.
 //  · Leer-Diff-Verletzungen (gespeicherter Block, den der Leser nicht zeigen kann):
 //    0 offen. 11 befristete, benannte Ausnahmen in
 //    `bibliothek/register/entstehung-leerdiff-ausnahmen.json` (10× CHEMRRV @2022-05-01 —
@@ -18,10 +18,16 @@
 //    Token-Kontinuität in `neuNach`). Die fünf Ausnahmen des Profils `/3` sind
 //    erledigt: ihre Ursache war die Storage-Lücke, nicht die Lineage.
 //  · 522 Alt-Blöcke tragen eine geänderte Sachüberschrift (`ueberschriftNeu`),
-//    31 davon OHNE Wortlaut-Unterschied — das ist der Leser-Zustand «nur die
+//    33 davon OHNE Wortlaut-Unterschied — das ist der Leser-Zustand «nur die
 //    Sachüberschrift wurde geändert» (`nurTitelGeaendert`), der mit Profil `/3`
 //    fälschlich «kein Unterschied erkennbar» hiess.
-//  · Deckel: Synopse-Shards 6716,1 KB / 8192,0 KB (82 %).
+//  · Deckel: Synopse-Shards 6684,2 KB / 8192,0 KB (82 %).
+//  · ERFUNDENE Änderungen (Auflage A5): 0 offen. Der Wächter hat seit `/4` einen zweiten
+//    Ast — `phantomVerletzungen()`: Alt und Neu nach dieser Vergleichsform identisch UND
+//    Titel-Paar gleich ⇒ rot. Zehn solche Blöcke sind mit A5 verschwunden (MWSTG 97,
+//    KLV 7, GEBV_SchKG 9, VRV 67, FDV 36 ×2, HMG 9/67, STHG 25, BVV 2 55), und 330
+//    Blöcke haben ihr amtliches Etikett zurück (das Absatz-Etikett kam vorher aus einem
+//    Listenpunkt).
 //
 // WO DER SCOPE SITZT — und warum er nicht hier sitzt: die STRUKTURELLEN Regeln
 // (was überhaupt verglichen und gespeichert wird: `<paragraph>`-Inhalt samt

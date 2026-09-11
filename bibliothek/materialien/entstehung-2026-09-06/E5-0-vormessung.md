@@ -369,3 +369,64 @@ gefährlicher als keines).
 zum zweiten — alle 186 Synopse-Shards identisch; einziger Unterschied ist der
 Provenienz-Vermerk `parserAenderung` im Quell-Register, den nur der
 ändernde Lauf schreibt (§7d).
+
+## 10 Nachtrag 12.9.2026 (zweiter) — Neuprüfung PR #798, Auflage A5: die erfundene Änderung
+
+§9 bleibt unverändert stehen; seine Zahlen (4651 Alt-Blöcke, 1176 `ohne_ereignis`,
+Deckel 6716,1 KB, 31 Nur-Titel-Fälle) gelten für den Stand VOR dieser Auflage.
+
+**Befund der Neuprüfung:** A1–A4 bestätigt (Vollerhebung: keine echte Änderung
+verloren), aber Profil `/4` buchte **Phantom-Änderungen** — Schritte, in denen die
+amtliche Fassung Zeichen für Zeichen dieselbe ist und nur die Fedlex-Generation die
+Elementgrenzen anders setzt. Zwei Wurzeln, beide am Roh-XML belegt (abgerufen
+12.9.2026):
+
+1. **Das Absatz-Etikett kam aus einem Listenpunkt.** `zerlegeAbsatz` nahm das ERSTE
+   `<num>` des ganzen Absatzes. Führt eine Generation die Absatz-Ziffer im TEXT statt
+   als Element (MWSTG Art. 97, Stand 2023-09-01: der ganze Artikel ist EIN
+   `<paragraph eId="art_97/para">` mit «1 Die Busse …» und «2 Bei erschwerenden
+   Umständen …» im Fliesstext), hat der Absatz gar kein eigenes `<num>` — der Block
+   bekam das Etikett «a.» eines Listenpunkts weiter unten, und dieser Listenpunkt
+   verlor sein eigenes, weil dieselbe Regel das `<num>` aus dem Rumpf strich. Neu:
+   `absatzKopf()` liest nur das `<num>` VOR dem Inhalt und entfernt genau dieses.
+2. **Das Ordnungs-Suffix wandert über die Grenze `<num>`/Text.** GEBV_SchKG Art. 9
+   Abs. 1bis steht 2022-01-01 als `<num>1</num><p><sup>bis</sup> Erfordert …`, 2026-01-01
+   als `<num>1<sup>bis</sup></num><p> Erfordert …`; dieselbe Klasse in der
+   `listIntroduction` (KLV Art. 7 Abs. 2bis) und im Fliesstext (VRV Art. 67 Abs. 1quater).
+   Die A2-Regel «Absatz-Etikett nur beim Wechsel» unterdrückte das Etikett «1» der
+   alten Fassung, weil der Absatz davor dasselbe trug — der Vergleich sah ein «1»
+   Unterschied. Neu setzt `vergleichsFolge()` das Etikett **genau einmal je Absatz**, so
+   wie es im XML steht. Das `xmlns:mig`-Attribut, das dieselben Stellen markiert, ist
+   für den Vergleich folgenlos (`reinerText` entfernt Tags samt Attributen).
+3. **Nachzügler derselben Familie:** BVV 2 Art. 55 (2024-01-01 → 2025-01-01) setzt die
+   Aufzählung einmal als `<blockList>`, einmal als Folge gewöhnlicher `<p>` mit dem
+   Buchstaben im Text; die Satzzeichen-Regel (a) nahm den Doppelpunkt nur auf der
+   Listen-Seite weg. Regel (a2) tut das jetzt auch vor der ERSTEN Aufzählungsmarke in
+   Textform — und nur dort (die erste, zu gierige Fassung strich auch die Strichpunkte
+   zwischen den Punkten; beide Grenzen stehen als Unit-Test).
+
+**Tor-Lücke und ihr Schluss:** Der Leer-Diff-Wächter fragt «zeigt der Leser zu wenig?»
+und kann die erfundene Änderung nicht sehen — dort unterscheiden sich die gespeicherten
+Blöcke ja wirklich, nur in der Struktur. Neu ist `phantomVerletzungen()` der zweite Ast
+desselben Wächters: Alt und Neu nach der gemeinsamen, leerraum-blinden Vergleichsform
+identisch UND Titel-Paar gleich ⇒ rot. Rot-Beweis am Bestand: gegen die Artefakte aus
+`ba3e52470` meldete der Ast vier Fälle (FDV 36 @2022-07-01 und @2023-01-01, HMG 67
+@2025-01-01, VRV 67 @2025-07-01); die übrigen vergleicht der Leser gegen den
+Korpus-Snapshot und sind für diesen Ast unerreichbar — darum sitzt der eigentliche Fix
+im Generator. Eine ECHTE Absatz-Umbenennung (Abs. 2 → Abs. 1 bei gleichem Wortlaut)
+bleibt gebucht und wird nie als Phantom gemeldet; auch das steht als Test.
+
+**Vollerhebung gegen `ba3e52470` (jeder Alt-Block, keine Stichprobe):** 10 Blöcke
+entfallen, 0 neu — BVV_2 55 @2025-01-01, FDV 36 @2022-07-01 und @2023-01-01,
+GEBV_SCHKG 9 @2026-01-01, HMG 9 und 67 @2025-01-01, KLV 7 @2025-07-01, MWSTG 97
+@2024-01-01, STHG 25 @2023-01-01, VRV 67 @2025-07-01. Alle zehn sind amtlich wortgleich,
+unabhängig gemessen am sichtbaren Artikeltext (Tag-Strip über den ganzen Artikel — das
+Verfahren des Profils `/3` —, leerraum-blind verglichen): 10/10 identisch. Dazu tragen
+**330 Blöcke korrigierte Etiketten** (AHVG 49b, AHVV 7/125/133/55bis …): das aus einem
+Listenpunkt gezogene «a.» ist weg, die Listenpunkte haben ihr amtliches Etikett zurück.
+
+**Stand nach A5:** 4641 Alt-Blöcke, 1166 `ohne_ereignis`, 522 Blöcke mit geändertem
+Randtitel (33 davon ohne Wortlaut-Unterschied), Deckel 6684,2 KB / 8192,0 KB (82 %),
+0 offene Leer-Diff- und 0 offene Phantom-Verletzungen, 11 befristete Ausnahmen
+unverändert. Determinismus: zweiter Lauf aus demselben XML-Cache byte-gleich (einzige
+Differenz der Provenienz-Vermerk `parserAenderung`, den nur der ändernde Lauf schreibt).
