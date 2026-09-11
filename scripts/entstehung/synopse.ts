@@ -325,6 +325,15 @@ export function vergleichsRoh(roh: string): string {
     // Block betroffen: `reinerText` entfernt `<authorialNote>` ohnehin vollstaendig, nur
     // die VERGLEICHS-Reihenfolge war falsch). Dieselbe Regex wie in `reinerText`.
     .replace(/<authorialNote\b[^>]*>[\s\S]*?<\/authorialNote>/g, '')
+    // (a0b) INLINE-Auszeichnung SPURLOS weg, aus demselben Grund wie (a0) und mit derselben
+    // Regex-Liste wie `reinerText` (Rot-Beweis ZSTV Art. 17, 2025-01-01 -> 2025-06-01):
+    // `<span>…bewilligen:</span></listIntroduction>` in EINER Generation (ein reines
+    // Konversions-Artefakt — `reinerText` entfernt `<span>` ohnehin spurlos) blockiert die
+    // Satzzeichen-Regel (a) genauso wie eine `<authorialNote>` — dieselbe STRUKTUR
+    // (Konversions-Rauschen zwischen Satzzeichen und Elementgrenze), nur das dazwischen-
+    // liegende Element wechselt. `bloecke` waren in diesem Fall bereits byte-gleich; nur die
+    // VERGLEICHS-Reihenfolge war falsch.
+    .replace(/<\/?(?:b|i|em|strong|sup|sub|span|a|abbr|small|u|inline|ref)\b[^>]*>/gi, '')
     // (a) Satzzeichen unmittelbar VOR einer Aufzaehlung. Gemessen an zwei Faellen:
     //   ARG Art. 12  (2021-01-01 -> 2023-09-01): derselbe Satz einmal als gewoehnlicher
     //     `<p>` ohne Satzzeichen, einmal als `<listIntroduction>… werden:</listIntroduction>`.
@@ -346,19 +355,28 @@ export function vergleichsRoh(roh: string): string {
     // «(2)» mitten im Satz ebenso.
     .replace(/<num\b[^>]*>\s*\(\s*[0-9a-zA-Z]{1,4}\s*\)\s*<\/num>/g, '')
     .replace(/(<p\b[^>]*>)\s*\(\s*[0-9a-zA-Z]{1,4}\s*\)\s*/g, '$1')
-    // (c) Fliesstext NACH einer Aufzaehlung, innerhalb desselben Absatzes (Befund #796,
-    // Nachtrag 11.9.2026). Beleg: KLV Art. 12 Bst. e, 2021-11-04 -> 2022-01-01 — ein
-    // Satz NACH `</blockList>` (in einer Tabellenzelle: `</blockList><p>Findet die
-    // Untersuchung … in den Kantonen … statt …</p></td></tr></table>`) traegt eine
-    // ECHTE Aenderung (Kantonsliste um Bern/Luzern erweitert) — aber `zerlegeBloecke`
-    // kennt nach einer `<blockList>` nur `listIntroduction` + `item`, nie Text DANACH,
-    // und speichert diesen Satz darum in KEINER Generation. Ohne diese Regel saehe
-    // `flachText` die Aenderung, `bloecke` nie — ein Alt-Block waere "geaendert"
-    // gebucht, dessen gespeicherter Wortlaut sich nie unterscheidet (§5). Die Regel
-    // faellt bewusst NICHT mit der STORAGE-Luecke selbst zusammen (die bleibt, ist ein
-    // eigener, separater Befund) — sie synchronisiert nur die VERGLEICHS-Entscheidung
-    // mit dem, was ohnehin gespeichert wird.
-    .replace(/(<\/blockList>)[\s\S]*?(<\/content>|<\/paragraph>)/g, '$1$2');
+    // (c) EIN Fliesstext-Satz UNMITTELBAR NACH einer Aufzaehlung (Befund #796, Nachtrag
+    // 11.9.2026). Beleg: KLV Art. 12 Bst. e, 2021-11-04 -> 2022-01-01 — ein Satz DIREKT
+    // nach `</blockList>` (in einer Tabellenzelle: `</blockList><p>Findet die
+    // Untersuchung … in den Kantonen … statt …</p></td></tr></table>`) traegt eine ECHTE
+    // Aenderung (Kantonsliste um Bern/Luzern erweitert) — aber `zerlegeBloecke` kennt
+    // nach einer `<blockList>` nur `listIntroduction` + `item`, nie Text DANACH, und
+    // speichert diesen Satz darum in KEINER Generation. Ohne diese Regel saehe
+    // `flachText` die Aenderung, `bloecke` nie — ein Alt-Block waere "geaendert" gebucht,
+    // dessen gespeicherter Wortlaut sich nie unterscheidet (§5). Die Regel faellt bewusst
+    // NICHT mit der STORAGE-Luecke selbst zusammen (die bleibt, ist ein eigener,
+    // separater Befund) — sie synchronisiert nur die VERGLEICHS-Entscheidung mit dem, was
+    // ohnehin gespeichert wird.
+    //
+    // ENG GEFASST auf EINEN unmittelbar angrenzenden `<p>`, NICHT «alles bis zum
+    // Absatzende» (Rot-Beweis OR Art. 652d, 2023-09-01 -> 2024-01-01, Regression bei der
+    // ersten Fassung dieser Regel behoben): ein Absatz kann MEHRERE `<blockList>`-
+    // Elemente als Geschwister tragen (`</blockList><blockList eId="…list_u2">…</blockList>`,
+    // AKN teilt eine durchlaufende Aufzaehlung manchmal so auf) — «alles bis
+    // `</content>`/`</paragraph>`» verschluckte dort die ZWEITE Liste mitsamt ihres
+    // `<item>`-Inhalts. Die enge Fassung endet an der naechsten `<blockList>`, wenn eine
+    // folgt, und ruehrt eine echte zweite Liste nie an.
+    .replace(/(<\/blockList>)\s*<p\b[^>]*>[\s\S]*?<\/p>(?!\s*<blockList\b)/g, '$1');
 }
 
 /**
@@ -448,6 +466,17 @@ export function diffStaende(
       if (leer(n)) ohneAltText.push(eId); else erstBefuellt.push(eId);
       continue;
     }
+    // Symmetrischer Fall (Nachtrag Befund #796, 11.9.2026): die NEU-Fassung wird leer,
+    // waehrend die ALT-Fassung Wortlaut trug — dieselbe Ueberlegung wie oben, nur
+    // spiegelverkehrt. Beleg: AVIV Art. 57b, 2021-04-01 -> 2021-07-01 (`<num><b>Art.
+    // 57</b><i>b</i></num>` bleibt als eId erhalten, der Koerper wird textlos — keine
+    // `<paragraph>` mit Inhalt mehr). Ohne diese Regel wurde eine ZUR HUELSE GEWORDENE
+    // Bestimmung als "geaendert" gebucht statt als "entfallen" — `neuNach()` suchte beim
+    // Leser dann ueber den leeren Punkt hinweg nach dem NAECHSTEN Auftreten desselben
+    // Tokens und fand dort zufaellig denselben Wortlaut wieder (Kurzarbeits-Verlaengerung
+    // "sechs Abrechnungsperioden", 2021-07-01 wie 2025-11-01) — ein Leer-Diff, dessen
+    // Ursache eine falsche STORAGE-Klassifikation war, keine Normalisierungs-Luecke.
+    if (leer(n)) { nurAlt.push(eId); continue; }
     geaendert.push(eId);
   }
   const nurNeu = [...neu.keys()].filter((e) => !alt.has(e)).concat(erstBefuellt).sort();

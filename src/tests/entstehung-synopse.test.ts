@@ -154,6 +154,103 @@ describe('vergleichsRoh — Fussnote vor der Satzzeichen-Regel weg (Befund #796,
   });
 });
 
+describe('vergleichsRoh — Inline-Auszeichnung vor der Satzzeichen-Regel weg (Auftrag Koordinator, Nachtrag)', () => {
+  // ZSTV Art. 17, 2025-01-01 -> 2025-06-01 (Fedlex Filestore, real, gekürzt): ein
+  // <span> um den ganzen listIntroduction-Text sitzt in EINER Generation zwischen dem
+  // Doppelpunkt und </listIntroduction> — derselbe Mechanismus wie bei <authorialNote>
+  // (Klasse a0), nur mit einer INLINE-Auszeichnung statt eines Fussnoten-Elements.
+  it('lässt ein <span> um den Listeneinleitungs-Satz die Satzzeichen-Regel nicht blockieren', () => {
+    const mitSpan = dok(
+      '<article eId="art_17"><num><b>Art. 17</b></num>'
+      + '<paragraph eId="art_17/para_1"><num>1</num><content><blockList>'
+      + '<listIntroduction eId="art_17/para_1/listintro"> <span>Die Aufsichtsbehörde '
+      + 'bewilligen:</span></listIntroduction>'
+      + '<item eId="art_17/para_1/lbl_a"><num>a. </num><p>Voraussetzung a.</p></item>'
+      + '</blockList></content></paragraph></article>',
+    );
+    const ohneSpan = dok(
+      '<article eId="art_17"><num><b>Art. 17</b></num>'
+      + '<paragraph eId="art_17/para_1"><num>1</num><content><blockList>'
+      + '<listIntroduction eId="art_17/para_1/listintro"> Die Aufsichtsbehörde '
+      + 'bewilligen:</listIntroduction>'
+      + '<item eId="art_17/para_1/lbl_a"><num>a. </num><p>Voraussetzung a.</p></item>'
+      + '</blockList></content></paragraph></article>',
+    );
+    const a = artikel(mitSpan, 'art_17');
+    const b = artikel(ohneSpan, 'art_17');
+    expect(a.bloecke).toEqual(b.bloecke); // <span> ist ohnehin nie Teil des gespeicherten Wortlauts
+    expect(normalisiere(flachText(a))).toBe(normalisiere(flachText(b)));
+  });
+});
+
+describe('vergleichsRoh Regel (c) — zwei sibling <blockList> bleiben BEIDE erhalten (Rot-Beweis OR Art. 652d)', () => {
+  // OR Art. 652d, 2023-09-01 -> 2024-01-01 (Fedlex Filestore, real, gekürzt): ein Absatz
+  // trägt ZWEI <blockList>-Geschwister (AKN teilt eine durchlaufende Aufzählung manchmal
+  // so auf). Die ERSTE Fassung von Regel (c) («alles bis zum Absatzende ist Text nach
+  // einer Liste») verschluckte die ZWEITE Liste mitsamt ihrem <item>-Inhalt — ein echter
+  // Ziffer-2-Punkt («… Zwischenabschluss, sofern der Bilanzstichtag …») verschwand aus
+  // dem Vergleich, obwohl er in bloecke stand. Dieser Test haelt das Rot fest, das die
+  // erste Fassung erzeugt hätte.
+  it('ignoriert eine ZWEITE <blockList> nicht als "Text nach einer Liste"', () => {
+    const xml = dok(
+      '<article eId="art_652_d"><num><b>Art. 652</b><i>d</i></num>'
+      + '<paragraph eId="art_652_d/para_2"><num>2</num><content>'
+      + '<blockList eId="art_652_d/para_2/list_u1">'
+      + '<listIntroduction eId="art_652_d/para_2/list_u1/listintro"> Die Deckung wird nachgewiesen:</listIntroduction>'
+      + '<item eId="art_652_d/para_2/list_u1/lbl_1"><num>1. </num><p>mit der Jahresrechnung.</p></item>'
+      + '</blockList>'
+      + '<blockList eId="art_652_d/para_2/list_u2">'
+      + '<item eId="art_652_d/para_2/list_u2/lbl_2"><num>2. </num><p>mit einem Zwischenabschluss, '
+      + 'sofern der Bilanzstichtag mehr als sechs Monate zurückliegt.</p></item>'
+      + '</blockList></content></paragraph></article>',
+    );
+    const a = artikel(xml, 'art_652_d');
+    expect(flachText(a)).toContain('Zwischenabschluss');
+    expect(a.bloecke.some((b) => b[2].includes('Zwischenabschluss'))).toBe(true);
+  });
+});
+
+describe('diffStaende — Alt hat Text, Neu wird leer ⇒ entfallen, nicht geändert (Rot-Beweis AVIV Art. 57b)', () => {
+  // AVIV Art. 57b, 2021-04-01 -> 2021-07-01 (Fedlex Filestore, real, gekürzt): die
+  // COVID-Übergangsbestimmung hatte am 2021-04-01 Wortlaut, wurde am 2021-07-01 zur
+  // TEXTLOSEN Hülse (die eId bleibt im Baum, `zerlegeBloecke` findet keinen Inhalt mehr).
+  // Vorher wurde das als 'geändert' gebucht statt als 'entfallen' — der Leser suchte via
+  // neuNach() über den leeren Punkt hinweg weiter und fand Jahre später (2025-11-01)
+  // zufällig denselben Wortlaut wieder ("sechs Abrechnungsperioden") — ein Leer-Diff,
+  // dessen Ursache eine falsche STORAGE-Klassifikation war.
+  it('bucht eine textlos gewordene Bestimmung als entfallen, nicht als geändert', () => {
+    const vor = dok(
+      '<article eId="art_57_b"><num><b>Art. 57</b><i>b</i></num>'
+      + '<heading>Höchstdauer der Kurzarbeitsentschädigung</heading>'
+      + '<paragraph eId="art_57_b/para"><content>'
+      + '<p>Die Höchstdauer der Kurzarbeitsentschädigung wird um sechs Abrechnungsperioden verlängert.</p>'
+      + '</content></paragraph></article>',
+    );
+    const nach = dok(
+      '<article eId="art_57_b"><num><b>Art. 57</b><i>b</i></num>'
+      + '<heading>Höchstdauer der Kurzarbeitsentschädigung</heading>'
+      + '</article>',
+    );
+    const d = diffStaende(extrahiereArtikel(vor), extrahiereArtikel(nach));
+    expect(d.geaendert).toEqual([]);
+    expect(d.nurAlt).toEqual(['art_57_b']);
+    expect(tokenAusEId('art_57_b')).toBe('57_b');
+  });
+
+  it('bleibt symmetrisch: Alt leer, Neu hat Text ⇒ weiterhin nurNeu (erstBefuellt), unverändert', () => {
+    const vor = dok('<article eId="art_222_q"><num>Art. 222q</num></article>');
+    const nach = dok(
+      '<article eId="art_222_q"><num>Art. 222q</num>'
+      + '<paragraph eId="art_222_q/para"><content><p>Neu eingefügter Wortlaut.</p></content></paragraph>'
+      + '</article>',
+    );
+    const d = diffStaende(extrahiereArtikel(vor), extrahiereArtikel(nach));
+    expect(d.geaendert).toEqual([]);
+    expect(d.nurAlt).toEqual([]);
+    expect(d.nurNeu).toEqual(['art_222_q']);
+  });
+});
+
 describe('Gegenprobe PR #794 — bleibt bestehen (Profil /3 darf keine echte Struktur-Klasse verlernen)', () => {
   it('ARG Art. 12: Satzzeichen tauscht an der Elementgrenze Satz→Listeneinleitung — KEINE Änderung', () => {
     const vor = dok(
