@@ -214,6 +214,19 @@ priorisiert vor den übrigen Ämtern. Vorbild buzer.de-Muster (Point-in-Time-URL
 je Paragraphenfassung, Absatz-Synopse). Maschinell recherchiert; fachliche
 Abnahme David offen.
 
+**Synopse alt/neu — Vor-Messung E5.0 11.9.2026:** [materialien/entstehung-2026-09-06/E5-0-vormessung.md](materialien/entstehung-2026-09-06/E5-0-vormessung.md) —
+Quelle Fedlex SPARQL + Filestore (AKN-XML, DE), Abruf 11.9.2026, 8 Erlasse
+disjunkt zu R2 (ZGB/STPO/STGB/SCHKG/VTS/AVIV/NHG/UVPV), 68 Konsolidierungs-
+Schritte, 31 839 stabile eId-Vergleiche. Regel deterministisch: Diff-Einheit
+ist die amtliche eId, Normalisierungs-Profil `entstehung-norm/1` (nie editieren,
+Verbesserung = `/2` daneben) senkt die Roh-Falschtrefferquote von 16,9 % auf
+1,7 %; Stichprobe n=15 gegen die amtlichen Stände 15/15 echt, davon 11 mit
+Fussnoten-Beleg. Volumen nur-Alt korpusweit ≈ 3,1 MB über 1006 Schritte in 187
+Erlassen (Deckel 8 MB / 2 MB je Erlass). Geltung: Bund, Fenster ab Stand
+1.1.2021 — davor gibt es amtlich nur `doc`/`pdf-a`. Pflegebedarf: Nachlauf je
+neuer Konsolidierung; Drift-Wächter in `check:entstehung`. Maschinell gemessen;
+fachliche Abnahme David offen.
+
 ## register/ — fortlaufend gepflegt
 
 | Dokument | Inhalt |
