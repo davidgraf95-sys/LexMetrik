@@ -250,8 +250,8 @@ if (parserDrift.length && !parserGrund) {
   console.error(
     'Entweder war die Änderung unbeabsichtigt (dann rückgängig machen), oder sie ist gewollt: '
     + 'dann mit --parser-neu="<Grund>" erneut laufen lassen — der Grund landet im Register. '
-    + 'Ändert die Änderung die NORMALISIERUNG, ist ein neues Profil (entstehung-norm/2) fällig, '
-    + 'kein Überschreiben von /1.',
+    + 'Ändert die Änderung die NORMALISIERUNG, ist ein neues Profil (nächste Nummer) fällig, '
+    + 'kein Überschreiben des geltenden.',
   );
   process.exit(1);
 }

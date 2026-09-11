@@ -14,7 +14,7 @@
 import { describe, it, expect } from 'vitest';
 import {
   geltendeBloecke, lageFuerEreignis, ohneEreignisFuerArtikel, synopseZeilen,
-  tokenAusLabel, wortDiff, hatUnterschied, vergleichsform, AEHNLICH_MIN,
+  tokenAusLabel, wortDiff, hatUnterschied, vergleichsform, leerDiffVerletzungen, AEHNLICH_MIN,
   type SynopseZeile,
 } from '../lib/entstehung/synopse-diff';
 import type { SynopseBlock, SynopseShard } from '../lib/entstehung/synopse';
@@ -31,7 +31,7 @@ const B = (absatz: string, num: string, text: string): SynopseBlock => [absatz, 
 
 /** Minimaler Shard mit zwei Schritten am selben Artikel. */
 const SHARD: SynopseShard = {
-  erlass: 'TEST', eli: 'cc/2000/1', normProfil: 'entstehung-norm/2', erzeugt: '2026-09-11',
+  erlass: 'TEST', eli: 'cc/2000/1', normProfil: 'entstehung-norm/3', erzeugt: '2026-09-11',
   fensterAb: '2021-01-01', kuenftigeStaende: [],
   staende: [
     { datum: '2021-01-01', xmlUrl: 'x1', liveUrl: 'l1', sha: 's1', bytes: 1, abgerufen: '2026-09-11', artikelZahl: 1 },
@@ -218,6 +218,39 @@ describe('synopseZeilen: die Gegenüberstellung', () => {
   it('meldet ehrlich, wenn zwischen zwei Ständen kein Unterschied erkennbar ist (§8)', () => {
     const gleich = [B('1', '', 'Unveränderter Wortlaut.')];
     expect(hatUnterschied(synopseZeilen(gleich, gleich))).toBe(false);
+  });
+});
+
+describe('leerDiffVerletzungen — der Leer-Diff-Wächter von check:entstehung (Befund #796)', () => {
+  it('meldet KEINE Verletzung, solange jeder gespeicherte Alt-Block einen echten Unterschied zu seinem «Neu» trägt', () => {
+    expect(leerDiffVerletzungen(SHARD, () => GELTEND)).toEqual([]);
+  });
+
+  it('Rot-Beweis: ein Alt-Block, dessen Wortlaut (nach Vergleichsform) mit seinem «Neu» übereinstimmt, wird gemeldet', () => {
+    // Manipulierte Kopie von SHARD (§6.7): art_7 (`ohne_ereignis`) bekommt denselben
+    // Wortlaut wie der geltende Text — genau das Symptom aus Befund #796 (Generator
+    // speichert «geändert», Leser sieht «kein Unterschied»).
+    const manipuliert = {
+      ...SHARD,
+      schritte: SHARD.schritte.map((s, i) => (i !== 1 ? s : {
+        ...s,
+        artikel: s.artikel.map((a) => (a.eId !== 'art_7' ? a : { ...a, alt: [B('1', '', 'Dritte Fassung des Absatzes.')] })),
+      })),
+    };
+    const verletzungen = leerDiffVerletzungen(manipuliert, () => GELTEND);
+    expect(verletzungen).toEqual([{ token: '7', stand: '2023-01-01', zustand: 'ohne_ereignis' }]);
+  });
+
+  it('prüft auch `belegt`-Blöcke, nicht nur `ohne_ereignis`', () => {
+    const manipuliert = {
+      ...SHARD,
+      schritte: SHARD.schritte.map((s, i) => (i !== 0 ? s : {
+        ...s,
+        artikel: s.artikel.map((a) => ({ ...a, alt: [B('1', '', 'Zweite Fassung des Absatzes.')] })),
+      })),
+    };
+    const verletzungen = leerDiffVerletzungen(manipuliert, () => GELTEND);
+    expect(verletzungen).toEqual([{ token: '5', stand: '2022-01-01', zustand: 'belegt' }]);
   });
 });
 

@@ -19,7 +19,7 @@
 // konstruiert), (c) `liveUrl` auf die amtliche Fassung dieses Stands, (d) zwei
 // Prüfsummen je Quelle und je Block als Drift-Erkennung.
 //
-// NORMALISIERUNGS-PROFIL: `entstehung-norm/2`. Ein gelandetes Profil wird NIE editiert —
+// NORMALISIERUNGS-PROFIL: `entstehung-norm/3`. Ein gelandetes Profil wird NIE editiert —
 // eine Verbesserung bekommt die nächste Nummer und entsteht daneben. Sonst entwertet jede
 // Parser-Korrektur rückwirkend alle Prüfsummen (Muster law.soufien.lu, `soufien-lex.md`).
 //
@@ -37,8 +37,25 @@
  * Bau-Stichprobe nicht getroffen hatte — siehe `normalisiere()`. Es gibt also keinen
  * Bestand, den /2 entwerten könnte; die Nummer wächst trotzdem, damit die Provenienz
  * der Prüfsummen eindeutig bleibt.
+ *
+ * `/3` (Befund Bauer #796, 11.9.2026): `/2` verglich weiterhin den GANZEN
+ * Artikel-Innenraum (`flachText`), der Leser aber nur die gespeicherten `bloecke`
+ * (`zerlegeBloecke`, ausschliesslich `<paragraph>`-Inhalt) — zwei verschiedene
+ * Vergleichs-SCOPES, nicht nur zwei Zeichentabellen (§5: zwei Wahrheiten). Ein
+ * `<heading>`/`<subheading>`-Randvermerk, der sich ändert, während der Artikeltext
+ * byte-gleich bleibt (Beleg AVIV Art. 109b, 2021-04-01 → 2021-07-01: derselbe
+ * Absatz, der Querverweis «(Art. 83 Abs. 1 Bst. i und o AVIG)» wird zu
+ * «(Art. 83 Abs. 1bis AVIG)» wegen einer Umnummerierung ANDERSWO im Erlass), liess
+ * den Generator «geändert» buchen und den Leser «kein Unterschied» zeigen — Messung
+ * 11.9.2026: 36 von 3484 `belegt`-Blöcken, 34 von 999 `ohne_ereignis`-Blöcken (70
+ * insgesamt). `/3` schneidet `flachText` auf denselben `<paragraph>`-Scope wie
+ * `zerlegeBloecke` zurück UND bezieht die Zeichen-Normalisierung («geändert ja/nein»)
+ * aus DERSELBEN Funktion wie der Leser (`src/lib/entstehung/normalisierung.ts`,
+ * `vergleichsform`/`vergleichsformLeerraumBlind`) statt aus einer zweiten,
+ * eigenständigen Zeichenliste. Der gespeicherte Wortlaut (`bloecke`) ist von alledem
+ * unberührt — nur die Entscheidung «geändert ja/nein» wird geschärft.
  */
-export const NORM_PROFIL = 'entstehung-norm/2';
+export const NORM_PROFIL = 'entstehung-norm/3';
 
 /** Frühester Stand mit maschinenlesbarem Volltext (R2 §1, gemessen 6.9.2026). */
 export const SYNOPSE_FENSTER_AB = '2021-01-01';

@@ -23,6 +23,7 @@
 import { createHash } from 'node:crypto';
 import type { SparqlBinding } from '../fedlex-sparql.ts';
 import { ankerNachToken } from '../materialien/fedlex-anker.ts';
+import { vergleichsformLeerraumBlind } from '../../src/lib/entstehung/normalisierung.ts';
 import {
   NORM_PROFIL, SYNOPSE_FENSTER_AB,
   type SynopseBlock, type SynopseShard,
@@ -136,6 +137,17 @@ export interface ArtikelFassung {
 const ARTIKEL_RE = /<article\b[^>]*\beId="([^"]+)"[^>]*>([\s\S]*?)<\/article>/g;
 
 /**
+ * `<paragraph>`-Elemente eines Artikel-Innenraums — die EINZIGE Quelle sowohl der
+ * gespeicherten Blöcke (`zerlegeBloecke`) ALS AUCH des Vergleichstexts (`flachText`,
+ * Befund #796). Vorher zog `flachText` den GANZEN Artikel-Innenraum heran (inklusive
+ * `<heading>`/`<subheading>`) — ein Randvermerk-Update (Querverweis, wegen
+ * Umnummerierung anderswo) liess den Generator «geändert» buchen, obwohl der
+ * gespeicherte Artikelkörper byte-gleich blieb und der Leser folgerichtig «kein
+ * Unterschied» zeigte (§5: zwei Vergleichs-Scopes wären zwei Wahrheiten).
+ */
+const PARAGRAPH_RE = /<paragraph\b[^>]*>([\s\S]*?)<\/paragraph>/g;
+
+/**
  * REIN: AKN-XML → Artikel je eId. Erfasst werden ALLE `<article eId=…>` des Dokuments,
  * auch die in `<attachment>`/`<doc name="annex">` (Anhänge sind eigene Dokument-Wurzeln;
  * ein Zähl-Tor allein auf `<body>` übersähe sie — Skill `scraping-swiss-official-sources`).
@@ -174,13 +186,14 @@ function ersterTag(fragment: string, name: string): string | null {
  */
 export function zerlegeBloecke(inner: string): SynopseBlock[] {
   const out: SynopseBlock[] = [];
-  const paras = [...inner.matchAll(/<paragraph\b[^>]*>([\s\S]*?)<\/paragraph>/g)];
+  const paras = [...inner.matchAll(PARAGRAPH_RE)];
   if (paras.length === 0) {
     // Artikel ohne `<paragraph>` (Einzelsatz-Artikel, Platzhalter «Aufgehoben»):
-    // der Artikelkörper ohne `<num>`/`<heading>` ist EIN Block.
+    // der Artikelkörper ohne `<num>`/`<heading>`/`<subheading>` ist EIN Block.
     const koerper = inner
       .replace(/<num\b[^>]*>[\s\S]*?<\/num>/, '')
-      .replace(/<heading\b[^>]*>[\s\S]*?<\/heading>/, '');
+      .replace(/<heading\b[^>]*>[\s\S]*?<\/heading>/, '')
+      .replace(/<subheading\b[^>]*>[\s\S]*?<\/subheading>/, '');
     const t = reinerText(koerper);
     if (t) out.push(['', '', t]);
     return out;
@@ -255,13 +268,40 @@ export function wortlaut(bloecke: readonly SynopseBlock[]): string {
  * und weil die Fussnote schweigt, waere sie am Artikel eine falsche Behauptung (§1).
  * Deshalb entscheidet ueber «geaendert ja/nein» ausschliesslich der flache Text; die
  * Bloecke bleiben unveraendert das, was gespeichert und angezeigt wird.
+ *
+ * SCOPE SEIT PROFIL /3 (Befund #796, 11.9.2026): NUR `<paragraph>`-Inhalt — exakt
+ * dieselbe Quelle wie `zerlegeBloecke` (Konstante `PARAGRAPH_RE`). VORHER floss der
+ * GANZE Artikel-Innenraum ein, inklusive `<heading>` (Sachüberschrift) und
+ * `<subheading>` (Randvermerk, oft ein Querverweis auf einen ANDEREN Artikel). Ein
+ * Randvermerk-Update wegen Umnummerierung anderswo liess `flachText` eine Änderung
+ * sehen, obwohl der gespeicherte Artikelkörper (`bloecke`) byte-gleich blieb — 70
+ * Alt-Blöcke waren so gespeichert, aber für den Leser ohne Unterschied (Messung
+ * 11.9.2026: 36/3484 `belegt`, 34/999 `ohne_ereignis`). Beleg: AVIV Art. 109b,
+ * 2021-04-01 → 2021-07-01 — der `<subheading>` wanderte von
+ * «(Art. 83 Abs. 1 Bst. i und o AVIG)» zu «(Art. 83 Abs. 1bis AVIG)», der Artikeltext
+ * blieb Zeichen für Zeichen derselbe. `vergleichsRoh` wird weiterhin auf den GANZEN
+ * `roh`-String angewandt (seine beiden Regeln — Satzzeichen vor Aufzählung,
+ * Klammer-Etikett — treffen ausschliesslich `<num>`/`<p>`/`<listIntroduction>`/
+ * `<blockList>` INNERHALB eines Absatzes, siehe dort), erst danach schneidet
+ * `PARAGRAPH_RE` auf den Absatz-Scope zurück. Kein Artikel ohne `<paragraph>` war
+ * unter den 70 Fällen betroffen; der Fallback bleibt trotzdem konsistent (auch dort
+ * fällt `<subheading>` jetzt weg, siehe `zerlegeBloecke`).
  */
 export function flachText(a: ArtikelFassung): string {
-  return reinerText(vergleichsRoh(a.roh));
+  const vorbehandelt = vergleichsRoh(a.roh);
+  const paras = [...vorbehandelt.matchAll(PARAGRAPH_RE)];
+  if (paras.length === 0) {
+    const koerper = vorbehandelt
+      .replace(/<num\b[^>]*>[\s\S]*?<\/num>/g, '')
+      .replace(/<heading\b[^>]*>[\s\S]*?<\/heading>/g, '')
+      .replace(/<subheading\b[^>]*>[\s\S]*?<\/subheading>/g, '');
+    return reinerText(koerper);
+  }
+  return reinerText(paras.map((m) => m[1]).join(' '));
 }
 
 /**
- * Strukturelle Vorbehandlung NUR fuer den Vergleich (Profil `entstehung-norm/2`).
+ * Strukturelle Vorbehandlung NUR fuer den Vergleich (Profil `entstehung-norm/3`).
  *
  * Sie raeumt zwei Klassen von KONVERSIONS-Artefakten aus, die die Gegenpruefung zu
  * PR #794 an vier Stellen belegt hat — beide sitzen an einer ELEMENTGRENZE, nie im
@@ -293,47 +333,26 @@ export function vergleichsRoh(roh: string): string {
 }
 
 /**
- * Profil `entstehung-norm/1` — NUR fürs Matching. Löst die drei gemessenen Rausch-Quellen
- * auf (R2 §3): unsichtbare Trenn-/Leerzeichen-Codepunkte, Leerraum-Varianz und die
- * Generator-Typografie (die bereits `reinerText` schluckt). Gross-/Kleinschreibung und
- * Interpunktion bleiben unangetastet — eine Redaktionskorrektur «hiebei»→«hierbei» IST
- * eine Textänderung und darf nicht wegnormalisiert werden (§1).
+ * Profil `entstehung-norm/3` (Befund Bauer #796, 11.9.2026) — NUR fürs Matching.
+ * Dünner Wrapper um die EINE geteilte Vergleichsform
+ * (`src/lib/entstehung/normalisierung.ts`, dort auch von `synopse-diff.ts`/dem
+ * Leser importiert — «genau ein Ort», §5) MIT der generator-eigenen
+ * Leerraum-Blindheit obendrauf: sie trägt die Klasse «AKN-Elementgrenze wandert
+ * durch ein Ordnungs-Suffix» (AHVG Art. 10 Abs. 2bis, R2 §6b) und hat nach wie
+ * vor kein Gegenstück beim Leser (der sieht nie XML-Elementgrenzen, nur bereits
+ * sauber extrahierte Blöcke). Alles andere — unsichtbare Codepunkte,
+ * Bindestrich-/Ellipsen-Varianten, NFC, geschützte Leerzeichen — kommt jetzt
+ * aus DERSELBEN Funktion wie beim Leser statt aus einer zweiten, eigenen
+ * Zeichenliste (vorher `normalisiere()` hier, `vergleichsform()` dort — zwei
+ * Normalisierungen sind zwei Wahrheiten, §5).
  *
- * NIE EDITIEREN: eine Verbesserung heisst `entstehung-norm/2` und entsteht daneben,
- * sonst entwertet sie rückwirkend jede gespeicherte Prüfsumme.
+ * Profile /1 und /2 sind Geschichte (siehe `NORM_PROFIL`-Dokumentation in
+ * `src/lib/entstehung/synopse.ts`); NIE EDITIEREN — eine Verbesserung entsteht
+ * als neue Nummer daneben, sonst entwertet sie rückwirkend jede gespeicherte
+ * Prüfsumme.
  */
 export function normalisiere(s: string): string {
-  return s
-    // (1) unsichtbare Trenn-/Verbindungs-Codepunkte: Soft-Hyphen, Zero-Width-Space,
-    // ZWNJ/ZWJ, BOM — sie tragen keinen Wortlaut und wandern zwischen Generationen.
-    .replace(/\u00AD/g, '')  // Soft-Hyphen
-    .replace(/\u200B/g, '')  // Zero-Width-Space
-    .replace(/\u200C/g, '')  // ZWNJ  (einzeln, nicht als Zeichenklasse: ZWJ/ZWNJ in
-    .replace(/\u200D/g, '')  // ZWJ    einer Klasse waeren irrefuehrend, no-misleading-character-class)
-    .replace(/\uFEFF/g, '')  // BOM
-    // (2) Bindestrich-Varianten auf den gewoehnlichen Bindestrich. Gemessen an der
-    // Gegenpruefung zu PR #794 (ARG Art. 12): dieselbe Stelle steht in einer Generation
-    // mit «-», in der naechsten mit «\u2013». Der EM-DASH \u2014 bleibt ABSICHTLICH
-    // unangetastet — er ist Gedankenstrich, also Interpunktion, kein Trennzeichen.
-    .replace(/[\u2010\u2011\u2012\u2013]/g, '-')
-    // (3) Auslassungspunkte: dieselbe Stelle einmal «...», einmal «\u2026»
-    // (gemessen E5.0: ZGB Art. 107 Ziff. 4, 2021-01-01 -> 2022-01-01).
-    .replace(/\.\.\./g, '\u2026')
-    // (4) Unicode-Kanonik: dieselbe Umlaut-Folge kommt je nach Artefakt-Generation
-    // zusammengesetzt oder zerlegt — reine Kodierung, nie Wortlaut.
-    .normalize('NFC')
-    // (5) ALLER Leerraum faellt weg — die staerkste Regel des Profils, und die, an der
-    // /1 gescheitert ist. Die Grenze zwischen `<num>` und `<content>` WANDERT durch das
-    // Ordnungs-Suffix: AHVG Art. 10 Abs. 2bis steht im Stand 2021-01-01 als
-    // `<num>2bis</num><content>Die \u2026`, im Stand 2022-01-01 als
-    // `<num>2b</num><content><sup>is</sup> Die \u2026`. Beide Male lautet der Wortlaut
-    // «2bis Die \u2026»; zwischen «2b» und «is» steht einmal eine Elementgrenze (= ein
-    // Leerzeichen) und einmal nicht. Eine Grammatik fuer «bis/ter/quater/\u2026» waere
-    // offen (§2) und truege nur diesen einen Fall; Leerraum ganz zu streichen traegt die
-    // ganze Klasse. Ein Unterschied, der NUR aus Leerraum besteht, ist nie eine
-    // Gesetzesaenderung — der gespeicherte Wortlaut bleibt davon unberuehrt, die Regel
-    // gilt allein fuers Matching.
-    .replace(/\s+/g, '');
+  return vergleichsformLeerraumBlind(s);
 }
 
 export const NORMALISIERUNGS_PROFIL = NORM_PROFIL;

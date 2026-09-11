@@ -33,9 +33,10 @@ import {
 } from './deckung.ts';
 import { CURIA_DIR, CURIA_ZUSTAND_PFAD, leseCuriaZustand } from './curia-zustand.ts';
 import {
-  SYNOPSE_DIR, NORM_PROFIL, SynopseBlockIndex, type SynopseShard,
+  SYNOPSE_DIR, NORM_PROFIL, SynopseBlockIndex, type SynopseShard, type SynopseBlock,
 } from '../../src/lib/entstehung/synopse.ts';
 import { serialisiereShard as serialisiereSynopse, shaShard as shaSynopse } from './synopse.ts';
+import { geltendeBloecke, leerDiffVerletzungen } from '../../src/lib/entstehung/synopse-diff.ts';
 import { SYNOPSE_REGISTER_PFAD, type SynopseRegister } from './synopse-register.ts';
 import { ENTWURF_DIR, type EntwurfShard } from '../../src/lib/entstehung/synopse-entwurf.ts';
 import { serialisiereEntwurfShard, shaEntwurfShard } from './synopse-entwurf.ts';
@@ -267,6 +268,7 @@ for (const [name, pfad, max, gzip] of DECKEL) {
   let ohneEreignis = 0;
   let konflikte = 0;
   let staende = 0;
+  let leerDiffGeprueft = 0;
   if (register) {
     for (const f of dateien) {
       const key = f.slice(0, -'.json'.length);
@@ -345,6 +347,37 @@ for (const [name, pfad, max, gzip] of DECKEL) {
           }
         }
       }
+      // LEER-DIFF-WÄCHTER (Befund Bauer #796, 11.9.2026, §5/§1): kein gespeicherter
+      // Alt-Block darf nach der Leser-Vergleichsform (`vergleichsform`/`synopseZeilen`,
+      // DIESELBE Funktion wie hier im Generator seit Profil `entstehung-norm/3`) «kein
+      // Unterschied» zeigen — sonst speichert der Generator eine «Änderung», die der
+      // Leser nie sehen kann (zwei Normalisierungen wären zwei Wahrheiten).
+      const normtextPfad = `public/normtext/bund/${key}.json`;
+      if (existsSync(normtextPfad)) {
+        const snap = JSON.parse(readFileSync(normtextPfad, 'utf8')) as {
+          eintraege: { artikel: string; bloecke: unknown }[];
+        };
+        const geltendCache = new Map<string, SynopseBlock[]>();
+        const geltendFuerToken = (token: string): SynopseBlock[] => {
+          const cached = geltendCache.get(token);
+          if (cached) return cached;
+          const eintrag = snap.eintraege.find((e) => e.artikel === token);
+          const g = geltendeBloecke(eintrag?.bloecke as Parameters<typeof geltendeBloecke>[0]);
+          geltendCache.set(token, g);
+          return g;
+        };
+        for (const v of leerDiffVerletzungen(shard, geltendFuerToken)) {
+          fehler.push(
+            `Synopse ${f}: Alt-Block Token ${v.token} @${v.stand} (${v.zustand}) ist nach der `
+            + 'Leser-Vergleichsform OHNE Unterschied zu seinem «Neu» — zwei Normalisierungen, '
+            + 'zwei Wahrheiten (§5/§1). Generator neu laufen (npm run entstehung:synopse -- '
+            + '--datum=… --parser-neu="<Grund>").',
+          );
+        }
+        leerDiffGeprueft += 1;
+      } else {
+        fehler.push(`Synopse ${f}: kein Korpus-Snapshot ${normtextPfad} — Leer-Diff-Wächter kann nicht prüfen (§5).`);
+      }
     }
     for (const key of Object.keys(register.erlasse)) {
       if (!dateien.includes(`${key}.json`)) {
@@ -356,7 +389,8 @@ for (const [name, pfad, max, gzip] of DECKEL) {
     `check:entstehung — Synopse: ${dateien.length} Erlass-Shard(s), ${staende} Stände, ${schritte} Schritte, `
     + `${bloecke} Alt-Blöcke (${ohneEreignis} ohne Fussnoten-Ereignis, ${konflikte} Fussnoten-Ereignisse ohne `
     + `beobachtete Textänderung — beides angezeigt, nie aufgelöst); grösster Erlass ${groesster[0]} `
-    + `${kb(groesster[1])} / ${kb(JE_ERLASS)} (${((groesster[1] / JE_ERLASS) * 100).toFixed(0)} %).`,
+    + `${kb(groesster[1])} / ${kb(JE_ERLASS)} (${((groesster[1] / JE_ERLASS) * 100).toFixed(0)} %); `
+    + `Leer-Diff-Wächter (§5, Profil ${NORM_PROFIL}) gegen ${leerDiffGeprueft} Erlass-Korpora geprüft.`,
   );
 }
 

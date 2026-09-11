@@ -36,8 +36,15 @@
 // (§8, Flag `mehrdeutig`).
 
 import { istAufgehoben } from '../normtext/darstellung';
-import type { SynopseArtikel, SynopseBlock, SynopseSchritt, SynopseShard } from './synopse';
+import type { SynopseArtikel, SynopseBlock, SynopseSchritt, SynopseShard, SynopseZustand } from './synopse';
 import { SYNOPSE_FENSTER_AB } from './synopse';
+import { vergleichsform } from './normalisierung';
+
+// Rückwärtskompatibler Re-Export (Profil `entstehung-norm/3`, Befund #796): die EINE
+// Vergleichsform lebt jetzt in `normalisierung.ts` — von hier importiert Generator UND
+// Leser. Weiterhin von hier exportiert, damit bestehende Importe (Tests, Komponenten)
+// nicht anfassen müssen (§5: genau ein Ort für die Definition, nicht für den Zugriff).
+export { vergleichsform };
 
 // ═══ 1 · Der geltende Wortlaut in Synopse-Gestalt ════════════════════════════
 
@@ -253,29 +260,6 @@ function verdichte(bloecke: readonly SynopseBlock[]): SynopseBlock[] {
   return out;
 }
 
-/**
- * Vergleichsform eines Wortlauts — NUR fürs Matching, nie für die Anzeige.
- *
- * GEMESSEN 11.9.2026 (BGÖ 13, und der Fall ist typisch): die AKN-Konsolidierung
- * schreibt «Artikel\u00a011» mit geschütztem Leerzeichen, der Korpus-Adapter mit
- * gewöhnlichem. Zeichenweise verglichen sind das zwei verschiedene Wortlaute —
- * auf dem Bildschirm sind sie identisch. Ohne diese Normalisierung meldete die
- * Karte «geändert» und stellte zweimal denselben Satz nebeneinander: eine
- * behauptete Gesetzesänderung, die es nie gegeben hat (§1). Geschützte und
- * schmale Leerzeichen, weiche Trennstriche und Mehrfach-Leerraum sind Satz, nie
- * Recht.
- *
- * ANGEZEIGT WIRD IMMER DAS ORIGINAL (Muster law.soufien.lu, `soufien-lex.md`:
- * «Normalisierung nur fürs Matching, nie für Hash/Speicherung»).
- */
-export function vergleichsform(text: string): string {
-  return text
-    .replace(/[\u00ad\u200b]/g, '')
-    .replace(/[\u00a0\u202f\u2007\u2009\u2060]/g, ' ')
-    .replace(/\s+/g, ' ')
-    .trim();
-}
-
 /** Wörter samt ihrem nachfolgenden Trennraum — die Verkettung ergibt das Original. */
 function woerter(text: string): string[] {
   return text.match(/\S+\s*/g) ?? [];
@@ -462,6 +446,42 @@ export function synopseZeilen(
 /** Trägt die Gegenüberstellung überhaupt einen Unterschied? (§8: nie «geändert» behaupten, wo nichts steht.) */
 export function hatUnterschied(zeilen: readonly SynopseZeile[]): boolean {
   return zeilen.some((z) => z.art !== 'gleich');
+}
+
+/** Ein gespeicherter Alt-Block, der nach der Leser-Vergleichsform «kein Unterschied» zeigt (§5). */
+export interface SynopseLeerDiff {
+  token: string;
+  stand: string;
+  zustand: SynopseZustand;
+}
+
+/**
+ * Rot-Beweis-Grundlage von `check:entstehung` (Befund Bauer #796, 11.9.2026):
+ * prüft ALLE gespeicherten Alt-Blöcke eines Shards (`belegt` UND `ohne_ereignis`)
+ * mit GENAU DER Vergleichsform, die der Leser für die Anzeige verwendet
+ * (`synopseZeilen`/`hatUnterschied`, dieselbe `vergleichsform` wie der Generator).
+ * Kein gespeicherter Block darf danach leer-diffen — sonst speichert der Generator
+ * eine «Änderung», die niemand sehen kann (§1, §5: zwei Normalisierungen wären
+ * zwei Wahrheiten). `geltendFuerToken` liefert den geltenden Korpus-Wortlaut für
+ * den Fall, dass ein Alt-Block der letzte Schritt vor dem geltenden Stand ist.
+ */
+export function leerDiffVerletzungen(
+  shard: SynopseShard,
+  geltendFuerToken: (token: string) => readonly SynopseBlock[],
+): SynopseLeerDiff[] {
+  const out: SynopseLeerDiff[] = [];
+  for (const schritt of shard.schritte) {
+    for (const artikel of schritt.artikel) {
+      if (artikel.zustand !== 'belegt' && artikel.zustand !== 'ohne_ereignis') continue;
+      if (!artikel.token) continue;
+      const { neu } = neuNach(shard, artikel.token, schritt, artikel, geltendFuerToken(artikel.token));
+      if (neu === null) continue; // 'entfallen' — kein Vergleich möglich, kein Fall dieser Klasse.
+      if (!hatUnterschied(synopseZeilen(artikel.alt, neu))) {
+        out.push({ token: artikel.token, stand: schritt.bis, zustand: artikel.zustand });
+      }
+    }
+  }
+  return out;
 }
 
 // ═══ 4 · Entwurf ↔ Beschluss (E6) ════════════════════════════════════════════
