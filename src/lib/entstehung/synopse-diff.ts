@@ -475,6 +475,22 @@ export interface SynopseLeerDiff {
  * zur selben Norm-Linie?), keine Normalisierungs-Lücke — anderer Fehlerklasse,
  * eigener Befund, hier bewusst nicht mitgelöst (§1: dieses Tor bewacht «zwei
  * Normalisierungen», nicht Token-Identität über grosse Zeiträume).
+ *
+ * OFFENER REST (Nachtrag 11.9.2026, NICHT ausgefiltert): dieselbe
+ * Token-Kontinuitäts-Frage trifft auch `art: 'geaendert'`-Blöcke, wenn derselbe
+ * Wortlaut nach einem grossen Zeitsprung zufällig wiederkehrt, OHNE dass der
+ * Artikel zwischendurch `entfallen` war — Beleg AVIV Art. 57b: Alt @2021-07-01
+ * lautet «… um sechs Abrechnungsperioden …», die nächste erfasste Berührung
+ * desselben Tokens (@2025-11-01, über vier Jahre später) lautet WORTGLEICH
+ * «… um sechs …», bevor sie zu «… um zwölf …» wechselt. `neuNach` findet den
+ * nächsten Token-Treffer, nicht die nächste WORTLAUT-Änderung — für diese
+ * verbleibenden Fälle (gemessen 11.9.2026: 10, u. a. AIG 93, ASYLG 6a, AVIV
+ * 57b/1a, OR 652d, PARLG 13, VAM 51/76/77, ZSTV 17) bleibt das Tor ABSICHTLICH
+ * rot: sie werden HIER NICHT stillschweigend ausgefiltert, weil das dieselbe
+ * «Zwei-Wahrheiten»-Täuschung wäre, die dieses Tor gerade verhindern soll (§6.7
+ * — ein Tor, das den eigenen Befund wegfiltert, ist gefährlicher als keines).
+ * Der Fix gehört in `neuNach` selbst (eine Lineage-Regel über den Token hinaus,
+ * z. B. via `oc`/eId-Kontinuität) — eigener Roadmap-Schritt, hier nicht gebaut.
  */
 export function leerDiffVerletzungen(
   shard: SynopseShard,
