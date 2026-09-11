@@ -1,3 +1,13 @@
+// ── §6.3-DEKLARATION (W2·26/Z6, Mandat David 11.9.2026) ─────────────────────
+// Die drei Artikel-Aktionen («Zitat», «Link», «Amtliche Fassung ↗») stehen
+// unverändert in der Funktionszeile am Artikelende, werden aber erst GERENDERT,
+// wenn der Artikel Hover oder Fokus hat oder eine Rubrik offen ist; auf Geräten
+// ohne Hover (`(hover: none)`) stehen sie dauerhaft. Anlass ist §15: gemessen
+// 13 532 Knöpfe im OR-Leser, davon 3 372 Aktions-Knöpfe, die niemand sieht.
+// LOGIKVERLUST: keiner — nur der Render-Zeitpunkt ändert sich.
+// Die Zusagen dieser Datei sind unverändert; die Sonden sprechen die
+// Vorbedingung jetzt aus (`.lr7-bez` hovern), statt sie stillschweigend
+// vorauszusetzen.
 import { LESER_SUCHFELD_NAME } from './helpers/leserBeschriftung';
 // @shard-gruppe: 3
 // W2·10-UI-NAV-URL — Adress-Modell des Gesetzes-Lesers (LM-202).
@@ -145,6 +155,7 @@ test.describe('LM-202 — Teilen-Aktion: kopierte URL == Adresse', () => {
     await expect(page).toHaveURL(/#art-5$/)
 
     const verlaufVorher = await page.evaluate(() => history.length)
+    await art31.locator('.lr7-bez').hover()
     await art31.getByRole('button', { name: 'Permalink kopieren' }).click()
 
     const clip = await page.evaluate(() => navigator.clipboard.readText())
@@ -194,6 +205,7 @@ test.describe('LM-202 — Teilen im Split-View (B1)', () => {
     await expect(art31).toBeAttached({ timeout: BOOT_MS })
     await art31.scrollIntoViewIfNeeded()
     await page.waitForTimeout(400)
+    await art31.locator('.lr7-bez').hover()
     await art31.getByRole('button', { name: 'Permalink kopieren' }).click()
 
     // Der Kern von B1 — vor dem Fix blieb die Adresse auf «#art-5» stehen.
@@ -219,6 +231,7 @@ test.describe('LM-202 — Teilen im Split-View (B1)', () => {
     await zgbArt.scrollIntoViewIfNeeded()
     await page.waitForTimeout(400)
     const adresseVorher = page.url()
+    await zgbArt.locator('.lr7-bez').hover()
     await zgbArt.getByRole('button', { name: 'Permalink kopieren' }).click()
 
     const clip = await page.evaluate(() => navigator.clipboard.readText())
@@ -249,6 +262,7 @@ test('LM-202/B2 — Leerzeichen-Token: kopierter Permalink ist zeichengleich mit
   await art.scrollIntoViewIfNeeded()
   await page.waitForTimeout(400)
 
+  await art.locator('.lr7-bez').hover()
   await art.getByRole('button', { name: 'Permalink kopieren' }).click()
   await expect(page).toHaveURL(/#art-22%20a$/, { timeout: 10000 })
   const clip = await page.evaluate(() => navigator.clipboard.readText())
@@ -291,6 +305,8 @@ test('A9 — Teilen-Knopf: Tastatur/aria/Tap-Ziel, Scroll + Teilen unter 6× Dro
   for (let i = 0; i < 5; i++) { await page.mouse.wheel(0, 1200); await page.waitForTimeout(150) }
   expect(page.url(), 'Adresse unter Drossel gewandert').toBe(adresseVorScroll)
 
+  await art31.locator('.lr7-bez').scrollIntoViewIfNeeded()
+  await art31.locator('.lr7-bez').hover()
   const knopf = art31.getByRole('button', { name: 'Permalink kopieren' })
   await knopf.scrollIntoViewIfNeeded()
   const gemessen = await knopf.evaluate((el) => {
