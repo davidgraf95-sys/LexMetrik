@@ -1012,11 +1012,65 @@
   html[data-vermerke="aus"] .lc-leser [data-hist-druck] {
     display: none;
   }
+  /* ══ W2·26/Z8 (Mandat David 11.9.2026) · «FUSSNOTEN ABGEWÄHLT» HEISST ALLE ══
+     WÖRTLICH: «Fussnoten, die z. B. nur eine SR-Nummer enthalten, müssen
+     ebenfalls weg sein, wenn Fussnoten abgewählt sind.»
+
+     HIER STANDEN VIER ZEILEN, die ausschliesslich `[data-fn-klasse="A"]` und den
+     dadurch leeren Apparat-Kasten (`[data-fn-nur-a]`) dämpften. Ihre Herleitung
+     (D35-F3 «verlustfrei», H0-Auflage 1, die ZPO-Messung 212/96/3) steht Wort für
+     Wort in den Blöcken darüber und bleibt stehen — sie war für ihren Stand
+     richtig (§0 Ziff. 2b, nicht nachgeführt).
+
+     NULLPROBE, die den Wechsel ausgelöst hat (gemessen 11.9.2026, OR-Leser
+     @Vorgabestellung `data-vermerke="fassung"`, also «Fussnoten abgewählt»):
+       Marker `[data-fn-ref]`      847 im DOM · 215 SICHTBAR
+       Apparat-Kästen              595 im DOM · 194 SICHTBAR
+       sichtbare Apparat-Einträge  V 75 · G 30 · U 13 · Z 21 · ohne Klasse 1
+       davon V = reine SR-Verweise («SR 943.03») — genau Davids Befund
+       97 der sichtbaren Marker liegen AUSSERHALB jedes `<article>`: sie kommen
+       aus dem zweiten Render-Pfad (`parts/SektionKopf.tsx`,
+       `parts/ErlassKopfBlock.tsx`), der GAR KEIN `data-fn-klasse` setzt und den
+       die alten Regeln darum nie erreichen konnten.
+
+     DIE NEUE, EINE REGEL: in den Stellungen «Fassung» und «aus» verschwindet der
+     Fussnoten-Apparat GANZ — Marker im Fliesstext, Marker am Randtitel, Marker im
+     Erlass-Kopf und alle Apparat-Kästen, klassenblind. Das ist derselbe
+     Selektor-Satz, den der Schalter `data-fussnoten="aus"` bis D35-F3 trug
+     (A1, David 5.7.2026); mit der Zusammenlegung zur Dreier-Wahl war die Stellung
+     «alle Fussnoten aus» verloren gegangen, und genau sie verlangt das Mandat
+     zurück. «Fussnoten» stellt weiterhin ALLES her (A1-Mechanik: der Inhalt
+     bleibt im DOM, es wird nichts nachgeladen).
+
+     H0-AUFLAGE 1 IST NICHT VERLETZT, sondern gegenstandslos geworden: sie
+     verlangt, dass die ÄNDERUNGS-Ansicht nur die Klasse `A` dämpft
+     (`bibliothek/normen/hist-ansicht-h0-trennbarkeit.md`). Hier dämpft keine
+     Klasse mehr etwas — der Schalter fasst den Apparat als GANZES, und genau
+     dafür hat H0 ihn ausdrücklich vorgesehen («wer auch den nicht sehen will, hat
+     den Fussnoten-Schalter»). Kein Selektor dieser Datei nennt seither eine
+     `kl`-Klasse; `src/tests/fussnoten-toggle-huellenneutral.test.ts` bewacht das.
+
+     DER SCHALTER MUSS DANN AUCH ANGEBOTEN WERDEN, sonst versteckte die Vorgabe
+     «Fassung» den Apparat ohne Weg zurück (§8). `bieteAenderungsvermerkeSchalter`
+     (`pages/gesetz-leser/berechnungen.ts`) fragt darum seit W2·26 zusätzlich
+     «trägt dieser Erlass überhaupt Fussnoten?» — gemessen 11.9.2026 betrifft das
+     253 Erlasse, die NUR Kopf-Fussnoten führen (u. a. CISG, VRK, AR-131.13).
+
+     `@media screen` BLEIBT, mit der Begründung von D35-F3: ein AUSDRUCK ohne
+     amtlichen Apparat wäre ein unvollständiges Dokument, und der Leser sieht ihm
+     die Bildschirm-Einstellung nicht an (§7/§8). Der abgeleitete Fassungs-Slot
+     folgt der Wahl weiterhin auch auf dem Papier (Block darüber).
+
+     R9/§8 UNVERÄNDERT: `display:none` trifft NIE einen Substanz-Träger — der
+     Normtext selbst bleibt in jeder Stellung sichtbar, durchsuchbar und im
+     Ausdruck. ═══════════════════════════════════════════════════════════════ */
   @media screen {
-    html[data-vermerke="fassung"] .lc-leser [data-fn-klasse="A"],
-    html[data-vermerke="aus"] .lc-leser [data-fn-klasse="A"],
-    html[data-vermerke="fassung"] .lc-leser [data-fn-apparat][data-fn-nur-a],
-    html[data-vermerke="aus"] .lc-leser [data-fn-apparat][data-fn-nur-a] {
+    html[data-vermerke="fassung"] .lc-leser [data-fn-ref],
+    html[data-vermerke="fassung"] .lc-leser [data-fn-marker],
+    html[data-vermerke="fassung"] .lc-leser [data-fn-apparat],
+    html[data-vermerke="aus"] .lc-leser [data-fn-ref],
+    html[data-vermerke="aus"] .lc-leser [data-fn-marker],
+    html[data-vermerke="aus"] .lc-leser [data-fn-apparat] {
       display: none;
     }
   }
@@ -3586,7 +3640,6 @@ html[data-lr6-anker-warten] footer { visibility: hidden; }
   line-height: 1.5rem; /* = min-h-beiwerk: die Zeile ist so hoch wie eine Chip-Zeile */
   color: var(--ink-500);
 }
-.lr7-bez-wort { font-weight: 500; color: var(--ink-600); }
 /* Registerfarben-Marke je Rubrik: derselbe 3-px-Strich, der bis R6 am
    `.lr-notiz-titel` stand — die einzige Farbe am Artikel. Er sitzt seit D35-F1
    auf der linken Kante des Mini-Knopfes: die Haarlinie ringsum ist die
@@ -3654,47 +3707,24 @@ html[data-fuss-aus*="w"] .lc-leser .lr7-bez-block[data-reg="w"],
 html[data-fuss-aus*="a"] .lc-leser .lr7-bez-aktionen {
   display: none;
 }
-/* Das Wort «Bezüge» gehört den VIER Rubriken, nicht den Aktionen: es steht
-   genau dann, wenn dieser Artikel mindestens eine Rubrik führt, die auch
-   gezeigt wird. Stehen nur noch «Zitat · Link · …» in der Zeile, benennt es
-   nichts mehr (§8).
+/* ══ W2·26/Z1 (Mandat David 11.9.2026) · DAS WORT «BEZÜGE» IST GEFALLEN ═════
+   Hier standen fünf Regeln, die EIN Wort in der Zeile ein- und ausblendeten:
+   `.lc-leser .lr7-bez-wort { display: none }` plus vier Anschalt-Zeilen über
+   `html:not([data-fuss-aus*="…"]) … [data-bez-marken*="…"]`. Ihre Herleitung
+   (Anschalt- statt Ausschalt-Liste, kein `:has()` über 1686 Artikel, der Befund
+   `d35-f2-c` an ZPO Art. 272) bleibt als datierter Beleg im Git-Verlauf dieser
+   Datei und in `abnahme/design-identitaet/D35-F2-KOPF.md` stehen — sie war für
+   ihren Stand richtig (§0 Ziff. 2b, nicht nachgeführt).
 
-   EINE ANSCHALT-LISTE, KEINE AUSSCHALT-LISTE — und das ist der ganze Trick.
-   Die Frage lautet «ist von den GEZÄHLTEN Rubriken dieses Artikels noch eine
-   sichtbar?», und sie hängt an zwei Dingen: an der Wahl (`data-fuss-aus`, am
-   <html>) und am Bestand des Artikels (`data-bez-marken`, an der Zeile —
-   `parts/Funktionszeile.tsx` schreibt die Buchstaben, die es wirklich gibt).
-   Als Ausschalt-Regel gefasst wären das die 16 Teilmengen von r/m/g/w, jede mit
-   vier Klauseln; als Anschalt-Regel sind es VIER Zeilen, eine je Rubrik.
-   `:has()` bleibt damit aussen vor — die Nachbarschafts-Anfrage über 1686
-   Artikel, die W2·19-GLIEDERUNG/F1 als Scroll-Bremse nachgewiesen hat (§15),
-   entsteht gar nicht erst.
+   DAS WORT SELBST GIBT ES NICHT MEHR (`parts/Funktionszeile.tsx`, Z1): es war
+   eine Überschrift über vier Marken, die ihren Gegenstand bereits im Wort
+   tragen («11 Entscheide», «6 Verweise»). Mit dem Wort fallen die Regeln, die
+   es davor bewahren mussten, über einer leeren Liste zu lügen — nicht das Wort
+   wird bewacht, es wird gestrichen (§17-Gegengewicht).
 
-   `html:not([data-fuss-aus*="r"])` greift auch, solange es das Attribut noch
-   nicht gibt (prerendertes HTML vor dem Bündel) — dort ist «zeigen» richtig,
-   also flackert nichts.
-
-   BEFUND, der die Regel ausgelöst hat (gemessen 7.9.2026, Bild `d35-f2-c`):
-   ZPO Art. 272 führt genau eine Rubrik («Entscheide»). Mit abgewählter Rubrik
-   stand dort «Bezüge» allein neben den Aktionen — eine Überschrift über nichts.
-   D40 · `f` STEHT ABSICHTLICH NICHT IN DIESER LISTE. «Fassung» ist keine
-   Angabe ÜBER etwas anderes — sie sagt, seit wann dieser Artikel gilt. Sie
-   steht darum links VOR dem Wort (`parts/Funktionszeile.tsx` teilt die Zeile in
-   zwei Hälften), und ein Artikel, an dem nur noch sie sichtbar ist, zeigt
-   folgerichtig kein «Bezüge» — dasselbe Kriterium wie unten, nur konsequent zu
-   Ende gedacht (§8).
-
-   ROT GESEHEN (§6.7, 7.9.2026): die vier Zeilen unten durch eine pauschale
-   `display: block`-Regel ersetzt ⇒ `w224-d35-f2-kopf` («das Wort ‹Bezüge›
-   steht nur, solange es etwas benennt») meldet «‹Bezüge› steht über einer
-   leeren Rubrik-Liste». */
-.lc-leser .lr7-bez-wort { display: none; }
-html:not([data-fuss-aus*="r"]) .lc-leser .lr7-bez[data-bez-marken*="r"] .lr7-bez-wort,
-html:not([data-fuss-aus*="m"]) .lc-leser .lr7-bez[data-bez-marken*="m"] .lr7-bez-wort,
-html:not([data-fuss-aus*="g"]) .lc-leser .lr7-bez[data-bez-marken*="g"] .lr7-bez-wort,
-html:not([data-fuss-aus*="w"]) .lc-leser .lr7-bez[data-bez-marken*="w"] .lr7-bez-wort {
-  display: block;
-}
+   `data-bez-marken` BLEIBT am Wurzel-Element: es ist seit D35-F2 die
+   maschinenlesbare Auskunft «welche Rubriken führt dieser Artikel» und wird von
+   den Sonden gelesen. Nur sein CSS-Leser ist weg. ════════════════════════════ */
 /* Alles abgewählt ⇒ die Zeile selbst geht, samt ihrer Trennlinie und ihrem
    Abstand. Eine leere Linie unter jedem Artikel wäre ein Rahmen ohne Inhalt
    (F0.6). Der Vergleich ist EXAKT, nicht `*=`: die Buchstaben stehen immer in

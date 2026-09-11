@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { NormChip } from '../../../components/vorlagen/NormChip';
 import { SUCH_META } from '../suchHighlight';
 import { Funktionszeile, type BezugsMarke } from './Funktionszeile';
+import { fassungsMarkeEtikett } from '../fassungsEtikett';
 import { BezuegeZeile } from './BezuegeZeile';
 import { LeitfallZeile } from './ArtikelLeser.leitfaelle';
 import { ArtikelHistorieZeile } from './ArtikelHistorie';
@@ -145,6 +146,25 @@ export function ArtikelBezuegeFuss({
   // Menge als das, was daneben steht. (Bis D34 hiess die Prop
   // `bezuegeImKopf`; der Ort hat gewechselt, die Rangfolge nicht.)
   const b = bezuegeImFuss ?? bezuege;
+  // ── W2·26/Z3 · EINE ZAHL, NICHT ZWEI (Mandat David 11.9.2026) ────────────
+  // BIS W2·26 zeigte die Marke IMMER die Grundgesamtheit aus der Zähl-Datei
+  // («11 Entscheide»), während die Liste darunter bei aktivem Zeit- oder
+  // Kantonsfilter nur die gefilterten Kanten führte und ihre eigene
+  // «5 von 12»-Auskunft trug (`./BezuegeZeile.tsx`). Die Zeile versprach dann
+  // eine Menge, die der Klick nicht lieferte — derselbe §8-Mangel, den D30 an
+  // der umgekehrten Stelle behoben hat.
+  //
+  // JETZT: bei aktivem Filter zeigt die Marke die GEFILTERTE Zahl, also genau
+  // die Zahl der Zeilen, die das Aufklappen zeigt. Die Grundgesamtheit ist
+  // nicht verschwiegen (§8) — sie steht im `title` der Marke, wie sie in der
+  // Liste im `title` der Statusgruppe steht.
+  //
+  // OHNE FILTER ÄNDERT SICH NICHTS: dann bleibt die Zähl-Datei die Quelle, und
+  // damit bleibt die R6c/D30-Zusage bestehen, dass die Zahl beim Eintreffen des
+  // Shards nicht umspringt (sie ist gezählt, nicht gefiltert).
+  const filterAktiv = !!b && (b.zeitAktiv || b.kantonAktiv);
+  const entscheideRoh = zaehler ? zaehler.entscheide : (b ? b.kanten.length : (leitfaelle?.length ?? 0));
+  const entscheideGezeigt = filterAktiv && b ? b.kanten.length : entscheideRoh;
   const bezugsMarken: BezugsMarke[] = [
     // ── D40 (David 7.9.2026) · «wieso ist fassung nicht auch unten am artikel?»
     {
@@ -173,6 +193,16 @@ export function ArtikelBezuegeFuss({
          Herleitung am gefallenen Kopf-Slot in `./ArtikelLeser.tsx`). */
       anzahl: historie?.ereignisse?.length ?? 0,
       wort: ['Fassung', 'Fassungen'],
+      /* W2·26/Z2 (David 11.9.2026): «Fassung soll nur ‹gilt seit XXX› zeigen,
+         erst beim Aufklappen erscheinen die Angaben». ZUGEKLAPPT liest die
+         Marke darum den STAND dieses Artikels, nicht die Zahl seiner
+         Änderungsstände — das ist die Auskunft, die man am Artikel sucht.
+         Aufgeklappt steht die Zahl wieder da (`parts/Funktionszeile.tsx`), denn
+         dann ist die Zeitleiste der Gegenstand. Die Zeichenkette kommt aus
+         `../fassungsEtikett` — DIESELBE, die das Schild im Block darunter
+         trägt (§5), und ohne datierten Stand schlicht «Fassung» (§8: nie ein
+         Datum erfinden). */
+      etikett: fassungsMarkeEtikett(historie),
       /* GLEICHE KOMPONENTE, KEIN DUPLIKAT (§5): das ist dieselbe
          `ArtikelHistorieZeile`, die bis D40 im Kopf-Slot stand — «Fassung ·
          Gilt seit …» und darunter die Zeitleiste. Neu ist nur, dass sie ihre
@@ -183,8 +213,13 @@ export function ArtikelBezuegeFuss({
     },
     {
       reg: 'r',
-      anzahl: zaehler ? zaehler.entscheide : (b ? b.kanten.length : (leitfaelle?.length ?? 0)),
+      anzahl: entscheideGezeigt,
       wort: ['Entscheid', 'Entscheide'],
+      /* Z3 · die Grundgesamtheit, wenn die sichtbare Zahl gefiltert ist —
+         nie verschwiegen, nur nicht in der Zeile (Herleitung oben). */
+      titel: filterAktiv && entscheideRoh > entscheideGezeigt
+        ? `${entscheideGezeigt} im aktiven Filter — ${entscheideRoh} insgesamt zu ${zitat}`
+        : undefined,
       brauchtDaten: true,
       /* ── D30 · DIE ENTSCHEIDE, DIE DER ZÄHLER VERSPRICHT ─────────
          `form="rand"`: senkrecht gestapelte Zeilen mit Zitierung und

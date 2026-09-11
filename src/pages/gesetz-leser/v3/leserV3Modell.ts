@@ -262,9 +262,9 @@ export function useLeserV3Modell({ ebene: routenSegment, schluessel }: { ebene: 
   }, [struktur]);
   // D1/D35-F3: EINE Zählung, zwei Leser (§5) — «wird die Wahl angeboten?» und «dämpft «Fassung» hier etwas?».
   const aenderungsFussnoten = useMemo(() => zaehleAenderungsvermerke(struktur), [struktur]);
-  const hatAenderungsvermerke = useMemo(() => bieteAenderungsvermerkeSchalter(aenderungsFussnoten,
-    (eintraege ?? []).some((e) => historieFuer(e.artikel) !== undefined), eintraege !== null),
-  [aenderungsFussnoten, eintraege, historieFuer]);
+  const hatAenderungsvermerke = useMemo(() => bieteAenderungsvermerkeSchalter(aenderungsFussnoten, // W2·26/Z8 · dritter Träger (Kopf-Fussnoten mitgezählt), Herleitung + Messung an `bieteAenderungsvermerkeSchalter`
+    (eintraege ?? []).some((e) => historieFuer(e.artikel) !== undefined), eintraege !== null,
+    struktur || kopf ? (fussnotenAnzahl ?? 0) + (kopf?.fussnoten?.length ?? 0) : null), [aenderungsFussnoten, eintraege, historieFuer, struktur, kopf, fussnotenAnzahl]);
 
   // ── A-2 · DIE MELDUNG AN DIE APP-LEISTE IST WEG (David 17.8.2026) ──────────
   // Hier stand bis 17.8. ein Effekt, der Krume · Stand · laufenden Artikel an

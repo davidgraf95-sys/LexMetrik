@@ -1,6 +1,7 @@
 import { memo } from 'react';
 import type { ArtikelHistorie, HistorieEreignis, HistorieTyp } from '../../../lib/normtext/historie-laden';
 import { formatiereDatum } from '../helpers';
+import { fassungsSchild } from '../fassungsEtikett';
 import { AMTLICHE_FASSUNG_NOMEN } from '../../../lib/benennung';
 
 // G-HIST-UI — Per-Artikel-«Gilt seit»-Badge + aufklappbare Fassungs-Timeline.
@@ -123,11 +124,13 @@ export const ArtikelHistorieZeile = memo(function ArtikelHistorieZeile({ histori
   // Badge-Text (§8, nie erfunden): aufgehobener Artikel zeigt den Wirkungs-Stand,
   // sonst das In-Kraft-Datum der aktuellen Fassung; fehlt beides, ein neutraler
   // Titel für die reine Ereignis-Historie.
-  const badgeText = historie.aufgehobenSeit
-    ? `Aufgehoben seit ${formatiereDatum(historie.aufgehobenSeit)}`
-    : historie.giltSeit
-      ? `Gilt seit ${formatiereDatum(historie.giltSeit)}`
-      : 'Fassungshistorie';
+  //
+  // W2·26/Z2 (11.9.2026): die Rechnung steht seither in `../fassungsEtikett` —
+  // Wort für Wort dieselbe, nur an EINEM Ort. Grund: seit David «Fassung soll
+  // nur ‹gilt seit XXX› zeigen» liest DERSELBE Stand auch als Marke in der
+  // Funktionszeile, und zwei Formulierungen desselben Datums wären zwei
+  // Wahrheiten (§5). Hier stand bis dahin die Original-Kette aus G-HIST-UI.
+  const badgeText = fassungsSchild(historie);
 
   return (
     // Kein eigener Aussenabstand mehr: den trägt der reservierte Slot in

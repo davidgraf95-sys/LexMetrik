@@ -274,9 +274,34 @@ export function LeserLesespalte({ m, bezuege, weckeBezuege, oeffneBlatt, bezuege
       // Scroll-Spy-Takt neu rendern — genau die Bauart, die §15.4 an dieser
       // Spalte verbietet. EIN Abo an der Spalte, ein Handler, kein Prop durch
       // die memoisierte Artikelkette.
+      //
+      // ── W2·26/Z5 · D45 (Mandat David 11.9.2026) · DIE AUFGEKLAPPTE RUBRIK
+      //    «ENTSCHEIDE» IST DERSELBE APPARAT ─────────────────────────────────
+      // BEFUND (Fahrplan D45, Nebenfund des D41-Fixers): ein Klick auf einen
+      // Entscheid IN der Funktionszeile navigierte die ganze Seite weg, während
+      // derselbe Entscheid in der Randnotiz daneben aufging. Zwei Gesten für
+      // dieselbe Absicht — und die schlechtere dort, wo die Liste seit D34/D35
+      // eigentlich zuhause ist.
+      //
+      // DER JURISTISCHE GRUND IST WORTGLEICH DER VON R6 (`../randNotizOeffnen`):
+      // ein Bezug am Artikel wird GEPRÜFT, nicht besucht; der Artikel muss
+      // stehen bleiben, sonst liest man den Entscheid ohne die Norm. Genau
+      // darum ist das hier KEINE zweite Regel, sondern DERSELBE Aufruf mit
+      // einem zweiten Herkunfts-Ort (§5): ⌘/Strg-Klick bleibt neuer Reiter,
+      // Mittel-/Umschalt-Klick bleiben dem Browser, ein schon offenes Ziel wird
+      // nicht zweimal geöffnet, und wo keine zweite Hälfte möglich ist
+      // (schmales Fenster, Pane-Kontingent voll) navigiert der Klick wie bisher
+      // — `kannOeffnen` entscheidet das, nicht diese Stelle.
+      //
+      // NUR `[data-reg="r"]`: «Materialien», «Verweise» und «Rechner» führen zu
+      // Seiten, die man BESUCHT (ein Rechner, eine Botschaft, ein anderer
+      // Artikel) — dort ist Navigation die richtige Geste, und der Unterschied
+      // zwischen Apparat und Navigation ist genau der, den R6 gezogen hat. Der
+      // Neben-Griff «im Blatt öffnen ›» (D35-F2) bleibt unberührt: er ist ein
+      // `<button>`, kein `<a>`, und fällt durch `closest('a')` ohnehin heraus.
       onClickCapture={(ev) => {
         const ziel = (ev.target as HTMLElement | null)?.closest?.('a');
-        if (!ziel || !ziel.closest('.lr-notiz')) return;
+        if (!ziel || !ziel.closest('.lr-notiz, .lr7-bez-block[data-reg="r"]')) return;
         if (randNotizZiel(ev, ziel.getAttribute('href'), kannOeffnen, paneOffen) !== 'daneben') return;
         ev.preventDefault();
         oeffneDaneben(ziel.getAttribute('href') as string);
