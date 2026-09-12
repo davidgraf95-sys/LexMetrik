@@ -1,5 +1,7 @@
 {
- "erzeugt": "2026-08-29",
+ "erzeugt": "2026-09-12",
+ "stand": "2026-05-01",
+ "fassungsToken": "20260501",
  "kopf": {
   "srNummer": "0.109",
   "titel": "Übereinkommen über die Rechte von Menschen mit Behinderungen",
@@ -484,6 +486,16 @@
    "marginalie": [
     "Verbindliche Wortlaute"
    ]
+  },
+  "scope_u1": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Geltungsbereich",
+     "eId": "scope"
+    }
+   ],
+   "marginalie": []
   }
  }
 }

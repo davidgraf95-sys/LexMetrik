@@ -1,5 +1,7 @@
 {
- "erzeugt": "2026-08-29",
+ "erzeugt": "2026-09-12",
+ "stand": "2024-11-28",
+ "fassungsToken": "20241128",
  "kopf": {
   "srNummer": "0.103.1",
   "titel": "Internationaler Pakt über wirtschaftliche, soziale und kulturelle Rechte",
@@ -414,6 +416,16 @@
      "ebene": 1,
      "label": "Teil V",
      "eId": "part_5"
+    }
+   ],
+   "marginalie": []
+  },
+  "scope_u1": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Geltungsbereich",
+     "eId": "scope"
     }
    ],
    "marginalie": []

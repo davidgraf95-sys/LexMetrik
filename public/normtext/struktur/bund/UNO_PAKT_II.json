@@ -1,5 +1,7 @@
 {
- "erzeugt": "2026-08-29",
+ "erzeugt": "2026-09-12",
+ "stand": "2022-05-09",
+ "fassungsToken": "20220509",
  "kopf": {
   "srNummer": "0.103.2",
   "titel": "Internationaler Pakt über bürgerliche und politische Rechte",
@@ -638,6 +640,46 @@
      "ebene": 1,
      "label": "Teil VI",
      "eId": "part_6"
+    }
+   ],
+   "marginalie": []
+  },
+  "decl_u2": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Geltungsbereich und Erklärungen",
+     "eId": "scope"
+    }
+   ],
+   "marginalie": []
+  },
+  "decl_u3": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Geltungsbereich und Erklärungen",
+     "eId": "scope"
+    }
+   ],
+   "marginalie": []
+  },
+  "decl_u4": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Geltungsbereich und Erklärungen",
+     "eId": "scope"
+    }
+   ],
+   "marginalie": []
+  },
+  "scope_u1": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Geltungsbereich und Erklärungen",
+     "eId": "scope"
     }
    ],
    "marginalie": []

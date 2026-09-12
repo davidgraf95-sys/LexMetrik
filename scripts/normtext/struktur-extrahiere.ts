@@ -311,13 +311,41 @@ export function extrahiereStruktur(html: string): Record<string, ArtikelStruktur
 export function extrahiereAnhangStruktur(html: string): Record<string, ArtikelStruktur> {
   const result: Record<string, ArtikelStruktur> = {};
   const eId = anhangContainerEId(html);
-  for (const anker of alleAnhangAnker(html)) {
-    const ex = extrahiereAnhang(html, anker);
+  const anker = alleAnhangAnker(html);
+  const label = gruppenLabel(eId, anker);
+  for (const a of anker) {
+    const ex = extrahiereAnhang(html, a);
     if (!ex || ex.bloecke.length === 0) continue;
-    result[ankerZuToken(anker)] = {
-      gliederung: [{ ebene: 1, label: 'Anhänge', ...(eId ? { eId } : {}) }],
+    result[ankerZuToken(a)] = {
+      gliederung: [{ ebene: 1, label, ...(eId ? { eId } : {}) }],
       marginalie: [],
     };
   }
   return result;
+}
+
+/**
+ * QS-KORPUS-SCOPE (12.9.2026): Wie die EINE Gruppenstufe heisst.
+ *
+ * «Anhänge» überall dort, wo der Erlass einen amtlichen Anhang-Container trägt —
+ * also unverändert für alle 136 Erlasse des Vorbestands, EINSCHLIESSLICH der 14
+ * Staatsverträge, bei denen `scope_*`/`decl_*` mit unter diese Stufe fallen
+ * (dokumentierte Unschärfe, s. `anhangContainerEId`).
+ *
+ * Bei den 12 Staatsverträgen OHNE Anhang-Container wäre «Anhänge» eine
+ * FALSCHAUSSAGE (§8): diese Erlasse haben keinen einzigen Anhang, die Stufe
+ * trägt ausschliesslich Geltungsbereich und CH-Erklärungen. Das Label benennt
+ * darum, was tatsächlich darunter hängt — deterministisch aus den gefundenen
+ * Ankern, nie geraten: nur `scope_*` → «Geltungsbereich»; zusätzlich `decl_*` →
+ * «Geltungsbereich und Erklärungen» (Korpus 12.9.2026: 7-mal bzw. 5-mal).
+ *
+ * OFFENGELEGTE RESTUNSCHÄRFE (§8): die SYNTHETISCHE Wurzel des Lesers über
+ * dieser Stufe heisst weiterhin «Anhänge» — sie entsteht darstellungsseitig aus
+ * `istAnhangToken` (`scope_`/`decl_` zählen dort seit PR #195 mit) und nicht aus
+ * diesem Label. Das zu ändern wäre ein Darstellungs-Schritt (§3), kein
+ * Extraktions-Schritt, und bleibt darum bewusst ausserhalb dieses Bauschritts.
+ */
+function gruppenLabel(eId: string | undefined, anker: readonly string[]): string {
+  if (eId !== 'scope') return 'Anhänge';
+  return anker.some((a) => /^decl/.test(a)) ? 'Geltungsbereich und Erklärungen' : 'Geltungsbereich';
 }
