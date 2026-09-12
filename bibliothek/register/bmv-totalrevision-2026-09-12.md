@@ -88,6 +88,44 @@ Gegenprobe nach dem Fix: `revisionen-raw/BMV.json` byte-identisch zum Bestand.
   `YYYYMMDD`-Feld der `bmv_2025`-Zeile gebumpt (Update-Pfad, Skill
   `korpus-werkstatt`).
 
+## Norm-Key-Auflösung: Fassungs-Reihe statt Kollision (Nachzug 12.9.2026)
+
+**Befund (CI rot, Lauf zu PR #823).** Der zweite Register-Eintrag auf SR
+412.103.1 liess `src/tests/entscheide-normkeys.test.ts` in zwei Fällen fallen:
+`ABK_KOLLISIONEN = ['BMV']` (dasselbe Kürzel auf zwei keys) und drei
+Alias-Notizen (`BMV` de, `OMPr` fr/it — «SR im ERLASS_REGISTER mehrdeutig»).
+Die Kollisionsregel hätte das Kürzel beidseitig verworfen: ein Entscheid zur
+Berufsmaturität bekäme **gar keinen** Norm-Key, in keiner Amtssprache.
+
+**Regel (deterministisch, §2).** Ein Entscheid, der «BMV» zitiert, meint die im
+Entscheidzeitpunkt geltende Fassung — vor dem 1.3.2026 die Verordnung von 2009
+(`BMV`), ab dem 1.3.2026 die von 2025 (`BMV_2025`). Umgesetzt als
+*Fassungs-Reihe* in `scripts/normtext/entscheide-mapping.ts`
+(`fassungsReihen`, `normKeyFuerAbk(abk, datum)`): eine Reihe entsteht nur, wenn
+mehrere Bund-Einträge dieselbe SR-Nummer teilen, **genau einer** nicht
+aufgehoben ist und **jeder** aufgehobene sein amtliches Aufhebungsdatum plus
+einen über `erlassKeyVonEli` auflösbaren Nachfolger **derselben** Reihe nennt.
+Quelle bleibt `src/lib/normtext/aufhebungen.ts` (§5) — keine neue Tabelle.
+
+**Geltung/Ausnahmen.** Jede andere Mehrfachbelegung eines Kürzels bleibt
+Kollision und wird beidseitig verworfen. Rot-Beweis 12.9.2026: ein dritter
+Register-Eintrag mit Kürzel «BMV» ausserhalb der Reihe → `ABK_KOLLISIONEN =
+['BMV']`, Tor rot (Sabotage-Eintrag danach zurückgenommen). Datumsunbekannte
+Snapshots fallen auf den deterministischen Platzhalter `<GN-Jahr>-01-01`
+zurück — Epoche trifft, Tagesgrenze innerhalb des Aufhebungsjahres ist eine
+benannte Restunschärfe (§8, im Quellkommentar festgehalten).
+
+**Betroffene Entscheide: null.** Im committeten Rechtsprechungs-Korpus (5'093
+Snapshots) kommt kein «BMV»- oder «OMPr»-Zitat vor (`grep -rl` über
+`public/rechtsprechung`: 0 Treffer, 12.9.2026) — weder vor noch nach dem
+1.3.2026. Der Fix ist damit heute vollständig vorsorglich; `golden:vergleich`
+256/256 byte-gleich, `check:normkeys` unverändert 93.6 % gemappt.
+
+**Pflegebedarf.** Nächste Totalrevision: eine Zeile in `aufhebungen.ts` — die
+Norm-Key-Auflösung zieht ohne weiteren Handgriff nach. Die exakte Liste der
+Reihen steht im Unit-Test (`ERLASS_FASSUNGS_REIHEN`) und in der Ausgabe von
+`check:normkeys`.
+
 ## Abnahme-Status
 
 **entwurf** — maschinell gegen die amtliche Quelle verifiziert (deterministischer

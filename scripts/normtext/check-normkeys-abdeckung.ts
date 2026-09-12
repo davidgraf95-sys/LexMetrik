@@ -141,6 +141,7 @@ import {
   ABK_AUSSCHLUSS,
   ABK_KOLLISIONEN,
   abkVonStatut,
+  ERLASS_FASSUNGS_REIHEN,
   fliesstextOhneApparat,
   fliesstextVon,
   literaturSpannen,
@@ -709,6 +710,18 @@ function main(): void {
       `  Alias auf ausgeschlossenen Erlass (bewusste Lücke, kein Fehler): `
       + ABK_ALIAS_AUSGESCHLOSSEN.join(', '),
     );
+  }
+  if (ERLASS_FASSUNGS_REIHEN.length > 0) {
+    // INFORMATIV, kein Rot: SR-Slots mit einer deklarierten Fassungs-Abfolge
+    // (Totalrevision). Für diese Kürzel greift die Kollisionsregel NICHT mehr
+    // beidseitig — statt zu verwerfen wählt `normKeyFuerAbk` am Entscheiddatum
+    // die damals geltende Fassung. Genau darum steht die Liste hier: sie ist
+    // die Ausnahmeliste zur strengsten Regel dieses Mappings (§6.7).
+    console.log(
+      `  FASSUNGS-REIHEN (Kürzel datumsabhängig, keine Kollision): `
+      + `${ERLASS_FASSUNGS_REIHEN.length}`,
+    );
+    for (const z of ERLASS_FASSUNGS_REIHEN) console.log(`    ${z}`);
   }
   // INFORMATIV, kein Rot: Aliase, die der Fliesstext-Extraktor strukturell nie
   // trifft. Im statutes-Pfad bleiben sie wirksam — sichtbar statt still

@@ -77,6 +77,7 @@
 //    NEUE Kollision laut, statt sie still zu schlucken (§6.7).
 
 import { ABK_ALIASE } from '../../src/lib/normtext/abk-aliase.generated';
+import { erlassKeyVonEli } from '../../src/lib/normtext/erlassAdresse';
 import { ERLASS_REGISTER } from '../../src/lib/normtext/register';
 import {
   extrahiereStatutRefs, extrahiereStatutRefsMitAnzahl, INVALID_LAW_CODES,
@@ -180,6 +181,156 @@ export const AUSGESCHLOSSENE_KEYS: ReadonlySet<string> = new Set(
     .sort(),
 );
 
+// ─── FASSUNGS-REIHEN: ein SR-Slot, zwei Fassungen (Totalrevision) ───────────
+//
+// ANLASS (12.9.2026, PR #823). SR 412.103.1 trägt seit dem 1.3.2026 ZWEI
+// Register-Einträge: die geltende Berufsmaturitätsverordnung vom 13.6.2025
+// (`BMV_2025`, ELI cc/2025/408) und ihre in deren Art. 34 ausdrücklich
+// aufgehobene Vorgängerin von 2009 (`BMV`, ELI cc/2009/423). Beide führen
+// dasselbe amtliche Kürzel «BMV», beide dieselbe SR-Nummer. Für die
+// Kollisionsregel war das ein Mehrdeutigkeits-Fall wie jeder andere: das
+// Kürzel beidseitig verworfen, die fremdsprachigen Aliase (fr/it «OMPr») über
+// die doppelt belegte SR-Nummer dazu. Ergebnis wäre, dass ein Entscheid zur
+// Berufsmaturität GAR KEINEN Norm-Key mehr bekommt — obwohl hier nichts
+// unklar ist.
+//
+// WARUM DAS KEINE KOLLISION IST. Die Kollisionsregel schützt vor RATEN: zwei
+// verschiedene Erlasse, dasselbe Kürzel, kein Kriterium zur Trennung. Hier
+// gibt es ein Kriterium, und es ist amtlich deklariert — das Aufhebungsdatum.
+// Ein Entscheid, der «BMV» zitiert, meint die im Entscheidzeitpunkt geltende
+// Fassung: vor dem 1.3.2026 die Verordnung von 2009, ab dem 1.3.2026 die von
+// 2025. Das ist keine Heuristik, sondern die Grundregel der zeitlichen Geltung
+// (§1); §2 bleibt gewahrt, weil beide Eingaben deklariert sind — das Datum aus
+// dem Snapshot, die Aufhebung aus `aufhebungen.ts`.
+//
+// DEKLARIERT, NICHT GERATEN (§5/§2). Eine Reihe entsteht nur, wenn ALLE vier
+// Bedingungen erfüllt sind:
+//   (1) mehrere Bund-Einträge teilen genau dieselbe SR-Nummer,
+//   (2) GENAU EINER von ihnen ist nicht aufgehoben (die geltende Fassung),
+//   (3) jeder aufgehobene nennt in `aufgehoben.nachfolger.eli` einen
+//       Nachfolger, der über `erlassKeyVonEli` auf einen Eintrag DERSELBEN
+//       Reihe auflöst — die Abfolge ist also beidseitig belegt, nicht aus der
+//       gemeinsamen SR-Nummer erschlossen,
+//   (4) jeder aufgehobene trägt sein amtliches Aufhebungsdatum (`seit`).
+// Fehlt eine davon, bleibt es bei der alten, strengen Regel: verwerfen und als
+// Kollision bzw. Alias-Notiz ausweisen (§6.7 — nie still raten). Die
+// Sabotage-Probe dazu steht im Unit-Test: zwei Einträge auf derselben
+// SR-Nummer OHNE deklarierte Aufhebung ergeben KEINE Reihe.
+//
+// KEINE ZWEITE WAHRHEIT (§5). Die Abfolge wird nirgends neu gepflegt: sie
+// entsteht aus dem ERLASS_REGISTER (das `aufhebungen.ts` bereits einmergt) und
+// der ELI→key-Zuordnung aus `erlassAdresse.ts`. Wer einen Erlass total
+// revidiert, ergänzt eine Zeile in `aufhebungen.ts` — die Norm-Key-Auflösung
+// zieht ohne weiteren Handgriff nach.
+
+/** Eine Fassungs-Reihe in einem SR-Slot: die geltende Fassung plus ihre
+ *  aufgehobenen Vorgängerinnen mit dem amtlichen Aufhebungsdatum (`bis`).
+ *  `bis` ist EXKLUSIV — `datum < bis` fällt in die Geltungszeit dieser
+ *  Fassung, `datum >= bis` in die der Nachfolgerin (am Aufhebungstag tritt die
+ *  neue Fassung in Kraft). */
+export interface FassungsReihe {
+  /** Register-key der heute geltenden Fassung. */
+  geltend: string;
+  /** Aufgehobene Vorgängerinnen, aufsteigend nach `bis`. */
+  historisch: ReadonlyArray<{ key: string; bis: string }>;
+}
+
+type RegEintrag = (typeof ERLASS_REGISTER)[number];
+
+/**
+ * Fassungs-Reihen je SR-Nummer. Parameter nur für die Sabotage-Probe des
+ * Unit-Tests (§6.7) — der Produktpfad nimmt immer das echte Register und die
+ * echte ELI-Zuordnung.
+ */
+export function fassungsReihen(
+  register: ReadonlyArray<RegEintrag> = ERLASS_REGISTER,
+  eliZuKey: (eli: string) => string | null = erlassKeyVonEli,
+): Map<string, FassungsReihe> {
+  const jeSr = new Map<string, RegEintrag[]>();
+  for (const e of register) {
+    if (e.ebene !== 'bund' || !e.sr) continue;
+    const liste = jeSr.get(e.sr);
+    if (liste) liste.push(e); else jeSr.set(e.sr, [e]);
+  }
+  const raus = new Map<string, FassungsReihe>();
+  for (const [sr, gruppe] of jeSr) {
+    if (gruppe.length < 2) continue;                                  // (1)
+    const geltende = gruppe.filter((e) => !e.aufgehoben);
+    if (geltende.length !== 1) continue;                              // (2)
+    const inGruppe = new Set(gruppe.map((e) => e.key));
+    const historisch: Array<{ key: string; bis: string }> = [];
+    let vollstaendig = true;
+    for (const a of gruppe.filter((e) => e.aufgehoben)) {
+      const auf = a.aufgehoben;
+      const nachfolger = auf?.nachfolger ? eliZuKey(auf.nachfolger.eli) : null;
+      if (!auf?.seit || !nachfolger || !inGruppe.has(nachfolger)) {    // (3)+(4)
+        vollstaendig = false;
+        break;
+      }
+      historisch.push({ key: a.key, bis: auf.seit });
+    }
+    if (!vollstaendig) continue;
+    historisch.sort((x, y) => (x.bis < y.bis ? -1 : x.bis > y.bis ? 1
+      : x.key < y.key ? -1 : x.key > y.key ? 1 : 0));
+    raus.set(sr, { geltend: geltende[0].key, historisch });
+  }
+  return raus;
+}
+
+const FASSUNGS_REIHEN = fassungsReihen();
+
+/** Register-key → seine Fassungs-Reihe (geltende UND historische Fassungen). */
+const REIHE_JE_KEY: ReadonlyMap<string, FassungsReihe> = (() => {
+  const m = new Map<string, FassungsReihe>();
+  for (const r of FASSUNGS_REIHEN.values()) {
+    m.set(r.geltend, r);
+    for (const h of r.historisch) m.set(h.key, r);
+  }
+  return m;
+})();
+
+/** Gehören ZWEI keys derselben Fassungs-Reihe? Dann ist ihr gemeinsames Kürzel
+ *  keine Kollision, sondern eine zeitliche Abfolge. Sonst null. */
+function reiheFuerPaar(a: string, b: string): FassungsReihe | null {
+  const ra = REIHE_JE_KEY.get(a);
+  return ra !== undefined && ra === REIHE_JE_KEY.get(b) ? ra : null;
+}
+
+/**
+ * Die erkannten Fassungs-Reihen als lesbarer Beleg — heute genau eine:
+ * `SR 412.103.1: BMV_2025 (geltend) ← BMV bis 2026-03-01`.
+ *
+ * Sichtbar statt still (§6.7): eine Reihe ENTSCHÄRFT die Kollisionsregel für
+ * genau ein Kürzel. Wächst die Liste unbemerkt, wächst unbemerkt auch die
+ * Menge der Kürzel, die nicht mehr beidseitig verworfen werden. Der Unit-Test
+ * schreibt sie exakt fest, das Tor `check:normkeys` weist sie informativ aus.
+ */
+export const ERLASS_FASSUNGS_REIHEN: ReadonlyArray<string> = [...FASSUNGS_REIHEN]
+  .map(([sr, r]) => `SR ${sr}: ${r.geltend} (geltend) ← `
+    + r.historisch.map((h) => `${h.key} bis ${h.bis}`).join(' ← '))
+  .sort();
+
+/**
+ * Das Datum, an dem die Fassungs-Wahl eines Snapshots hängt: sein
+ * Entscheiddatum. Rein (§2) — kein `Date.now()`, kein Fallback auf «heute».
+ *
+ * PLATZHALTER-DATEN, ehrlich benannt (§8). Trägt ein Snapshot
+ * `datumUnbekannt`, ist `datum` ein deterministischer Platzhalter aus dem
+ * Geschäftsnummer-Jahr (`<GN-Jahr>-01-01`). Für die Fassungs-Wahl zählt nur die
+ * EPOCHE des Entscheids, und die trifft der Platzhalter: ein Entscheid mit
+ * GN-Jahr 2019 liegt in der Geltungszeit der Fassung von 2009, gleich an
+ * welchem Tag des Jahres er erging. BENANNTE RESTUNSCHÄRFE: fällt ein
+ * Aufhebungsdatum MITTEN in das GN-Jahr eines datumsunbekannten Entscheids
+ * (hier: irgendwann 2026), kann der Platzhalter auf die falsche Seite der
+ * Grenze fallen. Der Alternativweg — bei unbekanntem Datum die heute geltende
+ * Fassung nehmen — wäre in derselben Lage nicht genauer, sondern systematisch
+ * falsch für den ganzen historischen Bestand. Darum der Platzhalter, mit dieser
+ * Grenze im Text statt im Verborgenen.
+ */
+export function fassungsDatumVon(snap: EntscheidSnapshot): string | null {
+  return snap.datum || null;
+}
+
 /**
  * SR-Nummer → Register-key, für die Auflösung der Fedlex-Aliase (Baustein b).
  *
@@ -199,7 +350,18 @@ function baueSrIndex(): { srKey: Map<string, string>; mehrdeutig: Set<string> } 
     if (bisher === undefined) { srKey.set(e.sr, e.key); continue; }
     if (bisher !== e.key) mehrdeutig.add(e.sr);
   }
-  for (const sr of mehrdeutig) srKey.delete(sr);
+  // FASSUNGS-REIHE STATT MEHRDEUTIGKEIT: trägt der SR-Slot eine deklarierte
+  // Abfolge (genau eine geltende Fassung, alle übrigen mit belegter Aufhebung
+  // und Nachfolger in derselben Reihe), löst die SR-Nummer auf die GELTENDE
+  // Fassung auf, statt beidseitig zu verwerfen. Die fremdsprachigen Aliase
+  // («OMPr» fr/it) erben damit dieselbe Abfolge wie das deutsche Kürzel — die
+  // datumsabhängige Wahl geschieht erst in `normKeyFuerAbk`. Jeder andere
+  // Doppel-Slot bleibt mehrdeutig und wird verworfen wie bisher (§1/§6.7).
+  for (const sr of [...mehrdeutig]) {
+    const reihe = FASSUNGS_REIHEN.get(sr);
+    if (reihe) { srKey.set(sr, reihe.geltend); mehrdeutig.delete(sr); continue; }
+    srKey.delete(sr);
+  }
   return { srKey, mehrdeutig };
 }
 
@@ -244,7 +406,13 @@ function baueAbkTabelle(): {
     if (!kandidat) return;
     const bisher = tabelle.get(kandidat);
     if (bisher === undefined) { tabelle.set(kandidat, key); return; }
-    if (bisher !== key) kollidiert.add(kandidat);
+    if (bisher === key) return;
+    // Zwei Fassungen DESSELBEN Erlasses (deklarierte Totalrevision) sind keine
+    // Kollision: die Tabelle trägt die GELTENDE Fassung, `normKeyFuerAbk` wählt
+    // am Entscheiddatum die damals geltende. Alles andere kollidiert wie bisher.
+    const reihe = reiheFuerPaar(bisher, key);
+    if (reihe) { tabelle.set(kandidat, reihe.geltend); return; }
+    kollidiert.add(kandidat);
   };
 
   for (const e of ERLASS_REGISTER) {
@@ -323,10 +491,37 @@ export const ABK_ALIAS_AUSGESCHLOSSEN: ReadonlyArray<string> = ALIAS_AUSGESCHLOS
  */
 export const ABK_KOLLISIONEN: ReadonlyArray<string> = KOLLISIONEN;
 
-export function normKeyFuerAbk(abk: string): string | null {
+/**
+ * Abkürzung → Register-key. `datum` ist das ISO-Entscheiddatum (`YYYY-MM-DD`)
+ * und wählt bei einer FASSUNGS-REIHE die im Entscheidzeitpunkt geltende
+ * Fassung: «BMV» in einem Entscheid von 2020 meint die Verordnung von 2009
+ * (`BMV`), in einem Entscheid ab dem 1.3.2026 die von 2025 (`BMV_2025`).
+ *
+ * OHNE `datum` liefert die Funktion die HEUTE geltende Fassung. Das ist die
+ * richtige Antwort für die beiden datumsfreien Aufrufer: das Sichtbarkeits-Tor
+ * fragt «ist dieses Kürzel überhaupt auflösbar», und der kantonale Resolver
+ * fragt «ist dieses Kürzel Bundesrecht» — beide brauchen die Fassung nicht, nur
+ * die Existenz. Kein Aufrufer im Korpus-Schreibpfad ist datumsfrei: die
+ * Snapshot-Funktionen unten reichen `snap.datum` durch (§2 — das Datum ist
+ * Eingabe, nicht Uhrzeit).
+ *
+ * Zeigt ein Kürzel auf eine HISTORISCHE Fassung, ohne dass eine Kollision es
+ * dorthin gezwungen hätte (ein Alias, der nur die alte Fassung benennt), bleibt
+ * dieser Key unangetastet — das Kürzel nennt die Fassung ja ausdrücklich.
+ */
+export function normKeyFuerAbk(abk: string, datum?: string | null): string | null {
   const k = normalisiereAbk(abk);
   if (ABK_AUSSCHLUSS.has(k)) return null;
-  return ABK_TABELLE.get(k) ?? null;
+  const key = ABK_TABELLE.get(k);
+  if (key === undefined) return null;
+  if (!datum) return key;
+  const reihe = REIHE_JE_KEY.get(key);
+  if (!reihe || reihe.geltend !== key) return key;
+  // `historisch` ist aufsteigend nach `bis` — die erste Fassung, deren
+  // Geltungsfenster das Datum noch enthält, ist die damals geltende. Bei einer
+  // mehrgliedrigen Kette (A → B → C) trifft das die richtige Stufe.
+  const damals = reihe.historisch.find((h) => datum < h.bis);
+  return damals ? damals.key : key;
 }
 
 /**
@@ -359,12 +554,12 @@ export function normKeyFuerAbk(abk: string): string | null {
  * dort strukturell schlechter abgeschnitten als die Bundes-Snapshots — ein
  * Unterschied der QUELLE, nicht der Rechtsanwendung.
  */
-export function statutesZuNormKeys(statutes: string[]): string[] {
+export function statutesZuNormKeys(statutes: string[], datum?: string | null): string[] {
   const out = new Set<string>();
   for (const s of statutes ?? []) {
     const abk = abkVonStatut(s);
     if (!abk) continue;
-    const k = normKeyFuerAbk(abk);
+    const k = normKeyFuerAbk(abk, datum);
     if (k) out.add(k);
   }
   return [...out];
@@ -620,9 +815,10 @@ export function fliesstextOhneApparat(snap: EntscheidSnapshot): string {
  * dort steht kein Literaturapparat.
  */
 export function normKeysVonSnapshot(snap: EntscheidSnapshot, hint?: string | null): string[] {
-  const out = new Set<string>(statutesZuNormKeys(snap.zitierteNormen ?? []));
+  const datum = fassungsDatumVon(snap);
+  const out = new Set<string>(statutesZuNormKeys(snap.zitierteNormen ?? [], datum));
   for (const ref of extrahiereStatutRefs(fliesstextOhneApparat(snap))) {
-    const k = normKeyFuerAbk(ref.gesetz);
+    const k = normKeyFuerAbk(ref.gesetz, datum);
     if (k) out.add(k);
   }
   if (hint && !AUSGESCHLOSSENE_KEYS.has(hint)) out.add(hint);
@@ -649,11 +845,12 @@ export function normKeysVonSnapshot(snap: EntscheidSnapshot, hint?: string | nul
  * Rein, sortiert (§2).
  */
 export function literaturEntfernteNormKeys(snap: EntscheidSnapshot): string[] {
-  const ausStatutes = new Set(statutesZuNormKeys(snap.zitierteNormen ?? []));
+  const datum = fassungsDatumVon(snap);
+  const ausStatutes = new Set(statutesZuNormKeys(snap.zitierteNormen ?? [], datum));
   const keysAus = (text: string): Set<string> => {
     const out = new Set<string>();
     for (const ref of extrahiereStatutRefs(text)) {
-      const k = normKeyFuerAbk(ref.gesetz);
+      const k = normKeyFuerAbk(ref.gesetz, datum);
       if (k) out.add(k);
     }
     return out;
@@ -762,9 +959,10 @@ export function undeklarierteAltKeys(
  */
 export function artikelSchluesselVonSnapshot(snap: EntscheidSnapshot): Set<string> {
   const out = new Set<string>();
+  const datum = fassungsDatumVon(snap);
   const text = (snap.zitierteNormen ?? []).join('\n') + '\n' + fliesstextOhneApparat(snap);
   for (const ref of extrahiereStatutRefs(text)) {
-    const rk = normKeyFuerAbk(ref.gesetz);
+    const rk = normKeyFuerAbk(ref.gesetz, datum);
     if (!rk) continue;
     out.add(`${rk}/${ref.artikel}`);
   }
@@ -919,12 +1117,16 @@ export function fremdDefinierteKeys(snap: EntscheidSnapshot): Set<string> {
   const out = new Set<string>();
   const text = fliesstextVon(snap);
   if (!text) return out;
+  // DASSELBE Datum wie in der Extraktion: gesperrt werden muss genau der Key,
+  // den `artikelSchluesselVonSnapshot` für dieses Dokument erzeugt — ein Riegel
+  // auf die andere Fassung derselben Reihe griffe ins Leere (§5).
+  const datum = fassungsDatumVon(snap);
 
   // ARM A — Titel-Definition ohne Überschneidung («(Biozidprodukteverordnung, BPR)»).
   for (const m of text.matchAll(DEFINITION)) {
     const titel = m[1];
     if (!TITEL_WORT.test(titel) || ZITAT_KOPF.test(titel)) continue;
-    const key = normKeyFuerAbk(m[2]);
+    const key = normKeyFuerAbk(m[2], datum);
     if (!key) continue;
     if (!titelUeberlappt(titel, REGISTER_TITEL.get(key) ?? '')) out.add(key);
   }
@@ -952,7 +1154,7 @@ export function fremdDefinierteKeys(snap: EntscheidSnapshot): Set<string> {
   // sie widerlegen sie nicht.
   for (const m of text.matchAll(SIGEL_BINDUNG)) {
     if (!KANTONS_SIGEL.has(m[2]) && !KANTONS_SIGEL.has(m[2].toUpperCase())) continue;
-    const key = normKeyFuerAbk(m[1]);
+    const key = normKeyFuerAbk(m[1], datum);
     if (!key) continue;
     // DIESELBE TITEL-PRÜFUNG WIE ARM A — nur sitzt der Titel hier VOR der
     // Klammer («des kantonalen Anwaltsgesetzes vom 28. März 2006 (KAG; BSG
@@ -1000,7 +1202,7 @@ export function artikelSchluesselMitBefund(snap: EntscheidSnapshot): {
   const roh = new Set<string>();
   const rohText = (snap.zitierteNormen ?? []).join('\n') + '\n' + fliesstextVon(snap);
   for (const ref of extrahiereStatutRefs(rohText)) {
-    const rk = normKeyFuerAbk(ref.gesetz);
+    const rk = normKeyFuerAbk(ref.gesetz, fassungsDatumVon(snap));
     if (rk) roh.add(`${rk}/${ref.artikel}`);
   }
   const literaturVerworfen = [...roh].filter((k) => !schluessel.has(k)).sort();
