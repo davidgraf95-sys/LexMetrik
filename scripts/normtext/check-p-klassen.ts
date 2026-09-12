@@ -14,6 +14,7 @@
  */
 import { readFileSync, existsSync } from 'node:fs';
 import { parseFedlexCacheEintraege } from './inventar-bund.ts';
+import { pinBefund } from './cache-pin-befund.ts';
 
 // ─── Manifest: ENTSCHIEDENE Drop-Klassen (semantischer Leit-Token) ───────────
 // Diese Klassen treffen KEINE Extraktor-Alternative und werden BEWUSST nicht in
@@ -105,6 +106,11 @@ let artScan = 0;
 for (const e of eintraege) {
   const pfad = `/tmp/${e.name}.html`;
   if (!existsSync(pfad)) continue;
+  // §17 (Gegenprüfung #808 B4): ein VOR einem Re-Pin geschriebener Cache besteht die
+  // Existenz-Prüfung anstandslos, stammt aber aus der überholten Manifestation —
+  // dieselbe Pin-Sonde wie normtext-snapshot.ts/struktur-run.ts/check-vollstaendigkeit.ts.
+  const pin = pinBefund(e.name, e.eli, e.konsolidierung, e.htmlN);
+  if (!pin.ok) { console.warn(`  HINWEIS: ${e.name}: ${pin.grund} — überspringen.`); continue; }
   const html = readFileSync(pfad, 'utf8');
   const artRe = /<article[^>]*\sid="[^"]+"[^>]*>([\s\S]*?)<\/article>/gi;
   let am: RegExpExecArray | null;

@@ -1,5 +1,60 @@
 # ROADMAP — Erledigt-Chronik (Detail-Archiv erledigter Schritte)
 
+## `normtext:struktur`-Erlassfilter + Pin-Sonde auf drei Konsumenten ausgeweitet — gelöst 12.9.2026 (W2·18-FEHLERBUCH)
+
+**Ursprünglicher Befund (Wortlaut, bis 12.9.2026 offen, `fahrplaene/FAHRPLAN-OFFENE-BEFUNDE.md` §4,
+«Nebenfunde Nacht 5.9.2026», Gegenprüfungen #679/#691/#694/#695):**
+«**`normtext:struktur` ohne Erlass-Filter** — je Lauf 227 `erzeugt`-Felder (Churn); `--nur=<key>`
+analog `--nur=bund`.» sowie «**§17 /tmp-HTML-Cache invalidiert nicht bei Re-Pin** —
+`struktur-run.ts:61` refetcht nur bei Abwesenheit, `normtext-snapshot.ts:387` nur bei <20 KB;
+Generator stempelt neuen `fassungsToken` auf alten Text (Beleg DBG #695). Wurzel:
+Cache-Schlüssel um fassungsToken/html-N. Dazu (§6.7): `check-struktur-konsistenz.ts` vergleicht
+nur Artikel-Keys, nicht `stand`/`fassungsToken`.»
+
+- [x] **Gelöst 12.9.2026, PR fix/strukturfilter:**
+  - **Erlass-Filter** (`scripts/normtext/struktur-run.ts`): `--nur=<KEY[,KEY2]>` — dieselbe
+    Filterform wie `struktur-kanton-run.ts`/`revisionen-generieren-run.ts`. Nullprobe:
+    Breitband-Lauf (`npm run normtext:struktur -- --datum=…`) berührt alle 227 Bund-Sidecars
+    (`git status` 227 Treffer), `--nur=OR` genau `OR.json`.
+  - **Churn-Wurzel behoben** (nicht nur umschifft, §17): `sollSchreiben()` stempelt `erzeugt`
+    nur, wenn sich Struktur/Kopf/Fussnoten inhaltlich geändert haben — reine Datums-Churn-Regel
+    wiederverwendet aus `scripts/normtext/churn-reset.ts` (`istReinerDatumsChurn`, dieselben
+    Felder `erzeugt`/`abgerufen`) statt zweimal definiert. Empirisch belegt: `OR.json` zweimal
+    mit `--nur=OR` gebaut, zweiter Lauf mit einem ANDEREN `--datum` (2026-09-12 → 2026-09-13) —
+    Datei nach dem zweiten Lauf byte-identisch zum ersten (kein `erzeugt`-Sprung).
+  - **Pin-Sonde ausgeweitet** (§17, Gegenprüfung #808 Auflage B4): geprüft, ob die drei
+    genannten Stellen den /tmp-Cache weiterhin ohne die in PR #808 gebaute Pin-Identitäts-Sonde
+    (`scripts/normtext/cache-pin-befund.ts`, `pinBefund`) lasen — ja, alle drei nur `existsSync`.
+    Dieselbe Sonde eingebaut: `struktur-run.ts` (neue `cacheGueltig()`, PLUS Pin-Nachzug nach dem
+    Fetch mit `warFrischGeschrieben`/`pinIdentitaet` — ohne den Nachzug hätte kein Cache je wieder
+    als gültig gegolten, im ersten Testlauf dieses Fixes selbst als Rot-Beweis erlebt: alle 227
+    Erlasse fälschlich «ohne verwertbaren Cache»), `check-vollstaendigkeit.ts:392`,
+    `check-p-klassen.ts:106`. Statt eines Cache-Schlüssel-Umbaus (invasiv, hätte
+    `fedlex-cache.sh`/`normtext-snapshot.ts` global berührt, ausserhalb der Whitelist dieser
+    Bau-Einheit) wird damit dieselbe, bereits gebaute Sonde konsequent wiederverwendet (§5).
+  - **§6.7-Ast ergänzt** (`check-struktur-konsistenz.ts`): `standDriftBefund()` vergleicht
+    zusätzlich zu den Artikel-Keys `stand`/`fassungsToken` zwischen Snapshot und Sidecar — deckt
+    den Fall ab, dass der Generator einen neuen `fassungsToken` auf unverändertem Artikel-Bestand
+    stempelt (Beleg DBG #695), was der reine Key-Vergleich übersah. Additiver Rollout (wie `kl`,
+    W2·5i): nur ein Befund, wenn BEIDE Seiten die Felder tragen — ältere Sidecars ohne die Felder
+    werden nicht rückwirkend rot, sie erhalten `stand`/`fassungsToken` beim nächsten regulären
+    `normtext:struktur`-Lauf (`struktur-run.ts` stempelt sie ab sofort, aus dem zugehörigen
+    Snapshot gelesen).
+  - **Werkzeug-Falle gefunden und dokumentiert** (eigener §17-Fund dieser Session, kein Vorfalls-
+    Fahrplaneintrag nötig, da sofort selbst gefixt): ein CLI-Guard `process.argv[1]` zur
+    Testbarkeit (`if (istCliLauf) main();`) ist unter `vite-node` BLIND — `process.argv[1]` zeigt
+    dort auf das `vite-node`-Binary, nicht auf die Zieldatei, wodurch `npm run
+    normtext:struktur`/`check:struktur-konsistenz` wortlos exit 0 liefen (still, ohne main()).
+    Fix: Guard auf `!process.env.VITEST` umgestellt (Vitest setzt die Variable in jedem
+    Testprozess zuverlässig; vite-node/tsx/node nie) — vor dem Fix am eigenen Testlauf reproduziert.
+  - **Rot-Beweis vorher** (Unit-Tests, alle vorher rot demonstriert per `git stash` auf den
+    Quelldateien): `src/tests/normtext-struktur-run-logik.test.ts` (`parseNurFilter`,
+    `sollSchreiben`, `cacheGueltig` — 13 Fälle), `src/tests/normtext-struktur-konsistenz-stand.test.ts`
+    (`standDriftBefund` — 6 Fälle). Alle 19 grün nach dem Fix; `npm run check:struktur-konsistenz`,
+    `check:vollstaendigkeit`, `check:p-klassen`, `check:golden-normtext`, `golden:vergleich` grün
+    auf dem committeten Bestand; `tsc -b`/`lint` grün. `git status` bei Abschluss ohne
+    `public/**`-Diff (alle Experimentalläufe per `git checkout` zurückgesetzt).
+
 ## Entscheid-Datumsfehler `bge_151_II_475` — Wortlaut vor der Lösung + Lösung 12.9.2026 (W2·18-FEHLERBUCH)
 
 **Ursprünglicher Befund (Wortlaut, bis 12.9.2026 offen, ROADMAP.md `W2·6-B`-Umfeld):**

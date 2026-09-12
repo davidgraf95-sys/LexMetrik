@@ -22,6 +22,7 @@
 
 import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { parseFedlexCacheEintraege } from './inventar-bund.ts';
+import { pinBefund } from './cache-pin-befund.ts';
 import {
   sammleKantonInventar,
   sammleHtmInventar,
@@ -394,6 +395,15 @@ async function main(): Promise<void> {
       console.warn(
         `  HINWEIS: ${eintrag.name}: HTML-Cache /tmp/${eintrag.name}.html fehlt — überspringen (bash scripts/fedlex-cache.sh ausführen).`,
       );
+      continue;
+    }
+    // §17 (Gegenprüfung #808 B4): Inhalt allein genügt nicht — ein VOR einem Re-Pin
+    // geschriebener Cache besteht die Existenz-Prüfung anstandslos, stammt aber aus
+    // der überholten Manifestation. Dieselbe Pin-Sonde wie normtext-snapshot.ts
+    // (sicherstelleCaches) und struktur-run.ts (cacheGueltig), hier bisher gefehlt.
+    const pin = pinBefund(eintrag.name, eintrag.eli, eintrag.konsolidierung, eintrag.htmlN);
+    if (!pin.ok) {
+      console.warn(`  HINWEIS: ${eintrag.name}: ${pin.grund} — überspringen.`);
       continue;
     }
 
