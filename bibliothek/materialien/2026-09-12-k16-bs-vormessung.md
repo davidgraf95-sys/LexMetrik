@@ -247,3 +247,25 @@ danach: Ratschlag 84 · Bericht 32 · Initiative 1. Das Tor führt unbekannte Ar
 jetzt als **Fehler** statt als Hinweis und prüft zusätzlich, dass eine Art
 ausserhalb der Vorlage-Arten nur mit Fussnoten-Kante vorkommt.
 
+---
+
+## 9 Nachtrag 12.9.2026: LexWork `versions`-Endpunkt (Fund für R12a)
+
+Im Zuge der Vormessung «Entstehung am Paragraph BS» (FAHRPLAN-KANTONE.md §5
+R12a) zusätzlich geprüft: die LexWork-API der BS-Gesetzessammlung liefert unter
+`https://www.gesetzessammlung.bs.ch/api/texts_of_law/<SG>` ein Feld
+`old_versions[]`; jede darin genannte Fassung ist unter
+`https://www.gesetzessammlung.bs.ch/api/texts_of_law/<SG>/versions/<id>` als
+**Volltext-XHTML** abrufbar — nicht nur Metadaten. Geprüft am Beispiel **132.100**
+(10 Fassungen, HTTP 200, abgerufen 12.9.2026).
+
+**Lizenz unklar.** Der Endpunkt trägt, anders als `100311`–`100355` (data.bs.ch,
+CC BY 4.0, §1 oben), **keinen Lizenzvermerk** und ist nicht Teil der
+dokumentierten data.bs.ch-Kataloge — er ist die interne API der Gesetzessammlungs-
+Website selbst, undokumentiert. Vor jedem Bau auf diesem Fund: (1) Lizenz beim
+Kanton BS klären, (2) eine Stabilitäts-Sonde (Endpunkt kann sich ohne
+Versionierung ändern). Dieser Fund ändert nichts am §3-Entscheid oben — er senkt
+nur die Kosten des R12a-Baus, sobald die Lizenz geklärt ist: eine BS-
+Fassungskette bräuchte sonst einen eigenen zweiten Volltext-Parser ohne
+erkennbare Quelle.
+

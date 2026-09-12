@@ -163,6 +163,9 @@ tragfähig bleiben zwei maschinelle Wege (SG-Nummer im Geschäftstitel 20 Erlass
 Titel/Stichwort genitiv-tolerant 37 Erlasse, 102 Kanten = 25,7 % der 136 adressierbaren Gesetze),
 Datum allein ist als Schlüssel widerlegt (Kollision 161.100/162.100). Geltung: nur BS; ZH offen.
 Pflegebedarf: Monatslauf ausserhalb der Gate-Kette. Maschinell; fachliche Abnahme David offen.
+**Nachtrag §9 (12.9.2026):** LexWork-`versions`-Endpunkt liefert Volltext-XHTML je Fassung
+(`old_versions[]`) — Grundlage für `R12a-ENTSTEHUNG-BS` (FAHRPLAN-KANTONE.md §5), Lizenz des
+Endpunkts ungeklärt, Nicht-Bau-Entscheid unverändert.
 
 **Materialien-Register — Deckel-Messung und Projektions-Entwurf vor ZH (W2·13-KANTONE-DATEN):** [materialien/2026-09-12-register-deckel-messung.md](materialien/2026-09-12-register-deckel-messung.md) —
 Quelle: die committete Projektion `public/materialien/register.json` (Korpusstand `f6b5471fc`), gemessen

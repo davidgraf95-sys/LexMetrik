@@ -698,6 +698,28 @@ vollständig). Darauf, je EIGENE Runde mit eigener Gegenprüfung:
   zwischen Fassungen — zhlex liefert ALLE Vorfassungen als PDF (ø 4,2,
   max 48; Stadt-AS analog); natürlicher POC für W2·5g-ZEIT
   (Blocker zeit-historik-poc), was der Bund mangels Alt-Volltext nicht kann.
+- **R12a Entstehung am Paragraph — Basel-Stadt (vor Zürich)** (`R12a-ENTSTEHUNG-BS`)
+  *(Vormessung lex-recherche 12.9.2026, Grundlage `bibliothek/materialien/
+  2026-09-12-k16-bs-vormessung.md` §3/§7/§9 — Nicht-Bau-Entscheid.)*
+  **Noch nicht baubar:** BS hat keine Fassungskette je § — 0 kantonale
+  Historie-Einträge in `public/normtext/historie/`; 2908 Fussnoten in
+  793 BS-Struktur-Sidecars, davon nur 13 mit «GRB vom» und 8 mit
+  Ratschlagsnummer. Der amtliche Schlüssel Erlass↔Geschäft aus `K-16`
+  deckt 5 von 859 Erlassen (8 von 122 Kanten); der Rest trägt
+  `quelle: maschinell`. **Neuer Fund (12.9.2026):** die LexWork-API der
+  BS-Gesetzessammlung (`https://www.gesetzessammlung.bs.ch/api/
+  texts_of_law/<SG>`, undokumentiert, kein Lizenzvermerk am Endpunkt)
+  liefert `old_versions[]` und je Fassung Volltext-XHTML unter
+  `.../versions/<id>` — geprüft am Beispiel 132.100 (10 Fassungen).
+  Ziel, sobald freigegeben: BS-Fassungskette je § aus `old_versions`/
+  `versions/<id>`, Verknüpfung mit den K-16-Kanten, Synopse-BS analog E5
+  mit Profil-Normalisierung, Karte für BS-Keys. **Grenzen:** Lizenz des
+  `versions`-Endpunkts vorab klären (kein CC-BY-Vermerk); Endpunkt
+  undokumentiert ⇒ Stabilitäts-Sonde vor Bau; Vorstufen R3/R7/R12 für BS
+  neu (heute nur für ZH definiert). **Zwei Handgriffe ohne Bau (David):**
+  (1) Lizenz des LexWork-`versions`-Endpunkts klären, (2) amtlichen
+  Schlüssel Erlass↔Geschäft bei BS anfragen. Deckel-Reserve nach `#802`
+  ausreichend.
 - **R12b Entstehung am Paragraph — ZH-Pendant zu `W2·6c-ENTSTEHUNG-*`**
   *(David 6.9.2026: «Botschaften und anderes analog von Gesetzen Zürich» —
   ja, aber nach Bund und BS; Grundlage `bibliothek/materialien/
@@ -720,8 +742,8 @@ vollständig). Darauf, je EIGENE Runde mit eigener Gegenprüfung:
   klären, (2) nach einem amtlichen Schlüssel Erlass ↔ Vorlage fragen — mit
   Schlüssel würde die Kante amtlich. Etappen dann wie Bund E1/E2/E3 (Zeitstrahl
   aus ABLAUFSCHRITTE, Fassungskette aus R3, Karte im ZH-Leser), ohne E4-Pendant
-  (keine Namensabstimmungs-Daten gefunden). Reihenfolge: **Bund → BS
-  (`K-16`, data.bs.ch CC BY 4.0, fertige Änderungs-Metadaten) → ZH.**
+  (keine Namensabstimmungs-Daten gefunden). Reihenfolge: **Bund (#792–#801)
+  → BS (R12a) → ZH (R12b).**
 
 **Phase V — Ernte:**
 - **R13 Rechtsprechungs-Brücke:** (a) LS-Zitate in Entscheiden → kantonale
