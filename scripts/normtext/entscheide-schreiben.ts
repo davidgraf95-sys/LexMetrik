@@ -384,8 +384,9 @@ export function schreibeKorpus(auswahl: EntscheidSnapshot[], datum: string, root
     manifest.push({
       key, gericht: snap.gericht, gerichtName: snap.gerichtName, gerichtstyp: snap.gerichtstyp,
       kanton: snap.kanton, nummer: snap.nummer, bgeReferenz: snap.bgeReferenz, datum: snap.datum,
-      // datumUnbekannt nur projizieren, wenn gesetzt (Bestand bleibt byte-gleich, §6).
+      // datumUnbekannt/quarantaene nur projizieren, wenn gesetzt (Bestand bleibt byte-gleich, §6).
       ...(snap.datumUnbekannt ? { datumUnbekannt: true as const } : {}),
+      ...(snap.quarantaene ? { quarantaene: snap.quarantaene } : {}),
       zitierung: snap.zitierung, leitcharakter: snap.leitcharakter,
       regesteVorhanden: !!snap.regeste, regesteKurz, sachgebiet: snap.sachgebiet, sprache: snap.sprache,
       normKeys: snap.normKeys, bestand: snap.bestand, kuratierung: snap.kuratierung,

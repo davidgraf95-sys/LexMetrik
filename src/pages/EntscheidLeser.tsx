@@ -1023,7 +1023,7 @@ function EntscheidLeserInhalt({ schluessel, ansichtParam, normParam, leseParam }
             {/* Lesespalte 60–75 Zeichen (Reglement R1). */}
             {!lese && (
               <article ref={koerperRef} className="rsp-anker mx-auto w-full max-w-reading" style={{ '--rsp-fs': `${FS_STUFEN[fsIdx]}rem` } as CSSProperties}>
-                <EntscheidBody abschnitte={aktiveAbschnitte} zitierung={snap.zitierung} bgeReferenz={snap.bgeReferenz} />
+                <EntscheidBody abschnitte={aktiveAbschnitte} zitierung={snap.zitierung} bgeReferenz={snap.bgeReferenz} quarantaene={snap.quarantaene} />
               </article>
             )}
           </div>

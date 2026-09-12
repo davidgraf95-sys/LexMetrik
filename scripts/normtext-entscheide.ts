@@ -19,6 +19,8 @@ import {
 } from './normtext/entscheide-mapping';
 import { sha256EntscheidBloecke } from './normtext/sha-entscheide';
 import { holeRegesteSprachfassungen, holeClirHtml, parseClirUrteilskopf, bgeRefZuClirId } from './normtext/clir-regeste';
+import { verschlechtertDatum } from './normtext/bge-bandjahr';
+import { mergeB1Ergebnis } from './normtext/entscheide-b1-merge';
 import type { EntscheidSnapshot } from '../src/lib/rechtsprechung/typen';
 import type { Rechtsgebiet } from '../src/lib/normtext/register';
 import * as path from 'node:path';
@@ -518,10 +520,32 @@ async function main() {
     console.log(`[regeste-refresh] Bestand ${basis.length}, davon ${bge.length} BGE.`);
 
     // ── B1: BGE ohne Vollurteil (azaUrteil:null) via aza-Resolver nachladen ──
+    // Amtliches Urteilsdatum + eigenes aza-Az. ZUERST aus dem bger.ch clir-Urteilskopf
+    // holen (wie im Band-Nachzug, --bge-baender) — OCLs decision_date ist bei etlichen
+    // BGE ein Platzhalter/Fehlwert (Befund 12.9.2026, bge_151_II_475: persistiert war
+    // 1999-06-21 = Datum des in der Regeste zitierten Luftverkehrsabkommens, nicht des
+    // Urteils; amtlich verifiziert 2C_64/2023 vom 26.11.2024, bger.ch clir + aktuelle
+    // OCL-decision_date stimmen überein). Ohne kopf.datumFallback bliebe ein
+    // Auszug-only-Treffer auf den gröberen Bandjahr-Platzhalter angewiesen.
     const b1 = bge.filter((s) => !s.azaUrteil);
     console.log(`[b1] ${b1.length} BGE ohne Vollurteil → aza-Resolver (bger.ch/OCL)`);
     const b1neu = await mapLimit(b1, 3, async (s) => {
-      const neu = await holeBgeLeitentscheid(s.id.replace(/^bund\/bge\//, ''), datum);
+      const clirId = s.bgeReferenz ? bgeRefZuClirId(s.bgeReferenz) : null;
+      const html = clirId ? await holeClirHtml(clirId, 'de', CLIR_CACHE, 300) : null;
+      // A1 (Gegenprüfungs-Auflage 12.9.2026, PR #816): eine NETZSTÖRUNG beim
+      // clir-Kopf-Fetch (html === null, obwohl eine clirId existiert) darf NIE mit
+      // degradiertem kopf (aza:null, datumIso:null) weiterverarbeitet werden — sonst
+      // fiele holeBgeLeitentscheid im Auszug-only-Fall auf den groben Bandjahr-
+      // Platzhalter zurück und würde ein bereits exaktes Bestandsdatum verschlechtern.
+      // Dieser Kandidat bleibt für den nächsten Lauf offen (Bestand unangetastet).
+      if (clirId && html === null) {
+        process.stdout.write('n');
+        return { id: s.id, neu: null as EntscheidSnapshot | null };
+      }
+      const kopf = html ? parseClirUrteilskopf(html) : { aza: null, datumIso: null };
+      const neu = await holeBgeLeitentscheid(
+        s.id.replace(/^bund\/bge\//, ''), datum, { azaAz: kopf.aza, datumFallback: kopf.datumIso },
+      );
       process.stdout.write(neu?.azaUrteil ? '.' : neu ? '·' : 'x');
       return { id: s.id, neu };
     });
@@ -529,8 +553,33 @@ async function main() {
     if (b1.length && b1neu.every((x) => !x.neu)) {
       console.log('[b1] 0 Ergebnisse (OCL nicht erreichbar?) — Korpus unberührt.'); return;
     }
+    // Wurzel-Fix (Fund 12.9.2026, W2·18-FEHLERBUCH): ein frisches Auszug-only-
+    // Ergebnis (azaUrteil:null) wurde bisher hier VERWORFEN — der korrigierte
+    // Datums-Fallback (kopf.datumFallback bzw. Bandjahr-Platzhalter statt eines
+    // fehlerhaften decision_date) blieb dadurch stumm ungeschrieben und der alte
+    // Fehlwert stand weiter im Bestand. Jetzt wird jedes erfolgreich geholte
+    // Ergebnis übernommen (auch Auszug-only) — AUSSER es verschlechtert das Datum
+    // (A1, `verschlechtertDatum`: ein bereits exaktes Bestandsdatum wird NIE durch
+    // den groben Bandjahr-Platzhalter ersetzt). Ein gescheiterter Fetch
+    // (neu === null) lässt den Bestandseintrag ohnehin unangetastet.
+    // B (Gegenprüfungs-Auflage 12.9.2026, PR #816): `neu` ERSETZTE bisher den
+    // ganzen Bestandseintrag — `regeste.sprachfassungen` stammt aber aus einem
+    // ANDEREN Refresh-Zweig (B2/A18, `holeRegesteSprachfassungen`), nicht aus
+    // `holeBgeLeitentscheid`, und ging beim reinen Überschreiben verloren (6/6
+    // betroffene BGE, korpusweit 1258→1252 mit Sprachfassungen). `mergeB1Ergebnis`
+    // holt sie zurück, wenn der flache Regeste-Text unverändert ist.
+    const b1ById = new Map(b1.map((s) => [s.id, s]));
     const byId = new Map<string, EntscheidSnapshot>();
-    for (const { neu } of b1neu) if (neu?.azaUrteil) byId.set(neu.id, neu);
+    for (const { id, neu: neuRoh } of b1neu) {
+      if (!neuRoh) continue;
+      const alt = b1ById.get(id)!;
+      const neu = mergeB1Ergebnis(alt, neuRoh);
+      if (verschlechtertDatum(alt, neu)) {
+        console.log(`[b1] ${alt.bgeReferenz}: frisches Ergebnis verschlechtert das Datum (${alt.datum} → ${neu.datum}) — verworfen (A1).`);
+        continue;
+      }
+      byId.set(neu.id, neu);
+    }
     for (let i = 0; i < basis.length; i++) { const r = byId.get(basis[i].id); if (r) basis[i] = r; }
     // Kollisions-Quarantäne (§8) über ALLE BGE: teilt sich ein aza-key auf mehrere
     // BGE (OCL-Konflation, z.B. «152 V 2»↔«152 V 20»), ist ≥1 Zuordnung falsch → die
