@@ -118,6 +118,11 @@ export interface RevisionEintrag {
   plausibilitaet?: 'berichtigung-fremdes-as-dokument';
   /** Begründungstext zum Marker (nur gesetzt, wenn `plausibilitaet` gesetzt ist). */
   plausibilitaetsGrund?: string;
+  /** Finding 4b, zweite Stufe (W2·18-FEHLERBUCH, s. `IN_KRAFT_FUER_CH_WHITELIST`): das
+   *  amtlich belegte «in Kraft für die Schweiz seit»-Datum, wenn es VOR `dateEntryInForce`
+   *  («angewendet ab») liegt UND vom Konsolidierungstext bezeugt ist — nur art='aenderung',
+   *  nur für die whitelisteten ocUris (kein generischer Switch, s. Docstring dort). */
+  dateInKraftFuerCh?: string;
   /** Fedlex-Live-Link auf den AS-Text (art='aenderung') bzw. die amtliche Sammlung. */
   quelleUrl: string;
   /** sha-256 über die Identitätsfelder (Drift-Token, §7d). */
@@ -148,6 +153,36 @@ const REICHWEITE =
 // der Reichweite; die primäre (b)-Timeline reicht dagegen weiter zurück. Die primären
 // Änderungs-Erlasse (art='aenderung') werden NIE beschnitten (Vollständigkeit vor Kürze).
 export const MARKER_CUTOFF = '2000-01-01';
+
+/**
+ * Finding 4b, ZWEITE STUFE (W2·18-FEHLERBUCH, Auftrag 12.9.2026): `belegtImXml`/
+ * `belegteOcs` oben lösen nur, OB ein Amendment schon im Konsolidierungstext zitiert ist
+ * (→ `nichtKonsolidiert` unterdrücken) — nicht, WELCHES frühere Datum der Text daneben
+ * nennt. Für FZA/AS 2021 12 lautet der amtliche Wortlaut (live 12.9.2026, `eli/cc/2002/243/
+ * 20201215`, DE-XML): «… in Kraft für die Schweiz seit 15. Dez. 2020 und angewendet ab
+ * 1. Jan. 2021 …» — `dateEntryInForce` bildet nur Letzteres ab (§8: sonst unvollständig).
+ *
+ * Dieses frühere Datum trägt KEIN strukturiertes Fedlex-Prädikat: live geprüft (SPARQL
+ * `DESCRIBE`-Äquivalent auf `eli/oc/2021/12`, 12.9.2026) — der oc-Knoten hat `dateDocument`
+ * (2020-12-15) und `dateEntryInForce` (2021-01-01), aber KEIN `jolux:dateApplicability`.
+ * Und `dateDocument` ist KEIN verlässlicher Proxy für «in Kraft für die Schweiz» im
+ * Allgemeinen — Gegenprobe an vier weiteren Fällen mit ähnlich knappem Datums-Abstand
+ * (`oc/2017/653`: dateDocument 2017-10-25 ≠ Text-Datum 2017-12-31; `oc/2021/429` und
+ * `oc/2019/317`: dateDocument == dateEntryInForce, kein zweites Datum; `oc/2020/841`:
+ * dateDocument 2020-10-14 ≠ Text-Datum 2020-12-15) — eine allgemeine Ableitung würde also
+ * in den meisten Fällen ein FALSCHES zweites Datum erfinden (§1/§7). Eine Vollerhebung über
+ * alle 228 Sidecars fand 757 Fälle, in denen ein `sammelerlass-marker` unmittelbar vor einer
+ * `aenderung` steht (Lücke 1 Tag bis 13 Jahre, Median 214 Tage) — die überwiegende Mehrheit
+ * sind eigenständige, zeitlich zufällig benachbarte Sammelerlass-Änderungen (§8-Regelfall),
+ * KEIN zweites Datum desselben Ereignisses.
+ *
+ * Deshalb — wie beim `plausibilitaet`-Marker oben — eine WHITELIST auf den einen amtlich
+ * verifizierten Fall, keine Herleitung: jeder weitere Eintrag braucht dieselbe Live-
+ * Verifikation am Konsolidierungstext (Muster `belegtImXml`), bevor er hier landet.
+ */
+const IN_KRAFT_FUER_CH_WHITELIST: ReadonlyMap<string, string> = new Map([
+  ['https://fedlex.data.admin.ch/eli/oc/2021/12', '2020-12-15'], // FZA, Beschluss Nr. 1/2020
+]);
 
 /** oc-URI → «AS <jahr/band> <num>» aus dem ELI-Pfad. NUR korrekt, wenn die ELI-Nummer
  *  die AS-Seite IST: (1) Multi-Segment-ELI (Alt-AS, `DE_FR_IT`-Seiten) → erstes Segment =
@@ -272,6 +307,7 @@ function shaEintrag(e: Omit<RevisionEintrag, 'sha'>): string {
   // verlangt ausdrücklich nur betroffene Sidecars neu; ein bedingungslos angehängtes Feld
   // hätte JEDE sha im Korpus verändert).
   if (e.plausibilitaet) felder.push(e.plausibilitaet, e.plausibilitaetsGrund ?? '');
+  if (e.dateInKraftFuerCh) felder.push(e.dateInKraftFuerCh);
   return createHash('sha256').update(felder.join('|'), 'utf8').digest('hex');
 }
 
@@ -330,6 +366,11 @@ export function baueRevisionen(
     // Verknüpfung selbst ein Fedlex-Datenfehler sein kann.
     const info = rectifiesInfoProOc.get(r.oc);
     const fremdesAsDokument = info !== undefined && info.fremdeSr !== erlass.sr;
+    // Finding 4b, zweite Stufe: NUR aus der Whitelist, NUR wenn das Datum tatsächlich VOR
+    // dateEntryInForce liegt (sonst wäre «in Kraft seit» nach «angewendet ab» widersinnig —
+    // ein Schutz gegen einen künftigen Whitelist-Tippfehler, §7).
+    const inKraftFuerCh = IN_KRAFT_FUER_CH_WHITELIST.get(r.oc);
+    const dateInKraftFuerCh = inKraftFuerCh && inKraftFuerCh < r.dateForce ? inKraftFuerCh : undefined;
     const roh: Omit<RevisionEintrag, 'sha'> = {
       art: 'aenderung',
       dateEntryInForce: r.dateForce,
@@ -348,10 +389,19 @@ export function baueRevisionen(
           + '— häufig, weil die berichtigte Bestimmung im Anhang eines anderen Erlasses geändert '
           + 'wurde; massgeblich ist die amtliche Sammlung (§7/§8).'
         : undefined,
+      dateInKraftFuerCh,
       quelleUrl: liveLink(r.oc),
     };
     eintraege.push({ ...roh, sha: shaEintrag(roh) });
   }
+
+  // Finding 4b, zweite Stufe: Pfad-(a)-Stände, die bereits als `dateInKraftFuerCh` auf einer
+  // `aenderung` erscheinen, sind KEIN eigenständiger Sammelerlass-Marker mehr (sonst zeigt
+  // die Timeline dasselbe Ereignis zweimal — einmal korrekt zugeordnet, einmal als
+  // unzusammenhängend wirkender Marker, §8-Ehrlichkeit).
+  const belegteFruehereDaten = new Set(
+    eintraege.map((e) => e.dateInKraftFuerCh).filter((d): d is string => !!d),
+  );
 
   // Pfad-(a)-Cross-Check: Geltungsstände des gepinnten Abstracts ohne passenden (b)-Erlass
   // → Mantel-/Sammelerlass-Änderung (§8-Marker, nie stille Lücke). Nur Stände, die NACH dem
@@ -361,6 +411,7 @@ export function baueRevisionen(
     if (bStaende.has(stand)) continue;
     if (aeltesterB && stand < aeltesterB) continue;
     if (stand < MARKER_CUTOFF) continue; // unterhalb der Verlässlichkeits-Schwelle (§8)
+    if (belegteFruehereDaten.has(stand)) continue; // bereits als dateInKraftFuerCh gezeigt
     const roh: Omit<RevisionEintrag, 'sha'> = {
       art: 'sammelerlass-marker',
       dateEntryInForce: stand,
