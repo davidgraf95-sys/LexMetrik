@@ -476,4 +476,69 @@ describe('holeLexWork — mit gemocktem fetch', () => {
       /LexWork https:\/\/x\/api\/de\/texts_of_law\/1\.1: selected_version\.xhtml_tol ist number, erwartet string oder null/,
     );
   });
+
+  // Gegenprüfungs-Auflage A1 (PR #813): der Array-Container wurde geprüft,
+  // seine Elemente nicht — annexArtikelToken()/die Marker-Rücknahme lesen je
+  // Element `title`/`abrogated`. Basis-Fixture mit gültigem xhtml_tol, damit
+  // der Code überhaupt bis zum Annex-Block läuft (nurPdf=false).
+  const annexBasis = (annexDocuments: unknown) => ({
+    text_of_law: {
+      title: 't',
+      abbreviation: 'a',
+      enactment: '2020-01-01',
+      version_uid: 'u',
+      current_version: { structured_document_id: 1, version_dates_str: 'in Kraft seit: 01.01.2020' },
+      selected_version: {
+        structured_document_id: 1,
+        pdf_link_tol: null,
+        xhtml_tol: LEXWORK_XHTML_BEISPIEL,
+        annex_documents: annexDocuments,
+      },
+    },
+  });
+
+  it('wirft bei annex_documents-Element null, statt URL-los zu crashen', async () => {
+    vi.stubGlobal(
+      'fetch',
+      vi.fn(async () => ({
+        ok: true,
+        status: 200,
+        headers: new Headers({ 'content-type': 'application/json' }),
+        json: async () => annexBasis([null]),
+      } as unknown as Response)),
+    );
+    await expect(holeLexWork('x', 'de', '1.1')).rejects.toThrow(
+      /LexWork https:\/\/x\/api\/de\/texts_of_law\/1\.1: selected_version\.annex_documents\[0\] hat unerwartete Form \(null\), erwartet Objekt/,
+    );
+  });
+
+  it('wirft bei annex_documents[].title vom falschen Typ (Zahl statt String), statt in annexArtikelToken() zu crashen', async () => {
+    vi.stubGlobal(
+      'fetch',
+      vi.fn(async () => ({
+        ok: true,
+        status: 200,
+        headers: new Headers({ 'content-type': 'application/json' }),
+        json: async () => annexBasis([{ title: 46, abrogated: false }]),
+      } as unknown as Response)),
+    );
+    await expect(holeLexWork('x', 'de', '1.1')).rejects.toThrow(
+      /LexWork https:\/\/x\/api\/de\/texts_of_law\/1\.1: selected_version\.annex_documents\[0\]\.title ist number, erwartet string/,
+    );
+  });
+
+  it('wirft bei annex_documents[].abrogated als String "false", statt die Marker-Rücknahme still auszulassen', async () => {
+    vi.stubGlobal(
+      'fetch',
+      vi.fn(async () => ({
+        ok: true,
+        status: 200,
+        headers: new Headers({ 'content-type': 'application/json' }),
+        json: async () => annexBasis([{ title: 'Anhang zu § 1', abrogated: 'false' }]),
+      } as unknown as Response)),
+    );
+    await expect(holeLexWork('x', 'de', '1.1')).rejects.toThrow(
+      /LexWork https:\/\/x\/api\/de\/texts_of_law\/1\.1: selected_version\.annex_documents\[0\]\.abrogated ist string, erwartet boolean/,
+    );
+  });
 });

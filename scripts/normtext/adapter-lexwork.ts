@@ -805,6 +805,24 @@ function validiereTextOfLaw(url: string, tol: unknown): asserts tol is TextOfLaw
       Array.isArray(sel.annex_documents),
       'Array oder null',
     );
+    // Gegenprüfungs-Auflage A1 (PR #813): Der Array-Container allein reicht
+    // nicht — annexArtikelToken()/der Marker-Rücknahme-Block unten lesen je
+    // Element `title`/`abrogated`. Reproduziert vor diesem Fix: `[null]`
+    // crashte URL-los (`Cannot read properties of null`); `[{title: 46}]`
+    // crashte in annexArtikelToken() («titel.match is not a function»);
+    // `[{abrogated: "false"}]` lief STILL durch — der String ist truthy,
+    // die Marker-Rücknahme unterblieb, ein geltender Artikel bliebe
+    // fälschlich «aufgehoben» stehen (§6.7).
+    if (Array.isArray(sel.annex_documents)) {
+      sel.annex_documents.forEach((eintrag, i) => {
+        const pfad = `selected_version.annex_documents[${i}]`;
+        if (!istPlainObject(eintrag)) {
+          throw new Error(`LexWork ${url}: ${pfad} hat unerwartete Form (${typName(eintrag)}), erwartet Objekt`);
+        }
+        feld(`${pfad}.title`, eintrag.title, typeof eintrag.title === 'string', 'string');
+        feld(`${pfad}.abrogated`, eintrag.abrogated, typeof eintrag.abrogated === 'boolean', 'boolean');
+      });
+    }
   }
 }
 
