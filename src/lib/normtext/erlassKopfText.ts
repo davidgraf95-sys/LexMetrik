@@ -144,6 +144,20 @@ export function aufgehobenSeitSatz(seitIso: string): string {
 }
 
 /**
+ * Finding 4b, zweite Stufe (W2·18-FEHLERBUCH, Gegenprüfung PR #832, Auflage 2):
+ * amtlicher Wortlaut ist «in Kraft **für die Schweiz** seit» — bei
+ * Staatsvertrags-Beschlüssen (Gemischter-Ausschuss-Entscheide) ist «in Kraft
+ * seit» ohne den Zusatz sinnverengend, weil ein Vertrag pro Vertragspartei
+ * unterschiedlich in Kraft treten kann; der Fedlex-Text selbst nennt IMMER
+ * den Bezug («in Kraft für die Schweiz seit 15. Dez. 2020 …», FZA-Fussnote,
+ * s. `scripts/normtext/revisionen-generieren.ts` Docstring `belegtImXml`).
+ * Verwendet von `RevisionenGruppe.tsx` neben `dateInKraftFuerCh` — hier statt
+ * als Literal in der Komponente, damit das Wort nicht ein zweites Mal
+ * abweichend formuliert wird (§5).
+ */
+export const IN_KRAFT_FUER_CH_LABEL = 'in Kraft für die Schweiz seit';
+
+/**
  * Nachfolge-Erlass-Hinweis für den Prerender-Kopf (Kurzform des Reader-
  * Banner-Satzes «Nachfolge-Erlass: SR … (in Kraft seit …)», hier als reiner
  * Text ohne Link-Anatomie — der Prerender-Kopf trägt bereits EINEN Live-Link

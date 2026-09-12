@@ -92,6 +92,15 @@ for (const m of meta) {
     if (!!r.plausibilitaet !== !!r.plausibilitaetsGrund) {
       fehler.push(`${m.key}: plausibilitaet/plausibilitaetsGrund inkonsistent bei ${r.dateEntryInForce}.`);
     }
+    // Finding 4b, zweite Stufe (W2·18-FEHLERBUCH): dateInKraftFuerCh nur auf 'aenderung',
+    // ISO, und ECHT früher als dateEntryInForce — sonst wäre «in Kraft seit … angewendet
+    // ab …» widersinnig (§7). Determinismus (1) fängt jeden Whitelist-Handedit bereits ab;
+    // dies ist die zusätzliche, lesbare Invariante (§6.7: ein Tor, das scheitern KANN).
+    if (r.dateInKraftFuerCh) {
+      if (r.art !== 'aenderung') fehler.push(`${m.key}: dateInKraftFuerCh auf einem ${r.art}-Eintrag (nur 'aenderung' zulässig).`);
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(r.dateInKraftFuerCh)) fehler.push(`${m.key}: dateInKraftFuerCh «${r.dateInKraftFuerCh}» nicht ISO.`);
+      if (r.dateInKraftFuerCh >= r.dateEntryInForce) fehler.push(`${m.key}: dateInKraftFuerCh «${r.dateInKraftFuerCh}» nicht früher als dateEntryInForce «${r.dateEntryInForce}».`);
+    }
     // (8b) Auflage d (Gegenprüfung PR #827, §6.7): unabhängige Rückhalt-Prüfung DIREKT aus
     // raw — kein erneuter Aufruf von baueRevisionen/baueOcZuRectifiesSr. Ein Marker ohne
     // passende rectifies-Bindung + abweichende Fremd-SR in raw ist unbelegt (Handedit oder

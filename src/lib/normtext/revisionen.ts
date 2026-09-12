@@ -38,6 +38,11 @@ export interface RevisionBezug {
   plausibilitaet?: 'berichtigung-fremdes-as-dokument';
   /** Begründungstext zum Marker (nur gesetzt, wenn `plausibilitaet` gesetzt ist). */
   plausibilitaetsGrund?: string;
+  /** Finding 4b, zweite Stufe (W2·18-FEHLERBUCH): amtlich belegtes «in Kraft für die
+   *  Schweiz seit»-Datum, wenn es früher als `dateEntryInForce` («angewendet ab») liegt —
+   *  Whitelist auf den einen live verifizierten Fall (FZA/AS 2021 12), s.
+   *  `scripts/normtext/revisionen-generieren.ts` (`IN_KRAFT_FUER_CH_WHITELIST`). */
+  dateInKraftFuerCh?: string;
   /** Fedlex-Live-Link auf den AS-Text bzw. die amtliche Sammlung (§7c). */
   quelleUrl: string;
 }

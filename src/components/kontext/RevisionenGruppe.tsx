@@ -2,6 +2,7 @@ import { AbrufFehler } from '../ui/AbrufFehler';
 import { Datum } from '../ui/Datum';
 import { fedlexLokalisiert, type Locale } from '../locale';
 import { revisionTitel, type RevisionBezug } from '../../lib/normtext/revisionen';
+import { IN_KRAFT_FUER_CH_LABEL } from '../../lib/normtext/erlassKopfText';
 import type { BotschaftBezug } from '../../lib/materialien/botschaften';
 import { KontextGruppe } from './KontextGruppe';
 
@@ -51,7 +52,20 @@ export function RevisionenGruppe({ revFehler, revAenderungen, revMarker, botscha
                 <li key={r.ocUri} className="text-body-s">
                   <a href={fedlexLokalisiert(r.quelleUrl, locale)} target="_blank" rel="noopener noreferrer"
                     className="no-underline hover:text-brass-700">
-                    <Datum iso={r.dateEntryInForce} className="text-ink-500" />
+                    {/* Finding 4b, zweite Stufe (W2·18-FEHLERBUCH): bei den (whitelisteten)
+                        Fällen, wo Fedlex «angewendet ab» statt «in Kraft für die Schweiz
+                        seit» als dateEntryInForce führt, BEIDE Daten zeigen — sonst bleibt
+                        das frühere, amtlich belegte Datum unsichtbar (§8). */}
+                    {r.dateInKraftFuerCh ? (
+                      <>
+                        <span className="text-ink-500">{IN_KRAFT_FUER_CH_LABEL} </span>
+                        <Datum iso={r.dateInKraftFuerCh} className="text-ink-500" />
+                        <span className="text-ink-500"> · angewendet ab </span>
+                        <Datum iso={r.dateEntryInForce} className="text-ink-500" />
+                      </>
+                    ) : (
+                      <Datum iso={r.dateEntryInForce} className="text-ink-500" />
+                    )}
                     {titel && <>{' — '}<span className="font-medium">{titel}</span></>}
                   </a>
                   {r.roFundstelle && <span className="num text-micro text-ink-500"> · {r.roFundstelle}</span>}

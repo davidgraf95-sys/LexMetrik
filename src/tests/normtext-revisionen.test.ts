@@ -151,6 +151,46 @@ describe('baueRevisionen — Kern-Logik', () => {
     expect(MARKER_CUTOFF).toBe('2000-01-01');
   });
 
+  // Finding 4b, ZWEITE STUFE (W2·18-FEHLERBUCH, Auftrag 12.9.2026): dateEntryInForce trägt
+  // bei FZA/AS 2021 12 nur «angewendet ab» — «in Kraft für die Schweiz seit 15.12.2020»
+  // stand bislang nur unauffällig als eigenständiger, unzusammenhängend wirkender
+  // Sammelerlass-Marker in der Timeline (§8: unvollständig). Whitelist auf den EINEN
+  // live verifizierten Fall (s. `IN_KRAFT_FUER_CH_WHITELIST` im Generator).
+  describe('baueRevisionen — Finding 4b, zweite Stufe (dateInKraftFuerCh-Whitelist)', () => {
+    // Eine ältere (b)-Änderung schiebt `aeltesterB` vor 2020-12-15 — sonst würde der
+    // bestehende «Erstpublikation»-Ausschluss (§356ff. im Generator) den Pfad-(a)-Stand
+    // schon VOR jeder Whitelist-Logik wegfiltern und der Test bewiese nichts (Rot-Beweis
+    // an genau diesem Fixture-Fehler geführt).
+    const AELTERE_BINDING = bind({ oc: OC('2019/1'), dateForce: '2019-01-01', titleDe: 'Ältere Änderung' });
+
+    it('setzt dateInKraftFuerCh auf der FZA/AS-2021-12-aenderung und schluckt den doppelten Sammelerlass-Marker', () => {
+      const bindings = [AELTERE_BINDING, bind({ oc: OC('2021/12'), dateForce: '2021-01-01', titleDe: 'Beschluss Nr. 1/2020' })];
+      const aStaende = ['2020-12-15']; // Pfad-(a)-Geltungsstand — ohne die Whitelist würde er einen Marker erzeugen
+      const s = baueRevisionen(ERLASS, bindings, aStaende, '2025-01-01', new Map(), '2026-07-10');
+      const ae = s.revisionen.find((r) => r.ocUri === OC('2021/12'));
+      expect(ae?.dateInKraftFuerCh).toBe('2020-12-15');
+      expect(s.revisionen.filter((r) => r.art === 'sammelerlass-marker')).toHaveLength(0);
+    });
+
+    it('lässt dateInKraftFuerCh weg, wenn die oc-URI NICHT in der Whitelist steht (kein genereller Switch) — der Marker bleibt bestehen', () => {
+      const bindings = [AELTERE_BINDING, bind({ oc: OC('2020/841'), dateForce: '2021-01-01', titleDe: 'Andere Änderung' })];
+      const aStaende = ['2020-12-15']; // zeitlich benachbart, aber unbelegt — bleibt eigenständiger Marker
+      const s = baueRevisionen(ERLASS, bindings, aStaende, '2025-01-01', new Map(), '2026-07-10');
+      const ae = s.revisionen.find((r) => r.ocUri === OC('2020/841'));
+      expect(ae?.dateInKraftFuerCh).toBeUndefined();
+      expect(s.revisionen.filter((r) => r.art === 'sammelerlass-marker')).toHaveLength(1);
+    });
+
+    it('unterdrückt dateInKraftFuerCh, wenn das Whitelist-Datum NICHT früher als dateEntryInForce läge (Schutz gegen einen Whitelist-Fehler, §7)', () => {
+      // dateForce liegt VOR dem Whitelist-Datum 2020-12-15 — dann wäre «in Kraft seit …
+      // angewendet ab …» widersinnig; die Whitelist darf das nicht blind anwenden.
+      const bindings = [bind({ oc: OC('2021/12'), dateForce: '2020-01-01', titleDe: 'Hypothetisch' })];
+      const s = baueRevisionen(ERLASS, bindings, [], '2025-01-01', new Map(), '2026-07-10');
+      const ae = s.revisionen.find((r) => r.ocUri === OC('2021/12'));
+      expect(ae?.dateInKraftFuerCh).toBeUndefined();
+    });
+  });
+
   it('sortiert Datum absteigend und ist byte-deterministisch', () => {
     const bindings = [
       bind({ oc: OC('2019/111'), dateForce: '2019-03-01', titleDe: 'A' }),
