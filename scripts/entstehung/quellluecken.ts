@@ -3,8 +3,12 @@
 // `synopse.ts` ausgelagert (§6.6-Split, PR #801-Nachzug), Fassaden-Muster: `synopse.ts`
 // re-exportiert dieses Modul unverändert, kein Konsumenten-Importpfad ändert sich.
 // REIN wie der Rest der Synopse-Bausteine — kein Fetch, kein Schreiben, kein Date.now (§2).
-import type { StandProfil } from './synopse.ts';
-import { tokenAusEId } from './synopse.ts';
+//
+// Importiert `StandProfil`/`tokenAusEId` aus `./synopse-basis.ts`, NICHT aus `./synopse.ts`
+// (check:zyklen-Auflage nach PR #804): `synopse.ts` re-exportiert dieses Modul, ein
+// Rückimport hierher hätte einen Zyklus synopse.ts ⇄ quellluecken.ts erzeugt.
+import type { StandProfil } from './synopse-basis.ts';
+import { tokenAusEId } from './synopse-basis.ts';
 
 /** Eine erkannte Lücke der Quelle — Indizes in die Stände-Liste des Erlasses. */
 export interface QuellLuecke {
