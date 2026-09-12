@@ -310,6 +310,11 @@ Residue-Klasse trägt heute sehr Verschiedenes unter einem Etikett); (c) Ausbau 
 
 ## §19 `QS-KORPUS-SCOPE` — scope/decl-Sektionen ohne annex-Container ingestieren
 
+**Erledigt 12.9.2026, PR #838 (`87db8a514`):** 23 scope/decl-Sektionen in den 12 unten
+genannten Staatsverträgen ingestiert, Gegenprüfung (Sonnet, Bau Opus) bestanden — keine
+Blocker. Nebenfund: Leser-Wurzel-Label «Anhänge» uneinheitlich → eigener Schritt PR #840
+(offen). Spec-Wortlaut unten unverändert stehen gelassen.
+
 *Nachzug 15.8.2026 (Etiketten-Konsolidierung BAUPLAN-UMBAU): Das Etikett `QS-KORPUS-SCOPE` ist
 aufgegangen — bauender Schritt dieser Spec ist seither das Dach `QS-KORPUS` (Korpus-Pflege,
 Risikopfad ⇒ Gegenprüfung), die Zeile steht dort als Checklisten-Eintrag. **Trailer also

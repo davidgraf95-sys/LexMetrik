@@ -33,6 +33,32 @@ falsch — korrigiert 30.8.2026). Karten abgeschlossener Sessions (älter als
 werden direkt unter dem KARTEN-Anker eingefügt (jüngste zuoberst).
 
 <!-- KARTEN -->
+## Session 12.9.2026 (7) — Abschluss: #838 gelandet, #840 in Landung, Session-Bilanz
+
+**Gelandet:** #838 (Kopf `87db8a514`) `QS-KORPUS-SCOPE` — 23 scope/decl-Sektionen in 12
+Staatsverträgen ingestiert (war in Karte (6) noch «landet gerade»); Gegenprüfung bestanden
+(Sonnet, Bau Opus): eigener Census 228 Caches 136/26/14/12, 23/23 h1 == Label, 0 Drops,
+Live-Stichprobe 3 Erlasse byte-gleich — keine Blocker. ROADMAP/FAHRPLAN-OFFENE-BEFUNDE/
+FAHRPLAN-FEDLEX-PORTFOLIO §19 entsprechend abgehakt.
+
+**In Landung (PR offen, nicht Teil dieser Landung):** #840 (Kopf `185cf141c`) — Leser-Wurzel
+für scope/decl-Sektionen heisst synthetisch «Anhänge» statt eines eigenen Labels
+(Nebenfund aus #838); ROADMAP-Zeile bleibt bewusst offen, bis gemergt.
+
+**Session-Bilanz (12.9.2026, Fehlerbuch-Wellen 4–6 + Staatsverträge):** 18 PRs an einem Tag
+gelandet; 11 Gegenprüfungen (Opus/Sonnet wechselseitig), davon 5 Bau-Behauptungen widerlegt
+oder mit Auflagen versehen — `rectifies`-Ziel-Widerspruch 3 Nachbesserungs-Runden, #828 vier
+Runden, #826/#832/#834 je mit Auflagen durchgekommen. Drei Fedlex-Datenfehler-Klassen amtlich
+belegt: falsches `rectifies`-Ziel (SKV/AIG-Verwechslung), fehlende `dateApplicability` und
+echte Sammelberichtigungen (ein `rectifies` für mehrere Erlasse). Rund 10 vermeidbare
+CI-Läufe heute allein durch BEHIND-Nachzüge vor dem Merge.
+
+**Offen für die nächste Session:** Fehlerbuch-Zeilen Tabellen-`<dt>`-Marken (ZPO art_250,
+StG art_5 f., BV art_197), 216 Struktur-Sidecars ohne `stand`/`fassungsToken`, offene
+doc/pdf-Berichtigungen aus der `rectifies`-Messung. David-Handgriffe unverändert: BE-Sprengel-
+Abnahme, BS-Lizenz/Schlüssel, CC-BY-Nennung `data.bs.ch`, 114 BS-Kanten, Merge-Queue-
+Repo-Setting.
+
 ## Session 12.9.2026 (6) — Fehlerbuch-Welle 6 `W2·18-FEHLERBUCH` (Opus-Bau + Sonnet-Prüfer)
 
 **Ablauf:** Fortsetzung der Fehlerbuch-Runde auf dem Stand von Session 12.9.2026 (5) —
