@@ -302,8 +302,8 @@ zgb-a36-anhang: Die ZGB-Gliederung zeigt 74 Artikel des Anhangs «Wortlaut der f
   **(PR #794, Stand 11.9.2026: offen).**
   **Detail:** [FAHRPLAN-MATERIALIEN-VERZAHNUNG.md](fahrplaene/FAHRPLAN-MATERIALIEN-VERZAHNUNG.md) §11.5.
 
-- [ ] **Entstehung am Artikel — Quelllücken in einzelnen Fedlex-Ständen ehrlich zeigen** *(`W2·6c-ENTSTEHUNG-QUELLLUECKE`, Auflage A6 Gegenprüfung PR #798, 12.9.2026)*
-  <!-- @meta id: W2·6c-ENTSTEHUNG-QUELLLUECKE · status: ready · blocker: null · dep: [W2·6c-ENTSTEHUNG-SYNOPSE] · feld: korpus · fahrplan: fahrplaene/FAHRPLAN-MATERIALIEN-VERZAHNUNG.md -->
+- [x] **Entstehung am Artikel — Quelllücken in einzelnen Fedlex-Ständen ehrlich zeigen** *(`W2·6c-ENTSTEHUNG-QUELLLUECKE`, Auflage A6 Gegenprüfung PR #798, 12.9.2026)*
+  <!-- @meta id: W2·6c-ENTSTEHUNG-QUELLLUECKE · status: done · blocker: null · dep: [W2·6c-ENTSTEHUNG-SYNOPSE] · feld: korpus · fahrplan: fahrplaene/FAHRPLAN-MATERIALIEN-VERZAHNUNG.md -->
   Erkennt der Generator, dass eine eId in GENAU EINEM Stand fehlt und danach unverändert
   zurückkehrt (Beleg CHEMRRV `cc/2005/478` @2022-05-01: Art. 4–24 stehen als
   `<mod>`/`<quotedStructure>` eines Anhangs statt als `<article>`, 22 Blöcke darum fälschlich
