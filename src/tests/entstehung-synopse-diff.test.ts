@@ -13,7 +13,7 @@
 // stehen hier, damit er es nicht wieder wird.
 import { describe, it, expect } from 'vitest';
 import {
-  geltendeBloecke, lageFuerEreignis, ohneEreignisFuerArtikel, synopseZeilen,
+  geltendeBloecke, lageFuerEreignis, ohneEreignisFuerArtikel, quellLueckenFuerArtikel, synopseZeilen,
   tokenAusLabel, wortDiff, hatUnterschied, vergleichsform, leerDiffVerletzungen, phantomVerletzungen, nurTitelGeaendert, AEHNLICH_MIN,
   type SynopseZeile,
 } from '../lib/entstehung/synopse-diff';
@@ -111,6 +111,115 @@ describe('Auswahl: welcher Alt-Block gehört zu diesem Punkt?', () => {
     expect(treffer).toHaveLength(1);
     expect(treffer[0].artikel.zustand).toBe('ohne_ereignis');
     expect(ohneEreignisFuerArtikel(SHARD, '5', GELTEND)).toHaveLength(0);
+  });
+});
+
+/**
+ * Die zweite Ursache der Ausnahmeliste (W2·6c-ENTSTEHUNG-QUELLLUECKE, ROADMAP):
+ * ein Artikel entfällt WIRKLICH, und dieselbe eId trägt Jahre später wieder Text.
+ * Gemessen an AVIV Art. 57b: am 2021-07-01 wird die COVID-Bestimmung zur textlosen
+ * Hülse (korrekt «entfallen»), am 2025-11-01 trägt dieselbe eId wieder Text — der
+ * zufällig wortgleich ist («sechs Abrechnungsperioden»).
+ */
+const SHARD_LINEAGE: SynopseShard = {
+  erlass: 'TESTL', eli: 'cc/2000/2', normProfil: 'entstehung-norm/4', erzeugt: '2026-09-12',
+  fensterAb: '2021-01-01', kuenftigeStaende: [],
+  staende: [
+    { datum: '2021-04-01', xmlUrl: 'x1', liveUrl: 'l1', sha: 's1', bytes: 1, abgerufen: '2026-09-12', artikelZahl: 1 },
+    { datum: '2021-07-01', xmlUrl: 'x2', liveUrl: 'l2', sha: 's2', bytes: 1, abgerufen: '2026-09-12', artikelZahl: 1 },
+    { datum: '2025-11-01', xmlUrl: 'x3', liveUrl: 'l3', sha: 's3', bytes: 1, abgerufen: '2026-09-12', artikelZahl: 1 },
+    { datum: '2026-01-01', xmlUrl: 'x4', liveUrl: 'l4', sha: 's4', bytes: 1, abgerufen: '2026-09-12', artikelZahl: 1 },
+  ],
+  schritte: [
+    {
+      von: '2021-04-01', bis: '2021-07-01',
+      artikel: [{
+        eId: 'art_57_b', token: '57_b', label: 'Art. 57b', art: 'entfallen',
+        alt: [B('1', '', 'Die Höchstdauer beträgt sechs Abrechnungsperioden.')],
+        shaNorm: 'a', zustand: 'ohne_ereignis',
+      }],
+    },
+    { von: '2021-07-01', bis: '2025-11-01', neuEIds: ['art_57_b'], artikel: [] },
+    {
+      von: '2025-11-01', bis: '2026-01-01',
+      artikel: [{
+        eId: 'art_57_b', token: '57_b', label: 'Art. 57b', art: 'geaendert',
+        alt: [B('1', '', 'Die Höchstdauer beträgt sechs Abrechnungsperioden.')],
+        shaNorm: 'b', zustand: 'belegt', oc: ['oc/2025/9'],
+      }],
+    },
+  ],
+};
+
+describe('Lineage: «Neu» folgt der Kette, nicht dem nächsten Token-Treffer', () => {
+  it('ein entfallener Artikel hat KEIN «Neu» — auch wenn dieselbe eId später wiederkehrt', () => {
+    // Vor dem Fix stellte `neuNach` den Wortlaut von 2026 neben den von 2021 und
+    // erzeugte damit einen Leer-Diff (Ausnahme AVIV 57_b @2021-07-01, Register
+    // `bibliothek/register/entstehung-leerdiff-ausnahmen.json`). Was zwischen den
+    // beiden Ständen liegt, ist eine NEUE Bestimmung unter derselben Nummer — der
+    // Leser darf sie nicht als Fortsetzung der alten lesen (§1).
+    const treffer = ohneEreignisFuerArtikel(SHARD_LINEAGE, '57_b', GELTEND);
+    expect(treffer).toHaveLength(1);
+    expect(treffer[0].neuHerkunft).toBe('entfallen');
+    expect(treffer[0].neu).toBeNull();
+  });
+
+  it('und der Leer-Diff-Wächter hat damit nichts mehr zu beanstanden', () => {
+    expect(leerDiffVerletzungen(SHARD_LINEAGE, () => GELTEND)).toEqual([]);
+  });
+});
+
+/**
+ * Die Quelllücke im Leser (W2·6c-ENTSTEHUNG-QUELLLUECKE) — nachgebaut nach dem
+ * gemessenen Fall CHEMRRV Art. 9: Stand 2022-04-01 führt den Artikel, 2022-05-01 und
+ * 2022-10-01 führen ihn nur im Änderungsanhang, 2022-10-06 wieder normal und wortgleich.
+ */
+const SHARD_LUECKE: SynopseShard = {
+  erlass: 'TESTQ', eli: 'cc/2005/478', normProfil: 'entstehung-norm/4', erzeugt: '2026-09-12',
+  fensterAb: '2021-01-01', kuenftigeStaende: [],
+  staende: [
+    { datum: '2022-04-01', xmlUrl: 'x1', liveUrl: 'l1', sha: 's1', bytes: 700027, abgerufen: '2026-09-12', artikelZahl: 25 },
+    { datum: '2022-05-01', xmlUrl: 'x2', liveUrl: 'l2', sha: 's2', bytes: 708599, abgerufen: '2026-09-12', artikelZahl: 3 },
+    { datum: '2022-10-01', xmlUrl: 'x3', liveUrl: 'l3', sha: 's3', bytes: 717322, abgerufen: '2026-09-12', artikelZahl: 3 },
+    { datum: '2022-10-06', xmlUrl: 'x4', liveUrl: 'l4', sha: 's4', bytes: 711735, abgerufen: '2026-09-12', artikelZahl: 27 },
+  ],
+  schritte: [
+    {
+      von: '2022-04-01', bis: '2022-05-01',
+      artikel: [{
+        eId: 'art_9', token: '9', label: 'Art. 9', ueberschrift: 'Örtlicher Geltungsbereich',
+        art: 'entfallen', alt: [], shaNorm: 'q', zustand: 'quelle_unvollstaendig',
+        zurueckAb: '2022-10-06', imAnhang: true,
+      }],
+    },
+    { von: '2022-05-01', bis: '2022-10-01', artikel: [] },
+    { von: '2022-10-01', bis: '2022-10-06', artikel: [] },
+  ],
+};
+
+describe('Quelllücke: ein fehlender Stand ist keine Aufhebung (§8)', () => {
+  it('liefert die betroffenen Stände samt Quell-Beleg — abgeleitet, nicht zweitgespeichert', () => {
+    const treffer = quellLueckenFuerArtikel(SHARD_LUECKE, '9');
+    expect(treffer).toHaveLength(1);
+    expect(treffer[0].staende).toEqual(['2022-05-01', '2022-10-01']);
+    expect(treffer[0].belege.map((b) => b.liveUrl)).toEqual(['l2', 'l3']);
+    expect(treffer[0].artikel.imAnhang).toBe(true);
+  });
+
+  it('hängt am Fassungspunkt, wenn der Apparat zum Lücken-Stand doch ein Ereignis führt', () => {
+    const lage = lageFuerEreignis(SHARD_LUECKE, '9', '2022-05-01', ['oc/2022/220'], GELTEND);
+    expect(lage.art).toBe('quelle_unvollstaendig');
+    if (lage.art !== 'quelle_unvollstaendig') return;
+    expect(lage.treffer.staende).toEqual(['2022-05-01', '2022-10-01']);
+  });
+
+  it('steht NICHT in der Liste «ohne Fussnoten-Ereignis» — zwei verschiedene Aussagen', () => {
+    expect(ohneEreignisFuerArtikel(SHARD_LUECKE, '9', GELTEND)).toHaveLength(0);
+  });
+
+  it('und beide Wächter lassen sie in Ruhe: es gibt keinen behaupteten Unterschied', () => {
+    expect(leerDiffVerletzungen(SHARD_LUECKE, () => GELTEND)).toEqual([]);
+    expect(phantomVerletzungen(SHARD_LUECKE, () => GELTEND)).toEqual([]);
   });
 });
 
@@ -268,15 +377,21 @@ describe('leerDiffVerletzungen — der Leer-Diff-Wächter von check:entstehung (
     expect(verletzungen).toEqual([{ token: '5', stand: '2022-01-01', zustand: 'belegt' }]);
   });
 
-  // §6.3-BEGRÜNDUNG FÜR DIE ÄNDERUNG DIESES TESTS: bis Profil `/3` stand hier die
-  // Erwartung `toEqual([])` — der Wächter liess `art: entfallen` aus. Die Gegenprüfung zu
-  // PR #798 (Auflage A4) hat das als Tor-Lücke beanstandet: mit `/3` wechselten 160
-  // Alt-Blöcke von «geändert» zu «entfallen» und verliessen damit den Blick des Wächters
-  // (§6.7). Die Erwartung ist deshalb FACHLICH umgedreht, nicht angepasst.
-  it('Rot-Beweis: auch ein `art: entfallen`-Block ohne sichtbaren Unterschied wird gemeldet (Auflage A4)', () => {
-    // Der entfallene Artikel taucht unter DEMSELBEN Token in einem späteren Schritt
-    // wieder auf (die CHEMRRV-Klasse) — `neuNach` stellt dessen Wortlaut als «Neu»
-    // daneben. Ist er derselbe, sieht der Leser nichts, und genau das muss das Tor sagen.
+  // §6.3-DEKLARATION, ZWEITE RUNDE (W2·6c-ENTSTEHUNG-QUELLLUECKE, 12.9.2026) — die
+  // Erwartung dieses Tests ist erneut FACHLICH umgedreht, nicht «angepasst»:
+  //
+  //  · Bis Profil `/3` stand hier `toEqual([])`, weil der Wächter `art: entfallen` ganz
+  //    ausliess. Die Gegenprüfung zu PR #798 (Auflage A4) hat das als Tor-Lücke
+  //    beanstandet — 160 Alt-Blöcke waren gerade zu «entfallen» gewechselt (§6.7).
+  //  · Seit der LINEAGE-REGEL in `neuNach` (siehe dort) hat ein entfallener Artikel kein
+  //    «Neu» mehr, auch wenn dieselbe eId Jahre später wiederkehrt. Der konstruierte Fall
+  //    ist damit kein Leer-Diff mehr, sondern das, was er immer war: ein Artikel, der in
+  //    diesem Schritt entfällt — linke Spalte Wortlaut, rechte Spalte «aufgehoben».
+  //  · Der Wächter meldet ihn deshalb NICHT mehr, und das ist kein Zahn weniger: was er
+  //    hier prüfte, ist strukturell unmöglich geworden. Dass die Karte einen Unterschied
+  //    ZEIGT, prüft die zweite Erwartung unten; dass ein Alt-Block überhaupt Wortlaut
+  //    trägt, prüft `check:entstehung` («Alt-Block ohne Wortlaut»).
+  it('ein entfallener Artikel mit späterem Token-Treffer ist kein Leer-Diff mehr (Lineage-Regel)', () => {
     const manipuliert = {
       ...SHARD,
       schritte: SHARD.schritte.map((s, i) => (i !== 0 ? s : {
@@ -286,8 +401,10 @@ describe('leerDiffVerletzungen — der Leer-Diff-Wächter von check:entstehung (
         })),
       })),
     };
-    expect(leerDiffVerletzungen(manipuliert, () => GELTEND))
-      .toEqual([{ token: '5', stand: '2022-01-01', zustand: 'belegt' }]);
+    expect(leerDiffVerletzungen(manipuliert, () => GELTEND)).toEqual([]);
+    // Und der Leser sieht sehr wohl einen Unterschied: Wortlaut gegen nichts.
+    expect(hatUnterschied(synopseZeilen([B('1', '', 'Zweite Fassung des Absatzes.')], [])))
+      .toBe(true);
   });
 
   it('meldet einen entfallenen Artikel OHNE Folgeschritt nicht — «entfallen» ist selbst der Unterschied', () => {

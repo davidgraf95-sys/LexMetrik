@@ -95,8 +95,7 @@
           "sha": "4292e7738a6dad29f757a8af733cd07f208e445262eec4c06ba5a2e0f179ce5b",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/63/1185_1183_1185/20260101/de/xml/fedlex-data-admin-ch-eli-cc-63-1185_1183_1185-20260101-de-xml.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4, Auflage A5 (Neupruefung PR #798): Absatz-Etikett nur aus dem <num> VOR dem Inhalt und im Vergleich genau einmal je Absatz; Satzzeichen-Regel auch fuer Aufzaehlungen ohne blockList (Regel a2)"
+      ]
     },
     "AIG": {
       "eli": "cc/2007/758",
@@ -1636,14 +1635,13 @@
           "sha": "f88b9ccbcf94838f9b903339bb9362bca79b0371bf6bbbf9dafb913b8a79fec3",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1984/543_543_543/20260801/de/xml/fedlex-data-admin-ch-eli-cc-1984-543_543_543-20260801-de-xml.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4, Auflage A5 (Neupruefung PR #798): Absatz-Etikett nur aus dem <num> VOR dem Inhalt und im Vergleich genau einmal je Absatz; Satzzeichen-Regel auch fuer Aufzaehlungen ohne blockList (Regel a2)"
+      ]
     },
     "CHEMRRV": {
       "eli": "cc/2005/478",
       "abgerufen": "2026-09-12",
-      "shardSha": "3b153de6b9022e528a6d55d5a448f0626678df988448cbec1380912a66bb9efe",
-      "bytes": 41875,
+      "shardSha": "40b907c12b4e1ca9efc6430fee1d6aeb19d77c6c1bdcf7c3c4d4649fdb915707",
+      "bytes": 31331,
       "schritte": 24,
       "altBloecke": 36,
       "staende": [
@@ -1772,7 +1770,8 @@
           "sha": "d3ee596d3721f98d495208c6395d11b398aaba7e7d716d0f98d4b1072c321ec2",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2005/478/20260716/de/xml/fedlex-data-admin-ch-eli-cc-2005-478-20260716-de-xml-1.xml"
         }
-      ]
+      ],
+      "parserAenderung": "W2-6c-ENTSTEHUNG-QUELLLUECKE (12.9.2026): Quellluecken ueber die ganze Staende-Kette — eine eId, die in einem kurzen Lauf von Staenden aus dem Artikelbaum faellt und unveraendert zurueckkehrt, wird als zustand=quelle_unvollstaendig gebucht statt als entfallen + neu eingefuegt (Gegenpruefungs-Befund A6 zu PR #798, Beleg CHEMRRV cc/2005/478 Art. 4-24 @2022-05-01/@2022-10-01)"
     },
     "CHEMV": {
       "eli": "cc/2015/366",
@@ -5702,8 +5701,7 @@
           "sha": "ff19e38973ef5a1e05948838ff2e80f4f2fb80dfd292fa2a89d58d69a1886ada",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/1991/1256_1256_1256/20250101/de/xml/fedlex-data-admin-ch-eli-cc-1991-1256_1256_1256-20250101-de-xml-11.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4, Auflage A5 (Neupruefung PR #798): Absatz-Etikett nur aus dem <num> VOR dem Inhalt und im Vergleich genau einmal je Absatz; Satzzeichen-Regel auch fuer Aufzaehlungen ohne blockList (Regel a2)"
+      ]
     },
     "STPO": {
       "eli": "cc/2010/267",
@@ -6383,8 +6381,7 @@
           "sha": "3d504b0526f533758619892ed4c1046789d9886a8f17dddf89ab02418f4c4193",
           "xmlUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2018/493/20260612/de/xml/fedlex-data-admin-ch-eli-cc-2018-493-20260612-de-xml-1.xml"
         }
-      ],
-      "parserAenderung": "Profil entstehung-norm/4, Auflage A5 (Neupruefung PR #798): Absatz-Etikett nur aus dem <num> VOR dem Inhalt und im Vergleich genau einmal je Absatz; Satzzeichen-Regel auch fuer Aufzaehlungen ohne blockList (Regel a2)"
+      ]
     },
     "VFV": {
       "eli": "cc/1961/419_429_439",

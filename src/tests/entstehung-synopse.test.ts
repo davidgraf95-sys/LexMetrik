@@ -23,6 +23,7 @@
 import { describe, it, expect } from 'vitest';
 import {
   extrahiereArtikel, flachText, normalisiere, diffStaende, tokenAusEId, titelGeaendert,
+  standProfil, findeQuellLuecken, QUELLLUECKE_STAENDE_MAX,
 } from '../../scripts/entstehung/synopse';
 import { vergleichsform, vergleichsformLeerraumBlind } from '../lib/entstehung/normalisierung';
 import { vergleichsform as vergleichsformAusLeser } from '../lib/entstehung/synopse-diff';
@@ -538,6 +539,74 @@ describe('diffStaende — Alt hat Text, Neu wird leer ⇒ entfallen, nicht geän
     expect(d.geaendert).toEqual([]);
     expect(d.nurAlt).toEqual([]);
     expect(d.nurNeu).toEqual(['art_222_q']);
+  });
+});
+
+describe('findeQuellLuecken — eine Lücke der Quelle ist keine Aufhebung (W2·6c-QUELLLUECKE)', () => {
+  // Der Fall ist gemessen, nicht erfunden: CHEMRRV (`cc/2005/478`) führt in den Ständen
+  // vom 1.5.2022 und 1.10.2022 nur noch `art_1`…`art_3` als `<article>`; die Artikel
+  // 4–24 stehen in derselben Datei als `<mod eId="annex_1_a/mod_uN">` mit
+  // `<quotedStructure>` — ab dem 6.10.2022 wieder normal und Wort für Wort gleich
+  // (nachgerechnet 12.9.2026 gegen die drei Filestore-XML, 700 027 / 708 599 / 711 735 B).
+  const ART = (eId: string, num: string, text: string): string =>
+    `<article eId="${eId}"><num>${num}</num>`
+    + `<paragraph eId="${eId}/para"><content><p>${text}</p></content></paragraph></article>`;
+  // Der Änderungsanhang trägt das Etikett im `<ref …role="modification-reference">`,
+  // die Blöcke darunter aber `annex_1_a/mod_uN/...` — NIE `art_9`. Genau deshalb wird
+  // der Wortlaut von dort nicht übernommen (kein eId-Match, §5).
+  const MOD = (label: string, text: string): string =>
+    `<mod eId="annex_1_a/mod_u1"><ref href="" fedlex:role="modification-reference">${label}</ref>`
+    + `<quotedStructure><paragraph eId="annex_1_a/mod_u1/para"><content><p>${text}</p></content>`
+    + '</paragraph></quotedStructure></mod>';
+  const profil = (xml: string) => standProfil(extrahiereArtikel(xml), xml);
+
+  const VOLL = dok(ART('art_3', 'Art. 3', 'Dritter.'), ART('art_9', 'Art. 9', 'Örtlicher Geltungsbereich: Neuntens.'));
+  const LUECKE = dok(ART('art_3', 'Art. 3', 'Dritter.')) + MOD('<b>Art. 9</b> Örtlicher Geltungsbereich', 'Örtlicher Geltungsbereich: Neuntens.');
+
+  it('bucht die Lücke, wenn die eId unverändert zurückkehrt — mit Beleg im Änderungsanhang', () => {
+    const { luecken, ohneBeleg } = findeQuellLuecken([profil(VOLL), profil(LUECKE), profil(LUECKE), profil(VOLL)]);
+    expect(luecken).toEqual([{ eId: 'art_9', vonIdx: 1, zurueckIdx: 3, imAnhang: true }]);
+    expect(ohneBeleg).toEqual([]);
+  });
+
+  it('Rot-Beweis: kehrt ein GEÄNDERTER Wortlaut zurück, bleibt es bei «entfallen»', () => {
+    // Sonst versteckte die Buchung eine echte Aufhebung mit Neuerlass (§1) — die
+    // gefährlichere Falschaussage von beiden.
+    const ANDERS = dok(ART('art_3', 'Art. 3', 'Dritter.'), ART('art_9', 'Art. 9', 'Örtlicher Geltungsbereich: Zehntens.'));
+    expect(findeQuellLuecken([profil(VOLL), profil(LUECKE), profil(ANDERS)]).luecken).toEqual([]);
+  });
+
+  it('kehrt die eId gar nicht zurück, ist sie entfallen — hier wird nichts vermutet', () => {
+    expect(findeQuellLuecken([profil(VOLL), profil(LUECKE), profil(LUECKE)]).luecken).toEqual([]);
+  });
+
+  it(`eine Lücke über mehr als ${QUELLLUECKE_STAENDE_MAX} Stände bleibt «entfallen» (Sicherheitsgurt)`, () => {
+    const kette = [profil(VOLL), ...Array.from({ length: QUELLLUECKE_STAENDE_MAX + 1 }, () => profil(LUECKE)), profil(VOLL)];
+    expect(findeQuellLuecken(kette).luecken).toEqual([]);
+  });
+
+  // AUFLAGE DER GEGENPRÜFUNG ZU PR #801 (12.9.2026): der Anhang-Beleg ist BEDINGUNG,
+  // nicht Vermerk. Ohne ihn ist eine wortgleiche Rückkehr innerhalb des Deckels von
+  // einer echten Aufhebung mit späterer, wortgleicher Wiedereinführung nicht zu
+  // unterscheiden — und die als «Quelle unvollständig» zu tarnen wäre die schwerere
+  // Falschaussage (§1). Der Fall bleibt «entfallen» + «neu» und wird gemeldet.
+  it('ohne Beleg im Änderungsanhang wird NICHT gebucht — der Fall wird nur gemeldet', () => {
+    const OHNE = dok(ART('art_3', 'Art. 3', 'Dritter.'));
+    const { luecken, ohneBeleg } = findeQuellLuecken([profil(VOLL), profil(OHNE), profil(VOLL)]);
+    expect(luecken).toEqual([]);
+    expect(ohneBeleg).toEqual([{ eId: 'art_9', vonIdx: 1, zurueckIdx: 2, imAnhang: false }]);
+  });
+
+  it('der Beleg muss in JEDEM Lücken-Stand liegen, nicht nur im ersten', () => {
+    const OHNE = dok(ART('art_3', 'Art. 3', 'Dritter.'));
+    const { luecken, ohneBeleg } = findeQuellLuecken([profil(VOLL), profil(LUECKE), profil(OHNE), profil(VOLL)]);
+    expect(luecken).toEqual([]);
+    expect(ohneBeleg).toHaveLength(1);
+  });
+
+  it('standProfil liest das Anhang-Etikett über die Inline-Auszeichnung hinweg («Art. 4a», nie «Art. 4 a»)', () => {
+    const p = profil(dok(ART('art_1', 'Art. 1', 'Erster.')) + MOD('<b>Art. 4</b><i>a</i> Bewilligungsfreie Anwendungen', 'Text.'));
+    expect([...p.anhangTokens]).toEqual(['4_a']);
   });
 });
 

@@ -28,6 +28,13 @@ export interface SynopseRegisterErlass {
   schritte: number;
   altBloecke: number;
   staende: SynopseRegisterStand[];
+  /** Wortgleiche Rückkehr einer eId OHNE Beleg im Änderungsanhang des Lücken-Stands
+   *  (Auflage Gegenprüfung PR #801). Solche Fälle werden NICHT als «Quelle unvollständig»
+   *  gebucht — sie bleiben «entfallen» + «neu eingefügt», weil sie von einer echten
+   *  Aufhebung mit späterer, wortgleicher Wiedereinführung nicht zu unterscheiden sind
+   *  (§1). Der Vermerk hält sie fest, damit ein Mensch hinsieht: `check:entstehung`
+   *  wiederholt ihn als WARNUNG, nie als Fehler. Fehlt der Schlüssel, gab es keinen Fall. */
+  quellLueckeOhneBeleg?: { eId: string; stand: string; zurueckAb: string }[];
   /** Nur gesetzt, wenn ein Lauf mit `--parser-neu="<Grund>"` entsperrt wurde. */
   parserAenderung?: string;
 }
