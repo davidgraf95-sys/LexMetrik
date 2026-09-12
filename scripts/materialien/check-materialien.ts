@@ -52,6 +52,7 @@ import {
   ladeKantenAusDb,
   dbDokAusZustand,
   teileRegister,
+  sammleKantenDokIds,
   REGISTER_PFAD,
   REGISTER_I18N_PFAD,
   REGISTER_PROVENIENZ_PFAD,
@@ -64,6 +65,9 @@ import {
 } from './soft-law-projektion.ts';
 import { wortfeldTreffer, wortfeldImQuellcode } from './wortfeld.ts';
 import { finding7Fehler, parseDatumArg } from './vernehmlassungen-tor.ts';
+import {
+  pruefeDbVollstaendigkeit, pruefeKantenVollstaendigkeit, nurGelistete, shardInhaltGleich, zaehleKanten,
+} from './db-vollstaendigkeit.ts';
 
 /** Kantonaler Normtext-Korpus: die Datei-Stämme sind die Erlass-Schlüssel (K-16). */
 const KANTON_KORPUS_DIR = join('public', 'normtext', 'kanton');
@@ -185,7 +189,7 @@ function main(): void {
     zustand = ladeZustand();
   } catch (e) {
     fehler.push(`Zustands-Manifest ungültig: ${(e as Error).message}`);
-    ausgabe(0, 0, 0, 0, 0);
+    ausgabe(0, 0, 0, 0);
     return;
   }
   const gelistet = new Map<string, DokZeile>();
@@ -224,7 +228,7 @@ function main(): void {
   // ── 4. register.json einlesen + Dreieck/Determinismus (byte-gleich) ───────────
   if (!existsSync(REGISTER_PFAD)) {
     fehler.push(`${REGISTER_PFAD} fehlt — 'npm run materialien -- --datum=$(date +%F)' ausführen und committen.`);
-    ausgabe(0, 0, 0, 0, 0);
+    ausgabe(0, 0, 0, 0);
     return;
   }
   const registerBytes = readFileSync(REGISTER_PFAD, 'utf8');
@@ -273,20 +277,47 @@ function main(): void {
     if (!registerKeys.has(k)) fehler.push(`${k}: FR/IT-Titel ohne Eintrag im Kern-Register — Waise (§5).`);
   }
 
-  // Shard-Byte-Reprojektion nur lokal-mit-Harvest-DB; sonst (CI ohne DB, hohle Build-DB)
-  // committete Shards direkt validieren (§0/M0-Vermerk).
-  let downgradesN = 0;
-  if (dbExists && reprojektionsfaehig) {
+  // Shard-Byte-Reprojektion nur lokal-mit-Harvest-DB UND vollständig geladenen Quellen; sonst
+  // (CI ohne DB, hohle Build-DB, ODER ein lokaler Teilstand mit nur EINER gecrawlten Quelle)
+  // committete Shards direkt validieren (§0/M0-Vermerk). Vollständigkeits-Marker in ZWEI
+  // Dimensionen (Gegenprüfung PR #815, Auflage A2a): (1) Dokument-Meta — jede 'gelistet'-id
+  // MUSS in der DB-Dokument-Meta auftauchen; (2) Kanten — jedes Dokument mit mindestens einer
+  // COMMITTETEN Kante MUSS auch in der DB-Kantenmenge auftauchen. Dimension 1 allein reicht
+  // NICHT: `seedSoftLawDb` befüllt `soft_law` immer vollständig, auch wenn `norm_referenzen`
+  // (die Kanten) auf eine einzelne Quelle beschnitten wurden — genau dieser Fall bestand
+  // Dimension 1 trotzdem und erzeugte die 7 falschen Orphan-Shard-Meldungen. Ohne DEN Marker
+  // vergliche der Byte-Pfad einen unvollständig geladenen DB-Zustand gegen die VOLLSTÄNDIGEN
+  // committeten Shards (FAHRPLAN-OFFENE-BEFUNDE.md, PR #703-Nachzug; siehe
+  // scripts/materialien/db-vollstaendigkeit.ts für den vollständigen Befund samt A1-Präzisierung
+  // zu den ZUSÄTZLICH beobachteten 4 Byte-Abweichungen, die NICHT vom Teilstand stammen, sondern
+  // vom `erzeugt`-Stempel — deshalb `shardInhaltGleich` statt rohem String-Vergleich unten).
+  const dokMetaIds = new Set(dokMeta.keys());
+  const dbKantenDokIds = new Set(kanten.map((k) => k.quelldok_id));
+  const gelistetIds = new Set(gelistet.keys());
+  const dokMetaVollstaendigkeit = pruefeDbVollstaendigkeit(gelistetIds, dokMetaIds);
+  // A4 (Gegenprüfung PR #815, Deadlock): Kanten-Soll auf aktuell 'gelistet' einschränken — ein
+  // entlistetes Dokument hat im COMMITTETEN (noch nicht bereinigten) Shard weiterhin eine
+  // Kante, darf die DB aber nicht als unvollständig markieren (siehe nurGelistete-Docstring).
+  const kantenVollstaendigkeit = pruefeKantenVollstaendigkeit(nurGelistete(sammleKantenDokIds(), gelistetIds), dbKantenDokIds);
+  const vollstaendig = dokMetaVollstaendigkeit.vollstaendig && kantenVollstaendigkeit.vollstaendig;
+  const fehlendeGesamt = [...new Set([...dokMetaVollstaendigkeit.fehlendeIds, ...kantenVollstaendigkeit.fehlendeIds])];
+  let kantenGesamt: number;
+  if (dbExists && reprojektionsfaehig && vollstaendig) {
     const shard1 = projiziereShards(register.erzeugt, kanten, dokMeta, korpus);
     const shard2 = projiziereShards(register.erzeugt, kanten, dokMeta, korpus);
     if (JSON.stringify(shard1.dateien) !== JSON.stringify(shard2.dateien)) fehler.push('Shard-Projektion nicht deterministisch (2-Lauf-Diff).');
-    downgradesN = shard1.downgrades.length;
-    pruefeShardDrift(shard1.dateien, gelistet);
+    kantenGesamt = pruefeShardDrift(shard1.dateien, gelistet);
   } else {
-    if (dbExists) {
+    if (dbExists && reprojektionsfaehig && !vollstaendig) {
+      console.log(
+        `HINWEIS materialien: ${SOFT_LAW_DB} unvollständig geladen (${fehlendeGesamt.length} Dokument(e) ` +
+          `ohne volle Dok-Meta- und/oder Kanten-Deckung, z. B. ${fehlendeGesamt.slice(0, 3).join(', ')}` +
+          `${fehlendeGesamt.length > 3 ? ', …' : ''}) — Shard-Byte-Vergleich übersprungen, committete Shards werden direkt validiert (§6.7).`,
+      );
+    } else if (dbExists) {
       console.log(`SKIP  Byte-Reprojektion: ${SOFT_LAW_DB} ohne Harvest-Zeilen (norm_referenzen/soft_law leer, z.B. nach datenhaltung:build) — committete Shards werden direkt validiert (CI-Pfad).`);
     }
-    pruefeCommittedShards(gelistet);
+    kantenGesamt = pruefeCommittedShards(gelistet);
   }
 
   // ── 5. Merge-Modell: jedes register-Element kuratiert ODER gelistetes DB-Dok ──
@@ -360,34 +391,46 @@ function main(): void {
   for (const k of registerDbKeys) if (!dbKeys.has(k)) fehler.push(`register.json-DB-Eintrag '${k}' ohne Zustands-Zeile.`);
 
   const shards = existsSync(KANTEN_DIR) ? collectFiles(KANTEN_DIR, (p) => p.endsWith('.json')).length : 0;
-  ausgabe(register.materialien.length, dbDocs.length, kanten.length, shards, downgradesN);
+  ausgabe(register.materialien.length, dbDocs.length, kantenGesamt, shards);
 }
 
+
 // ── Shard-/Bucket-Prüfung gegen die committeten Dateien (byte + Invarianten) ────
-// Lokal (mit DB): Byte-Reprojektion + Orphan-Erkennung + direkte Invarianten.
-function pruefeShardDrift(emittiertDateien: ShardDatei[], gelistet: Map<string, DokZeile>): void {
+// Lokal (mit DB): Byte-Reprojektion + Orphan-Erkennung + direkte Invarianten. Der Kanten-
+// Zähler stammt bewusst NICHT aus der (lokalen) DB, sondern aus den tatsächlich validierten
+// committeten Shard-Dateien — sonst zeigt die Tor-Zusammenfassung strukturell 0, sobald der
+// Byte-Pfad übersprungen wird, obwohl der committete Bestand tausende Kanten trägt (§6.7,
+// FAHRPLAN-OFFENE-BEFUNDE.md PR #703-Nachzug). Der Byte-Vergleich läuft über `shardInhaltGleich`
+// (ohne den `erzeugt`-Stempel, A2b) — ein reiner Erzeugungs-Zeitstempel-Unterschied ist kein
+// fachlicher Drift (siehe db-vollstaendigkeit.ts, A1-Präzisierung).
+function pruefeShardDrift(emittiertDateien: ShardDatei[], gelistet: Map<string, DokZeile>): number {
   const emittiert = new Map(emittiertDateien.map((d) => [join(KANTEN_DIR, d.pfad), d.inhalt]));
   const vorhanden = existsSync(KANTEN_DIR) ? collectFiles(KANTEN_DIR, (p) => p.endsWith('.json')) : [];
   for (const [p, inhalt] of emittiert) {
     if (!existsSync(p)) fehler.push(`Shard fehlt: ${p} — Projektion neu schreiben.`);
-    else if (readFileSync(p, 'utf8') !== inhalt) fehler.push(`Shard weicht von der Projektion ab: ${p}.`);
+    else if (!shardInhaltGleich(readFileSync(p, 'utf8'), inhalt)) fehler.push(`Shard weicht von der Projektion ab: ${p}.`);
   }
   for (const p of vorhanden) if (!emittiert.has(p)) fehler.push(`Orphan-Shard (nicht mehr projiziert): ${p}.`);
   // Direkte Invarianten auf den committeten Dateien (Defense-in-depth über die Byte-Gleichheit hinaus).
-  for (const p of vorhanden) pruefeShardDatei(p, gelistet);
+  let kanten = 0;
+  for (const p of vorhanden) kanten += pruefeShardDatei(p, gelistet);
+  return kanten;
 }
 
 // CI (ohne DB): keine Byte-Reprojektion möglich → committete Shards DIREKT validieren
-// (Invarianten + Dok-Mitgliedschaft im JSONL + Plausibilität), §0/M0-Vermerk.
-function pruefeCommittedShards(gelistet: Map<string, DokZeile>): void {
+// (Invarianten + Dok-Mitgliedschaft im JSONL + Plausibilität), §0/M0-Vermerk. Ebenso der
+// Fallback bei einer unvollständig geladenen lokalen DB (Vollständigkeits-Marker oben).
+function pruefeCommittedShards(gelistet: Map<string, DokZeile>): number {
   const vorhanden = existsSync(KANTEN_DIR) ? collectFiles(KANTEN_DIR, (p) => p.endsWith('.json')) : [];
-  for (const p of vorhanden) pruefeShardDatei(p, gelistet);
+  let kanten = 0;
+  for (const p of vorhanden) kanten += pruefeShardDatei(p, gelistet);
+  return kanten;
 }
 
 interface ShardKanteRaw { dok: string; artikel?: string; quelle: string; konfidenz: string; stand: string; fundstellen?: unknown[] }
 interface ShardRaw { erzeugt: string; erlass: string; dokumente?: Record<string, unknown>; kanten?: ShardKanteRaw[]; buckets?: string[] }
 
-function pruefeShardDatei(pfad: string, gelistet: Map<string, DokZeile>): void {
+function pruefeShardDatei(pfad: string, gelistet: Map<string, DokZeile>): number {
   const bytes = Buffer.byteLength(readFileSync(pfad), 'utf8');
   if (bytes > SHARD_BYTE_LIMIT) fehler.push(`Shard ${pfad} ${bytes} B > ${SHARD_BYTE_LIMIT} B Budget (§0/B5).`);
   let obj: ShardRaw;
@@ -395,7 +438,7 @@ function pruefeShardDatei(pfad: string, gelistet: Map<string, DokZeile>): void {
     obj = JSON.parse(readFileSync(pfad, 'utf8')) as ShardRaw;
   } catch {
     fehler.push(`Shard ${pfad}: kein gültiges JSON.`);
-    return;
+    return 0;
   }
   const erlassSet = new Set(ERLASS_REGISTER.map((e) => e.key));
   if (!erlassSet.has(obj.erlass)) fehler.push(`Shard ${pfad}: erlass '${obj.erlass}' nicht im ERLASS_REGISTER.`);
@@ -435,6 +478,10 @@ function pruefeShardDatei(pfad: string, gelistet: Map<string, DokZeile>): void {
   if (dokInShard.size > gelistet.size) {
     fehler.push(`Shard ${pfad}: ${dokInShard.size} distinkte Dokumente > ${gelistet.size} gelistete im Manifest — unplausibel.`);
   }
+  // Zusammenfassungs-Zähler der Tor-Ausgabe: immer aus dem committeten Bestand DIESES Shards
+  // (nie aus der lokalen DB, §6.7 — siehe Kommentar an den Aufrufern). Kein Downgrade-Zähler
+  // mehr (A3, §17-Gegengewicht) — siehe zaehleKanten in db-vollstaendigkeit.ts.
+  return zaehleKanten(obj.kanten);
 }
 
 // ── Append-only + Entlistungs-Quote je Lauf-Gruppe (§2.5) ───────────────────────
@@ -472,7 +519,10 @@ function pruefeEntlistungsQuote(zeilen: ZustandZeile[]): void {
 }
 
 // ── Ausgabe ─────────────────────────────────────────────────────────────────────
-function ausgabe(nReg: number, nDb: number, nKanten: number, nShards: number, nDowngrades: number): void {
+// Kein Downgrade-Zähler mehr (A3, Gegenprüfung PR #815, §17-Gegengewicht): der Wert war in
+// JEDEM erfolgreichen Lauf strukturell 0 (jeder Downgrade-Verstoss macht den Lauf über
+// pruefeShardDatei gleichzeitig rot, siehe dort) — gestrichen statt nur ehrlicher beschriftet.
+function ausgabe(nReg: number, nDb: number, nKanten: number, nShards: number): void {
   for (const w of warn) console.warn(`WARN  materialien: ${w}`);
   if (fehler.length) {
     for (const f of fehler) console.error(`ROT   materialien: ${f}`);
@@ -481,7 +531,7 @@ function ausgabe(nReg: number, nDb: number, nKanten: number, nShards: number, nD
   }
   console.log(
     `check:materialien OK — ${nReg} Materialien (${nReg - nDb} kuratiert · ${nDb} DB), ` +
-      `${nKanten} Kanten · ${nShards} Shards · ${nDowngrades} Downgrades; ` +
+      `${nKanten} Kanten · ${nShards} Shards; ` +
       `Merge-Modell + Determinismus + Revisions-/Wortfeld-Tor konsistent.`,
   );
 }
