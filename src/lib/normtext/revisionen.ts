@@ -27,6 +27,17 @@ export interface RevisionBezug {
   botschaftKey?: string;
   /** In Kraft, aber noch nicht in den geltenden (gepinnten) Normtext konsolidiert (§8). */
   nichtKonsolidiert?: boolean;
+  /** FALSIFIZIERT 12.9.2026, ZWEIMAL (Gegenprüfung PR #827): (1) ursprünglich als
+   *  «Fedlex-interner Widerspruch» beschrieben — live widerlegt. (2) die Korrektur behauptete
+   *  ihrerseits «Erstpublikation»/«Anhangs-Änderung» als Tatsache — auch das trägt das Tripel
+   *  nicht (Gegenbeleg AS 2025 686/SKV: `jolux:rectifies` zeigt dort fälschlich auf einen
+   *  anderen Erlass, belegter Fedlex-Datenfehler). Dritte, konservative Fassung + Herleitung:
+   *  `scripts/normtext/revisionen-generieren.ts` (`RevisionEintrag.plausibilitaet`). Einziger
+   *  bekannter Wert; bewusst kein generischer Switch im UI (Whitelist, kein Ausbau ohne neuen
+   *  Befund). */
+  plausibilitaet?: 'berichtigung-fremdes-as-dokument';
+  /** Begründungstext zum Marker (nur gesetzt, wenn `plausibilitaet` gesetzt ist). */
+  plausibilitaetsGrund?: string;
   /** Fedlex-Live-Link auf den AS-Text bzw. die amtliche Sammlung (§7c). */
   quelleUrl: string;
 }

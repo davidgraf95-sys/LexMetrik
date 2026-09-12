@@ -482,6 +482,20 @@ export function KontextPanel({ typ, normKeys, zusatzGruppen, ohneNormen = false,
                               In Kraft, aber noch nicht in den geltenden Text konsolidiert.
                             </span>
                           )}
+                          {/* §8-Marker (Gegenprüfung #703, Semantik zweimal korrigiert nach
+                              Gegenprüfung PR #827 — Auflagen a+f): berichtet NUR, was das
+                              jolux:rectifies-Tripel selbst trägt (Verknüpfung mit einem
+                              AS-Dokument unter Fremd-SR), NIE eine Interpretation
+                              («erstpubliziert», «Anhangs-Änderung» als Tatsache — Gegenbeleg
+                              SKV/AS 2025 686 zeigt, dass die Verknüpfung selbst ein
+                              Fedlex-Datenfehler sein kann). Whitelist auf den einen bekannten
+                              Zustand, kein genereller Switch. Neutrale Farbe (text-ink-500),
+                              NICHT warn-700 — es ist keine Warnung. */}
+                          {r.plausibilitaet === 'berichtigung-fremdes-as-dokument' && (
+                            <span className="block text-micro text-ink-500">
+                              {r.plausibilitaetsGrund ?? 'Fedlex verknüpft diese Berichtigung (jolux:rectifies) mit einem AS-Dokument anderer SR-Klassierung; massgeblich ist die amtliche Sammlung.'}
+                            </span>
+                          )}
                         </li>
                       );
                     })}

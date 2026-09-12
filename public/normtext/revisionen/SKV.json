@@ -1,7 +1,7 @@
 {
   "erlassKey": "SKV",
   "sr": "741.013",
-  "abgerufen": "2026-09-05",
+  "abgerufen": "2026-09-12",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -25,8 +25,10 @@
       "titelDe": "Verordnung über die Kontrolle des Strassenverkehrs (Strassenverkehrskontrollverordnung, SKV). Berichtigung (Betrifft nur den italienischen Text)",
       "titelFr": "Ordonnance sur le contrôle de la circulation routière (OCCR). Erratum (Ne concerne que le texte italien)",
       "titelIt": "Ordinanza sul controllo della circolazione stradale (OCCS). Correzione",
+      "plausibilitaet": "berichtigung-fremdes-as-dokument",
+      "plausibilitaetsGrund": "Fedlex verknüpft diese Berichtigung (jolux:rectifies) mit dem AS-Dokument AS 2025 648, das unter SR 741.413 klassiert ist — häufig, weil die berichtigte Bestimmung im Anhang eines anderen Erlasses geändert wurde; massgeblich ist die amtliche Sammlung (§7/§8).",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2025/686/de",
-      "sha": "8f2d14cd4ca35ba81d9257b0f5d574bc4f1ff9baff25f9cee44fabef0703c6ea"
+      "sha": "840c69379b2cf4931b8a2cf1f9e9b17d6836bd005e87c127cfc64dc20c545256"
     },
     {
       "art": "aenderung",
@@ -155,5 +157,5 @@
       "sha": "4687c174992c0c9cb934abadf17780cd9e1d15bab37854b16dfbef46c7361699"
     }
   ],
-  "sha": "1178948672d1f697ec303c6a9666379e957bcb445c96246725ddfd2a3d624fec"
+  "sha": "19318e8679012d64c415a66325f8fc5e68d7c09a1e7f9f3ddd4d56308aef1474"
 }

@@ -10,7 +10,7 @@ import { fileURLToPath } from 'node:url';
 import { dirname, resolve } from 'node:path';
 import {
   grundmenge, holeBindingsB, holeStaendeA, baueRevisionen, serialisiere, botschaftIndex,
-  ermittleBelegteOcs, type ErlassMeta,
+  ermittleBelegteOcs, holeRectifiesSr, baueOcZuRectifiesSr, type ErlassMeta,
 } from './revisionen-generieren.ts';
 import type { SparqlBinding } from '../fedlex-sparql.ts';
 
@@ -57,6 +57,13 @@ for (const b of bindings) {
   if (sr && bNachSr.has(sr)) bNachSr.get(sr)!.push(b);
 }
 
+// §8-Marker (Gegenprüfung #703): EINE globale Batch-Auflösung der jolux:rectifies-Ziele →
+// deren SR-Notation + AS-Fundstelle (Auflage f), statt je Erlass separat nachzufragen.
+const rectifiesZiele = [...new Set(bindings.map((b) => b.rectifies?.value).filter((v): v is string => !!v))];
+const zielInfoProOc = await holeRectifiesSr(rectifiesZiele, fetch);
+if (rectifiesZiele.length) console.log(`  jolux:rectifies-Ziele ${rectifiesZiele.length} · SR aufgelöst ${zielInfoProOc.size}`);
+let fremdeAsDokumente = 0;
+
 let mitAenderung = 0, gesamtEintraege = 0, mitBotschaft = 0, sammelMarker = 0, ohnePin = 0, kuenftig = 0;
 let belegtTrotzDatum = 0;
 // dateDocument (Beschluss-/Erlassdatum) darf NICHT in der Zukunft liegen — das wäre
@@ -81,6 +88,7 @@ for (const m of meta as ErlassMeta[]) {
   const konsEli = pin ? `${pin.abstractEli}/${pin.konsKompakt}` : null;
   const belegteOcs = konsEli && kandidatOcs.length ? await ermittleBelegteOcs(konsEli, kandidatOcs, fetch) : new Set<string>();
   belegtTrotzDatum += belegteOcs.size;
+  const rectifiesInfoProOc = baueOcZuRectifiesSr(bBindings, zielInfoProOc);
 
   // store-raw (deterministisch, sortiert): Bindings byte-stabil ablegen.
   const rawBindings = [...bBindings].sort((a, b) =>
@@ -90,9 +98,13 @@ for (const m of meta as ErlassMeta[]) {
     JSON.stringify({
       sr: m.sr, korpusStand, bBindings: rawBindings, aStaende: [...aStaende].sort(),
       belegteOcs: [...belegteOcs].sort(),
+      // §8-Marker: als Objekt persistiert (Re-Parse ohne Re-Crawl, §11) — sonst müsste
+      // check:revisionen (OFFLINE) erneut gegen Fedlex fragen. Trägt seit Auflage f
+      // (Gegenprüfung PR #827) auch die Ziel-Fundstelle (RectifiesInfo), nicht mehr nur die SR.
+      rectifiesInfoProOc: Object.fromEntries([...rectifiesInfoProOc.entries()].sort(([a], [b]) => (a < b ? -1 : a > b ? 1 : 0))),
     }, null, 2) + '\n', 'utf8');
 
-  const sidecar = baueRevisionen(m, bBindings, aStaende, korpusStand, ocZuBotschaft, heute, belegteOcs);
+  const sidecar = baueRevisionen(m, bBindings, aStaende, korpusStand, ocZuBotschaft, heute, belegteOcs, rectifiesInfoProOc);
   writeFileSync(`${SIDECAR_DIR}/${m.key}.json`, serialisiere(sidecar), 'utf8');
 
   const ae = sidecar.revisionen.filter((r) => r.art === 'aenderung');
@@ -100,6 +112,7 @@ for (const m of meta as ErlassMeta[]) {
   gesamtEintraege += ae.length;
   mitBotschaft += ae.filter((r) => r.botschaftKey).length;
   sammelMarker += sidecar.revisionen.filter((r) => r.art === 'sammelerlass-marker').length;
+  fremdeAsDokumente += ae.filter((r) => r.plausibilitaet).length;
   for (const r of sidecar.revisionen) {
     if (r.dateEntryInForce > heute) kuenftig++;
     if (r.dateDocument && r.dateDocument > heute) datumsfehler.push(`${m.key}:${r.dateDocument}`);
@@ -109,4 +122,4 @@ for (const m of meta as ErlassMeta[]) {
 if (datumsfehler.length) { console.error(`revisionen: ${datumsfehler.length} Eintrag(e) mit Beschluss-Datum > ${heute} (Datenfehler): ${datumsfehler.slice(0, 5).join(', ')} …`); process.exit(1); }
 
 console.log(`revisionen: ${meta.length} Sidecars → ${SIDECAR_DIR}/`);
-console.log(`  Erlasse mit ≥1 Änderung ${mitAenderung}/${meta.length} · Änderungs-Einträge ${gesamtEintraege} · Botschafts-Join ${mitBotschaft} · Sammelerlass-Marker ${sammelMarker} · künftig-in-Kraft ${kuenftig} · Finding-4b-Text-Beleg trotz Datum ${belegtTrotzDatum}${ohnePin ? ` · ohne Pin ${ohnePin}` : ''}`);
+console.log(`  Erlasse mit ≥1 Änderung ${mitAenderung}/${meta.length} · Änderungs-Einträge ${gesamtEintraege} · Botschafts-Join ${mitBotschaft} · Sammelerlass-Marker ${sammelMarker} · künftig-in-Kraft ${kuenftig} · Finding-4b-Text-Beleg trotz Datum ${belegtTrotzDatum} · §8-Marker (Berichtigung fremdes AS-Dokument) ${fremdeAsDokumente}${ohnePin ? ` · ohne Pin ${ohnePin}` : ''}`);

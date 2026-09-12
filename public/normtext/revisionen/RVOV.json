@@ -1,7 +1,7 @@
 {
   "erlassKey": "RVOV",
   "sr": "172.010.1",
-  "abgerufen": "2026-09-05",
+  "abgerufen": "2026-09-12",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -153,8 +153,10 @@
       "titelDe": "Organisationsverordnung für das Eidgenössische Departement für auswärtige Angelegenheiten (OV-EDA). Berichtigung",
       "titelFr": "Ordonnance sur l’organisation du Département fédéral des affaires étrangères (Org DFAE). Erratum",
       "titelIt": "Ordinanza sull’organizzazione del Dipartimento federale degli affari esteri (OOrg-DFAE). Correzione",
+      "plausibilitaet": "berichtigung-fremdes-as-dokument",
+      "plausibilitaetsGrund": "Fedlex verknüpft diese Berichtigung (jolux:rectifies) mit dem AS-Dokument AS 2020 5899, das unter SR 172.211.1 klassiert ist — häufig, weil die berichtigte Bestimmung im Anhang eines anderen Erlasses geändert wurde; massgeblich ist die amtliche Sammlung (§7/§8).",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2021/429/de",
-      "sha": "c6800f328f67af1b97801256e93ba399e4c5995d7f8b4e4f539284fa8e5835b1"
+      "sha": "e26513134b2be9877744b0e809600213e37dcf0fd0e47a1b6149e6548e2d4d81"
     },
     {
       "art": "sammelerlass-marker",
@@ -835,5 +837,5 @@
       "sha": "dd4b8f5946b7dc0cb90652e4e09272505b885f30427ea81a6bb56485caa3518d"
     }
   ],
-  "sha": "13469c110cb062514603ba43fbd23f7043894f434880977cd03a6fc1596f0c98"
+  "sha": "71aadc41afb7114743863ba699b12795591f93c3abdde5881ba99214ff1b70fc"
 }
