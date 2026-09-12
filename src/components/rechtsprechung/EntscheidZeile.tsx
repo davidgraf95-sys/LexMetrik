@@ -27,8 +27,12 @@ export function EntscheidZeile({ e, onNorm }: {
   const bezeichnung = verweis ? `Vollständiges Urteil zu BGE ${verweis.bgeReferenz}` : themaText(e);
   return (
     <div className="group relative flex items-stretch gap-3 px-4 py-3 lc-hover-flaeche">
-      {/* Overlay-Link über der ganzen Zeile (Navigation); Name = Bezeichnung. */}
-      <Link to={ziel} aria-label={bezeichnung} className="absolute inset-0 no-underline" />
+      {/* Overlay-Link über der ganzen Zeile (Navigation); Name = Bezeichnung.
+          `data-quarantaene` sitzt HIER (nicht nur am Chip weiter unten) — dieser
+          Link ist LEER (Stretched-Link-Muster), der Chip ist ein GESCHWISTER,
+          kein Nachfahre; ein `:has([data-quarantaene])` auf dem <a> träfe sonst
+          nie zu (Befund CI-Rot, PR #816, Browser-Smoke Shard 4/4). */}
+      <Link to={ziel} aria-label={bezeichnung} className="absolute inset-0 no-underline" data-quarantaene={e.quarantaene} />
 
       {/* Ganz links — Entscheiddatum (feste Spalte, scanbare Kante). Platzhalter
           datumsloser Entscheide NIE als echtes Datum (§8/BS §7.2): «JJJJ, o. D.». */}
@@ -72,6 +76,11 @@ export function EntscheidZeile({ e, onNorm }: {
             mit relative/z über dem Overlay-Link, damit sie klickbar bleiben. */}
         <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-ink-500">
           <span className="text-brass-700" title={e.kuratierung === 'maschinell' ? 'Sachgebiet maschinell zugeordnet' : undefined}>{GEBIET_LABEL[e.sachgebiet]}</span>
+          {/* D3 (Gegenprüfungs-Auflage 12.9.2026, PR #816): siehe EntscheidKarte.tsx. */}
+          {e.quarantaene && (
+            <span className="text-micro italic text-ink-500" data-quarantaene={e.quarantaene}
+              title="Der amtliche Volltext ist in der Quelle mit einem anderen Entscheid vermischt">Volltext nicht verfügbar</span>
+          )}
           {synth && <span className="text-micro italic text-ink-500">ohne amtl. Regeste</span>}
           {/* §8-Ehrlichkeit (Block-B-Kontrakt): die Bezeichnung ist der amtliche
               Betreff der Trefferliste, KEINE Regeste — offen etikettieren. */}
