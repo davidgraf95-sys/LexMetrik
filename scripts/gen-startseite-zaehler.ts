@@ -33,6 +33,11 @@ import { BEHOERDEN } from '../src/lib/materialien/register.ts';
 // in `src/lib/rechtsprechung/browse.ts` (Verweise raus) — die Zahl in der Leiste
 // ist damit exakt die Zahl auf der Sachgebiets-Kachel der Übersicht (§5/§8).
 import { GEBIETE } from '../src/lib/normtext/register.ts';
+// #691 (FAHRPLAN-OFFENE-BEFUNDE §1): der Stand der Rechtsprechung braucht das
+// jüngste ABRUFDATUM der Inhalte, nicht `register.json`s `erzeugt` (ein
+// Bau-Zeitstempel). Kern in einem Helfer OHNE Top-Level-Seiteneffekte, damit
+// er isoliert testbar bleibt (src/tests/startseite-zaehler-stand-rechtsprechung.test.ts).
+import { juengstes, berechneStandRechtsprechung } from './startseite-zaehler-stand.ts';
 
 const wurzel = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const GESETZE_REGISTER = resolve(wurzel, 'public/normtext/register.json');
@@ -54,6 +59,9 @@ interface EntscheidEintrag {
   sachgebiet?: string;
   /** 'leitentscheid' | 'routine' … — D26. */
   leitcharakter?: string;
+  /** Pfad zur eigenen Snapshot-Datei, relativ zu `public/rechtsprechung/`
+   *  (`null` bei Verweisen) — #691: Quelle des Abrufdatums je Entscheid. */
+  datei?: string | null;
 }
 interface MaterialEintrag {
   key: string; behoerde: string;
@@ -76,15 +84,9 @@ interface MaterialEintrag {
 //    (§2, das Artefakt muss deterministisch sein).
 //  · Gibt es keinen einzigen gültigen Wert, ist das Feld `null` und die Zeile
 //    entfällt in der Anzeige — nie ein erfundenes Datum.
-const ISO_TAG = /^\d{4}-\d{2}-\d{2}$/;
-function juengstes(werte: Array<string | null | undefined>): string | null {
-  let max: string | null = null;
-  for (const w of werte) {
-    if (typeof w !== 'string' || !ISO_TAG.test(w)) continue;
-    if (max === null || w > max) max = w;
-  }
-  return max;
-}
+//
+// `juengstes` sitzt seit #691 im Helfer `startseite-zaehler-stand.ts` (Import
+// oben) — dieselbe Funktion, jetzt geteilt mit `berechneStandRechtsprechung`.
 
 /** Wie viele Kürzel je Systematik-Zeile als Beispiel-Zeile mitlaufen. */
 const KUERZEL_PRO_ZEILE = 4;
@@ -186,6 +188,20 @@ function zaehle() {
     r.entscheide.filter((e) => !e.verweis).map((e) => e.datum));
   const juengsteMaterialie = juengstes(m.materialien.map((x) => x.stand));
 
+  // #691: Stand der Rechtsprechung = jüngstes ABRUFDATUM über den echten
+  // Bestand — NICHT `r.erzeugt` (Bau-Zeitstempel des letzten Registerlaufs,
+  // sprang bei jedem Teil-Lauf auf «heute», egal ob neue Entscheide dazukamen).
+  // Jede Snapshot-Datei trägt ihr eigenes `erzeugt` == Abrufdatum des Inhalts
+  // (entscheide-schreiben.ts). §2: rein/deterministisch — kein Date.now().
+  // Fallback auf `r.erzeugt` NUR falls der Bestand keinen einzigen gültigen
+  // Wert liefert (leeres/degeneriertes Register) — das Feld bleibt `string`
+  // (kein API-Bruch für Konsumenten), und ein solcher Bestand reisst ohnehin
+  // `check:entscheide`s Mindestzahl-Tor.
+  const standRechtsprechung = berechneStandRechtsprechung(r.entscheide, (datei) => {
+    const snap = JSON.parse(readFileSync(resolve(dirname(RSPR_REGISTER), datei), 'utf8')) as { erzeugt?: string };
+    return snap.erzeugt ?? null;
+  }) ?? r.erzeugt;
+
   return {
     gesetzeBundVolltext: bund,
     gesetzeKantonVolltext: kanton,
@@ -202,7 +218,7 @@ function zaehle() {
     rechner,
     vorlagen,
     standGesetze: g.erzeugt,
-    standRechtsprechung: r.erzeugt,
+    standRechtsprechung,
     standMaterialien: m.erzeugt,
     juengsterGesetzStand,
     juengsterEntscheid,
@@ -256,7 +272,13 @@ function baue(): string {
     '  vorlagen: number;\n' +
     '  /** Stand der Gesetzes-Register-Erzeugung (ISO). */\n' +
     '  standGesetze: string;\n' +
-    '  /** Stand der Rechtsprechungs-Register-Erzeugung (ISO). */\n' +
+    '  /** Fix #691 (12.9.2026): jüngstes ABRUFDATUM über den echten Rechtsprechungs-\n' +
+    '   *  Bestand (ISO) — zuvor stand hier das Erzeugungsdatum des Registers\n' +
+    '   *  (`register.json`s `erzeugt`, ein Bau-Zeitstempel), der bei jedem\n' +
+    '   *  Teil-Lauf auf «heute» sprang, unabhängig davon ob neue Entscheide\n' +
+    '   *  dazukamen. Andere Bedeutung als `standGesetze`/`standMaterialien`\n' +
+    '   *  (die bleiben Bau-Zeitstempel) — bewusst, weil hier ein echtes\n' +
+    '   *  Abrufdatum je Snapshot vorliegt (§8). */\n' +
     '  standRechtsprechung: string;\n' +
     '  /** Stand der Materialien-Register-Erzeugung (ISO). */\n' +
     '  standMaterialien: string;\n' +
