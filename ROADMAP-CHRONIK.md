@@ -1,5 +1,29 @@
 # ROADMAP — Erledigt-Chronik (Detail-Archiv erledigter Schritte)
 
+## Deckungs-Seite «was wir nicht haben» — Wortlaut vor der Lösung + Lösung 12.9.2026 (PR #807)
+
+**Ursprünglicher Befund (Wortlaut, bis 12.9.2026 offen):** «Deckungs-Seite «was wir nicht haben»
+offen (§11.5 FAHRPLAN-MATERIALIEN-VERZAHNUNG.md, Befund 11.9.2026) — 1286 von 4770 Synopse-Alt-
+Blöcken (27 %) tragen kein Fussnoten-Ereignis; Stichprobe belegt echte Änderungen ohne Fussnote
+(Berichtigungen, Terminologie), Quote aber nicht erlassweise geprüft — eigener Schritt zur
+Vollständigkeit des amtlichen Fussnoten-Apparats wert.»
+
+- [x] **Gelöst 12.9.2026, PR #807:** öffentliche Seite **`/materialien/deckung`**, Projektion
+  **`public/materialien/deckungs-sicht.json`** (generiert aus dem Mess-Register
+  `bibliothek/register/entstehung-deckung.json`, Byte-Vergleich via `check:entstehung`; Basisname
+  bewusst verschieden vom Register — dort Diagnose je Erlass, hier ausgelieferte Sicht). Ist-Stand
+  bei Bau (nach den Normalisierungs-Korrekturen aus #798/#801, andere Grundgesamtheit als am
+  11.9.): **1144 von 4641 Alt-Blöcken (24,7 %) ohne Fussnoten-Ereignis** — der Messwert vom
+  11.9.2026 (1286/4770, 27 %) bleibt als datierter Beleg unverändert stehen (§2b), keine
+  Ersetzung. Daneben ausgewiesen, ebenfalls ungelöst: 1008 Fussnoten-Ereignisse ohne beobachtete
+  Textänderung, 22 Quelllücken, 385 Curia-Geschäfte, BS 117 Ketten (8 amtlich/114 maschinell).
+  Grundgesamtheit = Vereinigung über alle Quellen (nicht nur das Deckungs-Register, sonst fielen
+  14 Staatsverträge mit Synopse-Fenster heraus). Gegenprüfung Sonnet mit Auflage Paritäts-Ingest —
+  Nachtrag: Ingest-Wächter `ungedeckteTopLevelJson` gebaut (`scripts/datenhaltung/ingest.ts`), fand
+  beim ersten Lauf vier vorbestehende, nie erfasste Top-Level-JSONs (`inkrafttreten.json`,
+  `kanton-luecken.json`, `pdf-quellen.json`, `bezuege-bilanz.json`) — eingetragen statt in eine
+  Ausnahmeliste gelegt (Normtext-Seitendateien 4→7, Rechtsprechung-Manifeste 5→6).
+
 ## K-16 (BS-Teil) — Kantonale Materialien Basel-Stadt an die Botschaften-Pipeline, erledigt 12.9.2026
 
 PR #799 (`c83501304`): Grosser Rat Basel-Stadt (data.bs.ch, CC BY 4.0) an die Botschaften-Pipeline
