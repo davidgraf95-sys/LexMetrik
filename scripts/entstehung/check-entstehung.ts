@@ -37,10 +37,10 @@
 // benannt und befristet durchzulassen, statt am Tor zu drehen (Muster #779).
 import { readFileSync, existsSync, readdirSync, writeFileSync, statSync, mkdirSync } from 'node:fs';
 import { join } from 'node:path';
-import { gzipSync } from 'node:zlib';
 import { ANKER_DIR, type AnkerSidecar } from '../../src/lib/entstehung/anker.ts';
 import { shaSidecar, serialisiereSidecar } from './anker-sidecars.ts';
 import { ANKER_REGISTER_PFAD, type AnkerRegister } from './anker-register.ts';
+import { pruefeVerfahrensEreignisse, groesse, kb } from './deckel.ts';
 import {
   misseDeckung, serialisiereDeckung, DECKUNG_REGISTER_PFAD,
   type DeckungRegister, type DeckungErlass,
@@ -131,10 +131,17 @@ const DECKEL: readonly (readonly [string, string, number, boolean])[] = [
   ['Historie-Shards       ', 'public/normtext/historie', 11 * 1024 * 1024, false],
   // §11.6: Parlaments-Shards ~2 KB je Geschäft über 385 Geschäfte ⇒ ~0,8 MB.
   ['Curia-Shards          ', CURIA_DIR, 2 * 1024 * 1024, false],
-  // Ergänzung dieses Bau-Schritts (offengelegt, §7): register.json ist der einzige
-  // browser-erreichbare Kanal der Verfahrensketten und wuchs durch E1 um 5 % gzip.
-  // Ohne Deckel wächst er unbemerkt weiter; check:perf-budget führt ihn nicht.
-  ['Materialien-Register  ', 'public/materialien/register.json', 400 * 1024, true],
+  // Materialien-Register, drei Projektionen (12.9.2026; Herleitung, Verbraucher und
+  // verworfene Entwürfe: bibliothek/materialien/2026-09-12-register-deckel-messung.md).
+  // Kern = einziger Browser-Kanal im Normalfall, lädt auf JEDER Leserseite; Deckel
+  // GESENKT 400 → 280 KB (Präzedenz K3), Ist 118,3 (vorher 331,8 = 83 %), ZH 135,9 = 49 %.
+  ['Materialien-Kern      ', 'public/materialien/register.json', 280 * 1024, true],
+  // FR/IT-Titel: nur bei locale fr/it geholt (browse.ts), nie im deutschen Lesepfad.
+  // Ist 83,7 KB; Kantone tragen keine, Wachstum nur aus Bundes-Material. ZH: +0.
+  ['Materialien-FR/IT     ', 'public/materialien/register-i18n.json', 140 * 1024, true],
+  // Provenienz (sha + Verfahrens-/Join-Felder): KEIN Browser-Kanal (kein fetch() im
+  // src-Baum, Grep 12.9.2026), Mengen-Wächter. Ist 92,9 KB, ZH-Prognose 113,5 = 47 %.
+  ['Materialien-Provenienz', 'public/materialien/register-provenienz.json', 240 * 1024, true],
   // §11.6/A6: Synopse-Alt-Blöcke 8 MB gesamt. Ist-Prognose aus der Vor-Messung E5.0
   // (11.9.2026): ~4,9 MB roh über 1006 Schritte in 187 Erlassen.
   ['Synopse-Shards        ', SYNOPSE_DIR, 8 * 1024 * 1024, false],
@@ -152,20 +159,6 @@ const DECKEL: readonly (readonly [string, string, number, boolean])[] = [
  *  dieselbe Denkart wie bei der Deckung: Korpus-Summe ist keine Diagnose). */
 const PROJEKTION_DECKEL_DATEI = 96 * 1024;
 
-function groesse(pfad: string, gzip: boolean): number | null {
-  if (!existsSync(pfad)) return null;
-  const s = statSync(pfad);
-  if (s.isFile()) return gzip ? gzipSync(readFileSync(pfad)).length : s.size;
-  let summe = 0;
-  for (const f of readdirSync(pfad)) {
-    const t = join(pfad, f);
-    const st = statSync(t);
-    summe += st.isDirectory() ? (groesse(t, gzip) ?? 0) : (gzip ? gzipSync(readFileSync(t)).length : st.size);
-  }
-  return summe;
-}
-
-const kb = (n: number): string => `${(n / 1024).toFixed(1)} KB`;
 zeilen.push('check:entstehung — Deckel je Klasse (Ist / Deckel):');
 for (const [name, pfad, max, gzip] of DECKEL) {
   const ist = groesse(pfad, gzip);
@@ -175,18 +168,11 @@ for (const [name, pfad, max, gzip] of DECKEL) {
   if (ist > max) fehler.push(`Deckel gerissen: ${pfad} ${kb(ist)} > ${kb(max)} — nie den Deckel anheben, sondern die Nutzlast (§8/§15).`);
 }
 
-// ── Verfahrens-Ereignisse (E1): eigene Klasse, Deckel < 100 KB (§11.6) ─────────
+// ── Verfahrens-Ereignisse (E1): eigene Klasse; Herleitung in ./deckel-ereignisse.ts ──
 {
-  const quelle = 'src/lib/materialien/botschaften.generated.ts';
-  if (existsSync(quelle)) {
-    const s = readFileSync(quelle, 'utf8');
-    const bloecke = s.match(/ereignisse: \[[^\]]*\]/g) ?? [];
-    const bytes = bloecke.reduce((n, b) => n + Buffer.byteLength(b, 'utf8'), 0);
-    const max = 100 * 1024;
-    zeilen.push(`  Verfahrens-Ereignisse  ${kb(bytes).padStart(10)} / ${kb(max).padStart(10)}  (${((bytes / max) * 100).toFixed(0)} %, ${bloecke.length} Ketten)`);
-    if (bytes > max) fehler.push(`Deckel gerissen: Verfahrens-Ereignisse ${kb(bytes)} > ${kb(max)} in ${quelle}.`);
-    if (bloecke.length === 0) fehler.push(`${quelle} trägt keine Verfahrensketten mehr — E1 rückgebaut? (Generator neu laufen.)`);
-  }
+  const { zeile, fehler: f } = pruefeVerfahrensEreignisse();
+  if (zeile) zeilen.push(zeile);
+  fehler.push(...f);
 }
 
 // ── (2) + (5) Anker-Sidecars gegen das Quell-Register ──────────────────────────

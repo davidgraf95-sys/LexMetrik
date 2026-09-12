@@ -12,6 +12,7 @@ import { vernehmlassungenFuer, VERNEHMLASSUNG_STATUS_LABEL, type VernehmlassungB
 import { AMTLICHE_FASSUNG_NOMEN } from '../../lib/benennung';
 import { datumCh } from '../../lib/normtext/erlassKopfText';
 import { AbrufFehler } from '../ui/AbrufFehler';
+import { TitelRueckfallZeile } from './TitelRueckfallZeile';
 import { Datum } from '../ui/Datum';
 import { GruppenKopf } from '../ui/GruppenKopf';
 import { Leerzustand } from '../ui/Leerzustand';
@@ -201,9 +202,12 @@ export function KontextPanel({ typ, normKeys, zusatzGruppen, ohneNormen = false,
     if (typ !== 'norm') return;
     const keys = normKeysKey ? normKeysKey.split(',') : [];
     let lebt = true;
-    botschaftenFuer(keys).then((r) => { if (lebt) setBotGeladen({ key: normKeysKey, refs: r }); });
+    // `locale` mit in den Abruf: die FR/IT-Titel stehen seit dem 12.9.2026 in einer
+    // eigenen Projektion (register-i18n.json) und werden nur für diese beiden Sprachen
+    // geholt — der deutsche Lesefluss zieht sie nicht mehr mit (§15).
+    botschaftenFuer(keys, locale).then((r) => { if (lebt) setBotGeladen({ key: normKeysKey, refs: r }); });
     return () => { lebt = false; };
-  }, [typ, normKeysKey]);
+  }, [typ, normKeysKey, locale]);
   const botAktuell = typ === 'norm' && botGeladen?.key === normKeysKey ? botGeladen : null;
   const botschaftenLaden = typ === 'norm' && !botAktuell;
   const botschaftenFehler = botAktuell?.refs === null;
@@ -239,9 +243,9 @@ export function KontextPanel({ typ, normKeys, zusatzGruppen, ohneNormen = false,
     if (typ !== 'norm') return;
     const keys = normKeysKey ? normKeysKey.split(',') : [];
     let lebt = true;
-    vernehmlassungenFuer(keys).then((r) => { if (lebt) setVernGeladen({ key: normKeysKey, refs: r }); });
+    vernehmlassungenFuer(keys, locale).then((r) => { if (lebt) setVernGeladen({ key: normKeysKey, refs: r }); });
     return () => { lebt = false; };
-  }, [typ, normKeysKey]);
+  }, [typ, normKeysKey, locale]);
   const vernAktuell = typ === 'norm' && vernGeladen?.key === normKeysKey ? vernGeladen : null;
   const vernehmlassungenLaden = typ === 'norm' && !vernAktuell;
   const vernehmlassungenFehler = vernAktuell?.refs === null;
@@ -410,7 +414,8 @@ export function KontextPanel({ typ, normKeys, zusatzGruppen, ohneNormen = false,
                           <a href={fedlexLokalisiert(b.quelleUrl, locale)} target="_blank" rel="noopener noreferrer"
                             className="no-underline hover:text-brass-700">
                             <Datum iso={b.stand} className="text-ink-500" />
-                            {' — '}<span className="font-medium">{titel}</span>
+                            {/* `lang="de"` nur im Rückfall (sonst spräche Vorlese-Software ihn fr/it). */}
+                            {' — '}<span className="font-medium" {...(b.titelRueckfall ? { lang: 'de' } : {})}>{titel}</span>
                           </a>
                           {b.nummer && b.parlamentUrl && (
                             <>
@@ -431,6 +436,7 @@ export function KontextPanel({ typ, normKeys, zusatzGruppen, ohneNormen = false,
                       … und <span className="num">{botschaften.length - MAX_BOTSCHAFTEN}</span> weitere. Vollständige Liste über die amtliche Quelle (Fedlex).
                     </p>
                   )}
+                  <TitelRueckfallZeile bezuege={botschaften} bereich="botschaften" />
                 </>
               )}
             </KontextGruppe>
@@ -535,7 +541,7 @@ export function KontextPanel({ typ, normKeys, zusatzGruppen, ohneNormen = false,
                             <span className={`lc-overline ${laeuft ? 'text-brass-700' : ''}`}>
                               {laeuft && v.fristEnde ? `läuft bis ${datumCh(v.fristEnde)}` : VERNEHMLASSUNG_STATUS_LABEL[v.status]}
                             </span>
-                            {' — '}<span className="font-medium">{titel}</span>
+                            {' — '}<span className="font-medium" {...(v.titelRueckfall ? { lang: 'de' } : {})}>{titel}</span>
                           </a>
                         </li>
                       );
@@ -546,6 +552,7 @@ export function KontextPanel({ typ, normKeys, zusatzGruppen, ohneNormen = false,
                       … und <span className="num">{vernehmlassungen.length - MAX_VERNEHMLASSUNGEN}</span> weitere. Vollständige Liste über die amtliche Quelle (Fedlex).
                     </p>
                   )}
+                  <TitelRueckfallZeile bezuege={vernehmlassungen} bereich="vernehmlassungen" />
                 </>
               )}
             </KontextGruppe>
