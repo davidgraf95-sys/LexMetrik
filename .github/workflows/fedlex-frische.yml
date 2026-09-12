@@ -280,6 +280,23 @@ jobs:
       # Vernehmlassungs-Generator muss im Frische-Kreislauf mitlaufen oder das
       # Tor auf einen erhobenen Stand statt auf `heute` prüfen. Bis dahin kann
       # dieser Arm an einem fremden Befund scheitern.
+      #
+      # GELÖST (§17-Wurzelfix, 12.9.2026, PR #803, FAHRPLAN-OFFENE-BEFUNDE §2
+      # QS-MONITOR-ROT — zweiter Vorfall in 24 h, #789 + heute; PRÄZISIERT nach
+      # Gegenprüfungs-Auflage A1 desselben PR): Finding 7 prüft jetzt gegen den
+      # committeten Erhebungsstand (`r.stand`, vom Generator geschrieben), NIE mehr
+      # gegen `heute` — scripts/materialien/check-materialien.ts ist damit komplett
+      # wanduhr-frei. Der Alterungs-Wächter (45-Tage-Deckel) wurde NICHT dort belassen,
+      # sondern in einen eigenen, standalone Tor `check:vernehmlassungen-alter`
+      # ausgelagert, der BEWUSST NICHT Teil von `check:seriell` ist (K7-Entscheid,
+      # Begründung: scripts/materialien/vernehmlassungen-tor.ts) — dieser Arm hier
+      # fährt `npm run check` (= check:seriell) und führt den Alterungs-Wächter darum
+      # gar nicht aus; er kann an KEINEM der beiden Vernehmlassungs-Befunde mehr
+      # scheitern. Dazu der hier vermisste Kreislauf: der Vernehmlassungs-Generator
+      # läuft jetzt monatlich mit im normen-monitor.yml (Job `vernehmlassungen`, Cron
+      # `11 4 1 * *`) und öffnet bei Änderung einen eigenen PR (kein Auto-Merge); der
+      # Alterungs-Wächter selbst läuft wöchentlich im Job `normen` (Ersatz-Arbiter,
+      # `if: always()`, direkt nach `check:verfall` — derselbe K7-Platz).
       - name: Offline-Tore vor dem PR (VOLLE Tor-Menge, keine Auswahl)
         if: steps.diff.outputs.geaendert == '1'
         run: |

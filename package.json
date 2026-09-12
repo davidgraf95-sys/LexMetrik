@@ -86,6 +86,7 @@
     "check:bezuege": "vite-node scripts/normtext/check-bezuege.ts",
     "check:normkeys-kanton": "vite-node scripts/normtext/check-normkeys-kanton.ts",
     "check:materialien": "vite-node scripts/materialien/check-materialien.ts",
+    "check:vernehmlassungen-alter": "vite-node scripts/materialien/check-vernehmlassungen-alter.ts",
     "check:bs-materialien": "vite-node scripts/materialien/check-bs-materialien.ts",
     "materialien": "vite-node scripts/materialien/soft-law-projektion-run.ts --",
     "materialien:kaskade": "vite-node scripts/materialien/kaskade-run.ts --",
