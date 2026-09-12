@@ -8,7 +8,7 @@ import { istReinerDatumsChurn } from '../../scripts/normtext/churn-reset';
 import type { SparqlBinding } from '../../scripts/fedlex-sparql';
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { extrahiereHeadlineZitate, klassifiziereBerichtigung } from '../../scripts/normtext/rectifies-berichtigung';
+import { ausnahmeGueltig, extrahiereHeadlineZitate, klassifiziereBerichtigung } from '../../scripts/normtext/rectifies-berichtigung';
 
 // Paket 5 (W2·6-REV): reine Generator-Logik (dedupe/Sortierung/Determinismus/
 // RO-Fundstelle/Botschafts-Join/Sammelerlass-Cross-Check/nichtKonsolidiert) + die
@@ -367,5 +367,40 @@ describe('extrahiereHeadlineZitate + klassifiziereBerichtigung (rectifies-Wächt
     const zitate = { as: [], sr: ['220'] };
     expect(klassifiziereBerichtigung(zitate, { fremdeSr: '220' })).toBe('uebereinstimmend');
     expect(klassifiziereBerichtigung(zitate, { fremdeSr: '221' })).toBe('abweichend');
+  });
+});
+
+// ── Stale-Schutz der Ausnahmeliste (Gegenprüfung PR #834, Auflage 3, §6.7) ──
+describe('ausnahmeGueltig — eine Ausnahme gilt nur für das PAAR, das sie ursprünglich belegt hat', () => {
+  const skv = {
+    erwartetesZielOc: 'https://fedlex.data.admin.ch/eli/oc/2025/648',
+    erwarteteZielFundstelle: 'AS 2025 648',
+    erwarteteTextFundstelle: 'AS 2025 644',
+  };
+
+  it('bleibt gültig, solange Ziel-oc, Ziel-Fundstelle UND Text-Fundstelle wie belegt sind', () => {
+    expect(ausnahmeGueltig(skv, {
+      zielOc: skv.erwartetesZielOc, zielFundstelle: skv.erwarteteZielFundstelle, textFundstelle: skv.erwarteteTextFundstelle,
+    })).toBe(true);
+  });
+
+  it('wird stale, wenn Fedlex das rectifies-Tripel auf ein DRITTES Ziel umhängt (Rot-Beweis, §6.7)', () => {
+    // Verfälschter Erwartungswert simuliert genau das: das frische Ziel-oc weicht vom
+    // dokumentierten ab, obwohl Fundstelle/Text unverändert blieben.
+    expect(ausnahmeGueltig(skv, {
+      zielOc: 'https://fedlex.data.admin.ch/eli/oc/2099/999', zielFundstelle: skv.erwarteteZielFundstelle, textFundstelle: skv.erwarteteTextFundstelle,
+    })).toBe(false);
+  });
+
+  it('wird stale, wenn der amtliche Berichtigungstext eine ANDERE Fundstelle nennt als dokumentiert', () => {
+    expect(ausnahmeGueltig(skv, {
+      zielOc: skv.erwartetesZielOc, zielFundstelle: skv.erwarteteZielFundstelle, textFundstelle: 'AS 2030 1',
+    })).toBe(false);
+  });
+
+  it('wird stale, wenn Fedlex die abgeleitete Ziel-Fundstelle selbst korrigiert', () => {
+    expect(ausnahmeGueltig(skv, {
+      zielOc: skv.erwartetesZielOc, zielFundstelle: 'AS 2025 649', textFundstelle: skv.erwarteteTextFundstelle,
+    })).toBe(false);
   });
 });

@@ -33,6 +33,18 @@
  * eigenem «vom … (AS …)»; VVEA/oc/2023/543: zwei unabhängige Änderungen) = eine echte
  * Sammelberichtigung — der Marker/das rectifies-Tripel bildet dann nur EINE der mehreren
  * betroffenen Fundstellen ab (§8-Ehrlichkeit, wie `baueOcZuRectifiesSr`).
+ *
+ * ── Ergänzung 12.9.2026, Gegenprüfung PR #834 (Auflage 1) ── (2b: ergänzt, nicht
+ * nachgeführt — die Erst-Fassung oben bleibt der SKV-Beleg, unverändert)
+ * ZWEITER belegter Fedlex-Datenfehler, live nachgemessen: AIG/oc/2025/342. Der amtliche
+ * Berichtigungstext korrigiert ausdrücklich «Änderung vom 25. September 2015 (AS 2016
+ * 3101)», Anhang Ziff. 1, AIG (SR 142.20) Art. 80 Abs. 1. Das rectifies-Ziel `eli/oc/2018/438`
+ * (Fundstelle AS 2018 2855) ist dagegen NUR eine Inkraftsetzungsverordnung ohne eigenen
+ * Normtext — ihr Volltext (PDF-A, verifiziert 12.9.2026) lautet vollständig: «Einziger
+ * Artikel: Die Änderung vom 25. September 2015 des AsylG tritt am 1. März 2019
+ * abschliessend in Kraft.» Sie kann die im Berichtigungstext zitierte Anhangs-Änderung
+ * nicht selbst tragen — jolux:rectifies zeigt auf das falsche AS-Dokument. Beide Funde
+ * jetzt in `bibliothek/normtext/rectifies-ausnahmen.json`.
  */
 import { sparqlSelect, type FetchImpl } from '../fedlex-sparql.ts';
 import type { RectifiesInfo } from './revisionen-generieren.ts';
@@ -67,6 +79,37 @@ export function extrahiereHeadlineZitate(html: string): HeadlineZitate {
 }
 
 export type RectifiesKlasse = 'uebereinstimmend' | 'abweichend' | 'sammelberichtigung';
+
+/** Ein Eintrag in `bibliothek/normtext/rectifies-ausnahmen.json` (Gegenprüfung PR #834,
+ *  Auflage 3, §6.7-Stale-Schutz): eine Ausnahme trägt NICHT nur die oc-Identität, sondern
+ *  das PAAR, das sie ursprünglich belegt hat — welches Ziel das rectifies-Tripel nannte
+ *  UND welche Fundstelle der Berichtigungstext selbst nannte. Ändert sich eines von beiden
+ *  (Fedlex korrigiert das Tripel, oder ein neuer Text erscheint unter derselben oc), gilt
+ *  die Ausnahme NICHT mehr automatisch weiter — sonst wäre sie ein stiller Freibrief, der
+ *  nie wieder scheitern kann (§6.7 «ein Tor, das nicht scheitern kann, ist gefährlicher
+ *  als keines»). */
+export interface RectifiesAusnahme {
+  oc: string;
+  seit: string;
+  belegUrl: string;
+  begruendung: string;
+  erwartetesZielOc: string;
+  erwarteteZielFundstelle?: string;
+  erwarteteTextFundstelle?: string;
+}
+
+/** Reine Prüfung (§2): passt die dokumentierte Ausnahme noch zur AKTUELL gemessenen
+ *  Realität (frisches rectifies-Ziel + frisch extrahierte Text-Fundstelle)? `false` ⇒ die
+ *  Ausnahme ist stale — der Aufrufer listet sie dann als eigene, rote Klasse statt sie
+ *  stillschweigend weiter greifen zu lassen. */
+export function ausnahmeGueltig(
+  ausnahme: Pick<RectifiesAusnahme, 'erwartetesZielOc' | 'erwarteteZielFundstelle' | 'erwarteteTextFundstelle'>,
+  aktuell: { zielOc: string; zielFundstelle?: string; textFundstelle?: string },
+): boolean {
+  return ausnahme.erwartetesZielOc === aktuell.zielOc
+    && (ausnahme.erwarteteZielFundstelle ?? '') === (aktuell.zielFundstelle ?? '')
+    && (ausnahme.erwarteteTextFundstelle ?? '') === (aktuell.textFundstelle ?? '');
+}
 
 /** Reine Komposition (§2): Headline-Zitate + rectifies-Zielinfo → Klasse.
  *  - >1 distinktes AS-Zitat ⇒ Sammelberichtigung (der Text korrigiert mehr als eine

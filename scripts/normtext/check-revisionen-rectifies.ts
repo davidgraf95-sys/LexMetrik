@@ -1,6 +1,6 @@
 /**
  * scripts/normtext/check-revisionen-rectifies.ts — Netz-Arm «rectifies-Ziel vs.
- * Berichtigungstext» (Fehlerbuch ROADMAP W2·18, Kontext PR #827/#828).
+ * Berichtigungstext» (Fehlerbuch ROADMAP W2·18, Kontext PR #827/#828/#834).
  *
  * Fedlex' `jolux:rectifies` kann auf das FALSCHE AS-Dokument zeigen (belegt: AS 2025 686
  * SKV — Ziel AS 2025 648 = TAFV 2, der amtliche Berichtigungstext selbst nennt aber
@@ -16,37 +16,44 @@
  * Klassen je rectifies-Kante (oc → dessen `jolux:rectifies`-Ziel):
  *   uebereinstimmend  — der amtliche Berichtigungstext nennt die Fundstelle/SR des Ziels.
  *   abweichend        — er nennt eine ANDERE (Befund, §7: gelistet, nie in Prosa gedeutet —
- *                        das kann ein Fedlex-Datenfehler sein wie SKV, muss es aber nicht:
- *                        s. Docstring-Fund AIG/oc/2025/342 unten).
+ *                        kann ein Fedlex-Datenfehler sein, muss es aber nicht).
  *   sammelberichtigung — der Text nennt MEHR ALS EINE Fundstelle; das rectifies-Tripel
  *                        trägt nur eine davon (§8-Ehrlichkeit, wie `baueOcZuRectifiesSr`).
  *   nicht-abrufbar     — keine HTML-Manifestation oder Casemates-Hülle (Skill-Falle 3) —
  *                        eine Lücke wird GELISTET, nie geraten.
+ *   stale              — WAR als `abweichend` dokumentiert-entschärft (Ausnahmeliste), aber
+ *                        das aktuell gemessene Paar (rectifies-Ziel + Text-Fundstelle) passt
+ *                        nicht mehr zum dokumentierten Paar (§6.7-Stale-Schutz, Gegenprüfung
+ *                        PR #834 Auflage 3, s. `ausnahmeGueltig`). Rot wie ein unbelegtes
+ *                        `abweichend` — eine Ausnahme, die egal welchem neuen Tripel weiter
+ *                        stillschweigend zustimmt, wäre ein Freibrief, kein Beleg.
  *
- * Exit 1 NUR bei `abweichend` ohne Eintrag in `bibliothek/normtext/rectifies-ausnahmen.json`
- * (Identität = exakte oc-URI, kein Substring). `sammelberichtigung`/`nicht-abrufbar` bleiben
- * grün (dokumentierter Befund, keine Behauptung eines Fehlers).
+ * Exit 1 bei `abweichend` ohne (gültigen) Eintrag in
+ * `bibliothek/normtext/rectifies-ausnahmen.json` ODER bei `stale` (Identität = exakte
+ * oc-URI, kein Substring). `sammelberichtigung`/`nicht-abrufbar` bleiben grün (dokumentierter
+ * Befund, keine Behauptung eines Fehlers).
  *
  * ── Live-Befund 12.9.2026 (Mass, nicht übernommen — Auftragstext nannte ≈16/1/1/n) ──
  * 25 rectifies-Kanten im Korpus (nicht 71 — Schätzung des Auftrags widerlegt, §0/§17
  * «messen, nicht übernehmen»): 14 uebereinstimmend, 2 abweichend, 2 sammelberichtigung,
- * 7 nicht-abrufbar (nur pdf-a/docx, keine HTML-Manifestation). EIN abweichend ist der
- * dokumentierte SKV-Fund (Ausnahmeliste). Der ZWEITE — AIG/oc/2025/342 — ist ein NEUER,
- * bislang unbelegter Fund dieses Tors: der Berichtigungstext nennt «AsylG-Änderung vom
- * 25. September 2015 (AS 2016 3101)», das rectifies-Ziel `eli/oc/2018/438` ist aber die
- * SPÄTERE «Verordnung über die abschliessende Inkraftsetzung» derselben Änderung
- * (AS 2018 2855, 2018-06-08, in Kraft 2019-03-01) — SR-Familie stimmt (AsylG), die
- * konkrete AS-Fundstelle nicht. Ob das ein Fedlex-Datenfehler ist oder eine legitime,
- * bloss anders zu vergleichende Zwei-Stufen-Inkraftsetzung, entscheidet NICHT dieses Tor
- * (§7/§8) — es bleibt bewusst ROT, bis Gegenprüfung/David den Fund einordnet (Ausnahme
- * ergänzen ODER als zweiten Fedlex-Datenfehler im Fehlerbuch verankern). Da dieser Arm
- * nur in `check:netz:kette` (Schedule/`workflow_dispatch`, s. `normen-monitor.yml`) läuft,
- * blockiert das keinen PR-Merge — es öffnet den «Bei Rot»-Aufgaben-Zettel des Monitors.
+ * 7 nicht-abrufbar (nur pdf-a/docx, keine HTML-Manifestation).
+ *
+ * ── Ergänzung 12.9.2026, Gegenprüfung PR #834 (Auflage 1) ── (2b: ergänzt, nicht
+ * nachgeführt — der obige Mess-Satz bleibt stehen) Beide `abweichend`-Funde sind jetzt
+ * amtlich eingeordnet und in `rectifies-ausnahmen.json` belegt: SKV/oc/2025/686 (Erst-Fund,
+ * PR #827) UND AIG/oc/2025/342 (ZWEITER Fedlex-Datenfehler — der Berichtigungstext korrigiert
+ * die AsylG-Änderung AS 2016 3101/AIG Art. 80, das rectifies-Ziel `eli/oc/2018/438` ist aber
+ * eine reine, normtextlose Inkraftsetzungsverordnung, s. `rectifies-berichtigung.ts`-Docstring
+ * und den Ausnahme-Eintrag für Volltext-Beleg). Das Tor zeigt damit wieder grün — der
+ * Stale-Schutz oben sorgt dafür, dass es das nicht stillschweigend BLEIBT, sollte Fedlex das
+ * Tripel je wieder ändern. Da dieser Arm nur in `check:netz:kette`
+ * (Schedule/`workflow_dispatch`, s. `normen-monitor.yml`) läuft, blockiert ein Rot-Fund hier
+ * nie einen PR-Merge — er öffnet den «Bei Rot»-Aufgaben-Zettel des Monitors.
  */
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import {
-  extrahiereHeadlineZitate, holeBerichtigungstext, klassifiziereBerichtigung,
-  loeseBerichtigungsHtmlUrl, type RectifiesKlasse,
+  ausnahmeGueltig, extrahiereHeadlineZitate, holeBerichtigungstext, klassifiziereBerichtigung,
+  loeseBerichtigungsHtmlUrl, type RectifiesAusnahme, type RectifiesKlasse,
 } from './rectifies-berichtigung.ts';
 import { holeMitCache, modusAusUmgebung } from './rectifies-cache.ts';
 import type { RectifiesInfo } from './revisionen-generieren.ts';
@@ -55,9 +62,13 @@ const RAW_DIR = 'bibliothek/normtext/revisionen-raw';
 const AUSNAHMEN_PFAD = 'bibliothek/normtext/rectifies-ausnahmen.json';
 
 interface Kante { erlassKey: string; oc: string; info: RectifiesInfo }
-interface Ausnahme { oc: string; seit: string; belegUrl: string; begruendung: string }
-type Klasse = RectifiesKlasse | 'nicht-abrufbar';
-interface Befund { erlassKey: string; oc: string; klasse: Klasse; detail: string }
+type Klasse = RectifiesKlasse | 'nicht-abrufbar' | 'stale';
+interface Befund {
+  erlassKey: string; oc: string; klasse: Klasse; detail: string;
+  /** Nur bei genau einem Headline-Zitat gesetzt (abweichend/uebereinstimmend) — Grundlage
+   *  des Stale-Vergleichs gegen `erwarteteTextFundstelle`. */
+  textFundstelle?: string;
+}
 
 /** Alle rectifies-Kanten aus den committeten store-raw-Dateien (§2: kein erneuter
  *  SPARQL-Aufruf für die Kantenliste selbst — die ist bereits Teil der Pipeline-1-Ausgabe;
@@ -77,9 +88,9 @@ export function ladeKanten(rawDir: string = RAW_DIR): Kante[] {
     : (a.oc < b.oc ? -1 : a.oc > b.oc ? 1 : 0)));
 }
 
-export function ladeAusnahmen(pfad: string = AUSNAHMEN_PFAD): Map<string, Ausnahme> {
+export function ladeAusnahmen(pfad: string = AUSNAHMEN_PFAD): Map<string, RectifiesAusnahme> {
   if (!existsSync(pfad)) return new Map();
-  const arr = JSON.parse(readFileSync(pfad, 'utf8')) as Ausnahme[];
+  const arr = JSON.parse(readFileSync(pfad, 'utf8')) as RectifiesAusnahme[];
   return new Map(arr.map((a) => [a.oc, a]));
 }
 
@@ -97,7 +108,7 @@ async function pruefeKante(k: Kante, modus: ReturnType<typeof modusAusUmgebung>)
       ? `Text: ${zitate.as.join(', ') || '∅'}.`
       : `Text nennt ${zitate.as.join(', ') || '∅'} (SR ${zitate.sr.join(', ') || '∅'}) — `
         + `rectifies-Ziel ${k.info.zielFundstelle ?? k.info.zielOc} (SR ${k.info.fremdeSr}).`;
-    return { erlassKey: k.erlassKey, oc: k.oc, klasse, detail };
+    return { erlassKey: k.erlassKey, oc: k.oc, klasse, detail, textFundstelle: zitate.as[0] };
   } catch (e) {
     return { erlassKey: k.erlassKey, oc: k.oc, klasse: 'nicht-abrufbar', detail: (e as Error).message };
   }
@@ -113,7 +124,25 @@ async function main(): Promise<void> {
   const modus = modusAusUmgebung();
 
   const befunde: Befund[] = [];
-  for (const k of kanten) befunde.push(await pruefeKante(k, modus));
+  for (const k of kanten) {
+    const befund = await pruefeKante(k, modus);
+    if (befund.klasse === 'abweichend') {
+      const ausnahme = ausnahmen.get(befund.oc);
+      if (ausnahme) {
+        const gueltig = ausnahmeGueltig(ausnahme, {
+          zielOc: k.info.zielOc, zielFundstelle: k.info.zielFundstelle, textFundstelle: befund.textFundstelle,
+        });
+        if (!gueltig) {
+          befund.klasse = 'stale';
+          befund.detail = `Ausnahmeliste-Eintrag seit ${ausnahme.seit} passt NICHT MEHR zum frischen Mass `
+            + `(erwartet Ziel ${ausnahme.erwartetesZielOc} / Fundstelle ${ausnahme.erwarteteZielFundstelle ?? '∅'} / `
+            + `Text ${ausnahme.erwarteteTextFundstelle ?? '∅'}; aktuell Ziel ${k.info.zielOc} / `
+            + `Fundstelle ${k.info.zielFundstelle ?? '∅'} / Text ${befund.textFundstelle ?? '∅'}) — neu einordnen.`;
+        }
+      }
+    }
+    befunde.push(befund);
+  }
 
   const counts: Partial<Record<Klasse, number>> = {};
   for (const b of befunde) counts[b.klasse] = (counts[b.klasse] ?? 0) + 1;
@@ -130,17 +159,18 @@ async function main(): Promise<void> {
     console.log(`  - ${b.erlassKey} ${b.oc} → ${b.klasse}${marker}: ${b.detail}`);
   }
 
-  const rotOhneAusnahme = befunde.filter((b) => b.klasse === 'abweichend' && !ausnahmen.has(b.oc));
-  if (rotOhneAusnahme.length) {
-    console.error(`\ncheck:revisionen-rectifies ROT: ${rotOhneAusnahme.length} unbelegte Abweichung(en):`);
-    for (const b of rotOhneAusnahme) console.error(`  - ${b.erlassKey} ${b.oc}: ${b.detail}`);
+  const rot = befunde.filter((b) => b.klasse === 'stale' || (b.klasse === 'abweichend' && !ausnahmen.has(b.oc)));
+  if (rot.length) {
+    console.error(`\ncheck:revisionen-rectifies ROT: ${rot.length} unbelegte/veraltete Abweichung(en):`);
+    for (const b of rot) console.error(`  - ${b.erlassKey} ${b.oc} (${b.klasse}): ${b.detail}`);
     console.error(
       `Beleg-URL amtlich prüfen und — nur bei bestätigtem Fedlex-Datenfehler (§7) — Eintrag `
-      + `in ${AUSNAHMEN_PFAD} ergänzen (oc + seit + belegUrl + begruendung).`,
+      + `in ${AUSNAHMEN_PFAD} ergänzen/nachführen (oc + seit + belegUrl + begruendung + `
+      + `erwartetesZielOc + erwarteteZielFundstelle + erwarteteTextFundstelle).`,
     );
     process.exit(1);
   }
-  console.log('check:revisionen-rectifies grün: keine unbelegte Abweichung.');
+  console.log('check:revisionen-rectifies grün: keine unbelegte oder veraltete Abweichung.');
 }
 
 await main();
