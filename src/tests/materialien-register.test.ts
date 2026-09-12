@@ -120,13 +120,12 @@ describe('Tor 2 — committetes Manifest == frischer Build (Merge-Modell §2.7, 
     }
   });
 
-  it('Register-sha ist stand-frei (Provenienz ≠ Identität, §7/FAHRPLAN-OFFENE-BEFUNDE «Register-sha rotiert mit stand»)', () => {
-    // Nullprobe/Rot-Beweis: `stand` ist bei generierten Materialien (Vernehmlassungen,
-    // Botschaften, BS-Grossrat) das Abrufdatum des Erhebungslaufs, nicht ein
-    // inhaltliches Merkmal — ein blosser Tages-Wechsel darf den Identitäts-sha
-    // NICHT ändern (sonst rotiert jeder Lauf alle sha, Drift-Erkennung wertlos,
-    // Churn in Diffs; Beleg: Lauf #789→#803 änderte 831/831 Vernehmlassungs-sha bei
-    // nur 1 tatsächlichem Statusübergang).
+  it('Register-sha: `stand` ist NUR bei BUND (Erhebungsdatum) stand-frei, sonst Teil der Identität (§7/FAHRPLAN-OFFENE-BEFUNDE «Register-sha rotiert mit stand», Gegenprüfungs-Auflage PR #814)', () => {
+    // BUND (Vernehmlassungen, Paket 3): `stand` = Abfragedatum des Erhebungslaufs, kein
+    // inhaltliches Merkmal — ein blosser Tages-Wechsel darf den Identitäts-sha NICHT
+    // ändern (sonst rotiert jeder Lauf alle sha, Drift-Erkennung wertlos, Churn in
+    // Diffs; Beleg: Lauf #789→#803 änderte 831/831 Vernehmlassungs-sha bei nur 1
+    // tatsächlichem Statusübergang).
     const basis: MaterialRegistereintrag = {
       key: 'TEST-STAND', behoerde: 'BUND', doktyp: 'vernehmlassung', titel: 'Test',
       rechtsgebiet: 'oeffentlich', sprache: 'de', status: 'nur-live-link',
@@ -140,6 +139,36 @@ describe('Tor 2 — committetes Manifest == frischer Build (Merge-Modell §2.7, 
     };
     expect(shaEintrag(spaeterStand)).toBe(shaEintrag(basis)); // stand nicht im sha
     expect(shaEintrag(statusWechsel)).not.toBe(shaEintrag(basis)); // Inhalt weiterhin im sha
+
+    // Kuratierter Eintrag (z. B. ESTV-KS): `stand` ist das amtliche Dokumentdatum
+    // (register.ts: «Dokument über Nummer/Stand identifizieren») — MUSS im sha bleiben,
+    // sonst würde eine Datums-Korrektur der Behörde drift-unsichtbar (Gegenprüfungs-
+    // Auflage PR #814; Rot-Beweis vor diesem Fix: dieselben zwei Objekte ergaben
+    // gleiches sha, weil `stand` global ausgeschlossen war).
+    const kuratiert: MaterialRegistereintrag = {
+      key: 'ESTV-KS-DBG-5A', behoerde: 'ESTV', doktyp: 'kreisschreiben', titel: 'Test-KS',
+      rechtsgebiet: 'steuern', sprache: 'de', status: 'nur-live-link',
+      quelleUrl: 'https://www.estv.admin.ch/x', stand: '2022-02-01', rang: 1,
+    };
+    const kuratiertAndererStand: MaterialRegistereintrag = { ...kuratiert, stand: '2023-05-01' };
+    expect(shaEintrag(kuratiertAndererStand)).not.toBe(shaEintrag(kuratiert)); // stand IM sha
+
+    // BR (Botschaften) und BS-GR (Grossrat): `stand` ist ebenfalls ein amtliches
+    // Dokumentdatum (Botschafts- bzw. Vorlage-/Ereignisdatum, s. Kommentar `standVon()`
+    // in bs-materialien.ts: «nie das Abrufdatum») — bleibt im sha (Abweichung von der
+    // Auflagen-Formulierung, §7-Offenlegung s. material-manifest.ts).
+    const br: MaterialRegistereintrag = {
+      key: 'BR-TEST', behoerde: 'BR', doktyp: 'botschaft', titel: 'Test-Botschaft',
+      rechtsgebiet: 'privat', sprache: 'de', status: 'nur-live-link',
+      quelleUrl: 'https://www.fedlex.admin.ch/eli/fga/2026/1/de', stand: '2026-01-01', rang: 1,
+    };
+    expect(shaEintrag({ ...br, stand: '2026-02-01' })).not.toBe(shaEintrag(br));
+    const bsGr: MaterialRegistereintrag = {
+      key: 'BS-GR-26.0001', behoerde: 'BS-GR', doktyp: 'ratschlag', titel: 'Test-Geschäft',
+      rechtsgebiet: 'oeffentlich', sprache: 'de', status: 'nur-live-link',
+      quelleUrl: 'https://grosserrat.bs.ch/x', stand: '2026-03-01', rang: 1,
+    };
+    expect(shaEintrag({ ...bsGr, stand: '2026-04-01' })).not.toBe(shaEintrag(bsGr));
   });
 });
 
