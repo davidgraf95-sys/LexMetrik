@@ -45,7 +45,11 @@ const artefakt = {
     abgerufen,
     lizenz: 'Freie Nutzung. Quellenangabe ist Pflicht.',
     lizenzUrl: 'https://geofiles.be.ch/internet/geo/geodaten/agi-dv-nutzungsbedingungen-de.pdf',
-    normbasis: 'Art. 80, 81 und 92 GSOG (BSG 161.1)',
+    normbasis: 'Art. 80, 81, 88a und 92 GSOG (BSG 161.1)',
+    // Die Lizenz verlangt die Quellenangabe — dieser Satz ist der Wortlaut,
+    // den jede Anzeige der Zuordnung mitführen muss (Nutzungsbedingungen AGI
+    // BE, Ziff. 3; §7 lit. c verlangt zusätzlich den Live-Link).
+    quellenangabe: 'Geodaten: Amt für Geoinformation des Kantons Bern (ADMRG, ADMRSA, GRENZ5)',
     normUrl: 'https://www.belex.sites.be.ch/app/de/texts_of_law/161.1',
     uebersichtGerichte: 'https://www.zsg.justice.be.ch/de/start/ueber-uns/regionalgerichte.html',
     uebersichtStaatsanwaltschaft: 'https://www.justice.be.ch/de/start/ueber-uns/gerichtsbehoerden-staatsanwaltschaft.html',

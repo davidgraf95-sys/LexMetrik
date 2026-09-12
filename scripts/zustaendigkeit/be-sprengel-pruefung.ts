@@ -64,7 +64,7 @@ export function pruefeBeSprengel(): BeSprengelBefund {
   // ─── (A) Form ───────────────────────────────────────────────────────────────
   const datum = /^\d{4}-\d{2}-\d{2}$/;
   if (!datum.test(a.stand)) fehler.push(`(A) stand «${a.stand}» ist kein ISO-Datum.`);
-  for (const feld of ['herausgeber', 'lizenz', 'lizenzUrl', 'normbasis', 'normUrl', 'uebersichtGerichte', 'uebersichtStaatsanwaltschaft'] as const) {
+  for (const feld of ['herausgeber', 'lizenz', 'lizenzUrl', 'normbasis', 'normUrl', 'quellenangabe', 'uebersichtGerichte', 'uebersichtStaatsanwaltschaft'] as const) {
     if (typeof a.quelle[feld] !== 'string' || (a.quelle[feld] as string).trim() === '') fehler.push(`(A) quelle.${feld} fehlt — §7-Pflichtmerkmal.`);
   }
   if (typeof a.quelle.abgerufen !== 'string' || !datum.test(a.quelle.abgerufen)) fehler.push('(A) quelle.abgerufen fehlt oder ist kein ISO-Datum.');

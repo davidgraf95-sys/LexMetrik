@@ -62,7 +62,17 @@ export interface GerichtsStandort {
   name: string;
   /** Französische amtliche Bezeichnung, wo die Quelle sie führt. */
   nameFr: string | null;
-  /** Bezeichnung der Aussenstelle (Art. 81 Abs. 1 GSOG), sonst null. */
+  /** Bezeichnung der Aussenstelle (Art. 81 Abs. 1 GSOG), sonst null.
+   *  Ihr heutiger Standort liegt im Verwaltungskreis Biel/Bienne, nicht im
+   *  Berner Jura: Art. 88a GSOG (eingefügt, in Kraft seit 1.1.2026) erlaubt
+   *  das «im Zuge des Wechsels der Gemeinde Moutier zum Kanton Jura … für eine
+   *  begrenzte Zeit» — für Regionalgericht (Art. 81 Abs. 1) und Schlichtungs-
+   *  behörde (Art. 84 Abs. 4); für die regionale Staatsanwaltschaft sagt
+   *  Art. 92 Abs. 4 GSOG dasselbe. NICHT Art. 91 Abs. 3 — der regelt die
+   *  Jugendanwaltschafts-Dienststelle (Korrektur 12.9.2026 aus der
+   *  Gegenprüfung zu PR #810, am BELEX-Normtext verifiziert). Die Adresse
+   *  kommt ohnehin aus der Quelle; der Verweis erklärt nur, warum sie in Biel
+   *  liegt, und warum sie sich wieder ändern wird. */
   aussenstelle: string | null;
   zivil: Anschrift;
   straf: Anschrift;

@@ -35,10 +35,36 @@ Quelle: BELEX-API des Kantons Bern, `https://www.belex.sites.be.ch/api/texts_of_
 - **Art. 81 Abs. 1 GSOG**: «Für jede Gerichtsregion besteht ein Regionalgericht. Das
   Regionalgericht Berner Jura-Seeland hat eine **Aussenstelle im Berner Jura**.»
   → Die Aussenstelle ist gesetzlich, nicht bloss organisatorisch.
-- **Art. 92 Abs. 1 GSOG**: vier regionale Staatsanwaltschaften, gleich bezeichnet.
-- **Art. 91 Abs. 3 GSOG** (Kontext): wegen des Wechsels der Gemeinde **Moutier zum
-  Kanton Jura** kann die Aussenstelle vorübergehend im Verwaltungskreis Biel/Bienne
-  untergebracht werden — deckt sich mit der Geodaten-Adresse Unionsgasse 13, 2502 Biel.
+- **Art. 92 Abs. 1 und 2 GSOG**: vier regionale Staatsanwaltschaften, gleich
+  bezeichnet; Abs. 2 bindet ihre Sprengel an dieselben Verwaltungsregionen wie
+  Art. 80 Abs. 2 für die Gerichte. Abs. 3: die regionale Staatsanwaltschaft
+  Berner Jura-Seeland führt ebenfalls eine Aussenstelle im Berner Jura.
+- **Art. 88a GSOG** (eingefügt, in Kraft seit 1.1.2026) — *korrigiert 12.9.2026,
+  s. u.*: «Im Zuge des Wechsels der Gemeinde Moutier zum Kanton Jura können die
+  Aussenstelle des Regionalgerichts Berner Jura-Seeland (Art. 81 Abs. 1) und die
+  Aussenstelle der Schlichtungsbehörde Berner Jura-Seeland (Art. 84 Abs. 4) für
+  eine begrenzte Zeit im Verwaltungskreis Biel/Bienne untergebracht werden, bis
+  die notwendigen Räumlichkeiten für ihre definitive Ansiedlung im Berner Jura
+  zur Verfügung stehen.» Für die **regionale Staatsanwaltschaft** sagt
+  **Art. 92 Abs. 4 GSOG** dasselbe. Beides deckt sich mit den Geodaten-Adressen
+  Unionsgasse 13, 2502 Biel (Gericht) und Ländtestrasse 20, 2501 Biel/Bienne (StA).
+  Wortlaute live gegen die BELEX-API geprüft:
+  `https://www.belex.sites.be.ch/api/texts_of_law/161.1` (abgerufen 12.9.2026,
+  Fassung «in Kraft seit: 01.05.2026»); Live-Fassung:
+  `https://www.belex.sites.be.ch/app/de/texts_of_law/161.1`.
+
+  **Korrektur vom 12.9.2026 (§2b — der Alt-Wortlaut bleibt stehen, er wird nicht
+  nachgeführt).** Die Erstfassung dieses Dossiers führte an dieser Stelle:
+  «**Art. 91 Abs. 3 GSOG** (Kontext): wegen des Wechsels der Gemeinde **Moutier
+  zum Kanton Jura** kann die Aussenstelle vorübergehend im Verwaltungskreis
+  Biel/Bienne untergebracht werden — deckt sich mit der Geodaten-Adresse
+  Unionsgasse 13, 2502 Biel.» Das ist der **falsche Artikel**: Art. 91 Abs. 3
+  regelt die Aussenstelle der **Jugendanwaltschafts-Dienststelle** Berner
+  Jura-Seeland, nicht die des Regionalgerichts. Einschlägig sind Art. 88a
+  (Gericht und Schlichtungsbehörde) und Art. 92 Abs. 4 (regionale
+  Staatsanwaltschaft). Befund der adversarialen Gegenprüfung zu PR #810,
+  am Normtext verifiziert. Die Sprengel-Zuordnung selbst ist davon nicht
+  berührt — der Fehler lag allein in der Fundstellen-Angabe des Kontext-Satzes.
 
 ## 3 · Die Geodatensätze (live geprüft 12.9.2026)
 

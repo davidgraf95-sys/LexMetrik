@@ -13,7 +13,15 @@
 //                     Seeland; übrige = gleichnamige Verwaltungsregion (Art. 39a OrG)
 //   · Art. 81 Abs. 1  je ein Regionalgericht; Berner Jura-Seeland mit
 //                     Aussenstelle im Berner Jura
-//   · Art. 92 Abs. 1  vier regionale Staatsanwaltschaften
+//   · Art. 92 Abs. 1/2 vier regionale Staatsanwaltschaften, Sprengel ebenfalls
+//                     an die Verwaltungsregionen gebunden
+//   · Art. 88a        Aussenstelle des Regionalgerichts (und der Schlichtungs-
+//                     behörde, Art. 84 Abs. 4) darf wegen des Wechsels Moutiers
+//                     zum Kanton Jura vorübergehend im Verwaltungskreis
+//                     Biel/Bienne liegen; Art. 92 Abs. 4 sagt dasselbe für die
+//                     regionale Staatsanwaltschaft. Darum steht die «Aussenstelle
+//                     Berner Jura» heute in Biel — ein Provisorium mit
+//                     gesetzlichem Verfalldatum, kein Datenfehler.
 // Herleitung, Lizenz und Messprotokoll:
 // bibliothek/behoerden/be-sprengel-geodaten-2026-09-12.md
 //
@@ -52,6 +60,7 @@ interface BeSprengelDaten {
     lizenzUrl: string;
     normbasis: string;
     normUrl: string;
+    quellenangabe: string;
     uebersichtGerichte: string;
     uebersichtStaatsanwaltschaft: string;
     datensaetze: { code: string; titel: string; detail: string; bezug: string }[];
