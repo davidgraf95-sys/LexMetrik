@@ -128,6 +128,20 @@ maschinellen K-16-Kanten (§7) — beide unter `W2·13-KANTONE-DATEN` in `ROADMA
 Entscheid (Lehre 5). Wartet auf Fortsetzung: PR #807 Merge (Gegenprüfungs-Verdikt Auflage
 Paritäts-Ingest steht aus, Orchestrator landet nach diesem Doku-PR).
 
+**#810 gelandet** (`064d191f6`, Gegenprüfung Sonnet, Auflage Bibliotheks-Zitat erfüllt) — K-15
+BE-Sprengel-Zuordnung aus amtlichen Geodaten des Amts für Geoinformation BE (ADMRG/ADMRSA/GRENZ5,
+build-zeitliche Punkt-in-Fläche-Berechnung, keine Laufzeit-Geodaten): 334/334 Gemeinden, 5
+Gerichtsstandorte, 4 regionale Staatsanwaltschaften, Normbasis GSOG Art. 80/81/88a/92 (BSG 161.1),
+Artefakt `src/data/zustaendigkeit/beSprengel.json` (18,7 KB). Wartet auf David: fachliche Abnahme
+(§7), UI-Verdrahtung erst danach (beide unter `K-15-Nachzug` in `ROADMAP.md`).
+
+**Vormessung «Entstehung am Paragraph BS» (12.9.2026, lex-recherche, kein Bau):** BS-Fassungskette
+je § ist heute nicht baubar (0 kantonale Historie-Einträge; K-16-Schlüssel Erlass↔Geschäft deckt
+5/859 Erlasse). Neuer Fund: LexWork-`versions`-Endpunkt der BS-Gesetzessammlung liefert
+Volltext-XHTML je Fassung, Lizenz ungeklärt. Neuer Roadmap-Schritt `R12a-ENTSTEHUNG-BS` (blocked
+auf `david-bs-lizenz-schluessel`); Reihenfolge jetzt Bund → BS (R12a) → ZH (R12b). Detail:
+`bibliothek/materialien/2026-09-12-k16-bs-vormessung.md` §9, `fahrplaene/FAHRPLAN-KANTONE.md` §5.
+
 ## Session 11.9.2026 — W2·26 Funktionszeile + Kette «Entstehung am Artikel» (Daten → Leser → Synopse), acht PRs
 
 **Auftrag David (wörtlich):** «führe alles durch» (Go «Entstehung am Artikel» + §11.9-Entscheide 1–6,

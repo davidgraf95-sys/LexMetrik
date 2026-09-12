@@ -66,6 +66,7 @@ richter-analytik-gate: Richter-/Spruchkörper-Analytik (W3·15-RICHTER). GRENZE 
 david-entscheid-org-umzug: QS-ORG-UMZUG — Repo-Transfer in eine Gratis-Organisation für die native Merge Queue (User-Konten haben keine); Infrastruktur-Entscheid mit ~1 h Nacharbeit (Vercel, Branch-Schutz, Secrets). Erst prüfen, ob der Auto-Nachzug (Checklisten-Zeile unter QS-AUTOMATIK) den BEHIND-Schmerz ausreichend dämpft (Entscheid David 7.8.2026: «B als Schritt, A parken»)
 zielbild-gesetzesleser: Zurückgestellt durch das Zielbild-Dekret 1.9.2026 (Gesetzesleser zuerst) — wieder öffnen, sobald die Queue-Blöcke 1–3 gelandet sind oder David einen Schritt ausdrücklich vorzieht (FINMA: vorziehen, wenn ein externer Termin drängt). Kein Bau-Blocker, reine Reihenfolge-Entscheidung.
 david-go-entstehung: ERTEILT — Go David 11.9.2026 («führe alles durch»); die drei W2·6c-ENTSTEHUNG-*-Schritte stehen auf `status: ready`, Blocker entfernt. Design freigegeben 6.9.2026; §11.9 der Materialien-Spec bucht die Entscheide 1–6 als entschieden 11.9.2026 (Mandat), Nr. 7 (fachliche Abnahme) bleibt bei David.
+david-bs-lizenz-schluessel: R12a — David klärt Lizenz LexWork-versions-Endpunkt + fragt amtlichen Schlüssel Erlass↔Geschäft bei BS an (Vormessung 12.9.2026).
 -->
 
 <!-- @david-fragen
@@ -220,7 +221,9 @@ zgb-a36-anhang: Die ZGB-Gliederung zeigt 74 Artikel des Anhangs «Wortlaut der f
   - [ ] **ZH-4d · Gliederungs-Überschriften + Übergangsbestimmungen** *(Befund 31.8.2026, nach der Fix-Runde neu geschnitten)* — «4. Abschnitt: Medien» u. ä. landet am Ende des VORANGEHENDEN § (129 Blöcke). Teilentlastet 31.8.2026: römische Gliederungsziffern werden jetzt wie die Buchstaben-Gliederung verworfen; die Marginalien-/Randnoten-Ebene bleibt offen und braucht den Tag-Leser. **Neu dazu:** Übergangs- und Schlussbestimmungen sind seit der Fix-Runde bewusst NICHT mehr im Snapshot (§8: ausgewiesene Lücke statt falscher Zuordnung an den letzten §) — ihre Aufnahme als eigener Eintragstyp gehört hierher, ebenso der PBG-Anhang mit den nachgedruckten Altfassungen. Der Loseblatt-Änderungsapparat im letzten § ist erledigt (43 → 0 Blöcke). *Ergänzung 31.8.2026 (Fix-Runde 2, der Satz oben bleibt als Stand nach Runde 1 stehen):* Die ZÄHLENDE Gliederungsform («2. Kapitel:», «1. Abschnitt:», «Erster Teil:») ist seither ebenfalls erledigt (103 → 0 Blöcke); offen bleibt allein die Marginalien-/Randnoten-Ebene. Die Auslassung der Übergangsbestimmungen und des PBG-Anhangs ist seither im Artefakt ausgewiesen (`kanton-luecken.json`) — ihre Aufnahme als eigener Eintragstyp bleibt hier. Sollte vor ZH-Stufe 3. §1-A.
   - [ ] **Systematik-Upstream-Drift AG/BS** *(Befund 31.8.2026, bewusst nicht mitgenommen)* — ein frischer `kanton-systematik-run.ts` zeigt: AG verliert Knoten 401, BS gewinnt 731/788/RiE#731. Eigener Schritt, damit der ZH-Diff sortenrein bleibt. §1-A.
   - [ ] **`check:paritaet` ist gegen Datei-LÖSCHUNG blind** *(Nebenfund ZH-Fix-Runde 3, 31.8.2026 — bewusst NICHT hier gefixt, fremde Baufläche `scripts/datenhaltung/**`)* — Am Code belegt (`scripts/datenhaltung/check-paritaet.ts`, gelesen 31.8.2026): das Tor baut seine DB durch INGEST DER VORHANDENEN DATEIEN (`ingestNormtext(db)`) und vergleicht danach jeden Pfad, den diese DB kennt, byte-weise mit der Datei. Eine gelöschte Datei wird nie ingestiert, steht nie in `alleEintragPfade()` und wird nie verglichen — die Löschung ist für dieses Tor unsichtbar, nicht wegen eines Fehlers, sondern wegen der Richtung des Beweises. Auffallen kann sie nur einem Tor, das eine andere Frage stellt (`check:golden-normtext` vermisst die sha-Einträge). Nötig ist die Gegenrichtung im Paritäts-Tor: DB-Erlassmenge ⊆ Dateimenge. Fläche `scripts/datenhaltung/check-paritaet.ts`, zu bauen zusammen mit dem Datenhaltungs-Strang (§12: die beiden Stränge landen abwechselnd, nie gleichzeitig auf dieselben Artefakte).
-  - [ ] **K-15 · Sprengel-Zuordnung BE aus amtlichen Geodaten** — opendata.swiss «Regionalgerichte»/«Regionale Staatsanwaltschaften» (Amt für Geoinformation BE, GPKG/Parquet) macht `zustaendigkeitKantone.ts` für BE deterministisch; Build-Zeit-Snapshot mit Stand. Quelle: Fremdquellen-Sichtung 2.9.2026 §1 #5.
+  - [x] **K-15 · Sprengel-Zuordnung BE aus amtlichen Geodaten** — erledigt 12.9.2026, PR #810 (`064d191f6`): 334/334 Gemeinden, 5 Gerichtsstandorte, 4 regionale Staatsanwaltschaften; Normbasis GSOG Art. 80/81/88a/92 (BSG 161.1); Artefakt `src/data/zustaendigkeit/beSprengel.json`; Tore `check:be-sprengel`/`check:be-sprengel-netz`. Wortlaut: ROADMAP-CHRONIK.md, Umschichtung 12.9.2026.
+  - [ ] **K-15-Nachzug · Fachliche Abnahme der BE-Sprengel-Tabelle** (David, §7) — bis dahin UI unverändert.
+  - [ ] **K-15-Nachzug · UI-Verdrahtung BE-Sprengel im Zuständigkeits-Rechner mit Pflicht-Quellenangabe AGI BE** (eigener Schritt nach Abnahme).
   - [x] **K-16 (BS-Teil) · Kantonale Materialien Basel-Stadt an die Botschaften-Pipeline** — erledigt 12.9.2026, PR #799 (`c83501304`): Grosser Rat (data.bs.ch, CC BY 4.0), 117 Geschäfte, 122 Kanten (8 amtlich, 114 maschinell gekennzeichnet), 409 Verfahrens-Ereignisse. ZH-Teil bleibt offen (Präzisierung 6.9.2026: Bund → BS → ZH; ZH-Pendant FAHRPLAN-KANTONE §5 R12b). Wortlaut: ROADMAP-CHRONIK.md, Umschichtung 12.9.2026.
   - [ ] **K-16-Nachzug · CC-BY-Namensnennung data.bs.ch in der UI** (Entscheid David) — die 114 maschinell gekennzeichneten Kanten und die BS-Materialien stammen aus einer CC-BY-4.0-Quelle; wo/wie die Namensnennung im UI erscheint, ist offen.
   - [ ] **K-16-Nachzug · Fachliche Abnahme der 114 maschinellen Kanten** (David, §7) — Erlass↔Vorstoss-Zuordnung ohne amtlichen Schlüssel (heuristisch, `quelle: maschinell`), Abnahme steht aus.
@@ -314,6 +317,23 @@ zgb-a36-anhang: Die ZGB-Gliederung zeigt 74 Artikel des Anhangs «Wortlaut der f
   Quelllücke). Löst die 11 befristeten Ausnahmen in
   `bibliothek/register/entstehung-leerdiff-ausnahmen.json` ab — **fällig vor deren Verfall
   2026-10-12**. **Detail:** [FAHRPLAN-MATERIALIEN-VERZAHNUNG.md](fahrplaene/FAHRPLAN-MATERIALIEN-VERZAHNUNG.md) §11.10.
+
+- [ ] **Entstehung am Paragraph — Basel-Stadt (vor Zürich)** *(`R12a-ENTSTEHUNG-BS`, Vormessung
+  lex-recherche 12.9.2026)*
+  <!-- @meta id: R12a-ENTSTEHUNG-BS · status: blocked · blocker: david-bs-lizenz-schluessel · dep: [W2·6c-ENTSTEHUNG-SYNOPSE] · feld: korpus · fahrplan: fahrplaene/FAHRPLAN-KANTONE.md -->
+  **Nicht jetzt baubar** (Vormessung 12.9.2026): BS hat keine Fassungskette je § — 0 kantonale
+  Historie-Einträge, 2908 Fussnoten in 793 BS-Sidecars, davon nur 13 «GRB vom», 8 mit
+  Ratschlagsnummer; der amtliche Schlüssel Erlass↔Geschäft (K-16) deckt 5/859 Erlasse, 8/122 Kanten.
+  **Neuer Fund:** die LexWork-API der BS-Gesetzessammlung
+  (`https://www.gesetzessammlung.bs.ch/api/texts_of_law/<SG>`, undokumentiert) liefert
+  `old_versions[]` und je Fassung Volltext-XHTML unter `.../versions/<id>` — geprüft 12.9.2026 am
+  Beispiel 132.100 (10 Fassungen); Lizenz des `versions`-Endpunkts nicht deklariert. Ziel, sobald
+  freigegeben: BS-Fassungskette je § aus `old_versions`/`versions/<id>`, Verknüpfung mit den K-16-
+  Kanten (amtlich nur 5 Erlasse, Rest `quelle: maschinell`), Synopse-BS analog E5 mit
+  Profil-Normalisierung, Karte für BS-Keys. Grenzen: Stabilitäts-Sonde des undokumentierten
+  Endpunkts vor Bau; Vorstufen R3/R7/R12 für BS neu (heute nur für ZH definiert).
+  **Detail:** [FAHRPLAN-KANTONE.md](fahrplaene/FAHRPLAN-KANTONE.md) §5 R12a.
+  **Grundlage:** `bibliothek/materialien/2026-09-12-k16-bs-vormessung.md` §3/§7/§9.
 
 - [ ] **Watchlist & Änderungs-Signale** *(`W2·14-SIGNAL`, Ideen-Intake 20.7.2026)*
   <!-- @meta id: W2·14-SIGNAL · status: ready · blocker: null · dep: [] · feld: korpus · fahrplan: fahrplaene/FAHRPLAN-FEDLEX-PORTFOLIO.md -->
