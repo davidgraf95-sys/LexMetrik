@@ -2,6 +2,7 @@
 import { test, expect } from '@playwright/test';
 import { mkdirSync } from 'node:fs';
 import { LESER_SUCHFELD_NAME } from './helpers/leserBeschriftung';
+import { OR_LESER_FRIST } from './helpers/orLeser';
 
 // Visuelle + funktionale Verifikation der 9 Gesetze-UX-Punkte (Auftrag David
 // 26.6.2026). Screenshots landen unter test-results/ux9/ zur Sichtprüfung.
@@ -48,7 +49,7 @@ test.describe('Gesetze-UX 9 Punkte', () => {
 
   test('P4: Gliederung/Randtitel steht VOR der Artikelnummer (Fedlex-Reihenfolge)', async ({ page }) => {
     await page.goto('/gesetze/bund/OR');
-    await expect(page.locator('#art-1')).toBeVisible();
+    await expect(page.locator('#art-1')).toBeVisible({ timeout: OR_LESER_FRIST });
     // §6.3-Anpassung 29.6.2026 (B1-Modell, Verhalten verifiziert): Der Randtitel
     // ist seit B1 ein eigener Gliederungs-Sektionskopf ([data-sek], Fedlex-analog)
     // und steht in DOKUMENT-Reihenfolge VOR der Artikelnummer — nicht mehr als
@@ -72,7 +73,7 @@ test.describe('Gesetze-UX 9 Punkte', () => {
   test('Einklappen analog Fedlex: Artikel-Body klappt zu, Nummer bleibt; Randtitel-Sektionskopf bleibt', async ({ page }) => {
     await page.goto('/gesetze/bund/OR');
     const art = page.locator('#art-1');
-    await expect(art).toContainText('Willensäusserung'); // Body sichtbar
+    await expect(art).toContainText('Willensäusserung', { timeout: OR_LESER_FRIST }); // Body sichtbar
     // §6.3-ANPASSUNG 5.9.2026 (deklarierte fachliche Änderung, QS-UI
     // Folgeschritt): der Klapp-Knopf hiess zustandsabhängig «Artikel
     // einklappen» / «Artikel ausklappen» — zwölf wortgleiche Namen auf
@@ -105,7 +106,7 @@ test.describe('Gesetze-UX 9 Punkte', () => {
 
   test('P9: Gliederung markiert aktive Sektion beim Scrollen (Scroll-Spy)', async ({ page }) => {
     await page.goto('/gesetze/bund/OR');
-    await expect(page.locator('#art-1')).toBeVisible();
+    await expect(page.locator('#art-1')).toBeVisible({ timeout: OR_LESER_FRIST });
     // Tief scrollen → ein aktiver TOC-Eintrag muss existieren.
     await page.evaluate(() => window.scrollTo(0, 2500));
     await page.waitForTimeout(400);
@@ -155,7 +156,7 @@ test.describe('Gesetze-UX 9 Punkte', () => {
 
   test('Such-Bug: Suchleiste bleibt nach Aktivieren im Bild (nicht nach oben raus)', async ({ page }) => {
     await page.goto('/gesetze/bund/OR');
-    await expect(page.locator('#art-1')).toBeVisible();
+    await expect(page.locator('#art-1')).toBeVisible({ timeout: OR_LESER_FRIST });
     // Tief scrollen, dann suchen → vor dem Fix rutschte der sticky-Container raus.
     await page.evaluate(() => window.scrollTo(0, 4000));
     await page.waitForTimeout(150);
@@ -167,7 +168,7 @@ test.describe('Gesetze-UX 9 Punkte', () => {
 
   test('Screenshots Desktop hell + dunkel', async ({ page }) => {
     await page.goto('/gesetze/bund/OR');
-    await expect(page.locator('#art-1')).toBeVisible();
+    await expect(page.locator('#art-1')).toBeVisible({ timeout: OR_LESER_FRIST });
     // Screenshot-Budget explizit auf 60 s (Playwright-Default 30 s). Auf dem
     // langsamen Runner wartet `page.screenshot` auf einen stabilen Frame der
     // ~930-KB-OR-Seite; bisher band das 90-s-TEST-Budget vorher (Beleg oben), mit
@@ -175,7 +176,7 @@ test.describe('Gesetze-UX 9 Punkte', () => {
     await page.screenshot({ path: `${SHOT}/leser-desktop-hell.png`, fullPage: false, timeout: 60_000 });
     await page.emulateMedia({ colorScheme: 'dark' });
     await page.reload();
-    await expect(page.locator('#art-1')).toBeVisible();
+    await expect(page.locator('#art-1')).toBeVisible({ timeout: OR_LESER_FRIST });
     await page.screenshot({ path: `${SHOT}/leser-desktop-dunkel.png`, fullPage: false, timeout: 60_000 });
   });
 
@@ -204,7 +205,7 @@ test.describe('Gesetze-UX 9 Punkte', () => {
   test('Screenshot Mobil', async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
     await page.goto('/gesetze/bund/OR');
-    await expect(page.locator('#art-1')).toBeVisible();
+    await expect(page.locator('#art-1')).toBeVisible({ timeout: OR_LESER_FRIST });
     await page.screenshot({ path: `${SHOT}/leser-mobil-hell.png`, fullPage: false });
   });
 });

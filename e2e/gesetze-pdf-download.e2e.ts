@@ -1,5 +1,6 @@
 // @shard-gruppe: 1
 import { test, expect } from '@playwright/test';
+import { OR_LESER_FRIST } from './helpers/orLeser';
 
 // W2·5d U-PDF / A12 — die Download-Aktion lädt das AMTLICHE PDF der gepinnten
 // Fassung (Bund: Fedlex-Filestore pdf-a; Kanton: LexWork). Reine Verifikation der
@@ -12,7 +13,10 @@ test.describe('U-PDF · Download = amtliches PDF (A12)', () => {
 
   test('Bund-Snapshot (OR): Fedlex-Filestore-pdf-a, ehrlich beschriftet, fokussierbar', async ({ page }) => {
     await page.goto('/gesetze/bund/OR');
-    await expect(page.locator('#art-1')).toBeVisible(); // Client-Takeover abwarten
+    // §17-Wurzelfix 12.9.2026 (OR-Leser-e2e-Härtung, Rot-/Grün-Beweis in
+    // `helpers/orLeser.ts`): Client-Takeover abwarten, 60-s-Budget statt
+    // 10-s-Default.
+    await expect(page.locator('#art-1')).toBeVisible({ timeout: OR_LESER_FRIST });
     const pdf = page.getByRole('link', { name: /Amtliches PDF/ }).first();
     await expect(pdf).toBeVisible();
     // Ehrliche «Fassung vom …»-Beschriftung (§8).

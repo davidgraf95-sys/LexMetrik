@@ -33,6 +33,40 @@ falsch — korrigiert 30.8.2026). Karten abgeschlossener Sessions (älter als
 werden direkt unter dem KARTEN-Anker eingefügt (jüngste zuoberst).
 
 <!-- KARTEN -->
+## Session 12.9.2026 (6) — Fehlerbuch-Welle 6 `W2·18-FEHLERBUCH` (Opus-Bau + Sonnet-Prüfer)
+
+**Ablauf:** Fortsetzung der Fehlerbuch-Runde auf dem Stand von Session 12.9.2026 (5) —
+zwei Bau-Schritte gelandet, ein dritter landet gerade.
+
+**Gelandet:** #836 `0f8981838` Fedlex-Trenner mitführen — `extrahiere-fedlex.ts` verwarf
+den Trenner (`a. ` vs. `A: `) bisher; additiv `items[].trenner` (Opus-Bau, Sonnet-Gegenprüfung),
+87 «:»-Labels/1447 «)»-Marken/2852 ohne Trenner erfasst, 227 Bund-Snapshots nur um das neue
+Feld ergänzt (Skelett-Nullprobe: 0 Restdiff), Leser nutzt das Feld statt der bisherigen
+Heuristik; löst Wurzel zu Issue #679 · #837 `8a7336e5a` OR-Leser-e2e auf 60-s-Budget gehärtet
+— Wurzel gemessen (CDP-CPU-Drossel 10x: 10-s-Default 8/8 rot, 60 s 0/8 rot), zentraler Helfer
+`e2e/helpers/orLeser.ts` (`OR_LESER_FRIST`/`warteOrGeladen()`), bare 10-s-Defaults in 6 Specs
+ersetzt.
+
+**Landet gerade (nicht Teil dieser Landung, PR offen):** #838 (Kopf `ade48cac9`)
+QS-KORPUS-SCOPE — 23 scope/decl-Sektionen in 12 Staatsverträgen ingestiert; Gegenprüfung läuft,
+ROADMAP-Zeile bleibt darum bewusst offen stehen, bis gemergt.
+
+**Lehre dieser Session:** CPU-Drossel-Messung (CDP throttling, nicht blosses Wiederholen) ist
+die belastbare Beweisform für e2e-Timeout-Ursachen — #837 zeigt am selben Test 8/8 rot bei
+10 s vs. 0/8 rot bei 60 s unter 10x-Drosselung, statt nur eine höhere Zahl zu raten.
+
+**Nachfunde dieser Session (noch nicht gebaut, als ROADMAP-Zeilen unter `W2·18-FEHLERBUCH`
+vermerkt):**
+1. Tabellen-`<dt>`-Marken («–»/[tab]) werden in ZPO art_250, StG art_5 f., BV art_197 als
+   Aufzählungsmarken extrahiert — Extraktions-Altlast (Nebenfund #836); Fix gehört in den
+   Extraktor (Tabellen-`<dt>` von Aufzählungs-`<dt>` trennen), nie in die Daten geflickt.
+2. 216 Struktur-Sidecars tragen `stand`/`fassungsToken` noch nicht (additiver Alt-Rollout aus
+   #824) — nur die 12 Sidecars aus #838 haben die Felder bereits; eigener Regenerations-Schritt
+   aus dem Cache mit Skelett-Nullprobe.
+3. Die Leser-Wurzel für scope/decl-Sektionen (Geltungsbereich, CH-Erklärungen/Vorbehalte) heisst
+   synthetisch «Anhänge» — uneinheitlich bei 14 LUGUE-Verträgen und den 12 aus #838;
+   Empfehlung der Gegenprüfung zu #838 abwarten, bevor gebaut wird.
+
 ## Session 12.9.2026 (5) — Fehlerbuch-Welle 5 `W2·18-FEHLERBUCH` (Einzel-Fixer + Opus-Prüfer)
 
 **Ablauf:** Fortsetzung der Fehlerbuch-Runde auf dem Stand von Session 12.9.2026 (4) —
