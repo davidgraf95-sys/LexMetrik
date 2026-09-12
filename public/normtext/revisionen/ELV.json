@@ -25,10 +25,10 @@
       "titelDe": "Verordnung über die Invalidenversicherung (IVV). Berichtigung (Betrifft nur den italienischen Text)",
       "titelFr": "Règlement sur l’assurance-invalidité (RAI). Erratum (Ne concerne que le texte italien)",
       "titelIt": "Ordinanza sull’assicurazione per l’invalidità (OAI). Correzione",
-      "plausibilitaet": "widerspruch-fedlex-notation",
-      "plausibilitaetsGrund": "Fedlex klassiert diese Änderung unter SR 831.301 (ELV); sie berichtigt (jolux:rectifies) jedoch einen unter SR 831.201 klassierten Erlass — Widerspruch in der Fedlex-Notation, massgeblich bleibt die amtliche Sammlung (§7/§8).",
+      "plausibilitaet": "berichtigung-fremdes-as-dokument",
+      "plausibilitaetsGrund": "Diese Berichtigung korrigiert eine Änderung dieses Erlasses (SR 831.301, ELV), die im AS-Text eines anderen Erlasses (SR 831.201, Anhangs-Änderung «Änderung bisherigen Rechts») erstpubliziert wurde; massgeblich bleibt die amtliche Sammlung (§7/§8).",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2024/130/de",
-      "sha": "9c7de051abdae8fb2814125bd130dc630447fd8ccf0c768be41e9fac9712ba54"
+      "sha": "6fb077696e839a9cc9f0ada1484574b64dcc2cde19e4bb3b818e11d725d84187"
     },
     {
       "art": "sammelerlass-marker",
@@ -217,5 +217,5 @@
       "sha": "6a716d1738317f93f515385a72862748f6e274ef452f67356c1406ee5f916cd2"
     }
   ],
-  "sha": "5d78bc29351730d0c8c6ec08b938895550e250c318e28d1e9b7f9e0f2837138a"
+  "sha": "64dd7e9c7799db5ff20be9eb1a26c1ae3a33a0990582fb903acff4ea4b8bbe66"
 }

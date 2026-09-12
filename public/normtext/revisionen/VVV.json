@@ -67,10 +67,10 @@
       "titelDe": "Verordnung über die technischen Anforderungen an Strassenfahrzeuge (VTS). Berichtigung (Betrifft nur den italienischen Text)",
       "titelFr": "Ordonnance concernant les exigences techniques requises pour les véhicules routiers (OETV). Erratum (Ne concerne que le texte italien)",
       "titelIt": "Ordinanza concernente le esigenze tecniche per i veicoli stradali (OETV). Correzione",
-      "plausibilitaet": "widerspruch-fedlex-notation",
-      "plausibilitaetsGrund": "Fedlex klassiert diese Änderung unter SR 741.31 (VVV); sie berichtigt (jolux:rectifies) jedoch einen unter SR 741.41 klassierten Erlass — Widerspruch in der Fedlex-Notation, massgeblich bleibt die amtliche Sammlung (§7/§8).",
+      "plausibilitaet": "berichtigung-fremdes-as-dokument",
+      "plausibilitaetsGrund": "Diese Berichtigung korrigiert eine Änderung dieses Erlasses (SR 741.31, VVV), die im AS-Text eines anderen Erlasses (SR 741.41, Anhangs-Änderung «Änderung bisherigen Rechts») erstpubliziert wurde; massgeblich bleibt die amtliche Sammlung (§7/§8).",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2021/578/de",
-      "sha": "6316d991059f2c64373f73bc2a6526a81380610b25695116d00a646d24fff581"
+      "sha": "526b469a371a3b61358cac90d4412046396129f54ed21b492596f444b53ff7a6"
     },
     {
       "art": "aenderung",
@@ -325,5 +325,5 @@
       "sha": "14aac9edbe4f3af12e3cc62c81bcc31db31c9c0620c397a529cd29b859b717ef"
     }
   ],
-  "sha": "6ca53f49d9bb88daab7dbd0128bd5a782e3ec77859604948a0578b6c88e8db9f"
+  "sha": "4546cc48bd24e3a6ca39f3de3585641773b9f13b81177ad67894f51146a044a1"
 }

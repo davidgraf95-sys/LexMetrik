@@ -43,10 +43,10 @@
       "titelDe": "Verordnung zum Bundesgesetz über die Koordination und Vereinfachung von Entscheidverfahren. Berichtigung (Betrifft nur den italienischen Text)",
       "titelFr": "Ordonnance relative à la loi fédérale sur la coordination et la simplification des procédures de décision . Erratum (Ne concerne que le texte italien)",
       "titelIt": "Ordinanza relativa alla legge federale sul coordinamento e la semplificazione delle procedure d’approvazione dei piani. Correzione",
-      "plausibilitaet": "widerspruch-fedlex-notation",
-      "plausibilitaetsGrund": "Fedlex klassiert diese Änderung unter SR 748.131.1 (VIL); sie berichtigt (jolux:rectifies) jedoch einen unter SR 451.1 klassierten Erlass — Widerspruch in der Fedlex-Notation, massgeblich bleibt die amtliche Sammlung (§7/§8).",
+      "plausibilitaet": "berichtigung-fremdes-as-dokument",
+      "plausibilitaetsGrund": "Diese Berichtigung korrigiert eine Änderung dieses Erlasses (SR 748.131.1, VIL), die im AS-Text eines anderen Erlasses (SR 451.1, Anhangs-Änderung «Änderung bisherigen Rechts») erstpubliziert wurde; massgeblich bleibt die amtliche Sammlung (§7/§8).",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2021/269/de",
-      "sha": "83a99fcfe95ee28f8c771085000dfbe8da6b7e48270eccbf9d6cc062fd7b1d66"
+      "sha": "0efff723019d8c3fe2ffa66ef08d3f6e786c919b04be35809e26dcffedfbd256"
     },
     {
       "art": "sammelerlass-marker",
@@ -193,5 +193,5 @@
       "sha": "df0310a38dc2fc3a6d5da62c0f31f7ae833a5f851c35238007adf1c45c407f87"
     }
   ],
-  "sha": "0e8ac2bc7f282d7832a50268d17daa41497454276912c0e27817ab7f55dc905d"
+  "sha": "a2e2d8c9522455d788239a878d2b1d5633d0d62a2713dd7d3a007cfc34f3b7c2"
 }

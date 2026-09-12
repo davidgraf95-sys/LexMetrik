@@ -80,10 +80,10 @@
       "titelDe": "Verordnung über die Bekämpfung übertragbarer Krankheiten des Menschen (Epidemienverordnung, EpV). Berichtigung (Betrifft nur den italienischen Text)",
       "titelFr": "Ordonnance sur la lutte contre les maladies transmissibles de l’homme (Ordonnance sur les épidémies, OEp). Erratum (Ne concerne que le texte italien)",
       "titelIt": "Ordinanza concernente la lotta contro le malattie trasmissibili dell’essere umano (Ordinanza sulle epidemie, OEp). Correzione",
-      "plausibilitaet": "widerspruch-fedlex-notation",
-      "plausibilitaetsGrund": "Fedlex klassiert diese Änderung unter SR 641.201 (MWSTV); sie berichtigt (jolux:rectifies) jedoch einen unter SR 818.101.1 klassierten Erlass — Widerspruch in der Fedlex-Notation, massgeblich bleibt die amtliche Sammlung (§7/§8).",
+      "plausibilitaet": "berichtigung-fremdes-as-dokument",
+      "plausibilitaetsGrund": "Diese Berichtigung korrigiert eine Änderung dieses Erlasses (SR 641.201, MWSTV), die im AS-Text eines anderen Erlasses (SR 818.101.1, Anhangs-Änderung «Änderung bisherigen Rechts») erstpubliziert wurde; massgeblich bleibt die amtliche Sammlung (§7/§8).",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2021/122/de",
-      "sha": "a48656cb0163cefe6a12e0204d0a08773cede43d89d80efacec5e6f2a7f5db41"
+      "sha": "69c9048990aafd25396ac66e7e691c616d20197b1880a99e05a83e088c9e7a79"
     },
     {
       "art": "sammelerlass-marker",
@@ -106,10 +106,10 @@
       "titelDe": "Verordnung 3 über Massnahmen zur Bekämpfung des Coronavirus (Covid-19) (Covid-19-Verordnung 3) (Sars-CoV-2-Schnelltests). Berichtigung (Betrifft nur den italienischen Text)",
       "titelFr": "Ordonnance 3 sur les mesures destinées à lutter contre le coronavirus (COVID-19) (Ordonnance 3 COVID-19) (Tests rapides SARS-CoV-2). Erratum (Ne concerne que le texte italien)",
       "titelIt": "Ordinanza 3 sui provvedimenti per combattere il coronavirus (COVID-19) (Ordinanza 3 COVID-19) (Test rapidi SARS-CoV-2). Correzione",
-      "plausibilitaet": "widerspruch-fedlex-notation",
-      "plausibilitaetsGrund": "Fedlex klassiert diese Änderung unter SR 641.201 (MWSTV); sie berichtigt (jolux:rectifies) jedoch einen unter SR 818.101.24 klassierten Erlass — Widerspruch in der Fedlex-Notation, massgeblich bleibt die amtliche Sammlung (§7/§8).",
+      "plausibilitaet": "berichtigung-fremdes-as-dokument",
+      "plausibilitaetsGrund": "Diese Berichtigung korrigiert eine Änderung dieses Erlasses (SR 641.201, MWSTV), die im AS-Text eines anderen Erlasses (SR 818.101.24, Anhangs-Änderung «Änderung bisherigen Rechts») erstpubliziert wurde; massgeblich bleibt die amtliche Sammlung (§7/§8).",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2021/11/de",
-      "sha": "4457c5e06f76c6252cfba4683020e89cd20eac2533854723207c22bc0c15eeff"
+      "sha": "df92d419aad4f3f6ce8e964afffe6cdc56f77c604bebd2023b70c5b10bd08f7b"
     },
     {
       "art": "sammelerlass-marker",
@@ -340,5 +340,5 @@
       "sha": "4918b33462473dcd741db693bd76077c67e45b0a38e7e536e9a0840f027c6f91"
     }
   ],
-  "sha": "0d482f283e63879054c41fafc184555b0b342b9246f94df9831faa2859f50d39"
+  "sha": "5e5541bf38bf24aab58314089d78f8a61e4ef9b7c250a8537c0f9fddbd205916"
 }

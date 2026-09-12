@@ -106,10 +106,10 @@
       "titelDe": "Signalisationsverordnung (SSV). Berichtigung (Betrifft nur den italienischen Text)",
       "titelFr": "Ordonnance sur la signalisation routière (OSR). Erratum (Ne concerne que le texte italien)",
       "titelIt": "Ordinanza sulla segnaletica stradale (OSStr). Correzione",
-      "plausibilitaet": "widerspruch-fedlex-notation",
-      "plausibilitaetsGrund": "Fedlex klassiert diese Änderung unter SR 741.21 (SSV); sie berichtigt (jolux:rectifies) jedoch einen unter SR 725.111 klassierten Erlass — Widerspruch in der Fedlex-Notation, massgeblich bleibt die amtliche Sammlung (§7/§8).",
+      "plausibilitaet": "berichtigung-fremdes-as-dokument",
+      "plausibilitaetsGrund": "Diese Berichtigung korrigiert eine Änderung dieses Erlasses (SR 741.21, SSV), die im AS-Text eines anderen Erlasses (SR 725.111, Anhangs-Änderung «Änderung bisherigen Rechts») erstpubliziert wurde; massgeblich bleibt die amtliche Sammlung (§7/§8).",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2024/144/de",
-      "sha": "c46a69e59c50b32b19edd0719a327379875a02bb26d10825b4b191c85dc123a0"
+      "sha": "a2be70d6be52bfe090f2bfc73a1da1b4b4390869102af6e08c189ce1cfe93d34"
     },
     {
       "art": "aenderung",
@@ -364,5 +364,5 @@
       "sha": "66a0e32b92bb25bf085f8e97a6e7fb772a50ee6be74399a8f3590045ecd5d31f"
     }
   ],
-  "sha": "e82b088e85780be5b66d8f2c7a98d2a70df8339f027d8ef41d7be7ae9c2c878c"
+  "sha": "76129349f74ba095334f0260698861fcc28afc00392780fc791cc5803bf90798"
 }

@@ -100,10 +100,10 @@
       "titelDe": "Pflanzenschutzmittelverordnung (PSMV). Berichtigung",
       "titelFr": "Ordonnance sur les produits phytosanitaires (OPPh). Erratum",
       "titelIt": "Ordinanza sui prodotti fitosanitari (OPF). Correzione",
-      "plausibilitaet": "widerspruch-fedlex-notation",
-      "plausibilitaetsGrund": "Fedlex klassiert diese Änderung unter SR 814.81 (CHEMRRV); sie berichtigt (jolux:rectifies) jedoch einen unter SR 916.161 klassierten Erlass — Widerspruch in der Fedlex-Notation, massgeblich bleibt die amtliche Sammlung (§7/§8).",
+      "plausibilitaet": "berichtigung-fremdes-as-dokument",
+      "plausibilitaetsGrund": "Diese Berichtigung korrigiert eine Änderung dieses Erlasses (SR 814.81, CHEMRRV), die im AS-Text eines anderen Erlasses (SR 916.161, Anhangs-Änderung «Änderung bisherigen Rechts») erstpubliziert wurde; massgeblich bleibt die amtliche Sammlung (§7/§8).",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2025/864/de",
-      "sha": "f26a20abbe3e231c2bd4744dcad9528256ef4853c0b779576671a470b260e0d6"
+      "sha": "45a0cc6e9b232b6d04e17afa9d062f12a4c00792f93e876956d8fc7be150011a"
     },
     {
       "art": "aenderung",
@@ -784,5 +784,5 @@
       "sha": "a993ac534035835c97b63b3a35ac82d725066f2f88295f4547cfbe3c39e997d5"
     }
   ],
-  "sha": "78bc3ec87a9f030bbc7dc0318da9938005a2340f0800c018eced6dd6f4d4b40b"
+  "sha": "4d356719db528271461ed8cb51f0e75c097c7656ec6af8bb8d40d38790bf5265"
 }

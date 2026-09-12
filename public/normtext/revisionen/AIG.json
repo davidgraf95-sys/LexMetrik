@@ -206,10 +206,10 @@
       "titelDe": "Asylgesetz (AsylG). Berichtigung",
       "titelFr": "Loi sur l’asile (LAsi). Erratum (ne concerne que le texte allemand)",
       "titelIt": "Legge sull’asilo (LAsi). Correzione (concerne solo il testo tedesco)",
-      "plausibilitaet": "widerspruch-fedlex-notation",
-      "plausibilitaetsGrund": "Fedlex klassiert diese Änderung unter SR 142.20 (AIG); sie berichtigt (jolux:rectifies) jedoch einen unter SR 142.31 klassierten Erlass — Widerspruch in der Fedlex-Notation, massgeblich bleibt die amtliche Sammlung (§7/§8).",
+      "plausibilitaet": "berichtigung-fremdes-as-dokument",
+      "plausibilitaetsGrund": "Diese Berichtigung korrigiert eine Änderung dieses Erlasses (SR 142.20, AIG), die im AS-Text eines anderen Erlasses (SR 142.31, Anhangs-Änderung «Änderung bisherigen Rechts») erstpubliziert wurde; massgeblich bleibt die amtliche Sammlung (§7/§8).",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2025/342/de",
-      "sha": "11919e850e4f40931de1e6075a1d1d78907e7a9d6fbb1635d68691cd0423f029"
+      "sha": "c63e290012e4ded978c8ebfaed4d1ac4e152d344121897c951d5d4e9aaa5564a"
     },
     {
       "art": "sammelerlass-marker",
@@ -941,5 +941,5 @@
       "sha": "61ffc69115701b9edcc8e9d5fe46b446b5340baaf0135dccab7d5260405ee661"
     }
   ],
-  "sha": "91506bedbccfc0ce38533983c36caaadf8fff53c2ab7a4614bb672fefb1d113d"
+  "sha": "903f4077058f54a6ef706037961a91830454d02f8f5bde860c79cf77526f788c"
 }

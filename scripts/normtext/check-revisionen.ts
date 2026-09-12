@@ -12,8 +12,14 @@
 //       Totalrevision 2020 (spannt die Totalrevision, Referenzfall).
 //   (6) nichtKonsolidiert-Marker gesetzt gdw. dateEntryInForce > Korpus-Stand (Finding 4).
 //   (7) Coverage — je Bund-Volltext-Erlass genau ein Sidecar (kein Drift Grundmenge↔Dateien).
-//   (8) Plausibilitäts-Marker (§703): plausibilitaetsGrund gdw. plausibilitaet gesetzt;
-//       einziger bekannter Wert 'widerspruch-fedlex-notation'.
+//   (8) §8-Marker (§703, Semantik korrigiert nach Gegenprüfung PR #827 — s.
+//       `RevisionEintrag.plausibilitaet`): plausibilitaetsGrund gdw. plausibilitaet gesetzt,
+//       einziger bekannter Wert 'berichtigung-fremdes-as-dokument'; UND (8b, Auflage d
+//       Gegenprüfung PR #827) der Marker ist NUR zulässig, wenn raw unabhängig — ohne
+//       `baueRevisionen` erneut aufzurufen — dieselbe Fremd-SR belegt (raw.bBindings trägt
+//       für den oc eine `rectifies`-Bindung UND raw.rectifiesSrProOc löst sie auf eine von
+//       `sidecar.sr` abweichende SR auf). Rot-Beweis (§6.7): manuell ein `plausibilitaet`
+//       ohne Rückhalt in raw eingefügt → dieser Ast schlägt fehl (s. ROADMAP-CHRONIK.md).
 //
 // NETZ (`check:revisionen-netz`, in check:netz, --netz): Stichproben-Nachfahrt Pfad (b) +
 // Cross-Check (a)vs(b) gegen den amtlichen Endpunkt; Treffermenge/shas vs. committet, Drift=Exit 1.
@@ -79,12 +85,24 @@ for (const m of meta) {
     if (!/^https?:\/\//.test(r.quelleUrl)) fehler.push(`${m.key}: quelleUrl «${r.quelleUrl}» nicht http(s) (§7c).`);
     if (r.botschaftKey && !botschaftKeys.has(r.botschaftKey)) fehler.push(`${m.key}: toter botschaftKey «${r.botschaftKey}».`);
     if (r.art === 'aenderung' && !r.ocUri) fehler.push(`${m.key}: aenderung ohne ocUri.`);
-    // (8) Plausibilitäts-Marker (§703): Grund gdw. Marker, kein unbekannter Marker-Wert.
-    if (r.plausibilitaet && r.plausibilitaet !== 'widerspruch-fedlex-notation') {
+    // (8) §8-Marker: Grund gdw. Marker, kein unbekannter Marker-Wert.
+    if (r.plausibilitaet && r.plausibilitaet !== 'berichtigung-fremdes-as-dokument') {
       fehler.push(`${m.key}: unbekannter plausibilitaet-Wert «${r.plausibilitaet}».`);
     }
     if (!!r.plausibilitaet !== !!r.plausibilitaetsGrund) {
       fehler.push(`${m.key}: plausibilitaet/plausibilitaetsGrund inkonsistent bei ${r.dateEntryInForce}.`);
+    }
+    // (8b) Auflage d (Gegenprüfung PR #827, §6.7): unabhängige Rückhalt-Prüfung DIREKT aus
+    // raw — kein erneuter Aufruf von baueRevisionen/baueOcZuRectifiesSr. Ein Marker ohne
+    // passende rectifies-Bindung + abweichende Fremd-SR in raw ist unbelegt (Handedit oder
+    // Regression) und macht diesen Ast rot (Rot-Beweis in ROADMAP-CHRONIK.md).
+    if (r.plausibilitaet === 'berichtigung-fremdes-as-dokument') {
+      const rawEintrag = raw.bBindings.find((b) => b.oc?.value === r.ocUri);
+      const rectifiesZiel = rawEintrag?.rectifies?.value;
+      const fremdeSr = r.ocUri ? rectifiesSrProOc.get(r.ocUri) : undefined;
+      if (!rectifiesZiel || fremdeSr === undefined || fremdeSr === sidecar.sr) {
+        fehler.push(`${m.key}: plausibilitaet gesetzt ohne Rückhalt in raw (rectifies-Bindung/Fremd-SR) bei ${r.ocUri ?? r.dateEntryInForce}.`);
+      }
     }
     // (6) nichtKonsolidiert korrekt gdw. dateEntryInForce > Korpus-Stand UND kein Finding-4b-
     // Text-Beleg (belegteOcs) vorliegt.

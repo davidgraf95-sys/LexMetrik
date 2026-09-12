@@ -27,11 +27,13 @@ export interface RevisionBezug {
   botschaftKey?: string;
   /** In Kraft, aber noch nicht in den geltenden (gepinnten) Normtext konsolidiert (§8). */
   nichtKonsolidiert?: boolean;
-  /** §8-Plausibilitätsmarker (Gegenprüfung #703): Fedlex klassiert diese Änderung unter der
-   *  SR dieses Erlasses, obwohl sie per jolux:rectifies einen unter anderer SR klassierten
-   *  Erlass berichtigt — Fedlex-interner Widerspruch, s. Generator. Einziger bekannter Wert;
-   *  bewusst kein generischer Switch im UI (Whitelist, kein Ausbau ohne neuen Befund). */
-  plausibilitaet?: 'widerspruch-fedlex-notation';
+  /** FALSIFIZIERT 12.9.2026 (Gegenprüfung PR #827): ursprünglich als «Fedlex-interner
+   *  Widerspruch» beschrieben — live widerlegt (jolux:rectifies nennt nur das AS-Dokument der
+   *  Erstpublikation, oft ein Mantelerlass-Anhang; keine Widersprüchlichkeit). Korrigierte
+   *  Semantik + Herleitung: `scripts/normtext/revisionen-generieren.ts`
+   *  (`RevisionEintrag.plausibilitaet`). Einziger bekannter Wert; bewusst kein generischer
+   *  Switch im UI (Whitelist, kein Ausbau ohne neuen Befund). */
+  plausibilitaet?: 'berichtigung-fremdes-as-dokument';
   /** Begründungstext zum Marker (nur gesetzt, wenn `plausibilitaet` gesetzt ist). */
   plausibilitaetsGrund?: string;
   /** Fedlex-Live-Link auf den AS-Text bzw. die amtliche Sammlung (§7c). */

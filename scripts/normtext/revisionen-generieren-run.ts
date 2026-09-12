@@ -62,7 +62,7 @@ for (const b of bindings) {
 const rectifiesZiele = [...new Set(bindings.map((b) => b.rectifies?.value).filter((v): v is string => !!v))];
 const zielSrProOc = await holeRectifiesSr(rectifiesZiele, fetch);
 if (rectifiesZiele.length) console.log(`  jolux:rectifies-Ziele ${rectifiesZiele.length} · SR aufgelöst ${zielSrProOc.size}`);
-let widersprueche = 0;
+let fremdeAsDokumente = 0;
 
 let mitAenderung = 0, gesamtEintraege = 0, mitBotschaft = 0, sammelMarker = 0, ohnePin = 0, kuenftig = 0;
 let belegtTrotzDatum = 0;
@@ -111,7 +111,7 @@ for (const m of meta as ErlassMeta[]) {
   gesamtEintraege += ae.length;
   mitBotschaft += ae.filter((r) => r.botschaftKey).length;
   sammelMarker += sidecar.revisionen.filter((r) => r.art === 'sammelerlass-marker').length;
-  widersprueche += ae.filter((r) => r.plausibilitaet).length;
+  fremdeAsDokumente += ae.filter((r) => r.plausibilitaet).length;
   for (const r of sidecar.revisionen) {
     if (r.dateEntryInForce > heute) kuenftig++;
     if (r.dateDocument && r.dateDocument > heute) datumsfehler.push(`${m.key}:${r.dateDocument}`);
@@ -121,4 +121,4 @@ for (const m of meta as ErlassMeta[]) {
 if (datumsfehler.length) { console.error(`revisionen: ${datumsfehler.length} Eintrag(e) mit Beschluss-Datum > ${heute} (Datenfehler): ${datumsfehler.slice(0, 5).join(', ')} …`); process.exit(1); }
 
 console.log(`revisionen: ${meta.length} Sidecars → ${SIDECAR_DIR}/`);
-console.log(`  Erlasse mit ≥1 Änderung ${mitAenderung}/${meta.length} · Änderungs-Einträge ${gesamtEintraege} · Botschafts-Join ${mitBotschaft} · Sammelerlass-Marker ${sammelMarker} · künftig-in-Kraft ${kuenftig} · Finding-4b-Text-Beleg trotz Datum ${belegtTrotzDatum} · §8-Plausibilitäts-Widersprüche ${widersprueche}${ohnePin ? ` · ohne Pin ${ohnePin}` : ''}`);
+console.log(`  Erlasse mit ≥1 Änderung ${mitAenderung}/${meta.length} · Änderungs-Einträge ${gesamtEintraege} · Botschafts-Join ${mitBotschaft} · Sammelerlass-Marker ${sammelMarker} · künftig-in-Kraft ${kuenftig} · Finding-4b-Text-Beleg trotz Datum ${belegtTrotzDatum} · §8-Marker (Berichtigung fremdes AS-Dokument) ${fremdeAsDokumente}${ohnePin ? ` · ohne Pin ${ohnePin}` : ''}`);

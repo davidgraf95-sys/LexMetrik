@@ -482,12 +482,14 @@ export function KontextPanel({ typ, normKeys, zusatzGruppen, ohneNormen = false,
                               In Kraft, aber noch nicht in den geltenden Text konsolidiert.
                             </span>
                           )}
-                          {/* §8-Plausibilitätsmarker (Gegenprüfung #703): Whitelist auf den
-                              einen bekannten Zustand, kein genereller Switch (kein Ausbau ohne
-                              neuen Befund). Fedlex bleibt Quelle — der Hinweis deckt nur auf. */}
-                          {r.plausibilitaet === 'widerspruch-fedlex-notation' && (
-                            <span className="block text-micro text-warn-700">
-                              Fedlex ordnet diese Änderung widersprüchlich ein (Berichtigungs-Notation) — {r.plausibilitaetsGrund ?? 'Details bei Fedlex.'}
+                          {/* §8-Marker (Gegenprüfung #703, Semantik korrigiert nach
+                              Gegenprüfung PR #827 — kein Fehler/Widerspruch, reine
+                              AS-Herkunftsangabe): Whitelist auf den einen bekannten Zustand,
+                              kein genereller Switch (kein Ausbau ohne neuen Befund). Neutrale
+                              Farbe (text-ink-500), NICHT warn-700 — es ist keine Warnung. */}
+                          {r.plausibilitaet === 'berichtigung-fremdes-as-dokument' && (
+                            <span className="block text-micro text-ink-500">
+                              {r.plausibilitaetsGrund ?? 'Diese Berichtigung ist im AS-Text eines anderen Erlasses erstpubliziert; massgeblich bleibt die amtliche Sammlung.'}
                             </span>
                           )}
                         </li>

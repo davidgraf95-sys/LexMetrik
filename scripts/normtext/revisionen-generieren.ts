@@ -89,15 +89,26 @@ export interface RevisionEintrag {
    *  geltenden (gepinnten) Normtext konsolidiert (Finding 4, user-sichtbar). */
   nichtKonsolidiert?: boolean;
   /**
-   * Plausibilitäts-Marker (Gegenprüfung #703, §8): Fedlex klassiert diese Änderung per
-   * `jolux:classifiedByTaxonomyEntry` unter der SR DIESES Erlasses, obwohl sie per
-   * `jolux:rectifies` einen unter einer ANDEREN SR klassierten Erlass berichtigt —
-   * ein Fedlex-interner Widerspruch (live belegt: AS 2026 448, klassiert unter 642.11/DBG,
-   * rectifies→eli/oc/1996/1445 unter 824.0/ZDG). §7: Fedlex bleibt Quelle, der Eintrag wird
-   * NIE stillschweigend umgehängt — der Marker macht den Widerspruch nur sichtbar.
-   * Einziger bekannter Wert; kein Enum-Ausbau ohne neuen Befund.
+   * FALSIFIZIERT 12.9.2026 (Gegenprüfung PR #827, live nachgerechnet 4/4): die ursprüngliche
+   * Lesart hier lautete «Fedlex-interner Widerspruch, wenn `jolux:rectifies` einen unter
+   * ANDERER SR klassierten Erlass nennt». Live-Gegenbeweis: `jolux:rectifies` nennt das
+   * AS-DOKUMENT, in dem der fehlerhafte Text ERSTPUBLIZIERT wurde — bei einer Berichtigung
+   * einer «Änderung bisherigen Rechts» (Anhangs-Novelle) ist das regelmässig das AS-Dokument
+   * des MANTEL-/mitbetroffenen Erlasses, nicht des korrigierten. Beleg AS 2026 448: der
+   * ZDG-Erlass (AS 1996 1445) änderte 1996 im Anhang Ziff. 7 auch DBG Art. 124 Abs. 4/133
+   * Abs. 3; die 2026er-Berichtigung dieser DBG-Bestimmungen ist darum KORREKT unter 642.11
+   * (DBG) klassiert, verweist per `rectifies` aber auf das ZDG-Enactment (824.0), weil DORT
+   * der fehlerhafte Text stand. Weitere live bestätigte Fälle: AS 2023 739 (OR-Anhang →
+   * StGB Art. 154), AS 2026 284 (MG-Anhang → MStG Art. 3), AS 2024 144 (Sammelberichtigung
+   * SSV direkt + NSV-Anhang → SSV Art. 98). KEIN Widerspruch — reine Herkunftsangabe.
+   *
+   * Marker (§8, korrigierte Semantik): informiert, dass die AS-Fundstelle DIESER Berichtigung
+   * im Enactment-Dokument eines ANDEREN Erlasses liegt (Anhangs-Änderung «Änderung bisherigen
+   * Rechts») — nützlich, um die AS-Fundstelle einzuordnen, niemals als Fehlerindiz zu lesen.
+   * §7: Fedlex bleibt Quelle, der Eintrag wird NIE umgehängt. Einziger bekannter Wert; kein
+   * Enum-Ausbau ohne neuen Befund.
    */
-  plausibilitaet?: 'widerspruch-fedlex-notation';
+  plausibilitaet?: 'berichtigung-fremdes-as-dokument';
   /** Begründungstext zum Marker (nur gesetzt, wenn `plausibilitaet` gesetzt ist). */
   plausibilitaetsGrund?: string;
   /** Fedlex-Live-Link auf den AS-Text (art='aenderung') bzw. die amtliche Sammlung. */
@@ -280,7 +291,6 @@ export function baueRevisionen(
 ): RevisionSidecar {
   interface Roh {
     oc: string; dateForce: string; dateDoc?: string; roId?: string; de?: string; fr?: string; it?: string;
-    rectifies?: string;
   }
   const proOc = new Map<string, Roh>();
   for (const b of bBindings) {
@@ -296,7 +306,6 @@ export function baueRevisionen(
     if (!r.de && b.titleDe?.value) r.de = b.titleDe.value;
     if (!r.fr && b.titleFr?.value) r.fr = b.titleFr.value;
     if (!r.it && b.titleIt?.value) r.it = b.titleIt.value;
-    if (!r.rectifies && b.rectifies?.value) r.rectifies = b.rectifies.value;
   }
 
   const eintraege: RevisionEintrag[] = [];
@@ -304,12 +313,13 @@ export function baueRevisionen(
   for (const r of proOc.values()) {
     bStaende.add(r.dateForce);
     const botschaftKey = ocZuBotschaft.get(r.oc);
-    // §8-Plausibilitätsmarker (Gegenprüfung #703): rectifiesSrProOc trägt die SR-Notation
-    // des per jolux:rectifies berichtigten Erlasses (falls ermittelt) — weicht sie von der
-    // SR DIESES Erlasses ab, klassiert Fedlex die Änderung widersprüchlich (§7: Fedlex
-    // bleibt Quelle, der Widerspruch wird nur offengelegt, nie stillschweigend behoben).
-    const rectifiesSr = r.rectifies ? rectifiesSrProOc.get(r.oc) : undefined;
-    const widerspruch = rectifiesSr !== undefined && rectifiesSr !== erlass.sr;
+    // §8-Marker (Gegenprüfung #703, korrigiert nach Gegenprüfung PR #827 — s. Docstring
+    // `RevisionEintrag.plausibilitaet`): `rectifiesSrProOc` trägt bereits NUR aufgelöste,
+    // deterministisch (kleinste SR-Notation) ausgewählte Fremd-SR je oc (s.
+    // `baueOcZuRectifiesSr`/`holeRectifiesSr`) — direkter Lookup, kein Ordnungs-abhängiges
+    // Gate mehr nötig (behebt die Nicht-Determinismus-Auflage e, PR #827).
+    const fremdeSr = rectifiesSrProOc.get(r.oc);
+    const fremdesAsDokument = fremdeSr !== undefined && fremdeSr !== erlass.sr;
     const roh: Omit<RevisionEintrag, 'sha'> = {
       art: 'aenderung',
       dateEntryInForce: r.dateForce,
@@ -321,11 +331,11 @@ export function baueRevisionen(
       titelIt: r.it ? titelText(r.it) : undefined,
       botschaftKey,
       nichtKonsolidiert: (r.dateForce > korpusStand && !belegteOcs.has(r.oc)) ? true : undefined,
-      plausibilitaet: widerspruch ? 'widerspruch-fedlex-notation' : undefined,
-      plausibilitaetsGrund: widerspruch
-        ? `Fedlex klassiert diese Änderung unter SR ${erlass.sr} (${erlass.key}); sie berichtigt `
-          + `(jolux:rectifies) jedoch einen unter SR ${rectifiesSr} klassierten Erlass — `
-          + 'Widerspruch in der Fedlex-Notation, massgeblich bleibt die amtliche Sammlung (§7/§8).'
+      plausibilitaet: fremdesAsDokument ? 'berichtigung-fremdes-as-dokument' : undefined,
+      plausibilitaetsGrund: fremdesAsDokument
+        ? `Diese Berichtigung korrigiert eine Änderung dieses Erlasses (SR ${erlass.sr}, ${erlass.key}), `
+          + `die im AS-Text eines anderen Erlasses (SR ${fremdeSr}, Anhangs-Änderung «Änderung `
+          + 'bisherigen Rechts») erstpubliziert wurde; massgeblich bleibt die amtliche Sammlung (§7/§8).'
         : undefined,
       quelleUrl: liveLink(r.oc),
     };
@@ -392,15 +402,25 @@ SELECT ?sr ?oc ?dateForce ?dateDoc ?roId ?titleDe ?titleFr ?titleIt ?rectifies W
  * Erlasses, gebildet aus den (bereits je Erlass gefilterten) Pfad-(b)-Bindings + der global
  * aufgelösten Ziel-SR-Map (`holeRectifiesSr`). Kein Netz hier — Netz-Schritt lebt im Runner
  * (§703-Plausibilitätsmarker, s. `RevisionEintrag.plausibilitaet`).
+ *
+ * Deterministisch UNABHÄNGIG von der Bindungsreihenfolge (§2, Auflage e Gegenprüfung PR
+ * #827): trägt ein oc mehrere `jolux:rectifies`-Ziele (Mehrfach-Berichtigung), wird je oc
+ * IMMER das lexikografisch kleinste Ziel gewählt — nicht das zuerst in `bBindings`
+ * angetroffene (dessen Reihenfolge vom SPARQL-Endpunkt/Netz abhängt, nicht vom Inhalt).
  */
 export function baueOcZuRectifiesSr(
   bBindings: SparqlBinding[], zielSrProOc: ReadonlyMap<string, string>,
 ): Map<string, string> {
-  const map = new Map<string, string>();
+  const zielProOc = new Map<string, string>();
   for (const b of bBindings) {
     const oc = b.oc?.value;
     const ziel = b.rectifies?.value;
-    if (!oc || !ziel || map.has(oc)) continue;
+    if (!oc || !ziel) continue;
+    const vorhanden = zielProOc.get(oc);
+    if (!vorhanden || ziel < vorhanden) zielProOc.set(oc, ziel);
+  }
+  const map = new Map<string, string>();
+  for (const [oc, ziel] of zielProOc) {
     const sr = zielSrProOc.get(ziel);
     if (sr) map.set(oc, sr);
   }
@@ -411,6 +431,10 @@ export function baueOcZuRectifiesSr(
  * Holt für eine Menge von oc-URIs (Ziele eines `jolux:rectifies`) je deren SR-Notation
  * (`jolux:classifiedByTaxonomyEntry` → `skos:notation`, id-systematique-typisiert — sonst
  * greift dieselbe Timeout-Falle wie bei Pfad (b), §0c). VALUES-Batching wie `holeBindingsB`.
+ *
+ * Deterministisch UNABHÄNGIG von der SPARQL-Antwortreihenfolge (§2, Auflage e Gegenprüfung
+ * PR #827): trägt ein oc mehrere id-systematique-Notationen (selten, aber möglich bei
+ * Mehrfachklassierung), wird je oc IMMER die lexikografisch kleinste gewählt.
  */
 export async function holeRectifiesSr(
   ocUris: readonly string[], fetchImpl: FetchImpl = fetch,
@@ -430,7 +454,9 @@ SELECT ?oc ?notation WHERE {
   for (const b of bindings) {
     const oc = b.oc?.value;
     const notation = b.notation?.value;
-    if (oc && notation && !map.has(oc)) map.set(oc, notation);
+    if (!oc || !notation) continue;
+    const vorhanden = map.get(oc);
+    if (!vorhanden || notation < vorhanden) map.set(oc, notation);
   }
   return map;
 }

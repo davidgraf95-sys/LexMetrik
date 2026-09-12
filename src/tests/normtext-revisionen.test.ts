@@ -161,29 +161,39 @@ describe('baueRevisionen — Kern-Logik', () => {
   });
 });
 
-// §8-Plausibilitätsmarker (Gegenprüfung #703, Nullprobe 12.9.2026 live gegen
+// §8-Marker (Gegenprüfung #703, Nullprobe 12.9.2026 live gegen
 // https://fedlex.data.admin.ch/sparqlendpoint, abgerufen 12.9.2026): AS 2026 448
 // (eli/oc/2026/448) ist per jolux:classifiedByTaxonomyEntry unter SR 642.11 (DBG)
-// klassiert, berichtigt (jolux:rectifies) aber eli/oc/1996/1445_1445_1445, welches unter
-// SR 824.0 (ZDG, nicht im Korpus) klassiert ist — ein Fedlex-interner Widerspruch. Der
-// Generator liest treu (§7: Fedlex bleibt Quelle) und macht den Widerspruch nur sichtbar,
-// hängt den Eintrag NIE stillschweigend zu ZDG um.
-describe('baueRevisionen — §8-Plausibilitätsmarker (rectifies-SR ≠ eigene SR, Gegenprüfung #703)', () => {
+// klassiert; jolux:rectifies nennt eli/oc/1996/1445_1445_1445, welches unter SR 824.0
+// (ZDG, nicht im Korpus) klassiert ist.
+//
+// FALSIFIZIERT 12.9.2026 (Gegenprüfung PR #827, 4/4 live nachgerechnet): diese Test-
+// Beschreibung lautete ursprünglich «ein Fedlex-interner Widerspruch». Live-Gegenbeweis:
+// die ZDG-Erstpublikation (AS 1996 1445) änderte im Anhang Ziff. 7 auch DBG Art. 124
+// Abs. 4/133 Abs. 3 («Änderung bisherigen Rechts») — die 2026er-Berichtigung DIESER
+// DBG-Bestimmungen ist darum KORREKT unter 642.11 klassiert; jolux:rectifies zeigt nur
+// auf das AS-Dokument der Erstpublikation (ZDG-Enactment), nicht auf einen Fehler.
+// Weitere live bestätigte Fälle derselben Konstellation: AS 2023 739 (OR-Anhang → StGB
+// Art. 154), AS 2026 284 (MG-Anhang → MStG Art. 3), AS 2024 144 (SSV/NSV-Sammelberichtigung
+// → SSV Art. 98). Korrigierte Semantik: `plausibilitaet: 'berichtigung-fremdes-as-dokument'`
+// — reine Herkunftsangabe, Generator liest weiterhin treu (§7).
+describe('baueRevisionen — §8-Marker (Berichtigung mit AS-Fundstelle im Enactment eines anderen Erlasses, Gegenprüfung #703/#827)', () => {
   const DBG: ErlassMeta = { key: 'DBG', sr: '642.11' };
   const ZIEL_OC = OC('1996/1445_1445_1445');
   const RECT_OC = OC('2026/448');
 
-  it('markiert eine Änderung als widerspruch-fedlex-notation, wenn ihr rectifies-Ziel unter einer ANDEREN SR klassiert ist', () => {
+  it('markiert eine Berichtigung als berichtigung-fremdes-as-dokument, wenn ihr rectifies-Ziel unter einer ANDEREN SR klassiert ist', () => {
     const bindings = [bind({ oc: RECT_OC, dateForce: '2026-09-02', titleDe: 'Berichtigung', rectifies: ZIEL_OC })];
     const rectifiesSrProOc = new Map([[RECT_OC, '824.0']]);
     const s = baueRevisionen(DBG, bindings, [], '2026-09-01', new Map(), '2026-09-12', new Set(), rectifiesSrProOc);
     const e = s.revisionen.find((r) => r.ocUri === RECT_OC);
-    expect(e?.plausibilitaet).toBe('widerspruch-fedlex-notation');
+    expect(e?.plausibilitaet).toBe('berichtigung-fremdes-as-dokument');
     expect(e?.plausibilitaetsGrund).toMatch(/642\.11/);
     expect(e?.plausibilitaetsGrund).toMatch(/824\.0/);
+    expect(e?.plausibilitaetsGrund).not.toMatch(/[Ww]iderspr/); // korrigierte Semantik: nie "Widerspruch"
   });
 
-  it('setzt KEINEN Marker, wenn die rectifies-SR mit der eigenen SR übereinstimmt', () => {
+  it('setzt KEINEN Marker, wenn die rectifies-SR mit der eigenen SR übereinstimmt (Regelfall: eigene Berichtigung)', () => {
     const bindings = [bind({ oc: RECT_OC, dateForce: '2026-09-02', titleDe: 'Berichtigung', rectifies: ZIEL_OC })];
     const rectifiesSrProOc = new Map([[RECT_OC, '642.11']]); // gleiche SR wie DBG
     const s = baueRevisionen(DBG, bindings, [], '2026-09-01', new Map(), '2026-09-12', new Set(), rectifiesSrProOc);
@@ -200,8 +210,8 @@ describe('baueRevisionen — §8-Plausibilitätsmarker (rectifies-SR ≠ eigene 
 
   it('lässt die sha unbetroffener Einträge unverändert (§6.7: additiv, kein globaler Diff)', () => {
     // Derselbe Eintrag OHNE Ziel-SR-Auflösung (Default-Map) muss byte-identisch bleiben zur
-    // Fassung, die es vor dem Plausibilitätsmarker gab — sonst würde die Vollerhebung ALLE
-    // 226 unbetroffenen Sidecars unnötig anfassen (§703-Auflage).
+    // Fassung, die es vor dem Marker gab — sonst würde die Vollerhebung ALLE 226
+    // unbetroffenen Sidecars unnötig anfassen (§703-Auflage).
     const bindings = [bind({ oc: RECT_OC, dateForce: '2026-09-02', titleDe: 'Berichtigung' })];
     const ohneMarker = baueRevisionen(DBG, bindings, [], '2026-09-01', new Map(), '2026-09-12');
     const mitLeererMap = baueRevisionen(DBG, bindings, [], '2026-09-01', new Map(), '2026-09-12', new Set(), new Map());
@@ -209,7 +219,7 @@ describe('baueRevisionen — §8-Plausibilitätsmarker (rectifies-SR ≠ eigene 
   });
 });
 
-describe('baueOcZuRectifiesSr — reine Komposition (§703)', () => {
+describe('baueOcZuRectifiesSr — reine Komposition (§703, deterministisch nach Auflage e Gegenprüfung PR #827)', () => {
   it('bildet oc → SR-Notation des rectifies-Ziels, nur wenn beide bekannt sind', () => {
     const bindings = [
       bind({ oc: OC('2026/448'), rectifies: OC('1996/1445_1445_1445') }),
@@ -221,6 +231,22 @@ describe('baueOcZuRectifiesSr — reine Komposition (§703)', () => {
     expect(m.get(OC('2026/448'))).toBe('824.0');
     expect(m.has(OC('2024/1'))).toBe(false);
     expect(m.has(OC('2024/2'))).toBe(false);
+  });
+
+  it('wählt bei mehreren rectifies-Zielen für dasselbe oc IMMER das lexikografisch kleinste — unabhängig von der Bindungsreihenfolge', () => {
+    // Auflage e (Gegenprüfung PR #827, §2): vorher «erstes gesehenes Ziel gewinnt» — abhängig
+    // von der (Netz-)Reihenfolge in bBindings, also nicht deterministisch reproduzierbar.
+    const oc = OC('2026/448');
+    const bindingsA = [
+      bind({ oc, rectifies: OC('2000/999') }),
+      bind({ oc, rectifies: OC('1990/1') }),
+    ];
+    const bindingsB = [...bindingsA].reverse();
+    const zielSrProOc = new Map([[OC('2000/999'), '111.1'], [OC('1990/1'), '222.2']]);
+    const mA = baueOcZuRectifiesSr(bindingsA, zielSrProOc);
+    const mB = baueOcZuRectifiesSr(bindingsB, zielSrProOc);
+    expect(mA.get(oc)).toBe(mB.get(oc)); // reihenfolge-unabhängig
+    expect(mA.get(oc)).toBe('222.2'); // OC('1990/1') < OC('2000/999') lexikografisch
   });
 });
 

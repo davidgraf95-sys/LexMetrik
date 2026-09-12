@@ -4058,3 +4058,71 @@ entstehung/**` (Kaskade, 14 betroffene), `daten-manifest.json`,
 `src/lib/normtext/revisionen.ts`, `src/components/kontext/KontextPanel.tsx`
 (nur Hinweiszeile), `src/tests/normtext-revisionen.test.ts`,
 `fahrplaene/FAHRPLAN-OFFENE-BEFUNDE.md` (Fund-Zeile), `ROADMAP-CHRONIK.md`.
+
+### Nachtrag 12.9.2026 (Gegenprüfung PR #827, ERGÄNZT — der Eintrag oben ist FALSIFIZIERT, nicht überschrieben, §2b)
+
+**Verdikt: WIDERLEGT.** Der obige Eintrag beschrieb `jolux:rectifies` als
+«Fedlex-internen Widerspruch» — live nachgerechnet (Opus-Gegenprüfung,
+4/4 Fälle) ist das falsch. `jolux:rectifies` nennt das AS-DOKUMENT, in dem
+der fehlerhafte Text ERSTPUBLIZIERT wurde; `classifiedByTaxonomyEntry`
+nennt den betroffenen SR-Erlass. Bei einer Berichtigung einer «Änderung
+bisherigen Rechts» (Anhangs-Novelle) sind das regelmässig ZWEI verschiedene
+Erlasse — ohne jeden Widerspruch:
+
+- AS 2026 448: ZDG-Enactment (AS 1996 1445) änderte im Anhang Ziff. 7 auch
+  DBG Art. 124 Abs. 4/133 Abs. 3 → die 2026er-Berichtigung dieser
+  DBG-Bestimmungen ist korrekt unter 642.11 klassiert, `rectifies` zeigt auf
+  das ZDG-Enactment.
+- AS 2023 739 (OR-Anhang Ziff. 5 → StGB Art. 154), AS 2026 284 (MG-Anhang
+  Ziff. 1 → MStG Art. 3), AS 2024 144 (Sammelberichtigung SSV direkt + NSV-
+  Anhang 4 Ziff. II 6 → SSV Art. 98, Fedlex führt nur EIN `rectifies`), AS
+  2025 686 (berichtigt laut Text den eigenen Erlass SR 741.013 —
+  `rectifies`-Ziel liegt daneben, ebenfalls kein Fehler).
+
+**Korrekturen (alle committet, Kopf-SHA im PR-Body):**
+
+- (a) Marker umbenannt: `plausibilitaet: 'berichtigung-fremdes-as-dokument'`
+  statt `'widerspruch-fedlex-notation'`; Begründungstext neutral
+  («… im AS-Text eines anderen Erlasses … erstpubliziert …»), nie mehr
+  «Widerspruch»/«widersprüchlich». `KontextPanel.tsx` zeigt die Zeile jetzt
+  in `text-ink-500` (neutral), nicht `text-warn-700` (Warnung) — es ist
+  keine Warnung.
+- (b) Die drei ursprünglichen «Fedlex-interner Widerspruch»-Docstrings
+  (`revisionen-generieren.ts` `RevisionEintrag.plausibilitaet`,
+  `revisionen.ts` `RevisionBezug.plausibilitaet`,
+  `normtext-revisionen.test.ts` Blockkommentar vor dem Test-`describe`) sind
+  je mit «FALSIFIZIERT 12.9.2026 (Gegenprüfung PR #827)» + Gegenbeleg
+  markiert stehen geblieben, NICHT stillschweigend gelöscht (§2b) —
+  darunter die korrigierte Lesart.
+- (c) **Deklaration (Auflage c):** `public/normtext/revisionen/SSV.json`
+  trägt zusätzlich zum Marker zwei genuine, unverbundene neue Einträge
+  (AS 2026 453/458, in Kraft 2026-10-01, `nichtKonsolidiert`) aus dem
+  12.9.2026-Lauf — Fedlex-Tagesdrift für SSV, real und korrekt, nicht mit
+  dem Marker-Fund zu verwechseln. Alle 14 regenerierten Sidecars tragen
+  einheitlich `abgerufen: "2026-09-12"`; die übrigen 213 Sidecars des
+  Korpus bleiben unverändert bei ihrem letzten Lauf (`2026-09-05` oder
+  älter) — kein Vollauf, nur die 14 vom Fund betroffenen Dateien.
+- (d) **Rot-Beweis (§6.7), neue Prüfung (8b) in `check-revisionen.ts`:**
+  ein `plausibilitaet` ohne Rückhalt in `raw` (rectifies-Bindung +
+  abweichende Fremd-SR) macht den Ast jetzt unabhängig von der
+  Determinismus-Prüfung rot. Demonstriert: `AIG.json` manuell mit einem
+  unbelegten Marker versehen → `npm run check:revisionen` →
+  ```
+  check:revisionen ROT: 2 Befund(e):
+    - Determinismus: AIG — Neubau aus raw ≠ committetes Sidecar (Nichtdeterminismus oder Handedit).
+    - AIG: plausibilitaet gesetzt ohne Rückhalt in raw (rectifies-Bindung/Fremd-SR) bei https://fedlex.data.admin.ch/eli/oc/2026/393.
+  ```
+  Danach Original wiederhergestellt, `check:revisionen` erneut grün.
+- (e) **Determinismus (§2):** `holeRectifiesSr`/`baueOcZuRectifiesSr` wählten
+  bei mehreren Treffern je oc bisher «das zuerst gesehene» — abhängig von
+  der SPARQL-Antwort-/Bindungsreihenfolge. Beide wählen jetzt IMMER den
+  lexikografisch KLEINSTEN Wert (SR-Notation bzw. rectifies-Ziel-URI),
+  unabhängig von der Eingabereihenfolge. Neuer Test: gleiche Bindungen in
+  beiden Reihenfolgen → identisches Ergebnis.
+- Tore erneut nackt grün: `check:revisionen`, `check:revisionen-netz`,
+  `check:artikel-revisionen`, `check:historie`, `check:datenhaltung`,
+  `check:paritaet`, `golden:vergleich` (256 IDENTISCH), `npx vitest run
+  src/tests/normtext-revisionen.test.ts src/tests/verzahnung-artikel-
+  revisionen.test.ts` (60/60), `npx tsc -b`, `lint` (0 Fehler). Kaskade
+  (`gen:entstehung-projektion`/`gen:entstehung-deckung`) erneut gefahren:
+  0 Abweichungen (unverändert, da nur Label/Text-Felder betroffen waren).
