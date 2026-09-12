@@ -14,9 +14,20 @@
 // Urteil zitiert legitim ÄLTERE Präjudizien mit Seitenangabe («vgl. BGE 82 III 94
 // S. 96») — das ist die Norm, kein Fehler. Ein laufender Kopf DERSELBEN Bandes
 // aber ANDERER Nummer kann dagegen nie eine legitime Zitierung sein (der eigene
-// Band ist zum Zeitpunkt des Urteils noch gar nicht paginiert) — 26 BGE im
-// Bestand tragen mind. eine "BGE … S. …"-Zitierung, korpusweit GENAU EIN
-// Treffer mit Band-Gleichheit (`152_V_2`, 12.9.2026).
+// Band ist zum Zeitpunkt des Urteils noch gar nicht paginiert).
+//
+// Korrigierte Prüfmenge (Gegenprüfungs-Nachtrag D2, 12.9.2026): 26 BGE tragen
+// mind. eine "BGE … S. …"-Zitierung IRGENDEINES Bandes — das ist die falsche
+// Bezugsgrösse. Die tatsächlich für diesen Wächter relevante Menge ist enger:
+// NUR 6/1259 BGE im Bestand tragen überhaupt einen Seitenkopf-Marker DESSELBEN
+// Bandes (147 III 49, 148 III 115, 148 IV 409, 149 III 172, 151 III 336,
+// 151 V 100 — je durchweg selbst-konsistent); davon war GENAU EINER (`152_V_2`,
+// vor der Quarantäne) fremd. Diese enge Prüfmenge (0,5 % des Bestands) ist die
+// Abdeckungs-Lücke des Wächters: er sieht NUR Bodies, die überhaupt einen
+// laufenden Seitenkopf enthalten (kurze Auszüge ohne Seitenumbruch tragen
+// keinen) — ein breiterer Konflations-Wächter (Regeste-Normen vs. Body-
+// normKeys, Regeste-Sprache vs. Body-Sprache) ist als Roadmap-Folgeschritt
+// unter W2·18-FEHLERBUCH vorgemerkt (ROADMAP.md).
 
 const LAUFENDER_KOPF = /\bBGE\s+(\d{1,3})\s+([IVXLC]+[a-z]?)\s+(\d+)\s+S\.\s*\d+/g;
 
