@@ -84,6 +84,12 @@ export interface BrowseEntscheid {
   richter?: RichterRef[];
   /** Gesetzt nur bei Verweis-Einträgen (vollständiges Urteil zu einem BGE); sonst undefined. */
   verweis?: VolltextVerweis | null;
+  /**
+   * Siehe `EntscheidSnapshot.quarantaene` (typen.ts) — in die Übersicht projiziert,
+   * damit die Karte/Zeile VOR dem Klick warnt («Volltext nicht verfügbar»), statt
+   * den Nutzer erst im Reader mit einem leeren Body zu überraschen (§8, PR #816).
+   */
+  quarantaene?: string;
 }
 
 export interface EntscheidManifest {
