@@ -1,5 +1,53 @@
 # ROADMAP — Erledigt-Chronik (Detail-Archiv erledigter Schritte)
 
+## `nichtKonsolidiert`-Marker falsch-positiv (FZA/KLV) — Wortlaut + Fix 12.9.2026 (PR #820, Gegenprüfung ausstehend — nicht gemergt)
+
+**Ursprünglicher Befund (Wortlaut, W2·18-FEHLERBUCH #19 / FAHRPLAN-OFFENE-BEFUNDE.md:203,
+Gegenprüfung S3 16.8.2026):** «`nichtKonsolidiert`-Marker bei Staatsverträgen
+falsch-positiv (FZA)» — `scripts/normtext/revisionen-generieren.ts:233` setzte
+`dateForce > korpusStand`, kannte aber «in Kraft ≠ angewendet ab» nicht.
+
+- [x] **Gefixt 12.9.2026, PR #820 (`71adc3563`), Gegenprüfung ausstehend — nicht
+  gemergt:** Amtlich live nachvollzogen (Skill `scraping-swiss-official-sources`,
+  abgerufen 12.9.2026): SPARQL bestätigt, dass die FZA-Konsolidierung
+  `eli/cc/2002/243/20201215` (SR 0.142.112.681) noch die AKTIVE Fassung ist
+  (`dateApplicability=2020-12-15`, kein `dateEndApplicability` — es existiert bis heute
+  KEINE neuere Konsolidierung). Deren DE-XML (aufgelöst über
+  `isRealizedBy→isEmbodiedBy→isExemplifiedBy`) zitiert bereits per
+  `<ref href="https://fedlex.data.admin.ch/eli/oc/2021/12">`: „… Art. 1 des Beschlusses
+  Nr. 1/2020 des Gemischten Ausschusses vom 15. Dez. 2020, in Kraft für die Schweiz seit
+  15. Dez. 2020 und angewendet ab 1. Jan. 2021 (AS 2021 12)." — `jolux:dateEntryInForce`
+  dieser oc-URI ist jedoch 2021-01-01 (das «angewendet ab»-Datum, nicht das «in Kraft
+  seit»-Datum), was den reinen Datumsvergleich in die Irre führte.
+  Wurzel-Fix: `belegtImXml()` (reine Funktion) + Netz-Helfer `ermittleBelegteOcs()`/
+  `loeseKonsolidierungsXmlUrl()` (`scripts/normtext/revisionen-generieren.ts`) prüfen,
+  ob die oc-URI eines `nichtKonsolidiert`-Kandidaten bereits im Konsolidierungstext
+  zitiert ist; `baueRevisionen()` bleibt rein (`belegteOcs`-Set injiziert), der
+  Netz-Schritt lebt im Runner und wird per store-raw (`belegteOcs`-Feld) deterministisch
+  re-parsebar abgelegt (kein zweiter Live-Fetch in `check-revisionen.ts`). Rot-Beweis
+  vorher: drei Unit-Tests (`belegtImXml` × 2, `baueRevisionen`-Fall FZA) schlugen fehl,
+  bevor die Funktionen existierten (`normtext-revisionen.test.ts`).
+  **Vollerhebung** (Netz-Lauf über die volle Grundmenge, 227 Erlasse,
+  `--datum=2026-09-12`): 96 `nichtKonsolidiert`-Marker gesamt, davon 34 `art=aenderung`
+  mit AS-Fundstelle (prüfbar) und 62 `sammelerlass-marker` ohne AS-Fundstelle (kein
+  Text-Beleg gegen eine konkrete oc-URI möglich — ausserhalb der Reichweite dieses
+  Fixes). Von den 34 geprüften waren 3 bereits im Text zitiert: FZA (`eli/oc/2021/12`)
+  sowie KLV (`eli/oc/2025/852` und `eli/oc/2026/348`, ebenfalls «angewendet ab» statt
+  «in Kraft seit» — der Fehler ist NICHT auf Staatsverträge beschränkt). Nur diese
+  beiden Erlasse wurden regeneriert und committet — kein Blanket-Re-Run über den ganzen
+  Korpus; die übrigen 225 Sidecars bleiben byte-gleich (kein Golden-Diff ausserhalb der
+  zwei korrigierten Erlasse).
+  Nebenpunkte des Fund-Wortlauts NICHT Teil dieses Fixes (offen, ggf. eigener
+  Folgeschritt): `revisionen.ts:130`-Kommentar (BMV-Begründung) berichtigen; Warnung in
+  den Prerender-Standausweis (`seo-detail.ts`) übernehmen.
+  Tore: `check:revisionen` grün (227 Sidecars, 5151 Einträge) · `check:normtext`
+  (offline) grün (25404 Snapshots) · `check:golden-normtext` grün (60283 Knoten, 0
+  Waisen) · `check:historie` grün (209 Shards synchron) · `check:datenhaltung` grün
+  (nach `datenhaltung:build` + `datenhaltung:manifest`) · `check:paritaet` grün (9194
+  Dateien byte-gleich) · `golden:vergleich` IDENTISCH (256 Fälle) · `npx tsc -b` sauber ·
+  `lint` 0 Fehler (1 vorbestehende, unrelated Warning) · `vitest
+  normtext-revisionen.test.ts` 18/18 grün.
+
 ## Register-sha rotiert mit stand — Wortlaut vor der Lösung + Lösung 12.9.2026 (PR #814)
 
 **Ursprünglicher Befund (Wortlaut, bis 12.9.2026 offen, FAHRPLAN-OFFENE-BEFUNDE.md:93,
