@@ -583,6 +583,7 @@ zgb-a36-anhang: Die ZGB-Gliederung zeigt 74 Artikel des Anhangs «Wortlaut der f
   vollständige, wörtlich übernommene Befundliste (33 offene Positionen mit ihren Belegen);
   Such-/Navigations-Posten zusätzlich in [FAHRPLAN-UI-NAVIGATION.md](fahrplaene/FAHRPLAN-UI-NAVIGATION.md) §7.
   - [ ] **OR-Leser-e2e-Timeouts app-weit härten · Shard-Laufzeit-Deckel** *(CI 5.9.2026)* — Fahrplan §4.
+  - [ ] **KontextPanel zeigt bei Finding-4b-Fällen nur `dateEntryInForce`, nicht das frühere «in Kraft seit»-Datum** *(Hinweis 3, Gegenprüfung PR #820, 12.9.2026)* — bei FZA/AS 2021 12 zeigt `src/components/kontext/KontextPanel.tsx` (Revisions-Zeile) das «angewendet ab»-Datum 1.1.2021, ohne dass «in Kraft für die Schweiz seit 15.12.2020» sichtbar wird (§8-Ehrlichkeit: nicht falsch, aber unvollständig für den einen Fall, wo Text-Beleg und Datumsfeld auseinanderfallen). Beobachtung, nicht gebaut — kein Bau-Auftrag dieses Schritts.
 
 - [ ] **Oberflächen-Qualität app-weit** *(`QS-UI`, reines UI/Design §13, kontinuierlich)*
   <!-- @meta id: QS-UI · status: ready · blocker: null · dep: [] · feld: design · fahrplan: fahrplaene/FAHRPLAN-UI-QUALITAET.md -->

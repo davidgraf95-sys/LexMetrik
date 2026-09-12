@@ -149,15 +149,28 @@ export function fundstelle(ocUri: string, historicalId?: string): string | undef
   return roFundstelleAusOc(ocUri);
 }
 
-// Fenster um die href-Fundstelle, in dem die Wortlaut-Probe nach «angewendet ab» sucht
-// (FZA-Beleg: die Wendung steht ~30 Zeichen VOR dem <ref href>, im selben Satz/derselben
-// authorialNote). Grosszügig genug für eine Fussnote, eng genug, um nicht versehentlich
-// eine andere Fussnote im selben Dokument zu treffen.
-const ANGEWENDET_AB_FENSTER = 400;
+/**
+ * Grenzen des `<authorialNote>`, das die Position `index` umschliesst — `null`, wenn
+ * `index` in keiner Fussnote liegt (z. B. Fliesstext) oder die Note nicht sauber
+ * schliesst. Ein einfacher `lastIndexOf`/`indexOf` genügt hier bewusst NICHT (könnte in
+ * eine FREMDE, spätere Note hineingreifen) — deshalb die Sanity-Prüfung: schliesst
+ * zwischen `noteStart` und `index` bereits eine ANDERE Note, liegt `index` gar nicht in
+ * dieser.
+ */
+function findeAuthorialNote(xmlText: string, index: number): { start: number; end: number } | null {
+  const start = xmlText.lastIndexOf('<authorialNote', index);
+  if (start === -1) return null;
+  const end = xmlText.indexOf('</authorialNote>', index);
+  if (end === -1) return null;
+  const fremdesEndeDazwischen = xmlText.indexOf('</authorialNote>', start);
+  if (fremdesEndeDazwischen !== -1 && fremdesEndeDazwischen < index) return null;
+  return { start, end: end + '</authorialNote>'.length };
+}
 
 /**
  * Finding 4b (Gegenprüfung 16.8.2026, W2·18-FEHLERBUCH #19, live an FZA/SR 0.142.112.681
- * verifiziert): Fedlex modelliert `jolux:dateEntryInForce` bei gewissen Staatsvertrags-
+ * verifiziert; §6.7-Auflage Gegenprüfung PR #820, 12.9.2026: Element-Bindung statt
+ * Zeichenfenster). Fedlex modelliert `jolux:dateEntryInForce` bei gewissen Staatsvertrags-
  * Beschlüssen (Gemischter-Ausschuss-Entscheide) als «angewendet ab»-Datum, NICHT als
  * «in Kraft für die Schweiz seit»-Datum. Beleg live (`eli/cc/2002/243/20201215`,
  * DE-XML, Art. 1 des Beschlusses Nr. 1/2020, abgerufen 12.9.2026): der Konsolidierungs-
@@ -170,19 +183,29 @@ const ANGEWENDET_AB_FENSTER = 400;
  * früheren Fassungen einer Bestimmung) oder ein Amendment kann NUR TEILWEISE in Kraft sein
  * («Abs. 1 Bst. a und c in Kraft seit 1. Aug. 2026 … Die anderen Bestimmungen treten zu
  * einem späteren Zeitpunkt in Kraft.») — in beiden Fällen ist der Marker weiterhin
- * KORREKT `nichtKonsolidiert`, obwohl die href vorkommt. Deshalb: Beleg nur, wenn die
- * spezifische Wendung «angewendet ab» IN DERSELBEN FUSSNOTE neben der href steht — das ist
- * das Fedlex-Vokabular für genau die «in Kraft ≠ angewendet ab»-Konstellation, nicht
- * irgendeine Nachbarschaft. Live geprüft: `angewendet ab` kommt im gesamten KLV-Text kein
- * einziges Mal vor (0 Treffer), im FZA-Text genau einmal — direkt bei der fraglichen href.
+ * KORREKT `nichtKonsolidiert`, obwohl die href vorkommt.
+ *
+ * Ein blosses Zeichenfenster reicht ABER AUCH NICHT (§6.7-Auflage): eine Fedlex-
+ * Sammelnote listet oft MEHRERE Änderungserlasse in EINER `<authorialNote>` auf
+ * («… vom X (ref A) … und angewendet ab Y (ref B) …») — ein Fenster um `ref A` kann dann
+ * das «angewendet ab» erfassen, das eigentlich zu `ref B` gehört, und `ref A` fälschlich
+ * entwarnen. Massgeblich ist deshalb NUR das Segment INNERHALB derselben Fussnote
+ * zwischen dem vorhergehenden `</ref>` (oder Notenanfang) und der gesuchten href — das
+ * ist exakt die Wortfolge, die sich strukturell auf DIESEN Erlass bezieht, live
+ * verifiziert an FZA (Segment endet unmittelbar vor der href, «angewendet ab» direkt
+ * davor) und an KLV (Segment enthält «angewendet ab» in KEINEM der beiden Fälle).
  */
 export function belegtImXml(xmlText: string, ocUri: string): boolean {
   const href = `href="${ocUri}"`;
   const i = xmlText.indexOf(href);
   if (i === -1) return false;
-  const von = Math.max(0, i - ANGEWENDET_AB_FENSTER);
-  const bis = Math.min(xmlText.length, i + href.length + ANGEWENDET_AB_FENSTER);
-  return xmlText.slice(von, bis).includes('angewendet ab');
+  const note = findeAuthorialNote(xmlText, i);
+  if (!note) return false; // kein Fussnoten-Kontext auffindbar — kein Beleg (konservativ)
+  const noteText = xmlText.slice(note.start, note.end);
+  const relIndex = i - note.start;
+  const vorherigerRefEnde = noteText.lastIndexOf('</ref>', relIndex);
+  const segmentStart = vorherigerRefEnde === -1 ? 0 : vorherigerRefEnde + '</ref>'.length;
+  return noteText.slice(segmentStart, relIndex).includes('angewendet ab');
 }
 
 /** oc-URI → Fedlex-Live-Link (DE-Rendering des AS-Textes). */
