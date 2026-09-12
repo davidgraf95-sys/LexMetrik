@@ -67,8 +67,7 @@ import {
 } from './entstehung-projektion.ts';
 import { BOTSCHAFTEN } from '../../src/lib/materialien/botschaften.generated.ts';
 import {
-  baueDeckungProjektion, serialisiereDeckungProjektion, leseDeckungQuellen,
-  DECKUNG_PROJEKTION_PFAD, DECKUNG_DECKEL,
+  pruefeDeckungsSicht, DECKUNG_PROJEKTION_PFAD, DECKUNG_DECKEL,
 } from './deckung-projektion-quellen.ts';
 
 const schreibe = process.argv.includes('--schreibe');
@@ -156,10 +155,9 @@ const DECKEL: readonly (readonly [string, string, number, boolean])[] = [
   // könnte sie unbemerkt dorthin zurückwachsen (Ist 11.9.2026: 692 KB über 185 Erlasse,
   // ø 3,7 KB; grösste Datei AIG 43,6 KB — je Datei bewacht die Zeile darunter).
   ['Entstehungs-Projektion', PROJEKTION_DIR, 1536 * 1024, false],
-  // Deckungs-Sicht (W2·6c-DECKUNGS-SEITE, 12.9.2026): der EINZIGE Ladekanal von
-  // /materialien/deckung. Sie ersetzt dort 8 MB Artefakte durch eine Datei —
-  // genau deshalb braucht sie einen eigenen Deckel, sonst wächst sie unbemerkt
-  // wieder dorthin zurück (Ist 12.9.2026: 78,4 KB roh / 10,8 KB gzip, 219 Erlasse).
+  // Deckungs-Sicht (W2·6c, 12.9.2026): EINZIGER Ladekanal von /materialien/deckung.
+  // Sie ersetzt dort 8 MB Artefakte durch eine Datei — ohne eigenen Deckel wüchse
+  // sie unbemerkt dorthin zurück (Ist: 78,5 KB roh / 10,8 KB gzip, 219 Erlasse).
   ['Deckungs-Sicht        ', DECKUNG_PROJEKTION_PFAD, DECKUNG_DECKEL, false],
 ];
 
@@ -785,34 +783,12 @@ for (const [name, pfad, max, gzip] of DECKEL) {
   }
 }
 
-// ── (7) Deckungs-Sicht: Determinismus gegen die Quellen (W2·6c-DECKUNGS-SEITE) ─
-// Dieselbe Zusicherung wie bei der Entstehungs-Projektion (6): die ausgelieferte
-// Datei ist eine SICHT und darf nie etwas anderes sagen als ihre Quellen. Weil
-// sie ohne Uhr und ohne `--datum` gebaut wird (die Stände kommen aus den Quellen
-// selbst), ist der Vergleich offline vollständig: Byte für Byte.
+// ── (7) Deckungs-Sicht (W2·6c): Herleitung in ./deckung-projektion-quellen.ts,
+// Muster ./deckel.ts — eingebaut stand das Tor bei 824 > 800 Zeilen (§6.6).
 {
-  if (!existsSync(DECKUNG_PROJEKTION_PFAD)) {
-    fehler.push(
-      `${DECKUNG_PROJEKTION_PFAD} fehlt — die Deckungs-Seite hätte keinen Ladekanal `
-      + "(«npm run gen:entstehung-deckung»).",
-    );
-  } else {
-    const soll = serialisiereDeckungProjektion(baueDeckungProjektion(leseDeckungQuellen()));
-    const ist = readFileSync(DECKUNG_PROJEKTION_PFAD, 'utf8');
-    const zeilen2 = JSON.parse(ist) as { erlasse: Record<string, unknown> };
-    if (soll !== ist) {
-      fehler.push(
-        `${DECKUNG_PROJEKTION_PFAD} deckt sich nicht mit der Neuberechnung aus ihren Quellen — `
-        + 'entweder von Hand geändert oder eine Quelle bewegte sich ohne Generator-Lauf. '
-        + '«npm run gen:entstehung-deckung» ausführen und den Diff prüfen (§2/§5).',
-      );
-    }
-    zeilen.push(
-      `check:entstehung — Deckungs-Sicht: ${Object.keys(zeilen2.erlasse).length} Erlass-Zeilen, `
-      + `${kb(Buffer.byteLength(ist))} / ${kb(DECKUNG_DECKEL)}; `
-      + `${soll === ist ? 0 : 1} Abweichung(en) zur Neuberechnung.`,
-    );
-  }
+  const { zeile, fehler: f } = pruefeDeckungsSicht();
+  if (zeile) zeilen.push(zeile);
+  fehler.push(...f);
 }
 
 for (const z of zeilen) console.log(z);

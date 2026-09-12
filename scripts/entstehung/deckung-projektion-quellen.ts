@@ -9,6 +9,10 @@
 import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { DECKUNG_REGISTER_PFAD } from './deckung.ts';
+import {
+  baueDeckungProjektion, serialisiereDeckungProjektion,
+  DECKUNG_PROJEKTION_PFAD, DECKUNG_DECKEL,
+} from './deckung-projektion.ts';
 import { ANKER_REGISTER_PFAD } from './anker-register.ts';
 import type {
   DeckungBauEingabe, DeckungRegisterQuelle, EntstehungQuelle, SynopseQuelle,
@@ -60,5 +64,43 @@ export function leseDeckungQuellen(): DeckungBauEingabe {
     provenienz: lies<ProvenienzQuelle>(PROVENIENZ_PFAD),
     ankerRegister: lies<AnkerRegisterQuelle>(ANKER_REGISTER_PFAD),
     curia: { geschaefte: curiaDateien.length, abgerufen: curiaAbgerufen || deckung.erzeugt },
+  };
+}
+
+// ── Tor-Klasse «Deckungs-Sicht» (check:entstehung Ziff. 7) ───────────────────
+//
+// Dieselbe Zusicherung wie bei der Entstehungs-Projektion (E3): die
+// ausgelieferte Datei ist eine SICHT und darf nie etwas anderes sagen als ihre
+// Quellen. Weil sie ohne Uhr und ohne `--datum` gebaut wird — die Stände kommen
+// aus den Quellen selbst —, ist der Vergleich offline vollständig: Byte für
+// Byte. Die Funktion steht HIER und nicht im Tor, weil das Tor sonst über die
+// §6.6-Schwelle wächst (Muster ./deckel.ts, Klasse «Verfahrens-Ereignisse»).
+
+/** Ausgabezeile + Fehler der Klasse (rein bis auf das Lesen der Artefakte). */
+export function pruefeDeckungsSicht(pfad: string = DECKUNG_PROJEKTION_PFAD): {
+  zeile: string | null; fehler: string[];
+} {
+  if (!existsSync(pfad)) {
+    return {
+      zeile: null,
+      fehler: [`${pfad} fehlt — die Deckungs-Seite hätte keinen Ladekanal («npm run gen:entstehung-deckung»).`],
+    };
+  }
+  const ist = readFileSync(pfad, 'utf8');
+  const soll = serialisiereDeckungProjektion(baueDeckungProjektion(leseDeckungQuellen()));
+  const fehler: string[] = [];
+  if (soll !== ist) {
+    fehler.push(
+      `${pfad} deckt sich nicht mit der Neuberechnung aus ihren Quellen — entweder von Hand `
+      + 'geändert oder eine Quelle bewegte sich ohne Generator-Lauf. '
+      + '«npm run gen:entstehung-deckung» ausführen und den Diff prüfen (§2/§5).',
+    );
+  }
+  const zeilen = (JSON.parse(ist) as { erlasse: Record<string, unknown> }).erlasse;
+  return {
+    zeile: `check:entstehung — Deckungs-Sicht: ${Object.keys(zeilen).length} Erlass-Zeilen, `
+      + `${(Buffer.byteLength(ist) / 1024).toFixed(1)} KB / ${(DECKUNG_DECKEL / 1024).toFixed(1)} KB; `
+      + `${soll === ist ? 0 : 1} Abweichung(en) zur Neuberechnung.`,
+    fehler,
   };
 }

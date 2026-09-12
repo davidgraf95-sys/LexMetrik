@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { SeitenKopf } from '../components/layout/SeitenKopf';
 import { datumCh } from '../lib/normtext/erlassKopfText';
+import { erlassPfadVonKey } from '../lib/normtext/erlassAdresse';
 import { AMTLICHE_FASSUNG_NOMEN, MASSGEBLICH_HALBSATZ } from '../lib/benennung';
 import {
   ladeDeckungProjektion, summiere, quote, zeilen, sortiere,
@@ -198,8 +199,8 @@ export function DeckungsSicht({ p }: { p: DeckungProjektion }) {
             belegt und in{' '}
             <span className="lc-ziffern text-ink-900">{nf(eb.bsKanten.maschinell)}</span> Fällen
             maschinell über Datum und Titel abgeleitet. Die abgeleiteten Verbindungen sind
-            plausibel, aber von niemandem fachlich nachgeprüft; sie sind in der Anzeige als
-            solche gekennzeichnet und dürfen nicht wie eine amtliche Zuordnung gelesen werden.
+            plausibel, aber fachlich nicht geprüft; sie sind in der Anzeige als solche
+            gekennzeichnet und dürfen nicht wie eine amtliche Zuordnung gelesen werden.
           </p>
       </section>
 
@@ -286,7 +287,10 @@ export function DeckungsSicht({ p }: { p: DeckungProjektion }) {
                       onClick={() => sortiereNach(sp.id)}
                       title={sp.titel}
                       data-deckung-sort={sp.id}
-                      className="text-ink-600 hover:text-ink-900 focus-visible:text-ink-900"
+                      /* B-K1: Bausteinklasse statt Eigenbau-Optik. `lc-btn-mini`
+                         bringt Haarlinie und das 24-px-Tippziel mit; Stimme
+                         (Grad, Tintenstufe) bleibt beim Aufrufer. */
+                      className="lc-btn-mini text-xs font-medium text-ink-600 hover:text-ink-900"
                     >
                       {sp.kopf}
                       <span aria-hidden className="ml-1 text-ink-400">
@@ -301,8 +305,14 @@ export function DeckungsSicht({ p }: { p: DeckungProjektion }) {
               {liste.map((z) => (
                 <tr key={z.key} data-deckung-zeile={z.key} className="border-b border-line align-baseline">
                   <th scope="row" className="max-w-[7rem] py-1.5 pr-3 text-left font-normal sm:max-w-[16rem] sm:pr-4">
+                    {/* §5: die Erlass-Adresse hat EINE Ableitung. Hier stand
+                        `/gesetze/bund/<key>` von Hand — für die 14 erfassten
+                        Staatsverträge (CISG, EMRK, UNO_PAKT_I/II …) wäre das
+                        die falsche Adresse gewesen (Routen-Ebene
+                        «international», Befund 45); das Tor
+                        src/tests/erlass-adresse.test.ts hat es gemeldet. */}
                     <Link
-                      to={`/gesetze/bund/${encodeURIComponent(z.key)}`}
+                      to={erlassPfadVonKey(z.key)}
                       className="text-brass-700 no-underline hover:text-brass-600"
                     >
                       {z.key}
