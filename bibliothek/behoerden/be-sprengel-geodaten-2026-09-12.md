@@ -127,3 +127,51 @@ Hodlerstrasse 7, 3011 Bern). Der bisher nur als Prosa-Hinweis geführte Satz
   Normbasis (Art. 80 Abs. 2 GSOG → Verwaltungsregion) und die Geodaten selbst.
 - Jugendanwaltschaften (`ADMRSA`-Schwester `Regionale Jugendanwaltschaften`,
   Art. 91 GSOG) sind bewusst **nicht** aufgenommen — eigener Arbeitsgang.
+
+## 8 · Verdrahtung und Rot-Beweise (12.9.2026)
+
+**Erzeugnis.** `scripts/zustaendigkeit/be-sprengel-generieren.ts` →
+`src/data/zustaendigkeit/beSprengel.json` (18,7 KB, 334 Gemeinden). Reader mit
+Typen und Struktur-Guard: `src/lib/zustaendigkeit/beSprengel.ts`. Der Lauf ist
+deterministisch (zweiter Lauf byte-gleich geprüft); das Abrufdatum kommt als
+Argument `--abrufdatum`, nie aus `Date.now`.
+
+**Bewusst NICHT umgestellt.** Die BE-Schlichtungs-Auflösung
+(`aemterKantone.json`) bleibt, wie sie ist: die Geodaten bestätigen sie
+Gemeinde für Gemeinde (0 Abweichungen). Sie durch einen zweiten Pfad zu
+ersetzen, brächte kein anderes Ergebnis, aber ein neues Risiko — statt dessen
+verklammert Tor-Teil (D) beide Artefakte, sodass ein künftiges Auseinanderlaufen
+rot wird. Die Darstellungsschicht ist in diesem Schritt unberührt; die
+gemeindescharfe Auflösung steht bereit, ist aber noch nicht in der UI verdrahtet
+(eigener Schritt, siehe Ziff. 9).
+
+**Tore.** `npm run check:be-sprengel` (offline; dieselbe Prüffunktion läuft
+merge-blockierend als `src/tests/beSprengel.test.ts`) und
+`npm run check:be-sprengel-netz` (in der Kette `check:netz`, Normen-Monitor).
+
+Jedes Tor-Teil einmal rot gezeigt (CLAUDE.md §6.7):
+
+| Eingriff | Tor | Meldung |
+|---|---|---|
+| Gemeinde «Thun» aus der Tabelle entfernt | `check:be-sprengel` | (C) 1 BE-Gemeinde des PLZ-Verzeichnisses fehlt: Thun · (D) nur im Register: Thun — Exit 1 |
+| Thun auf den Sprengel Bern-Mittelland umgebogen | `check:be-sprengel` | (D) Register «Oberland», Gericht «Bern-Mittelland», StA «Bern-Mittelland» — Exit 1 |
+| dieselbe Mutation | `check:be-sprengel-netz` | Gemeinde 942 (Thun): Sprengel gewechselt [3,2] → [4,3] — Exit 1 |
+| `quelle.abgerufen` gelöscht, `lizenzUrl` auf `http` | `check:be-sprengel` | (A) abgerufen fehlt · (A) lizenzUrl ist kein https-Link — Exit 1 |
+| Deckel testweise auf 8 KB gesenkt | `check:be-sprengel` | (E) Artefakt 18,7 KB > Deckel 8 KB — Exit 1 |
+| Live-Link eines Gerichts verfälscht | `check:be-sprengel-netz` | Live-Link tot: …/oberland-gibt-es-nicht.html → HTTP 404 — Exit 1 |
+
+Zusätzlich bricht der Generator selbst ab, wenn die Quelle sich fachlich ändert:
+unbekannter Regionsname (Art. 80 Abs. 1 GSOG), Gemeinde mit null oder mehr als
+einem Sprengel, Verwaltungskreis über zwei Sprengel verteilt (Art. 80 Abs. 2
+GSOG), Innenpunkt ausserhalb der eigenen Gemeindefläche, verschiedene Stände der
+drei Datensätze, ZIP-Bezug mit HTTP 200 aber ohne ZIP-Signatur.
+
+## 9 · Nächste Schritte (nicht Teil dieses Schrittes)
+
+1. Darstellungsschicht: Gemeinde-Eingabe → Regionalgericht/Staatsanwaltschaft
+   anzeigen, mit Stand, Lizenz-Quellenangabe und Live-Link (§7 lit. c).
+2. Fachliche Abnahme durch David — erst danach darf der Eintrag den Status
+   «geprüft» tragen.
+3. Offen: dieselbe Mechanik für die regionalen Jugendanwaltschaften (ADMJA/
+   Art. 91 GSOG) und, sofern amtliche Sprengel-Geodaten bestehen, für weitere
+   Kantone.
