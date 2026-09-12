@@ -1,7 +1,7 @@
 {
   "erlassKey": "KLV",
   "sr": "832.112.31",
-  "abgerufen": "2026-09-05",
+  "abgerufen": "2026-09-12",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -20,9 +20,8 @@
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l’assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l’assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell’assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
-      "nichtKonsolidiert": true,
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2025/852/de",
-      "sha": "603808a48e879adfd73d9b7ca7e3e4625e7fbd59f03be378505ff74322a3327a"
+      "sha": "c0057658f8fde8bc0e4dc1e65e583fb69079f7fccd166d937739a9c102b354a2"
     },
     {
       "art": "aenderung",
@@ -46,9 +45,8 @@
       "titelDe": "Verordnung des EDI über Leistungen in der obligatorischen Krankenpflegeversicherung (Krankenpflege-Leistungsverordnung, KLV)",
       "titelFr": "Ordonnance du DFI sur les prestations dans l’assurance obligatoire des soins en cas de maladie (Ordonnance sur les prestations de l’assurance des soins, OPAS)",
       "titelIt": "Ordinanza del DFI sulle prestazioni dell’assicurazione obbligatoria delle cure medico-sanitarie (Ordinanza sulle prestazioni, OPre)",
-      "nichtKonsolidiert": true,
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2026/348/de",
-      "sha": "0cf9db460eb2c569141099def84c361f890a938ab9fa2c88179f0b7d41ca4cd6"
+      "sha": "902eebaeb9c2d4afeed5766ae33602581fdb0b2b1403d18df3718021591b86f3"
     },
     {
       "art": "sammelerlass-marker",
@@ -1959,5 +1957,5 @@
       "sha": "e636cf67a1d1aa35b4a5099a945ccc9acf2f3f80e0dee33993e1bf4034113129"
     }
   ],
-  "sha": "ad1bb0ed2c5b74667852697889e2dd45c0db59ed5a01170fcfa2a3436d018e58"
+  "sha": "f98a1a117327692e51b8f34fdad5f0077f8b59bce9ae5d7e33815bb73ff45d5c"
 }

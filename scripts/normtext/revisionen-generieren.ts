@@ -149,6 +149,23 @@ export function fundstelle(ocUri: string, historicalId?: string): string | undef
   return roFundstelleAusOc(ocUri);
 }
 
+/**
+ * Finding 4b (Gegenprüfung 16.8.2026, W2·18-FEHLERBUCH #19, live an FZA/SR 0.142.112.681
+ * verifiziert): Fedlex modelliert `jolux:dateEntryInForce` bei gewissen Staatsvertrags-
+ * Beschlüssen (Gemischter-Ausschuss-Entscheide) als «angewendet ab»-Datum, NICHT als
+ * «in Kraft für die Schweiz seit»-Datum. Beleg live (`eli/cc/2002/243/20201215`,
+ * DE-XML, Art. 1 des Beschlusses Nr. 1/2020, abgerufen 12.9.2026): der Konsolidierungs-
+ * text vom 15.12.2020 zitiert bereits die oc-URI `eli/oc/2021/12` per `<ref href>`,
+ * obwohl deren `dateEntryInForce` erst 2021-01-01 ist («in Kraft … seit 15. Dez. 2020
+ * und angewendet ab 1. Jan. 2021»). Der reine Datumsvergleich markiert das dann
+ * falsch-positiv als `nichtKonsolidiert`. Massgeblich ist die tatsächlich zitierte
+ * Fundstelle im amtlichen Text (§7), nicht das Datumsfeld — daher der Text-Beleg als
+ * Korrektiv, nie ein zweites Datumsfeld (das wäre wieder nur eine Heuristik).
+ */
+export function belegtImXml(xmlText: string, ocUri: string): boolean {
+  return xmlText.includes(`href="${ocUri}"`);
+}
+
 /** oc-URI → Fedlex-Live-Link (DE-Rendering des AS-Textes). */
 export function liveLink(ocUri: string): string {
   return ocUri.replace('https://fedlex.data.admin.ch', 'https://www.fedlex.admin.ch') + '/de';
@@ -186,9 +203,11 @@ function shaEintrag(e: Omit<RevisionEintrag, 'sha'>): string {
  * gepinnten Abstracts) + Korpus-Stand → deterministisch sortierte Timeline EINES Erlasses.
  * - dedupe je oc (min dateEntryInForce = erstes Inkrafttreten; Sprachen kollabieren);
  * - RO-Fundstelle aus oc-URI; Botschafts-Join über ocUri-Index;
- * - nichtKonsolidiert wenn dateEntryInForce > korpusStand (Finding 4);
+ * - nichtKonsolidiert wenn dateEntryInForce > korpusStand UND die oc-URI NICHT bereits im
+ *   Konsolidierungstext zitiert ist (Finding 4, verfeinert um Finding 4b: `belegteOcs`,
+ *   ausserhalb ermittelt via `belegtImXml` — s. dort);
  * - Pfad-(a)-Cross-Check: Geltungsstände ohne (b)-Erlass → sammelerlass-marker (§8).
- * Kein Netz, kein Date.now.
+ * Kein Netz, kein Date.now — `belegteOcs` wird injiziert (Netz-Schritt lebt im Runner).
  */
 export function baueRevisionen(
   erlass: ErlassMeta,
@@ -197,6 +216,7 @@ export function baueRevisionen(
   korpusStand: string,
   ocZuBotschaft: Map<string, string>,
   abgerufen: string,
+  belegteOcs: ReadonlySet<string> = new Set(),
 ): RevisionSidecar {
   interface Roh { oc: string; dateForce: string; dateDoc?: string; roId?: string; de?: string; fr?: string; it?: string; }
   const proOc = new Map<string, Roh>();
@@ -230,7 +250,7 @@ export function baueRevisionen(
       titelFr: r.fr ? titelText(r.fr) : undefined,
       titelIt: r.it ? titelText(r.it) : undefined,
       botschaftKey,
-      nichtKonsolidiert: r.dateForce > korpusStand ? true : undefined,
+      nichtKonsolidiert: (r.dateForce > korpusStand && !belegteOcs.has(r.oc)) ? true : undefined,
       quelleUrl: liveLink(r.oc),
     };
     eintraege.push({ ...roh, sha: shaEintrag(roh) });
@@ -297,6 +317,51 @@ export async function holeBindingsB(
 ): Promise<SparqlBinding[]> {
   const werte = meta.map((m) => `"${m.sr}"^^${NOTATION_TYPE}`);
   return sparqlBatch(werte, baueQueryB, { batchGroesse: 40, fetchImpl });
+}
+
+/**
+ * Löst die DE-XML-Manifestation EINER Konsolidierung über die amtliche
+ * `isRealizedBy → isEmbodiedBy → isExemplifiedBy`-Kette auf (Skill
+ * `scraping-swiss-official-sources`, Rezept 2 — `isExemplifiedBy` ist PRIMÄR, kein
+ * String-Template). `consEli` = `cc/<jahr>/<nr>/<YYYYMMDD>` (Konsolidierungs-ELI,
+ * NICHT das blosse Abstract). `null`, wenn keine XML-Manifestation existiert (selten).
+ */
+export async function loeseKonsolidierungsXmlUrl(
+  consEli: string, fetchImpl: FetchImpl = fetch,
+): Promise<string | null> {
+  const query = `PREFIX jolux: <http://data.legilux.public.lu/resource/ontology/jolux#>
+SELECT ?file WHERE {
+  <https://fedlex.data.admin.ch/eli/${consEli}> jolux:isRealizedBy ?expr .
+  ?expr jolux:language ${LANG.de} ; jolux:isEmbodiedBy ?manif .
+  ?manif jolux:isExemplifiedBy ?file ;
+         jolux:userFormat <https://fedlex.data.admin.ch/vocabulary/user-format/xml> .
+}`;
+  const bindings = await sparqlSelect(query, fetchImpl);
+  return bindings[0]?.file?.value ?? null;
+}
+
+/**
+ * Finding 4b (Netz-Schritt zu `belegtImXml`, s. dort für die Begründung): holt EINMAL den
+ * Konsolidierungstext und gibt die Teilmenge von `kandidatOcs` zurück, die darin bereits
+ * als `<ref href>` zitiert ist. `kandidatOcs` = oc-URIs, deren `dateForce > korpusStand`
+ * WÄRE (over-inclusive ist harmlos — `baueRevisionen` prüft die Bedingung ohnehin erneut).
+ * Wirft bei Netz-/Format-Fehler (nie eine falsch-positive Warnung stumm bestehen lassen,
+ * indem ein Fehler als «nicht belegt» durchgeht — Soft-404-Falle, Skill-Rezept 3).
+ */
+export async function ermittleBelegteOcs(
+  consEli: string, kandidatOcs: readonly string[], fetchImpl: FetchImpl = fetch,
+): Promise<Set<string>> {
+  if (!kandidatOcs.length) return new Set();
+  const url = await loeseKonsolidierungsXmlUrl(consEli, fetchImpl);
+  if (!url) return new Set(); // keine XML-Manifestation → kein Text-Beleg möglich, Marker bleibt stehen
+  const res = await fetchImpl(url);
+  const typ = res.headers?.get?.('content-type') ?? null;
+  const text = await res.text();
+  const istAngularShell = text.startsWith('<!DOCTYPE html') || text.includes('<title>Casemates</title>');
+  if (!res.ok || (typ !== null && !typ.includes('xml')) || istAngularShell) {
+    throw new Error(`Konsolidierungs-XML ${url} nicht abrufbar (Status ${res.status}, Content-Type «${typ}»).`);
+  }
+  return new Set(kandidatOcs.filter((oc) => belegtImXml(text, oc)));
 }
 
 /** Pfad (a): Geltungsstände (dateApplicability) des gepinnten Abstracts eines Erlasses. */

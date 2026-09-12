@@ -55,11 +55,12 @@ for (const m of meta) {
   const rawP = `${RAW_DIR}/${m.key}.json`;
   if (!existsSync(rawP)) { fehler.push(`Determinismus: store-raw fehlt für ${m.key}.`); continue; }
   const raw = JSON.parse(readFileSync(rawP, 'utf8')) as {
-    korpusStand: string; bBindings: SparqlBinding[]; aStaende: string[];
+    korpusStand: string; bBindings: SparqlBinding[]; aStaende: string[]; belegteOcs?: string[];
   };
+  const belegteOcsSet = new Set(raw.belegteOcs ?? []);
 
   // (1) Determinismus: aus raw neu bauen (mit committetem abgerufen + raw.korpusStand).
-  const neu = baueRevisionen(m, raw.bBindings, raw.aStaende, raw.korpusStand, ocZuBotschaft, sidecar.abgerufen);
+  const neu = baueRevisionen(m, raw.bBindings, raw.aStaende, raw.korpusStand, ocZuBotschaft, sidecar.abgerufen, belegteOcsSet);
   if (serialisiere(neu) !== serialisiere(sidecar)) {
     fehler.push(`Determinismus: ${m.key} — Neubau aus raw ≠ committetes Sidecar (Nichtdeterminismus oder Handedit).`);
   }
@@ -74,8 +75,9 @@ for (const m of meta) {
     if (!/^https?:\/\//.test(r.quelleUrl)) fehler.push(`${m.key}: quelleUrl «${r.quelleUrl}» nicht http(s) (§7c).`);
     if (r.botschaftKey && !botschaftKeys.has(r.botschaftKey)) fehler.push(`${m.key}: toter botschaftKey «${r.botschaftKey}».`);
     if (r.art === 'aenderung' && !r.ocUri) fehler.push(`${m.key}: aenderung ohne ocUri.`);
-    // (6) nichtKonsolidiert korrekt gdw. dateEntryInForce > Korpus-Stand.
-    const soll = r.dateEntryInForce > raw.korpusStand;
+    // (6) nichtKonsolidiert korrekt gdw. dateEntryInForce > Korpus-Stand UND kein Finding-4b-
+    // Text-Beleg (belegteOcs) vorliegt.
+    const soll = r.dateEntryInForce > raw.korpusStand && !(r.ocUri && belegteOcsSet.has(r.ocUri));
     if (soll !== !!r.nichtKonsolidiert) fehler.push(`${m.key}: nichtKonsolidiert falsch bei ${r.dateEntryInForce} (Korpus-Stand ${raw.korpusStand}).`);
     // (4) Sortierung Datum absteigend.
     if (r.dateEntryInForce > vorher) fehler.push(`${m.key}: Sortierung verletzt bei ${r.dateEntryInForce} (> ${vorher}).`);
@@ -101,10 +103,13 @@ if (netz) {
       const committet = lade(m.key);
       const rawP = `${RAW_DIR}/${m.key}.json`;
       if (!committet || !existsSync(rawP)) { fehler.push(`Netz: ${m.key} Sidecar/raw fehlt.`); continue; }
-      const raw = JSON.parse(readFileSync(rawP, 'utf8')) as { korpusStand: string };
+      const raw = JSON.parse(readFileSync(rawP, 'utf8')) as { korpusStand: string; belegteOcs?: string[] };
       const abstractEli = raw.korpusStand ? liesAbstract(m.sr) : '';
       const aStaende = abstractEli ? await holeStaendeA(abstractEli, fetch) : [];
-      const frisch = baueRevisionen(m, bNachSr.get(m.sr) ?? [], aStaende, raw.korpusStand, ocZuBotschaft, committet.abgerufen);
+      // Finding 4b: der Text-Beleg wird hier NICHT frisch nachgefahren (bräuchte einen
+      // weiteren XML-Netzfetch je Stichprobe) — wie beim Korpus-Stand selbst genügt der
+      // committete Beleg (raw.belegteOcs) als Vergleichsbasis für den Drift-Check.
+      const frisch = baueRevisionen(m, bNachSr.get(m.sr) ?? [], aStaende, raw.korpusStand, ocZuBotschaft, committet.abgerufen, new Set(raw.belegteOcs ?? []));
       if (frisch.sha !== committet.sha) {
         fehler.push(`Netz-Drift: ${m.key} — frische Query-sha ≠ committet (${frisch.revisionen.length} vs ${committet.revisionen.length} Einträge). Neu generieren.`);
       }

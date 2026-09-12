@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import {
   baueRevisionen, roFundstelleAusOc, fundstelle, liveLink, botschaftIndex, serialisiere,
-  MARKER_CUTOFF, type ErlassMeta,
+  belegtImXml, MARKER_CUTOFF, type ErlassMeta,
 } from '../../scripts/normtext/revisionen-generieren';
 import { revisionenFuerNorm, revisionTitel, type RevisionBezug } from '../lib/normtext/revisionen';
 import type { SparqlBinding } from '../../scripts/fedlex-sparql';
@@ -49,6 +49,16 @@ describe('fundstelle — massgebliche AS-Fundstelle (§7, gelesen statt fabrizie
   });
 });
 
+describe('belegtImXml — Finding 4b (AS-Fundstelle bereits im Konsolidierungstext zitiert)', () => {
+  it('erkennt eine oc-URI, die als <ref href> im XML-Text zitiert ist', () => {
+    const xml = '<p>… Art. 1 des Beschlusses Nr. 1/2020 …, <ref href="https://fedlex.data.admin.ch/eli/oc/2021/12">AS <b>2021</b> 12</ref>).</p>';
+    expect(belegtImXml(xml, OC('2021/12'))).toBe(true);
+  });
+  it('gibt false, wenn die oc-URI nicht vorkommt', () => {
+    expect(belegtImXml('<p>kein Verweis hier</p>', OC('2024/100'))).toBe(false);
+  });
+});
+
 describe('liveLink', () => {
   it('baut den DE-Live-Link auf www.fedlex', () => {
     expect(liveLink(OC('2022/491'))).toBe('https://www.fedlex.admin.ch/eli/oc/2022/491/de');
@@ -82,6 +92,23 @@ describe('baueRevisionen — Kern-Logik', () => {
     const alt = s.revisionen.find((r) => r.ocUri === OC('2024/100'));
     expect(nk?.nichtKonsolidiert).toBe(true);
     expect(alt?.nichtKonsolidiert).toBeUndefined();
+  });
+
+  it('nichtKonsolidiert bleibt weg, wenn die oc-URI im Konsolidierungs-XML bereits zitiert ist (Finding 4b, FZA)', () => {
+    // Gegenprüfung 16.8.2026: Fedlex modelliert `jolux:dateEntryInForce` bei gewissen
+    // Staatsvertrags-Beschlüssen als «angewendet ab»-Datum, nicht als «in Kraft für die
+    // Schweiz»-Datum. Live-Beleg FZA/AS 2021 12: Konsolidierung 2020-12-15 zitiert die
+    // oc-URI bereits per <ref href> — der Marker wäre sonst falsch-positiv.
+    const bindings = [
+      bind({ oc: OC('2021/12'), dateForce: '2021-01-01', titleDe: 'Beschluss Nr. 1/2020' }),
+      bind({ oc: OC('2024/100'), dateForce: '2024-05-01', titleDe: 'Echt künftig' }),
+    ];
+    const belegteOcs = new Set([OC('2021/12')]);
+    const s = baueRevisionen(ERLASS, bindings, [], '2020-12-15', new Map(), '2026-07-10', belegteOcs);
+    const belegt = s.revisionen.find((r) => r.ocUri === OC('2021/12'));
+    const echtKuenftig = s.revisionen.find((r) => r.ocUri === OC('2024/100'));
+    expect(belegt?.nichtKonsolidiert).toBeUndefined();
+    expect(echtKuenftig?.nichtKonsolidiert).toBe(true); // ohne Text-Beleg bleibt die Warnung
   });
 
   it('erzeugt Sammelerlass-Marker für Pfad-(a)-Stände ohne (b)-Erlass, ab Cutoff', () => {
