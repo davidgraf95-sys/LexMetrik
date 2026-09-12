@@ -89,6 +89,14 @@ export const ZIVILGERICHTE_ERSTINSTANZ: Record<Kanton, KantonZivilgerichteErstin
     hinweisMiete: 'Mietgericht am Bezirksgericht (§§ 16, 21, 26 GOG ZH) — Eingabe an das Mietgericht des zuständigen Bezirks (Stadt Zürich: eigener Standort).',
   },
   BE: {
+    // Gemeindescharfe Auflösung seit K-15 vorhanden, aber hier bewusst NICHT
+    // eingebaut: `beSprengelFuerGemeinde` in src/lib/zustaendigkeit/beSprengel.ts
+    // löst Gemeinde → Regionalgericht (inkl. Aussenstelle Berner Jura) und →
+    // regionale Staatsanwaltschaft aus den amtlichen Geodaten des AGI BE auf
+    // (Art. 80/81/92 GSOG). Diese Liste bleibt die UI-Fassade, bis die
+    // Darstellungsschicht auf die Auflösung umgestellt wird — die Adressen
+    // unten sind gegen die Geodaten bestätigt; die dortige Zivil/Straf-Trennung
+    // (Effingerstrasse 34 vs. Hodlerstrasse 7) ist amtlich belegt.
     stand: '5.6.2026', quelle: Q_ERSTLISTE,
     url: 'https://www.zsg.justice.be.ch/de/start/ueber-uns/regionalgerichte.html',
     erstinstanz: {
