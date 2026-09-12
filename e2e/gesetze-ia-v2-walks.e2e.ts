@@ -17,6 +17,7 @@
 import { test, expect, type Page } from '@playwright/test'
 import { fehlerSammeln } from './helpers/fehlerSammeln'
 import { sprungZeile } from './helpers/kopfSuche'
+import { OR_LESER_FRIST } from './helpers/orLeser'
 
 // CI-Härtung 19.7.2026 (BEFUND 3a): die IA-1-Walks laden EINMAL den ~4-MB-Artikel-
 // Index und warten per 20-s-Latch auf den «Sprung»-Treffer (sprungWalk). Auf dem
@@ -74,8 +75,15 @@ test.describe('IA-1 · Named-Article-Klick-Beweis (§11.6 Punkt 2)', () => {
       expect(interaktionen, 'Budget §11.3 Zeile 1/9').toBe(1)
       await expect(page).toHaveURL(new RegExp(`/gesetze/bund/OR#${anker}$`))
       const ziel = page.locator(`#${anker}`)
-      await expect(ziel).toHaveCount(1)
-      await expect(ziel).toBeInViewport()
+      // §17-Wurzelfix 12.9.2026 (FAHRPLAN-OFFENE-BEFUNDE «OR-Leser-e2e auf
+      // 60-s-Budget härten»): dies ist der ERSTE Content-Wartepunkt nach dem
+      // Sprung auf `/gesetze/bund/OR` — derselbe Client-Takeover, für den
+      // `helpers/orLeser.ts` Rot-/Grün-Beweis führt (10x-Drossel: Default 10 s
+      // 8/8 ROT bei 10.7–10.9 s Ist-Dauer, 60 s 0/8 ROT). #682 härtete nur
+      // norm-sprung/leser-suche; dies war der noch offene OR-Leser-e2e-Fund.
+      // §6.3: dieselbe Sachaussage (Ziel-Anker im DOM, im Viewport).
+      await expect(ziel).toHaveCount(1, { timeout: OR_LESER_FRIST })
+      await expect(ziel).toBeInViewport({ timeout: OR_LESER_FRIST })
       expect(fehler).toEqual([])
     })
   }

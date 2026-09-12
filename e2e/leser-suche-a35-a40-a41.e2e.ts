@@ -1,6 +1,7 @@
 // @shard-gruppe: 3
 import { test, expect, type Page } from '@playwright/test';
 import { LESER_SUCHFELD_NAME } from './helpers/leserBeschriftung';
+import { OR_LESER_FRIST } from './helpers/orLeser';
 
 // E5-Welle (David 16.7.2026, §10.10) — A35 · A40 · A41.
 //
@@ -45,7 +46,13 @@ test.describe.configure({ timeout: 120_000 });
 // OR-Leser-Latches auf dasselbe Verhältnis nach, das der Kopf für das Budget
 // begründet (langsamer Runner ≠ kaputte Software: Tempo prüft das
 // §15-Perf-Budget). Geprüft wird unverändert DASSELBE.
-const OR_LESER_FRIST = 45000;
+//
+// §17-Wurzelfix 12.9.2026: die lokale Konstante (zuletzt 45 s) ist zur
+// zentralen `OR_LESER_FRIST` (60 s, `helpers/orLeser.ts`) zusammengezogen —
+// #682 härtete diese Datei und `norm-sprung` je mit eigener Kopie derselben
+// Zahl; die Kopie entfällt hier. Das 120-s-Test-Budget oben trägt zwei
+// sequenzielle 60-s-Wartepunkte (Zeilen unten) mit Reserve. Rot-/Grün-Beweis
+// der 60-s-Zahl: `helpers/orLeser.ts`.
 
 const inGesetzSuche = (page: Page) => page.getByRole('searchbox', { name: LESER_SUCHFELD_NAME });
 const headerFeld = (page: Page) => page.getByRole('combobox', { name: /LexMetrik durchsuchen/ });
