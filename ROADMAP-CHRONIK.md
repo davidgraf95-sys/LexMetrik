@@ -3388,3 +3388,31 @@ verbliebene Rest-Stub darum jetzt vollständig geschlossen.*
     Stelle mehr `heute`/`Date.now`. Zwei absolute Sätze präzisiert statt nachgeführt
     (§2b): `fedlex-frische.yml` (Kommentar beim offenen Punkt) und
     `FAHRPLAN-OFFENE-BEFUNDE.md` §2 (Zeile zum Reparatur-Arm-Befund).
+
+### Deckel-Reserven vor ZH (R12b) — Wortlaut vor der Lösung + Lösung 12.9.2026 (PR #802)
+
+  **Ursprünglicher Befund (Wortlaut, bis 12.9.2026 offen):** «Deckel-Reserven vor ZH
+  (R12b) — Materialien-Register 332/400 KB gzip (83 %, gemessen 12.9.2026),
+  Verfahrens-Ereignisse 85/100 KB (85 %, 407 Ketten); ein ZH-Schritt gleicher Grösse
+  wie K-16 BS reisst beide Deckel. Deckel-Strategie (Shard je Kanton oder lazy
+  Projektion) klären, bevor R12b baut.»
+
+  - [x] **Gelöst 12.9.2026, PR #802 (`c0acd4557`):** Messung vorab
+    (`bibliothek/materialien/2026-09-12-register-deckel-messung.md`) fand den echten
+    Treiber — vier Feldgruppen (`sha`, `ereignisse`, `bsKanten`, Join-Felder) gehen an
+    JEDEN Browser, ohne dass eine Browser-Zeile sie liest, dazu die FR/IT-Titel, die
+    der deutsche Lesefluss nie anfasst. Gewählt: Trennung nach Nutzungszeitpunkt statt
+    Shard je Kanton (verworfen — Übersicht/Suche brauchen alle Herkünfte) oder
+    Kopf-Index + lazy Detail (verworfen — N Fetches je Kontext-Panel-Aufklappen). Ein
+    Generator-Lauf, eine In-Memory-SSoT, drei Projektionen, jedes Feld in genau EINER
+    Datei (§5): `register.json` (Kern), `register-i18n.json` (nur locale fr/it),
+    `register-provenienz.json` (nie vom Browser geholt). Zahlen gzip: Kern 331,8 →
+    118,3 KB (Deckel 400 → **280 KB**, gesenkt nicht angehoben — 42 % Auslastung, ZH-
+    Prognose 49 %); i18n neu 83,7/140 KB (60 %); Provenienz neu 92,9/240 KB (39 %);
+    Verfahrens-Ereignisse 16,0/60 KB (27 %, jetzt über alle Herkünfte statt nur Bund —
+    §17-Nebenfund: der alte Deckel mass nur `botschaften.generated.ts`, die 117
+    BS-Ketten aus #799 waren ihm unsichtbar). §15 Logikverlust: keiner — kein
+    Verbraucher verliert ein Feld. Tore: `check:entstehung`/`check:datenhaltung`/
+    `check:paritaet` (9189 Dateien) grün, `golden:vergleich` 256 Fälle byte-gleich,
+    zweiter Generator-Lauf byte-gleich (Determinismus). Messung:
+    `bibliothek/materialien/2026-09-12-register-deckel-messung.md`.
