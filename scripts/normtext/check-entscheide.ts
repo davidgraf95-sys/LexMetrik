@@ -82,6 +82,19 @@ const NORM_INDEX_BUDGET_MB = 8;
 // Die eigentliche Lade-Optimierung (Shard-Staffelung/Artikel-Fenster) ist
 // W2·7-VZUI-Thema, nicht diese Bau-Einheit.
 const SHARD_BUDGET_KB = 1024;
+// Mindestzahl-Ast (§17-Wurzel-Fix, Fund fahrplaene/FAHRPLAN-OFFENE-BEFUNDE.md:35,
+// #691): zweite, unabhängige Schranke NEBEN der Bestandszahl-Sperre in
+// `schreibeKorpus` (entscheide-schreiben.ts) — die dortige Sperre wirkt nur beim
+// SCHREIBEN und nur gegen die 5 %-Toleranz eines einzelnen Laufs; dieses Tor liest
+// den fertigen, committeten Bestand und fängt zusätzlich: einen Schreiber, der an
+// `schreibeKorpus` vorbei direkt in `public/rechtsprechung` schreibt, einen bewusst
+// mit `LEXMETRIK_ERLAUBE_ABGANG=1` durchgesetzten Abgang, der über eine sinnvolle
+// Grösse hinausschiesst, oder einen Checkout, dem committete Dateien fehlen, ohne
+// dass je ein Generator lief. Ist 12.9.2026 = 6341 Entscheide (inkl. `__voll`-
+// Verweis-Einträge); Deckel = Ist − ~5 % Reserve, fliessend nachzuziehen wie
+// BUDGET_MB (Freigabe-Logik David 26.6.2026) — bremst einen Unfall, limitiert das
+// Wachstum nicht künstlich.
+const MINDESTZAHL_ENTSCHEIDE = 6000;
 const AHV = /\b756\.\d{4}\.\d{4}\.\d{2}\b/;   // CH-Sozialversicherungsnummer (darf nicht vorkommen)
 
 const fehler: string[] = [];
@@ -109,6 +122,14 @@ function main() {
   const manifest = JSON.parse(readFileSync(join(PUB, 'register.json'), 'utf8')) as EntscheidManifest;
   const keys = new Set(manifest.entscheide.map((e) => e.key));
   const azaKeys: Record<string, string[]> = {};   // aza-Key → BGE-Keys (Kollisions-Backstop)
+
+  // Mindestzahl-Ast: siehe Begründung an MINDESTZAHL_ENTSCHEIDE oben.
+  if (manifest.entscheide.length < MINDESTZAHL_ENTSCHEIDE) {
+    fehler.push(
+      `Mindestzahl unterschritten: ${manifest.entscheide.length} Entscheide < ${MINDESTZAHL_ENTSCHEIDE} `
+      + `(Bestandszahl-Sperre in schreibeKorpus umgangen oder Checkout unvollständig — #691).`,
+    );
+  }
 
   for (const e of manifest.entscheide) {
     // Verweis-Eintrag (vollständiges Urteil zu einem BGE, Deep-Link): KEIN eigenes
