@@ -98,12 +98,20 @@ export function teileRegister(voll: MaterialVollManifest): {
 }
 
 /** sha256 über die Identitätsfelder (stabile, sortierte Repräsentation). Ändert
- *  sich, sobald sich Titel/Nummer/Quelle/Stand/Status/Verzahnung ändern → Drift-
- *  Token, das ein check gegen die committete Fassung prüft. */
+ *  sich, sobald sich Titel/Nummer/Quelle/Status/Verzahnung ändern → Drift-Token,
+ *  das ein check gegen die committete Fassung prüft. `stand` ist bewusst NICHT
+ *  Teil des Identitäts-sha: bei generierten Materialien (Vernehmlassungen/
+ *  Botschaften/BS-Grossrat) ist es das Abrufdatum des Erhebungslaufs, keine
+ *  inhaltliche Eigenschaft — sonst rotiert jeder Lauf alle sha und die
+ *  Drift-Erkennung wird wertlos (Fund FAHRPLAN-OFFENE-BEFUNDE «Register-sha
+ *  rotiert mit stand», Beleg Lauf #789→#803: 831/831 Vernehmlassungs-sha bei
+ *  nur 1 tatsächlichem Statusübergang). `stand` bleibt als eigenes
+ *  Provenienz-Feld erhalten (§7, `teileRegister`/register-provenienz.json ist
+ *  nicht der Träger — der Kern trägt `stand` direkt, §5). */
 export function shaEintrag(r: MaterialRegistereintrag): string {
   const norm = [
     r.key, r.behoerde, r.doktyp, r.titel, r.nummer ?? '', r.rechtsgebiet,
-    r.sprache, r.status, r.quelleUrl, r.stand, String(r.rang),
+    r.sprache, r.status, r.quelleUrl, String(r.rang),
     (r.normKeys ?? []).join(','), r.hinweis ?? '',
     // Botschaften-Zusatzfelder NUR für BR anhängen → bestehende Einträge byte-identisch
     // (Drift-Token deckt titel_fr/it + Paket-5-Join-Felder mit ab).

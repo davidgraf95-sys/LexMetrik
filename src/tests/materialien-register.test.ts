@@ -6,14 +6,14 @@ import {
 import { BOTSCHAFTEN } from '../lib/materialien/botschaften.generated';
 import { VERNEHMLASSUNGEN } from '../lib/materialien/vernehmlassungen.generated';
 import { BS_MATERIALIEN } from '../lib/materialien/bs-grossrat.generated';
-import { baueMaterialManifest } from '../../scripts/materialien/material-manifest';
+import { baueMaterialManifest, shaEintrag } from '../../scripts/materialien/material-manifest';
 import { projiziereRegister, dbDokAusZustand, teileRegister } from '../../scripts/materialien/soft-law-projektion';
 import { ladeZustand } from '../../scripts/materialien/soft-law-zustand';
 import { BEHOERDE_RECHTSGEBIET } from '../../scripts/materialien/adapter-typen';
 import { ERLASS_REGISTER, GEBIETE } from '../lib/normtext/register';
 import { NAVIGATION } from '../lib/navigation';
 import { materialienFuerNorm } from '../lib/normtext/werkzeuge';
-import type { MaterialManifest } from '../lib/materialien/typen';
+import type { MaterialManifest, MaterialRegistereintrag } from '../lib/materialien/typen';
 
 // Konsistenz-Tore Material-Register ↔ Manifest ↔ Navigation (offline, im gate).
 // Pendant zu normtext-register.test.ts; eigener Namespace. Jede Diskrepanz bricht
@@ -118,6 +118,28 @@ describe('Tor 2 — committetes Manifest == frischer Build (Merge-Modell §2.7, 
       expect(x.doktypLabel).toBe(DOKTYP_LABEL[x.doktyp]);
       expect(x.sha).toMatch(/^[0-9a-f]{64}$/);
     }
+  });
+
+  it('Register-sha ist stand-frei (Provenienz ≠ Identität, §7/FAHRPLAN-OFFENE-BEFUNDE «Register-sha rotiert mit stand»)', () => {
+    // Nullprobe/Rot-Beweis: `stand` ist bei generierten Materialien (Vernehmlassungen,
+    // Botschaften, BS-Grossrat) das Abrufdatum des Erhebungslaufs, nicht ein
+    // inhaltliches Merkmal — ein blosser Tages-Wechsel darf den Identitäts-sha
+    // NICHT ändern (sonst rotiert jeder Lauf alle sha, Drift-Erkennung wertlos,
+    // Churn in Diffs; Beleg: Lauf #789→#803 änderte 831/831 Vernehmlassungs-sha bei
+    // nur 1 tatsächlichem Statusübergang).
+    const basis: MaterialRegistereintrag = {
+      key: 'TEST-STAND', behoerde: 'BUND', doktyp: 'vernehmlassung', titel: 'Test',
+      rechtsgebiet: 'oeffentlich', sprache: 'de', status: 'nur-live-link',
+      quelleUrl: 'https://www.fedlex.admin.ch/eli/dl/proj/2026/1/cons_1/de',
+      stand: '2026-07-10', rang: 1, normKeys: ['OR'],
+      vernehmlassung: { status: 'laufend', fristStart: '2026-07-01', fristEnde: '2026-10-01', projEli: 'x' },
+    };
+    const spaeterStand: MaterialRegistereintrag = { ...basis, stand: '2026-09-12' };
+    const statusWechsel: MaterialRegistereintrag = {
+      ...basis, vernehmlassung: { ...basis.vernehmlassung!, status: 'abgeschlossen' },
+    };
+    expect(shaEintrag(spaeterStand)).toBe(shaEintrag(basis)); // stand nicht im sha
+    expect(shaEintrag(statusWechsel)).not.toBe(shaEintrag(basis)); // Inhalt weiterhin im sha
   });
 });
 
