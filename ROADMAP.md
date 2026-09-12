@@ -357,7 +357,7 @@ zgb-a36-anhang: Die ZGB-Gliederung zeigt 74 Artikel des Anhangs «Wortlaut der f
     Entscheid-Snapshot wörtlich steht — §1 sofort erfüllt), den Generator-Neubau erst nach
     `W2·21-ZULIEFERER` (kommt der Graph von dort, entfällt er).
   - [ ] **Kernerlasse-Lücken Bund schliessen** *(Bestandsmessung 1.9.2026, Zielbild Gesetzesleser)* — EMRK (SR 0.101) ist nur PDF-Einbettung, kein Snapshot; EÖBV (SR 211.435.1) und AVG (SR 823.11) fehlen ganz. Fedlex-Adapter, Pin in `fedlex-cache.sh`, §7-Beleg; EMRK-Pin ersetzt die pdf-embed-Zeile nur, wenn der Fedlex-Konsolidierungstext vollständig ist (sonst Einbettung behalten, §8).
-  - [ ] **Geltende BMV in den Korpus aufnehmen** — Totalrevision `cc/2025/408` (gleiche SR 412.103.1) fehlt; Nutzer finden nur den historischen Text.
+  - [x] **Geltende BMV in den Korpus aufnehmen** — ✅ erledigt 12.9.2026 (Wortlaut: ROADMAP-CHRONIK.md); Gegenprüfung ausstehend, noch nicht gemergt.
   - [ ] **scope/decl-Sektionen von 12 Staatsverträgen ingestieren** — 23 amtliche Sektionen liegen ausserhalb `div#annex`; golden-Diff erwartet (neue amtliche Substanz).
   - [x] **Entscheid-Datumsfehler bereinigen** — ✅ (Wortlaut: ROADMAP-CHRONIK.md, Umschichtung 12.9.2026).
   - [x] **Erledigt:** VZV Art. 3/4 · AMBV — ✅ Wortlaut: ROADMAP-CHRONIK.md, Umschichtung 7.9.2026 (2).
@@ -879,8 +879,9 @@ zgb-a36-anhang: Die ZGB-Gliederung zeigt 74 Artikel des Anhangs «Wortlaut der f
   `scripts/fedlex-cache.sh` gepinnt und werden per 1.1.2027 **vollständig aufgehoben** (amtlich
   angekündigt). Massnahme am Stichtag: Snapshot ersetzen/entfernen, Nachfolgeerlass prüfen (§7/§8)
   — ein ausgeliefertes Gesetz, das es nicht mehr gibt, ist der schwerere Fehler als eine Lücke.
-  **Bereits erfolgt:** `BMV` (SR 412.103.1) aufgehoben 1.3.2026 (#287/#422); **Nachfolger
-  `cc/2025/408` fehlt noch im Korpus** → Schritt `QS-KORPUS`.
+  **Bereits erfolgt:** `BMV` (SR 412.103.1) aufgehoben 1.3.2026 (#287/#422); Nachfolger
+  `cc/2025/408` seit 12.9.2026 als eigener Register-Key `BMV_2025` im Korpus (der historische
+  Text bleibt unter `BMV`) — Beleg `bibliothek/register/bmv-totalrevision-2026-09-12.md`.
 
 ---
 

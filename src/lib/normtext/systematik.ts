@@ -78,7 +78,7 @@ export const SYSTEMATIK: SystematikKategorie[] = [
       { id: 'wirtschaft', titel: 'Wirtschaft & Finanzmarkt', keys: ['BANKG', 'BANKV', 'NBV', 'ERV', 'KAG', 'KKV', 'KKV_FINMA', 'FINMAG', 'FINMA_GEBV', 'FINIG', 'FINIV', 'FINFRAG', 'FINFRAV', 'FINFRAV_FINMA', 'VAG', 'AVO', 'FIDLEG', 'FIDLEV', 'PUEG', 'GWG', 'GWV_FINMA', 'BEWG', 'BEWV', 'THG', 'BGBM', 'AKKBV'] },
       { id: 'gesundheit', titel: 'Gesundheit & Lebensmittel', keys: ['HMG', 'VAM', 'AMBV', 'MEPV', 'EPG', 'EPV', 'TXG', 'LMG'] },
       { id: 'sektoren', titel: 'Beschaffung, Verkehr & Kommunikation', keys: ['BOEB', 'VOEB', 'SVG', 'VRV', 'VZV', 'VTS', 'SSV', 'SKV', 'VVV', 'LFG', 'EBG', 'FMG', 'VIL', 'FDV', 'FAV'] },
-      { id: 'arbeit', titel: 'Arbeit, Bildung & Anwaltsrecht', keys: ['ARG', 'ARGV1', 'ARGV2', 'ARGV3', 'ARGV4', 'ARGV5', 'ENTSG', 'BBG', 'BBV', 'BMV', 'BGFA'] },
+      { id: 'arbeit', titel: 'Arbeit, Bildung & Anwaltsrecht', keys: ['ARG', 'ARGV1', 'ARGV2', 'ARGV3', 'ARGV4', 'ARGV5', 'ENTSG', 'BBG', 'BBV', 'BMV_2025', 'BMV', 'BGFA'] },
     ],
   },
   // Völker- & Europarecht (EMRK/LugÜ/VRK u. a.) liegt seit 24.6.2026 in der
