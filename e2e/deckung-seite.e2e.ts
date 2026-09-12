@@ -26,8 +26,10 @@
 //      bei aufsteigender Sortierung zuoberst und zeigt «0.0 %» — die Seite
 //      versteckt ihre schlechtesten Werte nicht (§8).
 //
-//  (e) KEIN SPRUNG, KEIN ÜBERLAUF. @320 px ragt nichts aus dem Viewport (die
-//      breite Tabelle scrollt in ihrem eigenen Kasten), und nach dem Laden
+//  (e) KEIN SPRUNG, KEIN ÜBERLAUF. @320 px ragt nichts aus dem Viewport, ausser
+//      es sitzt in einem AFFORDANZIERTEN Scroller (`overflow-x` +
+//      `lc-scrollrand-x`) — dieselbe Bedingung wie `e2e/kein-abschnitt`
+//      Kategorie a. Die Seite selbst scrollt nie waagrecht, und nach dem Laden
 //      verschiebt sich der Seitenkopf nicht (CLS 0, §15).
 //
 // ROT ZU BEKOMMEN (§6.7) — je einzeln gefahren, Protokoll im PR-Body:
@@ -36,7 +38,7 @@
 //  · in `src/lib/materialien/deckung.ts` `summiere()` alle Summen auf 0 ⇒ (b) rot
 //  · dort `sortiere()` die Liste unverändert zurückgeben lassen     ⇒ (c) rot
 //  · in der Seite die 0-%-Zeilen herausfiltern                      ⇒ (d) rot
-//  · an der Tabelle `overflow-x-auto` entfernen                     ⇒ (e) rot
+//  · an der Tabelle `lc-scrollrand-x` ODER `overflow-x-auto` entfernen ⇒ (e) rot
 import { test, expect, type Page } from '@playwright/test';
 
 const ORT = '/materialien/deckung';
@@ -149,31 +151,47 @@ test.describe('Deckungs-Seite «was wir nicht haben»', () => {
     // Die SEITE darf nicht waagrecht scrollen — das ist der Massstab, nicht
     // «kein Element ist breiter als der Schirm»: die Zahlentabelle IST breiter,
     // sie scrollt aber in ihrem eigenen Kasten (Prüfung direkt darunter).
-    // Gezählt wird deshalb nur, was AUSSERHALB eines Scroll-Kastens übersteht.
+    //
+    // GESCHÄRFT (CI-Befund R8, 12.9.2026): die erste Fassung liess JEDEN
+    // `overflow-x`-Vorfahren durchgehen und war damit blind für genau den
+    // Fehler, der dann in Shard 2/4 auffiel — ein Scroller OHNE Affordanz
+    // (`lc-scrollrand-x`) schneidet die letzte Spalte ab, ohne dass irgendetwas
+    // sagt, dass dort noch Inhalt liegt. Die Sonde misst jetzt dieselbe
+    // Bedingung wie `e2e/kein-abschnitt` Kategorie a: nur ein AFFORDANZIERTER
+    // Scroller entschuldigt den Überlauf. `hidden`/`clip` entschuldigen ihn
+    // nicht mehr — was geklippt wird, ist unerreichbar, nicht geschoben.
     const ueberlauf = await page.evaluate(() => {
       const w = document.documentElement.clientWidth;
-      const imKasten = (e: Element): boolean => {
-        for (let a = e.parentElement; a; a = a.parentElement) {
+      const imAffordanziertenKasten = (e: Element): boolean => {
+        for (let a: Element | null = e.parentElement; a; a = a.parentElement) {
           const ox = getComputedStyle(a).overflowX;
-          if (ox === 'auto' || ox === 'scroll' || ox === 'hidden') return true;
+          if ((ox === 'auto' || ox === 'scroll') && a.classList.contains('lc-scrollrand-x')) return true;
         }
         return false;
       };
       return [...document.querySelectorAll('body *')]
-        .filter((e) => e.getBoundingClientRect().right > w + 1 && !imKasten(e))
+        .filter((e) => e.getBoundingClientRect().right > w + 1 && !imAffordanziertenKasten(e))
         .map((e) => `${e.tagName}.${(e.className || '').toString().slice(0, 40)}`)
         .slice(0, 5);
     });
-    expect(ueberlauf, 'kein Element ragt über den Viewport').toEqual([]);
+    expect(ueberlauf, 'kein Element ragt ohne affordanzierten Scroller über den Viewport').toEqual([]);
     const seiteScrollt = await page.evaluate(
       () => document.scrollingElement!.scrollWidth > document.documentElement.clientWidth + 1,
     );
     expect(seiteScrollt, 'die Seite selbst scrollt nie waagrecht').toBe(false);
-    // Die Tabelle selbst darf breiter sein — sie scrollt in ihrem eigenen Kasten.
-    const scrollt = await page.locator(TABELLE).evaluate((t) => {
+    // Die Tabelle selbst darf breiter sein — sie scrollt in ihrem eigenen
+    // Kasten, UND der Kasten sagt es (Scrollstand-Affordanz `lc-scrollrand-x`,
+    // B8/LM-063): ohne sie endet die letzte Spalte ohne jedes Zeichen.
+    const kasten = await page.locator(TABELLE).evaluate((t) => {
       const k = t.parentElement!;
-      return k.scrollWidth > k.clientWidth && getComputedStyle(k).overflowX !== 'visible';
+      return {
+        scrollt: k.scrollWidth > k.clientWidth,
+        overflowX: getComputedStyle(k).overflowX,
+        affordanz: k.classList.contains('lc-scrollrand-x'),
+      };
     });
-    expect(scrollt, 'die breite Tabelle scrollt in ihrem Kasten').toBe(true);
+    expect(kasten.scrollt, 'die breite Tabelle scrollt in ihrem Kasten').toBe(true);
+    expect(['auto', 'scroll'], 'der Kasten ist wirklich scrollbar').toContain(kasten.overflowX);
+    expect(kasten.affordanz, 'der Kasten trägt die Scrollstand-Affordanz lc-scrollrand-x').toBe(true);
   });
 });

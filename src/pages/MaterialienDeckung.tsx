@@ -262,12 +262,19 @@ export function DeckungsSicht({ p }: { p: DeckungProjektion }) {
             schmale Kürzel-Spalte, Titelzeile aus (der Titel bleibt im
             `title`-Attribut und über den Link erreichbar) und ein kleinerer
             Mindestrahmen — so stehen Kürzel, Deckungsgrad und Fundstellen
-            zusammen im Bild, der Rest kommt durch Schieben. Die Tabelle
-            scrollt in IHREM Kasten, die Seite nie (Sonde (e), §15). */}
-        <p className="pt-2 text-xs text-ink-500 sm:hidden">
-          Die Tabelle lässt sich seitwärts schieben.
-        </p>
-        <div className="mt-2 overflow-x-auto sm:mt-4">
+            zusammen im Bild, der Rest kommt durch Schieben.
+
+            `lc-scrollrand-x` IST DIE AFFORDANZ, nicht ein Zusatz (B8, LM-063/
+            LM-064): `overflow-x-auto` allein schneidet die letzte Spalte ohne
+            ein Zeichen ab, dass dort noch etwas liegt — genau das meldete R8
+            (`kein-abschnitt`, Kategorie a) an dieser Stelle, viermal, @320 und
+            @390 in hell und dunkel. Der Deckel-Ton bleibt der Vorgabewert
+            `--paper`: die Seite trägt keine eigene Fläche.
+            Hier stand zuvor zusätzlich der Satz «Die Tabelle lässt sich
+            seitwärts schieben» — er ist mit der Affordanz weg, nicht neben sie
+            gestellt (§17-Gegengewicht: der Schatten kennt den Scrollstand, der
+            Satz kannte ihn nie und stand auch am Streckenende noch da, §8). */}
+        <div className="mt-2 overflow-x-auto lc-scrollrand-x sm:mt-4">
           <table data-deckung-tabelle className="w-full min-w-[30rem] border-collapse text-body-s sm:min-w-[38rem]">
             <caption className="sr-only">
               Deckung je Erlass: Fussnoten-Deckung, erfasste Änderungen und Alt-Blöcke des
