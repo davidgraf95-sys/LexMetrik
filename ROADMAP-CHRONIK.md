@@ -3602,3 +3602,64 @@ verbliebene Rest-Stub darum jetzt vollständig geschlossen.*
     17 Dateien/286 Tests grün. `git status` nur Code/Test/Doku — `daten/` und
     `public/materialien/` nach jeder Rot-Beweis-Manipulation exakt
     zurückgesetzt (`git checkout` / `rm`).
+
+### Auflage A4 (Entlistungs-Deadlock) zu PR #815 (12.9.2026) — Nachzug am selben Tag
+
+  **Auflage (Wortlaut Delta-Prüfung, PR #815):** «in `soft-law-projektion-
+  run.ts:48-70` (und im Tor) ist das Kanten-Soll `sammleKantenDokIds()` = ALLE
+  Dokumente mit committeter Kante, auch entlistete. Nach einer Entlistung
+  (Kanten + soft_law-Zeile eines Dokuments weg, Rest voll — Prüfer simulierte
+  EDOEB-LEITFADEN-WAHLEN-ABSTIMMUNGEN-VERSION-2022) bricht der Generator mit
+  exit 1 ab, während `check-materialien.ts:456` für genau diesen Zustand rot
+  macht («nicht als 'gelistet'») — der einzige Reparaturweg ist blockiert,
+  trifft auch den nächtlichen normen-monitor.»
+
+  - [x] **Nullprobe (Deadlock reproduziert):** volle DB (`seedSoftLawDb`,
+    298/3372) gebaut, dann EDOEB-LEITFADEN-WAHLEN-ABSTIMMUNGEN-VERSION-2022
+    ECHT entlistet — Zeile in der (lokalen Kopie der) `soft-law-
+    zustand.jsonl` auf `status: entlistet` gesetzt UND die Zeilen in
+    `soft_law`/`norm_referenzen` entfernt (so wie es `soft-law-snapshot.ts`
+    nach einem realen Crawl-Verlust selbst schreiben würde), committeter
+    `DSG.json`-Shard unverändert (referenziert das Dokument noch).
+    `check:materialien` meldete exakt den zitierten Befund: «Shard …/DSG.json:
+    dok-Verweis '…' nicht als 'gelistet' im Zustands-Manifest» (plus
+    Folgefehler, weil `register.json` seinerseits noch nicht regeneriert war
+    — real und erwartet). `npm run materialien -- --datum=…` (der einzige
+    Reparaturweg) brach mit «unvollständig geladen» ab — der Deadlock.
+  - [x] **A4-Fix:** `sammleKantenDokIds()` bleibt unverändert (Ground Truth
+    aus den committeten Shards), aber BEIDE Wächter (`check-materialien.ts`
+    UND `soft-law-projektion-run.ts`) schränken die Menge jetzt vor dem
+    Vergleich auf `∩ gelistet` ein — neue Funktion `nurGelistete` in
+    `db-vollstaendigkeit.ts`. Begründung im Docstring von
+    `pruefeKantenVollstaendigkeit`: ein entlistetes Dokument hat im
+    committeten (noch nicht bereinigten) Shard eine Kante, aber weder im
+    Zustandsträger noch in einer frischen DB je wieder eine — kein
+    Ladefehler, sondern der Normalzustand direkt nach einer Entlistung, den
+    der laufende Generator selbst beheben soll.
+  - [x] **Rot-Beweis nachher (derselbe präparierte Zustand):** `npm run
+    materialien -- --datum=…` lief jetzt durch (`register.json 1680
+    Materialien … Shards 11 Datei(en) [11 geschrieben · 0 orphan]`),
+    `DSG.json` trägt die Kante des entlisteten Dokuments danach nicht mehr
+    (`grep -c` 0 Treffer), `check:materialien` läuft grün («1680 Materialien
+    … 2053 Kanten»). Bestehende Rot-Beweise unverändert bestätigt: die
+    A2a-Gegenprobe (soft_law voll, `norm_referenzen` auf ESTV-MWST getrimmt,
+    KEINE Entlistung) liefert weiterhin den HINWEIS «unvollständig» in
+    beiden Wächtern, weil diese Dokumente nach wie vor 'gelistet' sind
+    (`∩ gelistet` verändert dort nichts). Alle Manipulationen (JSONL,
+    `public/materialien/`, `daten/`) danach exakt zurückgesetzt.
+  - [x] **Unit-Tests:** `src/tests/db-vollstaendigkeit.test.ts`, neue
+    `describe('nurGelistete …')` mit 4 Fällen inkl. End-zu-Ende-Vergleich
+    (`pruefeKantenVollstaendigkeit` ohne vs. mit Filter auf derselben
+    Eingabe) — vorher (HEAD vor A4) 4 rot (`nurGelistete is not a
+    function`), nachher 17/17 grün.
+  - [x] **Nebenfund benannt, nicht behoben (optional laut Auflage):**
+    `shardInhaltGleich` (A2b) normalisiert nicht nur den `erzeugt`-Stempel,
+    sondern jede reine Umformatierung, die bei gleicher Feldreihenfolge
+    keinen semantischen Unterschied hinterlässt — im Docstring vermerkt;
+    folgenlos, solange Shards ausschliesslich generiert werden (§2/§5).
+  - [x] **Tore/Tests (nach A4):** `check:materialien` zweimal byte-identisch
+    grün auf sauberem Baum (`2054 Kanten · 11 Shards`); `check:bs-
+    materialien`, `check:datenhaltung`, `check:tor-paritaet`, `npx tsc -b`,
+    `lint` grün (0 Fehler); `npx vitest run src/tests/*materialien*
+    src/tests/db-vollstaendigkeit.test.ts` 17 Dateien/290 Tests grün.
+    `git merge origin/main` sauber. `git status` nur Code/Test/Doku.

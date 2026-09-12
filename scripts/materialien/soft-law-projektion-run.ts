@@ -24,7 +24,7 @@ import {
   type DokMeta,
 } from './soft-law-projektion.ts';
 import { ladeZustand } from './soft-law-zustand.ts';
-import { pruefeDbVollstaendigkeit, pruefeKantenVollstaendigkeit } from './db-vollstaendigkeit.ts';
+import { pruefeDbVollstaendigkeit, pruefeKantenVollstaendigkeit, nurGelistete } from './db-vollstaendigkeit.ts';
 
 const datumArg = process.argv.find((a) => a.startsWith('--datum='));
 const datum = datumArg?.slice('--datum='.length);
@@ -56,8 +56,11 @@ if (existsSync(SOFT_LAW_DB)) {
 if (kanten.length > 0) {
   const dokMetaIds = new Set(dokMeta.keys());
   const dbKantenDokIds = new Set(kanten.map((k) => k.quelldok_id));
-  const dokMetaVollstaendigkeit = pruefeDbVollstaendigkeit(dbDocs.map((d) => d.key), dokMetaIds);
-  const kantenVollstaendigkeit = pruefeKantenVollstaendigkeit(sammleKantenDokIds(), dbKantenDokIds);
+  const gelistetIds = new Set(dbDocs.map((d) => d.key));
+  const dokMetaVollstaendigkeit = pruefeDbVollstaendigkeit(gelistetIds, dokMetaIds);
+  // A4 (Gegenprüfung PR #815, Deadlock): siehe nurGelistete-Docstring in db-vollstaendigkeit.ts —
+  // ein entlistetes Dokument darf hier fehlen, dieser Lauf bereinigt seine Shard-Kante gerade.
+  const kantenVollstaendigkeit = pruefeKantenVollstaendigkeit(nurGelistete(sammleKantenDokIds(), gelistetIds), dbKantenDokIds);
   if (!dokMetaVollstaendigkeit.vollstaendig || !kantenVollstaendigkeit.vollstaendig) {
     const fehlend = [...new Set([...dokMetaVollstaendigkeit.fehlendeIds, ...kantenVollstaendigkeit.fehlendeIds])];
     console.error(

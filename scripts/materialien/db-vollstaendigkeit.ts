@@ -86,12 +86,35 @@ export function pruefeDbVollstaendigkeit(
  * auftauchen. Nur BEIDE Dimensionen zusammen (Dokument-Meta UND Kanten) machen eine DB
  * reprojektionsfähig — die Gegenprobe der Gegenprüfung (volle Dok-Meta, auf eine Quelle
  * getrimmte Kanten) besteht Dimension 1, aber nicht Dimension 2.
+ *
+ * WICHTIG (A4, Gegenprüfung PR #815 — Deadlock): `committeteDokIds` MUSS vom Aufrufer VORHER
+ * auf die aktuell 'gelistet' geführten ids eingeschränkt werden (siehe `nurGelistete` unten).
+ * Ein entlistetes Dokument hat im COMMITTETEN Shard (von VOR der Entlistung) noch eine Kante,
+ * aber weder im Zustandsträger noch in einer frisch gecrawlten DB je wieder eine — das ist kein
+ * Teilstand, sondern der NORMALE, erwartete Zustand direkt nach einer Entlistung, den genau
+ * dieser Lauf (Orphan-Bereinigung in `schreibeShardsUndBereinige`) beheben soll. Ohne die
+ * Einschränkung verlangte das Kanten-Soll ewig etwas, das kein DB-Zustand je wieder liefern
+ * kann — ein Deadlock: `soft-law-projektion-run.ts` (A2c) brach ab, UND `check-materialien.ts`
+ * validierte über den CI-Pfad den stehengebliebenen Shard direkt, der wegen des entlisteten
+ * Dokuments ohnehin rot wurde («… nicht als 'gelistet' im Zustands-Manifest») — der einzige
+ * Reparaturweg (den Generator laufen lassen) war durch denselben Fehlalarm blockiert.
  */
 export function pruefeKantenVollstaendigkeit(
   committeteDokIds: Iterable<string>,
   dbKantenDokIds: ReadonlySet<string>,
 ): VollstaendigkeitsErgebnis {
   return pruefeMengenDeckung(committeteDokIds, dbKantenDokIds);
+}
+
+/**
+ * (A4) Schränkt eine Kandidatenmenge auf die aktuell 'gelistet' geführten ids ein. Ein
+ * entlistetes Dokument darf in der DB fehlen (Kanten UND Meta), ohne die DB als unvollständig
+ * zu markieren — der laufende Generator-Lauf bereinigt dessen committete Shard-Kante gerade
+ * SELBST (regulärer Orphan-Abbau), das ist kein Ladefehler. Anzuwenden auf `committeteDokIds`
+ * VOR dem Aufruf von `pruefeKantenVollstaendigkeit` — siehe deren Docstring.
+ */
+export function nurGelistete(ids: Iterable<string>, gelistetIds: ReadonlySet<string>): Set<string> {
+  return new Set([...ids].filter((id) => gelistetIds.has(id)));
 }
 
 /**
@@ -105,6 +128,17 @@ export function pruefeKantenVollstaendigkeit(
  * rot werden; ein inhaltlicher Unterschied (Kanten/Dokumente/Buckets) bleibt rot. Bei
  * ungültigem JSON auf einer Seite: nicht gleich (die "kein gültiges JSON"-Meldung kommt separat
  * aus `pruefeShardDatei`, Defense-in-depth).
+ *
+ * NEBENFUND (Gegenprüfung PR #815, A4-Auflage, unbehoben — nur benannt): der Parse-plus-
+ * Restringifizieren-Vergleich normalisiert NICHT NUR den `erzeugt`-Stempel, sondern JEDE reine
+ * Umformatierung, die bei gleicher Feld-REIHENFOLGE keinen semantischen Unterschied im
+ * geparsten Objekt hinterlässt (z. B. andere Einrückung, fehlende/zusätzliche Leerzeichen,
+ * abweichende Zeilenenden) — ein von Hand umformatierter, aber inhaltlich identischer
+ * committeter Shard würde also NICHT mehr als Abweichung erkannt, obwohl er nicht mehr
+ * byte-gleich der (kanonisch von `serialisiereShard` erzeugten) Projektion ist. Bisher folgenlos,
+ * weil Shards ausschliesslich generiert, nie von Hand editiert werden (§2/§5) — sollte das
+ * jemals nicht mehr gelten, braucht es hier eine explizite Byte-Formatierungsprüfung zusätzlich
+ * zur Inhaltsprüfung.
  */
 export function shardInhaltGleich(a: string, b: string): boolean {
   if (a === b) return true; // schneller Pfad (deckt auch den Normalfall ab: Stempel gleich).

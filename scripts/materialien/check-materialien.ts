@@ -66,7 +66,7 @@ import {
 import { wortfeldTreffer, wortfeldImQuellcode } from './wortfeld.ts';
 import { finding7Fehler, parseDatumArg } from './vernehmlassungen-tor.ts';
 import {
-  pruefeDbVollstaendigkeit, pruefeKantenVollstaendigkeit, shardInhaltGleich, zaehleKanten,
+  pruefeDbVollstaendigkeit, pruefeKantenVollstaendigkeit, nurGelistete, shardInhaltGleich, zaehleKanten,
 } from './db-vollstaendigkeit.ts';
 
 /** Kantonaler Normtext-Korpus: die Datei-Stämme sind die Erlass-Schlüssel (K-16). */
@@ -293,8 +293,12 @@ function main(): void {
   // vom `erzeugt`-Stempel — deshalb `shardInhaltGleich` statt rohem String-Vergleich unten).
   const dokMetaIds = new Set(dokMeta.keys());
   const dbKantenDokIds = new Set(kanten.map((k) => k.quelldok_id));
-  const dokMetaVollstaendigkeit = pruefeDbVollstaendigkeit(gelistet.keys(), dokMetaIds);
-  const kantenVollstaendigkeit = pruefeKantenVollstaendigkeit(sammleKantenDokIds(), dbKantenDokIds);
+  const gelistetIds = new Set(gelistet.keys());
+  const dokMetaVollstaendigkeit = pruefeDbVollstaendigkeit(gelistetIds, dokMetaIds);
+  // A4 (Gegenprüfung PR #815, Deadlock): Kanten-Soll auf aktuell 'gelistet' einschränken — ein
+  // entlistetes Dokument hat im COMMITTETEN (noch nicht bereinigten) Shard weiterhin eine
+  // Kante, darf die DB aber nicht als unvollständig markieren (siehe nurGelistete-Docstring).
+  const kantenVollstaendigkeit = pruefeKantenVollstaendigkeit(nurGelistete(sammleKantenDokIds(), gelistetIds), dbKantenDokIds);
   const vollstaendig = dokMetaVollstaendigkeit.vollstaendig && kantenVollstaendigkeit.vollstaendig;
   const fehlendeGesamt = [...new Set([...dokMetaVollstaendigkeit.fehlendeIds, ...kantenVollstaendigkeit.fehlendeIds])];
   let kantenGesamt: number;

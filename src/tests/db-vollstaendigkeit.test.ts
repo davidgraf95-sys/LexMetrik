@@ -1,12 +1,12 @@
 import { describe, it, expect } from 'vitest';
 import {
-  pruefeDbVollstaendigkeit, pruefeKantenVollstaendigkeit, shardInhaltGleich, zaehleKanten,
+  pruefeDbVollstaendigkeit, pruefeKantenVollstaendigkeit, nurGelistete, shardInhaltGleich, zaehleKanten,
 } from '../../scripts/materialien/db-vollstaendigkeit';
 
 // FAHRPLAN-OFFENE-BEFUNDE.md, PR #703-Nachzug: «check:materialien lokal 7 falsche
 // Shard-Abweichungen» — reine Prüf-Logik aus check-materialien.ts extrahiert, damit sie
 // hier ohne den ganzen vite-node-Lauf testbar ist (Muster: vernehmlassungen-tor.test.ts).
-// Erweitert um die Gegenprüfungs-Auflagen A1/A2a/A2b/A3 (PR #815, 12.9.2026).
+// Erweitert um die Gegenprüfungs-Auflagen A1/A2a/A2b/A3/A4 (PR #815, 12.9.2026).
 
 describe('pruefeDbVollstaendigkeit (Dimension 1: Dokument-Meta gegen den Zustandsträger)', () => {
   it('meldet vollständig, wenn dokMeta jede gelistete id trägt', () => {
@@ -48,6 +48,40 @@ describe('pruefeKantenVollstaendigkeit (Dimension 2, A2a-Nachzug: Kanten gegen d
 
   it('kein committetes Kanten-Dokument ⇒ trivial vollständig', () => {
     expect(pruefeKantenVollstaendigkeit([], new Set()).vollstaendig).toBe(true);
+  });
+});
+
+describe('nurGelistete (A4, Gegenprüfung PR #815: Entlistungs-Deadlock)', () => {
+  it('lässt gelistete ids unverändert durch', () => {
+    expect(nurGelistete(['A', 'B'], new Set(['A', 'B', 'C']))).toEqual(new Set(['A', 'B']));
+  });
+
+  it('filtert entlistete ids aus der Kandidatenmenge (Rot-Beweis: der Deadlock-Fall)', () => {
+    // Reproduziert exakt die Gegenprobe der Gegenprüfung: EDOEB-LEITFADEN-WAHLEN-ABSTIMMUNGEN-
+    // VERSION-2022 hat im committeten DSG-Shard eine Kante (sammleKantenDokIds), ist aber gerade
+    // entlistet worden — weder eine frisch gecrawlte DB noch der Zustandsträger führen es noch.
+    // Ohne nurGelistete verlangte pruefeKantenVollstaendigkeit ewig eine Kante, die kein
+    // DB-Zustand je wieder liefern kann (Deadlock: der Generator, der genau das bereinigen
+    // soll, bricht wegen "unvollständig" ab).
+    const committeteDokIdsRoh = ['EDOEB-LEITFADEN-WAHLEN-ABSTIMMUNGEN-VERSION-2022', 'ESTV-MWST-INFO-04'];
+    const gelistetIds = new Set(['ESTV-MWST-INFO-04']); // das entlistete Dokument fehlt hier zu Recht.
+    expect(nurGelistete(committeteDokIdsRoh, gelistetIds)).toEqual(new Set(['ESTV-MWST-INFO-04']));
+  });
+
+  it('End-zu-Ende: entlistetes Dokument macht pruefeKantenVollstaendigkeit NICHT mehr unvollständig', () => {
+    const committeteDokIdsRoh = ['EDOEB-LEITFADEN-WAHLEN-ABSTIMMUNGEN-VERSION-2022', 'ESTV-MWST-INFO-04'];
+    const gelistetIds = new Set(['ESTV-MWST-INFO-04']);
+    const dbKantenDokIds = new Set(['ESTV-MWST-INFO-04']); // frische DB kennt das entlistete Dok nicht mehr.
+    // Ohne die Einschränkung (alter Zustand, Rot-Beweis):
+    const ohneFilter = pruefeKantenVollstaendigkeit(committeteDokIdsRoh, dbKantenDokIds);
+    expect(ohneFilter.vollstaendig).toBe(false); // genau der Deadlock-Zustand vor A4.
+    // Mit der Einschränkung (A4-Fix):
+    const mitFilter = pruefeKantenVollstaendigkeit(nurGelistete(committeteDokIdsRoh, gelistetIds), dbKantenDokIds);
+    expect(mitFilter.vollstaendig).toBe(true);
+  });
+
+  it('leere Kandidatenmenge bleibt leer', () => {
+    expect(nurGelistete([], new Set(['A']))).toEqual(new Set());
   });
 });
 
