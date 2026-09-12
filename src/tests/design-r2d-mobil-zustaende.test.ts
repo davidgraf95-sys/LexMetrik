@@ -189,7 +189,7 @@ describe('F2-4 · «… konnte nicht geladen werden» läuft über EINEN Baustei
     expect(baustein, 'Kanon-Link statt handgeschriebenem <a>').toContain('<QuellLink');
   });
 
-  it('die vier Fundstellen konsumieren ihn', () => {
+  it('die fünf Fundstellen konsumieren ihn', () => {
     for (const datei of [
       'pages/gesetz-leser/v3/PanelMaterialien.tsx',
       'components/kontext/KontextPanel.tsx',
@@ -199,12 +199,23 @@ describe('F2-4 · «… konnte nicht geladen werden» läuft über EINEN Baustei
       // KontextPanel unter der §6.6-Schwelle bleibt; der Kanon gilt auch für sie,
       // und ohne diese Zeile wäre der neue Konsument unbewacht.
       'components/kontext/TitelRueckfallZeile.tsx',
+      // WÄCHTER-DATEILISTE UM LEAF-MODUL ERGÄNZT (§6.6-Split, 12.9.2026, PR #830):
+      // fünfte Fundstelle — der Revisionen-AbrufFehler («Änderungsverlauf konnte
+      // nicht geladen werden») wanderte aus KontextPanel.tsx in dieses eigene
+      // Leaf-Modul (Zeilen-Schwelle §6.6). Rein additiv: dieselbe Verwendung,
+      // anderer Ort — ohne diese Zeile wäre der Konsument unbewacht.
+      'components/kontext/RevisionenGruppe.tsx',
     ]) {
       expect(lies(datei), `${datei} konsumiert AbrufFehler`).toContain('<AbrufFehler');
     }
+    // §6.6-Split (12.9.2026, PR #830): die drei Abruf-Fehler (Botschaften,
+    // Revisionen, Vernehmlassungen) verteilen sich seither über zwei Dateien —
+    // Revisionen zog nach `RevisionenGruppe.tsx` um. Die Gesamtzahl bleibt 3
+    // (rein additiv gezählt, keine Datei trägt den Revisionen-Fund doppelt).
     expect(
-      (lies('components/kontext/KontextPanel.tsx').match(/<AbrufFehler/g) ?? []).length,
-      'KontextPanel hat drei Abruf-Fehler (Botschaften, Revisionen, Vernehmlassungen)',
+      (lies('components/kontext/KontextPanel.tsx').match(/<AbrufFehler/g) ?? []).length
+      + (lies('components/kontext/RevisionenGruppe.tsx').match(/<AbrufFehler/g) ?? []).length,
+      'KontextPanel + RevisionenGruppe haben zusammen drei Abruf-Fehler (Botschaften, Revisionen, Vernehmlassungen)',
     ).toBe(3);
   });
 

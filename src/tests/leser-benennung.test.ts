@@ -575,7 +575,12 @@ describe('B-6 · Zwei-Begriffe-Regel: «Quelle» bleibt der PLATTFORM vorbehalte
     // Sie benennt ein anderes Ding als die Fassung eines Erlasses: die
     // Publikationsreihe, in der die Änderungserlasse stehen. Ein Vereinheitlichen
     // auf «Fassung» wäre hier keine Vereinheitlichung, sondern ein Sachfehler.
-    expect(ohneKommentare(LIES_APP('components/kontext/KontextPanel.tsx')))
+    // WÄCHTER-DATEILISTE UM LEAF-MODUL ERGÄNZT (§6.6-Split, 12.9.2026, PR #830):
+    // der Fachbegriff steht seither im ausgelagerten `RevisionenGruppe.tsx`
+    // (Zeilen-Schwelle §6.6), nicht mehr in `KontextPanel.tsx` selbst — die
+    // Sonde prüft darum additiv beide Dateien der App-Fläche zu diesem Feature.
+    expect(ohneKommentare(LIES_APP('components/kontext/KontextPanel.tsx'))
+      + ohneKommentare(LIES_APP('components/kontext/RevisionenGruppe.tsx')))
       .toContain('amtliche Sammlung');
   });
 });

@@ -7,7 +7,7 @@ import {
 import { ladeLeitfallShard, artikelProEntscheid } from '../../lib/rechtsprechung/norm-index';
 import { artikelWerkzeugGruppen } from '../../lib/normtext/werkzeuge';
 import { botschaftenFuer, type BotschaftBezug } from '../../lib/materialien/botschaften';
-import { revisionenFuerNorm, revisionTitel, type RevisionAnsicht, type RevisionBezug } from '../../lib/normtext/revisionen';
+import { revisionenFuerNorm, type RevisionAnsicht, type RevisionBezug } from '../../lib/normtext/revisionen';
 import { vernehmlassungenFuer, VERNEHMLASSUNG_STATUS_LABEL, type VernehmlassungBezug } from '../../lib/materialien/vernehmlassungen';
 import { AMTLICHE_FASSUNG_NOMEN } from '../../lib/benennung';
 import { datumCh } from '../../lib/normtext/erlassKopfText';
@@ -22,6 +22,7 @@ import { KantenChip } from '../verzahnung/KantenChip';
 import { StatusBadge } from '../verzahnung/StatusBadge';
 import { ZeichenLegende } from '../verzahnung/ZeichenLegende';
 import { ArtikelKontextZeilen } from './ArtikelKontextGruppe';
+import { RevisionenGruppe } from './RevisionenGruppe';
 // §6.6-Split (9.8.2026): die geteilte Gruppen-Hülle lebt daneben; der
 // Re-Export hält den bisherigen Import-Pfad `./KontextPanel` für alle
 // Bestands-Aufrufer stabil (§6 Ziff. 3 — kein Test wird angefasst).
@@ -54,7 +55,6 @@ import {
 const MAX_ENTSCHEIDE = 8;
 const MAX_MATERIALIEN = 8;
 const MAX_BOTSCHAFTEN = 8;
-const MAX_REVISIONEN = 10;
 const MAX_VERNEHMLASSUNGEN = 8;
 
 // LM-168 (W2·17-UI-BEFUNDE B6, K-15): Anzeige-Absicherung gegen mitten im Wort
@@ -445,87 +445,14 @@ export function KontextPanel({ typ, normKeys, zusatzGruppen, ohneNormen = false,
           {/* Änderungen / Revisionen — AS/RO-Änderungserlasse (Paket 5, W2·6-REV,
               Moat-Hebel 1). Die tatsächliche Änderung neben der Absicht (Botschaft),
               an derselben Stelle. §8: maschinell aus dem amtlichen Fedlex-Graphen;
-              massgeblich bleibt die amtliche Sammlung. */}
+              massgeblich bleibt die amtliche Sammlung.
+              §6.6-Split (12.9.2026): die JSX-Darstellung lebt in `RevisionenGruppe`
+              daneben (Begründung dort); Ladezustand/Filterung bleiben hier, weil
+              `revLaden`/`revFehler`/`alleRevisionen` auch `laedtNoch`/`istLeer`
+              speisen (§5, kein zweiter Zustands-Bus). */}
           {(revFehler || alleRevisionen.length > 0) && (
-            <KontextGruppe titel="Änderungen / Revisionen" richtung="Amtliche Sammlung"
-              anzahl={revAenderungen.length}
-              hinweis={revFehler
-                ? undefined
-                : <><span className="num">{revAenderungen.length}</span> Änderungs­erlass{revAenderungen.length === 1 ? '' : 'e'} (AS/RO) — maschinell über den amtlichen Fedlex-Graphen zusammengestellt (verlässlich ab ~2000); massgeblich bleibt die amtliche Sammlung.</>}>
-              {/* F2-4, zweite Fundstelle (Begründung bei der ersten). */}
-              {revFehler ? (
-                <AbrufFehler gegenstand="Änderungsverlauf" href="https://www.fedlex.admin.ch" />
-              ) : (
-                <>
-                  <ul className="flex flex-col gap-1.5">
-                    {revAenderungen.slice(0, MAX_REVISIONEN).map((r) => {
-                      const titel = revisionTitel(r, locale as 'de' | 'fr' | 'it');
-                      const bot = r.botschaftKey ? botschaftNachKey.get(r.botschaftKey) : undefined;
-                      return (
-                        <li key={r.ocUri} className="text-body-s">
-                          <a href={fedlexLokalisiert(r.quelleUrl, locale)} target="_blank" rel="noopener noreferrer"
-                            className="no-underline hover:text-brass-700">
-                            <Datum iso={r.dateEntryInForce} className="text-ink-500" />
-                            {titel && <>{' — '}<span className="font-medium">{titel}</span></>}
-                          </a>
-                          {r.roFundstelle && <span className="num text-micro text-ink-500"> · {r.roFundstelle}</span>}
-                          {bot && (
-                            <>
-                              {' '}
-                              <a href={fedlexLokalisiert(bot.quelleUrl, locale)} target="_blank" rel="noopener noreferrer"
-                                title="Zugehörige Botschaft des Bundesrates"
-                                className="text-micro text-ink-500 hover:text-brass-700">· Botschaft ↗</a>
-                            </>
-                          )}
-                          {r.nichtKonsolidiert && (
-                            <span className="block text-micro text-warn-700">
-                              In Kraft, aber noch nicht in den geltenden Text konsolidiert.
-                            </span>
-                          )}
-                          {/* §8-Marker (Gegenprüfung #703, Semantik zweimal korrigiert nach
-                              Gegenprüfung PR #827 — Auflagen a+f): berichtet NUR, was das
-                              jolux:rectifies-Tripel selbst trägt (Verknüpfung mit einem
-                              AS-Dokument unter Fremd-SR), NIE eine Interpretation
-                              («erstpubliziert», «Anhangs-Änderung» als Tatsache — Gegenbeleg
-                              SKV/AS 2025 686 zeigt, dass die Verknüpfung selbst ein
-                              Fedlex-Datenfehler sein kann). Whitelist auf den einen bekannten
-                              Zustand, kein genereller Switch. Neutrale Farbe (text-ink-500),
-                              NICHT warn-700 — es ist keine Warnung. */}
-                          {r.plausibilitaet === 'berichtigung-fremdes-as-dokument' && (
-                            <span className="block text-micro text-ink-500">
-                              {r.plausibilitaetsGrund ?? 'Fedlex verknüpft diese Berichtigung (jolux:rectifies) mit einem AS-Dokument anderer SR-Klassierung; massgeblich ist die amtliche Sammlung.'}
-                            </span>
-                          )}
-                        </li>
-                      );
-                    })}
-                  </ul>
-                  {revAenderungen.length > MAX_REVISIONEN && (
-                    <p className="text-micro text-ink-500">
-                      … und <span className="num">{revAenderungen.length - MAX_REVISIONEN}</span> weitere. Vollständige Liste über die amtliche Sammlung (Fedlex).
-                    </p>
-                  )}
-                  {revMarker.length > 0 && (
-                    <details className="group">
-                      <summary className="cursor-pointer list-none text-body-s text-ink-500 hover:text-brass-700 [&::-webkit-details-marker]:hidden">
-                        <span aria-hidden className="mr-1 inline-block transition-transform group-open:rotate-90">›</span>
-                        <span className="num">{revMarker.length}</span> weitere Änderung{revMarker.length === 1 ? '' : 'en'} über Sammelerlasse anderer Erlasse
-                      </summary>
-                      <ul className="mt-1.5 flex flex-col gap-1.5 border-l border-line pl-3">
-                        {revMarker.map((r) => (
-                          <li key={`${r.art}:${r.dateEntryInForce}`} className="text-body-s text-ink-500">
-                            <Datum iso={r.dateEntryInForce} />
-                            {' — '}Änderung über einen Sammelerlass ·{' '}
-                            <a href={r.quelleUrl} target="_blank" rel="noopener noreferrer" className="hover:text-brass-700">amtliche Sammlung ↗</a>
-                            {r.nichtKonsolidiert && <span className="text-warn-700"> · noch nicht konsolidiert</span>}
-                          </li>
-                        ))}
-                      </ul>
-                    </details>
-                  )}
-                </>
-              )}
-            </KontextGruppe>
+            <RevisionenGruppe revFehler={revFehler} revAenderungen={revAenderungen}
+              revMarker={revMarker} botschaftNachKey={botschaftNachKey} locale={locale} />
           )}
 
           {/* Gesetzgebung in Arbeit — Vernehmlassungen (Paket 3, W3·11, Moat-Hebel 1).
