@@ -608,6 +608,10 @@
       "titleIt": {
         "type": "literal",
         "value": "Codice delle obbligazioni (Diritto della società anonima). Correzione"
+      },
+      "rectifies": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2020/746"
       }
     },
     {
@@ -768,6 +772,10 @@
       "titleIt": {
         "type": "literal",
         "value": "Codice di diritto processuale civile svizzero (Codice di procedura civile, CPC) (Migliorare la praticabilità e l’applicazione del diritto). Correzione"
+      },
+      "rectifies": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2023/491"
       }
     }
   ],
@@ -789,5 +797,18 @@
     "2023-09-01",
     "2025-01-01",
     "2026-07-01"
-  ]
+  ],
+  "belegteOcs": [],
+  "rectifiesInfoProOc": {
+    "https://fedlex.data.admin.ch/eli/oc/2022/110": {
+      "fremdeSr": "220",
+      "zielOc": "https://fedlex.data.admin.ch/eli/oc/2020/746",
+      "zielFundstelle": "AS 2020 4005"
+    },
+    "https://fedlex.data.admin.ch/eli/oc/2024/235": {
+      "fremdeSr": "272",
+      "zielOc": "https://fedlex.data.admin.ch/eli/oc/2023/491",
+      "zielFundstelle": "AS 2023 491"
+    }
+  }
 }

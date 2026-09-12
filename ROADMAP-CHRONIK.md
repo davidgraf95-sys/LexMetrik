@@ -4033,3 +4033,214 @@ verbliebene Rest-Stub darum jetzt vollständig geschlossen.*
     `lint` grün (0 Fehler); `npx vitest run src/tests/*materialien*
     src/tests/db-vollstaendigkeit.test.ts` 17 Dateien/290 Tests grün.
     `git merge origin/main` sauber. `git status` nur Code/Test/Doku.
+
+## Revisionen: Plausibilitäts-Marker `rectifies`-Notation ≠ eigene (Gegenprüfung #703) — GELÖST 12.9.2026
+
+- [x] **Nullprobe (live, Skill `scraping-swiss-official-sources`, SPARQL):**
+  gegen `https://fedlex.data.admin.ch/sparqlendpoint`, abgerufen 12.9.2026 —
+  `<eli/oc/2026/448> jolux:classifiedByTaxonomyEntry` → Taxonomie-Notation
+  `642.11` (DBG); dieselbe Ressource trägt `jolux:rectifies` →
+  `<eli/oc/1996/1445_1445_1445>`, dessen eigene
+  `jolux:classifiedByTaxonomyEntry` → `824.0` (ZDG, nicht im Korpus) liefert.
+  Der Titel des AS-2026-448-Eintrags nennt explizit «Zivildienstgesetz,
+  ZDG). Berichtigung» — der Widerspruch ist damit auf Fedlex-Seite, nicht im
+  Generator. Vor der Änderung stand der Eintrag in
+  `public/normtext/revisionen/DBG.json` ohne jede Kennzeichnung; es existiert
+  kein `ZDG.json` (ZDG ist kein Bund-Volltext-Erlass in `register.ts`), der
+  Widerspruch war also nur am Titeltext zu erahnen.
+- [x] **Marker (additiv, §6.7):** `baueQueryB` (`scripts/normtext/
+  revisionen-generieren.ts`) fragt neu `OPTIONAL { ?oc jolux:rectifies
+  ?rectifies }` mit ab. Neue reine Funktion `baueOcZuRectifiesSr(bBindings,
+  zielSrProOc)` bildet oc → SR-Notation des berichtigten Erlasses; neue
+  Netzfunktion `holeRectifiesSr(ocUris)` löst diese SR-Notationen in einer
+  globalen VALUES-Batch auf (Muster wie `holeStaendeA`/`holeBindingsB`).
+  `baueRevisionen` erhält den zusätzlichen Parameter `rectifiesSrProOc`
+  (Default leere Map, rückwärtskompatibel zu allen Bestandsaufrufen/-Tests)
+  und setzt `plausibilitaet: 'widerspruch-fedlex-notation'` +
+  `plausibilitaetsGrund` NUR, wenn die aufgelöste rectifies-SR von der SR
+  DIESES Erlasses abweicht — Fedlex bleibt Quelle (§7), der Eintrag wird nie
+  umgehängt. `shaEintrag` hängt die neuen Felder NUR bei gesetztem Marker an
+  den Hash-Input an, damit die sha (und damit der byte-Inhalt) jedes
+  unbetroffenen Eintrags unverändert bleibt (§6.7-Auflage, sonst hätte ein
+  bedingungslos angehängtes Feld JEDE sha im Korpus verändert). Store-raw
+  (`bibliothek/normtext/revisionen-raw/<KEY>.json`) trägt neu
+  `rectifiesSrProOc` (Re-Parse ohne Re-Crawl, §11); `check-revisionen.ts`
+  liest sie offline für den Determinismus-Check und löst sie im
+  `--netz`-Pfad zusätzlich frisch auf (§6.7: sonst könnte
+  `holeRectifiesSr`/`baueOcZuRectifiesSr` beliebig kaputtgehen und
+  `check:revisionen-netz` bliebe grün) sowie eine neue Schema-Prüfung (8):
+  `plausibilitaetsGrund` gdw. `plausibilitaet`, kein unbekannter Marker-Wert.
+  Reader (`src/lib/normtext/revisionen.ts`) übernimmt die zwei Felder
+  1:1 in `RevisionBezug`; `KontextPanel.tsx` zeigt bei
+  `art === 'aenderung'` eine warn-Hinweiszeile — Whitelist auf exakt den
+  einen bekannten Wert `'widerspruch-fedlex-notation'`, kein genereller
+  Switch (kein Ausbau ohne neuen Befund).
+- [x] **Unit-Tests (rot vor Grün, §6.7):** `src/tests/
+  normtext-revisionen.test.ts` — 4 neue Fälle für `baueRevisionen`
+  (Marker bei SR-Abweichung inkl. Grund-Text mit beiden SR-Nummern, kein
+  Marker bei SR-Gleichheit, kein Marker ohne rectifies-Signal, sha
+  unbetroffener Einträge byte-identisch mit/ohne leere `rectifiesSrProOc`-
+  Map) + 1 für die neue reine Komposition `baueOcZuRectifiesSr`. Rot-Beweis
+  per `git stash` nur der Implementierungsdateien (Tests blieben): 2/29 rot
+  (`expected undefined to be 'widerspruch-fedlex-notation'`,
+  `baueOcZuRectifiesSr is not a function`) — danach `git stash pop`, 59/59
+  grün (`normtext-revisionen.test.ts` + `verzahnung-artikel-revisionen.test.ts`).
+- [x] **Vollerhebung (korpusweit, live SPARQL):** vollständiger Lauf über
+  alle 227 Bund-Volltext-Erlasse fand `jolux:rectifies` an 71 Änderungs-
+  Erlassen (70 SR aufgelöst) und **18 Widersprüche in 14 Erlassen**: AIG,
+  CHEMRRV, DBG (×3 — AS 2026 448/ZDG-824.0, AS 2024 215/BGS-935.51, AS 2022
+  112/OR-220), ELV, MSTG (×2), MWSTV (×2), RVOV, SKV, SSV, STGB, VIL, VVEA,
+  VVV, ZPO (je 1, ausser vermerkt). Committet wurden **nur diese 14
+  Sidecars** (`--nur=AIG,CHEMRRV,DBG,ELV,MSTG,MWSTV,RVOV,SKV,SSV,STGB,VIL,
+  VVEA,VVV,ZPO`, plus deren `bibliothek/normtext/revisionen-raw/*.json`) —
+  ein erster ungezielter Vollauf hatte zusätzlich 5 unbeteiligte Erlasse
+  (EOV, FAMZV, IVV, VRV, VTS) mit genuinem, aber unverbundenem Fedlex-
+  Tagesdrift verändert (neue Amendments seit dem letzten Korpus-Stand,
+  0 Bezug zu `rectifies`); dieser Lauf wurde verworfen (`git checkout --`)
+  und durch den gezielten `--nur`-Lauf ersetzt, um die Fund-Reparatur nicht
+  mit unrelated Datendrift zu vermengen (§1). `normtext:churn-reset`
+  bestätigte für die 14 Zieldateien 0 reinen Datums-Churn / 14 mit Substanz.
+- [x] **Tore (nackt, alle grün):** `check:revisionen` (227 Sidecars, 5153
+  Einträge, Determinismus+Schema+Cross-Link+DSG-Anker), `check:revisionen
+  -netz` (Stichprobe DSG/MWSTG/OR/DBG/FZA inkl. frischer rectifies-
+  Auflösung — deckt DBG direkt ab), `check:artikel-revisionen` (202
+  Erlasse/12947 Artikel synchron), `check:historie` (209 Shards synchron),
+  `check:datenhaltung` (Manifest deterministisch, 0 Orphans),
+  `check:paritaet` (9194 Dateien byte-gleich aus der DB), `golden:vergleich`
+  (256 Fälle IDENTISCH), `npx vitest run src/tests/*revision*` (59/59),
+  `npm run lint` (0 Fehler, 1 vorbestehende unabhängige Warnung). Kaskade:
+  `check:entstehung` fiel zunächst mit «14 Projektions-Datei(en) decken sich
+  nicht mit der Neuberechnung» (exakt die 14 betroffenen Erlasse) — behoben
+  durch `gen:entstehung-projektion` + `gen:entstehung-deckung`
+  (Deckungs-Sicht unverändert), danach GRÜN; Manifest anschliessend erneut
+  über `datenhaltung:manifest` nachgezogen, `check:datenhaltung`/
+  `check:paritaet`/`golden:vergleich` erneut grün bestätigt.
+- [x] **Fund-Zeile abgehakt:** `fahrplaene/FAHRPLAN-OFFENE-BEFUNDE.md`.
+
+Whitelist: `scripts/normtext/revisionen-generieren.ts`, `scripts/normtext/
+revisionen-generieren-run.ts`, `scripts/normtext/check-revisionen.ts`,
+`public/normtext/revisionen/**` (14 betroffene), `public/materialien/
+entstehung/**` (Kaskade, 14 betroffene), `daten-manifest.json`,
+`src/lib/normtext/revisionen.ts`, `src/components/kontext/KontextPanel.tsx`
+(nur Hinweiszeile), `src/tests/normtext-revisionen.test.ts`,
+`fahrplaene/FAHRPLAN-OFFENE-BEFUNDE.md` (Fund-Zeile), `ROADMAP-CHRONIK.md`.
+
+### Nachtrag 12.9.2026 (Gegenprüfung PR #827, ERGÄNZT — der Eintrag oben ist FALSIFIZIERT, nicht überschrieben, §2b)
+
+**Verdikt: WIDERLEGT.** Der obige Eintrag beschrieb `jolux:rectifies` als
+«Fedlex-internen Widerspruch» — live nachgerechnet (Opus-Gegenprüfung,
+4/4 Fälle) ist das falsch. `jolux:rectifies` nennt das AS-DOKUMENT, in dem
+der fehlerhafte Text ERSTPUBLIZIERT wurde; `classifiedByTaxonomyEntry`
+nennt den betroffenen SR-Erlass. Bei einer Berichtigung einer «Änderung
+bisherigen Rechts» (Anhangs-Novelle) sind das regelmässig ZWEI verschiedene
+Erlasse — ohne jeden Widerspruch:
+
+- AS 2026 448: ZDG-Enactment (AS 1996 1445) änderte im Anhang Ziff. 7 auch
+  DBG Art. 124 Abs. 4/133 Abs. 3 → die 2026er-Berichtigung dieser
+  DBG-Bestimmungen ist korrekt unter 642.11 klassiert, `rectifies` zeigt auf
+  das ZDG-Enactment.
+- AS 2023 739 (OR-Anhang Ziff. 5 → StGB Art. 154), AS 2026 284 (MG-Anhang
+  Ziff. 1 → MStG Art. 3), AS 2024 144 (Sammelberichtigung SSV direkt + NSV-
+  Anhang 4 Ziff. II 6 → SSV Art. 98, Fedlex führt nur EIN `rectifies`), AS
+  2025 686 (berichtigt laut Text den eigenen Erlass SR 741.013 —
+  `rectifies`-Ziel liegt daneben, ebenfalls kein Fehler).
+
+**Korrekturen (alle committet, Kopf-SHA im PR-Body):**
+
+- (a) Marker umbenannt: `plausibilitaet: 'berichtigung-fremdes-as-dokument'`
+  statt `'widerspruch-fedlex-notation'`; Begründungstext neutral
+  («… im AS-Text eines anderen Erlasses … erstpubliziert …»), nie mehr
+  «Widerspruch»/«widersprüchlich». `KontextPanel.tsx` zeigt die Zeile jetzt
+  in `text-ink-500` (neutral), nicht `text-warn-700` (Warnung) — es ist
+  keine Warnung.
+- (b) Die drei ursprünglichen «Fedlex-interner Widerspruch»-Docstrings
+  (`revisionen-generieren.ts` `RevisionEintrag.plausibilitaet`,
+  `revisionen.ts` `RevisionBezug.plausibilitaet`,
+  `normtext-revisionen.test.ts` Blockkommentar vor dem Test-`describe`) sind
+  je mit «FALSIFIZIERT 12.9.2026 (Gegenprüfung PR #827)» + Gegenbeleg
+  markiert stehen geblieben, NICHT stillschweigend gelöscht (§2b) —
+  darunter die korrigierte Lesart.
+- (c) **Deklaration (Auflage c):** `public/normtext/revisionen/SSV.json`
+  trägt zusätzlich zum Marker zwei genuine, unverbundene neue Einträge
+  (AS 2026 453/458, in Kraft 2026-10-01, `nichtKonsolidiert`) aus dem
+  12.9.2026-Lauf — Fedlex-Tagesdrift für SSV, real und korrekt, nicht mit
+  dem Marker-Fund zu verwechseln. Alle 14 regenerierten Sidecars tragen
+  einheitlich `abgerufen: "2026-09-12"`; die übrigen 213 Sidecars des
+  Korpus bleiben unverändert bei ihrem letzten Lauf (`2026-09-05` oder
+  älter) — kein Vollauf, nur die 14 vom Fund betroffenen Dateien.
+- (d) **Rot-Beweis (§6.7), neue Prüfung (8b) in `check-revisionen.ts`:**
+  ein `plausibilitaet` ohne Rückhalt in `raw` (rectifies-Bindung +
+  abweichende Fremd-SR) macht den Ast jetzt unabhängig von der
+  Determinismus-Prüfung rot. Demonstriert: `AIG.json` manuell mit einem
+  unbelegten Marker versehen → `npm run check:revisionen` →
+  ```
+  check:revisionen ROT: 2 Befund(e):
+    - Determinismus: AIG — Neubau aus raw ≠ committetes Sidecar (Nichtdeterminismus oder Handedit).
+    - AIG: plausibilitaet gesetzt ohne Rückhalt in raw (rectifies-Bindung/Fremd-SR) bei https://fedlex.data.admin.ch/eli/oc/2026/393.
+  ```
+  Danach Original wiederhergestellt, `check:revisionen` erneut grün.
+- (e) **Determinismus (§2):** `holeRectifiesSr`/`baueOcZuRectifiesSr` wählten
+  bei mehreren Treffern je oc bisher «das zuerst gesehene» — abhängig von
+  der SPARQL-Antwort-/Bindungsreihenfolge. Beide wählen jetzt IMMER den
+  lexikografisch KLEINSTEN Wert (SR-Notation bzw. rectifies-Ziel-URI),
+  unabhängig von der Eingabereihenfolge. Neuer Test: gleiche Bindungen in
+  beiden Reihenfolgen → identisches Ergebnis.
+- Tore erneut nackt grün: `check:revisionen`, `check:revisionen-netz`,
+  `check:artikel-revisionen`, `check:historie`, `check:datenhaltung`,
+  `check:paritaet`, `golden:vergleich` (256 IDENTISCH), `npx vitest run
+  src/tests/normtext-revisionen.test.ts src/tests/verzahnung-artikel-
+  revisionen.test.ts` (60/60), `npx tsc -b`, `lint` (0 Fehler). Kaskade
+  (`gen:entstehung-projektion`/`gen:entstehung-deckung`) erneut gefahren:
+  0 Abweichungen (unverändert, da nur Label/Text-Felder betroffen waren).
+
+### Nachtrag 2, 12.9.2026 (Gegenprüfung PR #827, Auflage f — der Nachtrag oben ist selbst teilweise FALSIFIZIERT, ERGÄNZT statt überschrieben, §2b)
+
+Der erste Nachtrag korrigierte «Widerspruch» zu «Berichtigung mit AS-Fundstelle
+im Enactment eines anderen Erlasses» — behauptete dabei aber selbst zu viel:
+«erstpubliziert» und «Anhangs-Änderung ‹Änderung bisherigen Rechts›» als
+FAKTUM, obwohl das `jolux:rectifies`-Tripel das nicht trägt.
+
+**Gegenbeleg (Auflage f, Fedlex-Filestore, 12.9.2026 abgerufen):** AS 2025 686
+(SKV) berichtigt laut Text wörtlich «SKV Änderung vom 15. Oktober 2025
+(AS 2025 644; SR 741.013) Art. 24 Abs. 1 Bst. b Ziff. 2» — SKV berichtigt hier
+den EIGENEN Erlass. Fedlex' `jolux:rectifies` zeigt für AS 2025 686 aber
+FÄLSCHLICH auf `eli/oc/2025/648` (TAFV 2, SR 741.413) statt auf `eli/oc/2025/644`
+(die im Text genannte Fundstelle) — ein BELEGTER FEDLEX-DATENFEHLER in der
+Verknüpfung selbst, keine Anhangs-Konstellation. Zusätzlich: AS 2024 144 (SSV)
+berichtigt laut Fedlex ZWEI Stellen (SSV direkt + NSV-Anhang), ein einzelner
+Grund-Satz kann das nie vollständig abbilden.
+
+**Korrekturen (dritte, konservative Fassung):**
+
+- Grund-Text-Template geändert zu: «Fedlex verknüpft diese Berichtigung
+  (jolux:rectifies) mit dem AS-Dokument \<Ziel-Fundstelle\>, das unter SR
+  \<Fremd-SR\> klassiert ist — häufig, weil die berichtigte Bestimmung im
+  Anhang eines anderen Erlasses geändert wurde; massgeblich ist die amtliche
+  Sammlung.» — berichtet NUR das Tripel, keine Tatsachenbehauptung
+  («erstpubliziert»/«Änderung bisherigen Rechts» als Faktum entfernt).
+  `KontextPanel.tsx`-Fallback-Text ebenso angepasst.
+- Datenmodell erweitert: `RectifiesInfo { fremdeSr, zielOc, zielFundstelle? }`
+  statt reiner SR-String; `holeRectifiesSr` fragt neu zusätzlich
+  `historicalId` der Ziel-ocs ab, `baueOcZuRectifiesSr` leitet die
+  Ziel-Fundstelle über die bestehende `fundstelle()`-Funktion ab (kein
+  Duplikat, §10). `baueRevisionen`s Parameter entsprechend umbenannt
+  (`rectifiesInfoProOc`), Store-raw-Feld `rectifiesInfoProOc` (vorher
+  `rectifiesSrProOc`) — alle 14 betroffenen raw-Dateien neu geschrieben.
+- Generator-Docstring (`RevisionEintrag.plausibilitaet`) trägt jetzt DREI
+  Fassungen übereinander (§2b: jede FALSIFIZIERT, keine gelöscht) — die
+  zweite («erstpubliziert») ausdrücklich mit Datum + SKV-Gegenbeleg als
+  Fedlex-Datenfehler-Klasse markiert.
+- Live-Probe SKV bestätigt die Korrektur: `plausibilitaetsGrund` zeigt jetzt
+  «AS-Dokument AS 2025 648» (die tatsächliche, wenn auch aus Fedlex-Sicht
+  falsche, rectifies-Verknüpfung) statt einer erfundenen
+  Anhangs-Interpretation.
+
+**Tore erneut nackt grün:** `check:revisionen` ZWEIMAL hintereinander,
+`check:revisionen-netz`, `check:artikel-revisionen`, `check:historie`,
+`check:datenhaltung`, `check:paritaet`, `golden:vergleich` (256 IDENTISCH),
+`npx tsc -b` (nach `--force`-Neubau, um die Inkrement-Cache-Lücke
+auszuschliessen), `lint` (0 Fehler), `npx vitest run
+src/tests/normtext-revisionen.test.ts src/tests/verzahnung-artikel-
+revisionen.test.ts` (61/61). Kaskade (`gen:entstehung-projektion`/
+`-deckung`) erneut 0 Abweichungen. Rot-Beweis (8b) erneut demonstriert
+(identischer Ablauf wie Nachtrag 1, neues Schema).

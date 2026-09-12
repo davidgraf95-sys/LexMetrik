@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import {
   baueRevisionen, roFundstelleAusOc, fundstelle, liveLink, botschaftIndex, serialisiere,
-  belegtImXml, MARKER_CUTOFF, type ErlassMeta,
+  belegtImXml, baueOcZuRectifiesSr, MARKER_CUTOFF, type ErlassMeta,
 } from '../../scripts/normtext/revisionen-generieren';
 import { revisionenFuerNorm, revisionTitel, type RevisionBezug } from '../lib/normtext/revisionen';
 import { istReinerDatumsChurn } from '../../scripts/normtext/churn-reset';
@@ -158,6 +158,104 @@ describe('baueRevisionen — Kern-Logik', () => {
     expect(a).toBe(b); // reihenfolge-unabhängig
     const s = JSON.parse(a) as { revisionen: RevisionBezug[] };
     expect(s.revisionen.map((r) => r.dateEntryInForce)).toEqual(['2023-09-01', '2019-03-01']);
+  });
+});
+
+// §8-Marker (Gegenprüfung #703, Nullprobe 12.9.2026 live gegen
+// https://fedlex.data.admin.ch/sparqlendpoint, abgerufen 12.9.2026): AS 2026 448
+// (eli/oc/2026/448) ist per jolux:classifiedByTaxonomyEntry unter SR 642.11 (DBG)
+// klassiert; jolux:rectifies nennt eli/oc/1996/1445_1445_1445, welches unter SR 824.0
+// (ZDG, nicht im Korpus) klassiert ist.
+//
+// FALSIFIZIERT 12.9.2026, ZWEIMAL (Gegenprüfung PR #827): (1) «ein Fedlex-interner
+// Widerspruch» — widerlegt, `jolux:rectifies` ist kein Fehlerindiz. (2) Die Korrektur
+// behauptete ihrerseits «erstpubliziert»/«Anhangs-Änderung» als Tatsache — auch das trägt
+// das Tripel nicht: Gegenbeleg AS 2025 686 (SKV) berichtigt LAUT TEXT den eigenen Erlass
+// (SR 741.013, AS 2025 644), Fedlex' `jolux:rectifies` zeigt aber FÄLSCHLICH auf
+// `eli/oc/2025/648` (TAFV 2, SR 741.413) — ein belegter Fedlex-Datenfehler, keine
+// Anhangs-Konstellation. Der Marker (dritte, konservative Fassung) berichtet deshalb NUR
+// das Tripel selbst: Verknüpfung mit einem AS-Dokument unter Fremd-SR — ohne Interpretation.
+describe('baueRevisionen — §8-Marker (Berichtigung mit rectifies-Verknüpfung zu fremder SR, Gegenprüfung #703/#827)', () => {
+  const DBG: ErlassMeta = { key: 'DBG', sr: '642.11' };
+  const ZIEL_OC = OC('1996/1445_1445_1445');
+  const RECT_OC = OC('2026/448');
+
+  it('markiert eine Berichtigung als berichtigung-fremdes-as-dokument und nennt Fremd-SR + Ziel-Fundstelle, wenn ihr rectifies-Ziel unter einer ANDEREN SR klassiert ist', () => {
+    const bindings = [bind({ oc: RECT_OC, dateForce: '2026-09-02', titleDe: 'Berichtigung', rectifies: ZIEL_OC })];
+    const rectifiesInfoProOc = new Map([[RECT_OC, { fremdeSr: '824.0', zielOc: ZIEL_OC, zielFundstelle: 'AS 1996 1445' }]]);
+    const s = baueRevisionen(DBG, bindings, [], '2026-09-01', new Map(), '2026-09-12', new Set(), rectifiesInfoProOc);
+    const e = s.revisionen.find((r) => r.ocUri === RECT_OC);
+    expect(e?.plausibilitaet).toBe('berichtigung-fremdes-as-dokument');
+    expect(e?.plausibilitaetsGrund).toMatch(/824\.0/);
+    expect(e?.plausibilitaetsGrund).toMatch(/AS 1996 1445/); // Auflage f: Ziel-Fundstelle im Text
+    expect(e?.plausibilitaetsGrund).not.toMatch(/[Ww]iderspr/); // nie "Widerspruch"
+    expect(e?.plausibilitaetsGrund).not.toMatch(/erstpubliziert/i); // Auflage f: keine Provenienz-Behauptung
+    expect(e?.plausibilitaetsGrund).not.toMatch(/Änderung bisherigen Rechts/); // Auflage f: keine Tatsachenbehauptung
+  });
+
+  it('fällt bei fehlender Ziel-Fundstelle ehrlich auf die Ziel-oc-URI zurück (§7: nie fabrizieren)', () => {
+    const bindings = [bind({ oc: RECT_OC, dateForce: '2026-09-02', titleDe: 'Berichtigung', rectifies: ZIEL_OC })];
+    const rectifiesInfoProOc = new Map([[RECT_OC, { fremdeSr: '824.0', zielOc: ZIEL_OC }]]); // keine zielFundstelle
+    const s = baueRevisionen(DBG, bindings, [], '2026-09-01', new Map(), '2026-09-12', new Set(), rectifiesInfoProOc);
+    const e = s.revisionen.find((r) => r.ocUri === RECT_OC);
+    expect(e?.plausibilitaetsGrund).toContain(ZIEL_OC);
+  });
+
+  it('setzt KEINEN Marker, wenn die rectifies-SR mit der eigenen SR übereinstimmt (Regelfall: eigene Berichtigung)', () => {
+    const bindings = [bind({ oc: RECT_OC, dateForce: '2026-09-02', titleDe: 'Berichtigung', rectifies: ZIEL_OC })];
+    const rectifiesInfoProOc = new Map([[RECT_OC, { fremdeSr: '642.11', zielOc: ZIEL_OC }]]); // gleiche SR wie DBG
+    const s = baueRevisionen(DBG, bindings, [], '2026-09-01', new Map(), '2026-09-12', new Set(), rectifiesInfoProOc);
+    const e = s.revisionen.find((r) => r.ocUri === RECT_OC);
+    expect(e?.plausibilitaet).toBeUndefined();
+    expect(e?.plausibilitaetsGrund).toBeUndefined();
+  });
+
+  it('setzt KEINEN Marker ohne rectifies-Bindung oder ohne aufgelöste Ziel-Info (Standardfall, kein Netz)', () => {
+    const bindings = [bind({ oc: OC('2024/1'), dateForce: '2024-01-01', titleDe: 'Normale Änderung' })];
+    const s = baueRevisionen(DBG, bindings, [], '2023-01-01', new Map(), '2026-09-12');
+    expect(s.revisionen[0].plausibilitaet).toBeUndefined();
+  });
+
+  it('lässt die sha unbetroffener Einträge unverändert (§6.7: additiv, kein globaler Diff)', () => {
+    // Derselbe Eintrag OHNE Ziel-Info-Auflösung (Default-Map) muss byte-identisch bleiben zur
+    // Fassung, die es vor dem Marker gab — sonst würde die Vollerhebung ALLE 226
+    // unbetroffenen Sidecars unnötig anfassen (§703-Auflage).
+    const bindings = [bind({ oc: RECT_OC, dateForce: '2026-09-02', titleDe: 'Berichtigung' })];
+    const ohneMarker = baueRevisionen(DBG, bindings, [], '2026-09-01', new Map(), '2026-09-12');
+    const mitLeererMap = baueRevisionen(DBG, bindings, [], '2026-09-01', new Map(), '2026-09-12', new Set(), new Map());
+    expect(serialisiere(ohneMarker)).toBe(serialisiere(mitLeererMap));
+  });
+});
+
+describe('baueOcZuRectifiesSr — reine Komposition (§703, deterministisch nach Auflage e, angereichert nach Auflage f, Gegenprüfung PR #827)', () => {
+  it('bildet oc → RectifiesInfo (Fremd-SR + Ziel-Fundstelle) des rectifies-Ziels, nur wenn beide bekannt sind', () => {
+    const zielOc = OC('1996/1445_1445_1445');
+    const bindings = [
+      bind({ oc: OC('2026/448'), rectifies: zielOc }),
+      bind({ oc: OC('2024/1') }), // keine rectifies-Bindung
+      bind({ oc: OC('2024/2'), rectifies: OC('unbekannt/1') }), // Ziel-Info nicht aufgelöst
+    ];
+    const zielInfoProOc = new Map([[zielOc, { sr: '824.0', roId: undefined }]]);
+    const m = baueOcZuRectifiesSr(bindings, zielInfoProOc);
+    expect(m.get(OC('2026/448'))).toEqual({ fremdeSr: '824.0', zielOc, zielFundstelle: roFundstelleAusOc(zielOc) });
+    expect(m.has(OC('2024/1'))).toBe(false);
+    expect(m.has(OC('2024/2'))).toBe(false);
+  });
+
+  it('wählt bei mehreren rectifies-Zielen für dasselbe oc IMMER das lexikografisch kleinste — unabhängig von der Bindungsreihenfolge', () => {
+    // Auflage e (Gegenprüfung PR #827, §2): vorher «erstes gesehenes Ziel gewinnt» — abhängig
+    // von der (Netz-)Reihenfolge in bBindings, also nicht deterministisch reproduzierbar.
+    const oc = OC('2026/448');
+    const bindingsA = [
+      bind({ oc, rectifies: OC('2000/999') }),
+      bind({ oc, rectifies: OC('1990/1') }),
+    ];
+    const bindingsB = [...bindingsA].reverse();
+    const zielInfoProOc = new Map([[OC('2000/999'), { sr: '111.1' }], [OC('1990/1'), { sr: '222.2' }]]);
+    const mA = baueOcZuRectifiesSr(bindingsA, zielInfoProOc);
+    const mB = baueOcZuRectifiesSr(bindingsB, zielInfoProOc);
+    expect(mA.get(oc)).toEqual(mB.get(oc)); // reihenfolge-unabhängig
+    expect(mA.get(oc)?.fremdeSr).toBe('222.2'); // OC('1990/1') < OC('2000/999') lexikografisch
   });
 });
 
