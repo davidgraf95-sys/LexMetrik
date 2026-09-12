@@ -145,22 +145,38 @@ export function aufgehobenSeitSatz(seitIso: string): string {
 
 /**
  * Nachfolge-Erlass-Hinweis für den Prerender-Kopf (Kurzform des Reader-
- * Banner-Satzes «Nachfolge-Erlass: SR …», hier als reiner Text ohne
- * Link-Anatomie — der Prerender-Kopf trägt bereits EINEN Live-Link auf
- * `quelleUrl`, ein zweiter auf die Nachfolger-ELI ist nicht Teil dieses
+ * Banner-Satzes «Nachfolge-Erlass: SR … (in Kraft seit …)», hier als reiner
+ * Text ohne Link-Anatomie — der Prerender-Kopf trägt bereits EINEN Live-Link
+ * auf `quelleUrl`, ein zweiter auf die Nachfolger-ELI ist nicht Teil dieses
  * Funds und bliebe ein separater, deklarierter Schritt).
  *
- * OHNE Datum (Gegenprüfung PR #826, 12.9.2026, §7): `AufhebungsNachfolger`
- * trägt kein eigenes Inkrafttreten-Feld. Die Vorfassung leitete es aus dem
- * AUFHEBUNGSDATUM des ALTEN Erlasses ab (`seitIso`) — bei BMV deckungsgleich
- * (Totalrevision, nahtloser Übergang), aber unbelegt im Allgemeinen: bei
- * patv/vgvp (Aufhebung 2027-01-01) fällt das Nachfolger-Inkrafttreten NICHT
- * mit diesem Datum zusammen. Eine unbelegte Aussage wird entfernt, nicht
- * geschätzt (§7/§8) — der Reader trägt dieselbe Annahme noch (offener
- * Nachzug, s. `aufgehobenSeitSatz`-Kommentar oben).
+ * Gegenprüfung PR #826 (12.9.2026, §7 — Nachtrag zur ersten Fassung dieser
+ * Funktion, die das Inkrafttreten noch aus dem Aufhebungsdatum des ALTEN
+ * Erlasses geraten hatte, `seitIso` statt eines eigenen Felds): das Datum
+ * kommt jetzt NUR aus `nachfolger.inKraftSeit` — einem separat verifizierten,
+ * optionalen Feld an der SSoT (`aufhebungen.ts`) — und wird weggelassen,
+ * wenn dort nichts hinterlegt ist, statt geschätzt (§8: keine unbelegte
+ * Aussage). Dass eine Rate-Heuristik nicht verallgemeinert: SPARQL bestätigt
+ * für PATV (SR 232.141, ELI cc/1977/2027_2027_2027) und VGVP (SR 814.621,
+ * ELI cc/2000/299) je `jolux:dateNoLongerInForce=2027-01-01` — beide OHNE
+ * deklarierten Eintrag in `ANERKANNTE_AUFHEBUNGEN` (Repeal liegt noch in der
+ * Zukunft) und ohne verifizierten Nachfolger-Bezug; Abruf 12.9.2026,
+ * https://fedlex.data.admin.ch/sparqlendpoint.
+ *
+ * SR-IDENTISCH = TOTALREVISION (Gegenprüfung PR #826): trägt der Nachfolger
+ * dieselbe SR-Nummer wie der aufgehobene Erlass (`altSr`), wäre «Nachfolge-
+ * Erlass SR …» ein Selbstverweis (§8) — Wortlaut wechselt auf «Totalrevision»
+ * mit der ELI als Unterscheidungsmerkmal.
  */
-export function nachfolgerHinweis(nachfolger: { sr: string }): string {
-  return `Nachfolge-Erlass SR ${nachfolger.sr}`;
+export function nachfolgerHinweis(
+  nachfolger: { sr: string; eli: string; inKraftSeit?: string },
+  altSr: string | null,
+): string {
+  const datumTeil = nachfolger.inKraftSeit ? ` in Kraft seit ${datumCh(nachfolger.inKraftSeit)}` : '';
+  if (altSr && nachfolger.sr === altSr) {
+    return `Totalrevision${datumTeil} (ELI ${nachfolger.eli})`;
+  }
+  return `Nachfolge-Erlass SR ${nachfolger.sr}${datumTeil}`;
 }
 
 /**

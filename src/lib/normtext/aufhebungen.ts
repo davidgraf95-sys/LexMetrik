@@ -33,6 +33,13 @@ interface AufhebungsNachfolger {
   titel: string;
   /** ELI-Pfad des Nachfolgers, `cc/JJJJ/NNN` (ohne Sprache/Datum). */
   eli: string;
+  /** ISO `YYYY-MM-DD`: amtliches Inkrafttreten des Nachfolgers (Fedlex SPARQL
+   *  `jolux:dateApplicability` der ersten Konsolidierung unter dem Nachfolger-
+   *  ELI). Gegenprüfung PR #826 (12.9.2026, §7): OPTIONAL und nur gesetzt,
+   *  wenn empirisch verifiziert — NICHT aus `seit` (Aufhebungsdatum des ALTEN
+   *  Erlasses) geraten. Bei Totalrevisionen mit nahtlosem Übergang (BMV) sind
+   *  beide Daten gleich, das ist aber ein Datenbefund, keine Regel. */
+  inKraftSeit?: string;
 }
 
 /** Aufhebungs-Vermerk am Registereintrag/Browse-Erlass — genau die Felder aus
@@ -70,6 +77,13 @@ export const ANERKANNTE_AUFHEBUNGEN: readonly AnerkannteAufhebung[] = [
       titel:
         'Verordnung vom 13. Juni 2025 über die eidgenössische Berufsmaturität (Berufsmaturitätsverordnung, BMV)',
       eli: 'cc/2025/408',
+      // Gegenprüfung PR #826 (12.9.2026): per SPARQL zusätzlich unabhängig
+      // verifiziert — https://fedlex.data.admin.ch/sparqlendpoint,
+      // ConsolidationAbstract classifiedByTaxonomyEntry SR 412.103.1 trägt
+      // eine Konsolidierung <https://fedlex.data.admin.ch/eli/cc/2025/408/20260301>
+      // mit jolux:dateApplicability=2026-03-01 (deckungsgleich mit dem
+      // dateNoLongerInForce des alten cc/2009/423). Abruf 12.9.2026.
+      inKraftSeit: '2026-03-01',
     },
     quelle:
       'Fedlex SPARQL: cc/2009/423 jolux:dateNoLongerInForce=2026-03-01, inForceStatus=enforcement-status/3 «Nicht mehr in Kraft». Nachfolge cc/2025/408 (AKN-preface <docNumber>412.103.1</docNumber>, jolux:dateEntryInForce=2026-03-01, Taxonomie-Slot 6599). Live verifiziert 2026-07-18.',

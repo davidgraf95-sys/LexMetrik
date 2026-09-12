@@ -209,14 +209,15 @@ describe('erlassVolltextHtml() — Standausweis am aufgehobenen Erlass (Gegenpr�
     );
     expect(html).not.toContain('(geltend)');
   });
-  it('aufgehobener Erlass trägt stattdessen «aufgehoben per TT.MM.JJJJ»', () => {
+  it('aufgehobener Erlass trägt den Kanon-Linktext «Amtliche (aufgehobene) Fassung» und «aufgehoben per TT.MM.JJJJ» (A3/PR #826)', () => {
     const html = erlassVolltextHtml(
       { ...kanton, aufgehoben: { seit: '2026-03-01' } },
       datei,
     );
-    expect(html).toContain('(aufgehoben per 01.03.2026)');
+    expect(html).toContain('>Amtliche (aufgehobene) Fassung<');
+    expect(html).toContain('aufgehoben per 01.03.2026');
   });
-  it('Nachfolger, wenn im Register vorhanden, erscheint im Kopf OHNE Inkrafttreten-Datum (§7: kein eigenes Feld dafür, PR #826)', () => {
+  it('Nachfolger mit ANDERER SR ohne belegtes Inkrafttreten-Datum bleibt ohne Datum (§7: kein Feld gesetzt)', () => {
     const html = erlassVolltextHtml(
       {
         ...kanton,
@@ -229,6 +230,34 @@ describe('erlassVolltextHtml() — Standausweis am aufgehobenen Erlass (Gegenpr�
     );
     expect(html).toContain('Nachfolge-Erlass SR 412.103.1');
     expect(html).not.toContain('in Kraft seit');
+  });
+  it('Nachfolger mit belegtem Inkrafttreten-Datum trägt «(in Kraft seit …)» (A1/PR #826)', () => {
+    const html = erlassVolltextHtml(
+      {
+        ...kanton,
+        aufgehoben: {
+          seit: '2026-03-01',
+          nachfolger: { sr: '412.103.1', titel: 'Nachfolge-Titel', eli: 'cc/2025/408', inKraftSeit: '2026-03-01' },
+        },
+      },
+      datei,
+    );
+    expect(html).toContain('Nachfolge-Erlass SR 412.103.1 in Kraft seit 01.03.2026');
+  });
+  it('Nachfolger mit IDENTISCHER SR (Totalrevision) heisst «Totalrevision …», kein SR-Selbstverweis (A1/PR #826)', () => {
+    const html = erlassVolltextHtml(
+      {
+        ...kanton,
+        sr: '412.103.1',
+        aufgehoben: {
+          seit: '2026-03-01',
+          nachfolger: { sr: '412.103.1', titel: 'Nachfolge-Titel', eli: 'cc/2025/408', inKraftSeit: '2026-03-01' },
+        },
+      },
+      datei,
+    );
+    expect(html).toContain('Totalrevision in Kraft seit 01.03.2026 (ELI cc/2025/408)');
+    expect(html).not.toContain('Nachfolge-Erlass SR');
   });
   it('geltender (nicht aufgehobener) Erlass bleibt unverändert bei «(geltend)»', () => {
     const html = erlassVolltextHtml(kanton, datei);
