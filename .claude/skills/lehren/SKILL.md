@@ -125,6 +125,26 @@ Ergebnis keine trägt und der flache Regeste-Text unverändert ist; neuer Ast in
 (dokumentierte Ausnahme `bge_149_IV_1`). Regel: ein Auszug-only-Refresh MERGT
 additive Bestandsfelder, ersetzt sie nie blind.
 
+**F15 — Sperre/Wächter ohne Nullprobe gegen die reale Korpus-/CI-Lage blockiert
+Nachtläufe, statt sie zu schützen (12.9.2026, drei Fälle an einem Tag).** Ein
+neuer Sperren-Mechanismus wurde je gegen den GEDACHTEN, nicht den tatsächlichen
+Bestand entworfen: #815 (A4) verlangte im Kanten-Soll auch Kanten bereits
+ENTLISTETER Dokumente und brach beim nächsten legitimen Entlistungslauf mit
+«unvollständig» ab — der einzige Reparaturweg (Generator laufen lassen) war
+damit blockiert; #818 (B1) feuerte die erste Bestandszahl-Sperren-Fassung auf
+dem unveränderten, VOLLSTÄNDIGEN Korpus, weil `altManifest.entscheide.length`
+abgeleitete `__voll`-Verweis-Einträge mitzählte, `auswahl.length` aber nicht;
+#824 (C1/D1) nahm einen `/tmp`-HTML-Cache als gegeben an — in der CI-Umgebung
+ohne diesen Cache lief das Tor unbemerkt GRÜN durch, statt den fehlenden Fetch
+zu melden (Spiegelbild von F2e/F2h: eine Schranke, die nie gegen den eigenen
+Nullfall — intakter Bestand, cache-lose CI — gegengeprüft wurde, ist so
+gefährlich wie eine, die nie greift). Gegenmittel: Dispatch-§0 Regel 3(a)
+(Nullprobe an den ANFANG jeder Sperren-Diagnose) gilt genauso beim BAU einer
+neuen Sperre — vor dem ersten Commit einmal gegen den unveränderten,
+vollständigen Bestand UND gegen die tatsächliche CI-Umgebung (ohne lokale
+Caches) laufen lassen, nicht nur gegen die Fehlerkonstruktion, die den Bau
+auslöste.
+
 ## Eine neue Lehre ablegen
 
 1. **Klasse bestimmen.** Fällt der Vorfall unter F1–F6? Dann dort das Gegenmittel

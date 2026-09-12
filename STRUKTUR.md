@@ -33,6 +33,60 @@ falsch — korrigiert 30.8.2026). Karten abgeschlossener Sessions (älter als
 werden direkt unter dem KARTEN-Anker eingefügt (jüngste zuoberst).
 
 <!-- KARTEN -->
+## Session 12.9.2026 (3) — Fehlerbuch-Wellen 2+3 `W2·18-FEHLERBUCH` (je Einzel-Fixer + Opus/Sonnet-Prüfer)
+
+**Ablauf:** Fortsetzung der Fehlerbuch-Runde aus Session 12.9.2026 (2) — Welle 2 und
+Welle 3, wieder je ein Einzel-Fixer-Agent im eigenen Worktree, je Prüfrunde Opus oder
+Sonnet als Gegenprüfer.
+
+**Gelandet:** Welle 2 — #818 Bestandszahl-Sperre gegen stillen Korpus-Abgang bei
+Offline-Refresh (`9df548fb4`; Prüfer-Blocker aus Runde 1: die erste Fassung feuerte auf
+dem VOLLSTÄNDIGEN Korpus, weil `altManifest.entscheide.length` abgeleitete
+`__voll`-Verweis-Einträge mitzählte, `auswahl.length` aber nicht — Nullprobe auf dem
+echten Bestand 5093/6341 belegt) · #819 Reparatur-Arm um `normtext:revisionen` ergänzt
+(`0fe6bdb7a`) · #820 FZA-`nichtKonsolidiert`-Marker («angewendet ab» als Konsolidiert-
+Beleg, Vollerhebung 87→34 prüfbare Marker, genau 1 Treffer) (`8aa845bb0`).
+Welle 3 — #821 `standRechtsprechung` aus max(abgerufen) statt Register-Erzeugungsdatum
+(`f63c51c81`) · #824 (Neuaufsetzung von #822, byte-gleich zum geprüften Kopf `5c8b825dc`,
+Historie-Rewrite war gesperrt) — `normtext:struktur --nur=<KEY>`, Churn-Fix, Cache-Pin-
+Sonde mit Bestandssperre, D1 Cache-Pflicht nur bei tatsächlichem Fetch (`6aca2901e`;
+drei Gegenprüfungsrunden Opus: B1 Pin-Skip machte Tore zu No-ops, C1 CI-Lage ohne
+`/tmp`-Cache lief unbemerkt grün durch, D1 Frische-Arm-Deadlock).
+**Offen (nicht Teil dieser Landung):** #823 BMV_2025 im Korpus (SR 412.103.1,
+`cc/2025/408`, neuer Register-Key neben dem historischen `BMV`) + §17-Wurzelfix SR-
+Kollision im Revisionen-Generator (`lesePinsMitSr()` auf Register-Key statt SR
+umgestellt) — PR offen, Auflage «Nachfolge-Link intern» aus der Gegenprüfung noch nicht
+eingebaut, nicht mergen.
+
+**Lehren dieser Session:**
+1. **Ein Sperren-/Wächter-Bau ohne Nullprobe gegen die reale Korpus-/CI-Lage blockiert
+   Nachtläufe (Deadlock), statt sie zu schützen** — dreimal an einem Tag: #815 (A4,
+   Welle 1) verlangte Kanten auch für bereits ENTLISTETE Dokumente und brach beim
+   nächsten legitimen Entlistungslauf ab; #818 (B1) feuerte die erste
+   Bestandszahl-Sperren-Fassung auf dem unveränderten, vollständigen Korpus; #824
+   (C1/D1) nahm einen `/tmp`-Cache als gegeben an — in der CI-Umgebung ohne diesen Cache
+   lief das Tor unbemerkt grün durch, statt den fehlenden Fetch zu melden. Neue Klasse
+   F15 in Skill `lehren`.
+2. **CI-Skip-Marker nie wörtlich in einer Commit-MESSAGE zitieren — auch nicht im
+   Nachbesserungs-Commit** (#822 → #824): weil der Marker schon einmal im Verlauf
+   stand, war Historie-Rewrite (Amend/Rebase-Squash) gesperrt und #822 musste komplett
+   neu aufgesetzt werden (byte-gleicher Inhalt, neuer Commit ohne den Marker im Wortlaut)
+   statt nur nachgebessert zu werden. Ein Fixer-Prompt muss diese Regel selbst tragen —
+   ein Nachbesserer erbt sie nicht automatisch vom Erstversuch.
+3. **Nach jedem main-Nachzug in einem PR die volle Projektions-Kaskade fahren, nicht
+   nur das nächstliegende Artefakt** (#820): der Rebase auf `main` (`8aa845bb0`) verlangte
+   mehr als das Manifest — `lesePinsMitSr()` musste sowohl das `konsKompakt`-Feld aus
+   #820 als auch die Zwei-Schlüssel-Struktur des eigenen PR zusammenführen; ein Nachzug,
+   der nur das Manifest neu erzeugt, hätte die stille Rückkehr des behobenen Fehlers
+   riskiert.
+4. **Die SR-Nummer ist bei Totalrevisionen kein stabiler Erlass-Schlüssel** (#823):
+   SR 412.103.1 trägt seit 1.3.2026 zwei Erlasse (historisch `cc/2009/423`, geltend
+   `cc/2025/408`) — eine reine SR-Keyung in `lesePinsMitSr()` hätte der nächsten
+   Vollregeneration den ELI und Korpus-Stand der Nachfolgerin auf den historischen
+   Erlass übertragen (Rot-Beweis geführt: SR-Map lieferte für Register-Key `BMV` die
+   Daten von `BMV_2025`). Gegenmittel: Lookup nach Register-Key (== Pin-Name), SR nur als
+   Rückfall.
+
 ## Session 12.9.2026 (2) — Fehlerbuch-Runde `W2·18-FEHLERBUCH` (Finder → 5 Einzel-Fixer → Opus-Prüfer)
 
 **Ablauf:** ein Finder sammelte fünf Fund-Zeilen aus `FAHRPLAN-OFFENE-BEFUNDE.md`/`FAHRPLAN-UI-BEFUNDE.md`,
