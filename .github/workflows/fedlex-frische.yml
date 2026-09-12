@@ -213,11 +213,48 @@ jobs:
             npm run gen:pdf-quellen -- --nur=bund
             npm run normtext:register -- --datum=${{ steps.datum.outputs.iso }}
             npm run normtext:struktur -- --datum=${{ steps.datum.outputs.iso }}
+            # ── §17-Wurzelfix (12.9.2026, Fund #703, FAHRPLAN-OFFENE-BEFUNDE.md,
+            # Nacht 5.9.2026) ────────────────────────────────────────────────────
+            # Befund: dieser Arm fuhr `normtext:revisionen` NIE — nur die gleichnamig
+            # klingende, aber andere `gen:artikel-revisionen` (Artikel-Fussnoten-
+            # Extrakt, siehe unten) lief hier. Die «Änderungen/Revisionen»-Timeline je
+            # Erlass (public/normtext/revisionen/<KEY>.json, Reader-Feature W2·6-REV)
+            # blieb dadurch nach einem Re-Pin stehen — reproduziert: DBG trug nach der
+            # AS-2026-448-Änderung (5.9.2026, Hand-Nachzug) 55 statt der veralteten 54
+            # Einträge, aber KEIN automatischer Lauf hätte das je nachgezogen, weil der
+            # Schritt schlicht fehlte (Nullprobe: `grep normtext:revisionen` in dieser
+            # Datei traf vor diesem Fix nichts).
+            #
+            # `--nur-geaendert` im Generator NICHT gebaut (Abweichung vom ursprünglichen
+            # Fund-Wortlaut, §7-offengelegt): der Fund verlangte das gegen 227
+            # `abgerufen`-Bumps je Netz-Lauf (jeder Erlass trägt einen frischen
+            # Abrufstempel, auch ohne Fassungsänderung — Diff-Bläh-Faktor ~20). Das ist
+            # exakt die Sorge, die `normtext:churn-reset` (Zeile unten, seit 1.9.2026,
+            # Befund a2) bereits generisch für JEDE Datei unter `public/normtext` trägt
+            # — es entfernt die Felder `erzeugt`/`abgerufen` rekursiv und erkennt einen
+            # reinen Datums-Bump unabhängig vom Schema. Der Sidecar-Feldname ist
+            # wortgleich `abgerufen`. Ein zweites, generator-eigenes `--nur-geaendert`
+            # wäre dieselbe Prüfung ein zweites Mal (§5, zwei Wahrheiten) und genau die
+            # Art Duplikat, die §10/§17-Gegengewicht verbietet, solange eine bestehende
+            # Stelle dieselbe Sorge schon trägt. Rot-Beweis der Wiederverwendung (kein
+            # blindes Vertrauen, §7): `src/tests/normtext-revisionen.test.ts`, Block
+            # „Rot-Beweis §703“ — ein reiner abgerufen-Bump gilt nachweislich als Churn
+            # (wird zurückgesetzt), eine gekürzte Revisionen-Liste (die DBG-54→55-
+            # Drift-Klasse) NIE. Deshalb hier VOR dem Churn-Reset-Schritt platziert,
+            # nicht danach — sein eigener Abrufstempel-Churn wird von dem bestehenden
+            # Schritt gleich miterledigt, kein separater Lauf nötig.
+            #
+            # Bund-only per Konstruktion (`grundmenge()` filtert bereits auf
+            # `ebene==='bund'`) — kein `--nur=bund`-Flag nötig (das `--nur=`-Flag dieses
+            # Generators filtert nach Erlass-KEY, nicht nach Ebene; ein `--nur=bund`
+            # würde hier fälschlich eine leere Grundmenge suchen und den Lauf abbrechen).
+            npm run normtext:revisionen -- --datum=${{ steps.datum.outputs.iso }}
             # Churn-Reset seit 1.9.2026 (Befund (a2)): Dateien, die sich NUR in
             # `erzeugt`/`abgerufen` unterscheiden, zurück auf HEAD — der PR trägt
             # danach nur Substanz (Pin-Hebung, neue Fassung). Vor den abgeleiteten
             # Generatoren und vor dem Manifest, damit beide vom bereinigten
             # Stand ausgehen. Reset-Regel bisher nur von Hand (fedlex-cache.sh).
+            # Deckt seit dem Schritt oben AUCH die Revisionen-Sidecars ab (§703).
             npm run normtext:churn-reset -- --pfad=public/normtext
             npm run gen:fedlex-wiedervorlage -- --datum=${{ steps.datum.outputs.iso }}
             npm run gen:verfall
