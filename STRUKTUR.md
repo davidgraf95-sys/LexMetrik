@@ -33,6 +33,42 @@ falsch — korrigiert 30.8.2026). Karten abgeschlossener Sessions (älter als
 werden direkt unter dem KARTEN-Anker eingefügt (jüngste zuoberst).
 
 <!-- KARTEN -->
+## Session 12.9.2026 (5) — Fehlerbuch-Welle 5 `W2·18-FEHLERBUCH` (Einzel-Fixer + Opus-Prüfer)
+
+**Ablauf:** Fortsetzung der Fehlerbuch-Runde auf dem Stand von Session 12.9.2026 (4) —
+zwei Fixer plus eine Netz-Arm-Gegenprüfung, letztere noch offen.
+
+**Gelandet:** #833 `5b4aa17a7` Falscher Freund «BMV» im Kanton-Pfad — `KUERZEL_NUR_BUND`
+griff am primären `NORM_IM_TEXT`-Anker nicht (Guard-Lücke, zweistufige Root Cause), betraf
+neben SG-3849 (Gebührentarif, BMV↔Schutzbautenverordnung) auch StG-Fehlverlinkungen in
+AR-621.111/AR-625.21/AI-640.000; korpusweites Delta StG 25 + BMV 10 in 4 Dateien, §1-Grundsatz
+«kein Link statt falscher Link» durchgesetzt (Opus-GP bestanden, Rot-Beweise Art. 9 BMV 1→0
+und Art. 35 StG 1→0) · #832 `66c7d74be` Kontext-Panel zeigt bei FZA/AS 2021 12 beide Daten
+(Finding-4b, Gegenprüfung #820) — Fedlex-Graph liefert kein `dateApplicability`, `dateDocument`
+ist kein Proxy (Vollerhebung 757 Marker-Fälle, 240 Korpus-Caches: «angewendet ab» nur bei FZA);
+darum amtlich belegte Whitelist `dateInKraftFuerCh` statt Heuristik, Zeile «in Kraft für die
+Schweiz seit 15.12.2020 · angewendet ab 1.1.2021», neuer Hausbegriff `IN_KRAFT_FUER_CH_LABEL`.
+
+**Landet gerade (nicht Teil dieser Landung, PR offen):** #834 (Kopf `d5e57a0a7`) Netz-Arm
+`check:revisionen-rectifies` — Gegenprüfung von 25 `rectifies`-Kanten: 14 übereinstimmend,
+2 abweichend (SKV `oc/2025/686` + AIG `oc/2025/342`, als belegte Fedlex-Datenfehler in
+`bibliothek/normtext/rectifies-ausnahmen.json` verankert), 2 Sammelberichtigungen, 7 nicht
+abrufbar (Fedlex führt sie nur als doc/pdf-a). Ausnahmen sind an ihr erwartetes Ziel gebunden
+— weicht der Wert künftig ab, wird der Wächter rot (Stale-Bindung). **#834 ist zum Zeitpunkt
+dieser Karte OPEN** (geprüft via `gh pr view 834`) — die ROADMAP-Zeile «Wächter rectifies-Ziel
+vs. Berichtigungstext» bleibt darum bewusst offen stehen, bis gemergt.
+
+**Nachfunde dieser Session (noch nicht gebaut, als ROADMAP-Zeilen unter `W2·18-FEHLERBUCH`
+vermerkt):**
+1. Der rectifies-Wächter ist für 7/25 Berichtigungen blind, weil Fedlex sie nur als
+   doc/pdf-a führt, nicht als HTML — Konvertierung ist machbar (`textutil -convert txt` auf
+   macOS, sonst PyMuPDF), Tor müsste die doc-Manifestation mit abdecken, damit die Klasse
+   «nicht abrufbar» auf 0 sinkt (Gegenprüfung #834).
+2. Der Bund-Pfad löst «Art. 9 BMV» weiterhin auf die per 1.3.2026 aufgehobene Fassung
+   `cc/2009/423` auf (`src/lib/fedlex/tabelle.ts`), obwohl `aufhebungen.ts` die Nachfolge
+   kennt — die in #823 gebaute Fassungs-Reihe (`normKeyFuerAbk` mit Datum) ist bisher nur im
+   Aufnahme-Pfad wirksam, nicht im Verweis-Resolver (Gegenprüfung #833).
+
 ## Session 12.9.2026 (4) — Fehlerbuch-Welle 4 `W2·18-FEHLERBUCH` (Einzel-Fixer + Opus/Sonnet-Prüfer)
 
 **Ablauf:** Fortsetzung der Fehlerbuch-Runde auf dem Stand von Session 12.9.2026 (3) —
