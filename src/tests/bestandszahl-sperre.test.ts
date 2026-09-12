@@ -52,11 +52,14 @@ function korpus(n: number): EntscheidSnapshot[] {
 }
 
 describe('schreibeKorpus — Bestandszahl-Sperre gegen stillen Abgang', () => {
-  it('wirft, wenn die neue Eingabe > 5 % unter den committeten Bestand fällt', () => {
+  it('wirft, wenn die neue Eingabe unter den committeten Bestand fällt (kein Prozent-Freibrief)', () => {
     const root = neuerRoot('lexm-sperre-');
     schreibeKorpus(korpus(20), '2026-01-01', root);
-    // 2/20 = 10 % Abgang, simuliert einen fehlenden Shard (physisch gelöscht, Register
+    // 2/20 fehlen, simuliert einen fehlenden Shard (physisch gelöscht, Register
     // NICHT angepasst) — genau der #691-Reproduktionsweg über ladeBestandSnapshots.
+    // Analyse (Gegenprüfungs-Runde 2, PR #818): JEDER additive Aufrufer liefert bei
+    // korrektem Ablauf eine Eingabe ≥ dem vorherigen Bestand — die Sperre lässt
+    // darum GAR KEINEN unbegründeten Abgang durch, auch keinen kleinen.
     const manifest = JSON.parse(
       readFileSync(join(root, 'public', 'rechtsprechung', 'register.json'), 'utf8'),
     ) as EntscheidManifest;
@@ -73,15 +76,34 @@ describe('schreibeKorpus — Bestandszahl-Sperre gegen stillen Abgang', () => {
     expect(manifestNachher.entscheide.length).toBe(20);
   });
 
-  it('lässt einen Abgang ≤ 5 % durch (normales additives Rauschen)', () => {
-    const root = neuerRoot('lexm-sperre-toleranz-');
-    schreibeKorpus(korpus(40), '2026-01-01', root);
-    const voll = korpus(40);
-    const res = schreibeKorpus(voll.slice(0, 39), '2026-01-02', root); // 1/40 = 2.5 %
-    expect(res.anzahl).toBe(39);
+  // Regressionstest Gegenprüfungs-Runde 2 (PR #818, Blocker): der Vergleich verglich
+  // ursprünglich `auswahl.length` (rohe Snapshots) mit `altManifest.entscheide.length`
+  // (Snapshots + abgeleitete `__voll`-Verweis-Einträge, die schreibeKorpus SELBST erst
+  // aus genau dieser Eingabe erzeugt) — ein Snapshot mit `azaUrteil` +
+  // `auszugAbschnitte` erzeugt GENAU EINEN zusätzlichen Verweis-Eintrag (Deep-Link-
+  // Karte, Zeile ~333 ff.). Ein unveränderter Roundtrip derselben Eingabe feuerte
+  // damit FÄLSCHLICH, weil das Register (mit Verweisen) grösser zählt als die
+  // Eingabe (ohne Verweise) — bei einem vollständigen Bestand mit vielen aza-
+  // Urteilen (Ist 12.9.2026: 5093 Snapshots + 1248 Verweise = 6341) hätte JEDER
+  // additive Lauf die Sperre ausgelöst.
+  it('feuert NICHT auf einem unveränderten Roundtrip, obwohl __voll-Verweis-Einträge das Register grösser zählen', () => {
+    const root = neuerRoot('lexm-sperre-verweis-');
+    const mitVoll = bge('150 III 1', {
+      azaUrteil: { aktenzeichen: '1B_1/2026', key: 'bund/bger/1b_1_2026', quelleUrl: 'https://www.bger.ch/ext/x' },
+      auszugAbschnitte: [{ typ: 'erwaegung', bloecke: [{ marke: null, text: 'auszug' }] }],
+    });
+    const ohneVoll = bge('150 III 2');
+    const eingabe = [mitVoll, ohneVoll];
+
+    const res1 = schreibeKorpus(eingabe, '2026-01-01', root);
+    expect(res1.anzahl).toBe(3); // 2 Snapshots + 1 __voll-Verweis
+
+    // Unveränderter additiver Roundtrip (wie ladeBestandSnapshots ihn liefern würde):
+    // 2 Snapshots gegen ein Register mit 3 Einträgen — darf NICHT werfen.
+    expect(() => schreibeKorpus(eingabe, '2026-01-02', root)).not.toThrow();
   });
 
-  it('erlaubt einen grösseren Abgang explizit über LEXMETRIK_ERLAUBE_ABGANG=1', () => {
+  it('erlaubt einen Abgang explizit über LEXMETRIK_ERLAUBE_ABGANG=1', () => {
     const root = neuerRoot('lexm-sperre-flag-');
     schreibeKorpus(korpus(20), '2026-01-01', root);
     process.env.LEXMETRIK_ERLAUBE_ABGANG = '1';
@@ -103,7 +125,7 @@ describe('schreibeKorpus — Bestandszahl-Sperre gegen stillen Abgang', () => {
       schreibeKorpus(basis, '2026-01-02', root);
       expect.fail('hätte werfen müssen');
     } catch (err) {
-      expect((err as Error).message).toMatch(/15 < \d+ \(95% von 20/);
+      expect((err as Error).message).toMatch(/15 < 20 \(100% von 20/);
     }
   });
 

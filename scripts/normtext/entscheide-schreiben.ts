@@ -77,12 +77,21 @@ const LEITFAELLE_PRO_ARTIKEL = 8;
  * das verhindert einen KOMPLETT leeren Lauf, nicht eine stumm GESCHRUMPFTE Teilmenge
  * (ein fehlender Shard auf der Platte, ein falscher cwd bei relativer `root`, ein
  * halber Checkout — `ladeBestandSnapshots` übersprang bisher unauffindbare Dateien
- * mit einem blossen `continue`). 5 % Toleranz deckt normales additives Wachstum
- * (Ersetzungen/Quarantäne-Rückstufungen einzelner Einträge) ab, ohne bei einem
- * grösseren, unbeabsichtigten Abgang stillzuhalten. Bewusster Rückbau bleibt möglich
- * (`LEXMETRIK_ERLAUBE_ABGANG=1`), aber nie stillschweigend.
+ * mit einem blossen `continue`).
+ *
+ * KEINE PROZENT-TOLERANZ (korrigiert, Gegenprüfungs-Runde 2, PR #818 — hier stand
+ * vorher 0.95/5 %). Analyse aller additiven Aufrufer: Refresh-Pfade (regeste-/
+ * rubrum-refresh, remap) mutieren nur Felder AUF derselben Bestandsliste, Länge
+ * unverändert; additive Pfade (additiv, bge-baender) fügen ausschliesslich hinzu
+ * oder ersetzen entfernte Routine-Einträge durch MINDESTENS ebenso viele neue BGE
+ * (`neueAzaIds`-Filterung und `neuUniq`-Zugang sind in `normtext-entscheide.ts`
+ * gekoppelt). Bei korrektem Ablauf ist die neue Eingabe also NIE kleiner als der
+ * committete Bestand — jede Reduktion, und sei es nur um 1 von 5000+ Snapshots, ist
+ * ein Befund (fehlender Shard, falscher cwd, Quellen-Ausfall), nie normales Rauschen.
+ * `BESTANDSZAHL_MINDESTANTEIL = 1` heisst darum: kein unbegründeter Abgang ohne
+ * explizites Flag (`LEXMETRIK_ERLAUBE_ABGANG=1`), auch nicht ein kleiner.
  */
-const BESTANDSZAHL_MINDESTANTEIL = 0.95;
+const BESTANDSZAHL_MINDESTANTEIL = 1;
 
 /**
  * Totale Ordnung der Leitfälle je Artikel (§2-deterministisch): gewicht ↓, dann
@@ -262,7 +271,15 @@ export function schreibeKorpus(auswahl: EntscheidSnapshot[], datum: string, root
   const regPfadAlt = join(PUB, 'register.json');
   if (existsSync(regPfadAlt)) {
     const altManifest = JSON.parse(readFileSync(regPfadAlt, 'utf8')) as EntscheidManifest;
-    const altZahl = altManifest.entscheide.length;
+    // `auswahl` sind rohe EntscheidSnapshots (Eingabe VOR diesem Lauf) — die
+    // `__voll`-Verweis-Einträge (Deep-Link-Karte je BGE mit azaUrteil+
+    // auszugAbschnitte, oben im Schleifenkörper erzeugt) entstehen ERST WEITER
+    // UNTEN, aus genau dieser Eingabe. `altManifest.entscheide.length` zählt sie
+    // mit (Ist 12.9.2026: 6341 = 5093 Snapshots + 1248 Verweise) — ein Vergleich
+    // dagegen liesse die Sperre auf jedem VOLLSTÄNDIGEN Lauf fälschlich feuern
+    // (5093 < 6341·0.95, Gegenprüfungs-Befund PR #818). Vergleichbar ist nur die
+    // Snapshot-Menge OHNE die abgeleiteten Verweise.
+    const altZahl = altManifest.entscheide.filter((e) => !e.verweis).length;
     const neuZahl = auswahl.length;
     const erlaubeAbgang = process.env.LEXMETRIK_ERLAUBE_ABGANG === '1';
     if (!erlaubeAbgang && altZahl > 0 && neuZahl < altZahl * BESTANDSZAHL_MINDESTANTEIL) {
