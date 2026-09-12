@@ -371,6 +371,7 @@ zgb-a36-anhang: Die ZGB-Gliederung zeigt 74 Artikel des Anhangs «Wortlaut der f
   - [ ] **`public/normtext/pdf-quellen.json` in eine Paritäts-Klasse aufnehmen** — kann heute byte-abweichen, ohne dass `check:paritaet` es sieht.
   - [ ] **`aufgehoben`-Flag ist golden-neutral (blinder Fleck)** — eine FALSCHE Aufhebungs-Markierung sieht kein Drift-Tor (§8).
   - [ ] **`check:fedlex-versionen` rot: Pin `erv` html-6 ≠ kanonisch html-7** *(gemeldet von zwei Prüfern 12.9.2026, Vorbestand, Netz-Tor)* — Pin nachführen über den Pflegeweg, nicht von Hand.
+  - [x] **`QS-CURRENCY-KANON-FRISCHE`** — gelöst mit PR #808: `fedlex-frische.yml` regenerierte das Manifest nur bei einem `cache.sh`-Diff, während `gen:fedlex-wiedervorlage` `currency.json` (ingestierte DB-Quelle) in JEDEM Lauf schreibt — Lauf 34107274098 scheiterte an `check:datenhaltung`, PR-Schritt `skipped`. `datenhaltung:manifest` läuft jetzt unbedingt nach der Regenerierung. Dazu Pin-Identitäts-Sonde in `scripts/normtext/cache-pin-befund.ts`: ein `/tmp`-Cache gilt erst nach Marker-Abgleich (`eli|konsolidierung|html-N`) als gültig, nicht mehr nach reiner Inhalts-Sonde.
 
 - [ ] **FR/IT-Drift-Wächter Stufe 2** *(`QS-FRIT-DRIFT`, Stufe 1 gebaut 15.8.2026)*
   <!-- @meta id: QS-FRIT-DRIFT · status: ready · blocker: null · dep: [] · feld: korpus · fahrplan: fahrplaene/FAHRPLAN-FEDLEX-PORTFOLIO.md -->
