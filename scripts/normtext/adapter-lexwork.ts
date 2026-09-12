@@ -724,6 +724,90 @@ function annexArtikelToken(titel: string): string | null {
   return m ? m[1] : null;
 }
 
+/** Objekt, aber weder `null` noch Array — Basis der Laufzeit-Validierung
+ *  unten (QS-TYP-LUECKE). */
+function istPlainObject(x: unknown): x is Record<string, unknown> {
+  return typeof x === 'object' && x !== null && !Array.isArray(x);
+}
+
+function typName(x: unknown): string {
+  return x === null ? 'null' : Array.isArray(x) ? 'Array' : typeof x;
+}
+
+/** Von holeLexWork() zur Laufzeit geprüfte Mindestform (Gegenstück zum
+ *  früheren reinen Compile-Cast, siehe validiereTextOfLaw). */
+type TextOfLawRoh = {
+  title?: string;
+  abbreviation?: string;
+  enactment?: string;
+  version_uid?: string;
+  current_version?: {
+    version_dates_str?: string;
+    structured_document_id?: number | null;
+  } | null;
+  selected_version?: {
+    xhtml_tol?: string | null;
+    pdf_link_tol?: string | null;
+    structured_document_id?: number | null;
+    version_dates_str?: string;
+    annex_documents?: Array<{ title?: string; abrogated?: boolean }> | null;
+  } | null;
+};
+
+/**
+ * Laufzeit-Validierung des LexWork-Antwortvertrags (§7 — Nullprobe
+ * QS-TYP-LUECKE 15.8.2026, Gegenprüfungs-Auflage A1): `Response.json()`
+ * liefert `any`; der frühere `let json: {...}`-Cast prüfte die Form nur beim
+ * Compile, nie zur Laufzeit. Empirisch belegt (Reproduktion vor diesem Fix):
+ * ein `text_of_law` mit falschem Typ (String statt Objekt) lief STILL durch
+ * — Ergebnis ein leeres nurPdf-Ergebnis ohne jeden Hinweis; ein
+ * `current_version` als Array lief ebenso still durch (Feld schweigend
+ * ignoriert); ein `xhtml_tol` als Zahl crashte erst tief im XHTML-Parser mit
+ * einer URL-losen Fehlermeldung («xhtml.split is not a function»). Wirft
+ * jetzt sofort mit URL + Feldpfad + gefundenem Typ (kein stiller Fallback,
+ * §6.7) — gleiches Muster wie scripts/materialien/adapter-bs-grossrat.ts
+ * (`unknown` + `typeof`/`Array.isArray`-Wächter statt neuer Bibliothek).
+ */
+function validiereTextOfLaw(url: string, tol: unknown): asserts tol is TextOfLawRoh {
+  if (!istPlainObject(tol)) {
+    throw new Error(`LexWork ${url}: text_of_law hat unerwartete Form (${typName(tol)}), erwartet Objekt`);
+  }
+  const feld = (pfad: string, wert: unknown, ok: boolean, erwartet: string) => {
+    if (wert != null && !ok) {
+      throw new Error(`LexWork ${url}: ${pfad} ist ${typName(wert)}, erwartet ${erwartet}`);
+    }
+  };
+  feld('text_of_law.title', tol.title, typeof tol.title === 'string', 'string');
+  feld('text_of_law.abbreviation', tol.abbreviation, typeof tol.abbreviation === 'string', 'string');
+  feld('text_of_law.enactment', tol.enactment, typeof tol.enactment === 'string', 'string');
+  feld('text_of_law.version_uid', tol.version_uid, typeof tol.version_uid === 'string', 'string');
+
+  for (const name of ['current_version', 'selected_version'] as const) {
+    const v = tol[name];
+    feld(`text_of_law.${name}`, v, istPlainObject(v), 'Objekt oder null');
+    if (!istPlainObject(v)) continue;
+    feld(`text_of_law.${name}.version_dates_str`, v.version_dates_str, typeof v.version_dates_str === 'string', 'string');
+    feld(
+      `text_of_law.${name}.structured_document_id`,
+      v.structured_document_id,
+      typeof v.structured_document_id === 'number',
+      'number oder null',
+    );
+  }
+
+  const sel = tol.selected_version;
+  if (istPlainObject(sel)) {
+    feld('selected_version.xhtml_tol', sel.xhtml_tol, typeof sel.xhtml_tol === 'string', 'string oder null');
+    feld('selected_version.pdf_link_tol', sel.pdf_link_tol, typeof sel.pdf_link_tol === 'string', 'string oder null');
+    feld(
+      'selected_version.annex_documents',
+      sel.annex_documents,
+      Array.isArray(sel.annex_documents),
+      'Array oder null',
+    );
+  }
+}
+
 /**
  * Holt einen LexWork-Erlass und extrahiert die angeforderten Artikel-Tokens.
  *
@@ -754,28 +838,9 @@ export async function holeLexWork(
   if (contentType && !/json/i.test(contentType)) {
     throw new LexWorkShellError(url, `Content-Type "${contentType}" statt application/json`);
   }
-  let json: {
-    text_of_law?: {
-      title?: string;
-      abbreviation?: string;
-      enactment?: string;
-      version_uid?: string;
-      current_version?: {
-        version_dates_str?: string;
-        structured_document_id?: number | null;
-      } | null;
-      selected_version?: {
-        xhtml_tol?: string | null;
-        pdf_link_tol?: string | null;
-        structured_document_id?: number | null;
-        version_dates_str?: string;
-        // G-AUFH-ART Runde 2: Anhang-Liste für den Anhang-Ausschluss (Fehlklasse 2).
-        annex_documents?: Array<{ title?: string; abrogated?: boolean }> | null;
-      } | null;
-    };
-  };
+  let roh: unknown;
   try {
-    json = await res.json();
+    roh = await res.json();
   } catch (e) {
     // 200 + JSON-Content-Type (oder fehlender Header) aber HTML-/Shell-Body →
     // Parse scheitert. Als Soft-404-Shell melden (harter Drift-Tor-Fehler),
@@ -783,10 +848,14 @@ export async function holeLexWork(
     throw new LexWorkShellError(url, `Antwort ist kein gültiges JSON (${e instanceof Error ? e.message : String(e)})`);
   }
 
-  const tol = json.text_of_law;
-  if (!tol) {
+  // `roh` ist zu diesem Zeitpunkt `unknown` (Response.json() liefert `any`,
+  // ein blosser Cast beweist zur Laufzeit nichts — QS-TYP-LUECKE 15.8.2026).
+  if (!istPlainObject(roh) || roh.text_of_law == null) {
     throw new Error(`LexWork ${url}: kein text_of_law im JSON`);
   }
+  const rohTol: unknown = roh.text_of_law;
+  validiereTextOfLaw(url, rohTol);
+  const tol = rohTol;
 
   const sel = tol.selected_version ?? null;
   const cur = tol.current_version ?? null;

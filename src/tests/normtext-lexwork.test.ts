@@ -408,4 +408,72 @@ describe('holeLexWork — mit gemocktem fetch', () => {
       istSoftShell: true,
     });
   });
+
+  // QS-TYP-LUECKE 15.8.2026 (Gegenprüfungs-Auflage A1): Response.json() liefert
+  // `any`; der frühere `let json: {...}`-Cast prüfte nur beim Compile, nie zur
+  // Laufzeit. Reproduktion vor dem Fix (empirisch belegt): ein `text_of_law`
+  // vom falschen Typ lief STILL durch (leeres nurPdf-Ergebnis ohne Hinweis)
+  // statt eines klaren Fehlers mit URL + Grund (§6.7).
+  it('wirft bei text_of_law vom falschen Typ (String statt Objekt), statt still leer durchzulaufen', async () => {
+    vi.stubGlobal(
+      'fetch',
+      vi.fn(async () => ({
+        ok: true,
+        status: 200,
+        headers: new Headers({ 'content-type': 'application/json' }),
+        json: async () => ({ text_of_law: 'kaputt' }),
+      } as unknown as Response)),
+    );
+    await expect(holeLexWork('x', 'de', '1.1')).rejects.toThrow(
+      /text_of_law hat unerwartete Form \(string\), erwartet Objekt/,
+    );
+  });
+
+  it('wirft bei current_version vom falschen Typ (Array statt Objekt), statt das Feld still zu ignorieren', async () => {
+    vi.stubGlobal(
+      'fetch',
+      vi.fn(async () => ({
+        ok: true,
+        status: 200,
+        headers: new Headers({ 'content-type': 'application/json' }),
+        json: async () => ({
+          text_of_law: {
+            title: 't',
+            abbreviation: 'a',
+            enactment: '2020-01-01',
+            version_uid: 'u',
+            current_version: [],
+            selected_version: { structured_document_id: 1, pdf_link_tol: null, xhtml_tol: null },
+          },
+        }),
+      } as unknown as Response)),
+    );
+    await expect(holeLexWork('x', 'de', '1.1')).rejects.toThrow(
+      /text_of_law\.current_version ist Array, erwartet Objekt oder null/,
+    );
+  });
+
+  it('wirft bei xhtml_tol vom falschen Typ (Zahl statt String), statt tief im Parser mit URL-loser Meldung zu crashen', async () => {
+    vi.stubGlobal(
+      'fetch',
+      vi.fn(async () => ({
+        ok: true,
+        status: 200,
+        headers: new Headers({ 'content-type': 'application/json' }),
+        json: async () => ({
+          text_of_law: {
+            title: 't',
+            abbreviation: 'a',
+            enactment: '2020-01-01',
+            version_uid: 'u',
+            current_version: { structured_document_id: 1, version_dates_str: 'x' },
+            selected_version: { structured_document_id: 1, pdf_link_tol: null, xhtml_tol: 12345 },
+          },
+        }),
+      } as unknown as Response)),
+    );
+    await expect(holeLexWork('x', 'de', '1.1')).rejects.toThrow(
+      /LexWork https:\/\/x\/api\/de\/texts_of_law\/1\.1: selected_version\.xhtml_tol ist number, erwartet string oder null/,
+    );
+  });
 });
