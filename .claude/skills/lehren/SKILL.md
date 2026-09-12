@@ -159,6 +159,13 @@ Gegenmittel: **Prüfer-Regel** — ein Marker-/Beleg-Text aus einem einzelnen RD
 steht im Konjunktiv oder als reine Wiedergabe, nie als Behauptung, wenn das Tripel die
 Aussage selbst nicht trägt.
 
+**Zweiter Beleg (12.9.2026, PR #834, Netz-Arm `check:revisionen-rectifies`):** Vollerhebung
+von 25 `rectifies`-Kanten fand einen zweiten echten Fedlex-Datenfehler — AIG `oc/2025/342` —
+neben dem in Runde 2 gefundenen SKV-Fall. Beide Ausnahmen liegen als Muster in
+`bibliothek/normtext/rectifies-ausnahmen.json`, jede an ihr erwartetes Ziel gebunden: weicht
+der amtliche Wert künftig ab, wird der Wächter rot (Stale-Bindung) statt die Ausnahme
+stillschweigend weiter zu tragen — dieselbe Prüfer-Regel, jetzt auch als Tor-Muster.
+
 ## Eine neue Lehre ablegen
 
 1. **Klasse bestimmen.** Fällt der Vorfall unter F1–F6? Dann dort das Gegenmittel

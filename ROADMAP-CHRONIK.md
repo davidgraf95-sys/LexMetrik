@@ -1,5 +1,54 @@
 # ROADMAP — Erledigt-Chronik (Detail-Archiv erledigter Schritte)
 
+## Wächter «rectifies-Ziel vs. Berichtigungstext» — gelöst 12.9.2026 (W2·18-FEHLERBUCH)
+
+**Ursprünglicher Befund (Wortlaut, bis 12.9.2026 offen, `W2·18-FEHLERBUCH`):** «**Wächter «rectifies-Ziel vs. Berichtigungstext»** *(Gegenprüfung PR #827, 12.9.2026)* — Fedlex' `jolux:rectifies` kann auf das falsche AS-Dokument zeigen (AS 2025 686/SKV: Ziel AS 2025 648 = TAFV 2, im amtlichen Text steht AS 2025 644 = SKV; AS 2024 144/SSV: Sammelberichtigung mit nur einem `rectifies`). Tor: die im Berichtigungstext (Filestore-HTML, «(AS … ; SR …)») genannte AS-Fundstelle gegen das `rectifies`-Ziel messen, Abweichung als Befund listen statt in Prosa übersetzen (§7/§17; heute nur Docstring-Vermerk in `scripts/normtext/revisionen-generieren.ts`).»
+
+- [x] **Gelöst 12.9.2026, PR #834 (`e51b5b64b`).** Netz-Arm `check:revisionen-rectifies` in der
+  normen-monitor-Kette: Kopfzitate «(AS … ; SR …)» aus dem Filestore-HTML des berichtigenden AS
+  gegen das rectifies-Ziel gemessen — 25 Kanten: 14 übereinstimmend · 2 abweichend (SKV oc/2025/686,
+  AIG oc/2025/342 = Ziel reine Inkraftsetzungs-VO ohne Normtext; beide als belegte Fedlex-Datenfehler
+  in `bibliothek/normtext/rectifies-ausnahmen.json`) · 2 Sammelberichtigungen · 7 nur doc/pdf-a
+  (Nachfund-Zeile im Fehlerbuch). Ausnahmen an erwartetes Ziel + Text-Fundstelle gebunden, Abweichung
+  ⇒ stale ⇒ rot (Rot-Beweis). Gegenprüfung Opus bestanden (Regex 0/18 falsch-positiv).
+
+## Falscher Freund «BMV» im Kanton-Pfad — gelöst 12.9.2026 (W2·18-FEHLERBUCH)
+
+**Ursprünglicher Befund (Wortlaut, bis 12.9.2026 offen, `W2·18-FEHLERBUCH`):** «**Falscher
+Freund «BMV» im Kanton-Pfad** *(Fixer #823, 12.9.2026)* — `kanton/SG-3849` meint mit «BMV» die
+Schutzbautenverordnung, der Normtext-Link zeigt auf die Berufsmaturitätsverordnung (Bund);
+Kürzel-Auflösung im Kanton-Pfad muss kantonale Kürzel vor Bund-Kürzeln prüfen oder benannt
+ausschliessen (§7).»
+
+- [x] **Gelöst 12.9.2026, PR #833 (`5b4aa17a7`).** Root Cause zweistufig: fehlender Eintrag in
+  `KUERZEL_NUR_BUND` UND eine Guard-Lücke am primären `NORM_IM_TEXT`-Anker («Art. N KÜRZEL»,
+  auch Passus-Formen), die auch StG-Fehlverlinkungen in AR-621.111/AR-625.21/AI-640.000
+  durchliess. Kein Link statt falscher Link (§1/§8) — korpusweites Delta StG 25 + BMV 10 in
+  4 Dateien, Verweis-Basislinie nachgeführt. **Gegenprüfung bestanden** (Opus,
+  `spannen.ts`/`positivliste.ts`; eigene Rot-Beweise Art. 9 BMV 1→0 und Art. 35 StG 1→0).
+  **Begründung:** wörtliche Fehlerbuch-Zeile durch Fix erledigt, Überführung in die Chronik
+  (Steuer-Doku-Welle 5, 12.9.2026).
+
+## Kontext-Panel zeigt bei Finding-4b-Fällen nur `dateEntryInForce` — gelöst 12.9.2026 (W2·18-FEHLERBUCH)
+
+**Ursprünglicher Befund (Wortlaut, bis 12.9.2026 offen, `W2·18-FEHLERBUCH`):** «**KontextPanel
+zeigt bei Finding-4b-Fällen nur `dateEntryInForce`, nicht das frühere «in Kraft seit»-Datum**
+*(Hinweis 3, Gegenprüfung PR #820, 12.9.2026)* — bei FZA/AS 2021 12 zeigt
+`src/components/kontext/KontextPanel.tsx` (Revisions-Zeile) das «angewendet ab»-Datum
+1.1.2021, ohne dass «in Kraft für die Schweiz seit 15.12.2020» sichtbar wird
+(§8-Ehrlichkeit: nicht falsch, aber unvollständig für den einen Fall, wo Text-Beleg und
+Datumsfeld auseinanderfallen). Beobachtung, nicht gebaut — kein Bau-Auftrag dieses Schritts.»
+
+- [x] **Gelöst 12.9.2026, PR #832 (`66c7d74be`).** Fedlex-Graph liefert kein
+  `dateApplicability`, `dateDocument` ist kein Proxy (Vollerhebung 757 Marker-Fälle, 240
+  Korpus-Caches: «angewendet ab» nur bei FZA) — darum additive, amtlich belegte Whitelist
+  `dateInKraftFuerCh` im Revisionen-Generator statt Heuristik (Fedlex `cc/2002/243/20201215`:
+  «in Kraft für die Schweiz seit 15. Dez. 2020 und angewendet ab 1. Jan. 2021 (AS 2021 12)»),
+  neue Invariante in `check-revisionen`, Hausbegriff `IN_KRAFT_FUER_CH_LABEL`, Render-Test.
+  **Gegenprüfung bestanden** (Opus, Norm-Wortlaut/Breite/Determinismus/Rot-Beweis).
+  **Begründung:** wörtliche Fehlerbuch-Zeile durch Fix erledigt, Überführung in die Chronik
+  (Steuer-Doku-Welle 5, 12.9.2026).
+
 ## `check:schlankheit`-Restfeld adapter-lexwork.ts + KontextPanel.tsx — gelöst 12.9.2026 (W2·18-FEHLERBUCH)
 
 **Ursprünglicher Befund (Wortlaut, bis 12.9.2026 offen, `W2·18-FEHLERBUCH`):** «**`check:schlankheit`
