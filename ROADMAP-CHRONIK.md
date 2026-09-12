@@ -1,5 +1,47 @@
 # ROADMAP — Erledigt-Chronik (Detail-Archiv erledigter Schritte)
 
+## Entscheid-Datumsfehler `bge_151_II_475` — Wortlaut vor der Lösung + Lösung 12.9.2026 (W2·18-FEHLERBUCH)
+
+**Ursprünglicher Befund (Wortlaut, bis 12.9.2026 offen, ROADMAP.md `W2·6-B`-Umfeld):**
+«**Entscheid-Datumsfehler bereinigen** — `bge_151_II_475` trägt 1999 statt 2025; Register-Sweep
+nach weiteren Band/Jahr-Diskrepanzen.» Ausführlicher in `fahrplaene/FAHRPLAN-OFFENE-BEFUNDE.md`
+§4: «**Entscheid-Datumsfehler im Rechtsprechungs-Register bereinigen** — `bge_151_II_475` trägt
+1999 statt 2025; Datum gegen bger.ch verifizieren, in der Pipeline-Quelle korrigieren (nie im
+Projektions-JSON, §5), Register-Sweep nach weiteren Band/Jahr-Diskrepanzen, Projektion neu
+erzeugen. **Risikopfad** ⇒ Gegenprüfung.»
+
+- [x] **Gelöst 12.9.2026 (Finder-Fund 12.9.2026, Fix-Session gleichentags):** Nullprobe bestätigte
+  den Fund im Snapshot (`public/rechtsprechung/bund/bge/151_II_475.json`, `datum: "1999-06-21"`,
+  `azaUrteil: null` — Auszug-only). **Amtlich verifiziert** (bger.ch clir,
+  `search.bger.ch/ext/eurospider/live/de/php/clir/...highlight_docid=atf://151-II-475:de`, Abruf
+  12.9.2026): «151 II 475 — 2C_64/2023 vom 26. November 2024»; aktuelle OCL-`decision_date`
+  (`mcp.opencaselaw.ch/api/decisions/bge_151%20II%20475`) stimmt damit überein. Das persistierte
+  1999-06-21 ist das Datum des in der Regeste zitierten Luftverkehrsabkommens («Accord conclu le
+  21 juin 1999 …»), nicht des Urteils — ein OCL-`decision_date`-Fehlwert, wie ihn
+  `adapter-entscheide.ts` für genau diese Bande-Familie (Band 151 → 2025) bereits kennt und seit
+  ec5ac2211 (5.7.2026) über die Bandjahr-Regel abfängt. **Die eigentliche Wurzel lag aber NICHT
+  mehr im Adapter**, sondern im Refresh-Orchestrator `scripts/normtext-entscheide.ts`: der
+  B1-Zweig von `--regeste-refresh` (aza-Nachresolution der BGE ohne Vollurteil) verwarf ein frisch
+  geholtes Ergebnis, sobald es Auszug-only blieb (`if (neu?.azaUrteil) byId.set(...)`) — der
+  korrigierte Datums-Fallback wurde dadurch berechnet, aber nie geschrieben, und der Fehlwert vom
+  Bau vor dem 5.7.-Fix (Datei-`abgerufen`: 2026-06-29) blieb über zwei additive Nachpflege-Läufe
+  (faed1f48c 5.7., d47234add 28.7. — beide bewusst additiv, rührten `datum` nicht an) unverändert
+  stehen. Zusätzlich fehlte im B1-Zweig die clir-Kopf-Datumsanreicherung (`holeClirHtml` +
+  `parseClirUrteilskopf`), die der Band-Nachzug (`--bge-baender`) bereits nutzt. **Fix:** (1) B1
+  übernimmt jetzt jedes erfolgreich geholte Ergebnis, auch Auszug-only (nur ein gescheiterter Fetch
+  lässt den Bestand unangetastet); (2) B1 holt vorab denselben clir-Kopf wie `--bge-baender`.
+  Effekt beim erneuten Lauf: der aza-Resolver löste `2C_64/2023` diesmal sogar vollständig auf
+  (Inversions-Schutz griff nicht mehr) — der Entscheid trägt jetzt das echte Vollurteil samt
+  Datum 2024-11-26, Besetzung und Zitaten statt nur des Sammlungs-Auszugs. **Vollerhebung**
+  (Skript gegen den ganzen BGE-Bestand, Regel Bandjahr−Jahr(datum) > 5): 1259 amtliche BGE geprüft,
+  genau 1 Treffer — nur dieser Fund; nach dem Fix 0 Treffer. **Dauer-Tor ergänzt:**
+  `check:entscheide` prüft neu je BGE die Bandjahr-Plausibilität (dasselbe ±5-Jahr-Fenster wie der
+  aza-Resolver) und schlägt hart fehl, wenn ein `decision_date` mehr als 5 Jahre vor dem
+  BGE-Bandjahr liegt — Rot-Beweis vor dem Fix erbracht (exakt dieser eine Treffer, exit 1), grün
+  danach. Regeneration ausschliesslich über den Pflegeweg (Adapter-Funktionen, `schreibeKorpus`),
+  kein Hand-Edit im Artefakt (§5); reiner `erzeugt`-Zeitstempel-Churn in unbeteiligten Shards wurde
+  vor dem Commit verworfen (bekanntes Muster, vgl. `normtext:struktur`-Churn-Befund).
+
 ## Deckungs-Seite «was wir nicht haben» — Wortlaut vor der Lösung + Lösung 12.9.2026 (PR #807)
 
 **Ursprünglicher Befund (Wortlaut, bis 12.9.2026 offen):** «Deckungs-Seite «was wir nicht haben»

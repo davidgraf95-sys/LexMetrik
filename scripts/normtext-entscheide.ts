@@ -518,10 +518,22 @@ async function main() {
     console.log(`[regeste-refresh] Bestand ${basis.length}, davon ${bge.length} BGE.`);
 
     // ── B1: BGE ohne Vollurteil (azaUrteil:null) via aza-Resolver nachladen ──
+    // Amtliches Urteilsdatum + eigenes aza-Az. ZUERST aus dem bger.ch clir-Urteilskopf
+    // holen (wie im Band-Nachzug, --bge-baender) — OCLs decision_date ist bei etlichen
+    // BGE ein Platzhalter/Fehlwert (Befund 12.9.2026, bge_151_II_475: persistiert war
+    // 1999-06-21 = Datum des in der Regeste zitierten Luftverkehrsabkommens, nicht des
+    // Urteils; amtlich verifiziert 2C_64/2023 vom 26.11.2024, bger.ch clir + aktuelle
+    // OCL-decision_date stimmen überein). Ohne kopf.datumFallback bliebe ein
+    // Auszug-only-Treffer auf den gröberen Bandjahr-Platzhalter angewiesen.
     const b1 = bge.filter((s) => !s.azaUrteil);
     console.log(`[b1] ${b1.length} BGE ohne Vollurteil → aza-Resolver (bger.ch/OCL)`);
     const b1neu = await mapLimit(b1, 3, async (s) => {
-      const neu = await holeBgeLeitentscheid(s.id.replace(/^bund\/bge\//, ''), datum);
+      const clirId = s.bgeReferenz ? bgeRefZuClirId(s.bgeReferenz) : null;
+      const html = clirId ? await holeClirHtml(clirId, 'de', CLIR_CACHE, 300) : null;
+      const kopf = html ? parseClirUrteilskopf(html) : { aza: null, datumIso: null };
+      const neu = await holeBgeLeitentscheid(
+        s.id.replace(/^bund\/bge\//, ''), datum, { azaAz: kopf.aza, datumFallback: kopf.datumIso },
+      );
       process.stdout.write(neu?.azaUrteil ? '.' : neu ? '·' : 'x');
       return { id: s.id, neu };
     });
@@ -529,8 +541,15 @@ async function main() {
     if (b1.length && b1neu.every((x) => !x.neu)) {
       console.log('[b1] 0 Ergebnisse (OCL nicht erreichbar?) — Korpus unberührt.'); return;
     }
+    // Wurzel-Fix (Fund 12.9.2026, W2·18-FEHLERBUCH): ein frisches Auszug-only-
+    // Ergebnis (azaUrteil:null) wurde bisher hier VERWORFEN — der korrigierte
+    // Datums-Fallback (kopf.datumFallback bzw. Bandjahr-Platzhalter statt eines
+    // fehlerhaften decision_date) blieb dadurch stumm ungeschrieben und der alte
+    // Fehlwert stand weiter im Bestand. Jetzt wird JEDES erfolgreich geholte
+    // Ergebnis übernommen (auch Auszug-only) — nur ein gescheiterter Fetch
+    // (neu === null) lässt den Bestandseintrag unangetastet.
     const byId = new Map<string, EntscheidSnapshot>();
-    for (const { neu } of b1neu) if (neu?.azaUrteil) byId.set(neu.id, neu);
+    for (const { neu } of b1neu) if (neu) byId.set(neu.id, neu);
     for (let i = 0; i < basis.length; i++) { const r = byId.get(basis[i].id); if (r) basis[i] = r; }
     // Kollisions-Quarantäne (§8) über ALLE BGE: teilt sich ein aza-key auf mehrere
     // BGE (OCL-Konflation, z.B. «152 V 2»↔«152 V 20»), ist ≥1 Zuordnung falsch → die

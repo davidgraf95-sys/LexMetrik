@@ -133,6 +133,23 @@ function main() {
       fehler.push(`${e.key}: bgeReferenz ohne 'leitentscheid' — Invariante verletzt (§8)`);
     }
     if (e.kuratierung === 'geprueft') warn.push(`${e.key}: kuratierung 'geprueft' ohne Abnahme? (P0 erwartet 'maschinell')`);
+    // Bandjahr-Plausibilität (Register-Sweep, Fund 12.9.2026, W2·18-FEHLERBUCH):
+    // ein BGE-Band deckt genau einen Jahrgang (Band+1874 = Publikationsjahr, §2, seit
+    // 1875) — das OCL-`decision_date` ist bei einzelnen BGE ein Platzhalter/Fehlwert
+    // (Anlassfall bge_151_II_475: persistiertes Datum 1999-06-21 = das in der Regeste
+    // zitierte Luftverkehrsabkommen, nicht das Urteil; amtlich 2C_64/2023 vom
+    // 26.11.2024). Fenster wie im aza-Resolver (adapter-entscheide.ts, §8): ein
+    // Urteil datiert nie nach dem Bandjahr und praktisch nie mehr als 5 Jahre davor.
+    if (e.bgeReferenz && e.datum) {
+      const band = parseInt(e.bgeReferenz, 10);
+      const jahr = parseInt(e.datum.slice(0, 4), 10);
+      if (Number.isFinite(band) && band > 0 && Number.isFinite(jahr)) {
+        const bandJahr = band + 1874;
+        if (bandJahr - jahr > 5) {
+          fehler.push(`${e.key}: Entscheiddatum ${e.datum} liegt ${bandJahr - jahr} Jahre vor dem BGE-Bandjahr ${bandJahr} (bgeReferenz ${e.bgeReferenz}) — Band+1874 ist die kanonische Jahresquelle (§2); OCL-decision_date-Fehlwert prüfen (W2·18-FEHLERBUCH-Muster).`);
+        }
+      }
+    }
     if (e.datum && manifest.erzeugt && e.datum > manifest.erzeugt) {
       warn.push(`${e.key}: Entscheiddatum ${e.datum} liegt nach dem Erzeugungsdatum ${manifest.erzeugt} (OCL-Publikations-/Datumsartefakt prüfen)`);
     }

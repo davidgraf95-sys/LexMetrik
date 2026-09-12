@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-09-05",
+  "erzeugt": "2026-09-12",
   "erlass": "OR",
   "gewichtQuelle": "alt",
   "proArtikel": {
@@ -19,6 +19,16 @@
         "zitierung": "BGE 147 II 72",
         "regesteKurz": "Art. 4 Abs. 1, Art. 5 Abs. 1, 2 und 4, Art. 49a KG; Art. 7 EMRK; Art. 2-6 SVKG; Art. 13 Abs. 2 und Art. 18 Abs. 2 PBV; Art. 37 VGG i.V.m. Art. 49 lit. c VwVG; gesetzliche Grundlage einer abgestimmten Verhaltensweise; Anwendung auf eine…",
         "datum": "2021-02-04",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 2
+      },
+      {
+        "key": "bge_148_II_521",
+        "zitierung": "BGE 148 II 521",
+        "regesteKurz": "Art. 2 Abs. 1 und Art. 4 Abs. 1 KG; Begriff der Wettbewerbsabrede; Konzernprivileg; Zurechenbarkeit von Wettbewerbsabreden innerhalb eines Konzerns; einseitiges Verhalten eines Unternehmens. Begriff der Wettbewerbsabrede im schweizerischen…",
+        "datum": "2022-08-03",
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
@@ -45,6 +55,16 @@
         "gewicht": 0
       },
       {
+        "key": "bge_151_II_475",
+        "zitierung": "BGE 151 II 475",
+        "regesteKurz": "Art. 1 und 8 Abs. 1, Art. 10 und 11 Abs. 2, Art. 17 und 32 LVA; Art. 4 Abs. 1, Art. 5 Abs. 1 und 3 lit. a sowie Art. 49a Abs. 1 KG; Art. 29 Abs. 1 BV; Art. 6 Ziff. 1 EMRK; Preisabreden im Bereich Luftfracht; anwendbares Recht und…",
+        "datum": "2024-11-26",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      },
+      {
         "key": "bge_150_IV_188",
         "zitierung": "BGE 150 IV 188",
         "regesteKurz": "Art. 1 ff. und 184 Abs. 1 OR; Art. 146 Abs. 1 und Art. 147 Abs. 1 StGB; Online-Bestellung von Waren auf Rechnung; Täuschung über den Zahlungswillen; Abgrenzung des Betrugs zum betrügerischen Missbrauch einer Datenverarbeitungsanlage.…",
@@ -59,26 +79,6 @@
         "zitierung": "BGE 150 II 390",
         "regesteKurz": "Art. 10-13 CO 2 -Gesetz; Art. 17 Abs. 3, Art. 20 und 29 CO 2 -Verordnung; Auslegung des Begriffs des Importeurs; Zuordnung anhand des Typengenehmigungsinhabercodes; Zulässigkeit von CO 2 -Börsen; Übertragung und Zurechnung von CO 2…",
         "datum": "2024-03-22",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bge",
-        "kanton": "CH",
-        "gewicht": 0
-      },
-      {
-        "key": "bge_149_II_225",
-        "zitierung": "BGE 149 II 225",
-        "regesteKurz": "Art. 9 BV; Art. 132 Abs. 2 und 3 des Genfer Gesetzes vom 26. September 2010 über die Gerichtsorganisation; Art. 6 des Genfer Gesetzes vom 12. Dezember 2019 über die vorschulische Betreuung; Art. 13 des Reglements der Stadt Genf über die…",
-        "datum": "2023-01-17",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bge",
-        "kanton": "CH",
-        "gewicht": 0
-      },
-      {
-        "key": "bge_148_II_521",
-        "zitierung": "BGE 148 II 521",
-        "regesteKurz": "Art. 2 Abs. 1 und Art. 4 Abs. 1 KG; Begriff der Wettbewerbsabrede; Konzernprivileg; Zurechenbarkeit von Wettbewerbsabreden innerhalb eines Konzerns; einseitiges Verhalten eines Unternehmens. Begriff der Wettbewerbsabrede im schweizerischen…",
-        "datum": "2022-08-03",
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
@@ -5126,6 +5126,16 @@
       }
     ],
     "530": [
+      {
+        "key": "bge_151_II_475",
+        "zitierung": "BGE 151 II 475",
+        "regesteKurz": "Art. 1 und 8 Abs. 1, Art. 10 und 11 Abs. 2, Art. 17 und 32 LVA; Art. 4 Abs. 1, Art. 5 Abs. 1 und 3 lit. a sowie Art. 49a Abs. 1 KG; Art. 29 Abs. 1 BV; Art. 6 Ziff. 1 EMRK; Preisabreden im Bereich Luftfracht; anwendbares Recht und…",
+        "datum": "2024-11-26",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      },
       {
         "key": "bge_149_III_71",
         "zitierung": "BGE 149 III 71",
