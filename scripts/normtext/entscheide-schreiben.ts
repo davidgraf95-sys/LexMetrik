@@ -6,7 +6,7 @@
 // erfasste-keys.generated.ts (interne Verlinkung). Eine Stelle, kein Duplikat (§5).
 
 import { mkdirSync, writeFileSync, rmSync, existsSync, readFileSync } from 'node:fs';
-import { join } from 'node:path';
+import { join, resolve } from 'node:path';
 import { kuerzeRegeste, normalisiereRegeste } from '../../src/lib/rechtsprechung/register';
 import type { EntscheidSnapshot, EntscheidSnapshotDatei } from '../../src/lib/rechtsprechung/typen';
 import type { BrowseEntscheid, EntscheidManifest, RichterRef, RichterRegister } from '../../src/lib/rechtsprechung/register';
@@ -68,6 +68,49 @@ export function manifestRegesteKurz(snap: EntscheidSnapshot): string | null {
 // norm-index.json (Budget-Tor in check-entscheide.ts). Bewusst kleiner als der
 // Erlass-Deckel (12), weil eine Artikel-Ansicht die wenigen zentralen Fälle zeigt.
 const LEITFAELLE_PRO_ARTIKEL = 8;
+
+/**
+ * BESTANDSZAHL-SPERRE (§17-Wurzel-Fix, Fund fahrplaene/FAHRPLAN-OFFENE-BEFUNDE.md:35,
+ * #691). `schreibeKorpus` ist die EINE Schreibstelle (§5) für JEDEN additiven Aufruf
+ * in scripts/normtext-entscheide.ts (additiv/bge-refresh/regeste-refresh/rubrum-
+ * refresh/remap/bge-baender) — jeder Aufrufer schützt nur mit `if (!basis.length)`,
+ * das verhindert einen KOMPLETT leeren Lauf, nicht eine stumm GESCHRUMPFTE Teilmenge
+ * (ein fehlender Shard auf der Platte, ein falscher cwd bei relativer `root`, ein
+ * halber Checkout — `ladeBestandSnapshots` übersprang bisher unauffindbare Dateien
+ * mit einem blossen `continue`).
+ *
+ * KEINE PROZENT-TOLERANZ (korrigiert, Gegenprüfungs-Runde 2, PR #818 — hier stand
+ * vorher 0.95/5 %). Analyse aller additiven Aufrufer: Refresh-Pfade (regeste-/
+ * rubrum-refresh, remap) mutieren nur Felder AUF derselben Bestandsliste, Länge
+ * unverändert; additive Pfade (additiv, bge-baender) fügen ausschliesslich hinzu
+ * oder ersetzen entfernte Routine-Einträge durch MINDESTENS ebenso viele neue BGE
+ * (`neueAzaIds`-Filterung und `neuUniq`-Zugang sind in `normtext-entscheide.ts`
+ * gekoppelt). Bei korrektem Ablauf ist die neue Eingabe also NIE kleiner als der
+ * committete Bestand — jede Reduktion, und sei es nur um 1 von 5000+ Snapshots, ist
+ * ein Befund (fehlender Shard, falscher cwd, Quellen-Ausfall), nie normales Rauschen.
+ * `BESTANDSZAHL_MINDESTANTEIL = 1` heisst darum: kein unbegründeter Abgang ohne
+ * explizites Flag (`LEXMETRIK_ERLAUBE_ABGANG=1`), auch nicht ein kleiner.
+ *
+ * BEKANNTE, GEWOLLTE AUSNAHME (Delta-Prüfung PR #818): `scripts/rechtsprechung/
+ * bs-parse.ts` ist kein additiver Aufrufer im obigen Sinn, sondern ersetzt den
+ * GESAMTEN BS-Anteil des Bestands bei jedem Lauf (Delta-/Takedown-Semantik §5.4,
+ * Kommentar dort). Zieht das Portal einen BS-Entscheid zurück, liefert dieser Lauf
+ * legitim WENIGER Einträge als vorher committet — die Sperre wirft dann bewusst
+ * (mit Abgangs-Liste) und braucht `LEXMETRIK_ERLAUBE_ABGANG=1`; kein Workflow setzt
+ * das automatisch, ist also ein gewollter manueller Stolperstein, kein Deadlock.
+ *
+ * GRENZFALL `altZahl` vs. `ladeBestandSnapshots` (Delta-Prüfung PR #818): `altZahl`
+ * zählt jeden Nicht-Verweis-Manifest-Eintrag, AUCH einen ohne `datei` (derzeit gibt
+ * es keinen — Ist 12.9.2026 stimmen 5093 Snapshots mit 5093 Nicht-Verweis-Einträgen
+ * exakt überein); `ladeBestandSnapshots` liest dagegen NUR Einträge MIT `datei` (sie
+ * überspringt `!e.datei` wie `e.verweis`, Zeile ~590). Entstünde künftig ein
+ * datei-loser, nicht-verweis Manifest-Eintrag, zählte `altZahl` ihn mit, während ein
+ * additiver Lauf ihn nie in seine Eingabe laden könnte — die Sperre würfe dann
+ * DAUERHAFT, auch bei unverändertem Bestand. Bisher kein solcher Eintragstyp
+ * vorgesehen; träte einer hinzu, müsste `altZahl` denselben Filter wie
+ * `ladeBestandSnapshots` tragen (`!e.verweis && e.datei`).
+ */
+const BESTANDSZAHL_MINDESTANTEIL = 1;
 
 /**
  * Totale Ordnung der Leitfälle je Artikel (§2-deterministisch): gewicht ↓, dann
@@ -233,8 +276,49 @@ export function schreibeKorpus(auswahl: EntscheidSnapshot[], datum: string, root
   bezugsShards: number; bezugsBefund: BezugsIndex['befund'] | null;
   literaturVerwurf: { paare: number; nennungen: number; spannen: number };
 } {
+  // Absolute Pfadauflösung (§17-Wurzel-Fix #694/#691): eine relative `root` würde
+  // sich sonst gegen den AKTUELLEN cwd auflösen — läuft der Aufrufer aus einem
+  // anderen Verzeichnis (Sub-Shell, CI-Step-Wechsel), zeigen `PUB`/`GENKEYS` auf
+  // einen unerwarteten Ort, ohne dass irgendein Fehler das meldet (fail-open).
+  // `resolve` fixiert die Wurzel EINMAL, hier, für alle Konsumenten unten.
+  root = resolve(root);
   const PUB = join(root, 'public', 'rechtsprechung');
   const GENKEYS = join(root, 'src', 'lib', 'rechtsprechung', 'erfasste-keys.generated.ts');
+
+  // Bestandszahl-Sperre — MUSS vor dem `rmSync` unten laufen: danach ist der
+  // committete Vergleichswert bereits weg.
+  const regPfadAlt = join(PUB, 'register.json');
+  if (existsSync(regPfadAlt)) {
+    const altManifest = JSON.parse(readFileSync(regPfadAlt, 'utf8')) as EntscheidManifest;
+    // `auswahl` sind rohe EntscheidSnapshots (Eingabe VOR diesem Lauf) — die
+    // `__voll`-Verweis-Einträge (Deep-Link-Karte je BGE mit azaUrteil+
+    // auszugAbschnitte, oben im Schleifenkörper erzeugt) entstehen ERST WEITER
+    // UNTEN, aus genau dieser Eingabe. `altManifest.entscheide.length` zählt sie
+    // mit (Ist 12.9.2026: 6341 = 5093 Snapshots + 1248 Verweise) — ein Vergleich
+    // dagegen liesse die Sperre auf jedem VOLLSTÄNDIGEN Lauf fälschlich feuern
+    // (5093 < 6341·0.95, Gegenprüfungs-Befund PR #818). Vergleichbar ist nur die
+    // Snapshot-Menge OHNE die abgeleiteten Verweise.
+    const altZahl = altManifest.entscheide.filter((e) => !e.verweis).length;
+    const neuZahl = auswahl.length;
+    const erlaubeAbgang = process.env.LEXMETRIK_ERLAUBE_ABGANG === '1';
+    if (!erlaubeAbgang && altZahl > 0 && neuZahl < altZahl * BESTANDSZAHL_MINDESTANTEIL) {
+      const neuKeys = new Set(auswahl.map((s) => keyVon(s).key));
+      const abgang = altManifest.entscheide
+        .filter((e) => !e.verweis && !neuKeys.has(e.key))
+        .map((e) => e.key);
+      console.error(
+        `[schreibeKorpus] BESTANDSZAHL-SPERRE: neue Eingabe ${neuZahl} Snapshot(s) < `
+        + `${(BESTANDSZAHL_MINDESTANTEIL * 100).toFixed(0)}% des committeten Bestands ${altZahl} `
+        + `(Wurzel ${root}). Abgänge (${abgang.length}): `
+        + `${abgang.slice(0, 30).join(', ')}${abgang.length > 30 ? ' …' : ''}`,
+      );
+      throw new Error(
+        `Bestandszahl-Sperre: ${neuZahl} < ${Math.ceil(altZahl * BESTANDSZAHL_MINDESTANTEIL)} `
+        + `(${(BESTANDSZAHL_MINDESTANTEIL * 100).toFixed(0)}% von ${altZahl} committeten Einträgen). `
+        + `Bei ABSICHTLICHEM Abgang erneut mit LEXMETRIK_ERLAUBE_ABGANG=1 ausführen.`,
+      );
+    }
+  }
 
   if (existsSync(PUB)) rmSync(PUB, { recursive: true, force: true });
   mkdirSync(PUB, { recursive: true });
@@ -566,19 +650,37 @@ export function berichteBezuege(shards: number, befund: BezugsIndex['befund'] | 
  * schreibeKorpus den stabil sortierten Manifest unverändert reproduziert.
  */
 export function ladeBestandSnapshots(root = process.cwd()): EntscheidSnapshot[] {
+  // Absolute Pfadauflösung (§17-Wurzel-Fix #694/#691) — wie in `schreibeKorpus`:
+  // eine relative `root` löst sonst fail-open gegen den jeweiligen cwd auf.
+  root = resolve(root);
   const PUB = join(root, 'public', 'rechtsprechung');
   const regPfad = join(PUB, 'register.json');
   if (!existsSync(regPfad)) return [];
   const manifest = JSON.parse(readFileSync(regPfad, 'utf8')) as EntscheidManifest;
   const out: EntscheidSnapshot[] = [];
   const gesehen = new Set<string>();
+  // Im Register geführte, aber auf der Platte fehlende Dateien (#691): früher ein
+  // stummes `continue` — der Aufrufer erfuhr nie, dass die geladene Basis kleiner
+  // war als das Register verspricht. Jetzt gezählt UND gemeldet; die eigentliche
+  // Schutzwirkung gegen einen daraus folgenden Datenverlust liefert die
+  // Bestandszahl-Sperre in `schreibeKorpus` (dort, wo sonst `rmSync` griffe).
+  const fehlend: string[] = [];
   for (const e of manifest.entscheide) {
     if (e.verweis || !e.datei) continue;
     const fp = join(PUB, e.datei);
-    if (!existsSync(fp)) continue;
+    if (!existsSync(fp)) { fehlend.push(e.key); continue; }
     const d = JSON.parse(readFileSync(fp, 'utf8')) as EntscheidSnapshotDatei;
     const snap = d.eintraege?.[0];
     if (snap && !gesehen.has(snap.id)) { gesehen.add(snap.id); out.push(snap); }
+  }
+  if (fehlend.length) {
+    const erwartet = manifest.entscheide.filter((e) => !e.verweis && e.datei).length;
+    console.error(
+      `[ladeBestandSnapshots] ${fehlend.length} im Register geführte Entscheid-Datei(en) `
+      + `fehlen auf der Platte (Wurzel ${root}) — NICHT stumm übersprungen: `
+      + `${fehlend.slice(0, 20).join(', ')}${fehlend.length > 20 ? ` … (+${fehlend.length - 20} weitere)` : ''}. `
+      + `Geladen: ${out.length}/${erwartet}.`,
+    );
   }
   return out;
 }
