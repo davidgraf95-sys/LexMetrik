@@ -374,6 +374,15 @@ jobs:
       # `if: always()`, direkt nach `check:verfall` — derselbe K7-Platz).
       - name: Offline-Tore vor dem PR (VOLLE Tor-Menge, keine Auswahl)
         if: steps.diff.outputs.geaendert == '1'
+        # LEXMETRIK_CACHE_PFLICHT (Gegenprüfung #822 C1): dieser Arm hat oben bereits
+        # `bash scripts/fedlex-cache.sh` gefahren (npm run normtext u.a.) — hier MUSS
+        # der volle Bund-Cache-Bestand samt gültiger Pins vorliegen, ein `--cache-pflicht`-
+        # Verzicht (wie in ci.yml, das nie fetcht) wäre hier ein stiller Blindflug, falls
+        # der Fetch weiter oben nur teilweise gelang. `check:vollstaendigkeit`/`check:p-klassen`
+        # laufen über `npm run check` (run-parallel.ts spawnt sie als Kindprozesse und
+        # vererbt die Umgebung ohne Weiteres) — die Variable erreicht sie darum unverändert.
+        env:
+          LEXMETRIK_CACHE_PFLICHT: '1'
         run: |
           set -euo pipefail
           npm run check

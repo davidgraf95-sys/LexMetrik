@@ -371,6 +371,11 @@ function ladeKantonManifest(): Map<string, string> {
 async function main(): Promise<void> {
   const shellQuelle = readFileSync('scripts/fedlex-cache.sh', 'utf8');
   const cacheEintraege = parseFedlexCacheEintraege(shellQuelle);
+  // §17 (Gegenprüfung #822 C1): `ci.yml` fährt dieses Tor bei JEDEM Nicht-Doku-PR, OHNE
+  // je `fedlex-cache.sh` zu rufen — dort ist ein /tmp-Cache die AUSNAHME, kein Normalfall.
+  // `--cache-pflicht` (nur im Frische-Arm `fedlex-frische.yml` gesetzt, der den Cache
+  // selbst frisch fetcht) verlangt die VOLLE Bestandszahl auch bei 0 vorhandenen Caches.
+  const cachePflicht = process.argv.includes('--cache-pflicht') || process.env.LEXMETRIK_CACHE_PFLICHT === '1';
 
   const { snapshots: bundSnapshots, snapshotIds: bundSnapshotIds } = ladeBundSnapshots();
   const {
@@ -386,6 +391,7 @@ async function main(): Promise<void> {
   console.log('\n── Prüfung 1: Bund-Extraktions-Vollständigkeit ──────────────────────────');
 
   let bundHtmlGeprüft = 0;
+  let bundVorhanden = 0; // Gegenprüfung #822 C1: Caches, die ÜBERHAUPT existieren (Existenz, nicht Pin-Gültigkeit)
   let bundFehlendTotal = 0;
   let bundSkipTotal = 0;
 
@@ -397,6 +403,7 @@ async function main(): Promise<void> {
       );
       continue;
     }
+    bundVorhanden++;
     // §17 (Gegenprüfung #808 B4): Inhalt allein genügt nicht — ein VOR einem Re-Pin
     // geschriebener Cache besteht die Existenz-Prüfung anstandslos, stammt aber aus
     // der überholten Manifestation. Dieselbe Pin-Sonde wie normtext-snapshot.ts
@@ -464,14 +471,44 @@ async function main(): Promise<void> {
     console.log(`  ${gesetz}: ${statusText}`);
   }
 
-  // Bestandszahl-Sperre (Gegenprüfung #822 B1): `bundFehlendTotal` bleibt bei 0, wenn der
-  // Schleifenkörper für JEDEN Eintrag übersprungen wurde (fehlender ODER pin-ungültiger
-  // Cache) — ohne diese Sperre meldete Prüfung 1 dann trotzdem «ok». `cacheEintraege.length`
-  // ist die Zahl der in fedlex-cache.sh registrierten Bund-Erlasse (Register-Bund-Erlasse).
-  if (bundHtmlGeprüft < cacheEintraege.length) {
+  // Bestandszahl-Sperre (Gegenprüfung #822 B1, verschärft C1): `bundFehlendTotal` bleibt
+  // bei 0, wenn der Schleifenkörper für JEDEN Eintrag übersprungen wurde (fehlender ODER
+  // pin-ungültiger Cache) — ohne diese Sperre meldete Prüfung 1 dann trotzdem «ok».
+  // `cacheEintraege.length` ist die Zahl der in fedlex-cache.sh registrierten Bund-Erlasse.
+  //
+  // C1-KORREKTUR: `ci.yml` fährt dieses Tor bei JEDEM Nicht-Doku-PR, OHNE je
+  // `fedlex-cache.sh` zu rufen — dort ist `bundVorhanden === 0` der NORMALFALL, kein
+  // Befund. Eine strikte Vollzahl-Pflicht hätte darum JEDEN Nicht-Doku-PR rot gestellt
+  // (Rot-Beweis dieses genauen Fehlers: erste Fassung dieses Fixes, reproduziert mit
+  // allen 227 Bund-Caches weggelegt). Die Schranke bezieht sich darum auf VORHANDENE
+  // Caches: 0 vorhanden ⇒ Prüfung ungefahren (grün, HINWEIS) — ausser `--cache-pflicht`
+  // (nur im Frische-Arm `fedlex-frische.yml`, der den Cache selbst frisch fetcht) verlangt
+  // dort auch bei 0 die volle Zahl. Ein TEILBESTAND (0 < n < alle) ist in JEDEM Kontext ein
+  // Befund — halb gefetchte Caches sind kein gültiger Zustand.
+  if (bundVorhanden === 0 && !cachePflicht) {
+    console.log(
+      `\nHINWEIS: Cache-Prüfung nicht durchgeführt (kein /tmp-Cache; nur im Frische-Arm Pflicht).`,
+    );
+  } else if (bundVorhanden > 0 && bundVorhanden < cacheEintraege.length) {
+    console.error(
+      `\nFEHLER: nur ${bundVorhanden}/${cacheEintraege.length} Bund-Erlasse haben überhaupt einen ` +
+        `/tmp-Cache (Teilbestand) — entweder ALLE Caches bereitstellen ('bash scripts/fedlex-cache.sh') ` +
+        `oder KEINEN (Prüfung wird dann übersprungen).`,
+    );
+    exitCode = 1;
+  } else if (bundVorhanden === 0 && cachePflicht) {
+    console.error(
+      `\nFEHLER: --cache-pflicht verlangt Bund-Caches, aber 0/${cacheEintraege.length} vorhanden ` +
+        `— 'bash scripts/fedlex-cache.sh' lief nicht oder scheiterte vollständig.`,
+    );
+    exitCode = 1;
+  } else if (bundHtmlGeprüft < cacheEintraege.length) {
+    // Voller Bestand vorhanden (oder --cache-pflicht verlangt es), aber mindestens ein
+    // Cache ist pin-ungültig (bereits oben je einzeln als FEHLER geloggt) — hier nur die
+    // Summenzeile, damit ein Scroll-Log die Ursache nicht verliert.
     console.error(
       `\nFEHLER: nur ${bundHtmlGeprüft}/${cacheEintraege.length} Bund-Erlasse tatsächlich geprüft ` +
-        `(fehlende/pin-ungültige Caches zählen NICHT als bestanden) — 'bash scripts/fedlex-cache.sh' laufen lassen.`,
+        `(pin-ungültige Caches zählen NICHT als bestanden, s. FEHLER-Zeilen oben).`,
     );
     exitCode = 1;
   }

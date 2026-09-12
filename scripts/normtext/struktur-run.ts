@@ -82,9 +82,18 @@ export function sollSchreiben(altInhalt: string | null, neuInhalt: string): bool
  * §17 (Gegenprüfung #822 B2): trägt eine vorhandene `zaehler`-Zeile aus `altInhalt`
  * unverändert in `neuInhalt` weiter, wenn geschrieben wird — «beim Schreiben erhalten».
  * Dieser Generator berechnet den Block nicht selbst und darf ihn beim Zurückschreiben
- * darum nicht löschen. Ein regulärer `npm run projektionen`-Lauf zieht `gen:bezuege-zaehler`
- * danach ohnehin nach und aktualisiert den Wert; bis dahin bleibt der ALTE (ggf. leicht
- * veraltete) Block sichtbar statt gar keiner (§8: nie stillschweigend verlieren).
+ * darum nicht löschen.
+ *
+ * ZUSATZ-HINWEIS (Prüfer-Auflage, Gegenprüfung #822 C1): bei einer REINEN Datums-Churn
+ * (nichts inhaltlich geändert) ist der übernommene Block exakt richtig. Bei einer ECHTEN
+ * Bestandsänderung (neue/entfernte Artikel, geänderte Fussnoten) trägt er den ALTEN Wert
+ * weiter — der kann für neue Artikel fehlen oder für entfernte noch dastehen, bis
+ * `npm run gen:bezuege-zaehler` (Teil von `npm run projektionen`, läuft nach jedem
+ * `normtext:struktur`-Lauf) den Block aus den aktuellen Verzahnungs-Shards neu zieht und
+ * ersetzt. Diese Projektions-Kaskade (struktur-run.ts → gen-bezuege-zaehler.ts) ist der
+ * Grund, warum ein kurzzeitig veralteter Block hier vertretbar ist: er wird im selben
+ * Build-Durchlauf korrigiert, statt bis dahin ganz zu fehlen (§8: nie stillschweigend
+ * verlieren — lieber kurz veraltet als leer).
  */
 export function zaehlerZeileErhalten(altInhalt: string | null, neuInhalt: string): string {
   if (!altInhalt) return neuInhalt;
