@@ -164,6 +164,16 @@ Titel/Stichwort genitiv-tolerant 37 Erlasse, 102 Kanten = 25,7 % der 136 adressi
 Datum allein ist als Schlüssel widerlegt (Kollision 161.100/162.100). Geltung: nur BS; ZH offen.
 Pflegebedarf: Monatslauf ausserhalb der Gate-Kette. Maschinell; fachliche Abnahme David offen.
 
+**Materialien-Register — Deckel-Messung und Projektions-Entwurf vor ZH (W2·13-KANTONE-DATEN):** [materialien/2026-09-12-register-deckel-messung.md](materialien/2026-09-12-register-deckel-messung.md) —
+Quelle: die committete Projektion `public/materialien/register.json` (Korpusstand `f6b5471fc`), gemessen
+12.9.2026 mit `zlib.gzipSync`. Regel deterministisch: das Register wird nach NUTZUNGSZEITPUNKT geteilt
+(Kern · `register-i18n.json` nur für locale fr/it · `register-provenienz.json` nie vom Browser), nicht nach
+Herkunft — Herkunfts-Shards und Lazy-Detail sind mit Zahlen verworfen. Befund: `sha` kostet 59,2 KB gzip
+(inkompressibel), FR/IT-Titel 70,6 KB, und vier Feldgruppen werden ausgeliefert, die keine Browser-Zeile
+liest; 331,8 → 118,3 KB gzip, Deckel 400 → 280 KB gesenkt, ZH-Prognose 49 %. Geltung: Rubrik Materialien
+und Kontext-Panel, alle Herkünfte. Pflegebedarf: drei Dateien entstehen in EINEM Generator-Lauf, `check:materialien`
+prüft alle drei byte-gleich. Maschinell gemessen; fachliche Abnahme David offen.
+
 **Botschaften / Entstehungsgeschichte (Fedlex-Portfolio Paket 2, W2·6):** [materialien/botschaften-2026-07-10.md](materialien/botschaften-2026-07-10.md) —
 401 Botschaften des Bundesrates über die 218 Bund-Volltext-Erlasse, automatisch über den
 Fedlex-Gesetzgebungs-Projekt-Graphen verknüpft (SPARQL-Reverse-Kette, `draftHasLegislativeTask`
