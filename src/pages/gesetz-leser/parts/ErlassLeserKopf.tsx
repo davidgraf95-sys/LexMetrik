@@ -372,7 +372,14 @@ export function ErlassLeserKopf({
               const nachfolgerKey = erlassKeyVonEli(n.eli);
               const amtlich = `https://www.fedlex.admin.ch/eli/${n.eli}/de`;
               const bezeichnung = (
-                <>Nachfolge-Erlass: SR <span className="num">{n.sr}</span> (in Kraft seit <Datum iso={erlass.aufgehoben.seit} />)</>
+                // Gegenprüfung PR #826 (A2-Nachzug): Inkrafttreten des Nachfolgers
+                // nur aus dem belegten SSoT-Feld `nachfolger.inKraftSeit`
+                // (`aufhebungen.ts`), nie aus dem Aufhebungsdatum des alten
+                // Erlasses abgeleitet; fehlt es, entfällt die Klammer.
+                <>
+                  Nachfolge-Erlass: SR <span className="num">{n.sr}</span>
+                  {n.inKraftSeit && (<> (in Kraft seit <Datum iso={n.inKraftSeit} />)</>)}
+                </>
               );
               if (!nachfolgerKey) {
                 return (

@@ -64,6 +64,9 @@ describe('ANERKANNTE_AUFHEBUNGEN — SSoT-Integrität', () => {
         sr: '412.103.1',
         titel: expect.stringContaining('Berufsmaturität'),
         eli: 'cc/2025/408',
+        // Gegenprüfung PR #826 (12.9.2026): SPARQL-verifiziertes Inkrafttreten
+        // des Nachfolgers, s. Kommentar an der Deklaration in aufhebungen.ts.
+        inKraftSeit: '2026-03-01',
       },
     });
     expect(aufhebungFuerRegister('OR')).toBeUndefined();

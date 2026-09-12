@@ -19,10 +19,12 @@
 // Stand, s. Block unten (snapshot ≠ in Kraft — TODO(David), Welle ab 1.12.2026).
 
 import { SITE_URL, type RouteMetadaten } from './seo';
-import { AMTLICHE_FASSUNG, AMTLICHE_FASSUNG_NOMEN, MASSGEBLICH_SATZ } from './benennung';
+import { AMTLICHE_FASSUNG, AMTLICHE_FASSUNG_AUFGEHOBEN, AMTLICHE_FASSUNG_NOMEN, MASSGEBLICH_SATZ } from './benennung';
 import {
+  aufgehobenSeitSatz,
   GELTUNG_UNGEPRUEFT_SATZ,
   naechsteFassungSatz,
+  nachfolgerHinweis,
   STAND_UNBEKANNT,
   standausweisSatz,
 } from './normtext/erlassKopfText';
@@ -351,13 +353,31 @@ export function erlassVolltextHtml(
         : '';
   const kuenftig = currency?.naechsteFassungAb ? ` · ${esc(naechsteFassungSatz(currency.naechsteFassungAb))}` : '';
   const standSegment = e.stand ? `Stand ${esc(e.stand)}` : esc(STAND_UNBEKANNT);
+  // Gegenprüfung PR #823/W2·18 (12.9.2026): der Live-Link hiess bis hierher
+  // IMMER «amtliche Fassung (geltend)» — auch am GANZ aufgehobenen Erlass
+  // (Beleg dist/gesetze/bund/BMV.html). `e.aufgehoben` ist dieselbe Ableitung,
+  // die `geprueft`/`kuenftig` zwei Zeilen darüber bereits gatet (§5).
+  // Nachtrag Gegenprüfung PR #826 (12.9.2026, A3): der Linktext am
+  // aufgehobenen Erlass ist jetzt der KANON `AMTLICHE_FASSUNG_AUFGEHOBEN`
+  // (`benennung.ts`, dieselbe Zeichenkette wie `QuellLink(variante:
+  // 'aufgehoben')` im Reader) statt eines eigenen Literals; der geltende
+  // Zweig bleibt das ungeänderte Alt-Literal — Golden für alle geltenden
+  // Erlasse bleibt dadurch unberührt (nur der `e.aufgehoben`-Zweig ändert
+  // sich, s. `npm run golden:vergleich` / SHA-256-Diff im PR).
+  const linkText = e.aufgehoben ? AMTLICHE_FASSUNG_AUFGEHOBEN : 'amtliche Fassung (geltend)';
+  const aufgehobenSegment = e.aufgehoben ? ` · ${esc(aufgehobenSeitSatz(e.aufgehoben.seit))}` : '';
+  // A1 (PR #826): `altSr` (die SR-Nummer DIESES Erlasses) entscheidet, ob der
+  // Nachfolger denselben SR-Slot trägt (Totalrevision, s. `nachfolgerHinweis`).
+  const nachfolgerSegment = e.aufgehoben?.nachfolger
+    ? ` · ${esc(nachfolgerHinweis(e.aufgehoben.nachfolger, e.sr))}`
+    : '';
   const kopf =
     `<header><nav aria-label="Brotkrumen"><a href="/gesetze">Gesetze</a> › ` +
     `<a href="/gesetze">${esc(gebietLabel(e.rechtsgebiet))}</a> › ${esc(e.kuerzel)}</nav>` +
     `<h1>${esc(e.kuerzel)} — ${esc(e.titel)}</h1>` +
     `<p>${esc(e.kuerzel)}${srZeile} · ${standSegment} · ` +
-    `<a href="${esc(e.quelleUrl)}" rel="nofollow noopener" target="_blank">amtliche Fassung (geltend)</a>` +
-    `${geprueft}${kuenftig}</p>` +
+    `<a href="${esc(e.quelleUrl)}" rel="nofollow noopener" target="_blank">${esc(linkText)}</a>` +
+    `${aufgehobenSegment}${nachfolgerSegment}${geprueft}${kuenftig}</p>` +
     `</header>`;
   const artikel = datei.eintraege
     .map((a) => {
