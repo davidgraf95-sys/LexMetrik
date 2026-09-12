@@ -189,6 +189,31 @@ describe('ausgeschriebeneVerweiseImText — Kürzel mit kantonaler Doppelbedeutu
   });
 });
 
+// ─── W2·18-FEHLERBUCH-Nachzug (12.9.2026): KUERZEL_NUR_BUND fehlte am ─────────
+// PRIMÄREN Anker (NORM_IM_TEXT), nicht nur an Z5 — dieselbe Lücke, die
+// GP-Nachzug PR #635 für `zusatzwortSperre`/`historischeFassung` bereits schloss.
+// Beleg wörtlich aus kanton/SG/3849 art_7 (Stand 2026-01-01, quelleUrl
+// gesetzessammlung.sg.ch): «Prüfung und Genehmigung von Projekten für private
+// Schutzräume (Art. 9 BMV; Art. 39 Bst. b EV zum ZSG)» — gemeint ist die
+// eidgenössische Schutzbautenverordnung vom 27.11.1978, nicht die geltende
+// Berufsmaturitätsverordnung (SR 412.103.1, Register-Key 'BMV').
+describe('normVerweiseImText — Kürzel mit kantonaler/zeitlicher Doppelbedeutung am PRIMÄREN Anker', () => {
+  const sgBmv = 'Prüfung und Genehmigung von Projekten für private Schutzräume (Art. 9 BMV; Art. 39 Bst. b EV zum ZSG).';
+
+  it('in einem KANTONALEN Erlass bleibt die kürzeste Zitatform «Art. 9 BMV» Text', () => {
+    // Vor dem Fix (nur Z5 gesperrt): NORM_IM_TEXT matcht «Art. 9 BMV» direkt
+    // und produziert den falschen Link auf SR 412.103.1 — dieser Test war rot,
+    // bis der Guard auf `normVerweiseImText` (spannen.ts) ausgeweitet wurde.
+    expect(normVerweiseImText(sgBmv, 'SG-3849', 'kanton')).toEqual([]);
+  });
+
+  it('in einem BUNDESERLASS bleibt «BMV» der Bundes-Verweis (SR 412.103.1)', () => {
+    expect(normVerweiseImText(sgBmv, undefined, 'bund')).toEqual([
+      { start: 63, end: 73, anzeige: 'Art. 9 BMV', artikel: 'Art. 9 BMV', propagiert: false },
+    ]);
+  });
+});
+
 // ─── GP-Nachzug (PR #635) B1: Kürzel + Zusatzwort = ein ANDERER Erlass ───────
 
 describe('ausgeschriebeneVerweiseImText — Kürzel mit titel-weiterführendem Zusatzwort', () => {

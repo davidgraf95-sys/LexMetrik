@@ -13,8 +13,8 @@
   "gesamt": {
     "stellen": 36083,
     "self": 19667,
-    "fremd": 11382,
-    "text": 5034,
+    "fremd": 11351,
+    "text": 5065,
     "selbstmarker": 925
   },
   "klassen": [
@@ -37,7 +37,7 @@
     {
       "klasse": "anker-fedlex",
       "entscheid": "FREMD",
-      "stellen": 2605,
+      "stellen": 2575,
       "erlasse": 337,
       "selbstmarker": 0,
       "was": "Voll zitierter Bund-Anker «Art. N GESETZ» (NORM_IM_TEXT)"
@@ -45,8 +45,8 @@
     {
       "klasse": "anker-kette",
       "entscheid": "FREMD",
-      "stellen": 69,
-      "erlasse": 36,
+      "stellen": 68,
+      "erlasse": 35,
       "selbstmarker": 0,
       "was": "Ketten-Glied, Kürzel aus dem Anker-Ende propagiert (i.V.m.)"
     },
@@ -85,8 +85,8 @@
     {
       "klasse": "art-kein-token",
       "entscheid": "TEXT",
-      "stellen": 957,
-      "erlasse": 218,
+      "stellen": 958,
+      "erlasse": 219,
       "selbstmarker": 3,
       "was": "bare «Art. N» — Bestimmung existiert im Erlass nicht"
     },
@@ -101,8 +101,8 @@
     {
       "klasse": "art-n2-fremdkuerzel",
       "entscheid": "TEXT",
-      "stellen": 15,
-      "erlasse": 7,
+      "stellen": 45,
+      "erlasse": 9,
       "selbstmarker": 0,
       "was": "«Art. N … FEDLEX-Kürzel» (N2 Form A) — Self unterdrückt"
     },
