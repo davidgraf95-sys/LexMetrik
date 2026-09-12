@@ -1,7 +1,7 @@
 {
   "erlassKey": "FZA",
   "sr": "0.142.112.681",
-  "abgerufen": "2026-09-05",
+  "abgerufen": "2026-09-12",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -13,9 +13,8 @@
       "titelDe": "Beschluss Nr. 1/2020 des Gemischten Ausschusses eingesetzt im Rahmen des Abkommens zwischen der Europäischen Gemeinschaft und ihren Mitgliedstaaten einerseits und der Schweizerischen Eidgenossenschaft andererseits über die Freizügigkeit zur Änderung von Anhangs II dieses Abkommens über die Koordinierung der Systeme der sozialen Sicherheit",
       "titelFr": "Décision n° 1/2020 du comité mixte institué par l’Accord entre la Communauté européenne et ses États membres, d’une part, et la Confédération suisse, d’autre part, sur la libre circulation des personnes modifiant l’annexe II dudit accord sur la coordination des systèmes de sécurité sociale",
       "titelIt": "Decisione N. 1/2020 del Comitato misto istituito nel quadro dell’accordo tra la Comunità europea e i suoi Stati membri, da una parte, e la Confederazione svizzera, dall’altra, sulla libera circolazione delle persone che modifica l’allegato II di tale accordo riguardante il coordinamento dei sistemi di sicurezza sociale",
-      "nichtKonsolidiert": true,
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2021/12/de",
-      "sha": "83a465d258b0b64e2e4a37bbfa3bf92636d7ed65204d3f706de9440d6d407b17"
+      "sha": "a568bba6c13d960ba3d5aa877dbf045f35fd9342a6b91035ea586022f844905f"
     },
     {
       "art": "sammelerlass-marker",
@@ -250,5 +249,5 @@
       "sha": "4db9d6c6d2aabc7b4325fb162266af351b1cf4889a56dba119ecae2a30c9ba11"
     }
   ],
-  "sha": "55860317de05597cd00573880d49d50701bfb1329466f8697126efea1455f7a4"
+  "sha": "943ce7f5793b2be91e8f24ccf8260d30e09851a1e553e59565438acbfed5a5b0"
 }
