@@ -2,6 +2,7 @@ import { AbrufFehler } from '../ui/AbrufFehler';
 import { Datum } from '../ui/Datum';
 import { fedlexLokalisiert, type Locale } from '../locale';
 import { revisionTitel, type RevisionBezug } from '../../lib/normtext/revisionen';
+import { IN_KRAFT_FUER_CH_LABEL } from '../../lib/normtext/erlassKopfText';
 import type { BotschaftBezug } from '../../lib/materialien/botschaften';
 import { KontextGruppe } from './KontextGruppe';
 
@@ -57,7 +58,7 @@ export function RevisionenGruppe({ revFehler, revAenderungen, revMarker, botscha
                         das frühere, amtlich belegte Datum unsichtbar (§8). */}
                     {r.dateInKraftFuerCh ? (
                       <>
-                        <span className="text-ink-500">in Kraft seit </span>
+                        <span className="text-ink-500">{IN_KRAFT_FUER_CH_LABEL} </span>
                         <Datum iso={r.dateInKraftFuerCh} className="text-ink-500" />
                         <span className="text-ink-500"> · angewendet ab </span>
                         <Datum iso={r.dateEntryInForce} className="text-ink-500" />
