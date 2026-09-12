@@ -12,6 +12,7 @@ import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { execSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import { parseFedlexCacheEintraege } from './normtext/inventar-bund.ts';
+import { pinIdentitaet, pinBefund } from './normtext/cache-pin-befund.ts';
 import {
   extrahiereArtikel,
   alleArtikelTokens,
@@ -378,16 +379,31 @@ export function cacheBefund(name: string): CacheBefund {
   return { ok: true };
 }
 
+// Pin-Identitäts-Sonde ausgelagert nach scripts/normtext/cache-pin-befund.ts
+// (§6.6 Datei-Schlankheit — Cache-Helfer gehören dorthin). Re-Export hier hält
+// den bisherigen Importpfad `../../scripts/normtext-snapshot` für Aufrufer/Tests
+// stabil (§5, keine zweite Wahrheit über den richtigen Importort).
+export { pinIdentitaet, pinBefund };
+
+/** Inhalt UND Pin-Identität — der vollständige Befund, den `sicherstelleCaches` verlangt. */
+function cacheUndPinOk(e: { name: string; eli: string; konsolidierung: string; htmlN: number }): CacheBefund {
+  const inhalt = cacheBefund(e.name);
+  if (!inhalt.ok) return inhalt;
+  return pinBefund(e.name, e.eli, e.konsolidierung, e.htmlN);
+}
+
 // ── Caches sicherstellen ──────────────────────────────────────────────────────
-function sicherstelleCaches(eintraege: Array<{ name: string }>): void {
-  const fehlende = eintraege.filter((e) => !cacheBefund(e.name).ok);
+function sicherstelleCaches(
+  eintraege: Array<{ name: string; eli: string; konsolidierung: string; htmlN: number }>,
+): void {
+  const fehlende = eintraege.filter((e) => !cacheUndPinOk(e).ok);
   if (fehlende.length === 0) return;
 
   console.log(
     `\n[Cache] ${fehlende.length} HTML-Cache(s) fehlen oder sind unbrauchbar — lade via bash scripts/fedlex-cache.sh …`,
   );
   for (const e of fehlende) {
-    const b = cacheBefund(e.name);
+    const b = cacheUndPinOk(e);
     if (b.grund && b.grund !== 'fehlt') console.log(`        /tmp/${e.name}.html: ${b.grund}`);
   }
 
@@ -400,6 +416,9 @@ function sicherstelleCaches(eintraege: Array<{ name: string }>): void {
     ladeFehler = e as Error;
   }
 
+  // Inhalts-Nachprüfung — bewusst NUR `cacheBefund` (Inhalt), nicht der volle
+  // Pin-Befund: der Marker wird erst unten geschrieben, ihn hier schon zu
+  // verlangen wäre zirkulär (er kann per Definition noch nicht existieren).
   const nochFehlend = fehlende
     .map((e) => ({ name: e.name, befund: cacheBefund(e.name) }))
     .filter((x) => !x.befund.ok);
@@ -411,6 +430,19 @@ function sicherstelleCaches(eintraege: Array<{ name: string }>): void {
         'kanonisches html-N in scripts/fedlex-cache.sh nachziehen ' +
         "('npm run fedlex:repin-kanonik -- --write').",
     );
+  }
+
+  // Pin-Marker nachziehen: fedlex-cache.sh lädt bei jedem Aufruf AUSNAHMSLOS
+  // seine komplette EINTRAEGE-Liste neu (kein Skip-if-exists, s. Kommentar
+  // dort) — der /tmp-Inhalt jedes Eintrags dieses Laufs ist also frisch vom
+  // aktuell gepinnten html-N. Die Schleife läuft über die volle `eintraege`-
+  // Liste (nicht nur `fehlende`), weil auch vormals schon gültige Caches durch
+  // den Abruf überschrieben wurden; je Eintrag erst nach erneuter Inhalts-
+  // Bestätigung schreiben, statt dem Abruf blind zu vertrauen.
+  for (const e of eintraege) {
+    if (cacheBefund(e.name).ok) {
+      writeFileSync(`/tmp/${e.name}.html.pin`, pinIdentitaet(e.eli, e.konsolidierung, e.htmlN), 'utf8');
+    }
   }
 
   // Alle ANGEFORDERTEN Erlasse sind brauchbar, das Skript endete trotzdem mit

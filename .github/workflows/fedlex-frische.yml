@@ -133,6 +133,35 @@ jobs:
           # Heilung behauptet, die nicht stattfand (§8).
           npm run check:fedlex-versionen
 
+      # ── §17-Wurzelfix (12.9.2026, Gegenprüfung #806, Lauf 34107274098) ──────
+      # Befund: dieser Schritt regenerierte NUR bei einem cache.sh-Diff (Re-Pin).
+      # Der Schritt "Wiedervorlage + Currency frisch halten" oben läuft aber IN
+      # JEDEM Lauf und schreibt public/normtext/currency.json neu — `geprueftAm`
+      # wird für JEDEN Erlass auf das Laufdatum gesetzt, das ist der ganze Zweck
+      # von O-2.2. currency.json ist eine ingestierte DB-Quelle
+      # (scripts/datenhaltung/ingest.ts Zeile 33, „P1-d Currency-Sidecar“) — sie
+      # ändert die DB, ohne dass cache.sh sich rührt. Blieb der Re-Pin an diesem
+      # Lauf aus (kein überholter Pin), übersprang dieser Schritt die
+      # Manifest-Regenerierung komplett; der PR trug danach ein frisches
+      # currency.json gegen ein STEHENGEBLIEBENES daten-manifest.json.
+      # `check:datenhaltung` (Teil von `npm run check` unten) meldete darauf
+      # „Dump-Manifest weicht vom committeten daten-manifest.json ab“, der
+      # PR-Schritt lief `skipped`, und jede in diesem Lauf berechnete Reparatur
+      # (Re-Pin inklusive) wurde beim Abbruch mitverworfen.
+      #
+      # ENTSCHEID: `npm run datenhaltung:manifest` steht jetzt UNBEDINGT nach
+      # diesem Schritt (siehe unten, ausserhalb des if/fi) — nicht an eine
+      # weitere, wachsende Liste „welcher Schritt berührt die DB“ gekoppelt.
+      # `check-datenhaltung.ts` liest nur lokale Dateien (kein Netz, kein
+      # Re-Pin) und ist damit so billig wie ein weiterer Lint-Lauf; ihn immer zu
+      # fahren beseitigt die ganze Fehlerklasse „ein künftiger Generator berührt
+      # die DB, aber niemand trägt ihn in die Trigger-Bedingung nach“ — dieselbe
+      # Lehre, die die Tor-Liste weiter unten am 29.8.2026 bereits von acht
+      # benannten Toren auf `npm run check` umgestellt hat. Die TEURE
+      # Voll-Regenerierung (normtext/Register/Struktur/PDF-Quellen/Historie)
+      # bleibt bewusst auf den cache.sh-Diff (= tatsächlicher Re-Pin) gegated —
+      # ein Republish ohne Re-Pin braucht sie nicht, und der Netz-Lauf bliebe
+      # sonst jede Woche auf der vollen Laufzeit.
       - name: Regenerierung (nur wenn cache.sh re-gepinnt wurde)
         run: |
           set -euo pipefail
@@ -202,8 +231,10 @@ jobs:
             # das Register änderte sich, der Feed blieb stehen — check:feed rot
             # mit «erlasse.xml VERALTET gegenüber dem Register».
             npm run gen:feed
-            npm run datenhaltung:manifest
           fi
+
+      - name: Manifest immer aktuell halten (DB-Berührung jeden Lauf, §17-Wurzel oben)
+        run: npm run datenhaltung:manifest
 
       - name: Diff feststellen
         id: diff
