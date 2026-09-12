@@ -131,7 +131,12 @@ test.describe('W2·6c-SYNOPSE-LESER · Fassungsvergleich am Artikel', () => {
 
     // §7 a–d im Fuss: Stand beider Fassungen, Quelle, Live-Link, Abruf, Profil.
     const fuss = karte.locator('[data-synopse-fuss]').first();
-    await expect(fuss).toContainText('entstehung-norm/2');
+    // §6.3-DEKLARATION (Gegenprüfung PR #798, 12.9.2026): das DATENPROFIL ist gehoben
+    // worden — `/2` → `/3` → `/4` (Auflagen A1/A2/A4/A5). Die Zusage dieser Zeile ist
+    // unverändert «im Fuss steht, unter welchem Profil die Prüfsumme gebildet wurde»;
+    // geprüft wird darum die Profil-ZEILE, nicht eine eingefrorene Nummer — die Nummer
+    // selbst bewacht `check:entstehung` byte-genau gegen `NORM_PROFIL`.
+    await expect(fuss).toContainText(/Normalisierung\s+entstehung-norm\/\d+/);
     await expect(fuss).toContainText(/Abruf\s+\d{2}\.\d{2}\.\d{4}/);
     await expect(fuss).toContainText('massgeblich bleibt');
     await expect(fuss.locator('a[href*="fedlex.admin.ch"]').first()).toBeVisible();
@@ -154,13 +159,21 @@ test.describe('W2·6c-SYNOPSE-LESER · Fassungsvergleich am Artikel', () => {
     await expect(karte.locator('[data-synopse-lage="vor_fenster"]'))
       .toContainText(/Fassungsvergleich erst für Stände ab\s+01\.01\.2021/);
 
-    // BGÖ 13: ein Wortlaut-Unterschied, den der amtliche Fussnoten-Apparat nicht
-    // führt. Er hängt an keinem Punkt der Leiste und steht darum eigens da (§8).
-    await oeffneRubrik(page, '/gesetze/bund/BGOE', '13');
-    const block = page.locator(`#art-13 ${F_BLOCK}`);
-    const bgoeGriffe = block.locator('[data-synopse-griff]');
-    await expect(bgoeGriffe.first()).toBeVisible({ timeout: 10_000 });
-    await bgoeGriffe.nth(0).click();
+    // §6.3-DEKLARATION (Gegenprüfung PR #798, 12.9.2026): hier stand bis Profil `/2`
+    // BGÖ Art. 13. Dieser Fall war ein FALSCHTREFFER — der «Wortlaut-Unterschied» war
+    // eine Fussnote, die sich in EINER Fedlex-Generation zwischen Satzzeichen und
+    // `</listIntroduction>` schob (Befund #796, Klasse 2). Seit `/3` bucht der Generator
+    // ihn zu Recht nicht mehr, und BGÖ trägt korpusweit KEINEN `ohne_ereignis`-Block
+    // mehr (gemessen 12.9.2026: 0). Die ZUSAGE ist unverändert; sie braucht nur einen
+    // Artikel, an dem der Zustand wirklich vorkommt: DBG Art. 26 führt genau EINEN
+    // solchen Block (Stand 2023-01-01, `public/materialien/synopse/DBG.json`) — ein
+    // Wortlaut-Unterschied, den der amtliche Fussnoten-Apparat nicht führt. Er hängt an
+    // keinem Punkt der Leiste und steht darum eigens da (§8).
+    await oeffneRubrik(page, ORT, '26');
+    const block = page.locator(`#art-26 ${F_BLOCK}`);
+    const dbg26Griffe = block.locator('[data-synopse-griff]');
+    await expect(dbg26Griffe.first()).toBeVisible({ timeout: 10_000 });
+    await dbg26Griffe.nth(0).click();
     const abschnitt = block.locator('[data-entstehung-ohne-ereignis]');
     await expect(abschnitt).toHaveCount(1);
     await expect(abschnitt).toContainText('ohne Fussnoten-Ereignis im amtlichen Apparat');
@@ -181,10 +194,24 @@ test.describe('W2·6c-SYNOPSE-LESER · Fassungsvergleich am Artikel', () => {
     // offenen Block hinein, und dass der nächste Artikel dabei nachrückt, ist
     // kein Layout-Sprung, sondern der Sinn eines Aufklapp-Blocks. Gemessen wird,
     // was der Leser gerade liest — und das steht darüber.
+    //
+    // §6.3-DEKLARATION (Gegenprüfung PR #798, 12.9.2026): gemessen wird seither die
+    // DOKUMENT-Position (`rect.y + scrollY`), nicht die Viewport-Position. Grund, lokal
+    // reproduziert: ein Klick FOKUSSIERT den Griff, und liegt der Griff auch nur knapp
+    // unter der Falzkante, scrollt der Browser ihn sichtbar — dann wandern ALLE
+    // Viewport-Werte um exakt denselben Betrag, ohne dass sich am Layout etwas ändert
+    // (Sonde 12.9.2026: scrollY +16, art-1 Viewport −16, art-1 Dokument ±0; in der CI
+    // dasselbe Muster mit 477 px, Lauf 34658704141). Die Viewport-Messung hätte damit
+    // das Scrollen des Browsers als Layout-Sprung gemeldet — die Zusage «kein Sprung»
+    // meint aber das Layout (CLS zählt Scroll-Verschiebungen ebenfalls nicht mit).
+    // Die Schärfe bleibt: ein ECHTER Sprung verschiebt die Dokument-Position, und die
+    // zweite Erwartung unten bindet jede Viewport-Verschiebung an genau den
+    // Scroll-Betrag — eine Verschiebung ohne Scroll bleibt rot.
     const geometrie = () => page.evaluate(() => {
-      const o: Record<string, number> = {};
+      const o: Record<string, number> = { scrollY: Math.round(window.scrollY) };
       for (const a of [...document.querySelectorAll('article[id^="art-"]')].slice(0, 4)) {
-        o[a.id] = Math.round(a.getBoundingClientRect().y);
+        o[`${a.id}_dokument`] = Math.round(a.getBoundingClientRect().y + window.scrollY);
+        o[`${a.id}_viewport`] = Math.round(a.getBoundingClientRect().y);
       }
       return o;
     });
@@ -192,7 +219,20 @@ test.describe('W2·6c-SYNOPSE-LESER · Fassungsvergleich am Artikel', () => {
     await griffe.nth(0).click();
     await expect(page.locator(KARTE)).toHaveCount(1);
     await page.waitForTimeout(500);
-    expect(await geometrie()).toEqual(vorher);
+    const nachher = await geometrie();
+    const dokument = (m: Record<string, number>) => Object.fromEntries(
+      Object.entries(m).filter(([k]) => k.endsWith('_dokument')),
+    );
+    expect(dokument(nachher), 'die Artikel über dem geöffneten haben ihre Layout-Position verlassen')
+      .toEqual(dokument(vorher));
+    const scrollDelta = nachher.scrollY - vorher.scrollY;
+    for (const [k, v] of Object.entries(vorher)) {
+      if (!k.endsWith('_viewport')) continue;
+      // Summe statt Vergleich mit `-scrollDelta`: bei 0 unterscheidet `Object.is`
+      // zwischen 0 und -0, und das ist keine Aussage über die Seite.
+      expect(nachher[k] - v + scrollDelta, `${k} ist um mehr verschoben, als der Browser gescrollt hat`)
+        .toBe(0);
+    }
 
     // Untereinander, nicht nebeneinander: eine Spalte im Raster.
     const spalten = await page.locator(`${KARTE} [data-synopse-zeile]`).first()
