@@ -4,6 +4,7 @@ import {
   MARKER_CUTOFF, type ErlassMeta,
 } from '../../scripts/normtext/revisionen-generieren';
 import { revisionenFuerNorm, revisionTitel, type RevisionBezug } from '../lib/normtext/revisionen';
+import { istReinerDatumsChurn } from '../../scripts/normtext/churn-reset';
 import type { SparqlBinding } from '../../scripts/fedlex-sparql';
 
 // Paket 5 (W2·6-REV): reine Generator-Logik (dedupe/Sortierung/Determinismus/
@@ -107,6 +108,47 @@ describe('baueRevisionen — Kern-Logik', () => {
     expect(a).toBe(b); // reihenfolge-unabhängig
     const s = JSON.parse(a) as { revisionen: RevisionBezug[] };
     expect(s.revisionen.map((r) => r.dateEntryInForce)).toEqual(['2023-09-01', '2019-03-01']);
+  });
+});
+
+// #703 (FAHRPLAN-OFFENE-BEFUNDE.md, Nacht 5.9.2026): der Frische-Reparatur-Arm fuhr
+// `normtext:revisionen` nie — Nachzug in fedlex-frische.yml. Der Fund verlangte dazu ein
+// eigenes `--nur-geaendert` im Generator gegen die 227 `abgerufen`-Bumps je Netz-Lauf (jeder
+// Erlass trägt einen frischen Abrufstempel, auch ohne inhaltliche Änderung — Diff-Bläh-Faktor
+// ~20). REUSE statt Duplikat (§10/§17-Gegengewicht): `normtext:churn-reset` (1.9.2026,
+// QS-MONITOR-ROT Befund a2, scripts/normtext/churn-reset.ts) entfernt genau die Felder
+// `erzeugt`/`abgerufen` rekursiv und erkennt eine reine Datumsänderung bereits generisch für
+// JEDE Datei unter `public/normtext` — der Sidecar-Feldname ist wortgleich `abgerufen`. Ein
+// zweites, generator-eigenes `--nur-geaendert` wäre dieselbe Prüfung ein zweites Mal (zwei
+// Wahrheiten, §5). Diese Tests sind der geforderte Rot-Beweis für die Wiederverwendungs-
+// Entscheidung: ein reiner Abrufstempel-Bump gilt als Churn (wird vom Reparatur-Arm
+// zurückgesetzt, kein Diff), eine gekürzte Revisionen-Liste (die DBG-54→55-Drift-Klasse aus
+// dem Fund) NIE — echte Substanz überlebt den Reset immer. Platzierung im Workflow: NACH
+// `normtext:struktur`, VOR `normtext:churn-reset --pfad=public/normtext` (Wortlaut dort).
+describe('normtext:revisionen × normtext:churn-reset — Rot-Beweis §703 (Wiederverwendung statt --nur-geaendert)', () => {
+  const meta: ErlassMeta = { key: 'DBG', sr: '642.11' };
+  const bindings = [
+    bind({ oc: OC('2020/1'), dateForce: '2020-01-01', titleDe: 'Alt' }),
+    bind({ oc: OC('2026/448'), dateForce: '2026-09-02', titleDe: 'Neu (AS 2026 448)' }),
+  ];
+
+  it('ein reiner abgerufen-Bump (jeder Netz-Lauf, ohne Fassungsänderung) gilt als Churn', () => {
+    const alt = serialisiere(baueRevisionen(meta, bindings, [], '2026-09-02', new Map(), '2026-09-05'));
+    const neu = serialisiere(baueRevisionen(meta, bindings, [], '2026-09-02', new Map(), '2026-09-12'));
+    expect(alt).not.toBe(neu); // nur der abgerufen-Zeitstempel unterscheidet
+    expect(istReinerDatumsChurn(alt, neu)).toBe(true);
+  });
+
+  it('eine gekürzte Revisionen-Liste (DBG-54→55-Drift-Klasse) ist NIE Churn, trotz Bump', () => {
+    const alt = serialisiere(baueRevisionen(meta, bindings, [], '2026-09-02', new Map(), '2026-09-05'));
+    const gekuerzt = bindings.slice(0, 1); // simuliert eine verlorene Fassung
+    const neu = serialisiere(baueRevisionen(meta, gekuerzt, [], '2026-09-02', new Map(), '2026-09-12'));
+    expect(istReinerDatumsChurn(alt, neu)).toBe(false);
+  });
+
+  it('byte-gleiche Eingabe ohne jede Änderung ist ebenfalls kein Churn-Fall (nichts zu tun)', () => {
+    const s = serialisiere(baueRevisionen(meta, bindings, [], '2026-09-02', new Map(), '2026-09-05'));
+    expect(istReinerDatumsChurn(s, s)).toBe(false);
   });
 });
 
