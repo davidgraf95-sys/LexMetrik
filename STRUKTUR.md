@@ -33,6 +33,66 @@ falsch — korrigiert 30.8.2026). Karten abgeschlossener Sessions (älter als
 werden direkt unter dem KARTEN-Anker eingefügt (jüngste zuoberst).
 
 <!-- KARTEN -->
+## Session 12.9.2026 (4) — Fehlerbuch-Welle 4 `W2·18-FEHLERBUCH` (Einzel-Fixer + Opus/Sonnet-Prüfer)
+
+**Ablauf:** Fortsetzung der Fehlerbuch-Runde auf dem Stand von Session 12.9.2026 (3) —
+vier weitere Einzelbauten (§8-Marker-Semantik, Steuer-Doku der Wellen 2+3, Prerender-Kopf
+aufgehobener Erlasse, BMV_2025-Aufnahme) plus eine noch offene Gegenprüfungsrunde
+(Kanton-Fremd-Drift AR/BS).
+
+**Gelandet:** #827 `d7d4bbca1` §8-Marker `berichtigung-fremdes-as-dokument` für
+`jolux:rectifies`-Kanten (18 Einträge, 14 Erlasse), Tor-Prüfung (8b) mit Rot-Beweis,
+deterministische Ziel-Wahl (3 Prüfrunden Opus — Runde 1 falsifizierte die ursprüngliche
+Lesart «Fedlex-interner Widerspruch» amtlich: `jolux:rectifies` benennt das AS-Dokument
+der Erstpublikation/Anhangs-Änderung, `classifiedByTaxonomyEntry` den betroffenen
+SR-Erlass, kein Widerspruch; Runde 2 fand einen echten Fedlex-Datenfehler im Marker-Text
+— Provenienz-Satz «erstpubliziert» bei AS 2025 686/SKV falsch, `rectifies`-Ziel 648 statt
+amtlich 644; Runde 3 bestanden, Marker-Text gibt nur noch das Tripel wieder) · #825
+`eeb1c2c96` Steuer-Doku Wellen 2+3 + drei Fehlerbuch-Zeilen (Session-Karte (3)) · #826
+`3d2c97d75` Prerender-Kopf aufgehobener Erlasse — «Amtliche (aufgehobene) Fassung ·
+aufgehoben per … · Totalrevision in Kraft seit …» statt «(geltend)», belegtes
+`nachfolger.inKraftSeit` aus SPARQL `dateApplicability` (Opus, 2 Runden; A1
+Nachfolger-SR-Selbstverweis bei Totalrevision über belegtes Feld gelöst, A2 Reader nutzt
+dasselbe Feld, A3 Benennungs-Kanon, A4 Beleg patv/vgvp) · #823 `fbe82c2f2` BMV_2025 ins
+Korpus (SR 412.103.1, Totalrevision 1.3.2026; Sonnet, 2 Runden — CI-Rot 1: verworfenes
+Wort «geltende Fassung» im Link-Text ⇒ Benennungs-Wächter; CI-Rot 2: Kürzel-Kollision
+BMV/BMV_2025 auf derselben SR ⇒ «Fassungs-Reihe» `normKeyFuerAbk(abk, datum)`, 0
+betroffene Entscheide, Bibliothek `bmv-totalrevision-2026-09-12.md`; CI-Rot 3:
+Verweis-Basislinie).
+
+**Landet gerade (nicht Teil dieser Landung, PR offen):** #828 (Kopf `2ebadd940`)
+Kanton-Drift AR/BS — Drift-Tor sah nur 69 von 1189 LexWork-Kanton-Snapshots als
+tarif-zitiert (§6.7-Lücke), Vollinventar 1185→1189 Gruppen korrigiert, 26 AR/BS-Erlasse
+nachgeführt, fr-Stand-Regex («en vigueur depuis: …») korrigierte 3 VS-Stände (173.8-fr,
+178.104, 211.611); 4 Prüfrunden Opus (A1 `lawId`-Suffix-404-Warngruppen, B2/D1
+`erlassNr`-Verlust im `--nur`-Pfad — Mehrheits-Heuristik durch 1:1-Übernahme ersetzt,
+der Wächter selbst war nicht scheiterfähig: er hätte 267 Verlust-Kandidaten zeigen
+müssen, mass 0). **#828 ist zum Zeitpunkt dieser Karte OPEN** (geprüft via
+`gh pr view 828`) — die zugehörige ROADMAP-Zeile «Kanton-Drift» bleibt darum bewusst
+offen stehen, bis gemergt.
+
+**Lehren dieser Session:**
+1. **Fixer nie in einen Worktree schicken, in dem eine Gegenprüfung noch läuft** — der
+   Prüfer meldete dort fremdes, uncommittetes WIP (§12/§14.7). Verankert als
+   Orchestrator-Falle (f) in Skill `auftrag` §6.
+2. **Nach jeder Register-Regeneration gehört `check:verweis-inventar -- --schreiben`
+   NEBEN `gen:zaehler` in die Projektions-Kaskade**, sonst kostet die Lücke jeden
+   Folgelauf einen eigenen CI-Durchgang (drei CI-Läufe verloren, #827). Kaskaden-Liste
+   in Skill `auftrag` §6 (Punkt g) ergänzt.
+3. **Landereihenfolge spielt keine Rolle — jede Landung macht die übrigen offenen PRs
+   `BEHIND`**; Merge Queue bleibt David-Setting. Nicht neu verankert: Skill `landung`
+   (Abschnitt „Serielle Landung“, Schritt 2) dokumentiert die `BEHIND`-Nachkontrolle
+   bereits — kein Netto-Zuwachs (Chesterton, §17-Gegengewicht).
+4. **Marker-Semantik aus einem einzelnen RDF-Tripel ist eine Tatsachenbehauptung, keine
+   Wiedergabe, wenn sie ungeprüft in Prosa übersetzt wird** (#827, erst Runde 3 neutral).
+   Neue Klasse F16 in Skill `lehren`.
+5. **Ein Wächter-Test mit UND-verknüpften Bedingungen kann still 0 messen, statt zu
+   scheitern** (#828 Runde D1: der Vollabdeckungs-Wächter im `--nur`-Pfad hätte 267
+   Verlust-Kandidaten zeigen müssen, zeigte 0). Gehört inhaltlich zu §6.7 (Skill
+   `refactoring`) — ausserhalb der Whitelist dieser Session; darum nur als ROADMAP-Zeile
+   unter `W2·18-FEHLERBUCH` vermerkt, Verankerung in Skill `refactoring` als eigener
+   Schritt offen.
+
 ## Session 12.9.2026 (3) — Fehlerbuch-Wellen 2+3 `W2·18-FEHLERBUCH` (je Einzel-Fixer + Opus/Sonnet-Prüfer)
 
 **Ablauf:** Fortsetzung der Fehlerbuch-Runde aus Session 12.9.2026 (2) — Welle 2 und
