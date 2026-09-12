@@ -145,6 +145,20 @@ vollständigen Bestand UND gegen die tatsächliche CI-Umgebung (ohne lokale
 Caches) laufen lassen, nicht nur gegen die Fehlerkonstruktion, die den Bau
 auslöste.
 
+**F16 — Marker-Semantik aus einem einzelnen RDF-Tripel als Tatsachenbehauptung
+formuliert, statt als Wiedergabe (12.9.2026, PR #827, 3 Prüfrunden Opus).** Ein neuer
+§8-Marker (`berichtigung-fremdes-as-dokument` für `jolux:rectifies`-Kanten) behauptete
+in Runde 1 einen «Fedlex-internen Widerspruch» — amtlich falsifiziert: `jolux:rectifies`
+benennt das AS-Dokument der Erstpublikation (Anhangs-Änderung), `classifiedByTaxonomyEntry`
+den betroffenen SR-Erlass; zwei verschiedene Aussagen, kein Widerspruch. Runde 2 fand in
+derselben Marker-Klasse einen echten Fehler: der Provenienz-Satz «erstpubliziert» bei
+AS 2025 686/SKV war falsch, das `rectifies`-Ziel zeigte auf AS 2025 648 statt der
+amtlichen 644 — ein Fedlex-Datenfehler, keine Extraktionslücke. Erst Runde 3 bestand: der
+Marker-Text gibt nur noch das Tripel wieder (Fremd-SR + Fundstelle), ohne Deutung.
+Gegenmittel: **Prüfer-Regel** — ein Marker-/Beleg-Text aus einem einzelnen RDF-Tripel
+steht im Konjunktiv oder als reine Wiedergabe, nie als Behauptung, wenn das Tripel die
+Aussage selbst nicht trägt.
+
 ## Eine neue Lehre ablegen
 
 1. **Klasse bestimmen.** Fällt der Vorfall unter F1–F6? Dann dort das Gegenmittel
