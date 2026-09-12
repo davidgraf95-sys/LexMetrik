@@ -7,15 +7,15 @@
   },
   "korpus": {
     "erlasse": 1567,
-    "eintraege": 60319,
-    "texte": 214582
+    "eintraege": 60347,
+    "texte": 214554
   },
   "gesamt": {
-    "stellen": 36064,
-    "self": 19665,
-    "fremd": 11364,
-    "text": 5035,
-    "selbstmarker": 927
+    "stellen": 36083,
+    "self": 19667,
+    "fremd": 11382,
+    "text": 5034,
+    "selbstmarker": 925
   },
   "klassen": [
     {
@@ -133,7 +133,7 @@
     {
       "klasse": "n2b-genitiv",
       "entscheid": "FREMD",
-      "stellen": 667,
+      "stellen": 666,
       "erlasse": 212,
       "selbstmarker": 0,
       "was": "Form-B-Glied über kuratierten Kurztitel-Genitiv ohne Klammer («des Bankengesetzes», V-7a; Geltung je Ebene)"
@@ -165,7 +165,7 @@
     {
       "klasse": "paragraf-fremd-grosswort",
       "entscheid": "TEXT",
-      "stellen": 164,
+      "stellen": 166,
       "erlasse": 79,
       "selbstmarker": 0,
       "was": "«§ N <Grosswort>» — Fremd-Indiz, kein Link"
@@ -173,7 +173,7 @@
     {
       "klasse": "paragraf-fremd-name",
       "entscheid": "TEXT",
-      "stellen": 916,
+      "stellen": 912,
       "erlasse": 302,
       "selbstmarker": 0,
       "was": "«§ N des/der/über/vom …» — Fremd-Indiz, kein Link"
@@ -181,7 +181,7 @@
     {
       "klasse": "paragraf-kanton-kuerzel",
       "entscheid": "FREMD",
-      "stellen": 560,
+      "stellen": 579,
       "erlasse": 116,
       "selbstmarker": 0,
       "was": "«§ N KÜRZEL» — im Kanton EINDEUTIGES Kürzel eines anderen Erlasses → Link auf dessen Lesesicht (V-3)"
@@ -189,17 +189,17 @@
     {
       "klasse": "paragraf-kein-token",
       "entscheid": "TEXT",
-      "stellen": 75,
-      "erlasse": 47,
+      "stellen": 76,
+      "erlasse": 48,
       "selbstmarker": 0,
       "was": "«§ N» — Bestimmung existiert im Erlass nicht"
     },
     {
       "klasse": "paragraf-self",
       "entscheid": "SELF",
-      "stellen": 3289,
+      "stellen": 3291,
       "erlasse": 464,
-      "selbstmarker": 318,
+      "selbstmarker": 316,
       "was": "«§ N» → Sprung im eigenen Erlass (F40)"
     },
     {

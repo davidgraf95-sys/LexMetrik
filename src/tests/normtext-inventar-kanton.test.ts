@@ -10,6 +10,7 @@
 import { describe, it, expect } from 'vitest';
 import {
   sammleKantonInventar,
+  sammleKantonVollinventarLexWork,
   sammleFallback,
   sammlePdfInventar,
   sammleHtmInventar,
@@ -196,5 +197,93 @@ describe('sammleHtmInventar (NE/GE/TI)', () => {
     for (const g of htm) {
       expect(['ne', 'ge', 'ti']).toContain(g.profil);
     }
+  });
+});
+
+// §6.7-Wurzel-Fix (Fund #694, 12.9.2026): sammleKantonInventar() (Tarif-Zitate)
+// deckt nur einen Bruchteil des committeten LexWork-Kanton-Bestands ab (69 von
+// 1189, Nullprobe 12.9.2026) — ein tarif-unzitierter Erlass (z. B. BS-121.100
+// Bürgerrechtsgesetz) driftete dadurch unbemerkt gegen die amtliche Fassung.
+// sammleKantonVollinventarLexWork() liest STATT der Tarif-Tabellen den
+// gesamten committeten Bestand (public/normtext/kanton/*.json) und liefert
+// eine Gruppe je LexWork-Erlass, unabhängig von einem Tarif-Zitat.
+describe('sammleKantonVollinventarLexWork (Vollabdeckung, §6.7-Fund #694)', () => {
+  const voll = sammleKantonVollinventarLexWork();
+
+  it('deckt deutlich mehr Erlasse ab als die Tarif-Stichprobe', () => {
+    const tarif = sammleKantonInventar();
+    expect(voll.length).toBeGreaterThan(tarif.length * 5);
+    expect(voll.length).toBeGreaterThan(1000); // Ist-Bestand 12.9.2026: 1189
+  });
+
+  it('jede Gruppe hat kanton/host/lang/lawId, keine Artikel-Filterung', () => {
+    for (const g of voll) {
+      expect(g.kanton.length).toBeGreaterThan(0);
+      expect(g.host.length).toBeGreaterThan(0);
+      expect(['de', 'fr']).toContain(g.lang);
+      expect(g.lawId.length).toBeGreaterThan(0);
+      expect(g.artikel).toEqual([]);
+    }
+  });
+
+  it('enthält BS-121.100 (Bürgerrechtsgesetz) — den §6.7-Befund-Erlass ohne Tarif-Zitat', () => {
+    const buerg = voll.find((g) => g.kanton === 'BS' && g.lawId === '121.100');
+    expect(buerg).toBeDefined();
+    expect(buerg?.host).toBe('www.gesetzessammlung.bs.ch');
+  });
+
+  it('keine doppelten (kanton, host, lang, lawId)-Schlüssel', () => {
+    const schluessel = voll.map((g) => `${g.kanton}|${g.host}|${g.lang}|${g.lawId}`);
+    expect(new Set(schluessel).size).toBe(schluessel.length);
+  });
+
+  // Gegenprüfung PR #828, 12.9.2026, Auflage A1: bei zweisprachigen Erlassen
+  // trägt der Bestands-Key (lawId, aus der Snapshot-id) den Sprachsuffix
+  // («130.11-de»/«130.11-fr»), die LexWork-API-URL nicht («…/texts_of_law/
+  // 130.11»). Ohne fetchLawId hätte der Netz-Abruf mit dem suffix-behafteten
+  // lawId als Pfadsegment HTTP 404 geliefert — Drift dieser vier Erlasse wäre
+  // für immer unsichtbar geblieben (als transiente Netz-WARNUNG klassiert).
+  it('setzt fetchLawId (suffixfrei) für zweisprachige Erlasse — FR-130.11-de/-fr, VS-173.8-de/-fr', () => {
+    for (const [kanton, lawId, erwarteteFetchLawId] of [
+      ['FR', '130.11-de', '130.11'],
+      ['FR', '130.11-fr', '130.11'],
+      ['VS', '173.8-de', '173.8'],
+      ['VS', '173.8-fr', '173.8'],
+    ] as const) {
+      const g = voll.find((x) => x.kanton === kanton && x.lawId === lawId);
+      expect(g, `${kanton}-${lawId} fehlt im Vollinventar`).toBeDefined();
+      expect(g?.fetchLawId).toBe(erwarteteFetchLawId);
+    }
+  });
+
+  it('setzt fetchLawId NICHT für einsprachige Erlasse (Bestands-Key ist bereits fetch-tauglich)', () => {
+    const buerg = voll.find((g) => g.kanton === 'BS' && g.lawId === '121.100');
+    expect(buerg?.fetchLawId).toBeUndefined();
+  });
+
+  // Nachprüfung PR #828, 12.9.2026 (B2): erlassName/erlassNr dürfen NICHT leer
+  // bleiben — erzeugeKantonsSnapshots baut daraus per erlassBezeichnung() die
+  // Systematiknummer-Klammer; leer liess einen --nur-Regen die Nummer
+  // verlieren (VS-173.8-fr: «…, LTar» statt «…, LTar (RS 173.8)»). Rot-Beweis:
+  // vor dem Fix waren BEIDE Felder für jede Gruppe '' (Konstanten im Code).
+  it('übernimmt erlassNr aus dem committeten Snapshot, sprachrichtig (RS fr / SR de) — VS-173.8', () => {
+    const fr = voll.find((g) => g.kanton === 'VS' && g.lawId === '173.8-fr');
+    const de = voll.find((g) => g.kanton === 'VS' && g.lawId === '173.8-de');
+    expect(fr?.erlassNr).toBe('RS 173.8');
+    expect(de?.erlassNr).toBe('SR 173.8');
+    expect(fr?.erlassName.length).toBeGreaterThan(0);
+  });
+
+  it('kein Vollinventar-Erlass mit erkennbarer Systematiknummer verliert sie (erlassNr nie leer, wenn die Quelle eine Klammer trägt)', () => {
+    // D1-Fix (Gegenprüfung PR #828, 12.9.2026): vorher mass dieser Wächter
+    // `erlassNr === '' && erlassName === ''` — ein Tor, das nicht scheitern
+    // konnte (§6.7), denn erlassName ist praktisch nie leer. Empirisch waren
+    // 267/1189 Erlasse mit `erlassNr === ''` betroffen (AR 0/265, SG 0/2 ohne
+    // Präfixwort), der alte Wächter zeigte 0 Treffer. Jetzt `erlassNr` allein.
+    const leer = voll.filter((g) => g.erlassNr === '');
+    // §8: nicht 0 erzwingen (manche committeten Erlasse tragen amtlich keine
+    // Klammer-Nummer) — aber die weit überwiegende Mehrheit muss sie tragen,
+    // sonst ist das Rückparsen aus dem Snapshot gebrochen (Regression von B2).
+    expect(leer.length).toBeLessThan(voll.length * 0.05);
   });
 });

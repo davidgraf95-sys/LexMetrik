@@ -66,6 +66,123 @@ Text. **Risikopfad** ⇒ Gegenprüfung.» Bau-Spec: `FAHRPLAN-FEDLEX-PORTFOLIO.m
   Beleg §11: `bibliothek/register/bmv-totalrevision-2026-09-12.md`.
   **Gegenprüfung ausstehend, noch nicht gemergt.**
 
+## Kanton-Fremd-Drift AR/BS (26 Erlasse) + Vollabdeckungs-Tor — gelöst 12.9.2026 (W2·18-FEHLERBUCH)
+
+**Ursprünglicher Befund (Wortlaut, bis 12.9.2026 offen, `fahrplaene/FAHRPLAN-OFFENE-BEFUNDE.md` §1,
+Fund #694):** «**Kanton-Fremd-Drift 19 Struktur-Sidecars** — BS Bürgerrechtsgesetz Stand 1.7.2026,
+AR/BS-PDF-Versionen; Drift-PR. `confidence.json` seit 23.6. stale (150/1565).»
+
+- [x] **Gelöst 12.9.2026, PR fix/kantondrift:**
+  - **§6.7-Nullprobe zuerst:** `check:struktur-konsistenz` (nur Sidecar↔Snapshot-Konsistenz,
+    keine Fassungsprüfung) und `check:normtext-netz` (Kanton-Drift-Ast) liefen NACKT — beide grün,
+    0 Drift gemeldet, obwohl BS-121.100 (Bürgerrechtsgesetz) live seit 1.7.2026 in neuer Fassung
+    steht (per LexWork-API bestätigt: `version_uid` 81ce1fd9… ≠ Snapshot 6793e446…, Snapshot-Stand
+    2018-01-01). Ursache gefunden: `check-drift.ts`s Kanton-Drift-Prüfung liest ihre Gruppen aus
+    `sammleKantonInventar()`, das **nur tarif-zitierte LexWork-Erlasse** liefert — empirisch 69 von
+    1189 committeten LexWork-Kanton-Snapshots (Nullprobe 12.9.2026). Ein Erlass ohne Tarif-Zitat
+    driftet dadurch strukturell unbemerkt gegen die amtliche Fassung — ein Tor, das nicht scheitern
+    kann (§6.7).
+  - **Tor-Ast ergänzt (Wurzel-Fix, kein Sonderfall AR/BS):** neue Funktion
+    `sammleKantonVollinventarLexWork()` (`scripts/normtext/inventar-kanton.ts`) liest statt der
+    Tarif-Tabellen den GESAMTEN committeten `public/normtext/kanton/*.json`-Bestand und liefert eine
+    Gruppe je LexWork-Erlass (keine Artikel-Filterung nötig — der Drift-Vergleich braucht nur
+    kanton/host/lang/lawId). `check-drift.ts` bildet die Vereinigung aus Tarif-Gruppen und
+    Vollinventar (dedupliziert). Rot-Beweis 12.9.2026: `check:normtext-netz` prüfte danach 1185
+    statt 69 Kanton-Gruppen und fand **exakt 26 driftende AR/BS-Erlasse** — deckungsgleich mit einer
+    unabhängigen Handmessung gegen die LexWork-API. Kosten: läuft nur im wöchentlichen
+    `normen-monitor.yml` (NICHT PR-CI), zusätzliche Netzlast dort einkalkuliert.
+  - **Content-Generator-Lücke geschlossen:** `normtext-snapshot.ts --nur=kanton --kanton=…
+    --discovery` kannte bisher NUR Kanton-Granularität — ein erster Testlauf ohne Filter hätte alle
+    1124 committeten AR/BS-Dateien angefasst (Datums-/Feature-Churn statt eines chirurgischen
+    Diffs, git-revertiert statt committet). Neuer, wiederverwendbarer `--nur=<KEY[,KEY2]>`-Filter
+    (`parseKantonNurFilter()` in `inventar-kanton.ts`, analog zum bestehenden `--nur=` bei
+    struktur-run.ts/struktur-kanton-run.ts) regeneriert seither erlassgenau. Golden/Register-Diff
+    danach exakt 26 Kanton-Dateien + `register.json` + `golden/normtext-snapshot.json` — für keinen
+    anderen der 1124 AR/BS-Erlasse eine Änderung (verifiziert per Key-für-Key-Vergleich alt/neu).
+  - **Nachgeführt:** die 26 driftenden Erlasse (Inhalt aus derselben LexWork-API, die auch den
+    Drift meldete) + `normtext:struktur-kanton --nur=<...>` (26 Sidecars) + zusätzlich
+    `BS-BaB 152.100` in `public/normtext/pdf-quellen.json` (`gen:pdf-quellen -- --nur=kanton
+    --kanton=AR,BS`, kantonsscharf statt Vollkorpus) — die im Fund explizit erwähnte
+    «AR/BS-PDF-Versionen»-Drift, unabhängig von den 26 Content-Treffern. Downstream-Artefakte
+    (`daten-manifest.json`, `messwerte/verweis-inventar.json`, `public/materialien/deckungs-sicht.json`,
+    `public/feed/erlasse.xml`, `src/data/startseiteZaehler.generated.ts`) über ihre jeweiligen
+    Generatoren mitgezogen (§5, keine Hand-Edits). Stichprobe: 3 Paragraphen je nachgeführtem
+    Erlass (81 Stellen total) gegen die live LexWork-API — 81/81 Identitäts-Treffer.
+  - **`confidence.json` (150/1565 stale seit 23.6.):** kein totes Werkzeug — `report:confidence`
+    ist bewusst nicht verdrahtetes, aktiv dokumentiertes Treue-Gate (QS-CONFIDENCE-EHRLICH,
+    8.8.2026) und bereits als **eigener** ROADMAP-Schritt erfasst (`ROADMAP.md`, Befund PR #668,
+    4.9.2026: neu erzeugen + Quarantäne-Liste sichten + Tor-/Wächter-Entscheid). Hier bewusst NICHT
+    mitregeneriert — ausserhalb der Kanton-Struktur-Whitelist dieses Fixes und ein eigener,
+    grösserer Entscheid (Schwelle/Wächter-Art), keine Drift-Reparatur. Nebeneffekt dieses PRs: die
+    Differenz wächst geringfügig (1566 statt 1565 Erlasse insgesamt) — ändert nichts an der
+    anstehenden Entscheidung.
+  - **Bewusst offen gelassen (Nebenfund, nicht Teil dieser Bau-Einheit):** `check:schlankheit`
+    zeigt `scripts/normtext/adapter-lexwork.ts` bereits auf unverändertem `origin/main` rot (926 Z.,
+    Baseline 839, erlaubt bis 922 — per Nullprobe/`git stash` bestätigt, VOR dieser Session
+    entstanden). `scripts/normtext-snapshot.ts` wäre durch den neuen `--nur`-Filter ebenfalls über
+    die Schwelle gerutscht (1736→1761 Z., erlaubt bis 1747) — hier behoben durch Auslagern der
+    Filter-Logik nach `inventar-kanton.ts` (1743 Z., unter der Schwelle), OHNE Baseline-Bump.
+    `adapter-lexwork.ts` bleibt ein eigener, unabhängiger §17-Befund für eine künftige Session
+    (Datei splitten oder Baseline bewusst mit Begründung heben).
+  - Alle Tore grün ausser den beiden erwarteten: `check:gegenpruefung` (wartet auf die
+    Pflicht-Gegenprüfung, wird vom Orchestrator dispatcht) und das oben dokumentierte, aus main
+    ererbte `check:schlankheit`-Restfeld (adapter-lexwork.ts). Wortlaut: ROADMAP-CHRONIK.md (dieser
+    Eintrag).
+
+**Nachtrag 12.9.2026 (Gegenprüfung PR #828, Auflage A1 — Wortlaut ergänzt, nicht ersetzt, §2b):**
+`sammleKantonVollinventarLexWork()` leitete `lawId` allein aus dem Snapshot-`id`-Pfad ab; bei den
+vier zweisprachigen Erlassen (FR-130.11-de/-fr, VS-173.8-de/-fr) trägt dieser Pfad den Sprachsuffix,
+die LexWork-API-URL nicht → Netz-Abruf HTTP 404, von `check-drift.ts` als transiente WARNUNG (exit 0)
+klassiert — Drift dieser vier wäre unsichtbar geblieben. Fix: neues Feld `fetchLawId` (suffixfreie,
+URL-taugliche Form, gesetzt nur wenn sie vom Bestands-Key abweicht) in `inventar-kanton.ts`,
+konsumiert in `check-drift.ts` UND in `normtext-snapshot.ts`s `erzeugeKantonsSnapshots` (Content-
+Generator hatte denselben Bug). Rot-Beweis: `check:normtext-netz` vorher 1185 Kanton-Gruppen/4
+Netz-Warnungen (HTTP 404 FR-130.11-de/-fr, VS-173.8-de/-fr) → nachher 1189 Gruppen/0 Warnungen, 0 Drift.
+Nebenfund gleichen Mechanismus (§8): `inKraftSeit()` (adapter-lexwork.ts) kannte für die
+französische «ohne le»-Form («en vigueur depuis DD.MM.YYYY») keinen optionalen Doppelpunkt — lex.vs.ch
+liefert «en vigueur depuis: DD.MM.YYYY» (VS-173.8-fr), das Muster traf nicht und fiel still auf
+`enactment` zurück; VS-173.8-fr zeigte dadurch `stand: 2011-01-01` statt amtlich `2025-01-01` (Token
+unverändert — reiner Stand-Fehler). Regex um `\s*:?\s*` ergänzt (analog zum deutschen Muster), Rot-
+Beweis per Vitest-Regressionsfall (`inKraftSeit` liefert jetzt `2025-01-01`), Snapshot chirurgisch
+nachgeführt (`--nur=VS-173.8-fr`, EINE Datei + register.json + Struktur-Sidecar geändert, Stichprobe
+2 Paragraphen live 2/2 Identität). Dabei entdeckter Zusatz-Bug (§17, in derselben Auflage behoben):
+die kantonsweiten HTM/ZH/PDF-Phasen kannten `--nur=<KEY>` nicht und regenerierten beim ersten
+Testlauf ungewollt auch fremde Erlasse desselben Kantons (VS-1413) — Guard `nurUeberspringt` ergänzt,
+git-revertiert vor dem Commit. `adapter-lexwork.ts` bleibt bei 928 Z. (vorher 926, weiterhin über der
+Baseline-Schwelle, s. o. — die zwei zusätzlichen Zeilen sind die Regex-Begründung dieses Fixes).
+Tore erneut nackt gefahren: `check:struktur-konsistenz`, `check:normkeys-kanton`, `check:datenhaltung`,
+`check:paritaet`, `check:normtext-netz`, `golden:vergleich`, `tsc -b`, `lint`, vitest (7905 Tests,
+davon 3 neu für A1) — alle grün ausser dem unveränderten `check:gegenpruefung`/`check:schlankheit`-Paar.
+
+**Nachtrag 12.9.2026 (Nachprüfung PR #828, Auflagen B1/B2/C1 — Wortlaut ergänzt, §2b):** B1 bestätigte
+dieselbe fr-Stand-Bugklasse UID-identisch in zwei weiteren VS-Snapshots (`VS-178.104.json`: committet
+2009-01-01, amtlich 2011-01-01; `VS-211.611.json`: committet 2015-01-02, amtlich 2025-10-01) —
+`inKraftSeit()`s Regex war für BEIDE bereits durch den A1-Fix ausreichend (liefert korrekt 2011-01-01/
+2025-10-01), reiner Zeit-Nachzug per `--nur=VS-178.104,VS-211.611`; zusätzlich `en vigueur dès:
+DD.MM.YYYY` (ohne «le», mit Doppelpunkt) additiv abgedeckt, obwohl real noch nicht beobachtet — die
+vereinheitlichte Regex (EIN Ausdruck statt zwei Alternativen, Nebeneffekt: `adapter-lexwork.ts` sank
+dadurch auf 921 Z., C1 damit erledigt, s. u.) deckt «depuis»/«dès» ohnehin gemeinsam ab. B2 deckte einen
+eigenen Bug auf: `sammleKantonVollinventarLexWork()` liess `erlassName`/`erlassNr` leer (Konstanten),
+`erzeugeKantonsSnapshots` baut daraus aber die Systematiknummer-Klammer — VS-173.8-fr verlor durch den
+A1-Regen die Nummer (`erlass` «…, LTar» statt «…, LTar (RS 173.8)», `register.json` `sr: null`).
+Root-Fix NICHT «vom eigenen Snapshot zurückparsen» (der historische Wert von VS-173.8-fr selbst trug
+fälschlich «SR» statt «RS» — vermutlich aus der Tarif-DE-Gruppe kopiert, als beide Sprachen einst in
+einem Lauf kombiniert wurden), sondern MEHRHEITS-Präfix aus den GESCHWISTERN desselben (Kanton,
+Sprache) (VS-178.104/-211.611/-643.1-fr tragen alle «RS»), kombiniert mit der amtlichen
+Systematiknummer (URL-lawId, die stimmt immer) — «geprüft, nicht geraten». Bestätigt an FR-130.11:
+DE→«SGF 130.11», FR→«RSF 130.11» (kanton-eigene Abkürzung, kein generisches SR→RS). Rot-Beweis-Test
+(vorher: `erlassNr` für JEDE Vollinventar-Gruppe `''`) + gezielter Test (VS-173.8-fr/-de exakte Werte).
+VS-173.8-fr neu erzeugt (`erlass` trägt «(RS 173.8)» wieder, `register.json sr: "RS 173.8"`), Feed/
+Manifest nachgezogen. C1: `adapter-lexwork.ts` 928→**921 Z.** (Baseline 839, erlaubt 922) —
+`check:schlankheit` wieder VOLLSTÄNDIG GRÜN (nicht nur «nicht schlechter als main [926]»), ohne Split
+und ohne Baseline-Anhebung, allein durch die Regex-Vereinheitlichung (B1) und Kommentar-Straffung.
+Stichproben: VS-178.104/-211.611 je 1 Paragraph live — 2/2 Identität. Tore erneut nackt: `tsc -b`,
+`lint`, `check:struktur-konsistenz`, `check:normkeys-kanton`, `check:datenhaltung`, `check:paritaet`,
+`check:normtext-netz` (1189 Gruppen, Drift 0, 0 Warnungen), `check:golden-normtext`, `golden:vergleich`
+(256 identisch), `check:perf-budget`, vitest (7909 Tests, 4 neu) — alle grün ausser dem unveränderten
+`check:gegenpruefung` (wartet auf Orchestrator-Dispatch).
+
+
 ## `normtext:struktur`-Erlassfilter + Pin-Sonde auf drei Konsumenten ausgeweitet — gelöst 12.9.2026 (W2·18-FEHLERBUCH)
 
 **Ursprünglicher Befund (Wortlaut, bis 12.9.2026 offen, `fahrplaene/FAHRPLAN-OFFENE-BEFUNDE.md` §4,

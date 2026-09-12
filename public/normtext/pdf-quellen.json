@@ -164,6 +164,11 @@
     "stand": "2016-01-01",
     "quelle": "lexwork"
   },
+  "AR-142.121": {
+    "url": "https://ar.clex.ch/api/de/versions/1639/pdf_file",
+    "stand": "2026-07-01",
+    "quelle": "lexwork"
+  },
   "AR-142.13": {
     "url": "https://ar.clex.ch/api/de/versions/1265/pdf_file",
     "stand": "2019-06-01",
@@ -205,7 +210,7 @@
     "quelle": "lexwork"
   },
   "AR-142.22": {
-    "url": "https://ar.clex.ch/api/de/versions/1602/pdf_file",
+    "url": "https://ar.clex.ch/api/de/versions/1644/pdf_file",
     "stand": "2026-01-01",
     "quelle": "lexwork"
   },
@@ -930,7 +935,7 @@
     "quelle": "lexwork"
   },
   "AR-811.112": {
-    "url": "https://ar.clex.ch/api/de/versions/1351/pdf_file",
+    "url": "https://ar.clex.ch/api/de/versions/1642/pdf_file",
     "stand": "2021-04-01",
     "quelle": "lexwork"
   },
@@ -1305,7 +1310,7 @@
     "quelle": "lexwork"
   },
   "AR-931.1": {
-    "url": "https://ar.clex.ch/api/de/versions/1588/pdf_file",
+    "url": "https://ar.clex.ch/api/de/versions/1643/pdf_file",
     "stand": "2025-10-01",
     "quelle": "lexwork"
   },
@@ -1705,8 +1710,13 @@
     "quelle": "lexwork"
   },
   "BS-121.100": {
-    "url": "https://www.gesetzessammlung.bs.ch/api/de/versions/4323/pdf_file",
-    "stand": "2018-01-01",
+    "url": "https://www.gesetzessammlung.bs.ch/api/de/versions/6866/pdf_file",
+    "stand": "2026-07-01",
+    "quelle": "lexwork"
+  },
+  "BS-121.110": {
+    "url": "https://www.gesetzessammlung.bs.ch/api/de/versions/6801/pdf_file",
+    "stand": "2026-07-01",
     "quelle": "lexwork"
   },
   "BS-122.200": {
@@ -1850,8 +1860,8 @@
     "quelle": "lexwork"
   },
   "BS-152.250": {
-    "url": "https://www.gesetzessammlung.bs.ch/api/de/versions/6549/pdf_file",
-    "stand": "2025-02-01",
+    "url": "https://www.gesetzessammlung.bs.ch/api/de/versions/6858/pdf_file",
+    "stand": "2026-09-01",
     "quelle": "lexwork"
   },
   "BS-152.330": {
@@ -2120,8 +2130,8 @@
     "quelle": "lexwork"
   },
   "BS-162.200": {
-    "url": "https://www.gesetzessammlung.bs.ch/api/de/versions/6449/pdf_file",
-    "stand": "2025-01-01",
+    "url": "https://www.gesetzessammlung.bs.ch/api/de/versions/6854/pdf_file",
+    "stand": "2026-09-01",
     "quelle": "lexwork"
   },
   "BS-162.300": {
@@ -2180,8 +2190,8 @@
     "quelle": "lexwork"
   },
   "BS-164.100": {
-    "url": "https://www.gesetzessammlung.bs.ch/api/de/versions/6735/pdf_file",
-    "stand": "2025-02-13",
+    "url": "https://www.gesetzessammlung.bs.ch/api/de/versions/6855/pdf_file",
+    "stand": "2026-09-01",
     "quelle": "lexwork"
   },
   "BS-164.150": {
@@ -2680,13 +2690,13 @@
     "quelle": "lexwork"
   },
   "BS-292.100": {
-    "url": "https://www.gesetzessammlung.bs.ch/api/de/versions/6636/pdf_file",
-    "stand": "2020-07-01",
+    "url": "https://www.gesetzessammlung.bs.ch/api/de/versions/6846/pdf_file",
+    "stand": "2026-08-01",
     "quelle": "lexwork"
   },
   "BS-292.110": {
-    "url": "https://www.gesetzessammlung.bs.ch/api/de/versions/3874/pdf_file",
-    "stand": "2016-07-01",
+    "url": "https://www.gesetzessammlung.bs.ch/api/de/versions/6847/pdf_file",
+    "stand": "2026-08-01",
     "quelle": "lexwork"
   },
   "BS-292.400": {
@@ -2950,8 +2960,8 @@
     "quelle": "lexwork"
   },
   "BS-410.100": {
-    "url": "https://www.gesetzessammlung.bs.ch/api/de/versions/6481/pdf_file",
-    "stand": "2024-08-12",
+    "url": "https://www.gesetzessammlung.bs.ch/api/de/versions/6782/pdf_file",
+    "stand": "2026-08-10",
     "quelle": "lexwork"
   },
   "BS-410.120": {
@@ -3000,13 +3010,13 @@
     "quelle": "lexwork"
   },
   "BS-410.700": {
-    "url": "https://www.gesetzessammlung.bs.ch/api/de/versions/6796/pdf_file",
-    "stand": "2025-08-11",
+    "url": "https://www.gesetzessammlung.bs.ch/api/de/versions/6820/pdf_file",
+    "stand": "2026-07-31",
     "quelle": "lexwork"
   },
   "BS-410.910": {
-    "url": "https://www.gesetzessammlung.bs.ch/api/de/versions/2997/pdf_file",
-    "stand": "2014-08-18",
+    "url": "https://www.gesetzessammlung.bs.ch/api/de/versions/6878/pdf_file",
+    "stand": "2026-08-10",
     "quelle": "lexwork"
   },
   "BS-411.100": {
@@ -3085,13 +3095,13 @@
     "quelle": "lexwork"
   },
   "BS-412.750": {
-    "url": "https://www.gesetzessammlung.bs.ch/api/de/versions/6551/pdf_file",
-    "stand": "2024-08-12",
+    "url": "https://www.gesetzessammlung.bs.ch/api/de/versions/6826/pdf_file",
+    "stand": "2026-08-10",
     "quelle": "lexwork"
   },
   "BS-413.630": {
-    "url": "https://www.gesetzessammlung.bs.ch/api/de/versions/6589/pdf_file",
-    "stand": "2025-08-11",
+    "url": "https://www.gesetzessammlung.bs.ch/api/de/versions/6648/pdf_file",
+    "stand": "2026-08-10",
     "quelle": "lexwork"
   },
   "BS-413.820": {
@@ -3275,13 +3285,13 @@
     "quelle": "lexwork"
   },
   "BS-423.200": {
-    "url": "https://www.gesetzessammlung.bs.ch/api/de/versions/3583/pdf_file",
-    "stand": "2009-08-10",
+    "url": "https://www.gesetzessammlung.bs.ch/api/de/versions/6827/pdf_file",
+    "stand": "2026-08-10",
     "quelle": "lexwork"
   },
   "BS-424.100": {
-    "url": "https://www.gesetzessammlung.bs.ch/api/de/versions/4459/pdf_file",
-    "stand": "2018-08-13",
+    "url": "https://www.gesetzessammlung.bs.ch/api/de/versions/6821/pdf_file",
+    "stand": "2026-07-31",
     "quelle": "lexwork"
   },
   "BS-424.500": {
@@ -3815,8 +3825,8 @@
     "quelle": "lexwork"
   },
   "BS-590.200": {
-    "url": "https://www.gesetzessammlung.bs.ch/api/de/versions/4745/pdf_file",
-    "stand": "2020-01-01",
+    "url": "https://www.gesetzessammlung.bs.ch/api/de/versions/6857/pdf_file",
+    "stand": "2026-09-01",
     "quelle": "lexwork"
   },
   "BS-610.100": {
@@ -3985,7 +3995,7 @@
     "quelle": "lexwork"
   },
   "BS-724.100": {
-    "url": "https://www.gesetzessammlung.bs.ch/api/de/versions/6219/pdf_file",
+    "url": "https://www.gesetzessammlung.bs.ch/api/de/versions/6876/pdf_file",
     "stand": "2021-01-01",
     "quelle": "lexwork"
   },
@@ -4030,8 +4040,8 @@
     "quelle": "lexwork"
   },
   "BS-730.100": {
-    "url": "https://www.gesetzessammlung.bs.ch/api/de/versions/6680/pdf_file",
-    "stand": "2025-11-01",
+    "url": "https://www.gesetzessammlung.bs.ch/api/de/versions/6877/pdf_file",
+    "stand": "2026-08-18",
     "quelle": "lexwork"
   },
   "BS-730.110": {
@@ -4709,6 +4719,11 @@
     "stand": "2025-02-17",
     "quelle": "lexwork"
   },
+  "BS-861.520": {
+    "url": "https://www.gesetzessammlung.bs.ch/api/de/versions/6841/pdf_file",
+    "stand": "2026-07-02",
+    "quelle": "lexwork"
+  },
   "BS-861.540": {
     "url": "https://www.gesetzessammlung.bs.ch/api/de/versions/6705/pdf_file",
     "stand": "2025-11-01",
@@ -5114,6 +5129,11 @@
     "stand": "2022-10-01",
     "quelle": "lexwork"
   },
+  "BS-BaB 152.100": {
+    "url": "https://www.gesetzessammlung.bs.ch/api/de/versions/6813/pdf_file",
+    "stand": "2026-07-01",
+    "quelle": "lexwork"
+  },
   "BS-BaB 152.110": {
     "url": "https://www.gesetzessammlung.bs.ch/api/de/versions/6669/pdf_file",
     "stand": "2026-01-01",
@@ -5320,7 +5340,7 @@
     "quelle": "lexwork"
   },
   "BS-BeE 153.860": {
-    "url": "https://www.gesetzessammlung.bs.ch/api/de/versions/5065/pdf_file",
+    "url": "https://www.gesetzessammlung.bs.ch/api/de/versions/6873/pdf_file",
     "stand": "2021-01-01",
     "quelle": "lexwork"
   },
@@ -5580,8 +5600,8 @@
     "quelle": "lexwork"
   },
   "BS-RiE 162.110": {
-    "url": "https://www.gesetzessammlung.bs.ch/api/de/versions/6718/pdf_file",
-    "stand": "2026-01-01",
+    "url": "https://www.gesetzessammlung.bs.ch/api/de/versions/6838/pdf_file",
+    "stand": "2026-08-01",
     "quelle": "lexwork"
   },
   "BS-RiE 164.100": {
@@ -5655,8 +5675,8 @@
     "quelle": "lexwork"
   },
   "BS-RiE 411.610": {
-    "url": "https://www.gesetzessammlung.bs.ch/api/de/versions/6581/pdf_file",
-    "stand": "2025-04-17",
+    "url": "https://www.gesetzessammlung.bs.ch/api/de/versions/6746/pdf_file",
+    "stand": "2026-08-01",
     "quelle": "lexwork"
   },
   "BS-RiE 411.630": {
@@ -6921,17 +6941,17 @@
   },
   "VS-173.8-fr": {
     "url": "https://lex.vs.ch/api/fr/versions/3360/pdf_file",
-    "stand": "2011-01-01",
+    "stand": "2025-01-01",
     "quelle": "lexwork"
   },
   "VS-178.104": {
     "url": "https://lex.vs.ch/api/fr/versions/1413/pdf_file",
-    "stand": "2009-01-01",
+    "stand": "2011-01-01",
     "quelle": "lexwork"
   },
   "VS-211.611": {
     "url": "https://lex.vs.ch/api/fr/versions/3515/pdf_file",
-    "stand": "2015-01-02",
+    "stand": "2025-10-01",
     "quelle": "lexwork"
   },
   "VS-643.1": {
