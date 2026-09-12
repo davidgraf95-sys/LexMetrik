@@ -52,6 +52,48 @@ erzeugen. **Risikopfad** ⇒ Gegenprüfung.»
   Befund — OCLs eigener Basis-Record ist bei full_text/docket_number_2/decision_date komplett mit
   `152 V 20` konfliert (nicht nur die aza-Auswahl); auf Bandjahr-Platzhalter zurückgestuft,
   Content-Korrektur bleibt eigener offener Befund (`fahrplaene/FAHRPLAN-OFFENE-BEFUNDE.md`).
+  **Nachtrag Delta-Prüfung 12.9.2026 (B, PR #816):** der A1/A2-B1-Lauf hatte
+  `regeste.sprachfassungen` (dreisprachig, B2/A18) bei allen 6 angefassten BGE verloren — der
+  B1-Zweig ERSETZTE den Bestandseintrag durch das frische `holeBgeLeitentscheid`-Ergebnis, das
+  dieses Feld nicht trägt (kommt aus `holeRegesteSprachfassungen`, anderer Refresh-Zweig; korpusweit
+  1258→1252 mit Sprachfassungen). Fix: neues Modul `entscheide-b1-merge.ts`
+  (`mergeB1Ergebnis`, unit-getestet, Rot-Beweis erbracht) — übernimmt `alt.regeste.sprachfassungen`
+  in `neu`, wenn `neu` selbst keine trägt und der flache Regeste-Text unverändert ist. Neuer Wächter
+  in `check:entscheide`: amtlicher BGE mit Regeste ohne sprachfassungen ⇒ FEHLER (Ausnahme
+  `bge_149_IV_1`, dokumentiert seit 5.7.2026). Die 6 Einträge aus dem unveränderten
+  origin/main-Bestand gemergt (kein Neu-Abruf, Text-Gleichheit geprüft); Vollerhebung 1258/1259.
+  **A3:** `bge_152_V_2`s Urteilsdatum (2026-01-29, amtlich eindeutig aus zwei unabhängigen Quellen)
+  darf die Body-Quarantäne überleben — gesetzt, Body/azaUrteil bleiben Auszug/quarantäniert.
+  Kommentar zur A1-Restlücke ergänzt: ein plausibel-aber-falsches Bestandsdatum (wie 152_V_2s
+  vorheriges 2025-06-23, aus der OCL-Konflation geerbt) wird von `verschlechtertDatum` konserviert,
+  nicht automatisch korrigiert.
+
+## Register-sha rotiert mit stand — Wortlaut vor der Lösung + Lösung 12.9.2026 (PR #814)
+
+**Ursprünglicher Befund (Wortlaut, bis 12.9.2026 offen, FAHRPLAN-OFFENE-BEFUNDE.md:93,
+Nacht 5.9.2026, #687/#695):** «Register-`sha` rotiert mit `stand`» — `material-manifest.ts:45`
+hasht `r.stand`; stand-freie `shaVernehmlassung()` nur im Test (§5/§6.7).
+
+- [x] **Gelöst 12.9.2026, PR #814:** Nullprobe zuerst — Rot-Beweis-Test bewies, dass
+  `shaEintrag()` bei identischem Inhalt und unterschiedlichem `stand` verschiedene sha
+  erzeugte; Messreihe Lauf #789→#803 (register.json, Commits e1e0e708e→6456dcf00): 831 von
+  831 Vernehmlassungs-sha änderten sich, bei nur 1 tatsächlichem Statusübergang. Fix:
+  `r.stand` aus dem Identitäts-sha in `shaEintrag()` entfernt (stand bleibt eigenes
+  Provenienz-/Kern-Feld, §7, unverändert ausgeliefert); die stand-freie Formel
+  `shaVernehmlassung()` (nie im Generator-Pfad verdrahtet, nur eigener Test) entfernt statt
+  als zweite Formel weitergepflegt — eine Funktion für Generator UND Test (§5). Konsumenten
+  geprüft: `check-materialien.ts` prüft nur Format + Byte-Gleichheit zur frischen
+  Projektion, kein Vergleich gegen eine Alt-Fassung; `check:entstehung`
+  (Anker-sha-Determinismus-Wächter) ist ein eigenständiges Sidecar-sha-System ohne Import
+  aus `material-manifest.ts` — unberührt. Register neu erzeugt (`materialien
+  --datum=2026-09-12`, `datenhaltung:manifest`): 1383/1681 sha ändern sich EINMALIG
+  (Formel-Wechsel), alle anderen Felder byte-gleich (register.json/register-i18n.json
+  unverändert). Tore: `check:materialien`/`check:bs-materialien`/`check:entstehung`/
+  `check:datenhaltung`/`check:paritaet`/`check:zaehler`/`check:feed` grün,
+  `golden:vergleich` 256 Fälle byte-gleich, `vitest src/tests/*materialien*` 16
+  Dateien/274 Tests grün, `lint` 0 Fehler. Damit sind alle drei Befunde der Nacht-5.9.2026-
+  Sammelzeile (ROADMAP.md:416) gelöst: Finding 7 ohne Reparaturweg (PR #803) ·
+  Register-sha rotiert mit stand (PR #814) · Arm-Tor wanduhrabhängig (PR #803).
 
 ## `adapter-lexwork.ts:778` Fetch-Ergebnis unvalidiert — Wortlaut + Fix 12.9.2026 (PR #813, Gegenprüfung ausstehend)
 

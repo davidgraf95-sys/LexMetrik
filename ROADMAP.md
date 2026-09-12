@@ -413,7 +413,7 @@ zgb-a36-anhang: Die ZGB-Gliederung zeigt 74 Artikel des Anhangs «Wortlaut der f
   - [ ] **Pflegetermin 1.10.2026:** 14 «Künftige Fassung»-Einträge (OR/StGB/BankG/GwG u. a., SR-Tabellen) werden fällig — Register `parameter-verfall.md`, vorher nachführen (Hinweis Referenzzins-Agent 2.9.2026).
   - [ ] **§17 Reparatur-Arm deckt Kanton-Drift nicht** *(Anlass 4.9.2026, #597/#600: BE 154.21 driftete 3 Läufe lang rot, Nachführung von Hand in PR #668)* — Reparatur-Arm um enge Kanton-Regeneration erweitern (`normtext -- --nur=kanton --kanton=XX` + `gen:pdf-quellen -- --kanton=XX`, neu in #668), Gegenprüfung bleibt Pflicht (Risikopfad, kein Auto-Merge).
   - [ ] **`gate` flaky parallel zu `check-drift.ts --netz`** *(Nullprobe 4.9.2026, PR #668)* — Netz-Lauf schreibt `daten/pdf-cache-zh/`, während der Offline-Teil liest (73× «Roh-PDF-Cache leer»); Wurzel-Fix: Netz-Modus in Temp-Verzeichnis schreiben und atomar tauschen, oder Tor-Lock.
-  - [ ] **Nacht 5.9.2026:** Finding 7 ohne Reparaturweg · Register-sha rotiert mit stand · Arm-Tor wanduhrabhängig — Fahrplan §2.
+  - [x] **Nacht 5.9.2026:** Finding 7 ohne Reparaturweg · Register-sha rotiert mit stand · Arm-Tor wanduhrabhängig — Fahrplan §2. **Alle drei gelöst 12.9.2026 (PR #803, #814):** Wortlaut ROADMAP-CHRONIK.md, Detail Fahrplan §2.
 
 ---
 

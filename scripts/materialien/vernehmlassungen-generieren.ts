@@ -26,7 +26,6 @@
  * additive Spalten vern_status/frist_start/frist_ende/proj_eli.
  */
 import { writeFileSync, mkdirSync } from 'node:fs';
-import { createHash } from 'node:crypto';
 import { sparqlBatch, type SparqlBinding, type FetchImpl } from '../fedlex-sparql.ts';
 import { grundmenge, type ErlassMeta } from './botschaften-generieren.ts';
 import type { VernehmlassungStatus, MaterialRegistereintrag } from '../../src/lib/materialien/typen.ts';
@@ -167,16 +166,10 @@ export function baueVernehmlassungen(
   return out;
 }
 
-/** sha256 über die Identitäts-/Drift-Felder (Currency-Token, §7d): Status + Fristende + normKeys. */
-export function shaVernehmlassung(e: MaterialRegistereintrag): string {
-  const v = e.vernehmlassung;
-  const norm = [
-    e.key, e.behoerde, e.doktyp, e.titel, e.titelFr ?? '', e.titelIt ?? '',
-    e.rechtsgebiet, e.status, e.quelleUrl, e.normKeys?.join(',') ?? '',
-    v?.status ?? '', v?.fristStart ?? '', v?.fristEnde ?? '', v?.projEli ?? '',
-  ].join('');
-  return createHash('sha256').update(norm, 'utf8').digest('hex');
-}
+// sha256-Identitäts-/Drift-Token: ausschliesslich `shaEintrag` in material-manifest.ts
+// (§5 SSoT) — das frühere Duplikat `shaVernehmlassung` hier war nur im eigenen Test
+// verdrahtet, nie im Generator-Pfad (Fund FAHRPLAN-OFFENE-BEFUNDE «Register-sha
+// rotiert mit stand», entfernt statt zweiter Formel gepflegt).
 
 // ── SPARQL-Query (eine VALUES-Batch) ────────────────────────────────────────────
 // Titel je Sprache über die SPARQL-LANG()-Funktion am eventTitle (kein Expression-Join
