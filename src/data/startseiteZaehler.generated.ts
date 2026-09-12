@@ -42,7 +42,13 @@ export interface StartseiteZaehler {
   vorlagen: number;
   /** Stand der Gesetzes-Register-Erzeugung (ISO). */
   standGesetze: string;
-  /** Stand der Rechtsprechungs-Register-Erzeugung (ISO). */
+  /** Fix #691 (12.9.2026): jüngstes ABRUFDATUM über den echten Rechtsprechungs-
+   *  Bestand (ISO) — zuvor stand hier das Erzeugungsdatum des Registers
+   *  (`register.json`s `erzeugt`, ein Bau-Zeitstempel), der bei jedem
+   *  Teil-Lauf auf «heute» sprang, unabhängig davon ob neue Entscheide
+   *  dazukamen. Andere Bedeutung als `standGesetze`/`standMaterialien`
+   *  (die bleiben Bau-Zeitstempel) — bewusst, weil hier ein echtes
+   *  Abrufdatum je Snapshot vorliegt (§8). */
   standRechtsprechung: string;
   /** Stand der Materialien-Register-Erzeugung (ISO). */
   standMaterialien: string;
