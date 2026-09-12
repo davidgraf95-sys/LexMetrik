@@ -170,10 +170,23 @@ jobs:
       # ein Republish ohne Re-Pin braucht sie nicht, und der Netz-Lauf bliebe
       # sonst jede Woche auf der vollen Laufzeit.
       - name: Regenerierung (nur wenn cache.sh re-gepinnt wurde)
+        id: regen
         run: |
           set -euo pipefail
           if git diff --quiet -- scripts/fedlex-cache.sh; then
             echo "Kein Re-Pin — keine Regenerierung nötig."
+            # Gegenprüfung #822 D1 (Prüfer-Nullprobe 12.9.2026): `gefetcht` markiert,
+            # ob DIESER Lauf `bash scripts/fedlex-cache.sh` tatsächlich gefahren hat —
+            # nicht, ob unten im Job irgendetwas geändert wurde. `steps.diff.outputs.
+            # geaendert` (weiter unten) misst den GANZEN Baum (Wiedervorlage, Arbiter,
+            # Manifest berühren JEDEN Lauf, auch ohne Re-Pin) und eignet sich darum
+            # NICHT als Cache-Pflicht-Signal: ohne dieses `gefetcht` hätte JEDER
+            # Frische-Lauf mit Diff, aber OHNE Re-Pin (der Normalfall — Wiedervorlage/
+            # Arbiter/Manifest ändern sich praktisch immer), den Tor-Schritt mit 0
+            # /tmp-Caches UND `--cache-pflicht` gefahren ⇒ EXIT=1 ⇒ die Frische-
+            # Automatik wäre rot geworden, ohne je einen PR zu liefern (reproduziert:
+            # Prüfer-Nullprobe fand `geaendert=1` bei unverändertem `fedlex-cache.sh`).
+            echo "gefetcht=0" >> "$GITHUB_OUTPUT"
           else
             echo "cache.sh re-gepinnt → Snapshots/Struktur/Register regenerieren."
             # `--nur=bund` seit 1.9.2026 (QS-MONITOR-ROT, Befund (a2)): der Voll-Lauf
@@ -275,6 +288,11 @@ jobs:
             # das Register änderte sich, der Feed blieb stehen — check:feed rot
             # mit «erlasse.xml VERALTET gegenüber dem Register».
             npm run gen:feed
+            # Gegenprüfung #822 D1: DIESER Zweig hat `bash scripts/fedlex-cache.sh`
+            # tatsächlich gefahren (via `npm run normtext -- --nur=bund` oben,
+            # `sicherstelleCaches`) — nur hier darf der Tor-Schritt unten die volle
+            # Cache-Pflicht verlangen.
+            echo "gefetcht=1" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Manifest immer aktuell halten (DB-Berührung jeden Lauf, §17-Wurzel oben)
@@ -374,6 +392,22 @@ jobs:
       # `if: always()`, direkt nach `check:verfall` — derselbe K7-Platz).
       - name: Offline-Tore vor dem PR (VOLLE Tor-Menge, keine Auswahl)
         if: steps.diff.outputs.geaendert == '1'
+        # LEXMETRIK_CACHE_PFLICHT (Gegenprüfung #822 C1, KORRIGIERT D1): die Pflicht
+        # gilt NUR, wenn DIESER Lauf `bash scripts/fedlex-cache.sh` tatsächlich
+        # gefahren hat (`steps.regen.outputs.gefetcht`, oben gesetzt) — NICHT bei
+        # `steps.diff.outputs.geaendert`: dieser misst den GANZEN Baum (Wiedervorlage/
+        # Arbiter/Manifest ändern sich praktisch jeden Lauf, auch OHNE Re-Pin). Mit der
+        # Pflicht fest auf '1' verdrahtet hätte JEDER Diff-Lauf OHNE Re-Pin die Tore mit
+        # 0 /tmp-Caches UND Pflicht gefahren ⇒ EXIT=1 ⇒ die Frische-Automatik würde rot,
+        # ohne je einen PR zu liefern (Prüfer-Nullprobe 12.9.2026: `geaendert=1` bei
+        # unverändertem `fedlex-cache.sh` reproduziert). `gefetcht` trägt NUR '0' oder
+        # '1' (s. Schritt oben) — `check-vollstaendigkeit.ts`/`check-p-klassen.ts`
+        # werten ausschliesslich exakt `'1'` als Pflicht (`=== '1'`), jeder andere Wert
+        # (leer, '0', fehlend) bleibt die alte, tolerante Regel. Ein `--cache-pflicht`-
+        # Verzicht wäre hier (wenn gefetcht) ein stiller Blindflug, falls der Fetch nur
+        # teilweise gelang — deshalb bleibt die Pflicht im gefetcht-Fall bestehen.
+        env:
+          LEXMETRIK_CACHE_PFLICHT: ${{ steps.regen.outputs.gefetcht }}
         run: |
           set -euo pipefail
           npm run check
