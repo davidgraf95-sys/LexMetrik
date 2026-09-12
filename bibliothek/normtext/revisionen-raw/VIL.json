@@ -1097,7 +1097,11 @@
     "2026-07-01"
   ],
   "belegteOcs": [],
-  "rectifiesSrProOc": {
-    "https://fedlex.data.admin.ch/eli/oc/2021/269": "451.1"
+  "rectifiesInfoProOc": {
+    "https://fedlex.data.admin.ch/eli/oc/2021/269": {
+      "fremdeSr": "451.1",
+      "zielOc": "https://fedlex.data.admin.ch/eli/oc/2000/121",
+      "zielFundstelle": "AS 2000 703"
+    }
   }
 }

@@ -101,9 +101,9 @@
       "titelFr": "Ordonnance sur les produits phytosanitaires (OPPh). Erratum",
       "titelIt": "Ordinanza sui prodotti fitosanitari (OPF). Correzione",
       "plausibilitaet": "berichtigung-fremdes-as-dokument",
-      "plausibilitaetsGrund": "Diese Berichtigung korrigiert eine Änderung dieses Erlasses (SR 814.81, CHEMRRV), die im AS-Text eines anderen Erlasses (SR 916.161, Anhangs-Änderung «Änderung bisherigen Rechts») erstpubliziert wurde; massgeblich bleibt die amtliche Sammlung (§7/§8).",
+      "plausibilitaetsGrund": "Fedlex verknüpft diese Berichtigung (jolux:rectifies) mit dem AS-Dokument AS 2025 565, das unter SR 916.161 klassiert ist — häufig, weil die berichtigte Bestimmung im Anhang eines anderen Erlasses geändert wurde; massgeblich ist die amtliche Sammlung (§7/§8).",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2025/864/de",
-      "sha": "45a0cc6e9b232b6d04e17afa9d062f12a4c00792f93e876956d8fc7be150011a"
+      "sha": "37b164b6db2df55265e5d31e498a4435ffdfeaa2af7d6e919832e80c494d5bcc"
     },
     {
       "art": "aenderung",
@@ -784,5 +784,5 @@
       "sha": "a993ac534035835c97b63b3a35ac82d725066f2f88295f4547cfbe3c39e997d5"
     }
   ],
-  "sha": "4d356719db528271461ed8cb51f0e75c097c7656ec6af8bb8d40d38790bf5265"
+  "sha": "f98d17cde7e3b9dde973a6ea4d956881f9d970d74f01c69c3d786ec2448fe2bc"
 }

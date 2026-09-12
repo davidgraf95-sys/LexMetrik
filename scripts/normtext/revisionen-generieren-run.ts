@@ -57,11 +57,11 @@ for (const b of bindings) {
   if (sr && bNachSr.has(sr)) bNachSr.get(sr)!.push(b);
 }
 
-// §8-Plausibilitätsmarker (Gegenprüfung #703): EINE globale Batch-Auflösung der
-// jolux:rectifies-Ziele → deren SR-Notation, statt je Erlass separat nachzufragen.
+// §8-Marker (Gegenprüfung #703): EINE globale Batch-Auflösung der jolux:rectifies-Ziele →
+// deren SR-Notation + AS-Fundstelle (Auflage f), statt je Erlass separat nachzufragen.
 const rectifiesZiele = [...new Set(bindings.map((b) => b.rectifies?.value).filter((v): v is string => !!v))];
-const zielSrProOc = await holeRectifiesSr(rectifiesZiele, fetch);
-if (rectifiesZiele.length) console.log(`  jolux:rectifies-Ziele ${rectifiesZiele.length} · SR aufgelöst ${zielSrProOc.size}`);
+const zielInfoProOc = await holeRectifiesSr(rectifiesZiele, fetch);
+if (rectifiesZiele.length) console.log(`  jolux:rectifies-Ziele ${rectifiesZiele.length} · SR aufgelöst ${zielInfoProOc.size}`);
 let fremdeAsDokumente = 0;
 
 let mitAenderung = 0, gesamtEintraege = 0, mitBotschaft = 0, sammelMarker = 0, ohnePin = 0, kuenftig = 0;
@@ -88,7 +88,7 @@ for (const m of meta as ErlassMeta[]) {
   const konsEli = pin ? `${pin.abstractEli}/${pin.konsKompakt}` : null;
   const belegteOcs = konsEli && kandidatOcs.length ? await ermittleBelegteOcs(konsEli, kandidatOcs, fetch) : new Set<string>();
   belegtTrotzDatum += belegteOcs.size;
-  const rectifiesSrProOc = baueOcZuRectifiesSr(bBindings, zielSrProOc);
+  const rectifiesInfoProOc = baueOcZuRectifiesSr(bBindings, zielInfoProOc);
 
   // store-raw (deterministisch, sortiert): Bindings byte-stabil ablegen.
   const rawBindings = [...bBindings].sort((a, b) =>
@@ -98,12 +98,13 @@ for (const m of meta as ErlassMeta[]) {
     JSON.stringify({
       sr: m.sr, korpusStand, bBindings: rawBindings, aStaende: [...aStaende].sort(),
       belegteOcs: [...belegteOcs].sort(),
-      // §8-Plausibilitätsmarker: als Objekt persistiert (Re-Parse ohne Re-Crawl, §11) —
-      // sonst müsste check:revisionen (OFFLINE) erneut gegen Fedlex fragen.
-      rectifiesSrProOc: Object.fromEntries([...rectifiesSrProOc.entries()].sort(([a], [b]) => (a < b ? -1 : a > b ? 1 : 0))),
+      // §8-Marker: als Objekt persistiert (Re-Parse ohne Re-Crawl, §11) — sonst müsste
+      // check:revisionen (OFFLINE) erneut gegen Fedlex fragen. Trägt seit Auflage f
+      // (Gegenprüfung PR #827) auch die Ziel-Fundstelle (RectifiesInfo), nicht mehr nur die SR.
+      rectifiesInfoProOc: Object.fromEntries([...rectifiesInfoProOc.entries()].sort(([a], [b]) => (a < b ? -1 : a > b ? 1 : 0))),
     }, null, 2) + '\n', 'utf8');
 
-  const sidecar = baueRevisionen(m, bBindings, aStaende, korpusStand, ocZuBotschaft, heute, belegteOcs, rectifiesSrProOc);
+  const sidecar = baueRevisionen(m, bBindings, aStaende, korpusStand, ocZuBotschaft, heute, belegteOcs, rectifiesInfoProOc);
   writeFileSync(`${SIDECAR_DIR}/${m.key}.json`, serialisiere(sidecar), 'utf8');
 
   const ae = sidecar.revisionen.filter((r) => r.art === 'aenderung');

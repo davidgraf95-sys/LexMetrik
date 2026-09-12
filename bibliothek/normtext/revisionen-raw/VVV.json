@@ -2167,8 +2167,16 @@
     "2026-01-01"
   ],
   "belegteOcs": [],
-  "rectifiesSrProOc": {
-    "https://fedlex.data.admin.ch/eli/oc/2021/578": "741.41",
-    "https://fedlex.data.admin.ch/eli/oc/2025/687": "741.31"
+  "rectifiesInfoProOc": {
+    "https://fedlex.data.admin.ch/eli/oc/2021/578": {
+      "fremdeSr": "741.41",
+      "zielOc": "https://fedlex.data.admin.ch/eli/oc/1995/4425_4425_4425",
+      "zielFundstelle": "AS 1995 4425"
+    },
+    "https://fedlex.data.admin.ch/eli/oc/2025/687": {
+      "fremdeSr": "741.31",
+      "zielOc": "https://fedlex.data.admin.ch/eli/oc/2025/645",
+      "zielFundstelle": "AS 2025 645"
+    }
   }
 }

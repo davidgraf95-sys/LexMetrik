@@ -207,9 +207,9 @@
       "titelFr": "Loi sur l’asile (LAsi). Erratum (ne concerne que le texte allemand)",
       "titelIt": "Legge sull’asilo (LAsi). Correzione (concerne solo il testo tedesco)",
       "plausibilitaet": "berichtigung-fremdes-as-dokument",
-      "plausibilitaetsGrund": "Diese Berichtigung korrigiert eine Änderung dieses Erlasses (SR 142.20, AIG), die im AS-Text eines anderen Erlasses (SR 142.31, Anhangs-Änderung «Änderung bisherigen Rechts») erstpubliziert wurde; massgeblich bleibt die amtliche Sammlung (§7/§8).",
+      "plausibilitaetsGrund": "Fedlex verknüpft diese Berichtigung (jolux:rectifies) mit dem AS-Dokument AS 2018 2855, das unter SR 142.31 klassiert ist — häufig, weil die berichtigte Bestimmung im Anhang eines anderen Erlasses geändert wurde; massgeblich ist die amtliche Sammlung (§7/§8).",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2025/342/de",
-      "sha": "c63e290012e4ded978c8ebfaed4d1ac4e152d344121897c951d5d4e9aaa5564a"
+      "sha": "f8827d58b08646d1d69c2cee4ccb687acca389005188c524b2d01adfc07190a1"
     },
     {
       "art": "sammelerlass-marker",
@@ -941,5 +941,5 @@
       "sha": "61ffc69115701b9edcc8e9d5fe46b446b5340baaf0135dccab7d5260405ee661"
     }
   ],
-  "sha": "903f4077058f54a6ef706037961a91830454d02f8f5bde860c79cf77526f788c"
+  "sha": "f656511fe960bfa2d251c4a633c553b465454d67111035532c4a0d46eec93cd1"
 }

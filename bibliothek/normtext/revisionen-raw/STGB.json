@@ -6022,7 +6022,11 @@
     "2026-10-01"
   ],
   "belegteOcs": [],
-  "rectifiesSrProOc": {
-    "https://fedlex.data.admin.ch/eli/oc/2023/739": "220"
+  "rectifiesInfoProOc": {
+    "https://fedlex.data.admin.ch/eli/oc/2023/739": {
+      "fremdeSr": "220",
+      "zielOc": "https://fedlex.data.admin.ch/eli/oc/2020/746",
+      "zielFundstelle": "AS 2020 4005"
+    }
   }
 }

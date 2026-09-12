@@ -3661,9 +3661,21 @@
     "2029-01-01"
   ],
   "belegteOcs": [],
-  "rectifiesSrProOc": {
-    "https://fedlex.data.admin.ch/eli/oc/2022/112": "220",
-    "https://fedlex.data.admin.ch/eli/oc/2024/215": "935.51",
-    "https://fedlex.data.admin.ch/eli/oc/2026/448": "824.0"
+  "rectifiesInfoProOc": {
+    "https://fedlex.data.admin.ch/eli/oc/2022/112": {
+      "fremdeSr": "220",
+      "zielOc": "https://fedlex.data.admin.ch/eli/oc/2020/746",
+      "zielFundstelle": "AS 2020 4005"
+    },
+    "https://fedlex.data.admin.ch/eli/oc/2024/215": {
+      "fremdeSr": "935.51",
+      "zielOc": "https://fedlex.data.admin.ch/eli/oc/2018/795",
+      "zielFundstelle": "AS 2018 5103"
+    },
+    "https://fedlex.data.admin.ch/eli/oc/2026/448": {
+      "fremdeSr": "824.0",
+      "zielOc": "https://fedlex.data.admin.ch/eli/oc/1996/1445_1445_1445",
+      "zielFundstelle": "AS 1996 1445"
+    }
   }
 }

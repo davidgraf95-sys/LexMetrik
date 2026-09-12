@@ -4606,7 +4606,11 @@
     "2027-01-01"
   ],
   "belegteOcs": [],
-  "rectifiesSrProOc": {
-    "https://fedlex.data.admin.ch/eli/oc/2021/429": "172.211.1"
+  "rectifiesInfoProOc": {
+    "https://fedlex.data.admin.ch/eli/oc/2021/429": {
+      "fremdeSr": "172.211.1",
+      "zielOc": "https://fedlex.data.admin.ch/eli/oc/2020/990",
+      "zielFundstelle": "AS 2020 5899"
+    }
   }
 }

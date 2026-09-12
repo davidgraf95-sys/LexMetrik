@@ -5531,7 +5531,11 @@
     "2027-01-01"
   ],
   "belegteOcs": [],
-  "rectifiesSrProOc": {
-    "https://fedlex.data.admin.ch/eli/oc/2025/342": "142.31"
+  "rectifiesInfoProOc": {
+    "https://fedlex.data.admin.ch/eli/oc/2025/342": {
+      "fremdeSr": "142.31",
+      "zielOc": "https://fedlex.data.admin.ch/eli/oc/2018/438",
+      "zielFundstelle": "AS 2018 2855"
+    }
   }
 }

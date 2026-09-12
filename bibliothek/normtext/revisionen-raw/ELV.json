@@ -1544,7 +1544,11 @@
     "2025-01-01"
   ],
   "belegteOcs": [],
-  "rectifiesSrProOc": {
-    "https://fedlex.data.admin.ch/eli/oc/2024/130": "831.201"
+  "rectifiesInfoProOc": {
+    "https://fedlex.data.admin.ch/eli/oc/2024/130": {
+      "fremdeSr": "831.201",
+      "zielOc": "https://fedlex.data.admin.ch/eli/oc/2007/723",
+      "zielFundstelle": "AS 2007 5155"
+    }
   }
 }

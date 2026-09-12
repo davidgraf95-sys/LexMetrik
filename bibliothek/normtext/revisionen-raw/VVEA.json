@@ -1429,8 +1429,16 @@
     "2026-08-01"
   ],
   "belegteOcs": [],
-  "rectifiesSrProOc": {
-    "https://fedlex.data.admin.ch/eli/oc/2023/543": "814.600",
-    "https://fedlex.data.admin.ch/eli/oc/2025/256": "916.171"
+  "rectifiesInfoProOc": {
+    "https://fedlex.data.admin.ch/eli/oc/2023/543": {
+      "fremdeSr": "814.600",
+      "zielOc": "https://fedlex.data.admin.ch/eli/oc/2022/161",
+      "zielFundstelle": "AS 2022 161"
+    },
+    "https://fedlex.data.admin.ch/eli/oc/2025/256": {
+      "fremdeSr": "916.171",
+      "zielOc": "https://fedlex.data.admin.ch/eli/oc/2023/711",
+      "zielFundstelle": "AS 2023 711"
+    }
   }
 }

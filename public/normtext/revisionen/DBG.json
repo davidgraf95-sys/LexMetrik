@@ -34,9 +34,9 @@
       "titelFr": "Loi fédérale sur le service civil (LSC). Erratum (Ne concerne que le texte italien)",
       "titelIt": "Legge federale sul servizio civile sostitutivo (Legge sul servizio civile, LSC). Correzione",
       "plausibilitaet": "berichtigung-fremdes-as-dokument",
-      "plausibilitaetsGrund": "Diese Berichtigung korrigiert eine Änderung dieses Erlasses (SR 642.11, DBG), die im AS-Text eines anderen Erlasses (SR 824.0, Anhangs-Änderung «Änderung bisherigen Rechts») erstpubliziert wurde; massgeblich bleibt die amtliche Sammlung (§7/§8).",
+      "plausibilitaetsGrund": "Fedlex verknüpft diese Berichtigung (jolux:rectifies) mit dem AS-Dokument AS 1996 1445, das unter SR 824.0 klassiert ist — häufig, weil die berichtigte Bestimmung im Anhang eines anderen Erlasses geändert wurde; massgeblich ist die amtliche Sammlung (§7/§8).",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2026/448/de",
-      "sha": "dad71e98703ccad22bf597e0cf0433c6693e672db6019876169b611b0ab3e50e"
+      "sha": "d0c1630a5074ddbf64ff1031a3e540de2283e4cbd16e146f08f6bee40ba04444"
     },
     {
       "art": "sammelerlass-marker",
@@ -80,9 +80,9 @@
       "titelFr": "Loi fédérale sur les jeux d’argent (LJAr). Erratum",
       "titelIt": "Legge federale sui giochi in denaro (LGD). Correzione (Concerne soltanto il testo francese)",
       "plausibilitaet": "berichtigung-fremdes-as-dokument",
-      "plausibilitaetsGrund": "Diese Berichtigung korrigiert eine Änderung dieses Erlasses (SR 642.11, DBG), die im AS-Text eines anderen Erlasses (SR 935.51, Anhangs-Änderung «Änderung bisherigen Rechts») erstpubliziert wurde; massgeblich bleibt die amtliche Sammlung (§7/§8).",
+      "plausibilitaetsGrund": "Fedlex verknüpft diese Berichtigung (jolux:rectifies) mit dem AS-Dokument AS 2018 5103, das unter SR 935.51 klassiert ist — häufig, weil die berichtigte Bestimmung im Anhang eines anderen Erlasses geändert wurde; massgeblich ist die amtliche Sammlung (§7/§8).",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2024/215/de",
-      "sha": "86df41d0f69fadc8b0515136b24f33aff5bddb1ac73ca4d1a77848070be766bb"
+      "sha": "14d5ce32f58c20dd5e59b4499e7cd615b588b84e7f08069ddab997857c836c2d"
     },
     {
       "art": "sammelerlass-marker",
@@ -106,9 +106,9 @@
       "titelFr": "Code des obligations (Droit de la société anonyme). Erratum",
       "titelIt": "Codice delle obbligazioni (Diritto della società anonima). Correzione",
       "plausibilitaet": "berichtigung-fremdes-as-dokument",
-      "plausibilitaetsGrund": "Diese Berichtigung korrigiert eine Änderung dieses Erlasses (SR 642.11, DBG), die im AS-Text eines anderen Erlasses (SR 220, Anhangs-Änderung «Änderung bisherigen Rechts») erstpubliziert wurde; massgeblich bleibt die amtliche Sammlung (§7/§8).",
+      "plausibilitaetsGrund": "Fedlex verknüpft diese Berichtigung (jolux:rectifies) mit dem AS-Dokument AS 2020 4005, das unter SR 220 klassiert ist — häufig, weil die berichtigte Bestimmung im Anhang eines anderen Erlasses geändert wurde; massgeblich ist die amtliche Sammlung (§7/§8).",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2022/112/de",
-      "sha": "6f195e52548367cbe17953da91787f3b3bd4becb723e30bc0b73234b132e8366"
+      "sha": "61c879b9865573783cb98cd7651d3d06c8681b664bb3ce13244a0ef94771c816"
     },
     {
       "art": "aenderung",
@@ -586,5 +586,5 @@
       "sha": "74a5495e38eb632fb30ba6da63289274d420124c5da6b68290cb16603989a9db"
     }
   ],
-  "sha": "36d9d5be9b49a2a87bd33c2f32808714a46ea3e3a5228e85ef57f499da8771de"
+  "sha": "6b50a618a5fded8b68a9922b6883826857cf73eab5b78197c22307f6e57facc9"
 }

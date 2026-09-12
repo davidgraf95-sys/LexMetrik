@@ -4126,3 +4126,55 @@ Erlasse — ohne jeden Widerspruch:
   revisionen.test.ts` (60/60), `npx tsc -b`, `lint` (0 Fehler). Kaskade
   (`gen:entstehung-projektion`/`gen:entstehung-deckung`) erneut gefahren:
   0 Abweichungen (unverändert, da nur Label/Text-Felder betroffen waren).
+
+### Nachtrag 2, 12.9.2026 (Gegenprüfung PR #827, Auflage f — der Nachtrag oben ist selbst teilweise FALSIFIZIERT, ERGÄNZT statt überschrieben, §2b)
+
+Der erste Nachtrag korrigierte «Widerspruch» zu «Berichtigung mit AS-Fundstelle
+im Enactment eines anderen Erlasses» — behauptete dabei aber selbst zu viel:
+«erstpubliziert» und «Anhangs-Änderung ‹Änderung bisherigen Rechts›» als
+FAKTUM, obwohl das `jolux:rectifies`-Tripel das nicht trägt.
+
+**Gegenbeleg (Auflage f, Fedlex-Filestore, 12.9.2026 abgerufen):** AS 2025 686
+(SKV) berichtigt laut Text wörtlich «SKV Änderung vom 15. Oktober 2025
+(AS 2025 644; SR 741.013) Art. 24 Abs. 1 Bst. b Ziff. 2» — SKV berichtigt hier
+den EIGENEN Erlass. Fedlex' `jolux:rectifies` zeigt für AS 2025 686 aber
+FÄLSCHLICH auf `eli/oc/2025/648` (TAFV 2, SR 741.413) statt auf `eli/oc/2025/644`
+(die im Text genannte Fundstelle) — ein BELEGTER FEDLEX-DATENFEHLER in der
+Verknüpfung selbst, keine Anhangs-Konstellation. Zusätzlich: AS 2024 144 (SSV)
+berichtigt laut Fedlex ZWEI Stellen (SSV direkt + NSV-Anhang), ein einzelner
+Grund-Satz kann das nie vollständig abbilden.
+
+**Korrekturen (dritte, konservative Fassung):**
+
+- Grund-Text-Template geändert zu: «Fedlex verknüpft diese Berichtigung
+  (jolux:rectifies) mit dem AS-Dokument \<Ziel-Fundstelle\>, das unter SR
+  \<Fremd-SR\> klassiert ist — häufig, weil die berichtigte Bestimmung im
+  Anhang eines anderen Erlasses geändert wurde; massgeblich ist die amtliche
+  Sammlung.» — berichtet NUR das Tripel, keine Tatsachenbehauptung
+  («erstpubliziert»/«Änderung bisherigen Rechts» als Faktum entfernt).
+  `KontextPanel.tsx`-Fallback-Text ebenso angepasst.
+- Datenmodell erweitert: `RectifiesInfo { fremdeSr, zielOc, zielFundstelle? }`
+  statt reiner SR-String; `holeRectifiesSr` fragt neu zusätzlich
+  `historicalId` der Ziel-ocs ab, `baueOcZuRectifiesSr` leitet die
+  Ziel-Fundstelle über die bestehende `fundstelle()`-Funktion ab (kein
+  Duplikat, §10). `baueRevisionen`s Parameter entsprechend umbenannt
+  (`rectifiesInfoProOc`), Store-raw-Feld `rectifiesInfoProOc` (vorher
+  `rectifiesSrProOc`) — alle 14 betroffenen raw-Dateien neu geschrieben.
+- Generator-Docstring (`RevisionEintrag.plausibilitaet`) trägt jetzt DREI
+  Fassungen übereinander (§2b: jede FALSIFIZIERT, keine gelöscht) — die
+  zweite («erstpubliziert») ausdrücklich mit Datum + SKV-Gegenbeleg als
+  Fedlex-Datenfehler-Klasse markiert.
+- Live-Probe SKV bestätigt die Korrektur: `plausibilitaetsGrund` zeigt jetzt
+  «AS-Dokument AS 2025 648» (die tatsächliche, wenn auch aus Fedlex-Sicht
+  falsche, rectifies-Verknüpfung) statt einer erfundenen
+  Anhangs-Interpretation.
+
+**Tore erneut nackt grün:** `check:revisionen` ZWEIMAL hintereinander,
+`check:revisionen-netz`, `check:artikel-revisionen`, `check:historie`,
+`check:datenhaltung`, `check:paritaet`, `golden:vergleich` (256 IDENTISCH),
+`npx tsc -b` (nach `--force`-Neubau, um die Inkrement-Cache-Lücke
+auszuschliessen), `lint` (0 Fehler), `npx vitest run
+src/tests/normtext-revisionen.test.ts src/tests/verzahnung-artikel-
+revisionen.test.ts` (61/61). Kaskade (`gen:entstehung-projektion`/
+`-deckung`) erneut 0 Abweichungen. Rot-Beweis (8b) erneut demonstriert
+(identischer Ablauf wie Nachtrag 1, neues Schema).

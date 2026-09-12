@@ -2286,8 +2286,16 @@
     "2026-10-01"
   ],
   "belegteOcs": [],
-  "rectifiesSrProOc": {
-    "https://fedlex.data.admin.ch/eli/oc/2024/144": "725.111",
-    "https://fedlex.data.admin.ch/eli/oc/2026/343": "741.21"
+  "rectifiesInfoProOc": {
+    "https://fedlex.data.admin.ch/eli/oc/2024/144": {
+      "fremdeSr": "725.111",
+      "zielOc": "https://fedlex.data.admin.ch/eli/oc/2007/796",
+      "zielFundstelle": "AS 2007 5957"
+    },
+    "https://fedlex.data.admin.ch/eli/oc/2026/343": {
+      "fremdeSr": "741.21",
+      "zielOc": "https://fedlex.data.admin.ch/eli/oc/2026/24",
+      "zielFundstelle": "AS 2026 24"
+    }
   }
 }

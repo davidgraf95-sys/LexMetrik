@@ -2211,8 +2211,16 @@
     "2027-01-01"
   ],
   "belegteOcs": [],
-  "rectifiesSrProOc": {
-    "https://fedlex.data.admin.ch/eli/oc/2021/11": "818.101.24",
-    "https://fedlex.data.admin.ch/eli/oc/2021/122": "818.101.1"
+  "rectifiesInfoProOc": {
+    "https://fedlex.data.admin.ch/eli/oc/2021/11": {
+      "fremdeSr": "818.101.24",
+      "zielOc": "https://fedlex.data.admin.ch/eli/oc/2020/977",
+      "zielFundstelle": "AS 2020 5801"
+    },
+    "https://fedlex.data.admin.ch/eli/oc/2021/122": {
+      "fremdeSr": "818.101.1",
+      "zielOc": "https://fedlex.data.admin.ch/eli/oc/2021/53",
+      "zielFundstelle": "AS 2021 53"
+    }
   }
 }

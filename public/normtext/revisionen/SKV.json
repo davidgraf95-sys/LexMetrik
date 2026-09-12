@@ -26,9 +26,9 @@
       "titelFr": "Ordonnance sur le contrôle de la circulation routière (OCCR). Erratum (Ne concerne que le texte italien)",
       "titelIt": "Ordinanza sul controllo della circolazione stradale (OCCS). Correzione",
       "plausibilitaet": "berichtigung-fremdes-as-dokument",
-      "plausibilitaetsGrund": "Diese Berichtigung korrigiert eine Änderung dieses Erlasses (SR 741.013, SKV), die im AS-Text eines anderen Erlasses (SR 741.413, Anhangs-Änderung «Änderung bisherigen Rechts») erstpubliziert wurde; massgeblich bleibt die amtliche Sammlung (§7/§8).",
+      "plausibilitaetsGrund": "Fedlex verknüpft diese Berichtigung (jolux:rectifies) mit dem AS-Dokument AS 2025 648, das unter SR 741.413 klassiert ist — häufig, weil die berichtigte Bestimmung im Anhang eines anderen Erlasses geändert wurde; massgeblich ist die amtliche Sammlung (§7/§8).",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2025/686/de",
-      "sha": "e24a73c6630197481812ed804d0d65894d58754461c67ae387b298d75d8ccac5"
+      "sha": "840c69379b2cf4931b8a2cf1f9e9b17d6836bd005e87c127cfc64dc20c545256"
     },
     {
       "art": "aenderung",
@@ -157,5 +157,5 @@
       "sha": "4687c174992c0c9cb934abadf17780cd9e1d15bab37854b16dfbef46c7361699"
     }
   ],
-  "sha": "9b7324cb419ef55e2fbc7cbb96c2659223e0ee171bad0891b6623f104da211e9"
+  "sha": "19318e8679012d64c415a66325f8fc5e68d7c09a1e7f9f3ddd4d56308aef1474"
 }

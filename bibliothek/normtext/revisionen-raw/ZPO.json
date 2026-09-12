@@ -799,8 +799,16 @@
     "2026-07-01"
   ],
   "belegteOcs": [],
-  "rectifiesSrProOc": {
-    "https://fedlex.data.admin.ch/eli/oc/2022/110": "220",
-    "https://fedlex.data.admin.ch/eli/oc/2024/235": "272"
+  "rectifiesInfoProOc": {
+    "https://fedlex.data.admin.ch/eli/oc/2022/110": {
+      "fremdeSr": "220",
+      "zielOc": "https://fedlex.data.admin.ch/eli/oc/2020/746",
+      "zielFundstelle": "AS 2020 4005"
+    },
+    "https://fedlex.data.admin.ch/eli/oc/2024/235": {
+      "fremdeSr": "272",
+      "zielOc": "https://fedlex.data.admin.ch/eli/oc/2023/491",
+      "zielFundstelle": "AS 2023 491"
+    }
   }
 }

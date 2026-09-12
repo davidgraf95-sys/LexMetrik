@@ -81,9 +81,9 @@
       "titelFr": "Ordonnance sur la lutte contre les maladies transmissibles de l’homme (Ordonnance sur les épidémies, OEp). Erratum (Ne concerne que le texte italien)",
       "titelIt": "Ordinanza concernente la lotta contro le malattie trasmissibili dell’essere umano (Ordinanza sulle epidemie, OEp). Correzione",
       "plausibilitaet": "berichtigung-fremdes-as-dokument",
-      "plausibilitaetsGrund": "Diese Berichtigung korrigiert eine Änderung dieses Erlasses (SR 641.201, MWSTV), die im AS-Text eines anderen Erlasses (SR 818.101.1, Anhangs-Änderung «Änderung bisherigen Rechts») erstpubliziert wurde; massgeblich bleibt die amtliche Sammlung (§7/§8).",
+      "plausibilitaetsGrund": "Fedlex verknüpft diese Berichtigung (jolux:rectifies) mit dem AS-Dokument AS 2021 53, das unter SR 818.101.1 klassiert ist — häufig, weil die berichtigte Bestimmung im Anhang eines anderen Erlasses geändert wurde; massgeblich ist die amtliche Sammlung (§7/§8).",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2021/122/de",
-      "sha": "69c9048990aafd25396ac66e7e691c616d20197b1880a99e05a83e088c9e7a79"
+      "sha": "8f23a1c4d87e56a27d9b9492ad9012d37b86c3d2f203d2d307b083156b6f5a54"
     },
     {
       "art": "sammelerlass-marker",
@@ -107,9 +107,9 @@
       "titelFr": "Ordonnance 3 sur les mesures destinées à lutter contre le coronavirus (COVID-19) (Ordonnance 3 COVID-19) (Tests rapides SARS-CoV-2). Erratum (Ne concerne que le texte italien)",
       "titelIt": "Ordinanza 3 sui provvedimenti per combattere il coronavirus (COVID-19) (Ordinanza 3 COVID-19) (Test rapidi SARS-CoV-2). Correzione",
       "plausibilitaet": "berichtigung-fremdes-as-dokument",
-      "plausibilitaetsGrund": "Diese Berichtigung korrigiert eine Änderung dieses Erlasses (SR 641.201, MWSTV), die im AS-Text eines anderen Erlasses (SR 818.101.24, Anhangs-Änderung «Änderung bisherigen Rechts») erstpubliziert wurde; massgeblich bleibt die amtliche Sammlung (§7/§8).",
+      "plausibilitaetsGrund": "Fedlex verknüpft diese Berichtigung (jolux:rectifies) mit dem AS-Dokument AS 2020 5801, das unter SR 818.101.24 klassiert ist — häufig, weil die berichtigte Bestimmung im Anhang eines anderen Erlasses geändert wurde; massgeblich ist die amtliche Sammlung (§7/§8).",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2021/11/de",
-      "sha": "df92d419aad4f3f6ce8e964afffe6cdc56f77c604bebd2023b70c5b10bd08f7b"
+      "sha": "39a9a500dab26b8f9619eb81caeeb3f2ed7c356e7b18d1760594a9a29dc0703c"
     },
     {
       "art": "sammelerlass-marker",
@@ -340,5 +340,5 @@
       "sha": "4918b33462473dcd741db693bd76077c67e45b0a38e7e536e9a0840f027c6f91"
     }
   ],
-  "sha": "5e5541bf38bf24aab58314089d78f8a61e4ef9b7c250a8537c0f9fddbd205916"
+  "sha": "8ca338f866b3dcf83bb77ff534df08a3783cbc44d9d66b697a5b41f0e6a7caee"
 }

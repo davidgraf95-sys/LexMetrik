@@ -68,9 +68,9 @@
       "titelFr": "Ordonnance concernant les exigences techniques requises pour les véhicules routiers (OETV). Erratum (Ne concerne que le texte italien)",
       "titelIt": "Ordinanza concernente le esigenze tecniche per i veicoli stradali (OETV). Correzione",
       "plausibilitaet": "berichtigung-fremdes-as-dokument",
-      "plausibilitaetsGrund": "Diese Berichtigung korrigiert eine Änderung dieses Erlasses (SR 741.31, VVV), die im AS-Text eines anderen Erlasses (SR 741.41, Anhangs-Änderung «Änderung bisherigen Rechts») erstpubliziert wurde; massgeblich bleibt die amtliche Sammlung (§7/§8).",
+      "plausibilitaetsGrund": "Fedlex verknüpft diese Berichtigung (jolux:rectifies) mit dem AS-Dokument AS 1995 4425, das unter SR 741.41 klassiert ist — häufig, weil die berichtigte Bestimmung im Anhang eines anderen Erlasses geändert wurde; massgeblich ist die amtliche Sammlung (§7/§8).",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2021/578/de",
-      "sha": "526b469a371a3b61358cac90d4412046396129f54ed21b492596f444b53ff7a6"
+      "sha": "e6165894c6dbbbd55cd221f50681fbe44517e77523bb08249876a24b5918933d"
     },
     {
       "art": "aenderung",
@@ -325,5 +325,5 @@
       "sha": "14aac9edbe4f3af12e3cc62c81bcc31db31c9c0620c397a529cd29b859b717ef"
     }
   ],
-  "sha": "4546cc48bd24e3a6ca39f3de3585641773b9f13b81177ad67894f51146a044a1"
+  "sha": "c406293aed16ae496f64632ca45997dfd073daafdd1ac824917ba32e7536e879"
 }

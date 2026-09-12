@@ -12,12 +12,12 @@
 //       Totalrevision 2020 (spannt die Totalrevision, Referenzfall).
 //   (6) nichtKonsolidiert-Marker gesetzt gdw. dateEntryInForce > Korpus-Stand (Finding 4).
 //   (7) Coverage — je Bund-Volltext-Erlass genau ein Sidecar (kein Drift Grundmenge↔Dateien).
-//   (8) §8-Marker (§703, Semantik korrigiert nach Gegenprüfung PR #827 — s.
+//   (8) §8-Marker (§703, Semantik zweimal korrigiert — Gegenprüfung PR #827 Auflagen a+f — s.
 //       `RevisionEintrag.plausibilitaet`): plausibilitaetsGrund gdw. plausibilitaet gesetzt,
 //       einziger bekannter Wert 'berichtigung-fremdes-as-dokument'; UND (8b, Auflage d
 //       Gegenprüfung PR #827) der Marker ist NUR zulässig, wenn raw unabhängig — ohne
 //       `baueRevisionen` erneut aufzurufen — dieselbe Fremd-SR belegt (raw.bBindings trägt
-//       für den oc eine `rectifies`-Bindung UND raw.rectifiesSrProOc löst sie auf eine von
+//       für den oc eine `rectifies`-Bindung UND raw.rectifiesInfoProOc löst sie auf eine von
 //       `sidecar.sr` abweichende SR auf). Rot-Beweis (§6.7): manuell ein `plausibilitaet`
 //       ohne Rückhalt in raw eingefügt → dieser Ast schlägt fehl (s. ROADMAP-CHRONIK.md).
 //
@@ -26,7 +26,7 @@
 import { readFileSync, existsSync, readdirSync } from 'node:fs';
 import {
   grundmenge, holeBindingsB, holeStaendeA, baueRevisionen, serialisiere, botschaftIndex,
-  ermittleBelegteOcs, holeRectifiesSr, baueOcZuRectifiesSr, type RevisionSidecar,
+  ermittleBelegteOcs, holeRectifiesSr, baueOcZuRectifiesSr, type RevisionSidecar, type RectifiesInfo,
 } from './revisionen-generieren.ts';
 import { ERLASS_REGISTER } from '../../src/lib/normtext/register.ts';
 import { BOTSCHAFTEN } from '../../src/lib/materialien/botschaften.generated.ts';
@@ -64,13 +64,13 @@ for (const m of meta) {
   if (!existsSync(rawP)) { fehler.push(`Determinismus: store-raw fehlt für ${m.key}.`); continue; }
   const raw = JSON.parse(readFileSync(rawP, 'utf8')) as {
     korpusStand: string; bBindings: SparqlBinding[]; aStaende: string[]; belegteOcs?: string[];
-    rectifiesSrProOc?: Record<string, string>;
+    rectifiesInfoProOc?: Record<string, RectifiesInfo>;
   };
   const belegteOcsSet = new Set(raw.belegteOcs ?? []);
-  const rectifiesSrProOc = new Map(Object.entries(raw.rectifiesSrProOc ?? {}));
+  const rectifiesInfoProOc = new Map(Object.entries(raw.rectifiesInfoProOc ?? {}));
 
   // (1) Determinismus: aus raw neu bauen (mit committetem abgerufen + raw.korpusStand).
-  const neu = baueRevisionen(m, raw.bBindings, raw.aStaende, raw.korpusStand, ocZuBotschaft, sidecar.abgerufen, belegteOcsSet, rectifiesSrProOc);
+  const neu = baueRevisionen(m, raw.bBindings, raw.aStaende, raw.korpusStand, ocZuBotschaft, sidecar.abgerufen, belegteOcsSet, rectifiesInfoProOc);
   if (serialisiere(neu) !== serialisiere(sidecar)) {
     fehler.push(`Determinismus: ${m.key} — Neubau aus raw ≠ committetes Sidecar (Nichtdeterminismus oder Handedit).`);
   }
@@ -99,8 +99,8 @@ for (const m of meta) {
     if (r.plausibilitaet === 'berichtigung-fremdes-as-dokument') {
       const rawEintrag = raw.bBindings.find((b) => b.oc?.value === r.ocUri);
       const rectifiesZiel = rawEintrag?.rectifies?.value;
-      const fremdeSr = r.ocUri ? rectifiesSrProOc.get(r.ocUri) : undefined;
-      if (!rectifiesZiel || fremdeSr === undefined || fremdeSr === sidecar.sr) {
+      const info = r.ocUri ? rectifiesInfoProOc.get(r.ocUri) : undefined;
+      if (!rectifiesZiel || info === undefined || info.fremdeSr === sidecar.sr) {
         fehler.push(`${m.key}: plausibilitaet gesetzt ohne Rückhalt in raw (rectifies-Bindung/Fremd-SR) bei ${r.ocUri ?? r.dateEntryInForce}.`);
       }
     }
@@ -130,11 +130,11 @@ if (netz) {
     const bNachSr = new Map<string, SparqlBinding[]>();
     for (const m of stichprobe) bNachSr.set(m.sr, []);
     for (const b of bindings) { const sr = b.sr?.value; if (sr && bNachSr.has(sr)) bNachSr.get(sr)!.push(b); }
-    // §8-Plausibilitätsmarker: die jolux:rectifies-Ziele der Stichprobe frisch auflösen
-    // (sonst könnte holeRectifiesSr/baueOcZuRectifiesSr beliebig kaputtgehen und
-    // check:revisionen-netz bliebe grün, §6.7 «ein Tor, das nicht scheitern kann»).
+    // §8-Marker: die jolux:rectifies-Ziele der Stichprobe frisch auflösen (sonst könnte
+    // holeRectifiesSr/baueOcZuRectifiesSr beliebig kaputtgehen und check:revisionen-netz
+    // bliebe grün, §6.7 «ein Tor, das nicht scheitern kann»).
     const rectifiesZieleFrisch = [...new Set(bindings.map((b) => b.rectifies?.value).filter((v): v is string => !!v))];
-    const zielSrProOcFrisch = await holeRectifiesSr(rectifiesZieleFrisch, fetch);
+    const zielInfoProOcFrisch = await holeRectifiesSr(rectifiesZieleFrisch, fetch);
     for (const m of stichprobe) {
       const committet = lade(m.key);
       const rawP = `${RAW_DIR}/${m.key}.json`;
@@ -168,8 +168,8 @@ if (netz) {
         );
       }
 
-      const rectifiesSrProOcFrisch = baueOcZuRectifiesSr(frischeBindings, zielSrProOcFrisch);
-      const frisch = baueRevisionen(m, frischeBindings, aStaende, raw.korpusStand, ocZuBotschaft, committet.abgerufen, belegteOcsFrisch, rectifiesSrProOcFrisch);
+      const rectifiesInfoProOcFrisch = baueOcZuRectifiesSr(frischeBindings, zielInfoProOcFrisch);
+      const frisch = baueRevisionen(m, frischeBindings, aStaende, raw.korpusStand, ocZuBotschaft, committet.abgerufen, belegteOcsFrisch, rectifiesInfoProOcFrisch);
       if (frisch.sha !== committet.sha) {
         fehler.push(`Netz-Drift: ${m.key} — frische Query-sha ≠ committet (${frisch.revisionen.length} vs ${committet.revisionen.length} Einträge). Neu generieren.`);
       }

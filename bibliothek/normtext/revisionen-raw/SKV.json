@@ -1050,7 +1050,11 @@
     "2026-01-01"
   ],
   "belegteOcs": [],
-  "rectifiesSrProOc": {
-    "https://fedlex.data.admin.ch/eli/oc/2025/686": "741.413"
+  "rectifiesInfoProOc": {
+    "https://fedlex.data.admin.ch/eli/oc/2025/686": {
+      "fremdeSr": "741.413",
+      "zielOc": "https://fedlex.data.admin.ch/eli/oc/2025/648",
+      "zielFundstelle": "AS 2025 648"
+    }
   }
 }
