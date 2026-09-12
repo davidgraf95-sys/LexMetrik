@@ -94,10 +94,39 @@ jetzt in ROADMAP unter QS-CODE-PROP vermerkt).
    Merge auf `origin/main` gemergt werden. Ob eine GitHub Merge Queue das automatisieren soll, ist
    eine Prozessentscheidung, die bei David liegt, nicht technisch vorwegzunehmen.
 
+**Gelandet seit #805 (Doku-Nachtrag):** #806 QS-CURRENCY-KANON ERV-Pin (`56d33dae8`, Gegenprüfung
+Opus) — Pin `erv` html-6 → html-7 (kanonische Fedlex-Manifestation, Republish derselben
+Konsolidierung 2025-01-24). #808 QS-CURRENCY-KANON-FRISCHE (`fda1838c2`, Gegenprüfung Opus mit
+Auflage A1) — Frische-Arm-Wurzel: `datenhaltung:manifest` lief nur bei einem `cache.sh`-Diff, ein
+Re-Pin ohne Cache-Skript-Änderung liess das Manifest atomar hinter der DB zurück (Lauf 34107274098,
+7.9.); läuft jetzt unbedingt nach der Regenerierung, dazu Cache-Pin-Sonde
+(`scripts/normtext/cache-pin-befund.ts`, neu: ein `/tmp`-Cache gilt erst nach Marker-Abgleich
+`eli|konsolidierung|html-N` als gültig). #807 Deckungs-Seite «was wir nicht haben» +
+Ingest-Wächter (Gegenprüfung Sonnet mit Auflage Paritäts-Ingest, landet gerade) — Route
+`/materialien/deckung`, Projektion `public/materialien/deckungs-sicht.json`; Wächter
+`ungedeckteTopLevelJson` fand vier vorbestehende Lücken (`inkrafttreten`, `kanton-luecken`,
+`pdf-quellen`, `bezuege-bilanz`), geschlossen ohne Ausnahme-Mechanik. Detail/Zahlen:
+ROADMAP-CHRONIK.md, FAHRPLAN-MATERIALIEN-VERZAHNUNG.md §11.10.
+
+**Lehren #806–#808:**
+6. **«Byte-identisch» ist eine Messmethode, keine Behauptung** (#806, Gegenprüfung Opus): der
+   erste Beleg verglich Artikel-SHAs (Extraktionsergebnis) und schrieb «byte-identisch»; die
+   Gegenprüfung hat an der amtlichen Quelle selbst gemessen und Bytes verglichen — beide Messungen
+   sind richtig, aber verschieden. Ein Beleg muss die Messmethode nennen (Text-/Extraktions-
+   Gleichheit vs. rohe Byte-Gleichheit), sonst liest sich ein wahrer Fund als Widerspruch.
+7. **Runner-Abbrüche sind kein Testfehler, solange der Rerun grün ist:** die Browser-Shards
+   brachen während #807 zweimal in Shard 2 ab — beide Male Infrastruktur-Flake, im Rerun grün;
+   vor jeder Zuschreibung an das gebaute Feature erst den Rerun fahren (§0-Nullprobe).
+8. **Ein Tor, das im selben Zug gebaut UND scharf gestellt wird, findet auch Fremdes:** der
+   Paritäts-Ingest-Wächter aus #807 war für die neue Deckungs-Sicht gedacht, deckte beim ersten
+   Lauf gegen den Ist-Stand aber vier vorbestehende, nie erfasste Top-Level-JSON-Dateien auf.
+9. **Split ⇒ `check:zyklen` nackt mitfahren lassen** — gilt weiterhin für jeden künftigen
+   §6.6-Auszug im `entstehung`-Baum (Fortführung Lehre 4 aus #804).
+
 **Wartet auf David:** CC-BY-Namensnennung data.bs.ch in der UI, fachliche Abnahme der 114
 maschinellen K-16-Kanten (§7) — beide unter `W2·13-KANTONE-DATEN` in `ROADMAP.md`; Merge-Queue-
-Entscheid (Lehre 5). Wartet auf Fortsetzung: PR #804 CI/Merge (Risikopfad-Gegenprüfung
-`scripts/entstehung/**`).
+Entscheid (Lehre 5). Wartet auf Fortsetzung: PR #807 Merge (Gegenprüfungs-Verdikt Auflage
+Paritäts-Ingest steht aus, Orchestrator landet nach diesem Doku-PR).
 
 ## Session 11.9.2026 — W2·26 Funktionszeile + Kette «Entstehung am Artikel» (Daten → Leser → Synopse), acht PRs
 

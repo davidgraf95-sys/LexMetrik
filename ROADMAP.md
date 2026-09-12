@@ -344,10 +344,8 @@ zgb-a36-anhang: Die ZGB-Gliederung zeigt 74 Artikel des Anhangs «Wortlaut der f
   - [ ] **Golden-Token blind für Randtitel** *(Befund PR #668, 4.9.2026)* — `sha256Bloecke` (`scripts/normtext/sha-bloecke.ts`) hasht weder `titel` noch `absatz` (Gegenprüfung 4.9.2026: `sha-bloecke.ts:50`); eine reine Randtitel-Revision (BE 154.21 Art. 31) bewegt den Golden-Index nicht. Wurzel-Fix korpusweit (~60k Hashes) als eigener Schritt mit Gegenprüfung.
   - [ ] **`public/normtext/confidence.json` veraltet** *(Befund PR #668, 4.9.2026)* — erzeugt 23.6.2026 mit 150 Erlassen, heutiger Lauf liefert 1566 (196 Quarantäne); eigener Schritt: neu erzeugen, Quarantäne-Liste sichten, `report:confidence` als Tor oder Wächter-Zeile.
   - [ ] **Nebenfunde Nacht 5.9.2026** (7 Zeilen: Cache ohne Fassungsschlüssel, struktur-Filter, stumme Löschung, GL-Kanonik, Kanton-Drift, Fedlex-Trenner, standRechtsprechung) — Fahrplan §1.
-  - [ ] **Deckungs-Seite «was wir nicht haben» offen** *(§11.5 FAHRPLAN-MATERIALIEN-VERZAHNUNG.md, Befund 11.9.2026)* — 1286 von 4770 Synopse-Alt-Blöcken (27 %) tragen kein Fussnoten-Ereignis;
-    Stichprobe belegt echte Änderungen ohne Fussnote (Berichtigungen, Terminologie), Quote aber
-    nicht erlassweise geprüft — eigener Schritt zur Vollständigkeit des amtlichen
-    Fussnoten-Apparats wert.
+  - [x] **Erledigt:** Deckungs-Seite «was wir nicht haben» — ✅ Wortlaut: ROADMAP-CHRONIK.md, PR #807 (12.9.2026).
+  - [x] **Ingest-Wächter `ungedeckteTopLevelJson`** (#807) fand vier vorbestehende Lücken (`inkrafttreten`, `kanton-luecken`, `pdf-quellen`, `bezuege-bilanz`) — geschlossen; Ausnahme-Mechanik ohne Verfall bewusst nicht gebaut.
   - [ ] **`public/normtext/historie/**` ausserhalb des Paritäts-Ingest** *(Kritik C9, FAHRPLAN-MATERIALIEN-VERZAHNUNG.md §11.0, unverändert offen)* — `check:paritaet` prüft den
     Historie-Shard nicht mit; bewusst nicht Teil von W2·6c (Historie-Generator/-Shard bleiben
     unangetastet), aber als Lücke im Paritäts-Netz weiterhin unbehoben.
@@ -370,8 +368,9 @@ zgb-a36-anhang: Die ZGB-Gliederung zeigt 74 Artikel des Anhangs «Wortlaut der f
   - [ ] **`gen:pdf-quellen --nur=kanton` nachfahren + `check:pdf-quellen` in den Tor-Block** — sonst driftet der amtliche PDF-Link still auf überholte Fassungen.
   - [ ] **`public/normtext/pdf-quellen.json` in eine Paritäts-Klasse aufnehmen** — kann heute byte-abweichen, ohne dass `check:paritaet` es sieht.
   - [ ] **`aufgehoben`-Flag ist golden-neutral (blinder Fleck)** — eine FALSCHE Aufhebungs-Markierung sieht kein Drift-Tor (§8).
-  - [ ] **`check:fedlex-versionen` rot: Pin `erv` html-6 ≠ kanonisch html-7** *(gemeldet von zwei Prüfern 12.9.2026, Vorbestand, Netz-Tor)* — Pin nachführen über den Pflegeweg, nicht von Hand.
+  - [x] **`check:fedlex-versionen` rot: Pin `erv` html-6 ≠ kanonisch html-7** *(gemeldet von zwei Prüfern 12.9.2026, Vorbestand, Netz-Tor)* — gelöst mit PR #806 (`56d33dae8`): Pin auf die kanonische Fedlex-Manifestation html-7 nachgeführt (Republish derselben Konsolidierung 2025-01-24). Erster Beleg «byte-identisch» war falsch, in der Gegenprüfung (Opus, #808) korrigiert (§2b, ergänzt statt überschrieben): richtig ist **textgleich, Markup abweichend** — Extraktionsgleichheit über 224/224 Artikel-SHAs belegt.
   - [x] **`QS-CURRENCY-KANON-FRISCHE`** — gelöst mit PR #808: `fedlex-frische.yml` regenerierte das Manifest nur bei einem `cache.sh`-Diff, während `gen:fedlex-wiedervorlage` `currency.json` (ingestierte DB-Quelle) in JEDEM Lauf schreibt — Lauf 34107274098 scheiterte an `check:datenhaltung`, PR-Schritt `skipped`. `datenhaltung:manifest` läuft jetzt unbedingt nach der Regenerierung. Dazu Pin-Identitäts-Sonde in `scripts/normtext/cache-pin-befund.ts`: ein `/tmp`-Cache gilt erst nach Marker-Abgleich (`eli|konsolidierung|html-N`) als gültig, nicht mehr nach reiner Inhalts-Sonde.
+  - [ ] **Vorbestand:** `struktur-run.ts:61/68`, `check-vollstaendigkeit.ts:392`, `check-p-klassen.ts:106` lesen `/tmp`-Caches ohne Pin-Prüfung (Gegenprüfung #808 B4); im Frische-Arm durch den vorgelagerten `normtext`-Lauf gedeckt.
 
 - [ ] **FR/IT-Drift-Wächter Stufe 2** *(`QS-FRIT-DRIFT`, Stufe 1 gebaut 15.8.2026)*
   <!-- @meta id: QS-FRIT-DRIFT · status: ready · blocker: null · dep: [] · feld: korpus · fahrplan: fahrplaene/FAHRPLAN-FEDLEX-PORTFOLIO.md -->
