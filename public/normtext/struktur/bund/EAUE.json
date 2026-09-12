@@ -1,6 +1,8 @@
 {
  "zaehler":{"1":[2,0],"2":[1,0],"3":[1,0],"6":[1,0],"26":[1,0]},
- "erzeugt": "2026-08-29",
+ "erzeugt": "2026-09-12",
+ "stand": "2023-06-28",
+ "fassungsToken": "20230628",
  "kopf": {
   "srNummer": "0.353.1",
   "titel": "Europäisches Auslieferungsübereinkommen",
@@ -451,6 +453,36 @@
    "marginalie": [
     "Notifikationen"
    ]
+  },
+  "decl_u2": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Geltungsbereich und Erklärungen",
+     "eId": "scope"
+    }
+   ],
+   "marginalie": []
+  },
+  "decl_u3": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Geltungsbereich und Erklärungen",
+     "eId": "scope"
+    }
+   ],
+   "marginalie": []
+  },
+  "scope_u1": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Geltungsbereich und Erklärungen",
+     "eId": "scope"
+    }
+   ],
+   "marginalie": []
   }
  }
 }

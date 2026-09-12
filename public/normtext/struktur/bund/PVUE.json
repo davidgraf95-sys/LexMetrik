@@ -1,6 +1,8 @@
 {
  "zaehler":{"4b":[1,0]},
- "erzeugt": "2026-08-29",
+ "erzeugt": "2026-09-12",
+ "stand": "2024-01-09",
+ "fassungsToken": "20240109",
  "kopf": {
   "srNummer": "0.232.04",
   "titel": "Pariser Übereinkunft zum Schutz des gewerblichen Eigentums revidiert in Stockholm am 14. Juli 1967",
@@ -592,6 +594,16 @@
    "marginalie": [
     "[Marken: Verbandsmarken]"
    ]
+  },
+  "scope_u1": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Geltungsbereich",
+     "eId": "scope"
+    }
+   ],
+   "marginalie": []
   }
  }
 }

@@ -1,5 +1,7 @@
 {
- "erzeugt": "2026-08-29",
+ "erzeugt": "2026-09-12",
+ "stand": "2026-04-07",
+ "fassungsToken": "20260407",
  "kopf": {
   "srNummer": "0.748.411",
   "titel": "Übereinkommen zur Vereinheitlichung bestimmter Vorschriften über die Beförderung im internationalen Luftverkehr",
@@ -934,6 +936,16 @@
    "marginalie": [
     "Vorbehalte"
    ]
+  },
+  "scope_u1": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Geltungsbereich",
+     "eId": "scope"
+    }
+   ],
+   "marginalie": []
   }
  }
 }

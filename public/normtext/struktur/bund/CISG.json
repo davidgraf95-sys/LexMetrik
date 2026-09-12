@@ -1,6 +1,8 @@
 {
  "zaehler":{"31":[1,0]},
- "erzeugt": "2026-08-29",
+ "erzeugt": "2026-09-12",
+ "stand": "2026-05-22",
+ "fassungsToken": "20260522",
  "kopf": {
   "srNummer": "0.221.211.1",
   "titel": "Übereinkommen der Vereinten Nationen über Verträge über den internationalen Warenkauf",
@@ -1695,6 +1697,16 @@
      "ebene": 1,
      "label": "Teil IV Schlussbestimmungen",
      "eId": "part_IV"
+    }
+   ],
+   "marginalie": []
+  },
+  "scope_u1": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Geltungsbereich",
+     "eId": "scope"
     }
    ],
    "marginalie": []

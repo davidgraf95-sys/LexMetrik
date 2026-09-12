@@ -1,5 +1,7 @@
 {
- "erzeugt": "2026-08-29",
+ "erzeugt": "2026-09-12",
+ "stand": "2016-09-15",
+ "fassungsToken": "20160915",
  "kopf": {
   "srNummer": "0.211.213.02",
   "titel": "Übereinkommen über die Anerkennung und Vollstreckung von Unterhaltsentscheidungen",
@@ -465,6 +467,16 @@
      "ebene": 1,
      "label": "Abschnitt VII Schlussbestimmungen",
      "eId": "chap_VII"
+    }
+   ],
+   "marginalie": []
+  },
+  "scope_u1": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Geltungsbereich",
+     "eId": "scope"
     }
    ],
    "marginalie": []

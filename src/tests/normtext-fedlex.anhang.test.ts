@@ -37,6 +37,46 @@ describe('alleAnhangAnker (M13-Annex)', () => {
   it('liefert leeres Array, wenn das Gesetz keinen <div id="annex"> hat', () => {
     expect(alleAnhangAnker('<main><article id="art_1"></article></main>')).toEqual([]);
   });
+
+  // ── QS-KORPUS-SCOPE (12.9.2026): Staatsverträge OHNE annex-Container ───────
+  // 12 Staatsverträge (cisg, krk, cedaw, uno_pakt_i/ii, uno_antifolter, uno_brk,
+  // eaue, hbewue, huvue, montreal, pvue) tragen KEINEN <div id="annex"> — ihr
+  // Geltungsbereich und die CH-Erklärungen stehen im eigenen Container
+  // <div id="scope">. Vollerhebung 228 Caches (12.9.2026): 136 HTMLs mit
+  // annex-Container, 26 mit scope-Container (14 davon mit BEIDEN, scope NIE vor
+  // annex), im scope-Container ausschliesslich scope_*/decl_*-Sektionen.
+  it('erfasst scope_*/decl_* im eigenen <div id="scope"> auch OHNE annex-Container', () => {
+    const html =
+      '<main><article id="art_1"><p>Text.</p></article></main>'
+      + '<div id="scope">'
+      + '<section id="scope_u1"><h1 class="heading"><a href="#scope_u1">Geltungsbereich am 22. Mai 2026</a></h1>'
+      + '<div class="collapseable"><p class="absatz">Vertragsstaaten.</p></div></section>'
+      + '<section id="decl_u2"><h1 class="heading"><a href="#decl_u2">Erklärungen</a></h1>'
+      + '<div class="collapseable"><p class="absatz">Vorbehalt der Schweiz.</p></div></section>'
+      + '</div>';
+    expect(alleAnhangAnker(html)).toEqual(['scope_u1', 'decl_u2']);
+  });
+
+  it('annex UND scope vorhanden: Sammlung beginnt am annex-Container (Reihenfolge erhalten)', () => {
+    // LUGUE-Klasse (14 Verträge) — unveränderte Vorbestands-Erfassung.
+    const html =
+      '<div id="annex"><section id="annex_u1"><h1 class="heading"><a href="#annex_u1">Anhang</a></h1>'
+      + '<div class="collapseable"><section id="annex_u1/lvl_u1"><p>Inhalt</p></section></div></section></div>'
+      + '<div id="scope"><section id="scope_u1"><h1 class="heading"><a href="#scope_u1">Geltungsbereich</a></h1>'
+      + '<div class="collapseable"><p class="absatz">Staaten.</p></div></section></div>';
+    expect(alleAnhangAnker(html)).toEqual(['annex_u1', 'scope_u1']);
+  });
+
+  // N1 (Nebenbefund Gegenprüfung #425): getElementById ist case-SENSITIV — eine
+  // gross geschriebene Container-id wäre als eId ein Blindgänger. Korpus heute
+  // 0 Varianten (136/136 literal `<div id="annex">`, 26/26 `<div id="scope">`),
+  // der Literal-Match hält es so. Reine Robustheit, kein Verhaltens-Fix.
+  it('N1: Container-Match ist literal — `<div ID="ANNEX">` zählt NICHT', () => {
+    const html =
+      '<div ID="ANNEX"><section id="annex_1"><h1 class="heading"><a href="#annex_1">Anhang 1</a></h1>'
+      + '<div class="collapseable"><p class="absatz">X</p></div></section></div>';
+    expect(alleAnhangAnker(html)).toEqual([]);
+  });
 });
 
 describe('extrahiereAnhang (M13-Annex)', () => {
