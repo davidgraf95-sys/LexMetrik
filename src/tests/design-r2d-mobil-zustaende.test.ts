@@ -189,26 +189,23 @@ describe('F2-4 · «… konnte nicht geladen werden» läuft über EINEN Baustei
     expect(baustein, 'Kanon-Link statt handgeschriebenem <a>').toContain('<QuellLink');
   });
 
-  it('die Fundstellen konsumieren ihn (eine in PanelMaterialien, fünf im KontextPanel)', () => {
+  it('die vier Fundstellen konsumieren ihn', () => {
     for (const datei of [
       'pages/gesetz-leser/v3/PanelMaterialien.tsx',
       'components/kontext/KontextPanel.tsx',
+      // DEKLARIERTE FACHLICHE ERWEITERUNG (§6.3, 12.9.2026): vierte Fundstelle —
+      // «Die Übersetzung der Titel konnte nicht geladen werden» (Auflage der
+      // Gegenprüfung zu PR #802). Sie steht in einer eigenen Datei, damit
+      // KontextPanel unter der §6.6-Schwelle bleibt; der Kanon gilt auch für sie,
+      // und ohne diese Zeile wäre der neue Konsument unbewacht.
+      'components/kontext/TitelRueckfallZeile.tsx',
     ]) {
       expect(lies(datei), `${datei} konsumiert AbrufFehler`).toContain('<AbrufFehler');
     }
-    // DEKLARIERTE FACHLICHE ÄNDERUNG (§6.3, Titel-Rückfall 12.9.2026, Auflage der
-    // Gegenprüfung zu PR #802): 3 → 5. Die Zahl steigt, WEIL zwei Fundstellen
-    // dazugekommen sind, nicht weil der Wächter aufgeweicht würde — er zählt
-    // weiterhin exakt, und der Kanon (EIN Baustein) gilt für alle fünf.
-    // Neu: «Die Übersetzung der Titel konnte nicht geladen werden» je einmal im
-    // Botschaften- und im Vernehmlassungs-Block; seit der Aufteilung des
-    // Materialien-Registers kommen die FR/IT-Titel aus einer zweiten Datei, und
-    // deren gescheiterter Abruf darf nicht stumm in deutsche Titel zurückfallen (§8).
     expect(
       (lies('components/kontext/KontextPanel.tsx').match(/<AbrufFehler/g) ?? []).length,
-      'KontextPanel hat fünf Abruf-Fehler (Botschaften, Revisionen, Vernehmlassungen '
-        + '+ Titel-Übersetzung nicht geladen: einmal bei den Botschaften, einmal bei den Vernehmlassungen)',
-    ).toBe(5);
+      'KontextPanel hat drei Abruf-Fehler (Botschaften, Revisionen, Vernehmlassungen)',
+    ).toBe(3);
   });
 
   it('keine handgeschriebene Fehlerzeile mehr im Baum', () => {
