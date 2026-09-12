@@ -581,8 +581,9 @@ export function datumPasst(gesetz: FedlexGesetz, rohDatum: string | null | undef
 // art_7 «Eidgenössische Schutzbautenverordnung vom 27. November 1978 (BMV) …
 // Prüfung und Genehmigung von Projekten für private Schutzräume (Art. 9 BMV;
 // …)» — gemeint ist diese 1978er Verordnung, verlinkt wurde `BMV` = SR
-// 412.103.1 (die geltende Berufsmaturitätsverordnung, ein VÖLLIG anderes
-// Sachgebiet). Die 1978er Schutzbautenverordnung ist im Korpus nicht als
+// 412.103.1 (Berufsmaturitätsverordnung, ein VÖLLIG anderes Sachgebiet;
+// Register-Key `BMV` = Fassung cc/2009/423, per 1.3.2026 aufgehoben, geltend
+// ist `BMV_2025` = cc/2025/408 — Gegenprüfung 12.9.2026). Die 1978er Schutzbautenverordnung ist im Korpus nicht als
 // eigener Snapshot geführt — es gibt kein richtiges Ziel, an das der Guard
 // stattdessen binden könnte; er unterdrückt darum nur (§1: kein Link statt
 // eines falschen), wie bei StG. Ebenfalls Rot-Beweis fürs zweite Leck der

@@ -144,8 +144,9 @@ export function normVerweiseImText(
     // also auch am Guard. Belegt an kanton/SG/3849 art_7: «Prüfung und
     // Genehmigung von Projekten für private Schutzräume (Art. 9 BMV; …)» meint
     // die (nicht im Korpus geführte) eidgenössische Schutzbautenverordnung vom
-    // 27.11.1978 — verlinkt wurde SR 412.103.1, die geltende
-    // Berufsmaturitätsverordnung. Kürzel-Erkennung VOR dem Push, damit der
+    // 27.11.1978 — verlinkt wurde SR 412.103.1, die Berufsmaturitätsverordnung
+    // (Register-Key `BMV` = cc/2009/423, per 1.3.2026 aufgehoben; geltend
+    // `BMV_2025` = cc/2025/408). Kürzel-Erkennung VOR dem Push, damit der
     // Guard den Anker selbst noch stoppt (Beleg und Aufnahme-Regel bei
     // `KUERZEL_NUR_BUND`, positivliste.ts).
     const kuerzelAmAnker = erkenneFedlexGesetz(roh);
