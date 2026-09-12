@@ -281,7 +281,7 @@ jobs:
       # Tor auf einen erhobenen Stand statt auf `heute` prüfen. Bis dahin kann
       # dieser Arm an einem fremden Befund scheitern.
       #
-      # GELÖST (§17-Wurzelfix, 12.9.2026, PR #<PR_NUMMER>, FAHRPLAN-OFFENE-BEFUNDE §2
+      # GELÖST (§17-Wurzelfix, 12.9.2026, PR #803, FAHRPLAN-OFFENE-BEFUNDE §2
       # QS-MONITOR-ROT — zweiter Vorfall in 24 h, #789 + heute): Finding 7 prüft jetzt
       # gegen den committeten Erhebungsstand (`r.stand`, vom Generator geschrieben),
       # NIE mehr gegen `heute` — scripts/materialien/check-materialien.ts. Dazu ein

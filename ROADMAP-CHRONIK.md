@@ -3342,7 +3342,7 @@ verbliebene Rest-Stub darum jetzt vollständig geschlossen.*
 
   - [~] **(d) Datenhaltungs-Optimierung — Suche-Edge-Umzug Kanton** (31.8.2026). K0 Nullprobe · K1 Recall-Parität (`fts_artikel` 1→6 Felder, contentless) · K2 Ranking-Parität (topische Stufung IM SQL-Kern; **Befund: bm25 allein reicht nicht — OR 253 lag bei «Miete» auf Rang 128 von 165**, ein Client-Re-Ranking des 50er-Fensters kann das nicht heilen) · K3 Bund-only-Flag **vorbereitet, Default AUS** · K5 Nachführ-Kette · **K6 Fix-Runde nach der Gegenprüfung** (F1–F5, je mit Rot-Beweis): **F1 HOCH — die Landung hätte 502 auf jede Artikel-Query erzeugt** (spalten-gefilterte MATCH gegen die alte Ein-Spalten-Replika; weder die `paths` von `turso-sync.yml` noch der Frische-Wächter sahen je eine Schema-Änderung) → `paths` erweitert **und** DDL-Vergleich als Dimension 0 im Wächter · F2 Spaltenfilter von UND auf ODER (Client-Semantik: «Verjährung Fristen» hebt OR 127 von Rang 8 auf 1, recall-neutral belegt) · F3 echter Byte-Beweis für das K3-Flag · F4 K5-Kette getestet (Naht + Subprozess gegen npm-Stub) · F5 Zweitkopien raus, bm25-Ordnung bewacht. Messungen und Belege: [suche-edge-nullprobe-2026-08-31.md](bibliothek/register/suche-edge-nullprobe-2026-08-31.md), Fix-Runde in [FAHRPLAN-DATENHALTUNG.md](fahrplaene/FAHRPLAN-DATENHALTUNG.md) §16 (K6).
 
-### QS-MONITOR-ROT — §17-Wurzelfix Finding-7-Wanduhr 12.9.2026 (Wortlaut, PR #<PR_NUMMER>)
+### QS-MONITOR-ROT — §17-Wurzelfix Finding-7-Wanduhr 12.9.2026 (Wortlaut, PR #803)
 
   - [x] **`check:materialien` Finding 7 war wanduhr-abhängig** (2. Vorfall in 24 h — #789 und
     12.9.2026, VERN-2026-45 fristEnde 2026-09-11 gegen `heute` 2026-09-12) — jeder Tag mit
