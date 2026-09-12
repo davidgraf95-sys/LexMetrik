@@ -1,5 +1,42 @@
 # ROADMAP — Erledigt-Chronik (Detail-Archiv erledigter Schritte)
 
+## Falscher Freund «BMV» im Kanton-Pfad — gelöst 12.9.2026 (W2·18-FEHLERBUCH)
+
+**Ursprünglicher Befund (Wortlaut, bis 12.9.2026 offen, `W2·18-FEHLERBUCH`):** «**Falscher
+Freund «BMV» im Kanton-Pfad** *(Fixer #823, 12.9.2026)* — `kanton/SG-3849` meint mit «BMV» die
+Schutzbautenverordnung, der Normtext-Link zeigt auf die Berufsmaturitätsverordnung (Bund);
+Kürzel-Auflösung im Kanton-Pfad muss kantonale Kürzel vor Bund-Kürzeln prüfen oder benannt
+ausschliessen (§7).»
+
+- [x] **Gelöst 12.9.2026, PR #833 (`5b4aa17a7`).** Root Cause zweistufig: fehlender Eintrag in
+  `KUERZEL_NUR_BUND` UND eine Guard-Lücke am primären `NORM_IM_TEXT`-Anker («Art. N KÜRZEL»,
+  auch Passus-Formen), die auch StG-Fehlverlinkungen in AR-621.111/AR-625.21/AI-640.000
+  durchliess. Kein Link statt falscher Link (§1/§8) — korpusweites Delta StG 25 + BMV 10 in
+  4 Dateien, Verweis-Basislinie nachgeführt. **Gegenprüfung bestanden** (Opus,
+  `spannen.ts`/`positivliste.ts`; eigene Rot-Beweise Art. 9 BMV 1→0 und Art. 35 StG 1→0).
+  **Begründung:** wörtliche Fehlerbuch-Zeile durch Fix erledigt, Überführung in die Chronik
+  (Steuer-Doku-Welle 5, 12.9.2026).
+
+## Kontext-Panel zeigt bei Finding-4b-Fällen nur `dateEntryInForce` — gelöst 12.9.2026 (W2·18-FEHLERBUCH)
+
+**Ursprünglicher Befund (Wortlaut, bis 12.9.2026 offen, `W2·18-FEHLERBUCH`):** «**KontextPanel
+zeigt bei Finding-4b-Fällen nur `dateEntryInForce`, nicht das frühere «in Kraft seit»-Datum**
+*(Hinweis 3, Gegenprüfung PR #820, 12.9.2026)* — bei FZA/AS 2021 12 zeigt
+`src/components/kontext/KontextPanel.tsx` (Revisions-Zeile) das «angewendet ab»-Datum
+1.1.2021, ohne dass «in Kraft für die Schweiz seit 15.12.2020» sichtbar wird
+(§8-Ehrlichkeit: nicht falsch, aber unvollständig für den einen Fall, wo Text-Beleg und
+Datumsfeld auseinanderfallen). Beobachtung, nicht gebaut — kein Bau-Auftrag dieses Schritts.»
+
+- [x] **Gelöst 12.9.2026, PR #832 (`66c7d74be`).** Fedlex-Graph liefert kein
+  `dateApplicability`, `dateDocument` ist kein Proxy (Vollerhebung 757 Marker-Fälle, 240
+  Korpus-Caches: «angewendet ab» nur bei FZA) — darum additive, amtlich belegte Whitelist
+  `dateInKraftFuerCh` im Revisionen-Generator statt Heuristik (Fedlex `cc/2002/243/20201215`:
+  «in Kraft für die Schweiz seit 15. Dez. 2020 und angewendet ab 1. Jan. 2021 (AS 2021 12)»),
+  neue Invariante in `check-revisionen`, Hausbegriff `IN_KRAFT_FUER_CH_LABEL`, Render-Test.
+  **Gegenprüfung bestanden** (Opus, Norm-Wortlaut/Breite/Determinismus/Rot-Beweis).
+  **Begründung:** wörtliche Fehlerbuch-Zeile durch Fix erledigt, Überführung in die Chronik
+  (Steuer-Doku-Welle 5, 12.9.2026).
+
 ## `check:schlankheit`-Restfeld adapter-lexwork.ts + KontextPanel.tsx — gelöst 12.9.2026 (W2·18-FEHLERBUCH)
 
 **Ursprünglicher Befund (Wortlaut, bis 12.9.2026 offen, `W2·18-FEHLERBUCH`):** «**`check:schlankheit`
