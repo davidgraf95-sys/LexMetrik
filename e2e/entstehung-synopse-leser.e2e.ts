@@ -6,7 +6,7 @@
 // den Wortlaut vorher neben dem Wortlaut nachher (FAHRPLAN-MATERIALIEN-
 // VERZAHNUNG §11.5 (3), Daten aus E5/E6, PR #794).
 //
-// FÜNF ZUSAGEN, je einzeln messbar:
+// SECHS ZUSAGEN, je einzeln messbar:
 //
 //  (a) NICHTS LÄDT VOR DEM KLICK. Aufgeklappte Rubrik: NULL Abrufe unter
 //      `/materialien/synopse/`. Erst «Alt/Neu» holt den Shard — genau EINEN,
@@ -25,6 +25,12 @@
 //      Alt-Fassungen, die an keinem Punkt hängen (BGÖ 13: Wortlaut-Unterschied
 //      ohne Fussnoten-Ereignis), stehen als eigener Abschnitt da.
 //
+//  (f) EINE LÜCKE DER QUELLE HEISST NICHT «AUFGEHOBEN». CHEMRRV Art. 9: die
+//      amtlichen Konsolidierungen vom 1.5.2022 und 1.10.2022 führen die Artikel
+//      4–24 nur in einem Änderungsanhang, ab 6.10.2022 wieder normal und
+//      wortgleich. Die Karte sagt genau das — und NICHT «entfallen» (§8;
+//      Gegenprüfungs-Befund A6 zu PR #798, W2·6c-ENTSTEHUNG-QUELLLUECKE).
+//
 //  (d) KEIN SPRUNG, KEIN ÜBERLAUF @320 px. Zwei Spalten werden dort zu einer;
 //      die Artikel ÜBER dem geöffneten dürfen sich beim Aufbau nicht bewegen.
 //
@@ -39,6 +45,8 @@
 //  · in `src/index.css` `.lr8-syn-zeile` fest auf zwei Spalten zwingen
 //    und `white-space: nowrap` setzen                             ⇒ (d) rot
 //  · am Griff `aria-expanded` weglassen                           ⇒ (e) rot
+//  · in `synopse-run.ts` die Umbuchung auf `quelle_unvollstaendig`
+//    auslassen (Shards neu erzeugen)                               ⇒ (f) rot
 import { test, expect, type Page } from '@playwright/test';
 import { F_BLOCK, F_MARKE } from './helpers/fassungsRubrik';
 
@@ -180,6 +188,35 @@ test.describe('W2·6c-SYNOPSE-LESER · Fassungsvergleich am Artikel', () => {
     const ohneGriff = abschnitt.locator('[data-synopse-griff]').nth(0);
     await ohneGriff.click();
     await expect(abschnitt.locator('[data-synopse-ohne-ereignis]')).toContainText('kein Änderungs-Ereignis');
+  });
+
+  test('(f) Quelllücke: die Karte sagt «Quelle unvollständig», nicht «entfallen»', async ({ page }) => {
+    // CHEMRRV Art. 9 ist einer von 22 Blöcken, die der Generator bis 12.9.2026 als
+    // «entfallen» + «neu eingefügt» buchte, obwohl der Artikel nie aufgehoben war.
+    await oeffneRubrik(page, '/gesetze/bund/CHEMRRV', '9');
+    const block = page.locator(`#art-9 ${F_BLOCK}`);
+    // Der Shard lädt erst auf Klick (Zusage (a)) — und damit auch diese Liste. Also
+    // zuerst den Griff am Fassungspunkt, dann steht der Abschnitt da.
+    const punktGriff = block.locator('[data-synopse-griff]').nth(0);
+    await expect(punktGriff).toBeVisible({ timeout: 10_000 });
+    await punktGriff.click();
+    const abschnitt = block.locator('[data-entstehung-quellluecke]');
+    await expect(abschnitt).toHaveCount(1, { timeout: 15_000 });
+    await expect(abschnitt).toContainText('Stände, in denen die amtliche Quelle diesen Artikel nicht führt');
+
+    const griff = abschnitt.locator('[data-synopse-griff]').nth(0);
+    await griff.click();
+    const karte = block.locator('[data-synopse-lage="quelle_unvollstaendig"]');
+    await expect(karte).toHaveCount(1);
+    const satz = karte.locator('[data-synopse-quellluecke]');
+    await expect(satz).toContainText('Quelle unvollständig');
+    await expect(satz).toContainText('01.05.2022');
+    await expect(satz).toContainText('nur in einem Änderungsanhang');
+    await expect(satz).toContainText('massgeblich bleibt');
+    // Das Gegenteil der alten, falschen Aussage — und der Live-Link auf die
+    // amtliche Fassung des betroffenen Stands (§7c).
+    await expect(karte).not.toContainText('entfallen');
+    await expect(karte.locator('a[href*="fedlex.admin.ch"]').first()).toBeVisible();
   });
 
   test('(d) @320 px: eine Spalte, kein Überlauf, kein Sprung der Artikel darüber', async ({ page }) => {

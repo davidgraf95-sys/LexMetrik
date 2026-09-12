@@ -4,7 +4,7 @@ import { standVon, type SynopseShard } from '../../lib/entstehung/synopse';
 import { entwurfUrl, type EntwurfArtikel, type EntwurfShard } from '../../lib/entstehung/synopse-entwurf';
 import {
   hatUnterschied, nurTitelGeaendert, synopseZeilen,
-  type DiffStueck, type SynopseLage, type SynopseTreffer, type SynopseZeile,
+  type DiffStueck, type QuellLueckeTreffer, type SynopseLage, type SynopseTreffer, type SynopseZeile,
 } from '../../lib/entstehung/synopse-diff';
 
 // ═══ DER FASSUNGSVERGLEICH AM ARTIKEL (W2·6c · E5/E6 im Leser) ══════════════
@@ -149,7 +149,9 @@ export function SynopseKarte({ lage, shard, geltend, entwurf, aufgehoben, id }: 
     <div className="lr8-syn" data-synopse-karte id={id}>
       {lage.art === 'vergleich'
         ? <Vergleich treffer={lage.treffer} shard={shard!} geltend={geltend} entwurf={entwurf} aufgehoben={aufgehoben} />
-        : <p className="lr8-syn-lage" data-synopse-lage={lage.art}>{lageSatz(lage)}</p>}
+        : lage.art === 'quelle_unvollstaendig'
+          ? <QuellLuecke treffer={lage.treffer} />
+          : <p className="lr8-syn-lage" data-synopse-lage={lage.art}>{lageSatz(lage)}</p>}
     </div>
   );
 }
@@ -180,6 +182,67 @@ function lageSatz(lage: SynopseLage): string {
     default:
       return 'Für diesen Erlass ist kein Fassungsvergleich erfasst.';
   }
+}
+
+/**
+ * DIE LÜCKE DER QUELLE — der ehrliche Ersatz für ein falsches «entfallen».
+ *
+ * Eine amtliche Konsolidierung kann einen Artikel verlieren, ohne dass ihn jemand
+ * aufgehoben hätte: bei CHEMRRV (`cc/2005/478`) stehen die Artikel 4–24 in den Ständen
+ * vom 1.5.2022 und 1.10.2022 nicht als `<article>`, sondern als Änderungs-Anhang
+ * (`<mod>`/`<quotedStructure>`) derselben Datei — ab dem 6.10.2022 wieder normal, Wort
+ * für Wort gleich. Der paarweise Diff sah darin 22 Aufhebungen und 22 Neueinfügungen;
+ * beides hat es nie gegeben (Gegenprüfungs-Befund A6 zu PR #798).
+ *
+ * WAS HIER STEHT, IST ALSO EINE AUSSAGE ÜBER DAS ARTEFAKT, NICHT ÜBER DAS RECHT (§8) —
+ * und darum steht der Live-Link auf die amtliche Fassung jedes betroffenen Stands
+ * daneben: massgeblich ist sie, nie unsere Auswertung (§7c).
+ *
+ * KEIN WORTLAUT: über die Lücke hinweg ist er derselbe — das ist die Erkennungsregel
+ * selbst. Zwei identische Spalten wären keine Synopse, sondern eine erfundene Änderung.
+ */
+function QuellLuecke({ treffer }: { treffer: QuellLueckeTreffer }) {
+  const { artikel, staende, belege } = treffer;
+  const daten = staende.map(datumCh);
+  const standWort = daten.length === 1
+    ? `der amtliche Stand vom ${daten[0]}`
+    : `die amtlichen Stände vom ${daten.slice(0, -1).join(', ')} und ${daten[daten.length - 1]}`;
+  const fuehrt = daten.length === 1 ? 'führt' : 'führen';
+  return (
+    <div data-synopse-lage="quelle_unvollstaendig">
+      <p className="lr8-syn-kopf">
+        <span className="lc-overline"><span className="lc-punkt" aria-hidden />Quelle unvollständig</span>{' '}
+        <span className="text-ink-500">
+          {artikel.label}
+          {artikel.ueberschrift && <> · {artikel.ueberschrift}</>}
+        </span>
+      </p>
+      <p className="lr8-syn-hinweis" data-synopse-quellluecke>
+        <span className="lc-chip lr8-syn-warn">Quelle unvollständig</span>{' '}
+        {/* «nur in einem Änderungsanhang» ist keine Vermutung, sondern Bedingung der
+            Buchung: ohne diesen Beleg wird gar keine Quelllücke gebucht (Auflage
+            Gegenprüfung PR #801, `findeQuellLuecken` (4), Tor-Ast in
+            `check:entstehung`). Darum steht hier ein Satz und keine Fallunterscheidung. */}
+        Quelle unvollständig: {standWort} {fuehrt} diesen Artikel nur in einem
+        Änderungsanhang; massgeblich bleibt {AMTLICHE_FASSUNG_NOMEN}.
+        {artikel.zurueckAb && <>
+          {' '}Ab dem <span className="num">{datumCh(artikel.zurueckAb)}</span> steht er dort
+          wieder — mit demselben Wortlaut wie davor. Aufgehoben war er nie; hier fehlt das
+          Artefakt, nicht die Bestimmung.
+        </>}
+      </p>
+      <ul className="lr8-syn-fuss" data-synopse-fuss>
+        {belege.map((b) => (
+          <Nachweis key={b.datum} wort="Betroffener Stand" stand={b.datum} liveUrl={b.liveUrl}
+            quelleUrl={b.xmlUrl} abgerufen={b.abgerufen} />
+        ))}
+        <li className="text-ink-400">
+          Erkannt über die ganze Stände-Kette: dieselbe eId fehlt in diesem einen Abschnitt
+          und kehrt Zeichen für Zeichen unverändert zurück.
+        </li>
+      </ul>
+    </div>
+  );
 }
 
 function Vergleich({ treffer, shard, geltend, entwurf, aufgehoben }: {
