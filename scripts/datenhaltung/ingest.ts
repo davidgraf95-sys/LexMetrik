@@ -31,6 +31,14 @@ export const NORMTEXT_SEITENDATEIEN = [
   'public/normtext/kanton-systematik.json',
   'public/normtext/pdf-index.json',
   'public/normtext/currency.json', // P1-d Currency-Sidecar (byte-genaue Paritäts-Klasse)
+  // VOM WÄCHTER GEFUNDEN (12.9.2026, `ungedeckteTopLevelJson`): drei committete
+  // Seitendateien fehlten hier, obwohl der Kommentar oben «ALLE committeten
+  // public/normtext/**/*.json» versprach. Der Anspruch stand also im Code, die
+  // Deckung nicht — genau die Lücke, die ein Kommentar nicht schliessen kann.
+  // Alle drei sind reiner Dokument-Byte-Roundtrip wie ihre Nachbarn.
+  'public/normtext/inkrafttreten.json',
+  'public/normtext/kanton-luecken.json',
+  'public/normtext/pdf-quellen.json',
 ];
 export const NORMTEXT_STRUKTUR_DIR = 'public/normtext/struktur'; // rekursiv: bund/ + kanton/
 // Paket 5 (W2·6-REV): Revisions-Timeline-Sidecars je Erlass. Neue public/normtext/**-
@@ -59,6 +67,9 @@ export const RECHTSPRECHUNG_MANIFESTE = [
   // stammt vom selben Schreiber wie register.json (entscheide-schreiben.ts) und
   // ist reiner Dokument-Byte-Roundtrip.
   'public/rechtsprechung/normkeys-kanton.json',
+  // bezuege-bilanz.json — vom Wächter gefunden (12.9.2026), vierte Instanz
+  // derselben Lektion. Dokument-Byte-Roundtrip wie die Nachbarn darüber.
+  'public/rechtsprechung/bezuege-bilanz.json',
 ];
 // Schaufenster-Shards (Weiche B, §11.2): je Erlass eine committete Projektion des
 // norm-index (nur Erlasse mit Artikel-Treffern). Variable Datei-Menge → über den
@@ -75,6 +86,10 @@ export const MATERIALIEN_PROJEKTIONEN = [
   'public/materialien/register.json',
   'public/materialien/register-i18n.json',
   'public/materialien/register-provenienz.json',
+  // Deckungs-Sicht (W2·6c, 12.9.2026): Ladekanal von /materialien/deckung —
+  // dieselbe Lektion zum VIERTEN Mal, diesmal nicht von Hand entdeckt, sondern
+  // vom Wächter darunter (`ungedeckteTopLevelJson`). Genau deshalb steht er da.
+  'public/materialien/deckungs-sicht.json',
 ];
 /** Append-only Zustands-Manifest (der Rebuild-/Historie-Anker, §0/B2). */
 export const MATERIALIEN_ZUSTAND = ['bibliothek/register/soft-law-zustand.jsonl'];
@@ -96,6 +111,49 @@ export const ENTSTEHUNG_TRAEGER = [
   'bibliothek/register/entstehung-entwurf.json',
   'bibliothek/register/curia-zustand.jsonl',
 ];
+
+// ── §17-WURZEL · DIE FESTEN LISTEN WERDEN BEWACHT, NICHT NUR GEPFLEGT ────────
+//
+// Die Kommentare oben nennen dieselbe Lektion dreimal («norm-index-erlasse.json»,
+// «normkeys-kanton.json», «register-i18n/-provenienz»): eine NEUE committete
+// Datei im Top-Level eines Datenverzeichnisses, die in keiner Ingest-Liste
+// steht, läuft still an `check:paritaet` und `check:datenhaltung` vorbei. Beim
+// vierten Mal (Deckungs-Sicht, 12.9.2026) wurde daraus dieser Wächter: eine
+// Erinnerung im Kommentar ist kein Tor.
+//
+// GLOB STATT LISTE WÄRE DER FALSCHE FIX. Die Listen sind Absicht — sie sagen,
+// WELCHE Datei in WELCHE Doktyp-DB gehört, und ein Glob würde jede neue Datei
+// stillschweigend in die nächstbeste Partition ziehen (§5). Bewacht wird darum
+// nur die VOLLSTÄNDIGKEIT: jede committete Top-Level-JSON gehört in genau eine
+// Liste, und wer eine neue anlegt, entscheidet bewusst, in welche.
+//
+// Nur TOP-LEVEL: die Shard-Verzeichnisse (kanten/, anker/, curia/, synopse/,
+// bund/, kanton/ …) kommen über Verzeichnis-Sammler herein und haben deshalb
+// keine feste Liste, gegen die sich abgleichen liesse.
+
+/** Verzeichnis → die feste Liste, die seine Top-Level-JSONs vollständig führen muss. */
+export const FESTE_LISTEN: readonly { dir: string; name: string; pfade: readonly string[] }[] = [
+  { dir: 'public/normtext', name: 'NORMTEXT_MANIFESTE + NORMTEXT_SEITENDATEIEN', pfade: [...NORMTEXT_MANIFESTE, ...NORMTEXT_SEITENDATEIEN] },
+  { dir: 'public/rechtsprechung', name: 'RECHTSPRECHUNG_MANIFESTE', pfade: RECHTSPRECHUNG_MANIFESTE },
+  { dir: 'public/materialien', name: 'MATERIALIEN_PROJEKTIONEN', pfade: MATERIALIEN_PROJEKTIONEN },
+];
+
+/** Committete Top-Level-JSONs ohne Ingest-Eintrag — leer heisst «lückenlos». */
+export function ungedeckteTopLevelJson(
+  listen: readonly { dir: string; name: string; pfade: readonly string[] }[] = FESTE_LISTEN,
+): { pfad: string; liste: string }[] {
+  const offen: { pfad: string; liste: string }[] = [];
+  for (const { dir, name, pfade } of listen) {
+    if (!existsSync(dir)) continue;
+    const gedeckt = new Set(pfade);
+    for (const f of readdirSync(dir, { withFileTypes: true })) {
+      if (!f.isFile() || !f.name.endsWith('.json')) continue;
+      const pfad = `${dir}/${f.name}`;
+      if (!gedeckt.has(pfad)) offen.push({ pfad, liste: name });
+    }
+  }
+  return offen.sort((a, b) => (a.pfad < b.pfad ? -1 : 1));
+}
 
 export interface Eintrag {
   id?: string;

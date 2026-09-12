@@ -36,10 +36,14 @@ describe('prerenderRouten()', () => {
     // die Säule /gesetze?ebene=international (s. VERBOTEN).
     // /einstellungen kam mit QS-UI B14 #670 (5.9.2026) dazu — fehlte bisher im
     // Register und erbte Titel/Canonical der Startseite.
-    for (const p of ['/', '/rechner', '/vorlagen', '/gesetze', '/rechtsprechung', '/materialien', '/methodik', '/ueber', '/kontakt', '/datenschutz', '/abdeckung', '/suche', '/einstellungen']) {
+    // FACHLICHE ÄNDERUNG, kein Refactoring (§6.3): /materialien/deckung ist eine
+    // NEUE Seite (W2·6c-DECKUNGS-SEITE, 12.9.2026). Der Zähler ist der deklarierte
+    // Drift-Backstop dieser Liste — eine neue statische Seite MUSS ihn bewegen,
+    // sonst wäre er kein Tor. 13 -> 14.
+    for (const p of ['/', '/rechner', '/vorlagen', '/gesetze', '/rechtsprechung', '/materialien', '/materialien/deckung', '/methodik', '/ueber', '/kontakt', '/datenschutz', '/abdeckung', '/suche', '/einstellungen']) {
       expect(ROUTEN).toContain(p);
     }
-    expect(ROUTEN).toHaveLength(kartenPfade.size + 13);
+    expect(ROUTEN).toHaveLength(kartenPfade.size + 14);
   });
 
   it('enthält keine Duplikate, Hashes oder relativen Pfade', () => {

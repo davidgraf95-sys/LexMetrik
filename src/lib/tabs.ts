@@ -158,6 +158,11 @@ const KURZFORM: Record<string, string> = {
   '/datenschutz': 'Datenschutz',
   '/einstellungen': 'Einstellungen',
   '/abdeckung': 'Abdeckung',
+  // W2·6c-DECKUNGS-SEITE (12.9.2026): ohne Eintrag hiesse der Reiter nach
+  // `labelAusMeta` «Was wir nicht haben — LexMetrik». Der Eintrag hat hier
+  // eine ZWEITE Wirkung: `Reiterleiste` holt das 1,4-MB-Material-Register nur
+  // noch für Materialien-Reiter OHNE feste Kurzform — diese Route braucht es
+  // nicht (gemessen 12.9.2026: sie zog es vorher mit, Sonde (a) rot).
   '/suche': 'Suche',
 };
 

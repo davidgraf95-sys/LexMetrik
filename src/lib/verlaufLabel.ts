@@ -37,7 +37,15 @@ export function entscheidPfad(path: string): { key: string } | null {
 
 /** Material-Leser-Pfad → {key} oder null. */
 export function materialPfad(path: string): { key: string } | null {
-  const m = /^\/materialien\/([^/]+)\/?$/.exec(pfadTeil(path));
+  const p = pfadTeil(path);
+  // Eine Route mit EIGENEM Meta-Eintrag ist eine Seite, kein Material-Schlüssel
+  // (seit 12.9.2026: `/materialien/deckung`). Ohne diese Zeile löste jeder
+  // Aufrufer sie als Material auf, fände den «Schlüssel» im Register nicht —
+  // und hätte dafür 1,4 MB geladen (gemessen, Sonde e2e/deckung-seite (a)).
+  // Die Prüfung ist allgemein, nicht auf einen Pfad geschrieben: sie gilt für
+  // jede künftige statische Unterseite von /materialien.
+  if (metaFuerPfad(p)) return null;
+  const m = /^\/materialien\/([^/]+)\/?$/.exec(p);
   return m ? { key: decodeURIComponent(m[1]) } : null;
 }
 

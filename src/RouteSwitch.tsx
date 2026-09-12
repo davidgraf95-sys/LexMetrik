@@ -66,6 +66,11 @@ const InternationalRedirect = lazyRetry(() => import('./pages/InternationalRedir
 // als Metadaten-/Live-Link-Seite (seo-detail.ts). Routenzahl +1.
 const Materialien = lazyRetry(() => import('./pages/Materialien').then((m) => ({ default: m.Materialien })));
 const MaterialLeser = lazyRetry(() => import('./pages/MaterialLeser').then((m) => ({ default: m.MaterialLeser })));
+// W2·6c-DECKUNGS-SEITE (§11.5): «was wir nicht haben» — die Deckungs-Seite der
+// Entstehungsgeschichte. Eigene statische Route UNTER /materialien; sie steht
+// vor /materialien/:key, und weil alle Material-Schlüssel versal sind, kann der
+// kleingeschriebene Pfad keinen Eintrag verschatten (Tor: routenManifest-Test).
+const MaterialienDeckung = lazyRetry(() => import('./pages/MaterialienDeckung').then((m) => ({ default: m.MaterialienDeckung })));
 const NotFound = lazyRetry(() => import('./pages/NotFound').then((m) => ({ default: m.NotFound })));
 
 // Alt-Routen der aufgehobenen Free/Pro-Zweiteilung (FAHRPLAN-EINE-HAUPTSEITE
@@ -133,6 +138,7 @@ export function RouteSwitch({ location }: { location?: string }) {
       <Route path="/international" element={<InternationalRedirect />} />
       {/* Rubrik «Materialien»: Übersicht (prerendert) + Detail (Metadaten/Live-Link) */}
       <Route path="/materialien" element={<Materialien />} />
+      <Route path="/materialien/deckung" element={<MaterialienDeckung />} />
       <Route path="/materialien/:key" element={<MaterialLeser />} />
       <Route path="/methodik" element={<Methodik />} />
       <Route path="/ueber" element={<Ueber />} />
