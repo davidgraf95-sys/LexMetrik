@@ -111,6 +111,19 @@ negativ). Kandidaten: ein Selbst-Cancel-Schritt im Workflow bei bewegtem HEAD,
 oder ein GitHub-seitiger Abbruch. ROADMAP-Zeile unter `QS-AUTOMATIK` (Ursache
 klären, Rot-Beweis). Bis dahin Regel Skill `landung` Nachkontrolle 0: nach
 einem Code-Merge kein weiterer main-Push, bis der Deploy-Job grün ist.
+**F14 — Additiver Refresh überschreibt gute Bestandsdaten statt sie zu mergen
+(12.9.2026, PR #816, Delta-Prüfung).** Der B1-Zweig von `--regeste-refresh`
+(`scripts/normtext-entscheide.ts`) übernahm ein frisch geholtes Auszug-only-
+Ergebnis vollständig — bei 6 von 1259 amtlichen BGE verschwand dabei über
+zwei additive Nachpflege-Läufe (5.7./28.7.2026) die bereits vorhandene
+`regeste.sprachfassungen`, unbemerkt, weil kein Tor die Regeste-Vollständigkeit
+prüfte; gefangen hat es erst die Gegenprüfung, nicht der Bau. Gegenmittel
+(Tor, bereits gebaut): `mergeB1Ergebnis()` (`scripts/normtext/entscheide-b1-
+merge.ts`) übernimmt additive Bestandsfelder aus dem Altwert, wenn das frische
+Ergebnis keine trägt und der flache Regeste-Text unverändert ist; neuer Ast in
+`check:entscheide` — amtlicher BGE mit Regeste ohne `sprachfassungen` ⇒ FEHLER
+(dokumentierte Ausnahme `bge_149_IV_1`). Regel: ein Auszug-only-Refresh MERGT
+additive Bestandsfelder, ersetzt sie nie blind.
 
 ## Eine neue Lehre ablegen
 

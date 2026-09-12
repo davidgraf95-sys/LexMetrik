@@ -33,6 +33,55 @@ falsch — korrigiert 30.8.2026). Karten abgeschlossener Sessions (älter als
 werden direkt unter dem KARTEN-Anker eingefügt (jüngste zuoberst).
 
 <!-- KARTEN -->
+## Session 12.9.2026 (2) — Fehlerbuch-Runde `W2·18-FEHLERBUCH` (Finder → 5 Einzel-Fixer → Opus-Prüfer)
+
+**Ablauf:** ein Finder sammelte fünf Fund-Zeilen aus `FAHRPLAN-OFFENE-BEFUNDE.md`/`FAHRPLAN-UI-BEFUNDE.md`,
+je ein eigener Einzel-Fixer-Agent (Prinzip `einzelne-spezialisierte-agenten`) baute isoliert im eigenen
+Worktree, ein Opus-Prüfer lief gegen jeden Bau gegen.
+
+**Gelandet:** #812 LM-187 (Teil 2 war bereits seit PR #681 gebaut, nur die Fund-Zeile hinkte nach —
+reine Doku-Korrektur, kein Code) · #813 LexWork-Adapter: Laufzeit-Validierung `validiereTextOfLaw()`
+statt Compile-Cast, inkl. `annex_documents`-Elemente (Gegenprüfungs-Auflage A1 nachgebessert) · #814
+Register-`sha` stand-frei (`shaEintrag()` ohne `r.stand`, Duplikat `shaVernehmlassung()` gelöscht — eine
+Formel, §5) · #815 `check:materialien`-Vollständigkeitswache (Dokumente **und** Kanten, nur gelistete
+IDs, stempel-neutraler Shard-Vergleich, Schreib-Wache vor dem projizierenden Lauf, Blindzähler «0
+Kanten/Downgrades» gestrichen statt umformuliert — vier Gegenprüfungs-Runden A1–A4).
+
+**Landet gerade** (fünf Prüfrunden, Gegenprüfung bestanden — Opus, bger.ch-clir-Abruf 12.9.2026,
+noch nicht gemergt): #816 BGE 151 II 475 Datumsfehler (1999→2025, Wurzel im B1-Refresh-Zweig von
+`scripts/normtext-entscheide.ts`, nicht im Adapter) + vier weitere Datums-Hebungen aus der
+Gegenprüfungs-Auflage A2 (151 I 73, 151 II 710, 151 III 336, 152 V 20). Dabei zwei tiefere Funde:
+(1) derselbe B1-Zweig hatte bei 6/1259 BGE die `regeste.sprachfassungen` beim additiven Refresh
+stillschweigend verworfen (`entscheide-b1-merge.ts` mergt sie jetzt, statt zu ersetzen; neuer
+`check:entscheide`-Ast: Regeste ohne Sprachfassungen ⇒ FEHLER); (2) OCLs eigener Basis-Record für
+`bge_152_V_2` ist bei `full_text`/`docket_number_2`/`decision_date` mit `bge_152_V_20` konfliert —
+auf den ehrlichen Bandjahr-Platzhalter zurückgestuft, `abschnitte`/`rubrum`/`zitierteNormen`/
+`dispositivOrders` genullt, neues Feld `quarantaene` + sichtbarer UI-Hinweis («… ist in der Quelle
+mit BGE 152 V 20 vermischt …»), neuer Konflations-Wächter (`findeFremdeFundstelleImBody`, Prüfmenge
+6/1259 BGE mit band-gleichem Seitenkopf, 0,5 %). Content-Korrektur des kontaminierten Records bleibt
+bewusst offener Befund (kein bestehender Mechanismus deckt eine Verunreinigung des OCL-Basis-Records
+selbst ab). PR-Bodies (`gh pr view 812..816`) tragen die Tor-Listen/Stichproben vollständig.
+
+**Lehren dieser Session:**
+1. **Ein Auszug-only-Refresh darf einen Bestandseintrag nie ersetzen, nur mergen** (#816): der
+   B1-Zweig übernahm ein frisch geholtes Auszug-only-Ergebnis komplett und liess dabei über zwei
+   additive Nachpflege-Läufe (5.7./28.7.2026) bei 6 BGE die Sprachfassungen unter den Tisch fallen —
+   kein Tor prüfte Regeste-Vollständigkeit, gefangen hat es erst der Prüfer. Jetzt Tor-Ebene
+   (`mergeB1Ergebnis` + `check:entscheide`-Ast) — Registerzeile F14 in Skill `lehren`.
+2. **Bei Datenkorrekturen die VOLLE Vitest-Suite fahren, gezielte Dateien übersehen Zahlen-Pins**
+   (#816, D1+D2): die BGG-Bezüge-Zähler-Pins (`bezuege-facetten.test.ts`) verschoben sich als
+   notwendige Folge der Konflations-Bereinigung (Kanten 10'559→10'604, Dokumente 1253→1254) — nur der
+   volle Lauf (482 Dateien/7851 Tests) fing das, ein gezielter Testdatei-Lauf hätte es nicht gesehen.
+3. **Prüfer-Auflagen können falsch sein — Bauer-Abweichung mit Quellort-Beleg (§7) ist erwünscht**
+   (#816): die Auftrags-Whitelist nannte `scripts/rechtsprechung/**`; das Bund/BGE-Korpus wird
+   tatsächlich von `scripts/normtext-entscheide.ts` erzeugt (`scripts/rechtsprechung/**` ist
+   ausschliesslich der BS-Kantonsimport) — die Wurzel liegt zwingend im erstgenannten Pfad, offengelegt
+   statt stillschweigend der falschen Whitelist gefolgt.
+4. **Wächter-Reichweite immer mit Prüfmenge angeben** (#816, D2-Korrektur): der neue
+   Konflations-Wächter deckt 6/1259 BGE mit band-gleichem Seitenkopf-Marker (0,5 %) ab — die erste
+   Formulierung nannte «26 BGE mit irgendeiner Zitierung» und zählte auch legitime Alt-Band-Zitate
+   mit; eine Prüfmenge ohne Nenner verschleiert, wie schmal ein Wächter tatsächlich greift.
+
 ## Session 12.9.2026 — Synopse-Leser + gemeinsame Normalisierung (Fortsetzung der Kette vom 11.9.)
 
 **Gelandet seit dem Doku-Abschluss #795:** #796 W2·6c-ENTSTEHUNG-SYNOPSE-LESER (`0a79eb68f`,
