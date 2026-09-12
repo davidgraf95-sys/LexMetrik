@@ -275,7 +275,12 @@ describe('sammleKantonVollinventarLexWork (Vollabdeckung, §6.7-Fund #694)', () 
   });
 
   it('kein Vollinventar-Erlass mit erkennbarer Systematiknummer verliert sie (erlassNr nie leer, wenn die Quelle eine Klammer trägt)', () => {
-    const leer = voll.filter((g) => g.erlassNr === '' && g.erlassName === '');
+    // D1-Fix (Gegenprüfung PR #828, 12.9.2026): vorher mass dieser Wächter
+    // `erlassNr === '' && erlassName === ''` — ein Tor, das nicht scheitern
+    // konnte (§6.7), denn erlassName ist praktisch nie leer. Empirisch waren
+    // 267/1189 Erlasse mit `erlassNr === ''` betroffen (AR 0/265, SG 0/2 ohne
+    // Präfixwort), der alte Wächter zeigte 0 Treffer. Jetzt `erlassNr` allein.
+    const leer = voll.filter((g) => g.erlassNr === '');
     // §8: nicht 0 erzwingen (manche committeten Erlasse tragen amtlich keine
     // Klammer-Nummer) — aber die weit überwiegende Mehrheit muss sie tragen,
     // sonst ist das Rückparsen aus dem Snapshot gebrochen (Regression von B2).

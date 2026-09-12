@@ -395,7 +395,7 @@ export function sammleKantonVollinventarLexWork(): KantonInventarGruppe[] {
 
   interface RohEintrag {
     kanton: string; host: string; lang: 'de' | 'fr'; bestandsKey: string;
-    urlLawId: string; quelleUrl: string; erlassName: string; eigenesPraefix: string | null;
+    urlLawId: string; quelleUrl: string; erlassName: string; erlassNr: string;
   }
   const roh: RohEintrag[] = [];
 
@@ -414,53 +414,33 @@ export function sammleKantonVollinventarLexWork(): KantonInventarGruppe[] {
     const teile = erster.id.split('/');
     if (teile.length < 4 || teile[0] !== 'kanton') continue;
 
+    // D1-Wurzelfix (Gegenprüfung PR #828, 12.9.2026): KEINE Mehrheits-Präfix-
+    // Heuristik mehr — sie liess erlassNr für jeden Erlass ohne Buchstaben-
+    // Präfix vor der Nummer leer (AR 0/265, SG 0/2: «142.121» trägt gar kein
+    // Präfixwort) und liess bei BS eine 5-gegen-854-Minderheit («SG 121.100»
+    // statt «121.100») über den Mehrheitswert der Geschwister entscheiden.
+    // `sr` wird stattdessen 1:1 aus dem COMMITTETEN Label übernommen — kein
+    // Raten, kein Gleichstand, keine Fremd-Ableitung aus Geschwister-Erlassen.
     const { titel: erlassName, sr } = identitaetAusErlass(erster.erlass ?? '');
-    // Nur das PRÄFIX-WORT (z. B. «RS»/«SR»/«RSF») aus dem eigenen Wert, NICHT
-    // die Nummer — B2 zeigte, dass ein EINZELNER Erlass (VS-173.8-fr) historisch
-    // die falsche Sprachform trug («SR» statt «RS»); die Zahl selbst deckt sich
-    // dagegen immer mit der amtlichen Systematiknummer (urlLawId, s. u.).
-    const eigenesPraefix = sr?.match(/^([A-ZÄÖÜ]+)\s/)?.[1] ?? null;
 
     roh.push({
       kanton: teile[1], host: m[1], lang: m[2] as 'de' | 'fr', bestandsKey: teile[2],
-      urlLawId: kanonischeLawId(m[3]), quelleUrl: erster.quelleUrl, erlassName, eigenesPraefix,
+      urlLawId: kanonischeLawId(m[3]), quelleUrl: erster.quelleUrl, erlassName,
+      erlassNr: sr ?? '',
     });
   }
 
-  // B2 (Gegenprüfung PR #828, 12.9.2026): erlassNr NICHT leer lassen (baut
-  // sonst über erlassBezeichnung() die Systematiknummer weg) — aber auch NICHT
-  // blind den eigenen historischen Wert übernehmen (der war für VS-173.8-fr
-  // selbst falsch, «SR» statt «RS»). Präfix = MEHRHEIT der GESCHWISTER
-  // desselben (Kanton, Sprache) — «prüfen, was die Geschwister tragen», nicht
-  // raten; Zahl = amtliche Systematiknummer (urlLawId), die stimmt immer.
-  const praefixZaehlung = new Map<string, Map<string, number>>();
-  for (const r of roh) {
-    if (!r.eigenesPraefix) continue;
-    const schluessel = `${r.kanton}|${r.lang}`;
-    const zaehler = praefixZaehlung.get(schluessel) ?? new Map<string, number>();
-    zaehler.set(r.eigenesPraefix, (zaehler.get(r.eigenesPraefix) ?? 0) + 1);
-    praefixZaehlung.set(schluessel, zaehler);
-  }
-  const mehrheitsPraefix = (kanton: string, lang: string): string | null => {
-    const zaehler = praefixZaehlung.get(`${kanton}|${lang}`);
-    if (!zaehler) return null;
-    return [...zaehler.entries()].sort((a, b) => b[1] - a[1])[0][0];
-  };
-
-  return roh.map((r) => {
-    const praefix = mehrheitsPraefix(r.kanton, r.lang) ?? r.eigenesPraefix;
-    return {
-      kanton: r.kanton,
-      host: r.host,
-      lang: r.lang,
-      lawId: r.bestandsKey,
-      ...(r.urlLawId !== r.bestandsKey ? { fetchLawId: r.urlLawId } : {}),
-      erlassName: r.erlassName,
-      erlassNr: praefix ? `${praefix} ${r.urlLawId}` : '',
-      quelleUrl: r.quelleUrl,
-      artikel: [],
-    };
-  });
+  return roh.map((r) => ({
+    kanton: r.kanton,
+    host: r.host,
+    lang: r.lang,
+    lawId: r.bestandsKey,
+    ...(r.urlLawId !== r.bestandsKey ? { fetchLawId: r.urlLawId } : {}),
+    erlassName: r.erlassName,
+    erlassNr: r.erlassNr,
+    quelleUrl: r.quelleUrl,
+    artikel: [],
+  }));
 }
 
 /**
