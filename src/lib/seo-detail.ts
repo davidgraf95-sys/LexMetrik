@@ -359,8 +359,11 @@ export function erlassVolltextHtml(
   // die `geprueft`/`kuenftig` zwei Zeilen darüber bereits gatet (§5) — hier
   // trägt sie zusätzlich den Klammerzusatz und, wenn bekannt, den Nachfolger.
   const linkZusatz = e.aufgehoben ? aufgehobenSeitSatz(e.aufgehoben.seit) : 'geltend';
+  // Gegenprüfung PR #826 (12.9.2026, §7): OHNE Inkrafttreten-Datum des
+  // Nachfolgers — `AufhebungsNachfolger` trägt kein eigenes Feld dafür, s.
+  // Begründung an `nachfolgerHinweis`.
   const nachfolgerSegment = e.aufgehoben?.nachfolger
-    ? ` · ${esc(nachfolgerHinweis(e.aufgehoben.nachfolger, e.aufgehoben.seit))}`
+    ? ` · ${esc(nachfolgerHinweis(e.aufgehoben.nachfolger))}`
     : '';
   const kopf =
     `<header><nav aria-label="Brotkrumen"><a href="/gesetze">Gesetze</a> › ` +

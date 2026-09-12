@@ -133,8 +133,11 @@ export function nichtKonsolidiertSatz(seitIso: string | null): string {
  * (geltend)» — belegt an `dist/gesetze/bund/BMV.html` (BMV aufgehoben
  * 1.3.2026, Stand-Zeile «Stand 2016-08-23 · amtliche Fassung (geltend)», kein
  * Aufhebungs-Hinweis). Die crawlbare Fassung sagte damit das GEGENTEIL der
- * lesenden. EINE Quelle (§5): dieselbe Ableitung (`e.aufgehoben`, hier nur
- * die Datumsform) wie der Reader, nicht ein zweiter handgeschriebener String.
+ * lesenden. GETEILTE DATUMSFORM (§5, `datumCh` — dieselbe, die `Datum.tsx`
+ * im Reader nutzt), nicht dieselbe Ableitung wie der Reader: dessen
+ * Aufhebungs-Banner (`ErlassLeserKopf.tsx`) trägt weiterhin eigene Literale
+ * («Aufgehoben per …», «Nachfolge-Erlass: SR …») statt dieser Funktionen —
+ * Umstellung dort ist Reader-Nachzug, offen (Gegenprüfung PR #826, 12.9.2026).
  */
 export function aufgehobenSeitSatz(seitIso: string): string {
   return `aufgehoben per ${datumCh(seitIso)}`;
@@ -142,13 +145,22 @@ export function aufgehobenSeitSatz(seitIso: string): string {
 
 /**
  * Nachfolge-Erlass-Hinweis für den Prerender-Kopf (Kurzform des Reader-
- * Banner-Satzes «Nachfolge-Erlass: SR … (in Kraft seit …)», hier als reiner
- * Text ohne Link-Anatomie — der Prerender-Kopf trägt bereits EINEN Live-Link
- * auf `quelleUrl`, ein zweiter auf die Nachfolger-ELI ist nicht Teil dieses
+ * Banner-Satzes «Nachfolge-Erlass: SR …», hier als reiner Text ohne
+ * Link-Anatomie — der Prerender-Kopf trägt bereits EINEN Live-Link auf
+ * `quelleUrl`, ein zweiter auf die Nachfolger-ELI ist nicht Teil dieses
  * Funds und bliebe ein separater, deklarierter Schritt).
+ *
+ * OHNE Datum (Gegenprüfung PR #826, 12.9.2026, §7): `AufhebungsNachfolger`
+ * trägt kein eigenes Inkrafttreten-Feld. Die Vorfassung leitete es aus dem
+ * AUFHEBUNGSDATUM des ALTEN Erlasses ab (`seitIso`) — bei BMV deckungsgleich
+ * (Totalrevision, nahtloser Übergang), aber unbelegt im Allgemeinen: bei
+ * patv/vgvp (Aufhebung 2027-01-01) fällt das Nachfolger-Inkrafttreten NICHT
+ * mit diesem Datum zusammen. Eine unbelegte Aussage wird entfernt, nicht
+ * geschätzt (§7/§8) — der Reader trägt dieselbe Annahme noch (offener
+ * Nachzug, s. `aufgehobenSeitSatz`-Kommentar oben).
  */
-export function nachfolgerHinweis(nachfolger: { sr: string }, seitIso: string): string {
-  return `Nachfolge-Erlass SR ${nachfolger.sr} (in Kraft seit ${datumCh(seitIso)})`;
+export function nachfolgerHinweis(nachfolger: { sr: string }): string {
+  return `Nachfolge-Erlass SR ${nachfolger.sr}`;
 }
 
 /**

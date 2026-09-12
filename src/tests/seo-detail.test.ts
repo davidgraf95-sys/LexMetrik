@@ -216,7 +216,7 @@ describe('erlassVolltextHtml() — Standausweis am aufgehobenen Erlass (Gegenpr�
     );
     expect(html).toContain('(aufgehoben per 01.03.2026)');
   });
-  it('Nachfolger, wenn im Register vorhanden, erscheint im Kopf', () => {
+  it('Nachfolger, wenn im Register vorhanden, erscheint im Kopf OHNE Inkrafttreten-Datum (§7: kein eigenes Feld dafür, PR #826)', () => {
     const html = erlassVolltextHtml(
       {
         ...kanton,
@@ -227,7 +227,8 @@ describe('erlassVolltextHtml() — Standausweis am aufgehobenen Erlass (Gegenpr�
       },
       datei,
     );
-    expect(html).toContain('Nachfolge-Erlass SR 412.103.1 (in Kraft seit 01.03.2026)');
+    expect(html).toContain('Nachfolge-Erlass SR 412.103.1');
+    expect(html).not.toContain('in Kraft seit');
   });
   it('geltender (nicht aufgehobener) Erlass bleibt unverändert bei «(geltend)»', () => {
     const html = erlassVolltextHtml(kanton, datei);
