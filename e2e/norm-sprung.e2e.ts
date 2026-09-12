@@ -10,6 +10,7 @@ import { test, expect, type Page } from '@playwright/test'
 import { fehlerSammeln } from './helpers/fehlerSammeln'
 import { clsBeobachtenInstallieren, clsAuslesen } from './helpers/cls'
 import { kopfSucheOeffnen, sprungZeile } from './helpers/kopfSuche'
+import { OR_LESER_FRIST } from './helpers/orLeser'
 
 // CI-Härtung 19.7.2026 (BEFUND 3b): die Sprung-Tests warten per 20-s-Latch auf den
 // EINMAL-Load des ~4-MB-Artikel-Index (P3 u. a.). Auf dem 2-vCPU-Runner unter
@@ -17,7 +18,13 @@ import { kopfSucheOeffnen, sprungZeile } from './helpers/kopfSuche'
 // darum explizit auf 60 s (Muster gesetze-pdf-download). Der A9-CLS-Test behält sein
 // eigenes test.slow(). INFRASTRUKTUR (Zeitbudget), KEIN Assertion-Change (§6.3):
 // Sprung-/CLS-Assertions unberührt, Timeout greift nur bei Überschreitung.
-test.describe.configure({ timeout: 60_000 })
+//
+// §17-Wurzelfix 12.9.2026 (OR-Leser-e2e-Härtung, FAHRPLAN-OFFENE-BEFUNDE): auf
+// 150 s angehoben — die beiden `OR_LESER_FRIST`-Wartepunkte unten tragen seit
+// heute je das zentrale 60-s-Budget (`helpers/orLeser.ts`) statt vorher 30 s;
+// bei 60 s (statt bisher 30 s) je Wartepunkt reichte das alte 60-s-Test-Budget
+// nicht mehr, um beiden im Ernstfall ihr volles Budget zu lassen.
+test.describe.configure({ timeout: 150_000 })
 
 // NACHZUG 4.9.2026 (§17-Wurzel-Fix Shard 3/8) — DEKLARIERTE TEST-INFRASTRUKTUR,
 // KEIN Assertion-Change (§6.3): Der Datei-Kopf hob am 19.7.2026 das TEST-Budget
@@ -30,7 +37,12 @@ test.describe.configure({ timeout: 60_000 })
 // Überschreitung, verlangsamt grüne Läufe nicht und lässt innerhalb der 60 s
 // weiterhin Raum für die vorangehenden Prüfschritte. Geprüft wird unverändert
 // DASSELBE (Überschrift trägt «OR», Ziel-Artikel im DOM).
-const OR_LESER_FRIST = 30_000
+//
+// §17-Wurzelfix 12.9.2026: die lokale Konstante (30 s) ist zur zentralen
+// `OR_LESER_FRIST` (60 s, `helpers/orLeser.ts`) zusammengezogen — #682 härtete
+// diese Datei und `leser-suche-a35-a40-a41` je mit eigener Kopie derselben
+// Zahl; die Kopie entfällt hier (Fahrplan-Eintrag «#682 härtete nur
+// norm-sprung/leser-suche»). Rot-/Grün-Beweis der 60-s-Zahl: dort.
 
 // ── §6.3-DEKLARATION 6.9.2026 (W2·24-DESIGN-IDENTITAET, Treffer-Anatomie D23) ─
 // Die Sprung-Zeile trug bis hierher ein gerahmtes Etikett mit dem Wort «Sprung»
