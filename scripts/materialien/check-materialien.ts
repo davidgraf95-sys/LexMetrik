@@ -22,6 +22,15 @@
 //  · Wortfeld-Tor (§0/A7): keine AFFIRMATIVE «geprüft/gegengeprüft/verifiziert» in EIGENEN
 //    Nutzertexten; Negationen («nicht/noch nicht/ungeprüft») sind ehrliche §8-Offenlegungen
 //    und ERLAUBT. Amtliche `titel` in register.json = Zitat-Felder (ausgenommen).
+//  · Vernehmlassungen Finding 7 (§17-Wurzelfix PR #803, war wanduhr-abhängig): 'laufend' mit
+//    fristEnde < r.stand (Erhebungsdatum, vom Generator geschrieben) = Datenfehler zum
+//    Erhebungszeitpunkt. Deterministisch, KEIN heute/Date.now — dieses Tor liest an KEINER
+//    Stelle mehr die Wanduhr (Gegenprüfungs-Auflage A1). Der zugehörige Alterungs-Wächter
+//    (Erhebungsdatum zu alt ⇒ rot) lebt bewusst NICHT hier, sondern im eigenen, standalone
+//    Tor `check:vernehmlassungen-alter` (K7-Entscheid, Begründung dort UND in
+//    scripts/materialien/vernehmlassungen-tor.ts) — sonst würde ein wanduhr-Rot fachfremde
+//    Aufrufer dieses Tors (z. B. normen-monitor.yml Job `bs-grossrat`) vor deren PR-Schritt
+//    mit einem Vernehmlassungs-Befund töten.
 // Harte Verstösse → exit 1.
 
 import { readFileSync, existsSync, readdirSync, statSync } from 'node:fs';
@@ -51,6 +60,7 @@ import {
   type ShardDatei,
 } from './soft-law-projektion.ts';
 import { wortfeldTreffer, wortfeldImQuellcode } from './wortfeld.ts';
+import { finding7Fehler, parseDatumArg } from './vernehmlassungen-tor.ts';
 
 /** Kantonaler Normtext-Korpus: die Datei-Stämme sind die Erlass-Schlüssel (K-16). */
 const KANTON_KORPUS_DIR = join('public', 'normtext', 'kanton');
@@ -98,14 +108,17 @@ function main(): void {
   const kuratiertKeys = new Set(ALLE_MATERIALIEN.map((r) => r.key));
   const korpus = baueKorpusInfo();
 
-  const datumArg = process.argv.find((a) => a.startsWith('--datum='));
-  const heute = datumArg?.slice('--datum='.length);
-  // Für die Vernehmlassungs-Staleness-Assertion (Finding 7) IMMER gegen den echten heutigen
-  // Tag prüfen, auch ohne --datum im Default-gate (das ist der belastbare Currency-Schutz,
-  // da check:vernehmlassungen-netz nicht im Default-gate läuft). Kein Engine-Date.now (§2) —
-  // dies ist ein Staleness-Tor; eine abgelaufene «laufend»-Frist SOLL das Tor rot machen und
-  // zur Neu-Generierung zwingen.
-  const heuteEff = heute ?? new Date().toISOString().slice(0, 10);
+  // A2 (Gegenprüfung PR #803): --datum gegen ISO validieren statt ein kaputtes Format
+  // stillschweigend als "kein Override" zu behandeln (Date.parse('kaputt') = NaN hätte
+  // sonst z. B. den Zukunfts-Check unten lautlos abgeschaltet). Ungültig ⇒ harter Fehler,
+  // `heute` bleibt undefined (die übrigen Checks laufen trotzdem, der Fehler oben reicht
+  // für exit 1 in ausgabe()).
+  let heute: string | undefined;
+  try {
+    heute = parseDatumArg(process.argv);
+  } catch (e) {
+    fehler.push((e as Error).message);
+  }
 
   // ── 1. Register-Grundchecks (kuratiert + generierte Botschaften) ──────────────
   const gesehen = new Set<string>();
@@ -152,12 +165,13 @@ function main(): void {
         if (v.fristStart && v.fristEnde && v.fristStart > v.fristEnde) {
           fehler.push(`${r.key}: fristStart ${v.fristStart} > fristEnde ${v.fristEnde} (unmöglicher Zeitraum).`);
         }
-        // Finding 7 (P0, user-sichtbar): 'laufend' mit abgelaufener Frist gegen HEUTE (nicht gegen
-        // das mit-alternde stand) = still-falsche «läuft»-Anzeige → rot. Offline-Schutz, da
-        // check:vernehmlassungen-netz (Currency-Arbiter) NICHT im Default-gate läuft.
-        if (v.status === 'laufend' && v.fristEnde && v.fristEnde < heuteEff) {
-          fehler.push(`${r.key}: Status 'laufend', aber fristEnde ${v.fristEnde} < heute ${heuteEff} — Konsistenz-Verstoss (Finding 7). Neu generieren (materialien:vernehmlassungen).`);
-        }
+        // Finding 7 (P0, user-sichtbar), deterministisch seit §17-Wurzelfix PR #803 (war
+        // wanduhr-abhängig, #789/Befund 12.9.2026) — reine Funktion in vernehmlassungen-tor.ts,
+        // testbar ohne den ganzen check-materialien-Lauf. Der zugehörige Alterungs-Wächter (liest
+        // `heute`) lebt bewusst NICHT hier, sondern im eigenen Tor `check:vernehmlassungen-alter`
+        // (K7-Entscheid, Begründung im Kopf dieser Datei und in vernehmlassungen-tor.ts).
+        const f7 = finding7Fehler(r.key, v.status, v.fristEnde, r.stand);
+        if (f7) fehler.push(f7);
       }
     }
   }
