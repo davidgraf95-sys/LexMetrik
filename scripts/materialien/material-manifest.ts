@@ -112,8 +112,17 @@ export function teileRegister(voll: MaterialVollManifest): {
 // im Quellcode (§1/§7).
 const STAND_IST_ERHEBUNGSDATUM = new Set(['BUND']);
 
-/** sha256 über die Identitätsfelder (stabile, sortierte Repräsentation, Felder durch ein
- *  Leerzeichen getrennt — Absicherung an der Feldgrenze; kein kryptografischer
+// Feld-Trenner für den sha-Normstring: das ASCII-Steuerzeichen «Unit Separator»
+// (0x1F) — kommt in keinem Feld vor (Titel/Hinweis/URL sind lesbarer Text ohne
+// Steuerzeichen), anders als ein blosses Leerzeichen. Delta-Prüfung PR #814,
+// Rot-Beweis des Prüfers: mit `.join(' ')` ergaben `titel:'A B', nummer:'N'` und
+// `titel:'A', nummer:'B N'` dasselbe sha, weil ' ' selbst Feldinhalt sein kann —
+// die Feldgrenze war nicht eindeutig. 0x1F ist dafür das amtliche ASCII-Steuerzeichen
+// (genau dieser Zweck: Feld-/Datensatz-Trennung in Textdaten).
+const FELD_TRENNER = '';
+
+/** sha256 über die Identitätsfelder (stabile, sortierte Repräsentation, Felder durch
+ *  `FELD_TRENNER` getrennt — eindeutige Feldgrenze, s. o.; kein kryptografischer
  *  Kollisionsschutz nötig, da nur Drift-Vergleich gegen die committete Fassung). Ändert
  *  sich, sobald sich Titel/Nummer/Quelle/Status/Verzahnung ändern → Drift-Token, das ein
  *  check gegen die committete Fassung prüft. `stand` ist NUR bei
@@ -154,7 +163,7 @@ export function shaEintrag(r: MaterialRegistereintrag): string {
       ? [(r.ereignisse ?? []).map((v) => `${v.code}:${v.datum ?? ''}:${v.res ?? ''}:${v.bez ?? ''}`).join(';'),
          (r.bsKanten ?? []).map((k) => `${k.erlass}:${k.quelle}:${k.regel}:${k.beleg}`).join(';')]
       : []),
-  ].join(' ');
+  ].join(FELD_TRENNER);
   return createHash('sha256').update(norm, 'utf8').digest('hex');
 }
 

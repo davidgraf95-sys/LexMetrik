@@ -170,6 +170,21 @@ describe('Tor 2 — committetes Manifest == frischer Build (Merge-Modell §2.7, 
     };
     expect(shaEintrag({ ...bsGr, stand: '2026-04-01' })).not.toBe(shaEintrag(bsGr));
   });
+
+  it('Register-sha: Feldgrenze ist eindeutig, kein Trenner-Kollisions-Paar (Delta-Prüfung PR #814)', () => {
+    // Rot-Beweis des Prüfers: ein blosses Leerzeichen als Feld-Trenner schliesst die
+    // Feldgrenze nicht — `titel:'A B', nummer:'N'` und `titel:'A', nummer:'B N'`
+    // ergaben mit `.join(' ')` dasselbe sha, weil ' ' selbst in Feldern vorkommen
+    // kann (Titel-Text). Trenner muss ein Zeichen sein, das in keinem Feld auftritt.
+    const basis = (titel: string, nummer: string): MaterialRegistereintrag => ({
+      key: 'TEST-GRENZE', behoerde: 'ESTV', doktyp: 'kreisschreiben', titel, nummer,
+      rechtsgebiet: 'steuern', sprache: 'de', status: 'nur-live-link',
+      quelleUrl: 'https://www.estv.admin.ch/x', stand: '2022-02-01', rang: 1,
+    });
+    const a = basis('A B', 'N');
+    const b = basis('A', 'B N');
+    expect(shaEintrag(a)).not.toBe(shaEintrag(b));
+  });
 });
 
 describe('Tor 3 — Navigation verlinkt nur existierende Behörden (kein toter Link)', () => {
