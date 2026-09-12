@@ -110,7 +110,7 @@ export function DeckungsSicht({ p }: { p: DeckungProjektion }) {
 
   return (
     <>
-      <section aria-labelledby="d-ebenen" className="space-y-2">
+      <section aria-labelledby="d-ebenen" data-deckung-ebenen className="space-y-2">
         <h2 id="d-ebenen" className="text-h3 font-display font-semibold text-ink-900">
           Ebene für Ebene
         </h2>
@@ -203,7 +203,7 @@ export function DeckungsSicht({ p }: { p: DeckungProjektion }) {
           </p>
       </section>
 
-      <section aria-labelledby="d-ohne" className="space-y-2 border-t border-line pt-6">
+      <section aria-labelledby="d-ohne" data-deckung-ohne className="space-y-2 border-t border-line pt-6">
         <h2 id="d-ohne" className="text-h3 font-display font-semibold text-ink-900">
           Änderungen, zu denen die amtliche Fussnote schweigt
         </h2>
@@ -255,8 +255,19 @@ export function DeckungsSicht({ p }: { p: DeckungProjektion }) {
             )}
         </p>
 
-        <div className="mt-4 overflow-x-auto">
-          <table className="w-full min-w-[38rem] border-collapse text-body-s">
+        {/* @320 px passt die Zahlentabelle nicht in den Viewport — gemessen
+            12.9.2026: bei 16 rem Kürzel-Spalte füllte allein sie den Schirm,
+            die Zahlen standen unsichtbar rechts daneben. Darum unter `sm`:
+            schmale Kürzel-Spalte, Titelzeile aus (der Titel bleibt im
+            `title`-Attribut und über den Link erreichbar) und ein kleinerer
+            Mindestrahmen — so stehen Kürzel, Deckungsgrad und Fundstellen
+            zusammen im Bild, der Rest kommt durch Schieben. Die Tabelle
+            scrollt in IHREM Kasten, die Seite nie (Sonde (e), §15). */}
+        <p className="pt-2 text-xs text-ink-500 sm:hidden">
+          Die Tabelle lässt sich seitwärts schieben.
+        </p>
+        <div className="mt-2 overflow-x-auto sm:mt-4">
+          <table data-deckung-tabelle className="w-full min-w-[30rem] border-collapse text-body-s sm:min-w-[38rem]">
             <caption className="sr-only">
               Deckung je Erlass: Fussnoten-Deckung, erfasste Änderungen und Alt-Blöcke des
               Fassungsvergleichs. Die Spaltenköpfe sortieren.
@@ -274,6 +285,7 @@ export function DeckungsSicht({ p }: { p: DeckungProjektion }) {
                       type="button"
                       onClick={() => sortiereNach(sp.id)}
                       title={sp.titel}
+                      data-deckung-sort={sp.id}
                       className="text-ink-600 hover:text-ink-900 focus-visible:text-ink-900"
                     >
                       {sp.kopf}
@@ -287,29 +299,29 @@ export function DeckungsSicht({ p }: { p: DeckungProjektion }) {
             </thead>
             <tbody>
               {liste.map((z) => (
-                <tr key={z.key} className="border-b border-line align-baseline">
-                  <th scope="row" className="max-w-[16rem] py-1.5 pr-4 text-left font-normal">
+                <tr key={z.key} data-deckung-zeile={z.key} className="border-b border-line align-baseline">
+                  <th scope="row" className="max-w-[7rem] py-1.5 pr-3 text-left font-normal sm:max-w-[16rem] sm:pr-4">
                     <Link
                       to={`/gesetze/bund/${encodeURIComponent(z.key)}`}
                       className="text-brass-700 no-underline hover:text-brass-600"
                     >
                       {z.key}
                     </Link>
-                    <span className="block truncate text-xs text-ink-500" title={z.titel}>
+                    <span className="hidden truncate text-xs text-ink-500 sm:block" title={z.titel}>
                       {z.titel}
                     </span>
                   </th>
-                  <td className="lc-ziffern py-1.5 pl-4 text-right text-ink-900">{pf(quote(z))}</td>
-                  <td className="lc-ziffern py-1.5 pl-4 text-right text-ink-600">
+                  <td className="lc-ziffern py-1.5 pl-2 text-right sm:pl-4 text-ink-900">{pf(quote(z))}</td>
+                  <td className="lc-ziffern py-1.5 pl-2 text-right sm:pl-4 text-ink-600">
                     {z.ocFussnoten === 0 ? '—' : `${nf(z.ocGetroffen)} / ${nf(z.ocFussnoten)}`}
                   </td>
-                  <td className="lc-ziffern py-1.5 pl-4 text-right text-ink-600">
+                  <td className="lc-ziffern py-1.5 pl-2 text-right sm:pl-4 text-ink-600">
                     {z.aenderungen === 0 ? '—' : `${nf(z.aenderungen)} · ${nf(z.mitBotschaft)}`}
                   </td>
-                  <td className="lc-ziffern py-1.5 pl-4 text-right text-ink-600">
+                  <td className="lc-ziffern py-1.5 pl-2 text-right sm:pl-4 text-ink-600">
                     {z.altBloecke === undefined ? '—' : nf(z.altBloecke)}
                   </td>
-                  <td className="lc-ziffern py-1.5 pl-4 text-right text-ink-600">
+                  <td className="lc-ziffern py-1.5 pl-2 text-right sm:pl-4 text-ink-600">
                     {z.ohneEreignis === undefined ? '—' : nf(z.ohneEreignis)}
                   </td>
                 </tr>
