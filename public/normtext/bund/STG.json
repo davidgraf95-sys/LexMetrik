@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-08-29",
+  "erzeugt": "2026-09-12",
   "eintraege": [
     {
       "id": "bund/STG/art_1",
@@ -40,7 +40,8 @@
             {
               "marke": "[tab]",
               "text": "4. und 5. …",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ""
             },
             {
               "marke": "b",
@@ -94,9 +95,9 @@
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_1",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20240101",
-      "sha": "74fcbc2fb66156cf79be9bcd540894eb271d9d29ab504d594ba578d6e81313e0"
+      "sha": "be60be77bb7b800edbb6fa0861abbe582c482496b397db347256e017f7523238"
     },
     {
       "id": "bund/STG/art_2",
@@ -113,7 +114,7 @@
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_2",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20240101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -136,7 +137,7 @@
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_3",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20240101",
       "sha": "9c976b313221cce996c7a04f2932a96a7e5282fc430880144312528d222fe8df"
     },
@@ -185,7 +186,7 @@
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_4",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20240101",
       "sha": "1008de2bbed504a791103a8d9f1dba91155de6fb36acbcc77a53bcc0d5b802d4"
     },
@@ -208,32 +209,38 @@
             {
               "marke": "–",
               "text": "Aktien inländischer Aktiengesellschaften und Kommanditaktiengesellschaften;",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ""
             },
             {
               "marke": "–",
               "text": "Stammanteilen inländischer Gesellschaften mit beschränkter Haftung;",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ""
             },
             {
               "marke": "–",
               "text": "Genossenschaftsanteilen inländischer Genossenschaften;",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ""
             },
             {
               "marke": "–",
               "text": "Genussscheinen inländischer Gesellschaften oder Genossenschaften. Als Genussscheine gelten Urkunden über Ansprüche auf einen Anteil am Reingewinn oder am Liquidationsergebnis;",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ""
             },
             {
               "marke": "–",
               "text": "Partizipationsscheinen inländischer Gesellschaften, Genossenschaften oder gewerblicher Unternehmen des öffentlichen Rechts;",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ""
             },
             {
               "marke": "–",
               "text": "Beteiligungsscheinen von Genossenschaftsbanken.",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ""
             },
             {
               "marke": "b",
@@ -262,9 +269,9 @@
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_5",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20240101",
-      "sha": "e762ccedc52e8c13c207f49aa9276e827f7324ee6ea5926344f6fd5711eaad75"
+      "sha": "03ceb8161d0c0327191c6facb8716de5da8533a8ec91e135f5537cd516168e06"
     },
     {
       "id": "bund/STG/art_5_a",
@@ -281,7 +288,7 @@
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_5_a",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20240101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -304,21 +311,25 @@
             {
               "marke": "–",
               "text": "die Dividende auf höchstens 6 Prozent des einbezahlten Gesellschafts- oder Genossenschaftskapitals beschränkt,",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ""
             },
             {
               "marke": "–",
               "text": "die Ausrichtung von Tantiemen ausgeschlossen und",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ""
             },
             {
               "marke": "–",
               "text": "bei der Auflösung der Gesellschaft oder Genossenschaft der nach Rückzahlung des einbezahlten Gesellschafts- oder Genossenschaftskapitals verbleibende Teil des Vermögens einem der erwähnten Zwecke zuzuwenden ist;",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ""
             },
             {
               "marke": "[tab]",
-              "text": "abis. Beteiligungsrechte, die in Durchführung von Beschlüssen über Fusionen oder diesen wirtschaftlich gleichkommende Zusammenschlüsse, Umwandlungen und Spaltungen von Aktiengesellschaften, Kommanditaktiengesellschaften, Gesellschaften mit beschränkter Haftung oder Genossenschaften begründet oder erhöht werden;"
+              "text": "abis. Beteiligungsrechte, die in Durchführung von Beschlüssen über Fusionen oder diesen wirtschaftlich gleichkommende Zusammenschlüsse, Umwandlungen und Spaltungen von Aktiengesellschaften, Kommanditaktiengesellschaften, Gesellschaften mit beschränkter Haftung oder Genossenschaften begründet oder erhöht werden;",
+              "trenner": ""
             },
             {
               "marke": "ater",
@@ -367,12 +378,14 @@
             {
               "marke": "–",
               "text": "bestehende Verluste beseitigt werden, und",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ""
             },
             {
               "marke": "–",
               "text": "die Leistungen der Gesellschafter oder Genossenschafter gesamthaft 10 Millionen Franken nicht übersteigen;",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ""
             },
             {
               "marke": "l",
@@ -380,7 +393,8 @@
             },
             {
               "marke": "[tab]",
-              "text": "m.…"
+              "text": "m.…",
+              "trenner": ""
             }
           ]
         },
@@ -391,9 +405,9 @@
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_6",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20240101",
-      "sha": "d97635a48c5b3f3b8efbceb7b9031ef602c5475a556cd2e3fa810a828e4ef4b1"
+      "sha": "fc553f88abd1533d700a5a00ebcd136c2e65e4fbb1c4a0a188e4cce1c46de6c9"
     },
     {
       "id": "bund/STG/art_7",
@@ -413,7 +427,8 @@
             },
             {
               "marke": "[tab]",
-              "text": "abis. bei Beteiligungsrechten, die im Verfahren der bedingten Kapitalerhöhung begründet werden: im Zeitpunkt ihrer Ausgabe;"
+              "text": "abis. bei Beteiligungsrechten, die im Verfahren der bedingten Kapitalerhöhung begründet werden: im Zeitpunkt ihrer Ausgabe;",
+              "trenner": ""
             },
             {
               "marke": "b",
@@ -444,9 +459,9 @@
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_7",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20240101",
-      "sha": "259c44b0af7e421e7e5d607b5501ddc71a6858849a54ae3d434438404fe664ec"
+      "sha": "34e5ca9c31f6cb9a1e3ebeb327ed33ae749361b8e5090866979040ae3df953e4"
     },
     {
       "id": "bund/STG/art_8",
@@ -485,7 +500,7 @@
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_8",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20240101",
       "sha": "72911666fe8def0c4be4422379f9ac3c53ca07960848023ade87e093b7bd4f21"
     },
@@ -534,7 +549,7 @@
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_9",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20240101",
       "sha": "90b63f814892830260f14ebf448b9e9b8078f91b83106b148edc55af8c38fda2"
     },
@@ -553,7 +568,7 @@
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_9_a",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20240101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -580,7 +595,7 @@
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_10",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20240101",
       "sha": "a4708cf2a212a6e5ca8ae2605bfc5573f07751113355246047f43584a9b3ebd4"
     },
@@ -613,7 +628,7 @@
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_11",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20240101",
       "sha": "e2fa5e0a8b9081fcdd98d0b4bf879f5469149680d2a68b5966d2150ed36dc795"
     },
@@ -632,7 +647,7 @@
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_12",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20240101",
       "sha": "e49678ecd143af3be18a530b8cc2c59fa76b63c951a745d8452dbb4b709637f5"
     },
@@ -750,7 +765,7 @@
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_13",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20240101",
       "sha": "e7ab8e3a2fe3e4c5392ac6ffea2374dd17b39d89723797369c01cd5baf04c54f"
     },
@@ -819,7 +834,7 @@
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_14",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20240101",
       "sha": "efd21a28613014d89d2bf1aef4c54f119f6b8ef676dfc94fa16cb34b1a022578"
     },
@@ -842,7 +857,7 @@
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_15",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20240101",
       "sha": "5eedf8398a3071eb7d254e02176b5645bdba04628d9e2443604d82751f884d3d"
     },
@@ -875,7 +890,7 @@
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_16",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20240101",
       "sha": "52ecd1174469c3f1138e442d872aafc5486b7e0b79994df5859c63d260b8ff05"
     },
@@ -930,7 +945,7 @@
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_17",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20240101",
       "sha": "078165498673957e9205d78b50637f1d1fdd1869e5ff15334f63d6195dcea81a"
     },
@@ -1001,7 +1016,7 @@
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_17_a",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20240101",
       "sha": "7179271e616992eb147f5a6ee0992394880c2b69c6595e872de24c9e6041ca6f"
     },
@@ -1028,7 +1043,7 @@
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_18",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20240101",
       "sha": "11f91f8777ce3a3f4d820e046301752ff2884ab2352b435e3f5d89ca58852948"
     },
@@ -1051,7 +1066,7 @@
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_19",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20240101",
       "sha": "099c7cb2d3f1bc3c2a8aa0b5ecb755eb18477144e427efff056f9269ac6403cb"
     },
@@ -1070,7 +1085,7 @@
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_19_a",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20240101",
       "sha": "89a213b6068b625a1d2d5ba80877acd2bc230d8f4b713bb4b41127ded5a7779d"
     },
@@ -1089,7 +1104,7 @@
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_20",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20240101",
       "sha": "fd373165d9df8113b0011025dc5612f16cb1f293d60bc7004402b517daed49f7"
     },
@@ -1118,7 +1133,7 @@
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_21",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20240101",
       "sha": "d34683afc83c14e460a6c665ec0f536b948e13c64e37f4f9d85e664dec93c14c"
     },
@@ -1140,11 +1155,13 @@
             },
             {
               "marke": "[tab]",
-              "text": "abis. Lebensversicherung, soweit diese der beruflichen Vorsorge im Sinne des BVG dient;"
+              "text": "abis. Lebensversicherung, soweit diese der beruflichen Vorsorge im Sinne des BVG dient;",
+              "trenner": ""
             },
             {
               "marke": "[tab]",
-              "text": "ater. Lebensversicherung, welche von einem Versicherungsnehmer mit Wohnsitz im Ausland abgeschlossen wird;"
+              "text": "ater. Lebensversicherung, welche von einem Versicherungsnehmer mit Wohnsitz im Ausland abgeschlossen wird;",
+              "trenner": ""
             },
             {
               "marke": "b",
@@ -1191,9 +1208,9 @@
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_22",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20240101",
-      "sha": "e644a9762d1b992cb966746897742a8d4e181755a6140a911f99d48032a01407"
+      "sha": "c0fde0846f575e1641f7bf72769cfa27a647e562bda8a488ef3952e3fb2705b6"
     },
     {
       "id": "bund/STG/art_23",
@@ -1210,7 +1227,7 @@
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_23",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20240101",
       "sha": "a330f324d2d7f91f826c6b37b08068ec8c0381daf4c8a2313c4369beef8493ce"
     },
@@ -1233,7 +1250,7 @@
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_24",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20240101",
       "sha": "e7afb15dea8045f99d2ea9af6f35ec45b70174659ec151b934e7fc03d2da3096"
     },
@@ -1252,7 +1269,7 @@
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_25",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20240101",
       "sha": "92cb89e703cae086c34954a636bb746c455497c9e202fd9ff835df6c53a4eecd"
     },
@@ -1271,7 +1288,7 @@
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_26",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20240101",
       "sha": "5305757c916c8f4bb77a83d46c63b6e42a3631f46365e486e7a3a68039ca4aa1"
     },
@@ -1294,7 +1311,7 @@
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_27",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20240101",
       "sha": "66fb7445a3b09cbe4907ed8b2242277263e01b4589c6c0f65a0a26abeaf62fa8"
     },
@@ -1317,7 +1334,7 @@
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_28",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20240101",
       "sha": "464eb9d69a4e4da802308c2bb32dd404536930d4997ca50d6bb522aa97b83e80"
     },
@@ -1336,7 +1353,7 @@
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_29",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20240101",
       "sha": "93d90d6cfd254afebd2979211e4e38ebdd8ab34bd1c2a1f1e462bf7a99519f0b"
     },
@@ -1367,7 +1384,7 @@
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_30",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20240101",
       "sha": "c3459be550e989085f4245d540090ddbb5f52b2a95e54944984e06cfb7a9dcfa"
     },
@@ -1386,7 +1403,7 @@
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_31",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20240101",
       "sha": "e82077c3b0f69dd31b255dd83dbeb19cef5f53d6bf0021442af4ef9396af4051"
     },
@@ -1417,7 +1434,7 @@
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_32",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20240101",
       "sha": "5da44cb6b534dd49732e44dc89748f0b2a2e724870d2de1f46192f67d44a44f7"
     },
@@ -1452,7 +1469,7 @@
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_32_a",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20240101",
       "sha": "75e126a2e4d8534b84a12bec5fec6b1f3eb7e62817a2bd6e7e95d6539f80d943"
     },
@@ -1485,7 +1502,7 @@
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_33",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20240101",
       "sha": "39f2006bd31ce04db15385a59fe77d90ae8838400d12661ee35960bbf8458202"
     },
@@ -1512,7 +1529,7 @@
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_34",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20240101",
       "sha": "7de9d31a9cc4fdd1f09d80c3561db365c85b5de9a29aadf3d821d107ae9f1e70"
     },
@@ -1549,7 +1566,7 @@
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_35",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20240101",
       "sha": "f6717c06accc3e6c5d6dbdb6b3310ffd55003b6fcfdf56467490644e3ddbcd1b"
     },
@@ -1572,7 +1589,7 @@
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_36",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20240101",
       "sha": "f8778c0a33275992828694f7c1f0d9e6195f67231cfdfd4e59f54777cd30b1a5"
     },
@@ -1607,7 +1624,7 @@
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_37",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20240101",
       "sha": "8f212cfa09716729681c69fb194e8a74e155e01cdf7f660c6ac3bf36b993d839"
     },
@@ -1640,7 +1657,7 @@
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_38",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20240101",
       "sha": "ce35265811119baf31582b494c00eb2326458fe2bd8c104a909938962159975e"
     },
@@ -1675,7 +1692,7 @@
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_39",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20240101",
       "sha": "aa9164474b4af937a4304e270365ffe7cef66809c87e0f2cf6c8ff99edaeed59"
     },
@@ -1694,7 +1711,7 @@
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_39_a",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20240101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -1713,7 +1730,7 @@
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_40",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20240101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -1736,7 +1753,7 @@
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_41",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20240101",
       "sha": "efbde6aa07d23afd7f4acdc1da81e250ccd1ee8d2e8c3fe05d90ed19ed6140f9"
     },
@@ -1763,7 +1780,7 @@
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_41_a",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20240101",
       "sha": "ee337035fe9a5ab68c99f8ce056a7b1fa5165650db59a53ebed3a2b6481b8dbd"
     },
@@ -1786,7 +1803,7 @@
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_42",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20240101",
       "sha": "12c5d6f696e100f8a65b4b18dfc82d95049e4e63fb0076cf92b25dd10f6a5ba7"
     },
@@ -1835,7 +1852,7 @@
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_43",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20240101",
       "sha": "7f899742e9efdfe1645d379e30470884a2e3d100391531b68988cf9f4a4a742f"
     },
@@ -1858,7 +1875,7 @@
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_44",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20240101",
       "sha": "18b6de519bfc09da66b27d47b00e6f4f8f55fa3883fbfe910dc3cf132afbadeb"
     },
@@ -1881,7 +1898,7 @@
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_45",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20240101",
       "sha": "92ae6f18a3776c07fb4eda93177d619f279fa5216a26534e7174146fbd59afe4"
     },
@@ -1934,7 +1951,7 @@
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_46",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20240101",
       "sha": "45ed5d28d745247dfdef54bc6974adf87c61309879d9be5c4d6362662a6f751b"
     },
@@ -1965,7 +1982,7 @@
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_47",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20240101",
       "sha": "55137df1b2e5113b62713bdb9e5616860c5052f558f549228be0b99292357088"
     },
@@ -1984,7 +2001,7 @@
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_48_49",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20240101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -2007,7 +2024,7 @@
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_50",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20240101",
       "sha": "b26aceccee46aaf3af45b43caaee2c4e91bc2a1c802245a97797acda2fc458bf"
     },
@@ -2026,7 +2043,7 @@
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_51",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20240101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -2045,7 +2062,7 @@
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_52",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20240101",
       "sha": "b4935894c8ce16bde67bbffc672428b1533c4f1e1e8b1ce21a2933183db6bfa5"
     },
@@ -2082,7 +2099,7 @@
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_53",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20240101",
       "sha": "0d004c9f50370176d179303d75561863fc4f6314127beb35c9d0d74161bf83dc"
     },
@@ -2101,7 +2118,7 @@
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_54",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20240101",
       "sha": "3fe67e284cb3d08ec358c5d4fd0ec019d93b6d91755ad1e2ef921a6c1eede863"
     },
@@ -2120,7 +2137,7 @@
       ],
       "stand": "2024-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1974/11_11_11/de#art_55",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20240101",
       "sha": "a97726632a7577d117be7c08255fef4dfdb400594445a34e458f6dcabfd6d206"
     }

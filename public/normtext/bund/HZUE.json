@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-08-29",
+  "erzeugt": "2026-09-12",
   "eintraege": [
     {
       "id": "bund/HZUE/art_1",
@@ -20,7 +20,7 @@
       ],
       "stand": "2023-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2809_2809_2809/de#art_1",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230612",
       "sha": "db143990884546e3fcffe0229da8e5a754f790bc595c3e73d4702df99d26d1fc"
     },
@@ -43,7 +43,7 @@
       ],
       "stand": "2023-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2809_2809_2809/de#art_2",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230612",
       "sha": "31d109766951d9168dfa33096ff4347fc03be563ba27e77f2e05c8633224d1a3"
     },
@@ -66,7 +66,7 @@
       ],
       "stand": "2023-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2809_2809_2809/de#art_3",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230612",
       "sha": "8520028d81a014d532a6d81985fbd93fa88e8a014e985400643e1100d030510d"
     },
@@ -85,7 +85,7 @@
       ],
       "stand": "2023-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2809_2809_2809/de#art_4",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230612",
       "sha": "7efa33152ab294a1f676870e57d4f9e51caf8242c84fb41bdd7589d2eccb540b"
     },
@@ -103,11 +103,13 @@
           "items": [
             {
               "marke": "a",
-              "text": "entweder in einer der Formen, die das Recht des ersuchten Staates für die Zustellung der in seinem Hoheitsgebiet ausgestellten Schriftstücke an dort befindliche Personen vorschreibt, oder"
+              "text": "entweder in einer der Formen, die das Recht des ersuchten Staates für die Zustellung der in seinem Hoheitsgebiet ausgestellten Schriftstücke an dort befindliche Personen vorschreibt, oder",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "in einer besonderen, von der ersuchenden Stelle gewünschten Form, es sei denn, dass diese Form mit dem Recht des ersuchten Staates unvereinbar ist."
+              "text": "in einer besonderen, von der ersuchenden Stelle gewünschten Form, es sei denn, dass diese Form mit dem Recht des ersuchten Staates unvereinbar ist.",
+              "trenner": ")"
             }
           ]
         },
@@ -126,9 +128,9 @@
       ],
       "stand": "2023-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2809_2809_2809/de#art_5",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230612",
-      "sha": "69890d82d5ef3e4b66de1649209a304b0d785b3ba0fcdd391b25a1ba2ce034c0"
+      "sha": "02f2b32461ff1569c07ce79105a0438b7e344542f65522291870465fba78fc27"
     },
     {
       "id": "bund/HZUE/art_6",
@@ -157,7 +159,7 @@
       ],
       "stand": "2023-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2809_2809_2809/de#art_6",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230612",
       "sha": "44b3d6e34ed0edbcff03bf84ac62d4409f23eaf0903df19c3a8ee5b285d32638"
     },
@@ -180,7 +182,7 @@
       ],
       "stand": "2023-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2809_2809_2809/de#art_7",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230612",
       "sha": "fcca611bdc02384c676247d8917fc38338107225320e0e89a103ea5a49c0b936"
     },
@@ -203,7 +205,7 @@
       ],
       "stand": "2023-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2809_2809_2809/de#art_8",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230612",
       "sha": "c1fe38ba0afaa05f994153ebfb799a8d0a87dac3a611b5a922b1c9c732ef92fc"
     },
@@ -226,7 +228,7 @@
       ],
       "stand": "2023-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2809_2809_2809/de#art_9",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230612",
       "sha": "44582e3e89686e7b7b9c7262166b5b5b6ab182afe0ff59dc34048210556bee54"
     },
@@ -244,24 +246,27 @@
           "items": [
             {
               "marke": "a",
-              "text": "dass gerichtliche Schriftstücke im Ausland befindlichen Personen unmittelbar durch die Post übersandt werden dürfen,"
+              "text": "dass gerichtliche Schriftstücke im Ausland befindlichen Personen unmittelbar durch die Post übersandt werden dürfen,",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "dass Justizbeamte, andere Beamte oder sonst zuständige Personen des Ursprungsstaats Zustellungen unmittelbar durch Justizbeamte, andere Beamte oder sonst zuständige Personen des Bestimmungsstaats bewirken lassen dürfen,"
+              "text": "dass Justizbeamte, andere Beamte oder sonst zuständige Personen des Ursprungsstaats Zustellungen unmittelbar durch Justizbeamte, andere Beamte oder sonst zuständige Personen des Bestimmungsstaats bewirken lassen dürfen,",
+              "trenner": ")"
             },
             {
               "marke": "c",
-              "text": "dass jeder an einem gerichtlichen Verfahren Beteiligte Zustellungen gerichtlicher Schriftstücke unmittelbar durch Justizbeamte, andere Beamte oder sonst zuständige Personen des Bestimmungsstaats bewirken lassen darf."
+              "text": "dass jeder an einem gerichtlichen Verfahren Beteiligte Zustellungen gerichtlicher Schriftstücke unmittelbar durch Justizbeamte, andere Beamte oder sonst zuständige Personen des Bestimmungsstaats bewirken lassen darf.",
+              "trenner": ")"
             }
           ]
         }
       ],
       "stand": "2023-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2809_2809_2809/de#art_10",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230612",
-      "sha": "74faba5384faf2e954ece40cf3590211e2322fe689c70b6694adfc8b12584438"
+      "sha": "46d1b21e3564829183da58d6afd98cf98d5e99be5d9ab73d249ca0f08533c1d5"
     },
     {
       "id": "bund/HZUE/art_11",
@@ -278,7 +283,7 @@
       ],
       "stand": "2023-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2809_2809_2809/de#art_11",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230612",
       "sha": "baeab29ba0260ca26939238d61633e82d1231b23eb7fb00fa151c44d3da8ed3f"
     },
@@ -300,20 +305,22 @@
           "items": [
             {
               "marke": "a",
-              "text": "dass bei der Zustellung ein Justizbeamter oder eine nach dem Recht des Bestimmungsstaats zuständige Person mitwirkt,"
+              "text": "dass bei der Zustellung ein Justizbeamter oder eine nach dem Recht des Bestimmungsstaats zuständige Person mitwirkt,",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "dass eine besondere Form der Zustellung angewendet wird."
+              "text": "dass eine besondere Form der Zustellung angewendet wird.",
+              "trenner": ")"
             }
           ]
         }
       ],
       "stand": "2023-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2809_2809_2809/de#art_12",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230612",
-      "sha": "5c7b8b435b406a8a8e5d8a86b1240b607119e60f0a1d6efe4cc682efb44387fb"
+      "sha": "00c71a14d7d0f2652aec441082744f30bab4541b3cfcd99b7cceeb80e1a5b316"
     },
     {
       "id": "bund/HZUE/art_13",
@@ -338,7 +345,7 @@
       ],
       "stand": "2023-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2809_2809_2809/de#art_13",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230612",
       "sha": "4a328767cb06d6c10150c75251de4fe45258ba677244b618b32dba45771114bb"
     },
@@ -357,7 +364,7 @@
       ],
       "stand": "2023-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2809_2809_2809/de#art_14",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230612",
       "sha": "258d402a6d26117bd9aadca9b0c165ea92909d66a4b9d1c1e49e643d5cd08e9b"
     },
@@ -375,11 +382,13 @@
           "items": [
             {
               "marke": "a",
-              "text": "dass das Schriftstück in einer der Formen zugestellt worden ist, die das Recht des ersuchten Staates für die Zustellung der in seinem Hoheitsgebiet ausgestellten Schriftstücke an dort befindliche Personen vorschreibt, oder"
+              "text": "dass das Schriftstück in einer der Formen zugestellt worden ist, die das Recht des ersuchten Staates für die Zustellung der in seinem Hoheitsgebiet ausgestellten Schriftstücke an dort befindliche Personen vorschreibt, oder",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "dass das Schriftstück entweder dem Beklagten selbst oder aber in seiner Wohnung nach einem anderen in diesem Übereinkommen vorgesehenen Verfahren übergeben worden ist"
+              "text": "dass das Schriftstück entweder dem Beklagten selbst oder aber in seiner Wohnung nach einem anderen in diesem Übereinkommen vorgesehenen Verfahren übergeben worden ist",
+              "trenner": ")"
             }
           ]
         },
@@ -393,15 +402,18 @@
           "items": [
             {
               "marke": "a",
-              "text": "dass das Schriftstück nach einem in diesem Übereinkommen vorgesehenen Verfahren übermittelt worden ist,"
+              "text": "dass das Schriftstück nach einem in diesem Übereinkommen vorgesehenen Verfahren übermittelt worden ist,",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "dass seit der Absendung des Schriftstücks eine Frist verstrichen ist, die der Richter nach den Umständen des Falles als angemessen erachtet und die mindestens sechs Monate betragen muss, und"
+              "text": "dass seit der Absendung des Schriftstücks eine Frist verstrichen ist, die der Richter nach den Umständen des Falles als angemessen erachtet und die mindestens sechs Monate betragen muss, und",
+              "trenner": ")"
             },
             {
               "marke": "c",
-              "text": "dass trotz aller zumutbaren Schritte bei den zuständigen Behörden des ersuchten Staates ein Zeugnis nicht zu erlangen war."
+              "text": "dass trotz aller zumutbaren Schritte bei den zuständigen Behörden des ersuchten Staates ein Zeugnis nicht zu erlangen war.",
+              "trenner": ")"
             }
           ]
         },
@@ -412,9 +424,9 @@
       ],
       "stand": "2023-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2809_2809_2809/de#art_15",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230612",
-      "sha": "e1fdd3beccb9bc305c6b8059a500fe8e22b123e371d48141ba0a97c214b54b97"
+      "sha": "67453619e0abb2f9468268423662e768c458ec4b48b749d5fe88c459c86962a5"
     },
     {
       "id": "bund/HZUE/art_16",
@@ -430,11 +442,13 @@
           "items": [
             {
               "marke": "a",
-              "text": "dass der Beklagte ohne sein Verschulden nicht so rechtzeitig Kenntnis von dem Schriftstück erlangt hat, dass er sich hätte verteidigen können, und nicht so rechtzeitig Kenntnis von der Entscheidung, dass er sie hätte anfechten können, und"
+              "text": "dass der Beklagte ohne sein Verschulden nicht so rechtzeitig Kenntnis von dem Schriftstück erlangt hat, dass er sich hätte verteidigen können, und nicht so rechtzeitig Kenntnis von der Entscheidung, dass er sie hätte anfechten können, und",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "dass die Verteidigung des Beklagten nicht von vornherein aussichtslos scheint."
+              "text": "dass die Verteidigung des Beklagten nicht von vornherein aussichtslos scheint.",
+              "trenner": ")"
             }
           ]
         },
@@ -453,9 +467,9 @@
       ],
       "stand": "2023-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2809_2809_2809/de#art_16",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230612",
-      "sha": "861ff5a0543d2b60bdfe3c398c731e4e3f2d8c5e5e3f71eb26ef2bc0bd3cea9e"
+      "sha": "6ca61837689aea43916cab5be36c7a4d88d5c694a9d3e477f9fdcd00773a43b9"
     },
     {
       "id": "bund/HZUE/art_17",
@@ -472,7 +486,7 @@
       ],
       "stand": "2023-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2809_2809_2809/de#art_17",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230612",
       "sha": "0cc8eda34d6d3a695ac7ea68ff09dc717316484d5b74ddd42406517c8ea92549"
     },
@@ -499,7 +513,7 @@
       ],
       "stand": "2023-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2809_2809_2809/de#art_18",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230612",
       "sha": "3b57f3b02217ca47992a2cf262db71635021eb4852c003f6e19d43cb6fd03207"
     },
@@ -518,7 +532,7 @@
       ],
       "stand": "2023-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2809_2809_2809/de#art_19",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230612",
       "sha": "a11ee85b8bc77d92cacca40e80ed48af0c6ec9e35c0719ffc7999e5e0ad222f8"
     },
@@ -536,28 +550,32 @@
           "items": [
             {
               "marke": "a",
-              "text": "Artikel 3 Absatz 2 in Bezug auf das Erfordernis, die Schriftstücke in zwei Exemplaren zu übermitteln,"
+              "text": "Artikel 3 Absatz 2 in Bezug auf das Erfordernis, die Schriftstücke in zwei Exemplaren zu übermitteln,",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "Artikel 5 Absatz 3 und Artikel 7 in Bezug auf die Verwendung von Sprachen,"
+              "text": "Artikel 5 Absatz 3 und Artikel 7 in Bezug auf die Verwendung von Sprachen,",
+              "trenner": ")"
             },
             {
               "marke": "c",
-              "text": "Artikel 5 Absatz 4,"
+              "text": "Artikel 5 Absatz 4,",
+              "trenner": ")"
             },
             {
               "marke": "d",
-              "text": "Artikel 12 Absatz 2."
+              "text": "Artikel 12 Absatz 2.",
+              "trenner": ")"
             }
           ]
         }
       ],
       "stand": "2023-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2809_2809_2809/de#art_20",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230612",
-      "sha": "424887b4a52f4b5cb07a85e4cf52abe09121ad97354293bf3709d0fc87565601"
+      "sha": "4fd5864b1f6e90edb6639d5512e975464f457e6f43ca0f3b5680cb666b534405"
     },
     {
       "id": "bund/HZUE/art_21",
@@ -573,15 +591,18 @@
           "items": [
             {
               "marke": "a",
-              "text": "die Bezeichnung der Behörden nach den Artikeln 2 und 18,"
+              "text": "die Bezeichnung der Behörden nach den Artikeln 2 und 18,",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "die Bezeichnung der Behörde, die das in Artikel 6 vorgesehene Zustellungszeugnis ausstellt,"
+              "text": "die Bezeichnung der Behörde, die das in Artikel 6 vorgesehene Zustellungszeugnis ausstellt,",
+              "trenner": ")"
             },
             {
               "marke": "c",
-              "text": "die Bezeichnung der Behörde, die Schriftstücke entgegennimmt, die nach Artikel 9 auf konsularischem Weg übermittelt werden."
+              "text": "die Bezeichnung der Behörde, die Schriftstücke entgegennimmt, die nach Artikel 9 auf konsularischem Weg übermittelt werden.",
+              "trenner": ")"
             }
           ]
         },
@@ -591,24 +612,27 @@
           "items": [
             {
               "marke": "a",
-              "text": "seinen Widerspruch gegen die Benutzung der in den Artikeln 8 und 10 vorgesehenen Übermittlungswege,"
+              "text": "seinen Widerspruch gegen die Benutzung der in den Artikeln 8 und 10 vorgesehenen Übermittlungswege,",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "die in den Artikeln 15 Absatz 2 und 16 Absatz 3 vorgesehenen Erklärungen,"
+              "text": "die in den Artikeln 15 Absatz 2 und 16 Absatz 3 vorgesehenen Erklärungen,",
+              "trenner": ")"
             },
             {
               "marke": "c",
-              "text": "jede Änderung der vorstehend erwähnten Behördenbezeichnungen, Widersprüche und Erklärungen."
+              "text": "jede Änderung der vorstehend erwähnten Behördenbezeichnungen, Widersprüche und Erklärungen.",
+              "trenner": ")"
             }
           ]
         }
       ],
       "stand": "2023-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2809_2809_2809/de#art_21",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230612",
-      "sha": "952f7e17f74cd1f06e13635b6a949d22e512fc954c872287c7f417c29dda300d"
+      "sha": "250d1a7b99359f3d53c744eeea7313f8346c4dd61e9757bc617126a2de1dd7d7"
     },
     {
       "id": "bund/HZUE/art_22",
@@ -625,7 +649,7 @@
       ],
       "stand": "2023-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2809_2809_2809/de#art_22",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230612",
       "sha": "cd88eb7ca7a5adaf7d659b2a05505c596858e1924f62d80c50064e68fbf157d1"
     },
@@ -648,7 +672,7 @@
       ],
       "stand": "2023-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2809_2809_2809/de#art_23",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230612",
       "sha": "d1227532efae667befed6f161fb85989edfac18fc4c8e4012bd1e076974aafd7"
     },
@@ -667,7 +691,7 @@
       ],
       "stand": "2023-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2809_2809_2809/de#art_24",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230612",
       "sha": "25fbd37ff573b483610783621efa9699dc1b352e944b55b2f5d7405b4622257f"
     },
@@ -686,7 +710,7 @@
       ],
       "stand": "2023-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2809_2809_2809/de#art_25",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230612",
       "sha": "4696381e18e3f6b47e340488f16fd520631fcd11276a52bb9117d413ac17ac4a"
     },
@@ -709,7 +733,7 @@
       ],
       "stand": "2023-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2809_2809_2809/de#art_26",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230612",
       "sha": "3ee64b045131835fbbc34c16b0730cc6d635eed38ed249fc6c5fc4b01365835a"
     },
@@ -732,7 +756,7 @@
       ],
       "stand": "2023-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2809_2809_2809/de#art_27",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230612",
       "sha": "e7357f9d440fff6b5fcefdcc9e14ae9dff589738bda07bd211eae3fa0fbe4168"
     },
@@ -759,7 +783,7 @@
       ],
       "stand": "2023-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2809_2809_2809/de#art_28",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230612",
       "sha": "0739de6c1d58e620e15fbcc8dee7799d16697db2c5089e4b658c2cefc4154d4d"
     },
@@ -786,7 +810,7 @@
       ],
       "stand": "2023-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2809_2809_2809/de#art_29",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230612",
       "sha": "c23799f94c14d12db35f0fce2e7c3f9dd5cb2dd990d9aafb8de8cb85d63643fb"
     },
@@ -821,7 +845,7 @@
       ],
       "stand": "2023-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2809_2809_2809/de#art_30",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230612",
       "sha": "e59738fe38dcac12cb048523bf60c28308d03138f5d2aac6d04454476dd327d7"
     },
@@ -839,36 +863,42 @@
           "items": [
             {
               "marke": "a",
-              "text": "jede Unterzeichnung und Ratifikation nach Artikel 26;"
+              "text": "jede Unterzeichnung und Ratifikation nach Artikel 26;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "den Tag, an dem dieses Übereinkommen nach Artikel 27 Absatz 1 in Kraft tritt;"
+              "text": "den Tag, an dem dieses Übereinkommen nach Artikel 27 Absatz 1 in Kraft tritt;",
+              "trenner": ")"
             },
             {
               "marke": "c",
-              "text": "jeden Beitritt nach Artikel 28 und den Tag, an dem er wirksam wird;"
+              "text": "jeden Beitritt nach Artikel 28 und den Tag, an dem er wirksam wird;",
+              "trenner": ")"
             },
             {
               "marke": "d",
-              "text": "jede Erstreckung nach Artikel 29 und den Tag, an dem sie wirksam wird;"
+              "text": "jede Erstreckung nach Artikel 29 und den Tag, an dem sie wirksam wird;",
+              "trenner": ")"
             },
             {
               "marke": "e",
-              "text": "jede Behördenbezeichnung, jeden Widerspruch und jede Erklärung nach Artikel 21;"
+              "text": "jede Behördenbezeichnung, jeden Widerspruch und jede Erklärung nach Artikel 21;",
+              "trenner": ")"
             },
             {
               "marke": "f",
-              "text": "jede Kündigung nach Artikel 30 Absatz 3."
+              "text": "jede Kündigung nach Artikel 30 Absatz 3.",
+              "trenner": ")"
             }
           ]
         }
       ],
       "stand": "2023-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2809_2809_2809/de#art_31",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230612",
-      "sha": "fedd6351efca2a7baeda00336404104446ab0f988a4bf6b4c2282a4fe17de98a"
+      "sha": "c5cab82484fd5fe1d0148c75959381f9831cb97bae861bb6032fa3caba7d12a5"
     },
     {
       "id": "bund/HZUE/annex_u1",
@@ -943,7 +973,8 @@
           "items": [
             {
               "marke": "a",
-              "text": "in einer der gesetzlichen Formen (Art. 5 Abs. 1 Bst. a) 1 ."
+              "text": "in einer der gesetzlichen Formen (Art. 5 Abs. 1 Bst. a) 1 .",
+              "trenner": ")"
             }
           ]
         },
@@ -953,7 +984,8 @@
           "items": [
             {
               "marke": "b",
-              "text": "in der folgenden besonderen Form (Art. 5 Abs. 1 Bst. b) 1 :"
+              "text": "in der folgenden besonderen Form (Art. 5 Abs. 1 Bst. b) 1 :",
+              "trenner": ")"
             }
           ]
         },
@@ -963,7 +995,8 @@
           "items": [
             {
               "marke": "c",
-              "text": "gegebenenfalls durch einfache Übergabe (Art. 5 Abs. 2) 1 ."
+              "text": "gegebenenfalls durch einfache Übergabe (Art. 5 Abs. 2) 1 .",
+              "trenner": ")"
             }
           ]
         },
@@ -1078,47 +1111,56 @@
             {
               "marke": "–",
               "text": "am (Datum)",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ""
             },
             {
               "marke": "–",
               "text": "le (date)",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ""
             },
             {
               "marke": "–",
               "text": "in (Ort, Strasse, Nummer)",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ""
             },
             {
               "marke": "–",
               "text": "à (localité, rue, numéro)",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ""
             },
             {
               "marke": "–",
               "text": "in einer der folgenden Formen nach Artikel 5:",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ""
             },
             {
               "marke": "–",
               "text": "dans une des formes suivantes prévues à l’art. 5:",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ""
             },
             {
               "marke": "a",
               "text": "in einer der gesetzlichen Formen (Art. 5 Abs. 1 Bst. a) 1 .",
-              "tiefe": 2
+              "tiefe": 2,
+              "trenner": ")"
             },
             {
               "marke": "b",
               "text": "in der folgenden besonderen Form 1 :",
-              "tiefe": 2
+              "tiefe": 2,
+              "trenner": ")"
             },
             {
               "marke": "c",
               "text": "durch einfache Übergabe 1 .",
-              "tiefe": 2
+              "tiefe": 2,
+              "trenner": ")"
             }
           ]
         },
@@ -1159,22 +1201,26 @@
             {
               "marke": "[tab]",
               "text": "Die in dem Ersuchen erwähnten Schriftstücke sind übergeben worden an:",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ""
             },
             {
               "marke": "[tab]",
               "text": "Les documents mentionnés dans la demande ont été remis à:",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ""
             },
             {
               "marke": "–",
               "text": "(Name und Stellung der Person)",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ""
             },
             {
               "marke": "–",
               "text": "Verwandtschafts-, Arbeits- oder sonstiges Verhältnis zum Zustellungsempfänger:",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ""
             },
             {
               "marke": "2",
@@ -1418,9 +1464,9 @@
       ],
       "stand": "2023-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2809_2809_2809/de#annex_u1",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230612",
-      "sha": "abb090d7e5598c4626beb57fafa6e591820263c1db8e2c7c1499cafad645016c"
+      "sha": "5c71af41bf6be17dcab30bfc8b1e0f5b90e5f65edac1bae97d50cff93ba2d9c4"
     },
     {
       "id": "bund/HZUE/scope_u1",
@@ -2207,7 +2253,7 @@
       ],
       "stand": "2023-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2809_2809_2809/de#scope_u1",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230612",
       "sha": "f7c6c27701194a8233d0c0358e6bddf89f144f3d890af6d6ddffd10dd08973cf"
     },
@@ -2304,7 +2350,7 @@
       ],
       "stand": "2023-06-12",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2809_2809_2809/de#decl_u2",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230612",
       "sha": "9853e5672cd608a8e3965a2667f89bd9665781d25b58796e5ef5beff6ebfe868"
     }

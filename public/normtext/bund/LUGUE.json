@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-09-04",
+  "erzeugt": "2026-09-12",
   "eintraege": [
     {
       "id": "bund/LUGUE/art_1",
@@ -19,19 +19,23 @@
           "items": [
             {
               "marke": "a",
-              "text": "den Personenstand, die Rechts- und Handlungsfähigkeit sowie die gesetzliche Vertretung von natürlichen Personen, die ehelichen Güterstände, das Gebiet des Erbrechts einschliesslich des Testamentsrechts;"
+              "text": "den Personenstand, die Rechts- und Handlungsfähigkeit sowie die gesetzliche Vertretung von natürlichen Personen, die ehelichen Güterstände, das Gebiet des Erbrechts einschliesslich des Testamentsrechts;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "Konkurse, Vergleiche und ähnliche Verfahren;"
+              "text": "Konkurse, Vergleiche und ähnliche Verfahren;",
+              "trenner": ")"
             },
             {
               "marke": "c",
-              "text": "die soziale Sicherheit;"
+              "text": "die soziale Sicherheit;",
+              "trenner": ")"
             },
             {
               "marke": "d",
-              "text": "die Schiedsgerichtsbarkeit."
+              "text": "die Schiedsgerichtsbarkeit.",
+              "trenner": ")"
             }
           ]
         },
@@ -42,9 +46,9 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_1",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
-      "sha": "ee95643f96d7a3ca8e9df291b05ba65717bbd046474ff3c5199eeb9c61414bc1"
+      "sha": "b27407a2763984d1507e1ee316a234be36a8b9cfa9230a5370883d2aba59a6bd"
     },
     {
       "id": "bund/LUGUE/art_2",
@@ -65,7 +69,7 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_2",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
       "sha": "c21b2f4265f419105b37820d086dc88bcf690108fdde36ad18523262507b0fc4"
     },
@@ -88,7 +92,7 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_3",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
       "sha": "7476785b60792346470a7a9a99d67c4c30b00cf75c2f7c306b7c03a110473db0"
     },
@@ -111,7 +115,7 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_4",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
       "sha": "596b8858701b2a29bf8457cdf307cb760c6066a16b902e3a7ca86356c5557334"
     },
@@ -133,21 +137,25 @@
             },
             {
               "marke": "b",
-              "text": "im Sinne dieser Vorschrift – und sofern nichts anderes vereinbart worden ist – ist der Erfüllungsort der Verpflichtung:"
+              "text": "im Sinne dieser Vorschrift – und sofern nichts anderes vereinbart worden ist – ist der Erfüllungsort der Verpflichtung:",
+              "trenner": ")"
             },
             {
               "marke": "–",
               "text": "für den Verkauf beweglicher Sachen der Ort in einem durch dieses Übereinkommen gebundenen Staat, an dem sie nach dem Vertrag geliefert worden sind oder hätten geliefert werden müssen",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ""
             },
             {
               "marke": "–",
               "text": "für die Erbringung von Dienstleistungen der Ort in einem durch dieses Übereinkommen gebundenen Staat, an dem sie nach dem Vertrag erbracht worden sind oder hätten erbracht werden müssen",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ""
             },
             {
               "marke": "c",
-              "text": "ist Buchstabe b nicht anwendbar, so gilt Buchstabe a;"
+              "text": "ist Buchstabe b nicht anwendbar, so gilt Buchstabe a;",
+              "trenner": ")"
             }
           ]
         },
@@ -157,15 +165,18 @@
           "items": [
             {
               "marke": "a",
-              "text": "vor dem Gericht des Ortes, an dem der Unterhaltsberechtigte seinen Wohnsitz oder seinen gewöhnlichen Aufenthalt hat, oder"
+              "text": "vor dem Gericht des Ortes, an dem der Unterhaltsberechtigte seinen Wohnsitz oder seinen gewöhnlichen Aufenthalt hat, oder",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "im Falle einer Unterhaltssache, über die im Zusammenhang mit einem Verfahren in Bezug auf den Personenstand zu entscheiden ist, vor dem nach seinem Recht für dieses Verfahren zuständigen Gericht, es sei denn, diese Zuständigkeit beruht lediglich auf der Staatsangehörigkeit einer der Parteien, oder"
+              "text": "im Falle einer Unterhaltssache, über die im Zusammenhang mit einem Verfahren in Bezug auf den Personenstand zu entscheiden ist, vor dem nach seinem Recht für dieses Verfahren zuständigen Gericht, es sei denn, diese Zuständigkeit beruht lediglich auf der Staatsangehörigkeit einer der Parteien, oder",
+              "trenner": ")"
             },
             {
               "marke": "c",
-              "text": "im Falle einer Unterhaltssache, über die im Zusammenhang mit einem Verfahren in Bezug auf die elterliche Verantwortung zu entscheiden ist, vor dem nach seinem Recht für dieses Verfahren zuständigen Gericht, es sei denn, diese Zuständigkeit beruht lediglich auf der Staatsangehörigkeit einer der Parteien;"
+              "text": "im Falle einer Unterhaltssache, über die im Zusammenhang mit einem Verfahren in Bezug auf die elterliche Verantwortung zu entscheiden ist, vor dem nach seinem Recht für dieses Verfahren zuständigen Gericht, es sei denn, diese Zuständigkeit beruht lediglich auf der Staatsangehörigkeit einer der Parteien;",
+              "trenner": ")"
             }
           ]
         },
@@ -191,11 +202,13 @@
           "items": [
             {
               "marke": "a",
-              "text": "mit Arrest belegt worden ist, um die Zahlung zu gewährleisten, oder"
+              "text": "mit Arrest belegt worden ist, um die Zahlung zu gewährleisten, oder",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "mit Arrest hätte belegt werden können, jedoch dafür eine Bürgschaft oder eine andere Sicherheit geleistet worden ist;"
+              "text": "mit Arrest hätte belegt werden können, jedoch dafür eine Bürgschaft oder eine andere Sicherheit geleistet worden ist;",
+              "trenner": ")"
             }
           ]
         },
@@ -206,9 +219,9 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_5",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
-      "sha": "939517fb957ba2cd58132e9bf5dd3ff174c6957908968ecc24a7e7f817a51bf1"
+      "sha": "ce283498adbd9d0a3f94729717d276a000c73435d84d7efab5afc77315138f98"
     },
     {
       "id": "bund/LUGUE/art_6",
@@ -243,7 +256,7 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_6",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
       "sha": "a5ef3392ec70b5be9ff7da2a028118e98889c26063ccf63232913c35f24b73f7"
     },
@@ -262,7 +275,7 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_7",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
       "sha": "911c3e19efe245dfe3f6d830e656655dd6225ef4eade5f862bc69f553d7a0241"
     },
@@ -281,7 +294,7 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_8",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
       "sha": "75f1056a0e03344c2d6ee8187e9fafb0f8a589a10d72dddefc146c614a464e22"
     },
@@ -299,15 +312,18 @@
           "items": [
             {
               "marke": "a",
-              "text": "vor den Gerichten des Staates, in dem er seinen Wohnsitz hat;"
+              "text": "vor den Gerichten des Staates, in dem er seinen Wohnsitz hat;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "in einem anderen durch dieses Übereinkommen gebundenen Staat bei Klagen des Versicherungsnehmers, des Versicherten oder des Begünstigten vor dem Gericht des Ortes, an dem der Kläger seinen Wohnsitz hat; oder"
+              "text": "in einem anderen durch dieses Übereinkommen gebundenen Staat bei Klagen des Versicherungsnehmers, des Versicherten oder des Begünstigten vor dem Gericht des Ortes, an dem der Kläger seinen Wohnsitz hat; oder",
+              "trenner": ")"
             },
             {
               "marke": "c",
-              "text": "falls es sich um einen Mitversicherer handelt, vor dem Gericht eines durch dieses Übereinkommen gebundenen Staates, bei dem der federführende Versicherer verklagt wird."
+              "text": "falls es sich um einen Mitversicherer handelt, vor dem Gericht eines durch dieses Übereinkommen gebundenen Staates, bei dem der federführende Versicherer verklagt wird.",
+              "trenner": ")"
             }
           ]
         },
@@ -318,9 +334,9 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_9",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
-      "sha": "3d45ac5977ae4bbc8ba78f24e14a4e932698ea209f78d5f1826ef2f3f30fabbc"
+      "sha": "c2c59368a02b75e978da4b6f04893235a6f8c200cd7dc3b53a30f9f8492e13f3"
     },
     {
       "id": "bund/LUGUE/art_10",
@@ -337,7 +353,7 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_10",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
       "sha": "082c0741edf43b26a8e10200f066504c068c1737993bfe2a8ee08636b150eba2"
     },
@@ -364,7 +380,7 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_11",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
       "sha": "0fd9d346403c27c31efc642ccb400b55586cee0d8ece139f32dc6192f77b1304"
     },
@@ -387,7 +403,7 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_12",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
       "sha": "ebc2b673a7e62d3458a1de921a3b944968bceb80b2a854d94af4df0949b4318b"
     },
@@ -428,7 +444,7 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_13",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
       "sha": "3ad14ec675fb10f73ac33d67382a470b7f517403dd4a1e5a40f57e064a60d071"
     },
@@ -451,12 +467,14 @@
             {
               "marke": "a",
               "text": "an Seeschiffen, Anlagen vor der Küste und auf hoher See oder Luftfahrzeugen aus Gefahren, die mit ihrer Verwendung zu gewerblichen Zwecken verbunden sind,",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ")"
             },
             {
               "marke": "b",
               "text": "an Transportgütern, ausgenommen Reisegepäck der Passagiere, wenn diese Güter ausschliesslich oder zum Teil mit diesen Schiffen oder Luftfahrzeugen befördert werden;",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ")"
             },
             {
               "marke": "2",
@@ -465,12 +483,14 @@
             {
               "marke": "a",
               "text": "aus der Verwendung oder dem Betrieb von Seeschiffen, Anlagen oder Luftfahrzeugen gemäss Nummer 1 Buchstabe a, es sei denn, dass – was die letztgenannten betrifft – nach den Rechtsvorschriften des durch dieses Übereinkommen gebundenen Staates, in dem das Luftfahrzeug eingetragen ist, Gerichtsstandsvereinbarungen für die Versicherung solcher Risiken untersagt sind,",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ")"
             },
             {
               "marke": "b",
               "text": "für Schäden, die durch Transportgüter während einer Beförderung im Sinne von Nummer 1 Buchstabe b verursacht werden;",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ")"
             },
             {
               "marke": "3",
@@ -489,9 +509,9 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_14",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
-      "sha": "d745ee1a738a5896efcb7e08515af1d6ce72b2167c99b696c61e805a626ed215"
+      "sha": "9afe058f92a3758fd6e53f1bd3a9b1f33458fe51266843f5b61c9bf32f716a03"
     },
     {
       "id": "bund/LUGUE/art_15",
@@ -507,15 +527,18 @@
           "items": [
             {
               "marke": "a",
-              "text": "wenn es sich um den Kauf beweglicher Sachen auf Teilzahlung handelt;"
+              "text": "wenn es sich um den Kauf beweglicher Sachen auf Teilzahlung handelt;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "wenn es sich um ein in Raten zurückzuzahlendes Darlehen oder ein anderes Kreditgeschäft handelt, das zur Finanzierung eines Kaufs derartiger Sachen bestimmt ist; oder"
+              "text": "wenn es sich um ein in Raten zurückzuzahlendes Darlehen oder ein anderes Kreditgeschäft handelt, das zur Finanzierung eines Kaufs derartiger Sachen bestimmt ist; oder",
+              "trenner": ")"
             },
             {
               "marke": "c",
-              "text": "in allen anderen Fällen, wenn der andere Vertragspartner in dem durch dieses Übereinkommen gebundenen Staat, in dessen Hoheitsgebiet der Verbraucher seinen Wohnsitz hat, eine berufliche oder gewerbliche Tätigkeit ausübt oder eine solche auf irgendeinem Wege auf diesen Staat oder auf mehrere Staaten, einschliesslich dieses Staates, ausrichtet und der Vertrag in den Bereich dieser Tätigkeit fällt."
+              "text": "in allen anderen Fällen, wenn der andere Vertragspartner in dem durch dieses Übereinkommen gebundenen Staat, in dessen Hoheitsgebiet der Verbraucher seinen Wohnsitz hat, eine berufliche oder gewerbliche Tätigkeit ausübt oder eine solche auf irgendeinem Wege auf diesen Staat oder auf mehrere Staaten, einschliesslich dieses Staates, ausrichtet und der Vertrag in den Bereich dieser Tätigkeit fällt.",
+              "trenner": ")"
             }
           ]
         },
@@ -530,9 +553,9 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_15",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
-      "sha": "abe42b335fc9a6f64609c2912a8a6a117359676445ea63161ec1a649ad38d11e"
+      "sha": "37b1656ea2919416a32d9dbe706a36c575f3fec6f9fd36beff033cf92850eb59"
     },
     {
       "id": "bund/LUGUE/art_16",
@@ -557,7 +580,7 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_16",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
       "sha": "f31691b206575a5c39d9055a25d16faebd881aa7d5aedc88465ab009d83b09b3"
     },
@@ -590,7 +613,7 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_17",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
       "sha": "6fab40828fcb9467fdb0622dbe851aa3318c3ae860f6d353a716c718af8cecd7"
     },
@@ -613,7 +636,7 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_18",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
       "sha": "ec8a963f5fad10f7f1828df7eaad302c1e37925773d1b80b22af4112f0f88a42"
     },
@@ -640,21 +663,23 @@
             {
               "marke": "a",
               "text": "vor dem Gericht des Ortes, an dem der Arbeitnehmer gewöhnlich seine Arbeit verrichtet oder zuletzt gewöhnlich verrichtet hat, oder",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ")"
             },
             {
               "marke": "b",
               "text": "wenn der Arbeitnehmer seine Arbeit gewöhnlich nicht in ein und demselben Staat verrichtet oder verrichtet hat, vor dem Gericht des Ortes, an dem sich die Niederlassung, die den Arbeitnehmer eingestellt hat, befindet bzw. befand.",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ")"
             }
           ]
         }
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_19",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
-      "sha": "76be1f1f1872d5d25e7f8f768c2ef23565c35ac50b57180125005eb0c60762db"
+      "sha": "9629c7f3b1bf5d878bb6e8d8dbb5613ce86e1cf26dc92bfa714f060d947ecc6d"
     },
     {
       "id": "bund/LUGUE/art_20",
@@ -675,7 +700,7 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_20",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
       "sha": "378bf22968b0eb07ed79b289839ecdd43cdad8aa35ae3c34ee55857aa28677a6"
     },
@@ -704,7 +729,7 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_21",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
       "sha": "f45a3ec9d9cd1a5d5738c7354d68a48882913eb0133210a4a81c6bcbad7f7322"
     },
@@ -745,7 +770,7 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_22",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
       "sha": "65afefc918e46d6ee4fde52140ac267fe999006a5079f616c0354acf723e5bde"
     },
@@ -763,15 +788,18 @@
           "items": [
             {
               "marke": "a",
-              "text": "schriftlich oder mündlich mit schriftlicher Bestätigung; oder"
+              "text": "schriftlich oder mündlich mit schriftlicher Bestätigung; oder",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "in einer Form, welche den Gepflogenheiten entspricht, die zwischen den Parteien entstanden sind; oder"
+              "text": "in einer Form, welche den Gepflogenheiten entspricht, die zwischen den Parteien entstanden sind; oder",
+              "trenner": ")"
             },
             {
               "marke": "c",
-              "text": "im internationalen Handel in einer Form, die einem Handelsbrauch entspricht, den die Parteien kannten oder kennen mussten und den Parteien von Verträgen dieser Art in dem betreffenden Geschäftszweig allgemein kennen und regelmässig beachten."
+              "text": "im internationalen Handel in einer Form, die einem Handelsbrauch entspricht, den die Parteien kannten oder kennen mussten und den Parteien von Verträgen dieser Art in dem betreffenden Geschäftszweig allgemein kennen und regelmässig beachten.",
+              "trenner": ")"
             }
           ]
         },
@@ -794,9 +822,9 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_23",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
-      "sha": "8c76fb50976c051a8dfbbe5e5a271b9db652a239cb282d11e3466bfb695a0acb"
+      "sha": "9035b16958613a0604a578cb8dc6c3ae8018e14b05aacfd26380178f942f9dc4"
     },
     {
       "id": "bund/LUGUE/art_24",
@@ -813,7 +841,7 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_24",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
       "sha": "addb0bfd40df54d044ec9c4bd30058f62301df388ffcb6ec99fa4f50f7778109"
     },
@@ -832,7 +860,7 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_25",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
       "sha": "d2d07719538c449d49e29cfda15ff6ac6ad4bee8c73250f3ef56a78843e56039"
     },
@@ -863,7 +891,7 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_26",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
       "sha": "17834737e246e6990b84fdb6d20fc25ed5e00b1b0f2794ca0ee52ad67c291a8a"
     },
@@ -886,7 +914,7 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_27",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
       "sha": "43b5883a7dba728ca5b2924572e0131852ac8467e129b1537bc2ca5afd1071dd"
     },
@@ -913,7 +941,7 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_28",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
       "sha": "25078d15080c77ee0c948a777dcb21ecd0b90945c9bd262a04797a1ec46eea3a"
     },
@@ -932,7 +960,7 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_29",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
       "sha": "0b0b7ba794d96fb1adf634449dc91b8e37d6051ba6b18d19a927dbfad9927d60"
     },
@@ -961,7 +989,7 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_30",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
       "sha": "9b43be2df08fa3d4920b9dc3b99343fe1c2279de131a886955f29feb1f10cd74"
     },
@@ -980,7 +1008,7 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_31",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
       "sha": "2871f418ea05c38cee2d9393f46848fa0205c2a64dbdf0b0958b885384017ad5"
     },
@@ -999,7 +1027,7 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_32",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
       "sha": "3f820f0b13e488c22425caf83d2b8495a29d48a263925ec9972253104fa29e58"
     },
@@ -1026,7 +1054,7 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_33",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
       "sha": "71b9d82c131d9d20ede1185a4c299fa453c184d56668b965950f0a761ed271a5"
     },
@@ -1063,7 +1091,7 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_34",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
       "sha": "f73670a3553247ba5f032ca3159e7eccd174cf8fcbb05b2f66d19f7565c828af"
     },
@@ -1090,7 +1118,7 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_35",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
       "sha": "d2397ced78c7fdbaeb844c08e9cbbf6bf90c7835ccbd019845ef44d5570d99cd"
     },
@@ -1109,7 +1137,7 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_36",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
       "sha": "b4214c6f2954d1f61537d3cf82e7b9d7793caeb7427c54abf90f6823c2a8fcd6"
     },
@@ -1132,7 +1160,7 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_37",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
       "sha": "7237b844b03cc879bae66c6697a036415a27c75e23df8c49c4c48a1093e986c6"
     },
@@ -1155,7 +1183,7 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_38",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
       "sha": "c87a119361ca8111687a1bc1972f38776d7e7b8c1228378d54d46158fddea477"
     },
@@ -1178,7 +1206,7 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_39",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
       "sha": "92faee1c1ed48f5098973191884db5111bb853141f7e25d8526f8ecfe3df7044"
     },
@@ -1205,7 +1233,7 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_40",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
       "sha": "9da4f2ab07cabfaf17a34d9baafaa1520646e2dd46348d307533a210cab06ad6"
     },
@@ -1224,7 +1252,7 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_41",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
       "sha": "f85953691ec56680b2d85f9781b259c75d2a417ed9a38476af43443bd99f3a9f"
     },
@@ -1247,7 +1275,7 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_42",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
       "sha": "042a66bd37bec7f303b406c9e14e4b6e7785317e35a8c6077a30da2a3fff3671"
     },
@@ -1282,7 +1310,7 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_43",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
       "sha": "1d66e46aaef6a28c797f5d6655354186ddb83763a4695d0d79a983d146c3d950"
     },
@@ -1301,7 +1329,7 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_44",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
       "sha": "eb81731874ae67ca78b126a177af403db7e88d3e3fd04e26c0ed272adbf90c9c"
     },
@@ -1324,7 +1352,7 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_45",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
       "sha": "4dae9e6cebd90f85d206c3b258e9d4f975aeb06427339d4592f7d82ad7bfd602"
     },
@@ -1351,7 +1379,7 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_46",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
       "sha": "9ff909cd8497b93ec2abd3749f274b97d95b39746ad60f902b9e3aa439965709"
     },
@@ -1378,7 +1406,7 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_47",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
       "sha": "9ac06a2b98b78022f685acd2b1adde881bfc487aaba0d9d2a492524ec6e47257"
     },
@@ -1401,7 +1429,7 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_48",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
       "sha": "958a8bd06197307f00f145a57b7c68838cb3fbd48277d1cf510215808cc0690f"
     },
@@ -1420,7 +1448,7 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_49",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
       "sha": "65d6f2b8dc88f9f734b85655d626ded6d65db026c9cb4cda0ded43c8250c9a1d"
     },
@@ -1443,7 +1471,7 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_50",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
       "sha": "6139141a68497326304a62babdb9ef03b9beb6765e1a1e4799e8bb01f3eaf6fe"
     },
@@ -1462,7 +1490,7 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_51",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
       "sha": "9e8d8dda4418759618ca1e4968803765ae4e82f3efd0fd550974202e76a128ff"
     },
@@ -1481,7 +1509,7 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_52",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
       "sha": "d9148bbe3c0867746a6f1c543dce4773fa68475cb0dde2c9e04d50344cf77817"
     },
@@ -1504,7 +1532,7 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_53",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
       "sha": "a04fd883d4b19585bbf0d31c5ea6b515b15531a1cb63d79f2f07f0f8bb2d0e6f"
     },
@@ -1523,7 +1551,7 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_54",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
       "sha": "f812936a193cbf119d9246921f4551d19441f33955e86f96d5ad2f4bbd23bb45"
     },
@@ -1546,7 +1574,7 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_55",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
       "sha": "16faefb333ec7214d34079dd70456b3cb9578eb5cb8c722dab9796a5378852fc"
     },
@@ -1565,7 +1593,7 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_56",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
       "sha": "6f0e9015e8f2db76e086066e2ee7bf458267eae91e58ce1f8077dde4c40ce437"
     },
@@ -1596,7 +1624,7 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_57",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
       "sha": "d92eac9221329c3fcded5130ddfa50143982d59ddc66c7556fa97b2fb9a028f6"
     },
@@ -1615,7 +1643,7 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_58",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
       "sha": "ebe732b1f29d40ff3bbc4b1d432bb0a31b2d7a9ecbcd341da86f783de16db184"
     },
@@ -1638,7 +1666,7 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_59",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
       "sha": "41622efccd7464d045670d0efa8d19419183568f8e89d07e74e2d5f90682ac80"
     },
@@ -1656,15 +1684,18 @@
           "items": [
             {
               "marke": "a",
-              "text": "ihr satzungsmässiger Sitz;"
+              "text": "ihr satzungsmässiger Sitz;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "ihre Hauptverwaltung; oder"
+              "text": "ihre Hauptverwaltung; oder",
+              "trenner": ")"
             },
             {
               "marke": "c",
-              "text": "ihre Hauptniederlassung"
+              "text": "ihre Hauptniederlassung",
+              "trenner": ")"
             }
           ]
         },
@@ -1683,9 +1714,9 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_60",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
-      "sha": "aece997cf982eb231173448a038aea383078aca3922bf0b5fe8fbb168e4f2cb6"
+      "sha": "7ddc9932d09344631cd9f412244d4fc70b4f008b2d0c27ccbbafb53e1c86e483"
     },
     {
       "id": "bund/LUGUE/art_61",
@@ -1702,7 +1733,7 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_61",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
       "sha": "54d30eff2753e96da89f049e7e41855ea7970c92deadba9cd4196b9d6fcd3e77"
     },
@@ -1721,7 +1752,7 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_62",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
       "sha": "fafcc709d73c595bf17e89b8d42f264ba34cadd5c53aa80c73712f33d89251dc"
     },
@@ -1743,20 +1774,22 @@
           "items": [
             {
               "marke": "a",
-              "text": "wenn die Klage im Ursprungsstaat erhoben wurde, nachdem das Übereinkommen von Lugano vom 16. September 1988 sowohl im Ursprungsstaat als auch in dem ersuchten Staat in Kraft getreten war;"
+              "text": "wenn die Klage im Ursprungsstaat erhoben wurde, nachdem das Übereinkommen von Lugano vom 16. September 1988 sowohl im Ursprungsstaat als auch in dem ersuchten Staat in Kraft getreten war;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "in allen anderen Fällen, wenn das Gericht aufgrund von Vorschriften zuständig war, die mit den Zuständigkeitsvorschriften des Titels II oder eines Abkommens übereinstimmen, das im Zeitpunkt der Klageerhebung zwischen dem Ursprungsstaat und dem ersuchten Staat in Kraft war."
+              "text": "in allen anderen Fällen, wenn das Gericht aufgrund von Vorschriften zuständig war, die mit den Zuständigkeitsvorschriften des Titels II oder eines Abkommens übereinstimmen, das im Zeitpunkt der Klageerhebung zwischen dem Ursprungsstaat und dem ersuchten Staat in Kraft war.",
+              "trenner": ")"
             }
           ]
         }
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_63",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
-      "sha": "3c78711015c4462a57d3eecb4e941ccc323012f8cd008ac7c3ebcb9da2f5a885"
+      "sha": "11d6871a7b7f78730b208942b64a9796aa70c765712aefba01fd4b026cede90f"
     },
     {
       "id": "bund/LUGUE/art_64",
@@ -1776,15 +1809,18 @@
           "items": [
             {
               "marke": "a",
-              "text": "in Fragen der gerichtlichen Zuständigkeit, wenn der Beklagte seinen Wohnsitz im Hoheitsgebiet eines Staates hat, in dem dieses Übereinkommen, aber keines der in Absatz 1 aufgeführten Rechtsinstrumente gilt, oder wenn die Gerichte eines solchen Staates nach Artikel 22 oder 23 dieses Übereinkommens zuständig sind;"
+              "text": "in Fragen der gerichtlichen Zuständigkeit, wenn der Beklagte seinen Wohnsitz im Hoheitsgebiet eines Staates hat, in dem dieses Übereinkommen, aber keines der in Absatz 1 aufgeführten Rechtsinstrumente gilt, oder wenn die Gerichte eines solchen Staates nach Artikel 22 oder 23 dieses Übereinkommens zuständig sind;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "bei Rechtshängigkeit oder im Zusammenhang stehenden Verfahren im Sinne der Artikel 27 und 28, wenn Verfahren in einem Staat anhängig gemacht werden, in dem dieses Übereinkommen, aber keines der in Absatz 1 aufgeführten Rechtsinstrumente gilt, und in einem Staat, in dem sowohl dieses Übereinkommen als auch eines der in Absatz 1 aufgeführten Rechtsinstrumente gilt;"
+              "text": "bei Rechtshängigkeit oder im Zusammenhang stehenden Verfahren im Sinne der Artikel 27 und 28, wenn Verfahren in einem Staat anhängig gemacht werden, in dem dieses Übereinkommen, aber keines der in Absatz 1 aufgeführten Rechtsinstrumente gilt, und in einem Staat, in dem sowohl dieses Übereinkommen als auch eines der in Absatz 1 aufgeführten Rechtsinstrumente gilt;",
+              "trenner": ")"
             },
             {
               "marke": "c",
-              "text": "in Fragen der Anerkennung und Vollstreckung, wenn entweder der Ursprungsstaat oder der ersuchte Staat keines der in Absatz 1 aufgeführten Rechtsinstrumente anwendet."
+              "text": "in Fragen der Anerkennung und Vollstreckung, wenn entweder der Ursprungsstaat oder der ersuchte Staat keines der in Absatz 1 aufgeführten Rechtsinstrumente anwendet.",
+              "trenner": ")"
             }
           ]
         },
@@ -1795,9 +1831,9 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_64",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
-      "sha": "fc822abffeb31f940e76183d3002fd220aadf1e30e35109ba72f9e1998b204ec"
+      "sha": "4befbb12dd1d8f1ad3e7880412ccbd018eccef8dd3359dfe0c1bad87a1cba079"
     },
     {
       "id": "bund/LUGUE/art_65",
@@ -1814,7 +1850,7 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_65",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
       "sha": "082d0e55d0b88194be7873d91ea7a4d2766fb36e1b2462b09bc4dad82b39dfb9"
     },
@@ -1837,7 +1873,7 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_66",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
       "sha": "7c69bbcf7f762ea1a7d78ded56568ab2cb733e2f10e097e28d0961a8f0b3036e"
     },
@@ -1872,7 +1908,7 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_67",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
       "sha": "a2f8c8e62d3ec626caa8f36dd2ef8c2acfe1693da8b238678cb027efe9c49335"
     },
@@ -1894,20 +1930,22 @@
           "items": [
             {
               "marke": "a",
-              "text": "wenn die Klage erhoben wird, um Eigentums- oder Inhaberrechte hinsichtlich dieses Vermögens festzustellen oder anzumelden oder um Verfügungsgewalt darüber zu erhalten, oder wenn die Klage sich aus einer anderen Streitsache im Zusammenhang mit diesem Vermögen ergibt; oder"
+              "text": "wenn die Klage erhoben wird, um Eigentums- oder Inhaberrechte hinsichtlich dieses Vermögens festzustellen oder anzumelden oder um Verfügungsgewalt darüber zu erhalten, oder wenn die Klage sich aus einer anderen Streitsache im Zusammenhang mit diesem Vermögen ergibt; oder",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "wenn das Vermögen die Sicherheit für einen Anspruch darstellt, der Gegenstand des Verfahrens ist."
+              "text": "wenn das Vermögen die Sicherheit für einen Anspruch darstellt, der Gegenstand des Verfahrens ist.",
+              "trenner": ")"
             }
           ]
         }
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_68",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
-      "sha": "70bf4da010eed844983b3abf6af0b9c7057489c88d15aae73a0346e3d9d6990c"
+      "sha": "6e5cf5cf4a62dd8da89d263633c5974ca21a3fb73d8f1a516cbc709784b66dfb"
     },
     {
       "id": "bund/LUGUE/art_69",
@@ -1948,7 +1986,7 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_69",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
       "sha": "61529f1bda579c5dc56b77e43a37bd9da1cb6bb9eb4c54af4ebcfebc72bf405c"
     },
@@ -1966,15 +2004,18 @@
           "items": [
             {
               "marke": "a",
-              "text": "die Staaten, die nach Auflage dieses Übereinkommens zur Unterzeichnung Mitglieder der Europäischen Freihandelsassoziation werden, unter den Voraussetzungen des Artikels 71;"
+              "text": "die Staaten, die nach Auflage dieses Übereinkommens zur Unterzeichnung Mitglieder der Europäischen Freihandelsassoziation werden, unter den Voraussetzungen des Artikels 71;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "ein Mitgliedstaat der Europäischen Gemeinschaft im Namen bestimmter aussereuropäischer Gebiete, die Teil seines Hoheitsgebiets sind oder für deren Aussenbeziehungen dieser Mitgliedstaat zuständig ist, unter den Voraussetzungen des Artikels 71;"
+              "text": "ein Mitgliedstaat der Europäischen Gemeinschaft im Namen bestimmter aussereuropäischer Gebiete, die Teil seines Hoheitsgebiets sind oder für deren Aussenbeziehungen dieser Mitgliedstaat zuständig ist, unter den Voraussetzungen des Artikels 71;",
+              "trenner": ")"
             },
             {
               "marke": "c",
-              "text": "jeder andere Staat unter den Voraussetzungen des Artikels 72."
+              "text": "jeder andere Staat unter den Voraussetzungen des Artikels 72.",
+              "trenner": ")"
             }
           ]
         },
@@ -1985,9 +2026,9 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_70",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
-      "sha": "c515825896f45dccb44209c19250656fc34d2726dab8a18b7714b8109b6c698d"
+      "sha": "bcfcbe7dfc8983aeb70800f08e9d0d31b2907382689070a45dce15f9e56f65de"
     },
     {
       "id": "bund/LUGUE/art_71",
@@ -2003,11 +2044,13 @@
           "items": [
             {
               "marke": "a",
-              "text": "teilt die zur Anwendung dieses Übereinkommens erforderlichen Angaben mit;"
+              "text": "teilt die zur Anwendung dieses Übereinkommens erforderlichen Angaben mit;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "kann Erklärungen nach Massgabe der Artikel I und III des Protokolls 1 abgeben."
+              "text": "kann Erklärungen nach Massgabe der Artikel I und III des Protokolls 1 abgeben.",
+              "trenner": ")"
             }
           ]
         },
@@ -2018,9 +2061,9 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_71",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
-      "sha": "03dc6cddbe40df4936188ffccb8a00eb7861e41840e5baf651a40a3dcba7ef8c"
+      "sha": "a015fbb5c33f5231ff3f40a0c583ad51f6376b44b6671d79fc832cf6898ba86f"
     },
     {
       "id": "bund/LUGUE/art_72",
@@ -2036,30 +2079,36 @@
           "items": [
             {
               "marke": "a",
-              "text": "teilt die zur Anwendung dieses Übereinkommens erforderlichen Angaben mit;"
+              "text": "teilt die zur Anwendung dieses Übereinkommens erforderlichen Angaben mit;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "kann Erklärungen nach Massgabe der Artikel I und III des Protokolls 1 abgeben;"
+              "text": "kann Erklärungen nach Massgabe der Artikel I und III des Protokolls 1 abgeben;",
+              "trenner": ")"
             },
             {
               "marke": "c",
-              "text": "erteilt dem Verwahrer Auskünfte insbesondere über:"
+              "text": "erteilt dem Verwahrer Auskünfte insbesondere über:",
+              "trenner": ")"
             },
             {
               "marke": "1",
               "text": "sein Justizsystem mit Angaben zur Ernennung der Richter und zu deren Unabhängigkeit,",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ")"
             },
             {
               "marke": "2",
               "text": "sein innerstaatliches Zivilprozess- und Vollstreckungsrecht,",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ")"
             },
             {
               "marke": "3",
               "text": "sein Internationales Zivilprozessrecht.",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ")"
             }
           ]
         },
@@ -2078,9 +2127,9 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_72",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
-      "sha": "fc74cfe437209f9398b3560b2950c3e238edb20fd7919520f0112a256a187668"
+      "sha": "ee1be7c61934c03391018f0445b20fa8f9e828ce4bf24037c744c1c31702dab7"
     },
     {
       "id": "bund/LUGUE/art_73",
@@ -2105,7 +2154,7 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_73",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
       "sha": "cc9ea20273cfb38d6a901f5cc6d2cd5894ae80e161ebe028cb382c1262605caa"
     },
@@ -2132,7 +2181,7 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_74",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
       "sha": "4e63e7aa260ba5fa666709cd43f6365b8b3292294e5a27f70ffedc3b8ee45a85"
     },
@@ -2150,31 +2199,38 @@
           "items": [
             {
               "marke": "–",
-              "text": "ein Protokoll 1 über bestimmte Zuständigkeits-, Verfahrens- und Vollstreckungsfragen;"
+              "text": "ein Protokoll 1 über bestimmte Zuständigkeits-, Verfahrens- und Vollstreckungsfragen;",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "ein Protokoll 2 über die einheitliche Auslegung des Übereinkommens und den Ständigen Ausschuss;"
+              "text": "ein Protokoll 2 über die einheitliche Auslegung des Übereinkommens und den Ständigen Ausschuss;",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "ein Protokoll 3 über die Anwendung von Artikel 67;"
+              "text": "ein Protokoll 3 über die Anwendung von Artikel 67;",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "die Anhänge I bis IV und Anhang VII mit Angaben zur Anwendung des Übereinkommens;"
+              "text": "die Anhänge I bis IV und Anhang VII mit Angaben zur Anwendung des Übereinkommens;",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "die Anhänge V und VI mit den Formblättern für die Bescheinigungen im Sinne der Artikel 54, 58 und 57;"
+              "text": "die Anhänge V und VI mit den Formblättern für die Bescheinigungen im Sinne der Artikel 54, 58 und 57;",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "Anhang VIII mit der Angabe der verbindlichen Sprachfassungen des Übereinkommens gemäss Artikel 79;"
+              "text": "Anhang VIII mit der Angabe der verbindlichen Sprachfassungen des Übereinkommens gemäss Artikel 79;",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "Anhang IX mit den Angaben gemäss Artikel II des Protokolls 1."
+              "text": "Anhang IX mit den Angaben gemäss Artikel II des Protokolls 1.",
+              "trenner": ""
             }
           ]
         },
@@ -2185,9 +2241,9 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_75",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
-      "sha": "fd4b5175e166f4d1edff87cbf36757fe2f5916f65eb3512cc68820b6391580ea"
+      "sha": "1d93aee76415d071aeb32e439a08b9035a25e8528d783f22cb59a9265a41b366"
     },
     {
       "id": "bund/LUGUE/art_76",
@@ -2204,7 +2260,7 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_76",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
       "sha": "975022e51b57975089565fdc7a35c5510639a696137037f37e4fcc8d9d23e897"
     },
@@ -2227,7 +2283,7 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_77",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
       "sha": "5420ed75f8359ccb1b39169f8c37620db31ebc2f44b65f5e6f1755a77496ae80"
     },
@@ -2245,19 +2301,23 @@
           "items": [
             {
               "marke": "a",
-              "text": "die Hinterlegung jeder Ratifikations- oder Beitrittsurkunde;"
+              "text": "die Hinterlegung jeder Ratifikations- oder Beitrittsurkunde;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "den Tag, an dem dieses Übereinkommen für die Vertragsparteien in Kraft tritt;"
+              "text": "den Tag, an dem dieses Übereinkommen für die Vertragsparteien in Kraft tritt;",
+              "trenner": ")"
             },
             {
               "marke": "c",
-              "text": "die nach den Artikeln I bis IV des Protokolls 1 eingegangenen Erklärungen;"
+              "text": "die nach den Artikeln I bis IV des Protokolls 1 eingegangenen Erklärungen;",
+              "trenner": ")"
             },
             {
               "marke": "d",
-              "text": "die Mitteilungen nach Artikel 74 Absatz 2, Artikel 77 Absatz 1 sowie Absatz 4 des Protokolls 3."
+              "text": "die Mitteilungen nach Artikel 74 Absatz 2, Artikel 77 Absatz 1 sowie Absatz 4 des Protokolls 3.",
+              "trenner": ")"
             }
           ]
         },
@@ -2268,9 +2328,9 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_78",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
-      "sha": "10fad6488f9a39e07c5747fdf33d69801ddd950f006aac458fedbd474b879988"
+      "sha": "ca1270f8864b31bea90004e0a3c2c427ed8c5119fb3106f78594583c989d5611"
     },
     {
       "id": "bund/LUGUE/art_79",
@@ -2287,7 +2347,7 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#art_79",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
       "sha": "7f128ed6a681257a2bfaaec7c9b65ea786d33bbec5db2abbfc5fb818583f22ae"
     },
@@ -2364,11 +2424,13 @@
           "items": [
             {
               "marke": "a",
-              "text": "das in Absatz 1 erwähnte Recht; und"
+              "text": "das in Absatz 1 erwähnte Recht; und",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "das Recht einer Behörde im Sinne von Artikel 39, unbeschadet der Vorschriften des Artikels 41 von Amts wegen zu prüfen, ob Gründe für die Versagung der Anerkennung oder Vollstreckung einer Entscheidung vorliegen."
+              "text": "das Recht einer Behörde im Sinne von Artikel 39, unbeschadet der Vorschriften des Artikels 41 von Amts wegen zu prüfen, ob Gründe für die Versagung der Anerkennung oder Vollstreckung einer Entscheidung vorliegen.",
+              "trenner": ")"
             }
           ]
         },
@@ -2501,35 +2563,43 @@
           "items": [
             {
               "marke": "–",
-              "text": "einer Konsultation über das Verhältnis zwischen diesem Übereinkommen und anderen internationalen Rechtsinstrumenten;"
+              "text": "einer Konsultation über das Verhältnis zwischen diesem Übereinkommen und anderen internationalen Rechtsinstrumenten;",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "einer Konsultation über die Anwendung des Artikels 67 einschliesslich des beabsichtigten Beitritts zu Rechtsinstrumenten über ein besonderes Rechtsgebiet im Sinne von Artikel 67 Absatz 1 und Rechtsetzungsvorschlägen gemäss dem Protokoll 3;"
+              "text": "einer Konsultation über die Anwendung des Artikels 67 einschliesslich des beabsichtigten Beitritts zu Rechtsinstrumenten über ein besonderes Rechtsgebiet im Sinne von Artikel 67 Absatz 1 und Rechtsetzungsvorschlägen gemäss dem Protokoll 3;",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "der Erwägung des Beitritts neuer Staaten. Der Ausschuss kann an beitretende Staaten im Sinne von Artikel 70 Absatz 1 Buchstabe c insbesondere Fragen über ihr Justizsystem und die Umsetzung dieses Übereinkommens richten. Der Ausschuss kann auch Anpassungen dieses Übereinkommens in Betracht ziehen, die für dessen Anwendung in den beitretenden Staaten notwendig sind;"
+              "text": "der Erwägung des Beitritts neuer Staaten. Der Ausschuss kann an beitretende Staaten im Sinne von Artikel 70 Absatz 1 Buchstabe c insbesondere Fragen über ihr Justizsystem und die Umsetzung dieses Übereinkommens richten. Der Ausschuss kann auch Anpassungen dieses Übereinkommens in Betracht ziehen, die für dessen Anwendung in den beitretenden Staaten notwendig sind;",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "der Aufnahme neuer verbindlicher Sprachfassungen nach Artikel 73 Absatz 3 des Übereinkommens und den notwendigen Änderungen des Anhangs VIII;"
+              "text": "der Aufnahme neuer verbindlicher Sprachfassungen nach Artikel 73 Absatz 3 des Übereinkommens und den notwendigen Änderungen des Anhangs VIII;",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "einer Konsultation über eine Revision des Übereinkommens gemäss Artikel 76;"
+              "text": "einer Konsultation über eine Revision des Übereinkommens gemäss Artikel 76;",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "einer Konsultation über Änderungen der Anhänge I bis IV und des Anhangs VII gemäss Artikel 77 Absatz 1;"
+              "text": "einer Konsultation über Änderungen der Anhänge I bis IV und des Anhangs VII gemäss Artikel 77 Absatz 1;",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "der Annahme von Änderungen der Anhänge V und VI gemäss Artikel 77 Absatz 2;"
+              "text": "der Annahme von Änderungen der Anhänge V und VI gemäss Artikel 77 Absatz 2;",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "der Rücknahme von Vorbehalten und Erklärungen der Vertragsparteien nach Protokoll 1 und notwendigen Änderungen des Anhangs IX."
+              "text": "der Rücknahme von Vorbehalten und Erklärungen der Vertragsparteien nach Protokoll 1 und notwendigen Änderungen des Anhangs IX.",
+              "trenner": ""
             }
           ]
         },
@@ -2586,9 +2656,9 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#annex_u1",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
-      "sha": "e3f53cdfeb5b1865e4814d8a381da66aa555d3bf88c287a911ec2e66681a1725"
+      "sha": "0f9b6450a33181cdcd229dca82da293bc5af993adc76958be12497d1acf6c8ed"
     },
     {
       "id": "bund/LUGUE/annex_I",
@@ -2604,139 +2674,170 @@
           "items": [
             {
               "marke": "–",
-              "text": "in Bulgarien: Artikel 4 Absatz 1 Nummer 2 des Gesetzbuchs über Internationales Privatrecht,"
+              "text": "in Bulgarien: Artikel 4 Absatz 1 Nummer 2 des Gesetzbuchs über Internationales Privatrecht,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in der Tschechischen Republik: Gesetz Nr. 91/2012 über Internationales Privatrecht (Zákon o mezinárodním právu soukromém), insbesondere Artikel 6,"
+              "text": "in der Tschechischen Republik: Gesetz Nr. 91/2012 über Internationales Privatrecht (Zákon o mezinárodním právu soukromém), insbesondere Artikel 6,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Dänemark: Artikel 246 Absätze 2 und 3 der Prozessordnung (Lov om rettens pleje),"
+              "text": "in Dänemark: Artikel 246 Absätze 2 und 3 der Prozessordnung (Lov om rettens pleje),",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Deutschland: § 23 der Zivilprozessordnung,"
+              "text": "in Deutschland: § 23 der Zivilprozessordnung,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Estland: Artikel 86 (Gerichtliche Zuständigkeit am Ort der Belegenheit des Vermögens) der Zivilprozessordnung (Tsiviilkohtumenetluse seadustik), sofern sich die Klage nicht auf das Vermögen der Person bezieht; Artikel 100 (Klage auf Einstellung der Anwendung von Standardklauseln) der Zivilprozessordnung, soweit die Klage bei dem Gericht eingereicht wird, in dessen örtlichem Zuständigkeitsbereich die Standardklausel angewandt wurde,"
+              "text": "in Estland: Artikel 86 (Gerichtliche Zuständigkeit am Ort der Belegenheit des Vermögens) der Zivilprozessordnung (Tsiviilkohtumenetluse seadustik), sofern sich die Klage nicht auf das Vermögen der Person bezieht; Artikel 100 (Klage auf Einstellung der Anwendung von Standardklauseln) der Zivilprozessordnung, soweit die Klage bei dem Gericht eingereicht wird, in dessen örtlichem Zuständigkeitsbereich die Standardklausel angewandt wurde,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Griechenland: Artikel 40 der Zivilprozessordnung (Κώδικας Πολιτικής Δικονομίας),"
+              "text": "in Griechenland: Artikel 40 der Zivilprozessordnung (Κώδικας Πολιτικής Δικονομίας),",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Frankreich: Artikel 14 und 15 des Zivilgesetzbuches (Code civil),"
+              "text": "in Frankreich: Artikel 14 und 15 des Zivilgesetzbuches (Code civil),",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Island: Artikel 32 Absatz 4 der Zivilprozessordnung (Lög um meðferð einkamála nr. 91/1991),"
+              "text": "in Island: Artikel 32 Absatz 4 der Zivilprozessordnung (Lög um meðferð einkamála nr. 91/1991),",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Irland: Vorschriften, nach denen die Zuständigkeit durch Zustellung eines verfahrenseinleitenden Schriftstücks an den Beklagten während dessen vorübergehender Anwesenheit in Irland begründet wird,"
+              "text": "in Irland: Vorschriften, nach denen die Zuständigkeit durch Zustellung eines verfahrenseinleitenden Schriftstücks an den Beklagten während dessen vorübergehender Anwesenheit in Irland begründet wird,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Italien: Artikel 3 und 4 des Gesetzes Nr. 218 vom 31. Mai 1995,"
+              "text": "in Italien: Artikel 3 und 4 des Gesetzes Nr. 218 vom 31. Mai 1995,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Zypern: Artikel 21 des Gerichtsgesetzes, Gesetz 14/60,"
+              "text": "in Zypern: Artikel 21 des Gerichtsgesetzes, Gesetz 14/60,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Lettland: Artikel 27 Absatz 2 und Artikel 28 Absätze 3, 5, 6 und 9 der Zivilprozessordnung (Civilprocesa likums),"
+              "text": "in Lettland: Artikel 27 Absatz 2 und Artikel 28 Absätze 3, 5, 6 und 9 der Zivilprozessordnung (Civilprocesa likums),",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Litauen: Artikel 783 Absatz 3, Artikel 787 und Artikel 789 Absatz 3 der Zivilprozessordnung (Civilinio proceso kodeksas),"
+              "text": "in Litauen: Artikel 783 Absatz 3, Artikel 787 und Artikel 789 Absatz 3 der Zivilprozessordnung (Civilinio proceso kodeksas),",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Luxemburg: Artikel 14 und 15 des Zivilgesetzbuches (Code civil),"
+              "text": "in Luxemburg: Artikel 14 und 15 des Zivilgesetzbuches (Code civil),",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Ungarn: Artikel 57 der Gesetzesverordnung Nr. 13 von 1979 über Internationales Privatrecht (a nemzetközi magánjogról szóló 1979. évi 13. törvényerejű rendelet),"
+              "text": "in Ungarn: Artikel 57 der Gesetzesverordnung Nr. 13 von 1979 über Internationales Privatrecht (a nemzetközi magánjogról szóló 1979. évi 13. törvényerejű rendelet),",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Malta: Artikel 742, 743 und 744 der Gerichtsverfassungs- und Zivilprozessordnung – Kapitel 12 (Kodiċi ta’ Organizzazzjoni u Proċedura Ċivili – Kap. 12) und Artikel 549 des Handelsgesetzbuches – Kapitel 13 (Kodiċi tal-kummerċ – Kap. 13),"
+              "text": "in Malta: Artikel 742, 743 und 744 der Gerichtsverfassungs- und Zivilprozessordnung – Kapitel 12 (Kodiċi ta’ Organizzazzjoni u Proċedura Ċivili – Kap. 12) und Artikel 549 des Handelsgesetzbuches – Kapitel 13 (Kodiċi tal-kummerċ – Kap. 13),",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Norwegen: Abschnitt 4–3 Absatz 2 Satz 2 der Prozessordnung (tvisteloven),"
+              "text": "in Norwegen: Abschnitt 4–3 Absatz 2 Satz 2 der Prozessordnung (tvisteloven),",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Österreich: § 99 der Jurisdiktionsnorm,"
+              "text": "in Österreich: § 99 der Jurisdiktionsnorm,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Kroatien: Artikel 54 des Gesetzes zur Lösung von Gesetzeskollisionen mit den Vorschriften anderer Staaten für bestimmte Verhältnisse;"
+              "text": "in Kroatien: Artikel 54 des Gesetzes zur Lösung von Gesetzeskollisionen mit den Vorschriften anderer Staaten für bestimmte Verhältnisse;",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Polen: Artikel 1103 Nummer 4 und Artikel 1110 der Zivilprozessordnung (Kodeks postępowania cywilnego), insofern als letzterer die Zuständigkeit ausschließlich nach Folgendem begründet: Der Antragsteller besitzt die polnische Staatsangehörigkeit oder hat seinen gewöhnlichen Aufenthalt, Wohnsitz oder Sitz in Polen;"
+              "text": "in Polen: Artikel 1103 Nummer 4 und Artikel 1110 der Zivilprozessordnung (Kodeks postępowania cywilnego), insofern als letzterer die Zuständigkeit ausschließlich nach Folgendem begründet: Der Antragsteller besitzt die polnische Staatsangehörigkeit oder hat seinen gewöhnlichen Aufenthalt, Wohnsitz oder Sitz in Polen;",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Portugal: Artikel 63 Absatz 1 der Zivilprozessordnung (Código de Processo Civil), insofern als nach diesem Artikel ein exorbitanter Gerichtsstand begründet werden kann – zum Beispiel ist das Gericht des Ortes zuständig, an dem sich die Zweigniederlassung, Agentur oder sonstige Niederlassung befindet (sofern sie sich in Portugal befindet), wenn die (im Ausland befindliche) Hauptverwaltung Zustellungsadressat ist –, und Artikel 10 der Arbeitsprozessordnung (Código de Processo do Trabalho), insofern als nach diesem Artikel ein exorbitanter Gerichtsstand begründet werden kann – zum Beispiel ist in einem Verfahren, das ein Arbeitnehmer in Bezug auf einen individuellen Arbeitsvertrag gegen einen Arbeitgeber angestrengt hat, das Gericht des Ortes zuständig, an dem der Kläger seinen Wohnsitz hat,"
+              "text": "in Portugal: Artikel 63 Absatz 1 der Zivilprozessordnung (Código de Processo Civil), insofern als nach diesem Artikel ein exorbitanter Gerichtsstand begründet werden kann – zum Beispiel ist das Gericht des Ortes zuständig, an dem sich die Zweigniederlassung, Agentur oder sonstige Niederlassung befindet (sofern sie sich in Portugal befindet), wenn die (im Ausland befindliche) Hauptverwaltung Zustellungsadressat ist –, und Artikel 10 der Arbeitsprozessordnung (Código de Processo do Trabalho), insofern als nach diesem Artikel ein exorbitanter Gerichtsstand begründet werden kann – zum Beispiel ist in einem Verfahren, das ein Arbeitnehmer in Bezug auf einen individuellen Arbeitsvertrag gegen einen Arbeitgeber angestrengt hat, das Gericht des Ortes zuständig, an dem der Kläger seinen Wohnsitz hat,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Rumänien: Titel I «Internationale Zuständigkeit der rumänischen Gerichte» Artikel 1065 bis 1081 in Buch VII «Internationales Zivilverfahrensrecht» des Gesetzes Nr. 134/2010 über die Zivilprozessordnung."
+              "text": "in Rumänien: Titel I «Internationale Zuständigkeit der rumänischen Gerichte» Artikel 1065 bis 1081 in Buch VII «Internationales Zivilverfahrensrecht» des Gesetzes Nr. 134/2010 über die Zivilprozessordnung.",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Slowenien: Artikel 48 Absatz 2 des Gesetzes über Internationales Privat- und Zivilprozessrecht (Zakon o medarodnem zasebnem pravu in postopku) in Bezug auf Artikel 47 Absatz 2 der Zivilprozessordnung (Zakon o pravdnem postopku) und Artikel 58 des Gesetzes über Internationales Privatrecht und die Prozessordnung (Zakon o medarodnem zasebnem pravu in postopku) in Bezug auf Artikel 59 der Zivilprozessordnung (Zakon o pravdnem postopku),"
+              "text": "in Slowenien: Artikel 48 Absatz 2 des Gesetzes über Internationales Privat- und Zivilprozessrecht (Zakon o medarodnem zasebnem pravu in postopku) in Bezug auf Artikel 47 Absatz 2 der Zivilprozessordnung (Zakon o pravdnem postopku) und Artikel 58 des Gesetzes über Internationales Privatrecht und die Prozessordnung (Zakon o medarodnem zasebnem pravu in postopku) in Bezug auf Artikel 59 der Zivilprozessordnung (Zakon o pravdnem postopku),",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in der Slowakei: die Artikel 37–37e des Gesetzes Nr. 97/1963 über Internationales Privatrecht und die entsprechenden Verfahrensvorschriften,"
+              "text": "in der Slowakei: die Artikel 37–37e des Gesetzes Nr. 97/1963 über Internationales Privatrecht und die entsprechenden Verfahrensvorschriften,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in der Schweiz: Artikel 4 des Bundesgesetzes über das internationale Privatrecht (Gerichtsstand des Arrestortes/for du lieu du séquestre/foro del luogo del sequestro),"
+              "text": "in der Schweiz: Artikel 4 des Bundesgesetzes über das internationale Privatrecht (Gerichtsstand des Arrestortes/for du lieu du séquestre/foro del luogo del sequestro),",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Finnland: Kapitel 10 § 18 Absatz 1 Unterabsätze 1 und 2 der Prozessordnung (oikeudenkäymiskaari/rättegångsbalken),"
+              "text": "in Finnland: Kapitel 10 § 18 Absatz 1 Unterabsätze 1 und 2 der Prozessordnung (oikeudenkäymiskaari/rättegångsbalken),",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Schweden: Kapitel 10 § 3 Absatz 1 Satz 1 der Prozessordnung (rättegångsbalken),"
+              "text": "in Schweden: Kapitel 10 § 3 Absatz 1 Satz 1 der Prozessordnung (rättegångsbalken),",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "im Vereinigten Königreich: Vorschriften, nach denen die Zuständigkeit begründet wird durch:"
+              "text": "im Vereinigten Königreich: Vorschriften, nach denen die Zuständigkeit begründet wird durch:",
+              "trenner": ""
             },
             {
               "marke": "a",
               "text": "die Zustellung eines verfahrenseinleitenden Schriftstücks an den Beklagten während dessen vorübergehender Anwesenheit im Vereinigten Königreich,",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ")"
             },
             {
               "marke": "b",
               "text": "das Vorhandensein von Vermögenswerten des Beklagten im Vereinigten Königreich oder",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ")"
             },
             {
               "marke": "c",
               "text": "die Beschlagnahme von Vermögenswerten im Vereinigten Königreich durch den Kläger.",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ")"
             }
           ]
         }
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#annex_I",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
-      "sha": "e6a296899e127779852cb1d29d3bd83fd996e078eddda8357163d8f092332625"
+      "sha": "31719f2ed1a57e3c5f9cc8d36b304959300155f0d6f28e4130a8adcefe20af7a"
     },
     {
       "id": "bund/LUGUE/annex_II",
@@ -2752,176 +2853,215 @@
           "items": [
             {
               "marke": "–",
-              "text": "in Belgien beim tribunal de première instance oder bei der rechtbank van eerste aanleg oder beim erstinstanzlichen Gericht,"
+              "text": "in Belgien beim tribunal de première instance oder bei der rechtbank van eerste aanleg oder beim erstinstanzlichen Gericht,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Bulgarien beim Окръжния съд,"
+              "text": "in Bulgarien beim Окръжния съд,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in der Tschechischen Republik beim «okresní soud»,"
+              "text": "in der Tschechischen Republik beim «okresní soud»,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Dänemark beim Byret,"
+              "text": "in Dänemark beim Byret,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Deutschland:"
+              "text": "in Deutschland:",
+              "trenner": ""
             },
             {
               "marke": "a",
               "text": "beim Vorsitzenden einer Kammer des Landgerichts,",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ")"
             },
             {
               "marke": "b",
               "text": "bei einem Notar für die Vollstreckbarerklärung einer öffentlichen Urkunde,",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ")"
             },
             {
               "marke": "–",
-              "text": "in Estland beim Maakohus,"
+              "text": "in Estland beim Maakohus,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Griechenland beim Μονομελές Πρωτοδικείο,"
+              "text": "in Griechenland beim Μονομελές Πρωτοδικείο,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Spanien beim Juzgado de Primera Instancia,"
+              "text": "in Spanien beim Juzgado de Primera Instancia,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Frankreich:"
+              "text": "in Frankreich:",
+              "trenner": ""
             },
             {
               "marke": "a",
               "text": "beim greffier en chef du tribunal de grande instance,",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ")"
             },
             {
               "marke": "b",
               "text": "beim président de la chambre départementale des notaires im Falle eines Antrags auf Vollstreckbarerklärung einer notariellen öffentlichen Urkunde,",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ")"
             },
             {
               "marke": "–",
-              "text": "in Irland beim High Court,"
+              "text": "in Irland beim High Court,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Island beim héraðsdómur,"
+              "text": "in Island beim héraðsdómur,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Italien bei der Corte d’appello,"
+              "text": "in Italien bei der Corte d’appello,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Zypern beim Επαρχιακό Δικαστήριο oder für Entscheidungen in Unterhaltssachen beim Οικογενειακό Δικαστήριο,"
+              "text": "in Zypern beim Επαρχιακό Δικαστήριο oder für Entscheidungen in Unterhaltssachen beim Οικογενειακό Δικαστήριο,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Lettland beim Rajona (pilsētas) tiesa,"
+              "text": "in Lettland beim Rajona (pilsētas) tiesa,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Litauen beim Lietuvos apeliacinis teismas,"
+              "text": "in Litauen beim Lietuvos apeliacinis teismas,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Luxemburg beim Präsidenten des tribunal d’arrondissement,"
+              "text": "in Luxemburg beim Präsidenten des tribunal d’arrondissement,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Ungarn beim «törvényszék székhelyén működő járásbíróság» und in Budapest beim «Budai Központi Kerületi Bíróság»,"
+              "text": "in Ungarn beim «törvényszék székhelyén működő járásbíróság» und in Budapest beim «Budai Központi Kerületi Bíróság»,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Malta beim Prim’ Awla tal-Qorti Ċivili oder Qorti tal-Maġistrati ta’ Għawdex fil-ġurisdizzjoni superjuri tagħha, oder für Entscheidungen in Unterhaltssachen beim Reġistratur tal-Qorti auf Befassung durch den Ministru responsabbli għall-Ġustizzja,"
+              "text": "in Malta beim Prim’ Awla tal-Qorti Ċivili oder Qorti tal-Maġistrati ta’ Għawdex fil-ġurisdizzjoni superjuri tagħha, oder für Entscheidungen in Unterhaltssachen beim Reġistratur tal-Qorti auf Befassung durch den Ministru responsabbli għall-Ġustizzja,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in den Niederlanden beim voorzieningenrechter van de rechtbank,"
+              "text": "in den Niederlanden beim voorzieningenrechter van de rechtbank,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Norwegen beim Tingrett,"
+              "text": "in Norwegen beim Tingrett,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Österreich beim Bezirksgericht,"
+              "text": "in Österreich beim Bezirksgericht,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Polen beim Sąd Okręgowy,"
+              "text": "in Polen beim Sąd Okręgowy,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Portugal: bei den «instâncias centrais de competência especializada cível, instâncias locais, secção competência genérica» oder «secção cível» – sofern es letzteres gibt – der «tribunais de comarca». Bei Unterhaltspflichten gegenüber Kindern (unter oder über 18 Jahren) und bei Unterhaltspflichten im Verhältnis der Ehegatten untereinander bei den «secções de família e menores das instâncias centrais» oder in Ermangelung derselben bei den «secções de competência genérica» oder «secção cível» – sofern es letzteres gibt – der «instâncias locais». Für die übrigen Unterhaltspflichten, die auf einem Familien- oder Verwandtschaftsverhältnis oder auf Schwägerschaft beruhen, bei den «secções de competência genérica» oder den «secção cível» – sofern es letzteres gibt – der «instâncias locais»,"
+              "text": "in Portugal: bei den «instâncias centrais de competência especializada cível, instâncias locais, secção competência genérica» oder «secção cível» – sofern es letzteres gibt – der «tribunais de comarca». Bei Unterhaltspflichten gegenüber Kindern (unter oder über 18 Jahren) und bei Unterhaltspflichten im Verhältnis der Ehegatten untereinander bei den «secções de família e menores das instâncias centrais» oder in Ermangelung derselben bei den «secções de competência genérica» oder «secção cível» – sofern es letzteres gibt – der «instâncias locais». Für die übrigen Unterhaltspflichten, die auf einem Familien- oder Verwandtschaftsverhältnis oder auf Schwägerschaft beruhen, bei den «secções de competência genérica» oder den «secção cível» – sofern es letzteres gibt – der «instâncias locais»,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Rumänien beim Tribunal,"
+              "text": "in Rumänien beim Tribunal,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Slowenien beim Okrožno sodišče,"
+              "text": "in Slowenien beim Okrožno sodišče,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in der Slowakei beim okresný súd,"
+              "text": "in der Slowakei beim okresný súd,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in der Schweiz beim kantonalen Vollstreckungsgericht/tribunal cantonal de l’exécution/giudice cantonale dell’esecuzione,"
+              "text": "in der Schweiz beim kantonalen Vollstreckungsgericht/tribunal cantonal de l’exécution/giudice cantonale dell’esecuzione,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Finnland beim Käräjäoikeus/tingsrätt,"
+              "text": "in Finnland beim Käräjäoikeus/tingsrätt,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Schweden: «tingsrätt»,"
+              "text": "in Schweden: «tingsrätt»,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Kroatien beim općinski sudovi in Zivilsachen, beim Općinski građanski sud u Zagrebu und beim trgovački sudovi in Handelssachen;"
+              "text": "in Kroatien beim općinski sudovi in Zivilsachen, beim Općinski građanski sud u Zagrebu und beim trgovački sudovi in Handelssachen;",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "im Vereinigten Königreich:"
+              "text": "im Vereinigten Königreich:",
+              "trenner": ""
             },
             {
               "marke": "a",
               "text": "in England und Wales beim High Court of Justice oder für Entscheidungen in Unterhaltssachen beim Family Court über den Secretary of State,",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ")"
             },
             {
               "marke": "b",
               "text": "in Schottland beim Court of Session oder für Entscheidungen in Unterhaltssachen beim Sheriff Court über die Scottish Ministers,",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ")"
             },
             {
               "marke": "c",
               "text": "in Nordirland beim High Court of Justice oder für Entscheidungen in Unterhaltssachen beim Magistrates’ Court über das Department of Justice,",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ")"
             },
             {
               "marke": "d",
               "text": "in Gibraltar beim Supreme Court of Gibraltar oder für Entscheidungen in Unterhaltssachen beim Magistrates’ Court über den Attorney General of Gibraltar.",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ")"
             }
           ]
         }
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#annex_II",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
-      "sha": "a9734e03cf7755d284ed8f55fcaefff83e66d807872e40968fee6359e06fb33f"
+      "sha": "14e50634b67f8a669d83f6ef4a15422680d4279434f7b315fb692f2b64b1f2da"
     },
     {
       "id": "bund/LUGUE/annex_III",
@@ -2937,176 +3077,215 @@
           "items": [
             {
               "marke": "–",
-              "text": "in Belgien:"
+              "text": "in Belgien:",
+              "trenner": ""
             },
             {
               "marke": "a",
               "text": "im Falle des Schuldners beim tribunal de première instance oder bei der rechtbank van eerste aanleg oder beim erstinstanzlichen Gericht,",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ")"
             },
             {
               "marke": "b",
               "text": "im Falle des Antragstellers bei der cour d’appel oder beim hof van beroep,",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ")"
             },
             {
               "marke": "–",
-              "text": "in Bulgarien beim Апелативен съд – София,"
+              "text": "in Bulgarien beim Апелативен съд – София,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in der Tschechischen Republik beim «okresní soud»,"
+              "text": "in der Tschechischen Republik beim «okresní soud»,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Dänemark beim landsret,"
+              "text": "in Dänemark beim landsret,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Deutschland beim Oberlandesgericht,"
+              "text": "in Deutschland beim Oberlandesgericht,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Estland beim Ringkonnakohus,"
+              "text": "in Estland beim Ringkonnakohus,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Griechenland beim Εφετείο,"
+              "text": "in Griechenland beim Εφετείο,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Spanien bei der Audiencia Provincial über das Juzgado de Primera Instancia, das die Entscheidung erlassen hat,"
+              "text": "in Spanien bei der Audiencia Provincial über das Juzgado de Primera Instancia, das die Entscheidung erlassen hat,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Frankreich:"
+              "text": "in Frankreich:",
+              "trenner": ""
             },
             {
               "marke": "a",
               "text": "bei der Cour d’appel in Bezug auf Entscheidungen zur Genehmigung des Antrags,",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ")"
             },
             {
               "marke": "b",
               "text": "beim vorsitzenden Richter des Tribunal de grande instance in Bezug auf Entscheidungen zur Ablehnung des Antrags,",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ")"
             },
             {
               "marke": "–",
-              "text": "in Irland beim High Court,"
+              "text": "in Irland beim High Court,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Island beim héraðsdómur,"
+              "text": "in Island beim héraðsdómur,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Italien bei der Corte d’appello,"
+              "text": "in Italien bei der Corte d’appello,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Zypern beim Επαρχιακό Δικαστήριο oder für Entscheidungen in Unterhaltssachen beim Οικογενειακό Δικαστήριο,"
+              "text": "in Zypern beim Επαρχιακό Δικαστήριο oder für Entscheidungen in Unterhaltssachen beim Οικογενειακό Δικαστήριο,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Lettland beim Apgabaltiesa über das rajona (pilsētas) tiesa,"
+              "text": "in Lettland beim Apgabaltiesa über das rajona (pilsētas) tiesa,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Litauen beim Lietuvos apeliacinis teismas,"
+              "text": "in Litauen beim Lietuvos apeliacinis teismas,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Luxemburg bei der Cour supérieure de Justice als Berufungsinstanz für Zivilsachen,"
+              "text": "in Luxemburg bei der Cour supérieure de Justice als Berufungsinstanz für Zivilsachen,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Ungarn beim «törvényszék székhelyén mőködő járásbíróság» (in Budapest beim «Budai Központi Kerületi Bíróság»); über den Rechtsbehelf entscheidet das «törvényszék» (in Budapest das «Fővárosi Törvényszék»),"
+              "text": "in Ungarn beim «törvényszék székhelyén mőködő járásbíróság» (in Budapest beim «Budai Központi Kerületi Bíróság»); über den Rechtsbehelf entscheidet das «törvényszék» (in Budapest das «Fővárosi Törvényszék»),",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Malta beim «Qorti ta’ l-Appell» nach dem in der Zivilprozessordnung «Kodiċi ta’ Organizzazzjoni u Proċedura Ċivili – Kap. 12» festgelegten Verfahren oder für Entscheidungen in Unterhaltssachen durch «rikors ġuramentat» vor dem «Prim’ Awla tal-Qorti Ċivili jew il-Qorti tal-Maġistrati ta’ Għawdex fil-ġurisdizzjoni superjuri tagħha»,"
+              "text": "in Malta beim «Qorti ta’ l-Appell» nach dem in der Zivilprozessordnung «Kodiċi ta’ Organizzazzjoni u Proċedura Ċivili – Kap. 12» festgelegten Verfahren oder für Entscheidungen in Unterhaltssachen durch «rikors ġuramentat» vor dem «Prim’ Awla tal-Qorti Ċivili jew il-Qorti tal-Maġistrati ta’ Għawdex fil-ġurisdizzjoni superjuri tagħha»,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in den Niederlanden: die rechtbank,"
+              "text": "in den Niederlanden: die rechtbank,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Norwegen beim lagmannsrett,"
+              "text": "in Norwegen beim lagmannsrett,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Österreich beim Landesgericht über das Bezirksgericht,"
+              "text": "in Österreich beim Landesgericht über das Bezirksgericht,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Polen beim Sąd Apelacyjny über das Sąd Okręgowy,"
+              "text": "in Polen beim Sąd Apelacyjny über das Sąd Okręgowy,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Portugal beim Tribunal da Relação über das Gericht, das die Entscheidung erlassen hat,"
+              "text": "in Portugal beim Tribunal da Relação über das Gericht, das die Entscheidung erlassen hat,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Rumänien bei der Curte de Apel,"
+              "text": "in Rumänien bei der Curte de Apel,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Slowenien beim okrožno sodišče,"
+              "text": "in Slowenien beim okrožno sodišče,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in der Slowakei beim Berufungsgericht, über das Bezirksgericht, gegen dessen Entscheidung Berufung eingelegt wird,"
+              "text": "in der Slowakei beim Berufungsgericht, über das Bezirksgericht, gegen dessen Entscheidung Berufung eingelegt wird,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in der Schweiz beim oberen Gericht des Kantons,"
+              "text": "in der Schweiz beim oberen Gericht des Kantons,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Finnland beim hovioikeus/hovrätt,"
+              "text": "in Finnland beim hovioikeus/hovrätt,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Schweden: «tingsrätt»,"
+              "text": "in Schweden: «tingsrätt»,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Kroatien beim županijski sud über das općinski sud in Zivilsachen und Visoki trgovački sud Republike Hrvatske über das trgovački sud in Handelssachen;"
+              "text": "in Kroatien beim županijski sud über das općinski sud in Zivilsachen und Visoki trgovački sud Republike Hrvatske über das trgovački sud in Handelssachen;",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "im Vereinigten Königreich:"
+              "text": "im Vereinigten Königreich:",
+              "trenner": ""
             },
             {
               "marke": "a",
               "text": "in England und Wales beim High Court of Justice oder für Entscheidungen in Unterhaltssachen beim Family Court,",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ")"
             },
             {
               "marke": "b",
               "text": "in Schottland beim Court of Session oder für Entscheidungen in Unterhaltssachen beim Sheriff Court,",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ")"
             },
             {
               "marke": "c",
               "text": "in Nordirland beim High Court of Justice oder für Entscheidungen in Unterhaltssachen beim Magistrates’ Court,",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ")"
             },
             {
               "marke": "d",
               "text": "in Gibraltar beim Supreme Court of Gibraltar oder für Entscheidungen in Unterhaltssachen beim Magistrates’ Court.",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ")"
             }
           ]
         }
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#annex_III",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
-      "sha": "8071217ad4c1ab827fb2e7364e10542817d834847dda46d9c8ea76d63207fec6"
+      "sha": "a8a4553caad23d0f8c62eacb7ddc18cedf37a93f76641e145faece058051a533"
     },
     {
       "id": "bund/LUGUE/annex_IV",
@@ -3122,112 +3301,137 @@
           "items": [
             {
               "marke": "–",
-              "text": "in Belgien, Griechenland, Spanien, Frankreich, Italien, Luxemburg und den Niederlanden: Kassationsbeschwerde,"
+              "text": "in Belgien, Griechenland, Spanien, Frankreich, Italien, Luxemburg und den Niederlanden: Kassationsbeschwerde,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Bulgarien: обжалване пред Върховния касационен съд,"
+              "text": "in Bulgarien: обжалване пред Върховния касационен съд,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in der Tschechischen Republik: ein «dovolání», ein «žaloba na obnovu řízení» und ein «žaloba pro zmatečnost»,"
+              "text": "in der Tschechischen Republik: ein «dovolání», ein «žaloba na obnovu řízení» und ein «žaloba pro zmatečnost»,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Dänemark: ein Rechtsbehelf beim højesteret nach Genehmigung des Procesbevillingsnævnet,"
+              "text": "in Dänemark: ein Rechtsbehelf beim højesteret nach Genehmigung des Procesbevillingsnævnet,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Deutschland: Rechtsbeschwerde,"
+              "text": "in Deutschland: Rechtsbeschwerde,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Estland: kassatsioonikaebus,"
+              "text": "in Estland: kassatsioonikaebus,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Irland: ein auf Rechtsfragen beschränkter Rechtsbehelf beim Court of Appeal,"
+              "text": "in Irland: ein auf Rechtsfragen beschränkter Rechtsbehelf beim Court of Appeal,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Island: ein Rechtsbehelf beim Hæstiréttur,"
+              "text": "in Island: ein Rechtsbehelf beim Hæstiréttur,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Zypern: ein Rechtsbehelf beim obersten Gericht,"
+              "text": "in Zypern: ein Rechtsbehelf beim obersten Gericht,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Kroatien: ein Rechtsbehelf beim Vrhovni sud Republike Hrvatske,"
+              "text": "in Kroatien: ein Rechtsbehelf beim Vrhovni sud Republike Hrvatske,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Lettland: ein Rechtsbehelf beim «Augstākā tiesa» über das «Apgabaltiesa»,"
+              "text": "in Lettland: ein Rechtsbehelf beim «Augstākā tiesa» über das «Apgabaltiesa»,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Litauen: eine Kassationsbeschwerde beim Lietuvos Aukščiausiasis Teismas,"
+              "text": "in Litauen: eine Kassationsbeschwerde beim Lietuvos Aukščiausiasis Teismas,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Ungarn: felülvizsgálati kérelem,"
+              "text": "in Ungarn: felülvizsgálati kérelem,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Malta: Es können keine weiteren Rechtsbehelfe eingelegt werden; bei Entscheidungen in Unterhaltssachen Qorti ta’ l-Appell nach dem in der Gerichtsverfassungs- und Zivilprozessordnung (kodiċi ta’ Organizzazzjoni u Procedura Ċivili – Kap. 12) für Rechtsbehelfe festgelegten Verfahren,"
+              "text": "in Malta: Es können keine weiteren Rechtsbehelfe eingelegt werden; bei Entscheidungen in Unterhaltssachen Qorti ta’ l-Appell nach dem in der Gerichtsverfassungs- und Zivilprozessordnung (kodiċi ta’ Organizzazzjoni u Procedura Ċivili – Kap. 12) für Rechtsbehelfe festgelegten Verfahren,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Norwegen: ein Rechtsbehelf beim Høyesteretts Ankeutvalg oder Høyesterett,"
+              "text": "in Norwegen: ein Rechtsbehelf beim Høyesteretts Ankeutvalg oder Høyesterett,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Österreich: Revisionsrekurs,"
+              "text": "in Österreich: Revisionsrekurs,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Polen: skarga kasacyjna,"
+              "text": "in Polen: skarga kasacyjna,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Portugal: ein auf Rechtsfragen beschränkter Rechtsbehelf,"
+              "text": "in Portugal: ein auf Rechtsfragen beschränkter Rechtsbehelf,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Rumänien: ein «recursul»,"
+              "text": "in Rumänien: ein «recursul»,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Slowenien: ein Rechtsbehelf beim Vrhovno sodišče Republike Slovenije,"
+              "text": "in Slowenien: ein Rechtsbehelf beim Vrhovno sodišče Republike Slovenije,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in der Slowakei: dovolanie,"
+              "text": "in der Slowakei: dovolanie,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in der Schweiz: Beschwerde beim Bundesgericht/recours devant le Tribunal fédéral/ricorso davanti al Tribunale federale,"
+              "text": "in der Schweiz: Beschwerde beim Bundesgericht/recours devant le Tribunal fédéral/ricorso davanti al Tribunale federale,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Finnland: ein Rechtsbehelf beim korkein oikeus/högsta domstolen,"
+              "text": "in Finnland: ein Rechtsbehelf beim korkein oikeus/högsta domstolen,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "in Schweden: ein Rechtsbehelf beim «hovrätt» und «Högsta domstolen»,"
+              "text": "in Schweden: ein Rechtsbehelf beim «hovrätt» und «Högsta domstolen»,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "im Vereinigten Königreich: ein einziger auf Rechtsfragen beschränkter Rechtsbehelf."
+              "text": "im Vereinigten Königreich: ein einziger auf Rechtsfragen beschränkter Rechtsbehelf.",
+              "trenner": ""
             }
           ]
         }
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#annex_IV",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
-      "sha": "634b800003c9e22405068356479905ff2e1fe4c77ec225cf496302d0526978cf"
+      "sha": "a7d762396d0fa026fb7af4a6663cdd38e797fdd2e5667c3e268c1b383676a0f0"
     },
     {
       "id": "bund/LUGUE/annex_V",
@@ -3251,15 +3455,18 @@
           "items": [
             {
               "marke": "2.1",
-              "text": "Name:"
+              "text": "Name:",
+              "trenner": ""
             },
             {
               "marke": "2.2",
-              "text": "Anschrift:"
+              "text": "Anschrift:",
+              "trenner": ""
             },
             {
               "marke": "2.3",
-              "text": "Tel./Fax/E-Mail:"
+              "text": "Tel./Fax/E-Mail:",
+              "trenner": ""
             }
           ]
         },
@@ -3269,11 +3476,13 @@
           "items": [
             {
               "marke": "3.1",
-              "text": "Bezeichnung des Gerichts:"
+              "text": "Bezeichnung des Gerichts:",
+              "trenner": ""
             },
             {
               "marke": "3.2",
-              "text": "Gerichtsort:"
+              "text": "Gerichtsort:",
+              "trenner": ""
             }
           ]
         },
@@ -3283,38 +3492,46 @@
           "items": [
             {
               "marke": "4.1",
-              "text": "Datum:"
+              "text": "Datum:",
+              "trenner": ""
             },
             {
               "marke": "4.2",
-              "text": "Aktenzeichen:"
+              "text": "Aktenzeichen:",
+              "trenner": ""
             },
             {
               "marke": "4.3",
-              "text": "Die Parteien der Entscheidung/des Prozessvergleichs*"
+              "text": "Die Parteien der Entscheidung/des Prozessvergleichs*",
+              "trenner": ""
             },
             {
               "marke": "4.3.1",
               "text": "Name(n) des (der) Kläger(s):",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ""
             },
             {
               "marke": "4.3.2",
               "text": "Name(n) des (der) Beklagten:",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ""
             },
             {
               "marke": "4.3.3",
               "text": "gegebenenfalls Name(n) der anderen Partei(en):",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ""
             },
             {
               "marke": "4.4",
-              "text": "Datum der Zustellung des verfahrenseinleitenden Schriftstücks, wenn die Entscheidung in einem Verfahren ergangen ist, auf das sich der Beklagte nicht eingelassen hat"
+              "text": "Datum der Zustellung des verfahrenseinleitenden Schriftstücks, wenn die Entscheidung in einem Verfahren ergangen ist, auf das sich der Beklagte nicht eingelassen hat",
+              "trenner": ""
             },
             {
               "marke": "4.5",
-              "text": "Wortlaut des Urteilsspruchs/des Prozessvergleichs* in der Anlage zu dieser Bescheinigung"
+              "text": "Wortlaut des Urteilsspruchs/des Prozessvergleichs* in der Anlage zu dieser Bescheinigung",
+              "trenner": ""
             }
           ]
         },
@@ -3353,9 +3570,9 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#annex_V",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
-      "sha": "bde24c80649eb7ff0100cdfcbff097a199b5a55ae6c03504add3b7700162afa2"
+      "sha": "23db87e1a562169caf176f202b9fa212314ff5fa4ffe5c8dfee84fa8cdec2de6"
     },
     {
       "id": "bund/LUGUE/annex_VI",
@@ -3379,15 +3596,18 @@
           "items": [
             {
               "marke": "2.1",
-              "text": "Name:"
+              "text": "Name:",
+              "trenner": ""
             },
             {
               "marke": "2.2",
-              "text": "Anschrift:"
+              "text": "Anschrift:",
+              "trenner": ""
             },
             {
               "marke": "2.3",
-              "text": "Tel./Fax/E-Mail:"
+              "text": "Tel./Fax/E-Mail:",
+              "trenner": ""
             }
           ]
         },
@@ -3397,31 +3617,37 @@
           "items": [
             {
               "marke": "3.1",
-              "text": "Stelle, die an der Aufnahme der öffentlichen Urkunde beteiligt war (falls zutreffend)"
+              "text": "Stelle, die an der Aufnahme der öffentlichen Urkunde beteiligt war (falls zutreffend)",
+              "trenner": ""
             },
             {
               "marke": "3.1.1",
               "text": "Name und Bezeichnung dieser Stelle:",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ""
             },
             {
               "marke": "3.1.2",
               "text": "Sitz dieser Stelle:",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ""
             },
             {
               "marke": "3.2",
-              "text": "Stelle, die die öffentliche Urkunde registriert hat (falls zutreffend)"
+              "text": "Stelle, die die öffentliche Urkunde registriert hat (falls zutreffend)",
+              "trenner": ""
             },
             {
               "marke": "3.2.1",
               "text": "Art der Stelle:",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ""
             },
             {
               "marke": "3.2.2",
               "text": "Sitz dieser Stelle:",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ""
             }
           ]
         },
@@ -3431,39 +3657,47 @@
           "items": [
             {
               "marke": "4.1",
-              "text": "Bezeichnung der Urkunde:"
+              "text": "Bezeichnung der Urkunde:",
+              "trenner": ""
             },
             {
               "marke": "4.2",
-              "text": "Datum:"
+              "text": "Datum:",
+              "trenner": ""
             },
             {
               "marke": "[tab]",
               "text": "4.2.1 an dem die Urkunde aufgenommen wurde",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ""
             },
             {
               "marke": "[tab]",
               "text": "4.2.2 falls abweichend: an dem die Urkunde registriert wurde",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ""
             },
             {
               "marke": "4.3",
-              "text": "Aktenzeichen:"
+              "text": "Aktenzeichen:",
+              "trenner": ""
             },
             {
               "marke": "4.4",
-              "text": "Die Parteien der Urkunde"
+              "text": "Die Parteien der Urkunde",
+              "trenner": ""
             },
             {
               "marke": "4.4.1",
               "text": "Name des Gläubigers:",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ""
             },
             {
               "marke": "4.4.2",
               "text": "Name des Schuldners:",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ""
             }
           ]
         },
@@ -3511,9 +3745,9 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#annex_VI",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
-      "sha": "ba4c4aff732a67be07d2597cd84472458900c9eab230fd9d0780eabef20a3565"
+      "sha": "2d03b706d04e3a2472e594182e30cb33fa8276009cf1c8d25dad18ba7d69a75f"
     },
     {
       "id": "bund/LUGUE/annex_VII",
@@ -3529,60 +3763,72 @@
           "items": [
             {
               "marke": "–",
-              "text": "der am 19. November 1896 in Madrid unterzeichnete spanisch-schweizerische Vertrag über die gegenseitige Vollstreckung gerichtlicher Urteile und Entscheidungen in Zivil- und Handelssachen,"
+              "text": "der am 19. November 1896 in Madrid unterzeichnete spanisch-schweizerische Vertrag über die gegenseitige Vollstreckung gerichtlicher Urteile und Entscheidungen in Zivil- und Handelssachen,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "der am 21. Dezember 1926 in Bern unterzeichnete Vertrag zwischen der Schweiz und der Tschechoslowakischen Republik über die Anerkennung und Vollstreckung gerichtlicher Entscheidungen mit Zusatzprotokoll,"
+              "text": "der am 21. Dezember 1926 in Bern unterzeichnete Vertrag zwischen der Schweiz und der Tschechoslowakischen Republik über die Anerkennung und Vollstreckung gerichtlicher Entscheidungen mit Zusatzprotokoll,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "das am 2. November 1929 in Bern unterzeichnete deutsch-schweizerische Abkommen über die gegenseitige Anerkennung und Vollstreckung von gerichtlichen Entscheidungen und Schiedssprüchen,"
+              "text": "das am 2. November 1929 in Bern unterzeichnete deutsch-schweizerische Abkommen über die gegenseitige Anerkennung und Vollstreckung von gerichtlichen Entscheidungen und Schiedssprüchen,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "das am 16. März 1932 in Kopenhagen unterzeichnete Übereinkommen zwischen Dänemark, Finnland, Island, Norwegen und Schweden über die Anerkennung und Vollstreckung gerichtlicher Entscheidungen,"
+              "text": "das am 16. März 1932 in Kopenhagen unterzeichnete Übereinkommen zwischen Dänemark, Finnland, Island, Norwegen und Schweden über die Anerkennung und Vollstreckung gerichtlicher Entscheidungen,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "das am 3. Januar 1933 in Rom unterzeichnete italienisch-schweizerische Abkommen über die Anerkennung und Vollstreckung gerichtlicher Entscheidungen,"
+              "text": "das am 3. Januar 1933 in Rom unterzeichnete italienisch-schweizerische Abkommen über die Anerkennung und Vollstreckung gerichtlicher Entscheidungen,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "das am 15. Januar 1936 in Stockholm unterzeichnete schwedisch-schweizerische Abkommen über die Anerkennung und Vollstreckung von gerichtlichen Entscheidungen und Schiedssprüchen,"
+              "text": "das am 15. Januar 1936 in Stockholm unterzeichnete schwedisch-schweizerische Abkommen über die Anerkennung und Vollstreckung von gerichtlichen Entscheidungen und Schiedssprüchen,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "das am 29. April 1959 in Bern unterzeichnete belgisch-schweizerische Abkommen über die Anerkennung und Vollstreckung von gerichtlichen Entscheidungen und Schiedssprüchen,"
+              "text": "das am 29. April 1959 in Bern unterzeichnete belgisch-schweizerische Abkommen über die Anerkennung und Vollstreckung von gerichtlichen Entscheidungen und Schiedssprüchen,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "der am 16. Dezember 1960 in Bern unterzeichnete österreichisch-schweizerische Vertrag über die Anerkennung und Vollstreckung gerichtlicher Entscheidungen,"
+              "text": "der am 16. Dezember 1960 in Bern unterzeichnete österreichisch-schweizerische Vertrag über die Anerkennung und Vollstreckung gerichtlicher Entscheidungen,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "das am 12. Juni 1961 in London unterzeichnete britisch-norwegische Abkommen über die gegenseitige Anerkennung und Vollstreckung gerichtlicher Entscheidungen in Zivilsachen,"
+              "text": "das am 12. Juni 1961 in London unterzeichnete britisch-norwegische Abkommen über die gegenseitige Anerkennung und Vollstreckung gerichtlicher Entscheidungen in Zivilsachen,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "der am 17. Juni 1977 in Oslo unterzeichnete deutsch-norwegische Vertrag über die gegenseitige Anerkennung und Vollstreckung gerichtlicher Entscheidungen und anderer Schuldtitel in Zivil- und Handelssachen,"
+              "text": "der am 17. Juni 1977 in Oslo unterzeichnete deutsch-norwegische Vertrag über die gegenseitige Anerkennung und Vollstreckung gerichtlicher Entscheidungen und anderer Schuldtitel in Zivil- und Handelssachen,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "das am 11. Oktober 1977 in Kopenhagen unterzeichnete Übereinkommen zwischen Dänemark, Finnland, Island, Norwegen und Schweden über die Anerkennung und Vollstreckung gerichtlicher Entscheidungen in Zivilsachen,"
+              "text": "das am 11. Oktober 1977 in Kopenhagen unterzeichnete Übereinkommen zwischen Dänemark, Finnland, Island, Norwegen und Schweden über die Anerkennung und Vollstreckung gerichtlicher Entscheidungen in Zivilsachen,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "das am 21. Mai 1984 in Wien unterzeichnete norwegisch-österreichische Abkommen über die Anerkennung und die Vollstreckung von Entscheidungen in Zivilsachen."
+              "text": "das am 21. Mai 1984 in Wien unterzeichnete norwegisch-österreichische Abkommen über die Anerkennung und die Vollstreckung von Entscheidungen in Zivilsachen.",
+              "trenner": ""
             }
           ]
         }
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#annex_VII",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
-      "sha": "4d20538b91dc64c65fff4cdba9816c6cbead27f08953106fbadb491b32e94115"
+      "sha": "19a7d124dcfaa7f649cd4a295c38c563f469d04531d65a9cd56bd840426a616f"
     },
     {
       "id": "bund/LUGUE/annex_VIII",
@@ -3599,7 +3845,7 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#annex_VIII",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
       "sha": "09c4ec294afe038cb4f0804a1748a8b480a38446289f9cf512240404d85b1eca"
     },
@@ -3617,48 +3863,57 @@
           "items": [
             {
               "marke": "–",
-              "text": "Deutschland: §§ 68 und 72–74 der Zivilprozessordnung, die für die Streitverkündung gelten,"
+              "text": "Deutschland: §§ 68 und 72–74 der Zivilprozessordnung, die für die Streitverkündung gelten,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "Estland: Artikel 214 Absätze 3 und 4 und Artikel 216 der Zivilprozessordnung (Tsiviilkohtumenetluse seadustik), die für die Streitverkündung gelten,"
+              "text": "Estland: Artikel 214 Absätze 3 und 4 und Artikel 216 der Zivilprozessordnung (Tsiviilkohtumenetluse seadustik), die für die Streitverkündung gelten,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "Kroatien: Artikel 211 der Zivilprozessordnung (Zakon o parničnom postupku),"
+              "text": "Kroatien: Artikel 211 der Zivilprozessordnung (Zakon o parničnom postupku),",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "Lettland: Artikel 75, 78, 79, 80 und 81 der Zivilprozessordnung (Civilprocesa likums), die für die Streitverkündung gelten,"
+              "text": "Lettland: Artikel 75, 78, 79, 80 und 81 der Zivilprozessordnung (Civilprocesa likums), die für die Streitverkündung gelten,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "Litauen: Artikel 47 der Zivilprozessordnung (Civilinio proceso kodeksas),"
+              "text": "Litauen: Artikel 47 der Zivilprozessordnung (Civilinio proceso kodeksas),",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "Ungarn: Artikel 58–60 der Zivilprozessordnung (Polgári perrendtartás), die für die Streitverkündung gelten,"
+              "text": "Ungarn: Artikel 58–60 der Zivilprozessordnung (Polgári perrendtartás), die für die Streitverkündung gelten,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "Österreich: § 21 der Zivilprozessordnung, der für die Streitverkündung gilt,"
+              "text": "Österreich: § 21 der Zivilprozessordnung, der für die Streitverkündung gilt,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "Polen: Artikel 84–85 der Zivilprozessordnung (Kodeks postępowania cywilnego), die für die Streitverkündung (przypozwanie) gelten,"
+              "text": "Polen: Artikel 84–85 der Zivilprozessordnung (Kodeks postępowania cywilnego), die für die Streitverkündung (przypozwanie) gelten,",
+              "trenner": ""
             },
             {
               "marke": "–",
-              "text": "Slowenien: Artikel 204 der Zivilprozessordnung (Zakon o pravdnem postopku), der für die Streitverkündung gilt."
+              "text": "Slowenien: Artikel 204 der Zivilprozessordnung (Zakon o pravdnem postopku), der für die Streitverkündung gilt.",
+              "trenner": ""
             }
           ]
         }
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#annex_IX",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
-      "sha": "20c80a39522c9a3a381441d87a5d521d7cc62b01f24b74b43ebcf0d734f9984d"
+      "sha": "d95f9eff21d9cf04bcf3b9828e07a8ececd4b2d95f1da316e3b395e9f4500b4b"
     },
     {
       "id": "bund/LUGUE/scope_u1",
@@ -3724,7 +3979,7 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#scope_u1",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
       "sha": "994f1db6bf795f0f90054f0f5f3515dc721f8c1c76db5db4fecf05f9cab835bf"
     },
@@ -3751,7 +4006,7 @@
       ],
       "stand": "2016-04-08",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2010/801/de#decl_u2",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20160408",
       "sha": "5b382e07dd1d96ba6afcffd475a2851ee4e788c35260df130fa2f6314434e0ac"
     }

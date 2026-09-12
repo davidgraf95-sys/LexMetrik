@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-08-29",
+  "erzeugt": "2026-09-12",
   "eintraege": [
     {
       "id": "bund/HEUE/art_1",
@@ -19,32 +19,37 @@
           "items": [
             {
               "marke": "a",
-              "text": "den Staat zu bestimmen, dessen Behörden zuständig sind, Massnahmen zum Schutz der Person oder des Vermögens des Erwachsenen zu treffen;"
+              "text": "den Staat zu bestimmen, dessen Behörden zuständig sind, Massnahmen zum Schutz der Person oder des Vermögens des Erwachsenen zu treffen;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "das von diesen Behörden bei der Ausübung ihrer Zuständigkeit anzuwendende Recht zu bestimmen;"
+              "text": "das von diesen Behörden bei der Ausübung ihrer Zuständigkeit anzuwendende Recht zu bestimmen;",
+              "trenner": ")"
             },
             {
               "marke": "c",
-              "text": "das auf die Vertretung des Erwachsenen anzuwendende Recht zu bestimmen;"
+              "text": "das auf die Vertretung des Erwachsenen anzuwendende Recht zu bestimmen;",
+              "trenner": ")"
             },
             {
               "marke": "d",
-              "text": "die Anerkennung und Vollstreckung der Schutzmassnahmen in allen Vertragsstaaten sicherzustellen;"
+              "text": "die Anerkennung und Vollstreckung der Schutzmassnahmen in allen Vertragsstaaten sicherzustellen;",
+              "trenner": ")"
             },
             {
               "marke": "e",
-              "text": "die zur Verwirklichung der Ziele dieses Übereinkommens notwendige Zusammenarbeit zwischen den Behörden der Vertragsstaaten einzurichten."
+              "text": "die zur Verwirklichung der Ziele dieses Übereinkommens notwendige Zusammenarbeit zwischen den Behörden der Vertragsstaaten einzurichten.",
+              "trenner": ")"
             }
           ]
         }
       ],
       "stand": "2023-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/381/de#art_1",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230509",
-      "sha": "8f43ccd7c6e113e3ff54ae64a0338560e3179ab96a4fd27efae894ac33f23155"
+      "sha": "29593878c5ff8823fe3d80c9d84285dce05763962d679d1f45fedc84efec91fe"
     },
     {
       "id": "bund/HEUE/art_2",
@@ -65,7 +70,7 @@
       ],
       "stand": "2023-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/381/de#art_2",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230509",
       "sha": "9d262b43ec4b009b9b35859324674fd0e5fc4b04d96942535b812a12edbe662c"
     },
@@ -83,40 +88,47 @@
           "items": [
             {
               "marke": "a",
-              "text": "die Entscheidung über die Handlungsunfähigkeit und die Einrichtung einer Schutzordnung;"
+              "text": "die Entscheidung über die Handlungsunfähigkeit und die Einrichtung einer Schutzordnung;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "die Unterstellung des Erwachsenen unter den Schutz eines Gerichts oder einer Verwaltungsbehörde;"
+              "text": "die Unterstellung des Erwachsenen unter den Schutz eines Gerichts oder einer Verwaltungsbehörde;",
+              "trenner": ")"
             },
             {
               "marke": "c",
-              "text": "die Vormundschaft, die Beistandschaft und entsprechende Einrichtungen;"
+              "text": "die Vormundschaft, die Beistandschaft und entsprechende Einrichtungen;",
+              "trenner": ")"
             },
             {
               "marke": "d",
-              "text": "die Bestimmung und den Aufgabenbereich jeder Person oder Stelle, die für die Person oder das Vermögen des Erwachsenen verantwortlich ist, den Erwachsenen vertritt oder ihm beisteht;"
+              "text": "die Bestimmung und den Aufgabenbereich jeder Person oder Stelle, die für die Person oder das Vermögen des Erwachsenen verantwortlich ist, den Erwachsenen vertritt oder ihm beisteht;",
+              "trenner": ")"
             },
             {
               "marke": "e",
-              "text": "die Unterbringung des Erwachsenen in einer Einrichtung oder an einem anderen Ort, an dem Schutz gewährt werden kann;"
+              "text": "die Unterbringung des Erwachsenen in einer Einrichtung oder an einem anderen Ort, an dem Schutz gewährt werden kann;",
+              "trenner": ")"
             },
             {
               "marke": "f",
-              "text": "die Verwaltung und Erhaltung des Vermögens des Erwachsenen oder die Verfügung darüber;"
+              "text": "die Verwaltung und Erhaltung des Vermögens des Erwachsenen oder die Verfügung darüber;",
+              "trenner": ")"
             },
             {
               "marke": "g",
-              "text": "die Erlaubnis eines bestimmten Einschreitens zum Schutz der Person oder des Vermögens des Erwachsenen."
+              "text": "die Erlaubnis eines bestimmten Einschreitens zum Schutz der Person oder des Vermögens des Erwachsenen.",
+              "trenner": ")"
             }
           ]
         }
       ],
       "stand": "2023-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/381/de#art_3",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230509",
-      "sha": "4a0cbc51a5aecc9feaa8a5718e0fff7fe434415c5d085e4bf1ba8a64b09cf9c5"
+      "sha": "545c8267627cf5ee0a9b8d86b215ba05e8746234629c798ba4cf6d34b7c38520"
     },
     {
       "id": "bund/HEUE/art_4",
@@ -132,39 +144,48 @@
           "items": [
             {
               "marke": "a",
-              "text": "auf Unterhaltspflichten;"
+              "text": "auf Unterhaltspflichten;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "auf das Eingehen, die Ungültigerklärung und die Auflösung einer Ehe oder einer ähnlichen Beziehung sowie die Trennung;"
+              "text": "auf das Eingehen, die Ungültigerklärung und die Auflösung einer Ehe oder einer ähnlichen Beziehung sowie die Trennung;",
+              "trenner": ")"
             },
             {
               "marke": "c",
-              "text": "auf den Güterstand einer Ehe oder vergleichbare Regelungen für ähnliche Beziehungen;"
+              "text": "auf den Güterstand einer Ehe oder vergleichbare Regelungen für ähnliche Beziehungen;",
+              "trenner": ")"
             },
             {
               "marke": "d",
-              "text": "auf Trusts und Erbschaften,"
+              "text": "auf Trusts und Erbschaften,",
+              "trenner": ")"
             },
             {
               "marke": "e",
-              "text": "auf die soziale Sicherheit,"
+              "text": "auf die soziale Sicherheit,",
+              "trenner": ")"
             },
             {
               "marke": "f",
-              "text": "auf öffentliche Massnahmen allgemeiner Art in Angelegenheiten der Gesundheit;"
+              "text": "auf öffentliche Massnahmen allgemeiner Art in Angelegenheiten der Gesundheit;",
+              "trenner": ")"
             },
             {
               "marke": "g",
-              "text": "auf Massnahmen, die hinsichtlich einer Person infolge ihrer Straftaten ergriffen wurden;"
+              "text": "auf Massnahmen, die hinsichtlich einer Person infolge ihrer Straftaten ergriffen wurden;",
+              "trenner": ")"
             },
             {
               "marke": "h",
-              "text": "auf Entscheidungen über Asylrecht und Einwanderung;"
+              "text": "auf Entscheidungen über Asylrecht und Einwanderung;",
+              "trenner": ")"
             },
             {
               "marke": "i",
-              "text": "auf Massnahmen, die allein auf die Wahrung der öffentlichen Sicherheit gerichtet sind."
+              "text": "auf Massnahmen, die allein auf die Wahrung der öffentlichen Sicherheit gerichtet sind.",
+              "trenner": ")"
             }
           ]
         },
@@ -175,9 +196,9 @@
       ],
       "stand": "2023-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/381/de#art_4",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230509",
-      "sha": "372eccc6960f3d6886c1ddd6091831748ed36ced90b97b99e3dc067d5205c2b3"
+      "sha": "8326bcf6809dccd994c17ac329b3ad65b4430e237aed9c9880691476b46ca594"
     },
     {
       "id": "bund/HEUE/art_5",
@@ -198,7 +219,7 @@
       ],
       "stand": "2023-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/381/de#art_5",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230509",
       "sha": "36f4d04117db7e47cf80232303b61a558856ba31d86ee089f7b8dca83dd3209f"
     },
@@ -221,7 +242,7 @@
       ],
       "stand": "2023-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/381/de#art_6",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230509",
       "sha": "9aac82ae67d1d392434cb55bd9f4280621d0f271535962b42cb803c5016a617b"
     },
@@ -248,7 +269,7 @@
       ],
       "stand": "2023-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/381/de#art_7",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230509",
       "sha": "b51143afccc8a87905095768a97c30ff75f97c4c41f908272423a8272d23af9f"
     },
@@ -270,27 +291,33 @@
           "items": [
             {
               "marke": "a",
-              "text": "ein Staat, dem der Erwachsene angehört;"
+              "text": "ein Staat, dem der Erwachsene angehört;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "der Staat, in dem der Erwachsene seinen vorherigen gewöhnlichen Aufenthalt hatte;"
+              "text": "der Staat, in dem der Erwachsene seinen vorherigen gewöhnlichen Aufenthalt hatte;",
+              "trenner": ")"
             },
             {
               "marke": "c",
-              "text": "ein Staat, in dem sich Vermögen des Erwachsenen befindet;"
+              "text": "ein Staat, in dem sich Vermögen des Erwachsenen befindet;",
+              "trenner": ")"
             },
             {
               "marke": "d",
-              "text": "der Staat, dessen Behörden schriftlich vom Erwachsenen gewählt worden sind, um Massnahmen zu seinem Schutz zu treffen;"
+              "text": "der Staat, dessen Behörden schriftlich vom Erwachsenen gewählt worden sind, um Massnahmen zu seinem Schutz zu treffen;",
+              "trenner": ")"
             },
             {
               "marke": "e",
-              "text": "der Staat, in dem eine Person, die dem Erwachsenen nahe steht und bereit ist, seinen Schutz zu übernehmen, ihren gewöhnlichen Aufenthalt hat;"
+              "text": "der Staat, in dem eine Person, die dem Erwachsenen nahe steht und bereit ist, seinen Schutz zu übernehmen, ihren gewöhnlichen Aufenthalt hat;",
+              "trenner": ")"
             },
             {
               "marke": "f",
-              "text": "hinsichtlich des Schutzes der Person des Erwachsenen der Staat, in dessen Hoheitsgebiet sich der Erwachsene befindet."
+              "text": "hinsichtlich des Schutzes der Person des Erwachsenen der Staat, in dessen Hoheitsgebiet sich der Erwachsene befindet.",
+              "trenner": ")"
             }
           ]
         },
@@ -301,9 +328,9 @@
       ],
       "stand": "2023-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/381/de#art_8",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230509",
-      "sha": "452dc6b8dd600d52c2d3cf173e723e3db9339c9f4a1091a08a44d96798ea162a"
+      "sha": "352181e6a02668b1591f7e0ad39aa058d643b77e162f2924be3fafa6aff01563"
     },
     {
       "id": "bund/HEUE/art_9",
@@ -320,7 +347,7 @@
       ],
       "stand": "2023-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/381/de#art_9",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230509",
       "sha": "8a9e469d499974e7047576f65b2d3814074c89b19460979193fa15a36c17f176"
     },
@@ -351,7 +378,7 @@
       ],
       "stand": "2023-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/381/de#art_10",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230509",
       "sha": "ce7804c4a7c8729897c1afa87bf63312db405b40a9bb1fcd15f8504e58ea2eda"
     },
@@ -374,7 +401,7 @@
       ],
       "stand": "2023-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/381/de#art_11",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230509",
       "sha": "7f3c95601f6ea43d8b8793ad0bdfe00c4b73eb1294b17f23f82e5e2537024de5"
     },
@@ -393,7 +420,7 @@
       ],
       "stand": "2023-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/381/de#art_12",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230509",
       "sha": "6194299144fdaea9cffd44f3d5ea5f9cd74d354b4e9f9ae5249c70fc1d851f1a"
     },
@@ -416,7 +443,7 @@
       ],
       "stand": "2023-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/381/de#art_13",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230509",
       "sha": "fd220c5a04faa33f1760a709c614c41aa39bf1b9b66a36ce35cfa889dc560651"
     },
@@ -435,7 +462,7 @@
       ],
       "stand": "2023-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/381/de#art_14",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230509",
       "sha": "e0683a2841cd0da9d017be8672e76f77d76222bb03c42940033547d0014e87a5"
     },
@@ -457,15 +484,18 @@
           "items": [
             {
               "marke": "a",
-              "text": "ein Staat, dem der Erwachsene angehört;"
+              "text": "ein Staat, dem der Erwachsene angehört;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "der Staat eines früheren gewöhnlichen Aufenthalts des Erwachsenen;"
+              "text": "der Staat eines früheren gewöhnlichen Aufenthalts des Erwachsenen;",
+              "trenner": ")"
             },
             {
               "marke": "c",
-              "text": "ein Staat, in dem sich Vermögen des Erwachsenen befindet, hinsichtlich dieses Vermögens."
+              "text": "ein Staat, in dem sich Vermögen des Erwachsenen befindet, hinsichtlich dieses Vermögens.",
+              "trenner": ")"
             }
           ]
         },
@@ -476,9 +506,9 @@
       ],
       "stand": "2023-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/381/de#art_15",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230509",
-      "sha": "f15e4e0ce921df393ad4adfb5178d92ad4e8c0295de985d9afce02fe3386e09a"
+      "sha": "76ee38d34f499611f6f81166ee384939af9fb7d0f53758cefe6b39bdcb87ca61"
     },
     {
       "id": "bund/HEUE/art_16",
@@ -495,7 +525,7 @@
       ],
       "stand": "2023-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/381/de#art_16",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230509",
       "sha": "1578201deb93ce3bb8ddeff31ca531fe8dffbbab96ce49d2d2dbc6d83cc345d3"
     },
@@ -518,7 +548,7 @@
       ],
       "stand": "2023-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/381/de#art_17",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230509",
       "sha": "bfe4ef96ea65ff234591897b995c7fb9dec1d2dd04b792d614237cb0ecaa0621"
     },
@@ -537,7 +567,7 @@
       ],
       "stand": "2023-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/381/de#art_18",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230509",
       "sha": "3b4422512d04aa8e2b51202185fb24510ee9347935418af020cc25671fbe3962"
     },
@@ -556,7 +586,7 @@
       ],
       "stand": "2023-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/381/de#art_19",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230509",
       "sha": "6b2b1c24cd96c93a143dc80c420286cef911663032921e33599fe786b5766ab1"
     },
@@ -575,7 +605,7 @@
       ],
       "stand": "2023-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/381/de#art_20",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230509",
       "sha": "4ef985cdd7178ba6d37f6db3ab726bb8d94e2c2ff19c84261fb2759c3d33d90d"
     },
@@ -594,7 +624,7 @@
       ],
       "stand": "2023-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/381/de#art_21",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230509",
       "sha": "04bb33da1e34d2febd0d491e1457ab719b26b681062679b5bbf06344bca60a6d"
     },
@@ -616,32 +646,37 @@
           "items": [
             {
               "marke": "a",
-              "text": "wenn die Massnahme von einer Behörde getroffen wurde, die nicht aufgrund oder in Übereinstimmung mit Kapitel II zuständig war;"
+              "text": "wenn die Massnahme von einer Behörde getroffen wurde, die nicht aufgrund oder in Übereinstimmung mit Kapitel II zuständig war;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "wenn die Massnahme, ausser in dringenden Fällen, im Rahmen eines Gerichts- oder Verwaltungsverfahrens getroffen wurde, ohne dass dem Erwachsenen die Möglichkeit eingeräumt worden war, gehört zu werden, und dadurch gegen wesentliche Verfahrensgrundsätze des ersuchten Staates verstossen wurde;"
+              "text": "wenn die Massnahme, ausser in dringenden Fällen, im Rahmen eines Gerichts- oder Verwaltungsverfahrens getroffen wurde, ohne dass dem Erwachsenen die Möglichkeit eingeräumt worden war, gehört zu werden, und dadurch gegen wesentliche Verfahrensgrundsätze des ersuchten Staates verstossen wurde;",
+              "trenner": ")"
             },
             {
               "marke": "c",
-              "text": "wenn die Anerkennung der öffentlichen Ordnung (ordre public) des ersuchten Staates offensichtlich widerspricht oder ihr eine Bestimmung des Rechts dieses Staates entgegensteht, die unabhängig vom sonst massgebenden Recht zwingend ist;"
+              "text": "wenn die Anerkennung der öffentlichen Ordnung (ordre public) des ersuchten Staates offensichtlich widerspricht oder ihr eine Bestimmung des Rechts dieses Staates entgegensteht, die unabhängig vom sonst massgebenden Recht zwingend ist;",
+              "trenner": ")"
             },
             {
               "marke": "d",
-              "text": "wenn die Massnahme mit einer später in einem Nichtvertragsstaat, der nach den Artikeln 5–9 zuständig gewesen wäre, getroffenen Massnahme unvereinbar ist, sofern die spätere Massnahme die für ihre Anerkennung im ersuchten Staat erforderlichen Voraussetzungen erfüllt;"
+              "text": "wenn die Massnahme mit einer später in einem Nichtvertragsstaat, der nach den Artikeln 5–9 zuständig gewesen wäre, getroffenen Massnahme unvereinbar ist, sofern die spätere Massnahme die für ihre Anerkennung im ersuchten Staat erforderlichen Voraussetzungen erfüllt;",
+              "trenner": ")"
             },
             {
               "marke": "e",
-              "text": "wenn das Verfahren nach Artikel 33 nicht eingehalten wurde."
+              "text": "wenn das Verfahren nach Artikel 33 nicht eingehalten wurde.",
+              "trenner": ")"
             }
           ]
         }
       ],
       "stand": "2023-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/381/de#art_22",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230509",
-      "sha": "8d40229f5203dd2a94057dda09c257483ebb8ba268f0ce9280ae0bc58d624a55"
+      "sha": "79d2950bb645595aee18572f215f3eba46f6e4eb44191c57d158fdce047bda80"
     },
     {
       "id": "bund/HEUE/art_23",
@@ -658,7 +693,7 @@
       ],
       "stand": "2023-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/381/de#art_23",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230509",
       "sha": "dd60dce67e4cd36ee8887c04da232a2d2e2849edf2ca768c2465eb9fa29ff8ba"
     },
@@ -677,7 +712,7 @@
       ],
       "stand": "2023-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/381/de#art_24",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230509",
       "sha": "2b3d0ab5818075964835526bd3e42a9048cec416070ca95e88f9b25b2c6bc5c3"
     },
@@ -704,7 +739,7 @@
       ],
       "stand": "2023-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/381/de#art_25",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230509",
       "sha": "8b06e54bbf875e388e0cf5c8f95b0cde699940f3fca23359cfd7465a05d61737"
     },
@@ -723,7 +758,7 @@
       ],
       "stand": "2023-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/381/de#art_26",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230509",
       "sha": "0b3321b3560328e068f0033d4866f90f62ecc43920588bedf1e0ca20f84f34f4"
     },
@@ -742,7 +777,7 @@
       ],
       "stand": "2023-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/381/de#art_27",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230509",
       "sha": "138de58d449cb67a982cdb3a910f9e0be670aa19b0d48d01fb0b991e8c264983"
     },
@@ -765,7 +800,7 @@
       ],
       "stand": "2023-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/381/de#art_28",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230509",
       "sha": "4b640feeb102d528e9a1171accff42b7fe3de0549295059fb39a0c4c66515a62"
     },
@@ -788,7 +823,7 @@
       ],
       "stand": "2023-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/381/de#art_29",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230509",
       "sha": "4a398c801424dd670b1a9069ee518701a81ced3cc7422d74d2383333929269b7"
     },
@@ -806,20 +841,22 @@
           "items": [
             {
               "marke": "a",
-              "text": "auf jedem Weg die Mitteilungen zwischen den zuständigen Behörden. bei Sachverhalten, auf die dieses Übereinkommen anzuwenden ist, zu erleichtern;"
+              "text": "auf jedem Weg die Mitteilungen zwischen den zuständigen Behörden. bei Sachverhalten, auf die dieses Übereinkommen anzuwenden ist, zu erleichtern;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "auf Ersuchen der zuständigen Behörde eines anderen Vertragsstaats bei der Ermittlung des Aufenthaltsorts des Erwachsenen Unterstützung zu leisten, wenn der Anschein besteht, dass sich der Erwachsene im Hoheitsgebiet des ersuchten Staates befindet und Schutz benötigt."
+              "text": "auf Ersuchen der zuständigen Behörde eines anderen Vertragsstaats bei der Ermittlung des Aufenthaltsorts des Erwachsenen Unterstützung zu leisten, wenn der Anschein besteht, dass sich der Erwachsene im Hoheitsgebiet des ersuchten Staates befindet und Schutz benötigt.",
+              "trenner": ")"
             }
           ]
         }
       ],
       "stand": "2023-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/381/de#art_30",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230509",
-      "sha": "0e33e9a986c31e457a7a24c0719b9de598bffb8722b00446e4800deb2f7d82b0"
+      "sha": "769bd99ebf622c6646310974eaa2f210e64be36804bac222b64f5f417022908a"
     },
     {
       "id": "bund/HEUE/art_31",
@@ -836,7 +873,7 @@
       ],
       "stand": "2023-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/381/de#art_31",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230509",
       "sha": "305993560f60d36db3d3559b6c2f4f57237389f2bedd835ba6d710853aad7e41"
     },
@@ -863,7 +900,7 @@
       ],
       "stand": "2023-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/381/de#art_32",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230509",
       "sha": "8cee929a0a07f17eda5fafcb7650e8d31de63298f1e08eab4f08166a6b17d3b9"
     },
@@ -886,7 +923,7 @@
       ],
       "stand": "2023-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/381/de#art_33",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230509",
       "sha": "fbf344fea1a4a538b333aca59a2f13da662449de940832ea5fda88aff870ee96"
     },
@@ -905,7 +942,7 @@
       ],
       "stand": "2023-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/381/de#art_34",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230509",
       "sha": "fd5c81e7c76115ca96ded608c118be7d4f91217083cf47700f425bb1a2ea9a70"
     },
@@ -924,7 +961,7 @@
       ],
       "stand": "2023-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/381/de#art_35",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230509",
       "sha": "4a638d95bc975ea07f597add991642ed7f239b1345565830804b4310afb9dc0a"
     },
@@ -947,7 +984,7 @@
       ],
       "stand": "2023-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/381/de#art_36",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230509",
       "sha": "2f6b1a92e11355ce863523daabfea91090cfd831133ff3f935efceebd4ff48c7"
     },
@@ -966,7 +1003,7 @@
       ],
       "stand": "2023-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/381/de#art_37",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230509",
       "sha": "91d62d422204af80bdee2d6d85e048328477611dcac1968cd6b400012932f12f"
     },
@@ -993,7 +1030,7 @@
       ],
       "stand": "2023-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/381/de#art_38",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230509",
       "sha": "0b4938f35688d1c50147598b082561b147d98464a0f0521c13b2323931937a89"
     },
@@ -1012,7 +1049,7 @@
       ],
       "stand": "2023-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/381/de#art_39",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230509",
       "sha": "816bfdb95c4472c67f9a57280b3bc629c47574d3f08e9205cdc871b3c3ebe597"
     },
@@ -1031,7 +1068,7 @@
       ],
       "stand": "2023-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/381/de#art_40",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230509",
       "sha": "b14e3e404845b5d8a1f92b3ac28d13a0d7d2ed566b45bcaa64de4239769d4682"
     },
@@ -1050,7 +1087,7 @@
       ],
       "stand": "2023-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/381/de#art_41",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230509",
       "sha": "32835fde187bcb8c9f87e7b93931d32c203b3d59852537d30247375f9dbb655f"
     },
@@ -1069,7 +1106,7 @@
       ],
       "stand": "2023-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/381/de#art_42",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230509",
       "sha": "77582f7aa770aa983e521fc42e051c3a8f0a063dce1fd2b556105e80d552a236"
     },
@@ -1092,7 +1129,7 @@
       ],
       "stand": "2023-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/381/de#art_43",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230509",
       "sha": "4caa1755a1a41ec4f5e23713009f799cecbcc502857bc2ff1b2d5a346257606f"
     },
@@ -1111,7 +1148,7 @@
       ],
       "stand": "2023-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/381/de#art_44",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230509",
       "sha": "65570f04bc0930ef54c5a7848aa78692120f2b04385b2c9d76af571f874bfd66"
     },
@@ -1129,62 +1166,74 @@
           "items": [
             {
               "marke": "a",
-              "text": "auf den gewöhnlichen Aufenthalt in diesem Staat als Verweisung auf den gewöhnlichen Aufenthalt in einer Gebietseinheit zu verstehen;"
+              "text": "auf den gewöhnlichen Aufenthalt in diesem Staat als Verweisung auf den gewöhnlichen Aufenthalt in einer Gebietseinheit zu verstehen;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "auf die Anwesenheit des Erwachsenen in diesem Staat als Verweisung auf die Anwesenheit des Erwachsenen in einer Gebietseinheit zu verstehen;"
+              "text": "auf die Anwesenheit des Erwachsenen in diesem Staat als Verweisung auf die Anwesenheit des Erwachsenen in einer Gebietseinheit zu verstehen;",
+              "trenner": ")"
             },
             {
               "marke": "c",
-              "text": "auf die Belegenheit des Vermögens des Erwachsenen in diesem Staat als Verweisung auf die Belegenheit des Vermögens des Erwachsenen in einer Gebietseinheit zu verstehen;"
+              "text": "auf die Belegenheit des Vermögens des Erwachsenen in diesem Staat als Verweisung auf die Belegenheit des Vermögens des Erwachsenen in einer Gebietseinheit zu verstehen;",
+              "trenner": ")"
             },
             {
               "marke": "d",
-              "text": "auf den Staat, dem der Erwachsene angehört, als Verweisung auf die von dem Recht dieses Staates bestimmte Gebietseinheit oder, wenn solche Regeln fehlen, als Verweisung auf die Gebietseinheit zu verstehen, mit welcher der Erwachsene die engste Verbindung hat;"
+              "text": "auf den Staat, dem der Erwachsene angehört, als Verweisung auf die von dem Recht dieses Staates bestimmte Gebietseinheit oder, wenn solche Regeln fehlen, als Verweisung auf die Gebietseinheit zu verstehen, mit welcher der Erwachsene die engste Verbindung hat;",
+              "trenner": ")"
             },
             {
               "marke": "e",
-              "text": "auf den Staat, dessen Behörden vom Erwachsenen gewählt worden sind, als Verweisung:"
+              "text": "auf den Staat, dessen Behörden vom Erwachsenen gewählt worden sind, als Verweisung:",
+              "trenner": ")"
             },
             {
               "marke": "–",
               "text": "auf die Gebietseinheit zu verstehen, wenn der Erwachsene die Behörden dieser Gebietseinheit gewählt hat,",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ""
             },
             {
               "marke": "–",
               "text": "auf die Gebietseinheit, mit welcher der Erwachsene die engste Verbindung hat, zu verstehen, wenn der Erwachsene die Behörden des Staates gewählt hat, ohne eine bestimmte Gebietseinheit innerhalb des Staates anzugeben;",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ""
             },
             {
               "marke": "f",
-              "text": "auf das Recht eines Staates, mit dem der Sachverhalt eine enge Verbindung hat, als Verweisung auf das Recht der Gebietseinheit zu verstehen, mit welcher der Sachverhalt eine enge Verbindung hat;"
+              "text": "auf das Recht eines Staates, mit dem der Sachverhalt eine enge Verbindung hat, als Verweisung auf das Recht der Gebietseinheit zu verstehen, mit welcher der Sachverhalt eine enge Verbindung hat;",
+              "trenner": ")"
             },
             {
               "marke": "g",
-              "text": "auf das Recht, das Verfahren oder die Behörde des Staates, in dem eine Massnahme getroffen wurde, als Verweisung auf das Recht, das Verfahren oder die Behörde der Gebietseinheit zu verstehen, in der diese Massnahme getroffen wurde;"
+              "text": "auf das Recht, das Verfahren oder die Behörde des Staates, in dem eine Massnahme getroffen wurde, als Verweisung auf das Recht, das Verfahren oder die Behörde der Gebietseinheit zu verstehen, in der diese Massnahme getroffen wurde;",
+              "trenner": ")"
             },
             {
               "marke": "h",
-              "text": "auf das Recht, das Verfahren oder die Behörde des ersuchten Staates als Verweisung auf das Recht, das Verfahren oder die Behörde der Gebietseinheit zu verstehen, in der die Anerkennung oder Vollstreckung geltend gemacht wird;"
+              "text": "auf das Recht, das Verfahren oder die Behörde des ersuchten Staates als Verweisung auf das Recht, das Verfahren oder die Behörde der Gebietseinheit zu verstehen, in der die Anerkennung oder Vollstreckung geltend gemacht wird;",
+              "trenner": ")"
             },
             {
               "marke": "i",
-              "text": "auf den Staat, in dem eine Schutzmassnahme durchzuführen ist, als Verweisung auf die Gebietseinheit zu verstehen, in der die Massnahme durchzuführen ist;"
+              "text": "auf den Staat, in dem eine Schutzmassnahme durchzuführen ist, als Verweisung auf die Gebietseinheit zu verstehen, in der die Massnahme durchzuführen ist;",
+              "trenner": ")"
             },
             {
               "marke": "j",
-              "text": "auf Stellen oder Behörden dieses Staates, die nicht Zentrale Behörden sind, als Verweisung auf die Stellen oder Behörden zu verstehen, die in der betreffenden Gebietseinheit handlungsbefugt sind."
+              "text": "auf Stellen oder Behörden dieses Staates, die nicht Zentrale Behörden sind, als Verweisung auf die Stellen oder Behörden zu verstehen, die in der betreffenden Gebietseinheit handlungsbefugt sind.",
+              "trenner": ")"
             }
           ]
         }
       ],
       "stand": "2023-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/381/de#art_45",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230509",
-      "sha": "c62f10d0d83442b72113aacaebb5327fbe806b72ea674ac51c186d1c4b88dc92"
+      "sha": "0ded480820636c4feb4caba038182d13f3457004a10df34f2d20c3c7e9e7cb36"
     },
     {
       "id": "bund/HEUE/art_46",
@@ -1200,20 +1249,22 @@
           "items": [
             {
               "marke": "a",
-              "text": "Sind in diesem Staat Regeln in Kraft, die das Recht einer bestimmten Gebietseinheit für anwendbar erklären, so ist das Recht dieser Einheit anzuwenden."
+              "text": "Sind in diesem Staat Regeln in Kraft, die das Recht einer bestimmten Gebietseinheit für anwendbar erklären, so ist das Recht dieser Einheit anzuwenden.",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "Fehlen solche Regeln, so ist das Recht der in Artikel 45 bestimmten Gebietseinheit anzuwenden."
+              "text": "Fehlen solche Regeln, so ist das Recht der in Artikel 45 bestimmten Gebietseinheit anzuwenden.",
+              "trenner": ")"
             }
           ]
         }
       ],
       "stand": "2023-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/381/de#art_46",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230509",
-      "sha": "999005eb2c3ccf29ccb57fab396c4759510fd03d565d1f5669863ec3b68a2148"
+      "sha": "525b7c3c8a73f815a8b092535ff53576a78da5acf60dd448e77b351ddf642b5f"
     },
     {
       "id": "bund/HEUE/art_47",
@@ -1229,20 +1280,22 @@
           "items": [
             {
               "marke": "a",
-              "text": "Sind in diesem Staat Regeln in Kraft, die bestimmen, welches dieser Rechte anzuwenden ist, so ist dieses anzuwenden."
+              "text": "Sind in diesem Staat Regeln in Kraft, die bestimmen, welches dieser Rechte anzuwenden ist, so ist dieses anzuwenden.",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "Fehlen solche Regeln, so ist das Rechtssystem oder die Gesamtheit von Regeln anzuwenden, mit denen der Erwachsene die engste Verbindung hat."
+              "text": "Fehlen solche Regeln, so ist das Rechtssystem oder die Gesamtheit von Regeln anzuwenden, mit denen der Erwachsene die engste Verbindung hat.",
+              "trenner": ")"
             }
           ]
         }
       ],
       "stand": "2023-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/381/de#art_47",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230509",
-      "sha": "8a659e39f7c6df203434e41e66b08941501d0fcc0e2008c88e259cd9fd857e53"
+      "sha": "594693e77aaa55884fea17898c8e11b6d135681ef6e49dd0f136c13ea59a6160"
     },
     {
       "id": "bund/HEUE/art_48",
@@ -1259,7 +1312,7 @@
       ],
       "stand": "2023-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/381/de#art_48",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230509",
       "sha": "ef599ab608c6bf5661e8b99c2046d8d4ec894099e55d6752a57a3a8cd16f60a7"
     },
@@ -1290,7 +1343,7 @@
       ],
       "stand": "2023-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/381/de#art_49",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230509",
       "sha": "e3a7a660606ddc1e2476473a0f2aa06dccaeabf5e817c38b655d7864cfdebc0b"
     },
@@ -1317,7 +1370,7 @@
       ],
       "stand": "2023-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/381/de#art_50",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230509",
       "sha": "987d1d181209ac0e7b54f4e1bf1af19feabeb103d52866097813ec8dab6575a8"
     },
@@ -1340,7 +1393,7 @@
       ],
       "stand": "2023-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/381/de#art_51",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230509",
       "sha": "d1399380e93ac3152bc031b7042ec3dc8b425df48902fe34289ce831912de8c0"
     },
@@ -1359,7 +1412,7 @@
       ],
       "stand": "2023-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/381/de#art_52",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230509",
       "sha": "044bd70ac2a18b2f995c6970c3b7cdc079f40888f42c3ce5102732121359c51d"
     },
@@ -1382,7 +1435,7 @@
       ],
       "stand": "2023-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/381/de#art_53",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230509",
       "sha": "9d8a8e519de496601145f90ac291049fdbf082e3c6dc40d77a7c9dcee99de366"
     },
@@ -1409,7 +1462,7 @@
       ],
       "stand": "2023-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/381/de#art_54",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230509",
       "sha": "022066786364fc703aad404b7b2ed71a6afd86cc79a7c78a38de9e756d641f5f"
     },
@@ -1436,7 +1489,7 @@
       ],
       "stand": "2023-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/381/de#art_55",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230509",
       "sha": "399066c34215659add5c9a9e5d878b6be40e6935141c8c97ebec3cbfe437cecd"
     },
@@ -1463,7 +1516,7 @@
       ],
       "stand": "2023-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/381/de#art_56",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230509",
       "sha": "f18bf566c542a652c2ef00560efc28dba59f04d846afd25b7a61ded0f5e85dc3"
     },
@@ -1485,24 +1538,27 @@
           "items": [
             {
               "marke": "a",
-              "text": "für jeden Staat, der es später ratifiziert, annimmt oder genehmigt, am ersten Tag des Monats, der auf einen Zeitabschnitt von drei Monaten nach Hinterlegung seiner Ratifikations-, Annahme-, Genehmigungs- oder Beitrittsurkunde folgt;"
+              "text": "für jeden Staat, der es später ratifiziert, annimmt oder genehmigt, am ersten Tag des Monats, der auf einen Zeitabschnitt von drei Monaten nach Hinterlegung seiner Ratifikations-, Annahme-, Genehmigungs- oder Beitrittsurkunde folgt;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "für jeden Staat, der ihm beitritt, am ersten Tag des Monats, der auf einen Zeitabschnitt von drei Monaten nach Ablauf der in Artikel 54 Absatz 3 vorgesehenen Frist von sechs Monaten folgt;"
+              "text": "für jeden Staat, der ihm beitritt, am ersten Tag des Monats, der auf einen Zeitabschnitt von drei Monaten nach Ablauf der in Artikel 54 Absatz 3 vorgesehenen Frist von sechs Monaten folgt;",
+              "trenner": ")"
             },
             {
               "marke": "c",
-              "text": "für die Gebietseinheiten, auf die es nach Artikel 55 erstreckt worden ist, am ersten Tag des Monats, der auf einen Zeitabschnitt von drei Monaten der in jenem Artikel vorgesehenen Notifikation folgt."
+              "text": "für die Gebietseinheiten, auf die es nach Artikel 55 erstreckt worden ist, am ersten Tag des Monats, der auf einen Zeitabschnitt von drei Monaten der in jenem Artikel vorgesehenen Notifikation folgt.",
+              "trenner": ")"
             }
           ]
         }
       ],
       "stand": "2023-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/381/de#art_57",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230509",
-      "sha": "b816c2e80ea976b753c4c83d1156a8b80819a95f3db53b45dffd2005ea970294"
+      "sha": "d308d0d465fe48d2e6ef2bd66d2451c7b858134bd35998ce457bc6cad07ce708"
     },
     {
       "id": "bund/HEUE/art_58",
@@ -1523,7 +1579,7 @@
       ],
       "stand": "2023-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/381/de#art_58",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230509",
       "sha": "a0ea93fa2d9639ae48ba36a1b358c26b6851ceda87c0d84f4398150f43a7eb1d"
     },
@@ -1541,40 +1597,47 @@
           "items": [
             {
               "marke": "a",
-              "text": "jede Unterzeichnung, Ratifikation, Annahme und Genehmigung nach Artikel 53;"
+              "text": "jede Unterzeichnung, Ratifikation, Annahme und Genehmigung nach Artikel 53;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "jeden Beitritt und jeden Einspruch gegen einen Beitritt nach Artikel 54;"
+              "text": "jeden Beitritt und jeden Einspruch gegen einen Beitritt nach Artikel 54;",
+              "trenner": ")"
             },
             {
               "marke": "c",
-              "text": "den Tag, an dem dieses Übereinkommen nach Artikel 57 in Kraft tritt;"
+              "text": "den Tag, an dem dieses Übereinkommen nach Artikel 57 in Kraft tritt;",
+              "trenner": ")"
             },
             {
               "marke": "d",
-              "text": "jede Erklärung nach Artikel 32 Absatz 2 und Artikel 55;"
+              "text": "jede Erklärung nach Artikel 32 Absatz 2 und Artikel 55;",
+              "trenner": ")"
             },
             {
               "marke": "e",
-              "text": "jede Vereinbarung nach Artikel 37;"
+              "text": "jede Vereinbarung nach Artikel 37;",
+              "trenner": ")"
             },
             {
               "marke": "f",
-              "text": "jeden Vorbehalt nach Artikel 51 Absatz 2 sowie jede Rücknahme eines Vorbehalts nach Artikel 56 Absatz 2;"
+              "text": "jeden Vorbehalt nach Artikel 51 Absatz 2 sowie jede Rücknahme eines Vorbehalts nach Artikel 56 Absatz 2;",
+              "trenner": ")"
             },
             {
               "marke": "g",
-              "text": "jede Kündigung nach Artikel 58."
+              "text": "jede Kündigung nach Artikel 58.",
+              "trenner": ")"
             }
           ]
         }
       ],
       "stand": "2023-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/381/de#art_59",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230509",
-      "sha": "f67bb95679d31b180bc579580a4f81f2f4b4068eb5b7b26372276ebff4f3c8c7"
+      "sha": "c7fd158ef7303d3221f6c554deb3f35744b5cb2e04860f431c27a0e0f51ef9f9"
     },
     {
       "id": "bund/HEUE/annex_u1",
@@ -1629,7 +1692,7 @@
       ],
       "stand": "2023-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/381/de#annex_u1",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230509",
       "sha": "1d219cf75da0c60c463a54bdc899296fd033ab8d8452f77b376129baaf1810fd"
     },
@@ -1767,7 +1830,7 @@
       ],
       "stand": "2023-05-09",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/381/de#scope_u1",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20230509",
       "sha": "09f6c55620be9d02c8d4c04925d65e68c982c7baa541bf1f7e14804809f8a9e5"
     }
