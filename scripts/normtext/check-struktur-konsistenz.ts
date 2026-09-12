@@ -52,6 +52,38 @@ function keysVonStruktur(pfad: string): string[] {
   return Object.keys(doc.artikel ?? {});
 }
 
+type VersionsMarke = { stand: string; fassungsToken: string } | null;
+
+/** Version des ERSTEN Snapshot-Eintrags (innerhalb eines Erlasses identisch, s. normtext-snapshot.ts). */
+function versionVonSnapshot(pfad: string): VersionsMarke {
+  const datei = JSON.parse(readFileSync(pfad, 'utf8')) as {
+    eintraege?: Array<{ stand?: string; fassungsToken?: string }>;
+  };
+  const e = datei.eintraege?.[0];
+  return e?.stand && e?.fassungsToken ? { stand: e.stand, fassungsToken: e.fassungsToken } : null;
+}
+
+/** Version, aus der der Struktur-Sidecar gebaut wurde (struktur-run.ts, §6.7 — additives Feld). */
+function versionVonStruktur(pfad: string): VersionsMarke {
+  const doc = JSON.parse(readFileSync(pfad, 'utf8')) as { stand?: string; fassungsToken?: string };
+  return doc.stand && doc.fassungsToken ? { stand: doc.stand, fassungsToken: doc.fassungsToken } : null;
+}
+
+/**
+ * §6.7 (Gegenprüfung #808 B4): Artikel-Keys können übereinstimmen, obwohl der Sidecar
+ * aus einer ÄLTEREN Snapshot-Version stammt — der Generator kann einen neuen
+ * `fassungsToken` auf einem unveränderten Artikel-Bestand stempeln (Beleg DBG #695).
+ * Der bisherige Vergleich (nur Artikel-Keys) übersieht diesen Fall. Nur ein Befund,
+ * wenn BEIDE Seiten die Versions-Felder tragen: additiver Rollout (wie `kl`,
+ * W2·5i) — ältere Sidecars ohne das Feld werden dadurch NICHT rückwirkend rot; sie
+ * erhalten es beim nächsten regulären `normtext:struktur`-Lauf.
+ */
+export function standDriftBefund(snap: VersionsMarke, stru: VersionsMarke): string | null {
+  if (!snap || !stru) return null;
+  if (snap.stand === stru.stand && snap.fassungsToken === stru.fassungsToken) return null;
+  return `Snapshot-Version (stand=${snap.stand}, fassungsToken=${snap.fassungsToken}) ≠ Sidecar-Version (stand=${stru.stand}, fassungsToken=${stru.fassungsToken})`;
+}
+
 function main(): void {
   let exitCode = 0;
 
@@ -93,6 +125,14 @@ function main(): void {
     if (r.fehlendDoppelId.length > 0) {
       // Dokumentierte Doppelartikel-Grenze (2. Vorkommen einer art_id) — kein Fehler.
       bundDoppelIdHinweise += r.fehlendDoppelId.length;
+    }
+
+    // §6.7-Ast (Gegenprüfung #808 B4): gleiche Artikel-Keys reichen nicht — der
+    // Sidecar kann trotzdem aus einer älteren Snapshot-Version stammen.
+    const drift = standDriftBefund(versionVonSnapshot(snapPfad), versionVonStruktur(struPfad));
+    if (drift) {
+      console.error(`  FEHLER ${gesetz}: ${drift} — Sidecar veraltet trotz gleicher Artikel-Keys.`);
+      exitCode = 1;
     }
   }
 
@@ -179,4 +219,10 @@ function main(): void {
   process.exit(exitCode);
 }
 
-main();
+// CLI-Guard (wie struktur-run.ts): erlaubt Tests, `standDriftBefund` (§6.7) zu
+// importieren, ohne dass main() (readdirSync über die echten public/-Verzeichnisse,
+// process.exit) beim Test-Import mitläuft. `process.argv[1]` zeigt unter vite-node
+// auf das vite-node-Binary, nicht auf diese Datei — Pfad-Regex wäre für den echten
+// CLI-Lauf blind. `VITEST` setzt Vitest in jedem Testprozess zuverlässig (verifiziert).
+const istCliLauf = !process.env.VITEST;
+if (istCliLauf) main();
