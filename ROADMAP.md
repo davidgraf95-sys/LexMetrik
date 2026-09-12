@@ -348,7 +348,7 @@ zgb-a36-anhang: Die ZGB-Gliederung zeigt 74 Artikel des Anhangs «Wortlaut der f
   <!-- @meta id: QS-KORPUS · status: ready · blocker: null · dep: [] · feld: korpus · fahrplan: fahrplaene/FAHRPLAN-OFFENE-BEFUNDE.md -->
   Dach für die offenen Reparaturen an Normtext- und Rechtsprechungs-Korpus; je Zeile eine
   sortenreine Bau-Einheit. **Detail:** [FAHRPLAN-OFFENE-BEFUNDE.md](fahrplaene/FAHRPLAN-OFFENE-BEFUNDE.md) §1.
-  - [ ] **`adapter-lexwork.ts:778` Fetch-Ergebnis unvalidiert** — Shape vor Verwendung prüfen.
+  - [x] **`adapter-lexwork.ts:778` Fetch-Ergebnis unvalidiert** — erledigt 12.9.2026, PR #813 (`af5e35ce9`), Gegenprüfung ausstehend: Laufzeit-Validierung `validiereTextOfLaw()` statt Compile-Cast, Nullprobe mit drei vorher rot laufenden Tests. Wortlaut: ROADMAP-CHRONIK.md.
   - [ ] **Bezüge-Kanten mit Phantom-Zitaten** *(Befund Split-Bau 30.8.2026, PR #582)* — 18 854 von
     75 365 Artikel↔Entscheid-Kanten nennen den Artikel im Entscheid-Snapshot gar nicht; Stichprobe
     `bge_148_V_265` trägt `«Art. 4 BGE»` in `zitierteNormen` (Extraktions-Artefakt). Wurzel im
