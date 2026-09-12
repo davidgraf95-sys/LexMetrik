@@ -50,12 +50,26 @@ describe('fundstelle — massgebliche AS-Fundstelle (§7, gelesen statt fabrizie
 });
 
 describe('belegtImXml — Finding 4b (AS-Fundstelle bereits im Konsolidierungstext zitiert)', () => {
-  it('erkennt eine oc-URI, die als <ref href> im XML-Text zitiert ist', () => {
-    const xml = '<p>… Art. 1 des Beschlusses Nr. 1/2020 …, <ref href="https://fedlex.data.admin.ch/eli/oc/2021/12">AS <b>2021</b> 12</ref>).</p>';
+  it('erkennt eine oc-URI, deren href-Zitat NEBEN «angewendet ab» steht (FZA-Muster)', () => {
+    const xml = '<p>… Art. 1 des Beschlusses Nr. 1/2020 …, in Kraft seit 15. Dez. 2020 und angewendet ab 1. Jan. 2021 (<ref href="https://fedlex.data.admin.ch/eli/oc/2021/12">AS <b>2021</b> 12</ref>).</p>';
     expect(belegtImXml(xml, OC('2021/12'))).toBe(true);
   });
   it('gibt false, wenn die oc-URI nicht vorkommt', () => {
     expect(belegtImXml('<p>kein Verweis hier</p>', OC('2024/100'))).toBe(false);
+  });
+  it('gibt false bei blosser href-Nennung OHNE «angewendet ab» (KLV-Gegenbeleg: Historie-Aufzählung / Teil-Inkrafttreten)', () => {
+    // Live-Gegenprobe 12.9.2026: KLV zitiert Amendment-ocs in Änderungs-Historien und bei
+    // Teil-Inkrafttreten («Abs. 1 Bst. a und c in Kraft seit …, die anderen Bestimmungen
+    // treten später in Kraft») — dort bleibt der Marker korrekt bestehen, obwohl die href
+    // vorkommt. Kein «angewendet ab» im Dokument ⇒ kein Beleg.
+    const historie = '<p>Fassung gemäss … vom 2. Dez. 2025 (<ref href="https://fedlex.data.admin.ch/eli/oc/2025/852">852</ref>) und Ziff. II vom 9. Juni 2026, in Kraft seit 1. Juli 2026 (<ref href="https://fedlex.data.admin.ch/eli/oc/2026/336">AS 2026 336</ref>).</p>';
+    expect(belegtImXml(historie, OC('2025/852'))).toBe(false);
+    const teilInKraft = '<p>Eingefügt durch Ziff. I der V des EDI vom 12. Juni 2026, Abs. 1 Bst. a und c in Kraft seit 1. Aug. 2026 (<ref href="https://fedlex.data.admin.ch/eli/oc/2026/348">AS 2026 348</ref>). Die anderen Bestimmungen treten zu einem späteren Zeitpunkt in Kraft.</p>';
+    expect(belegtImXml(teilInKraft, OC('2026/348'))).toBe(false);
+  });
+  it('verlangt «angewendet ab» IN DER NÄHE der href, nicht irgendwo im Dokument', () => {
+    const weitWeg = `<p>angewendet ab ${'x'.repeat(500)} <ref href="https://fedlex.data.admin.ch/eli/oc/2021/12">AS 2021 12</ref></p>`;
+    expect(belegtImXml(weitWeg, OC('2021/12'))).toBe(false);
   });
 });
 

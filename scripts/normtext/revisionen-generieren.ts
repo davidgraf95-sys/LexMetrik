@@ -149,21 +149,40 @@ export function fundstelle(ocUri: string, historicalId?: string): string | undef
   return roFundstelleAusOc(ocUri);
 }
 
+// Fenster um die href-Fundstelle, in dem die Wortlaut-Probe nach «angewendet ab» sucht
+// (FZA-Beleg: die Wendung steht ~30 Zeichen VOR dem <ref href>, im selben Satz/derselben
+// authorialNote). Grosszügig genug für eine Fussnote, eng genug, um nicht versehentlich
+// eine andere Fussnote im selben Dokument zu treffen.
+const ANGEWENDET_AB_FENSTER = 400;
+
 /**
  * Finding 4b (Gegenprüfung 16.8.2026, W2·18-FEHLERBUCH #19, live an FZA/SR 0.142.112.681
  * verifiziert): Fedlex modelliert `jolux:dateEntryInForce` bei gewissen Staatsvertrags-
  * Beschlüssen (Gemischter-Ausschuss-Entscheide) als «angewendet ab»-Datum, NICHT als
  * «in Kraft für die Schweiz seit»-Datum. Beleg live (`eli/cc/2002/243/20201215`,
  * DE-XML, Art. 1 des Beschlusses Nr. 1/2020, abgerufen 12.9.2026): der Konsolidierungs-
- * text vom 15.12.2020 zitiert bereits die oc-URI `eli/oc/2021/12` per `<ref href>`,
- * obwohl deren `dateEntryInForce` erst 2021-01-01 ist («in Kraft … seit 15. Dez. 2020
- * und angewendet ab 1. Jan. 2021»). Der reine Datumsvergleich markiert das dann
- * falsch-positiv als `nichtKonsolidiert`. Massgeblich ist die tatsächlich zitierte
- * Fundstelle im amtlichen Text (§7), nicht das Datumsfeld — daher der Text-Beleg als
- * Korrektiv, nie ein zweites Datumsfeld (das wäre wieder nur eine Heuristik).
+ * text vom 15.12.2020 zitiert bereits die oc-URI `eli/oc/2021/12` per `<ref href>`, DIREKT
+ * neben der Wendung «in Kraft für die Schweiz seit 15. Dez. 2020 und **angewendet ab**
+ * 1. Jan. 2021» — obwohl deren `dateEntryInForce` erst 2021-01-01 ist.
+ *
+ * Eine BLOSSE href-Präsenz reicht NICHT (Gegenprobe live an KLV/SR 832.112.31, 12.9.2026):
+ * dieselbe oc-URI kann in einer reinen Änderungs-HISTORIE auftauchen (Aufzählung aller
+ * früheren Fassungen einer Bestimmung) oder ein Amendment kann NUR TEILWEISE in Kraft sein
+ * («Abs. 1 Bst. a und c in Kraft seit 1. Aug. 2026 … Die anderen Bestimmungen treten zu
+ * einem späteren Zeitpunkt in Kraft.») — in beiden Fällen ist der Marker weiterhin
+ * KORREKT `nichtKonsolidiert`, obwohl die href vorkommt. Deshalb: Beleg nur, wenn die
+ * spezifische Wendung «angewendet ab» IN DERSELBEN FUSSNOTE neben der href steht — das ist
+ * das Fedlex-Vokabular für genau die «in Kraft ≠ angewendet ab»-Konstellation, nicht
+ * irgendeine Nachbarschaft. Live geprüft: `angewendet ab` kommt im gesamten KLV-Text kein
+ * einziges Mal vor (0 Treffer), im FZA-Text genau einmal — direkt bei der fraglichen href.
  */
 export function belegtImXml(xmlText: string, ocUri: string): boolean {
-  return xmlText.includes(`href="${ocUri}"`);
+  const href = `href="${ocUri}"`;
+  const i = xmlText.indexOf(href);
+  if (i === -1) return false;
+  const von = Math.max(0, i - ANGEWENDET_AB_FENSTER);
+  const bis = Math.min(xmlText.length, i + href.length + ANGEWENDET_AB_FENSTER);
+  return xmlText.slice(von, bis).includes('angewendet ab');
 }
 
 /** oc-URI → Fedlex-Live-Link (DE-Rendering des AS-Textes). */
