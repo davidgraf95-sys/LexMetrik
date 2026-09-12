@@ -136,9 +136,23 @@ export function normVerweiseImText(
     const nachAnker = text.slice(start + roh.length);
     if (zusatzwortSperre(nachAnker)) continue;   // anderer Erlass (§1)
     if (historischeFassung(nachAnker)) continue; // historische Fassung (§7/§8)
+    // W2·18-FEHLERBUCH-Nachzug (12.9.2026): DIESELBE Lücke wie oben, aber für
+    // KUERZEL_NUR_BUND statt der beiden GP-#635-Guards — der Guard lebte bis
+    // hierher NUR in `ausgeschriebeneVerweiseImText` (Z5, Kürzel MIT Passus wie
+    // «Art. 98 Abs. 2 lit. a und b StG»); die KÜRZESTE Zitatform ohne Passus
+    // («Art. 9 BMV») trifft aber NORM_IM_TEXT direkt und lief an Z5 vorbei,
+    // also auch am Guard. Belegt an kanton/SG/3849 art_7: «Prüfung und
+    // Genehmigung von Projekten für private Schutzräume (Art. 9 BMV; …)» meint
+    // die (nicht im Korpus geführte) eidgenössische Schutzbautenverordnung vom
+    // 27.11.1978 — verlinkt wurde SR 412.103.1, die geltende
+    // Berufsmaturitätsverordnung. Kürzel-Erkennung VOR dem Push, damit der
+    // Guard den Anker selbst noch stoppt (Beleg und Aufnahme-Regel bei
+    // `KUERZEL_NUR_BUND`, positivliste.ts).
+    const kuerzelAmAnker = erkenneFedlexGesetz(roh);
+    if (ebene === 'kanton' && kuerzelAmAnker && KUERZEL_NUR_BUND.has(kuerzelAmAnker)) continue;
     spans.push({ start, end: start + roh.length, anzeige: roh, artikel: roh, propagiert: false });
     // Kürzel des Anker-Endes → auf vorangehende bare Glieder propagieren.
-    const kuerzel = erkenneFedlexGesetz(roh);
+    const kuerzel = kuerzelAmAnker;
     if (!kuerzel) continue;
     let grenze = start;
     for (;;) {

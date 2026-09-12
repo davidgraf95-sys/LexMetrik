@@ -573,8 +573,26 @@ export function datumPasst(gesetz: FedlexGesetz, rohDatum: string | null | undef
 // für sich selbst oder für einen anderen Kantonserlass verwendet. Fehlt der
 // Beleg, gehört das Kürzel NICHT hierher — sonst gehen richtige Links verloren
 // (gemessen: der Guard kostet im Kantonskorpus 2 von 335 Z5-Links).
+//
+// ZWEITE AUFNAHME-KLASSE (W2·18-FEHLERBUCH, 12.9.2026): ein Kürzel kann auch
+// OHNE einen gleichnamigen Kantonserlass falsch sein, wenn der Register-Key
+// einen SPÄTEREN Bundeserlass trägt, der eine ÄLTERE, im Korpus nicht geführte
+// Fassung mit demselben amtlichen Kürzel abgelöst hat. Beleg: kanton/SG/3849
+// art_7 «Eidgenössische Schutzbautenverordnung vom 27. November 1978 (BMV) …
+// Prüfung und Genehmigung von Projekten für private Schutzräume (Art. 9 BMV;
+// …)» — gemeint ist diese 1978er Verordnung, verlinkt wurde `BMV` = SR
+// 412.103.1 (die geltende Berufsmaturitätsverordnung, ein VÖLLIG anderes
+// Sachgebiet). Die 1978er Schutzbautenverordnung ist im Korpus nicht als
+// eigener Snapshot geführt — es gibt kein richtiges Ziel, an das der Guard
+// stattdessen binden könnte; er unterdrückt darum nur (§1: kein Link statt
+// eines falschen), wie bei StG. Ebenfalls Rot-Beweis fürs zweite Leck der
+// Kürzel-Bindung: die primäre `NORM_IM_TEXT`-Anker-Form («Art. 9 BMV» ganz
+// ohne Passus) lief bis hierher am Z5-Pfad und damit an DIESEM Guard vorbei
+// (Fix: `normVerweiseImText`, spannen.ts).
 export const KUERZEL_NUR_BUND: ReadonlySet<FedlexGesetz> = new Set<FedlexGesetz>([
   'StG', // Steuergesetz — jeder Kanton führt eines (Belege oben)
+  'BMV', // Berufsmaturitätsverordnung — kollidiert mit der 1978er eidg.
+         // Schutzbautenverordnung desselben Kürzels, nicht im Korpus (Beleg oben)
 ]);
 
 // ─── Z5-Nachzug (GP zu PR #635) · Kürzel + ZUSATZWORT = ein ANDERER Erlass ───
