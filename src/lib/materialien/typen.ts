@@ -255,7 +255,7 @@ export interface MaterialProvenienz {
 
 /** Ein Eintrag MIT allen Feldern — die In-Memory-SSoT des Generators (§5), aus der
  *  die drei Dateien projiziert werden. Existiert nie als ausgelieferte Datei. */
-export type MaterialVoll = BrowseMaterial & MaterialProvenienz & MaterialTitelI18n & {
+export type MaterialVoll = BrowseMaterial & MaterialProvenienz & {
   titelFr?: string;
   titelIt?: string;
 };
