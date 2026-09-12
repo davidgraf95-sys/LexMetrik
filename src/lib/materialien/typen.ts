@@ -180,10 +180,25 @@ export interface MaterialRegistereintrag {
   }>;
 }
 
-// ── Browse-Manifest-Schema (generiert → public/materialien/register.json) ────
-// EIN Eintrag pro Material; Identität/Taxonomie aus dem Register, plus aufgelöste
-// Anzeige-Labels (Behörde/Doktyp) und ein deterministischer sha über die
-// Identitätsfelder (Provenienz, §2/§7). Lazy geladen, nie im Bundle (§3).
+// ── Manifest-Schemata (generiert → public/materialien/register*.json) ───────
+//
+// DREI Projektionen aus EINEM Generator-Lauf, getrennt nach NUTZUNGSZEITPUNKT
+// (Deckel-Messung 12.9.2026, bibliothek/materialien/2026-09-12-register-deckel-
+// messung.md). Jedes Feld liegt in genau EINER Datei — §5, keine zweite Wahrheit:
+//
+//   register.json             Kern; was der Browser beim ersten Blick braucht.
+//   register-i18n.json        FR/IT-Titel; nur bei locale 'fr'/'it' geholt.
+//   register-provenienz.json  sha + Verfahrens-/Join-Felder; vom Browser NIE geholt
+//                             (Tore, Datenhaltung, Paritätskette lesen sie von Platte).
+//
+// Warum getrennt und nicht je Herkunft geshardet: Übersicht, Universal-Suche und
+// «Zuletzt besucht» brauchen ALLE Herkünfte — Herkunfts-Shards vervielfachten die
+// Fetches je Seite mit jedem Kanton, ohne eine einzige der teuren Feldgruppen zu
+// verkleinern (gemessen: sha 59,2 KB gzip, FR/IT-Titel 70,6 KB, beide für den
+// deutschen Lesefluss wertlos).
+
+/** EIN Eintrag der Kern-Projektion (public/materialien/register.json). Lazy geladen,
+ *  nie im Bundle (§3). Trägt NUR, was eine Browser-Zeile tatsächlich liest. */
 export interface BrowseMaterial {
   key: string;
   behoerde: BehoerdeId;
@@ -201,34 +216,69 @@ export interface BrowseMaterial {
   rang: number;
   normKeys: string[];
   hinweis: string | null;
-  // ── Botschaften-Zusatzfelder (Paket 2; nur bei doktyp==='botschaft' gesetzt) ──
-  titelFr?: string;
-  titelIt?: string;
-  projEli?: string;
-  ocUris?: string[];
-  botschaftDate?: string;
-  artAnker?: string[];
-  /** E1: Verfahrenskette der Vorlage (nur bei doktyp==='botschaft' gesetzt). */
-  ereignisse?: VerfahrensEreignis[];
-  // ── Vernehmlassungs-Zusatzfeld (Paket 3; nur bei doktyp==='vernehmlassung' gesetzt) ──
+  /** Vernehmlassungs-Zustand (Paket 3; nur bei doktyp==='vernehmlassung' gesetzt).
+   *  Bleibt im Kern: das Kontext-Panel zeigt Status und Frist in JEDER Sprache. */
   vernehmlassung?: {
     status: VernehmlassungStatus;
     fristStart?: string;
     fristEnde?: string;
     projEli: string;
   };
-  /** K-16: Herkunft je Erlass-Verknüpfung (nur bei behoerde==='BS-GR' gesetzt). */
+}
+
+/** FR/IT-Titel eines Eintrags (public/materialien/register-i18n.json). */
+export interface MaterialTitelI18n {
+  fr?: string;
+  it?: string;
+}
+
+/** Provenienz- und Verfahrensfelder eines Eintrags
+ *  (public/materialien/register-provenienz.json — kein Browser-Kanal). */
+export interface MaterialProvenienz {
+  /** sha-256 über die Identitätsfelder (Drift-/Provenienz-Token, §7). */
+  sha: string;
+  projEli?: string;
+  ocUris?: string[];
+  botschaftDate?: string;
+  artAnker?: string[];
+  /** E1: Verfahrenskette der Vorlage. Die Entstehungs-Karte rendert sie aus
+   *  public/materialien/entstehung/<KEY>.json, nicht von hier (§5). */
+  ereignisse?: VerfahrensEreignis[];
+  /** K-16: Herkunft je Erlass-Verknüpfung (nur bei behoerde==='BS-GR'). */
   bsKanten?: ReadonlyArray<{
     erlass: string;
     quelle: 'amtlich' | 'maschinell';
     regel: 'fussnote' | 'sg-nummer' | 'datum-titel';
     beleg: string;
   }>;
-  /** sha-256 über die Identitätsfelder (Drift-/Provenienz-Token). */
-  sha: string;
 }
+
+/** Ein Eintrag MIT allen Feldern — die In-Memory-SSoT des Generators (§5), aus der
+ *  die drei Dateien projiziert werden. Existiert nie als ausgelieferte Datei. */
+export type MaterialVoll = BrowseMaterial & MaterialProvenienz & MaterialTitelI18n & {
+  titelFr?: string;
+  titelIt?: string;
+};
 
 export interface MaterialManifest {
   erzeugt: string;
   materialien: BrowseMaterial[];
+}
+
+/** Build-Zeit-Manifest mit allen Feldern (vor der Aufteilung). */
+export interface MaterialVollManifest {
+  erzeugt: string;
+  materialien: MaterialVoll[];
+}
+
+export interface MaterialI18nManifest {
+  erzeugt: string;
+  /** key → Titel in FR/IT (nur Einträge, die mindestens einen tragen). */
+  titel: Record<string, MaterialTitelI18n>;
+}
+
+export interface MaterialProvenienzManifest {
+  erzeugt: string;
+  /** key → Provenienz-/Verfahrensfelder (EIN Eintrag je Material, sha immer gesetzt). */
+  eintraege: Record<string, MaterialProvenienz>;
 }

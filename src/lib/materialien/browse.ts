@@ -5,7 +5,10 @@
 // erzeugt. Klon des Musters aus src/lib/normtext/browse.ts (eigener Namespace,
 // das Original bleibt unberührt, §12).
 
-import type { BrowseMaterial, MaterialManifest, BehoerdeId, DoktypId } from './typen';
+import type {
+  BrowseMaterial, MaterialManifest, MaterialI18nManifest, MaterialTitelI18n,
+  BehoerdeId, DoktypId,
+} from './typen';
 import { BEHOERDEN, BEHOERDE_RANG, DOKTYP_LABEL } from './register';
 import type { Rechtsgebiet } from '../normtext/register';
 
@@ -26,6 +29,49 @@ export async function ladeMaterialManifest(): Promise<MaterialManifest | null> {
     })();
   }
   return manifestPromise;
+}
+
+// ── FR/IT-Titel (eigene Projektion, eigener Abruf) ───────────────────────────
+//
+// Getrennt vom Kern, weil der deutsche Lesefluss sie nie anfasst: 70,6 KB gzip,
+// die 2026 jede Leserseite mitzog (Messung 12.9.2026). Die Datei wird NUR geholt,
+// wenn die Oberfläche wirklich auf FR oder IT steht — `ladeMaterialTitelI18n('de')`
+// löst keinen Abruf aus und liefert `null` (§15: null Byte für den Normalfall).
+let i18nPromise: Promise<Map<string, MaterialTitelI18n> | null> | null = null;
+
+export async function ladeMaterialTitelI18n(
+  locale: string,
+): Promise<Map<string, MaterialTitelI18n> | null> {
+  if (locale !== 'fr' && locale !== 'it') return null;
+  if (!i18nPromise) {
+    i18nPromise = (async () => {
+      try {
+        const res = await fetch('/materialien/register-i18n.json');
+        if (!res.ok) return null;
+        const m = (await res.json()) as MaterialI18nManifest;
+        return m && typeof m.titel === 'object' && m.titel !== null
+          ? new Map(Object.entries(m.titel))
+          : null;
+      } catch {
+        return null;
+      }
+    })();
+  }
+  return i18nPromise;
+}
+
+/**
+ * Der anzuzeigende Titel eines Materials in der gewählten Sprache — mit Rückfall
+ * auf den deutschen Titel, wenn keine Übersetzung vorliegt oder die Projektion
+ * nicht geladen werden konnte (§8: nie eine leere Zeile statt des amtlichen Titels).
+ */
+export function titelI18n(
+  key: string, titelDe: string, locale: string,
+  karte: Map<string, MaterialTitelI18n> | null,
+): string {
+  const t = karte?.get(key);
+  if (!t) return titelDe;
+  return (locale === 'fr' && t.fr) || (locale === 'it' && t.it) || titelDe;
 }
 
 /** Findet den Material-Eintrag eines Schlüssels (key) im Manifest. */

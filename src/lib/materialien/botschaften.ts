@@ -6,13 +6,18 @@
 // (§15): sie kommen aus derselben register.json, die das Kontext-Panel ohnehin
 // lädt (ladeMaterialManifest, gecachte Promise) — deshalb kein zweiter Fetch.
 //
+// FR/IT-Titel (12.9.2026): seit der Aufteilung der Projektion stehen sie in
+// `register-i18n.json` und werden NUR bei locale 'fr'/'it' geholt — der Index bleibt
+// sprachfrei, die Übersetzung wird erst auf das Ergebnis gelegt. Für 'de' passiert
+// gar nichts (kein Abruf, keine Kopie); die Anzeige fällt wie bisher auf `titel`.
+//
 // Finding 11 (Payload/§15): botschaftenFuer iteriert die volle Liste NICHT je
 // Aufruf, sondern baut EINMAL einen erlassKey→Botschaften-Index (memoisiert auf die
 // Manifest-Referenz). §5: keine zweite Wahrheit — der Index ist eine In-Memory-
 // Projektion des Manifests, keine committete Parallel-Datei.
 
-import { ladeMaterialManifest } from './browse';
-import type { BrowseMaterial, MaterialManifest } from './typen';
+import { ladeMaterialManifest, ladeMaterialTitelI18n } from './browse';
+import type { BrowseMaterial, MaterialManifest, MaterialTitelI18n } from './typen';
 
 /** Anzeige-Form einer Botschaft (Entstehungsgeschichte-Eintrag). */
 export interface BotschaftBezug {
@@ -48,8 +53,6 @@ function browseNachBotschaft(m: BrowseMaterial): BotschaftBezug {
   return {
     key: m.key,
     titel: m.titel,
-    titelFr: m.titelFr,
-    titelIt: m.titelIt,
     nummer: m.nummer,
     quelleUrl: m.quelleUrl,
     stand: m.stand,
@@ -80,8 +83,12 @@ function baueIndex(manifest: MaterialManifest): Map<string, BotschaftBezug[]> {
  * Botschaften über mehrere normKeys vereinigt + dedupliziert (Datum absteigend). `null`
  * nur, wenn das Manifest gar nicht geladen werden konnte (Fetch-Fehler, §8).
  */
-export async function botschaftenFuer(normKeys: readonly string[]): Promise<BotschaftBezug[] | null> {
-  const manifest = await ladeMaterialManifest();
+export async function botschaftenFuer(
+  normKeys: readonly string[], locale = 'de',
+): Promise<BotschaftBezug[] | null> {
+  const [manifest, i18n] = await Promise.all([
+    ladeMaterialManifest(), ladeMaterialTitelI18n(locale),
+  ]);
   if (!manifest) return null;
   if (!indexCache || indexCache.manifest !== manifest) {
     indexCache = { manifest, index: baueIndex(manifest) };
@@ -94,5 +101,10 @@ export async function botschaftenFuer(normKeys: readonly string[]): Promise<Bots
     }
   }
   out.sort((a, b) => (a.stand < b.stand ? 1 : a.stand > b.stand ? -1 : (a.key < b.key ? -1 : a.key > b.key ? 1 : 0)));
-  return out;
+  return i18n ? out.map((b) => mitI18n(b, i18n.get(b.key))) : out;
+}
+
+/** Legt FR/IT-Titel auf einen Bezug (ohne Übersetzung unverändert, §8). */
+function mitI18n(b: BotschaftBezug, t: MaterialTitelI18n | undefined): BotschaftBezug {
+  return t ? { ...b, titelFr: t.fr, titelIt: t.it } : b;
 }

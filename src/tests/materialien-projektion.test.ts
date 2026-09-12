@@ -12,7 +12,7 @@ import {
 } from '../../scripts/materialien/soft-law-projektion';
 import { wortfeldTreffer, blendeKommentareAus, wortfeldImQuellcode } from '../../scripts/materialien/wortfeld';
 import { braucheDowngrade } from '../../scripts/materialien/revisions-cutoff';
-import type { BrowseMaterial } from '../lib/materialien/typen';
+import type { MaterialVoll } from '../lib/materialien/typen';
 
 // E6a Stufe 1: reine Projektions-/Extractor-Funktionen (§2.7/§4). Kein Anfassen bestehender Tests.
 
@@ -142,7 +142,7 @@ describe('serialisiereShard (Bucket-Split §0/B5)', () => {
 });
 
 describe('projiziereRegister (Merge-Modell + Determinismus)', () => {
-  const dbDoc: BrowseMaterial = {
+  const dbDoc: MaterialVoll = {
     key: 'ESTV-MWST-MI-99', behoerde: 'ESTV', behoerdeName: 'Eidgenössische Steuerverwaltung', behoerdeKuerzel: 'ESTV',
     doktyp: 'mwst-info', doktypLabel: 'MWST-Info', titel: 'DB-Dok', nummer: null, rechtsgebiet: 'steuern',
     sprache: 'de', status: 'nur-live-link', quelleUrl: 'https://x', stand: '2025-01-01', rang: 999, normKeys: [], hinweis: null, sha: 'x',

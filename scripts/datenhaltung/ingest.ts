@@ -68,10 +68,17 @@ export const RECHTSPRECHUNG_SHARD_DIR = 'public/rechtsprechung/norm-index';
 //   register.json     — Browse-Projektion (nur gelistete, schlank).
 //   soft-law-zustand  — append-only Zustands-Manifest (der Rebuild-/Historie-Anker, §0/B2).
 //   kanten/**/*.json  — Norm-Referenz-Shards + Bucket-Dateien (variable Menge, in M0 evtl. keine).
-export const MATERIALIEN_MANIFESTE = [
+/** Die drei Register-Projektionen EINES Generator-Laufs (Aufteilung 12.9.2026: Kern ·
+ *  FR/IT-Titel · Provenienz). Ohne die beiden neuen Zeilen lägen zwei Extraktions-
+ *  Artefakte ausserhalb der Paritätskette — genau die Lücke, die A8 für anker/** benannte. */
+export const MATERIALIEN_PROJEKTIONEN = [
   'public/materialien/register.json',
-  'bibliothek/register/soft-law-zustand.jsonl',
+  'public/materialien/register-i18n.json',
+  'public/materialien/register-provenienz.json',
 ];
+/** Append-only Zustands-Manifest (der Rebuild-/Historie-Anker, §0/B2). */
+export const MATERIALIEN_ZUSTAND = ['bibliothek/register/soft-law-zustand.jsonl'];
+export const MATERIALIEN_MANIFESTE = [...MATERIALIEN_PROJEKTIONEN, ...MATERIALIEN_ZUSTAND];
 export const MATERIALIEN_KANTEN_DIR = 'public/materialien/kanten';
 // Entstehung am Artikel (W2·6c, §11.6, Kritik A8/C4): Anker-Sidecars und Parlaments-Shards
 // samt ihren committeten Zustandsträgern. Ohne diese Zeilen lägen zwei Extraktions-
@@ -302,8 +309,11 @@ export function ingestSoftLaw(db: DatabaseSync): Zaehler {
   ingestDokumente(db, entwurf, 'entstehung-entwurf');
   ingestDokumente(db, traeger, 'entstehung-traeger');
   return {
-    Materialien: 1,
-    'Soft-Law-Zustand': 1,
+    // Aus den Listen gezählt, nie hartkodiert (12.9.2026): die feste `1` meldete nach
+    // der Register-Aufteilung 1 statt 3 Dateien weiter — ein Zähler, der beim nächsten
+    // Zuwachs wieder still falsch würde (§8: die Grün-Meldung ist ein Beleg, kein Text).
+    Materialien: MATERIALIEN_PROJEKTIONEN.length,
+    'Soft-Law-Zustand': MATERIALIEN_ZUSTAND.length,
     'Materialien-Kanten': kanten.length,
     'Entstehung-Anker': anker.length,
     'Entstehung-Curia': curia.length,

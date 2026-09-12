@@ -6,12 +6,16 @@
 // aus derselben register.json, die das Kontext-Panel ohnehin lädt (ladeMaterialManifest,
 // gecachte Promise) — kein zweiter Fetch.
 //
+// FR/IT-Titel (12.9.2026): aus `register-i18n.json`, nur bei locale 'fr'/'it' geholt —
+// der Index bleibt sprachfrei, die Übersetzung liegt erst auf dem Ergebnis (wie bei den
+// Botschaften). Für 'de' kein Abruf und keine Kopie.
+//
 // Payload/§15 (Finding 11): vernehmlassungenFuer iteriert die volle Liste NICHT je Aufruf,
 // sondern baut EINMAL einen erlassKey→Verfahren-Index (memoisiert auf die Manifest-Referenz).
 // §5: keine zweite Wahrheit — In-Memory-Projektion des Manifests, keine committete Parallel-Datei.
 
-import { ladeMaterialManifest } from './browse';
-import type { BrowseMaterial, MaterialManifest, VernehmlassungStatus } from './typen';
+import { ladeMaterialManifest, ladeMaterialTitelI18n } from './browse';
+import type { BrowseMaterial, MaterialManifest, MaterialTitelI18n, VernehmlassungStatus } from './typen';
 
 /** Anzeige-Form eines Vernehmlassungsverfahrens (Gesetzgebung-in-Arbeit-Eintrag). */
 export interface VernehmlassungBezug {
@@ -50,8 +54,6 @@ function browseNachVernehmlassung(m: BrowseMaterial): VernehmlassungBezug | null
   return {
     key: m.key,
     titel: m.titel,
-    titelFr: m.titelFr,
-    titelIt: m.titelIt,
     status: v.status,
     fristStart: v.fristStart,
     fristEnde: v.fristEnde,
@@ -88,8 +90,12 @@ function baueIndex(manifest: MaterialManifest): Map<string, VernehmlassungBezug[
  * zuerst). Leeres Array = keine Verknüpfung im Graphen (Reichweite ~ab 2006). `null` = Manifest-
  * Ladefehler (Fetch-Fehler ≠ leer, §8).
  */
-export async function vernehmlassungenFuer(normKeys: readonly string[]): Promise<VernehmlassungBezug[] | null> {
-  const manifest = await ladeMaterialManifest();
+export async function vernehmlassungenFuer(
+  normKeys: readonly string[], locale = 'de',
+): Promise<VernehmlassungBezug[] | null> {
+  const [manifest, i18n] = await Promise.all([
+    ladeMaterialManifest(), ladeMaterialTitelI18n(locale),
+  ]);
   if (!manifest) return null;
   if (!indexCache || indexCache.manifest !== manifest) {
     indexCache = { manifest, index: baueIndex(manifest) };
@@ -102,7 +108,9 @@ export async function vernehmlassungenFuer(normKeys: readonly string[]): Promise
     }
   }
   out.sort(vergleiche);
-  return out;
+  return i18n
+    ? out.map((v) => { const t: MaterialTitelI18n | undefined = i18n.get(v.key); return t ? { ...v, titelFr: t.fr, titelIt: t.it } : v; })
+    : out;
 }
 
 /** Deutsche Anzeige-Labels der Status (UI, keine Rechtslogik). */

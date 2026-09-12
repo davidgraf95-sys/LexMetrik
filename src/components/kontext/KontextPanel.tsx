@@ -201,9 +201,12 @@ export function KontextPanel({ typ, normKeys, zusatzGruppen, ohneNormen = false,
     if (typ !== 'norm') return;
     const keys = normKeysKey ? normKeysKey.split(',') : [];
     let lebt = true;
-    botschaftenFuer(keys).then((r) => { if (lebt) setBotGeladen({ key: normKeysKey, refs: r }); });
+    // `locale` mit in den Abruf: die FR/IT-Titel stehen seit dem 12.9.2026 in einer
+    // eigenen Projektion (register-i18n.json) und werden nur für diese beiden Sprachen
+    // geholt — der deutsche Lesefluss zieht sie nicht mehr mit (§15).
+    botschaftenFuer(keys, locale).then((r) => { if (lebt) setBotGeladen({ key: normKeysKey, refs: r }); });
     return () => { lebt = false; };
-  }, [typ, normKeysKey]);
+  }, [typ, normKeysKey, locale]);
   const botAktuell = typ === 'norm' && botGeladen?.key === normKeysKey ? botGeladen : null;
   const botschaftenLaden = typ === 'norm' && !botAktuell;
   const botschaftenFehler = botAktuell?.refs === null;
@@ -239,9 +242,9 @@ export function KontextPanel({ typ, normKeys, zusatzGruppen, ohneNormen = false,
     if (typ !== 'norm') return;
     const keys = normKeysKey ? normKeysKey.split(',') : [];
     let lebt = true;
-    vernehmlassungenFuer(keys).then((r) => { if (lebt) setVernGeladen({ key: normKeysKey, refs: r }); });
+    vernehmlassungenFuer(keys, locale).then((r) => { if (lebt) setVernGeladen({ key: normKeysKey, refs: r }); });
     return () => { lebt = false; };
-  }, [typ, normKeysKey]);
+  }, [typ, normKeysKey, locale]);
   const vernAktuell = typ === 'norm' && vernGeladen?.key === normKeysKey ? vernGeladen : null;
   const vernehmlassungenLaden = typ === 'norm' && !vernAktuell;
   const vernehmlassungenFehler = vernAktuell?.refs === null;

@@ -33,7 +33,7 @@ import { MATERIAL_REGISTER, BEHOERDEN, DOKTYPEN } from '../../src/lib/materialie
 // dieselben Register-Grundchecks + gelten im Merge-Modell als «kuratiert» (nicht DB-Dok).
 import { ALLE_MATERIALIEN } from './material-manifest.ts';
 import { ERLASS_REGISTER } from '../../src/lib/normtext/register.ts';
-import type { BrowseMaterial, MaterialManifest } from '../../src/lib/materialien/typen.ts';
+import type { MaterialVoll, MaterialManifest } from '../../src/lib/materialien/typen.ts';
 import { ladeZustand, type DokZeile, type SoftLawQuelle, type ZustandZeile } from './soft-law-zustand.ts';
 import { braucheDowngrade } from './revisions-cutoff.ts';
 import {
@@ -42,7 +42,10 @@ import {
   baueKorpusInfo,
   ladeKantenAusDb,
   dbDokAusZustand,
+  teileRegister,
   REGISTER_PFAD,
+  REGISTER_I18N_PFAD,
+  REGISTER_PROVENIENZ_PFAD,
   KANTEN_DIR,
   SOFT_LAW_DB,
   SHARD_BYTE_LIMIT,
@@ -184,7 +187,7 @@ function main(): void {
   // register.json-Byte-Gleichheit läuft so auch in CI (keine DB nötig). Die DB dient NUR der
   // lokalen Shard-Reprojektion (kanten/dokMeta); in CI werden die committeten Shards direkt
   // validiert (pruefeShardDatei + Dok-Mitgliedschaft + Plausibilität), nicht byte-reprojiziert.
-  const dbDocs: BrowseMaterial[] = dbDokAusZustand(zustand);
+  const dbDocs: MaterialVoll[] = dbDokAusZustand(zustand);
   const dbExists = existsSync(SOFT_LAW_DB);
   let kanten: NormRefRow[] = [];
   let dokMeta = new Map<string, DokMeta>();
@@ -217,8 +220,43 @@ function main(): void {
   const frisch1 = projiziereRegister(register.erzeugt, dbDocs);
   const frisch2 = projiziereRegister(register.erzeugt, dbDocs);
   if (JSON.stringify(frisch1) !== JSON.stringify(frisch2)) fehler.push('register-Projektion nicht deterministisch (2-Lauf-Diff).');
-  if (registerBytes !== JSON.stringify(frisch1, null, 2) + '\n') {
-    fehler.push(`${REGISTER_PFAD} weicht von der frischen Projektion ab — nur über den Generator pflegen (§2). 'npm run materialien -- --datum=$(date +%F)'.`);
+  // ALLE DREI Projektionen byte-gleich gegen denselben frischen Lauf (12.9.2026):
+  // sie entstehen gemeinsam, also müssen sie auch gemeinsam geprüft werden — sonst
+  // könnte eine der beiden neuen Dateien unbemerkt veralten (§5, zweite Wahrheit).
+  const geteilt = teileRegister(frisch1);
+  const geteilt2 = teileRegister(frisch2);
+  if (JSON.stringify(geteilt) !== JSON.stringify(geteilt2)) fehler.push('Register-Aufteilung nicht deterministisch (2-Lauf-Diff).');
+  for (const [pfad, soll] of [
+    [REGISTER_PFAD, geteilt.kern],
+    [REGISTER_I18N_PFAD, geteilt.i18n],
+    [REGISTER_PROVENIENZ_PFAD, geteilt.provenienz],
+  ] as const) {
+    if (!existsSync(pfad)) {
+      fehler.push(`${pfad} fehlt — 'npm run materialien -- --datum=$(date +%F)' schreibt alle drei Projektionen gemeinsam.`);
+      continue;
+    }
+    if (readFileSync(pfad, 'utf8') !== JSON.stringify(soll, null, 2) + '\n') {
+      fehler.push(`${pfad} weicht von der frischen Projektion ab — nur über den Generator pflegen (§2). 'npm run materialien -- --datum=$(date +%F)'.`);
+    }
+  }
+  // Kein Feld darf in zwei Dateien liegen und keines verschwinden (§5/§8): der Kern
+  // trägt nie sha/FR/IT/Ketten, und JEDER Eintrag hat genau eine Provenienz-Zeile.
+  for (const m of register.materialien as unknown as Array<Record<string, unknown>>) {
+    for (const verboten of ['sha', 'titelFr', 'titelIt', 'ereignisse', 'bsKanten', 'ocUris', 'projEli', 'botschaftDate', 'artAnker']) {
+      if (verboten in m) fehler.push(`${String(m.key)}: Feld '${verboten}' liegt im Browser-Kanal register.json — gehört in register-i18n.json bzw. register-provenienz.json (§5/§15).`);
+    }
+  }
+  const provKeys = new Set(Object.keys(geteilt.provenienz.eintraege));
+  for (const m of register.materialien) {
+    if (!provKeys.has(m.key)) fehler.push(`${m.key}: keine Provenienz-Zeile (sha) in ${REGISTER_PROVENIENZ_PFAD} — Drift-Token verloren (§7).`);
+  }
+  for (const k of provKeys) {
+    if (!registerKeys.has(k)) fehler.push(`${k}: Provenienz-Zeile ohne Eintrag im Kern-Register — Waise (§5).`);
+    const sha = geteilt.provenienz.eintraege[k].sha;
+    if (!/^[0-9a-f]{64}$/.test(sha)) fehler.push(`${k}: sha ist kein sha256 (§7).`);
+  }
+  for (const k of Object.keys(geteilt.i18n.titel)) {
+    if (!registerKeys.has(k)) fehler.push(`${k}: FR/IT-Titel ohne Eintrag im Kern-Register — Waise (§5).`);
   }
 
   // Shard-Byte-Reprojektion nur lokal-mit-Harvest-DB; sonst (CI ohne DB, hohle Build-DB)

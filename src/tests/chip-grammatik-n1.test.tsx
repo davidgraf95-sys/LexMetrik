@@ -47,7 +47,7 @@ const material: BrowseMaterial = {
   behoerdeKuerzel: 'SECO', doktyp: 'wegleitung', doktypLabel: 'Wegleitung',
   titel: 'Wegleitung zum Arbeitsgesetz', nummer: '710.100', rechtsgebiet: 'privat', sprache: 'de',
   status: 'nur-live-link', quelleUrl: 'https://x', stand: '2022-02-01', rang: 0, normKeys: [],
-  hinweis: null, sha: 'x',
+  hinweis: null,
 };
 
 describe('N1 (1) — Struktur: die Chip-Reihen tragen die Opt-in-Klasse', () => {

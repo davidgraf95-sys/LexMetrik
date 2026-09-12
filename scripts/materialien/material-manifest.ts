@@ -17,7 +17,9 @@ import {
   MATERIAL_REGISTER, behoerdeVon, DOKTYP_LABEL, BEHOERDE_RANG,
 } from '../../src/lib/materialien/register.ts';
 import type {
-  BrowseMaterial, MaterialManifest, MaterialRegistereintrag,
+  MaterialVoll, MaterialVollManifest, MaterialRegistereintrag,
+  MaterialManifest, MaterialI18nManifest, MaterialProvenienzManifest,
+  MaterialProvenienz, MaterialTitelI18n, BrowseMaterial,
 } from '../../src/lib/materialien/typen.ts';
 // Botschaften (Paket 2, W2·6): NICHT im in-Bundle MATERIAL_REGISTER (§15 Bundle-Kosten:
 // ~400 Einträge × 3 Titel), sondern nur als Build-Zeit-Quelle hier gemerged → sie fliessen
@@ -38,6 +40,62 @@ export const ALLE_MATERIALIEN: ReadonlyArray<MaterialRegistereintrag> = [
 ];
 
 export const REGISTER_PFAD = join('public', 'materialien', 'register.json');
+/** FR/IT-Titel — eigene Projektion, weil der deutsche Lesefluss sie nie anfasst
+ *  (gemessen 12.9.2026: 70,6 KB gzip = 21 % des alten Monolithen). */
+export const REGISTER_I18N_PFAD = join('public', 'materialien', 'register-i18n.json');
+/** sha + Verfahrens-/Join-Felder — KEIN Browser-Kanal (kein fetch() im gesamten
+ *  src/-Baum, Identitäts-Grep 12.9.2026); Tore und Datenhaltung lesen von Platte. */
+export const REGISTER_PROVENIENZ_PFAD = join('public', 'materialien', 'register-provenienz.json');
+
+/** Felder der Kern-Projektion, in der Reihenfolge, in der sie geschrieben werden.
+ *  Als Liste geführt, damit `teileRegister` nicht per Löschen arbeitet: ein neues
+ *  Feld in MaterialVoll landet so NIE versehentlich im Browser-Kanal (§15). */
+const KERN_FELDER = [
+  'key', 'behoerde', 'behoerdeName', 'behoerdeKuerzel', 'doktyp', 'doktypLabel',
+  'titel', 'nummer', 'rechtsgebiet', 'sprache', 'status', 'quelleUrl', 'stand',
+  'rang', 'normKeys', 'hinweis', 'vernehmlassung',
+] as const satisfies ReadonlyArray<keyof BrowseMaterial>;
+
+/**
+ * Teilt das volle Manifest in die drei ausgelieferten Projektionen (§5: jedes Feld
+ * genau einmal). Rein und deterministisch — die Reihenfolge der Einträge ist die
+ * des vollen Manifests, die Schlüssel-Reihenfolge der Objekte damit ebenso.
+ */
+export function teileRegister(voll: MaterialVollManifest): {
+  kern: MaterialManifest;
+  i18n: MaterialI18nManifest;
+  provenienz: MaterialProvenienzManifest;
+} {
+  const materialien: BrowseMaterial[] = [];
+  const titel: Record<string, MaterialTitelI18n> = {};
+  const eintraege: Record<string, MaterialProvenienz> = {};
+  for (const m of voll.materialien) {
+    const kernEintrag: Partial<BrowseMaterial> = {};
+    for (const f of KERN_FELDER) {
+      if (m[f] !== undefined) (kernEintrag as Record<string, unknown>)[f] = m[f];
+    }
+    materialien.push(kernEintrag as BrowseMaterial);
+
+    const t: MaterialTitelI18n = {};
+    if (m.titelFr) t.fr = m.titelFr;
+    if (m.titelIt) t.it = m.titelIt;
+    if (t.fr || t.it) titel[m.key] = t;
+
+    const p: MaterialProvenienz = { sha: m.sha };
+    if (m.projEli) p.projEli = m.projEli;
+    if (m.ocUris) p.ocUris = m.ocUris;
+    if (m.botschaftDate) p.botschaftDate = m.botschaftDate;
+    if (m.artAnker) p.artAnker = m.artAnker;
+    if (m.ereignisse) p.ereignisse = m.ereignisse;
+    if (m.bsKanten) p.bsKanten = m.bsKanten;
+    eintraege[m.key] = p;
+  }
+  return {
+    kern: { erzeugt: voll.erzeugt, materialien },
+    i18n: { erzeugt: voll.erzeugt, titel },
+    provenienz: { erzeugt: voll.erzeugt, eintraege },
+  };
+}
 
 /** sha256 über die Identitätsfelder (stabile, sortierte Repräsentation). Ändert
  *  sich, sobald sich Titel/Nummer/Quelle/Stand/Status/Verzahnung ändern → Drift-
@@ -74,7 +132,7 @@ export function shaEintrag(r: MaterialRegistereintrag): string {
   return createHash('sha256').update(norm, 'utf8').digest('hex');
 }
 
-function browseEintrag(r: MaterialRegistereintrag): BrowseMaterial {
+function vollEintrag(r: MaterialRegistereintrag): MaterialVoll {
   const b = behoerdeVon(r.behoerde);
   // Botschaften-Zusatzfelder NUR für BR emittieren → bestehende Einträge byte-identisch
   // (keine neuen null-Keys in den kuratierten register.json-Zeilen).
@@ -130,14 +188,15 @@ function browseEintrag(r: MaterialRegistereintrag): BrowseMaterial {
 }
 
 /** Deterministische Sortierung: Behörde-rang → eigener rang → key. */
-function vergleiche(a: BrowseMaterial, b: BrowseMaterial): number {
+function vergleiche(a: MaterialVoll, b: MaterialVoll): number {
   return (BEHOERDE_RANG[a.behoerde] - BEHOERDE_RANG[b.behoerde])
     || a.rang - b.rang
     || a.key.localeCompare(b.key);
 }
 
-/** Baut das Browse-Manifest aus dem Register (rein, testbar). */
-export function baueMaterialManifest(erzeugt: string): MaterialManifest {
-  const materialien = ALLE_MATERIALIEN.map(browseEintrag).sort(vergleiche);
+/** Baut das VOLLE Manifest aus dem Register (rein, testbar) — die In-Memory-SSoT,
+ *  aus der `teileRegister` die drei ausgelieferten Dateien projiziert (§5). */
+export function baueMaterialManifest(erzeugt: string): MaterialVollManifest {
+  const materialien = ALLE_MATERIALIEN.map(vollEintrag).sort(vergleiche);
   return { erzeugt, materialien };
 }
