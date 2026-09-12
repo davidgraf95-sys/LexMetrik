@@ -197,6 +197,44 @@ describe('erlassVolltextHtml() — §5-Gleichlauf mit dem interaktiven Kopf (K-2
   });
 });
 
+describe('erlassVolltextHtml() — Standausweis am aufgehobenen Erlass (Gegenprüfung PR #823/W2·18, 12.9.2026)', () => {
+  const kanton = erlasse.find((e) => e.ebene === 'kanton' && e.datei && e.stand)!;
+  const datei: NormSnapshotDatei = JSON.parse(
+    readFileSync(join(PUB, 'normtext', kanton.datei!), 'utf8'),
+  );
+  it('aufgehobener Erlass trägt NIE «(geltend)» im Live-Link (Fund: BMV.html zeigte «(geltend)» trotz Aufhebung)', () => {
+    const html = erlassVolltextHtml(
+      { ...kanton, aufgehoben: { seit: '2026-03-01' } },
+      datei,
+    );
+    expect(html).not.toContain('(geltend)');
+  });
+  it('aufgehobener Erlass trägt stattdessen «aufgehoben per TT.MM.JJJJ»', () => {
+    const html = erlassVolltextHtml(
+      { ...kanton, aufgehoben: { seit: '2026-03-01' } },
+      datei,
+    );
+    expect(html).toContain('(aufgehoben per 01.03.2026)');
+  });
+  it('Nachfolger, wenn im Register vorhanden, erscheint im Kopf', () => {
+    const html = erlassVolltextHtml(
+      {
+        ...kanton,
+        aufgehoben: {
+          seit: '2026-03-01',
+          nachfolger: { sr: '412.103.1', titel: 'Nachfolge-Titel', eli: 'cc/2025/408' },
+        },
+      },
+      datei,
+    );
+    expect(html).toContain('Nachfolge-Erlass SR 412.103.1 (in Kraft seit 01.03.2026)');
+  });
+  it('geltender (nicht aufgehobener) Erlass bleibt unverändert bei «(geltend)»', () => {
+    const html = erlassVolltextHtml(kanton, datei);
+    expect(html).toContain('(geltend)');
+  });
+});
+
 describe('Substanz-Prädikate (kein header-only «Volltext», §8)', () => {
   it('erlassHatVolltext: true bei echtem Snapshot, false bei leer', () => {
     const datei = JSON.parse(readFileSync(join(PUB, 'normtext', or.datei!), 'utf8'));

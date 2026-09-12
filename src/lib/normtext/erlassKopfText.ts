@@ -123,6 +123,35 @@ export function nichtKonsolidiertSatz(seitIso: string | null): string {
 }
 
 /**
+ * Standausweis des AUFGEHOBENEN Erlasses (Gegenprüfung PR #823, 12.9.2026,
+ * W2·18-FEHLERBUCH): «aufgehoben per TT.MM.JJJJ».
+ *
+ * Der interaktive Kopf (`ErlassLeserKopf.tsx`) weist einen aufgehobenen
+ * Erlass seit dem §8-Aufhebungs-Banner unmissverständlich aus («Aufgehoben
+ * per …»). Der prerenderte Kopf (`seo-detail.ts: erlassVolltextHtml`) schrieb
+ * denselben Erlass bis zu diesem Fund weiterhin als «amtliche Fassung
+ * (geltend)» — belegt an `dist/gesetze/bund/BMV.html` (BMV aufgehoben
+ * 1.3.2026, Stand-Zeile «Stand 2016-08-23 · amtliche Fassung (geltend)», kein
+ * Aufhebungs-Hinweis). Die crawlbare Fassung sagte damit das GEGENTEIL der
+ * lesenden. EINE Quelle (§5): dieselbe Ableitung (`e.aufgehoben`, hier nur
+ * die Datumsform) wie der Reader, nicht ein zweiter handgeschriebener String.
+ */
+export function aufgehobenSeitSatz(seitIso: string): string {
+  return `aufgehoben per ${datumCh(seitIso)}`;
+}
+
+/**
+ * Nachfolge-Erlass-Hinweis für den Prerender-Kopf (Kurzform des Reader-
+ * Banner-Satzes «Nachfolge-Erlass: SR … (in Kraft seit …)», hier als reiner
+ * Text ohne Link-Anatomie — der Prerender-Kopf trägt bereits EINEN Live-Link
+ * auf `quelleUrl`, ein zweiter auf die Nachfolger-ELI ist nicht Teil dieses
+ * Funds und bliebe ein separater, deklarierter Schritt).
+ */
+export function nachfolgerHinweis(nachfolger: { sr: string }, seitIso: string): string {
+  return `Nachfolge-Erlass SR ${nachfolger.sr} (in Kraft seit ${datumCh(seitIso)})`;
+}
+
+/**
  * Anteil Anhang-Einträge, ab dem die Fakten-Zeile nicht mehr «Artikel» zählt.
  * Fahrplan Kap. 14, Wording-Punkt «Anhang-Dominanz»: «N Artikel» ist falsch, wo
  * der Snapshot fast nur aus Anhang-Einträgen besteht (typisch bei Tarif- und

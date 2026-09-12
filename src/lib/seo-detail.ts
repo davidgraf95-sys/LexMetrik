@@ -21,8 +21,10 @@
 import { SITE_URL, type RouteMetadaten } from './seo';
 import { AMTLICHE_FASSUNG, AMTLICHE_FASSUNG_NOMEN, MASSGEBLICH_SATZ } from './benennung';
 import {
+  aufgehobenSeitSatz,
   GELTUNG_UNGEPRUEFT_SATZ,
   naechsteFassungSatz,
+  nachfolgerHinweis,
   STAND_UNBEKANNT,
   standausweisSatz,
 } from './normtext/erlassKopfText';
@@ -351,13 +353,22 @@ export function erlassVolltextHtml(
         : '';
   const kuenftig = currency?.naechsteFassungAb ? ` · ${esc(naechsteFassungSatz(currency.naechsteFassungAb))}` : '';
   const standSegment = e.stand ? `Stand ${esc(e.stand)}` : esc(STAND_UNBEKANNT);
+  // Gegenprüfung PR #823/W2·18 (12.9.2026): der Live-Link hiess bis hierher
+  // IMMER «amtliche Fassung (geltend)» — auch am GANZ aufgehobenen Erlass
+  // (Beleg dist/gesetze/bund/BMV.html). `e.aufgehoben` ist dieselbe Ableitung,
+  // die `geprueft`/`kuenftig` zwei Zeilen darüber bereits gatet (§5) — hier
+  // trägt sie zusätzlich den Klammerzusatz und, wenn bekannt, den Nachfolger.
+  const linkZusatz = e.aufgehoben ? aufgehobenSeitSatz(e.aufgehoben.seit) : 'geltend';
+  const nachfolgerSegment = e.aufgehoben?.nachfolger
+    ? ` · ${esc(nachfolgerHinweis(e.aufgehoben.nachfolger, e.aufgehoben.seit))}`
+    : '';
   const kopf =
     `<header><nav aria-label="Brotkrumen"><a href="/gesetze">Gesetze</a> › ` +
     `<a href="/gesetze">${esc(gebietLabel(e.rechtsgebiet))}</a> › ${esc(e.kuerzel)}</nav>` +
     `<h1>${esc(e.kuerzel)} — ${esc(e.titel)}</h1>` +
     `<p>${esc(e.kuerzel)}${srZeile} · ${standSegment} · ` +
-    `<a href="${esc(e.quelleUrl)}" rel="nofollow noopener" target="_blank">amtliche Fassung (geltend)</a>` +
-    `${geprueft}${kuenftig}</p>` +
+    `<a href="${esc(e.quelleUrl)}" rel="nofollow noopener" target="_blank">amtliche Fassung (${esc(linkZusatz)})</a>` +
+    `${nachfolgerSegment}${geprueft}${kuenftig}</p>` +
     `</header>`;
   const artikel = datei.eintraege
     .map((a) => {
