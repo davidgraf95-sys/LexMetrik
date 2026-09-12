@@ -37,6 +37,18 @@ export function istBandjahrPlatzhalter(
  * übernommen. In jedem anderen Fall (Vollurteil aufgelöst, oder das Ergebnis
  * ist mindestens so präzise wie der Bestand) wird das frische Ergebnis
  * übernommen.
+ *
+ * RESTLÜCKE (dokumentiert, Gegenprüfung A3, 12.9.2026): das Fenster erkennt nur
+ * IMPLAUSIBLE Bestandsdaten (>5 Jahre vor dem Bandjahr) als «nicht exakt». Ein
+ * Bestandsdatum, das FALSCH, aber zufällig PLAUSIBEL aussieht (z.B. durch eine
+ * fremde OCL-Record-Konflation geerbt — Anlassfall `bge_152_V_2`: 2025-06-23 war
+ * das Datum von `152 V 20`, lag aber innerhalb des ±5-Jahr-Fensters von Band 152),
+ * wird von dieser Regel als «exakt» behandelt und darum KONSERVIERT, nicht
+ * korrigiert — ein automatischer B1-Lauf hätte diesen Fall nie repariert. Die
+ * Korrektur brauchte darum unabhängige, ausserhalb dieser Regel liegende
+ * amtliche Evidenz (bger.ch clir + der unkonfliert korrekte OCL-aza-Kandidat)
+ * und einen gezielten, manuell verifizierten Eingriff (§8, nichts geraten) —
+ * kein Automatismus schliesst diese Lücke pauschal.
  */
 export function verschlechtertDatum<T extends { datum: string; azaUrteil?: unknown; bgeReferenz: string | null | undefined }>(
   alt: T,

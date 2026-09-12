@@ -20,6 +20,7 @@ import {
 import { sha256EntscheidBloecke } from './normtext/sha-entscheide';
 import { holeRegesteSprachfassungen, holeClirHtml, parseClirUrteilskopf, bgeRefZuClirId } from './normtext/clir-regeste';
 import { verschlechtertDatum } from './normtext/bge-bandjahr';
+import { mergeB1Ergebnis } from './normtext/entscheide-b1-merge';
 import type { EntscheidSnapshot } from '../src/lib/rechtsprechung/typen';
 import type { Rechtsgebiet } from '../src/lib/normtext/register';
 import * as path from 'node:path';
@@ -561,11 +562,18 @@ async function main() {
     // (A1, `verschlechtertDatum`: ein bereits exaktes Bestandsdatum wird NIE durch
     // den groben Bandjahr-Platzhalter ersetzt). Ein gescheiterter Fetch
     // (neu === null) lässt den Bestandseintrag ohnehin unangetastet.
+    // B (Gegenprüfungs-Auflage 12.9.2026, PR #816): `neu` ERSETZTE bisher den
+    // ganzen Bestandseintrag — `regeste.sprachfassungen` stammt aber aus einem
+    // ANDEREN Refresh-Zweig (B2/A18, `holeRegesteSprachfassungen`), nicht aus
+    // `holeBgeLeitentscheid`, und ging beim reinen Überschreiben verloren (6/6
+    // betroffene BGE, korpusweit 1258→1252 mit Sprachfassungen). `mergeB1Ergebnis`
+    // holt sie zurück, wenn der flache Regeste-Text unverändert ist.
     const b1ById = new Map(b1.map((s) => [s.id, s]));
     const byId = new Map<string, EntscheidSnapshot>();
-    for (const { id, neu } of b1neu) {
-      if (!neu) continue;
+    for (const { id, neu: neuRoh } of b1neu) {
+      if (!neuRoh) continue;
       const alt = b1ById.get(id)!;
+      const neu = mergeB1Ergebnis(alt, neuRoh);
       if (verschlechtertDatum(alt, neu)) {
         console.log(`[b1] ${alt.bgeReferenz}: frisches Ergebnis verschlechtert das Datum (${alt.datum} → ${neu.datum}) — verworfen (A1).`);
         continue;

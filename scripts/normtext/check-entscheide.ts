@@ -161,6 +161,20 @@ function main() {
     if (snap.sha !== erwartet) fehler.push(`${e.key}: sha-Drift (Datei ${snap.sha?.slice(0, 8)} ≠ erwartet ${erwartet.slice(0, 8)})`);
     const volltext = snap.abschnitte.flatMap((a) => a.bloecke.map((b) => b.text)).join('\n');
     if (AHV.test(volltext) || AHV.test(snap.regeste?.text ?? '')) warn.push(`${e.key}: mögliche AHV-Nummer im Text (Anonymisierung prüfen)`);
+    // Wächter (Gegenprüfungs-Auflage B2, 12.9.2026, PR #816): ein amtlicher BGE
+    // (regesteAmtlich, leitcharakter==='leitentscheid') mit Regeste-Text MUSS die
+    // dreisprachige Struktur (A18) tragen — 1258/1259 taten das, bis der B1-Refresh
+    // sie bei 6 BGE durch reines Überschreiben verlor (mergeB1Ergebnis behebt die
+    // Wurzel). Einzige bekannte, datiert begründete Ausnahme: `bge_149_IV_1` — die
+    // amtliche DE-clir-Seite rendert für diesen BGE nur Regeste-Teil a (Sterneintrag),
+    // Teil b liegt nur auf fr/it-clir + im OCL-Flachtext vor (`deClirDegradiert` in
+    // normtext-entscheide.ts hängt darum bewusst KEINE unvollständige DE-Fassung an,
+    // sonst A29-Tor rot) — dokumentiert seit W2·6-B (5.7.2026).
+    const SPRACHFASSUNGEN_AUSNAHME = new Set<string>(['bge_149_IV_1']);
+    if (e.leitcharakter === 'leitentscheid' && snap.regesteAmtlich && snap.regeste?.text
+        && !snap.regeste.sprachfassungen?.length && !SPRACHFASSUNGEN_AUSNAHME.has(e.key)) {
+      fehler.push(`${e.key}: amtlicher BGE mit Regeste, aber OHNE sprachfassungen (A18-Struktur fehlt — B1-Merge-Verlust? W2·18-FEHLERBUCH-Muster)`);
+    }
     // W2·6-B B2+A18: strukturierte, dreisprachige Regeste (bger.ch clir). Invarianten
     // (§1/§2, hart): nur amtliche BGE tragen sie · Reihenfolge STRIKT DE→FR→IT · jede
     // Fassung hat einen nicht-leeren Kopf + amtliche clir-quelleUrl · keine Sprach-
