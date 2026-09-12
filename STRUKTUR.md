@@ -33,6 +33,32 @@ falsch — korrigiert 30.8.2026). Karten abgeschlossener Sessions (älter als
 werden direkt unter dem KARTEN-Anker eingefügt (jüngste zuoberst).
 
 <!-- KARTEN -->
+## Session 12.9.2026 (7) — Abschluss: #838 gelandet, #840 in Landung, Session-Bilanz
+
+**Gelandet:** #838 (Kopf `87db8a514`) `QS-KORPUS-SCOPE` — 23 scope/decl-Sektionen in 12
+Staatsverträgen ingestiert (war in Karte (6) noch «landet gerade»); Gegenprüfung bestanden
+(Sonnet, Bau Opus): eigener Census 228 Caches 136/26/14/12, 23/23 h1 == Label, 0 Drops,
+Live-Stichprobe 3 Erlasse byte-gleich — keine Blocker. ROADMAP/FAHRPLAN-OFFENE-BEFUNDE/
+FAHRPLAN-FEDLEX-PORTFOLIO §19 entsprechend abgehakt.
+
+**In Landung (PR offen, nicht Teil dieser Landung):** #840 (Kopf `185cf141c`) — Leser-Wurzel
+für scope/decl-Sektionen heisst synthetisch «Anhänge» statt eines eigenen Labels
+(Nebenfund aus #838); ROADMAP-Zeile bleibt bewusst offen, bis gemergt.
+
+**Session-Bilanz (12.9.2026, Fehlerbuch-Wellen 4–6 + Staatsverträge):** 18 PRs an einem Tag
+gelandet; 11 Gegenprüfungen (Opus/Sonnet wechselseitig), davon 5 Bau-Behauptungen widerlegt
+oder mit Auflagen versehen — `rectifies`-Ziel-Widerspruch 3 Nachbesserungs-Runden, #828 vier
+Runden, #826/#832/#834 je mit Auflagen durchgekommen. Drei Fedlex-Datenfehler-Klassen amtlich
+belegt: falsches `rectifies`-Ziel (SKV/AIG-Verwechslung), fehlende `dateApplicability` und
+echte Sammelberichtigungen (ein `rectifies` für mehrere Erlasse). Rund 10 vermeidbare
+CI-Läufe heute allein durch BEHIND-Nachzüge vor dem Merge.
+
+**Offen für die nächste Session:** Fehlerbuch-Zeilen Tabellen-`<dt>`-Marken (ZPO art_250,
+StG art_5 f., BV art_197), 216 Struktur-Sidecars ohne `stand`/`fassungsToken`, offene
+doc/pdf-Berichtigungen aus der `rectifies`-Messung. David-Handgriffe unverändert: BE-Sprengel-
+Abnahme, BS-Lizenz/Schlüssel, CC-BY-Nennung `data.bs.ch`, 114 BS-Kanten, Merge-Queue-
+Repo-Setting.
+
 ## Session 12.9.2026 (6) — Fehlerbuch-Welle 6 `W2·18-FEHLERBUCH` (Opus-Bau + Sonnet-Prüfer)
 
 **Ablauf:** Fortsetzung der Fehlerbuch-Runde auf dem Stand von Session 12.9.2026 (5) —
@@ -267,168 +293,6 @@ selbst ab). PR-Bodies (`gh pr view 812..816`) tragen die Tor-Listen/Stichproben 
    Konflations-Wächter deckt 6/1259 BGE mit band-gleichem Seitenkopf-Marker (0,5 %) ab — die erste
    Formulierung nannte «26 BGE mit irgendeiner Zitierung» und zählte auch legitime Alt-Band-Zitate
    mit; eine Prüfmenge ohne Nenner verschleiert, wie schmal ein Wächter tatsächlich greift.
-
-## Session 12.9.2026 — Synopse-Leser + gemeinsame Normalisierung (Fortsetzung der Kette vom 11.9.)
-
-**Gelandet seit dem Doku-Abschluss #795:** #796 W2·6c-ENTSTEHUNG-SYNOPSE-LESER (`0a79eb68f`,
-Gegenprüfung Sonnet, 1 Hinweis nicht blockierend) — Griff «Alt/Neu ›» in der Funktionszeile, sieben
-ehrliche Zustände, nichts lädt vor dem Klick. #797 QS-UI Tap-Ziel-Wächter/@media-Schärfung +
-Synopse-Raster (`957bfdbaa`, fix(test): F9-Wächter unterscheidet `@media`/`@container`-Bedingung von
-Deklaration). #799 K-16 BS-Materialien (`c83501304`, Gegenprüfung Sonnet mit Auflage doktyp) — Grosser
-Rat Basel-Stadt an die Botschaften-Pipeline, 117 Geschäfte, 122 Kanten (8 amtlich/114 maschinell), 409
-Verfahrens-Ereignisse; amtlicher Schlüssel deckt nur 5/859 Erlasse, Deckel Materialien-Register 83 %.
-
-**#798 gelandet** (`f6b5471fc`) — gemeinsame Normalisierung Generator+Leser über drei
-Gegenprüfungs-Runden (Sonnet): A1 gelöschter Nachlauftext zurück (4 echte KLV-12e-Änderungen), A2
-Sachüberschriften als Titel-Paar (522 Blöcke), A4 `entfallen`-Wächter, A5 zweiter Tor-Ast
-`phantomVerletzungen()` gegen wandernde Elementgrenzen (10 Phantom-Änderungen weg, u. a. FDV/HMG).
-Vollerhebung (kein Sample) gegen den Vorstand: **0 echte Änderung verloren**. Auflage A6 der
-Gegenprüfung (Quelllücke CHEMRRV) → eigener Schritt `W2·6c-ENTSTEHUNG-QUELLLUECKE`.
-Detail/Zahlen: `FAHRPLAN-MATERIALIEN-VERZAHNUNG.md` §11.10.
-
-**#801 gelandet** (`e0845936e`) — löst `W2·6c-ENTSTEHUNG-QUELLLUECKE` (Auflage A6): CHEMRRV-22
-Blöcke, die nur in einem amtlichen Änderungsanhang stehen, tragen jetzt `quelle_unvollstaendig`
-statt der falschen Buchung «22× entfallen + 24× neu eingefügt»; Anhang-Beleg (`imAnhang`) als
-Pflicht-Feld, Lineage-Fix in `neuNach()`, befristete Ausnahmeliste 11 → 0.
-
-**#803 gelandet** (`6456dcf00`) — §17-Wurzelfix `check:materialien` Finding 7 (2. Vorfall in 24 h):
-prüft jetzt gegen das Erhebungsdatum (`r.stand`) statt gegen `heute`; eigener, aus `check:seriell`
-ausgenommener Alterungs-Tor `check:vernehmlassungen-alter` (45 Tage) nach dem K7-Muster von
-`check:verfall` (`scripts/check-tor-paritaet.ts` ALLOWLIST); Vernehmlassungs-Monatslauf per PR in
-`normen-monitor.yml`.
-
-**#802 gelandet** (`c0acd4557`) — Deckel-Reserven vor ZH (R12b): Materialien-Register (332/400 KB
-gzip, 83 %) in drei Projektionen geteilt — Kern 118/280 KB (42 %), i18n 84/140 KB (60 %), Provenienz
-93/240 KB (39 %), Verfahrens-Ereignisse 16/60 KB (27 %, jetzt alle Herkünfte statt nur Bund);
-ZH-Prognose Kern 49 %. Deckel gesenkt (400 → 280 KB), nicht angehoben.
-
-**#804 offen** (Branch `fix/synopse-schlankheit`) — `refactor(entstehung)`-Split von
-`scripts/entstehung/synopse.ts` (811 → 729 Z.) in `quellluecken.ts` (94 Z., §6.6-Schwelle 800 nach
-#801 gerissen); Fassaden-Re-Export brach `check:zyklen` (nackt mitfahren lassen bei jedem §6.6-Auszug,
-jetzt in ROADMAP unter QS-CODE-PROP vermerkt).
-
-**Lehren dieser Session:**
-1. **Prüfer-Vollerhebung statt Stichprobe bei Verlustfragen** (aus #798): Gegenprüfungs-Runde 2
-   unterlief bei FDV/HMG selbst ein Messfehler, erst Runde 3 (Vollerhebung statt Stichprobe) fand
-   ihn — bei Verlust-/Vollständigkeitsfragen («ist wirklich nichts verschwunden?») ist eine
-   Vollerhebung einer Stichprobe vorzuziehen, sobald sie machbar ist (kein `lehren`-Registereintrag,
-   keine bestehende F-Klasse passt; Detail bleibt in §11.10 der Fahrplan-Datei).
-2. **Prüfer-Extraktor kann irren — beide Richtungen:** dieselbe Gegenprüfung, die sich selbst bei
-   FDV/HMG irrte (Punkt 1), fand mit Auflage A6 zugleich einen echten, vom Bau übersehenen Defekt
-   (CHEMRRV-Quelllücke, → #801) — eine Gegenprüfung, die nur den Bau misstraut und sich selbst
-   nicht, ist blind auf einem Auge; keines der beiden Ergebnisse darf ungeprüft übernommen werden.
-3. **Wanduhr-abhängige Tore gehören an die Wurzel, nicht in eine Allowlist** (#803, K7-Muster): ein
-   Tor, das `heute`/`Date.now` in seiner Prüflogik liest, färbt die CI an jedem Tag rot, an dem eine
-   Frist abläuft, egal was gebaut wird — Fix ist der Vergleich gegen ein committetes/generiertes
-   Datum, nicht das Herausnehmen aus der Pflichtkette.
-4. **Split ⇒ `check:zyklen` nackt mitfahren** (#804): ein §6.6-Auszug per Fassaden-Re-Export kann
-   einen Import-Zyklus erzeugen, den nur ein eigener Lauf von `check:zyklen` (ohne Pipe) fängt.
-5. **Plan-Buchung macht offene PRs BEHIND ⇒ Merge Queue ist ein David-Entscheid:** jeder gemergte
-   PR erzeugt einen automatischen `docs(plan): … -> done`-Folgecommit auf `main` (z. B. `bbb2a4614`
-   nach #801) — jeder zu diesem Zeitpunkt offene PR ist damit `BEHIND` und muss vor dem eigenen
-   Merge auf `origin/main` gemergt werden. Ob eine GitHub Merge Queue das automatisieren soll, ist
-   eine Prozessentscheidung, die bei David liegt, nicht technisch vorwegzunehmen.
-
-**Gelandet seit #805 (Doku-Nachtrag):** #806 QS-CURRENCY-KANON ERV-Pin (`56d33dae8`, Gegenprüfung
-Opus) — Pin `erv` html-6 → html-7 (kanonische Fedlex-Manifestation, Republish derselben
-Konsolidierung 2025-01-24). #808 QS-CURRENCY-KANON-FRISCHE (`fda1838c2`, Gegenprüfung Opus mit
-Auflage A1) — Frische-Arm-Wurzel: `datenhaltung:manifest` lief nur bei einem `cache.sh`-Diff, ein
-Re-Pin ohne Cache-Skript-Änderung liess das Manifest atomar hinter der DB zurück (Lauf 34107274098,
-7.9.); läuft jetzt unbedingt nach der Regenerierung, dazu Cache-Pin-Sonde
-(`scripts/normtext/cache-pin-befund.ts`, neu: ein `/tmp`-Cache gilt erst nach Marker-Abgleich
-`eli|konsolidierung|html-N` als gültig). #807 Deckungs-Seite «was wir nicht haben» +
-Ingest-Wächter (Gegenprüfung Sonnet mit Auflage Paritäts-Ingest, landet gerade) — Route
-`/materialien/deckung`, Projektion `public/materialien/deckungs-sicht.json`; Wächter
-`ungedeckteTopLevelJson` fand vier vorbestehende Lücken (`inkrafttreten`, `kanton-luecken`,
-`pdf-quellen`, `bezuege-bilanz`), geschlossen ohne Ausnahme-Mechanik. Detail/Zahlen:
-ROADMAP-CHRONIK.md, FAHRPLAN-MATERIALIEN-VERZAHNUNG.md §11.10.
-
-**Lehren #806–#808:**
-6. **«Byte-identisch» ist eine Messmethode, keine Behauptung** (#806, Gegenprüfung Opus): der
-   erste Beleg verglich Artikel-SHAs (Extraktionsergebnis) und schrieb «byte-identisch»; die
-   Gegenprüfung hat an der amtlichen Quelle selbst gemessen und Bytes verglichen — beide Messungen
-   sind richtig, aber verschieden. Ein Beleg muss die Messmethode nennen (Text-/Extraktions-
-   Gleichheit vs. rohe Byte-Gleichheit), sonst liest sich ein wahrer Fund als Widerspruch.
-7. **Runner-Abbrüche sind kein Testfehler, solange der Rerun grün ist:** die Browser-Shards
-   brachen während #807 zweimal in Shard 2 ab — beide Male Infrastruktur-Flake, im Rerun grün;
-   vor jeder Zuschreibung an das gebaute Feature erst den Rerun fahren (§0-Nullprobe).
-8. **Ein Tor, das im selben Zug gebaut UND scharf gestellt wird, findet auch Fremdes:** der
-   Paritäts-Ingest-Wächter aus #807 war für die neue Deckungs-Sicht gedacht, deckte beim ersten
-   Lauf gegen den Ist-Stand aber vier vorbestehende, nie erfasste Top-Level-JSON-Dateien auf.
-9. **Split ⇒ `check:zyklen` nackt mitfahren lassen** — gilt weiterhin für jeden künftigen
-   §6.6-Auszug im `entstehung`-Baum (Fortführung Lehre 4 aus #804).
-
-**Wartet auf David:** CC-BY-Namensnennung data.bs.ch in der UI, fachliche Abnahme der 114
-maschinellen K-16-Kanten (§7) — beide unter `W2·13-KANTONE-DATEN` in `ROADMAP.md`; Merge-Queue-
-Entscheid (Lehre 5). Wartet auf Fortsetzung: PR #807 Merge (Gegenprüfungs-Verdikt Auflage
-Paritäts-Ingest steht aus, Orchestrator landet nach diesem Doku-PR).
-
-**#810 gelandet** (`064d191f6`, Gegenprüfung Sonnet, Auflage Bibliotheks-Zitat erfüllt) — K-15
-BE-Sprengel-Zuordnung aus amtlichen Geodaten des Amts für Geoinformation BE (ADMRG/ADMRSA/GRENZ5,
-build-zeitliche Punkt-in-Fläche-Berechnung, keine Laufzeit-Geodaten): 334/334 Gemeinden, 5
-Gerichtsstandorte, 4 regionale Staatsanwaltschaften, Normbasis GSOG Art. 80/81/88a/92 (BSG 161.1),
-Artefakt `src/data/zustaendigkeit/beSprengel.json` (18,7 KB). Wartet auf David: fachliche Abnahme
-(§7), UI-Verdrahtung erst danach (beide unter `K-15-Nachzug` in `ROADMAP.md`).
-
-**Vormessung «Entstehung am Paragraph BS» (12.9.2026, lex-recherche, kein Bau):** BS-Fassungskette
-je § ist heute nicht baubar (0 kantonale Historie-Einträge; K-16-Schlüssel Erlass↔Geschäft deckt
-5/859 Erlasse). Neuer Fund: LexWork-`versions`-Endpunkt der BS-Gesetzessammlung liefert
-Volltext-XHTML je Fassung, Lizenz ungeklärt. Neuer Roadmap-Schritt `R12a-ENTSTEHUNG-BS` (blocked
-auf `david-bs-lizenz-schluessel`); Reihenfolge jetzt Bund → BS (R12a) → ZH (R12b). Detail:
-`bibliothek/materialien/2026-09-12-k16-bs-vormessung.md` §9, `fahrplaene/FAHRPLAN-KANTONE.md` §5.
-
-## Session 11.9.2026 — W2·26 Funktionszeile + Kette «Entstehung am Artikel» (Daten → Leser → Synopse), acht PRs
-
-**Auftrag David (wörtlich):** «führe alles durch» (Go «Entstehung am Artikel» + §11.9-Entscheide 1–6,
-Mandat 11.9.2026) · «bau und verbessere bis stop». Orchestrator Fable, Bau/Prüfung Opus/Sonnet.
-
-**Gelandet (Squash-Merges auf main, je mit Roadmap-Trailer, Status per Auto-Buchung):** #787 Doku
-W2·26-Plan (`dc12e6ab9`) · #790 Lagebild-Selbsttest Rot-Beweis ROADMAP-unabhängig (`c589feb40`,
-QS-LAGEBILD) · #788 W2·26-FUNKTIONSZEILE (`efc7129b8`) · #789 Vernehmlassungs-Register 11.9. nachgeführt
-(`e1e0e708e`, QS-DATA-INGEST-DRIFT, Gegenprüfung Opus) · #792 W2·6c-ENTSTEHUNG-DATEN (`71db836ca`,
-Gegenprüfung Sonnet) · #791 W2·26-FUNKTIONSZEILE-ZAEHLER (`5a09f161b`, Gegenprüfung Sonnet) · #793
-W2·6c-ENTSTEHUNG-LESER (`f0c82ab74`, Gegenprüfung Sonnet).
-
-**Kette Funktionszeile → Zähler → Entstehung-Daten → Leser → Synopse:** #788 baute die Funktionszeile
-neu (Z1–Z10: Wort «Bezüge» weg, Rubrik Fassung zu = nur «Gilt seit …», Akkordeon mit Tastatur/Escape,
-D45 Entscheid-Klick daneben, Knopfzahl **13 532 → 10 160** (−3 372, −24,9 %, Logikverlust keiner),
-Fussnoten-Option nimmt jetzt ALLE Marker (**215 → 0** sichtbar bei abgewählt, vorher blieben reine
-SR-Verweise stehen)). #791 zog die Bezüge-Zähler aus einer eigenen Datei in den ohnehin geladenen
-Struktur-Sidecar — ein Fetch weniger, **Requests 3 → 2** je Erlass, Erlass-Payload-Zuwachs praktisch
-null (+0,04–0,06 % gzip; eigener Ordner ersatzlos gelöscht, §17-Gegengewicht). #792 lieferte die
-Entstehungs-Daten E1/E2/E4 (1609 Verfahrens-Ereignisse über 407/407 Botschaften, 189 Botschafts-Anker,
-385/402 Curia-Geschäfte, Historie-Shard unangetastet). #793 baute die Leser-Karte E3 (Rubrik «Fassung»,
-«Warum?»-Griff je Fassungspunkt öffnet die Änderungskarte, 185 Erlass-Dateien à 692,3 KB gesamt, nichts
-lädt vor dem Klick). **#789** nebenbei: SPARQL-Vollauf gegen 227 Bund-Erlasse für das
-Vernehmlassungs-Register, 7 Status-Übergänge + 3 neue Verfahren, Stichprobe VERN-2026-19 gegen die
-amtliche Fedlex-Quelle bestätigt.
-
-**#794 W2·6c-ENTSTEHUNG-SYNOPSE (E5.0/E5/E6) — NICHT Teil der obigen Liste.** Geprüft 11.9.2026, 20:49
-CEST (`gh pr view 794`): Status **OPEN**, `mergeStateStatus BLOCKED`, Required-Checks «Merge-Schutz»
-und «Tore» **rot** (Lauf 34634994397), vier Browser-Smoke-Shards `pending` — eine andere Session
-bearbeitet den Branch `feat/w26c-entstehung-synopse` (eigener Worktree `w26c-synopse`) aktiv. Diese
-Karte hält nur den PR-Inhalt fest (186 Erlass-Shards, 1131 Stände, 4770 Alt-Blöcke E5; 10/59 Vorlagen
-E6), **nicht** einen Merge — Beleg §14.7: kein Erfolgsbericht ohne geprüftes Artefakt. Nächste Session:
-`gh pr view 794 --json state,mergedAt` neu prüfen, bei Merge PR-Nummer/SHA hier und in
-`FAHRPLAN-MATERIALIEN-VERZAHNUNG.md` §11.7/§11.10 nachtragen.
-
-**Nachtrag §17 (Prozessbefund, kein Fix in diesem PR):** Plan-Buchungs-Commit nach jedem Merge (der
-automatische `docs(plan): … [skip ci]`-Commit) macht jede wartende Branch/PR BEHIND ⇒ ein zusätzlicher
-CI-Lauf je nachfolgender Landung (Beleg 11.9.2026: #791 und #793 mussten je einmal gegen `origin/main`
-nachziehen) — als Unterpunkt unter `QS-CI-MINUTEN` in `ROADMAP.md` verankert, zwei Wurzel-Optionen
-offen (GitHub Merge Queue vs. Buchung im PR).
-
-**Nebenfund PR #790:** Der Rot-Beweis-Selbsttest `plan-bild-bloecke.test.ts` baute seine überschwere
-Eingabe aus der echten `ROADMAP.md` und wurde durch die ROADMAP-Kürzung in #787 selbst rot — der
-Wächter war defekt, nicht das Produktiv-Tor; Fix: synthetische, deterministische Eingabe (§6.3
-fachlich begründete Teständerung, kein stilles Nachführen).
-
-**Neuer Schritt angelegt:** `W2·6c-ENTSTEHUNG-SYNOPSE-LESER` (ready, feld: leser, dep
-`[W2·6c-ENTSTEHUNG-SYNOPSE, W2·6c-ENTSTEHUNG-LESER]`) — Synopse alt/neu in der Änderungskarte;
-Bau erst nach Merge von #794 UND separatem Go.
-
-**Wartet auf David:** nichts Neues (Mandat «führe alles durch»/«bau bis stop» deckte diese Session
-vollständig). Wartet auf Fortsetzung: PR #794 (Fremdsession, s.o.).
 
 ## Ältere Session-Karten und Chroniken — rotiert ins Archiv
 
