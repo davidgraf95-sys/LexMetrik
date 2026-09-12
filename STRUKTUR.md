@@ -93,6 +93,8 @@ offen stehen, bis gemergt.
    unter `W2·18-FEHLERBUCH` vermerkt, Verankerung in Skill `refactoring` als eigener
    Schritt offen.
 
+**Nachtrag:** #828 `bc3e65eb8` und #830 `a115a27cf` gelandet, alle Worktrees geräumt.
+
 ## Session 12.9.2026 (3) — Fehlerbuch-Wellen 2+3 `W2·18-FEHLERBUCH` (je Einzel-Fixer + Opus/Sonnet-Prüfer)
 
 **Ablauf:** Fortsetzung der Fehlerbuch-Runde aus Session 12.9.2026 (2) — Welle 2 und
