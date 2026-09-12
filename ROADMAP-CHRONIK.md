@@ -1,5 +1,17 @@
 # ROADMAP — Erledigt-Chronik (Detail-Archiv erledigter Schritte)
 
+## Wächter «rectifies-Ziel vs. Berichtigungstext» — gelöst 12.9.2026 (W2·18-FEHLERBUCH)
+
+**Ursprünglicher Befund (Wortlaut, bis 12.9.2026 offen, `W2·18-FEHLERBUCH`):** «**Wächter «rectifies-Ziel vs. Berichtigungstext»** *(Gegenprüfung PR #827, 12.9.2026)* — Fedlex' `jolux:rectifies` kann auf das falsche AS-Dokument zeigen (AS 2025 686/SKV: Ziel AS 2025 648 = TAFV 2, im amtlichen Text steht AS 2025 644 = SKV; AS 2024 144/SSV: Sammelberichtigung mit nur einem `rectifies`). Tor: die im Berichtigungstext (Filestore-HTML, «(AS … ; SR …)») genannte AS-Fundstelle gegen das `rectifies`-Ziel messen, Abweichung als Befund listen statt in Prosa übersetzen (§7/§17; heute nur Docstring-Vermerk in `scripts/normtext/revisionen-generieren.ts`).»
+
+- [x] **Gelöst 12.9.2026, PR #834 (`e51b5b64b`).** Netz-Arm `check:revisionen-rectifies` in der
+  normen-monitor-Kette: Kopfzitate «(AS … ; SR …)» aus dem Filestore-HTML des berichtigenden AS
+  gegen das rectifies-Ziel gemessen — 25 Kanten: 14 übereinstimmend · 2 abweichend (SKV oc/2025/686,
+  AIG oc/2025/342 = Ziel reine Inkraftsetzungs-VO ohne Normtext; beide als belegte Fedlex-Datenfehler
+  in `bibliothek/normtext/rectifies-ausnahmen.json`) · 2 Sammelberichtigungen · 7 nur doc/pdf-a
+  (Nachfund-Zeile im Fehlerbuch). Ausnahmen an erwartetes Ziel + Text-Fundstelle gebunden, Abweichung
+  ⇒ stale ⇒ rot (Rot-Beweis). Gegenprüfung Opus bestanden (Regex 0/18 falsch-positiv).
+
 ## Falscher Freund «BMV» im Kanton-Pfad — gelöst 12.9.2026 (W2·18-FEHLERBUCH)
 
 **Ursprünglicher Befund (Wortlaut, bis 12.9.2026 offen, `W2·18-FEHLERBUCH`):** «**Falscher
