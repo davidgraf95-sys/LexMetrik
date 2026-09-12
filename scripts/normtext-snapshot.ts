@@ -30,6 +30,7 @@ import {
   sammleHtmInventar,
   sammleZhPdfInventar,
   sammlePdfInventar,
+  parseKantonNurFilter,
   type KantonInventarGruppe,
 } from './normtext/inventar-kanton.ts';
 import { enumeriereKanton } from './normtext/lexfind-discovery.ts';
@@ -1213,13 +1214,16 @@ async function main(): Promise<void> {
     const kantone = new Set(
       kantonArg.slice('--kanton='.length).split(',').map((s) => s.trim().toUpperCase()).filter(Boolean),
     );
+    // §6.7-Fund #694 (12.9.2026): Erlass-genauer Filter — s. parseKantonNurFilter.
+    const { nurKeys, passt: passtNurFilter } = parseKantonNurFilter(process.argv);
     const goldenIndex: Record<string, string> = {};
     // Phase-1 (FAHRPLAN-GESETZE-IMPORT-3TIER): mit --discovery wird der Kanton-
     // Vollkorpus via LexFind enumeriert (Tier A) statt nur tarif-zitierte Erlasse.
     // Dann läuft NUR die LexWork-Phase (Discovery liefert ausschliesslich Tier-A-
     // LexWork-Quellen); HTM/ZH/PDF entfallen.
     const discovery = process.argv.includes('--discovery');
-    console.log(`\n[Normtext-Snapshot] --nur=kanton ${[...kantone].join(',')}${discovery ? ' --discovery' : ''}, datum=${abgerufen}`);
+    const nurSuffix = nurKeys ? ` --nur=${[...nurKeys].join(',')}` : '';
+    console.log(`\n[Normtext-Snapshot] --nur=kanton ${[...kantone].join(',')}${discovery ? ' --discovery' : ''}${nurSuffix}, datum=${abgerufen}`);
 
     let cov: KantonCoverage;
     if (discovery) {
@@ -1229,15 +1233,18 @@ async function main(): Promise<void> {
         const lang = FR_KANTONE.has(k) ? 'fr' : 'de';
         const erlasse = await enumeriereKanton(k, { lang, nurInKraft: true });
         const routing = discoveryZuInventar(erlasse, k);
-        console.log(
-          `  Discovery ${k}: ${erlasse.length} Erlasse → ${routing.gruppen.length} Tier-A-Gruppen ` +
-            `(${routing.uebersprungen.length} übersprungen)`,
-        );
-        gruppen.push(...routing.gruppen);
+        const gefiltert = routing.gruppen.filter(passtNurFilter);
+        const nurZeile = nurKeys ? `, --nur filtert auf ${gefiltert.length} Gruppe(n)` : '';
+        console.log(`  Discovery ${k}: ${erlasse.length} Erlasse → ${routing.gruppen.length} Tier-A-Gruppen (${routing.uebersprungen.length} übersprungen)${nurZeile}`);
+        gruppen.push(...gefiltert);
+      }
+      if (nurKeys && gruppen.length === 0) {
+        throw new Error(`--nur=${[...nurKeys].join(',')}: keine Gruppe traf zu — Key-Format <KT>-<lawId> prüfen (z. B. BS-121.100).`);
       }
       cov = await erzeugeKantonsSnapshots(abgerufen, goldenIndex, kantone, gruppen);
     } else {
-      cov = await erzeugeKantonsSnapshots(abgerufen, goldenIndex, kantone);
+      const inv = nurKeys ? sammleKantonInventar().filter((g) => kantone.has(g.kanton) && passtNurFilter(g)) : undefined;
+      cov = await erzeugeKantonsSnapshots(abgerufen, goldenIndex, kantone, inv);
     }
     for (const z of cov.reportZeilen) console.log(z);
     const htmCov = discovery ? null : await erzeugeHtmSnapshots(abgerufen, goldenIndex, kantone);

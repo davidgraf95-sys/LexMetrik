@@ -1,9 +1,9 @@
 {
  "zaehler":{"30":[1,0]},
- "erzeugt": "2026-07-18",
+ "erzeugt": "2026-09-12",
  "kopf": {
   "titel": "Notariatsgesetz des Kantons Basel-Stadt",
-  "erlassdatum": "Vom 18. Januar 2006 (Stand 1. Juli 2020)",
+  "erlassdatum": "Vom 18. Januar 2006 (Stand 1. August 2026)",
   "praeambel": [
    {
     "rolle": "autor",
@@ -265,15 +265,6 @@
    ],
    "marginalie": [
     "2. Anzeigen durch Behörden und Dritte"
-   ],
-   "fussnoten": [
-    {
-     "nr": "3",
-     "text": "Heute: Notariatsaufsichtskommission",
-     "links": [],
-     "absatz": "1",
-     "item": null
-    }
    ]
   },
   "16": {
@@ -623,7 +614,7 @@
     }
    ],
    "marginalie": [
-    "Beurkundungsbedürftige Versammlungen"
+    "Beschlussfassung an Versammlungen"
    ]
   },
   "40": {
@@ -862,36 +853,6 @@
    ],
    "marginalie": [
     "Disziplinarwesen"
-   ],
-   "fussnoten": [
-    {
-     "nr": "4",
-     "text": "Heute: Notariatsaufsichtskommission",
-     "links": [],
-     "absatz": "1",
-     "item": null
-    },
-    {
-     "nr": "5",
-     "text": "Heute: Notariatsaufsichtskommission",
-     "links": [],
-     "absatz": "3",
-     "item": null
-    },
-    {
-     "nr": "6",
-     "text": "Heute: Notariatsaufsichtskommission",
-     "links": [],
-     "absatz": "4",
-     "item": null
-    },
-    {
-     "nr": "7",
-     "text": "Heute: Notariatsaufsichtskommission",
-     "links": [],
-     "absatz": "5",
-     "item": null
-    }
    ]
   },
   "60": {
@@ -915,14 +876,14 @@
    ],
    "fussnoten": [
     {
-     "nr": "8",
+     "nr": "3",
      "text": "SG 211.100.",
      "links": [],
      "absatz": "1",
      "item": null
     },
     {
-     "nr": "9",
+     "nr": "4",
      "text": "Die Änderungen werden hier nicht abgedruckt.",
      "links": [],
      "absatz": "1",
@@ -942,12 +903,38 @@
    ],
    "fussnoten": [
     {
-     "nr": "10",
+     "nr": "5",
      "text": "Wirksam seit 1. 1. 2008.",
      "links": [],
      "absatz": "1",
      "item": null
     }
+   ]
+  },
+  "39_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "IV. Beurkundungsverfahren"
+    },
+    {
+     "ebene": 2,
+     "label": "IV.C. 2. Beurkundung von Vorgängen"
+    }
+   ],
+   "marginalie": [
+    "Beschlussfassung auf schriftlichem Weg"
+   ]
+  },
+  "52_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "V. Gestalt der öffentlichen Urkunden"
+    }
+   ],
+   "marginalie": [
+    "Elektronische öffentliche Urkunden"
    ]
   },
   "59_a": {

@@ -10,6 +10,7 @@
 import { describe, it, expect } from 'vitest';
 import {
   sammleKantonInventar,
+  sammleKantonVollinventarLexWork,
   sammleFallback,
   sammlePdfInventar,
   sammleHtmInventar,
@@ -196,5 +197,43 @@ describe('sammleHtmInventar (NE/GE/TI)', () => {
     for (const g of htm) {
       expect(['ne', 'ge', 'ti']).toContain(g.profil);
     }
+  });
+});
+
+// §6.7-Wurzel-Fix (Fund #694, 12.9.2026): sammleKantonInventar() (Tarif-Zitate)
+// deckt nur einen Bruchteil des committeten LexWork-Kanton-Bestands ab (69 von
+// 1189, Nullprobe 12.9.2026) — ein tarif-unzitierter Erlass (z. B. BS-121.100
+// Bürgerrechtsgesetz) driftete dadurch unbemerkt gegen die amtliche Fassung.
+// sammleKantonVollinventarLexWork() liest STATT der Tarif-Tabellen den
+// gesamten committeten Bestand (public/normtext/kanton/*.json) und liefert
+// eine Gruppe je LexWork-Erlass, unabhängig von einem Tarif-Zitat.
+describe('sammleKantonVollinventarLexWork (Vollabdeckung, §6.7-Fund #694)', () => {
+  const voll = sammleKantonVollinventarLexWork();
+
+  it('deckt deutlich mehr Erlasse ab als die Tarif-Stichprobe', () => {
+    const tarif = sammleKantonInventar();
+    expect(voll.length).toBeGreaterThan(tarif.length * 5);
+    expect(voll.length).toBeGreaterThan(1000); // Ist-Bestand 12.9.2026: 1189
+  });
+
+  it('jede Gruppe hat kanton/host/lang/lawId, keine Artikel-Filterung', () => {
+    for (const g of voll) {
+      expect(g.kanton.length).toBeGreaterThan(0);
+      expect(g.host.length).toBeGreaterThan(0);
+      expect(['de', 'fr']).toContain(g.lang);
+      expect(g.lawId.length).toBeGreaterThan(0);
+      expect(g.artikel).toEqual([]);
+    }
+  });
+
+  it('enthält BS-121.100 (Bürgerrechtsgesetz) — den §6.7-Befund-Erlass ohne Tarif-Zitat', () => {
+    const buerg = voll.find((g) => g.kanton === 'BS' && g.lawId === '121.100');
+    expect(buerg).toBeDefined();
+    expect(buerg?.host).toBe('www.gesetzessammlung.bs.ch');
+  });
+
+  it('keine doppelten (kanton, host, lang, lawId)-Schlüssel', () => {
+    const schluessel = voll.map((g) => `${g.kanton}|${g.host}|${g.lang}|${g.lawId}`);
+    expect(new Set(schluessel).size).toBe(schluessel.length);
   });
 });

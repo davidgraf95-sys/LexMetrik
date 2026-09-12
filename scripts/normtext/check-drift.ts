@@ -20,6 +20,7 @@ import pLimit from 'p-limit';
 import { parseFedlexCacheEintraege } from './inventar-bund.ts';
 import {
   sammleKantonInventar,
+  sammleKantonVollinventarLexWork,
   sammleHtmInventar,
   sammleZhPdfInventar,
   sammlePdfInventar,
@@ -187,7 +188,19 @@ async function main(): Promise<void> {
   // ─── Prüfung 3: Kanton-Drift (NETZ) ────────────────────────────────────────
   if (mitNetz) {
     console.log('\ncheck:normtext-netz: Kanton-Drift prüfen …');
-    const gruppen = sammleKantonInventar();
+    // §6.7-Wurzel-Fix (Fund #694, 12.9.2026): sammleKantonInventar() deckt nur
+    // die tarif-zitierten LexWork-Gruppen ab (69 von 1189 committeten LexWork-
+    // Kanton-Snapshots, Nullprobe 12.9.2026) — ein Erlass ohne Tarif-Zitat
+    // driftete dadurch unbemerkt (BS-121.100 u. a., ROADMAP-CHRONIK.md).
+    // Vollabdeckung: Tarif-Gruppen ∪ alle committeten LexWork-Snapshots,
+    // dedupliziert über denselben Gruppen-Schlüssel wie sammleKantonInventar.
+    const tarifGruppen = sammleKantonInventar();
+    const vollGruppen = sammleKantonVollinventarLexWork();
+    const tarifSchluessel = new Set(tarifGruppen.map((g) => `${g.kanton}|${g.host}|${g.lang}|${g.lawId}`));
+    const gruppen = [
+      ...tarifGruppen,
+      ...vollGruppen.filter((g) => !tarifSchluessel.has(`${g.kanton}|${g.host}|${g.lang}|${g.lawId}`)),
+    ];
     const kantonTokens = ladeKantonFassungsTokens();
 
     let kantonGeprüft = 0;
