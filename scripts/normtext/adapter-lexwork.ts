@@ -692,19 +692,14 @@ export function inKraftSeit(
       return `${mDe[3]}-${mDe[2]}-${mDe[1]}`;
     }
 
-    // Französisches Muster: «en vigueur depuis le DD.MM.YYYY» /
-    // «en vigueur dès le DD.MM.YYYY» / «en vigueur depuis DD.MM.YYYY».
-    // FR-API (bdlf.fr.ch, lex.vs.ch) liefert für fr-Erlasse ausschliesslich
-    // den französischen version_dates_str — ohne dieses Muster fiel der Stand
-    // auf enactment (Erlass-Datum, oft 2011) zurück (BUG A4, 16.6.2026).
+    // Französisches Muster, EIN Ausdruck für alle Varianten («depuis»/«dès»,
+    // mit/ohne «le», Doppelpunkt an beiden Stellen optional (PR #828 B1: lex.vs.ch
+    // liefert «depuis:/dès: DD.MM.YYYY» ohne «le» — sonst Fallback auf `enactment`).
     const mFr = versionDatesStr.match(
-      /[Ee]n\s+vigueur\s+(?:depuis|dès)\s+le\s+(\d{2})\.(\d{2})\.(\d{4})|[Ee]n\s+vigueur\s+depuis\s+(\d{2})\.(\d{2})\.(\d{4})/,
+      /[Ee]n\s+vigueur\s+(?:depuis|dès)\s*:?\s*(?:le\s*:?\s*)?(\d{2})\.(\d{2})\.(\d{4})/,
     );
     if (mFr) {
-      // Gruppe 1-3 für «depuis/dès le», Gruppe 4-6 für «depuis» ohne «le»
-      const j = mFr[3] ?? mFr[6];
-      const mo = mFr[2] ?? mFr[5];
-      const t = mFr[1] ?? mFr[4];
+      const [, t, mo, j] = mFr;
       return `${j}-${mo}-${t}`;
     }
   }

@@ -1,8 +1,8 @@
 {
- "erzeugt": "2026-07-18",
+ "erzeugt": "2026-09-12",
  "kopf": {
   "titel": "Reglement für die Schulen der Gemeinden Bettingen und Riehen",
-  "erlassdatum": "Vom 16. Juni 2009 (Stand 17. April 2025)",
+  "erlassdatum": "Vom 16. Juni 2009 (Stand 1. August 2026)",
   "praeambel": [
    {
     "rolle": "autor",
@@ -215,6 +215,10 @@
     {
      "ebene": 1,
      "label": "II. Betrieb der Gemeindeschulen"
+    },
+    {
+     "ebene": 2,
+     "label": "(II)1. Unterricht"
     }
    ],
    "marginalie": [
@@ -235,6 +239,10 @@
     {
      "ebene": 1,
      "label": "II. Betrieb der Gemeindeschulen"
+    },
+    {
+     "ebene": 2,
+     "label": "(II)1. Unterricht"
     }
    ],
    "marginalie": [
@@ -246,6 +254,10 @@
     {
      "ebene": 1,
      "label": "II. Betrieb der Gemeindeschulen"
+    },
+    {
+     "ebene": 2,
+     "label": "(II)1. Unterricht"
     }
    ],
    "marginalie": [
@@ -257,6 +269,10 @@
     {
      "ebene": 1,
      "label": "II. Betrieb der Gemeindeschulen"
+    },
+    {
+     "ebene": 2,
+     "label": "(II)1. Unterricht"
     }
    ],
    "marginalie": [
@@ -268,19 +284,14 @@
     {
      "ebene": 1,
      "label": "II. Betrieb der Gemeindeschulen"
+    },
+    {
+     "ebene": 2,
+     "label": "(II)1. Unterricht"
     }
    ],
    "marginalie": [
     "Schulausflüge, Lager und Wintersportveranstaltungen"
-   ],
-   "fussnoten": [
-    {
-     "nr": "3",
-     "text": "Softwarebedingte, redaktionelle Einfügung von Gliederungsbuchstaben oder -ziffern.",
-     "links": [],
-     "absatz": "2",
-     "item": null
-    }
    ]
   },
   "18": {
@@ -344,7 +355,7 @@
    ],
    "fussnoten": [
     {
-     "nr": "4",
+     "nr": "6",
      "text": "SG RiE 411.600",
      "links": [
       {
@@ -356,7 +367,7 @@
      "item": null
     },
     {
-     "nr": "5",
+     "nr": "7",
      "text": "SG 410.100",
      "links": [
       {
@@ -861,28 +872,28 @@
    ],
    "fussnoten": [
     {
-     "nr": "6",
+     "nr": "8",
      "text": "RiE 412.210.",
      "links": [],
      "absatz": "1",
      "item": null
     },
     {
-     "nr": "7",
+     "nr": "9",
      "text": "§ 56 Abs. 1: Die Änderung wird hier nicht abgedruckt.",
      "links": [],
      "absatz": "1",
      "item": null
     },
     {
-     "nr": "8",
+     "nr": "10",
      "text": "RiE 162.100.",
      "links": [],
      "absatz": "2",
      "item": null
     },
     {
-     "nr": "9",
+     "nr": "11",
      "text": "§ 56 Abs. 2: Die Änderung wird hier nicht abgedruckt.",
      "links": [],
      "absatz": "2",
@@ -942,6 +953,54 @@
    ],
    "marginalie": [
     "Weisung zu den Aufgaben der Schulräte"
+   ]
+  },
+  "17_a": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "II. Betrieb der Gemeindeschulen"
+    },
+    {
+     "ebene": 2,
+     "label": "(II)2. Tagesstrukturen"
+    }
+   ],
+   "marginalie": [
+    "Elternbeiträge"
+   ],
+   "fussnoten": [
+    {
+     "nr": "3",
+     "text": "SG 410.100",
+     "links": [
+      {
+       "label": "SG 410.100",
+       "url": "https://www.gesetzessammlung.bs.ch/data/SG%20410.100/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "4",
+     "text": "SG 412.600",
+     "links": [
+      {
+       "label": "SG 412.600",
+       "url": "https://www.gesetzessammlung.bs.ch/data/SG%20412.600/de"
+      }
+     ],
+     "absatz": "1",
+     "item": null
+    },
+    {
+     "nr": "5",
+     "text": "Softwarebedingte, redaktionelle Einfügung von Gliederungsbuchstaben oder -ziffern.",
+     "links": [],
+     "absatz": "2",
+     "item": null
+    }
    ]
   },
   "1_a": {

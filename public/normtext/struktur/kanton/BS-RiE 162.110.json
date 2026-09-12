@@ -1,8 +1,8 @@
 {
- "erzeugt": "2026-07-18",
+ "erzeugt": "2026-09-12",
  "kopf": {
   "titel": "Personalreglement",
-  "erlassdatum": "Vom 16. Juli 2002 (Stand 1. Januar 2026)",
+  "erlassdatum": "Vom 16. Juli 2002 (Stand 1. August 2026)",
   "praeambel": [
    {
     "rolle": "autor",
@@ -1064,7 +1064,18 @@
     }
    ],
    "marginalie": [
-    "Bezahlter Vaterschaftsurlaub"
+    "Bezahlter Urlaub des anderen Elternteils"
+   ]
+  },
+  "46_a_bis": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Schwangerschafts-, Mutterschafts- und Elternurlaub"
+    }
+   ],
+   "marginalie": [
+    "Urlaub im Falle des Todes der Mutter"
    ]
   },
   "46_b": {
@@ -1085,8 +1096,17 @@
      "label": "VI. Schwangerschafts-, Mutterschafts- und Elternurlaub"
     }
    ],
+   "marginalie": []
+  },
+  "46_c_bis": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "VI. Schwangerschafts-, Mutterschafts- und Elternurlaub"
+    }
+   ],
    "marginalie": [
-    "Bezahlter Urlaub bei eingetragener Partnerschaft"
+    "Kündigung zur Unzeit beim Bezug von bezahltem Elternurlaub"
    ]
   },
   "46_d": {

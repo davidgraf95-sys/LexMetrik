@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-06-23",
+  "erzeugt": "2026-09-12",
   "eintraege": [
     {
       "id": "kanton/BS/424.100/art_1",
@@ -15,10 +15,10 @@
           "text": "Diese Verordnung regelt in Ergänzung zu den bundesrechtlichen Vorschriften zur Berufsmaturität (BM) für die staatlichen und privaten Anbieterinnen und Anbieter von BM-Lehrgängen die Bildungsangebote und die Berufsmaturitätsprüfung."
         }
       ],
-      "stand": "2018-08-13",
+      "stand": "2026-07-31",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/424.100",
-      "abgerufen": "2026-06-23",
-      "fassungsToken": "f837589971ed9a45e074ae7a020bea22",
+      "abgerufen": "2026-09-12",
+      "fassungsToken": "394d613e978b7aba9d966909526d4cbb",
       "sha": "32658a7cbbbc1725ea7667f52e3a3c11d7268462effb6b18aaa4a5a0587b252d"
     },
     {
@@ -52,20 +52,24 @@
             },
             {
               "marke": "e",
-              "text": "Natur, Landschaft, Lebensmittel."
+              "text": "Natur, Landschaft und Lebensmittel."
             }
           ]
         },
         {
           "absatz": "2",
-          "text": "Das Erziehungsdepartement legt fest, welche Ausrichtung an welchem Standort angeboten wird."
+          "text": "Die Leitung Mittelschulen und Berufsbildung legt fest, welche Ausrichtung an welchem Standort angeboten wird."
+        },
+        {
+          "absatz": "3",
+          "text": "Die Leitung Mittelschulen und Berufsbildung legt fest, an welchen Standorten mehrsprachiger Berufsunterricht und eine mehrsprachige Berufsmaturität, Blended Learning sowie flexibilisierter Unterricht angeboten wird."
         }
       ],
-      "stand": "2018-08-13",
+      "stand": "2026-07-31",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/424.100",
-      "abgerufen": "2026-06-23",
-      "fassungsToken": "f837589971ed9a45e074ae7a020bea22",
-      "sha": "434fb8e48b34ff476079175f8c444eb8674c33c01187fdfb06ac1de0146df435"
+      "abgerufen": "2026-09-12",
+      "fassungsToken": "394d613e978b7aba9d966909526d4cbb",
+      "sha": "f0129296c8c827e4b27b052b20f234baf371ee433a10cc788bb5a60790c81031"
     },
     {
       "id": "kanton/BS/424.100/art_3",
@@ -82,7 +86,7 @@
         },
         {
           "absatz": "2",
-          "text": "Lernende der BM 2 werden zur Berufsmaturitätsprüfung zugelassen, wenn sie bis zu dem von der Schulleitung festgelegten Stichtag pro Unterrichtsfach mindestens 80% der Unterrichtslektionen des Prüfungssemesters besucht haben."
+          "text": "Lernende der BM 2 werden zur Berufsmaturitätsprüfung zugelassen, wenn sie bis zu dem von der Schulleitung festgelegten Stichtag pro Unterrichtsfach mindestens 80 % des Schulunterrichts des Prüfungssemesters besucht haben. In Blended-Learning-Lehrgängen gilt diese Regelung sinngemäss."
         },
         {
           "absatz": "3",
@@ -93,11 +97,11 @@
           "text": "Die Nichtzulassung gilt als erster gescheiterter Versuch, die Berufsmaturität zu erlangen. Die Lernenden der BM 2 müssen für die Zulassung zum Wiederholungstermin die Voraussetzung nach Abs. 2 erfüllen. Im Prüfungssemester erlangte Erfahrungsnoten werden nicht berücksichtigt."
         }
       ],
-      "stand": "2018-08-13",
+      "stand": "2026-07-31",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/424.100",
-      "abgerufen": "2026-06-23",
-      "fassungsToken": "f837589971ed9a45e074ae7a020bea22",
-      "sha": "c98b19c620a5def43ba69427ebcf6d1392c58bf640d48fedc34100d2afdb6483"
+      "abgerufen": "2026-09-12",
+      "fassungsToken": "394d613e978b7aba9d966909526d4cbb",
+      "sha": "65bdc81fa01585ac90f85d050e46a24479e49b905afb1a665eef303e50f65231"
     },
     {
       "id": "kanton/BS/424.100/art_4",
@@ -106,22 +110,18 @@
       "erlass": "Verordnung über die Berufsmaturität, Berufsmaturitätsverordnung (424.100)",
       "artikel": "4",
       "artikelLabel": "§ 4",
-      "titel": "Zeitpunkt der Abschlussprüfungen",
+      "aufgehoben": true,
       "bloecke": [
         {
-          "absatz": "1",
-          "text": "Die Abschlussprüfungen finden in der Regel am Ende des Semesters statt, in welchem das zu prüfende Fach zum letzten Mal unterrichtet wird."
-        },
-        {
-          "absatz": "2",
-          "text": "Es dürfen jedoch höchstens drei Prüfungsfächer vor dem Ende der Ausbildung abgeschlossen werden."
+          "absatz": null,
+          "text": ""
         }
       ],
-      "stand": "2018-08-13",
+      "stand": "2026-07-31",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/424.100",
-      "abgerufen": "2026-06-23",
-      "fassungsToken": "f837589971ed9a45e074ae7a020bea22",
-      "sha": "ea53c16d0c3d6ff169af8c137fcf4d05adc326f4cd0abb8db2577fc13c91e938"
+      "abgerufen": "2026-09-12",
+      "fassungsToken": "394d613e978b7aba9d966909526d4cbb",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
       "id": "kanton/BS/424.100/art_5",
@@ -135,13 +135,21 @@
         {
           "absatz": "1",
           "text": "Soweit nicht durch bundesrechtliche Vorschriften bestimmt, werden Form, Inhalt, Prüfungsdauer und Hilfsmittel in von der Prüfungsleitung erlassenen Prüfungsrichtlinien geregelt."
+        },
+        {
+          "absatz": "1bis",
+          "text": "Die schriftlichen Abschlussprüfungen werden in allen Fächern für alle Berufsmaturitätsausrichtungen einheitlich durch eine von den Kantonen Basel-Landschaft und Basel-Stadt eingesetzte Leitungsgruppe vorbereitet."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Leitung Mittelschulen und Berufsbildung legt fest, welche Fremdsprachendiplome die Abschlussprüfung in den entsprechenden Fächern ersetzen können und wie das Ergebnis der Fremdsprachendiplomprüfung in die Prüfungsnote umgerechnet wird."
         }
       ],
-      "stand": "2018-08-13",
+      "stand": "2026-07-31",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/424.100",
-      "abgerufen": "2026-06-23",
-      "fassungsToken": "f837589971ed9a45e074ae7a020bea22",
-      "sha": "704d09a0235b389312a7f7d56e1ac9200029c0b3cfd0bb2756782d5b41b1c492"
+      "abgerufen": "2026-09-12",
+      "fassungsToken": "394d613e978b7aba9d966909526d4cbb",
+      "sha": "83d7b3f3755526f788d854a2c7fa5c4a9d0a7a7cfef6eee675eba3348127446d"
     },
     {
       "id": "kanton/BS/424.100/art_6",
@@ -165,10 +173,10 @@
           "text": "Bestehen bei der Benotung Meinungsverschiedenheiten zwischen Examinatorin oder Examinator und Expertin oder Experte, legt die Prüfungsleitung die Prüfungsnote fest."
         }
       ],
-      "stand": "2018-08-13",
+      "stand": "2026-07-31",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/424.100",
-      "abgerufen": "2026-06-23",
-      "fassungsToken": "f837589971ed9a45e074ae7a020bea22",
+      "abgerufen": "2026-09-12",
+      "fassungsToken": "394d613e978b7aba9d966909526d4cbb",
       "sha": "946ea90cdcdfec86fd1953e776ceeed25e894a10597741f4f77493ac5e042fb7"
     },
     {
@@ -185,10 +193,10 @@
           "text": "Die Abschlussprüfungen sind nicht öffentlich. Zutritt haben nur die zuständigen Aufsichts- und Prüfungsbehörden."
         }
       ],
-      "stand": "2018-08-13",
+      "stand": "2026-07-31",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/424.100",
-      "abgerufen": "2026-06-23",
-      "fassungsToken": "f837589971ed9a45e074ae7a020bea22",
+      "abgerufen": "2026-09-12",
+      "fassungsToken": "394d613e978b7aba9d966909526d4cbb",
       "sha": "39f8504ab1a705f2e3b27819e6a983185c131870b78ffed184abcf2e2a3c6f3b"
     },
     {
@@ -217,10 +225,10 @@
           "text": "Die Schulleitung ernennt die Prüfungsleitung. Für die Berufsmaturität Ausrichtung Wirtschaft und Dienstleistungen (Typ Wirtschaft) setzt der Kaufmännische Verband Basel-Stadt eine Prüfungsleitung ein. Einzelne Aufgaben dieser Prüfungsleitung werden von Prüfungskreisleitungen übernommen."
         }
       ],
-      "stand": "2018-08-13",
+      "stand": "2026-07-31",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/424.100",
-      "abgerufen": "2026-06-23",
-      "fassungsToken": "f837589971ed9a45e074ae7a020bea22",
+      "abgerufen": "2026-09-12",
+      "fassungsToken": "394d613e978b7aba9d966909526d4cbb",
       "sha": "a09b1ad5809a00fa1acf8dd57fe3c77595757d144ce493ff01c4be25fc99dd6d"
     },
     {
@@ -237,10 +245,10 @@
           "text": "Examinatorinnen und Examinatoren sind diejenigen Lehrpersonen, welche Prüfungsfächer vor der Abschlussprüfung unterrichten."
         }
       ],
-      "stand": "2018-08-13",
+      "stand": "2026-07-31",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/424.100",
-      "abgerufen": "2026-06-23",
-      "fassungsToken": "f837589971ed9a45e074ae7a020bea22",
+      "abgerufen": "2026-09-12",
+      "fassungsToken": "394d613e978b7aba9d966909526d4cbb",
       "sha": "5f416311ba7bbaccacfb191a9c0493ea79253fe372edcd4a49009aa7aff8d9d8"
     },
     {
@@ -257,10 +265,10 @@
           "text": "Expertinnen und Experten sind die von der Schulkommission oder der zuständigen Prüfungskommission zugelassenen Personen. Bei der Auswahl der Expertinnen und Experten sind die Fachhochschulen angemessen zu berücksichtigen."
         }
       ],
-      "stand": "2018-08-13",
+      "stand": "2026-07-31",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/424.100",
-      "abgerufen": "2026-06-23",
-      "fassungsToken": "f837589971ed9a45e074ae7a020bea22",
+      "abgerufen": "2026-09-12",
+      "fassungsToken": "394d613e978b7aba9d966909526d4cbb",
       "sha": "8efff3e6d2eb0299567168845a0fd8943411b68d1bfa4088083fee7cee28e3a0"
     },
     {
@@ -274,14 +282,14 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Die Prüfungsnoten werden, vorbehältlich der Bestimmungen in § 12 dieser Verordnung, durch die Unterschrift der Examinatorin oder des Examinators sowie der Expertin oder des Experten validiert."
+          "text": "Die Prüfungsnoten werden, vorbehältlich der Bestimmungen in § 12, durch die Examinierenden sowie der Expertin oder des Experten validiert."
         }
       ],
-      "stand": "2018-08-13",
+      "stand": "2026-07-31",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/424.100",
-      "abgerufen": "2026-06-23",
-      "fassungsToken": "f837589971ed9a45e074ae7a020bea22",
-      "sha": "c378c752350476bf9e2fe6fc76c90a09be917020c52ef6f859cde3c335749e08"
+      "abgerufen": "2026-09-12",
+      "fassungsToken": "394d613e978b7aba9d966909526d4cbb",
+      "sha": "0a0f22de0dbf1808355d748c25e1acd71bc44450cea1b559ce17e4ec87a4eced"
     },
     {
       "id": "kanton/BS/424.100/art_12",
@@ -309,10 +317,10 @@
           "text": "Die Aufgaben der Berufsmaturitätskonferenz können von der zuständigen Prüfungskommission übernommen werden."
         }
       ],
-      "stand": "2018-08-13",
+      "stand": "2026-07-31",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/424.100",
-      "abgerufen": "2026-06-23",
-      "fassungsToken": "f837589971ed9a45e074ae7a020bea22",
+      "abgerufen": "2026-09-12",
+      "fassungsToken": "394d613e978b7aba9d966909526d4cbb",
       "sha": "afca7ee666da7ab9b1d08f1678c3b793d516fa52ee6c99dae5aeb9686eb30bc6"
     },
     {
@@ -337,10 +345,10 @@
           "text": "Noten unter 4 stehen für ungenügende Leistungen."
         }
       ],
-      "stand": "2018-08-13",
+      "stand": "2026-07-31",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/424.100",
-      "abgerufen": "2026-06-23",
-      "fassungsToken": "f837589971ed9a45e074ae7a020bea22",
+      "abgerufen": "2026-09-12",
+      "fassungsToken": "394d613e978b7aba9d966909526d4cbb",
       "sha": "8652fc5cdd3ae6e28f1821adedf3874bb9e21f787324026cae33c8d29c209cef"
     },
     {
@@ -350,40 +358,18 @@
       "erlass": "Verordnung über die Berufsmaturität, Berufsmaturitätsverordnung (424.100)",
       "artikel": "14",
       "artikelLabel": "§ 14",
-      "titel": "Notenberechnung",
+      "aufgehoben": true,
       "bloecke": [
         {
-          "absatz": "1",
-          "text": "Die Noten im Berufsmaturitätszeugnis werden auf ganze und halbe Noten gerundet."
-        },
-        {
-          "absatz": "2",
-          "text": "Sie sind der Mittelwert:",
-          "items": [
-            {
-              "marke": "a",
-              "text": "in nicht geprüften Fächern aus den Noten aller Zeugnisse (Erfahrungsnoten);"
-            },
-            {
-              "marke": "b",
-              "text": "in nur schriftlich oder nur mündlich geprüften Fächern aus dem auf ganze und halbe Noten gerundeten Durchschnitt der Erfahrungsnoten und der Prüfungsnote;"
-            },
-            {
-              "marke": "c",
-              "text": "in sowohl schriftlich und mündlich geprüften Fächern aus dem auf ganze und halbe Noten gerundeten Durchschnitt der Erfahrungsnoten sowie der auf ganze und halbe Noten gerundeten Prüfungsnote;"
-            },
-            {
-              "marke": "d",
-              "text": "im Bereich interdisziplinäres Arbeiten aus dem auf ganze und halbe Noten gerundeten Durchschnitt der Erfahrungsnoten Interdisziplinäres Arbeiten (IDAF) sowie der auf ganze und halbe Noten gerundeten Note für die Interdisziplinäre Projektarbeit (IDPA)."
-            }
-          ]
+          "absatz": null,
+          "text": ""
         }
       ],
-      "stand": "2018-08-13",
+      "stand": "2026-07-31",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/424.100",
-      "abgerufen": "2026-06-23",
-      "fassungsToken": "f837589971ed9a45e074ae7a020bea22",
-      "sha": "629c289f13e33c00fbe0c232900e581ffcf26c0848a4c1ed8d99c49e7cbfb818"
+      "abgerufen": "2026-09-12",
+      "fassungsToken": "394d613e978b7aba9d966909526d4cbb",
+      "sha": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
       "id": "kanton/BS/424.100/art_15",
@@ -396,7 +382,7 @@
       "bloecke": [
         {
           "absatz": "1",
-          "text": "Der Notendurchschnitt des Berufsmaturitätszeugnisses ist das arithmetische Mittel aller Fachnoten im Berufsmaturitätszeugnis, auf eine Dezimalstelle gerundet."
+          "text": "Die Gesamtnote ist das arithmetische Mittel aller Fachnoten im Berufsmaturitätszeugnis, auf eine Dezimalstelle gerundet."
         },
         {
           "absatz": "2",
@@ -404,7 +390,7 @@
           "items": [
             {
               "marke": "a",
-              "text": "der Durchschnitt sämtlicher Noten mindestens 4 beträgt;"
+              "text": "Die Gesamtnote beträgt mindestens 4;"
             },
             {
               "marke": "b",
@@ -417,11 +403,11 @@
           ]
         }
       ],
-      "stand": "2018-08-13",
+      "stand": "2026-07-31",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/424.100",
-      "abgerufen": "2026-06-23",
-      "fassungsToken": "f837589971ed9a45e074ae7a020bea22",
-      "sha": "46dad694221103cf17242ba619a6e32934dc3a203a4e25b09ab1896e4244fcb2"
+      "abgerufen": "2026-09-12",
+      "fassungsToken": "394d613e978b7aba9d966909526d4cbb",
+      "sha": "4cae90b4bda5c193faa81f7124c9f0c7b1ea1913a8bfb0650cd4f9887ffc45df"
     },
     {
       "id": "kanton/BS/424.100/art_16",
@@ -445,10 +431,10 @@
           "text": "Lernende, welche die Berufsmaturitätsprüfung bestanden haben, aber das Qualifikationsverfahren für das eidgenössische Fähigkeitszeugnis nicht bestanden haben, erhalten von der Prüfungsleitung eine Bescheinigung über die Ergebnisse der Abschlussprüfungen."
         }
       ],
-      "stand": "2018-08-13",
+      "stand": "2026-07-31",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/424.100",
-      "abgerufen": "2026-06-23",
-      "fassungsToken": "f837589971ed9a45e074ae7a020bea22",
+      "abgerufen": "2026-09-12",
+      "fassungsToken": "394d613e978b7aba9d966909526d4cbb",
       "sha": "76002d07e3c88e24fecb346ab585c2d32f21eff7d778da7aa1c284ec0dbb5a81"
     },
     {
@@ -466,44 +452,30 @@
         },
         {
           "absatz": "2",
-          "text": "Die Berufsmaturitätsprüfung ist in mindestens den Fächern mit ungenügenden Noten zu wiederholen. Eine Wiederholung in allen Fächern ist möglich."
+          "text": "…"
         },
         {
           "absatz": "3",
-          "text": "In Fächern, die nicht wiederholt werden, werden die bestehenden Berufsmaturitätsnoten übernommen."
+          "text": "…"
         },
         {
           "absatz": "4",
-          "text": "Wird zur Vorbereitung der Wiederholungsprüfung der Berufsmaturitätsunterricht während mindestens zweier Semester besucht, werden die neuen Zeugnisnoten als Erfahrungsnoten für die Berechnung der Gesamtnote berücksichtigt."
+          "text": "…"
         },
         {
           "absatz": "5",
-          "text": "In allen zu wiederholenden Fächern ist eine Abschlussprüfung abzulegen."
+          "text": "…"
         },
         {
           "absatz": "6",
-          "text": "Bei ungenügender Note im interdisziplinären Arbeiten gilt für die Wiederholung:",
-          "items": [
-            {
-              "marke": "a",
-              "text": "eine ungenügende interdisziplinäre Projektarbeit (IDPA) ist zu überarbeiten;"
-            },
-            {
-              "marke": "b",
-              "text": "bei einer ungenügenden Erfahrungsnote interdisziplinäres Arbeiten (IDAF) ist eine mündliche Abschlussprüfung zu interdisziplinärem Arbeiten abzulegen;"
-            },
-            {
-              "marke": "c",
-              "text": "eine genügende bisherige Erfahrungsnote ist zu berücksichtigen."
-            }
-          ]
+          "text": "…"
         }
       ],
-      "stand": "2018-08-13",
+      "stand": "2026-07-31",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/424.100",
-      "abgerufen": "2026-06-23",
-      "fassungsToken": "f837589971ed9a45e074ae7a020bea22",
-      "sha": "718c6802ee17b1e7011d8a7482b6b63e84e4884fc4a515f3a828d8206412869a"
+      "abgerufen": "2026-09-12",
+      "fassungsToken": "394d613e978b7aba9d966909526d4cbb",
+      "sha": "3e63e5a3ec91b301e0c715691f20f7d0692a301ce23e4ecbff7bb05c3dde3e9a"
     },
     {
       "id": "kanton/BS/424.100/art_18",
@@ -520,7 +492,7 @@
         },
         {
           "absatz": "2",
-          "text": "Kandidatinnen und Kandidaten, die ohne wichtigen Grund der Berufsmaturitätsprüfung fernbleiben oder während der Berufsmaturitätsprüfung zurücktreten, haben die Prüfung nicht bestanden."
+          "text": "Bleiben Kandidierende ohne wichtigen Verhinderungsgrund einer Prüfung fern, so gilt die ganze Berufsmaturitätsprüfung als nicht bestanden."
         },
         {
           "absatz": "3",
@@ -553,11 +525,11 @@
           "text": "Die Prüfungsleitung entscheidet darüber, ob wichtige Gründe für ein Fernbleiben oder Zurücktreten von der Berufsmaturitätsprüfung vorliegen sowie über den Zeitpunkt von Nachprüfungen."
         }
       ],
-      "stand": "2018-08-13",
+      "stand": "2026-07-31",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/424.100",
-      "abgerufen": "2026-06-23",
-      "fassungsToken": "f837589971ed9a45e074ae7a020bea22",
-      "sha": "8acfb8ebf19d8d4ecedb594135f09db1ea7a61eb23af7cc4a3dbc4f3bf297699"
+      "abgerufen": "2026-09-12",
+      "fassungsToken": "394d613e978b7aba9d966909526d4cbb",
+      "sha": "fcdce7c29f720cc32d2bc83d6fbe2e99f4d6a2f0f454c772c5950294adc6e3b6"
     },
     {
       "id": "kanton/BS/424.100/art_19",
@@ -573,10 +545,10 @@
           "text": "Die Schulleitungen und die Prüfungsleitungen koordinieren untereinander die Berufsmaturitätsprüfungen."
         }
       ],
-      "stand": "2018-08-13",
+      "stand": "2026-07-31",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/424.100",
-      "abgerufen": "2026-06-23",
-      "fassungsToken": "f837589971ed9a45e074ae7a020bea22",
+      "abgerufen": "2026-09-12",
+      "fassungsToken": "394d613e978b7aba9d966909526d4cbb",
       "sha": "042645226d93d3657ee584ba9268f41e436937b4f6f61c41be2ef22b5cc82eb7"
     },
     {
@@ -593,10 +565,10 @@
           "text": "Gegen im Rahmen dieser Verordnung erlassene Verfügungen kann nach den Bestimmungen des Gesetzes betreffend die Organisation des Regierungsrates und der Verwaltung vom Kanton Basel-Stadt (Organisationsgesetz, OG) vom 22. April 1976 an die zuständige Departementsvorsteherin bzw. an den zuständigen Departementsvorsteher rekurriert werden."
         }
       ],
-      "stand": "2018-08-13",
+      "stand": "2026-07-31",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/424.100",
-      "abgerufen": "2026-06-23",
-      "fassungsToken": "f837589971ed9a45e074ae7a020bea22",
+      "abgerufen": "2026-09-12",
+      "fassungsToken": "394d613e978b7aba9d966909526d4cbb",
       "sha": "01857cdd000233c250b9fcac5c2c64a9e9d6fe3b3633c20c2c34c7b257e3345a"
     },
     {
@@ -610,13 +582,17 @@
         {
           "absatz": "1",
           "text": "Für Lernende mit den Schullaufbahnen nach § 1 lit. a und b der Übergangsverordnung Schulharmonisierung vom 31. Januar 2012 gelten weiterhin die bisherigen Erlasse."
+        },
+        {
+          "absatz": "2",
+          "text": "Die Lernenden, die ihren BM-Lehrgang vor dem 31. Juli 2026 begonnen haben, schliessen diesen nach bisherigem Recht ab."
         }
       ],
-      "stand": "2018-08-13",
+      "stand": "2026-07-31",
       "quelleUrl": "https://www.gesetzessammlung.bs.ch/app/de/texts_of_law/424.100",
-      "abgerufen": "2026-06-23",
-      "fassungsToken": "f837589971ed9a45e074ae7a020bea22",
-      "sha": "b60415355a610ca07f1cc5ef21f4b5b1fcc4d5efb24bfc1ebab6bffe2882eff6"
+      "abgerufen": "2026-09-12",
+      "fassungsToken": "394d613e978b7aba9d966909526d4cbb",
+      "sha": "0d75229c7b3e4bfeda8de751834c157d6ecad8b9e382e052fe38c9921fe430f2"
     }
   ]
 }

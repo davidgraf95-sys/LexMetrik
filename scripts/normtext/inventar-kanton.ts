@@ -30,6 +30,9 @@ import * as bundesgericht from '../../src/data/tarif/bundesgericht.ts';
 import * as nichtVermoegensrechtlich from '../../src/data/tarif/nicht-vermoegensrechtlich.ts';
 import { parsePassus } from '../../src/lib/normtext/passus.ts';
 import { ZH_QUELLEN } from './zh-quellen.ts';
+import { identitaetAusErlass } from './browse-manifest.ts';
+import { existsSync, readFileSync, readdirSync } from 'node:fs';
+import { join } from 'node:path';
 
 /** Roh-Tarif-Eintrag, wie er in den Daten steht (nur die hier relevanten Felder). */
 export interface TarifEintrag {
@@ -67,6 +70,16 @@ export interface KantonInventarGruppe {
    *  Artikel-Anker → Gesetzes-Seite). Erster Eintrag der Gruppe gewinnt. */
   quelleUrl: string;
   artikel: KantonInventarArtikel[];
+  /**
+   * §6.7-Auflage A1 (Gegenprüfung PR #828, 12.9.2026): bei zweisprachigen
+   * Erlassen trägt der Bestands-KEY (`lawId`, aus dem Snapshot-`id`-Pfad,
+   * z. B. «130.11-de») den Sprachsuffix — die tatsächliche LexWork-API-URL
+   * trägt ihn NICHT (`/api/de/texts_of_law/130.11`). `fetchLawId` ist die
+   * URL-taugliche, suffixfreie Form für den Netz-Abruf; wenn nicht gesetzt
+   * (alle einsprachigen/tarif-abgeleiteten Gruppen), ist `lawId` bereits
+   * fetch-tauglich (bestehende Konvention, s. `sammleKantonInventar()`).
+   */
+  fetchLawId?: string;
 }
 
 export interface FallbackEintrag {
@@ -361,6 +374,120 @@ export function sammleKantonInventar(): KantonInventarGruppe[] {
   }
 
   return fertig;
+}
+
+/**
+ * §6.7-Wurzel-Fix (Fund #694, Kanton-Fremd-Drift, 12.9.2026): `sammleKantonInventar()`
+ * deckt NUR die tarif-zitierten LexWork-Erlasse ab (empirisch 69 von 1189
+ * committeten LexWork-Kanton-Snapshots — Nullprobe 12.9.2026). Ein Erlass ohne
+ * Tarif-Zitat (z. B. BS-121.100 Bürgerrechtsgesetz) driftet dadurch UNBEMERKT
+ * gegen die amtliche Fassung — `check:normtext-netz` sah 0 Drift, während ein
+ * direkter LexWork-Abgleich 26 driftende AR/BS-Erlasse fand (Wortlaut ROADMAP-
+ * CHRONIK.md). Diese Funktion liest STATT der Tarif-Tabellen den gesamten
+ * COMMITTETEN Kanton-Bestand (`public/normtext/kanton/*.json`) und baut für
+ * jeden LexWork-Erlass eine Gruppe ohne Artikel-Filter (Drift-Vergleich
+ * braucht nur kanton/host/lang/lawId, keine Artikel-Tokens) — Vollabdeckung
+ * statt Tarif-Stichprobe. Reine FS-Lektüre, keine Netz-/Extraktionslogik.
+ */
+export function sammleKantonVollinventarLexWork(): KantonInventarGruppe[] {
+  const dir = 'public/normtext/kanton';
+  if (!existsSync(dir)) return [];
+
+  interface RohEintrag {
+    kanton: string; host: string; lang: 'de' | 'fr'; bestandsKey: string;
+    urlLawId: string; quelleUrl: string; erlassName: string; erlassNr: string;
+  }
+  const roh: RohEintrag[] = [];
+
+  for (const datei of readdirSync(dir)) {
+    if (!datei.endsWith('.json') || datei === 'index.json') continue;
+    let inhalt: { eintraege?: Array<{ id: string; quelleUrl: string; erlass?: string }> };
+    try {
+      inhalt = JSON.parse(readFileSync(join(dir, datei), 'utf8'));
+    } catch {
+      continue; // unparsebar → dem Struktur-/Golden-Tor überlassen, hier nicht blockieren
+    }
+    const erster = inhalt.eintraege?.[0];
+    if (!erster) continue;
+    const m = erster.quelleUrl.match(LEXWORK);
+    if (!m) continue; // kein LexWork-Erlass (PDF/HTM/ZH) → andere Prüfungen decken die ab
+    const teile = erster.id.split('/');
+    if (teile.length < 4 || teile[0] !== 'kanton') continue;
+
+    // D1-Wurzelfix (Gegenprüfung PR #828, 12.9.2026): KEINE Mehrheits-Präfix-
+    // Heuristik mehr — sie liess erlassNr für jeden Erlass ohne Buchstaben-
+    // Präfix vor der Nummer leer (AR 0/265, SG 0/2: «142.121» trägt gar kein
+    // Präfixwort) und liess bei BS eine 5-gegen-854-Minderheit («SG 121.100»
+    // statt «121.100») über den Mehrheitswert der Geschwister entscheiden.
+    // `sr` wird stattdessen 1:1 aus dem COMMITTETEN Label übernommen — kein
+    // Raten, kein Gleichstand, keine Fremd-Ableitung aus Geschwister-Erlassen.
+    const { titel: erlassName, sr } = identitaetAusErlass(erster.erlass ?? '');
+
+    roh.push({
+      kanton: teile[1], host: m[1], lang: m[2] as 'de' | 'fr', bestandsKey: teile[2],
+      urlLawId: kanonischeLawId(m[3]), quelleUrl: erster.quelleUrl, erlassName,
+      erlassNr: sr ?? '',
+    });
+  }
+
+  return roh.map((r) => ({
+    kanton: r.kanton,
+    host: r.host,
+    lang: r.lang,
+    lawId: r.bestandsKey,
+    ...(r.urlLawId !== r.bestandsKey ? { fetchLawId: r.urlLawId } : {}),
+    erlassName: r.erlassName,
+    erlassNr: r.erlassNr,
+    quelleUrl: r.quelleUrl,
+    artikel: [],
+  }));
+}
+
+/**
+ * §6.7-Fund #694 (12.9.2026): Erlass-genauer `--nur=<KEY[,KEY2]>`-Filter für den
+ * Kanton-Content-Generator (`normtext-snapshot.ts --nur=kanton --kanton=…`),
+ * analog zum bestehenden `--nur=` bei struktur-run.ts/struktur-kanton-run.ts.
+ * Ohne ihn regeneriert `--discovery` IMMER den kompletten Kanton-Vollkorpus
+ * (Rot-Beweis 12.9.2026: ein Drift-Fix für 26 AR/BS-Erlasse hätte sonst alle
+ * 1124 committeten AR/BS-Dateien angefasst — Datums-/Feature-Churn statt eines
+ * chirurgischen Diffs). Key-Format = Dateiname ohne `.json` (`<KT>-<lawId>`,
+ * z. B. `BS-121.100`). Eigene, triviale `lawIdSafe`-Kopie statt Re-Import aus
+ * `normtext-snapshot.ts` (vermeidet einen Zirkel-Import; dort bereits die
+ * einzige Konsumentin dieser Funktion).
+ */
+export function parseKantonNurFilter(argv: string[]): {
+  nurKeys: Set<string> | null;
+  passt: (g: { kanton: string; lawId: string }) => boolean;
+} {
+  const nurArg = argv.find((a) => a.startsWith('--nur=') && a !== '--nur=kanton');
+  const nurKeys = nurArg
+    ? new Set(nurArg.slice('--nur='.length).split(',').map((s) => s.trim()).filter(Boolean))
+    : null;
+  const lawIdSafe = (lawId: string): string => lawId.replace(/\//g, '_');
+  const passt = (g: { kanton: string; lawId: string }): boolean =>
+    !nurKeys || nurKeys.has(`${g.kanton}-${lawIdSafe(g.lawId)}`);
+  return { nurKeys, passt };
+}
+
+/**
+ * A1-Erweiterung (Gegenprüfung PR #828, 12.9.2026): das Tarif-Inventar allein
+ * kennt nur die per Tarif zitierte Sprachfassung (z. B. VS-173.8 nur `de`) —
+ * ein committeter Erlass ohne (oder mit ANDERER) Tarif-Sprache wäre über
+ * `--nur=<KEY>` sonst nicht adressierbar (Beleg: VS-173.8-fr driftete im
+ * `stand`, war aber über den Tarif-Pfad gar nicht erreichbar). Vollinventar
+ * (bereits suffix-/`fetchLawId`-bewusst) ergänzt genau die fehlenden
+ * Bestands-Keys, ohne tarif-abgedeckte Erlasse zu duplizieren.
+ */
+export function baueKantonNurInventar(
+  kantone: Set<string>,
+  passt: (g: { kanton: string; lawId: string }) => boolean,
+): KantonInventarGruppe[] {
+  const tarif = sammleKantonInventar();
+  const tarifSchluessel = new Set(tarif.map((g) => `${g.kanton}|${g.lawId}`));
+  const vollErgaenzung = sammleKantonVollinventarLexWork().filter(
+    (g) => !tarifSchluessel.has(`${g.kanton}|${g.lawId}`),
+  );
+  return [...tarif, ...vollErgaenzung].filter((g) => kantone.has(g.kanton) && passt(g));
 }
 
 /**
