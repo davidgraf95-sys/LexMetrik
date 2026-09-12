@@ -88,6 +88,36 @@ export interface RevisionEintrag {
   /** true, wenn das Amendment nach dem Korpus-Stand in Kraft trat → noch nicht in den
    *  geltenden (gepinnten) Normtext konsolidiert (Finding 4, user-sichtbar). */
   nichtKonsolidiert?: boolean;
+  /**
+   * FALSIFIZIERT 12.9.2026, ERSTE FASSUNG (Gegenprüfung PR #827, live nachgerechnet 4/4): die
+   * ursprüngliche Lesart hier lautete «Fedlex-interner Widerspruch, wenn `jolux:rectifies`
+   * einen unter ANDERER SR klassierten Erlass nennt». Widerlegt: `jolux:rectifies` ist kein
+   * Fehlerindiz, sondern eine Verknüpfung zu einem AS-Dokument anderer SR-Klassierung —
+   * belegt an AS 2026 448 (ZDG-Enactment AS 1996 1445 → DBG Art. 124/133), AS 2023 739
+   * (OR → StGB Art. 154), AS 2026 284 (MG → MStG Art. 3), AS 2024 144 (SSV/NSV → SSV Art. 98).
+   *
+   * FALSIFIZIERT 12.9.2026, ZWEITE FASSUNG (Gegenprüfung PR #827, Auflage f): die zweite
+   * Fassung behauptete dafür ihrerseits zu viel — «erstpubliziert» und «Anhangs-Änderung
+   * Änderung bisherigen Rechts» als FAKTUM, obwohl das Tripel das nicht trägt. Gegenbeleg
+   * AS 2025 686 (SKV, Fedlex-Filestore, 12.9.2026 abgerufen): der Berichtigungstext nennt
+   * wörtlich «SKV Änderung vom 15. Oktober 2025 (AS 2025 644; SR 741.013) Art. 24 Abs. 1
+   * Bst. b Ziff. 2» — SKV berichtigt hier den EIGENEN Erlass. Fedlex' `jolux:rectifies`
+   * zeigt für AS 2025 686 aber FÄLSCHLICH auf `eli/oc/2025/648` (TAFV 2, SR 741.413) statt auf
+   * `eli/oc/2025/644` (die im Text genannte Fundstelle) — ein BELEGTER FEDLEX-DATENFEHLER
+   * (Ziel-oc ≠ tatsächlich berichtigter Erlass laut Berichtigungstext), nicht nur eine
+   * andersartige, aber korrekte Verknüpfung. AS 2024 144 (SSV) berichtigt zudem ZWEI Stellen
+   * (SSV direkt + NSV-Anhang) — ein Grund-Satz kann das nicht vollständig abbilden.
+   *
+   * Marker (§8, DRITTE — konservative — Fassung): berichtet NUR, was das Tripel selbst sagt
+   * (`jolux:rectifies` verknüpft mit einem AS-Dokument unter einer ANDEREN SR als der eigenen)
+   * — OHNE Interpretation, WARUM (Anhangs-Änderung, Fedlex-Fehler oder anderes bleibt offen;
+   * SKV-Fall zeigt, dass die Verknüpfung selbst fehlerhaft sein kann). §7: Fedlex bleibt
+   * Quelle, der Eintrag wird NIE umgehängt. Einziger bekannter Wert; kein Enum-Ausbau ohne
+   * neuen Befund.
+   */
+  plausibilitaet?: 'berichtigung-fremdes-as-dokument';
+  /** Begründungstext zum Marker (nur gesetzt, wenn `plausibilitaet` gesetzt ist). */
+  plausibilitaetsGrund?: string;
   /** Fedlex-Live-Link auf den AS-Text (art='aenderung') bzw. die amtliche Sammlung. */
   quelleUrl: string;
   /** sha-256 über die Identitätsfelder (Drift-Token, §7d). */
@@ -232,12 +262,17 @@ export function botschaftIndex(): Map<string, string> {
 }
 
 function shaEintrag(e: Omit<RevisionEintrag, 'sha'>): string {
-  const norm = [
+  const felder = [
     e.art, e.dateEntryInForce, e.ocUri ?? '', e.dateDocument ?? '', e.roFundstelle ?? '',
     e.titelDe ?? '', e.titelFr ?? '', e.titelIt ?? '', e.botschaftKey ?? '',
     e.nichtKonsolidiert ? '1' : '', e.quelleUrl,
-  ].join('|');
-  return createHash('sha256').update(norm, 'utf8').digest('hex');
+  ];
+  // Additiv NUR bei gesetztem Marker angehängt (§6.7 Auflage): so bleibt die sha jedes
+  // unbetroffenen Eintrags — und damit der ganze Sidecar — byte-gleich (§703-Vollerhebung
+  // verlangt ausdrücklich nur betroffene Sidecars neu; ein bedingungslos angehängtes Feld
+  // hätte JEDE sha im Korpus verändert).
+  if (e.plausibilitaet) felder.push(e.plausibilitaet, e.plausibilitaetsGrund ?? '');
+  return createHash('sha256').update(felder.join('|'), 'utf8').digest('hex');
 }
 
 /**
@@ -259,8 +294,11 @@ export function baueRevisionen(
   ocZuBotschaft: Map<string, string>,
   abgerufen: string,
   belegteOcs: ReadonlySet<string> = new Set(),
+  rectifiesInfoProOc: ReadonlyMap<string, RectifiesInfo> = new Map(),
 ): RevisionSidecar {
-  interface Roh { oc: string; dateForce: string; dateDoc?: string; roId?: string; de?: string; fr?: string; it?: string; }
+  interface Roh {
+    oc: string; dateForce: string; dateDoc?: string; roId?: string; de?: string; fr?: string; it?: string;
+  }
   const proOc = new Map<string, Roh>();
   for (const b of bBindings) {
     const oc = b.oc?.value;
@@ -282,6 +320,16 @@ export function baueRevisionen(
   for (const r of proOc.values()) {
     bStaende.add(r.dateForce);
     const botschaftKey = ocZuBotschaft.get(r.oc);
+    // §8-Marker (Gegenprüfung #703, korrigiert nach Gegenprüfung PR #827 Auflage f — s.
+    // Docstring `RevisionEintrag.plausibilitaet`): `rectifiesInfoProOc` trägt bereits NUR
+    // aufgelöste, deterministisch (kleinste SR-Notation bzw. -Ziel-URI) ausgewählte
+    // Fremd-SR + Ziel-Fundstelle je oc (s. `baueOcZuRectifiesSr`/`holeRectifiesSr`) — direkter
+    // Lookup, kein Ordnungs-abhängiges Gate (Auflage e). Der Grund-Text berichtet NUR das
+    // Tripel selbst (Verknüpfung + Ziel-SR/-Fundstelle), OHNE Interpretation («erstpubliziert»,
+    // «Anhangs-Änderung») — der SKV-Fall (AS 2025 686, s. Docstring) zeigt live, dass die
+    // Verknüpfung selbst ein Fedlex-Datenfehler sein kann.
+    const info = rectifiesInfoProOc.get(r.oc);
+    const fremdesAsDokument = info !== undefined && info.fremdeSr !== erlass.sr;
     const roh: Omit<RevisionEintrag, 'sha'> = {
       art: 'aenderung',
       dateEntryInForce: r.dateForce,
@@ -293,6 +341,13 @@ export function baueRevisionen(
       titelIt: r.it ? titelText(r.it) : undefined,
       botschaftKey,
       nichtKonsolidiert: (r.dateForce > korpusStand && !belegteOcs.has(r.oc)) ? true : undefined,
+      plausibilitaet: fremdesAsDokument ? 'berichtigung-fremdes-as-dokument' : undefined,
+      plausibilitaetsGrund: fremdesAsDokument
+        ? `Fedlex verknüpft diese Berichtigung (jolux:rectifies) mit dem AS-Dokument `
+          + `${info.zielFundstelle ?? info.zielOc}, das unter SR ${info.fremdeSr} klassiert ist `
+          + '— häufig, weil die berichtigte Bestimmung im Anhang eines anderen Erlasses geändert '
+          + 'wurde; massgeblich ist die amtliche Sammlung (§7/§8).'
+        : undefined,
       quelleUrl: liveLink(r.oc),
     };
     eintraege.push({ ...roh, sha: shaEintrag(roh) });
@@ -340,7 +395,7 @@ export function baueRevisionen(
 export function baueQueryB(valuesInline: string): string {
   return `PREFIX jolux: <http://data.legilux.public.lu/resource/ontology/jolux#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-SELECT ?sr ?oc ?dateForce ?dateDoc ?roId ?titleDe ?titleFr ?titleIt WHERE {
+SELECT ?sr ?oc ?dateForce ?dateDoc ?roId ?titleDe ?titleFr ?titleIt ?rectifies WHERE {
   VALUES ?notation { ${valuesInline} }
   ?tax skos:notation ?notation . BIND(STR(?notation) AS ?sr)
   ?oc jolux:classifiedByTaxonomyEntry ?tax ; jolux:legalResourceFamilyType <https://fedlex.data.admin.ch/vocabulary/resource-family/oc> ; jolux:dateEntryInForce ?dateForce .
@@ -349,7 +404,107 @@ SELECT ?sr ?oc ?dateForce ?dateDoc ?roId ?titleDe ?titleFr ?titleIt WHERE {
   OPTIONAL { ?oc jolux:isRealizedBy ?ede . ?ede jolux:language ${LANG.de} ; jolux:title ?titleDe . }
   OPTIONAL { ?oc jolux:isRealizedBy ?efr . ?efr jolux:language ${LANG.fr} ; jolux:title ?titleFr . }
   OPTIONAL { ?oc jolux:isRealizedBy ?eit . ?eit jolux:language ${LANG.it} ; jolux:title ?titleIt . }
+  OPTIONAL { ?oc jolux:rectifies ?rectifies . }
 }`;
+}
+
+/** Zwischenformat von `holeRectifiesSr`: SR-Notation + (wo vorhanden) `historicalId` je
+ *  rectifies-Ziel-oc — Rohstoff für die AS-Fundstellen-Ableitung in `baueOcZuRectifiesSr`. */
+interface ZielKlassierung { sr: string; roId?: string }
+
+/**
+ * Angereicherte Fremd-Info für den §8-Marker (Auflage f Gegenprüfung PR #827, §7): der
+ * Grund-Text darf NUR berichten, was das `jolux:rectifies`-Tripel selbst trägt — SR-Notation
+ * UND (wo ableitbar) AS-Fundstelle des Ziels, nie eine Interpretation («erstpubliziert»,
+ * «Anhangs-Änderung»). `zielFundstelle` fehlt, wenn `fundstelle()` sie nicht ableiten kann
+ * (dann fällt der Grund-Text auf `zielOc` zurück — nie fabrizieren, §7).
+ */
+export interface RectifiesInfo {
+  fremdeSr: string;
+  zielOc: string;
+  zielFundstelle?: string;
+}
+
+/**
+ * Reine Komposition (§2, testbar): oc → `RectifiesInfo` des per `jolux:rectifies` verknüpften
+ * AS-Dokuments, gebildet aus den (bereits je Erlass gefilterten) Pfad-(b)-Bindings + der
+ * global aufgelösten Ziel-Klassierungs-Map (`holeRectifiesSr`). Kein Netz hier — Netz-Schritt
+ * lebt im Runner (§703-Marker, s. `RevisionEintrag.plausibilitaet`).
+ *
+ * Deterministisch UNABHÄNGIG von der Bindungsreihenfolge (§2, Auflage e Gegenprüfung PR
+ * #827): trägt ein oc mehrere `jolux:rectifies`-Ziele (Mehrfach-Berichtigung — live an AS 2024
+ * 144/SSV beobachtet, das ZWEI Stellen berichtigt), wird je oc IMMER das lexikografisch
+ * kleinste Ziel gewählt — nicht das zuerst in `bBindings` angetroffene (dessen Reihenfolge vom
+ * SPARQL-Endpunkt/Netz abhängt, nicht vom Inhalt). Der Marker bildet damit bewusst nur EINE
+ * der ggf. mehreren Verknüpfungen ab — vollständig, aber nicht erschöpfend (§8-Ehrlichkeit).
+ */
+export function baueOcZuRectifiesSr(
+  bBindings: SparqlBinding[], zielInfoProOc: ReadonlyMap<string, ZielKlassierung>,
+): Map<string, RectifiesInfo> {
+  const zielProOc = new Map<string, string>();
+  for (const b of bBindings) {
+    const oc = b.oc?.value;
+    const ziel = b.rectifies?.value;
+    if (!oc || !ziel) continue;
+    const vorhanden = zielProOc.get(oc);
+    if (!vorhanden || ziel < vorhanden) zielProOc.set(oc, ziel);
+  }
+  const map = new Map<string, RectifiesInfo>();
+  for (const [oc, ziel] of zielProOc) {
+    const info = zielInfoProOc.get(ziel);
+    if (!info) continue;
+    map.set(oc, { fremdeSr: info.sr, zielOc: ziel, zielFundstelle: fundstelle(ziel, info.roId) });
+  }
+  return map;
+}
+
+/**
+ * Holt für eine Menge von oc-URIs (Ziele eines `jolux:rectifies`) je deren SR-Notation
+ * (`jolux:classifiedByTaxonomyEntry` → `skos:notation`, id-systematique-typisiert — sonst
+ * greift dieselbe Timeout-Falle wie bei Pfad (b), §0c) UND `historicalId` (für die
+ * AS-Fundstellen-Ableitung, Auflage f Gegenprüfung PR #827). VALUES-Batching wie
+ * `holeBindingsB`.
+ *
+ * Deterministisch UNABHÄNGIG von der SPARQL-Antwortreihenfolge (§2, Auflage e Gegenprüfung
+ * PR #827): trägt ein oc mehrere id-systematique-Notationen (selten, aber möglich bei
+ * Mehrfachklassierung), wird je oc IMMER die lexikografisch kleinste gewählt; bei mehreren
+ * `historicalId`-Werten NUR unter der gewählten kleinsten Notation ebenfalls der kleinste.
+ */
+export async function holeRectifiesSr(
+  ocUris: readonly string[], fetchImpl: FetchImpl = fetch,
+): Promise<Map<string, ZielKlassierung>> {
+  if (!ocUris.length) return new Map();
+  const werte = [...new Set(ocUris)].map((u) => `<${u}>`);
+  const baueQuery = (valuesInline: string) => `PREFIX jolux: <http://data.legilux.public.lu/resource/ontology/jolux#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?oc ?notation ?roId WHERE {
+  VALUES ?oc { ${valuesInline} }
+  ?oc jolux:classifiedByTaxonomyEntry ?tax .
+  ?tax skos:notation ?notation .
+  FILTER(DATATYPE(?notation) = ${NOTATION_TYPE})
+  OPTIONAL { ?oc <http://cogni.internal.system/model#historicalId> ?roId . }
+}`;
+  const bindings = await sparqlBatch(werte, baueQuery, { batchGroesse: 40, fetchImpl });
+  const zeilenProOc = new Map<string, { notation: string; roId?: string }[]>();
+  for (const b of bindings) {
+    const oc = b.oc?.value;
+    const notation = b.notation?.value;
+    if (!oc || !notation) continue;
+    const arr = zeilenProOc.get(oc) ?? [];
+    arr.push({ notation, roId: b.roId?.value });
+    zeilenProOc.set(oc, arr);
+  }
+  const map = new Map<string, ZielKlassierung>();
+  for (const [oc, zeilen] of zeilenProOc) {
+    const minNotation = zeilen.reduce((min, z) => (z.notation < min ? z.notation : min), zeilen[0].notation);
+    const roIds = zeilen
+      .filter((z) => z.notation === minNotation)
+      .map((z) => z.roId)
+      .filter((v): v is string => !!v)
+      .sort();
+    map.set(oc, { sr: minNotation, roId: roIds[0] });
+  }
+  return map;
 }
 
 /** Holt die Pfad-(b)-Bindings für die gesamte Grundmenge (VALUES-Batching, §0c). */

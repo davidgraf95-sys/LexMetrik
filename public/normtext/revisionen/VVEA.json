@@ -1,7 +1,7 @@
 {
   "erlassKey": "VVEA",
   "sr": "814.600",
-  "abgerufen": "2026-09-05",
+  "abgerufen": "2026-09-12",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -61,8 +61,10 @@
       "titelDe": "Verordnung über das Inverkehrbringen von Düngern (Düngerverordnung, DüV). Berichtigung (Betrifft nur den französischen Text)",
       "titelFr": "Ordonnance sur la mise en circulation des engrais (Ordonnance sur les engrais, OEng). Erratum",
       "titelIt": "Ordinanza sulla messa in commercio di concimi (Ordinanza sui concimi, OCon). Correzione (Concerne soltanto il testo francese)",
+      "plausibilitaet": "berichtigung-fremdes-as-dokument",
+      "plausibilitaetsGrund": "Fedlex verknüpft diese Berichtigung (jolux:rectifies) mit dem AS-Dokument AS 2023 711, das unter SR 916.171 klassiert ist — häufig, weil die berichtigte Bestimmung im Anhang eines anderen Erlasses geändert wurde; massgeblich ist die amtliche Sammlung (§7/§8).",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2025/256/de",
-      "sha": "2c56447b8f1991a5b8152de0e1bc07ffafcde3471aa28044b6a625a423fb0e88"
+      "sha": "fd0a8c43c4f53b31f219502134b95b650f96d492548018d9c2cff42c0f6a7f41"
     },
     {
       "art": "aenderung",
@@ -245,5 +247,5 @@
       "sha": "f9564c812f55206e9b5359b7e6805fd2d7146a851145205a0831d68f1a53386c"
     }
   ],
-  "sha": "3ae0107d2f650e89a7b8ec0f0b930d061f4df7c4cbce230d7158de6a659645e6"
+  "sha": "415462c770b10a4347c0985f767aeb562322fe23f8471c3097f11e3a14f3dc5f"
 }
