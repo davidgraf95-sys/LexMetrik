@@ -239,7 +239,32 @@ disjunkte Stichprobe n=13 über 13 Erlasse: 13/13 echt. Volumen nur-Alt korpuswe
 Erlassen (Deckel 8 MB / 2 MB je Erlass). Geltung: Bund, Fenster ab Stand
 1.1.2021 — davor gibt es amtlich nur `doc`/`pdf-a`. Pflegebedarf: Nachlauf je
 neuer Konsolidierung; Drift-Wächter in `check:entstehung`. Maschinell gemessen;
-fachliche Abnahme David offen.
+fachliche Abnahme David offen. **Nachtrag 11.9.2026 (§8, Befund Bauer #796):**
+Generator und Leser trugen bis `/2` je eine eigene Normalisierung — 70 Alt-Blöcke
+galten dem Leser als «kein Unterschied» trotz gebuchtem «geändert». Profil
+`entstehung-norm/3`: EINE Vergleichsform (`src/lib/entstehung/normalisierung.ts`)
+für beide Seiten, `flachText`-Scope auf `<paragraph>` beschränkt, Fussnoten- und
+Nachlisten-Text aus dem Vergleich genommen. 70 → 10 Leer-Diff-Verletzungen
+(Rest: andere Fehlerklasse, Token-Kontinuität, dokumentiert im Nachtrag). Regel
+deterministisch (zweiter Lauf byte-gleich); fachliche Abnahme David offen.
+**Nachtrag 12.9.2026 (§9, Gegenprüfung PR #798): Profil `entstehung-norm/4`.**
+`/3` hatte einen SPEICHERverlust (Fliesstext nach `</blockList>`, 651 Absätze je
+Stand) mit einer Vergleichsregel zugedeckt und damit vier echte Änderungen von
+KLV Art. 12 Bst. e gelöscht; ausserdem machte es 35 reine Randtitel-Änderungen
+unsichtbar (BVG 33b «ordentliches Rentenalter» → «Referenzalter»). `/4`
+speichert Vor-/Zwischen-/Nachlauftext, vergleicht und speichert die
+Sachüberschrift (`ueberschriftNeu`, 522 Blöcke, 31 davon ohne
+Wortlaut-Unterschied) und prüft `art: 'entfallen'` im Leer-Diff-Wächter mit.
+4651 Alt-Blöcke, 0 offene Verletzungen, 11 befristete Ausnahmen (CHEMRRV: die
+Konsolidierung vom 2022-05-01 führt nur 3 statt 25 `<article>`; AVIV 57b:
+Token-Kontinuität). **Nachtrag 12.9.2026 (§10, Auflage A5 der Neuprüfung):** `/4` buchte
+zehn PHANTOM-Änderungen (amtlich wortgleich, nur die Elementgrenzen wandern — MWSTG 97,
+KLV 7, GEBV_SchKG 9, VRV 67, FDV 36 ×2, HMG 9/67, STHG 25, BVV 2 55); Wurzeln: das
+Absatz-Etikett kam aus einem Listenpunkt, und das Ordnungs-Suffix «bis»/«quater» wandert
+zwischen `<num>` und Textanfang. Neu: `absatzKopf()`, Etikett im Vergleich genau einmal je
+Absatz, Satzzeichen-Regel (a2), und als zweiter Tor-Ast `phantomVerletzungen()`.
+Vollerhebung: 10 Blöcke weg, 0 neu, 330 Etiketten korrigiert; Stand 4641 Alt-Blöcke.
+Regel deterministisch; fachliche Abnahme David offen.
 
 ## register/ — fortlaufend gepflegt
 

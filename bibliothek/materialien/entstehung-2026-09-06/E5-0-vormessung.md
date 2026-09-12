@@ -210,3 +210,223 @@ Kein Umfangs-Rückbau nötig, keine Offenlegung nach §7 erforderlich. Speicherf
 Konsolidierungen nachträglich korrigiert, ist mit einem Stichtag nicht entscheidbar —
 genau dafür führt der Shard je Stand den Quell-`sha`, und `check:entstehung` verweigert
 eine Shard-Änderung ohne Quell-Hash-Änderung.
+
+## 8 Nachtrag 11.9.2026 — Befund #796: Generator und Leser trugen zwei Normalisierungen, Profil `entstehung-norm/3`
+
+**Befund (Bauer #796):** der Generator (`normalisiere()`, `flachText()` in
+`scripts/entstehung/synopse.ts`) und der Leser (`vergleichsform()` in
+`src/lib/entstehung/synopse-diff.ts`) trugen bis Profil `/2` je eine EIGENE
+Zeichen- und Struktur-Normalisierung. Gemessen (Stand vor dem Fix, 11.9.2026,
+über alle 186 Synopse-Shards): **70 gespeicherte Alt-Blöcke** (36/3484
+`belegt`, 34/999 `ohne_ereignis`) zeigten dem Leser «kein Unterschied
+erkennbar», obwohl der Generator sie als «geändert» ablegte — Rot-Beweis: ein
+neu gebauter Leer-Diff-Wächter in `check:entstehung` fand diese 70 Fälle exakt
+(Kommando `npm run check:entstehung` gegen die unregenerierten Profil-`/2`-
+Artefakte).
+
+**Ursachen, je Klasse (empirisch, nicht die Zeichentabellen allein):**
+
+1. **Randvermerk-Scope** (51 der 70 Fälle): `flachText` verglich den GANZEN
+   Artikel-Innenraum inklusive `<heading>`/`<subheading>` — ein Querverweis
+   («(Art. 83 Abs. 1 Bst. i und o AVIG)» → «(Art. 83 Abs. 1bis AVIG)», wegen
+   Umnummerierung an ANDERER Stelle des Erlasses) löste «geändert» aus, obwohl
+   der Artikeltext (`bloecke`, alles was gespeichert und angezeigt wird)
+   byte-gleich blieb. Beleg: AVIV Art. 109b, 2021-04-01 → 2021-07-01.
+2. **Fussnote vor der Satzzeichen-Regel** (die restlichen 19 der 70, alle
+   NBSP-Rauschen im Body als Nebeneffekt): eine `<authorialNote>`
+   (Berichtigungs- bzw. «Fassung gemäss …»-Hinweis) schob sich in EINER
+   Konsolidierungs-Generation zwischen ein Satzzeichen und
+   `</listIntroduction>` — die Satzzeichen-Regel aus PR #794 griff nur in der
+   fussnotenlosen Generation. Beleg: BGOE Art. 13, 2023-09-01 → 2023-11-01;
+   VEV Art. 4, 2026-04-08 → 2026-06-12.
+3. **Text nach einer Liste** (bei der Regenerierung neu aufgetreten, 18
+   weitere Fälle): `zerlegeBloecke` kennt nach einer `<blockList>` nur
+   `listIntroduction` + `item`, nie Text DANACH — ein Satz in einer
+   Tabellenzelle nach der Liste trug in einem Fall sogar eine ECHTE Änderung
+   (Kantonsliste um Bern/Luzern erweitert), landete aber in KEINER Generation
+   in `bloecke`. Beleg: KLV Art. 12 Bst. e, 2021-11-04 → 2022-01-01.
+
+**Fix (Profil `entstehung-norm/3`):** die Zeichen-Normalisierung lebt jetzt an
+GENAU EINEM Ort (`src/lib/entstehung/normalisierung.ts`, `vergleichsform`),
+von Generator UND Leser importiert; `flachText` ist auf den `<paragraph>`-Scope
+beschränkt (Klasse 1); `vergleichsRoh()` entfernt `<authorialNote>` VOR der
+Satzzeichen-Regel (Klasse 2) und ignoriert Text nach `</blockList>` (Klasse 3).
+Die Gegenprobe aus PR #794 (ARG 12, EMRK 44, UNO_PAKT_II 24, AHVG 10
+Elementgrenze UND die echte 413→422-Änderung im selben Schritt) ist jetzt ein
+dauerhafter Unit-Test (`src/tests/entstehung-synopse.test.ts`), vorher nur ein
+einmaliger Gegenprüfungs-Befund.
+
+**Wirkung auf die Zahlen:** 4659 → **4529 Alt-Blöcke** (−130, −2,8 %), davon
+`ohne_ereignis` 1175 → **1140**; Deckel 6580,1 → **6544,2 KB / 8192,0 KB
+(80 %)**; Leer-Diff-Verletzungen 70 → **10** (−86 %).
+
+**Offener Rest (10 Fälle, andere Fehlerklasse, NICHT Normalisierung):**
+Token-Kontinuität über grosse Zeitspannen — `neuNach()`
+(`src/lib/entstehung/synopse-diff.ts`) sucht den nächsten Schritt mit
+DEMSELBEN Token, nicht die nächste WORTLAUT-Änderung. Fällt der Wortlaut nach
+Jahren zufällig auf den Ausgangswert zurück (Beleg: AVIV Art. 57b — «… um
+sechs Abrechnungsperioden …» @2021-07-01, wortgleich wieder @2025-11-01, erst
+danach «… um zwölf …»), zeigt der Leser «kein Unterschied». Dieselbe Klasse
+trifft `art: 'entfallen'`-Artikel noch deutlicher (CHEMRRV, zehn Token um den
+2022-05-01 — dort bereits durch `leerDiffVerletzungen()` ausgefiltert, siehe
+Docstring dort). Bewusst NICHT stillschweigend gelöst (§6.7): `check:entstehung`
+bleibt für diese 10 Fälle rot, bis ein eigener Roadmap-Schritt `neuNach` um eine
+Lineage-Regel über den Token hinaus ergänzt (z. B. `oc`/eId-Kontinuität statt
+reiner Token-Gleichheit). Betroffen: AIG 93, ASYLG 6a, AVIV 57b/1a, OR 652d,
+PARLG 13, VAM 51/76/77, ZSTV 17.
+
+**Determinismus:** zweiter Generator-Lauf (identischer XML-Cache, ohne
+`--parser-neu`) byte-gleich zum ersten — sha256 aller 186 Synopse-Shards und
+des Quell-Registers identisch.
+
+## 9 Nachtrag 12.9.2026 — Gegenprüfung PR #798 widerlegt Profil `/3`; Profil `entstehung-norm/4`
+
+§8 bleibt als Beleg seines Datums unverändert stehen. Die Gegenprüfung zu
+PR #798 hat zwei seiner Schlüsse widerlegt und einen dritten als Tor-Lücke
+beanstandet; hier steht, was gemessen wurde, und nicht, was §8 hätte sagen
+sollen.
+
+**A1 — «Text nach einer Liste» war kein Rausch-Fall, sondern ein
+Speicherverlust.** §8 Klasse 3 hat die Lücke in `zerlegeBloecke` richtig
+BESCHRIEBEN, sie aber im Vergleich zugedeckt statt im Speicher geschlossen
+(«Regel (c)»). Damit verschwanden vier ECHTE Wortlautänderungen von KLV
+Art. 12 Bst. e — die Kantonsliste der Früherkennungsprogramme, an der die
+Franchisebefreiung hängt (amtliche Konsolidierungen, Fedlex Filestore ELI
+`cc/1995/4964_4964_4964`, abgerufen 12.9.2026):
+
+| Schritt | Kantonsliste |
+|---|---|
+| 2021-11-04 → 2022-01-01 | «… Basel-Stadt, Freiburg, Genf …» → **«+ Bern, Luzern»** |
+| 2022-10-01 → 2023-01-01 | → **«+ Basel-Landschaft»** |
+| 2024-07-01 → 2025-01-01 | → **«+ Solothurn»** |
+| 2026-05-11 → 2026-07-01 | → **«+ Glarus»** |
+
+Gemessen am ganzen Korpus (12.9.2026): **651 Absätze je Stand** tragen
+Fliesstext nach der letzten `<blockList>`; `<item>` ausserhalb einer
+`<blockList>` gibt es **0**; verschachtelte `<blockList>` **4476** — deshalb
+sucht `blockListBereiche()` balanciert, nicht nicht-gierig. `zerlegeBloecke`
+speichert seither Vor-, Zwischen- und Nachlauftext; Regel (c) ist gestrichen;
+`flachText` delegiert an `zerlegeBloecke` (ein Scope, §5).
+
+**A2 — die Sachüberschrift gehört in den Vergleich, aber auch in den
+Speicher.** §8 Klasse 1 hat `<heading>` zusammen mit dem `<subheading>`-
+Randvermerk aus dem Vergleich genommen. Der Randvermerk ist Rauschen, die
+Sachüberschrift nicht: **35 Schritte** ändern NUR den amtlichen Randtitel
+(BVG Art. 33b «Erwerbstätigkeit nach dem ordentlichen Rentenalter» →
+«… nach dem Referenzalter», 2023-01-01 → 2024-01-01, ELI
+`cc/1983/797_797_797`; dazu STPO 55/431, HMG 41, HREGV 77, PARTG 10, AHVV 52a,
+EPV 90, VAG 84, FINFRAG 41 …). Der Leser bekam dort «kein Unterschied
+erkennbar» — eine falsche Auskunft über eine echte Änderung (§8 des
+Reglements). Die enge Rausch-Regel ist gemessen: **2096 von 2096**
+`<subheading>` im jüngsten Stand aller 186 Erlasse sind ein Klammer-
+Querverweis auf die Delegationsnorm (acht davon mit amtlichen Schreibfehlern
+in der Klammerung). Gespeichert wird seither BEIDES — `ueberschrift` (alt) und
+`ueberschriftNeu` (neu) —, weil der geltende Korpus-Snapshot den Artikel-Titel
+für Bundeserlasse fast nie führt (**7500 von 22 496** Artikeln stimmen überein,
+die übrigen tragen im Korpus gar keinen Titel): ein Leser, der den neuen Titel
+von dort holte, zeigte bei zwei Dritteln aller Artikel eine Titel-Streichung,
+die es nie gab.
+
+**A4 — der Leer-Diff-Wächter prüft `art: 'entfallen'` mit.** §8 hatte diese
+Blöcke ausgefiltert; mit Profil `/3` waren 160 Blöcke gerade erst von
+«geändert» zu «entfallen» gewechselt und damit aus dem Blick des Tors
+verschwunden (§6.7). Ausgenommen bleibt nur der Fall ohne Folgeschritt
+(`neu === null`) — dort sagt die Karte «Der Artikel ist mit diesem Stand
+entfallen», und das IST der Unterschied.
+
+**Ein Nebenbefund, der aus A1 folgt:** die fünf Ausnahmen des Profils `/3`
+(KLV 13, KLV 12_b, KLV 12_a ×2, VTS 136) waren **keine**
+Token-Kontinuitäts-Fälle, wie §8 vermutete — sie sind mit dem
+Speicher-Fix erledigt. Die Diagnose «Lineage» war für sie falsch.
+
+**Neuer Stand (12.9.2026, Profil `/4`):** 4651 Alt-Blöcke (Profil `/3`: 4529),
+davon 1176 `ohne_ereignis`; 326 `entfallen`; 522 Blöcke mit geänderter
+Sachüberschrift, davon 31 ohne Wortlaut-Unterschied (Leser-Zustand «nur die
+Sachüberschrift wurde geändert»); Deckel 6716,1 KB / 8192,0 KB (82 %);
+Leer-Diff-Verletzungen **0 offen**.
+
+**Offener Rest — 11 befristete Ausnahmen
+(`bibliothek/register/entstehung-leerdiff-ausnahmen.json`, Ablauf 2026-10-12):**
+
+1. **CHEMRRV 4/7/8/9/10/11/12/16/18/20 @2022-05-01 — defekte Quell-Struktur,
+   NICHT Lineage.** Die amtliche Konsolidierung vom 2022-05-01 (und
+   2022-10-01) führt im Artikelbaum nur `<article eId="art_1..art_3">`; die
+   Artikel 4–24 stehen in derselben 685-KB-Datei als
+   `<mod eId="annex_1_a/mod_uN"><quotedStructure>` eines Anhangs, ab
+   2022-10-06 wieder als 27 reguläre `<article>` (gemessen 12.9.2026 am
+   Filestore-XML, ELI `cc/2005/478`). Der Generator bucht sie darum als
+   «entfallen» und später als neu eingefügt, obwohl sie nie aufgehoben waren.
+2. **AVIV 57b @2021-07-01 — echte Token-Kontinuität**, wie in §8 beschrieben.
+
+Beide Klassen brauchen dieselbe Wurzel: eine **Lineage-Regel über die ganze
+Stände-Kette** statt des nächsten Token-Treffers in `neuNach()` — eine eId, die
+in EINEM Stand fehlt und danach unverändert zurückkehrt, ist eine strukturelle
+Lücke der Quelle und keine Aufhebung. Eigener Bauschritt; in PR #798 bewusst
+nicht mitgebaut (§6.7: ein Tor, das den eigenen Befund wegfiltert, ist
+gefährlicher als keines).
+
+**Determinismus:** dritter Generator-Lauf aus demselben XML-Cache byte-gleich
+zum zweiten — alle 186 Synopse-Shards identisch; einziger Unterschied ist der
+Provenienz-Vermerk `parserAenderung` im Quell-Register, den nur der
+ändernde Lauf schreibt (§7d).
+
+## 10 Nachtrag 12.9.2026 (zweiter) — Neuprüfung PR #798, Auflage A5: die erfundene Änderung
+
+§9 bleibt unverändert stehen; seine Zahlen (4651 Alt-Blöcke, 1176 `ohne_ereignis`,
+Deckel 6716,1 KB, 31 Nur-Titel-Fälle) gelten für den Stand VOR dieser Auflage.
+
+**Befund der Neuprüfung:** A1–A4 bestätigt (Vollerhebung: keine echte Änderung
+verloren), aber Profil `/4` buchte **Phantom-Änderungen** — Schritte, in denen die
+amtliche Fassung Zeichen für Zeichen dieselbe ist und nur die Fedlex-Generation die
+Elementgrenzen anders setzt. Zwei Wurzeln, beide am Roh-XML belegt (abgerufen
+12.9.2026):
+
+1. **Das Absatz-Etikett kam aus einem Listenpunkt.** `zerlegeAbsatz` nahm das ERSTE
+   `<num>` des ganzen Absatzes. Führt eine Generation die Absatz-Ziffer im TEXT statt
+   als Element (MWSTG Art. 97, Stand 2023-09-01: der ganze Artikel ist EIN
+   `<paragraph eId="art_97/para">` mit «1 Die Busse …» und «2 Bei erschwerenden
+   Umständen …» im Fliesstext), hat der Absatz gar kein eigenes `<num>` — der Block
+   bekam das Etikett «a.» eines Listenpunkts weiter unten, und dieser Listenpunkt
+   verlor sein eigenes, weil dieselbe Regel das `<num>` aus dem Rumpf strich. Neu:
+   `absatzKopf()` liest nur das `<num>` VOR dem Inhalt und entfernt genau dieses.
+2. **Das Ordnungs-Suffix wandert über die Grenze `<num>`/Text.** GEBV_SchKG Art. 9
+   Abs. 1bis steht 2022-01-01 als `<num>1</num><p><sup>bis</sup> Erfordert …`, 2026-01-01
+   als `<num>1<sup>bis</sup></num><p> Erfordert …`; dieselbe Klasse in der
+   `listIntroduction` (KLV Art. 7 Abs. 2bis) und im Fliesstext (VRV Art. 67 Abs. 1quater).
+   Die A2-Regel «Absatz-Etikett nur beim Wechsel» unterdrückte das Etikett «1» der
+   alten Fassung, weil der Absatz davor dasselbe trug — der Vergleich sah ein «1»
+   Unterschied. Neu setzt `vergleichsFolge()` das Etikett **genau einmal je Absatz**, so
+   wie es im XML steht. Das `xmlns:mig`-Attribut, das dieselben Stellen markiert, ist
+   für den Vergleich folgenlos (`reinerText` entfernt Tags samt Attributen).
+3. **Nachzügler derselben Familie:** BVV 2 Art. 55 (2024-01-01 → 2025-01-01) setzt die
+   Aufzählung einmal als `<blockList>`, einmal als Folge gewöhnlicher `<p>` mit dem
+   Buchstaben im Text; die Satzzeichen-Regel (a) nahm den Doppelpunkt nur auf der
+   Listen-Seite weg. Regel (a2) tut das jetzt auch vor der ERSTEN Aufzählungsmarke in
+   Textform — und nur dort (die erste, zu gierige Fassung strich auch die Strichpunkte
+   zwischen den Punkten; beide Grenzen stehen als Unit-Test).
+
+**Tor-Lücke und ihr Schluss:** Der Leer-Diff-Wächter fragt «zeigt der Leser zu wenig?»
+und kann die erfundene Änderung nicht sehen — dort unterscheiden sich die gespeicherten
+Blöcke ja wirklich, nur in der Struktur. Neu ist `phantomVerletzungen()` der zweite Ast
+desselben Wächters: Alt und Neu nach der gemeinsamen, leerraum-blinden Vergleichsform
+identisch UND Titel-Paar gleich ⇒ rot. Rot-Beweis am Bestand: gegen die Artefakte aus
+`ba3e52470` meldete der Ast vier Fälle (FDV 36 @2022-07-01 und @2023-01-01, HMG 67
+@2025-01-01, VRV 67 @2025-07-01); die übrigen vergleicht der Leser gegen den
+Korpus-Snapshot und sind für diesen Ast unerreichbar — darum sitzt der eigentliche Fix
+im Generator. Eine ECHTE Absatz-Umbenennung (Abs. 2 → Abs. 1 bei gleichem Wortlaut)
+bleibt gebucht und wird nie als Phantom gemeldet; auch das steht als Test.
+
+**Vollerhebung gegen `ba3e52470` (jeder Alt-Block, keine Stichprobe):** 10 Blöcke
+entfallen, 0 neu — BVV_2 55 @2025-01-01, FDV 36 @2022-07-01 und @2023-01-01,
+GEBV_SCHKG 9 @2026-01-01, HMG 9 und 67 @2025-01-01, KLV 7 @2025-07-01, MWSTG 97
+@2024-01-01, STHG 25 @2023-01-01, VRV 67 @2025-07-01. Alle zehn sind amtlich wortgleich,
+unabhängig gemessen am sichtbaren Artikeltext (Tag-Strip über den ganzen Artikel — das
+Verfahren des Profils `/3` —, leerraum-blind verglichen): 10/10 identisch. Dazu tragen
+**330 Blöcke korrigierte Etiketten** (AHVG 49b, AHVV 7/125/133/55bis …): das aus einem
+Listenpunkt gezogene «a.» ist weg, die Listenpunkte haben ihr amtliches Etikett zurück.
+
+**Stand nach A5:** 4641 Alt-Blöcke, 1166 `ohne_ereignis`, 522 Blöcke mit geändertem
+Randtitel (33 davon ohne Wortlaut-Unterschied), Deckel 6684,2 KB / 8192,0 KB (82 %),
+0 offene Leer-Diff- und 0 offene Phantom-Verletzungen, 11 befristete Ausnahmen
+unverändert. Determinismus: zweiter Lauf aus demselben XML-Cache byte-gleich (einzige
+Differenz der Provenienz-Vermerk `parserAenderung`, den nur der ändernde Lauf schreibt).

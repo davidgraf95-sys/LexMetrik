@@ -1,6 +1,6 @@
 {
-  "erzeugt": "2026-09-11",
-  "normProfil": "entstehung-norm/2",
+  "erzeugt": "2026-09-12",
+  "normProfil": "entstehung-norm/4",
   "vorlagen": {
     "BOTSCHAFT-2024-1107": {
       "projEli": "https://fedlex.data.admin.ch/eli/dl/proj/7023/0243",
@@ -8,12 +8,13 @@
       "beschlussFga": "fga/2025/1094",
       "entwurfSha": "a2e9140631d7f7fd464e4f20693ba12eff5102c04d9e2857d3d940d4aad1d4a9",
       "beschlussSha": "44db1dc473dd022268aaf22679e276df7eb73d9b856c85b9eeb3f821b5b9a2c7",
-      "shardSha": "d3855632444e11d33f1f334657022dc3d34329db8a973c231fcd279042a7cd19",
+      "shardSha": "b1d9b55abebe89b548780e26a15be7914e8cc7f12e3be3f8ffd2205bf2df0a99",
       "bytes": 12653,
       "artikel": 8,
       "unveraendert": 4,
       "mehrdeutig": 0,
-      "abgerufen": "2026-09-11"
+      "abgerufen": "2026-09-12",
+      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798): nur Profil-Nummer, Entwurfs-Extraktion unveraendert"
     },
     "BOTSCHAFT-2024-2242": {
       "projEli": "https://fedlex.data.admin.ch/eli/dl/proj/7024/0071",
@@ -21,12 +22,13 @@
       "beschlussFga": "fga/2025/1106",
       "entwurfSha": "d4ed6308b67e0e4a2c2dd26bd5ed5711354a3b84393a80fab2e9a2224d36aeb6",
       "beschlussSha": "fe839bccb8e4faa59bf36d4479ec36d8dabfdc237ab0a0d195e6d4bf1d6ea655",
-      "shardSha": "fe759e92c6cd5b688b6c8b6376dcd01da13720f63f3d4e10a96d0163fc0ec3ce",
+      "shardSha": "06e4c73d0931291566b566fa8d41da5bcbfe9353563c259cd39bbd07b1b54fd9",
       "bytes": 5733,
       "artikel": 2,
       "unveraendert": 3,
       "mehrdeutig": 0,
-      "abgerufen": "2026-09-11"
+      "abgerufen": "2026-09-12",
+      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798): nur Profil-Nummer, Entwurfs-Extraktion unveraendert"
     },
     "BOTSCHAFT-2024-2316": {
       "projEli": "https://fedlex.data.admin.ch/eli/dl/proj/7023/0378",
@@ -34,12 +36,13 @@
       "beschlussFga": "fga/2025/2028",
       "entwurfSha": "7a121d77b3fa6d15728f7d3fb1fe7347d643719e8e4e0d79cb42cc39cc6b5064",
       "beschlussSha": "bd2ca1e4c636e0110f2739a20eed3c31652384e951dbaf58d0f0c5bf964bed71",
-      "shardSha": "cc7a0d844745d210af451fa8a2781769a04ac03f5d0440b298ffc9e004399375",
+      "shardSha": "77f02b106bc1ded8ec43a60bb60e55a11f930f17da6116b74f1eb0fbbe4f1478",
       "bytes": 16870,
       "artikel": 10,
       "unveraendert": 25,
       "mehrdeutig": 0,
-      "abgerufen": "2026-09-11"
+      "abgerufen": "2026-09-12",
+      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798): nur Profil-Nummer, Entwurfs-Extraktion unveraendert"
     },
     "BOTSCHAFT-2024-2448": {
       "projEli": "https://fedlex.data.admin.ch/eli/dl/proj/7024/0144",
@@ -47,12 +50,13 @@
       "beschlussFga": "fga/2025/2039",
       "entwurfSha": "1bc9597ffc4c9fd457e34d66c858378dbe4b99d20e4c54b1db6dbbd6da3f5e1a",
       "beschlussSha": "bbca3f22445b11e7d0064e5202ecf3a99a78d1878606b626e2469e0de5a363d1",
-      "shardSha": "b6d270349b3b6a105351d1fa32d75086b13699c3028225744188861136e432e3",
+      "shardSha": "e1291d7a34b9bdfa62ee78927608a9c8b668bfbc84cf37ee7912e1b675a60914",
       "bytes": 7845,
       "artikel": 8,
       "unveraendert": 2,
       "mehrdeutig": 0,
-      "abgerufen": "2026-09-11"
+      "abgerufen": "2026-09-12",
+      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798): nur Profil-Nummer, Entwurfs-Extraktion unveraendert"
     },
     "BOTSCHAFT-2024-2747": {
       "projEli": "https://fedlex.data.admin.ch/eli/dl/proj/7024/0250",
@@ -60,12 +64,13 @@
       "beschlussFga": "fga/2025/1105",
       "entwurfSha": "69077aa7028d5322868c85aff8baa97b582dd408106b286a3e0d5a676a942203",
       "beschlussSha": "1e3467110cc912d149c9236cd4c8a120d51f9355faa076a45c76fda78757212c",
-      "shardSha": "0833c3f67b69571e76e88c65d45fa6d3c1f7ae961f30775d42d2ef0abfc856ce",
+      "shardSha": "fd95f074a7e608611e89a4bd949ba01f7ac2cf0bfea947c70a32d9febf5d632a",
       "bytes": 1566,
       "artikel": 1,
       "unveraendert": 0,
       "mehrdeutig": 0,
-      "abgerufen": "2026-09-11"
+      "abgerufen": "2026-09-12",
+      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798): nur Profil-Nummer, Entwurfs-Extraktion unveraendert"
     },
     "BOTSCHAFT-2024-650": {
       "projEli": "https://fedlex.data.admin.ch/eli/dl/proj/7023/0369",
@@ -73,12 +78,13 @@
       "beschlussFga": "fga/2024/1453",
       "entwurfSha": "6dfb28ae329275ce55ddf87777dbc70b71765232633438d66ed35adf78513cf1",
       "beschlussSha": "a3ba8d9802b8a05d5f53d2c9c051d02173688fdd84a93ce312fae98eff09a39f",
-      "shardSha": "3603e0c6e65464b2a52f2766a5686ed699f90c3fd2a89877a48f672e344dd4d3",
+      "shardSha": "839b227afff8d805a3578fe51b454429854ee18f0461d92a0db6ae3e1d07ca0d",
       "bytes": 4926,
       "artikel": 4,
       "unveraendert": 4,
       "mehrdeutig": 0,
-      "abgerufen": "2026-09-11"
+      "abgerufen": "2026-09-12",
+      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798): nur Profil-Nummer, Entwurfs-Extraktion unveraendert"
     },
     "BOTSCHAFT-2024-792": {
       "projEli": "https://fedlex.data.admin.ch/eli/dl/proj/7023/0281",
@@ -86,12 +92,13 @@
       "beschlussFga": "fga/2025/24",
       "entwurfSha": "6c941c4099ec1675432773051eb10a0ce9d69acdfa842a0ee7fd27a55b50d0de",
       "beschlussSha": "6c333a58059d25ec67076313475dc8ad773107dd96a943510d75f1728651474c",
-      "shardSha": "07006517677a45cb229b9bcc237cbccd49c877e606738fb0575893c8e2d015d8",
+      "shardSha": "aac40b8fe50493ce9c73f32bb86fcb5d17021622bbe6ffacc478299704323871",
       "bytes": 1298,
       "artikel": 1,
       "unveraendert": 2,
       "mehrdeutig": 0,
-      "abgerufen": "2026-09-11"
+      "abgerufen": "2026-09-12",
+      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798): nur Profil-Nummer, Entwurfs-Extraktion unveraendert"
     },
     "BOTSCHAFT-2025-1528": {
       "projEli": "https://fedlex.data.admin.ch/eli/dl/proj/7024/0194",
@@ -99,12 +106,13 @@
       "beschlussFga": "fga/2026/29",
       "entwurfSha": "0ccba8500a5b0b4e0f7e12281db55bd40c1f3acbc09973d3b61e5da6023b574a",
       "beschlussSha": "345e62f40cac4ec1b1ed1d8ac224b4beea376ffc4b005195a7bbba8bbf438fe2",
-      "shardSha": "432e5775ad618b0c28a83829574a3eb782b36f8355abd6b2372916d495a4209b",
+      "shardSha": "b651721fd1db65a13b8d4ec0b0c39d393666dbdbcce4805ba1bc92b30da472f7",
       "bytes": 16974,
       "artikel": 17,
       "unveraendert": 24,
       "mehrdeutig": 0,
-      "abgerufen": "2026-09-11"
+      "abgerufen": "2026-09-12",
+      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798): nur Profil-Nummer, Entwurfs-Extraktion unveraendert"
     },
     "BOTSCHAFT-2025-3067": {
       "projEli": "https://fedlex.data.admin.ch/eli/dl/proj/7025/0173",
@@ -112,12 +120,13 @@
       "beschlussFga": "fga/2026/801",
       "entwurfSha": "a37d52373bbdf8bed9d741579e588b963c7a30e377b780e71366ffb5bbc1aafd",
       "beschlussSha": "b20d4c62543d4e5b17fbeec63c25d004a9a2fd42eb8d11820b4f2d62a8fbba72",
-      "shardSha": "558652a2ad3c61de4fb748e45be8ceb3fd1ca432c75311016d25cadaf60fd21e",
+      "shardSha": "71e6a51f3c57e2d7ea0119cf84125c3d163db618f2de2c4b56106aa3977b0950",
       "bytes": 29816,
       "artikel": 57,
       "unveraendert": 9,
       "mehrdeutig": 0,
-      "abgerufen": "2026-09-11"
+      "abgerufen": "2026-09-12",
+      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798): nur Profil-Nummer, Entwurfs-Extraktion unveraendert"
     },
     "BOTSCHAFT-2025-960": {
       "projEli": "https://fedlex.data.admin.ch/eli/dl/proj/7024/0316",
@@ -125,12 +134,13 @@
       "beschlussFga": "fga/2026/21",
       "entwurfSha": "01a52f428a37416dbe95affaff5dd06fdfbff11b0a04bf0f51a3f2de4aadc49d",
       "beschlussSha": "539aa728e80014749e3984342cc3e1504507d93dee8ffa9368f4b69df5536b98",
-      "shardSha": "aff82f286fcbfaf3f9495323726b5af53fff170ead7c2b71120883e9d787e578",
+      "shardSha": "321523d3fa67df80ee9f31e8109c05af2a628e058707415faf4929345fd432a5",
       "bytes": 15576,
       "artikel": 18,
       "unveraendert": 52,
       "mehrdeutig": 0,
-      "abgerufen": "2026-09-11"
+      "abgerufen": "2026-09-12",
+      "parserAenderung": "Profil entstehung-norm/4 (Gegenpruefung PR #798): nur Profil-Nummer, Entwurfs-Extraktion unveraendert"
     }
   }
 }

@@ -14,7 +14,7 @@
 import { describe, it, expect } from 'vitest';
 import {
   geltendeBloecke, lageFuerEreignis, ohneEreignisFuerArtikel, synopseZeilen,
-  tokenAusLabel, wortDiff, hatUnterschied, vergleichsform, AEHNLICH_MIN,
+  tokenAusLabel, wortDiff, hatUnterschied, vergleichsform, leerDiffVerletzungen, phantomVerletzungen, nurTitelGeaendert, AEHNLICH_MIN,
   type SynopseZeile,
 } from '../lib/entstehung/synopse-diff';
 import type { SynopseBlock, SynopseShard } from '../lib/entstehung/synopse';
@@ -31,7 +31,7 @@ const B = (absatz: string, num: string, text: string): SynopseBlock => [absatz, 
 
 /** Minimaler Shard mit zwei Schritten am selben Artikel. */
 const SHARD: SynopseShard = {
-  erlass: 'TEST', eli: 'cc/2000/1', normProfil: 'entstehung-norm/2', erzeugt: '2026-09-11',
+  erlass: 'TEST', eli: 'cc/2000/1', normProfil: 'entstehung-norm/4', erzeugt: '2026-09-11',
   fensterAb: '2021-01-01', kuenftigeStaende: [],
   staende: [
     { datum: '2021-01-01', xmlUrl: 'x1', liveUrl: 'l1', sha: 's1', bytes: 1, abgerufen: '2026-09-11', artikelZahl: 1 },
@@ -233,6 +233,167 @@ describe('synopseZeilen: die Gegenüberstellung', () => {
     expect(z.map((x) => x.art)).toEqual(['gleich', 'entfernt', 'eingefuegt']);
     expect(verkettet(z[1], 'alt')).toBe('Identischer Wortlaut.');
     expect(verkettet(z[2], 'neu')).toBe('Identischer Wortlaut.');
+  });
+});
+
+describe('leerDiffVerletzungen — der Leer-Diff-Wächter von check:entstehung (Befund #796)', () => {
+  it('meldet KEINE Verletzung, solange jeder gespeicherte Alt-Block einen echten Unterschied zu seinem «Neu» trägt', () => {
+    expect(leerDiffVerletzungen(SHARD, () => GELTEND)).toEqual([]);
+  });
+
+  it('Rot-Beweis: ein Alt-Block, dessen Wortlaut (nach Vergleichsform) mit seinem «Neu» übereinstimmt, wird gemeldet', () => {
+    // Manipulierte Kopie von SHARD (§6.7): art_7 (`ohne_ereignis`) bekommt denselben
+    // Wortlaut wie der geltende Text — genau das Symptom aus Befund #796 (Generator
+    // speichert «geändert», Leser sieht «kein Unterschied»).
+    const manipuliert = {
+      ...SHARD,
+      schritte: SHARD.schritte.map((s, i) => (i !== 1 ? s : {
+        ...s,
+        artikel: s.artikel.map((a) => (a.eId !== 'art_7' ? a : { ...a, alt: [B('1', '', 'Dritte Fassung des Absatzes.')] })),
+      })),
+    };
+    const verletzungen = leerDiffVerletzungen(manipuliert, () => GELTEND);
+    expect(verletzungen).toEqual([{ token: '7', stand: '2023-01-01', zustand: 'ohne_ereignis' }]);
+  });
+
+  it('prüft auch `belegt`-Blöcke, nicht nur `ohne_ereignis`', () => {
+    const manipuliert = {
+      ...SHARD,
+      schritte: SHARD.schritte.map((s, i) => (i !== 0 ? s : {
+        ...s,
+        artikel: s.artikel.map((a) => ({ ...a, alt: [B('1', '', 'Zweite Fassung des Absatzes.')] })),
+      })),
+    };
+    const verletzungen = leerDiffVerletzungen(manipuliert, () => GELTEND);
+    expect(verletzungen).toEqual([{ token: '5', stand: '2022-01-01', zustand: 'belegt' }]);
+  });
+
+  // §6.3-BEGRÜNDUNG FÜR DIE ÄNDERUNG DIESES TESTS: bis Profil `/3` stand hier die
+  // Erwartung `toEqual([])` — der Wächter liess `art: entfallen` aus. Die Gegenprüfung zu
+  // PR #798 (Auflage A4) hat das als Tor-Lücke beanstandet: mit `/3` wechselten 160
+  // Alt-Blöcke von «geändert» zu «entfallen» und verliessen damit den Blick des Wächters
+  // (§6.7). Die Erwartung ist deshalb FACHLICH umgedreht, nicht angepasst.
+  it('Rot-Beweis: auch ein `art: entfallen`-Block ohne sichtbaren Unterschied wird gemeldet (Auflage A4)', () => {
+    // Der entfallene Artikel taucht unter DEMSELBEN Token in einem späteren Schritt
+    // wieder auf (die CHEMRRV-Klasse) — `neuNach` stellt dessen Wortlaut als «Neu»
+    // daneben. Ist er derselbe, sieht der Leser nichts, und genau das muss das Tor sagen.
+    const manipuliert = {
+      ...SHARD,
+      schritte: SHARD.schritte.map((s, i) => (i !== 0 ? s : {
+        ...s,
+        artikel: s.artikel.map((a) => ({
+          ...a, art: 'entfallen' as const, alt: [B('1', '', 'Zweite Fassung des Absatzes.')],
+        })),
+      })),
+    };
+    expect(leerDiffVerletzungen(manipuliert, () => GELTEND))
+      .toEqual([{ token: '5', stand: '2022-01-01', zustand: 'belegt' }]);
+  });
+
+  it('meldet einen entfallenen Artikel OHNE Folgeschritt nicht — «entfallen» ist selbst der Unterschied', () => {
+    // `neuNach` liefert dort `neu === null`; die Karte sagt «Der Artikel ist mit diesem
+    // Stand entfallen». Ein Textvergleich muss diesen Unterschied nicht tragen.
+    const manipuliert = {
+      ...SHARD,
+      schritte: SHARD.schritte.map((s, i) => (i !== 1 ? s : {
+        ...s,
+        artikel: s.artikel.map((a) => (a.eId !== 'art_7' ? a : {
+          ...a, art: 'entfallen' as const, alt: [B('1', '', 'Dritte Fassung des Absatzes.')],
+        })),
+      })),
+    };
+    expect(leerDiffVerletzungen(manipuliert, () => GELTEND)).toEqual([]);
+  });
+
+  it('meldet einen Block mit geänderter Sachüberschrift nicht — der Titel IST der Unterschied (Auflage A2)', () => {
+    const manipuliert = {
+      ...SHARD,
+      schritte: SHARD.schritte.map((s, i) => (i !== 1 ? s : {
+        ...s,
+        artikel: s.artikel.map((a) => (a.eId !== 'art_7' ? a : {
+          ...a,
+          ueberschrift: 'Erwerbstätigkeit nach dem ordentlichen Rentenalter',
+          ueberschriftNeu: 'Erwerbstätigkeit nach dem Referenzalter',
+          alt: [B('1', '', 'Dritte Fassung des Absatzes.')],
+        })),
+      })),
+    };
+    expect(leerDiffVerletzungen(manipuliert, () => GELTEND)).toEqual([]);
+  });
+});
+
+describe('phantomVerletzungen — der erfundene Unterschied (Auflage A5)', () => {
+  it('meldet nichts, solange jeder gespeicherte Block wirklich einen anderen Wortlaut trägt', () => {
+    expect(phantomVerletzungen(SHARD, () => GELTEND)).toEqual([]);
+  });
+
+  it('Rot-Beweis: Alt und Neu identisch nach der Vergleichsform, Titel-Paar gleich ⇒ Phantom', () => {
+    // Die Klasse aus der Neuprüfung: der Wortlaut ist derselbe, nur die Blockgrenze wandert
+    // (hier: das Ordnungs-Suffix «bis» steht einmal im Etikett, einmal am Textanfang).
+    // `synopseZeilen` richtet über die Etiketten aus und zeigt darum einen Unterschied —
+    // der Leer-Diff-Ast kann das nicht fangen, dieser Ast schon.
+    const manipuliert = {
+      ...SHARD,
+      schritte: SHARD.schritte.map((s, i) => (i !== 1 ? s : {
+        ...s,
+        artikel: s.artikel.map((a) => (a.eId !== 'art_7' ? a : {
+          ...a, alt: [B('1', '', 'bis Dritte Fassung des Absatzes.')],
+        })),
+      })),
+    };
+    const geltend = [B('1bis', '', 'Dritte Fassung des Absatzes.')];
+    expect(hatUnterschied(synopseZeilen(manipuliert.schritte[1].artikel[1].alt, geltend))).toBe(true);
+    expect(phantomVerletzungen(manipuliert, () => geltend))
+      .toEqual([{ token: '7', stand: '2023-01-01', zustand: 'ohne_ereignis' }]);
+  });
+
+  it('lässt eine ECHTE Absatz-Umbenennung unangetastet (Abs. 2 → Abs. 1, gleicher Wortlaut)', () => {
+    const manipuliert = {
+      ...SHARD,
+      schritte: SHARD.schritte.map((s, i) => (i !== 1 ? s : {
+        ...s,
+        artikel: s.artikel.map((a) => (a.eId !== 'art_7' ? a : {
+          ...a, alt: [B('2', '', 'Dritte Fassung des Absatzes.')],
+        })),
+      })),
+    };
+    expect(phantomVerletzungen(manipuliert, () => [B('1', '', 'Dritte Fassung des Absatzes.')])).toEqual([]);
+  });
+
+  it('meldet nichts, wo sich die Sachüberschrift geändert hat — dann GIBT es eine Änderung', () => {
+    const manipuliert = {
+      ...SHARD,
+      schritte: SHARD.schritte.map((s, i) => (i !== 1 ? s : {
+        ...s,
+        artikel: s.artikel.map((a) => (a.eId !== 'art_7' ? a : {
+          ...a, ueberschrift: 'Alt', ueberschriftNeu: 'Neu', alt: [B('1', '', 'Dritte Fassung des Absatzes.')],
+        })),
+      })),
+    };
+    expect(phantomVerletzungen(manipuliert, () => GELTEND)).toEqual([]);
+  });
+});
+
+describe('nurTitelGeaendert — der Leser-Zustand «nur die Sachüberschrift» (Auflage A2, BVG Art. 33b)', () => {
+  // BVG Art. 33b, Schritt 2023-01-01 → 2024-01-01 (amtliche Konsolidierungen, Fedlex
+  // Filestore, abgerufen 12.9.2026): der Randtitel «Erwerbstätigkeit nach dem
+  // ordentlichen Rentenalter» wird zu «Erwerbstätigkeit nach dem Referenzalter»; der
+  // Absatzwortlaut bleibt Zeichen für Zeichen derselbe. Mit Profil `/3` sagte die Karte
+  // dazu «kein Unterschied erkennbar» — falsch (§8).
+  const gleich = [B('', '', 'Der Arbeitgeber kann in Abrede stellen, dass …')];
+  it('erkennt den Fall, wenn der Wortlaut gleich bleibt und der Titel wechselt', () => {
+    const zeilen = synopseZeilen(gleich, gleich);
+    expect(hatUnterschied(zeilen)).toBe(false);
+    expect(nurTitelGeaendert({ ueberschriftNeu: 'Erwerbstätigkeit nach dem Referenzalter' }, zeilen)).toBe(true);
+  });
+
+  it('sagt nichts über den Titel, wo sich auch der Wortlaut unterscheidet', () => {
+    const zeilen = synopseZeilen(gleich, [B('', '', 'Anderer Wortlaut.')]);
+    expect(nurTitelGeaendert({ ueberschriftNeu: 'Neuer Titel' }, zeilen)).toBe(false);
+  });
+
+  it('bleibt falsch, wo kein neuer Titel gespeichert ist', () => {
+    expect(nurTitelGeaendert({}, synopseZeilen(gleich, gleich))).toBe(false);
   });
 });
 

@@ -41,8 +41,15 @@
 // Synopse dokumentiert Streichung + Einfügung statt «gleich».
 
 import { istAufgehoben } from '../normtext/darstellung';
-import type { SynopseArtikel, SynopseBlock, SynopseSchritt, SynopseShard } from './synopse';
+import type { SynopseArtikel, SynopseBlock, SynopseSchritt, SynopseShard, SynopseZustand } from './synopse';
 import { SYNOPSE_FENSTER_AB } from './synopse';
+import { vergleichsform, vergleichsformLeerraumBlind } from './normalisierung';
+
+// Rückwärtskompatibler Re-Export (Profil `entstehung-norm/4`, Befund #796): die EINE
+// Vergleichsform lebt jetzt in `normalisierung.ts` — von hier importiert Generator UND
+// Leser. Weiterhin von hier exportiert, damit bestehende Importe (Tests, Komponenten)
+// nicht anfassen müssen (§5: genau ein Ort für die Definition, nicht für den Zugriff).
+export { vergleichsform };
 
 // ═══ 1 · Der geltende Wortlaut in Synopse-Gestalt ════════════════════════════
 
@@ -258,29 +265,6 @@ function verdichte(bloecke: readonly SynopseBlock[]): SynopseBlock[] {
   return out;
 }
 
-/**
- * Vergleichsform eines Wortlauts — NUR fürs Matching, nie für die Anzeige.
- *
- * GEMESSEN 11.9.2026 (BGÖ 13, und der Fall ist typisch): die AKN-Konsolidierung
- * schreibt «Artikel\u00a011» mit geschütztem Leerzeichen, der Korpus-Adapter mit
- * gewöhnlichem. Zeichenweise verglichen sind das zwei verschiedene Wortlaute —
- * auf dem Bildschirm sind sie identisch. Ohne diese Normalisierung meldete die
- * Karte «geändert» und stellte zweimal denselben Satz nebeneinander: eine
- * behauptete Gesetzesänderung, die es nie gegeben hat (§1). Geschützte und
- * schmale Leerzeichen, weiche Trennstriche und Mehrfach-Leerraum sind Satz, nie
- * Recht.
- *
- * ANGEZEIGT WIRD IMMER DAS ORIGINAL (Muster law.soufien.lu, `soufien-lex.md`:
- * «Normalisierung nur fürs Matching, nie für Hash/Speicherung»).
- */
-export function vergleichsform(text: string): string {
-  return text
-    .replace(/[\u00ad\u200b]/g, '')
-    .replace(/[\u00a0\u202f\u2007\u2009\u2060]/g, ' ')
-    .replace(/\s+/g, ' ')
-    .trim();
-}
-
 /** Wörter samt ihrem nachfolgenden Trennraum — die Verkettung ergibt das Original. */
 function woerter(text: string): string[] {
   return text.match(/\S+\s*/g) ?? [];
@@ -467,6 +451,142 @@ export function synopseZeilen(
 /** Trägt die Gegenüberstellung überhaupt einen Unterschied? (§8: nie «geändert» behaupten, wo nichts steht.) */
 export function hatUnterschied(zeilen: readonly SynopseZeile[]): boolean {
   return zeilen.some((z) => z.art !== 'gleich');
+}
+
+/**
+ * Der Leser-Zustand «nur die Sachüberschrift wurde geändert» (Profil `/4`, Auflage A2).
+ *
+ * Zwischen zwei Ständen kann sich ausschliesslich der amtliche Randtitel ändern — gemessen
+ * 12.9.2026 über alle 186 Shards in 35 Schritten (BVG Art. 33b «ordentliches Rentenalter»
+ * → «Referenzalter», STPO Art. 55/431, HMG Art. 41, HREGV Art. 77, PARTG Art. 10 …). Die
+ * Karte darf dort NICHT «kein Unterschied erkennbar» sagen: das wäre für den Leser eine
+ * falsche Auskunft über eine echte Änderung (§8).
+ */
+export function nurTitelGeaendert(
+  artikel: Pick<SynopseArtikel, 'ueberschriftNeu'>,
+  zeilen: readonly SynopseZeile[],
+): boolean {
+  return !!artikel.ueberschriftNeu && !hatUnterschied(zeilen);
+}
+
+/** Ein gespeicherter Alt-Block, der nach der Leser-Vergleichsform «kein Unterschied» zeigt (§5). */
+export interface SynopseLeerDiff {
+  token: string;
+  stand: string;
+  zustand: SynopseZustand;
+}
+
+/**
+ * Rot-Beweis-Grundlage von `check:entstehung` (Befund Bauer #796, 11.9.2026):
+ * prüft ALLE gespeicherten Alt-Blöcke eines Shards (`belegt` UND `ohne_ereignis`)
+ * mit GENAU DER Vergleichsform, die der Leser für die Anzeige verwendet
+ * (`synopseZeilen`/`hatUnterschied`, dieselbe `vergleichsform` wie der Generator).
+ * Kein gespeicherter Block darf danach leer-diffen — sonst speichert der Generator
+ * eine «Änderung», die niemand sehen kann (§1, §5: zwei Normalisierungen wären
+ * zwei Wahrheiten). `geltendFuerToken` liefert den geltenden Korpus-Wortlaut für
+ * den Fall, dass ein Alt-Block der letzte Schritt vor dem geltenden Stand ist.
+ *
+ * `art: 'entfallen'` WIRD SEIT PROFIL `/4` MITGEPRÜFT (Gegenprüfung PR #798, Auflage A4).
+ * Bis dahin übersprang der Wächter jeden entfallenen Artikel — 160 Alt-Blöcke, die mit
+ * `/3` gerade erst von «geändert» zu «entfallen» gewechselt hatten, verliessen damit
+ * still seinen Blick (ein Tor, das seinen eigenen Befund wegfiltert, §6.7). Der Prüfsatz
+ * ist für beide Arten derselbe: WAS DER LESER SIEHT, MUSS EIN UNTERSCHIED SEIN. Hat der
+ * entfallene Artikel keinen Folgeschritt, liefert `neuNach` `null` — die Karte sagt dann
+ * «Der Artikel ist mit diesem Stand entfallen», ein Unterschied, den kein Textvergleich
+ * tragen muss; dieser Fall bleibt darum ausgenommen. Findet `neuNach` dagegen einen
+ * späteren Schritt mit demselben Token, ist dessen Wortlaut die rechte Spalte — und sie
+ * muss sich vom entfallenen Text unterscheiden.
+ *
+ * TITEL-ÄNDERUNG IST EIN UNTERSCHIED (Auflage A2): trägt der Block ein
+ * `ueberschriftNeu`, zeigt die Karte die geänderte Sachüberschrift. Ein solcher Block
+ * ist kein Leer-Diff, auch wenn der Wortlaut Zeile für Zeile gleich bleibt — genau dafür
+ * wird der neue Titel gespeichert.
+ *
+ * OFFENER REST (Nachtrag Auftrag Koordinator, 11.9.2026, NICHT hier ausgefiltert):
+ * dieselbe Token-Kontinuitäts-Frage trifft auch `art: 'geaendert'`-Blöcke, wenn
+ * derselbe Wortlaut nach echten Zwischenänderungen wieder auf einen früheren
+ * Stand zurückkehrt (Beleg KLV Art. 13/12: eine «Auflage 3 → 4 → 3»-Kette; VTS
+ * Art. 136 dieselbe Klasse) — `neuNach` findet den nächsten TOKEN-Treffer, nicht
+ * die nächste WORTLAUT-Änderung. Von den ursprünglich 10 gemessenen Fällen
+ * (11.9.2026) waren 9 KEINE Token-Kontinuitäts-Fälle, sondern zwei weitere
+ * Normalisierungs-Lücken (Inline-Auszeichnung vor der Satzzeichen-Regel; Alt hat
+ * Text, Neu wird leer) — beide inzwischen behoben (`vergleichsRoh`, `diffStaende`
+ * in `scripts/entstehung/synopse.ts`). Die verbleibenden 5 (KLV 13/12_b/12_a×2,
+ * VTS 136) bleiben ABSICHTLICH hier NICHT ausgefiltert — HIER stillschweigend zu
+ * filtern wäre dieselbe «Zwei-Wahrheiten»-Täuschung, die dieses Tor verhindern
+ * soll (§6.7 — ein Tor, das den eigenen Befund wegfiltert, ist gefährlicher als
+ * keines). Stattdessen trägt `check:entstehung`
+ * (`bibliothek/register/entstehung-leerdiff-ausnahmen.json`, Muster
+ * Flacker-Wächter #779) eine BEFRISTETE, benannte Ausnahmeliste — der Fix gehört
+ * in `neuNach` selbst (eine Lineage-Regel über den Token hinaus, z. B. via
+ * `oc`/eId-Kontinuität) — eigener Roadmap-Schritt, hier nicht gebaut.
+ */
+/**
+ * ZWEITER AST DESSELBEN WÄCHTERS (Auflage A5, Gegenprüfung PR #798, 12.9.2026): der
+ * ERFUNDENE Unterschied — das Spiegelbild des Leer-Diffs.
+ *
+ * `leerDiffVerletzungen` fragt «zeigt der Leser zu wenig?». Diese Funktion fragt «zeigt er
+ * etwas, das es nicht gibt?»: Alt und Neu sind nach der gemeinsamen, leerraum-blinden
+ * Vergleichsform Zeichen für Zeichen dasselbe, das Titel-Paar ist gleich — und trotzdem
+ * steht der Block im Shard und die Karte malt eine Änderung. Der Leer-Diff-Ast KANN diese
+ * Klasse nicht fangen: dort unterscheiden sich die gespeicherten Blöcke ja wirklich, nur
+ * eben in der STRUKTUR (ein Ordnungs-Suffix «bis»/«quater», das zwischen `<num>` und dem
+ * Textanfang wandert, oder ein Absatz-Etikett, das eine Generation im Text und die
+ * nächste als Element führt).
+ *
+ * Vier Fälle im Bestand belegt (Profil `/4` vor dem Fix, gemessen 12.9.2026):
+ * MWSTG Art. 97 @2024-01-01, KLV Art. 7 @2025-07-01, GEBV_SCHKG Art. 9 @2026-01-01,
+ * VRV Art. 67 @2025-07-01 — alle vier amtlich wortgleich.
+ *
+ * ECHTE ETIKETT-ÄNDERUNGEN BLEIBEN SICHTBAR: eine Absatz-Umbenennung (Abs. 2 → Abs. 1 bei
+ * gleichem Wortlaut) ist nach dieser Vergleichsform NICHT identisch («2Text» ≠ «1Text») —
+ * sie wird also nie als Phantom gemeldet (§1; die Grenze selbst ist in `schluessel`
+ * dokumentiert).
+ */
+export function phantomVerletzungen(
+  shard: SynopseShard,
+  geltendFuerToken: (token: string) => readonly SynopseBlock[],
+): SynopseLeerDiff[] {
+  const out: SynopseLeerDiff[] = [];
+  for (const schritt of shard.schritte) {
+    for (const artikel of schritt.artikel) {
+      if (artikel.zustand !== 'belegt' && artikel.zustand !== 'ohne_ereignis') continue;
+      if (!artikel.token) continue;
+      if (artikel.ueberschriftNeu) continue; // Titel-Paar verschieden ⇒ es GIBT eine Änderung
+      const { neu } = neuNach(shard, artikel.token, schritt, artikel, geltendFuerToken(artikel.token));
+      if (neu === null) continue;
+      if (vergleichsformLeerraumBlind(alsText(artikel.alt)) === vergleichsformLeerraumBlind(alsText(neu))) {
+        out.push({ token: artikel.token, stand: schritt.bis, zustand: artikel.zustand });
+      }
+    }
+  }
+  return out;
+}
+
+/** Blockfolge als ein Vergleichstext — Etiketten mit, Reihenfolge amtlich. */
+function alsText(bloecke: readonly SynopseBlock[]): string {
+  return bloecke.map((b) => b.filter(Boolean).join(' ')).join('\n');
+}
+
+export function leerDiffVerletzungen(
+  shard: SynopseShard,
+  geltendFuerToken: (token: string) => readonly SynopseBlock[],
+): SynopseLeerDiff[] {
+  const out: SynopseLeerDiff[] = [];
+  for (const schritt of shard.schritte) {
+    for (const artikel of schritt.artikel) {
+      if (artikel.zustand !== 'belegt' && artikel.zustand !== 'ohne_ereignis') continue;
+      if (!artikel.token) continue;
+      // Die geänderte Sachüberschrift IST der sichtbare Unterschied (Profil `/4`).
+      if (artikel.ueberschriftNeu) continue;
+      const { neu } = neuNach(shard, artikel.token, schritt, artikel, geltendFuerToken(artikel.token));
+      if (neu === null) continue;
+      if (!hatUnterschied(synopseZeilen(artikel.alt, neu))) {
+        out.push({ token: artikel.token, stand: schritt.bis, zustand: artikel.zustand });
+      }
+    }
+  }
+  return out;
 }
 
 // ═══ 4 · Entwurf ↔ Beschluss (E6) ════════════════════════════════════════════
