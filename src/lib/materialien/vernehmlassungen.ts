@@ -14,8 +14,8 @@
 // sondern baut EINMAL einen erlassKey→Verfahren-Index (memoisiert auf die Manifest-Referenz).
 // §5: keine zweite Wahrheit — In-Memory-Projektion des Manifests, keine committete Parallel-Datei.
 
-import { ladeMaterialManifest, ladeMaterialTitelI18n } from './browse';
-import type { BrowseMaterial, MaterialManifest, MaterialTitelI18n, VernehmlassungStatus } from './typen';
+import { ladeMaterialManifest, ladeMaterialTitelI18n, titelUebersetzung, type TitelRueckfall } from './browse';
+import type { BrowseMaterial, MaterialManifest, VernehmlassungStatus } from './typen';
 
 /** Anzeige-Form eines Vernehmlassungsverfahrens (Gesetzgebung-in-Arbeit-Eintrag). */
 export interface VernehmlassungBezug {
@@ -31,6 +31,9 @@ export interface VernehmlassungBezug {
   fristEnde?: string;
   /** Fedlex-Live-Link zum Vernehmlassungs-Portal (amtliche Quelle, §7c). */
   quelleUrl: string;
+  /** Wie bei den Botschaften: Grund, warum der deutsche Titel steht, obwohl die
+   *  Oberfläche auf fr/it steht (§8). */
+  titelRueckfall?: TitelRueckfall;
 }
 
 /** Priorität für die Anzeige-Sortierung: laufend zuerst (was jetzt offen ist), dann geplant/
@@ -108,9 +111,8 @@ export async function vernehmlassungenFuer(
     }
   }
   out.sort(vergleiche);
-  return i18n
-    ? out.map((v) => { const t: MaterialTitelI18n | undefined = i18n.get(v.key); return t ? { ...v, titelFr: t.fr, titelIt: t.it } : v; })
-    : out;
+  if (i18n.art === 'nicht-noetig') return out;
+  return out.map((v) => ({ ...v, ...titelUebersetzung(v.key, locale, i18n) }));
 }
 
 /** Deutsche Anzeige-Labels der Status (UI, keine Rechtslogik). */

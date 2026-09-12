@@ -16,8 +16,8 @@
 // Manifest-Referenz). §5: keine zweite Wahrheit — der Index ist eine In-Memory-
 // Projektion des Manifests, keine committete Parallel-Datei.
 
-import { ladeMaterialManifest, ladeMaterialTitelI18n } from './browse';
-import type { BrowseMaterial, MaterialManifest, MaterialTitelI18n } from './typen';
+import { ladeMaterialManifest, ladeMaterialTitelI18n, titelUebersetzung, type TitelRueckfall } from './browse';
+import type { BrowseMaterial, MaterialManifest } from './typen';
 
 /** Anzeige-Form einer Botschaft (Entstehungsgeschichte-Eintrag). */
 export interface BotschaftBezug {
@@ -34,6 +34,11 @@ export interface BotschaftBezug {
   stand: string;
   /** Deep-Link parlament.ch (Curia Vista) — null, wenn keine Curia-Nr. */
   parlamentUrl: string | null;
+  /** Gesetzt, wenn die Oberfläche auf fr/it steht, aber der DEUTSCHE Titel angezeigt
+   *  wird: 'nicht-erfasst' = für diese Botschaft liegt keine Übersetzung vor (so war
+   *  es auch vor der Aufteilung der Projektion), 'nicht-geladen' = register-i18n.json
+   *  war nicht erreichbar. Die Fläche macht den zweiten Fall sichtbar (§8). */
+  titelRueckfall?: TitelRueckfall;
 }
 
 // Index memoisiert auf die Manifest-Referenz (eine Manifest-Instanz je Session).
@@ -101,10 +106,6 @@ export async function botschaftenFuer(
     }
   }
   out.sort((a, b) => (a.stand < b.stand ? 1 : a.stand > b.stand ? -1 : (a.key < b.key ? -1 : a.key > b.key ? 1 : 0)));
-  return i18n ? out.map((b) => mitI18n(b, i18n.get(b.key))) : out;
-}
-
-/** Legt FR/IT-Titel auf einen Bezug (ohne Übersetzung unverändert, §8). */
-function mitI18n(b: BotschaftBezug, t: MaterialTitelI18n | undefined): BotschaftBezug {
-  return t ? { ...b, titelFr: t.fr, titelIt: t.it } : b;
+  if (i18n.art === 'nicht-noetig') return out;
+  return out.map((b) => ({ ...b, ...titelUebersetzung(b.key, locale, i18n) }));
 }

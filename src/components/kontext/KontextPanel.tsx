@@ -413,7 +413,10 @@ export function KontextPanel({ typ, normKeys, zusatzGruppen, ohneNormen = false,
                           <a href={fedlexLokalisiert(b.quelleUrl, locale)} target="_blank" rel="noopener noreferrer"
                             className="no-underline hover:text-brass-700">
                             <Datum iso={b.stand} className="text-ink-500" />
-                            {' — '}<span className="font-medium">{titel}</span>
+                            {/* `lang="de"` NUR im Rückfall: der Titel ist dann deutsch, obwohl die
+                                Seite auf fr/it steht — Vorlese-Software spräche ihn sonst französisch
+                                bzw. italienisch aus. Keine Optik, eine Tatsachenangabe. */}
+                            {' — '}<span className="font-medium" {...(b.titelRueckfall ? { lang: 'de' } : {})}>{titel}</span>
                           </a>
                           {b.nummer && b.parlamentUrl && (
                             <>
@@ -433,6 +436,16 @@ export function KontextPanel({ typ, normKeys, zusatzGruppen, ohneNormen = false,
                     <p className="text-micro text-ink-500">
                       … und <span className="num">{botschaften.length - MAX_BOTSCHAFTEN}</span> weitere. Vollständige Liste über die amtliche Quelle (Fedlex).
                     </p>
+                  )}
+                  {/* Auflage der Gegenprüfung #802 (§8): scheitert der Abruf der Titel-
+                      Übersetzungen, standen hier stillschweigend die deutschen Titel. Der
+                      Kanon-Baustein sagt es in der Optik, die das Haus für «nicht
+                      erreichbar» führt — die Liste selbst bleibt, sie ist ja vollständig.
+                      NUR bei 'nicht-geladen': eine fehlende Einzel-Übersetzung ist
+                      «nichts erfasst» und war auch vor der Aufteilung stumm. */}
+                  {botschaften.some((b) => b.titelRueckfall === 'nicht-geladen') && (
+                    <AbrufFehler gegenstand="Die Übersetzung der Titel" href="https://www.fedlex.admin.ch"
+                      daten={{ 'data-titel-rueckfall': 'botschaften' }} />
                   )}
                 </>
               )}
@@ -538,7 +551,7 @@ export function KontextPanel({ typ, normKeys, zusatzGruppen, ohneNormen = false,
                             <span className={`lc-overline ${laeuft ? 'text-brass-700' : ''}`}>
                               {laeuft && v.fristEnde ? `läuft bis ${datumCh(v.fristEnde)}` : VERNEHMLASSUNG_STATUS_LABEL[v.status]}
                             </span>
-                            {' — '}<span className="font-medium">{titel}</span>
+                            {' — '}<span className="font-medium" {...(v.titelRueckfall ? { lang: 'de' } : {})}>{titel}</span>
                           </a>
                         </li>
                       );
@@ -548,6 +561,11 @@ export function KontextPanel({ typ, normKeys, zusatzGruppen, ohneNormen = false,
                     <p className="text-micro text-ink-500">
                       … und <span className="num">{vernehmlassungen.length - MAX_VERNEHMLASSUNGEN}</span> weitere. Vollständige Liste über die amtliche Quelle (Fedlex).
                     </p>
+                  )}
+                  {/* Zweite Fundstelle der Auflage (Begründung bei der ersten). */}
+                  {vernehmlassungen.some((v) => v.titelRueckfall === 'nicht-geladen') && (
+                    <AbrufFehler gegenstand="Die Übersetzung der Titel" href="https://www.fedlex.admin.ch"
+                      daten={{ 'data-titel-rueckfall': 'vernehmlassungen' }} />
                   )}
                 </>
               )}

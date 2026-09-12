@@ -35,43 +35,55 @@ export async function ladeMaterialManifest(): Promise<MaterialManifest | null> {
 //
 // Getrennt vom Kern, weil der deutsche Lesefluss sie nie anfasst: 70,6 KB gzip,
 // die 2026 jede Leserseite mitzog (Messung 12.9.2026). Die Datei wird NUR geholt,
-// wenn die Oberfläche wirklich auf FR oder IT steht — `ladeMaterialTitelI18n('de')`
-// löst keinen Abruf aus und liefert `null` (§15: null Byte für den Normalfall).
-let i18nPromise: Promise<Map<string, MaterialTitelI18n> | null> | null = null;
+// wenn die Oberfläche wirklich auf FR oder IT steht (§15: null Byte für den Normalfall).
+//
+// DREI Zustände, nicht zwei (Gegenprüfungs-Auflage #802, §8): «nicht nötig» (die
+// Oberfläche steht auf Deutsch), «geladen» und «nicht geladen». Ein gemeinsames
+// `null` für den ersten und den letzten Fall wäre genau die stille Stelle, die die
+// Auflage rügt — der Leser sähe deutsche Titel und erführe nie, dass ein Abruf
+// fehlgeschlagen ist. Der Unterschied zwischen «nichts erfasst» und «nicht
+// erreichbar» ist derselbe, den `ui/AbrufFehler` im Ton führt.
+export type TitelI18nStand =
+  | { art: 'nicht-noetig' }
+  | { art: 'geladen'; karte: Map<string, MaterialTitelI18n> }
+  | { art: 'nicht-geladen' };
 
-export async function ladeMaterialTitelI18n(
-  locale: string,
-): Promise<Map<string, MaterialTitelI18n> | null> {
-  if (locale !== 'fr' && locale !== 'it') return null;
+let i18nPromise: Promise<TitelI18nStand> | null = null;
+
+export async function ladeMaterialTitelI18n(locale: string): Promise<TitelI18nStand> {
+  if (locale !== 'fr' && locale !== 'it') return { art: 'nicht-noetig' };
   if (!i18nPromise) {
-    i18nPromise = (async () => {
+    i18nPromise = (async (): Promise<TitelI18nStand> => {
       try {
         const res = await fetch('/materialien/register-i18n.json');
-        if (!res.ok) return null;
+        if (!res.ok) return { art: 'nicht-geladen' };
         const m = (await res.json()) as MaterialI18nManifest;
-        return m && typeof m.titel === 'object' && m.titel !== null
-          ? new Map(Object.entries(m.titel))
-          : null;
+        if (!m || typeof m.titel !== 'object' || m.titel === null) return { art: 'nicht-geladen' };
+        return { art: 'geladen', karte: new Map(Object.entries(m.titel)) };
       } catch {
-        return null;
+        return { art: 'nicht-geladen' };
       }
     })();
   }
   return i18nPromise;
 }
 
-/**
- * Der anzuzeigende Titel eines Materials in der gewählten Sprache — mit Rückfall
- * auf den deutschen Titel, wenn keine Übersetzung vorliegt oder die Projektion
- * nicht geladen werden konnte (§8: nie eine leere Zeile statt des amtlichen Titels).
- */
-export function titelI18n(
-  key: string, titelDe: string, locale: string,
-  karte: Map<string, MaterialTitelI18n> | null,
-): string {
-  const t = karte?.get(key);
-  if (!t) return titelDe;
-  return (locale === 'fr' && t.fr) || (locale === 'it' && t.it) || titelDe;
+/** Warum ein Eintrag den deutschen Titel zeigt, obwohl die Oberfläche auf fr/it steht.
+ *  `undefined` = kein Rückfall (deutsche Oberfläche oder Übersetzung vorhanden). */
+export type TitelRueckfall = 'nicht-erfasst' | 'nicht-geladen';
+
+/** Die Übersetzung eines Eintrags in der gewählten Sprache — plus, wenn sie fehlt,
+ *  der GRUND (§8: der Leser soll unterscheiden können, ob nichts erfasst ist oder
+ *  ob ein Abruf scheiterte). Rein, ohne Netz. */
+export function titelUebersetzung(
+  key: string, locale: string, stand: TitelI18nStand,
+): { titelFr?: string; titelIt?: string; titelRueckfall?: TitelRueckfall } {
+  if (stand.art === 'nicht-noetig') return {};
+  if (stand.art === 'nicht-geladen') return { titelRueckfall: 'nicht-geladen' };
+  const t = stand.karte.get(key);
+  const uebersetzt = locale === 'fr' ? t?.fr : locale === 'it' ? t?.it : undefined;
+  if (!uebersetzt) return { titelRueckfall: 'nicht-erfasst' };
+  return { titelFr: t?.fr, titelIt: t?.it };
 }
 
 /** Findet den Material-Eintrag eines Schlüssels (key) im Manifest. */
