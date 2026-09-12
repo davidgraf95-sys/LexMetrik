@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-09-04",
+  "erzeugt": "2026-09-12",
   "eintraege": [
     {
       "id": "bund/UNO_PAKT_I/art_1",
@@ -24,7 +24,7 @@
       ],
       "stand": "2024-11-28",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/725_725_725/de#art_1",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20241128",
       "sha": "d081faef4778a5df1949e289b893137197c5ff2a556f3f6536cdbf03fda6d3f4"
     },
@@ -51,7 +51,7 @@
       ],
       "stand": "2024-11-28",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/725_725_725/de#art_2",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20241128",
       "sha": "cf630546a383607da2063478a3246eefa6a72a76e1ef8f91dc9a94bd8bc2db6d"
     },
@@ -70,7 +70,7 @@
       ],
       "stand": "2024-11-28",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/725_725_725/de#art_3",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20241128",
       "sha": "406b9ef288ead5e113a6e085139d7395a288d59e065a44c69e0f1f50779cbb04"
     },
@@ -89,7 +89,7 @@
       ],
       "stand": "2024-11-28",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/725_725_725/de#art_4",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20241128",
       "sha": "a85783f97e9e3bf396c84bf03933ddc55f15295dd89cdd06a4e0fda3598ce989"
     },
@@ -112,7 +112,7 @@
       ],
       "stand": "2024-11-28",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/725_725_725/de#art_5",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20241128",
       "sha": "03390e3548332540e24fa3c9b115bda86ee970b0348def28702db4c429ac6b22"
     },
@@ -135,7 +135,7 @@
       ],
       "stand": "2024-11-28",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/725_725_725/de#art_6",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20241128",
       "sha": "9102f974dc604fee28db63d0a8a86634ed42b2d50e72b918d7400c831664042e"
     },
@@ -153,38 +153,44 @@
           "items": [
             {
               "marke": "a",
-              "text": "ein Arbeitsentgelt, das allen Arbeitnehmern mindestens sichert"
+              "text": "ein Arbeitsentgelt, das allen Arbeitnehmern mindestens sichert",
+              "trenner": ")"
             },
             {
               "marke": "i",
               "text": "angemessenen Lohn und gleiches Entgelt für gleichwertige Arbeit ohne Unterschied; insbesondere wird gewährleistet, dass Frauen keine ungünstigeren Arbeitsbedingungen als Männer haben und dass sie für gleiche Arbeit gleiches Entgelt erhalten,",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ")"
             },
             {
               "marke": "ii",
               "text": "einen angemessenen Lebensunterhalt für sie und ihre Familien in Übereinstimmung mit diesem Pakt;",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "sichere und gesunde Arbeitsbedingungen;"
+              "text": "sichere und gesunde Arbeitsbedingungen;",
+              "trenner": ")"
             },
             {
               "marke": "c",
-              "text": "gleiche Möglichkeiten für jedermann, in seiner beruflichen Tätigkeit entsprechend aufzusteigen, wobei keine anderen Gesichtspunkte als Beschäftigungsdauer und Befähigung ausschlaggebend sein dürfen;"
+              "text": "gleiche Möglichkeiten für jedermann, in seiner beruflichen Tätigkeit entsprechend aufzusteigen, wobei keine anderen Gesichtspunkte als Beschäftigungsdauer und Befähigung ausschlaggebend sein dürfen;",
+              "trenner": ")"
             },
             {
               "marke": "d",
-              "text": "Arbeitspausen, Freizeit, eine angemessene Begrenzung der Arbeitszeit, regelmässiger bezahlter Urlaub sowie Vergütung gesetzlicher Feiertage."
+              "text": "Arbeitspausen, Freizeit, eine angemessene Begrenzung der Arbeitszeit, regelmässiger bezahlter Urlaub sowie Vergütung gesetzlicher Feiertage.",
+              "trenner": ")"
             }
           ]
         }
       ],
       "stand": "2024-11-28",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/725_725_725/de#art_7",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20241128",
-      "sha": "11587218d2d17ba4cb45b8c5848fc76e02cd806f5e881fa20701e6f17e90f62d"
+      "sha": "1ce91acabc0bd6d71d37446884a2e6e1fa86611c9bd7472f945551ddde476c72"
     },
     {
       "id": "bund/UNO_PAKT_I/art_8",
@@ -200,19 +206,23 @@
           "items": [
             {
               "marke": "a",
-              "text": "das Recht eines jeden, zur Förderung und zum Schutz seiner wirtschaftlichen und sozialen Interessen Gewerkschaften zu bilden oder einer Gewerkschaft eigener Wahl allein nach Massgabe ihrer Vorschriften beizutreten. Die Ausübung dieses Rechts darf nur solchen Einschränkungen unterworfen werden, die gesetzlich vorgesehen und in einer demokratischen Gesellschaft im Interesse der nationalen Sicherheit oder der öffentlichen Ordnung oder zum Schutz der Rechte und Freiheiten anderer erforderlich sind;"
+              "text": "das Recht eines jeden, zur Förderung und zum Schutz seiner wirtschaftlichen und sozialen Interessen Gewerkschaften zu bilden oder einer Gewerkschaft eigener Wahl allein nach Massgabe ihrer Vorschriften beizutreten. Die Ausübung dieses Rechts darf nur solchen Einschränkungen unterworfen werden, die gesetzlich vorgesehen und in einer demokratischen Gesellschaft im Interesse der nationalen Sicherheit oder der öffentlichen Ordnung oder zum Schutz der Rechte und Freiheiten anderer erforderlich sind;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "das Recht der Gewerkschaften, nationale Vereinigungen oder Verbände zu gründen, sowie deren Recht, internationale Gewerkschaftsorganisationen zu bilden oder solchen beizutreten;"
+              "text": "das Recht der Gewerkschaften, nationale Vereinigungen oder Verbände zu gründen, sowie deren Recht, internationale Gewerkschaftsorganisationen zu bilden oder solchen beizutreten;",
+              "trenner": ")"
             },
             {
               "marke": "c",
-              "text": "das Recht der Gewerkschaften, sich frei zu betätigen, wobei nur solche Einschränkungen zulässig sind, die gesetzlich vorgesehen und in einer demokratischen Gesellschaft im Interesse der nationalen Sicherheit oder der öffentlichen Ordnung oder zum Schutz der Rechte und Freiheiten anderer erforderlich sind;"
+              "text": "das Recht der Gewerkschaften, sich frei zu betätigen, wobei nur solche Einschränkungen zulässig sind, die gesetzlich vorgesehen und in einer demokratischen Gesellschaft im Interesse der nationalen Sicherheit oder der öffentlichen Ordnung oder zum Schutz der Rechte und Freiheiten anderer erforderlich sind;",
+              "trenner": ")"
             },
             {
               "marke": "d",
-              "text": "das Streikrecht, soweit es in Übereinstimmung mit der innerstaatlichen Rechtsordnung ausgeübt wird."
+              "text": "das Streikrecht, soweit es in Übereinstimmung mit der innerstaatlichen Rechtsordnung ausgeübt wird.",
+              "trenner": ")"
             }
           ]
         },
@@ -227,9 +237,9 @@
       ],
       "stand": "2024-11-28",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/725_725_725/de#art_8",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20241128",
-      "sha": "8e6fac8bfd8d3aa0942169545a2c40127749365b4acc0dd5ddf1e863f24f6dd6"
+      "sha": "3a9a45fb81ec2abd07cbc710c57d52f0c9bab4567a1512c3572ff0b1fedef19c"
     },
     {
       "id": "bund/UNO_PAKT_I/art_9",
@@ -246,7 +256,7 @@
       ],
       "stand": "2024-11-28",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/725_725_725/de#art_9",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20241128",
       "sha": "795d10a8aa6a447a26ddf8cd6701bc673796ebeb311c61ff2f7f948a1a99fb87"
     },
@@ -279,7 +289,7 @@
       ],
       "stand": "2024-11-28",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/725_725_725/de#art_10",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20241128",
       "sha": "89c14b5c0f942a2b0b4fcfbe3bd6004e6d13692915400e6568ad95a2a49cab94"
     },
@@ -301,20 +311,22 @@
           "items": [
             {
               "marke": "a",
-              "text": "zur Verbesserung der Methoden der Erzeugung, Haltbarmachung und Verteilung von Nahrungsmitteln durch volle Nutzung der technischen und wissenschaftlichen Erkenntnisse, durch Verbreitung der ernährungswissenschaftlichen Grundsätze sowie durch die Entwicklung oder Reform landwirtschaftlicher Systeme mit dem Ziel einer möglichst wirksamen Erschliessung und Nutzung der natürlichen Hilfsquellen;"
+              "text": "zur Verbesserung der Methoden der Erzeugung, Haltbarmachung und Verteilung von Nahrungsmitteln durch volle Nutzung der technischen und wissenschaftlichen Erkenntnisse, durch Verbreitung der ernährungswissenschaftlichen Grundsätze sowie durch die Entwicklung oder Reform landwirtschaftlicher Systeme mit dem Ziel einer möglichst wirksamen Erschliessung und Nutzung der natürlichen Hilfsquellen;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "zur Sicherung einer dem Bedarf entsprechenden gerechten Verteilung der Nahrungsmittelvorräte der Welt unter Berücksichtigung der Probleme der Nahrungsmittel einführenden und ausführenden Länder."
+              "text": "zur Sicherung einer dem Bedarf entsprechenden gerechten Verteilung der Nahrungsmittelvorräte der Welt unter Berücksichtigung der Probleme der Nahrungsmittel einführenden und ausführenden Länder.",
+              "trenner": ")"
             }
           ]
         }
       ],
       "stand": "2024-11-28",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/725_725_725/de#art_11",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20241128",
-      "sha": "59262e564518425c61b2cc926a3a227e149ebfc97d3b389f420c88bd7687532a"
+      "sha": "45aa486ee1d224cb8bf2527f8ee323bbb946495b4dbb7d29c909cca532a348b3"
     },
     {
       "id": "bund/UNO_PAKT_I/art_12",
@@ -334,28 +346,32 @@
           "items": [
             {
               "marke": "a",
-              "text": "zur Senkung der Zahl der Totgeburten und der Kindersterblichkeit sowie zur gesunden Entwicklung des Kindes;"
+              "text": "zur Senkung der Zahl der Totgeburten und der Kindersterblichkeit sowie zur gesunden Entwicklung des Kindes;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "zur Verbesserung aller Aspekte der Umwelt‑ und der Arbeitshygiene;"
+              "text": "zur Verbesserung aller Aspekte der Umwelt‑ und der Arbeitshygiene;",
+              "trenner": ")"
             },
             {
               "marke": "c",
-              "text": "zur Vorbeugung, Behandlung und Bekämpfung epidemischer, endemischer, Berufs- und sonstiger Krankheiten;"
+              "text": "zur Vorbeugung, Behandlung und Bekämpfung epidemischer, endemischer, Berufs- und sonstiger Krankheiten;",
+              "trenner": ")"
             },
             {
               "marke": "d",
-              "text": "zur Schaffung der Voraussetzungen, die für jedermann im Krankheitsfall den Genuss medizinischer Einrichtungen und ärztlicher Betreuung sicherstellen."
+              "text": "zur Schaffung der Voraussetzungen, die für jedermann im Krankheitsfall den Genuss medizinischer Einrichtungen und ärztlicher Betreuung sicherstellen.",
+              "trenner": ")"
             }
           ]
         }
       ],
       "stand": "2024-11-28",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/725_725_725/de#art_12",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20241128",
-      "sha": "b32a5ab2d58d8d4bb0a928f79509751c270cac6c15954b03bcb2bedc730d8090"
+      "sha": "49ef17cf82693d25374404d27aa30065a896dcf3dbb9e042550af90df4785487"
     },
     {
       "id": "bund/UNO_PAKT_I/art_13",
@@ -375,23 +391,28 @@
           "items": [
             {
               "marke": "a",
-              "text": "der Grundschulunterricht für jedermann Pflicht und allen unentgeltlich zugänglich sein muss;"
+              "text": "der Grundschulunterricht für jedermann Pflicht und allen unentgeltlich zugänglich sein muss;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "die verschiedenen Formen des höheren Schulwesens einschliesslich des höheren Fach‑ und Berufsschulwesens auf jede geeignete Weise, insbesondere durch allmähliche Einführung der Unentgeltlichkeit, allgemein verfügbar und jedermann zugänglich gemacht werden müssen;"
+              "text": "die verschiedenen Formen des höheren Schulwesens einschliesslich des höheren Fach‑ und Berufsschulwesens auf jede geeignete Weise, insbesondere durch allmähliche Einführung der Unentgeltlichkeit, allgemein verfügbar und jedermann zugänglich gemacht werden müssen;",
+              "trenner": ")"
             },
             {
               "marke": "c",
-              "text": "der Hochschulunterricht auf jede geeignete Weise, insbesondere durch allmähliche Einführung der Unentgeltlichkeit, jedermann gleichermassen entsprechend seinen Fähigkeiten zugänglich gemacht werden muss;"
+              "text": "der Hochschulunterricht auf jede geeignete Weise, insbesondere durch allmähliche Einführung der Unentgeltlichkeit, jedermann gleichermassen entsprechend seinen Fähigkeiten zugänglich gemacht werden muss;",
+              "trenner": ")"
             },
             {
               "marke": "d",
-              "text": "eine grundlegende Bildung für Personen, die eine Grundschule nicht besucht oder nicht beendet haben, so weit wie möglich zu fördern oder zu vertiefen ist;"
+              "text": "eine grundlegende Bildung für Personen, die eine Grundschule nicht besucht oder nicht beendet haben, so weit wie möglich zu fördern oder zu vertiefen ist;",
+              "trenner": ")"
             },
             {
               "marke": "e",
-              "text": "die Entwicklung eines Schulsystems auf allen Stufen aktiv voranzutreiben, ein angemessenes Stipendiensystem einzurichten und die wirtschaftliche Lage der Lehrerschaft fortlaufend zu verbessern ist."
+              "text": "die Entwicklung eines Schulsystems auf allen Stufen aktiv voranzutreiben, ein angemessenes Stipendiensystem einzurichten und die wirtschaftliche Lage der Lehrerschaft fortlaufend zu verbessern ist.",
+              "trenner": ")"
             }
           ]
         },
@@ -406,9 +427,9 @@
       ],
       "stand": "2024-11-28",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/725_725_725/de#art_13",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20241128",
-      "sha": "cab0eaeb605600ed03ea546d5a28a967aaeaef4c3a626e0b39e0746b83f969bf"
+      "sha": "6e30c78be0af2b2dcdcad8c7a32049daf4d6dc664425e3f6d76f5cfc6dabe255"
     },
     {
       "id": "bund/UNO_PAKT_I/art_14",
@@ -425,7 +446,7 @@
       ],
       "stand": "2024-11-28",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/725_725_725/de#art_14",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20241128",
       "sha": "480a62a0f8b04966ed59fe0994de0d1ad0350bee94c17ebf8056c4ccaee42fda"
     },
@@ -443,15 +464,18 @@
           "items": [
             {
               "marke": "a",
-              "text": "am kulturellen Leben teilzunehmen;"
+              "text": "am kulturellen Leben teilzunehmen;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "an den Errungenschaften des wissenschaftlichen Fortschritts und seiner Anwendung teilzuhaben;"
+              "text": "an den Errungenschaften des wissenschaftlichen Fortschritts und seiner Anwendung teilzuhaben;",
+              "trenner": ")"
             },
             {
               "marke": "c",
-              "text": "den Schutz der geistigen und materiellen Interessen zu geniessen, die ihm als Urheber von Werken der Wissenschaft, Literatur oder Kunst erwachsen."
+              "text": "den Schutz der geistigen und materiellen Interessen zu geniessen, die ihm als Urheber von Werken der Wissenschaft, Literatur oder Kunst erwachsen.",
+              "trenner": ")"
             }
           ]
         },
@@ -470,9 +494,9 @@
       ],
       "stand": "2024-11-28",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/725_725_725/de#art_15",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20241128",
-      "sha": "4fa93ef419c5f967b0316c74e20ab62d677eed71e7e3c721995c13653b93501e"
+      "sha": "b7f9f79210deb04060bcfd9c00fda71df2f860c1b25f405551e7f73edbadb9bd"
     },
     {
       "id": "bund/UNO_PAKT_I/art_16",
@@ -488,20 +512,22 @@
           "items": [
             {
               "marke": "(2) a",
-              "text": "Alle Berichte werden dem Generalsekretär der Vereinten Nationen vorgelegt, der sie abschriftlich dem Wirtschafts‑ und Sozialrat übermittelt, damit dieser sie nach Massgabe dieses Paktes prüft."
+              "text": "Alle Berichte werden dem Generalsekretär der Vereinten Nationen vorgelegt, der sie abschriftlich dem Wirtschafts‑ und Sozialrat übermittelt, damit dieser sie nach Massgabe dieses Paktes prüft.",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "Sind Vertragsstaaten gleichzeitig Mitglieder von Sonderorganisationen, so übermittelt der Generalsekretär der Vereinten Nationen ihre Berichte oder einschlägige Teile solcher Berichte abschriftlich auch den Sonderorganisationen, soweit diese Berichte oder Teile sich auf Angelegenheiten beziehen, die nach den Satzungen dieser Organisationen in deren Aufgabenbereich fallen."
+              "text": "Sind Vertragsstaaten gleichzeitig Mitglieder von Sonderorganisationen, so übermittelt der Generalsekretär der Vereinten Nationen ihre Berichte oder einschlägige Teile solcher Berichte abschriftlich auch den Sonderorganisationen, soweit diese Berichte oder Teile sich auf Angelegenheiten beziehen, die nach den Satzungen dieser Organisationen in deren Aufgabenbereich fallen.",
+              "trenner": ")"
             }
           ]
         }
       ],
       "stand": "2024-11-28",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/725_725_725/de#art_16",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20241128",
-      "sha": "e7c25f8d27d338e077b78215a23a07e4b644f58df3f5d464f69374a9f06d7461"
+      "sha": "15212b59fac35b507579e76aaafa8e386b3aa909e1f80753c782c2b804a85031"
     },
     {
       "id": "bund/UNO_PAKT_I/art_17",
@@ -526,7 +552,7 @@
       ],
       "stand": "2024-11-28",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/725_725_725/de#art_17",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20241128",
       "sha": "04897c1d5dfcf454676d74103ccbda163b2466e543cbe51211f3f723f1f2d450"
     },
@@ -545,7 +571,7 @@
       ],
       "stand": "2024-11-28",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/725_725_725/de#art_18",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20241128",
       "sha": "a91d94228f27d8c3a605f512986685e7c7218fc67c8a84b503c867ebb601ce69"
     },
@@ -564,7 +590,7 @@
       ],
       "stand": "2024-11-28",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/725_725_725/de#art_19",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20241128",
       "sha": "02a3e774688e712798180b66ca41bbedd38042fdac3b994890417ed6bf343b93"
     },
@@ -583,7 +609,7 @@
       ],
       "stand": "2024-11-28",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/725_725_725/de#art_20",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20241128",
       "sha": "76299b16cd248708dafce743d2788d8bf3640f92066caafdcc38883d7f21f6ba"
     },
@@ -602,7 +628,7 @@
       ],
       "stand": "2024-11-28",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/725_725_725/de#art_21",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20241128",
       "sha": "fb0f0a64dcb0c5d8ba5cea522dc6c8679fcc87214730db33eb3dad7f990635ab"
     },
@@ -621,7 +647,7 @@
       ],
       "stand": "2024-11-28",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/725_725_725/de#art_22",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20241128",
       "sha": "78c38a49f4c6a58582127f0770d6c5079b05342e52716b9e544bfcf3f2de4408"
     },
@@ -640,7 +666,7 @@
       ],
       "stand": "2024-11-28",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/725_725_725/de#art_23",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20241128",
       "sha": "a3ee455b3391754e539b3c5127e5639d0725c2d398361f2a0ab30caf1a9c0ba3"
     },
@@ -659,7 +685,7 @@
       ],
       "stand": "2024-11-28",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/725_725_725/de#art_24",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20241128",
       "sha": "79d5186fc606532a7c0092c4bfbca7f6622a520990ea82646f5f5fcaa33a12ef"
     },
@@ -678,7 +704,7 @@
       ],
       "stand": "2024-11-28",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/725_725_725/de#art_25",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20241128",
       "sha": "97aab7b911e27dee39a6316f5d09909734c5cdb35c984548bfbad5a1208d87b4"
     },
@@ -713,7 +739,7 @@
       ],
       "stand": "2024-11-28",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/725_725_725/de#art_26",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20241128",
       "sha": "0faaedb2cbc2018beee2c58974a427ca8a7b3b4967fcc119e19ebea35e48ef16"
     },
@@ -736,7 +762,7 @@
       ],
       "stand": "2024-11-28",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/725_725_725/de#art_27",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20241128",
       "sha": "6c9ced59ae504afd5ea977f02b3b05f4414c03e1e381e3f680e553a54f2c95ec"
     },
@@ -755,7 +781,7 @@
       ],
       "stand": "2024-11-28",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/725_725_725/de#art_28",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20241128",
       "sha": "5d4cb8fae4f328243b64befbd721c1bbe016ca2d719f99abbbcfb11f12773230"
     },
@@ -782,7 +808,7 @@
       ],
       "stand": "2024-11-28",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/725_725_725/de#art_29",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20241128",
       "sha": "04035503e2f3c1580d2f2e48eb246f15fe74029905a33d978a3042737543252f"
     },
@@ -800,20 +826,22 @@
           "items": [
             {
               "marke": "a",
-              "text": "von den Unterzeichnungen, Ratifikationen und Beitritten nach Artikel 26;"
+              "text": "von den Unterzeichnungen, Ratifikationen und Beitritten nach Artikel 26;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "vom Zeitpunkt des Inkrafttretens dieses Paktes nach Artikel 27 und vom Zeitpunkt des Inkrafttretens von Änderungen nach Artikel 29."
+              "text": "vom Zeitpunkt des Inkrafttretens dieses Paktes nach Artikel 27 und vom Zeitpunkt des Inkrafttretens von Änderungen nach Artikel 29.",
+              "trenner": ")"
             }
           ]
         }
       ],
       "stand": "2024-11-28",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/725_725_725/de#art_30",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20241128",
-      "sha": "83277325855c33e240694c391e587469b07db05d412d958f7dd8d8a6877e0e12"
+      "sha": "62a236dc49323646802d59ee0f7c9fa1230470addfd6c309f9fc073434187d73"
     },
     {
       "id": "bund/UNO_PAKT_I/art_31",
@@ -834,7 +862,7 @@
       ],
       "stand": "2024-11-28",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1993/725_725_725/de#art_31",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20241128",
       "sha": "32a6983498bc4d3fe928606ed90284fb3b0ec09bcf36c33ac246c810e77cb490"
     }

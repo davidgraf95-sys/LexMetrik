@@ -334,7 +334,9 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
           // QS-UI (Gegenprüfung PR #658): Beschriftung über markenAnzeige —
           // Aufzählungsmarke «a.»/«1.» unverändert, Label-Marke «BE:» statt
           // «BE.» (amtlicher <dt>-Doppelpunkt). Die Marke selbst bleibt «BE».
-          const markeAnzeige = markenAnzeige(it.marke);
+          // #679: `it.trenner` (amtlicher <dt>-Trenner) steuert Anzeige und Zitat,
+          // wo der Snapshot ihn mitführt; fehlt er, greift die Marken-Heuristik.
+          const markeAnzeige = markenAnzeige(it.marke, it.trenner);
           // Präzises Zitat inkl. Verschachtelung: eine Ziff. unter einer
           // Bst. wird «… lit. X Ziff. Y …». Eltern-Kette über die Stufen
           // rückwärts aufbauen (nächster Vorfahre je flacherer Stufe).
@@ -356,7 +358,7 @@ export function ArtikelBody({ bloecke, artikel, passus, passusRef, className, au
                 const m2 = kette[k].marke;
                 // QS-UI: Label-Marken ohne «lit.»-Präfix (markenZitat) — «lit. BE»
                 // ist in der VZV kein Zitat, die Kategorie heisst schlicht «BE».
-                seg.unshift(markenZitat(m2));
+                seg.unshift(markenZitat(m2, kette[k].trenner));
                 lvl--;
               }
             }

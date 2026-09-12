@@ -54,10 +54,37 @@ export const NOOP = (): void => {};
 // Befund und keine Beschriftungsfrage.
 export type MarkenArt = 'strich' | 'ziff' | 'lit' | 'label';
 
-/** Art einer Item-Marke — EINE Stelle (§5) für Präfix und Anzeige. */
-export function markenArt(marke: string): MarkenArt {
+// ─── AMTLICHER TRENNER STATT HEURISTIK (#679, 12.9.2026) ────────────────────
+// Seit dem Extraktions-Fix führt der Fedlex-Snapshot den amtlichen Trenner
+// hinter der <dt>-Marke als `items[].trenner` mit (extrahiere-fedlex.ts
+// §`trenner`). Wo er vorliegt, wird NICHT mehr geraten:
+//   ':'  → LABEL. Fedlex trennt Labels ausnahmslos mit Doppelpunkt; das
+//          entscheidet AUCH die kleingeschriebenen Labels, an denen die
+//          Heuristik scheiterte («für Witwen und Witwer:», UVG Art. 31 —
+//          sie las sie als «lit. für Witwen und Witwer»). 87 Items im Bund-
+//          Korpus (VZV 31, AsylV 3 17, VBB 16, VTS 13, UVG 4, ZEMIS-V 4, VKKG 2).
+//   ')'   → Ordinalmarke mit Klammer (1447 Items, v.a. Staatsverträge «a)»).
+//          Die Anzeige zeigt jetzt «a)» statt des erfundenen «a.».
+// '' / '.' → KEINE Übersteuerung, weiterhin Heuristik. Begründung gemessen
+//          (gepinnter Cache, 12.9.2026): unter den 30 '.'-Items stehen neben
+//          Bereichsmarken («d. und e.», «h.–j.») auch echte LABELS mit Punkt
+//          («EAZW + erm. St.» ZStV-Anhang, «B. 1.» GFK Art. 1) — der Punkt
+//          allein trägt die Unterscheidung also nicht. Die 2852 Items ohne
+//          Trenner sind Formelgrössen/Legendenschlüssel («BAS», «Leq,i») und
+//          Gedankenstriche, für die die Marken-Heuristik richtig entscheidet.
+//          Für die ANZEIGE ist auch '' und '.' verbindlich: dort wird der
+//          amtliche Trenner verbatim gesetzt, nie einer erfunden.
+// FEHLT das Feld ganz (Kanton-Snapshots, PDF-/HTM-Adapter), bleibt alles beim
+// Verhalten von PR #658 — der Fallback ist bewusst erhalten, kein Zweitpfad
+// auf Verdacht (§Gegengewicht).
+
+/** Art einer Item-Marke — EINE Stelle (§5) für Präfix und Anzeige.
+ *  `trenner` = amtlicher <dt>-Trenner des Snapshots, falls mitgeführt. */
+export function markenArt(marke: string, trenner?: string): MarkenArt {
   const m = marke.trim();
   if (/^[–—-]$/.test(m)) return 'strich';
+  if (trenner === ':') return 'label';
+  if (trenner === ')') return /^\d/.test(m) ? 'ziff' : 'lit';
   if (/^\d/.test(m)) return 'ziff';
   if (/^\p{Lu}/u.test(m)) return 'label';
   return 'lit';
@@ -65,25 +92,28 @@ export function markenArt(marke: string): MarkenArt {
 
 /** lit. (Buchstaben, Bund) vs. Ziff. (Zahlen, Kanton) anhand der Marke.
  *  Label-Marken tragen KEIN Präfix (leerer String) — s. Block oben. */
-export function litZiff(marke: string): string {
-  const art = markenArt(marke);
+export function litZiff(marke: string, trenner?: string): string {
+  const art = markenArt(marke, trenner);
   if (art === 'label') return '';
   return art === 'ziff' ? 'Ziff.' : 'lit.';
 }
 
 /** Zitat-Segment einer Marke («lit. a», «Ziff. 1», Label: nur «BE»).
  *  Der Nicht-Label-Zweig ist byte-gleich zum bisherigen `${litZiff(m)} ${m}`. */
-export function markenZitat(marke: string): string {
-  const p = litZiff(marke);
+export function markenZitat(marke: string, trenner?: string): string {
+  const p = litZiff(marke, trenner);
   return p === '' ? marke.trim() : `${p} ${marke}`;
 }
 
-/** Sichtbare Beschriftung der Marken-Spalte. Gedankenstrich ohne Punkt,
- *  Aufzählungsmarke mit «.», Label-Marke mit «:» wie im amtlichen <dt>.
- *  Trägt das Label schon ein Satzzeichen, wird keines verdoppelt. */
-export function markenAnzeige(marke: string): string {
-  const art = markenArt(marke);
+/** Sichtbare Beschriftung der Marken-Spalte. Liegt der AMTLICHE Trenner vor,
+ *  wird er verbatim gesetzt («a)», «BE:», «BAS» ohne Zusatz) — nie einer
+ *  erfunden. Ohne Trenner-Feld wie bisher: Gedankenstrich ohne Punkt,
+ *  Aufzählungsmarke mit «.», Label-Marke mit «:»; trägt das Label schon ein
+ *  Satzzeichen, wird keines verdoppelt. */
+export function markenAnzeige(marke: string, trenner?: string): string {
+  const art = markenArt(marke, trenner);
   if (art === 'strich') return '–';
+  if (trenner !== undefined) return `${marke.trimEnd()}${trenner}`;
   if (art !== 'label') return `${marke}.`;
   const m = marke.trimEnd();
   return /[:.;,]$/.test(m) ? m : `${m}:`;

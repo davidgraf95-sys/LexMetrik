@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-09-04",
+  "erzeugt": "2026-09-12",
   "eintraege": [
     {
       "id": "bund/UNO_ANTIFOLTER/art_1",
@@ -20,7 +20,7 @@
       ],
       "stand": "2026-05-28",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/1307_1307_1307/de#art_1",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260528",
       "sha": "953b7da283dc83e7a617ce9e4d5711e6db883dba5798abf8c8ae60564e8cd481"
     },
@@ -47,7 +47,7 @@
       ],
       "stand": "2026-05-28",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/1307_1307_1307/de#art_2",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260528",
       "sha": "4e86d87267e4eec45a228d008914ffb8108cf558e9aeef574be1ac1e5fee410b"
     },
@@ -70,7 +70,7 @@
       ],
       "stand": "2026-05-28",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/1307_1307_1307/de#art_3",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260528",
       "sha": "ea0a7248cb1873f6045d96cd873bc477dd4be5b4d52f40d594f84b881253149e"
     },
@@ -93,7 +93,7 @@
       ],
       "stand": "2026-05-28",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/1307_1307_1307/de#art_4",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260528",
       "sha": "609221a794f9e3acec463325c53eaf519e08bb486c43de2eac95d458876350cc"
     },
@@ -111,15 +111,18 @@
           "items": [
             {
               "marke": "a",
-              "text": "wenn die Straftat in einem der Hoheitsgewalt des betreffenden Staates unterstehenden Gebiet oder an Bord eines in diesem Staat eingetragenen Schiffes oder Luftfahrzeugs begangen wird;"
+              "text": "wenn die Straftat in einem der Hoheitsgewalt des betreffenden Staates unterstehenden Gebiet oder an Bord eines in diesem Staat eingetragenen Schiffes oder Luftfahrzeugs begangen wird;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "wenn der Verdächtige Angehöriger des betreffenden Staates ist;"
+              "text": "wenn der Verdächtige Angehöriger des betreffenden Staates ist;",
+              "trenner": ")"
             },
             {
               "marke": "c",
-              "text": "wenn das Opfer Angehöriger des betreffenden Staates ist, sofern dieser Staat es für angebracht hält."
+              "text": "wenn das Opfer Angehöriger des betreffenden Staates ist, sofern dieser Staat es für angebracht hält.",
+              "trenner": ")"
             }
           ]
         },
@@ -134,9 +137,9 @@
       ],
       "stand": "2026-05-28",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/1307_1307_1307/de#art_5",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260528",
-      "sha": "28536deef5fc81a68b13709818f04721b5575134f5a61ad9ecc5e335e20c8fcc"
+      "sha": "ba7763faa24e4265e1bddbd8cebdfac67b07d2aa5abac46e90f14e3dd85e5d4c"
     },
     {
       "id": "bund/UNO_ANTIFOLTER/art_6",
@@ -165,7 +168,7 @@
       ],
       "stand": "2026-05-28",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/1307_1307_1307/de#art_6",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260528",
       "sha": "d3595b97444e96775998ebb90375cd9abe752003dbb5c50ab5fb502d8b57e94b"
     },
@@ -192,7 +195,7 @@
       ],
       "stand": "2026-05-28",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/1307_1307_1307/de#art_7",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260528",
       "sha": "880da5e2830eaefc9645b64bff94d3ce9ff5710cb87a074555269b59e6a2480d"
     },
@@ -223,7 +226,7 @@
       ],
       "stand": "2026-05-28",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/1307_1307_1307/de#art_8",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260528",
       "sha": "26f85f9bb0c1372edab376674922270c12238fd418999509b606908e0043ae63"
     },
@@ -246,7 +249,7 @@
       ],
       "stand": "2026-05-28",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/1307_1307_1307/de#art_9",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260528",
       "sha": "60d7b3631dc688cda956fe2c0923b9f07199b1f19cda02b55c546e3ee0686851"
     },
@@ -269,7 +272,7 @@
       ],
       "stand": "2026-05-28",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/1307_1307_1307/de#art_10",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260528",
       "sha": "f26cd8788a54021477de96b98176e2fa0ec084f0e8cadd51e00fdbf1b970a867"
     },
@@ -288,7 +291,7 @@
       ],
       "stand": "2026-05-28",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/1307_1307_1307/de#art_11",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260528",
       "sha": "f1a2daae6bc45d56eca96887682e8f1df8de989266cdbd2460d46b166cac4535"
     },
@@ -307,7 +310,7 @@
       ],
       "stand": "2026-05-28",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/1307_1307_1307/de#art_12",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260528",
       "sha": "049aed1140229597b50b5e392b8f6516c1f673d316cde6e3a473b5191f7cb304"
     },
@@ -326,7 +329,7 @@
       ],
       "stand": "2026-05-28",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/1307_1307_1307/de#art_13",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260528",
       "sha": "d22bf92e51b249039159d0cc41992cd51a8fb752515f4ad5395b8284eb1409f7"
     },
@@ -349,7 +352,7 @@
       ],
       "stand": "2026-05-28",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/1307_1307_1307/de#art_14",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260528",
       "sha": "dfb5e245b3df10cd01ba06bd01e0f6f3318728c0a47a3c1e24825f91c8dd7ecf"
     },
@@ -368,7 +371,7 @@
       ],
       "stand": "2026-05-28",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/1307_1307_1307/de#art_15",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260528",
       "sha": "d45c3307076d4f48edebbcd2b91b6b313786113aaf45a3f46a06b8e7cccdd7a9"
     },
@@ -391,7 +394,7 @@
       ],
       "stand": "2026-05-28",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/1307_1307_1307/de#art_16",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260528",
       "sha": "e085bd98ae69e55b91f9557d3fb1a61ea3bc0748fb501100d985eded7e25d2a4"
     },
@@ -434,7 +437,7 @@
       ],
       "stand": "2026-05-28",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/1307_1307_1307/de#art_17",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260528",
       "sha": "a3d7c96cd18be5f499c7a5c5913282d2d9e72711a145a1070ae0361e0082c78d"
     },
@@ -456,11 +459,13 @@
           "items": [
             {
               "marke": "a",
-              "text": "Der Ausschuss ist bei Anwesenheit von sechs Mitgliedern beschlussfähig;"
+              "text": "Der Ausschuss ist bei Anwesenheit von sechs Mitgliedern beschlussfähig;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "der Ausschuss fasst seine Beschlüsse mit der Mehrheit der anwesenden Mitglieder."
+              "text": "der Ausschuss fasst seine Beschlüsse mit der Mehrheit der anwesenden Mitglieder.",
+              "trenner": ")"
             }
           ]
         },
@@ -479,9 +484,9 @@
       ],
       "stand": "2026-05-28",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/1307_1307_1307/de#art_18",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260528",
-      "sha": "dffc5330265e055cd2aca1b7d014a069c6dc3ed770eb2dcb1655be713d10ac0a"
+      "sha": "dc6c4e3b362e126f547aed7b1c6763950d4ece7d6b9ad317504e2743038cd04b"
     },
     {
       "id": "bund/UNO_ANTIFOLTER/art_19",
@@ -510,7 +515,7 @@
       ],
       "stand": "2026-05-28",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/1307_1307_1307/de#art_19",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260528",
       "sha": "04043e8fccf660c21602dc03218d701d3ca5354056843c287c280946e3a8e5c9"
     },
@@ -545,7 +550,7 @@
       ],
       "stand": "2026-05-28",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/1307_1307_1307/de#art_20",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260528",
       "sha": "25aa4b5d9ab11b0b77cc00d6509a818e0f9ffd0cd438880283aeb90f49b23d9c"
     },
@@ -563,45 +568,55 @@
           "items": [
             {
               "marke": "a",
-              "text": "Ist ein Vertragsstaat der Auffassung, dass ein anderer Vertragsstaat die Bestimmungen dieses Übereinkommens nicht durchführt, so kann er den anderen Staat durch eine schriftliche Mitteilung darauf hinweisen. Innerhalb von drei Monaten nach Zugang der Mitteilung hat der Empfangsstaat dem Staat, der die Mitteilung übersandt hat, in Bezug auf die Sache eine schriftliche Erklärung oder sonstige Stellungnahme zukommen zu lassen, die, soweit es möglich und angebracht ist, einen Hinweis auf die in der Sache durchgeführten, anhängigen oder zur Verfügung stehenden innerstaatlichen Verfahren und Rechtsbehelfe enthalten soll;"
+              "text": "Ist ein Vertragsstaat der Auffassung, dass ein anderer Vertragsstaat die Bestimmungen dieses Übereinkommens nicht durchführt, so kann er den anderen Staat durch eine schriftliche Mitteilung darauf hinweisen. Innerhalb von drei Monaten nach Zugang der Mitteilung hat der Empfangsstaat dem Staat, der die Mitteilung übersandt hat, in Bezug auf die Sache eine schriftliche Erklärung oder sonstige Stellungnahme zukommen zu lassen, die, soweit es möglich und angebracht ist, einen Hinweis auf die in der Sache durchgeführten, anhängigen oder zur Verfügung stehenden innerstaatlichen Verfahren und Rechtsbehelfe enthalten soll;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "wird die Sache nicht innerhalb von sechs Monaten nach Eingang der einleitenden Mitteilung bei dem Empfangsstaat zur Zufriedenheit der beiden beteiligten Vertragsstaaten geregelt, so hat jeder der beiden Staaten das Recht, die Sache dem Ausschuss zu unterbreiten, indem er diesem und dem anderen Staat eine entsprechende Mitteilung macht;"
+              "text": "wird die Sache nicht innerhalb von sechs Monaten nach Eingang der einleitenden Mitteilung bei dem Empfangsstaat zur Zufriedenheit der beiden beteiligten Vertragsstaaten geregelt, so hat jeder der beiden Staaten das Recht, die Sache dem Ausschuss zu unterbreiten, indem er diesem und dem anderen Staat eine entsprechende Mitteilung macht;",
+              "trenner": ")"
             },
             {
               "marke": "c",
-              "text": "der Ausschuss befasst sich mit einer ihm aufgrund dieses Artikels unterbreiteten Sache erst dann, wenn er sich Gewissheit verschafft hat, dass in der Sache alle innerstaatlichen Rechtsbehelfe in Übereinstimmung mit den allgemein anerkannten Grundsätzen des Völkerrechts eingelegt und erschöpft worden sind. Dies gilt nicht, wenn das Verfahren bei der Anwendung der Rechtsbehelfe unangemessen lange gedauert hat oder für die Person, die das Opfer einer Verletzung dieses Übereinkommens geworden ist, keine wirksame Abhilfe erwarten lässt;"
+              "text": "der Ausschuss befasst sich mit einer ihm aufgrund dieses Artikels unterbreiteten Sache erst dann, wenn er sich Gewissheit verschafft hat, dass in der Sache alle innerstaatlichen Rechtsbehelfe in Übereinstimmung mit den allgemein anerkannten Grundsätzen des Völkerrechts eingelegt und erschöpft worden sind. Dies gilt nicht, wenn das Verfahren bei der Anwendung der Rechtsbehelfe unangemessen lange gedauert hat oder für die Person, die das Opfer einer Verletzung dieses Übereinkommens geworden ist, keine wirksame Abhilfe erwarten lässt;",
+              "trenner": ")"
             },
             {
               "marke": "d",
-              "text": "der Ausschuss berät über Mitteilungen aufgrund dieses Artikels in nichtöffentlicher Sitzung;"
+              "text": "der Ausschuss berät über Mitteilungen aufgrund dieses Artikels in nichtöffentlicher Sitzung;",
+              "trenner": ")"
             },
             {
               "marke": "e",
-              "text": "sofern die Voraussetzungen des Buchstabens c erfüllt sind, stellt der Ausschuss den beteiligten Vertragsstaaten seine guten Dienste zur Verfügung, um eine gütliche Regelung der Sache auf der Grundlage der Einhaltung der in diesem Übereinkommen vorgesehenen Verpflichtungen herbeizuführen. Zu diesem Zweck kann der Ausschuss gegebenenfalls eine Ad‑hoc-Vergleichskommission einsetzen;"
+              "text": "sofern die Voraussetzungen des Buchstabens c erfüllt sind, stellt der Ausschuss den beteiligten Vertragsstaaten seine guten Dienste zur Verfügung, um eine gütliche Regelung der Sache auf der Grundlage der Einhaltung der in diesem Übereinkommen vorgesehenen Verpflichtungen herbeizuführen. Zu diesem Zweck kann der Ausschuss gegebenenfalls eine Ad‑hoc-Vergleichskommission einsetzen;",
+              "trenner": ")"
             },
             {
               "marke": "f",
-              "text": "der Ausschuss kann in jeder ihm aufgrund dieses Artikels unterbreiteten Sache die unter Buchstabe b genannten beteiligten Vertragsstaaten auffordern, alle erheblichen Angaben beizubringen;"
+              "text": "der Ausschuss kann in jeder ihm aufgrund dieses Artikels unterbreiteten Sache die unter Buchstabe b genannten beteiligten Vertragsstaaten auffordern, alle erheblichen Angaben beizubringen;",
+              "trenner": ")"
             },
             {
               "marke": "g",
-              "text": "die unter Buchstabe b genannten beteiligten Vertragsstaaten haben das Recht, sich vertreten zu lassen sowie mündlich und/oder schriftlich Stellung zu nehmen, wenn die Sache vom Ausschuss verhandelt wird;"
+              "text": "die unter Buchstabe b genannten beteiligten Vertragsstaaten haben das Recht, sich vertreten zu lassen sowie mündlich und/oder schriftlich Stellung zu nehmen, wenn die Sache vom Ausschuss verhandelt wird;",
+              "trenner": ")"
             },
             {
               "marke": "h",
-              "text": "der Ausschuss legt innerhalb von zwölf Monaten nach Eingang der unter Buchstabe b vorgesehenen Mitteilung einen Bericht vor:"
+              "text": "der Ausschuss legt innerhalb von zwölf Monaten nach Eingang der unter Buchstabe b vorgesehenen Mitteilung einen Bericht vor:",
+              "trenner": ")"
             },
             {
               "marke": "i",
               "text": "Wenn eine Regelung im Sinne des Buchstabens e zustandegekommen ist, beschränkt der Ausschuss seinen Bericht auf eine kurze Darstellung des Sachverhalts und der erzielten Regelung;",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ")"
             },
             {
               "marke": "ii",
               "text": "wenn eine Regelung im Sinne des Buchstabens e nicht zustandegekommen ist, beschränkt der Ausschuss seinen Bericht auf eine kurze Darstellung des Sachverhalts; die schriftlichen Stellungnahmen und das Protokoll über die mündlichen Stellungnahmen der beteiligten Vertragsstaaten sind dem Bericht beizufügen. In jedem Fall wird der Bericht den beteiligten Vertragsstaaten übermittelt.",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ")"
             }
           ]
         },
@@ -612,9 +627,9 @@
       ],
       "stand": "2026-05-28",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/1307_1307_1307/de#art_21",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260528",
-      "sha": "b025710f29f29668f9d527a14e80eeed59d710f39c8991a391db17c7161549b2"
+      "sha": "60f2c0f66958cd30cfae7a759eebf794350f45817b0fbbc95b625bad9da25d97"
     },
     {
       "id": "bund/UNO_ANTIFOLTER/art_22",
@@ -646,11 +661,13 @@
           "items": [
             {
               "marke": "a",
-              "text": "dass dieselbe Sache nicht bereits in einem anderen internationalen Untersuchungs‑ oder Streitregelungsverfahren geprüft wurde oder wird;"
+              "text": "dass dieselbe Sache nicht bereits in einem anderen internationalen Untersuchungs‑ oder Streitregelungsverfahren geprüft wurde oder wird;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "dass die Einzelperson alle zur Verfügung stehenden innerstaatlichen Rechtsbehelfe erschöpft hat; dies gilt nicht, wenn das Verfahren bei der Anwendung der Rechtsbehelfe unangemessen lange gedauert hat oder für die Person, die das Opfer einer Verletzung dieses Übereinkommens geworden ist, keine wirksame Abhilfe erwarten lässt."
+              "text": "dass die Einzelperson alle zur Verfügung stehenden innerstaatlichen Rechtsbehelfe erschöpft hat; dies gilt nicht, wenn das Verfahren bei der Anwendung der Rechtsbehelfe unangemessen lange gedauert hat oder für die Person, die das Opfer einer Verletzung dieses Übereinkommens geworden ist, keine wirksame Abhilfe erwarten lässt.",
+              "trenner": ")"
             }
           ]
         },
@@ -669,9 +686,9 @@
       ],
       "stand": "2026-05-28",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/1307_1307_1307/de#art_22",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260528",
-      "sha": "598cbea98ead5f29fd9138cf79dfbc083ce6a63863b011aa6e10315a3c45036d"
+      "sha": "523fc7265969a3c306deb6704bc4de6653e50429ac8fa9cced2fb81992371601"
     },
     {
       "id": "bund/UNO_ANTIFOLTER/art_23",
@@ -688,7 +705,7 @@
       ],
       "stand": "2026-05-28",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/1307_1307_1307/de#art_23",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260528",
       "sha": "1998a148e2a01ba8067e2bd3ba2c5266be9c724d3a3e0e052d5fdbaa71f2b58a"
     },
@@ -707,7 +724,7 @@
       ],
       "stand": "2026-05-28",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/1307_1307_1307/de#art_24",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260528",
       "sha": "f259a6c695a7761f6494115636e3eb28deec703796f94c4a14902ddb70fae15e"
     },
@@ -730,7 +747,7 @@
       ],
       "stand": "2026-05-28",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/1307_1307_1307/de#art_25",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260528",
       "sha": "e351e68bd0162627da8f35a5b10082db08f847a799a308db3960c02b521bfa1c"
     },
@@ -749,7 +766,7 @@
       ],
       "stand": "2026-05-28",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/1307_1307_1307/de#art_26",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260528",
       "sha": "4e7c116afe69b03b6fc109d293af67a9d6b900d361f108c8c0f7a7829308df6a"
     },
@@ -772,7 +789,7 @@
       ],
       "stand": "2026-05-28",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/1307_1307_1307/de#art_27",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260528",
       "sha": "cc183e8930509b1d0020d46ee761c1b63e0cd61a12b6f5e87986ad340efc9db6"
     },
@@ -795,7 +812,7 @@
       ],
       "stand": "2026-05-28",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/1307_1307_1307/de#art_28",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260528",
       "sha": "cc55ec9d1dcfbeea98619c1a1a1370cfaed13de30147d9530097c9d572cba595"
     },
@@ -822,7 +839,7 @@
       ],
       "stand": "2026-05-28",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/1307_1307_1307/de#art_29",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260528",
       "sha": "0dc1fa2549c88c3af98bf78e4daf851927620bdd1ba6fce7e97e816fa5cc508e"
     },
@@ -849,7 +866,7 @@
       ],
       "stand": "2026-05-28",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/1307_1307_1307/de#art_30",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260528",
       "sha": "bbd2bc089930865310594889a153368a0d17b67aa7112878c9f50967badf76fa"
     },
@@ -876,7 +893,7 @@
       ],
       "stand": "2026-05-28",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/1307_1307_1307/de#art_31",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260528",
       "sha": "547ad3b8d75281bee1df3e7777c4771cc14060b329d0c85a48491817dd02650f"
     },
@@ -894,24 +911,27 @@
           "items": [
             {
               "marke": "a",
-              "text": "von den Unterzeichnungen, Ratifikationen und Beitritten nach den Artikeln 25 und 26;"
+              "text": "von den Unterzeichnungen, Ratifikationen und Beitritten nach den Artikeln 25 und 26;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "vom Zeitpunkt des Inkrafttretens dieses Übereinkommens nach Artikel 27 und vom Zeitpunkt des Inkrafttretens von Änderungen nach Artikel 29;"
+              "text": "vom Zeitpunkt des Inkrafttretens dieses Übereinkommens nach Artikel 27 und vom Zeitpunkt des Inkrafttretens von Änderungen nach Artikel 29;",
+              "trenner": ")"
             },
             {
               "marke": "c",
-              "text": "von den Kündigungen nach Artikel 31."
+              "text": "von den Kündigungen nach Artikel 31.",
+              "trenner": ")"
             }
           ]
         }
       ],
       "stand": "2026-05-28",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/1307_1307_1307/de#art_32",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260528",
-      "sha": "055bc7418789ea70adc1e073231f54cb5890d363595ed6713b218d7a2e7fb38a"
+      "sha": "69324d300d8b5d66d2b26a4370d1fc30c9fc898aba29655f75668d86e41f5c96"
     },
     {
       "id": "bund/UNO_ANTIFOLTER/art_33",
@@ -932,7 +952,7 @@
       ],
       "stand": "2026-05-28",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1987/1307_1307_1307/de#art_33",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260528",
       "sha": "7be2aaf78e96147d8f1558a19943a3b2798b364fa7d18764850218f7ef5264e2"
     }

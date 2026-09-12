@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-08-29",
+  "erzeugt": "2026-09-12",
   "eintraege": [
     {
       "id": "bund/HBEWUE/art_1",
@@ -24,7 +24,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2824_2824_2824/de#art_1",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260101",
       "sha": "73a55966dd78e75d8cef743147388587ec55b662d8f44806caf0fd40732cc700"
     },
@@ -47,7 +47,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2824_2824_2824/de#art_2",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260101",
       "sha": "d59876b13a762cee95b16fd3f0a34e17eaa7777cd3b1c40d1804051747b15a15"
     },
@@ -65,19 +65,23 @@
           "items": [
             {
               "marke": "a",
-              "text": "die ersuchende und, soweit bekannt, die ersuchte Behörde;"
+              "text": "die ersuchende und, soweit bekannt, die ersuchte Behörde;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "den Namen und die Adresse der Parteien und gegebenenfalls ihrer Vertreter;"
+              "text": "den Namen und die Adresse der Parteien und gegebenenfalls ihrer Vertreter;",
+              "trenner": ")"
             },
             {
               "marke": "c",
-              "text": "die Art und den Gegenstand der Rechtssache sowie eine gedrängte Darstellung des Sachverhalts;"
+              "text": "die Art und den Gegenstand der Rechtssache sowie eine gedrängte Darstellung des Sachverhalts;",
+              "trenner": ")"
             },
             {
               "marke": "d",
-              "text": "die Beweisaufnahme oder die andere gerichtliche Handlung, die vorgenommen werden soll."
+              "text": "die Beweisaufnahme oder die andere gerichtliche Handlung, die vorgenommen werden soll.",
+              "trenner": ")"
             }
           ]
         },
@@ -87,23 +91,28 @@
           "items": [
             {
               "marke": "e",
-              "text": "den Namen und die Adresse der einzuvernehmenden Personen;"
+              "text": "den Namen und die Adresse der einzuvernehmenden Personen;",
+              "trenner": ")"
             },
             {
               "marke": "f",
-              "text": "die Fragen, welche an die einzuvernehmenden Personen gerichtet werden sollen, oder die Tatsachen, über die sie einvernommen werden sollen;"
+              "text": "die Fragen, welche an die einzuvernehmenden Personen gerichtet werden sollen, oder die Tatsachen, über die sie einvernommen werden sollen;",
+              "trenner": ")"
             },
             {
               "marke": "g",
-              "text": "die Urkunden oder die anderen Gegenstände, die geprüft werden sollen;"
+              "text": "die Urkunden oder die anderen Gegenstände, die geprüft werden sollen;",
+              "trenner": ")"
             },
             {
               "marke": "h",
-              "text": "den Antrag, die Einvernahme unter Eid oder Bekräftigung durchzuführen, und gegebenenfalls die dabei zu verwendende Formel;"
+              "text": "den Antrag, die Einvernahme unter Eid oder Bekräftigung durchzuführen, und gegebenenfalls die dabei zu verwendende Formel;",
+              "trenner": ")"
             },
             {
               "marke": "i",
-              "text": "den Antrag, eine besondere Form nach Artikel 9 einzuhalten."
+              "text": "den Antrag, eine besondere Form nach Artikel 9 einzuhalten.",
+              "trenner": ")"
             }
           ]
         },
@@ -118,9 +127,9 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2824_2824_2824/de#art_3",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260101",
-      "sha": "78cd8bffec08ed131ae6422717513f389e0a83b8e769bca86fe93b70f2114a3c"
+      "sha": "aed97379177f742f2c9e6ad3449af3e5da12bec675354302563fddbef8b4cbec"
     },
     {
       "id": "bund/HBEWUE/art_4",
@@ -153,7 +162,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2824_2824_2824/de#art_4",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260101",
       "sha": "e0d9b434bd876e194f8f43f10a2fba92f1810d28cd38eb3e6b95e6c9f4ad951c"
     },
@@ -172,7 +181,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2824_2824_2824/de#art_5",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260101",
       "sha": "1dfdb8118e47cef20c11bba83cdf982ebd37e6085242094ed62c32e162c34882"
     },
@@ -191,7 +200,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2824_2824_2824/de#art_6",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260101",
       "sha": "733f5ab8b4b3057408712a0e18beda496fb777b9c1b20e852636ca2f7fa84a9e"
     },
@@ -210,7 +219,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2824_2824_2824/de#art_7",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260101",
       "sha": "b3c54dd285ae9d616750bf4849ba39501c870567890c06fc2fdc475bc87014e4"
     },
@@ -229,7 +238,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2824_2824_2824/de#art_8",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260101",
       "sha": "9f15257aadf07c0e1a432f33d7d2dafe607fedbae540f30cf2f9556d5ad2b1b6"
     },
@@ -256,7 +265,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2824_2824_2824/de#art_9",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260101",
       "sha": "f857445d370dddb363e9812dfe2e28775babb112209e5207f7e0dd8e847a0154"
     },
@@ -275,7 +284,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2824_2824_2824/de#art_10",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260101",
       "sha": "ebe93d99a342300fa2d9649e541e5b1fc0dfd4ac1f9dff092734dbfb82ef177d"
     },
@@ -293,11 +302,13 @@
           "items": [
             {
               "marke": "a",
-              "text": "das nach dem Recht des ersuchten Staates vorgesehen ist oder"
+              "text": "das nach dem Recht des ersuchten Staates vorgesehen ist oder",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "das nach dem Recht des ersuchenden Staates vorgesehen und im Rechtshilfeersuchen bezeichnet oder erforderlichenfalls auf Verlangen der ersuchten Behörde von der ersuchenden Behörde bestätigt worden ist."
+              "text": "das nach dem Recht des ersuchenden Staates vorgesehen und im Rechtshilfeersuchen bezeichnet oder erforderlichenfalls auf Verlangen der ersuchten Behörde von der ersuchenden Behörde bestätigt worden ist.",
+              "trenner": ")"
             }
           ]
         },
@@ -308,9 +319,9 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2824_2824_2824/de#art_11",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260101",
-      "sha": "fce44eab9a9fab34b36e1c5cc3921859b31671d6d1078265476a9e021da30ec0"
+      "sha": "acdee28c5eb1e314e1e2602f7096130e4ce76190574c45bc7cc0b7e753c6c544"
     },
     {
       "id": "bund/HBEWUE/art_12",
@@ -326,11 +337,13 @@
           "items": [
             {
               "marke": "a",
-              "text": "die Erledigung des Ersuchens im ersuchten Staat nicht in den Bereich der Gerichtsgewalt fällt oder"
+              "text": "die Erledigung des Ersuchens im ersuchten Staat nicht in den Bereich der Gerichtsgewalt fällt oder",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "der ersuchte Staat die Erledigung für geeignet hält, seine Hoheitsrechte oder seine Sicherheit zu gefährden."
+              "text": "der ersuchte Staat die Erledigung für geeignet hält, seine Hoheitsrechte oder seine Sicherheit zu gefährden.",
+              "trenner": ")"
             }
           ]
         },
@@ -341,9 +354,9 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2824_2824_2824/de#art_12",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260101",
-      "sha": "9be812b7111c5d0d3946615a4e11f82c79d8c62c1c65b5bc0235bef8227ed774"
+      "sha": "440cb2d2be746a04eecaac53c2823985686846645ef97d0b4442a8a8696cc3e9"
     },
     {
       "id": "bund/HBEWUE/art_13",
@@ -364,7 +377,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2824_2824_2824/de#art_13",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260101",
       "sha": "559499b5ddfb8a38b9c072a4a41ebc7dc69ee67193e264d01e2ec4fd0f781817"
     },
@@ -391,7 +404,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2824_2824_2824/de#art_14",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260101",
       "sha": "0c3f894a3690b6d39062be333e4228059aacacf4539b2986100ee50b6d8e1ca6"
     },
@@ -414,7 +427,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2824_2824_2824/de#art_15",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260101",
       "sha": "4dc4995ba963c3555dd0bf8dfe55b41d44ed141f3ec44c2a691f55c83c623d85"
     },
@@ -432,11 +445,13 @@
           "items": [
             {
               "marke": "a",
-              "text": "wenn eine durch den Empfangsstaat bestimmte zuständige Behörde ihre Genehmigung allgemein oder für den Einzelfall erteilt hat und"
+              "text": "wenn eine durch den Empfangsstaat bestimmte zuständige Behörde ihre Genehmigung allgemein oder für den Einzelfall erteilt hat und",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "wenn der Vertreter die Auflagen erfüllt, welche die zuständige Behörde in der Genehmigung festgesetzt hat."
+              "text": "wenn der Vertreter die Auflagen erfüllt, welche die zuständige Behörde in der Genehmigung festgesetzt hat.",
+              "trenner": ")"
             }
           ]
         },
@@ -447,9 +462,9 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2824_2824_2824/de#art_16",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260101",
-      "sha": "6fdb5f21f80be47135179c4a88768bf7c8d44dc944635aff824b8e7a2b22a040"
+      "sha": "2e96ede919d75a0b10738c204a5a51627a067f6812f547613acdba0c2737f297"
     },
     {
       "id": "bund/HBEWUE/art_17",
@@ -465,11 +480,13 @@
           "items": [
             {
               "marke": "a",
-              "text": "wenn eine von dem Staat, in dem Beweis aufgenommen werden soll, bestimmte zuständige Behörde ihre Genehmigung allgemein oder für den Einzelfall erteilt hat und"
+              "text": "wenn eine von dem Staat, in dem Beweis aufgenommen werden soll, bestimmte zuständige Behörde ihre Genehmigung allgemein oder für den Einzelfall erteilt hat und",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "wenn die Person die Auflagen erfüllt, welche die zuständige Behörde in der Genehmigung festgesetzt hat."
+              "text": "wenn die Person die Auflagen erfüllt, welche die zuständige Behörde in der Genehmigung festgesetzt hat.",
+              "trenner": ")"
             }
           ]
         },
@@ -480,9 +497,9 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2824_2824_2824/de#art_17",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260101",
-      "sha": "0156c4716dbb5a88aa2a791c50e4415a24eabd108a3a47465908c8acd59e4a68"
+      "sha": "3483e8ae20e1be1b15c0bb72219de7eb11f38d9dbfaf8b60919f43427e7dedb7"
     },
     {
       "id": "bund/HBEWUE/art_18",
@@ -503,7 +520,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2824_2824_2824/de#art_18",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260101",
       "sha": "4c032a6f82b06c2e00be163e8f49999eebe77406a1714212703c65ba4780c7f7"
     },
@@ -522,7 +539,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2824_2824_2824/de#art_19",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260101",
       "sha": "61b10c3892401ebd16c0c9956da697ec8fa041e541c4a0165e1f424dc170d4d8"
     },
@@ -541,7 +558,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2824_2824_2824/de#art_20",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260101",
       "sha": "836daf557d17452fd00bb42a96677aded2111f433a7e69162c04dbe2e18db149"
     },
@@ -559,32 +576,37 @@
           "items": [
             {
               "marke": "a",
-              "text": "so kann er alle Beweise aufnehmen, soweit dies nicht mit dem Recht des Staates, in dem Beweis aufgenommen werden soll, unvereinbar ist oder der nach den angeführten Artikeln erteilten Genehmigung widerspricht, und unter denselben Bedingungen auch einen Eid abnehmen oder eine Bekräftigung entgegennehmen;"
+              "text": "so kann er alle Beweise aufnehmen, soweit dies nicht mit dem Recht des Staates, in dem Beweis aufgenommen werden soll, unvereinbar ist oder der nach den angeführten Artikeln erteilten Genehmigung widerspricht, und unter denselben Bedingungen auch einen Eid abnehmen oder eine Bekräftigung entgegennehmen;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "so ist jede Vorladung zum Erscheinen oder zur Mitwirkung an einer Beweisaufnahme in der Sprache des Ortes der Beweisaufnahme abzufassen oder eine Übersetzung in diese Sprache beizufügen, es sei denn, dass die durch die Beweisaufnahme betroffene Person dem Staat angehört, in dem das Verfahren anhängig ist;"
+              "text": "so ist jede Vorladung zum Erscheinen oder zur Mitwirkung an einer Beweisaufnahme in der Sprache des Ortes der Beweisaufnahme abzufassen oder eine Übersetzung in diese Sprache beizufügen, es sei denn, dass die durch die Beweisaufnahme betroffene Person dem Staat angehört, in dem das Verfahren anhängig ist;",
+              "trenner": ")"
             },
             {
               "marke": "c",
-              "text": "so ist in der Vorladung anzugeben, dass die Person einen Rechtsberater beiziehen kann, sowie in einem Staat, der nicht die Erklärung nach Artikel 18 abgegeben hat, dass sie nicht verpflichtet ist, zu erscheinen oder sonst an der Beweisaufnahme mitzuwirken;"
+              "text": "so ist in der Vorladung anzugeben, dass die Person einen Rechtsberater beiziehen kann, sowie in einem Staat, der nicht die Erklärung nach Artikel 18 abgegeben hat, dass sie nicht verpflichtet ist, zu erscheinen oder sonst an der Beweisaufnahme mitzuwirken;",
+              "trenner": ")"
             },
             {
               "marke": "d",
-              "text": "so können die Beweise in einer der Formen aufgenommen werden, die das Recht des Gerichts vorsieht, vor dem das Verfahren anhängig ist, es sei denn, dass das Recht des Staates, in dem Beweis aufgenommen wird, diese Form verbietet;"
+              "text": "so können die Beweise in einer der Formen aufgenommen werden, die das Recht des Gerichts vorsieht, vor dem das Verfahren anhängig ist, es sei denn, dass das Recht des Staates, in dem Beweis aufgenommen wird, diese Form verbietet;",
+              "trenner": ")"
             },
             {
               "marke": "e",
-              "text": "so kann sich die von der Beweisaufnahme betroffene Person auf die in Artikel 11 vorgesehenen Rechte zur Aussageverweigerung oder Aussageverbote berufen."
+              "text": "so kann sich die von der Beweisaufnahme betroffene Person auf die in Artikel 11 vorgesehenen Rechte zur Aussageverweigerung oder Aussageverbote berufen.",
+              "trenner": ")"
             }
           ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2824_2824_2824/de#art_21",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260101",
-      "sha": "7840db84167638a6ca58a280258064375fd37cd2b88f6f6f833ea3c851a1cfb5"
+      "sha": "9b018c4964be536b5f3ab143d9604f7efc8d265eb95e7d69550b4ae26b0203d4"
     },
     {
       "id": "bund/HBEWUE/art_22",
@@ -601,7 +623,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2824_2824_2824/de#art_22",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260101",
       "sha": "20952126d05f9dea092c19add2a04034da8ee8ea86a6c69495bde1058c281c41"
     },
@@ -620,7 +642,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2824_2824_2824/de#art_23",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260101",
       "sha": "738a7cb9263eda07165cc4a3ffe7f3053fca9b2d1975046f77817604c27e4ace"
     },
@@ -643,7 +665,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2824_2824_2824/de#art_24",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260101",
       "sha": "188e790a3915159344e078e2a0baf80a4bb4ccd46a91829bdc272938c82145cb"
     },
@@ -662,7 +684,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2824_2824_2824/de#art_25",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260101",
       "sha": "b78d39791e11732da5d9be6d75a69685ed4ae874b8c23bf80fa268ba01ed5f0d"
     },
@@ -685,7 +707,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2824_2824_2824/de#art_26",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260101",
       "sha": "8e685ea3f910a85fb392925e73f32737cc9af98a8f911e89cefb327064c12569"
     },
@@ -703,24 +725,27 @@
           "items": [
             {
               "marke": "a",
-              "text": "zu erklären, dass Rechtshilfeersuchen seinen gerichtlichen Behörden auch auf anderen als den in Artikel 2 vorgesehenen Wegen übermittelt werden können;"
+              "text": "zu erklären, dass Rechtshilfeersuchen seinen gerichtlichen Behörden auch auf anderen als den in Artikel 2 vorgesehenen Wegen übermittelt werden können;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "nach seinem innerstaatlichen Recht oder seiner innerstaatlichen Übung zuzulassen, dass Handlungen, auf die dieses Übereinkommen anwendbar ist, unter weniger einschränkenden Bedingungen vorgenommen werden;"
+              "text": "nach seinem innerstaatlichen Recht oder seiner innerstaatlichen Übung zuzulassen, dass Handlungen, auf die dieses Übereinkommen anwendbar ist, unter weniger einschränkenden Bedingungen vorgenommen werden;",
+              "trenner": ")"
             },
             {
               "marke": "c",
-              "text": "nach seinem innerstaatlichen Recht oder seiner innerstaatlichen Übung andere als die in diesem Übereinkommen vorgesehenen Verfahren der Beweisaufnahme zuzulassen."
+              "text": "nach seinem innerstaatlichen Recht oder seiner innerstaatlichen Übung andere als die in diesem Übereinkommen vorgesehenen Verfahren der Beweisaufnahme zuzulassen.",
+              "trenner": ")"
             }
           ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2824_2824_2824/de#art_27",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260101",
-      "sha": "e18dcf29047b8955011c09bf3b8a4e5ad93352c0c30b769df5eaba3dba31c764"
+      "sha": "b9425da9b751a50ba50a3831db4181e51847dab2ddc3c3ef9512646cdebcce3e"
     },
     {
       "id": "bund/HBEWUE/art_28",
@@ -736,40 +761,47 @@
           "items": [
             {
               "marke": "a",
-              "text": "Artikel 2 in Bezug auf den Übermittlungsweg für Rechtshilfeersuchen;"
+              "text": "Artikel 2 in Bezug auf den Übermittlungsweg für Rechtshilfeersuchen;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "Artikel 4 in Bezug auf die Verwendung von Sprachen;"
+              "text": "Artikel 4 in Bezug auf die Verwendung von Sprachen;",
+              "trenner": ")"
             },
             {
               "marke": "c",
-              "text": "Artikel 8 in Bezug auf die Anwesenheit von Mitgliedern der gerichtlichen Behörde bei der Erledigung von Rechtshilfeersuchen;"
+              "text": "Artikel 8 in Bezug auf die Anwesenheit von Mitgliedern der gerichtlichen Behörde bei der Erledigung von Rechtshilfeersuchen;",
+              "trenner": ")"
             },
             {
               "marke": "d",
-              "text": "Artikel 11 in Bezug auf die Aussageverweigerungsrechte und Aussageverbote;"
+              "text": "Artikel 11 in Bezug auf die Aussageverweigerungsrechte und Aussageverbote;",
+              "trenner": ")"
             },
             {
               "marke": "e",
-              "text": "Artikel 13 in Bezug auf die Übermittlung von Erledigungsstücken;"
+              "text": "Artikel 13 in Bezug auf die Übermittlung von Erledigungsstücken;",
+              "trenner": ")"
             },
             {
               "marke": "f",
-              "text": "Artikel 14 in Bezug auf die Regelung der Kosten;"
+              "text": "Artikel 14 in Bezug auf die Regelung der Kosten;",
+              "trenner": ")"
             },
             {
               "marke": "g",
-              "text": "den Bestimmungen des Kapitels II."
+              "text": "den Bestimmungen des Kapitels II.",
+              "trenner": ")"
             }
           ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2824_2824_2824/de#art_28",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260101",
-      "sha": "b0344a0630d54a9c9a76894fd002930791ab6a000514f87f2cf3399221f460a0"
+      "sha": "961aa0bac4e15b66f00202b4c797994165299fa2db5baea2d39713a5ad62ff61"
     },
     {
       "id": "bund/HBEWUE/art_29",
@@ -786,7 +818,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2824_2824_2824/de#art_29",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260101",
       "sha": "7f60877a0e7d8e467e9d12171d44447755e90b1bf6b2c8fab004935b01dd9656"
     },
@@ -805,7 +837,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2824_2824_2824/de#art_30",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260101",
       "sha": "6e04fa7e881c3b36c8609deac09239aca4bcdf10ac1291e0b8c4d541ddadc47a"
     },
@@ -824,7 +856,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2824_2824_2824/de#art_31",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260101",
       "sha": "25fbd37ff573b483610783621efa9699dc1b352e944b55b2f5d7405b4622257f"
     },
@@ -843,7 +875,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2824_2824_2824/de#art_32",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260101",
       "sha": "3a9995ff34d4c1618f623896331d4388f16a7c3cde2e33facabc0bc9042c75bd"
     },
@@ -870,7 +902,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2824_2824_2824/de#art_33",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260101",
       "sha": "6e0a5c84364a276f9b7feff4e14d0b49b640cf6e158d34279c6bd628b58d2398"
     },
@@ -889,7 +921,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2824_2824_2824/de#art_34",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260101",
       "sha": "504151b7eac1b7fb17e9d812f6de8ee54155d1e8d132878cf4d2af3589646f28"
     },
@@ -911,32 +943,37 @@
           "items": [
             {
               "marke": "a",
-              "text": "die Bezeichnung der Behörden, an die sich diplomatische oder konsularische Vertreter nach Artikel 16 wenden müssen, und derjenigen, die nach den Artikeln 15, 16 und 18 Genehmigungen erteilen oder Unterstützung gewähren können;"
+              "text": "die Bezeichnung der Behörden, an die sich diplomatische oder konsularische Vertreter nach Artikel 16 wenden müssen, und derjenigen, die nach den Artikeln 15, 16 und 18 Genehmigungen erteilen oder Unterstützung gewähren können;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "die Bezeichnung der Behörden, die den Beauftragten die in Artikel 17 vorgesehene Genehmigung erteilen oder die in Artikel 18 vorgesehene Unterstützung gewähren können;"
+              "text": "die Bezeichnung der Behörden, die den Beauftragten die in Artikel 17 vorgesehene Genehmigung erteilen oder die in Artikel 18 vorgesehene Unterstützung gewähren können;",
+              "trenner": ")"
             },
             {
               "marke": "c",
-              "text": "die Erklärungen nach den Artikeln 4, 8, 11, 15, 16, 17, 18, 23 und 27;"
+              "text": "die Erklärungen nach den Artikeln 4, 8, 11, 15, 16, 17, 18, 23 und 27;",
+              "trenner": ")"
             },
             {
               "marke": "d",
-              "text": "jede Rücknahme oder Änderung der vorstehend erwähnten Behördenbezeichnungen und Erklärungen;"
+              "text": "jede Rücknahme oder Änderung der vorstehend erwähnten Behördenbezeichnungen und Erklärungen;",
+              "trenner": ")"
             },
             {
               "marke": "e",
-              "text": "jede Rücknahme eines Vorbehalts."
+              "text": "jede Rücknahme eines Vorbehalts.",
+              "trenner": ")"
             }
           ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2824_2824_2824/de#art_35",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260101",
-      "sha": "941b7416d64a57da7beef39f217e5ed73d43d44482f808e74fefaa1e14f50fae"
+      "sha": "309061b9db59d8eab5d903fdfb93b84c8846263eca1f617d923ffbc27935b7fe"
     },
     {
       "id": "bund/HBEWUE/art_36",
@@ -953,7 +990,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2824_2824_2824/de#art_36",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260101",
       "sha": "55b1ecb799e66f559527f3af5a2c3164f0110050cf2b3cec480b336cdc095ee7"
     },
@@ -976,7 +1013,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2824_2824_2824/de#art_37",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260101",
       "sha": "3ba2493e5c584eda1c825ec4b86083ff3d98a585ef1415115b947a43f7b05fc4"
     },
@@ -999,7 +1036,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2824_2824_2824/de#art_38",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260101",
       "sha": "f2d84f4aeac619f78e507cb38320bc156ab9c98def98ab563bd29a5599728506"
     },
@@ -1034,7 +1071,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2824_2824_2824/de#art_39",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260101",
       "sha": "499916171b85aec312bfc1200e22c0b0166dbe75dce9d9ff52cfe2cd34599c40"
     },
@@ -1061,7 +1098,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2824_2824_2824/de#art_40",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260101",
       "sha": "d3525a1dee6f81d74eab1cc7665800df8e41d8f439bf2ce9106dba15226bded3"
     },
@@ -1096,7 +1133,7 @@
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2824_2824_2824/de#art_41",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260101",
       "sha": "fc3766b69f483325ed272c1ef0c7df6c94601b0622830ecfa8a8c756c21c92f6"
     },
@@ -1114,36 +1151,42 @@
           "items": [
             {
               "marke": "a",
-              "text": "jede Unterzeichnung und Ratifikation nach Artikel 37;"
+              "text": "jede Unterzeichnung und Ratifikation nach Artikel 37;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "den Tag, an dem dieses Übereinkommen nach Artikel 38 Absatz 1 in Kraft tritt;"
+              "text": "den Tag, an dem dieses Übereinkommen nach Artikel 38 Absatz 1 in Kraft tritt;",
+              "trenner": ")"
             },
             {
               "marke": "c",
-              "text": "jeden Beitritt nach Artikel 39 und den Tag, an dem er wirksam wird;"
+              "text": "jeden Beitritt nach Artikel 39 und den Tag, an dem er wirksam wird;",
+              "trenner": ")"
             },
             {
               "marke": "d",
-              "text": "jede Erstreckung nach Artikel 40 und den Tag, an dem sie wirksam wird;"
+              "text": "jede Erstreckung nach Artikel 40 und den Tag, an dem sie wirksam wird;",
+              "trenner": ")"
             },
             {
               "marke": "e",
-              "text": "jede Behördenbezeichnung, jeden Vorbehalt und jede Erklärung nach den Artikeln 33 und 35;"
+              "text": "jede Behördenbezeichnung, jeden Vorbehalt und jede Erklärung nach den Artikeln 33 und 35;",
+              "trenner": ")"
             },
             {
               "marke": "f",
-              "text": "jede Kündigung nach Artikel 41 Absatz 3."
+              "text": "jede Kündigung nach Artikel 41 Absatz 3.",
+              "trenner": ")"
             }
           ]
         }
       ],
       "stand": "2026-01-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1994/2824_2824_2824/de#art_42",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260101",
-      "sha": "2f6a31decbed21e6eec64bf34b5b136c59fcd94709b35cfd0574765561f096bd"
+      "sha": "97958cd7fe8b294a4ecdc3efa57a488be51802bc0c306543aef82a4f2392a3ab"
     }
   ]
 }

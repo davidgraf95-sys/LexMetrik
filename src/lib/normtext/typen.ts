@@ -63,7 +63,14 @@ export interface NormSnapshot {
      *  Wert = Heading-Tiefe (2–6). Nur Anhang-Einträge tragen das Feld; der
      *  Renderer (ArtikelBody) zeigt den `text` dann als Zwischenüberschrift. */
     titel?: number;
-    items?: Array<{ marke: string; text: string; tiefe?: number }>;
+    /** `trenner` (#679, 12.9.2026): der AMTLICHE Trenner hinter der <dt>-Marke
+     *  der Quelle — ':' (Label/Kategorie, «BE:»), ')' (Ordinalmarke «a)»), '.'
+     *  (Punkt bei nicht-kanonischer Marke) oder '' (kein Trenner, «BAS»).
+     *  FEHLT das Feld, ist es der Normalfall «kanonische Ordinalmarke + Punkt»
+     *  ODER eine Quelle, die den Trenner nicht mitführt (Kanton-Adapter) — die
+     *  Lesesicht fällt dann auf ihre Marken-Heuristik zurück
+     *  (ArtikelBody.helfer.ts `markenArt`). */
+    items?: Array<{ marke: string; text: string; tiefe?: number; trenner?: string }>;
     /** Stufe 1: Füllpunkt-Tarifzeilen (Beschreibung | Betrag). */
     tabelle?: Array<{ beschreibung: string; betrag: string }>;
     /**

@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-09-04",
+  "erzeugt": "2026-09-12",
   "eintraege": [
     {
       "id": "bund/UNO_BRK/art_1",
@@ -20,7 +20,7 @@
       ],
       "stand": "2026-05-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/245/de#art_1",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260501",
       "sha": "3c69afecd3e1865cfa50330139f23a7d99debb7d0d6dcd665cd78b57de57b6bf"
     },
@@ -59,7 +59,7 @@
       ],
       "stand": "2026-05-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/245/de#art_2",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260501",
       "sha": "b92e2a37e44544b2a18a3d37f24438205fab0c248f3ecb8e5feede9e903e40d3"
     },
@@ -77,44 +77,52 @@
           "items": [
             {
               "marke": "a",
-              "text": "die Achtung der dem Menschen innewohnenden Würde, seiner individuellen Autonomie, einschliesslich der Freiheit, eigene Entscheidungen zu treffen, sowie seiner Unabhängigkeit;"
+              "text": "die Achtung der dem Menschen innewohnenden Würde, seiner individuellen Autonomie, einschliesslich der Freiheit, eigene Entscheidungen zu treffen, sowie seiner Unabhängigkeit;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "die Nichtdiskriminierung;"
+              "text": "die Nichtdiskriminierung;",
+              "trenner": ")"
             },
             {
               "marke": "c",
-              "text": "die volle und wirksame Teilhabe an der Gesellschaft und Einbeziehung in die Gesellschaft;"
+              "text": "die volle und wirksame Teilhabe an der Gesellschaft und Einbeziehung in die Gesellschaft;",
+              "trenner": ")"
             },
             {
               "marke": "d",
-              "text": "die Achtung vor der Unterschiedlichkeit von Menschen mit Behinderungen und die Akzeptanz dieser Menschen als Teil der menschlichen Vielfalt und der Menschheit;"
+              "text": "die Achtung vor der Unterschiedlichkeit von Menschen mit Behinderungen und die Akzeptanz dieser Menschen als Teil der menschlichen Vielfalt und der Menschheit;",
+              "trenner": ")"
             },
             {
               "marke": "e",
-              "text": "die Chancengleichheit;"
+              "text": "die Chancengleichheit;",
+              "trenner": ")"
             },
             {
               "marke": "f",
-              "text": "die Zugänglichkeit;"
+              "text": "die Zugänglichkeit;",
+              "trenner": ")"
             },
             {
               "marke": "g",
-              "text": "die Gleichberechtigung von Mann und Frau;"
+              "text": "die Gleichberechtigung von Mann und Frau;",
+              "trenner": ")"
             },
             {
               "marke": "h",
-              "text": "die Achtung vor den sich entwickelnden Fähigkeiten von Kindern mit Behinderungen und die Achtung ihres Rechts auf Wahrung ihrer Identität."
+              "text": "die Achtung vor den sich entwickelnden Fähigkeiten von Kindern mit Behinderungen und die Achtung ihres Rechts auf Wahrung ihrer Identität.",
+              "trenner": ")"
             }
           ]
         }
       ],
       "stand": "2026-05-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/245/de#art_3",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260501",
-      "sha": "4bbddbb20a8321500d411bf49b171f5a5133bc8d2c9336572fad1587f842c60f"
+      "sha": "392f1f02465a87fd60cc8809a88b754bf345d2ebe8eb406fc89324197dfa2246"
     },
     {
       "id": "bund/UNO_BRK/art_4",
@@ -130,39 +138,48 @@
           "items": [
             {
               "marke": "a",
-              "text": "alle geeigneten Gesetzgebungs-, Verwaltungs- und sonstigen Massnahmen zur Umsetzung der in diesem Übereinkommen anerkannten Rechte zu treffen;"
+              "text": "alle geeigneten Gesetzgebungs-, Verwaltungs- und sonstigen Massnahmen zur Umsetzung der in diesem Übereinkommen anerkannten Rechte zu treffen;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "alle geeigneten Massnahmen einschliesslich gesetzgeberischer Massnahmen zur Änderung oder Aufhebung bestehender Gesetze, Verordnungen, Gepflogenheiten und Praktiken zu treffen, die eine Diskriminierung von Menschen mit Behinderungen darstellen;"
+              "text": "alle geeigneten Massnahmen einschliesslich gesetzgeberischer Massnahmen zur Änderung oder Aufhebung bestehender Gesetze, Verordnungen, Gepflogenheiten und Praktiken zu treffen, die eine Diskriminierung von Menschen mit Behinderungen darstellen;",
+              "trenner": ")"
             },
             {
               "marke": "c",
-              "text": "den Schutz und die Förderung der Menschenrechte von Menschen mit Behinderungen in allen politischen Konzepten und allen Programmen zu berücksichtigen;"
+              "text": "den Schutz und die Förderung der Menschenrechte von Menschen mit Behinderungen in allen politischen Konzepten und allen Programmen zu berücksichtigen;",
+              "trenner": ")"
             },
             {
               "marke": "d",
-              "text": "Handlungen oder Praktiken, die mit diesem Übereinkommen unvereinbar sind, zu unterlassen und dafür zu sorgen, dass die staatlichen Behörden und öffentlichen Einrichtungen im Einklang mit diesem Übereinkommen handeln;"
+              "text": "Handlungen oder Praktiken, die mit diesem Übereinkommen unvereinbar sind, zu unterlassen und dafür zu sorgen, dass die staatlichen Behörden und öffentlichen Einrichtungen im Einklang mit diesem Übereinkommen handeln;",
+              "trenner": ")"
             },
             {
               "marke": "e",
-              "text": "alle geeigneten Massnahmen zur Beseitigung der Diskriminierung aufgrund von Behinderung durch Personen, Organisationen oder private Unternehmen zu ergreifen;"
+              "text": "alle geeigneten Massnahmen zur Beseitigung der Diskriminierung aufgrund von Behinderung durch Personen, Organisationen oder private Unternehmen zu ergreifen;",
+              "trenner": ")"
             },
             {
               "marke": "f",
-              "text": "Forschung und Entwicklung für Güter, Dienstleistungen, Geräte und Einrichtungen in universellem Design, wie in Artikel 2 definiert, die den besonderen Bedürfnissen von Menschen mit Behinderungen mit möglichst geringem Anpassungs- und Kostenaufwand gerecht werden, zu betreiben oder zu fördern, ihre Verfügbarkeit und Nutzung zu fördern und sich bei der Entwicklung von Normen und Richtlinien für universelles Design einzusetzen;"
+              "text": "Forschung und Entwicklung für Güter, Dienstleistungen, Geräte und Einrichtungen in universellem Design, wie in Artikel 2 definiert, die den besonderen Bedürfnissen von Menschen mit Behinderungen mit möglichst geringem Anpassungs- und Kostenaufwand gerecht werden, zu betreiben oder zu fördern, ihre Verfügbarkeit und Nutzung zu fördern und sich bei der Entwicklung von Normen und Richtlinien für universelles Design einzusetzen;",
+              "trenner": ")"
             },
             {
               "marke": "g",
-              "text": "Forschung und Entwicklung für neue Technologien, die für Menschen mit Behinderungen geeignet sind, einschliesslich Informations- und Kommunikationstechnologien, Mobilitätshilfen, Geräten und unterstützenden Technologien, zu betreiben oder zu fördern sowie ihre Verfügbarkeit und Nutzung zu fördern und dabei Technologien zu erschwinglichen Kosten den Vorrang zu geben;"
+              "text": "Forschung und Entwicklung für neue Technologien, die für Menschen mit Behinderungen geeignet sind, einschliesslich Informations- und Kommunikationstechnologien, Mobilitätshilfen, Geräten und unterstützenden Technologien, zu betreiben oder zu fördern sowie ihre Verfügbarkeit und Nutzung zu fördern und dabei Technologien zu erschwinglichen Kosten den Vorrang zu geben;",
+              "trenner": ")"
             },
             {
               "marke": "h",
-              "text": "für Menschen mit Behinderungen zugängliche Informationen über Mobilitätshilfen, Geräte und unterstützende Technologien, einschliesslich neuer Technologien, sowie andere Formen von Hilfe, Unterstützungsdiensten und Einrichtungen zur Verfügung zu stellen;"
+              "text": "für Menschen mit Behinderungen zugängliche Informationen über Mobilitätshilfen, Geräte und unterstützende Technologien, einschliesslich neuer Technologien, sowie andere Formen von Hilfe, Unterstützungsdiensten und Einrichtungen zur Verfügung zu stellen;",
+              "trenner": ")"
             },
             {
               "marke": "i",
-              "text": "die Schulung von Fachkräften und anderem mit Menschen mit Behinderungen arbeitendem Personal auf dem Gebiet der in diesem Übereinkommen anerkannten Rechte zu fördern, damit die aufgrund dieser Rechte garantierten Hilfen und Dienste besser geleistet werden können."
+              "text": "die Schulung von Fachkräften und anderem mit Menschen mit Behinderungen arbeitendem Personal auf dem Gebiet der in diesem Übereinkommen anerkannten Rechte zu fördern, damit die aufgrund dieser Rechte garantierten Hilfen und Dienste besser geleistet werden können.",
+              "trenner": ")"
             }
           ]
         },
@@ -185,9 +202,9 @@
       ],
       "stand": "2026-05-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/245/de#art_4",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260501",
-      "sha": "10541a724a9d7d38632b455dc7c43eede87c3b3fe0b8e426ddb8a1a270530df0"
+      "sha": "d968dcf1243a5e4680db927dd1c6102afef17e83a008bf986ac59b5302590011"
     },
     {
       "id": "bund/UNO_BRK/art_5",
@@ -216,7 +233,7 @@
       ],
       "stand": "2026-05-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/245/de#art_5",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260501",
       "sha": "5e453894e32b94c9d2934fac19f73da29dc30c504a8f57fa8fceb804dd19132a"
     },
@@ -239,7 +256,7 @@
       ],
       "stand": "2026-05-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/245/de#art_6",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260501",
       "sha": "c0e7461e5ad61f8730117902a7b3decf101c52ebb5f61cb20b116cc0b4a3228e"
     },
@@ -266,7 +283,7 @@
       ],
       "stand": "2026-05-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/245/de#art_7",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260501",
       "sha": "b44793b5ffd7f60008728046edc75f47d502172c8aed5589a5bb4a25a891bc13"
     },
@@ -284,15 +301,18 @@
           "items": [
             {
               "marke": "a",
-              "text": "in der gesamten Gesellschaft, einschliesslich auf der Ebene der Familien, das Bewusstsein für Menschen mit Behinderungen zu schärfen und die Achtung ihrer Rechte und ihrer Würde zu fördern;"
+              "text": "in der gesamten Gesellschaft, einschliesslich auf der Ebene der Familien, das Bewusstsein für Menschen mit Behinderungen zu schärfen und die Achtung ihrer Rechte und ihrer Würde zu fördern;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "Klischees, Vorurteile und schädliche Praktiken gegenüber Menschen mit Behinderungen, einschliesslich aufgrund des Geschlechts oder des Alters, in allen Lebensbereichen zu bekämpfen;"
+              "text": "Klischees, Vorurteile und schädliche Praktiken gegenüber Menschen mit Behinderungen, einschliesslich aufgrund des Geschlechts oder des Alters, in allen Lebensbereichen zu bekämpfen;",
+              "trenner": ")"
             },
             {
               "marke": "c",
-              "text": "das Bewusstsein für die Fähigkeiten und den Beitrag von Menschen mit Behinderungen zu fördern."
+              "text": "das Bewusstsein für die Fähigkeiten und den Beitrag von Menschen mit Behinderungen zu fördern.",
+              "trenner": ")"
             }
           ]
         },
@@ -302,43 +322,50 @@
           "items": [
             {
               "marke": "a",
-              "text": "die Einleitung und dauerhafte Durchführung wirksamer Kampagnen zur Bewusstseinsbildung in der Öffentlichkeit mit dem Ziel:"
+              "text": "die Einleitung und dauerhafte Durchführung wirksamer Kampagnen zur Bewusstseinsbildung in der Öffentlichkeit mit dem Ziel:",
+              "trenner": ")"
             },
             {
               "marke": "i",
               "text": "die Aufgeschlossenheit gegenüber den Rechten von Menschen mit Behinderungen zu erhöhen,",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ")"
             },
             {
               "marke": "ii",
               "text": "eine positive Wahrnehmung von Menschen mit Behinderungen und ein grösseres gesellschaftliches Bewusstsein ihnen gegenüber zu fördern,",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ")"
             },
             {
               "marke": "iii",
               "text": "die Anerkennung der Fertigkeiten, Verdienste und Fähigkeiten von Menschen mit Behinderungen und ihres Beitrags zur Arbeitswelt und zum Arbeitsmarkt zu fördern;",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "die Förderung einer respektvollen Einstellung gegenüber den Rechten von Menschen mit Behinderungen auf allen Ebenen des Bildungssystems, auch bei allen Kindern von früher Kindheit an;"
+              "text": "die Förderung einer respektvollen Einstellung gegenüber den Rechten von Menschen mit Behinderungen auf allen Ebenen des Bildungssystems, auch bei allen Kindern von früher Kindheit an;",
+              "trenner": ")"
             },
             {
               "marke": "c",
-              "text": "die Aufforderung an alle Medienorgane, Menschen mit Behinderungen in einer dem Zweck dieses Übereinkommens entsprechenden Weise darzustellen;"
+              "text": "die Aufforderung an alle Medienorgane, Menschen mit Behinderungen in einer dem Zweck dieses Übereinkommens entsprechenden Weise darzustellen;",
+              "trenner": ")"
             },
             {
               "marke": "d",
-              "text": "die Förderung von Schulungsprogrammen zur Schärfung des Bewusstseins für Menschen mit Behinderungen und für deren Rechte."
+              "text": "die Förderung von Schulungsprogrammen zur Schärfung des Bewusstseins für Menschen mit Behinderungen und für deren Rechte.",
+              "trenner": ")"
             }
           ]
         }
       ],
       "stand": "2026-05-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/245/de#art_8",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260501",
-      "sha": "82c6faaad84ef0196b3d278cd82a5a88dab216e07ecae96c6ae38fb8e0502271"
+      "sha": "15fafd3a835d8ba8108c66d70334915b11d503a49de0a50b57e7edf0d9b8a71c"
     },
     {
       "id": "bund/UNO_BRK/art_9",
@@ -354,11 +381,13 @@
           "items": [
             {
               "marke": "a",
-              "text": "Gebäude, Strassen, Transportmittel sowie andere Einrichtungen in Gebäuden und im Freien, einschliesslich Schulen, Wohnhäusern, medizinischer Einrichtungen und Arbeitsstätten;"
+              "text": "Gebäude, Strassen, Transportmittel sowie andere Einrichtungen in Gebäuden und im Freien, einschliesslich Schulen, Wohnhäusern, medizinischer Einrichtungen und Arbeitsstätten;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "Informations-, Kommunikations- und andere Dienste, einschliesslich elektronischer Dienste und Notdienste."
+              "text": "Informations-, Kommunikations- und andere Dienste, einschliesslich elektronischer Dienste und Notdienste.",
+              "trenner": ")"
             }
           ]
         },
@@ -368,44 +397,52 @@
           "items": [
             {
               "marke": "a",
-              "text": "um Mindeststandards und Leitlinien für die Zugänglichkeit von Einrichtungen und Diensten, die der Öffentlichkeit offenstehen oder für sie bereitgestellt werden, auszuarbeiten und zu erlassen und ihre Anwendung zu überwachen;"
+              "text": "um Mindeststandards und Leitlinien für die Zugänglichkeit von Einrichtungen und Diensten, die der Öffentlichkeit offenstehen oder für sie bereitgestellt werden, auszuarbeiten und zu erlassen und ihre Anwendung zu überwachen;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "um sicherzustellen, dass private Rechtsträger, die Einrichtungen und Dienste, die der Öffentlichkeit offenstehen oder für sie bereitgestellt werden, anbieten, alle Aspekte der Zugänglichkeit für Menschen mit Behinderungen berücksichtigen;"
+              "text": "um sicherzustellen, dass private Rechtsträger, die Einrichtungen und Dienste, die der Öffentlichkeit offenstehen oder für sie bereitgestellt werden, anbieten, alle Aspekte der Zugänglichkeit für Menschen mit Behinderungen berücksichtigen;",
+              "trenner": ")"
             },
             {
               "marke": "c",
-              "text": "um betroffenen Kreisen Schulungen zu Fragen der Zugänglichkeit für Menschen mit Behinderungen anzubieten;"
+              "text": "um betroffenen Kreisen Schulungen zu Fragen der Zugänglichkeit für Menschen mit Behinderungen anzubieten;",
+              "trenner": ")"
             },
             {
               "marke": "d",
-              "text": "um in Gebäuden und anderen Einrichtungen, die der Öffentlichkeit offenstehen, Beschilderungen in Brailleschrift und in leicht lesbarer und verständlicher Form anzubringen;"
+              "text": "um in Gebäuden und anderen Einrichtungen, die der Öffentlichkeit offenstehen, Beschilderungen in Brailleschrift und in leicht lesbarer und verständlicher Form anzubringen;",
+              "trenner": ")"
             },
             {
               "marke": "e",
-              "text": "um menschliche und tierische Hilfe sowie Mittelspersonen, unter anderem Personen zum Führen und Vorlesen sowie professionelle Gebärdensprachdolmetscher und -dolmetscherinnen, zur Verfügung zu stellen mit dem Ziel, den Zugang zu Gebäuden und anderen Einrichtungen, die der Öffentlichkeit offenstehen, zu erleichtern;"
+              "text": "um menschliche und tierische Hilfe sowie Mittelspersonen, unter anderem Personen zum Führen und Vorlesen sowie professionelle Gebärdensprachdolmetscher und -dolmetscherinnen, zur Verfügung zu stellen mit dem Ziel, den Zugang zu Gebäuden und anderen Einrichtungen, die der Öffentlichkeit offenstehen, zu erleichtern;",
+              "trenner": ")"
             },
             {
               "marke": "f",
-              "text": "um andere geeignete Formen der Hilfe und Unterstützung für Menschen mit Behinderungen zu fördern, damit ihr Zugang zu Informationen gewährleistet wird;"
+              "text": "um andere geeignete Formen der Hilfe und Unterstützung für Menschen mit Behinderungen zu fördern, damit ihr Zugang zu Informationen gewährleistet wird;",
+              "trenner": ")"
             },
             {
               "marke": "g",
-              "text": "um den Zugang von Menschen mit Behinderungen zu den neuen Informations- und Kommunikationstechnologien und -systemen, einschliesslich des Internets, zu fördern;"
+              "text": "um den Zugang von Menschen mit Behinderungen zu den neuen Informations- und Kommunikationstechnologien und -systemen, einschliesslich des Internets, zu fördern;",
+              "trenner": ")"
             },
             {
               "marke": "h",
-              "text": "um die Gestaltung, die Entwicklung, die Herstellung und den Vertrieb zugänglicher Informations- und Kommunikationstechnologien und -systeme in einem frühen Stadium zu fördern, sodass deren Zugänglichkeit mit möglichst geringem Kostenaufwand erreicht wird."
+              "text": "um die Gestaltung, die Entwicklung, die Herstellung und den Vertrieb zugänglicher Informations- und Kommunikationstechnologien und -systeme in einem frühen Stadium zu fördern, sodass deren Zugänglichkeit mit möglichst geringem Kostenaufwand erreicht wird.",
+              "trenner": ")"
             }
           ]
         }
       ],
       "stand": "2026-05-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/245/de#art_9",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260501",
-      "sha": "4123842767d8b5a583cba7527c65f9d2e9172481332a4926d11ea49074369ef3"
+      "sha": "b4fbb0de23e3eeaf0ffd69ef4f6d28beb7dafaeef90655d5b4b0c5529af015ef"
     },
     {
       "id": "bund/UNO_BRK/art_10",
@@ -422,7 +459,7 @@
       ],
       "stand": "2026-05-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/245/de#art_10",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260501",
       "sha": "ea99b0ca41f40e8fac8f4ec5109bab66c0c1859b9b439ccff2bc41b56452ffa9"
     },
@@ -441,7 +478,7 @@
       ],
       "stand": "2026-05-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/245/de#art_11",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260501",
       "sha": "e258b453aa758012e0409c53cc8b87e918703a94abc047b3bbee0ca691107d91"
     },
@@ -476,7 +513,7 @@
       ],
       "stand": "2026-05-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/245/de#art_12",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260501",
       "sha": "efe5e381164a73b376fe771fd515263c6f3731a43d05f1b32fd402d203687c37"
     },
@@ -499,7 +536,7 @@
       ],
       "stand": "2026-05-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/245/de#art_13",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260501",
       "sha": "b09542be740fdd42164b740ef7b6536c7c0b539f4d7ba5a3d44598f9accaf65d"
     },
@@ -517,11 +554,13 @@
           "items": [
             {
               "marke": "a",
-              "text": "dass Menschen mit Behinderungen gleichberechtigt mit anderen das Recht auf persönliche Freiheit und Sicherheit geniessen;"
+              "text": "dass Menschen mit Behinderungen gleichberechtigt mit anderen das Recht auf persönliche Freiheit und Sicherheit geniessen;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "dass Menschen mit Behinderungen gleichberechtigt mit anderen die Freiheit nicht rechtswidrig oder willkürlich entzogen wird, dass jede Freiheitsentziehung im Einklang mit dem Gesetz erfolgt und dass das Vorliegen einer Behinderung in keinem Fall eine Freiheitsentziehung rechtfertigt."
+              "text": "dass Menschen mit Behinderungen gleichberechtigt mit anderen die Freiheit nicht rechtswidrig oder willkürlich entzogen wird, dass jede Freiheitsentziehung im Einklang mit dem Gesetz erfolgt und dass das Vorliegen einer Behinderung in keinem Fall eine Freiheitsentziehung rechtfertigt.",
+              "trenner": ")"
             }
           ]
         },
@@ -532,9 +571,9 @@
       ],
       "stand": "2026-05-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/245/de#art_14",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260501",
-      "sha": "70027a1a90d94b182f65d2c8132770d80dbf77261f9812c02eb4bc3df3873ad4"
+      "sha": "9db0e8a712752d27cb355e7cb872cd8588b291960e339f4503151d648b89ca0d"
     },
     {
       "id": "bund/UNO_BRK/art_15",
@@ -555,7 +594,7 @@
       ],
       "stand": "2026-05-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/245/de#art_15",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260501",
       "sha": "9aac18cf311b7f9339aed47c9109fd99fd859f8e1ed0062f7a7557ab1fe8c382"
     },
@@ -590,7 +629,7 @@
       ],
       "stand": "2026-05-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/245/de#art_16",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260501",
       "sha": "7c4d89a34dbf701e4b3748b0f59015ebb304e2dce0672d093d37a469e7ce8121"
     },
@@ -609,7 +648,7 @@
       ],
       "stand": "2026-05-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/245/de#art_17",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260501",
       "sha": "bf28f23736c8a033ab2a050d2d389f8c04fe44359bfc83763f70622f317fd40d"
     },
@@ -627,19 +666,23 @@
           "items": [
             {
               "marke": "a",
-              "text": "Menschen mit Behinderungen das Recht haben, eine Staatsangehörigkeit zu erwerben und ihre Staatsangehörigkeit zu wechseln, und dass ihnen diese nicht willkürlich oder aufgrund von Behinderung entzogen wird;"
+              "text": "Menschen mit Behinderungen das Recht haben, eine Staatsangehörigkeit zu erwerben und ihre Staatsangehörigkeit zu wechseln, und dass ihnen diese nicht willkürlich oder aufgrund von Behinderung entzogen wird;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "Menschen mit Behinderungen nicht aufgrund von Behinderung die Möglichkeit versagt wird, Dokumente zum Nachweis ihrer Staatsangehörigkeit oder andere Identitätsdokumente zu erhalten, zu besitzen und zu verwenden oder einschlägige Verfahren wie Einwanderungsverfahren in Anspruch zu nehmen, die gegebenenfalls erforderlich sind, um die Ausübung des Rechts auf Freizügigkeit zu erleichtern;"
+              "text": "Menschen mit Behinderungen nicht aufgrund von Behinderung die Möglichkeit versagt wird, Dokumente zum Nachweis ihrer Staatsangehörigkeit oder andere Identitätsdokumente zu erhalten, zu besitzen und zu verwenden oder einschlägige Verfahren wie Einwanderungsverfahren in Anspruch zu nehmen, die gegebenenfalls erforderlich sind, um die Ausübung des Rechts auf Freizügigkeit zu erleichtern;",
+              "trenner": ")"
             },
             {
               "marke": "c",
-              "text": "Menschen mit Behinderungen die Freiheit haben, jedes Land einschliesslich ihres eigenen zu verlassen;"
+              "text": "Menschen mit Behinderungen die Freiheit haben, jedes Land einschliesslich ihres eigenen zu verlassen;",
+              "trenner": ")"
             },
             {
               "marke": "d",
-              "text": "Menschen mit Behinderungen nicht willkürlich oder aufgrund von Behinderung das Recht entzogen wird, in ihr eigenes Land einzureisen."
+              "text": "Menschen mit Behinderungen nicht willkürlich oder aufgrund von Behinderung das Recht entzogen wird, in ihr eigenes Land einzureisen.",
+              "trenner": ")"
             }
           ]
         },
@@ -650,9 +693,9 @@
       ],
       "stand": "2026-05-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/245/de#art_18",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260501",
-      "sha": "3e85efe3e2ea771f828ae961fc6800c2067c72c266b52cf7c286277e078e6458"
+      "sha": "36a31f7b51f5182dedfbfc41594849e94d70e4cebb85ae040a68e53d787ee329"
     },
     {
       "id": "bund/UNO_BRK/art_19",
@@ -668,24 +711,27 @@
           "items": [
             {
               "marke": "a",
-              "text": "Menschen mit Behinderungen gleichberechtigt die Möglichkeit haben, ihren Aufenthaltsort zu wählen und zu entscheiden, wo und mit wem sie leben, und nicht verpflichtet sind, in besonderen Wohnformen zu leben;"
+              "text": "Menschen mit Behinderungen gleichberechtigt die Möglichkeit haben, ihren Aufenthaltsort zu wählen und zu entscheiden, wo und mit wem sie leben, und nicht verpflichtet sind, in besonderen Wohnformen zu leben;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "Menschen mit Behinderungen Zugang zu einer Reihe von gemeindenahen Unterstützungsdiensten zu Hause und in Einrichtungen sowie zu sonstigen gemeindenahen Unterstützungsdiensten haben, einschliesslich der persönlichen Assistenz, die zur Unterstützung des Lebens in der Gemeinschaft und der Einbeziehung in die Gemeinschaft sowie zur Verhinderung von Isolation und Absonderung von der Gemeinschaft notwendig ist;"
+              "text": "Menschen mit Behinderungen Zugang zu einer Reihe von gemeindenahen Unterstützungsdiensten zu Hause und in Einrichtungen sowie zu sonstigen gemeindenahen Unterstützungsdiensten haben, einschliesslich der persönlichen Assistenz, die zur Unterstützung des Lebens in der Gemeinschaft und der Einbeziehung in die Gemeinschaft sowie zur Verhinderung von Isolation und Absonderung von der Gemeinschaft notwendig ist;",
+              "trenner": ")"
             },
             {
               "marke": "c",
-              "text": "gemeindenahe Dienstleistungen und Einrichtungen für die Allgemeinheit Menschen mit Behinderungen auf der Grundlage der Gleichberechtigung zur Verfügung stehen und ihren Bedürfnissen Rechnung tragen."
+              "text": "gemeindenahe Dienstleistungen und Einrichtungen für die Allgemeinheit Menschen mit Behinderungen auf der Grundlage der Gleichberechtigung zur Verfügung stehen und ihren Bedürfnissen Rechnung tragen.",
+              "trenner": ")"
             }
           ]
         }
       ],
       "stand": "2026-05-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/245/de#art_19",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260501",
-      "sha": "5715990a6f40146ad1137e6a86666bdcce00e735f82eea5a2c29ee2feaeee4df"
+      "sha": "4a0b04f394554060e96510561f54b246c23cb72814f9930f6319d6eb93549c4a"
     },
     {
       "id": "bund/UNO_BRK/art_20",
@@ -701,28 +747,32 @@
           "items": [
             {
               "marke": "a",
-              "text": "die persönliche Mobilität von Menschen mit Behinderungen in der Art und Weise und zum Zeitpunkt ihrer Wahl und zu erschwinglichen Kosten erleichtern;"
+              "text": "die persönliche Mobilität von Menschen mit Behinderungen in der Art und Weise und zum Zeitpunkt ihrer Wahl und zu erschwinglichen Kosten erleichtern;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "den Zugang von Menschen mit Behinderungen zu hochwertigen Mobilitätshilfen, Geräten, unterstützenden Technologien und menschlicher und tierischer Hilfe sowie Mittelspersonen erleichtern, auch durch deren Bereitstellung zu erschwinglichen Kosten;"
+              "text": "den Zugang von Menschen mit Behinderungen zu hochwertigen Mobilitätshilfen, Geräten, unterstützenden Technologien und menschlicher und tierischer Hilfe sowie Mittelspersonen erleichtern, auch durch deren Bereitstellung zu erschwinglichen Kosten;",
+              "trenner": ")"
             },
             {
               "marke": "c",
-              "text": "Menschen mit Behinderungen und Fachkräften, die mit Menschen mit Behinderungen arbeiten, Schulungen in Mobilitätsfertigkeiten anbieten;"
+              "text": "Menschen mit Behinderungen und Fachkräften, die mit Menschen mit Behinderungen arbeiten, Schulungen in Mobilitätsfertigkeiten anbieten;",
+              "trenner": ")"
             },
             {
               "marke": "d",
-              "text": "Hersteller von Mobilitätshilfen, Geräten und unterstützenden Technologien ermutigen, alle Aspekte der Mobilität für Menschen mit Behinderungen zu berücksichtigen."
+              "text": "Hersteller von Mobilitätshilfen, Geräten und unterstützenden Technologien ermutigen, alle Aspekte der Mobilität für Menschen mit Behinderungen zu berücksichtigen.",
+              "trenner": ")"
             }
           ]
         }
       ],
       "stand": "2026-05-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/245/de#art_20",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260501",
-      "sha": "5711108d532ddb1e08ae2026264a1da9ccafe37d231196997cd717c42e50d60f"
+      "sha": "50cae5b529bad1535352ba3e91cdd3b7d164daa6cdf9cdf9a6cd7bdf99aec0ca"
     },
     {
       "id": "bund/UNO_BRK/art_21",
@@ -738,32 +788,37 @@
           "items": [
             {
               "marke": "a",
-              "text": "Menschen mit Behinderungen für die Allgemeinheit bestimmte Informationen rechtzeitig und ohne zusätzliche Kosten in zugänglichen Formaten und Technologien, die für unterschiedliche Arten der Behinderung geeignet sind, zur Verfügung stellen;"
+              "text": "Menschen mit Behinderungen für die Allgemeinheit bestimmte Informationen rechtzeitig und ohne zusätzliche Kosten in zugänglichen Formaten und Technologien, die für unterschiedliche Arten der Behinderung geeignet sind, zur Verfügung stellen;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "im Umgang mit Behörden die Verwendung von Gebärdensprachen, Brailleschrift, ergänzenden und alternativen Kommunikationsformen und allen sonstigen selbst gewählten zugänglichen Mitteln, Formen und Formaten der Kommunikation durch Menschen mit Behinderungen akzeptieren und erleichtern;"
+              "text": "im Umgang mit Behörden die Verwendung von Gebärdensprachen, Brailleschrift, ergänzenden und alternativen Kommunikationsformen und allen sonstigen selbst gewählten zugänglichen Mitteln, Formen und Formaten der Kommunikation durch Menschen mit Behinderungen akzeptieren und erleichtern;",
+              "trenner": ")"
             },
             {
               "marke": "c",
-              "text": "private Rechtsträger, die, einschliesslich durch das Internet, Dienste für die Allgemeinheit anbieten, dringend dazu auffordern, Informationen und Dienstleistungen in Formaten zur Verfügung zu stellen, die für Menschen mit Behinderungen zugänglich und nutzbar sind;"
+              "text": "private Rechtsträger, die, einschliesslich durch das Internet, Dienste für die Allgemeinheit anbieten, dringend dazu auffordern, Informationen und Dienstleistungen in Formaten zur Verfügung zu stellen, die für Menschen mit Behinderungen zugänglich und nutzbar sind;",
+              "trenner": ")"
             },
             {
               "marke": "d",
-              "text": "die Massenmedien, einschliesslich der Anbieter von Informationen über das Internet, dazu auffordern, ihre Dienstleistungen für Menschen mit Behinderungen zugänglich zu gestalten;"
+              "text": "die Massenmedien, einschliesslich der Anbieter von Informationen über das Internet, dazu auffordern, ihre Dienstleistungen für Menschen mit Behinderungen zugänglich zu gestalten;",
+              "trenner": ")"
             },
             {
               "marke": "e",
-              "text": "die Verwendung von Gebärdensprachen anerkennen und fördern."
+              "text": "die Verwendung von Gebärdensprachen anerkennen und fördern.",
+              "trenner": ")"
             }
           ]
         }
       ],
       "stand": "2026-05-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/245/de#art_21",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260501",
-      "sha": "135bb2ec0c678effc0673c56c87cafcad4d5b256aa31723a2beaea7ac01d77cc"
+      "sha": "0ca960411f82cb326d423280046c4000eee73b68aaf806f61dfec27afd7f7367"
     },
     {
       "id": "bund/UNO_BRK/art_22",
@@ -784,7 +839,7 @@
       ],
       "stand": "2026-05-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/245/de#art_22",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260501",
       "sha": "f80d90df5fcab1dab0c2baf0152bc71734d478a45533f927fa6f0df22696bcfd"
     },
@@ -802,15 +857,18 @@
           "items": [
             {
               "marke": "a",
-              "text": "das Recht aller Menschen mit Behinderungen im heiratsfähigen Alter, auf der Grundlage des freien und vollen Einverständnisses der künftigen Ehegatten eine Ehe zu schliessen und eine Familie zu gründen, anerkannt wird;"
+              "text": "das Recht aller Menschen mit Behinderungen im heiratsfähigen Alter, auf der Grundlage des freien und vollen Einverständnisses der künftigen Ehegatten eine Ehe zu schliessen und eine Familie zu gründen, anerkannt wird;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "das Recht von Menschen mit Behinderungen auf freie und verantwortungsbewusste Entscheidung über die Anzahl ihrer Kinder und die Geburtenabstände sowie auf Zugang zu altersgemässer Information sowie Aufklärung über Fortpflanzung und Familienplanung anerkannt wird und ihnen die notwendigen Mittel zur Ausübung dieser Rechte zur Verfügung gestellt werden;"
+              "text": "das Recht von Menschen mit Behinderungen auf freie und verantwortungsbewusste Entscheidung über die Anzahl ihrer Kinder und die Geburtenabstände sowie auf Zugang zu altersgemässer Information sowie Aufklärung über Fortpflanzung und Familienplanung anerkannt wird und ihnen die notwendigen Mittel zur Ausübung dieser Rechte zur Verfügung gestellt werden;",
+              "trenner": ")"
             },
             {
               "marke": "c",
-              "text": "Menschen mit Behinderungen, einschliesslich Kindern, gleichberechtigt mit anderen ihre Fruchtbarkeit behalten."
+              "text": "Menschen mit Behinderungen, einschliesslich Kindern, gleichberechtigt mit anderen ihre Fruchtbarkeit behalten.",
+              "trenner": ")"
             }
           ]
         },
@@ -833,9 +891,9 @@
       ],
       "stand": "2026-05-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/245/de#art_23",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260501",
-      "sha": "5cabda2ebc5766ec2892452c4ecee7019eda4a8515e2d81a6e01d036f67a1b88"
+      "sha": "8e05feca8af0b8c76b8a856f0f02e5da2610f26021f04e3fb12efa660abd6788"
     },
     {
       "id": "bund/UNO_BRK/art_24",
@@ -851,15 +909,18 @@
           "items": [
             {
               "marke": "a",
-              "text": "die menschlichen Möglichkeiten sowie das Bewusstsein der Würde und das Selbstwertgefühl des Menschen voll zur Entfaltung zu bringen und die Achtung vor den Menschenrechten, den Grundfreiheiten und der menschlichen Vielfalt zu stärken;"
+              "text": "die menschlichen Möglichkeiten sowie das Bewusstsein der Würde und das Selbstwertgefühl des Menschen voll zur Entfaltung zu bringen und die Achtung vor den Menschenrechten, den Grundfreiheiten und der menschlichen Vielfalt zu stärken;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "Menschen mit Behinderungen ihre Persönlichkeit, ihre Begabungen und ihre Kreativität sowie ihre geistigen und körperlichen Fähigkeiten voll zur Entfaltung bringen zu lassen;"
+              "text": "Menschen mit Behinderungen ihre Persönlichkeit, ihre Begabungen und ihre Kreativität sowie ihre geistigen und körperlichen Fähigkeiten voll zur Entfaltung bringen zu lassen;",
+              "trenner": ")"
             },
             {
               "marke": "c",
-              "text": "Menschen mit Behinderungen zur wirklichen Teilhabe an einer freien Gesellschaft zu befähigen."
+              "text": "Menschen mit Behinderungen zur wirklichen Teilhabe an einer freien Gesellschaft zu befähigen.",
+              "trenner": ")"
             }
           ]
         },
@@ -869,23 +930,28 @@
           "items": [
             {
               "marke": "a",
-              "text": "Menschen mit Behinderungen nicht aufgrund von Behinderung vom allgemeinen Bildungssystem ausgeschlossen werden und dass Kinder mit Behinderungen nicht aufgrund von Behinderung vom unentgeltlichen und obligatorischen Grundschulunterricht oder vom Besuch weiterführender Schulen ausgeschlossen werden;"
+              "text": "Menschen mit Behinderungen nicht aufgrund von Behinderung vom allgemeinen Bildungssystem ausgeschlossen werden und dass Kinder mit Behinderungen nicht aufgrund von Behinderung vom unentgeltlichen und obligatorischen Grundschulunterricht oder vom Besuch weiterführender Schulen ausgeschlossen werden;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "Menschen mit Behinderungen gleichberechtigt mit anderen in der Gemeinschaft, in der sie leben, Zugang zu einem integrativen, hochwertigen und unentgeltlichen Unterricht an Grundschulen und weiterführenden Schulen haben;"
+              "text": "Menschen mit Behinderungen gleichberechtigt mit anderen in der Gemeinschaft, in der sie leben, Zugang zu einem integrativen, hochwertigen und unentgeltlichen Unterricht an Grundschulen und weiterführenden Schulen haben;",
+              "trenner": ")"
             },
             {
               "marke": "c",
-              "text": "angemessene Vorkehrungen für die Bedürfnisse des Einzelnen getroffen werden;"
+              "text": "angemessene Vorkehrungen für die Bedürfnisse des Einzelnen getroffen werden;",
+              "trenner": ")"
             },
             {
               "marke": "d",
-              "text": "Menschen mit Behinderungen innerhalb des allgemeinen Bildungssystems die notwendige Unterstützung geleistet wird, um ihre erfolgreiche Bildung zu erleichtern;"
+              "text": "Menschen mit Behinderungen innerhalb des allgemeinen Bildungssystems die notwendige Unterstützung geleistet wird, um ihre erfolgreiche Bildung zu erleichtern;",
+              "trenner": ")"
             },
             {
               "marke": "e",
-              "text": "in Übereinstimmung mit dem Ziel der vollständigen Integration wirksame individuell angepasste Unterstützungsmassnahmen in einem Umfeld, das die bestmögliche schulische und soziale Entwicklung gestattet, angeboten werden."
+              "text": "in Übereinstimmung mit dem Ziel der vollständigen Integration wirksame individuell angepasste Unterstützungsmassnahmen in einem Umfeld, das die bestmögliche schulische und soziale Entwicklung gestattet, angeboten werden.",
+              "trenner": ")"
             }
           ]
         },
@@ -895,15 +961,18 @@
           "items": [
             {
               "marke": "a",
-              "text": "erleichtern sie das Erlernen von Brailleschrift, alternativer Schrift, ergänzenden und alternativen Formen, Mitteln und Formaten der Kommunikation, den Erwerb von Orientierungs- und Mobilitätsfertigkeiten sowie die Unterstützung durch andere Menschen mit Behinderungen und das Mentoring;"
+              "text": "erleichtern sie das Erlernen von Brailleschrift, alternativer Schrift, ergänzenden und alternativen Formen, Mitteln und Formaten der Kommunikation, den Erwerb von Orientierungs- und Mobilitätsfertigkeiten sowie die Unterstützung durch andere Menschen mit Behinderungen und das Mentoring;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "erleichtern sie das Erlernen der Gebärdensprache und die Förderung der sprachlichen Identität der Gehörlosen;"
+              "text": "erleichtern sie das Erlernen der Gebärdensprache und die Förderung der sprachlichen Identität der Gehörlosen;",
+              "trenner": ")"
             },
             {
               "marke": "c",
-              "text": "stellen sie sicher, dass blinden, gehörlosen oder taubblinden Menschen, insbesondere Kindern, Bildung in den Sprachen und Kommunikationsformen und mit den Kommunikationsmitteln, die für den Einzelnen am besten geeignet sind, sowie in einem Umfeld vermittelt wird, das die bestmögliche schulische und soziale Entwicklung gestattet."
+              "text": "stellen sie sicher, dass blinden, gehörlosen oder taubblinden Menschen, insbesondere Kindern, Bildung in den Sprachen und Kommunikationsformen und mit den Kommunikationsmitteln, die für den Einzelnen am besten geeignet sind, sowie in einem Umfeld vermittelt wird, das die bestmögliche schulische und soziale Entwicklung gestattet.",
+              "trenner": ")"
             }
           ]
         },
@@ -918,9 +987,9 @@
       ],
       "stand": "2026-05-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/245/de#art_24",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260501",
-      "sha": "351392c9425563d4f8a80a9615df5eb5a1d5b0983c25d3c5e92551765a032038"
+      "sha": "75e8bf5199578becdc2b94449b2161fe1a4d684d3ef25cddc6fe72b20253a4db"
     },
     {
       "id": "bund/UNO_BRK/art_25",
@@ -936,36 +1005,42 @@
           "items": [
             {
               "marke": "a",
-              "text": "stellen die Vertragsparteien Menschen mit Behinderungen eine unentgeltliche oder erschwingliche Gesundheitsversorgung in derselben Bandbreite, von derselben Qualität und auf demselben Standard zur Verfügung wie anderen Menschen, einschliesslich sexual- und fortpflanzungsmedizinischer Gesundheitsleistungen und der Gesamtbevölkerung zur Verfügung stehender Programme des öffentlichen Gesundheitswesens;"
+              "text": "stellen die Vertragsparteien Menschen mit Behinderungen eine unentgeltliche oder erschwingliche Gesundheitsversorgung in derselben Bandbreite, von derselben Qualität und auf demselben Standard zur Verfügung wie anderen Menschen, einschliesslich sexual- und fortpflanzungsmedizinischer Gesundheitsleistungen und der Gesamtbevölkerung zur Verfügung stehender Programme des öffentlichen Gesundheitswesens;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "bieten die Vertragsstaaten die Gesundheitsleistungen an, die von Menschen mit Behinderungen speziell wegen ihrer Behinderungen benötigt werden, soweit angebracht, einschliesslich Früherkennung und Frühintervention, sowie Leistungen, durch die, auch bei Kindern und älteren Menschen, weitere Behinderungen möglichst gering gehalten oder vermieden werden sollen;"
+              "text": "bieten die Vertragsstaaten die Gesundheitsleistungen an, die von Menschen mit Behinderungen speziell wegen ihrer Behinderungen benötigt werden, soweit angebracht, einschliesslich Früherkennung und Frühintervention, sowie Leistungen, durch die, auch bei Kindern und älteren Menschen, weitere Behinderungen möglichst gering gehalten oder vermieden werden sollen;",
+              "trenner": ")"
             },
             {
               "marke": "c",
-              "text": "bieten die Vertragsstaaten diese Gesundheitsleistungen so gemeindenah wie möglich an, auch in ländlichen Gebieten;"
+              "text": "bieten die Vertragsstaaten diese Gesundheitsleistungen so gemeindenah wie möglich an, auch in ländlichen Gebieten;",
+              "trenner": ")"
             },
             {
               "marke": "d",
-              "text": "erlegen die Vertragsstaaten den Angehörigen der Gesundheitsberufe die Verpflichtung auf, Menschen mit Behinderungen eine Versorgung von gleicher Qualität wie anderen Menschen angedeihen zu lassen, namentlich auf der Grundlage der freien Einwilligung nach vorheriger Aufklärung, indem sie unter anderem durch Schulungen und den Erlass ethischer Normen für die staatliche und private Gesundheitsversorgung das Bewusstsein für die Menschenrechte, die Würde, die Autonomie und die Bedürfnisse von Menschen mit Behinderungen schärfen;"
+              "text": "erlegen die Vertragsstaaten den Angehörigen der Gesundheitsberufe die Verpflichtung auf, Menschen mit Behinderungen eine Versorgung von gleicher Qualität wie anderen Menschen angedeihen zu lassen, namentlich auf der Grundlage der freien Einwilligung nach vorheriger Aufklärung, indem sie unter anderem durch Schulungen und den Erlass ethischer Normen für die staatliche und private Gesundheitsversorgung das Bewusstsein für die Menschenrechte, die Würde, die Autonomie und die Bedürfnisse von Menschen mit Behinderungen schärfen;",
+              "trenner": ")"
             },
             {
               "marke": "e",
-              "text": "verbieten die Vertragsstaaten die Diskriminierung von Menschen mit Behinderungen in der Krankenversicherung und in der Lebensversicherung, soweit eine solche Versicherung nach innerstaatlichem Recht zulässig ist; solche Versicherungen sind zu fairen und angemessenen Bedingungen anzubieten;"
+              "text": "verbieten die Vertragsstaaten die Diskriminierung von Menschen mit Behinderungen in der Krankenversicherung und in der Lebensversicherung, soweit eine solche Versicherung nach innerstaatlichem Recht zulässig ist; solche Versicherungen sind zu fairen und angemessenen Bedingungen anzubieten;",
+              "trenner": ")"
             },
             {
               "marke": "f",
-              "text": "verhindern die Vertragsstaaten die diskriminierende Vorenthaltung von Gesundheitsversorgung oder -leistungen oder von Nahrungsmitteln und Flüssigkeiten aufgrund von Behinderung."
+              "text": "verhindern die Vertragsstaaten die diskriminierende Vorenthaltung von Gesundheitsversorgung oder -leistungen oder von Nahrungsmitteln und Flüssigkeiten aufgrund von Behinderung.",
+              "trenner": ")"
             }
           ]
         }
       ],
       "stand": "2026-05-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/245/de#art_25",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260501",
-      "sha": "6244c5e233ce70b77980f70c3b5b44f614fd344ffaea2dc63a0d918e86c03144"
+      "sha": "e7c539a5d2517b3f0ef28da052121d935759164ef09eb23df22df2b75714d1cf"
     },
     {
       "id": "bund/UNO_BRK/art_26",
@@ -981,11 +1056,13 @@
           "items": [
             {
               "marke": "a",
-              "text": "im frühestmöglichen Stadium einsetzen und auf einer multidisziplinären Bewertung der individuellen Bedürfnisse und Stärken beruhen;"
+              "text": "im frühestmöglichen Stadium einsetzen und auf einer multidisziplinären Bewertung der individuellen Bedürfnisse und Stärken beruhen;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "die Einbeziehung in die Gemeinschaft und die Gesellschaft in allen ihren Aspekten sowie die Teilhabe daran unterstützen, freiwillig sind und Menschen mit Behinderungen so gemeindenah wie möglich zur Verfügung stehen, auch in ländlichen Gebieten."
+              "text": "die Einbeziehung in die Gemeinschaft und die Gesellschaft in allen ihren Aspekten sowie die Teilhabe daran unterstützen, freiwillig sind und Menschen mit Behinderungen so gemeindenah wie möglich zur Verfügung stehen, auch in ländlichen Gebieten.",
+              "trenner": ")"
             }
           ]
         },
@@ -1000,9 +1077,9 @@
       ],
       "stand": "2026-05-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/245/de#art_26",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260501",
-      "sha": "7d9bc94127823d32069f5ea5086e0f1e6d8507833f6a7c184ac3e8a3150e0433"
+      "sha": "f81f9e2d5f056f3acd8efbb89682a3de2dbaab3a23bd4c5bb9ebe01f0e636cff"
     },
     {
       "id": "bund/UNO_BRK/art_27",
@@ -1018,47 +1095,58 @@
           "items": [
             {
               "marke": "a",
-              "text": "Diskriminierung aufgrund von Behinderung in allen Angelegenheiten im Zusammenhang mit einer Beschäftigung gleich welcher Art, einschliesslich der Auswahl-, Einstellungs- und Beschäftigungsbedingungen, der Weiterbeschäftigung, des beruflichen Aufstiegs sowie sicherer und gesunder Arbeitsbedingungen, zu verbieten;"
+              "text": "Diskriminierung aufgrund von Behinderung in allen Angelegenheiten im Zusammenhang mit einer Beschäftigung gleich welcher Art, einschliesslich der Auswahl-, Einstellungs- und Beschäftigungsbedingungen, der Weiterbeschäftigung, des beruflichen Aufstiegs sowie sicherer und gesunder Arbeitsbedingungen, zu verbieten;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "das gleiche Recht von Menschen mit Behinderungen auf gerechte und günstige Arbeitsbedingungen, einschliesslich Chancengleichheit und gleichen Entgelts für gleichwertige Arbeit, auf sichere und gesunde Arbeitsbedingungen, einschliesslich Schutz vor Belästigungen, und auf Abhilfe bei Missständen zu schützen;"
+              "text": "das gleiche Recht von Menschen mit Behinderungen auf gerechte und günstige Arbeitsbedingungen, einschliesslich Chancengleichheit und gleichen Entgelts für gleichwertige Arbeit, auf sichere und gesunde Arbeitsbedingungen, einschliesslich Schutz vor Belästigungen, und auf Abhilfe bei Missständen zu schützen;",
+              "trenner": ")"
             },
             {
               "marke": "c",
-              "text": "zu gewährleisten, dass Menschen mit Behinderungen ihre Arbeitnehmer- und Gewerkschaftsrechte gleichberechtigt mit anderen ausüben können;"
+              "text": "zu gewährleisten, dass Menschen mit Behinderungen ihre Arbeitnehmer- und Gewerkschaftsrechte gleichberechtigt mit anderen ausüben können;",
+              "trenner": ")"
             },
             {
               "marke": "d",
-              "text": "Menschen mit Behinderungen wirksamen Zugang zu allgemeinen fachlichen und beruflichen Beratungsprogrammen, Stellenvermittlung sowie Berufsausbildung und Weiterbildung zu ermöglichen;"
+              "text": "Menschen mit Behinderungen wirksamen Zugang zu allgemeinen fachlichen und beruflichen Beratungsprogrammen, Stellenvermittlung sowie Berufsausbildung und Weiterbildung zu ermöglichen;",
+              "trenner": ")"
             },
             {
               "marke": "e",
-              "text": "für Menschen mit Behinderungen Beschäftigungsmöglichkeiten und beruflichen Aufstieg auf dem Arbeitsmarkt sowie die Unterstützung bei der Arbeitssuche, beim Erhalt und der Beibehaltung eines Arbeitsplatzes und beim beruflichen Wiedereinstieg zu fördern;"
+              "text": "für Menschen mit Behinderungen Beschäftigungsmöglichkeiten und beruflichen Aufstieg auf dem Arbeitsmarkt sowie die Unterstützung bei der Arbeitssuche, beim Erhalt und der Beibehaltung eines Arbeitsplatzes und beim beruflichen Wiedereinstieg zu fördern;",
+              "trenner": ")"
             },
             {
               "marke": "f",
-              "text": "Möglichkeiten für Selbständigkeit, Unternehmertum, die Bildung von Genossenschaften und die Gründung eines eigenen Geschäfts zu fördern;"
+              "text": "Möglichkeiten für Selbständigkeit, Unternehmertum, die Bildung von Genossenschaften und die Gründung eines eigenen Geschäfts zu fördern;",
+              "trenner": ")"
             },
             {
               "marke": "g",
-              "text": "Menschen mit Behinderungen im öffentlichen Sektor zu beschäftigen;"
+              "text": "Menschen mit Behinderungen im öffentlichen Sektor zu beschäftigen;",
+              "trenner": ")"
             },
             {
               "marke": "h",
-              "text": "die Beschäftigung von Menschen mit Behinderungen im privaten Sektor durch geeignete Strategien und Massnahmen zu fördern, wozu auch Programme für positive Massnahmen, Anreize und andere Massnahmen gehören können;"
+              "text": "die Beschäftigung von Menschen mit Behinderungen im privaten Sektor durch geeignete Strategien und Massnahmen zu fördern, wozu auch Programme für positive Massnahmen, Anreize und andere Massnahmen gehören können;",
+              "trenner": ")"
             },
             {
               "marke": "i",
-              "text": "sicherzustellen, dass am Arbeitsplatz angemessene Vorkehrungen für Menschen mit Behinderungen getroffen werden;"
+              "text": "sicherzustellen, dass am Arbeitsplatz angemessene Vorkehrungen für Menschen mit Behinderungen getroffen werden;",
+              "trenner": ")"
             },
             {
               "marke": "j",
-              "text": "das Sammeln von Arbeitserfahrung auf dem allgemeinen Arbeitsmarkt durch Menschen mit Behinderungen zu fördern;"
+              "text": "das Sammeln von Arbeitserfahrung auf dem allgemeinen Arbeitsmarkt durch Menschen mit Behinderungen zu fördern;",
+              "trenner": ")"
             },
             {
               "marke": "k",
-              "text": "Programme für die berufliche Rehabilitation, den Erhalt des Arbeitsplatzes und den beruflichen Wiedereinstieg von Menschen mit Behinderungen zu fördern."
+              "text": "Programme für die berufliche Rehabilitation, den Erhalt des Arbeitsplatzes und den beruflichen Wiedereinstieg von Menschen mit Behinderungen zu fördern.",
+              "trenner": ")"
             }
           ]
         },
@@ -1069,9 +1157,9 @@
       ],
       "stand": "2026-05-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/245/de#art_27",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260501",
-      "sha": "025174d29382254088fac229a39b44c5fd7e5708a1e20a03a4ec13319feff030"
+      "sha": "086ba06fc06142586f01085622a8744cd6780e03d441a18f820cf3e9f12e0d0b"
     },
     {
       "id": "bund/UNO_BRK/art_28",
@@ -1091,32 +1179,37 @@
           "items": [
             {
               "marke": "a",
-              "text": "Menschen mit Behinderungen gleichberechtigten Zugang zur Versorgung mit sauberem Wasser und den Zugang zu geeigneten und erschwinglichen Dienstleistungen, Geräten und anderen Hilfen für Bedürfnisse im Zusammenhang mit ihrer Behinderung zu sichern;"
+              "text": "Menschen mit Behinderungen gleichberechtigten Zugang zur Versorgung mit sauberem Wasser und den Zugang zu geeigneten und erschwinglichen Dienstleistungen, Geräten und anderen Hilfen für Bedürfnisse im Zusammenhang mit ihrer Behinderung zu sichern;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "Menschen mit Behinderungen, insbesondere Frauen und Mädchen sowie älteren Menschen mit Behinderungen, den Zugang zu Programmen für sozialen Schutz und Programmen zur Armutsbekämpfung zu sichern;"
+              "text": "Menschen mit Behinderungen, insbesondere Frauen und Mädchen sowie älteren Menschen mit Behinderungen, den Zugang zu Programmen für sozialen Schutz und Programmen zur Armutsbekämpfung zu sichern;",
+              "trenner": ")"
             },
             {
               "marke": "c",
-              "text": "in Armut lebenden Menschen mit Behinderungen und ihren Familien den Zugang zu staatlicher Hilfe bei behinderungsbedingten Aufwendungen, einschliesslich ausreichender Schulung, Beratung, finanzieller Unterstützung sowie Kurzzeitbetreuung, zu sichern;"
+              "text": "in Armut lebenden Menschen mit Behinderungen und ihren Familien den Zugang zu staatlicher Hilfe bei behinderungsbedingten Aufwendungen, einschliesslich ausreichender Schulung, Beratung, finanzieller Unterstützung sowie Kurzzeitbetreuung, zu sichern;",
+              "trenner": ")"
             },
             {
               "marke": "d",
-              "text": "Menschen mit Behinderungen den Zugang zu Programmen des sozialen Wohnungsbaus zu sichern;"
+              "text": "Menschen mit Behinderungen den Zugang zu Programmen des sozialen Wohnungsbaus zu sichern;",
+              "trenner": ")"
             },
             {
               "marke": "e",
-              "text": "Menschen mit Behinderungen gleichberechtigten Zugang zu Leistungen und Programmen der Altersversorgung zu sichern."
+              "text": "Menschen mit Behinderungen gleichberechtigten Zugang zu Leistungen und Programmen der Altersversorgung zu sichern.",
+              "trenner": ")"
             }
           ]
         }
       ],
       "stand": "2026-05-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/245/de#art_28",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260501",
-      "sha": "dfc0466c922d005b604d18156489bceb4f9612cb8693ddf52a060c7c60f6df5b"
+      "sha": "5043901b0da1f3b6bf16957e623a8fc767f16e6ec4f0c957ff8168d442f6789f"
     },
     {
       "id": "bund/UNO_BRK/art_29",
@@ -1132,45 +1225,52 @@
           "items": [
             {
               "marke": "a",
-              "text": "sicherzustellen, dass Menschen mit Behinderungen gleichberechtigt mit anderen wirksam und umfassend am politischen und öffentlichen Leben teilhaben können, sei es unmittelbar oder durch frei gewählte Vertreter oder Vertreterinnen, was auch das Recht und die Möglichkeit einschliesst, zu wählen und gewählt zu werden; unter anderem:"
+              "text": "sicherzustellen, dass Menschen mit Behinderungen gleichberechtigt mit anderen wirksam und umfassend am politischen und öffentlichen Leben teilhaben können, sei es unmittelbar oder durch frei gewählte Vertreter oder Vertreterinnen, was auch das Recht und die Möglichkeit einschliesst, zu wählen und gewählt zu werden; unter anderem:",
+              "trenner": ")"
             },
             {
               "marke": "i",
               "text": "stellen sie sicher, dass die Wahlverfahren, -einrichtungen und ‑materialien geeignet, zugänglich und leicht zu verstehen und zu handhaben sind,",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ")"
             },
             {
               "marke": "ii",
               "text": "schützen sie das Recht von Menschen mit Behinderungen, bei Wahlen und Volksabstimmungen in geheimer Abstimmung ohne Einschüchterung ihre Stimme abzugeben, bei Wahlen zu kandidieren, ein Amt wirksam innezuhaben und alle öffentlichen Aufgaben auf allen Ebenen staatlicher Tätigkeit wahrzunehmen, indem sie gegebenenfalls die Nutzung unterstützender und neuer Technologien erleichtern,",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ")"
             },
             {
               "marke": "iii",
               "text": "garantieren sie die freie Willensäusserung von Menschen mit Behinderungen als Wähler und Wählerinnen und erlauben zu diesem Zweck im Bedarfsfall auf Wunsch, dass sie sich bei der Stimmabgabe durch eine Person ihrer Wahl unterstützen lassen;",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "aktiv ein Umfeld zu fördern, in dem Menschen mit Behinderungen ohne Diskriminierung und gleichberechtigt mit anderen wirksam und umfassend an der Gestaltung der öffentlichen Angelegenheiten mitwirken können, und ihre Mitwirkung an den öffentlichen Angelegenheiten zu begünstigen, unter anderem:"
+              "text": "aktiv ein Umfeld zu fördern, in dem Menschen mit Behinderungen ohne Diskriminierung und gleichberechtigt mit anderen wirksam und umfassend an der Gestaltung der öffentlichen Angelegenheiten mitwirken können, und ihre Mitwirkung an den öffentlichen Angelegenheiten zu begünstigen, unter anderem:",
+              "trenner": ")"
             },
             {
               "marke": "i",
               "text": "die Mitarbeit in nichtstaatlichen Organisationen und Vereinigungen, die sich mit dem öffentlichen und politischen Leben ihres Landes befassen, und an den Tätigkeiten und der Verwaltung politischer Parteien,",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ")"
             },
             {
               "marke": "ii",
               "text": "die Bildung von Organisationen von Menschen mit Behinderungen, die sie auf internationaler, nationaler, regionaler und lokaler Ebene vertreten, und den Beitritt zu solchen Organisationen.",
-              "tiefe": 1
+              "tiefe": 1,
+              "trenner": ")"
             }
           ]
         }
       ],
       "stand": "2026-05-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/245/de#art_29",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260501",
-      "sha": "1c2d2545d43bbc949e4b96e2d8b39f0283af7a1e458da4cdd1498921aa4c48f0"
+      "sha": "1fc7e9f41127255980a59c6f291940793a4cd82380a4dbcfb2df2cd23c04536b"
     },
     {
       "id": "bund/UNO_BRK/art_30",
@@ -1186,15 +1286,18 @@
           "items": [
             {
               "marke": "a",
-              "text": "Zugang zu kulturellem Material in zugänglichen Formaten haben;"
+              "text": "Zugang zu kulturellem Material in zugänglichen Formaten haben;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "Zugang zu Fernsehprogrammen, Filmen, Theatervorstellungen und anderen kulturellen Aktivitäten in zugänglichen Formaten haben;"
+              "text": "Zugang zu Fernsehprogrammen, Filmen, Theatervorstellungen und anderen kulturellen Aktivitäten in zugänglichen Formaten haben;",
+              "trenner": ")"
             },
             {
               "marke": "c",
-              "text": "Zugang zu Orten kultureller Darbietungen oder Dienstleistungen, wie Theatern, Museen, Kinos, Bibliotheken und Tourismusdiensten, sowie, so weit wie möglich, zu Denkmälern und Stätten von nationaler kultureller Bedeutung haben."
+              "text": "Zugang zu Orten kultureller Darbietungen oder Dienstleistungen, wie Theatern, Museen, Kinos, Bibliotheken und Tourismusdiensten, sowie, so weit wie möglich, zu Denkmälern und Stätten von nationaler kultureller Bedeutung haben.",
+              "trenner": ")"
             }
           ]
         },
@@ -1216,32 +1319,37 @@
           "items": [
             {
               "marke": "a",
-              "text": "um Menschen mit Behinderungen zu ermutigen, so umfassend wie möglich an breitensportlichen Aktivitäten auf allen Ebenen teilzunehmen, und ihre Teilnahme zu fördern;"
+              "text": "um Menschen mit Behinderungen zu ermutigen, so umfassend wie möglich an breitensportlichen Aktivitäten auf allen Ebenen teilzunehmen, und ihre Teilnahme zu fördern;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "um sicherzustellen, dass Menschen mit Behinderungen die Möglichkeit haben, behinderungsspezifische Sport- und Erholungsaktivitäten zu organisieren, zu entwickeln und an solchen teilzunehmen, und zu diesem Zweck die Bereitstellung eines geeigneten Angebots an Anleitung, Training und Ressourcen auf der Grundlage der Gleichberechtigung mit anderen zu fördern;"
+              "text": "um sicherzustellen, dass Menschen mit Behinderungen die Möglichkeit haben, behinderungsspezifische Sport- und Erholungsaktivitäten zu organisieren, zu entwickeln und an solchen teilzunehmen, und zu diesem Zweck die Bereitstellung eines geeigneten Angebots an Anleitung, Training und Ressourcen auf der Grundlage der Gleichberechtigung mit anderen zu fördern;",
+              "trenner": ")"
             },
             {
               "marke": "c",
-              "text": "um sicherzustellen, dass Menschen mit Behinderungen Zugang zu Sport-, Erholungs- und Tourismusstätten haben;"
+              "text": "um sicherzustellen, dass Menschen mit Behinderungen Zugang zu Sport-, Erholungs- und Tourismusstätten haben;",
+              "trenner": ")"
             },
             {
               "marke": "d",
-              "text": "um sicherzustellen, dass Kinder mit Behinderungen gleichberechtigt mit anderen Kindern an Spiel-, Erholungs-, Freizeit- und Sportaktivitäten teilnehmen können, einschliesslich im schulischen Bereich;"
+              "text": "um sicherzustellen, dass Kinder mit Behinderungen gleichberechtigt mit anderen Kindern an Spiel-, Erholungs-, Freizeit- und Sportaktivitäten teilnehmen können, einschliesslich im schulischen Bereich;",
+              "trenner": ")"
             },
             {
               "marke": "e",
-              "text": "um sicherzustellen, dass Menschen mit Behinderungen Zugang zu Dienstleistungen der Organisatoren von Erholungs-, Tourismus-, Freizeit- und Sportaktivitäten haben."
+              "text": "um sicherzustellen, dass Menschen mit Behinderungen Zugang zu Dienstleistungen der Organisatoren von Erholungs-, Tourismus-, Freizeit- und Sportaktivitäten haben.",
+              "trenner": ")"
             }
           ]
         }
       ],
       "stand": "2026-05-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/245/de#art_30",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260501",
-      "sha": "3ab7d83668dd55cfefbac3ad816e521ede9678dc7c0f875f8bf79e369c03bff7"
+      "sha": "e427f3f8270737d0965ddaec35e808cb8085d845c7f0606898d63096bd7664e7"
     },
     {
       "id": "bund/UNO_BRK/art_31",
@@ -1257,11 +1365,13 @@
           "items": [
             {
               "marke": "a",
-              "text": "mit den gesetzlichen Schutzvorschriften, einschliesslich der Rechtsvorschriften über den Datenschutz, zur Sicherung der Vertraulichkeit und der Achtung der Privatsphäre von Menschen mit Behinderungen im Einklang stehen;"
+              "text": "mit den gesetzlichen Schutzvorschriften, einschliesslich der Rechtsvorschriften über den Datenschutz, zur Sicherung der Vertraulichkeit und der Achtung der Privatsphäre von Menschen mit Behinderungen im Einklang stehen;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "mit den international anerkannten Normen zum Schutz der Menschenrechte und Grundfreiheiten und den ethischen Grundsätzen für die Sammlung und Nutzung statistischer Daten im Einklang stehen."
+              "text": "mit den international anerkannten Normen zum Schutz der Menschenrechte und Grundfreiheiten und den ethischen Grundsätzen für die Sammlung und Nutzung statistischer Daten im Einklang stehen.",
+              "trenner": ")"
             }
           ]
         },
@@ -1276,9 +1386,9 @@
       ],
       "stand": "2026-05-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/245/de#art_31",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260501",
-      "sha": "5a0092c45d3e86d43f9df1663caf1fbcd8a09a71734eb8e2b6bbc44ff8bbbff8"
+      "sha": "c4b39638ecf71dc124e91dee65066260cfac87345ec67d59c8899e1e74925bf6"
     },
     {
       "id": "bund/UNO_BRK/art_32",
@@ -1294,19 +1404,23 @@
           "items": [
             {
               "marke": "a",
-              "text": "sicherzustellen, dass die internationale Zusammenarbeit, einschliesslich internationaler Entwicklungsprogramme, Menschen mit Behinderungen einbezieht und für sie zugänglich ist;"
+              "text": "sicherzustellen, dass die internationale Zusammenarbeit, einschliesslich internationaler Entwicklungsprogramme, Menschen mit Behinderungen einbezieht und für sie zugänglich ist;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "den Aufbau von Kapazitäten zu erleichtern und zu unterstützen, unter anderem durch den Austausch und die Weitergabe von Informationen, Erfahrungen, Ausbildungsprogrammen und vorbildlichen Praktiken;"
+              "text": "den Aufbau von Kapazitäten zu erleichtern und zu unterstützen, unter anderem durch den Austausch und die Weitergabe von Informationen, Erfahrungen, Ausbildungsprogrammen und vorbildlichen Praktiken;",
+              "trenner": ")"
             },
             {
               "marke": "c",
-              "text": "die Forschungszusammenarbeit und den Zugang zu wissenschaftlichen und technischen Kenntnissen zu erleichtern;"
+              "text": "die Forschungszusammenarbeit und den Zugang zu wissenschaftlichen und technischen Kenntnissen zu erleichtern;",
+              "trenner": ")"
             },
             {
               "marke": "d",
-              "text": "soweit angebracht, technische und wirtschaftliche Hilfe zu leisten, unter anderem durch Erleichterung des Zugangs zu zugänglichen und unterstützenden Technologien und ihres Austauschs sowie durch Weitergabe von Technologien."
+              "text": "soweit angebracht, technische und wirtschaftliche Hilfe zu leisten, unter anderem durch Erleichterung des Zugangs zu zugänglichen und unterstützenden Technologien und ihres Austauschs sowie durch Weitergabe von Technologien.",
+              "trenner": ")"
             }
           ]
         },
@@ -1317,9 +1431,9 @@
       ],
       "stand": "2026-05-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/245/de#art_32",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260501",
-      "sha": "a72b61ae9957c4ec37cfb1983cd95346a67e1acbc5311af3927192a5f5bb63ca"
+      "sha": "02cda08f33367e95909142b27c1d52813d50004a0d7139a59e77f9691a4d3ab0"
     },
     {
       "id": "bund/UNO_BRK/art_33",
@@ -1344,7 +1458,7 @@
       ],
       "stand": "2026-05-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/245/de#art_33",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260501",
       "sha": "6511db2c25c7b7eae3971811c7cac67f83608e0ed43888658102726453dd0a4b"
     },
@@ -1411,7 +1525,7 @@
       ],
       "stand": "2026-05-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/245/de#art_34",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260501",
       "sha": "c3c8c0bfff223c185d1834879ef9ba9f030ba8a115ba2a299138a38712df1ee6"
     },
@@ -1446,7 +1560,7 @@
       ],
       "stand": "2026-05-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/245/de#art_35",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260501",
       "sha": "2695f93ca57710f68aa41043935731e2f1da8217f6ae18df1400519d76a29b8d"
     },
@@ -1481,7 +1595,7 @@
       ],
       "stand": "2026-05-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/245/de#art_36",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260501",
       "sha": "b3effd662b02f0ddbb7de6c8e3b55d1ae3ba0b63f8b460a61fd55cf53e09ce8f"
     },
@@ -1504,7 +1618,7 @@
       ],
       "stand": "2026-05-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/245/de#art_37",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260501",
       "sha": "69771b2b2001479706d0716e4c4e161068a7b169daf66adec402a9fed86ac8f2"
     },
@@ -1522,20 +1636,22 @@
           "items": [
             {
               "marke": "a",
-              "text": "haben die Sonderorganisationen und andere Organe der Vereinten Nationen das Recht, bei der Erörterung der Durchführung derjenigen Bestimmungen des Übereinkommens, die in ihren Aufgabenbereich fallen, vertreten zu sein. Der Ausschuss kann, wenn er dies für angebracht hält, Sonderorganisationen und andere zuständige Stellen einladen, sachkundige Stellungnahmen zur Durchführung des Übereinkommens auf Gebieten abzugeben, die in ihren jeweiligen Aufgabenbereich fallen. Der Ausschuss kann Sonderorganisationen und andere Organe der Vereinten Nationen einladen, ihm Berichte über die Durchführung des Übereinkommens auf den Gebieten vorzulegen, die in ihren Tätigkeitsbereich fallen;"
+              "text": "haben die Sonderorganisationen und andere Organe der Vereinten Nationen das Recht, bei der Erörterung der Durchführung derjenigen Bestimmungen des Übereinkommens, die in ihren Aufgabenbereich fallen, vertreten zu sein. Der Ausschuss kann, wenn er dies für angebracht hält, Sonderorganisationen und andere zuständige Stellen einladen, sachkundige Stellungnahmen zur Durchführung des Übereinkommens auf Gebieten abzugeben, die in ihren jeweiligen Aufgabenbereich fallen. Der Ausschuss kann Sonderorganisationen und andere Organe der Vereinten Nationen einladen, ihm Berichte über die Durchführung des Übereinkommens auf den Gebieten vorzulegen, die in ihren Tätigkeitsbereich fallen;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "konsultiert der Ausschuss bei der Wahrnehmung seines Mandats, soweit angebracht, andere einschlägige Organe, die durch internationale Menschenrechtsverträge geschaffen wurden, mit dem Ziel, die Kohärenz ihrer jeweiligen Berichterstattungsleitlinien, Vorschläge und allgemeinen Empfehlungen zu gewährleisten sowie Doppelungen und Überschneidungen bei der Durchführung ihrer Aufgaben zu vermeiden."
+              "text": "konsultiert der Ausschuss bei der Wahrnehmung seines Mandats, soweit angebracht, andere einschlägige Organe, die durch internationale Menschenrechtsverträge geschaffen wurden, mit dem Ziel, die Kohärenz ihrer jeweiligen Berichterstattungsleitlinien, Vorschläge und allgemeinen Empfehlungen zu gewährleisten sowie Doppelungen und Überschneidungen bei der Durchführung ihrer Aufgaben zu vermeiden.",
+              "trenner": ")"
             }
           ]
         }
       ],
       "stand": "2026-05-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/245/de#art_38",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260501",
-      "sha": "36a40c3087412ec5439e822d13f69a23b6095699fb6681532425d6210a7b467f"
+      "sha": "faec7df68ef6f172b12e3ceb451537b25bc9ad47003483389a0fde91f9fc1c63"
     },
     {
       "id": "bund/UNO_BRK/art_39",
@@ -1552,7 +1668,7 @@
       ],
       "stand": "2026-05-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/245/de#art_39",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260501",
       "sha": "d114a4b16db8e85d76b0e66976c71c0cee124783a3b819853d86bf5138d3c0ac"
     },
@@ -1575,7 +1691,7 @@
       ],
       "stand": "2026-05-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/245/de#art_40",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260501",
       "sha": "4b3067a80a95e8fa0e60d78ead97ba7886916aab52c8d0d86ba51b5b589e0f0d"
     },
@@ -1594,7 +1710,7 @@
       ],
       "stand": "2026-05-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/245/de#art_41",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260501",
       "sha": "530de44d1678299d2e5e9bd32794a114245592311b9a9ab6e852ad74b9b5f7f8"
     },
@@ -1613,7 +1729,7 @@
       ],
       "stand": "2026-05-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/245/de#art_42",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260501",
       "sha": "66f8620b84ee3ec614396dabdd0d5f26811c7a46c758a7b62b6f71bf49dc5a0a"
     },
@@ -1632,7 +1748,7 @@
       ],
       "stand": "2026-05-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/245/de#art_43",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260501",
       "sha": "c6c8cae6b73f50a0e8b75bc80589e64a86471823976a2a011a2508313f19a12e"
     },
@@ -1663,7 +1779,7 @@
       ],
       "stand": "2026-05-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/245/de#art_44",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260501",
       "sha": "6a9c5911724d31db288fa84f5c2b6cc327537c8eabc54f1f6329163242c85b00"
     },
@@ -1686,7 +1802,7 @@
       ],
       "stand": "2026-05-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/245/de#art_45",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260501",
       "sha": "69ddfe8467e63fb94e6497fb6515d2f1f18620a6d342f770ff31817f909f4c6a"
     },
@@ -1709,7 +1825,7 @@
       ],
       "stand": "2026-05-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/245/de#art_46",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260501",
       "sha": "f61bcbf6e54ac7464325ded56d31d4ada24eeda2948be155e9b9892ef3af9b9b"
     },
@@ -1736,7 +1852,7 @@
       ],
       "stand": "2026-05-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/245/de#art_47",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260501",
       "sha": "b1f97c6d624739712bfda8ec0f2f0f9043e8e8b78d4f7cc439da9e3b206aadf1"
     },
@@ -1755,7 +1871,7 @@
       ],
       "stand": "2026-05-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/245/de#art_48",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260501",
       "sha": "3b42489fb13b0d6b6c7ab06ac93c2b3b6e903b2e84b46c0d34e5ede142344161"
     },
@@ -1774,7 +1890,7 @@
       ],
       "stand": "2026-05-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/245/de#art_49",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260501",
       "sha": "ef94ec388c3bc421dc41a5e9da6f587ebcfc74f444831efa991fb43378ab8305"
     },
@@ -1793,7 +1909,7 @@
       ],
       "stand": "2026-05-01",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2014/245/de#art_50",
-      "abgerufen": "2026-09-04",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20260501",
       "sha": "14f8cc20a76c68e4bc188f4ae50f537ed64e8dea20ed8bb7f16adda3c312c30b"
     }

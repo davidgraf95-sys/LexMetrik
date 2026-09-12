@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-08-29",
+  "erzeugt": "2026-09-12",
   "eintraege": [
     {
       "id": "bund/CMR/art_1",
@@ -27,15 +27,18 @@
           "items": [
             {
               "marke": "a",
-              "text": "für Beförderungen, die nach den Bestimmungen internationaler Postübereinkommen durchgeführt werden;"
+              "text": "für Beförderungen, die nach den Bestimmungen internationaler Postübereinkommen durchgeführt werden;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "für die Beförderung von Leichen;"
+              "text": "für die Beförderung von Leichen;",
+              "trenner": ")"
             },
             {
               "marke": "c",
-              "text": "für die Beförderung von Umzugsgut."
+              "text": "für die Beförderung von Umzugsgut.",
+              "trenner": ")"
             }
           ]
         },
@@ -46,9 +49,9 @@
       ],
       "stand": "2021-02-10",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1970/851_851_851/de#art_1",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20210210",
-      "sha": "4519a6c3066137508857c14f6f99a3f9923e93d1a6ec02f4b55f31e80eaa4d81"
+      "sha": "6ea4202a037c89e3db780f1784fc49749514253a5f381e1d4c88b113ed5ce5c0"
     },
     {
       "id": "bund/CMR/art_2",
@@ -69,7 +72,7 @@
       ],
       "stand": "2021-02-10",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1970/851_851_851/de#art_2",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20210210",
       "sha": "b8c628696612c3c191298b3504c3df6213f6b891904d169d0f9af680f8e13723"
     },
@@ -88,7 +91,7 @@
       ],
       "stand": "2021-02-10",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1970/851_851_851/de#art_3",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20210210",
       "sha": "5b484ac490e97654c1cab3d43720d8af40c3eb00c768ce43f1999e686b8c9937"
     },
@@ -107,7 +110,7 @@
       ],
       "stand": "2021-02-10",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1970/851_851_851/de#art_4",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20210210",
       "sha": "41fe99857e78429b9098b0ea3cdc69b870d6f42b05f1c1fc67ea3911c7b7f3f5"
     },
@@ -130,7 +133,7 @@
       ],
       "stand": "2021-02-10",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1970/851_851_851/de#art_5",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20210210",
       "sha": "9b95764f38cc68fe269b5d6e96a0cec2f48b88a2d59f51fbaf2762934bd6f881"
     },
@@ -148,47 +151,58 @@
           "items": [
             {
               "marke": "a",
-              "text": "Ort und Tag der Ausstellung;"
+              "text": "Ort und Tag der Ausstellung;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "Name und Anschrift des Absenders;"
+              "text": "Name und Anschrift des Absenders;",
+              "trenner": ")"
             },
             {
               "marke": "c",
-              "text": "Name und Anschrift des Frachtführers;"
+              "text": "Name und Anschrift des Frachtführers;",
+              "trenner": ")"
             },
             {
               "marke": "d",
-              "text": "Stelle und Tag der Übernahme des Gutes sowie die für die Ablieferung vorgesehene Stelle;"
+              "text": "Stelle und Tag der Übernahme des Gutes sowie die für die Ablieferung vorgesehene Stelle;",
+              "trenner": ")"
             },
             {
               "marke": "e",
-              "text": "Name und Anschrift des Empfängers;"
+              "text": "Name und Anschrift des Empfängers;",
+              "trenner": ")"
             },
             {
               "marke": "f",
-              "text": "die übliche Bezeichnung der Art des Gutes und die Art der Verpackung, bei gefährlichen Gütern ihre allgemein anerkannte Bezeichnung;"
+              "text": "die übliche Bezeichnung der Art des Gutes und die Art der Verpackung, bei gefährlichen Gütern ihre allgemein anerkannte Bezeichnung;",
+              "trenner": ")"
             },
             {
               "marke": "g",
-              "text": "Anzahl, Zeichen und Nummern der Frachtstücke;"
+              "text": "Anzahl, Zeichen und Nummern der Frachtstücke;",
+              "trenner": ")"
             },
             {
               "marke": "h",
-              "text": "Rohgewicht oder die anders angegebene Menge des Gutes;"
+              "text": "Rohgewicht oder die anders angegebene Menge des Gutes;",
+              "trenner": ")"
             },
             {
               "marke": "i",
-              "text": "die mit der Beförderung verbundenen Kosten (Fracht, Nebengebühren, Zölle und andere Kosten, die vom Vertragsabschluss bis zur Ablieferung anfallen);"
+              "text": "die mit der Beförderung verbundenen Kosten (Fracht, Nebengebühren, Zölle und andere Kosten, die vom Vertragsabschluss bis zur Ablieferung anfallen);",
+              "trenner": ")"
             },
             {
               "marke": "j",
-              "text": "Weisungen für die Zoll- und sonstige amtliche Behandlung;"
+              "text": "Weisungen für die Zoll- und sonstige amtliche Behandlung;",
+              "trenner": ")"
             },
             {
               "marke": "k",
-              "text": "die Angabe, dass die Beförderung trotz einer gegenteiligen Abmachung den Bestimmungen dieses Übereinkommens unterliegt."
+              "text": "die Angabe, dass die Beförderung trotz einer gegenteiligen Abmachung den Bestimmungen dieses Übereinkommens unterliegt.",
+              "trenner": ")"
             }
           ]
         },
@@ -198,31 +212,38 @@
           "items": [
             {
               "marke": "a",
-              "text": "das Verbot umzuladen;"
+              "text": "das Verbot umzuladen;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "die Kosten, die der Absender übernimmt;"
+              "text": "die Kosten, die der Absender übernimmt;",
+              "trenner": ")"
             },
             {
               "marke": "c",
-              "text": "den Betrag einer bei der Ablieferung des Gutes einzuziehenden Nachnahme;"
+              "text": "den Betrag einer bei der Ablieferung des Gutes einzuziehenden Nachnahme;",
+              "trenner": ")"
             },
             {
               "marke": "d",
-              "text": "die Angabe des Wertes des Gutes und des Betrages des besonderen Interesses an der Lieferung;"
+              "text": "die Angabe des Wertes des Gutes und des Betrages des besonderen Interesses an der Lieferung;",
+              "trenner": ")"
             },
             {
               "marke": "e",
-              "text": "Weisungen des Absenders an den Frachtführer über die Versicherung des Gutes;"
+              "text": "Weisungen des Absenders an den Frachtführer über die Versicherung des Gutes;",
+              "trenner": ")"
             },
             {
               "marke": "f",
-              "text": "die vereinbarte Frist, in der die Beförderung beendet sein muss;"
+              "text": "die vereinbarte Frist, in der die Beförderung beendet sein muss;",
+              "trenner": ")"
             },
             {
               "marke": "g",
-              "text": "ein Verzeichnis der dem Frachtführer übergebenen Urkunden."
+              "text": "ein Verzeichnis der dem Frachtführer übergebenen Urkunden.",
+              "trenner": ")"
             }
           ]
         },
@@ -233,9 +254,9 @@
       ],
       "stand": "2021-02-10",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1970/851_851_851/de#art_6",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20210210",
-      "sha": "a4588e1ef501f7c232c96c964559de2e9a2e19fa12199ae240d2c406e975bcb2"
+      "sha": "6d3a27f11035f2d0fbb2fc0af4b910c57c5c3a0bf8bdb418df88f5723ab10377"
     },
     {
       "id": "bund/CMR/art_7",
@@ -251,15 +272,18 @@
           "items": [
             {
               "marke": "a",
-              "text": "die in Artikel 6 Absatz 1 Buchstaben b, d, e, f, g, h und j bezeichneten Angaben;"
+              "text": "die in Artikel 6 Absatz 1 Buchstaben b, d, e, f, g, h und j bezeichneten Angaben;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "die in Artikel 6 Absatz 2 bezeichneten Angaben;"
+              "text": "die in Artikel 6 Absatz 2 bezeichneten Angaben;",
+              "trenner": ")"
             },
             {
               "marke": "c",
-              "text": "alle anderen Angaben oder Weisungen des Absenders für die Ausstellung des Frachtbriefes oder zum Zwecke der Eintragung in diesen."
+              "text": "alle anderen Angaben oder Weisungen des Absenders für die Ausstellung des Frachtbriefes oder zum Zwecke der Eintragung in diesen.",
+              "trenner": ")"
             }
           ]
         },
@@ -274,9 +298,9 @@
       ],
       "stand": "2021-02-10",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1970/851_851_851/de#art_7",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20210210",
-      "sha": "3d920eee3541d40d4f1936d8b36e5890f00597fca4770d9280a6f336f1ae4e05"
+      "sha": "d922fe0b1716c36f73ebe58ea6941793771d58449d6a460f0e3a20a7f615d1b0"
     },
     {
       "id": "bund/CMR/art_8",
@@ -292,11 +316,13 @@
           "items": [
             {
               "marke": "a",
-              "text": "die Richtigkeit der Angaben im Frachtbrief über die Anzahl der Frachtstücke und über ihre Zeichen und Nummern;"
+              "text": "die Richtigkeit der Angaben im Frachtbrief über die Anzahl der Frachtstücke und über ihre Zeichen und Nummern;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "den äusseren Zustand des Gutes und seiner Verpackung."
+              "text": "den äusseren Zustand des Gutes und seiner Verpackung.",
+              "trenner": ")"
             }
           ]
         },
@@ -311,9 +337,9 @@
       ],
       "stand": "2021-02-10",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1970/851_851_851/de#art_8",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20210210",
-      "sha": "c29a93e95402932a0986e5898a856fcfa2886b9a3b3246b9fd938a7050548271"
+      "sha": "28d833333084d0caa94df3cc38dd7ad41185a0990de7c0f3f74114f481d1be36"
     },
     {
       "id": "bund/CMR/art_9",
@@ -334,7 +360,7 @@
       ],
       "stand": "2021-02-10",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1970/851_851_851/de#art_9",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20210210",
       "sha": "3d6b573a353f6e8c95749c49d16274fcd946cc0d17a0a82af4a4c1f51386d54c"
     },
@@ -353,7 +379,7 @@
       ],
       "stand": "2021-02-10",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1970/851_851_851/de#art_10",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20210210",
       "sha": "891b588126580d232c7d3db8c5cb8181c2569f786750dc313262ec0c3016ca6c"
     },
@@ -380,7 +406,7 @@
       ],
       "stand": "2021-02-10",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1970/851_851_851/de#art_11",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20210210",
       "sha": "4c9aeed2dbbe71d52b1c000fc5f9304fe35ca10c6d9a346a274bf1722098f1be"
     },
@@ -414,15 +440,18 @@
           "items": [
             {
               "marke": "a",
-              "text": "der Absender oder in dem in Absatz 3 bezeichneten Falle der Empfänger hat, wenn er sein Verfügungsrecht ausüben will, die erste Ausfertigung des Frachtbriefes vorzuweisen, worin die dem Frachtführer erteilten neuen Weisungen eingetragen sein müssen, und dem Frachtführer alle Kosten und Schäden zu ersetzen, die durch die Ausführung der Weisungen entstehen;"
+              "text": "der Absender oder in dem in Absatz 3 bezeichneten Falle der Empfänger hat, wenn er sein Verfügungsrecht ausüben will, die erste Ausfertigung des Frachtbriefes vorzuweisen, worin die dem Frachtführer erteilten neuen Weisungen eingetragen sein müssen, und dem Frachtführer alle Kosten und Schäden zu ersetzen, die durch die Ausführung der Weisungen entstehen;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "die Ausführung der Weisungen muss zu dem Zeitpunkt, in dem sie die Person erreichen, die sie ausführen soll, möglich sein und darf weder den gewöhnlichen Betrieb des Unternehmens des Frachtführers hemmen noch die Absender oder Empfänger anderer Sendungen schädigen;"
+              "text": "die Ausführung der Weisungen muss zu dem Zeitpunkt, in dem sie die Person erreichen, die sie ausführen soll, möglich sein und darf weder den gewöhnlichen Betrieb des Unternehmens des Frachtführers hemmen noch die Absender oder Empfänger anderer Sendungen schädigen;",
+              "trenner": ")"
             },
             {
               "marke": "c",
-              "text": "die Weisungen dürfen nicht zu einer Teilung der Sendung führen."
+              "text": "die Weisungen dürfen nicht zu einer Teilung der Sendung führen.",
+              "trenner": ")"
             }
           ]
         },
@@ -437,9 +466,9 @@
       ],
       "stand": "2021-02-10",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1970/851_851_851/de#art_12",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20210210",
-      "sha": "b81eaa7c2a1a655f9e8e186fe6495c3926606fce48ff3f71055a7e9b527197b4"
+      "sha": "fdfc34f4651363eb01d66c2e22e7af5eba44ce9c6a2c75db4c6b4e3afd84fd6a"
     },
     {
       "id": "bund/CMR/art_13",
@@ -464,7 +493,7 @@
       ],
       "stand": "2021-02-10",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1970/851_851_851/de#art_13",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20210210",
       "sha": "ceb0929b85e8a32689423cdfc0ab8629aa4e94c172346b731224276060a7294c"
     },
@@ -487,7 +516,7 @@
       ],
       "stand": "2021-02-10",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1970/851_851_851/de#art_14",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20210210",
       "sha": "668f9fac546d3c88d8e696978a3bf24d624c8926276dbccde3b546f28f757f9d"
     },
@@ -514,7 +543,7 @@
       ],
       "stand": "2021-02-10",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1970/851_851_851/de#art_15",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20210210",
       "sha": "6c88d70fe62f6fd4f95f49dd46a7a564fc379b9f77742d059d031f1d4a1478dd"
     },
@@ -549,7 +578,7 @@
       ],
       "stand": "2021-02-10",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1970/851_851_851/de#art_16",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20210210",
       "sha": "ae6a2293eeee271c6d18ca89dfac420b79606431ac9de1756ccb5938bed1d433"
     },
@@ -579,23 +608,28 @@
           "items": [
             {
               "marke": "a",
-              "text": "Verwendung von offenen, nicht mit Planen gedeckten Fahrzeugen, wenn diese Verwendung ausdrücklich vereinbart und im Frachtbrief vermerkt worden ist;"
+              "text": "Verwendung von offenen, nicht mit Planen gedeckten Fahrzeugen, wenn diese Verwendung ausdrücklich vereinbart und im Frachtbrief vermerkt worden ist;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "Fehlen oder Mängel der Verpackung, wenn die Güter ihrer Natur nach bei fehlender oder mangelhafter Verpackung Verlusten oder Beschädigungen ausgesetzt sind;"
+              "text": "Fehlen oder Mängel der Verpackung, wenn die Güter ihrer Natur nach bei fehlender oder mangelhafter Verpackung Verlusten oder Beschädigungen ausgesetzt sind;",
+              "trenner": ")"
             },
             {
               "marke": "c",
-              "text": "Behandlung, Verladen, Verstauen oder Ausladen des Gutes durch den Absender, den Empfänger oder Dritte, die für den Absender oder Empfänger handeln;"
+              "text": "Behandlung, Verladen, Verstauen oder Ausladen des Gutes durch den Absender, den Empfänger oder Dritte, die für den Absender oder Empfänger handeln;",
+              "trenner": ")"
             },
             {
               "marke": "d",
-              "text": "natürliche Beschaffenheit gewisser Güter, derzufolge sie gänzlichem oder teilweisem Verlust oder Beschädigung, insbesondere durch Bruch, Rost, inneren Verderb, Austrocknen, Auslaufen, normalen Schwund oder Einwirkung von Ungeziefer oder Nagetieren, ausgesetzt sind;"
+              "text": "natürliche Beschaffenheit gewisser Güter, derzufolge sie gänzlichem oder teilweisem Verlust oder Beschädigung, insbesondere durch Bruch, Rost, inneren Verderb, Austrocknen, Auslaufen, normalen Schwund oder Einwirkung von Ungeziefer oder Nagetieren, ausgesetzt sind;",
+              "trenner": ")"
             },
             {
               "marke": "e",
-              "text": "ungenügende oder unzulängliche Bezeichnung oder Nummerierung der Frachtstücke;"
+              "text": "ungenügende oder unzulängliche Bezeichnung oder Nummerierung der Frachtstücke;",
+              "trenner": ")"
             },
             {
               "marke": "f",
@@ -610,9 +644,9 @@
       ],
       "stand": "2021-02-10",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1970/851_851_851/de#art_17",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20210210",
-      "sha": "94bcb48e8f2bb61f86fee48c41bfad9c9f0bdf3139256780a781b4f53bf8d874"
+      "sha": "d6d04c1db3fcd254d6f745c9c8a4bb56a26ba471e4530092535d33a01dd05c6b"
     },
     {
       "id": "bund/CMR/art_18",
@@ -645,7 +679,7 @@
       ],
       "stand": "2021-02-10",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1970/851_851_851/de#art_18",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20210210",
       "sha": "04002c340dfa04c9626e508ce32bbf68b04e46deef49403b7f4d17216f8e246b"
     },
@@ -664,7 +698,7 @@
       ],
       "stand": "2021-02-10",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1970/851_851_851/de#art_19",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20210210",
       "sha": "5173dac6c37c8d31a927f7cb296e5fd1bb03f3bc511d8d944b78d4deae4bd4ca"
     },
@@ -695,7 +729,7 @@
       ],
       "stand": "2021-02-10",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1970/851_851_851/de#art_20",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20210210",
       "sha": "9e329e54c0c598f394c3f3a198fd545779d9e9010976e1574c103b23fbd6887a"
     },
@@ -714,7 +748,7 @@
       ],
       "stand": "2021-02-10",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1970/851_851_851/de#art_21",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20210210",
       "sha": "0e4cee8eacc2878c6b74a5f40131c4ac53bcc8d8d2be14f4a3d6d9186148037f"
     },
@@ -737,7 +771,7 @@
       ],
       "stand": "2021-02-10",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1970/851_851_851/de#art_22",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20210210",
       "sha": "50c4675128db2facadff4ca7fb502da0560c64379369d20239e9b22fffd97dfb"
     },
@@ -788,7 +822,7 @@
       ],
       "stand": "2021-02-10",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1970/851_851_851/de#art_23",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20210210",
       "sha": "f544d88ea8033b287403349fd405b39781490cc03e091cc24581d738a6d80b79"
     },
@@ -807,7 +841,7 @@
       ],
       "stand": "2021-02-10",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1970/851_851_851/de#art_24",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20210210",
       "sha": "c21a119e76c918d5465a2fdd3421c3e75c79a01c630d84770b0b002155affa49"
     },
@@ -829,20 +863,22 @@
           "items": [
             {
               "marke": "a",
-              "text": "wenn die ganze Sendung durch die Beschädigung entwertet ist, den Betrag, der bei gänzlichem Verlust zu zahlen wäre;"
+              "text": "wenn die ganze Sendung durch die Beschädigung entwertet ist, den Betrag, der bei gänzlichem Verlust zu zahlen wäre;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "wenn nur ein Teil der Sendung durch die Beschädigung entwertet ist, den Betrag, der bei Verlust des entwerteten Teiles zu zahlen wäre."
+              "text": "wenn nur ein Teil der Sendung durch die Beschädigung entwertet ist, den Betrag, der bei Verlust des entwerteten Teiles zu zahlen wäre.",
+              "trenner": ")"
             }
           ]
         }
       ],
       "stand": "2021-02-10",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1970/851_851_851/de#art_25",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20210210",
-      "sha": "da1ccc328a713a8e7a462aaecc45940f5079bb93f71ebebea27c7865066dc9e7"
+      "sha": "5e3279f83c70b85f7b444288cdbae97c44ef28d3e1e2db89809a0afd24cda372"
     },
     {
       "id": "bund/CMR/art_26",
@@ -863,7 +899,7 @@
       ],
       "stand": "2021-02-10",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1970/851_851_851/de#art_26",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20210210",
       "sha": "cc3a07d41096aa31db47b589e02f858949a82e57c615be34c03d65fdfea85b66"
     },
@@ -886,7 +922,7 @@
       ],
       "stand": "2021-02-10",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1970/851_851_851/de#art_27",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20210210",
       "sha": "0fe046ee6c86a90ea4ff57b874fc864893ade875448d152d6f0e0ea2d7b8398a"
     },
@@ -909,7 +945,7 @@
       ],
       "stand": "2021-02-10",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1970/851_851_851/de#art_28",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20210210",
       "sha": "1c77485d55603f34f466ee6f9b6ec4bbb40312ecbc201a52aace87751233c26d"
     },
@@ -932,7 +968,7 @@
       ],
       "stand": "2021-02-10",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1970/851_851_851/de#art_29",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20210210",
       "sha": "c55ead36e21d9533522c5474718c49126608951f28a45c4b54cd338915e41f92"
     },
@@ -967,7 +1003,7 @@
       ],
       "stand": "2021-02-10",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1970/851_851_851/de#art_30",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20210210",
       "sha": "56f3246910a131948e6738cc7cfd42448a9f12667b185423f39135757c1f32cb"
     },
@@ -985,11 +1021,13 @@
           "items": [
             {
               "marke": "a",
-              "text": "der Beklagte seinen gewöhnlichen Aufenthalt, seine Hauptniederlassung oder die Zweigniederlassung oder Geschäftsstelle hat, durch deren Vermittlung der Beförderungsvertrag geschlossen worden ist, oder"
+              "text": "der Beklagte seinen gewöhnlichen Aufenthalt, seine Hauptniederlassung oder die Zweigniederlassung oder Geschäftsstelle hat, durch deren Vermittlung der Beförderungsvertrag geschlossen worden ist, oder",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "der Ort der Übernahme des Gutes oder der für die Ablieferung vorgesehene Ort liegt."
+              "text": "der Ort der Übernahme des Gutes oder der für die Ablieferung vorgesehene Ort liegt.",
+              "trenner": ")"
             }
           ]
         },
@@ -1016,9 +1054,9 @@
       ],
       "stand": "2021-02-10",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1970/851_851_851/de#art_31",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20210210",
-      "sha": "78e80fca252a82981c13e7c14a83e20007d6d8e881137a6d5a462e26dc4f30c5"
+      "sha": "c6a6471c8a75b27e6ab29295d49211f84b807bf16ac1221545084f29cd0d0978"
     },
     {
       "id": "bund/CMR/art_32",
@@ -1034,15 +1072,18 @@
           "items": [
             {
               "marke": "a",
-              "text": "bei teilweisem Verlust, Beschädigung oder Überschreitung der Lieferfrist mit dem Tage der Ablieferung des Gutes;"
+              "text": "bei teilweisem Verlust, Beschädigung oder Überschreitung der Lieferfrist mit dem Tage der Ablieferung des Gutes;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "bei gänzlichem Verlust mit dem dreissigsten Tage nach Ablauf der vereinbarten Lieferfrist oder, wenn eine Lieferfrist nicht vereinbart worden ist, mit dem sechzigsten Tage nach der Übernahme des Gutes durch den Frachtführer;"
+              "text": "bei gänzlichem Verlust mit dem dreissigsten Tage nach Ablauf der vereinbarten Lieferfrist oder, wenn eine Lieferfrist nicht vereinbart worden ist, mit dem sechzigsten Tage nach der Übernahme des Gutes durch den Frachtführer;",
+              "trenner": ")"
             },
             {
               "marke": "c",
-              "text": "in allen anderen Fällen mit dem Ablauf einer Frist von drei Monaten nach dem Abschluss des Beförderungsvertrages."
+              "text": "in allen anderen Fällen mit dem Ablauf einer Frist von drei Monaten nach dem Abschluss des Beförderungsvertrages.",
+              "trenner": ")"
             }
           ]
         },
@@ -1065,9 +1106,9 @@
       ],
       "stand": "2021-02-10",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1970/851_851_851/de#art_32",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20210210",
-      "sha": "ead39e77d16c93c4476f1686d01d284ef3c9870e74c49b5d49149eed96d22b5f"
+      "sha": "7a3fa056886e1dff2d2058684f7f013abc8f62aa3bba14fc03d985fecc934954"
     },
     {
       "id": "bund/CMR/art_33",
@@ -1084,7 +1125,7 @@
       ],
       "stand": "2021-02-10",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1970/851_851_851/de#art_33",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20210210",
       "sha": "163892989de2655c886d8aac3062ff1b7df6037b765d8224f726dc636078c6f3"
     },
@@ -1103,7 +1144,7 @@
       ],
       "stand": "2021-02-10",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1970/851_851_851/de#art_34",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20210210",
       "sha": "e4e6091c8726d0423a6c4ca4ba3d6f921c5db4700f41abdd4015c6be9ef0b7e4"
     },
@@ -1126,7 +1167,7 @@
       ],
       "stand": "2021-02-10",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1970/851_851_851/de#art_35",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20210210",
       "sha": "f570757353a8031cbed824eea0d994dfbac1b77177d94a447b6ec8d29214aabd"
     },
@@ -1145,7 +1186,7 @@
       ],
       "stand": "2021-02-10",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1970/851_851_851/de#art_36",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20210210",
       "sha": "5518fa0e049701bfdb61bb4e5a142d1ba8b4fcc7c6ed792684c8f8ddfd88b2d7"
     },
@@ -1163,24 +1204,27 @@
           "items": [
             {
               "marke": "a",
-              "text": "der Frachtführer, der den Verlust oder die Beschädigung verursacht hat, hat die von ihm oder von einem anderen Frachtführer geleistete Entschädigung allein zu tragen;"
+              "text": "der Frachtführer, der den Verlust oder die Beschädigung verursacht hat, hat die von ihm oder von einem anderen Frachtführer geleistete Entschädigung allein zu tragen;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "ist der Verlust oder die Beschädigung durch zwei oder mehrere Frachtführer verursacht worden, so hat jeder einen seinem Haftungsanteil entsprechenden Betrag zu zahlen; ist die Feststellung der einzelnen Haftungsanteile nicht möglich, so haftet jeder nach dem Verhältnis des ihm zustehenden Anteiles am Beförderungsentgelt;"
+              "text": "ist der Verlust oder die Beschädigung durch zwei oder mehrere Frachtführer verursacht worden, so hat jeder einen seinem Haftungsanteil entsprechenden Betrag zu zahlen; ist die Feststellung der einzelnen Haftungsanteile nicht möglich, so haftet jeder nach dem Verhältnis des ihm zustehenden Anteiles am Beförderungsentgelt;",
+              "trenner": ")"
             },
             {
               "marke": "c",
-              "text": "kann nicht festgestellt werden, welche der Frachtführer den Schaden zu tragen haben, so ist die zu leistende Entschädigung in dem unter Buchstabe b bestimmten Verhältnis zu Lasten aller Frachtführer aufzuteilen."
+              "text": "kann nicht festgestellt werden, welche der Frachtführer den Schaden zu tragen haben, so ist die zu leistende Entschädigung in dem unter Buchstabe b bestimmten Verhältnis zu Lasten aller Frachtführer aufzuteilen.",
+              "trenner": ")"
             }
           ]
         }
       ],
       "stand": "2021-02-10",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1970/851_851_851/de#art_37",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20210210",
-      "sha": "be2093cc573237489803c2daaf2a7112d4390da870c1b7f62f049c526908c20b"
+      "sha": "a91099418a792d5330a44773def0830c9c4a2cb3d85aadbd889f68353ce50065"
     },
     {
       "id": "bund/CMR/art_38",
@@ -1197,7 +1241,7 @@
       ],
       "stand": "2021-02-10",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1970/851_851_851/de#art_38",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20210210",
       "sha": "2d6b4ba2d4e366c77dde218f8d567bc0cad43536659cca10102bdbe4902a77fd"
     },
@@ -1228,7 +1272,7 @@
       ],
       "stand": "2021-02-10",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1970/851_851_851/de#art_39",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20210210",
       "sha": "470e239c7558c5db1f7371debeaf072c02675ceb995df273bae14fea30ae21cd"
     },
@@ -1247,7 +1291,7 @@
       ],
       "stand": "2021-02-10",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1970/851_851_851/de#art_40",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20210210",
       "sha": "188ebc5225cc5ea95742e4d461f210d2ae2b2609e2eecc5fb19adaa464d45b53"
     },
@@ -1270,7 +1314,7 @@
       ],
       "stand": "2021-02-10",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1970/851_851_851/de#art_41",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20210210",
       "sha": "baf8e831576739dcb8fa6358371a4b960c00fe092129b94307a7a34ef943d9ee"
     },
@@ -1305,7 +1349,7 @@
       ],
       "stand": "2021-02-10",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1970/851_851_851/de#art_42",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20210210",
       "sha": "b8622f61f39c0414f20a9fad691a13a6af77643f6d5dbc6c751d4112d1024765"
     },
@@ -1328,7 +1372,7 @@
       ],
       "stand": "2021-02-10",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1970/851_851_851/de#art_43",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20210210",
       "sha": "e958ef212028d6f6c6bfce7a140d7c5eda1bcbada2027a7f0c67086259029b6a"
     },
@@ -1351,7 +1395,7 @@
       ],
       "stand": "2021-02-10",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1970/851_851_851/de#art_44",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20210210",
       "sha": "1fdc233c9c6b80cda1e6c45c47b5a6242cfc509f037163acf271bbbe00213061"
     },
@@ -1370,7 +1414,7 @@
       ],
       "stand": "2021-02-10",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1970/851_851_851/de#art_45",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20210210",
       "sha": "5422c14bccf22141f0412441b891a22a42aa82ab77cd963d2bb9cd52468d8c9e"
     },
@@ -1393,7 +1437,7 @@
       ],
       "stand": "2021-02-10",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1970/851_851_851/de#art_46",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20210210",
       "sha": "124a4e5be9c06e495c344752c42da2b083a54734c9a004c83323bf00bb493861"
     },
@@ -1412,7 +1456,7 @@
       ],
       "stand": "2021-02-10",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1970/851_851_851/de#art_47",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20210210",
       "sha": "7c8decb24d997cb4b4f68928b9ec305c20a84097509abd2684c90a7a2a2ddb28"
     },
@@ -1439,7 +1483,7 @@
       ],
       "stand": "2021-02-10",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1970/851_851_851/de#art_48",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20210210",
       "sha": "6f403dc6c853d601190f574e797a3eacbd5bd752a5fcb6b617a753467ee72f77"
     },
@@ -1466,7 +1510,7 @@
       ],
       "stand": "2021-02-10",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1970/851_851_851/de#art_49",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20210210",
       "sha": "e5956cd89dab42fa736cba528380ab7196161b1f30bd340d3b8651dbc38e2893"
     },
@@ -1484,36 +1528,42 @@
           "items": [
             {
               "marke": "a",
-              "text": "die Ratifikationen und Beitritte nach Artikel 42;"
+              "text": "die Ratifikationen und Beitritte nach Artikel 42;",
+              "trenner": ")"
             },
             {
               "marke": "b",
-              "text": "die Zeitpunkte, zu denen dieses Übereinkommen nach Artikel 43 in Kraft tritt;"
+              "text": "die Zeitpunkte, zu denen dieses Übereinkommen nach Artikel 43 in Kraft tritt;",
+              "trenner": ")"
             },
             {
               "marke": "c",
-              "text": "die Kündigung nach Artikel 44;"
+              "text": "die Kündigung nach Artikel 44;",
+              "trenner": ")"
             },
             {
               "marke": "d",
-              "text": "das Ausserkrafttreten dieses Übereinkommens nach Artikel 45;"
+              "text": "das Ausserkrafttreten dieses Übereinkommens nach Artikel 45;",
+              "trenner": ")"
             },
             {
               "marke": "e",
-              "text": "den Eingang der Notifizierungen nach Artikel 46;"
+              "text": "den Eingang der Notifizierungen nach Artikel 46;",
+              "trenner": ")"
             },
             {
               "marke": "f",
-              "text": "den Eingang der Erklärungen und Notifizierungen nach Artikel 48 Absätze 1 und 2."
+              "text": "den Eingang der Erklärungen und Notifizierungen nach Artikel 48 Absätze 1 und 2.",
+              "trenner": ")"
             }
           ]
         }
       ],
       "stand": "2021-02-10",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1970/851_851_851/de#art_50",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20210210",
-      "sha": "07d3137f5dcf6027015ce737dc6cdb385f19e30a184b502f6722582b5982b838"
+      "sha": "16ac95b24cb985ea0a89ff8ca87d30123834d6e11d221c5b5b7712f2c33a2495"
     },
     {
       "id": "bund/CMR/art_51",
@@ -1530,7 +1580,7 @@
       ],
       "stand": "2021-02-10",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1970/851_851_851/de#art_51",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20210210",
       "sha": "4796ca873c0198749661ede8eb0829cea39ce691ba8e9726b22d54223029af5c"
     },
@@ -1573,7 +1623,7 @@
       ],
       "stand": "2021-02-10",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1970/851_851_851/de#annex_u1",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20210210",
       "sha": "12a973766a96f2fca0a4971db71dc015590728ac159fc1e9a45d20da490b7a40"
     },
@@ -2033,7 +2083,7 @@
       ],
       "stand": "2021-02-10",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/1970/851_851_851/de#scope_u1",
-      "abgerufen": "2026-08-29",
+      "abgerufen": "2026-09-12",
       "fassungsToken": "20210210",
       "sha": "1da06b6985b2784ee59f1b3c88423fc046a979c8861ff2ee6744d8ba71d75110"
     }

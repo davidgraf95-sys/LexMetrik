@@ -9,7 +9,7 @@ export function sha256Bloecke(
   bloecke: Array<{
     absatz: string | null;
     text: string;
-    items?: Array<{ marke: string; text: string; tiefe?: number }>;
+    items?: Array<{ marke: string; text: string; tiefe?: number; trenner?: string }>;
     tabelle?: Array<{ beschreibung: string; betrag: string }>;
     mehrspaltig?: {
       kopf?: string[];
@@ -25,8 +25,19 @@ export function sha256Bloecke(
       // tiefe fliesst in den sha NUR wenn > 0 → nicht verschachtelte Listen
       // bleiben byte-gleich (kein spuriöser Drift); echte Verschachtelung
       // (geänderte Fundstelle) wird vom Drift-Check erfasst (§1/§7, M6).
+      // trenner fliesst in den sha NUR wenn gesetzt (= amtlicher Trenner weicht
+      // vom Normalfall «kanonische Ordinalmarke + Punkt» ab, #679 12.9.2026) →
+      // bisher korrekte Items bleiben byte-gleich, kein spuriöser Drift. Wo er
+      // gesetzt ist, ist er drift-relevant: «BE:» (Kategorie) vs. «b.» (lit. b)
+      // ist eine andere Fundstelle, also gehört der Wechsel in den Daten-Index
+      // (§1/§7, gleiche Begründung wie `tiefe`). Prefix «t:» hält ihn von der
+      // tiefe-Spalte unterscheidbar.
       const itemTeil = (b.items ?? [])
-        .map((i) => `${i.marke}\t${i.text}${i.tiefe ? `\t${i.tiefe}` : ''}`)
+        .map(
+          (i) =>
+            `${i.marke}\t${i.text}${i.tiefe ? `\t${i.tiefe}` : ''}` +
+            `${i.trenner !== undefined ? `\tt:${i.trenner}` : ''}`,
+        )
         .join('\n');
       const tabTeil = (b.tabelle ?? []).map((z) => `${z.beschreibung}\t${z.betrag}`).join('\n');
       // Spalten-Vektor (kanonisches M10-Modell) trägt die Kopf-TITEL + -Typen —
