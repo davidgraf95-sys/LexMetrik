@@ -5763,49 +5763,14 @@
       "sachgebiet": "sozialversicherung",
       "sprache": "de",
       "normKeys": [
-        "ATSG",
-        "BGG",
-        "BV",
-        "IVG",
-        "KLV",
-        "KVG",
-        "MVG",
-        "OR",
-        "SVG",
-        "VWVG"
+        "IVG"
       ],
       "bestand": "snapshot",
       "kuratierung": "maschinell",
       "datei": "bund/bge/152_V_2.json",
       "quelle": "opencaselaw",
       "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F152-V-2%3Ade&lang=de&zoom=&type=show_document",
-      "fassungsToken": "b7080eb0c05048547609579409dbff8ffe046f265160d65992852f4c26ce727a",
-      "richter": [
-        {
-          "s": "moser-szeless",
-          "r": "vorsitz"
-        },
-        {
-          "s": "stadelmann",
-          "r": "mitglied"
-        },
-        {
-          "s": "parrino",
-          "r": "mitglied"
-        },
-        {
-          "s": "beusch",
-          "r": "mitglied"
-        },
-        {
-          "s": "scherrer-reber",
-          "r": "mitglied"
-        },
-        {
-          "s": "dormann",
-          "r": "gerichtsschreiber"
-        }
-      ]
+      "fassungsToken": "b7080eb0c05048547609579409dbff8ffe046f265160d65992852f4c26ce727a"
     },
     {
       "key": "bge_152_V_52",

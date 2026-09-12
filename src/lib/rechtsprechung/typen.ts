@@ -161,6 +161,18 @@ export interface EntscheidSnapshot {
    */
   auszugAbschnitte?: EntscheidAbschnitt[];
   dispositivOrders: string[];
+  /**
+   * Nur gesetzt, wenn die amtliche QUELLE selbst (nicht nur eine aza-Auswahl)
+   * nachweislich kontaminiert ist — `abschnitte`/`rubrum`/`zitierteNormen` gehören
+   * dann NICHT zu diesem Entscheid und werden leer/null gehalten (§8, nie ein
+   * fremder Body unter der eigenen Fundstelle). `regeste` bleibt unberührt, wenn
+   * sie separat verifiziert amtlich ist. Anlassfall `bge_152_V_2` (12.9.2026,
+   * PR #816): OCLs Basis-Record für «152 V 2» liefert vollständig den Text von
+   * «152 V 20» (live geprüft — Kopf-Provenienz erkennbar am laufenden Seitenkopf
+   * «BGE 152 V 20 S. …» im Fliesstext). UI zeigt den generischen «kein erfasster
+   * Text»-Hinweis (EntscheidBody.tsx, `abschnitte.length === 0`).
+   */
+  quarantaene?: string;
 
   // ── Verzahnung ──
   zitierteNormen: string[];   // OCL statutes[] (Roh-Drittextraktion, NICHT verifiziert)

@@ -10,6 +10,7 @@ import { join } from 'node:path';
 import { sha256EntscheidBloecke } from './sha-entscheide';
 import { vergleicheLeitfaelle } from './entscheide-schreiben';
 import { bandjahrDiffPlausibel } from './bge-bandjahr';
+import { findeFremdeFundstelleImBody } from './entscheide-koerper-konflation';
 import type { EntscheidSnapshotDatei } from '../../src/lib/rechtsprechung/typen';
 import type { EntscheidManifest } from '../../src/lib/rechtsprechung/register';
 import type { LeitfallRef, NormEntscheidIndex, LeitfallShard } from '../../src/lib/rechtsprechung/norm-index';
@@ -161,6 +162,17 @@ function main() {
     if (snap.sha !== erwartet) fehler.push(`${e.key}: sha-Drift (Datei ${snap.sha?.slice(0, 8)} ≠ erwartet ${erwartet.slice(0, 8)})`);
     const volltext = snap.abschnitte.flatMap((a) => a.bloecke.map((b) => b.text)).join('\n');
     if (AHV.test(volltext) || AHV.test(snap.regeste?.text ?? '')) warn.push(`${e.key}: mögliche AHV-Nummer im Text (Anonymisierung prüfen)`);
+    // Wächter (Gegenprüfungs-Auflage C1, 12.9.2026, PR #816): der Body trägt den
+    // laufenden Seitenkopf eines ANDEREN BGE desselben Bandes — der Body gehört
+    // dann nicht zur eigenen Fundstelle (OCL-Basis-Record-Konflation, Anlassfall
+    // bge_152_V_2 ← 152 V 20). Legitime Zitierungen ÄLTERER Bände bleiben unberührt
+    // (siehe entscheide-koerper-konflation.ts).
+    if (e.bgeReferenz) {
+      const fremd = findeFremdeFundstelleImBody(volltext, e.bgeReferenz);
+      if (fremd) {
+        fehler.push(`${e.key}: Body trägt den laufenden Kopf von BGE ${fremd} (eigene Fundstelle ${e.bgeReferenz}) — Basis-Record-Konflation (§8, W2·18-FEHLERBUCH-Muster)`);
+      }
+    }
     // Wächter (Gegenprüfungs-Auflage B2, 12.9.2026, PR #816): ein amtlicher BGE
     // (regesteAmtlich, leitcharakter==='leitentscheid') mit Regeste-Text MUSS die
     // dreisprachige Struktur (A18) tragen — 1258/1259 taten das, bis der B1-Refresh
