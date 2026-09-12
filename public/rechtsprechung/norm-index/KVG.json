@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-09-05",
+  "erzeugt": "2026-09-12",
   "erlass": "KVG",
   "gewichtQuelle": "alt",
   "proArtikel": {
@@ -17,19 +17,19 @@
     ],
     "3": [
       {
-        "key": "bge_152_V_2",
-        "zitierung": "BGE 152 V 2",
-        "regesteKurz": "Art. 56 Abs. 2, Art. 61 lit. a und f bis ATSG und Art. 69 Abs. 1 bis IVG (beide in der seit 1. Januar 2021 geltenden Fassung); Gerichtskosten im kantonalen Verfahren bei Rechtsverweigerungs- oder Rechtsverzögerungsbeschwerden auf dem…",
-        "datum": "2026-01-01",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bge",
-        "kanton": "CH",
-        "gewicht": 0
-      },
-      {
         "key": "bge_152_V_20",
         "zitierung": "BGE 152 V 20",
         "regesteKurz": "Art. 24 Abs. 1 KVG; Ziff. 1.2 Anhang 1 KLV; Art. 14 Abs. 2 lit. b Transplantationsgesetz; Ersatz von Erwerbsausfall bei Organspende. Der vom Organspender direkt gegenüber dem obligatorischen Krankenpflegeversicherer der Organempfängerin…",
+        "datum": "2025-06-23",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 1
+      },
+      {
+        "key": "bge_152_V_2",
+        "zitierung": "BGE 152 V 2",
+        "regesteKurz": "Art. 56 Abs. 2, Art. 61 lit. a und f bis ATSG und Art. 69 Abs. 1 bis IVG (beide in der seit 1. Januar 2021 geltenden Fassung); Gerichtskosten im kantonalen Verfahren bei Rechtsverweigerungs- oder Rechtsverzögerungsbeschwerden auf dem…",
         "datum": "2026-01-01",
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
@@ -91,19 +91,19 @@
     ],
     "7": [
       {
-        "key": "bge_152_V_2",
-        "zitierung": "BGE 152 V 2",
-        "regesteKurz": "Art. 56 Abs. 2, Art. 61 lit. a und f bis ATSG und Art. 69 Abs. 1 bis IVG (beide in der seit 1. Januar 2021 geltenden Fassung); Gerichtskosten im kantonalen Verfahren bei Rechtsverweigerungs- oder Rechtsverzögerungsbeschwerden auf dem…",
-        "datum": "2026-01-01",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bge",
-        "kanton": "CH",
-        "gewicht": 0
-      },
-      {
         "key": "bge_152_V_20",
         "zitierung": "BGE 152 V 20",
         "regesteKurz": "Art. 24 Abs. 1 KVG; Ziff. 1.2 Anhang 1 KLV; Art. 14 Abs. 2 lit. b Transplantationsgesetz; Ersatz von Erwerbsausfall bei Organspende. Der vom Organspender direkt gegenüber dem obligatorischen Krankenpflegeversicherer der Organempfängerin…",
+        "datum": "2025-06-23",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 1
+      },
+      {
+        "key": "bge_152_V_2",
+        "zitierung": "BGE 152 V 2",
+        "regesteKurz": "Art. 56 Abs. 2, Art. 61 lit. a und f bis ATSG und Art. 69 Abs. 1 bis IVG (beide in der seit 1. Januar 2021 geltenden Fassung); Gerichtskosten im kantonalen Verfahren bei Rechtsverweigerungs- oder Rechtsverzögerungsbeschwerden auf dem…",
         "datum": "2026-01-01",
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
@@ -179,6 +179,16 @@
         "gewicht": 2
       },
       {
+        "key": "bge_152_V_20",
+        "zitierung": "BGE 152 V 20",
+        "regesteKurz": "Art. 24 Abs. 1 KVG; Ziff. 1.2 Anhang 1 KLV; Art. 14 Abs. 2 lit. b Transplantationsgesetz; Ersatz von Erwerbsausfall bei Organspende. Der vom Organspender direkt gegenüber dem obligatorischen Krankenpflegeversicherer der Organempfängerin…",
+        "datum": "2025-06-23",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 1
+      },
+      {
         "key": "bge_151_V_233",
         "zitierung": "BGE 151 V 233",
         "regesteKurz": "Art. 32 Abs. 1, Art. 35 Abs. 2 lit. a, Art. 56 Abs. 1 und 6, Art. 59 Abs. 1 lit. b und Abs. 3 lit. a KVG; Wirtschaftlichkeitskontrolle von ärztlichen Leistungserbringern (\"Überarztung\"); Praxisbesonderheiten (BGE 150 V 129 E. 5.5).…",
@@ -202,16 +212,6 @@
         "key": "bge_152_V_2",
         "zitierung": "BGE 152 V 2",
         "regesteKurz": "Art. 56 Abs. 2, Art. 61 lit. a und f bis ATSG und Art. 69 Abs. 1 bis IVG (beide in der seit 1. Januar 2021 geltenden Fassung); Gerichtskosten im kantonalen Verfahren bei Rechtsverweigerungs- oder Rechtsverzögerungsbeschwerden auf dem…",
-        "datum": "2026-01-01",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bge",
-        "kanton": "CH",
-        "gewicht": 0
-      },
-      {
-        "key": "bge_152_V_20",
-        "zitierung": "BGE 152 V 20",
-        "regesteKurz": "Art. 24 Abs. 1 KVG; Ziff. 1.2 Anhang 1 KLV; Art. 14 Abs. 2 lit. b Transplantationsgesetz; Ersatz von Erwerbsausfall bei Organspende. Der vom Organspender direkt gegenüber dem obligatorischen Krankenpflegeversicherer der Organempfängerin…",
         "datum": "2026-01-01",
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
@@ -281,6 +281,16 @@
         "gewicht": 2
       },
       {
+        "key": "bge_152_V_20",
+        "zitierung": "BGE 152 V 20",
+        "regesteKurz": "Art. 24 Abs. 1 KVG; Ziff. 1.2 Anhang 1 KLV; Art. 14 Abs. 2 lit. b Transplantationsgesetz; Ersatz von Erwerbsausfall bei Organspende. Der vom Organspender direkt gegenüber dem obligatorischen Krankenpflegeversicherer der Organempfängerin…",
+        "datum": "2025-06-23",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 1
+      },
+      {
         "key": "bge_151_V_194",
         "zitierung": "BGE 151 V 194",
         "regesteKurz": "Art. 6 und 7 Abs. 1, Art. 21 Abs. 4 ATSG; Art. 1a, 4 Abs. 1, Art. 28 Abs. 1 lit. a und Art. 28 Abs. 1 bis IVG; Therapierbarkeit der Gesundheitsschädigung und Rentenanspruch. Die Behandelbarkeit des Leidens tangiert den…",
@@ -319,16 +329,6 @@
         "gericht": "bge",
         "kanton": "CH",
         "gewicht": 1
-      },
-      {
-        "key": "bge_152_V_2",
-        "zitierung": "BGE 152 V 2",
-        "regesteKurz": "Art. 56 Abs. 2, Art. 61 lit. a und f bis ATSG und Art. 69 Abs. 1 bis IVG (beide in der seit 1. Januar 2021 geltenden Fassung); Gerichtskosten im kantonalen Verfahren bei Rechtsverweigerungs- oder Rechtsverzögerungsbeschwerden auf dem…",
-        "datum": "2026-01-01",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bge",
-        "kanton": "CH",
-        "gewicht": 0
       }
     ],
     "27": [
@@ -365,19 +365,19 @@
     ],
     "29": [
       {
-        "key": "bge_152_V_2",
-        "zitierung": "BGE 152 V 2",
-        "regesteKurz": "Art. 56 Abs. 2, Art. 61 lit. a und f bis ATSG und Art. 69 Abs. 1 bis IVG (beide in der seit 1. Januar 2021 geltenden Fassung); Gerichtskosten im kantonalen Verfahren bei Rechtsverweigerungs- oder Rechtsverzögerungsbeschwerden auf dem…",
-        "datum": "2026-01-01",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bge",
-        "kanton": "CH",
-        "gewicht": 0
-      },
-      {
         "key": "bge_152_V_20",
         "zitierung": "BGE 152 V 20",
         "regesteKurz": "Art. 24 Abs. 1 KVG; Ziff. 1.2 Anhang 1 KLV; Art. 14 Abs. 2 lit. b Transplantationsgesetz; Ersatz von Erwerbsausfall bei Organspende. Der vom Organspender direkt gegenüber dem obligatorischen Krankenpflegeversicherer der Organempfängerin…",
+        "datum": "2025-06-23",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 1
+      },
+      {
+        "key": "bge_152_V_2",
+        "zitierung": "BGE 152 V 2",
+        "regesteKurz": "Art. 56 Abs. 2, Art. 61 lit. a und f bis ATSG und Art. 69 Abs. 1 bis IVG (beide in der seit 1. Januar 2021 geltenden Fassung); Gerichtskosten im kantonalen Verfahren bei Rechtsverweigerungs- oder Rechtsverzögerungsbeschwerden auf dem…",
         "datum": "2026-01-01",
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
@@ -511,19 +511,19 @@
     ],
     "33": [
       {
-        "key": "bge_152_V_2",
-        "zitierung": "BGE 152 V 2",
-        "regesteKurz": "Art. 56 Abs. 2, Art. 61 lit. a und f bis ATSG und Art. 69 Abs. 1 bis IVG (beide in der seit 1. Januar 2021 geltenden Fassung); Gerichtskosten im kantonalen Verfahren bei Rechtsverweigerungs- oder Rechtsverzögerungsbeschwerden auf dem…",
-        "datum": "2026-01-01",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bge",
-        "kanton": "CH",
-        "gewicht": 0
-      },
-      {
         "key": "bge_152_V_20",
         "zitierung": "BGE 152 V 20",
         "regesteKurz": "Art. 24 Abs. 1 KVG; Ziff. 1.2 Anhang 1 KLV; Art. 14 Abs. 2 lit. b Transplantationsgesetz; Ersatz von Erwerbsausfall bei Organspende. Der vom Organspender direkt gegenüber dem obligatorischen Krankenpflegeversicherer der Organempfängerin…",
+        "datum": "2025-06-23",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 1
+      },
+      {
+        "key": "bge_152_V_2",
+        "zitierung": "BGE 152 V 2",
+        "regesteKurz": "Art. 56 Abs. 2, Art. 61 lit. a und f bis ATSG und Art. 69 Abs. 1 bis IVG (beide in der seit 1. Januar 2021 geltenden Fassung); Gerichtskosten im kantonalen Verfahren bei Rechtsverweigerungs- oder Rechtsverzögerungsbeschwerden auf dem…",
         "datum": "2026-01-01",
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
@@ -1425,19 +1425,19 @@
     ],
     "64": [
       {
-        "key": "bge_152_V_2",
-        "zitierung": "BGE 152 V 2",
-        "regesteKurz": "Art. 56 Abs. 2, Art. 61 lit. a und f bis ATSG und Art. 69 Abs. 1 bis IVG (beide in der seit 1. Januar 2021 geltenden Fassung); Gerichtskosten im kantonalen Verfahren bei Rechtsverweigerungs- oder Rechtsverzögerungsbeschwerden auf dem…",
-        "datum": "2026-01-01",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bge",
-        "kanton": "CH",
-        "gewicht": 0
-      },
-      {
         "key": "bge_152_V_20",
         "zitierung": "BGE 152 V 20",
         "regesteKurz": "Art. 24 Abs. 1 KVG; Ziff. 1.2 Anhang 1 KLV; Art. 14 Abs. 2 lit. b Transplantationsgesetz; Ersatz von Erwerbsausfall bei Organspende. Der vom Organspender direkt gegenüber dem obligatorischen Krankenpflegeversicherer der Organempfängerin…",
+        "datum": "2025-06-23",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 1
+      },
+      {
+        "key": "bge_152_V_2",
+        "zitierung": "BGE 152 V 2",
+        "regesteKurz": "Art. 56 Abs. 2, Art. 61 lit. a und f bis ATSG und Art. 69 Abs. 1 bis IVG (beide in der seit 1. Januar 2021 geltenden Fassung); Gerichtskosten im kantonalen Verfahren bei Rechtsverweigerungs- oder Rechtsverzögerungsbeschwerden auf dem…",
         "datum": "2026-01-01",
         "leitcharakter": "leitentscheid",
         "gericht": "bge",

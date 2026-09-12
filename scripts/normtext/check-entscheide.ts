@@ -9,6 +9,7 @@ import { readFileSync, existsSync, readdirSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 import { sha256EntscheidBloecke } from './sha-entscheide';
 import { vergleicheLeitfaelle } from './entscheide-schreiben';
+import { bandjahrDiffPlausibel } from './bge-bandjahr';
 import type { EntscheidSnapshotDatei } from '../../src/lib/rechtsprechung/typen';
 import type { EntscheidManifest } from '../../src/lib/rechtsprechung/register';
 import type { LeitfallRef, NormEntscheidIndex, LeitfallShard } from '../../src/lib/rechtsprechung/norm-index';
@@ -141,13 +142,9 @@ function main() {
     // 26.11.2024). Fenster wie im aza-Resolver (adapter-entscheide.ts, §8): ein
     // Urteil datiert nie nach dem Bandjahr und praktisch nie mehr als 5 Jahre davor.
     if (e.bgeReferenz && e.datum) {
-      const band = parseInt(e.bgeReferenz, 10);
-      const jahr = parseInt(e.datum.slice(0, 4), 10);
-      if (Number.isFinite(band) && band > 0 && Number.isFinite(jahr)) {
-        const bandJahr = band + 1874;
-        if (bandJahr - jahr > 5) {
-          fehler.push(`${e.key}: Entscheiddatum ${e.datum} liegt ${bandJahr - jahr} Jahre vor dem BGE-Bandjahr ${bandJahr} (bgeReferenz ${e.bgeReferenz}) — Band+1874 ist die kanonische Jahresquelle (§2); OCL-decision_date-Fehlwert prüfen (W2·18-FEHLERBUCH-Muster).`);
-        }
+      const { ok, diff, bandJahr } = bandjahrDiffPlausibel(e.bgeReferenz, e.datum);
+      if (!ok) {
+        fehler.push(`${e.key}: Entscheiddatum ${e.datum} liegt ${diff} Jahre vor dem BGE-Bandjahr ${bandJahr} (bgeReferenz ${e.bgeReferenz}) — Band+1874 ist die kanonische Jahresquelle (§2); OCL-decision_date-Fehlwert prüfen (W2·18-FEHLERBUCH-Muster).`);
       }
     }
     if (e.datum && manifest.erzeugt && e.datum > manifest.erzeugt) {

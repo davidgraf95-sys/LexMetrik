@@ -19,6 +19,7 @@ import {
 } from './normtext/entscheide-mapping';
 import { sha256EntscheidBloecke } from './normtext/sha-entscheide';
 import { holeRegesteSprachfassungen, holeClirHtml, parseClirUrteilskopf, bgeRefZuClirId } from './normtext/clir-regeste';
+import { verschlechtertDatum } from './normtext/bge-bandjahr';
 import type { EntscheidSnapshot } from '../src/lib/rechtsprechung/typen';
 import type { Rechtsgebiet } from '../src/lib/normtext/register';
 import * as path from 'node:path';
@@ -530,6 +531,16 @@ async function main() {
     const b1neu = await mapLimit(b1, 3, async (s) => {
       const clirId = s.bgeReferenz ? bgeRefZuClirId(s.bgeReferenz) : null;
       const html = clirId ? await holeClirHtml(clirId, 'de', CLIR_CACHE, 300) : null;
+      // A1 (Gegenprüfungs-Auflage 12.9.2026, PR #816): eine NETZSTÖRUNG beim
+      // clir-Kopf-Fetch (html === null, obwohl eine clirId existiert) darf NIE mit
+      // degradiertem kopf (aza:null, datumIso:null) weiterverarbeitet werden — sonst
+      // fiele holeBgeLeitentscheid im Auszug-only-Fall auf den groben Bandjahr-
+      // Platzhalter zurück und würde ein bereits exaktes Bestandsdatum verschlechtern.
+      // Dieser Kandidat bleibt für den nächsten Lauf offen (Bestand unangetastet).
+      if (clirId && html === null) {
+        process.stdout.write('n');
+        return { id: s.id, neu: null as EntscheidSnapshot | null };
+      }
       const kopf = html ? parseClirUrteilskopf(html) : { aza: null, datumIso: null };
       const neu = await holeBgeLeitentscheid(
         s.id.replace(/^bund\/bge\//, ''), datum, { azaAz: kopf.aza, datumFallback: kopf.datumIso },
@@ -545,11 +556,22 @@ async function main() {
     // Ergebnis (azaUrteil:null) wurde bisher hier VERWORFEN — der korrigierte
     // Datums-Fallback (kopf.datumFallback bzw. Bandjahr-Platzhalter statt eines
     // fehlerhaften decision_date) blieb dadurch stumm ungeschrieben und der alte
-    // Fehlwert stand weiter im Bestand. Jetzt wird JEDES erfolgreich geholte
-    // Ergebnis übernommen (auch Auszug-only) — nur ein gescheiterter Fetch
-    // (neu === null) lässt den Bestandseintrag unangetastet.
+    // Fehlwert stand weiter im Bestand. Jetzt wird jedes erfolgreich geholte
+    // Ergebnis übernommen (auch Auszug-only) — AUSSER es verschlechtert das Datum
+    // (A1, `verschlechtertDatum`: ein bereits exaktes Bestandsdatum wird NIE durch
+    // den groben Bandjahr-Platzhalter ersetzt). Ein gescheiterter Fetch
+    // (neu === null) lässt den Bestandseintrag ohnehin unangetastet.
+    const b1ById = new Map(b1.map((s) => [s.id, s]));
     const byId = new Map<string, EntscheidSnapshot>();
-    for (const { neu } of b1neu) if (neu) byId.set(neu.id, neu);
+    for (const { id, neu } of b1neu) {
+      if (!neu) continue;
+      const alt = b1ById.get(id)!;
+      if (verschlechtertDatum(alt, neu)) {
+        console.log(`[b1] ${alt.bgeReferenz}: frisches Ergebnis verschlechtert das Datum (${alt.datum} → ${neu.datum}) — verworfen (A1).`);
+        continue;
+      }
+      byId.set(neu.id, neu);
+    }
     for (let i = 0; i < basis.length; i++) { const r = byId.get(basis[i].id); if (r) basis[i] = r; }
     // Kollisions-Quarantäne (§8) über ALLE BGE: teilt sich ein aza-key auf mehrere
     // BGE (OCL-Konflation, z.B. «152 V 2»↔«152 V 20»), ist ≥1 Zuordnung falsch → die

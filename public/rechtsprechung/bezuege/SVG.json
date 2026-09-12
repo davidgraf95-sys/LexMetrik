@@ -1,5 +1,5 @@
 {
-"erzeugt":"2026-09-05",
+"erzeugt":"2026-09-12",
 "erlass":"SVG",
 "erlassEbene":"bund",
 "dokumente":{
@@ -59,7 +59,7 @@
 "bge_151_I_3":{"zitierung":"BGE 151 I 3","regesteKurz":"Art. 8, 26, 27, 36, und 94 BV; kommunales Reglement über das Verbot betreffend den kommerziellen Plakataushang auf öffentlichem Grund und auf privatem Grund, der von öffentlichem Grund aus sichtbar ist; abstrakte Normenkontrolle. Das…","datum":"2024-06-05","facetten":{"quelltyp":"rechtsprechung","ebene":"bund","kanton":"CH","gericht":"bge","status":"bge"}},
 "bge_152_III_7":{"zitierung":"BGE 152 III 7","regesteKurz":"Art. 75 Abs. 3 ATSG; Art. 63 SVG; Ausnahme vom Regressprivileg des Arbeitgebers; Begriff der obligatorischen Haftpflichtversicherung; Unfall mit einem Bagger. Der in Art. 75 Abs. 3 ATSG statuierte Ausschluss des Regressprivilegs des…","datum":"2025-03-13","facetten":{"quelltyp":"rechtsprechung","ebene":"bund","kanton":"CH","gericht":"bge","status":"bge"}},
 "bge_152_V_2":{"zitierung":"BGE 152 V 2","regesteKurz":"Art. 56 Abs. 2, Art. 61 lit. a und f bis ATSG und Art. 69 Abs. 1 bis IVG (beide in der seit 1. Januar 2021 geltenden Fassung); Gerichtskosten im kantonalen Verfahren bei Rechtsverweigerungs- oder Rechtsverzögerungsbeschwerden auf dem…","datum":"2026-01-01","facetten":{"quelltyp":"rechtsprechung","ebene":"bund","kanton":"CH","gericht":"bge","status":"bge"}},
-"bge_152_V_20":{"zitierung":"BGE 152 V 20","regesteKurz":"Art. 24 Abs. 1 KVG; Ziff. 1.2 Anhang 1 KLV; Art. 14 Abs. 2 lit. b Transplantationsgesetz; Ersatz von Erwerbsausfall bei Organspende. Der vom Organspender direkt gegenüber dem obligatorischen Krankenpflegeversicherer der Organempfängerin…","datum":"2026-01-01","facetten":{"quelltyp":"rechtsprechung","ebene":"bund","kanton":"CH","gericht":"bge","status":"bge"}},
+"bge_152_V_20":{"zitierung":"BGE 152 V 20","regesteKurz":"Art. 24 Abs. 1 KVG; Ziff. 1.2 Anhang 1 KLV; Art. 14 Abs. 2 lit. b Transplantationsgesetz; Ersatz von Erwerbsausfall bei Organspende. Der vom Organspender direkt gegenüber dem obligatorischen Krankenpflegeversicherer der Organempfängerin…","datum":"2025-06-23","facetten":{"quelltyp":"rechtsprechung","ebene":"bund","kanton":"CH","gericht":"bge","status":"bge"}},
 "bs_appellationsgericht_BES.2022.59":{"zitierung":"Appellationsgericht BS BES.2022.59 vom 03.06.2022","regesteKurz":"Rückzugsfiktion (Art. 356 Abs. 4 StPO) (BGer-Nr. 6B_868/2022 vom 25. August 2022)","datum":"2022-06-03","facetten":{"quelltyp":"rechtsprechung","ebene":"kanton","kanton":"BS","gericht":"bs_appellationsgericht","status":"kantonal"}},
 "bs_appellationsgericht_BES.2022.74":{"zitierung":"Appellationsgericht BS BES.2022.74 vom 06.07.2022","regesteKurz":"Nichteintreten auf Einsprache infolge Verspätung","datum":"2022-07-06","facetten":{"quelltyp":"rechtsprechung","ebene":"kanton","kanton":"BS","gericht":"bs_appellationsgericht","status":"kantonal"}},
 "bs_appellationsgericht_BES.2023.125":{"zitierung":"Appellationsgericht BS BES.2023.125 vom 29.01.2024","regesteKurz":"Untersuchungsbefehl","datum":"2024-01-29","facetten":{"quelltyp":"rechtsprechung","ebene":"kanton","kanton":"BS","gericht":"bs_appellationsgericht","status":"kantonal"}},
@@ -179,7 +179,7 @@
 "51":[{"key":"bge_149_IV_153","gewicht":0},{"key":"bge_146_IV_358","gewicht":0},{"key":"bs_appellationsgericht_ZS.2024.4","gewicht":null},{"key":"bs_appellationsgericht_SB.2023.64","gewicht":null},{"key":"bs_appellationsgericht_SB.2020.14","gewicht":null}],
 "55":[{"key":"bge_147_IV_439","gewicht":0},{"key":"bge_146_IV_88","gewicht":0},{"key":"bs_appellationsgericht_SB.2021.4","gewicht":null},{"key":"bs_appellationsgericht_BES.2023.125","gewicht":null},{"key":"bs_appellationsgericht_BES.2023.47","gewicht":null},{"key":"bs_appellationsgericht_SB.2022.41","gewicht":null}],
 "57":[{"key":"bs_appellationsgericht_SB.2024.48","gewicht":null}],
-"58":[{"key":"bge_152_V_2","gewicht":0},{"key":"bge_152_V_20","gewicht":0},{"key":"bge_152_III_7","gewicht":0},{"key":"bge_148_III_401","gewicht":0},{"key":"bge_148_IV_432","gewicht":1},{"key":"bge_147_III_402","gewicht":0}],
+"58":[{"key":"bge_152_V_2","gewicht":0},{"key":"bge_152_V_20","gewicht":1},{"key":"bge_152_III_7","gewicht":0},{"key":"bge_148_III_401","gewicht":0},{"key":"bge_148_IV_432","gewicht":1},{"key":"bge_147_III_402","gewicht":0}],
 "62":[{"key":"bge_148_III_401","gewicht":0},{"key":"bge_148_IV_432","gewicht":1}],
 "63":[{"key":"bge_152_III_7","gewicht":0},{"key":"bge_146_III_362","gewicht":0}],
 "65":[{"key":"bge_151_III_35","gewicht":0},{"key":"bge_147_V_417","gewicht":0}],
