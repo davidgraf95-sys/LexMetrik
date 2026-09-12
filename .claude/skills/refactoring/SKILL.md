@@ -107,6 +107,17 @@ Ein `check:*` zählt erst als Tor, wenn alle vier Bedingungen erfüllt sind:
 **Sabotage-Probe:** Wer ein Tor baut, zeigt es einmal rot. Ein Tor, das nicht
 scheitern kann, ist gefährlicher als keines.
 
+**Kennzahl-Regel bei UND-Bedingungen** (Gegenprüfung PR #828 Runde D1, 12.9.2026):
+Bei Wächtern mit UND-verknüpften Bedingungen genügt «einmal rot, einmal grün»
+nicht — eine UND-Verknüpfung kann still 0 statt der erwarteten Trefferzahl
+messen, ohne dass der Test es bemerkt, wenn keine Teilbedingung je einzeln
+geprüft wird. Die Ist-Kennzahl JEDER Teilbedingung gehört einmal in den
+Testbeweis, nicht nur das 0/&gt;0-Gesamtergebnis. Beleg: der Vollabdeckungs-
+Wächter im `--nur`-Pfad (Kanton-Fremd-Drift, PR #828) prüfte die Bedingung
+`erlassNr === '' && erlassName === ''` — sie mass 0, obwohl die richtige
+Teil-Kennzahl `erlassNr === ''` bei 267 lag (Mehrheits-Heuristik statt
+1:1-Übernahme hatte `erlassName` unbemerkt mitbefüllt).
+
 **Einordnung beim Bau** (Klassierung, damit die lokale Kette nicht monoton
 wächst):
 

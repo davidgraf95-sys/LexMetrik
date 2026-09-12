@@ -1,5 +1,30 @@
 # ROADMAP — Erledigt-Chronik (Detail-Archiv erledigter Schritte)
 
+## `check:schlankheit`-Restfeld adapter-lexwork.ts + KontextPanel.tsx — gelöst 12.9.2026 (W2·18-FEHLERBUCH)
+
+**Ursprünglicher Befund (Wortlaut, bis 12.9.2026 offen, `W2·18-FEHLERBUCH`):** «**`check:schlankheit`
+rot auf main: `scripts/normtext/adapter-lexwork.ts` 926 Z. (Baseline 839)** *(Nullprobe zweier Fixer
+12.9.2026 auf 6aca2901e)* — §6.6-Split in Leaf-Module, Baseline nicht anheben; Risikopfad ⇒ Golden
+byte-gleich + Gegenprüfung (kein Jules-Ticket). Zusätzlich seit PR #827 (12.9.2026)
+`src/components/kontext/KontextPanel.tsx` 813 Z. (Schwelle 800) — reine UI-Komponente, kein
+Risikopfad; Split ohne Gegenprüfungspflicht.»
+
+- [x] **Gelöst 12.9.2026:**
+  - `adapter-lexwork.ts`: 926 → **921 Z.** durch PR #828 (`bc3e65eb8`, Kanton-Fremd-Drift-Auflage
+    C1) — kein Split, allein Regex-Vereinheitlichung (fr-Stand-Erkennung, ein Ausdruck statt zwei
+    Alternativen) und Kommentar-Straffung; Baseline unverändert (839, erlaubt bis 922). Volles
+    Nachtrags-Protokoll dieser Session: Abschnitt „Kanton-Fremd-Drift AR/BS … — gelöst 12.9.2026"
+    weiter unten in dieser Datei, Nachtrag-Absatz zu Auflagen B1/B2/C1.
+  - `KontextPanel.tsx`: 813 → **740 Z.** durch PR #830 (`a115a27cf`) — §6.6-Split, Revisions-
+    Abschnitt als eigenes Leaf-Modul `src/components/kontext/RevisionenGruppe.tsx` ausgelagert
+    (verhaltensneutral: Tests 7924/7924 grün, Golden 256 byte-gleich); zwei Datei-Wächter
+    (`leser-benennung`, `design-r2d-mobil-zustaende`) additiv um das neue Modul ergänzt.
+  - **Begründung:** beide Restfelder waren bereits vor dieser Buchung technisch erledigt (Commits
+    liegen auf `main`); die Buchung überführt nur die noch offene ROADMAP-Fehlerbuch-Zeile in die
+    Chronik. `npm run check:schlankheit` lief bei der Überführung NACKT grün: „1581 Datei(en)
+    geprüft, 15 Bestands-Einträge, keine Neuzugänge/Überschreitungen über der §6.6-Schwelle
+    (800 Z., Toleranz 10%)."
+
 ## Geltende BMV (SR 412.103.1) im Korpus — Wortlaut vor der Lösung + Lösung 12.9.2026 (W2·18-FEHLERBUCH)
 
 **Ursprünglicher Befund (Wortlaut, bis 12.9.2026 offen, ROADMAP.md `QS-KORPUS`-Umfeld):**
