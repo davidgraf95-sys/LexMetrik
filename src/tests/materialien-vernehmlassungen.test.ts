@@ -1,7 +1,8 @@
 import { describe, it, expect } from 'vitest';
 import {
-  baueVernehmlassungen, keyAusCons, projEliAusCons, liveLink, shaVernehmlassung,
+  baueVernehmlassungen, keyAusCons, projEliAusCons, liveLink,
 } from '../../scripts/materialien/vernehmlassungen-generieren';
+import { shaEintrag } from '../../scripts/materialien/material-manifest';
 import type { ErlassMeta } from '../../scripts/materialien/botschaften-generieren';
 import type { SparqlBinding } from '../../scripts/fedlex-sparql';
 import { VERNEHMLASSUNGEN } from '../lib/materialien/vernehmlassungen.generated';
@@ -77,11 +78,14 @@ describe('baueVernehmlassungen — Kern-Logik', () => {
   });
 
   it('sha ändert bei Status-/Frist-Wechsel (Currency-Drift-Token), nicht bei stand', () => {
+    // Geprüft wird der EINE Identitäts-sha des Generators (`shaEintrag`,
+    // material-manifest.ts) — kein Duplikat mehr im Generator-Modul (§5, Fund
+    // FAHRPLAN-OFFENE-BEFUNDE «Register-sha rotiert mit stand»).
     const base = baueVernehmlassungen([bind({ sr: '220', cons: CONS_A, status: `${S}2`, titelDe: 'T', start: '2021-09-06', ende: '2021-12-06' })], META, '2026-07-10')[0];
     const spaeterStand = baueVernehmlassungen([bind({ sr: '220', cons: CONS_A, status: `${S}2`, titelDe: 'T', start: '2021-09-06', ende: '2021-12-06' })], META, '2026-08-01')[0];
     const statusWechsel = baueVernehmlassungen([bind({ sr: '220', cons: CONS_A, status: `${S}5`, titelDe: 'T', start: '2021-09-06', ende: '2021-12-06' })], META, '2026-07-10')[0];
-    expect(shaVernehmlassung(spaeterStand)).toBe(shaVernehmlassung(base)); // stand nicht im sha
-    expect(shaVernehmlassung(statusWechsel)).not.toBe(shaVernehmlassung(base)); // Status im sha
+    expect(shaEintrag(spaeterStand)).toBe(shaEintrag(base)); // stand nicht im sha
+    expect(shaEintrag(statusWechsel)).not.toBe(shaEintrag(base)); // Status im sha
   });
 });
 

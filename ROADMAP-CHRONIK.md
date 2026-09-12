@@ -1,5 +1,31 @@
 # ROADMAP — Erledigt-Chronik (Detail-Archiv erledigter Schritte)
 
+## Register-sha rotiert mit stand — Wortlaut vor der Lösung + Lösung 12.9.2026 (PR #814)
+
+**Ursprünglicher Befund (Wortlaut, bis 12.9.2026 offen, FAHRPLAN-OFFENE-BEFUNDE.md:93,
+Nacht 5.9.2026, #687/#695):** «Register-`sha` rotiert mit `stand`» — `material-manifest.ts:45`
+hasht `r.stand`; stand-freie `shaVernehmlassung()` nur im Test (§5/§6.7).
+
+- [x] **Gelöst 12.9.2026, PR #814:** Nullprobe zuerst — Rot-Beweis-Test bewies, dass
+  `shaEintrag()` bei identischem Inhalt und unterschiedlichem `stand` verschiedene sha
+  erzeugte; Messreihe Lauf #789→#803 (register.json, Commits e1e0e708e→6456dcf00): 831 von
+  831 Vernehmlassungs-sha änderten sich, bei nur 1 tatsächlichem Statusübergang. Fix:
+  `r.stand` aus dem Identitäts-sha in `shaEintrag()` entfernt (stand bleibt eigenes
+  Provenienz-/Kern-Feld, §7, unverändert ausgeliefert); die stand-freie Formel
+  `shaVernehmlassung()` (nie im Generator-Pfad verdrahtet, nur eigener Test) entfernt statt
+  als zweite Formel weitergepflegt — eine Funktion für Generator UND Test (§5). Konsumenten
+  geprüft: `check-materialien.ts` prüft nur Format + Byte-Gleichheit zur frischen
+  Projektion, kein Vergleich gegen eine Alt-Fassung; `check:entstehung`
+  (Anker-sha-Determinismus-Wächter) ist ein eigenständiges Sidecar-sha-System ohne Import
+  aus `material-manifest.ts` — unberührt. Register neu erzeugt (`materialien
+  --datum=2026-09-12`, `datenhaltung:manifest`): 1383/1681 sha ändern sich EINMALIG
+  (Formel-Wechsel), alle anderen Felder byte-gleich (register.json/register-i18n.json
+  unverändert). Tore: `check:materialien`/`check:bs-materialien`/`check:entstehung`/
+  `check:datenhaltung`/`check:paritaet`/`check:zaehler`/`check:feed` grün,
+  `golden:vergleich` 256 Fälle byte-gleich, `vitest src/tests/*materialien*` 16
+  Dateien/274 Tests grün, `lint` 0 Fehler. Damit sind alle drei Befunde der Nacht-5.9.2026-
+  Sammelzeile (ROADMAP.md:416) gelöst: Finding 7 ohne Reparaturweg (PR #803) ·
+  Register-sha rotiert mit stand (PR #814) · Arm-Tor wanduhrabhängig (PR #803).
 ## `adapter-lexwork.ts:778` Fetch-Ergebnis unvalidiert — Wortlaut + Fix 12.9.2026 (PR #813, Gegenprüfung ausstehend)
 
 **Ursprünglicher Befund (Wortlaut, ROADMAP.md Stand 29.8.2026 / FAHRPLAN-OFFENE-BEFUNDE.md §1):**

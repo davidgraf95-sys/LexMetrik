@@ -6,14 +6,14 @@ import {
 import { BOTSCHAFTEN } from '../lib/materialien/botschaften.generated';
 import { VERNEHMLASSUNGEN } from '../lib/materialien/vernehmlassungen.generated';
 import { BS_MATERIALIEN } from '../lib/materialien/bs-grossrat.generated';
-import { baueMaterialManifest } from '../../scripts/materialien/material-manifest';
+import { baueMaterialManifest, shaEintrag } from '../../scripts/materialien/material-manifest';
 import { projiziereRegister, dbDokAusZustand, teileRegister } from '../../scripts/materialien/soft-law-projektion';
 import { ladeZustand } from '../../scripts/materialien/soft-law-zustand';
 import { BEHOERDE_RECHTSGEBIET } from '../../scripts/materialien/adapter-typen';
 import { ERLASS_REGISTER, GEBIETE } from '../lib/normtext/register';
 import { NAVIGATION } from '../lib/navigation';
 import { materialienFuerNorm } from '../lib/normtext/werkzeuge';
-import type { MaterialManifest } from '../lib/materialien/typen';
+import type { MaterialManifest, MaterialRegistereintrag } from '../lib/materialien/typen';
 
 // Konsistenz-Tore Material-Register ↔ Manifest ↔ Navigation (offline, im gate).
 // Pendant zu normtext-register.test.ts; eigener Namespace. Jede Diskrepanz bricht
@@ -118,6 +118,72 @@ describe('Tor 2 — committetes Manifest == frischer Build (Merge-Modell §2.7, 
       expect(x.doktypLabel).toBe(DOKTYP_LABEL[x.doktyp]);
       expect(x.sha).toMatch(/^[0-9a-f]{64}$/);
     }
+  });
+
+  it('Register-sha: `stand` ist NUR bei BUND (Erhebungsdatum) stand-frei, sonst Teil der Identität (§7/FAHRPLAN-OFFENE-BEFUNDE «Register-sha rotiert mit stand», Gegenprüfungs-Auflage PR #814)', () => {
+    // BUND (Vernehmlassungen, Paket 3): `stand` = Abfragedatum des Erhebungslaufs, kein
+    // inhaltliches Merkmal — ein blosser Tages-Wechsel darf den Identitäts-sha NICHT
+    // ändern (sonst rotiert jeder Lauf alle sha, Drift-Erkennung wertlos, Churn in
+    // Diffs; Beleg: Lauf #789→#803 änderte 831/831 Vernehmlassungs-sha bei nur 1
+    // tatsächlichem Statusübergang).
+    const basis: MaterialRegistereintrag = {
+      key: 'TEST-STAND', behoerde: 'BUND', doktyp: 'vernehmlassung', titel: 'Test',
+      rechtsgebiet: 'oeffentlich', sprache: 'de', status: 'nur-live-link',
+      quelleUrl: 'https://www.fedlex.admin.ch/eli/dl/proj/2026/1/cons_1/de',
+      stand: '2026-07-10', rang: 1, normKeys: ['OR'],
+      vernehmlassung: { status: 'laufend', fristStart: '2026-07-01', fristEnde: '2026-10-01', projEli: 'x' },
+    };
+    const spaeterStand: MaterialRegistereintrag = { ...basis, stand: '2026-09-12' };
+    const statusWechsel: MaterialRegistereintrag = {
+      ...basis, vernehmlassung: { ...basis.vernehmlassung!, status: 'abgeschlossen' },
+    };
+    expect(shaEintrag(spaeterStand)).toBe(shaEintrag(basis)); // stand nicht im sha
+    expect(shaEintrag(statusWechsel)).not.toBe(shaEintrag(basis)); // Inhalt weiterhin im sha
+
+    // Kuratierter Eintrag (z. B. ESTV-KS): `stand` ist das amtliche Dokumentdatum
+    // (register.ts: «Dokument über Nummer/Stand identifizieren») — MUSS im sha bleiben,
+    // sonst würde eine Datums-Korrektur der Behörde drift-unsichtbar (Gegenprüfungs-
+    // Auflage PR #814; Rot-Beweis vor diesem Fix: dieselben zwei Objekte ergaben
+    // gleiches sha, weil `stand` global ausgeschlossen war).
+    const kuratiert: MaterialRegistereintrag = {
+      key: 'ESTV-KS-DBG-5A', behoerde: 'ESTV', doktyp: 'kreisschreiben', titel: 'Test-KS',
+      rechtsgebiet: 'steuern', sprache: 'de', status: 'nur-live-link',
+      quelleUrl: 'https://www.estv.admin.ch/x', stand: '2022-02-01', rang: 1,
+    };
+    const kuratiertAndererStand: MaterialRegistereintrag = { ...kuratiert, stand: '2023-05-01' };
+    expect(shaEintrag(kuratiertAndererStand)).not.toBe(shaEintrag(kuratiert)); // stand IM sha
+
+    // BR (Botschaften) und BS-GR (Grossrat): `stand` ist ebenfalls ein amtliches
+    // Dokumentdatum (Botschafts- bzw. Vorlage-/Ereignisdatum, s. Kommentar `standVon()`
+    // in bs-materialien.ts: «nie das Abrufdatum») — bleibt im sha (Abweichung von der
+    // Auflagen-Formulierung, §7-Offenlegung s. material-manifest.ts).
+    const br: MaterialRegistereintrag = {
+      key: 'BR-TEST', behoerde: 'BR', doktyp: 'botschaft', titel: 'Test-Botschaft',
+      rechtsgebiet: 'privat', sprache: 'de', status: 'nur-live-link',
+      quelleUrl: 'https://www.fedlex.admin.ch/eli/fga/2026/1/de', stand: '2026-01-01', rang: 1,
+    };
+    expect(shaEintrag({ ...br, stand: '2026-02-01' })).not.toBe(shaEintrag(br));
+    const bsGr: MaterialRegistereintrag = {
+      key: 'BS-GR-26.0001', behoerde: 'BS-GR', doktyp: 'ratschlag', titel: 'Test-Geschäft',
+      rechtsgebiet: 'oeffentlich', sprache: 'de', status: 'nur-live-link',
+      quelleUrl: 'https://grosserrat.bs.ch/x', stand: '2026-03-01', rang: 1,
+    };
+    expect(shaEintrag({ ...bsGr, stand: '2026-04-01' })).not.toBe(shaEintrag(bsGr));
+  });
+
+  it('Register-sha: Feldgrenze ist eindeutig, kein Trenner-Kollisions-Paar (Delta-Prüfung PR #814)', () => {
+    // Rot-Beweis des Prüfers: ein blosses Leerzeichen als Feld-Trenner schliesst die
+    // Feldgrenze nicht — `titel:'A B', nummer:'N'` und `titel:'A', nummer:'B N'`
+    // ergaben mit `.join(' ')` dasselbe sha, weil ' ' selbst in Feldern vorkommen
+    // kann (Titel-Text). Trenner muss ein Zeichen sein, das in keinem Feld auftritt.
+    const basis = (titel: string, nummer: string): MaterialRegistereintrag => ({
+      key: 'TEST-GRENZE', behoerde: 'ESTV', doktyp: 'kreisschreiben', titel, nummer,
+      rechtsgebiet: 'steuern', sprache: 'de', status: 'nur-live-link',
+      quelleUrl: 'https://www.estv.admin.ch/x', stand: '2022-02-01', rang: 1,
+    });
+    const a = basis('A B', 'N');
+    const b = basis('A', 'B N');
+    expect(shaEintrag(a)).not.toBe(shaEintrag(b));
   });
 });
 

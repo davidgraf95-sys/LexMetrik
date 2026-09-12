@@ -97,16 +97,51 @@ export function teileRegister(voll: MaterialVollManifest): {
   };
 }
 
-/** sha256 über die Identitätsfelder (stabile, sortierte Repräsentation). Ändert
- *  sich, sobald sich Titel/Nummer/Quelle/Stand/Status/Verzahnung ändern → Drift-
- *  Token, das ein check gegen die committete Fassung prüft. */
+// Behörden, bei denen `stand` nachweislich ein Erhebungs-/Abfragedatum ist (rotiert bei
+// jedem Lauf, keine inhaltliche Eigenschaft) — NUR BUND (Vernehmlassungen, Paket 3):
+// `vernehmlassungen-generieren.ts` setzt `stand: datum`, den CLI-Lauf-Parameter, Kommentar
+// dort «Abfragedatum (Status ist mutabel)». ABWEICHUNG von der Gegenprüfungs-Auflage PR
+// #814 (die auch BR/BS-GR in dieses Set aufnehmen wollte, §7-Offenlegung): für beide ist
+// `stand` nachweislich ein amtliches Dokumentdatum, kein Erhebungsdatum — BR
+// (`botschaften-generieren.ts`: `stand: iso` = `r.date`, Feld-Kommentar «Botschafts-Datum
+// ISO», wertgleich zu `botschaftDate`) und BS-GR (`bs-materialien.ts`, Funktion `standVon`,
+// Kommentar dort wörtlich: «Amtliche Daten, in dieser festen Reihenfolge — nie das
+// Abrufdatum»). Beide zusätzlich auszuschliessen würde eine echte Dokumentdatum-Korrektur
+// (z. B. eine berichtigte Botschafts-/Vorlage-Datierung) drift-unsichtbar machen — genau
+// der Fehler, den dieser Fund beheben soll. Bei Widerspruch zur Auflage gewinnt der Beleg
+// im Quellcode (§1/§7).
+const STAND_IST_ERHEBUNGSDATUM = new Set(['BUND']);
+
+// Feld-Trenner für den sha-Normstring: das ASCII-Steuerzeichen «Unit Separator»
+// (0x1F) — kommt in keinem Feld vor (Titel/Hinweis/URL sind lesbarer Text ohne
+// Steuerzeichen), anders als ein blosses Leerzeichen. Delta-Prüfung PR #814,
+// Rot-Beweis des Prüfers: mit `.join(' ')` ergaben `titel:'A B', nummer:'N'` und
+// `titel:'A', nummer:'B N'` dasselbe sha, weil ' ' selbst Feldinhalt sein kann —
+// die Feldgrenze war nicht eindeutig. 0x1F ist dafür das amtliche ASCII-Steuerzeichen
+// (genau dieser Zweck: Feld-/Datensatz-Trennung in Textdaten).
+const FELD_TRENNER = '';
+
+/** sha256 über die Identitätsfelder (stabile, sortierte Repräsentation, Felder durch
+ *  `FELD_TRENNER` getrennt — eindeutige Feldgrenze, s. o.; kein kryptografischer
+ *  Kollisionsschutz nötig, da nur Drift-Vergleich gegen die committete Fassung). Ändert
+ *  sich, sobald sich Titel/Nummer/Quelle/Status/Verzahnung ändern → Drift-Token, das ein
+ *  check gegen die committete Fassung prüft. `stand` ist NUR bei
+ *  `STAND_IST_ERHEBUNGSDATUM`-Behörden ausgeschlossen (s. o.) — sonst bewusst Teil des
+ *  Identitäts-sha, weil es dort das amtliche Dokumentdatum trägt (Fund
+ *  FAHRPLAN-OFFENE-BEFUNDE «Register-sha rotiert mit stand», Beleg Lauf #789→#803:
+ *  831/831 Vernehmlassungs-sha bei nur 1 tatsächlichem Statusübergang). `stand` bleibt in
+ *  jedem Fall als eigenes Kern-/Provenienz-Feld erhalten (§7, unverändert ausgeliefert). */
 export function shaEintrag(r: MaterialRegistereintrag): string {
   const norm = [
     r.key, r.behoerde, r.doktyp, r.titel, r.nummer ?? '', r.rechtsgebiet,
-    r.sprache, r.status, r.quelleUrl, r.stand, String(r.rang),
+    r.sprache, r.status, r.quelleUrl, String(r.rang),
     (r.normKeys ?? []).join(','), r.hinweis ?? '',
-    // Botschaften-Zusatzfelder NUR für BR anhängen → bestehende Einträge byte-identisch
-    // (Drift-Token deckt titel_fr/it + Paket-5-Join-Felder mit ab).
+    ...(STAND_IST_ERHEBUNGSDATUM.has(r.behoerde) ? [] : [r.stand]),
+    // Botschaften-Zusatzfelder NUR für BR anhängen → bestehende Einträge byte-identisch.
+    // `botschaftDate`/`artAnker` bewusst NICHT zusätzlich im Drift-Token: `botschaftDate`
+    // ist wertgleich zu `stand` (das oben bereits einfliesst — kein zweites Feld für
+    // denselben Wert), `artAnker` ist heute in jedem Eintrag `undefined` (Moat-Hebel 2,
+    // noch ohne Daten) und trägt darum aktuell keine Drift-Information.
     ...(r.behoerde === 'BR'
       ? [r.titelFr ?? '', r.titelIt ?? '', r.projEli ?? '', (r.ocUris ?? []).join(','),
          // E1: Verfahrenskette im Drift-Token — ein neuer Verfahrensschritt ändert
@@ -128,7 +163,7 @@ export function shaEintrag(r: MaterialRegistereintrag): string {
       ? [(r.ereignisse ?? []).map((v) => `${v.code}:${v.datum ?? ''}:${v.res ?? ''}:${v.bez ?? ''}`).join(';'),
          (r.bsKanten ?? []).map((k) => `${k.erlass}:${k.quelle}:${k.regel}:${k.beleg}`).join(';')]
       : []),
-  ].join('');
+  ].join(FELD_TRENNER);
   return createHash('sha256').update(norm, 'utf8').digest('hex');
 }
 
