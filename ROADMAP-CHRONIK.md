@@ -1,5 +1,26 @@
 # ROADMAP — Erledigt-Chronik (Detail-Archiv erledigter Schritte)
 
+## `adapter-lexwork.ts:778` Fetch-Ergebnis unvalidiert — Wortlaut + Fix 12.9.2026 (PR #813, Gegenprüfung ausstehend)
+
+**Ursprünglicher Befund (Wortlaut, ROADMAP.md Stand 29.8.2026 / FAHRPLAN-OFFENE-BEFUNDE.md §1):**
+«`adapter-lexwork.ts:778` Fetch-Ergebnis unvalidiert — `Response.json()` liefert unter `lib: DOM`
+`any`; Shape vor Verwendung prüfen (Nebenfund QS-TYP-LUECKE 15.8., Gegenprüfungs-Auflage A1;
+Risikopfad Extraktion ⇒ QS-GP)».
+
+- [x] **Gefixt 12.9.2026, PR #813 (`af5e35ce9`), Gegenprüfung ausstehend — nicht gemergt:** Der
+  frühere `let json: {...}`-Cast auf das Ergebnis von `Response.json()` prüfte nur beim Compile,
+  nie zur Laufzeit. Nullprobe (drei Tests in `src/tests/normtext-lexwork.test.ts`, empirisch gegen
+  den alten Code verifiziert — `git stash` auf `adapter-lexwork.ts` allein, alle drei liefen rot):
+  `text_of_law` als String statt Objekt lief still durch (leeres nurPdf-Ergebnis ohne Hinweis),
+  `current_version` als Array statt Objekt ebenso (Feld schweigend ignoriert), `xhtml_tol` als
+  Zahl crashte erst tief im XHTML-Parser mit URL-loser Meldung («xhtml.split is not a function»).
+  Fix: `Response.json()` bleibt `unknown`; neue Laufzeit-Validierung `validiereTextOfLaw()` (+
+  Guard `istPlainObject`) prüft Objekt-Form und die tatsächlich verwendeten Feldtypen, wirft bei
+  Verstoss sofort mit URL + Feldpfad + gefundenem Typ (§6.7). Gleiches Muster wie
+  `scripts/materialien/adapter-bs-grossrat.ts` (`unknown` + `typeof`/`Array.isArray`-Wächter,
+  keine neue Bibliothek). Determinismus/Extraktions-Logik unverändert; `golden:vergleich` 256
+  Fälle byte-gleich, `check:golden-normtext` 60283 Knoten/0 Waisen unverändert.
+
 ## Deckungs-Seite «was wir nicht haben» — Wortlaut vor der Lösung + Lösung 12.9.2026 (PR #807)
 
 **Ursprünglicher Befund (Wortlaut, bis 12.9.2026 offen):** «Deckungs-Seite «was wir nicht haben»
