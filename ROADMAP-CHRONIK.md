@@ -88,6 +88,34 @@ Tore erneut nackt gefahren: `check:struktur-konsistenz`, `check:normkeys-kanton`
 `check:paritaet`, `check:normtext-netz`, `golden:vergleich`, `tsc -b`, `lint`, vitest (7905 Tests,
 davon 3 neu für A1) — alle grün ausser dem unveränderten `check:gegenpruefung`/`check:schlankheit`-Paar.
 
+**Nachtrag 12.9.2026 (Nachprüfung PR #828, Auflagen B1/B2/C1 — Wortlaut ergänzt, §2b):** B1 bestätigte
+dieselbe fr-Stand-Bugklasse UID-identisch in zwei weiteren VS-Snapshots (`VS-178.104.json`: committet
+2009-01-01, amtlich 2011-01-01; `VS-211.611.json`: committet 2015-01-02, amtlich 2025-10-01) —
+`inKraftSeit()`s Regex war für BEIDE bereits durch den A1-Fix ausreichend (liefert korrekt 2011-01-01/
+2025-10-01), reiner Zeit-Nachzug per `--nur=VS-178.104,VS-211.611`; zusätzlich `en vigueur dès:
+DD.MM.YYYY` (ohne «le», mit Doppelpunkt) additiv abgedeckt, obwohl real noch nicht beobachtet — die
+vereinheitlichte Regex (EIN Ausdruck statt zwei Alternativen, Nebeneffekt: `adapter-lexwork.ts` sank
+dadurch auf 921 Z., C1 damit erledigt, s. u.) deckt «depuis»/«dès» ohnehin gemeinsam ab. B2 deckte einen
+eigenen Bug auf: `sammleKantonVollinventarLexWork()` liess `erlassName`/`erlassNr` leer (Konstanten),
+`erzeugeKantonsSnapshots` baut daraus aber die Systematiknummer-Klammer — VS-173.8-fr verlor durch den
+A1-Regen die Nummer (`erlass` «…, LTar» statt «…, LTar (RS 173.8)», `register.json` `sr: null`).
+Root-Fix NICHT «vom eigenen Snapshot zurückparsen» (der historische Wert von VS-173.8-fr selbst trug
+fälschlich «SR» statt «RS» — vermutlich aus der Tarif-DE-Gruppe kopiert, als beide Sprachen einst in
+einem Lauf kombiniert wurden), sondern MEHRHEITS-Präfix aus den GESCHWISTERN desselben (Kanton,
+Sprache) (VS-178.104/-211.611/-643.1-fr tragen alle «RS»), kombiniert mit der amtlichen
+Systematiknummer (URL-lawId, die stimmt immer) — «geprüft, nicht geraten». Bestätigt an FR-130.11:
+DE→«SGF 130.11», FR→«RSF 130.11» (kanton-eigene Abkürzung, kein generisches SR→RS). Rot-Beweis-Test
+(vorher: `erlassNr` für JEDE Vollinventar-Gruppe `''`) + gezielter Test (VS-173.8-fr/-de exakte Werte).
+VS-173.8-fr neu erzeugt (`erlass` trägt «(RS 173.8)» wieder, `register.json sr: "RS 173.8"`), Feed/
+Manifest nachgezogen. C1: `adapter-lexwork.ts` 928→**921 Z.** (Baseline 839, erlaubt 922) —
+`check:schlankheit` wieder VOLLSTÄNDIG GRÜN (nicht nur «nicht schlechter als main [926]»), ohne Split
+und ohne Baseline-Anhebung, allein durch die Regex-Vereinheitlichung (B1) und Kommentar-Straffung.
+Stichproben: VS-178.104/-211.611 je 1 Paragraph live — 2/2 Identität. Tore erneut nackt: `tsc -b`,
+`lint`, `check:struktur-konsistenz`, `check:normkeys-kanton`, `check:datenhaltung`, `check:paritaet`,
+`check:normtext-netz` (1189 Gruppen, Drift 0, 0 Warnungen), `check:golden-normtext`, `golden:vergleich`
+(256 identisch), `check:perf-budget`, vitest (7909 Tests, 4 neu) — alle grün ausser dem unveränderten
+`check:gegenpruefung` (wartet auf Orchestrator-Dispatch).
+
 ## `normtext:struktur`-Erlassfilter + Pin-Sonde auf drei Konsumenten ausgeweitet — gelöst 12.9.2026 (W2·18-FEHLERBUCH)
 
 **Ursprünglicher Befund (Wortlaut, bis 12.9.2026 offen, `fahrplaene/FAHRPLAN-OFFENE-BEFUNDE.md` §4,

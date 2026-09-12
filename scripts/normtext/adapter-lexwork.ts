@@ -692,21 +692,14 @@ export function inKraftSeit(
       return `${mDe[3]}-${mDe[2]}-${mDe[1]}`;
     }
 
-    // Französisches Muster: «en vigueur depuis le DD.MM.YYYY» / «… dès le …» /
-    // «… depuis DD.MM.YYYY» / «… depuis: DD.MM.YYYY» (Doppelpunkt optional,
-    // wie im deutschen Muster oben — Gegenprüfung PR #828, 12.9.2026: die
-    // «ohne le»-Alternative kannte den Doppelpunkt nicht, lex.vs.ch liefert
-    // ihn aber («en vigueur depuis: 01.01.2025») → fiel still auf `enactment`
-    // zurück, VS-173.8-fr zeigte dadurch 2011 statt 2025 (Rest von BUG A4,
-    // 16.6.2026, das die «le»-Form schon korrekt behandelte).
+    // Französisches Muster, EIN Ausdruck für alle Varianten («depuis»/«dès»,
+    // mit/ohne «le», Doppelpunkt an beiden Stellen optional (PR #828 B1: lex.vs.ch
+    // liefert «depuis:/dès: DD.MM.YYYY» ohne «le» — sonst Fallback auf `enactment`).
     const mFr = versionDatesStr.match(
-      /[Ee]n\s+vigueur\s+(?:depuis|dès)\s+le\s*:?\s*(\d{2})\.(\d{2})\.(\d{4})|[Ee]n\s+vigueur\s+depuis\s*:?\s*(\d{2})\.(\d{2})\.(\d{4})/,
+      /[Ee]n\s+vigueur\s+(?:depuis|dès)\s*:?\s*(?:le\s*:?\s*)?(\d{2})\.(\d{2})\.(\d{4})/,
     );
     if (mFr) {
-      // Gruppe 1-3 für «depuis/dès le», Gruppe 4-6 für «depuis» ohne «le»
-      const j = mFr[3] ?? mFr[6];
-      const mo = mFr[2] ?? mFr[5];
-      const t = mFr[1] ?? mFr[4];
+      const [, t, mo, j] = mFr;
       return `${j}-${mo}-${t}`;
     }
   }

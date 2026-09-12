@@ -260,4 +260,25 @@ describe('sammleKantonVollinventarLexWork (Vollabdeckung, §6.7-Fund #694)', () 
     const buerg = voll.find((g) => g.kanton === 'BS' && g.lawId === '121.100');
     expect(buerg?.fetchLawId).toBeUndefined();
   });
+
+  // Nachprüfung PR #828, 12.9.2026 (B2): erlassName/erlassNr dürfen NICHT leer
+  // bleiben — erzeugeKantonsSnapshots baut daraus per erlassBezeichnung() die
+  // Systematiknummer-Klammer; leer liess einen --nur-Regen die Nummer
+  // verlieren (VS-173.8-fr: «…, LTar» statt «…, LTar (RS 173.8)»). Rot-Beweis:
+  // vor dem Fix waren BEIDE Felder für jede Gruppe '' (Konstanten im Code).
+  it('übernimmt erlassNr aus dem committeten Snapshot, sprachrichtig (RS fr / SR de) — VS-173.8', () => {
+    const fr = voll.find((g) => g.kanton === 'VS' && g.lawId === '173.8-fr');
+    const de = voll.find((g) => g.kanton === 'VS' && g.lawId === '173.8-de');
+    expect(fr?.erlassNr).toBe('RS 173.8');
+    expect(de?.erlassNr).toBe('SR 173.8');
+    expect(fr?.erlassName.length).toBeGreaterThan(0);
+  });
+
+  it('kein Vollinventar-Erlass mit erkennbarer Systematiknummer verliert sie (erlassNr nie leer, wenn die Quelle eine Klammer trägt)', () => {
+    const leer = voll.filter((g) => g.erlassNr === '' && g.erlassName === '');
+    // §8: nicht 0 erzwingen (manche committeten Erlasse tragen amtlich keine
+    // Klammer-Nummer) — aber die weit überwiegende Mehrheit muss sie tragen,
+    // sonst ist das Rückparsen aus dem Snapshot gebrochen (Regression von B2).
+    expect(leer.length).toBeLessThan(voll.length * 0.05);
+  });
 });

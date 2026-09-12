@@ -103,6 +103,27 @@ describe('inKraftSeit — reines Parsing ohne Netz', () => {
       ),
     ).toBe('2025-01-01');
   });
+
+  // Nachprüfung PR #828, 12.9.2026 (B1): dieselbe Bugklasse auf «dès» statt
+  // «depuis» — bislang ungetestet, weil real erst nur mit «depuis» beobachtet;
+  // additiv abgedeckt, damit die vereinheitlichte Regex beide Verben UND den
+  // Doppelpunkt gemeinsam trägt (nicht nur «depuis: …», wie im Fix zuvor).
+  it('verarbeitet «en vigueur dès: DD.MM.YYYY» MIT Doppelpunkt, OHNE «le»', () => {
+    expect(
+      inKraftSeit('Version actuelle en vigueur dès: 01.07.2026', '2011-01-01'),
+    ).toBe('2026-07-01');
+  });
+
+  // B1: die zwei weiteren, live bestätigten fr-Snapshots derselben Bugklasse
+  // (uid-identisch, nur `stand` betroffen) — VS-178.104 und VS-211.611.
+  it('verarbeitet die live bestätigten VS-178.104/-211.611-Fassungsstrings', () => {
+    expect(
+      inKraftSeit("Version actuelle en vigueur depuis: 01.01.2011 (Date d'adoption: 22.12.2010)", '2009-01-01'),
+    ).toBe('2011-01-01');
+    expect(
+      inKraftSeit("Version actuelle en vigueur depuis: 01.10.2025 (Date d'adoption: 17.09.2025)", '2015-01-02'),
+    ).toBe('2025-10-01');
+  });
 });
 
 describe('extrahiereLexWorkArtikel — gegen echte ZG-Fixture', () => {

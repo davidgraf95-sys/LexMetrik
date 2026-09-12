@@ -30,6 +30,7 @@ import * as bundesgericht from '../../src/data/tarif/bundesgericht.ts';
 import * as nichtVermoegensrechtlich from '../../src/data/tarif/nicht-vermoegensrechtlich.ts';
 import { parsePassus } from '../../src/lib/normtext/passus.ts';
 import { ZH_QUELLEN } from './zh-quellen.ts';
+import { identitaetAusErlass } from './browse-manifest.ts';
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 
@@ -390,12 +391,17 @@ export function sammleKantonInventar(): KantonInventarGruppe[] {
  */
 export function sammleKantonVollinventarLexWork(): KantonInventarGruppe[] {
   const dir = 'public/normtext/kanton';
-  const gruppen: KantonInventarGruppe[] = [];
-  if (!existsSync(dir)) return gruppen;
+  if (!existsSync(dir)) return [];
+
+  interface RohEintrag {
+    kanton: string; host: string; lang: 'de' | 'fr'; bestandsKey: string;
+    urlLawId: string; quelleUrl: string; erlassName: string; eigenesPraefix: string | null;
+  }
+  const roh: RohEintrag[] = [];
 
   for (const datei of readdirSync(dir)) {
     if (!datei.endsWith('.json') || datei === 'index.json') continue;
-    let inhalt: { eintraege?: Array<{ id: string; quelleUrl: string }> };
+    let inhalt: { eintraege?: Array<{ id: string; quelleUrl: string; erlass?: string }> };
     try {
       inhalt = JSON.parse(readFileSync(join(dir, datei), 'utf8'));
     } catch {
@@ -405,30 +411,56 @@ export function sammleKantonVollinventarLexWork(): KantonInventarGruppe[] {
     if (!erster) continue;
     const m = erster.quelleUrl.match(LEXWORK);
     if (!m) continue; // kein LexWork-Erlass (PDF/HTM/ZH) → andere Prüfungen decken die ab
-
     const teile = erster.id.split('/');
     if (teile.length < 4 || teile[0] !== 'kanton') continue;
 
-    // A1: bei zweisprachigen Erlassen (id trägt den Sprachsuffix, z. B.
-    // «130.11-de») ist die URL-abgeleitete lawId (m[3], kanonisiert) die
-    // fetch-taugliche Form; nur setzen, wenn sie vom Bestands-Key abweicht.
-    const urlLawId = kanonischeLawId(m[3]);
-    const bestandsKey = teile[2];
+    const { titel: erlassName, sr } = identitaetAusErlass(erster.erlass ?? '');
+    // Nur das PRÄFIX-WORT (z. B. «RS»/«SR»/«RSF») aus dem eigenen Wert, NICHT
+    // die Nummer — B2 zeigte, dass ein EINZELNER Erlass (VS-173.8-fr) historisch
+    // die falsche Sprachform trug («SR» statt «RS»); die Zahl selbst deckt sich
+    // dagegen immer mit der amtlichen Systematiknummer (urlLawId, s. u.).
+    const eigenesPraefix = sr?.match(/^([A-ZÄÖÜ]+)\s/)?.[1] ?? null;
 
-    gruppen.push({
-      kanton: teile[1],
-      host: m[1],
-      lang: m[2] as 'de' | 'fr',
-      lawId: bestandsKey,
-      ...(urlLawId !== bestandsKey ? { fetchLawId: urlLawId } : {}),
-      erlassName: '',
-      erlassNr: '',
-      quelleUrl: erster.quelleUrl,
-      artikel: [],
+    roh.push({
+      kanton: teile[1], host: m[1], lang: m[2] as 'de' | 'fr', bestandsKey: teile[2],
+      urlLawId: kanonischeLawId(m[3]), quelleUrl: erster.quelleUrl, erlassName, eigenesPraefix,
     });
   }
 
-  return gruppen;
+  // B2 (Gegenprüfung PR #828, 12.9.2026): erlassNr NICHT leer lassen (baut
+  // sonst über erlassBezeichnung() die Systematiknummer weg) — aber auch NICHT
+  // blind den eigenen historischen Wert übernehmen (der war für VS-173.8-fr
+  // selbst falsch, «SR» statt «RS»). Präfix = MEHRHEIT der GESCHWISTER
+  // desselben (Kanton, Sprache) — «prüfen, was die Geschwister tragen», nicht
+  // raten; Zahl = amtliche Systematiknummer (urlLawId), die stimmt immer.
+  const praefixZaehlung = new Map<string, Map<string, number>>();
+  for (const r of roh) {
+    if (!r.eigenesPraefix) continue;
+    const schluessel = `${r.kanton}|${r.lang}`;
+    const zaehler = praefixZaehlung.get(schluessel) ?? new Map<string, number>();
+    zaehler.set(r.eigenesPraefix, (zaehler.get(r.eigenesPraefix) ?? 0) + 1);
+    praefixZaehlung.set(schluessel, zaehler);
+  }
+  const mehrheitsPraefix = (kanton: string, lang: string): string | null => {
+    const zaehler = praefixZaehlung.get(`${kanton}|${lang}`);
+    if (!zaehler) return null;
+    return [...zaehler.entries()].sort((a, b) => b[1] - a[1])[0][0];
+  };
+
+  return roh.map((r) => {
+    const praefix = mehrheitsPraefix(r.kanton, r.lang) ?? r.eigenesPraefix;
+    return {
+      kanton: r.kanton,
+      host: r.host,
+      lang: r.lang,
+      lawId: r.bestandsKey,
+      ...(r.urlLawId !== r.bestandsKey ? { fetchLawId: r.urlLawId } : {}),
+      erlassName: r.erlassName,
+      erlassNr: praefix ? `${praefix} ${r.urlLawId}` : '',
+      quelleUrl: r.quelleUrl,
+      artikel: [],
+    };
+  });
 }
 
 /**
