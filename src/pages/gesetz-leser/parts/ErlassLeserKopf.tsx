@@ -352,12 +352,23 @@ export function ErlassLeserKopf({
               «amtliche Fassung»-Link und behält darum seinen eigenen Namen —
               aber dieselbe Anatomie (Pfeil hinten, gross beginnend). */}
           <p className="flex flex-wrap items-center gap-x-4 gap-y-1">
+            {/* Gegenprüfung PR #826 (12.9.2026, §7/A2-Nachzug): «in Kraft seit»
+                leitete das Inkrafttreten des NACHFOLGERS bis hierher aus dem
+                Aufhebungsdatum des ALTEN Erlasses ab (`erlass.aufgehoben.seit`)
+                — bei BMV deckungsgleich, aber unbelegt im Allgemeinen (s.
+                `nachfolgerHinweis` in `erlassKopfText.ts`, dieselbe Korrektur
+                für den Prerender-Kopf). Jetzt aus `nachfolger.inKraftSeit`
+                (eigenes, separat verifiziertes SSoT-Feld, `aufhebungen.ts`);
+                fehlt es, entfällt die Klammer statt geschätzt zu werden. */}
             {erlass.aufgehoben.nachfolger && (
               <QuellLink
                 href={`https://www.fedlex.admin.ch/eli/${erlass.aufgehoben.nachfolger.eli}/de`}
                 className="underline hover:no-underline"
               >
-                Nachfolge-Erlass: SR <span className="num">{erlass.aufgehoben.nachfolger.sr}</span> (in Kraft seit <Datum iso={erlass.aufgehoben.seit} />)
+                Nachfolge-Erlass: SR <span className="num">{erlass.aufgehoben.nachfolger.sr}</span>
+                {erlass.aufgehoben.nachfolger.inKraftSeit && (
+                  <> (in Kraft seit <Datum iso={erlass.aufgehoben.nachfolger.inKraftSeit} />)</>
+                )}
               </QuellLink>
             )}
             {erlass.quelleUrl && (
