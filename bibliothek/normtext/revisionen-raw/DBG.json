@@ -3200,6 +3200,10 @@
       "titleIt": {
         "type": "literal",
         "value": "Codice delle obbligazioni (Diritto della società anonima). Correzione"
+      },
+      "rectifies": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2020/746"
       }
     },
     {
@@ -3360,6 +3364,10 @@
       "titleIt": {
         "type": "literal",
         "value": "Legge federale sui giochi in denaro (LGD). Correzione (Concerne soltanto il testo francese)"
+      },
+      "rectifies": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2018/795"
       }
     },
     {
@@ -3456,6 +3464,10 @@
       "titleIt": {
         "type": "literal",
         "value": "Legge federale sul servizio civile sostitutivo (Legge sul servizio civile, LSC). Correzione"
+      },
+      "rectifies": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1996/1445_1445_1445"
       }
     },
     {
@@ -3647,5 +3659,23 @@
     "2026-09-02",
     "2027-01-01",
     "2029-01-01"
-  ]
+  ],
+  "belegteOcs": [],
+  "rectifiesInfoProOc": {
+    "https://fedlex.data.admin.ch/eli/oc/2022/112": {
+      "fremdeSr": "220",
+      "zielOc": "https://fedlex.data.admin.ch/eli/oc/2020/746",
+      "zielFundstelle": "AS 2020 4005"
+    },
+    "https://fedlex.data.admin.ch/eli/oc/2024/215": {
+      "fremdeSr": "935.51",
+      "zielOc": "https://fedlex.data.admin.ch/eli/oc/2018/795",
+      "zielFundstelle": "AS 2018 5103"
+    },
+    "https://fedlex.data.admin.ch/eli/oc/2026/448": {
+      "fremdeSr": "824.0",
+      "zielOc": "https://fedlex.data.admin.ch/eli/oc/1996/1445_1445_1445",
+      "zielFundstelle": "AS 1996 1445"
+    }
+  }
 }
