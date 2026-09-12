@@ -1,5 +1,5 @@
 // AUTO-GENERIERT von scripts/normtext/seed-grundart.mjs — NICHT von Hand editieren.
-// Grundart-Klassifikation (1468 Erlasse) aus der UX-Audit-Klassifikation
+// Grundart-Klassifikation (1469 Erlasse) aus der UX-Audit-Klassifikation
 // docs/ux-audit-2026-07/erlass-klassifikation.json (Methode: Datengetriebene Signal-Extraktion je Erlass, Grundart-Zuordnung per Prioritäts-Kaskade (Trägerformat → Systematik → Bund-Struktur).).
 // Datengrundlage für register.ts (grundart/erlassTyp) + die spätere Grundart-
 // Darstellung (bestimmungsEtikett, §/Art.-Label — NUR sichtbar, NIE Anker; K2/R8).
@@ -10,7 +10,7 @@
 //   KANTON: 1230
 //   ERLASS_MIT_ANHANG: 85
 //   STANDARD_ERLASS: 68
-//   FLACHER_KURZERLASS: 30
+//   FLACHER_KURZERLASS: 31
 //   STAATSVERTRAG: 27
 //   KODIFIKATION: 17
 //   LIVE_VERWEIS: 9
@@ -355,6 +355,7 @@ export const GRUNDART_SEED: Readonly<Record<string, GrundartSeed>> = {
   "BL-217.13": {"grundart":"KANTON","erlassTyp":"sonstiges","bestimmungsEtikett":"paragraf","bestimmungsEtikettStatus":"entwurf"},
   "BL-331": {"grundart":"KANTON","erlassTyp":"gesetz","bestimmungsEtikett":"paragraf","bestimmungsEtikettStatus":"entwurf"},
   "BMV": {"grundart":"FLACHER_KURZERLASS","erlassTyp":"verordnung"},
+  "BMV_2025": {"grundart":"FLACHER_KURZERLASS","erlassTyp":"verordnung"},
   "BOEB": {"grundart":"ERLASS_MIT_ANHANG","erlassTyp":"gesetz","hatAnhang":true},
   "BPG": {"grundart":"FLACHER_KURZERLASS","erlassTyp":"gesetz"},
   "BPR": {"grundart":"STANDARD_ERLASS","erlassTyp":"gesetz"},

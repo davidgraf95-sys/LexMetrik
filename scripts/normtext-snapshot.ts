@@ -230,6 +230,11 @@ const ERLASS_MAP: Record<string, string> = {
   vfv: 'VFV',
   bbv: 'BBV',
   bmv: 'BMV',
+  // Totalrevision derselben SR 412.103.1 (12.9.2026): `bmv` = historische
+  // Fassung von 2009 (aufgehoben 1.3.2026), `bmv_2025` = die seit 1.3.2026
+  // geltende Verordnung vom 13. Juni 2025. Beide tragen amtlich das Kürzel BMV
+  // — der Register-key (Datei-Stamm) unterscheidet sie, nicht das Kürzel.
+  bmv_2025: 'BMV',
   zemis_v: 'ZEMIS-V',
   adov: 'AdoV',
   rdv: 'RDV',

@@ -25,6 +25,7 @@
 // §5-Verstoss und wird vom Tor `src/tests/erlass-adresse.test.ts` gemeldet.
 
 import { KANTONE } from '../kantone';
+import { FEDLEX, type FedlexGesetz } from '../fedlex';
 import { ERLASS_REGISTER } from './register';
 import type { BrowseErlass } from './browse-typen';
 
@@ -182,6 +183,54 @@ export function routenEbeneVonKey(key: string, fallback = 'bund'): string {
 /** Adresse allein aus dem Schlüssel — siehe `routenEbeneVonKey`. */
 export function erlassPfadVonKey(key: string, fallback = 'bund'): string {
   return erlassPfadRoh(routenEbeneVonKey(key, fallback), key);
+}
+
+// ─── ELI → Schlüssel: liegt DIESER Erlass bei uns im Korpus? ────────────────
+//
+// Gegenprüfungs-Auflage zu PR #823 (12.9.2026). Ein Erlass kann einen anderen
+// als Nachfolger NENNEN (`BrowseErlass.aufgehoben.nachfolger.eli`), ohne dass
+// wir wüssten, ob wir diesen Nachfolger selbst führen. Bis zur BMV-Total-
+// revision war die Antwort immer «nein», und das Aufhebungs-Banner verlinkte
+// darum ausschliesslich nach fedlex.admin.ch. Seit `BMV_2025` im Korpus liegt,
+// schickte genau dieser Link den Leser aus dem Korpus HINAUS, obwohl die
+// geltende Fassung einen Klick entfernt lag (§8).
+//
+// Die Zuordnung ist DEKLARIERT, nicht geraten (§2/§5): jeder Bund-Eintrag trägt
+// seinen `fedlexKey`, und `FEDLEX` nennt dazu die amtliche ELI-URL. Beide
+// Tabellen sind bereits gegeneinander verriegelt («Tor 3 — fedlex.ts ↔ Register
+// synchron», src/tests/normtext-register.test.ts), es entsteht also keine
+// zweite Wahrheit.
+//
+// MEHRDEUTIGKEIT ⇒ KEIN TREFFER. Eine ELI, die auf mehr als einen Schlüssel
+// zeigte, wird bewusst verworfen statt willkürlich aufgelöst: ein Sprung auf
+// den falschen von zwei Erlassen wäre schlimmer als der bisherige Weg über die
+// amtliche Quelle (§8).
+
+/** ELI-Pfad (`cc/2025/408`) aus einer Fedlex-URL; null, wenn keine enthalten. */
+function eliAusUrl(url: string): string | null {
+  const m = /\/eli\/(.+?)(?:\/(?:de|fr|it|rm))?\/?$/.exec(url);
+  return m ? m[1] : null;
+}
+
+const KEY_JE_ELI: ReadonlyMap<string, string | null> = (() => {
+  const map = new Map<string, string | null>();
+  for (const e of ERLASS_REGISTER) {
+    if (e.ebene !== 'bund' || !e.fedlexKey) continue;
+    const eli = eliAusUrl(FEDLEX[e.fedlexKey as FedlexGesetz] ?? '');
+    if (!eli) continue;
+    map.set(eli, map.has(eli) ? null : e.key); // zweiter Treffer ⇒ mehrdeutig
+  }
+  return map;
+})();
+
+/**
+ * Register-Schlüssel zu einem ELI-Pfad (`cc/2025/408` → `BMV_2025`).
+ * null = nicht im Korpus oder mehrdeutig — dann bleibt die amtliche Quelle
+ * der einzige Weg (§7/§8).
+ */
+export function erlassKeyVonEli(eli: string): string | null {
+  if (!eli) return null;
+  return KEY_JE_ELI.get(eli.replace(/^\/+|\/+$/g, '')) ?? null;
 }
 
 // ─── Gespeicherte Adressen nachziehen ───────────────────────────────────────

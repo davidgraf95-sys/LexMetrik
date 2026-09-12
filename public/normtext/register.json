@@ -2918,33 +2918,25 @@
       "inkraftSeit": "2004-01-01"
     },
     {
-      "key": "BMV",
+      "key": "BMV_2025",
       "ebene": "bund",
       "kanton": null,
       "kuerzel": "BMV",
-      "titel": "Verordnung über die Berufsmaturität (Berufsmaturitätsverordnung)",
+      "titel": "Verordnung vom 13. Juni 2025 über die eidgenössische Berufsmaturität (Berufsmaturitätsverordnung, BMV)",
       "sr": "412.103.1",
       "rechtsgebiet": "oeffentlich",
       "sprache": "de",
       "rang": 102,
       "status": "snapshot",
-      "datei": "bund/BMV.json",
-      "artikelAnzahl": 37,
-      "stand": "2016-08-23",
-      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/423/de",
-      "fassungsToken": "20160823",
+      "datei": "bund/BMV_2025.json",
+      "artikelAnzahl": 36,
+      "stand": "2026-03-01",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2025/408/de",
+      "fassungsToken": "20260301",
       "pdfPfad": null,
-      "pdfUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2009/423/20160823/de/pdf-a/fedlex-data-admin-ch-eli-cc-2009-423-20160823-de-pdf-a-1.pdf",
-      "pdfStand": "2016-08-23",
-      "inkraftSeit": "2009-08-01",
-      "aufgehoben": {
-        "seit": "2026-03-01",
-        "nachfolger": {
-          "sr": "412.103.1",
-          "titel": "Verordnung vom 13. Juni 2025 über die eidgenössische Berufsmaturität (Berufsmaturitätsverordnung, BMV)",
-          "eli": "cc/2025/408"
-        }
-      }
+      "pdfUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2025/408/20260301/de/pdf-a/fedlex-data-admin-ch-eli-cc-2025-408-20260301-de-pdf-a.pdf",
+      "pdfStand": "2026-03-01",
+      "inkraftSeit": "2026-03-01"
     },
     {
       "key": "ZEMIS_V",
@@ -3428,6 +3420,36 @@
       "pdfUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2003/231/20240101/de/pdf-a/fedlex-data-admin-ch-eli-cc-2003-231-20240101-de-pdf-a.pdf",
       "pdfStand": "2024-01-01",
       "inkraftSeit": "2003-06-01"
+    },
+    {
+      "key": "BMV",
+      "ebene": "bund",
+      "kanton": null,
+      "kuerzel": "BMV",
+      "titel": "Verordnung über die Berufsmaturität (Berufsmaturitätsverordnung)",
+      "sr": "412.103.1",
+      "rechtsgebiet": "oeffentlich",
+      "sprache": "de",
+      "rang": 126,
+      "status": "snapshot",
+      "datei": "bund/BMV.json",
+      "artikelAnzahl": 37,
+      "stand": "2016-08-23",
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2009/423/de",
+      "fassungsToken": "20160823",
+      "pdfPfad": null,
+      "pdfUrl": "https://fedlex.data.admin.ch/filestore/fedlex.data.admin.ch/eli/cc/2009/423/20160823/de/pdf-a/fedlex-data-admin-ch-eli-cc-2009-423-20160823-de-pdf-a-1.pdf",
+      "pdfStand": "2016-08-23",
+      "inkraftSeit": "2009-08-01",
+      "aufgehoben": {
+        "seit": "2026-03-01",
+        "nachfolger": {
+          "sr": "412.103.1",
+          "titel": "Verordnung vom 13. Juni 2025 über die eidgenössische Berufsmaturität (Berufsmaturitätsverordnung, BMV)",
+          "eli": "cc/2025/408",
+          "inKraftSeit": "2026-03-01"
+        }
+      }
     },
     {
       "key": "MWSTG",

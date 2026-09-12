@@ -1,7 +1,7 @@
 {
   "erlassKey": "MSTG",
   "sr": "321.0",
-  "abgerufen": "2026-09-05",
+  "abgerufen": "2026-09-12",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -13,8 +13,10 @@
       "titelDe": "Bundesgesetz über die Armee und die Militärverwaltung (Militärgesetz, MG). Berichtigung",
       "titelFr": "Loi fédérale sur l’armée et l’administration militaire (Loi sur l’armée, LAAM). Erratum",
       "titelIt": "Legge federale sull’esercito e sull’amministrazione militare (Legge militare, LM). Correzione",
+      "plausibilitaet": "berichtigung-fremdes-as-dokument",
+      "plausibilitaetsGrund": "Fedlex verknüpft diese Berichtigung (jolux:rectifies) mit dem AS-Dokument AS 2026 164, das unter SR 510.10 klassiert ist — häufig, weil die berichtigte Bestimmung im Anhang eines anderen Erlasses geändert wurde; massgeblich ist die amtliche Sammlung (§7/§8).",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2026/284/de",
-      "sha": "f5afd2aa4011562237bc521e348b0692c576a4c8a18a8a92f916389cc3470e96"
+      "sha": "d038f6deb095fba4d020fe5077a4a5479c49ba7669b2ad8499410e33c52f63c7"
     },
     {
       "art": "sammelerlass-marker",
@@ -43,8 +45,10 @@
       "titelDe": "Bundesgesetz über die Harmonisierung der Strafrahmen. Berichtigung (Betrifft nur den italienischen Text)",
       "titelFr": "Loi fédérale sur l’harmonisation des peines. Erratum (Ne concerne que le texte italien)",
       "titelIt": "Legge federale sull’armonizzazione delle pene. Correzione",
+      "plausibilitaet": "berichtigung-fremdes-as-dokument",
+      "plausibilitaetsGrund": "Fedlex verknüpft diese Berichtigung (jolux:rectifies) mit dem AS-Dokument AS 2023 259, das unter SR 311.0 klassiert ist — häufig, weil die berichtigte Bestimmung im Anhang eines anderen Erlasses geändert wurde; massgeblich ist die amtliche Sammlung (§7/§8).",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2023/538/de",
-      "sha": "58cabc8a8d51e50815a13499757dc99edffc9ef9d6603813266c04c40de5a044"
+      "sha": "2954605b62ca1a2d51fd319bac35681e59a896532ac6b13c7e353c9df0c96ba4"
     },
     {
       "art": "sammelerlass-marker",
@@ -259,5 +263,5 @@
       "sha": "264b14a108bea156edcb1b3ea1be0b3eccedf1a85cf39befe8104d36dd4d272b"
     }
   ],
-  "sha": "49f94abe2ee408df1b7763b5fca1ca9ff1ed001e75c3fd442aca8d45f38748d7"
+  "sha": "0ccdd724b4a15cad672c7426df8b008b94a05edd13e674da5909a692395f79bc"
 }

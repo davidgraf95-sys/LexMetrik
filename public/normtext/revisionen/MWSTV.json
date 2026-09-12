@@ -1,7 +1,7 @@
 {
   "erlassKey": "MWSTV",
   "sr": "641.201",
-  "abgerufen": "2026-09-05",
+  "abgerufen": "2026-09-12",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -80,8 +80,10 @@
       "titelDe": "Verordnung über die Bekämpfung übertragbarer Krankheiten des Menschen (Epidemienverordnung, EpV). Berichtigung (Betrifft nur den italienischen Text)",
       "titelFr": "Ordonnance sur la lutte contre les maladies transmissibles de l’homme (Ordonnance sur les épidémies, OEp). Erratum (Ne concerne que le texte italien)",
       "titelIt": "Ordinanza concernente la lotta contro le malattie trasmissibili dell’essere umano (Ordinanza sulle epidemie, OEp). Correzione",
+      "plausibilitaet": "berichtigung-fremdes-as-dokument",
+      "plausibilitaetsGrund": "Fedlex verknüpft diese Berichtigung (jolux:rectifies) mit dem AS-Dokument AS 2021 53, das unter SR 818.101.1 klassiert ist — häufig, weil die berichtigte Bestimmung im Anhang eines anderen Erlasses geändert wurde; massgeblich ist die amtliche Sammlung (§7/§8).",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2021/122/de",
-      "sha": "e2cb16e2b548f851f574d9468054f76b784e18c2dfe438af4aa45cac44e1b15d"
+      "sha": "8f23a1c4d87e56a27d9b9492ad9012d37b86c3d2f203d2d307b083156b6f5a54"
     },
     {
       "art": "sammelerlass-marker",
@@ -104,8 +106,10 @@
       "titelDe": "Verordnung 3 über Massnahmen zur Bekämpfung des Coronavirus (Covid-19) (Covid-19-Verordnung 3) (Sars-CoV-2-Schnelltests). Berichtigung (Betrifft nur den italienischen Text)",
       "titelFr": "Ordonnance 3 sur les mesures destinées à lutter contre le coronavirus (COVID-19) (Ordonnance 3 COVID-19) (Tests rapides SARS-CoV-2). Erratum (Ne concerne que le texte italien)",
       "titelIt": "Ordinanza 3 sui provvedimenti per combattere il coronavirus (COVID-19) (Ordinanza 3 COVID-19) (Test rapidi SARS-CoV-2). Correzione",
+      "plausibilitaet": "berichtigung-fremdes-as-dokument",
+      "plausibilitaetsGrund": "Fedlex verknüpft diese Berichtigung (jolux:rectifies) mit dem AS-Dokument AS 2020 5801, das unter SR 818.101.24 klassiert ist — häufig, weil die berichtigte Bestimmung im Anhang eines anderen Erlasses geändert wurde; massgeblich ist die amtliche Sammlung (§7/§8).",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2021/11/de",
-      "sha": "0bc25e092eebd1b1bd3ff879eb7d5be54c5df4b73e77b94ae26a17b4f23b370e"
+      "sha": "39a9a500dab26b8f9619eb81caeeb3f2ed7c356e7b18d1760594a9a29dc0703c"
     },
     {
       "art": "sammelerlass-marker",
@@ -336,5 +340,5 @@
       "sha": "4918b33462473dcd741db693bd76077c67e45b0a38e7e536e9a0840f027c6f91"
     }
   ],
-  "sha": "6409552f3bc533ae307d988fadb49b3fd2bd68dc76079af324d7bedf30ee4023"
+  "sha": "8ca338f866b3dcf83bb77ff534df08a3783cbc44d9d66b697a5b41f0e6a7caee"
 }

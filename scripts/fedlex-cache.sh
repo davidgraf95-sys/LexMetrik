@@ -329,6 +329,23 @@ EINTRAEGE=(
   "vfv|cc/1961/419_429_439|20250101|5|art_1|831.111"
   "bbv|cc/2003/748|20250301|2|art_1|412.101"
   "bmv|cc/2009/423|20160823|7|art_1|412.103.1"
+  # ── TOTALREVISION BMV (W2·18-FEHLERBUCH, 12.9.2026) ────────────────────────
+  # SR 412.103.1 trägt seit dem 1.3.2026 einen NEUEN Erlass: die Verordnung vom
+  # 13. Juni 2025 über die eidgenössische Berufsmaturität (ELI cc/2025/408). Sie
+  # hebt die Fassung von 2009 (Zeile darüber, ELI cc/2009/423) in ihrem Art. 34
+  # ausdrücklich auf und tritt nach Art. 36 am 1.3.2026 in Kraft.
+  # ZWEI Pins auf DERSELBEN SR sind hier Absicht, kein Duplikat (§5/§8): der
+  # alte Pin trägt den historischen, ausdrücklich als aufgehoben deklarierten
+  # Text (src/lib/normtext/aufhebungen.ts, Register-Badge «aufgehoben»), der
+  # neue die geltende Fassung. Ein Re-Pin der bmv-Zeile hätte den historischen
+  # Text ersatzlos aus dem Korpus entfernt — die Aufhebungs-Deklaration, ihr
+  # Nachfolge-Vermerk und die Wiedervorlage-Mechanik hängen an genau diesem ELI.
+  # Kanonische html-Manifestation via isExemplifiedBy (scripts/fedlex-manifest.ts,
+  # aufgelöst 12.9.2026): n=0, echt suffixlose Datei (KEINE Alias-Konstruktion).
+  # Amtlich verifiziert 12.9.2026 (Fedlex-SPARQL): einzige Konsolidierung
+  # 2026-03-01, kein dateNoLongerInForce, Taxonomie-Slot 6599 skos:notation
+  # «412.103.1», Status CURRENT.
+  "bmv_2025|cc/2025/408|20260301|0|art_1,art_34,art_36|412.103.1"
   "zemis_v|cc/2006/303|20260801|0|art_1|142.513"
   "adov|cc/2011/505|20230123|5|art_1|211.221.36"
   "rdv|cc/2012/713|20260820|1|art_1|143.5"

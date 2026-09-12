@@ -10,7 +10,7 @@ import { fileURLToPath } from 'node:url';
 import { dirname, resolve } from 'node:path';
 import {
   grundmenge, holeBindingsB, holeStaendeA, baueRevisionen, serialisiere, botschaftIndex,
-  ermittleBelegteOcs, type ErlassMeta,
+  ermittleBelegteOcs, holeRectifiesSr, baueOcZuRectifiesSr, type ErlassMeta,
 } from './revisionen-generieren.ts';
 import type { SparqlBinding } from '../fedlex-sparql.ts';
 
@@ -23,17 +23,40 @@ const nur = nurArg ? new Set(nurArg.slice('--nur='.length).split(',').map((s) =>
 const SIDECAR_DIR = 'public/normtext/revisionen';
 const RAW_DIR = 'bibliothek/normtext/revisionen-raw';
 
-// ── cache.sh-Pins: SR → { abstractEli (cc/…), kons (Korpus-Stand ISO) } ─────────
+// ── cache.sh-Pins: Register-key UND SR → { abstractEli (cc/…), kons (Korpus-Stand ISO) } ──
 // SSoT §5: die Pins leben EINMAL in scripts/fedlex-cache.sh (name|eli|YYYYMMDD|N|anker|sr).
-function lesePinsMitSr(): Map<string, { abstractEli: string; kons: string; konsKompakt: string }> {
+//
+// WARUM ZWEI SCHLÜSSEL (W2·18-FEHLERBUCH, 12.9.2026). Die SR-Nummer ist KEIN
+// eindeutiger Pin-Schlüssel: eine Totalrevision behält den SR-Slot und bekommt
+// eine neue ELI — SR 412.103.1 trägt seit 1.3.2026 zwei Pins (`bmv` =
+// cc/2009/423, aufgehoben; `bmv_2025` = cc/2025/408, geltend). Eine reine
+// SR-Map behält den ZULETZT gelesenen Pin und hätte dem historischen Erlass
+// still die ELI und den Korpus-Stand seiner Nachfolgerin untergeschoben
+// (gemessener Rot-Beweis 12.9.2026: SR 412.103.1 → cc/2025/408 / 2026-03-01
+// statt cc/2009/423 / 2016-08-23 — die Pfad-(a)-Stände wären von 6 auf 1
+// gefallen, der Sammelerlass-Marker 2013-01-01 verschwunden und jedes
+// `nichtKonsolidiert` falsch berechnet worden).
+//
+// Der eindeutige Schlüssel ist der PIN-NAME: der Snapshot-Generator leitet den
+// Register-key als `name.toUpperCase()` ab (`gesetzKey` in
+// scripts/normtext-snapshot.ts), also gilt für jeden Bund-Volltext-Erlass
+// `pinName === key.toLowerCase()`. Die SR-Map bleibt als Rückfall bestehen
+// (Altbestand/Sonderfälle), wird aber nur noch befragt, wenn der key-Treffer
+// fehlt — und sie trägt bei Mehrdeutigkeit bewusst den ERSTEN Pin, statt den
+// letzten gewinnen zu lassen.
+interface PinBefund { abstractEli: string; kons: string; konsKompakt: string }
+function lesePinsMitSr(): { nachKey: Map<string, PinBefund>; nachSr: Map<string, PinBefund> } {
   const CACHE_SH = resolve(dirname(fileURLToPath(import.meta.url)), '../fedlex-cache.sh');
   const sh = readFileSync(CACHE_SH, 'utf8');
-  const map = new Map<string, { abstractEli: string; kons: string; konsKompakt: string }>();
+  const nachKey = new Map<string, PinBefund>();
+  const nachSr = new Map<string, PinBefund>();
   for (const m of sh.matchAll(/^\s*"([a-z0-9_]+)\|([a-z0-9/_]+)\|(\d{8})\|[^|]*\|[^|]*\|([0-9.]+)"/gm)) {
     const kons = `${m[3].slice(0, 4)}-${m[3].slice(4, 6)}-${m[3].slice(6, 8)}`;
-    map.set(m[4], { abstractEli: m[2], kons, konsKompakt: m[3] });
+    const befund: PinBefund = { abstractEli: m[2], kons, konsKompakt: m[3] };
+    nachKey.set(m[1].toUpperCase(), befund);
+    if (!nachSr.has(m[4])) nachSr.set(m[4], befund);
   }
-  return map;
+  return { nachKey, nachSr };
 }
 
 let meta = grundmenge();
@@ -41,10 +64,21 @@ if (nur) meta = meta.filter((m) => nur.has(m.key));
 if (!meta.length) { console.error('normtext:revisionen: leere Grundmenge (--nur ohne Treffer?)'); process.exit(1); }
 
 const pins = lesePinsMitSr();
+/** Pin eines Erlasses: eindeutig über den Register-key, Rückfall SR (s. lesePinsMitSr). */
+const pinFuer = (key: string, sr: string): PinBefund | undefined => pins.nachKey.get(key) ?? pins.nachSr.get(sr);
 const ocZuBotschaft = botschaftIndex();
 console.log(`revisionen: Grundmenge ${meta.length} Erlasse · Botschafts-oc-Index ${ocZuBotschaft.size} · SPARQL Pfad (b) …`);
 
-const bindings = await holeBindingsB(meta, fetch);
+// SR-Dedupe vor der Abfrage (W2·18-FEHLERBUCH, 12.9.2026): seit der BMV-
+// Totalrevision tragen ZWEI Register-Erlasse dieselbe SR (412.103.1). Ohne
+// Dedupe steht die SR zweimal im VALUES-Block, der Endpunkt liefert jede Zeile
+// doppelt, und `bNachSr` legt 62 statt 31 Bindings in BEIDE store-raw-Dateien —
+// ein aufgeblähtes, nicht mehr reproduzierbares Roh-Artefakt (gemessen: raw
+// BMV.json 31 → 62 Bindings, Sidecar-Inhalt unverändert, weil baueRevisionen
+// über die oc-URI dedupliziert). Die Timeline selbst ist bewusst SR-weit —
+// beide Erlasse teilen sie sich, jeder mit seinem eigenen Korpus-Stand.
+const metaAbfrage = meta.filter((m, i, a) => a.findIndex((x) => x.sr === m.sr) === i);
+const bindings = await holeBindingsB(metaAbfrage, fetch);
 
 // store-raw (§11): je Erlass { sr, bBindings, aStaende } → Re-Parse ohne Re-Crawl.
 mkdirSync(RAW_DIR, { recursive: true });
@@ -57,6 +91,13 @@ for (const b of bindings) {
   if (sr && bNachSr.has(sr)) bNachSr.get(sr)!.push(b);
 }
 
+// §8-Marker (Gegenprüfung #703): EINE globale Batch-Auflösung der jolux:rectifies-Ziele →
+// deren SR-Notation + AS-Fundstelle (Auflage f), statt je Erlass separat nachzufragen.
+const rectifiesZiele = [...new Set(bindings.map((b) => b.rectifies?.value).filter((v): v is string => !!v))];
+const zielInfoProOc = await holeRectifiesSr(rectifiesZiele, fetch);
+if (rectifiesZiele.length) console.log(`  jolux:rectifies-Ziele ${rectifiesZiele.length} · SR aufgelöst ${zielInfoProOc.size}`);
+let fremdeAsDokumente = 0;
+
 let mitAenderung = 0, gesamtEintraege = 0, mitBotschaft = 0, sammelMarker = 0, ohnePin = 0, kuenftig = 0;
 let belegtTrotzDatum = 0;
 // dateDocument (Beschluss-/Erlassdatum) darf NICHT in der Zukunft liegen — das wäre
@@ -66,7 +107,7 @@ let belegtTrotzDatum = 0;
 const datumsfehler: string[] = [];
 
 for (const m of meta as ErlassMeta[]) {
-  const pin = pins.get(m.sr);
+  const pin = pinFuer(m.key, m.sr);
   if (!pin) { ohnePin++; console.warn(`  ⚠ kein cache.sh-Pin für SR ${m.sr} (${m.key}) — Pfad-(a)-Cross-Check entfällt.`); }
   const bBindings = bNachSr.get(m.sr) ?? [];
   const aStaende = pin ? await holeStaendeA(pin.abstractEli, fetch) : [];
@@ -81,6 +122,7 @@ for (const m of meta as ErlassMeta[]) {
   const konsEli = pin ? `${pin.abstractEli}/${pin.konsKompakt}` : null;
   const belegteOcs = konsEli && kandidatOcs.length ? await ermittleBelegteOcs(konsEli, kandidatOcs, fetch) : new Set<string>();
   belegtTrotzDatum += belegteOcs.size;
+  const rectifiesInfoProOc = baueOcZuRectifiesSr(bBindings, zielInfoProOc);
 
   // store-raw (deterministisch, sortiert): Bindings byte-stabil ablegen.
   const rawBindings = [...bBindings].sort((a, b) =>
@@ -90,9 +132,13 @@ for (const m of meta as ErlassMeta[]) {
     JSON.stringify({
       sr: m.sr, korpusStand, bBindings: rawBindings, aStaende: [...aStaende].sort(),
       belegteOcs: [...belegteOcs].sort(),
+      // §8-Marker: als Objekt persistiert (Re-Parse ohne Re-Crawl, §11) — sonst müsste
+      // check:revisionen (OFFLINE) erneut gegen Fedlex fragen. Trägt seit Auflage f
+      // (Gegenprüfung PR #827) auch die Ziel-Fundstelle (RectifiesInfo), nicht mehr nur die SR.
+      rectifiesInfoProOc: Object.fromEntries([...rectifiesInfoProOc.entries()].sort(([a], [b]) => (a < b ? -1 : a > b ? 1 : 0))),
     }, null, 2) + '\n', 'utf8');
 
-  const sidecar = baueRevisionen(m, bBindings, aStaende, korpusStand, ocZuBotschaft, heute, belegteOcs);
+  const sidecar = baueRevisionen(m, bBindings, aStaende, korpusStand, ocZuBotschaft, heute, belegteOcs, rectifiesInfoProOc);
   writeFileSync(`${SIDECAR_DIR}/${m.key}.json`, serialisiere(sidecar), 'utf8');
 
   const ae = sidecar.revisionen.filter((r) => r.art === 'aenderung');
@@ -100,6 +146,7 @@ for (const m of meta as ErlassMeta[]) {
   gesamtEintraege += ae.length;
   mitBotschaft += ae.filter((r) => r.botschaftKey).length;
   sammelMarker += sidecar.revisionen.filter((r) => r.art === 'sammelerlass-marker').length;
+  fremdeAsDokumente += ae.filter((r) => r.plausibilitaet).length;
   for (const r of sidecar.revisionen) {
     if (r.dateEntryInForce > heute) kuenftig++;
     if (r.dateDocument && r.dateDocument > heute) datumsfehler.push(`${m.key}:${r.dateDocument}`);
@@ -109,4 +156,4 @@ for (const m of meta as ErlassMeta[]) {
 if (datumsfehler.length) { console.error(`revisionen: ${datumsfehler.length} Eintrag(e) mit Beschluss-Datum > ${heute} (Datenfehler): ${datumsfehler.slice(0, 5).join(', ')} …`); process.exit(1); }
 
 console.log(`revisionen: ${meta.length} Sidecars → ${SIDECAR_DIR}/`);
-console.log(`  Erlasse mit ≥1 Änderung ${mitAenderung}/${meta.length} · Änderungs-Einträge ${gesamtEintraege} · Botschafts-Join ${mitBotschaft} · Sammelerlass-Marker ${sammelMarker} · künftig-in-Kraft ${kuenftig} · Finding-4b-Text-Beleg trotz Datum ${belegtTrotzDatum}${ohnePin ? ` · ohne Pin ${ohnePin}` : ''}`);
+console.log(`  Erlasse mit ≥1 Änderung ${mitAenderung}/${meta.length} · Änderungs-Einträge ${gesamtEintraege} · Botschafts-Join ${mitBotschaft} · Sammelerlass-Marker ${sammelMarker} · künftig-in-Kraft ${kuenftig} · Finding-4b-Text-Beleg trotz Datum ${belegtTrotzDatum} · §8-Marker (Berichtigung fremdes AS-Dokument) ${fremdeAsDokumente}${ohnePin ? ` · ohne Pin ${ohnePin}` : ''}`);

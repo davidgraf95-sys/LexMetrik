@@ -6,15 +6,15 @@
     "guards": 23
   },
   "korpus": {
-    "erlasse": 1566,
-    "eintraege": 60311,
-    "texte": 214334
+    "erlasse": 1567,
+    "eintraege": 60347,
+    "texte": 214554
   },
   "gesamt": {
-    "stellen": 36068,
-    "self": 19653,
+    "stellen": 36083,
+    "self": 19667,
     "fremd": 11382,
-    "text": 5033,
+    "text": 5034,
     "selbstmarker": 925
   },
   "klassen": [
@@ -109,8 +109,8 @@
     {
       "klasse": "art-self",
       "entscheid": "SELF",
-      "stellen": 12898,
-      "erlasse": 471,
+      "stellen": 12907,
+      "erlasse": 472,
       "selbstmarker": 606,
       "was": "bare «Art. N» → Sprung im eigenen Erlass"
     },
@@ -237,16 +237,16 @@
     {
       "klasse": "plural-glied-self",
       "entscheid": "SELF",
-      "stellen": 3458,
-      "erlasse": 203,
+      "stellen": 3463,
+      "erlasse": 204,
       "selbstmarker": 0,
       "was": "A10-Glied → Sprung im eigenen Erlass"
     },
     {
       "klasse": "plural-region-unterdrueckt",
       "entscheid": "TEXT",
-      "stellen": 573,
-      "erlasse": 96,
+      "stellen": 574,
+      "erlasse": 97,
       "selbstmarker": 0,
       "was": "A10-Region mit unauflösbarem Fremdnamen — ganz unterdrückt"
     }

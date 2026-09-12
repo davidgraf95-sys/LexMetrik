@@ -123,6 +123,63 @@ export function nichtKonsolidiertSatz(seitIso: string | null): string {
 }
 
 /**
+ * Standausweis des AUFGEHOBENEN Erlasses (Gegenprüfung PR #823, 12.9.2026,
+ * W2·18-FEHLERBUCH): «aufgehoben per TT.MM.JJJJ».
+ *
+ * Der interaktive Kopf (`ErlassLeserKopf.tsx`) weist einen aufgehobenen
+ * Erlass seit dem §8-Aufhebungs-Banner unmissverständlich aus («Aufgehoben
+ * per …»). Der prerenderte Kopf (`seo-detail.ts: erlassVolltextHtml`) schrieb
+ * denselben Erlass bis zu diesem Fund weiterhin als «amtliche Fassung
+ * (geltend)» — belegt an `dist/gesetze/bund/BMV.html` (BMV aufgehoben
+ * 1.3.2026, Stand-Zeile «Stand 2016-08-23 · amtliche Fassung (geltend)», kein
+ * Aufhebungs-Hinweis). Die crawlbare Fassung sagte damit das GEGENTEIL der
+ * lesenden. GETEILTE DATUMSFORM (§5, `datumCh` — dieselbe, die `Datum.tsx`
+ * im Reader nutzt), nicht dieselbe Ableitung wie der Reader: dessen
+ * Aufhebungs-Banner (`ErlassLeserKopf.tsx`) trägt weiterhin eigene Literale
+ * («Aufgehoben per …», «Nachfolge-Erlass: SR …») statt dieser Funktionen —
+ * Umstellung dort ist Reader-Nachzug, offen (Gegenprüfung PR #826, 12.9.2026).
+ */
+export function aufgehobenSeitSatz(seitIso: string): string {
+  return `aufgehoben per ${datumCh(seitIso)}`;
+}
+
+/**
+ * Nachfolge-Erlass-Hinweis für den Prerender-Kopf (Kurzform des Reader-
+ * Banner-Satzes «Nachfolge-Erlass: SR … (in Kraft seit …)», hier als reiner
+ * Text ohne Link-Anatomie — der Prerender-Kopf trägt bereits EINEN Live-Link
+ * auf `quelleUrl`, ein zweiter auf die Nachfolger-ELI ist nicht Teil dieses
+ * Funds und bliebe ein separater, deklarierter Schritt).
+ *
+ * Gegenprüfung PR #826 (12.9.2026, §7 — Nachtrag zur ersten Fassung dieser
+ * Funktion, die das Inkrafttreten noch aus dem Aufhebungsdatum des ALTEN
+ * Erlasses geraten hatte, `seitIso` statt eines eigenen Felds): das Datum
+ * kommt jetzt NUR aus `nachfolger.inKraftSeit` — einem separat verifizierten,
+ * optionalen Feld an der SSoT (`aufhebungen.ts`) — und wird weggelassen,
+ * wenn dort nichts hinterlegt ist, statt geschätzt (§8: keine unbelegte
+ * Aussage). Dass eine Rate-Heuristik nicht verallgemeinert: SPARQL bestätigt
+ * für PATV (SR 232.141, ELI cc/1977/2027_2027_2027) und VGVP (SR 814.621,
+ * ELI cc/2000/299) je `jolux:dateNoLongerInForce=2027-01-01` — beide OHNE
+ * deklarierten Eintrag in `ANERKANNTE_AUFHEBUNGEN` (Repeal liegt noch in der
+ * Zukunft) und ohne verifizierten Nachfolger-Bezug; Abruf 12.9.2026,
+ * https://fedlex.data.admin.ch/sparqlendpoint.
+ *
+ * SR-IDENTISCH = TOTALREVISION (Gegenprüfung PR #826): trägt der Nachfolger
+ * dieselbe SR-Nummer wie der aufgehobene Erlass (`altSr`), wäre «Nachfolge-
+ * Erlass SR …» ein Selbstverweis (§8) — Wortlaut wechselt auf «Totalrevision»
+ * mit der ELI als Unterscheidungsmerkmal.
+ */
+export function nachfolgerHinweis(
+  nachfolger: { sr: string; eli: string; inKraftSeit?: string },
+  altSr: string | null,
+): string {
+  const datumTeil = nachfolger.inKraftSeit ? ` in Kraft seit ${datumCh(nachfolger.inKraftSeit)}` : '';
+  if (altSr && nachfolger.sr === altSr) {
+    return `Totalrevision${datumTeil} (ELI ${nachfolger.eli})`;
+  }
+  return `Nachfolge-Erlass SR ${nachfolger.sr}${datumTeil}`;
+}
+
+/**
  * Anteil Anhang-Einträge, ab dem die Fakten-Zeile nicht mehr «Artikel» zählt.
  * Fahrplan Kap. 14, Wording-Punkt «Anhang-Dominanz»: «N Artikel» ist falsch, wo
  * der Snapshot fast nur aus Anhang-Einträgen besteht (typisch bei Tarif- und

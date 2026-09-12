@@ -82,6 +82,14 @@ import {
   extrahiereStatutRefs, extrahiereStatutRefsMitAnzahl, INVALID_LAW_CODES,
 } from '../../src/lib/rechtsprechung/zitat-extraktion';
 import type { EntscheidSnapshot } from '../../src/lib/rechtsprechung/typen';
+// Fassungs-Reihen (SR-Slot mit deklarierter Totalrevision) leben in einem
+// eigenen Leaf-Modul (§6.6); diese Datei nutzt sie und reicht sie weiter.
+import {
+  FASSUNGS_REIHEN, REIHE_JE_KEY, reiheFuerPaar, fassungsDatumVon,
+} from './fassungs-reihen';
+export {
+  fassungsReihen, ERLASS_FASSUNGS_REIHEN, fassungsDatumVon, type FassungsReihe,
+} from './fassungs-reihen';
 
 /**
  * Abkürzung → Vergleichsform: gross, dann alles ausser [A-Z0-9ÄÖÜ] weg.
@@ -199,7 +207,18 @@ function baueSrIndex(): { srKey: Map<string, string>; mehrdeutig: Set<string> } 
     if (bisher === undefined) { srKey.set(e.sr, e.key); continue; }
     if (bisher !== e.key) mehrdeutig.add(e.sr);
   }
-  for (const sr of mehrdeutig) srKey.delete(sr);
+  // FASSUNGS-REIHE STATT MEHRDEUTIGKEIT: trägt der SR-Slot eine deklarierte
+  // Abfolge (genau eine geltende Fassung, alle übrigen mit belegter Aufhebung
+  // und Nachfolger in derselben Reihe), löst die SR-Nummer auf die GELTENDE
+  // Fassung auf, statt beidseitig zu verwerfen. Die fremdsprachigen Aliase
+  // («OMPr» fr/it) erben damit dieselbe Abfolge wie das deutsche Kürzel — die
+  // datumsabhängige Wahl geschieht erst in `normKeyFuerAbk`. Jeder andere
+  // Doppel-Slot bleibt mehrdeutig und wird verworfen wie bisher (§1/§6.7).
+  for (const sr of [...mehrdeutig]) {
+    const reihe = FASSUNGS_REIHEN.get(sr);
+    if (reihe) { srKey.set(sr, reihe.geltend); mehrdeutig.delete(sr); continue; }
+    srKey.delete(sr);
+  }
   return { srKey, mehrdeutig };
 }
 
@@ -244,7 +263,13 @@ function baueAbkTabelle(): {
     if (!kandidat) return;
     const bisher = tabelle.get(kandidat);
     if (bisher === undefined) { tabelle.set(kandidat, key); return; }
-    if (bisher !== key) kollidiert.add(kandidat);
+    if (bisher === key) return;
+    // Zwei Fassungen DESSELBEN Erlasses (deklarierte Totalrevision) sind keine
+    // Kollision: die Tabelle trägt die GELTENDE Fassung, `normKeyFuerAbk` wählt
+    // am Entscheiddatum die damals geltende. Alles andere kollidiert wie bisher.
+    const reihe = reiheFuerPaar(bisher, key);
+    if (reihe) { tabelle.set(kandidat, reihe.geltend); return; }
+    kollidiert.add(kandidat);
   };
 
   for (const e of ERLASS_REGISTER) {
@@ -323,10 +348,37 @@ export const ABK_ALIAS_AUSGESCHLOSSEN: ReadonlyArray<string> = ALIAS_AUSGESCHLOS
  */
 export const ABK_KOLLISIONEN: ReadonlyArray<string> = KOLLISIONEN;
 
-export function normKeyFuerAbk(abk: string): string | null {
+/**
+ * Abkürzung → Register-key. `datum` ist das ISO-Entscheiddatum (`YYYY-MM-DD`)
+ * und wählt bei einer FASSUNGS-REIHE die im Entscheidzeitpunkt geltende
+ * Fassung: «BMV» in einem Entscheid von 2020 meint die Verordnung von 2009
+ * (`BMV`), in einem Entscheid ab dem 1.3.2026 die von 2025 (`BMV_2025`).
+ *
+ * OHNE `datum` liefert die Funktion die HEUTE geltende Fassung. Das ist die
+ * richtige Antwort für die beiden datumsfreien Aufrufer: das Sichtbarkeits-Tor
+ * fragt «ist dieses Kürzel überhaupt auflösbar», und der kantonale Resolver
+ * fragt «ist dieses Kürzel Bundesrecht» — beide brauchen die Fassung nicht, nur
+ * die Existenz. Kein Aufrufer im Korpus-Schreibpfad ist datumsfrei: die
+ * Snapshot-Funktionen unten reichen `snap.datum` durch (§2 — das Datum ist
+ * Eingabe, nicht Uhrzeit).
+ *
+ * Zeigt ein Kürzel auf eine HISTORISCHE Fassung, ohne dass eine Kollision es
+ * dorthin gezwungen hätte (ein Alias, der nur die alte Fassung benennt), bleibt
+ * dieser Key unangetastet — das Kürzel nennt die Fassung ja ausdrücklich.
+ */
+export function normKeyFuerAbk(abk: string, datum?: string | null): string | null {
   const k = normalisiereAbk(abk);
   if (ABK_AUSSCHLUSS.has(k)) return null;
-  return ABK_TABELLE.get(k) ?? null;
+  const key = ABK_TABELLE.get(k);
+  if (key === undefined) return null;
+  if (!datum) return key;
+  const reihe = REIHE_JE_KEY.get(key);
+  if (!reihe || reihe.geltend !== key) return key;
+  // `historisch` ist aufsteigend nach `bis` — die erste Fassung, deren
+  // Geltungsfenster das Datum noch enthält, ist die damals geltende. Bei einer
+  // mehrgliedrigen Kette (A → B → C) trifft das die richtige Stufe.
+  const damals = reihe.historisch.find((h) => datum < h.bis);
+  return damals ? damals.key : key;
 }
 
 /**
@@ -359,12 +411,12 @@ export function normKeyFuerAbk(abk: string): string | null {
  * dort strukturell schlechter abgeschnitten als die Bundes-Snapshots — ein
  * Unterschied der QUELLE, nicht der Rechtsanwendung.
  */
-export function statutesZuNormKeys(statutes: string[]): string[] {
+export function statutesZuNormKeys(statutes: string[], datum?: string | null): string[] {
   const out = new Set<string>();
   for (const s of statutes ?? []) {
     const abk = abkVonStatut(s);
     if (!abk) continue;
-    const k = normKeyFuerAbk(abk);
+    const k = normKeyFuerAbk(abk, datum);
     if (k) out.add(k);
   }
   return [...out];
@@ -620,9 +672,10 @@ export function fliesstextOhneApparat(snap: EntscheidSnapshot): string {
  * dort steht kein Literaturapparat.
  */
 export function normKeysVonSnapshot(snap: EntscheidSnapshot, hint?: string | null): string[] {
-  const out = new Set<string>(statutesZuNormKeys(snap.zitierteNormen ?? []));
+  const datum = fassungsDatumVon(snap);
+  const out = new Set<string>(statutesZuNormKeys(snap.zitierteNormen ?? [], datum));
   for (const ref of extrahiereStatutRefs(fliesstextOhneApparat(snap))) {
-    const k = normKeyFuerAbk(ref.gesetz);
+    const k = normKeyFuerAbk(ref.gesetz, datum);
     if (k) out.add(k);
   }
   if (hint && !AUSGESCHLOSSENE_KEYS.has(hint)) out.add(hint);
@@ -649,11 +702,12 @@ export function normKeysVonSnapshot(snap: EntscheidSnapshot, hint?: string | nul
  * Rein, sortiert (§2).
  */
 export function literaturEntfernteNormKeys(snap: EntscheidSnapshot): string[] {
-  const ausStatutes = new Set(statutesZuNormKeys(snap.zitierteNormen ?? []));
+  const datum = fassungsDatumVon(snap);
+  const ausStatutes = new Set(statutesZuNormKeys(snap.zitierteNormen ?? [], datum));
   const keysAus = (text: string): Set<string> => {
     const out = new Set<string>();
     for (const ref of extrahiereStatutRefs(text)) {
-      const k = normKeyFuerAbk(ref.gesetz);
+      const k = normKeyFuerAbk(ref.gesetz, datum);
       if (k) out.add(k);
     }
     return out;
@@ -762,9 +816,10 @@ export function undeklarierteAltKeys(
  */
 export function artikelSchluesselVonSnapshot(snap: EntscheidSnapshot): Set<string> {
   const out = new Set<string>();
+  const datum = fassungsDatumVon(snap);
   const text = (snap.zitierteNormen ?? []).join('\n') + '\n' + fliesstextOhneApparat(snap);
   for (const ref of extrahiereStatutRefs(text)) {
-    const rk = normKeyFuerAbk(ref.gesetz);
+    const rk = normKeyFuerAbk(ref.gesetz, datum);
     if (!rk) continue;
     out.add(`${rk}/${ref.artikel}`);
   }
@@ -919,12 +974,16 @@ export function fremdDefinierteKeys(snap: EntscheidSnapshot): Set<string> {
   const out = new Set<string>();
   const text = fliesstextVon(snap);
   if (!text) return out;
+  // DASSELBE Datum wie in der Extraktion: gesperrt werden muss genau der Key,
+  // den `artikelSchluesselVonSnapshot` für dieses Dokument erzeugt — ein Riegel
+  // auf die andere Fassung derselben Reihe griffe ins Leere (§5).
+  const datum = fassungsDatumVon(snap);
 
   // ARM A — Titel-Definition ohne Überschneidung («(Biozidprodukteverordnung, BPR)»).
   for (const m of text.matchAll(DEFINITION)) {
     const titel = m[1];
     if (!TITEL_WORT.test(titel) || ZITAT_KOPF.test(titel)) continue;
-    const key = normKeyFuerAbk(m[2]);
+    const key = normKeyFuerAbk(m[2], datum);
     if (!key) continue;
     if (!titelUeberlappt(titel, REGISTER_TITEL.get(key) ?? '')) out.add(key);
   }
@@ -952,7 +1011,7 @@ export function fremdDefinierteKeys(snap: EntscheidSnapshot): Set<string> {
   // sie widerlegen sie nicht.
   for (const m of text.matchAll(SIGEL_BINDUNG)) {
     if (!KANTONS_SIGEL.has(m[2]) && !KANTONS_SIGEL.has(m[2].toUpperCase())) continue;
-    const key = normKeyFuerAbk(m[1]);
+    const key = normKeyFuerAbk(m[1], datum);
     if (!key) continue;
     // DIESELBE TITEL-PRÜFUNG WIE ARM A — nur sitzt der Titel hier VOR der
     // Klammer («des kantonalen Anwaltsgesetzes vom 28. März 2006 (KAG; BSG
@@ -1000,7 +1059,7 @@ export function artikelSchluesselMitBefund(snap: EntscheidSnapshot): {
   const roh = new Set<string>();
   const rohText = (snap.zitierteNormen ?? []).join('\n') + '\n' + fliesstextVon(snap);
   for (const ref of extrahiereStatutRefs(rohText)) {
-    const rk = normKeyFuerAbk(ref.gesetz);
+    const rk = normKeyFuerAbk(ref.gesetz, fassungsDatumVon(snap));
     if (rk) roh.add(`${rk}/${ref.artikel}`);
   }
   const literaturVerworfen = [...roh].filter((k) => !schluessel.has(k)).sort();
