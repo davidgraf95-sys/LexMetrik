@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-09-05",
+  "erzeugt": "2026-09-12",
   "erlass": "BGG",
   "gewichtQuelle": "alt",
   "proArtikel": {
@@ -159,20 +159,10 @@
         "gewicht": 1
       },
       {
-        "key": "bge_152_V_2",
-        "zitierung": "BGE 152 V 2",
-        "regesteKurz": "Art. 56 Abs. 2, Art. 61 lit. a und f bis ATSG und Art. 69 Abs. 1 bis IVG (beide in der seit 1. Januar 2021 geltenden Fassung); Gerichtskosten im kantonalen Verfahren bei Rechtsverweigerungs- oder Rechtsverzögerungsbeschwerden auf dem…",
-        "datum": "2026-01-01",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bge",
-        "kanton": "CH",
-        "gewicht": 0
-      },
-      {
         "key": "bge_152_V_20",
         "zitierung": "BGE 152 V 20",
         "regesteKurz": "Art. 24 Abs. 1 KVG; Ziff. 1.2 Anhang 1 KLV; Art. 14 Abs. 2 lit. b Transplantationsgesetz; Ersatz von Erwerbsausfall bei Organspende. Der vom Organspender direkt gegenüber dem obligatorischen Krankenpflegeversicherer der Organempfängerin…",
-        "datum": "2026-01-01",
+        "datum": "2025-06-23",
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
@@ -223,6 +213,16 @@
         "zitierung": "BGE 148 II 92",
         "regesteKurz": "Art. 2 Abs. 1 lit. a und Art. 3 Abs. 1 lit. a BGÖ; Art. 55 URG; Anwendung des BGÖ auf die Schiedskommission im Tarifgenehmigungsverfahren mit Einigungstarif. Die Eidgenössische Schiedskommission für die Verwertung von Urheberrechten und…",
         "datum": "2021-10-22",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      },
+      {
+        "key": "bge_147_IV_510",
+        "zitierung": "BGE 147 IV 510",
+        "regesteKurz": "Art. 86 StPO und Art. 9 VeÜ-ZSSV; kein Rechtsanspruch auf elektronische Zustellung von Mitteilungen der Strafbehörden. In Strafsachen sieht Art. 86 StPO vor, dass Mitteilungen der Strafbehörden an die betroffene Person mit deren…",
+        "datum": "2021-06-04",
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
@@ -325,6 +325,16 @@
         "gewicht": 19
       },
       {
+        "key": "bge_147_I_333",
+        "zitierung": "BGE 147 I 333",
+        "regesteKurz": "Art. 29a und Art. 185 Abs. 3 BV; Art. 30 Abs. 2 und Art. 86 BGG; Art. 11 Abs. 3 der Verordnung über die Abfederung der wirtschaftlichen Auswirkungen des Coronavirus (COVID-19) im Kultursektor (COVID-Verordnung Kultur); selbständige…",
+        "datum": "2021-03-24",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 13
+      },
+      {
         "key": "bge_146_II_276",
         "zitierung": "BGE 146 II 276",
         "regesteKurz": "Art. 83 lit. f Ziff. 2 BGG; Art. 1 Abs. 3 lit. d, Art. 13 lit. f und Art. 18 Abs. 1 der Interkantonalen Vereinbarung vom 25. November 1994/15. März 2001 über das öffentliche Beschaffungswesen; Wirtschaftlichkeitsgrundsatz; Wirkung der…",
@@ -333,16 +343,6 @@
         "gericht": "bge",
         "kanton": "CH",
         "gewicht": 13
-      },
-      {
-        "key": "bge_147_I_333",
-        "zitierung": "BGE 147 I 333",
-        "regesteKurz": "Art. 29a und Art. 185 Abs. 3 BV; Art. 30 Abs. 2 und Art. 86 BGG; Art. 11 Abs. 3 der Verordnung über die Abfederung der wirtschaftlichen Auswirkungen des Coronavirus (COVID-19) im Kultursektor (COVID-Verordnung Kultur); selbständige…",
-        "datum": "2021-03-24",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bge",
-        "kanton": "CH",
-        "gewicht": 12
       },
       {
         "key": "bge_150_II_346",
@@ -375,14 +375,14 @@
         "gewicht": 9
       },
       {
-        "key": "bge_150_II_409",
-        "zitierung": "BGE 150 II 409",
-        "regesteKurz": "Art. 89 Abs. 1 lit. c, Art. 111 Abs. 1 BGG; Beschwerdelegitimation im vorinstanzlichen Verfahren bei beantragter Höherveranlagung betr. direkte Bundessteuer. Fehlt es im steuerrechtlichen Prozess an einem schutzwürdigen Interesse an der…",
-        "datum": "2024-05-16",
+        "key": "bge_149_I_191",
+        "zitierung": "BGE 149 I 191",
+        "regesteKurz": "Art. 8 EMRK; Art. 10 Abs. 2 und Art. 36 BV; Art. 40 EpG; abstrakte Normenkontrolle von Art. 2 der Verordnung vom 14. September 2021 über die Covid-19-Zertifikatspflicht für den Studienbetrieb an Hochschulen des Kantons Freiburg. Rechtslage…",
+        "datum": "2023-03-31",
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
-        "gewicht": 6
+        "gewicht": 7
       }
     ],
     "30": [
@@ -421,6 +421,16 @@
         "zitierung": "BGE 151 IV 338",
         "regesteKurz": "Art. 393 Abs. 1 lit. c StPO; Rechtsmittel gegen Entscheide des Zwangsmassnahmengerichts. In seiner seit dem 1. Juli 2024 geltenden Fassung ist Art. 393 Abs. 1 lit. c StPO dahingehend zu verstehen, dass gegen Entscheide des…",
         "datum": "2025-07-07",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      },
+      {
+        "key": "bge_152_V_20",
+        "zitierung": "BGE 152 V 20",
+        "regesteKurz": "Art. 24 Abs. 1 KVG; Ziff. 1.2 Anhang 1 KLV; Art. 14 Abs. 2 lit. b Transplantationsgesetz; Ersatz von Erwerbsausfall bei Organspende. Der vom Organspender direkt gegenüber dem obligatorischen Krankenpflegeversicherer der Organempfängerin…",
+        "datum": "2025-06-23",
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
@@ -722,7 +732,7 @@
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
-        "gewicht": 75
+        "gewicht": 78
       },
       {
         "key": "bge_146_IV_88",
@@ -772,7 +782,7 @@
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
-        "gewicht": 18
+        "gewicht": 19
       },
       {
         "key": "bge_148_V_174",
@@ -792,7 +802,7 @@
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
-        "gewicht": 13
+        "gewicht": 14
       }
     ],
     "43": [
@@ -2046,7 +2056,7 @@
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
-        "gewicht": 72
+        "gewicht": 75
       },
       {
         "key": "bge_146_IV_88",
@@ -2116,10 +2126,20 @@
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
-        "gewicht": 19
+        "gewicht": 20
       }
     ],
     "67": [
+      {
+        "key": "bge_150_II_244",
+        "zitierung": "BGE 150 II 244",
+        "regesteKurz": "Art. 3 Abs. 5, Art. 105 Abs. 1 und Art. 108 DBG; Feststellung der Veranlagungszuständigkeit; Wohnsitz eines Bundesangestellten und seiner Ehegattin. Wenn für die Veranlagung der direkten Bundessteuer die Behörden mehrerer Kantone infrage…",
+        "datum": "2024-02-29",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 4
+      },
       {
         "key": "bge_148_I_160",
         "zitierung": "BGE 148 I 160",
@@ -2129,16 +2149,6 @@
         "gericht": "bge",
         "kanton": "CH",
         "gewicht": 4
-      },
-      {
-        "key": "bge_150_II_244",
-        "zitierung": "BGE 150 II 244",
-        "regesteKurz": "Art. 3 Abs. 5, Art. 105 Abs. 1 und Art. 108 DBG; Feststellung der Veranlagungszuständigkeit; Wohnsitz eines Bundesangestellten und seiner Ehegattin. Wenn für die Veranlagung der direkten Bundessteuer die Behörden mehrerer Kantone infrage…",
-        "datum": "2024-02-29",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bge",
-        "kanton": "CH",
-        "gewicht": 3
       },
       {
         "key": "bge_150_I_120",
@@ -2161,6 +2171,16 @@
         "gewicht": 2
       },
       {
+        "key": "bge_148_II_321",
+        "zitierung": "BGE 148 II 321",
+        "regesteKurz": "Art. 2 Abs. 1, Art. 4 Abs. 1 und Art. 5 Abs. 4 KG; Wettbewerbsabrede; Konzernprivileg; Handelsvertretervertrag und Handelsvertreterprivileg; Aleinvertriebsvertrag; Zurechnung von Verhaltensweisen im Konzern; doppelter Vertrieb. Begriffe…",
+        "datum": "2022-03-03",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 2
+      },
+      {
         "key": "bge_148_II_25",
         "zitierung": "BGE 148 II 25",
         "regesteKurz": "Art. 5 Abs. 4 und Art. 49a KG; vertikale Gebietsabsprache; Alleinvertriebsvertrag; Verbot von Passivverkäufen; absoluter Gebietsschutz bei Einkaufsmöglichkeit über ausländische Commerce-Websites. Kriterien für einen Vertriebsvertrag, der…",
@@ -2171,30 +2191,20 @@
         "gewicht": 2
       },
       {
+        "key": "bge_146_II_150",
+        "zitierung": "BGE 146 II 150",
+        "regesteKurz": "a Art. 28 Abs. 1 DBA CH-FR; Ziff. XI Abs. 3 Bst. a Zusatzprotokoll DBA CH-FR; Art. 2 der Vereinbarung vom 25. Juni 2014 über die Änderung des Zusatzprotokolls zum revidierten DBA CH-FR; Art. 3 lit. c StAhiG; Unterscheidung zwischen…",
+        "datum": "2019-07-26",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 2
+      },
+      {
         "key": "bge_151_II_154",
         "zitierung": "BGE 151 II 154",
         "regesteKurz": "Art. 33 Abs. 1 lit. a und c, Art. 35 Abs. 3 DBG; Ausscheidung von Unterhaltsbeiträgen und Schuldzinsen bei Ehegatten mit getrennten Wohnsitzen. Grundsätzlich erfolgt die internationale Ausscheidung von steuerlichen Abzügen bei…",
         "datum": "2024-09-23",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bge",
-        "kanton": "CH",
-        "gewicht": 1
-      },
-      {
-        "key": "bge_151_II_120",
-        "zitierung": "BGE 151 II 120",
-        "regesteKurz": "a Art. 140 ff. DBG; Umfang der funktionellen Zuständigkeit der kantonalen Steuerrekurskommission; Feststellung der Nichtigkeit nicht angefochtener Entscheide. Damit eine Behörde die Nichtigkeit eines Entscheids feststellen kann, muss sie…",
-        "datum": "2024-08-19",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bge",
-        "kanton": "CH",
-        "gewicht": 1
-      },
-      {
-        "key": "bge_150_III_153",
-        "zitierung": "BGE 150 III 153",
-        "regesteKurz": "Art. 286 Abs. 2 ZGB; Betreuungsunterhalt; Neufestsetzung des Unterhaltsbeitrags zufolge Erhöhung des Einkommens des hauptbetreuenden Elternteils. Enthält der in einem ersten Entscheid zugesprochene Kindesunterhaltsbeitrag einen Anteil…",
-        "datum": "2024-02-09",
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
@@ -2210,7 +2220,7 @@
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
-        "gewicht": 71
+        "gewicht": 74
       },
       {
         "key": "bge_146_IV_88",
@@ -2270,7 +2280,7 @@
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
-        "gewicht": 19
+        "gewicht": 20
       },
       {
         "key": "bge_146_II_335",
@@ -3094,7 +3104,7 @@
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
-        "gewicht": 29
+        "gewicht": 32
       },
       {
         "key": "bge_148_I_160",
@@ -3114,7 +3124,7 @@
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
-        "gewicht": 11
+        "gewicht": 12
       },
       {
         "key": "bge_147_I_16",
@@ -3137,16 +3147,6 @@
         "gewicht": 9
       },
       {
-        "key": "bge_150_I_1",
-        "zitierung": "BGE 150 I 1",
-        "regesteKurz": "Art. 9 und 127 Abs. 1 BV; Vertrauensschutz; besondere Bedeutung des Legalitätsprinzips im Steuerrecht. Anders als in anderen Rechtsgebieten steht der Schutz des Vertrauens in eine behördliche Auskunft im Steuerrecht nicht unter der…",
-        "datum": "2023-10-26",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bge",
-        "kanton": "CH",
-        "gewicht": 7
-      },
-      {
         "key": "bge_148_V_366",
         "zitierung": "BGE 148 V 366",
         "regesteKurz": "Art. 57 Abs. 1 UVG; Zuständigkeit des Schiedsgerichts. Die sachliche Zuständigkeit des kantonalen Schiedsgerichts nach Art. 57 Abs. 1 UVG bestimmt sich unter anderem mit Blick auf die sich in Wirklichkeit gegenüberstehenden Parteien und…",
@@ -3154,13 +3154,23 @@
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
-        "gewicht": 7
+        "gewicht": 8
       },
       {
         "key": "bge_147_I_333",
         "zitierung": "BGE 147 I 333",
         "regesteKurz": "Art. 29a und Art. 185 Abs. 3 BV; Art. 30 Abs. 2 und Art. 86 BGG; Art. 11 Abs. 3 der Verordnung über die Abfederung der wirtschaftlichen Auswirkungen des Coronavirus (COVID-19) im Kultursektor (COVID-Verordnung Kultur); selbständige…",
         "datum": "2021-03-24",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 8
+      },
+      {
+        "key": "bge_150_I_1",
+        "zitierung": "BGE 150 I 1",
+        "regesteKurz": "Art. 9 und 127 Abs. 1 BV; Vertrauensschutz; besondere Bedeutung des Legalitätsprinzips im Steuerrecht. Anders als in anderen Rechtsgebieten steht der Schutz des Vertrauens in eine behördliche Auskunft im Steuerrecht nicht unter der…",
+        "datum": "2023-10-26",
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
@@ -3176,7 +3186,7 @@
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
-        "gewicht": 29
+        "gewicht": 32
       },
       {
         "key": "bge_147_I_89",
@@ -3216,7 +3226,7 @@
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
-        "gewicht": 8
+        "gewicht": 9
       },
       {
         "key": "bge_147_I_268",
@@ -3373,6 +3383,16 @@
         "gewicht": 0
       },
       {
+        "key": "bge_151_II_710",
+        "zitierung": "BGE 151 II 710",
+        "regesteKurz": "Art. 32 Abs. 2, Art. 107 Abs. 2 und Art. 108 Abs. 1 lit. j BGS; Art. 89 Abs. 2 lit. d und Art. 111 Abs. 1 BGG; Art. 25 Abs. 6 GSK; Überprüfung kantonaler Kleinspielbewilligungen auf Bundesrechtskonformität durch die Gespa; Beschwerderecht.…",
+        "datum": "2025-02-25",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 0
+      },
+      {
         "key": "bge_151_II_245",
         "zitierung": "BGE 151 II 245",
         "regesteKurz": "Art. 6 Abs. 1 und 2 VG; Genugtuungsanspruch des Ehemanns in Zusammenhang mit der Verweigerung des Schweizer Grenzwachtkorps, medizinische Hilfe für seine schwangere Frau beizuziehen. Anwendbare Bestimmungen des Verantwortlichkeitsgesetzes…",
@@ -3401,16 +3421,6 @@
         "gericht": "bge",
         "kanton": "CH",
         "gewicht": 0
-      },
-      {
-        "key": "bge_149_I_366",
-        "zitierung": "BGE 149 I 366",
-        "regesteKurz": "Art. 5 Ziff. 1 lit. e und Ziff. 5 EMRK; Art. 59 StGB; Art. 236 Abs. 4 StPO; Frage der Staatshaftung wegen Unterbringung eines Massnahmeunterworfenen in ungeeigneten Einrichtungen. Bestimmung der Dauer, während der der Beschwerdeführer in…",
-        "datum": "2023-04-25",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bge",
-        "kanton": "CH",
-        "gewicht": 0
       }
     ],
     "86": [
@@ -3432,7 +3442,7 @@
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
-        "gewicht": 9
+        "gewicht": 10
       },
       {
         "key": "bge_146_II_276",
@@ -3475,6 +3485,16 @@
         "gewicht": 5
       },
       {
+        "key": "bge_148_II_392",
+        "zitierung": "BGE 148 II 392",
+        "regesteKurz": "Art. 27, 29 Abs. 2, Art. 94 Abs. 4, Art. 106 und 190 BV; Art. 3 lit. a, Art. 4, 9, 21, 24 Abs. 1 und Art. 86 ff. BGS; DNS-Zugangssperre für von ausländischen Unternehmen in der Schweiz angebotene Online-Geldspiele. Gegen Entscheide des…",
+        "datum": "2022-05-18",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 5
+      },
+      {
         "key": "bge_147_I_1",
         "zitierung": "BGE 147 I 1",
         "regesteKurz": "Art. 5 Abs. 1 sowie Art. 8 Abs. 1 und 2 BV; Art. 82 lit. a, Art. 86 Abs. 2 und 3 sowie Art. 89 Abs. 1 BGG; Nichtwiederwahl eines Verwaltungsrichters aus Altersgründen; Anfechtbarkeit des Wahlakts des kantonalen Parlaments; Vereinbarkeit…",
@@ -3483,16 +3503,6 @@
         "gericht": "bge",
         "kanton": "CH",
         "gewicht": 5
-      },
-      {
-        "key": "bge_149_II_337",
-        "zitierung": "BGE 149 II 337",
-        "regesteKurz": "Art. 10 Abs. 3 lit. a und b, Art. 28 Abs. 1, 2 und 3, Art. 34b Abs. 1 lit. a und Abs. 2 BPG; Art. 26 Abs. 2, Art. 173 Abs. 1 lit. a und b, Art. 183 Abs. 1 lit. a GAV SBB (2019); Art. 328b OR; Art. 2 Abs. 1 lit. b, Art. 3 lit. c Ziff. 2,…",
-        "datum": "2023-08-21",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bge",
-        "kanton": "CH",
-        "gewicht": 4
       }
     ],
     "87": [
@@ -3668,7 +3678,7 @@
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
-        "gewicht": 44
+        "gewicht": 47
       },
       {
         "key": "bge_148_I_160",
@@ -3688,7 +3698,7 @@
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
-        "gewicht": 14
+        "gewicht": 15
       },
       {
         "key": "bge_147_I_478",
@@ -3698,7 +3708,7 @@
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
-        "gewicht": 12
+        "gewicht": 13
       },
       {
         "key": "bge_146_I_62",
@@ -3721,16 +3731,6 @@
         "gewicht": 11
       },
       {
-        "key": "bge_147_I_16",
-        "zitierung": "BGE 147 I 16",
-        "regesteKurz": "Art. 35a-35t des Tessiner Gesetzes vom 6. Dezember 1994 über den öffentlichen Verkehr (LTPub) und Verordnung vom 28. Juni 2016 über die Erschliessungsgebühr (RTColl); Art. 127 Abs. 2 BV; Erschliessungsgebühr; abstrakte Normenkontrolle…",
-        "datum": "2020-03-25",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bge",
-        "kanton": "CH",
-        "gewicht": 11
-      },
-      {
         "key": "bge_149_II_66",
         "zitierung": "BGE 149 II 66",
         "regesteKurz": "Art. 89 Abs. 1 lit. a, Art. 89 Abs. 3, Art. 93 Abs. 1 lit. a BGG; Beschwerde in Stimmrechtssachen; Anfechtung eines Urteils, welches das kommunale Parlament verpflichtet, eine neue Umsetzungsvorlage zu einer allgemeinen Anregung…",
@@ -3738,7 +3738,17 @@
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
-        "gewicht": 10
+        "gewicht": 11
+      },
+      {
+        "key": "bge_147_II_44",
+        "zitierung": "BGE 147 II 44",
+        "regesteKurz": "Art. 90, 98, 106 Abs. 2 BGG; Rechtsnatur des Entscheids über die endgültige Nichtanordnung bzw. Aufhebung einer erstinstanzlich verfügten verkehrsmedizinischen Untersuchung und eines Sicherungsentzugs eines Führerausweises; vorsorgliche…",
+        "datum": "2020-09-14",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 11
       }
     ],
     "90": [
@@ -3783,6 +3793,16 @@
         "gewicht": 13
       },
       {
+        "key": "bge_147_I_478",
+        "zitierung": "BGE 147 I 478",
+        "regesteKurz": "Art. 42 Abs. 2 und Art. 89 Abs. 1 lit. c BGG; Art. 36 Abs. 1, Art. 46 Abs. 1 und Art. 118 Abs. 2 lit. b BV; Art. 40 und Art. 75 EpG; Art. 2 und 8 Covid-19-Verordnung besondere Lage; § 47, 49, 50, 56, 59 KV/SZ; abstrakte Normenkontrolle;…",
+        "datum": "2021-06-25",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 12
+      },
+      {
         "key": "bge_146_II_335",
         "zitierung": "BGE 146 II 335",
         "regesteKurz": "Art. 1 Abs. 1, Art. 2 Ziff. 6 und Art. 12 Abs. 1 AVEG; Allgemeinverbindlicherklärung von Gesamtarbeitsverträgen; Prinzip der \"offenen Türe\"; Zulässigkeit von Nebenbestimmungen. Zulässigkeit der Beschwerde in öffentlich-rechtlichen…",
@@ -3791,16 +3811,6 @@
         "gericht": "bge",
         "kanton": "CH",
         "gewicht": 12
-      },
-      {
-        "key": "bge_147_I_478",
-        "zitierung": "BGE 147 I 478",
-        "regesteKurz": "Art. 42 Abs. 2 und Art. 89 Abs. 1 lit. c BGG; Art. 36 Abs. 1, Art. 46 Abs. 1 und Art. 118 Abs. 2 lit. b BV; Art. 40 und Art. 75 EpG; Art. 2 und 8 Covid-19-Verordnung besondere Lage; § 47, 49, 50, 56, 59 KV/SZ; abstrakte Normenkontrolle;…",
-        "datum": "2021-06-25",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bge",
-        "kanton": "CH",
-        "gewicht": 11
       },
       {
         "key": "bge_147_II_44",
@@ -4130,7 +4140,7 @@
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
-        "gewicht": 79
+        "gewicht": 81
       },
       {
         "key": "bge_146_IV_88",
@@ -4170,7 +4180,7 @@
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
-        "gewicht": 22
+        "gewicht": 23
       },
       {
         "key": "bge_150_II_346",
@@ -4294,7 +4304,7 @@
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
-        "gewicht": 50
+        "gewicht": 52
       },
       {
         "key": "bge_146_IV_88",
@@ -4354,7 +4364,7 @@
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
-        "gewicht": 11
+        "gewicht": 12
       },
       {
         "key": "bge_146_IV_114",
@@ -4540,7 +4550,7 @@
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
-        "gewicht": 53
+        "gewicht": 55
       },
       {
         "key": "bge_148_I_160",
@@ -4573,6 +4583,16 @@
         "gewicht": 15
       },
       {
+        "key": "bge_149_II_66",
+        "zitierung": "BGE 149 II 66",
+        "regesteKurz": "Art. 89 Abs. 1 lit. a, Art. 89 Abs. 3, Art. 93 Abs. 1 lit. a BGG; Beschwerde in Stimmrechtssachen; Anfechtung eines Urteils, welches das kommunale Parlament verpflichtet, eine neue Umsetzungsvorlage zu einer allgemeinen Anregung…",
+        "datum": "2022-07-14",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 14
+      },
+      {
         "key": "bge_148_II_392",
         "zitierung": "BGE 148 II 392",
         "regesteKurz": "Art. 27, 29 Abs. 2, Art. 94 Abs. 4, Art. 106 und 190 BV; Art. 3 lit. a, Art. 4, 9, 21, 24 Abs. 1 und Art. 86 ff. BGS; DNS-Zugangssperre für von ausländischen Unternehmen in der Schweiz angebotene Online-Geldspiele. Gegen Entscheide des…",
@@ -4583,6 +4603,16 @@
         "gewicht": 14
       },
       {
+        "key": "bge_149_II_337",
+        "zitierung": "BGE 149 II 337",
+        "regesteKurz": "Art. 10 Abs. 3 lit. a und b, Art. 28 Abs. 1, 2 und 3, Art. 34b Abs. 1 lit. a und Abs. 2 BPG; Art. 26 Abs. 2, Art. 173 Abs. 1 lit. a und b, Art. 183 Abs. 1 lit. a GAV SBB (2019); Art. 328b OR; Art. 2 Abs. 1 lit. b, Art. 3 lit. c Ziff. 2,…",
+        "datum": "2023-08-21",
+        "leitcharakter": "leitentscheid",
+        "gericht": "bge",
+        "kanton": "CH",
+        "gewicht": 13
+      },
+      {
         "key": "bge_149_I_207",
         "zitierung": "BGE 149 I 207",
         "regesteKurz": "Art. 8 EMRK; mögliche Anrufung des Rechts auf Achtung des Privatlebens, um nach einem längeren illegalen Aufenthalt in der Schweiz eine Aufenthaltsbewilligung zu erhalten. Präzisierung der Rechtsprechung. Es ist nicht ausgeschlossen, nach…",
@@ -4591,26 +4621,6 @@
         "gericht": "bge",
         "kanton": "CH",
         "gewicht": 13
-      },
-      {
-        "key": "bge_149_II_66",
-        "zitierung": "BGE 149 II 66",
-        "regesteKurz": "Art. 89 Abs. 1 lit. a, Art. 89 Abs. 3, Art. 93 Abs. 1 lit. a BGG; Beschwerde in Stimmrechtssachen; Anfechtung eines Urteils, welches das kommunale Parlament verpflichtet, eine neue Umsetzungsvorlage zu einer allgemeinen Anregung…",
-        "datum": "2022-07-14",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bge",
-        "kanton": "CH",
-        "gewicht": 13
-      },
-      {
-        "key": "bge_149_II_337",
-        "zitierung": "BGE 149 II 337",
-        "regesteKurz": "Art. 10 Abs. 3 lit. a und b, Art. 28 Abs. 1, 2 und 3, Art. 34b Abs. 1 lit. a und Abs. 2 BPG; Art. 26 Abs. 2, Art. 173 Abs. 1 lit. a und b, Art. 183 Abs. 1 lit. a GAV SBB (2019); Art. 328b OR; Art. 2 Abs. 1 lit. b, Art. 3 lit. c Ziff. 2,…",
-        "datum": "2023-08-21",
-        "leitcharakter": "leitentscheid",
-        "gericht": "bge",
-        "kanton": "CH",
-        "gewicht": 12
       }
     ],
     "101": [
@@ -4910,7 +4920,7 @@
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
-        "gewicht": 75
+        "gewicht": 78
       },
       {
         "key": "bge_146_IV_88",
@@ -4970,13 +4980,13 @@
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
-        "gewicht": 21
+        "gewicht": 22
       },
       {
-        "key": "bge_148_V_174",
-        "zitierung": "BGE 148 V 174",
-        "regesteKurz": "Art. 28a Abs. 1 IVG in der bis 31. Dezember 2021 gültig gewesenen Fassung; Art. 16 ATSG; Bemessung des Invalideneinkommens anhand der Schweizerischen Lohnstrukturerhebung (LSE). Im heutigen Zeitpunkt besteht kein ernsthafter sachlicher…",
-        "datum": "2022-03-09",
+        "key": "bge_148_II_392",
+        "zitierung": "BGE 148 II 392",
+        "regesteKurz": "Art. 27, 29 Abs. 2, Art. 94 Abs. 4, Art. 106 und 190 BV; Art. 3 lit. a, Art. 4, 9, 21, 24 Abs. 1 und Art. 86 ff. BGS; DNS-Zugangssperre für von ausländischen Unternehmen in der Schweiz angebotene Online-Geldspiele. Gegen Entscheide des…",
+        "datum": "2022-05-18",
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
@@ -4992,7 +5002,7 @@
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
-        "gewicht": 83
+        "gewicht": 86
       },
       {
         "key": "bge_146_IV_88",
@@ -5062,7 +5072,7 @@
         "leitcharakter": "leitentscheid",
         "gericht": "bge",
         "kanton": "CH",
-        "gewicht": 21
+        "gewicht": 22
       }
     ],
     "107": [

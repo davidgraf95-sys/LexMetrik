@@ -216,7 +216,7 @@ export function LesemodusOverlay({ ziel, snap, abschnitte, regesteText, massgebl
         )}
 
         <div className="mt-9">
-          <EntscheidBody abschnitte={abschnitte} zitierung={snap.zitierung} bgeReferenz={snap.bgeReferenz} />
+          <EntscheidBody abschnitte={abschnitte} zitierung={snap.zitierung} bgeReferenz={snap.bgeReferenz} quarantaene={snap.quarantaene} />
         </div>
 
         <footer className="mt-12 border-t border-line pt-5 text-body-s text-ink-500">
