@@ -56,7 +56,16 @@ test.describe('Reader (über Klick aus der Übersicht)', () => {
   test('öffnet einen Entscheid mit Kopf, Abschnitten und Provenienz', async ({ page }) => {
     const fehler = fehlerSammeln(page)
     await page.goto('/rechtsprechung')
-    await page.locator('a[href^="/rechtsprechung/"]').first().click()
+    // Bewusst NICHT einfach `.first()`: ein quarantänierter Eintrag (§8, D-Auflage
+    // 12.9.2026, PR #816 — Anlassfall bge_152_V_2, kein Volltext) kann je nach
+    // Sortierung zuoberst stehen und trägt keine Abschnitte. `data-quarantaene`
+    // sitzt direkt AM Link (EntscheidZeile.tsx: der Overlay-<Link> ist leer,
+    // Stretched-Link-Muster — ein `:has([data-quarantaene])` auf dem <a> träfe
+    // dort NIE zu, weil der Chip ein Geschwister ist, kein Nachfahre; erst durch
+    // dieses Attribut direkt auf dem <a> ist der Zustand dort abfragbar). Die
+    // implizite Testvoraussetzung «der erste Treffer hat einen Volltext» wird
+    // jetzt explizit erzwungen.
+    await page.locator('a[href^="/rechtsprechung/"]:not([data-quarantaene])').first().click()
     await expect(page).toHaveURL(/\/rechtsprechung\/.+/)
     await expect(page.getByRole('heading', { level: 1 })).toBeVisible()
     // Gegliederte Lesesicht: mindestens die Erwägungen-Überschrift.
@@ -71,6 +80,19 @@ test.describe('Reader (über Klick aus der Übersicht)', () => {
     // unverändert; nur ihr Suchwort folgt dem Kanon.
     await expect(page.getByText('Amtliche Fassung', { exact: false }).first()).toBeVisible()
     await page.screenshot({ path: 'e2e-shots/rechtsprechung-reader.png', fullPage: true })
+    expect(fehler).toEqual([])
+  })
+
+  test('quarantänierter Entscheid (Quellenkonflikt) zeigt den Hinweis statt Abschnitte (§8, PR #816)', async ({ page }) => {
+    // Fixer, committeter Key (bge_152_V_2 — OCLs Basis-Record ist mit 152 V 20
+    // konfliert, `abschnitte` bewusst leer, `quarantaene` gesetzt). Direkt
+    // navigiert statt aus der Liste geklickt: Sortierung/Position sind kein
+    // Testinhalt, der Zustand des EINEN bekannten Falls ist es.
+    const fehler = fehlerSammeln(page)
+    await page.goto('/rechtsprechung/bge_152_V_2')
+    await expect(page.getByRole('heading', { level: 1 })).toBeVisible()
+    await expect(page.locator('[data-quarantaene]')).toContainText('mit BGE 152 V 20 vermischt')
+    await expect(page.getByText('Erwägungen', { exact: false })).toHaveCount(0)
     expect(fehler).toEqual([])
   })
 })

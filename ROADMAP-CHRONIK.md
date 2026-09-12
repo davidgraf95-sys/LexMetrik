@@ -1,5 +1,87 @@
 # ROADMAP — Erledigt-Chronik (Detail-Archiv erledigter Schritte)
 
+## Entscheid-Datumsfehler `bge_151_II_475` — Wortlaut vor der Lösung + Lösung 12.9.2026 (W2·18-FEHLERBUCH)
+
+**Ursprünglicher Befund (Wortlaut, bis 12.9.2026 offen, ROADMAP.md `W2·6-B`-Umfeld):**
+«**Entscheid-Datumsfehler bereinigen** — `bge_151_II_475` trägt 1999 statt 2025; Register-Sweep
+nach weiteren Band/Jahr-Diskrepanzen.» Ausführlicher in `fahrplaene/FAHRPLAN-OFFENE-BEFUNDE.md`
+§4: «**Entscheid-Datumsfehler im Rechtsprechungs-Register bereinigen** — `bge_151_II_475` trägt
+1999 statt 2025; Datum gegen bger.ch verifizieren, in der Pipeline-Quelle korrigieren (nie im
+Projektions-JSON, §5), Register-Sweep nach weiteren Band/Jahr-Diskrepanzen, Projektion neu
+erzeugen. **Risikopfad** ⇒ Gegenprüfung.»
+
+- [x] **Gelöst 12.9.2026 (Finder-Fund 12.9.2026, Fix-Session gleichentags):** Nullprobe bestätigte
+  den Fund im Snapshot (`public/rechtsprechung/bund/bge/151_II_475.json`, `datum: "1999-06-21"`,
+  `azaUrteil: null` — Auszug-only). **Amtlich verifiziert** (bger.ch clir,
+  `search.bger.ch/ext/eurospider/live/de/php/clir/...highlight_docid=atf://151-II-475:de`, Abruf
+  12.9.2026): «151 II 475 — 2C_64/2023 vom 26. November 2024»; aktuelle OCL-`decision_date`
+  (`mcp.opencaselaw.ch/api/decisions/bge_151%20II%20475`) stimmt damit überein. Das persistierte
+  1999-06-21 ist das Datum des in der Regeste zitierten Luftverkehrsabkommens («Accord conclu le
+  21 juin 1999 …»), nicht des Urteils — ein OCL-`decision_date`-Fehlwert, wie ihn
+  `adapter-entscheide.ts` für genau diese Bande-Familie (Band 151 → 2025) bereits kennt und seit
+  ec5ac2211 (5.7.2026) über die Bandjahr-Regel abfängt. **Die eigentliche Wurzel lag aber NICHT
+  mehr im Adapter**, sondern im Refresh-Orchestrator `scripts/normtext-entscheide.ts`: der
+  B1-Zweig von `--regeste-refresh` (aza-Nachresolution der BGE ohne Vollurteil) verwarf ein frisch
+  geholtes Ergebnis, sobald es Auszug-only blieb (`if (neu?.azaUrteil) byId.set(...)`) — der
+  korrigierte Datums-Fallback wurde dadurch berechnet, aber nie geschrieben, und der Fehlwert vom
+  Bau vor dem 5.7.-Fix (Datei-`abgerufen`: 2026-06-29) blieb über zwei additive Nachpflege-Läufe
+  (faed1f48c 5.7., d47234add 28.7. — beide bewusst additiv, rührten `datum` nicht an) unverändert
+  stehen. Zusätzlich fehlte im B1-Zweig die clir-Kopf-Datumsanreicherung (`holeClirHtml` +
+  `parseClirUrteilskopf`), die der Band-Nachzug (`--bge-baender`) bereits nutzt. **Fix:** (1) B1
+  übernimmt jetzt jedes erfolgreich geholte Ergebnis, auch Auszug-only (nur ein gescheiterter Fetch
+  lässt den Bestand unangetastet); (2) B1 holt vorab denselben clir-Kopf wie `--bge-baender`.
+  Effekt beim erneuten Lauf: der aza-Resolver löste `2C_64/2023` diesmal sogar vollständig auf
+  (Inversions-Schutz griff nicht mehr) — der Entscheid trägt jetzt das echte Vollurteil samt
+  Datum 2024-11-26, Besetzung und Zitaten statt nur des Sammlungs-Auszugs. **Vollerhebung**
+  (Skript gegen den ganzen BGE-Bestand, Regel Bandjahr−Jahr(datum) > 5): 1259 amtliche BGE geprüft,
+  genau 1 Treffer — nur dieser Fund; nach dem Fix 0 Treffer. **Dauer-Tor ergänzt:**
+  `check:entscheide` prüft neu je BGE die Bandjahr-Plausibilität (dasselbe ±5-Jahr-Fenster wie der
+  aza-Resolver) und schlägt hart fehl, wenn ein `decision_date` mehr als 5 Jahre vor dem
+  BGE-Bandjahr liegt — Rot-Beweis vor dem Fix erbracht (exakt dieser eine Treffer, exit 1), grün
+  danach. Regeneration ausschliesslich über den Pflegeweg (Adapter-Funktionen, `schreibeKorpus`),
+  kein Hand-Edit im Artefakt (§5); reiner `erzeugt`-Zeitstempel-Churn in unbeteiligten Shards wurde
+  vor dem Commit verworfen (bekanntes Muster, vgl. `normtext:struktur`-Churn-Befund). **Nachtrag
+  Gegenprüfung 12.9.2026 (A1+A2, PR #816):** A1 — der B1-Zweig übernahm ein frisches Ergebnis bis
+  dahin bedingungslos; bei einer Netzstörung im clir-Fetch hätte das ein bereits exaktes
+  Bestandsdatum durch den Bandjahr-Platzhalter ersetzt (1254/1259 BGE tragen exakte Daten, das
+  Fenster-Tor ist dafür blind). Fix: geteiltes, unit-getestetes Modul
+  `scripts/normtext/bge-bandjahr.ts` (`verschlechtertDatum` als Übernahme-Gate,
+  `src/tests/entscheid-bandjahr.test.ts`). A2 — gezielter Nachlauf für die 5 «weiterhin Auszug»
+  gebliebenen BGE, amtlich verifiziert: `151 I 73`/`151 II 710`/`152 V 20` voll aufgelöst,
+  `151 III 336` Datum gehoben (Auszug bleibt, aza-Kandidat kürzer als Auszug), `152 V 2` NEUER
+  Befund — OCLs eigener Basis-Record ist bei full_text/docket_number_2/decision_date komplett mit
+  `152 V 20` konfliert (nicht nur die aza-Auswahl); auf Bandjahr-Platzhalter zurückgestuft,
+  Content-Korrektur bleibt eigener offener Befund (`fahrplaene/FAHRPLAN-OFFENE-BEFUNDE.md`).
+  **Nachtrag Delta-Prüfung 12.9.2026 (B, PR #816):** der A1/A2-B1-Lauf hatte
+  `regeste.sprachfassungen` (dreisprachig, B2/A18) bei allen 6 angefassten BGE verloren — der
+  B1-Zweig ERSETZTE den Bestandseintrag durch das frische `holeBgeLeitentscheid`-Ergebnis, das
+  dieses Feld nicht trägt (kommt aus `holeRegesteSprachfassungen`, anderer Refresh-Zweig; korpusweit
+  1258→1252 mit Sprachfassungen). Fix: neues Modul `entscheide-b1-merge.ts`
+  (`mergeB1Ergebnis`, unit-getestet, Rot-Beweis erbracht) — übernimmt `alt.regeste.sprachfassungen`
+  in `neu`, wenn `neu` selbst keine trägt und der flache Regeste-Text unverändert ist. Neuer Wächter
+  in `check:entscheide`: amtlicher BGE mit Regeste ohne sprachfassungen ⇒ FEHLER (Ausnahme
+  `bge_149_IV_1`, dokumentiert seit 5.7.2026). Die 6 Einträge aus dem unveränderten
+  origin/main-Bestand gemergt (kein Neu-Abruf, Text-Gleichheit geprüft); Vollerhebung 1258/1259.
+  **A3:** `bge_152_V_2`s Urteilsdatum (2026-01-29, amtlich eindeutig aus zwei unabhängigen Quellen)
+  darf die Body-Quarantäne überleben — gesetzt, Body/azaUrteil bleiben Auszug/quarantäniert.
+  Kommentar zur A1-Restlücke ergänzt: ein plausibel-aber-falsches Bestandsdatum (wie 152_V_2s
+  vorheriges 2025-06-23, aus der OCL-Konflation geerbt) wird von `verschlechtertDatum` konserviert,
+  nicht automatisch korrigiert. **Nachtrag C1+D1+D2+E (Delta-Prüfungen 12.9.2026, PR #816):**
+  C1 — `bge_152_V_2` trug weiterhin 44'817 Zeichen des FREMDEN Urteils 152 V 20 im Body (nur der
+  aza-Body war quarantäniert, nicht der Basis-Record); `abschnitte`/`rubrum`/`zitierteNormen`/
+  `dispositivOrders` genullt, neues additives Feld `quarantaene` an `EntscheidSnapshot`, neuer
+  korpusweiter Wächter `findeFremdeFundstelleImBody` (laufender Seitenkopf-Vergleich, Rot-Beweis
+  erbracht, effektive Prüfmenge 6/1259 BGE — Roadmap-Folgeschritt für einen breiteren
+  Konflations-Wächter unter `W2·18-FEHLERBUCH` in ROADMAP.md vorgemerkt). D1 — der Leer-Body-
+  Hinweis in `EntscheidBody.tsx` präzisiert sich bei gesetztem `quarantaene` («… mit BGE 152 V 20
+  vermischt …»), unit-getestet. E — CI-Rot Browser-Smoke Shard 4/4: `quarantaene` fehlte in der
+  Manifest-Projektion (register.json), die Übersicht klickte darum blind auf den quarantänierten,
+  jüngst-datierten Eintrag; Chip «Volltext nicht verfügbar» jetzt auch in Karte/Zeile
+  (`data-quarantaene` DIREKT am `<Link>` — in `EntscheidZeile.tsx` ist der Link ein leerer
+  Stretched-Link, der Chip ein Geschwister, kein Nachfahre, ein `:has()`-Selektor traf darum nie
+  zu), e2e-Testvoraussetzung («erster Treffer hat Volltext») jetzt explizit erzwungen + neuer Fall
+  für den quarantänierten Zustand.
+
 ## Reparatur-Arm ohne `normtext:revisionen` — Wortlaut + Lösung 12.9.2026 (PR folgt)
 
 **Ursprünglicher Befund (Wortlaut, bis 12.9.2026 offen, FAHRPLAN-OFFENE-BEFUNDE.md:94,
@@ -71,6 +153,7 @@ hasht `r.stand`; stand-freie `shaVernehmlassung()` nur im Test (§5/§6.7).
   Dateien/274 Tests grün, `lint` 0 Fehler. Damit sind alle drei Befunde der Nacht-5.9.2026-
   Sammelzeile (ROADMAP.md:416) gelöst: Finding 7 ohne Reparaturweg (PR #803) ·
   Register-sha rotiert mit stand (PR #814) · Arm-Tor wanduhrabhängig (PR #803).
+
 ## `adapter-lexwork.ts:778` Fetch-Ergebnis unvalidiert — Wortlaut + Fix 12.9.2026 (PR #813, Gegenprüfung ausstehend)
 
 **Ursprünglicher Befund (Wortlaut, ROADMAP.md Stand 29.8.2026 / FAHRPLAN-OFFENE-BEFUNDE.md §1):**

@@ -1,5 +1,5 @@
 {
-"erzeugt":"2026-09-05",
+"erzeugt":"2026-09-12",
 "erlass":"MVG",
 "erlassEbene":"bund",
 "dokumente":{
@@ -7,15 +7,14 @@
 "bge_146_V_74":{"zitierung":"BGE 146 V 74","regesteKurz":"Art. 69 Abs. 2 ATSG; zum Begriff des Erwerbsausfalls nach Art. 69 Abs. 2 ATSG. Ein Erwerbsausfall von Angehörigen der verunfallten Person kann nur dann im Rahmen von Art. 69 Abs. 2 ATSG als Mehrkosten berücksichtigt werden, wenn er darauf…","datum":"2020-01-21","facetten":{"quelltyp":"rechtsprechung","ebene":"bund","kanton":"CH","gericht":"bge","status":"bge"}},
 "bge_147_V_297":{"zitierung":"BGE 147 V 297","regesteKurz":"Art. 23 Abs. 4 lit. a und Abs. 5 AHVG; Art. 46 Abs. 3 AHVV; Wiederaufleben des Anspruchs auf eine Witwen- oder Witwerrente. Der Anspruch auf eine Witwen- oder Witwerrente, der zufolge Wiederverheiratung erloschen ist (Art. 23 Abs. 4 lit. a…","datum":"2021-07-02","facetten":{"quelltyp":"rechtsprechung","ebene":"bund","kanton":"CH","gericht":"bge","status":"bge"}},
 "bge_148_V_58":{"zitierung":"BGE 148 V 58","regesteKurz":"Art. 34a BVG (je in der vom 1. Januar 2003 bis 31. Dezember 2016 in Kraft gestandenen und in der ab 1. Januar 2017 geltenden Fassung); Art. 24 (in der vom 1. Januar 2011 bis 31. Dezember 2016 in Kraft gestandenen Fassung), Art. 24a BVV 2…","datum":"2022-01-12","facetten":{"quelltyp":"rechtsprechung","ebene":"bund","kanton":"CH","gericht":"bge","status":"bge"}},
-"bge_152_V_2":{"zitierung":"BGE 152 V 2","regesteKurz":"Art. 56 Abs. 2, Art. 61 lit. a und f bis ATSG und Art. 69 Abs. 1 bis IVG (beide in der seit 1. Januar 2021 geltenden Fassung); Gerichtskosten im kantonalen Verfahren bei Rechtsverweigerungs- oder Rechtsverzögerungsbeschwerden auf dem…","datum":"2026-01-01","facetten":{"quelltyp":"rechtsprechung","ebene":"bund","kanton":"CH","gericht":"bge","status":"bge"}},
-"bge_152_V_20":{"zitierung":"BGE 152 V 20","regesteKurz":"Art. 24 Abs. 1 KVG; Ziff. 1.2 Anhang 1 KLV; Art. 14 Abs. 2 lit. b Transplantationsgesetz; Ersatz von Erwerbsausfall bei Organspende. Der vom Organspender direkt gegenüber dem obligatorischen Krankenpflegeversicherer der Organempfängerin…","datum":"2026-01-01","facetten":{"quelltyp":"rechtsprechung","ebene":"bund","kanton":"CH","gericht":"bge","status":"bge"}},
+"bge_152_V_20":{"zitierung":"BGE 152 V 20","regesteKurz":"Art. 24 Abs. 1 KVG; Ziff. 1.2 Anhang 1 KLV; Art. 14 Abs. 2 lit. b Transplantationsgesetz; Ersatz von Erwerbsausfall bei Organspende. Der vom Organspender direkt gegenüber dem obligatorischen Krankenpflegeversicherer der Organempfängerin…","datum":"2025-06-23","facetten":{"quelltyp":"rechtsprechung","ebene":"bund","kanton":"CH","gericht":"bge","status":"bge"}},
 "bs_sozialversicherungsgericht_MV.2022.1":{"zitierung":"Sozialversicherungsgericht BS MV.2022.1 vom 01.12.2022","regesteKurz":"Anordnung einer Begutachtung","datum":"2022-12-01","facetten":{"quelltyp":"rechtsprechung","ebene":"kanton","kanton":"BS","gericht":"bs_sozialversicherungsgericht","status":"kantonal"}}
 },
 "proArtikel":{
 "1":[{"key":"bge_146_V_121","gewicht":0}],
 "5":[{"key":"bs_sozialversicherungsgericht_MV.2022.1","gewicht":null}],
 "6":[{"key":"bs_sozialversicherungsgericht_MV.2022.1","gewicht":null}],
-"16":[{"key":"bge_152_V_2","gewicht":0},{"key":"bge_152_V_20","gewicht":0}],
+"16":[{"key":"bge_152_V_20","gewicht":0}],
 "30":[{"key":"bge_147_V_297","gewicht":0}],
 "47":[{"key":"bge_148_V_58","gewicht":0}],
 "72":[{"key":"bge_146_V_74","gewicht":0}],
@@ -27,7 +26,7 @@
 "1":{"bge":1},
 "5":{"kantonal":1},
 "6":{"kantonal":1},
-"16":{"bge":2},
+"16":{"bge":1},
 "30":{"bge":1},
 "47":{"bge":1},
 "72":{"bge":1},

@@ -622,11 +622,18 @@ describe('B7/c · «Eidg.» ist verdrahtet, aber korpusweit selten (§8)', () =>
   it('BEFUND I1 (Gegenprüfung R1): Fundstellen ≠ Entscheide, gemessen am BGG', () => {
     // Der Schalter beschriftete bis zur Gegenprüfung die KANTEN als «Entscheide».
     // Am einzelnen Artikel ist das dasselbe, über einen Erlass nicht — hier steht
-    // die Zahl, die es widerlegt hat (§8): 10'559 gegen 1'253, Faktor 8,4, bei
-    // einem Korpus von insgesamt 1'259 BGE.
+    // die Zahl, die es widerlegt hat (§8): ursprünglich 10'559 gegen 1'253, Faktor
+    // 8,4, bei einem Korpus von insgesamt 1'259 BGE. Kanten-Zahl EINMALIG
+    // nachgezogen (12.9.2026, PR #816, W2·18-FEHLERBUCH): die aza-Auflösung von
+    // 151 I 73/151 II 710/152 V 20 (vorher Auszug-only) brachte deren echte
+    // BGG-Zitate hinzu, die Basis-Body-Konflation von 152 V 2 (fälschlich
+    // 152-V-20-Inhalt, u.a. BGG-Zitate) wurde entfernt — keine Rechenlogik-
+    // Änderung, reine Datenkorrektur; dokumente 1253 → 1254 (zwei aza-Volltexte
+    // zitieren BGG neu als eigenständiges Dokument, einer weniger durch die
+    // entfernte Fremdkontamination — netto +1).
     const s = JSON.parse(readFileSync('public/rechtsprechung/bezuege/BGG.json', 'utf8')) as BezugsShard;
     const n = klassenImShard(s);
-    expect(n.bge!.kanten).toBe(10_559);
-    expect(n.bge!.dokumente).toBe(1253);
+    expect(n.bge!.kanten).toBe(10_604);
+    expect(n.bge!.dokumente).toBe(1254);
   });
 });

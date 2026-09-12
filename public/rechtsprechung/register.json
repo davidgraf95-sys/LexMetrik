@@ -1,5 +1,5 @@
 {
-  "erzeugt": "2026-09-05",
+  "erzeugt": "2026-09-12",
   "entscheide": [
     {
       "key": "bs_appellationsgericht_AUS.2026.54",
@@ -5748,6 +5748,32 @@
       "fassungsToken": "2026-03-13"
     },
     {
+      "key": "bge_152_V_2",
+      "gericht": "bge",
+      "gerichtName": "Bundesgericht",
+      "gerichtstyp": "bundesgericht",
+      "kanton": "CH",
+      "nummer": "152 V 2",
+      "bgeReferenz": "152 V 2",
+      "datum": "2026-01-29",
+      "quarantaene": "ocl-konflation:152 V 20",
+      "zitierung": "BGE 152 V 2",
+      "leitcharakter": "leitentscheid",
+      "regesteVorhanden": true,
+      "regesteKurz": "Art. 56 Abs. 2, Art. 61 lit. a und f bis ATSG und Art. 69 Abs. 1 bis IVG (beide in der seit 1. Januar 2021 geltenden Fassung); Gerichtskosten im kantonalen Verfahren bei Rechtsverweigerungs- oder Rechtsverzögerungsbeschwerden auf dem…",
+      "sachgebiet": "sozialversicherung",
+      "sprache": "de",
+      "normKeys": [
+        "IVG"
+      ],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "datei": "bund/bge/152_V_2.json",
+      "quelle": "opencaselaw",
+      "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F152-V-2%3Ade&lang=de&zoom=&type=show_document",
+      "fassungsToken": "b7080eb0c05048547609579409dbff8ffe046f265160d65992852f4c26ce727a"
+    },
+    {
       "key": "bge_152_V_52",
       "gericht": "bge",
       "gerichtName": "Bundesgericht",
@@ -7421,125 +7447,6 @@
         },
         {
           "s": "cruz-joelle",
-          "r": "gerichtsschreiber"
-        }
-      ]
-    },
-    {
-      "key": "bge_152_V_2",
-      "gericht": "bge",
-      "gerichtName": "Bundesgericht",
-      "gerichtstyp": "bundesgericht",
-      "kanton": "CH",
-      "nummer": "152 V 2",
-      "bgeReferenz": "152 V 2",
-      "datum": "2026-01-01",
-      "zitierung": "BGE 152 V 2",
-      "leitcharakter": "leitentscheid",
-      "regesteVorhanden": true,
-      "regesteKurz": "Art. 56 Abs. 2, Art. 61 lit. a und f bis ATSG und Art. 69 Abs. 1 bis IVG (beide in der seit 1. Januar 2021 geltenden Fassung); Gerichtskosten im kantonalen Verfahren bei Rechtsverweigerungs- oder Rechtsverzögerungsbeschwerden auf dem…",
-      "sachgebiet": "sozialversicherung",
-      "sprache": "de",
-      "normKeys": [
-        "ATSG",
-        "BGG",
-        "BV",
-        "IVG",
-        "KLV",
-        "KVG",
-        "MVG",
-        "OR",
-        "SVG",
-        "VWVG"
-      ],
-      "bestand": "snapshot",
-      "kuratierung": "maschinell",
-      "datei": "bund/bge/152_V_2.json",
-      "quelle": "opencaselaw",
-      "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F152-V-2%3Ade&lang=de&zoom=&type=show_document",
-      "fassungsToken": "b7080eb0c05048547609579409dbff8ffe046f265160d65992852f4c26ce727a",
-      "richter": [
-        {
-          "s": "moser-szeless",
-          "r": "vorsitz"
-        },
-        {
-          "s": "stadelmann",
-          "r": "mitglied"
-        },
-        {
-          "s": "parrino",
-          "r": "mitglied"
-        },
-        {
-          "s": "beusch",
-          "r": "mitglied"
-        },
-        {
-          "s": "scherrer-reber",
-          "r": "mitglied"
-        },
-        {
-          "s": "dormann",
-          "r": "gerichtsschreiber"
-        }
-      ]
-    },
-    {
-      "key": "bge_152_V_20",
-      "gericht": "bge",
-      "gerichtName": "Bundesgericht",
-      "gerichtstyp": "bundesgericht",
-      "kanton": "CH",
-      "nummer": "152 V 20",
-      "bgeReferenz": "152 V 20",
-      "datum": "2026-01-01",
-      "zitierung": "BGE 152 V 20",
-      "leitcharakter": "leitentscheid",
-      "regesteVorhanden": true,
-      "regesteKurz": "Art. 24 Abs. 1 KVG; Ziff. 1.2 Anhang 1 KLV; Art. 14 Abs. 2 lit. b Transplantationsgesetz; Ersatz von Erwerbsausfall bei Organspende. Der vom Organspender direkt gegenüber dem obligatorischen Krankenpflegeversicherer der Organempfängerin…",
-      "sachgebiet": "sozialversicherung",
-      "sprache": "de",
-      "normKeys": [
-        "ATSG",
-        "BGG",
-        "BV",
-        "KLV",
-        "KVG",
-        "MVG",
-        "OR",
-        "SVG",
-        "VWVG"
-      ],
-      "bestand": "snapshot",
-      "kuratierung": "maschinell",
-      "datei": "bund/bge/152_V_20.json",
-      "quelle": "opencaselaw",
-      "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F152-V-20%3Ade&lang=de&zoom=&type=show_document",
-      "fassungsToken": "524239bfc404545832fad499d2c99cb17d4c4e752b86c4e120362ea81d4d281f",
-      "richter": [
-        {
-          "s": "moser-szeless",
-          "r": "vorsitz"
-        },
-        {
-          "s": "stadelmann",
-          "r": "mitglied"
-        },
-        {
-          "s": "parrino",
-          "r": "mitglied"
-        },
-        {
-          "s": "beusch",
-          "r": "mitglied"
-        },
-        {
-          "s": "scherrer-reber",
-          "r": "mitglied"
-        },
-        {
-          "s": "dormann",
           "r": "gerichtsschreiber"
         }
       ]
@@ -27716,6 +27623,93 @@
       ]
     },
     {
+      "key": "bge_152_V_20",
+      "gericht": "bge",
+      "gerichtName": "Bundesgericht",
+      "gerichtstyp": "bundesgericht",
+      "kanton": "CH",
+      "nummer": "152 V 20",
+      "bgeReferenz": "152 V 20",
+      "datum": "2025-06-23",
+      "zitierung": "BGE 152 V 20",
+      "leitcharakter": "leitentscheid",
+      "regesteVorhanden": true,
+      "regesteKurz": "Art. 24 Abs. 1 KVG; Ziff. 1.2 Anhang 1 KLV; Art. 14 Abs. 2 lit. b Transplantationsgesetz; Ersatz von Erwerbsausfall bei Organspende. Der vom Organspender direkt gegenüber dem obligatorischen Krankenpflegeversicherer der Organempfängerin…",
+      "sachgebiet": "sozialversicherung",
+      "sprache": "de",
+      "normKeys": [
+        "ATSG",
+        "BGG",
+        "BV",
+        "KLV",
+        "KVG",
+        "MVG",
+        "OR",
+        "SVG",
+        "VWVG"
+      ],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "datei": "bund/bge/152_V_20.json",
+      "quelle": "opencaselaw",
+      "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F152-V-20%3Ade&lang=de&zoom=&type=show_document",
+      "fassungsToken": "524239bfc404545832fad499d2c99cb17d4c4e752b86c4e120362ea81d4d281f",
+      "richter": [
+        {
+          "s": "moser-szeless",
+          "r": "vorsitz"
+        },
+        {
+          "s": "stadelmann",
+          "r": "mitglied"
+        },
+        {
+          "s": "parrino",
+          "r": "mitglied"
+        },
+        {
+          "s": "beusch",
+          "r": "mitglied"
+        },
+        {
+          "s": "scherrer-reber",
+          "r": "mitglied"
+        },
+        {
+          "s": "dormann",
+          "r": "gerichtsschreiber"
+        }
+      ]
+    },
+    {
+      "key": "bge_152_V_20__voll",
+      "gericht": "bger",
+      "gerichtName": "Bundesgericht",
+      "gerichtstyp": "bundesgericht",
+      "kanton": "CH",
+      "nummer": "9C_121/2024",
+      "bgeReferenz": null,
+      "datum": "2025-06-23",
+      "zitierung": "BGer 9C_121/2024",
+      "leitcharakter": "routine",
+      "regesteVorhanden": false,
+      "regesteKurz": null,
+      "sachgebiet": "sozialversicherung",
+      "sprache": "de",
+      "normKeys": [],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "datei": null,
+      "quelle": "opencaselaw",
+      "quelleUrl": "http://relevancy.bger.ch/cgi-bin/JumpCGI?id=23.06.2025_9C_121/2024",
+      "fassungsToken": "524239bfc404545832fad499d2c99cb17d4c4e752b86c4e120362ea81d4d281f",
+      "verweis": {
+        "zielKey": "bge_152_V_20",
+        "ansicht": "voll",
+        "bgeReferenz": "152 V 20"
+      }
+    },
+    {
       "key": "bs_appellationsgericht_AUS.2025.70",
       "gericht": "bs_appellationsgericht",
       "gerichtName": "Appellationsgericht BS",
@@ -45006,6 +45000,86 @@
       ]
     },
     {
+      "key": "bge_151_II_710",
+      "gericht": "bge",
+      "gerichtName": "Bundesgericht",
+      "gerichtstyp": "bundesgericht",
+      "kanton": "CH",
+      "nummer": "151 II 710",
+      "bgeReferenz": "151 II 710",
+      "datum": "2025-02-25",
+      "zitierung": "BGE 151 II 710",
+      "leitcharakter": "leitentscheid",
+      "regesteVorhanden": true,
+      "regesteKurz": "Art. 32 Abs. 2, Art. 107 Abs. 2 und Art. 108 Abs. 1 lit. j BGS; Art. 89 Abs. 2 lit. d und Art. 111 Abs. 1 BGG; Art. 25 Abs. 6 GSK; Überprüfung kantonaler Kleinspielbewilligungen auf Bundesrechtskonformität durch die Gespa; Beschwerderecht.…",
+      "sachgebiet": "oeffentlich",
+      "sprache": "de",
+      "normKeys": [
+        "BGG",
+        "BV"
+      ],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "datei": "bund/bge/151_II_710.json",
+      "quelle": "opencaselaw",
+      "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F151-II-710%3Ade&lang=de&zoom==&type=show_document",
+      "fassungsToken": "1416025688b7adefbd6c452c54f232e92b0056127067998a946c775d7e1031a7",
+      "richter": [
+        {
+          "s": "aubry-girardin",
+          "r": "vorsitz"
+        },
+        {
+          "s": "donzallaz",
+          "r": "mitglied"
+        },
+        {
+          "s": "hanni",
+          "r": "mitglied"
+        },
+        {
+          "s": "ryter",
+          "r": "mitglied"
+        },
+        {
+          "s": "kradolfer",
+          "r": "mitglied"
+        },
+        {
+          "s": "hongler",
+          "r": "gerichtsschreiber"
+        }
+      ]
+    },
+    {
+      "key": "bge_151_II_710__voll",
+      "gericht": "bger",
+      "gerichtName": "Bundesgericht",
+      "gerichtstyp": "bundesgericht",
+      "kanton": "CH",
+      "nummer": "2C_46/2023",
+      "bgeReferenz": null,
+      "datum": "2025-02-25",
+      "zitierung": "BGer 2C_46/2023",
+      "leitcharakter": "routine",
+      "regesteVorhanden": false,
+      "regesteKurz": null,
+      "sachgebiet": "oeffentlich",
+      "sprache": "de",
+      "normKeys": [],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "datei": null,
+      "quelle": "opencaselaw",
+      "quelleUrl": "http://relevancy.bger.ch/cgi-bin/JumpCGI?id=25.02.2025_2C_46/2023",
+      "fassungsToken": "1416025688b7adefbd6c452c54f232e92b0056127067998a946c775d7e1031a7",
+      "verweis": {
+        "zielKey": "bge_151_II_710",
+        "ansicht": "voll",
+        "bgeReferenz": "151 II 710"
+      }
+    },
+    {
       "key": "bge_151_IV_219",
       "gericht": "bge",
       "gerichtName": "Bundesgericht",
@@ -52953,87 +53027,6 @@
       ]
     },
     {
-      "key": "bge_151_III_336",
-      "gericht": "bge",
-      "gerichtName": "Bundesgericht",
-      "gerichtstyp": "bundesgericht",
-      "kanton": "CH",
-      "nummer": "151 III 336",
-      "bgeReferenz": "151 III 336",
-      "datum": "2025-01-01",
-      "zitierung": "BGE 151 III 336",
-      "leitcharakter": "leitentscheid",
-      "regesteVorhanden": true,
-      "regesteKurz": "a aArt. 697e Abs. 2, Art. 697g Abs. 2 OR; Art. 93 BGG; Sonderuntersuchung; Bereinigungsverfahren; Zwischenentscheid; Kognition des Bundesgerichts. Der Entscheid, mit dem die Vorinstanz ein Begehren der Gesellschaft um Nichtoffenlegung…",
-      "sachgebiet": "privat",
-      "sprache": "de",
-      "normKeys": [
-        "BGG",
-        "OR"
-      ],
-      "bestand": "snapshot",
-      "kuratierung": "maschinell",
-      "datei": "bund/bge/151_III_336.json",
-      "quelle": "opencaselaw",
-      "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F151-III-336%3Ade&lang=de&zoom==&type=show_document",
-      "fassungsToken": "fed204d57abcc05f8bba82505d1d236f9ca9f4c5cee96a9e327e4a3fa9208e4d"
-    },
-    {
-      "key": "bge_151_II_710",
-      "gericht": "bge",
-      "gerichtName": "Bundesgericht",
-      "gerichtstyp": "bundesgericht",
-      "kanton": "CH",
-      "nummer": "151 II 710",
-      "bgeReferenz": "151 II 710",
-      "datum": "2025-01-01",
-      "zitierung": "BGE 151 II 710",
-      "leitcharakter": "leitentscheid",
-      "regesteVorhanden": true,
-      "regesteKurz": "Art. 32 Abs. 2, Art. 107 Abs. 2 und Art. 108 Abs. 1 lit. j BGS; Art. 89 Abs. 2 lit. d und Art. 111 Abs. 1 BGG; Art. 25 Abs. 6 GSK; Überprüfung kantonaler Kleinspielbewilligungen auf Bundesrechtskonformität durch die Gespa; Beschwerderecht.…",
-      "sachgebiet": "oeffentlich",
-      "sprache": "de",
-      "normKeys": [
-        "BGG",
-        "BV"
-      ],
-      "bestand": "snapshot",
-      "kuratierung": "maschinell",
-      "datei": "bund/bge/151_II_710.json",
-      "quelle": "opencaselaw",
-      "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F151-II-710%3Ade&lang=de&zoom==&type=show_document",
-      "fassungsToken": "1416025688b7adefbd6c452c54f232e92b0056127067998a946c775d7e1031a7"
-    },
-    {
-      "key": "bge_151_I_73",
-      "gericht": "bge",
-      "gerichtName": "Bundesgericht",
-      "gerichtstyp": "bundesgericht",
-      "kanton": "CH",
-      "nummer": "151 I 73",
-      "bgeReferenz": "151 I 73",
-      "datum": "2025-01-01",
-      "zitierung": "BGE 151 I 73",
-      "leitcharakter": "leitentscheid",
-      "regesteVorhanden": true,
-      "regesteKurz": "Art. 2 Abs. 5 lit. a, Art. 8 und 11 Abs. 1 BehiG; Art. 8 Abs. 2 BV; Art. 13 Abs. 2 lit. c UNO-Pakt I; Art. 24 Abs. 5 BRK; Art. 8 Ziff. 1 i.V.m. Art. 14 EMRK; Bestellung und Bezahlung einer Assistenz für Menschen mit Behinderungen in der…",
-      "sachgebiet": "oeffentlich",
-      "sprache": "de",
-      "normKeys": [
-        "ATSG",
-        "BV",
-        "EMRK",
-        "IVG",
-        "VWVG"
-      ],
-      "bestand": "snapshot",
-      "kuratierung": "maschinell",
-      "datei": "bund/bge/151_I_73.json",
-      "quelle": "opencaselaw",
-      "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F151-I-73%3Ade&lang=de&zoom==&type=show_document",
-      "fassungsToken": "01fc465dc959dd2273416488d1a5fe54391afae81c634557cd1b15ac810a52e7"
-    },
-    {
       "key": "bs_appellationsgericht_BES.2025.17",
       "gericht": "bs_appellationsgericht",
       "gerichtName": "Appellationsgericht BS",
@@ -54659,6 +54652,32 @@
           "r": "gerichtsschreiber"
         }
       ]
+    },
+    {
+      "key": "bge_151_III_336",
+      "gericht": "bge",
+      "gerichtName": "Bundesgericht",
+      "gerichtstyp": "bundesgericht",
+      "kanton": "CH",
+      "nummer": "151 III 336",
+      "bgeReferenz": "151 III 336",
+      "datum": "2024-12-18",
+      "zitierung": "BGE 151 III 336",
+      "leitcharakter": "leitentscheid",
+      "regesteVorhanden": true,
+      "regesteKurz": "a aArt. 697e Abs. 2, Art. 697g Abs. 2 OR; Art. 93 BGG; Sonderuntersuchung; Bereinigungsverfahren; Zwischenentscheid; Kognition des Bundesgerichts. Der Entscheid, mit dem die Vorinstanz ein Begehren der Gesellschaft um Nichtoffenlegung…",
+      "sachgebiet": "privat",
+      "sprache": "de",
+      "normKeys": [
+        "BGG",
+        "OR"
+      ],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "datei": "bund/bge/151_III_336.json",
+      "quelle": "opencaselaw",
+      "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F151-III-336%3Ade&lang=de&zoom==&type=show_document",
+      "fassungsToken": "fed204d57abcc05f8bba82505d1d236f9ca9f4c5cee96a9e327e4a3fa9208e4d"
     },
     {
       "key": "bge_151_III_402",
@@ -60609,6 +60628,91 @@
           "r": "gerichtsschreiber"
         }
       ]
+    },
+    {
+      "key": "bge_151_II_475",
+      "gericht": "bge",
+      "gerichtName": "Bundesgericht",
+      "gerichtstyp": "bundesgericht",
+      "kanton": "CH",
+      "nummer": "151 II 475",
+      "bgeReferenz": "151 II 475",
+      "datum": "2024-11-26",
+      "zitierung": "BGE 151 II 475",
+      "leitcharakter": "leitentscheid",
+      "regesteVorhanden": true,
+      "regesteKurz": "Art. 1 und 8 Abs. 1, Art. 10 und 11 Abs. 2, Art. 17 und 32 LVA; Art. 4 Abs. 1, Art. 5 Abs. 1 und 3 lit. a sowie Art. 49a Abs. 1 KG; Art. 29 Abs. 1 BV; Art. 6 Ziff. 1 EMRK; Preisabreden im Bereich Luftfracht; anwendbares Recht und…",
+      "sachgebiet": "oeffentlich",
+      "sprache": "de",
+      "normKeys": [
+        "BGG",
+        "BV",
+        "EMRK",
+        "KG",
+        "OR",
+        "STGB",
+        "VRK"
+      ],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "datei": "bund/bge/151_II_475.json",
+      "quelle": "opencaselaw",
+      "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F151-II-475%3Ade&lang=de&zoom==&type=show_document",
+      "fassungsToken": "8e1a2178ee3f1cfb5e967188c34f834f37a15b96a855c997cba4d20478b04c1e",
+      "richter": [
+        {
+          "s": "aubry-girardin",
+          "r": "vorsitz"
+        },
+        {
+          "s": "donzallaz",
+          "r": "mitglied"
+        },
+        {
+          "s": "hanni",
+          "r": "mitglied"
+        },
+        {
+          "s": "ryter",
+          "r": "mitglied"
+        },
+        {
+          "s": "kradolfer",
+          "r": "mitglied"
+        },
+        {
+          "s": "zollinger",
+          "r": "gerichtsschreiber"
+        }
+      ]
+    },
+    {
+      "key": "bge_151_II_475__voll",
+      "gericht": "bger",
+      "gerichtName": "Bundesgericht",
+      "gerichtstyp": "bundesgericht",
+      "kanton": "CH",
+      "nummer": "2C_64/2023",
+      "bgeReferenz": null,
+      "datum": "2024-11-26",
+      "zitierung": "BGer 2C_64/2023",
+      "leitcharakter": "routine",
+      "regesteVorhanden": false,
+      "regesteKurz": null,
+      "sachgebiet": "oeffentlich",
+      "sprache": "de",
+      "normKeys": [],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "datei": null,
+      "quelle": "opencaselaw",
+      "quelleUrl": "http://relevancy.bger.ch/cgi-bin/JumpCGI?id=26.11.2024_2C_64/2023",
+      "fassungsToken": "8e1a2178ee3f1cfb5e967188c34f834f37a15b96a855c997cba4d20478b04c1e",
+      "verweis": {
+        "zielKey": "bge_151_II_475",
+        "ansicht": "voll",
+        "bgeReferenz": "151 II 475"
+      }
     },
     {
       "key": "bge_151_II_533",
@@ -70981,6 +71085,90 @@
           "r": "gerichtsschreiber"
         }
       ]
+    },
+    {
+      "key": "bge_151_I_73",
+      "gericht": "bge",
+      "gerichtName": "Bundesgericht",
+      "gerichtstyp": "bundesgericht",
+      "kanton": "CH",
+      "nummer": "151 I 73",
+      "bgeReferenz": "151 I 73",
+      "datum": "2024-09-20",
+      "zitierung": "BGE 151 I 73",
+      "leitcharakter": "leitentscheid",
+      "regesteVorhanden": true,
+      "regesteKurz": "Art. 2 Abs. 5 lit. a, Art. 8 und 11 Abs. 1 BehiG; Art. 8 Abs. 2 BV; Art. 13 Abs. 2 lit. c UNO-Pakt I; Art. 24 Abs. 5 BRK; Art. 8 Ziff. 1 i.V.m. Art. 14 EMRK; Bestellung und Bezahlung einer Assistenz für Menschen mit Behinderungen in der…",
+      "sachgebiet": "oeffentlich",
+      "sprache": "de",
+      "normKeys": [
+        "ATSG",
+        "BGG",
+        "BV",
+        "EMRK",
+        "IVG",
+        "VWVG"
+      ],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "datei": "bund/bge/151_I_73.json",
+      "quelle": "opencaselaw",
+      "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F151-I-73%3Ade&lang=de&zoom==&type=show_document",
+      "fassungsToken": "01fc465dc959dd2273416488d1a5fe54391afae81c634557cd1b15ac810a52e7",
+      "richter": [
+        {
+          "s": "aubry-girardin",
+          "r": "vorsitz"
+        },
+        {
+          "s": "donzallaz",
+          "r": "mitglied"
+        },
+        {
+          "s": "hanni",
+          "r": "mitglied"
+        },
+        {
+          "s": "ryter",
+          "r": "mitglied"
+        },
+        {
+          "s": "kradolfer",
+          "r": "mitglied"
+        },
+        {
+          "s": "plattner",
+          "r": "gerichtsschreiber"
+        }
+      ]
+    },
+    {
+      "key": "bge_151_I_73__voll",
+      "gericht": "bger",
+      "gerichtName": "Bundesgericht",
+      "gerichtstyp": "bundesgericht",
+      "kanton": "CH",
+      "nummer": "2C_248/2023",
+      "bgeReferenz": null,
+      "datum": "2024-09-20",
+      "zitierung": "BGer 2C_248/2023",
+      "leitcharakter": "routine",
+      "regesteVorhanden": false,
+      "regesteKurz": null,
+      "sachgebiet": "oeffentlich",
+      "sprache": "de",
+      "normKeys": [],
+      "bestand": "snapshot",
+      "kuratierung": "maschinell",
+      "datei": null,
+      "quelle": "opencaselaw",
+      "quelleUrl": "http://relevancy.bger.ch/cgi-bin/JumpCGI?id=20.09.2024_2C_248/2023",
+      "fassungsToken": "01fc465dc959dd2273416488d1a5fe54391afae81c634557cd1b15ac810a52e7",
+      "verweis": {
+        "zielKey": "bge_151_I_73",
+        "ansicht": "voll",
+        "bgeReferenz": "151 I 73"
+      }
     },
     {
       "key": "bs_appellationsgericht_AUS.2024.52",
@@ -262629,34 +262817,6 @@
       "quelle": "opencaselaw",
       "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/aza/http/index.php?lang=de&type=highlight_simple_query&page=32&from_date=12.10.2007&to_date=31.10.2007&sort=relevance&insertion_date=&top_subcollection_aza=all&query_words=&rank=317&azaclir=aza&highlight_docid=aza%3A%2F%2F17-10-2007-2C_128-2007&number_of_ranks=407",
       "fassungsToken": "0c8d6fba48e266bee07e714ca3edd82e1e2ffcbee7392c876646af4ef5b6b35d"
-    },
-    {
-      "key": "bge_151_II_475",
-      "gericht": "bge",
-      "gerichtName": "Bundesgericht",
-      "gerichtstyp": "bundesgericht",
-      "kanton": "CH",
-      "nummer": "151 II 475",
-      "bgeReferenz": "151 II 475",
-      "datum": "1999-06-21",
-      "zitierung": "BGE 151 II 475",
-      "leitcharakter": "leitentscheid",
-      "regesteVorhanden": true,
-      "regesteKurz": "Art. 1 und 8 Abs. 1, Art. 10 und 11 Abs. 2, Art. 17 und 32 LVA; Art. 4 Abs. 1, Art. 5 Abs. 1 und 3 lit. a sowie Art. 49a Abs. 1 KG; Art. 29 Abs. 1 BV; Art. 6 Ziff. 1 EMRK; Preisabreden im Bereich Luftfracht; anwendbares Recht und…",
-      "sachgebiet": "oeffentlich",
-      "sprache": "de",
-      "normKeys": [
-        "BV",
-        "EMRK",
-        "KG",
-        "VRK"
-      ],
-      "bestand": "snapshot",
-      "kuratierung": "maschinell",
-      "datei": "bund/bge/151_II_475.json",
-      "quelle": "opencaselaw",
-      "quelleUrl": "https://search.bger.ch/ext/eurospider/live/de/php/clir/http/index.php?highlight_docid=atf%3A%2F%2F151-II-475%3Ade&lang=de&zoom==&type=show_document",
-      "fassungsToken": "8e1a2178ee3f1cfb5e967188c34f834f37a15b96a855c997cba4d20478b04c1e"
     }
   ]
 }

@@ -43,7 +43,7 @@ export function EntscheidKarte({ e, onNorm }: {
           interaktive Chip kein fokussierbarer Nachkomme des <a> (valides Markup),
           die ganze Fläche bleibt aber klickbar. */}
       <div className="relative flex flex-1 flex-col">
-      <Link to={ziel} className="block no-underline after:absolute after:inset-0 after:content-['']">
+      <Link to={ziel} className="block no-underline after:absolute after:inset-0 after:content-['']" data-quarantaene={e.quarantaene}>
         {/* Statuszeile: Gebiet + Leit-Marker links, Status rechts. */}
         <div className="flex items-center justify-between gap-2 text-micro">
           <span className="flex items-center gap-2">
@@ -53,6 +53,14 @@ export function EntscheidKarte({ e, onNorm }: {
             <span className="lc-overline text-brass-700" title={e.kuratierung === 'maschinell' ? 'Sachgebiet maschinell zugeordnet' : undefined}>{GEBIET_LABEL[e.sachgebiet]}</span>
           </span>
           <span className="flex shrink-0 items-center gap-1.5">
+            {/* D3 (Gegenprüfungs-Auflage 12.9.2026, PR #816): ein quarantänierter
+                Entscheid (Quellenkonflikt, §8) warnt bereits in der Übersicht —
+                der Nutzer klickt nicht erst in einen leeren Body. Gleiches
+                Chip-Muster wie «ohne amtl. Regeste»/«amtl. Betreff». */}
+            {e.quarantaene && (
+              <span className="text-ink-500 italic" data-quarantaene={e.quarantaene}
+                title="Der amtliche Volltext ist in der Quelle mit einem anderen Entscheid vermischt">Volltext nicht verfügbar</span>
+            )}
             {synth && <span className="text-ink-500 italic">ohne amtl. Regeste</span>}
             {betreff && (
               <span className="text-ink-500 italic"

@@ -257,7 +257,7 @@ export const STARTSEITE_ZAEHLER: StartseiteZaehler = {
   "rechner": 23,
   "vorlagen": 26,
   "standGesetze": "2026-09-06",
-  "standRechtsprechung": "2026-09-05",
+  "standRechtsprechung": "2026-09-12",
   "standMaterialien": "2026-09-12",
   "juengsterGesetzStand": "2026-09-02",
   "juengsterEntscheid": "2026-07-08",

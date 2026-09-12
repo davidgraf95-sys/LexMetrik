@@ -76,10 +76,12 @@ function BodyText({ text }: { text: string }) {
 // segmente/ankerFuer/gruppiereErwaegungen kommen aus abschnitte.ts — EINE
 // Wahrheit der Erwägungs-Ankerbildung, geteilt mit der Norm-Chip-Fundstellensuche.
 
-export function EntscheidBody({ abschnitte, zitierung, bgeReferenz }: {
+export function EntscheidBody({ abschnitte, zitierung, bgeReferenz, quarantaene }: {
   abschnitte: EntscheidAbschnitt[];
   zitierung: string;
   bgeReferenz: string | null;
+  /** Siehe `EntscheidSnapshot.quarantaene` (typen.ts) — Format `<grund>:<fremdeFundstelle>`. */
+  quarantaene?: string;
 }) {
   // Kopier-Bestätigung für Screenreader (aria-live): zählt mit hoch, damit auch das
   // wiederholte Kopieren derselben Fundstelle erneut angekündigt wird.
@@ -235,9 +237,16 @@ export function EntscheidBody({ abschnitte, zitierung, bgeReferenz }: {
   }
 
   if (abschnitte.length === 0) {
+    // D1 (Gegenprüfungs-Auflage 12.9.2026, PR #816): ein bekannter Quellenkonflikt
+    // (§8, `EntscheidSnapshot.quarantaene`) wird nicht als anonymes «kein Text»
+    // ausgewiesen — der Nutzer erfährt, WARUM und WOMIT vermischt (statt zu
+    // vermuten, die Erfassung sei einfach unvollständig).
+    const [, fremdeFundstelle] = quarantaene?.split(':') ?? [];
     return (
-      <div className="lc-notice lc-notice-warn">
-        Für diesen Entscheid liegt kein erfasster Text vor — massgeblich ist die amtliche Fassung (Link unten).
+      <div className="lc-notice lc-notice-warn" data-quarantaene={quarantaene ?? undefined}>
+        {fremdeFundstelle
+          ? `Der amtliche Volltext dieses Entscheids ist in der Quelle mit BGE ${fremdeFundstelle} vermischt und wird deshalb nicht angezeigt — massgeblich ist die amtliche Fassung (Link unten).`
+          : 'Für diesen Entscheid liegt kein erfasster Text vor — massgeblich ist die amtliche Fassung (Link unten).'}
       </div>
     );
   }

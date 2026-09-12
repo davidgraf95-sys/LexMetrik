@@ -9,6 +9,8 @@ import { readFileSync, existsSync, readdirSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 import { sha256EntscheidBloecke } from './sha-entscheide';
 import { vergleicheLeitfaelle } from './entscheide-schreiben';
+import { bandjahrDiffPlausibel } from './bge-bandjahr';
+import { findeFremdeFundstelleImBody } from './entscheide-koerper-konflation';
 import type { EntscheidSnapshotDatei } from '../../src/lib/rechtsprechung/typen';
 import type { EntscheidManifest } from '../../src/lib/rechtsprechung/register';
 import type { LeitfallRef, NormEntscheidIndex, LeitfallShard } from '../../src/lib/rechtsprechung/norm-index';
@@ -133,6 +135,19 @@ function main() {
       fehler.push(`${e.key}: bgeReferenz ohne 'leitentscheid' — Invariante verletzt (§8)`);
     }
     if (e.kuratierung === 'geprueft') warn.push(`${e.key}: kuratierung 'geprueft' ohne Abnahme? (P0 erwartet 'maschinell')`);
+    // Bandjahr-Plausibilität (Register-Sweep, Fund 12.9.2026, W2·18-FEHLERBUCH):
+    // ein BGE-Band deckt genau einen Jahrgang (Band+1874 = Publikationsjahr, §2, seit
+    // 1875) — das OCL-`decision_date` ist bei einzelnen BGE ein Platzhalter/Fehlwert
+    // (Anlassfall bge_151_II_475: persistiertes Datum 1999-06-21 = das in der Regeste
+    // zitierte Luftverkehrsabkommen, nicht das Urteil; amtlich 2C_64/2023 vom
+    // 26.11.2024). Fenster wie im aza-Resolver (adapter-entscheide.ts, §8): ein
+    // Urteil datiert nie nach dem Bandjahr und praktisch nie mehr als 5 Jahre davor.
+    if (e.bgeReferenz && e.datum) {
+      const { ok, diff, bandJahr } = bandjahrDiffPlausibel(e.bgeReferenz, e.datum);
+      if (!ok) {
+        fehler.push(`${e.key}: Entscheiddatum ${e.datum} liegt ${diff} Jahre vor dem BGE-Bandjahr ${bandJahr} (bgeReferenz ${e.bgeReferenz}) — Band+1874 ist die kanonische Jahresquelle (§2); OCL-decision_date-Fehlwert prüfen (W2·18-FEHLERBUCH-Muster).`);
+      }
+    }
     if (e.datum && manifest.erzeugt && e.datum > manifest.erzeugt) {
       warn.push(`${e.key}: Entscheiddatum ${e.datum} liegt nach dem Erzeugungsdatum ${manifest.erzeugt} (OCL-Publikations-/Datumsartefakt prüfen)`);
     }
@@ -147,6 +162,31 @@ function main() {
     if (snap.sha !== erwartet) fehler.push(`${e.key}: sha-Drift (Datei ${snap.sha?.slice(0, 8)} ≠ erwartet ${erwartet.slice(0, 8)})`);
     const volltext = snap.abschnitte.flatMap((a) => a.bloecke.map((b) => b.text)).join('\n');
     if (AHV.test(volltext) || AHV.test(snap.regeste?.text ?? '')) warn.push(`${e.key}: mögliche AHV-Nummer im Text (Anonymisierung prüfen)`);
+    // Wächter (Gegenprüfungs-Auflage C1, 12.9.2026, PR #816): der Body trägt den
+    // laufenden Seitenkopf eines ANDEREN BGE desselben Bandes — der Body gehört
+    // dann nicht zur eigenen Fundstelle (OCL-Basis-Record-Konflation, Anlassfall
+    // bge_152_V_2 ← 152 V 20). Legitime Zitierungen ÄLTERER Bände bleiben unberührt
+    // (siehe entscheide-koerper-konflation.ts).
+    if (e.bgeReferenz) {
+      const fremd = findeFremdeFundstelleImBody(volltext, e.bgeReferenz);
+      if (fremd) {
+        fehler.push(`${e.key}: Body trägt den laufenden Kopf von BGE ${fremd} (eigene Fundstelle ${e.bgeReferenz}) — Basis-Record-Konflation (§8, W2·18-FEHLERBUCH-Muster)`);
+      }
+    }
+    // Wächter (Gegenprüfungs-Auflage B2, 12.9.2026, PR #816): ein amtlicher BGE
+    // (regesteAmtlich, leitcharakter==='leitentscheid') mit Regeste-Text MUSS die
+    // dreisprachige Struktur (A18) tragen — 1258/1259 taten das, bis der B1-Refresh
+    // sie bei 6 BGE durch reines Überschreiben verlor (mergeB1Ergebnis behebt die
+    // Wurzel). Einzige bekannte, datiert begründete Ausnahme: `bge_149_IV_1` — die
+    // amtliche DE-clir-Seite rendert für diesen BGE nur Regeste-Teil a (Sterneintrag),
+    // Teil b liegt nur auf fr/it-clir + im OCL-Flachtext vor (`deClirDegradiert` in
+    // normtext-entscheide.ts hängt darum bewusst KEINE unvollständige DE-Fassung an,
+    // sonst A29-Tor rot) — dokumentiert seit W2·6-B (5.7.2026).
+    const SPRACHFASSUNGEN_AUSNAHME = new Set<string>(['bge_149_IV_1']);
+    if (e.leitcharakter === 'leitentscheid' && snap.regesteAmtlich && snap.regeste?.text
+        && !snap.regeste.sprachfassungen?.length && !SPRACHFASSUNGEN_AUSNAHME.has(e.key)) {
+      fehler.push(`${e.key}: amtlicher BGE mit Regeste, aber OHNE sprachfassungen (A18-Struktur fehlt — B1-Merge-Verlust? W2·18-FEHLERBUCH-Muster)`);
+    }
     // W2·6-B B2+A18: strukturierte, dreisprachige Regeste (bger.ch clir). Invarianten
     // (§1/§2, hart): nur amtliche BGE tragen sie · Reihenfolge STRIKT DE→FR→IT · jede
     // Fassung hat einen nicht-leeren Kopf + amtliche clir-quelleUrl · keine Sprach-
