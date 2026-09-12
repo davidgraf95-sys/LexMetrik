@@ -36,6 +36,66 @@ Stand aus max(abgerufen) (§8).»
   `check:datenhaltung`, `golden:vergleich` (256 Fälle byte-gleich), `check:gegenpruefung` (grün —
   keine Risiko-Datei berührt), Lint (0 Fehler), `npx tsc -b` — alle grün.
 
+## `nichtKonsolidiert`-Marker falsch-positiv (FZA) — Wortlaut + Fix 12.9.2026 (PR #820, Gegenprüfung ausstehend — nicht gemergt)
+
+**Ursprünglicher Befund (Wortlaut, W2·18-FEHLERBUCH #19 / FAHRPLAN-OFFENE-BEFUNDE.md:203,
+Gegenprüfung S3 16.8.2026):** «`nichtKonsolidiert`-Marker bei Staatsverträgen
+falsch-positiv (FZA)» — `scripts/normtext/revisionen-generieren.ts:233` setzte
+`dateForce > korpusStand`, kannte aber «in Kraft ≠ angewendet ab» nicht.
+
+- [x] **Gefixt 12.9.2026, PR #820, Gegenprüfung ausstehend — nicht gemergt:** Amtlich
+  live nachvollzogen (Skill `scraping-swiss-official-sources`, abgerufen 12.9.2026):
+  SPARQL bestätigt, dass die FZA-Konsolidierung `eli/cc/2002/243/20201215`
+  (SR 0.142.112.681) noch die AKTIVE Fassung ist (`dateApplicability=2020-12-15`, kein
+  `dateEndApplicability` — es existiert bis heute KEINE neuere Konsolidierung). Deren
+  DE-XML (aufgelöst über `isRealizedBy→isEmbodiedBy→isExemplifiedBy`) zitiert bereits
+  per `<ref href="https://fedlex.data.admin.ch/eli/oc/2021/12">`: „… Art. 1 des
+  Beschlusses Nr. 1/2020 des Gemischten Ausschusses vom 15. Dez. 2020, in Kraft für die
+  Schweiz seit 15. Dez. 2020 und angewendet ab 1. Jan. 2021 (AS 2021 12)." —
+  `jolux:dateEntryInForce` dieser oc-URI ist jedoch 2021-01-01 (das «angewendet
+  ab»-Datum, nicht das «in Kraft seit»-Datum), was den reinen Datumsvergleich in die
+  Irre führte.
+  Wurzel-Fix: `belegtImXml()` (reine Funktion) + Netz-Helfer `ermittleBelegteOcs()`/
+  `loeseKonsolidierungsXmlUrl()` (`scripts/normtext/revisionen-generieren.ts`) prüfen,
+  ob die oc-URI eines `nichtKonsolidiert`-Kandidaten NEBEN der Wendung «angewendet ab»
+  im Konsolidierungstext zitiert ist; `baueRevisionen()` bleibt rein (`belegteOcs`-Set
+  injiziert), der Netz-Schritt lebt im Runner und wird per store-raw (`belegteOcs`-Feld)
+  deterministisch re-parsebar abgelegt (kein zweiter Live-Fetch in
+  `check-revisionen.ts`). Rot-Beweis vorher: Unit-Tests (`belegtImXml` × 4,
+  `baueRevisionen`-Fall FZA) schlugen fehl, bevor die Funktionen existierten
+  (`normtext-revisionen.test.ts`).
+  **Verworfene erste Fassung, gegen einen Fund-Fehlschluss korrigiert (§0 Regel 3, noch
+  in derselben Session):** eine erste Version prüfte nur die blosse href-Präsenz und
+  stufte dabei zusätzlich zwei KLV-Einträge (SR 832.112.31, `eli/oc/2025/852`/
+  `eli/oc/2026/348`) fälschlich als «bereits konsolidiert» ein. Live-Gegenprobe am
+  KLV-Konsolidierungstext (`eli/cc/1995/4964_4964_4964/20260801`) zeigte: die href kommt
+  dort in einer reinen Änderungs-HISTORIE vor bzw. bei einem NUR TEILWEISEN
+  Inkrafttreten («Abs. 1 Bst. a und c in Kraft seit 1. Aug. 2026 … Die anderen
+  Bestimmungen treten zu einem späteren Zeitpunkt in Kraft.») — der Marker war dort
+  korrekt, «angewendet ab» kommt im gesamten KLV-Text kein einziges Mal vor (0 Treffer,
+  gegen 1 Treffer im FZA-Text, direkt bei der fraglichen href). Der Fix verlangt daher
+  zusätzlich, dass die Wendung «angewendet ab» in der Nähe der href steht — das ist das
+  Fedlex-Vokabular für genau die in §7-Auftrag beschriebene «in Kraft ≠ angewendet
+  ab»-Konstellation, keine blosse Nachbarschaft.
+  **Vollerhebung** (Netz-Lauf über die volle Grundmenge, 227 Erlasse,
+  `--datum=2026-09-12`): 96 `nichtKonsolidiert`-Marker gesamt, davon 34 `art=aenderung`
+  mit AS-Fundstelle (prüfbar) und 62 `sammelerlass-marker` ohne AS-Fundstelle (kein
+  Text-Beleg gegen eine konkrete oc-URI möglich — ausserhalb der Reichweite dieses
+  Fixes). Von den 34 geprüften trägt GENAU EINER (FZA/`eli/oc/2021/12`) die
+  «angewendet ab»-Signatur; alle übrigen 33 (inkl. der beiden KLV-Kandidaten) bleiben
+  zu Recht `nichtKonsolidiert`. Nur FZA wurde regeneriert und committet — kein
+  Blanket-Re-Run über den ganzen Korpus; die übrigen 226 Sidecars bleiben byte-gleich
+  (kein Golden-Diff ausserhalb des einen korrigierten Erlasses).
+  Nebenpunkte des Fund-Wortlauts NICHT Teil dieses Fixes (offen, ggf. eigener
+  Folgeschritt): `revisionen.ts:130`-Kommentar (BMV-Begründung) berichtigen; Warnung in
+  den Prerender-Standausweis (`seo-detail.ts`) übernehmen.
+  Tore: `check:revisionen` grün (227 Sidecars, 5151 Einträge) · `check:normtext`
+  (offline) grün (25404 Snapshots) · `check:golden-normtext` grün (60283 Knoten, 0
+  Waisen) · `check:historie` grün (209 Shards synchron) · `check:datenhaltung` grün
+  (nach `datenhaltung:build` + `datenhaltung:manifest`) · `check:paritaet` grün (9194
+  Dateien byte-gleich) · `golden:vergleich` IDENTISCH (256 Fälle) · `npx tsc -b` sauber ·
+  `lint` 0 Fehler (1 vorbestehende, unrelated Warning) · `vitest
+  normtext-revisionen.test.ts` 18/18 grün.
 ## Entscheid-Datumsfehler `bge_151_II_475` — Wortlaut vor der Lösung + Lösung 12.9.2026 (W2·18-FEHLERBUCH)
 
 **Ursprünglicher Befund (Wortlaut, bis 12.9.2026 offen, ROADMAP.md `W2·6-B`-Umfeld):**

@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import {
   baueRevisionen, roFundstelleAusOc, fundstelle, liveLink, botschaftIndex, serialisiere,
-  MARKER_CUTOFF, type ErlassMeta,
+  belegtImXml, MARKER_CUTOFF, type ErlassMeta,
 } from '../../scripts/normtext/revisionen-generieren';
 import { revisionenFuerNorm, revisionTitel, type RevisionBezug } from '../lib/normtext/revisionen';
 import { istReinerDatumsChurn } from '../../scripts/normtext/churn-reset';
@@ -50,6 +50,39 @@ describe('fundstelle — massgebliche AS-Fundstelle (§7, gelesen statt fabrizie
   });
 });
 
+describe('belegtImXml — Finding 4b (AS-Fundstelle bereits im Konsolidierungstext zitiert)', () => {
+  it('erkennt eine oc-URI, deren href-Zitat NEBEN «angewendet ab» steht (FZA-Muster)', () => {
+    const xml = '<authorialNote><p>… Art. 1 des Beschlusses Nr. 1/2020 …, in Kraft seit 15. Dez. 2020 und angewendet ab 1. Jan. 2021 (<ref href="https://fedlex.data.admin.ch/eli/oc/2021/12">AS <b>2021</b> 12</ref>).</p></authorialNote>';
+    expect(belegtImXml(xml, OC('2021/12'))).toBe(true);
+  });
+  it('gibt false, wenn die oc-URI nicht vorkommt', () => {
+    expect(belegtImXml('<authorialNote><p>kein Verweis hier</p></authorialNote>', OC('2024/100'))).toBe(false);
+  });
+  it('gibt false ausserhalb jeder <authorialNote> (kein Fussnoten-Kontext — konservativ)', () => {
+    const ohneNote = '<p>… und angewendet ab 1. Jan. 2021 (<ref href="https://fedlex.data.admin.ch/eli/oc/2021/12">AS 2021 12</ref>).</p>';
+    expect(belegtImXml(ohneNote, OC('2021/12'))).toBe(false);
+  });
+  it('gibt false bei blosser href-Nennung OHNE «angewendet ab» (KLV-Gegenbeleg: Historie-Aufzählung / Teil-Inkrafttreten)', () => {
+    // Live-Gegenprobe 12.9.2026: KLV zitiert Amendment-ocs in Änderungs-Historien und bei
+    // Teil-Inkrafttreten («Abs. 1 Bst. a und c in Kraft seit …, die anderen Bestimmungen
+    // treten später in Kraft») — dort bleibt der Marker korrekt bestehen, obwohl die href
+    // vorkommt. Kein «angewendet ab» im Dokument ⇒ kein Beleg.
+    const historie = '<authorialNote><p>Fassung gemäss … vom 2. Dez. 2025 (<ref href="https://fedlex.data.admin.ch/eli/oc/2025/852">852</ref>) und Ziff. II vom 9. Juni 2026, in Kraft seit 1. Juli 2026 (<ref href="https://fedlex.data.admin.ch/eli/oc/2026/336">AS 2026 336</ref>).</p></authorialNote>';
+    expect(belegtImXml(historie, OC('2025/852'))).toBe(false);
+    const teilInKraft = '<authorialNote><p>Eingefügt durch Ziff. I der V des EDI vom 12. Juni 2026, Abs. 1 Bst. a und c in Kraft seit 1. Aug. 2026 (<ref href="https://fedlex.data.admin.ch/eli/oc/2026/348">AS 2026 348</ref>). Die anderen Bestimmungen treten zu einem späteren Zeitpunkt in Kraft.</p></authorialNote>';
+    expect(belegtImXml(teilInKraft, OC('2026/348'))).toBe(false);
+  });
+  it('Sammelnote mit ZWEI Einträgen — «angewendet ab» des einen entwarnt NICHT den anderen href (§6.7-Auflage Gegenprüfung PR #820)', () => {
+    // Eine EINZIGE Fussnote listet zwei Änderungserlasse auf; nur der zweite trägt
+    // «angewendet ab» in seinem eigenen Segment. Ein blosses Zeichenfenster um ref A
+    // würde «angewendet ab» (das zu ref B gehört) fälschlich miterfassen — die
+    // Element-/Segment-Bindung (vorheriger </ref> als Grenze) darf das nicht tun.
+    const sammelnote = '<authorialNote><p>Fassung gemäss Ziff. I der V vom 1. Jan. 2020 (<ref href="https://fedlex.data.admin.ch/eli/oc/2020/1">AS 2020 1</ref>) und Art. 5 des Beschlusses vom 15. Dez. 2020, in Kraft seit 15. Dez. 2020 und angewendet ab 1. Jan. 2021 (<ref href="https://fedlex.data.admin.ch/eli/oc/2021/12">AS 2021 12</ref>).</p></authorialNote>';
+    expect(belegtImXml(sammelnote, OC('2020/1'))).toBe(false); // fremdes «angewendet ab» entwarnt NICHT
+    expect(belegtImXml(sammelnote, OC('2021/12'))).toBe(true); // eigenes Segment trägt die Wendung
+  });
+});
+
 describe('liveLink', () => {
   it('baut den DE-Live-Link auf www.fedlex', () => {
     expect(liveLink(OC('2022/491'))).toBe('https://www.fedlex.admin.ch/eli/oc/2022/491/de');
@@ -83,6 +116,23 @@ describe('baueRevisionen — Kern-Logik', () => {
     const alt = s.revisionen.find((r) => r.ocUri === OC('2024/100'));
     expect(nk?.nichtKonsolidiert).toBe(true);
     expect(alt?.nichtKonsolidiert).toBeUndefined();
+  });
+
+  it('nichtKonsolidiert bleibt weg, wenn die oc-URI im Konsolidierungs-XML bereits zitiert ist (Finding 4b, FZA)', () => {
+    // Gegenprüfung 16.8.2026: Fedlex modelliert `jolux:dateEntryInForce` bei gewissen
+    // Staatsvertrags-Beschlüssen als «angewendet ab»-Datum, nicht als «in Kraft für die
+    // Schweiz»-Datum. Live-Beleg FZA/AS 2021 12: Konsolidierung 2020-12-15 zitiert die
+    // oc-URI bereits per <ref href> — der Marker wäre sonst falsch-positiv.
+    const bindings = [
+      bind({ oc: OC('2021/12'), dateForce: '2021-01-01', titleDe: 'Beschluss Nr. 1/2020' }),
+      bind({ oc: OC('2024/100'), dateForce: '2024-05-01', titleDe: 'Echt künftig' }),
+    ];
+    const belegteOcs = new Set([OC('2021/12')]);
+    const s = baueRevisionen(ERLASS, bindings, [], '2020-12-15', new Map(), '2026-07-10', belegteOcs);
+    const belegt = s.revisionen.find((r) => r.ocUri === OC('2021/12'));
+    const echtKuenftig = s.revisionen.find((r) => r.ocUri === OC('2024/100'));
+    expect(belegt?.nichtKonsolidiert).toBeUndefined();
+    expect(echtKuenftig?.nichtKonsolidiert).toBe(true); // ohne Text-Beleg bleibt die Warnung
   });
 
   it('erzeugt Sammelerlass-Marker für Pfad-(a)-Stände ohne (b)-Erlass, ab Cutoff', () => {

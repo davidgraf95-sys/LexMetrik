@@ -203,6 +203,12 @@ Gegenprüfung härten und David vorlegen (§7); je Invariante einmal rot zeigen 
 Wörtlich aus ROADMAP.md (Stand 29.8.2026):
 
   - [ ] **`nichtKonsolidiert`-Marker bei Staatsverträgen falsch-positiv (FZA, Gegenprüfung S3 16.8.2026)** — `scripts/normtext/revisionen-generieren.ts:233` setzt `dateForce > korpusStand`, kennt aber «in Kraft ≠ angewendet ab» nicht: Fedlex-Konsolidierung 15.12.2020 enthält AS 2021 12 bereits (Fussnote «Bereinigt gemäss Beschluss Nr. 1/2020 … angewendet ab 1. Jan. 2021»), Warnung «seit 01.01.2021 geltend, nicht eingearbeitet» ist falsch (§1/§8). Wurzel-Fix: AS-Fundstelle im Konsolidierungs-XML als Konsolidiert-Beleg werten; Gegenrechnung über alle 87 Marker; Gegenprüfung Pflicht. Ergänzend `revisionen.ts:130` Kommentar (BMV-Begründung) berichtigen; Warnung auch in den Prerender-Standausweis (`seo-detail.ts`) übernehmen (§8 für Suchmaschinen).
+    — **Ergänzung 12.9.2026 (§2b, Zeile oben bleibt unverändert stehen):** gefixt, PR #820,
+    Gegenprüfung ausstehend, nicht gemergt. Wortlaut + Vollerhebung (34 geprüfte AS-Fundstellen,
+    genau 1 Text-Beleg: FZA — ein zweiter Kandidat KLV wurde geprüft und live widerlegt, s.
+    ROADMAP-CHRONIK) in [ROADMAP-CHRONIK.md](../ROADMAP-CHRONIK.md). Die beiden
+    Nebenpunkte (`revisionen.ts:130`-Kommentar, `seo-detail.ts`-Standausweis) sind NICHT
+    Teil dieses Fixes — offen, ggf. eigener Folgeschritt.
   - [ ] **WARTET AUF DAVID (fachlich, §7):** SF-F1 — bleibt die Art.-63-Verlängerung bei gehemmter Frist erhalten (sonst verkürzt die Hemmung eine Verwirkungsfrist)? · SF-F2 — Wartefrist-Ablauf in den Betreibungsferien ergibt früheren «frühesten Handlungstag» (4.1.) als dieselbe Frist als Handlungsfrist (6.1.) — gewollt? Katalog-Zeilen «fachlich vorzulegen» dort.
 
 Runde 1 (erledigt, als Beleg belassen):

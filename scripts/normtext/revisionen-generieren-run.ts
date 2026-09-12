@@ -10,7 +10,7 @@ import { fileURLToPath } from 'node:url';
 import { dirname, resolve } from 'node:path';
 import {
   grundmenge, holeBindingsB, holeStaendeA, baueRevisionen, serialisiere, botschaftIndex,
-  type ErlassMeta,
+  ermittleBelegteOcs, type ErlassMeta,
 } from './revisionen-generieren.ts';
 import type { SparqlBinding } from '../fedlex-sparql.ts';
 
@@ -25,13 +25,13 @@ const RAW_DIR = 'bibliothek/normtext/revisionen-raw';
 
 // ── cache.sh-Pins: SR → { abstractEli (cc/…), kons (Korpus-Stand ISO) } ─────────
 // SSoT §5: die Pins leben EINMAL in scripts/fedlex-cache.sh (name|eli|YYYYMMDD|N|anker|sr).
-function lesePinsMitSr(): Map<string, { abstractEli: string; kons: string }> {
+function lesePinsMitSr(): Map<string, { abstractEli: string; kons: string; konsKompakt: string }> {
   const CACHE_SH = resolve(dirname(fileURLToPath(import.meta.url)), '../fedlex-cache.sh');
   const sh = readFileSync(CACHE_SH, 'utf8');
-  const map = new Map<string, { abstractEli: string; kons: string }>();
+  const map = new Map<string, { abstractEli: string; kons: string; konsKompakt: string }>();
   for (const m of sh.matchAll(/^\s*"([a-z0-9_]+)\|([a-z0-9/_]+)\|(\d{8})\|[^|]*\|[^|]*\|([0-9.]+)"/gm)) {
     const kons = `${m[3].slice(0, 4)}-${m[3].slice(4, 6)}-${m[3].slice(6, 8)}`;
-    map.set(m[4], { abstractEli: m[2], kons });
+    map.set(m[4], { abstractEli: m[2], kons, konsKompakt: m[3] });
   }
   return map;
 }
@@ -58,6 +58,7 @@ for (const b of bindings) {
 }
 
 let mitAenderung = 0, gesamtEintraege = 0, mitBotschaft = 0, sammelMarker = 0, ohnePin = 0, kuenftig = 0;
+let belegtTrotzDatum = 0;
 // dateDocument (Beschluss-/Erlassdatum) darf NICHT in der Zukunft liegen — das wäre
 // ein Datenfehler. dateEntryInForce hingegen DARF künftig sein (Fedlex publiziert
 // bereits erlassene, künftig in Kraft tretende Amendments): die werden als
@@ -71,14 +72,27 @@ for (const m of meta as ErlassMeta[]) {
   const aStaende = pin ? await holeStaendeA(pin.abstractEli, fetch) : [];
   const korpusStand = pin?.kons ?? heute;
 
+  // Finding 4b (W2·18-FEHLERBUCH #19): Kandidaten für den Text-Beleg sind alle oc, deren
+  // dateForce > korpusStand WÄRE (over-inclusive — baueRevisionen prüft die Bedingung
+  // erneut). Nur mit Pin auflösbar (Konsolidierungs-ELI = abstractEli + Korpus-Stand-Datum).
+  const kandidatOcs = [...new Set(
+    bBindings.filter((b) => (b.dateForce?.value ?? '') > korpusStand).map((b) => b.oc?.value).filter((v): v is string => !!v),
+  )];
+  const konsEli = pin ? `${pin.abstractEli}/${pin.konsKompakt}` : null;
+  const belegteOcs = konsEli && kandidatOcs.length ? await ermittleBelegteOcs(konsEli, kandidatOcs, fetch) : new Set<string>();
+  belegtTrotzDatum += belegteOcs.size;
+
   // store-raw (deterministisch, sortiert): Bindings byte-stabil ablegen.
   const rawBindings = [...bBindings].sort((a, b) =>
     (a.oc?.value ?? '') < (b.oc?.value ?? '') ? -1 : (a.oc?.value ?? '') > (b.oc?.value ?? '') ? 1
     : (a.dateForce?.value ?? '') < (b.dateForce?.value ?? '') ? -1 : 1);
   writeFileSync(`${RAW_DIR}/${m.key}.json`,
-    JSON.stringify({ sr: m.sr, korpusStand, bBindings: rawBindings, aStaende: [...aStaende].sort() }, null, 2) + '\n', 'utf8');
+    JSON.stringify({
+      sr: m.sr, korpusStand, bBindings: rawBindings, aStaende: [...aStaende].sort(),
+      belegteOcs: [...belegteOcs].sort(),
+    }, null, 2) + '\n', 'utf8');
 
-  const sidecar = baueRevisionen(m, bBindings, aStaende, korpusStand, ocZuBotschaft, heute);
+  const sidecar = baueRevisionen(m, bBindings, aStaende, korpusStand, ocZuBotschaft, heute, belegteOcs);
   writeFileSync(`${SIDECAR_DIR}/${m.key}.json`, serialisiere(sidecar), 'utf8');
 
   const ae = sidecar.revisionen.filter((r) => r.art === 'aenderung');
@@ -95,4 +109,4 @@ for (const m of meta as ErlassMeta[]) {
 if (datumsfehler.length) { console.error(`revisionen: ${datumsfehler.length} Eintrag(e) mit Beschluss-Datum > ${heute} (Datenfehler): ${datumsfehler.slice(0, 5).join(', ')} …`); process.exit(1); }
 
 console.log(`revisionen: ${meta.length} Sidecars → ${SIDECAR_DIR}/`);
-console.log(`  Erlasse mit ≥1 Änderung ${mitAenderung}/${meta.length} · Änderungs-Einträge ${gesamtEintraege} · Botschafts-Join ${mitBotschaft} · Sammelerlass-Marker ${sammelMarker} · künftig-in-Kraft ${kuenftig}${ohnePin ? ` · ohne Pin ${ohnePin}` : ''}`);
+console.log(`  Erlasse mit ≥1 Änderung ${mitAenderung}/${meta.length} · Änderungs-Einträge ${gesamtEintraege} · Botschafts-Join ${mitBotschaft} · Sammelerlass-Marker ${sammelMarker} · künftig-in-Kraft ${kuenftig} · Finding-4b-Text-Beleg trotz Datum ${belegtTrotzDatum}${ohnePin ? ` · ohne Pin ${ohnePin}` : ''}`);

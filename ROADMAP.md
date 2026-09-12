@@ -583,6 +583,7 @@ zgb-a36-anhang: Die ZGB-Gliederung zeigt 74 Artikel des Anhangs «Wortlaut der f
   vollständige, wörtlich übernommene Befundliste (33 offene Positionen mit ihren Belegen);
   Such-/Navigations-Posten zusätzlich in [FAHRPLAN-UI-NAVIGATION.md](fahrplaene/FAHRPLAN-UI-NAVIGATION.md) §7.
   - [ ] **OR-Leser-e2e-Timeouts app-weit härten · Shard-Laufzeit-Deckel** *(CI 5.9.2026)* — Fahrplan §4.
+  - [ ] **KontextPanel zeigt bei Finding-4b-Fällen nur `dateEntryInForce`, nicht das frühere «in Kraft seit»-Datum** *(Hinweis 3, Gegenprüfung PR #820, 12.9.2026)* — bei FZA/AS 2021 12 zeigt `src/components/kontext/KontextPanel.tsx` (Revisions-Zeile) das «angewendet ab»-Datum 1.1.2021, ohne dass «in Kraft für die Schweiz seit 15.12.2020» sichtbar wird (§8-Ehrlichkeit: nicht falsch, aber unvollständig für den einen Fall, wo Text-Beleg und Datumsfeld auseinanderfallen). Beobachtung, nicht gebaut — kein Bau-Auftrag dieses Schritts.
 
 - [ ] **Oberflächen-Qualität app-weit** *(`QS-UI`, reines UI/Design §13, kontinuierlich)*
   <!-- @meta id: QS-UI · status: ready · blocker: null · dep: [] · feld: design · fahrplan: fahrplaene/FAHRPLAN-UI-QUALITAET.md -->
@@ -656,7 +657,7 @@ zgb-a36-anhang: Die ZGB-Gliederung zeigt 74 Artikel des Anhangs «Wortlaut der f
   Korpus-Defekt und zwei fachliche David-Fragen.
   **Detail:** [FAHRPLAN-OFFENE-BEFUNDE.md](fahrplaene/FAHRPLAN-OFFENE-BEFUNDE.md) §5.
   - [ ] **Split-Regel: bei jedem §6.6-Auszug `check:zyklen` nackt mitfahren** *(Beleg #804: Fassaden-Re-Export + Rückimport = Zyklus, CI rot)*.
-  - [ ] **`nichtKonsolidiert`-Marker bei Staatsverträgen falsch-positiv (FZA)** — Wurzel-Fix: AS-Fundstelle im Konsolidierungs-XML als Konsolidiert-Beleg werten; Gegenrechnung über alle 87 Marker.
+  - [x] **Gefixt 12.9.2026, PR #820, Gegenprüfung ausstehend — nicht gemergt:** `nichtKonsolidiert`-Marker bei Staatsverträgen falsch-positiv (FZA) — Wurzel-Fix + Vollerhebung siehe [ROADMAP-CHRONIK.md](ROADMAP-CHRONIK.md).
   - [ ] **Staffel-Invariante lückenlos + widerspruchsfrei** — Property-Test über alle `src/data/tarif/**`-Staffeln: jeder Streitwert trifft genau eine Stufe, keine Überlappung, keine Lücke, Stufen-Grenzen monoton; Rot-Beweis per Mutation. Muster Catala/Z3 «keine Regel anwendbar / zwei Regeln kollidieren». Quelle: Rules-as-Code-Sichtung 5.9.2026 §5.
   - [ ] **Monatsend-Arithmetik der Fristen-Engine explizit** — Prüfauftrag, ob `fristenEngine.ts`/`datumsUtils.ts` bei «31.1. + 1 Monat» und Schaltjahr stillschweigend rundet; Ergebnis als Property-Test mit belegter Norm (Art. 77 OR / Art. 142 ZPO) und ausdrücklicher Rundungsregel statt date-fns-Default. Muster Catala `dates-calc` (Apache-2.0, Namensnennung). Quelle: Rules-as-Code-Sichtung 5.9.2026 §2/§5.
   - [ ] **Rechenweg-Vollständigkeit als Invariante** — jede `status: 'ok'`-Antwort trägt ≥1 `Rechenschritt` mit Norm-Anker; heute leere `rechenweg: []`-Pfade in `beurkundung.ts`, `lohnfortzahlung.ts`, `grundbuchgebuehren.ts`, kein Rechenweg in `emissionsabgabe.ts`. Muster Catala `--trace`/GoRules-Trace (Regel → Artikel → Zwischenwert). Quelle: Rules-as-Code-Sichtung 5.9.2026 §5/§8.
