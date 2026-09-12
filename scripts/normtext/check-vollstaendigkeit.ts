@@ -401,9 +401,17 @@ async function main(): Promise<void> {
     // geschriebener Cache besteht die Existenz-Prüfung anstandslos, stammt aber aus
     // der überholten Manifestation. Dieselbe Pin-Sonde wie normtext-snapshot.ts
     // (sicherstelleCaches) und struktur-run.ts (cacheGueltig), hier bisher gefehlt.
+    //
+    // Gegenprüfung #822 B1: ein Pin-Fehlbefund war bis hierher nur eine HINWEIS +
+    // `continue` — mit ALLEN `.pin`-Markern weggelegt (fedlex-cache.sh selbst schreibt
+    // nie welche, nur normtext-snapshot.ts/struktur-run.ts nach einem Fetch) übersprang
+    // das JEDEN Erlass, `bundFehlendTotal` blieb bei 0 und das Tor meldete «ok» EXIT=0 —
+    // ein stiller No-op statt eines Befunds. Jetzt FEHLER wie in struktur-run.ts
+    // (cacheGueltig): zählt in `exitCode` UND in der Bestandszahl-Sperre unten.
     const pin = pinBefund(eintrag.name, eintrag.eli, eintrag.konsolidierung, eintrag.htmlN);
     if (!pin.ok) {
-      console.warn(`  HINWEIS: ${eintrag.name}: ${pin.grund} — überspringen.`);
+      console.error(`  FEHLER ${eintrag.name}: ${pin.grund} — Cache pin-ungültig, Prüfung unzuverlässig.`);
+      exitCode = 1;
       continue;
     }
 
@@ -454,6 +462,18 @@ async function main(): Promise<void> {
         ? `ok (${htmlTokens.length} Tokens)`
         : `FEHLER ${echteFehlend.length} fehlend`;
     console.log(`  ${gesetz}: ${statusText}`);
+  }
+
+  // Bestandszahl-Sperre (Gegenprüfung #822 B1): `bundFehlendTotal` bleibt bei 0, wenn der
+  // Schleifenkörper für JEDEN Eintrag übersprungen wurde (fehlender ODER pin-ungültiger
+  // Cache) — ohne diese Sperre meldete Prüfung 1 dann trotzdem «ok». `cacheEintraege.length`
+  // ist die Zahl der in fedlex-cache.sh registrierten Bund-Erlasse (Register-Bund-Erlasse).
+  if (bundHtmlGeprüft < cacheEintraege.length) {
+    console.error(
+      `\nFEHLER: nur ${bundHtmlGeprüft}/${cacheEintraege.length} Bund-Erlasse tatsächlich geprüft ` +
+        `(fehlende/pin-ungültige Caches zählen NICHT als bestanden) — 'bash scripts/fedlex-cache.sh' laufen lassen.`,
+    );
+    exitCode = 1;
   }
 
   const bundStatus = bundFehlendTotal === 0 ? 'ok' : `${bundFehlendTotal} fehlend`;

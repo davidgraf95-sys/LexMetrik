@@ -16,11 +16,13 @@
  *
  * KEIN NETZ. Alle Fixtures sind synthetisch, eigener /tmp-Namensraum, wird nach jedem
  * Test entfernt. Der Import dieser Datei löst KEINEN CLI-Lauf aus (istCliLauf-Guard in
- * struktur-run.ts prüft process.argv[1] gegen den Dateinamen — unter vitest nie wahr).
+ * struktur-run.ts prüft `!process.env.VITEST` — Vitest setzt die Variable in jedem
+ * Testprozess zuverlässig; ein Guard über `process.argv[1]` wurde verworfen, weil er
+ * unter vite-node auf das Binary zeigt, nicht auf diese Datei — Gegenprüfung #822 B4).
  */
 import { describe, it, expect, afterEach } from 'vitest';
 import { writeFileSync, rmSync } from 'node:fs';
-import { parseNurFilter, sollSchreiben, cacheGueltig } from '../../scripts/normtext/struktur-run';
+import { parseNurFilter, sollSchreiben, cacheGueltig, zaehlerZeileErhalten } from '../../scripts/normtext/struktur-run';
 import type { FedlexCacheEintrag } from '../../scripts/normtext/inventar-bund';
 
 describe('parseNurFilter', () => {
@@ -55,6 +57,43 @@ describe('sollSchreiben — §17 Churn-Wurzel', () => {
   it('inhaltliche Änderung NEBEN dem Datum ⇒ schreiben (Substanz bleibt)', () => {
     const neu = alt.replace('2026-09-01', '2026-09-12').replace('art_1', 'art_2');
     expect(sollSchreiben(alt, neu)).toBe(true);
+  });
+});
+
+// Gegenprüfung #822 B2: `zaehler` wird NACHTRÄGLICH von scripts/gen-bezuege-zaehler.ts
+// (W2·26) als EINE Zeile direkt hinter der öffnenden Klammer eingefügt — dieser
+// Generator schreibt/kennt das Feld nie selbst. ROT-BEWEIS (vor dem Fix): eine Datei
+// MIT `zaehler`-Zeile verglichen mit derselben Datei OHNE (= was struktur-run.ts frisch
+// berechnet) wäre KEIN reiner Datums-Churn gewesen (istReinerDatumsChurn stripte nur
+// erzeugt/abgerufen) ⇒ sollSchreiben() hätte `true` geliefert und beim Zurückschreiben
+// den `zaehler`-Block gelöscht — genau der Churn, den dieser Generator vermeiden soll.
+describe('sollSchreiben + zaehlerZeileErhalten — §17 Gegenprüfung #822 B2 (zaehler-Zeile)', () => {
+  const ohneZaehler = JSON.stringify({ erzeugt: '2026-09-12', artikel: { art_1: { blocke: [] } } }, null, 1) + '\n';
+  const mitZaehler = ohneZaehler.replace('{\n', '{\n "zaehler":{"1":[3,1]},\n');
+
+  it('Sidecar mit zaehler + identischer Quelle (nur die zaehler-Zeile fehlt in neu) ⇒ kein Schreibbedarf', () => {
+    expect(mitZaehler).not.toBe(ohneZaehler);
+    expect(sollSchreiben(mitZaehler, ohneZaehler)).toBe(false);
+  });
+
+  it('zaehlerZeileErhalten: trägt die zaehler-Zeile aus alt in neu weiter ⇒ byte-gleich zu alt', () => {
+    expect(zaehlerZeileErhalten(mitZaehler, ohneZaehler)).toBe(mitZaehler);
+  });
+
+  it('inhaltliche Änderung NEBEN zaehler ⇒ dennoch schreiben (Substanz bleibt), zaehler wird erhalten', () => {
+    const neuOhneZaehler = ohneZaehler.replace('art_1', 'art_2');
+    expect(sollSchreiben(mitZaehler, neuOhneZaehler)).toBe(true);
+    const geschrieben = zaehlerZeileErhalten(mitZaehler, neuOhneZaehler);
+    expect(geschrieben).toContain('"zaehler":{"1":[3,1]}');
+    expect(geschrieben).toContain('art_2');
+  });
+
+  it('alt ohne zaehler-Zeile ⇒ zaehlerZeileErhalten lässt neu unverändert', () => {
+    expect(zaehlerZeileErhalten(ohneZaehler, ohneZaehler)).toBe(ohneZaehler);
+  });
+
+  it('altInhalt null (neue Datei) ⇒ zaehlerZeileErhalten liefert neu unverändert', () => {
+    expect(zaehlerZeileErhalten(null, ohneZaehler)).toBe(ohneZaehler);
   });
 });
 

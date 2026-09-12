@@ -43,17 +43,58 @@ export function parseNurFilter(argv: readonly string[]): Set<string> | null {
 }
 
 /**
+ * Entfernt eine von `scripts/gen-bezuege-zaehler.ts` (W2·26) NACHTRÄGLICH eingefügte
+ * `"zaehler":…`-Zeile direkt hinter der öffnenden Klammer, falls vorhanden — sonst
+ * unverändert. Dieser Generator berechnet/schreibt `zaehler` nie selbst (das tut
+ * gen-bezuege-zaehler.ts aus den Verzahnungs-Shards); ohne dieses Stripping hielte
+ * `sollSchreiben` jede Regeneration für eine Substanz-Änderung, sobald ein vorheriger
+ * `npm run gen:bezuege-zaehler`-Lauf die Zeile eingefügt hatte (Gegenprüfung #822 B2).
+ */
+function ohneZaehlerZeile(text: string): string {
+  const nl = text.indexOf('\n');
+  if (nl < 0 || text.slice(0, nl + 1) !== '{\n') return text;
+  const rest = text.slice(nl + 1);
+  return text.slice(0, nl + 1) + rest.replace(/^([ \t]*)"zaehler":.*\n/, '');
+}
+
+/**
  * §17 Churn-Wurzel: `erzeugt` wird nur neu gestempelt, wenn sich der Inhalt (Struktur/
  * Kopf/Fussnoten) tatsächlich geändert hat — sonst bliebe die Datei inhaltlich gleich,
  * nur mit neuem Datum, und ein Breitband-Lauf risse einen reinen Datums-Diff über den
  * ganzen Bestand (227 Dateien). `altInhalt === null` heisst: Datei existiert noch
  * nicht → immer schreiben. Churn-Felder/-Regel wiederverwendet aus
  * scripts/normtext/churn-reset.ts (`erzeugt`/`abgerufen`) statt zweimal definiert (§5).
+ *
+ * Gegenprüfung #822 B2: eine `zaehler`-Zeile in `altInhalt` (von gen-bezuege-zaehler.ts
+ * nachträglich eingefügt) wird VOR dem Vergleich entfernt — sonst wäre jede Regeneration
+ * nach einem `npm run gen:bezuege-zaehler`-Lauf fälschlich eine Substanz-Änderung, und
+ * das Zurückschreiben hätte den Block stillschweigend gelöscht (derselbe Churn, den
+ * dieser Generator eigentlich vermeiden soll — nur diesmal fremdverschuldet).
  */
 export function sollSchreiben(altInhalt: string | null, neuInhalt: string): boolean {
   if (altInhalt === null) return true;
-  if (altInhalt === neuInhalt) return false;
-  return !istReinerDatumsChurn(altInhalt, neuInhalt);
+  const altOhneZaehler = ohneZaehlerZeile(altInhalt);
+  if (altOhneZaehler === neuInhalt) return false;
+  return !istReinerDatumsChurn(altOhneZaehler, neuInhalt);
+}
+
+/**
+ * §17 (Gegenprüfung #822 B2): trägt eine vorhandene `zaehler`-Zeile aus `altInhalt`
+ * unverändert in `neuInhalt` weiter, wenn geschrieben wird — «beim Schreiben erhalten».
+ * Dieser Generator berechnet den Block nicht selbst und darf ihn beim Zurückschreiben
+ * darum nicht löschen. Ein regulärer `npm run projektionen`-Lauf zieht `gen:bezuege-zaehler`
+ * danach ohnehin nach und aktualisiert den Wert; bis dahin bleibt der ALTE (ggf. leicht
+ * veraltete) Block sichtbar statt gar keiner (§8: nie stillschweigend verlieren).
+ */
+export function zaehlerZeileErhalten(altInhalt: string | null, neuInhalt: string): string {
+  if (!altInhalt) return neuInhalt;
+  const nlAlt = altInhalt.indexOf('\n');
+  if (nlAlt < 0 || altInhalt.slice(0, nlAlt + 1) !== '{\n') return neuInhalt;
+  const m = /^([ \t]*)"zaehler":.*\n/.exec(altInhalt.slice(nlAlt + 1));
+  if (!m) return neuInhalt;
+  const nlNeu = neuInhalt.indexOf('\n');
+  if (nlNeu < 0 || neuInhalt.slice(0, nlNeu + 1) !== '{\n') return neuInhalt;
+  return neuInhalt.slice(0, nlNeu + 1) + m[0] + neuInhalt.slice(nlNeu + 1);
 }
 
 /**
@@ -124,7 +165,13 @@ function main(): void {
       process.exit(1);
     }
   }
-  let geschrieben = 0;
+  // Gegenprüfung #822 B3: `verarbeitet` zählt jeden erfolgreich extrahierten Erlass
+  // (unabhängig davon, ob die Datei tatsächlich neu geschrieben wurde); `tatsaechlich-
+  // Geschrieben` NUR die echten writeFileSync-Aufrufe. Vorher hiess die Summenzeile
+  // «X geschrieben», zählte aber Verarbeitungen — bei --nur=OR mit Churn-Skip stand
+  // «1/1 … » obwohl 0 Bytes auf die Platte gingen.
+  let verarbeitet = 0;
+  let tatsaechlichGeschrieben = 0;
   const fehlend: string[] = [];
 
   // Pin-Identität je Cache-Eintrag (§17, Gegenprüfung #808 B4) — dieselbe Quelle
@@ -234,14 +281,20 @@ function main(): void {
     const metaBasis = version ? { erzeugt, ...version } : { erzeugt };
     const doc = kopf ? { ...metaBasis, kopf, artikel: sortiert } : { ...metaBasis, artikel: sortiert };
     const zielPfad = `${ZIEL}/${reg.key}.json`;
-    const neuInhalt = JSON.stringify(doc, null, 1) + '\n';
+    const neuInhaltRoh = JSON.stringify(doc, null, 1) + '\n';
     const altInhalt = existsSync(zielPfad) ? readFileSync(zielPfad, 'utf8') : null;
-    if (sollSchreiben(altInhalt, neuInhalt)) writeFileSync(zielPfad, neuInhalt, 'utf8');
-    geschrieben++;
+    if (sollSchreiben(altInhalt, neuInhaltRoh)) {
+      // §17 (Gegenprüfung #822 B2): eine bestehende `zaehler`-Zeile bleibt erhalten —
+      // dieser Generator kennt den Block nicht, darf ihn beim Schreiben aber nicht löschen.
+      writeFileSync(zielPfad, zaehlerZeileErhalten(altInhalt, neuInhaltRoh), 'utf8');
+      tatsaechlichGeschrieben++;
+    }
+    verarbeitet++;
   }
 
   console.log(
-    `Struktur-Sidecars: ${geschrieben}/${bund.length} Bund-Erlasse${nurFilter ? ` (--nur=${[...nurFilter].join(',')})` : ''} → ${ZIEL}/`,
+    `Struktur-Sidecars: ${verarbeitet}/${bund.length} Bund-Erlasse${nurFilter ? ` (--nur=${[...nurFilter].join(',')})` : ''} → ${ZIEL}/, ` +
+      `${tatsaechlichGeschrieben} geschrieben (${verarbeitet - tatsaechlichGeschrieben} unverändert/Churn übersprungen)`,
   );
   // «0 übersprungen»-Pflichtkontrolle (P1-a/b): ein übersprungener Erlass ist ein
   // harter Fehler, kein Hinweis — sonst regeneriert ein grüner No-op-Lauf still aus

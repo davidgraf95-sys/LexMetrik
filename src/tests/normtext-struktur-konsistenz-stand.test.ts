@@ -10,8 +10,10 @@
  * Tor unbemerkt grün passiert. Test 2 unten reproduziert genau dieses Szenario.
  *
  * KEIN NETZ, KEIN ECHTES public/-Verzeichnis. Der Import löst KEINEN CLI-Lauf aus
- * (istCliLauf-Guard in check-struktur-konsistenz.ts prüft process.argv[1] gegen den
- * Dateinamen — unter vitest nie wahr).
+ * (istCliLauf-Guard in check-struktur-konsistenz.ts prüft `!process.env.VITEST` —
+ * Vitest setzt die Variable in jedem Testprozess zuverlässig; ein Guard über
+ * `process.argv[1]` wurde verworfen, weil er unter vite-node auf das Binary zeigt,
+ * nicht auf diese Datei — Gegenprüfung #822 B4).
  */
 import { describe, it, expect } from 'vitest';
 import { standDriftBefund } from '../../scripts/normtext/check-struktur-konsistenz';
