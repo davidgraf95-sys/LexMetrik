@@ -52,6 +52,16 @@ on:
     # Erster des Monats, 03:47 UTC: nach dem Curia-Lauf (03:23, andere Dateien, aber
     # derselbe Branch-Raum) und vor dem Reparatur-Arm (04:43).
     - cron: '47 3 1 * *'
+    # MONATSLAUF Vernehmlassungs-Register (§17-Wurzelfix, ex-Finding-7-Wanduhr-Befund
+    # 5./12.9.2026, FAHRPLAN-OFFENE-BEFUNDE §2 QS-MONITOR-ROT). Der Vernehmlassungs-
+    # Generator lief bisher NUR von Hand — der Erhebungsstand (`stand` in
+    # vernehmlassungen.generated.ts) alterte unbemerkt, bis check:materialien
+    # (Finding 7, damals wanduhr-abhängig) an jedem Tag mit abgelaufener Frist rot
+    # wurde, ohne dass ein Bau daran schuld war. Jetzt deterministisch (Finding 7
+    # prüft gegen den committeten `stand`, nicht gegen heute) PLUS dieser Kreislauf,
+    # der den Stand selbst aktuell hält. Erster des Monats, 04:11 UTC: nach BS (03:47)
+    # und vor dem Reparatur-Arm (04:43) — dieselbe Reihenfolge-Überlegung wie oben.
+    - cron: '11 4 1 * *'
   workflow_dispatch:
 
 env:
@@ -369,4 +379,81 @@ jobs:
             gh pr create --base main --head "$branch" \
               --title "chore(materialien): BS-Grossrat-Monatslauf ${DATUM}" \
               --body "Automatischer Monats-Vollabgleich der Basler Grossratsgeschaefte (K-16). KEIN Auto-Merge: die Materialien-Artefakte liegen auf dem Risikopfad (istRisikoPfad), die adversariale Gegenpruefung ist nachgelagert."
+          fi
+
+  vernehmlassungen:
+    name: Vernehmlassungs-Register — Monatslauf (Erhebungsstand nachführen)
+    # §17-Wurzelfix (FAHRPLAN-OFFENE-BEFUNDE §2 QS-MONITOR-ROT, Befund 5./12.9.2026):
+    # check:materialien Finding 7 prüft seither deterministisch gegen den committeten
+    # `stand` (Erhebungsdatum) statt gegen die Wanduhr — das reicht aber nur, wenn der
+    # Erhebungsstand selbst regelmässig nachgeführt wird (dafür der Alterungs-Wächter
+    # im selben Tor, 35-Tage-Deckel). Dieser Job ist der Kreislauf, der ihn frisch hält.
+    # Eigener Job wie Curia/BS: er schreibt (generierte Datei + Projektion + Zähler)
+    # und braucht Schreibrechte; läuft nur am Monats-Cron oder auf Zuruf.
+    if: github.event_name == 'workflow_dispatch' || github.event.schedule == '11 4 1 * *'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      TZ: Europe/Zurich
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Abrufdatum (Zürich, nie Date.now im Generator)
+        id: datum
+        run: echo "iso=$(date +%F)" >> "$GITHUB_OUTPUT"
+      - name: Vernehmlassungs-Generator (Fedlex-Gesetzgebungs-Graph, SPARQL)
+        run: npm run materialien:vernehmlassungen -- --datum=${{ steps.datum.outputs.iso }}
+      - name: Projektion + Zähler auf dem frischen Stand
+        run: npm run materialien -- --datum=${{ steps.datum.outputs.iso }}
+      - name: Zähler nachziehen
+        run: npm run gen:zaehler
+      - name: Offline-Tore auf dem frischen Stand (Finding 7 + Alterungs-Wächter)
+        run: npm run check:materialien
+      - name: Datenhaltungs-Manifest
+        run: npm run datenhaltung:manifest && npm run check:datenhaltung
+      - name: Änderungen feststellen
+        id: diff
+        run: |
+          set -euo pipefail
+          if [ -n "$(git status --porcelain)" ]; then echo "geaendert=1" >> "$GITHUB_OUTPUT"; else echo "geaendert=0" >> "$GITHUB_OUTPUT"; fi
+      - name: PR eröffnen (NIE Auto-Merge — Risikopfad, Gegenprüfung nachgelagert)
+        if: steps.diff.outputs.geaendert == '1'
+        env:
+          GH_TOKEN: ${{ secrets.AUTOMERGE_TOKEN || github.token }}
+          DATUM: ${{ steps.datum.outputs.iso }}
+        run: |
+          set -euo pipefail
+          branch="chore/vernehmlassungen-monatslauf-${DATUM}"
+          git config user.name  "vernehmlassungen-monatslauf-bot"
+          git config user.email "noreply@anthropic.com"
+          git checkout -b "$branch"
+          git add -A
+          git commit -F - <<'EOF'
+          chore(materialien): Vernehmlassungs-Monatslauf — Erhebungsstand nachgeführt
+
+          Automatischer Vollabgleich gegen den Fedlex-Gesetzgebungs-Graphen (SPARQL,
+          data.admin.ch). Quelle: Bundeskanzlei/Fedlex. Hält den Erhebungsstand
+          (`stand`) der Vernehmlassungen frisch, gegen den check:materialien
+          Finding 7 deterministisch prüft (§17-Wurzelfix, FAHRPLAN-OFFENE-BEFUNDE §2
+          QS-MONITOR-ROT) — verhindert den Alterungs-Wächter-Rotlauf (35-Tage-Deckel).
+
+          Roadmap: QS-MONITOR-ROT
+          Gegenpruefung: ausstehend — automatischer Lauf, adversariale Pruefung nachgelagert
+          Co-Authored-By: Claude Opus 5 (1M context) <noreply@anthropic.com>
+          EOF
+          git push -u origin "$branch"
+          offen=$(gh pr list --head "$branch" --state open --json number --jq '.[0].number // empty')
+          if [ -n "$offen" ]; then
+            echo "PR #${offen} für ${branch} ist bereits offen (idempotent)."
+          else
+            gh pr create --base main --head "$branch" \
+              --title "chore(materialien): Vernehmlassungs-Monatslauf ${DATUM}" \
+              --body "Automatischer Monats-Vollabgleich des Vernehmlassungs-Registers (Fedlex-Gesetzgebungs-Graph). KEIN Auto-Merge: die Materialien-Artefakte liegen auf dem Risikopfad (istRisikoPfad), die adversariale Gegenpruefung ist nachgelagert."
           fi

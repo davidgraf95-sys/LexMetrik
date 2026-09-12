@@ -3341,3 +3341,26 @@ verbliebene Rest-Stub darum jetzt vollständig geschlossen.*
 ### QS-BASIS (d) Suche-Edge-Umzug Kanton — Teilerfolgs-Prosa der Unterzeile *(verschoben 8.9.2026)*
 
   - [~] **(d) Datenhaltungs-Optimierung — Suche-Edge-Umzug Kanton** (31.8.2026). K0 Nullprobe · K1 Recall-Parität (`fts_artikel` 1→6 Felder, contentless) · K2 Ranking-Parität (topische Stufung IM SQL-Kern; **Befund: bm25 allein reicht nicht — OR 253 lag bei «Miete» auf Rang 128 von 165**, ein Client-Re-Ranking des 50er-Fensters kann das nicht heilen) · K3 Bund-only-Flag **vorbereitet, Default AUS** · K5 Nachführ-Kette · **K6 Fix-Runde nach der Gegenprüfung** (F1–F5, je mit Rot-Beweis): **F1 HOCH — die Landung hätte 502 auf jede Artikel-Query erzeugt** (spalten-gefilterte MATCH gegen die alte Ein-Spalten-Replika; weder die `paths` von `turso-sync.yml` noch der Frische-Wächter sahen je eine Schema-Änderung) → `paths` erweitert **und** DDL-Vergleich als Dimension 0 im Wächter · F2 Spaltenfilter von UND auf ODER (Client-Semantik: «Verjährung Fristen» hebt OR 127 von Rang 8 auf 1, recall-neutral belegt) · F3 echter Byte-Beweis für das K3-Flag · F4 K5-Kette getestet (Naht + Subprozess gegen npm-Stub) · F5 Zweitkopien raus, bm25-Ordnung bewacht. Messungen und Belege: [suche-edge-nullprobe-2026-08-31.md](bibliothek/register/suche-edge-nullprobe-2026-08-31.md), Fix-Runde in [FAHRPLAN-DATENHALTUNG.md](fahrplaene/FAHRPLAN-DATENHALTUNG.md) §16 (K6).
+
+### QS-MONITOR-ROT — §17-Wurzelfix Finding-7-Wanduhr 12.9.2026 (Wortlaut, PR #<PR_NUMMER>)
+
+  - [x] **`check:materialien` Finding 7 war wanduhr-abhängig** (2. Vorfall in 24 h — #789 und
+    12.9.2026, VERN-2026-45 fristEnde 2026-09-11 gegen `heute` 2026-09-12) — jeder Tag mit
+    abgelaufener Frist färbte die PR-CI rot, ohne dass ein Bau daran schuld war. Wurzel-Fix,
+    kein Ausklammern (§6.7): Finding 7 prüft jetzt `fristEnde` gegen das vom Generator
+    geschriebene Erhebungsdatum (`r.stand`), nie mehr gegen die Wanduhr — deterministisch,
+    kein `Date.now`/`heute` im Kern der Prüflogik (§2). Ergänzt um einen eigenen
+    Alterungs-Wächter (einzige verbliebene, benannte Wanduhr-Lesestelle im Tor, mit
+    `--datum`-Override deterministisch testbar): das Erhebungsdatum älter als 35 Tage ⇒ rot
+    «Nachführung fällig». Rot-Beweise (§6.7, manipulierte Kopie) für beide Äste geführt:
+    fristEnde < stand (Datenfehler zum Erhebungszeitpunkt) und Erhebungsdatum > 35 Tage alt.
+    Frische-Kreislauf ergänzt: `normen-monitor.yml` fährt den Vernehmlassungs-Generator jetzt
+    monatlich (neuer Job `vernehmlassungen`, Cron `11 4 1 * *`, nach BS-Grossrat/vor dem
+    Reparatur-Arm) und öffnet bei Änderung einen eigenen PR (kein Auto-Merge, Gegenprüfung
+    nachgelagert) — Vorbild Curia-/BS-Monatslauf. Sofort geheilt: Pflegeweg
+    `materialien:vernehmlassungen → materialien → gen:zaehler → datenhaltung:manifest` mit
+    `--datum=2026-09-12` (Abrufdatum Fedlex-Gesetzgebungs-Graph, SPARQL) gefahren — einziger
+    fachlicher Übergang: VERN-2026-45 (AHV 2030) `laufend` → `abgeschlossen-stellungnahmen`
+    (Frist 2026-09-11 lief amtlich ab), kein Zu-/Abgang sonst (831 Verfahren, 0 neu/entfernt).
+    Kommentar in `fedlex-frische.yml` (offener Punkt seit 5.9.2026, #789) ergänzt (nicht
+    überschrieben, §2b) mit dem Lösungs-Verweis. Detail: FAHRPLAN-OFFENE-BEFUNDE.md §2.
