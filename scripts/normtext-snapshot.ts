@@ -12,7 +12,7 @@ import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { execSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import { parseFedlexCacheEintraege } from './normtext/inventar-bund.ts';
-import { pinIdentitaet, pinBefund } from './normtext/cache-pin-befund.ts';
+import { pinIdentitaet, pinBefund, warFrischGeschrieben } from './normtext/cache-pin-befund.ts';
 import {
   extrahiereArtikel,
   alleArtikelTokens,
@@ -409,6 +409,10 @@ function sicherstelleCaches(
 
   // Der Fehlschlag wird gemerkt, nicht geschluckt (N1: der frühere `catch {}`
   // verwarf Exit 1 ersatzlos, sobald die Dateien nur existierten).
+  // `vorAbruf` (Gegenprüfung #808, Auflage B1): Zeitstempel VOR dem Abruf, damit
+  // unten nur Dateien gestempelt werden, die DIESER Lauf tatsächlich neu
+  // geschrieben hat (s. Kommentar bei `warFrischGeschrieben`).
+  const vorAbruf = Date.now();
   let ladeFehler: Error | null = null;
   try {
     execSync('bash scripts/fedlex-cache.sh', { stdio: 'inherit' });
@@ -434,14 +438,22 @@ function sicherstelleCaches(
 
   // Pin-Marker nachziehen: fedlex-cache.sh lädt bei jedem Aufruf AUSNAHMSLOS
   // seine komplette EINTRAEGE-Liste neu (kein Skip-if-exists, s. Kommentar
-  // dort) — der /tmp-Inhalt jedes Eintrags dieses Laufs ist also frisch vom
-  // aktuell gepinnten html-N. Die Schleife läuft über die volle `eintraege`-
-  // Liste (nicht nur `fehlende`), weil auch vormals schon gültige Caches durch
-  // den Abruf überschrieben wurden; je Eintrag erst nach erneuter Inhalts-
-  // Bestätigung schreiben, statt dem Abruf blind zu vertrauen.
+  // dort) — der /tmp-Inhalt jedes Eintrags dieses Laufs ist also NORMALERWEISE
+  // frisch vom aktuell gepinnten html-N. Die Schleife läuft über die volle
+  // `eintraege`-Liste (nicht nur `fehlende`), weil auch vormals schon gültige
+  // Caches durch den Abruf überschrieben wurden.
+  //
+  // `warFrischGeschrieben` (Gegenprüfung #808, Auflage B1): bei einem
+  // TEILFEHLER (execSync wirft, aber manche Dateien wurden vor dem Abbruch
+  // bereits neu geschrieben) stempelt diese Schleife NUR die tatsächlich
+  // frisch geschriebenen Dateien (mtime ≥ vorAbruf) — nicht die volle Liste.
+  // Eine stehengebliebene Alt-Datei kann `cacheBefund` zufällig weiter
+  // bestehen (sie ist ein echter, nur überholter Dump); sie trotzdem zu
+  // stempeln wäre exakt die Lücke, die diese Sonde schliessen soll.
   for (const e of eintraege) {
-    if (cacheBefund(e.name).ok) {
-      writeFileSync(`/tmp/${e.name}.html.pin`, pinIdentitaet(e.eli, e.konsolidierung, e.htmlN), 'utf8');
+    const pfad = `/tmp/${e.name}.html`;
+    if (warFrischGeschrieben(pfad, vorAbruf) && cacheBefund(e.name).ok) {
+      writeFileSync(`${pfad}.pin`, pinIdentitaet(e.eli, e.konsolidierung, e.htmlN), 'utf8');
     }
   }
 

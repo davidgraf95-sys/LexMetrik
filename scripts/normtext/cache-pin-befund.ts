@@ -17,13 +17,20 @@
 // Republish inhaltlich abweicht, baute ein solcher Alt-Cache den Snapshot
 // still aus der überholten Fassung (§7).
 //
+// KORREKTUR (Gegenprüfung #808, Auflage A1, 12.9.2026): «byte-identisch» oben
+// ist falsch — html-6 (584 855 B, sha b5dc9c83…) und html-7 (585 530 B, sha
+// 2ce2ce1f…) weichen auf Byte-Ebene ab (1584 Fussnoten-`id`-Zeilen + 108
+// `class`-Zeilen unterschiedlich, z. B. `footnotes` → `footnotes
+// section-heading-footnote`). Richtig: textgleich, Markup abweichend;
+// Extraktionsgleichheit belegt durch 224/224 Artikel-SHAs (#806).
+//
 // Der Marker `/tmp/<name>.html.pin` trägt die Identität, mit der der Cache
 // zuletzt bestätigt geschrieben wurde (`eli|konsolidierung|html-N`). Fehlt er
 // oder weicht er vom aktuell gepinnten Eintrag ab, gilt der Cache als
 // unbrauchbar — unabhängig davon, wie plausibel sein Inhalt aussieht. Diese
 // Sonde ersetzt `cacheBefund` nicht, sie ergänzt sie: beide zusammen bilden
 // den vollen Befund, den `sicherstelleCaches` verlangt (dort `cacheUndPinOk`).
-import { existsSync, readFileSync } from 'node:fs';
+import { existsSync, readFileSync, statSync } from 'node:fs';
 
 export type CacheBefund = { ok: boolean; grund?: string };
 
@@ -49,4 +56,21 @@ export function pinBefund(name: string, eli: string, konsolidierung: string, htm
       grund: `Pin-Marker weicht ab: Cache=${tatsaechlich} ≠ gepinnt=${erwartet} — Neuabruf nötig`,
     };
   return { ok: true };
+}
+
+// ── mtime-Sonde (Gegenprüfung #808, Auflage B1, 12.9.2026) ────────────────────
+// `sicherstelleCaches` stempelte bisher die VOLLE Eintrags-Liste, auch wenn
+// `execSync('bash scripts/fedlex-cache.sh')` mittendrin scheiterte (Teilfehler:
+// manche /tmp-Dateien wurden neu geschrieben, andere blieben STEHENGEBLIEBENE
+// Alt-Dateien). Eine stehengebliebene Alt-Datei kann die Inhalts-Sonde
+// zufällig weiter bestehen (sie ist ja ein echter, nur überholter Dump) — ein
+// Marker dafür wäre GENAU die Lücke, die diese Sonde eigentlich schliessen
+// soll. `warFrischGeschrieben` lässt `sicherstelleCaches` nur die Einträge
+// stempeln, deren Datei dieser Lauf TATSÄCHLICH neu geschrieben hat.
+export function warFrischGeschrieben(pfad: string, seit: number): boolean {
+  try {
+    return statSync(pfad).mtimeMs >= seit;
+  } catch {
+    return false;
+  }
 }

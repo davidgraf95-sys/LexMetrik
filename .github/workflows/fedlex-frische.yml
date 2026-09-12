@@ -154,10 +154,17 @@ jobs:
       # weitere, wachsende Liste „welcher Schritt berührt die DB“ gekoppelt.
       # `check-datenhaltung.ts` liest nur lokale Dateien (kein Netz, kein
       # Re-Pin) und ist damit so billig wie ein weiterer Lint-Lauf; ihn immer zu
-      # fahren beseitigt die ganze Fehlerklasse „ein künftiger Generator berührt
-      # die DB, aber niemand trägt ihn in die Trigger-Bedingung nach“ — dieselbe
-      # Lehre, die die Tor-Liste weiter unten am 29.8.2026 bereits von acht
-      # benannten Toren auf `npm run check` umgestellt hat. Die TEURE
+      # fahren entschärft die Fehlerklasse „ein künftiger Generator berührt die
+      # DB, aber niemand trägt ihn in die Trigger-Bedingung nach“ für ALLE
+      # Schritte VOR diesem Punkt in der Kaskade — dieselbe Lehre, die die
+      # Tor-Liste weiter unten am 29.8.2026 bereits von acht benannten Toren
+      # auf `npm run check` umgestellt hat. NICHT beseitigt (Gegenprüfung #808,
+      # Auflage B2): der Fix ist reihenfolgeabhängig, kein Ersatz für eine
+      # generische Trigger-Bedingung — `datenhaltung:manifest` muss der LETZTE
+      # DB-berührende Schritt dieses Jobs bleiben. Ein künftiger Generator, der
+      # NACH diesem Schritt eingefügt wird und ebenfalls die DB berührt, reisst
+      # dieselbe Lücke erneut auf; wer hier einen weiteren `npm run gen:*`-Ruf
+      # ergänzt, gehört VOR diesen Schritt, nicht danach. Die TEURE
       # Voll-Regenerierung (normtext/Register/Struktur/PDF-Quellen/Historie)
       # bleibt bewusst auf den cache.sh-Diff (= tatsächlicher Re-Pin) gegated —
       # ein Republish ohne Re-Pin braucht sie nicht, und der Netz-Lauf bliebe
