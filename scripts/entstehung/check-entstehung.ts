@@ -45,7 +45,9 @@ import { CURIA_DIR, CURIA_ZUSTAND_PFAD, leseCuriaZustand } from './curia-zustand
 import {
   SYNOPSE_DIR, NORM_PROFIL, SynopseBlockIndex, type SynopseShard, type SynopseBlock,
 } from '../../src/lib/entstehung/synopse.ts';
-import { serialisiereShard as serialisiereSynopse, shaShard as shaSynopse } from './synopse.ts';
+import {
+  serialisiereShard as serialisiereSynopse, shaShard as shaSynopse, QUELLLUECKE_STAENDE_MAX,
+} from './synopse.ts';
 import { geltendeBloecke, leerDiffVerletzungen, phantomVerletzungen } from '../../src/lib/entstehung/synopse-diff.ts';
 import { SYNOPSE_REGISTER_PFAD, type SynopseRegister } from './synopse-register.ts';
 import { ENTWURF_DIR, type EntwurfShard } from '../../src/lib/entstehung/synopse-entwurf.ts';
@@ -321,6 +323,8 @@ for (const [name, pfad, max, gzip] of DECKEL) {
   let ohneEreignis = 0;
   let konflikte = 0;
   let staende = 0;
+  let quellLuecken = 0;
+  let quellLueckenBelegt = 0;
   let leerDiffGeprueft = 0;
   let leerDiffAusgenommen = 0;
   let phantomAusgenommen = 0;
@@ -392,13 +396,94 @@ for (const [name, pfad, max, gzip] of DECKEL) {
         for (const a of sch.artikel) {
           bloecke += 1;
           if (a.zustand === 'ohne_ereignis') ohneEreignis += 1;
-          // Ein Alt-Block ohne Wortlaut wäre eine Synopse gegen nichts (E5.0: angekündigte,
-          // textlose Hülsen gehören in die Klasse «nur im neuen Stand», nicht hierher).
-          if (a.alt.length === 0 || a.alt.every((b) => b[SynopseBlockIndex.text].trim() === '')) {
+          const leer = a.alt.length === 0 || a.alt.every((b) => b[SynopseBlockIndex.text].trim() === '');
+          if (a.zustand === 'quelle_unvollstaendig') {
+            quellLuecken += 1;
+            // UMGEKEHRTE RICHTUNG, gleiche Strenge: eine Quelllücke hat keinen Wortlaut zu
+            // zeigen — über sie hinweg ist er derselbe. Stünde hier Text, behauptete der
+            // Shard eine Fassung, die es so nie gab (§1).
+            if (!leer) {
+              fehler.push(
+                `Synopse ${f} Schritt ${sch.von}→${sch.bis}: Alt-Block ${a.eId} ist als `
+                + '«Quelle unvollständig» gebucht und trägt trotzdem Wortlaut — über eine '
+                + 'Lücke hinweg ist der Wortlaut derselbe, es gibt nichts gegenüberzustellen.',
+              );
+            }
+          } else if (leer) {
+            // Ein Alt-Block ohne Wortlaut wäre eine Synopse gegen nichts (E5.0: angekündigte,
+            // textlose Hülsen gehören in die Klasse «nur im neuen Stand», nicht hierher).
             fehler.push(`Synopse ${f} Schritt ${sch.von}→${sch.bis}: Alt-Block ${a.eId} ohne Wortlaut.`);
           }
           if (!/^[0-9a-f]{64}$/.test(a.shaNorm)) {
             fehler.push(`Synopse ${f} Schritt ${sch.von}→${sch.bis}: Alt-Block ${a.eId} ohne shaNorm (§7d).`);
+          }
+        }
+      }
+      // ── QUELLLÜCKEN-WÄCHTER (W2·6c-ENTSTEHUNG-QUELLLUECKE, 12.9.2026) ──────────
+      //
+      // «Quelle unvollständig» ist die schonendste Buchung des ganzen Shards: sie sagt,
+      // dass an einem Stand NICHTS geschehen ist, und nimmt damit 22 Aufhebungen und 22
+      // Neueinfügungen zurück (CHEMRRV Art. 4–24). Genau deshalb muss sie am engsten
+      // bewacht sein — eine falsch gesetzte Quelllücke VERSTECKT eine echte Aufhebung.
+      //
+      // Geprüft wird, was der Shard selbst belegen kann (offline, ohne Netz):
+      //  (a) die Lücke ist ein LÜCKENLOSER Lauf von 1 … QUELLLUECKE_STAENDE_MAX Ständen
+      //      zwischen `schritt.bis` und `zurueckAb`, und beide sind Stände DIESES Shards;
+      //  (b) in der Lücke steht kein zweiter Alt-Block derselben eId (sie ist ja gar
+      //      nicht da), und der Rückkehr-Schritt bucht sie NICHT als «neu eingefügt» —
+      //      sonst stünde die zurückgenommene Behauptung immer noch da;
+      //  (c) DIE RÜCKKEHR IST BYTE-GLEICH: der erste Alt-Block derselben eId NACH der
+      //      Rückkehr trägt den Wortlaut, der bei der Rückkehr galt — seine Prüfsumme
+      //      muss die der Lücke sein. Das ist der einzige Weg, die Kernbedingung der
+      //      Erkennungsregel im Artefakt selbst nachzurechnen; wo es keinen späteren
+      //      Alt-Block gibt, sagt die Schluss-Zeile, wie viele Fälle belegt sind.
+      {
+        const staendeDaten = shard.staende.map((x) => x.datum);
+        for (const sch of shard.schritte) {
+          for (const a of sch.artikel) {
+            if (a.zustand !== 'quelle_unvollstaendig') continue;
+            const kopf = `Synopse ${f} Schritt ${sch.von}→${sch.bis}: Alt-Block ${a.eId} («Quelle unvollständig»)`;
+            const zurueckAb = a.zurueckAb;
+            if (!zurueckAb || !/^\d{4}-\d{2}-\d{2}$/.test(zurueckAb)) {
+              fehler.push(`${kopf} ohne «zurueckAb» — ohne Rückkehr-Stand ist die Lücke nicht belegbar (§7).`);
+              continue;
+            }
+            if (!staendeDaten.includes(zurueckAb) || !staendeDaten.includes(sch.bis)) {
+              fehler.push(`${kopf}: «zurueckAb» ${zurueckAb} oder der Lücken-Stand ${sch.bis} ist kein ausgewerteter Stand dieses Erlasses.`);
+              continue;
+            }
+            const luecke = staendeDaten.filter((d) => d >= sch.bis && d < zurueckAb);
+            if (luecke.length < 1 || luecke.length > QUELLLUECKE_STAENDE_MAX) {
+              fehler.push(
+                `${kopf}: die Lücke umfasst ${luecke.length} Stand/Stände (erlaubt 1 … `
+                + `${QUELLLUECKE_STAENDE_MAX}). Je länger die Lücke, desto eher ist sie eine `
+                + 'echte Aufhebung mit späterem, wortgleichem Wiedererlass — und die als '
+                + 'Lücke zu buchen wäre die schlimmere Falschaussage (§1).',
+              );
+            }
+            for (const s2 of shard.schritte) {
+              if (s2.bis > sch.bis && s2.bis <= zurueckAb && (s2.neuEIds ?? []).includes(a.eId)) {
+                fehler.push(`${kopf}: der Schritt ${s2.von}→${s2.bis} bucht dieselbe eId weiterhin als «neu eingefügt» — die Gegenbuchung fehlt.`);
+              }
+              if (s2.bis > sch.bis && s2.bis < zurueckAb && s2.artikel.some((x) => x.eId === a.eId)) {
+                fehler.push(`${kopf}: der Schritt ${s2.von}→${s2.bis} liegt IN der Lücke und bucht trotzdem einen Alt-Block derselben eId.`);
+              }
+            }
+            const danach = shard.schritte
+              .filter((s2) => s2.von >= zurueckAb)
+              .sort((x, y) => (x.bis < y.bis ? -1 : 1))
+              .flatMap((s2) => s2.artikel.filter((x) => x.eId === a.eId))[0];
+            if (danach) {
+              quellLueckenBelegt += 1;
+              if (danach.shaNorm !== a.shaNorm) {
+                fehler.push(
+                  `${kopf}: der Wortlaut nach der Rückkehr (${zurueckAb}) ist NICHT derselbe `
+                  + `wie vor der Lücke (shaNorm ${danach.shaNorm.slice(0, 12)}… ≠ `
+                  + `${a.shaNorm.slice(0, 12)}…). Dann ist es keine Lücke der Quelle, sondern `
+                  + 'eine Aufhebung mit Neuerlass — «entfallen» + «neu» ist dort richtig (§1).',
+                );
+              }
+            }
           }
         }
       }
@@ -482,7 +567,9 @@ for (const [name, pfad, max, gzip] of DECKEL) {
     + `${kb(groesster[1])} / ${kb(JE_ERLASS)} (${((groesster[1] / JE_ERLASS) * 100).toFixed(0)} %); `
     + `Leer-Diff- UND Phantom-Wächter (§5/§1, Profil ${NORM_PROFIL}) gegen ${leerDiffGeprueft} Erlass-Korpora `
     + `geprüft, ${leerDiffAusgenommen} + ${phantomAusgenommen} befristete Ausnahme(n) `
-    + `(Muster #779, ${LEERDIFF_AUSNAHME_PFAD}).`,
+    + `(Muster #779, ${LEERDIFF_AUSNAHME_PFAD}); ${quellLuecken} Quelllücke(n) statt «entfallen» `
+    + `+ «neu eingefügt», davon ${quellLueckenBelegt} mit byte-gleicher Rückkehr im Artefakt `
+    + `nachgerechnet (Lücken-Deckel ${QUELLLUECKE_STAENDE_MAX} Stände).`,
   );
 }
 

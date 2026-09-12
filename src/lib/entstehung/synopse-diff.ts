@@ -41,7 +41,7 @@
 // Synopse dokumentiert Streichung + Einfügung statt «gleich».
 
 import { istAufgehoben } from '../normtext/darstellung';
-import type { SynopseArtikel, SynopseBlock, SynopseSchritt, SynopseShard, SynopseZustand } from './synopse';
+import type { SynopseArtikel, SynopseBlock, SynopseSchritt, SynopseShard, SynopseStand, SynopseZustand } from './synopse';
 import { SYNOPSE_FENSTER_AB } from './synopse';
 import { vergleichsform, vergleichsformLeerraumBlind } from './normalisierung';
 
@@ -111,14 +111,51 @@ export type SynopseLage =
   /** Zu diesem Datum liegt keine ausgewertete Konsolidierung vor. */
   | { art: 'kein_stand'; stand: string }
   /** Für diesen Erlass ist überhaupt keine Synopse erfasst. */
-  | { art: 'kein_shard' };
+  | { art: 'kein_shard' }
+  /** Die amtliche Konsolidierung dieses Stands führt den Artikel nicht im Artikelbaum;
+   *  der nächste Stand führt ihn unverändert wieder (§8 — eine Lücke des Artefakts,
+   *  keine Aufhebung). */
+  | { art: 'quelle_unvollstaendig'; treffer: QuellLueckeTreffer };
+
+/** Ein Stand (oder eine kurze Folge), in dem die Quelle den Artikel nicht führt. */
+export interface QuellLueckeTreffer {
+  /** Der Schritt, der in die Lücke führt — `schritt.bis` ist der erste Lücken-Stand. */
+  schritt: SynopseSchritt;
+  /** Der Buchungs-Eintrag (`zustand: 'quelle_unvollstaendig'`, `alt` leer). */
+  artikel: SynopseArtikel;
+  /** Die betroffenen Stände, aus `shard.staende` ABGELEITET (nie zweitgespeichert, §5). */
+  staende: string[];
+  /** Quell-Beleg der Lücken-Stände (§7 b/c: Live-Link und ausgewertete Manifestation). */
+  belege: SynopseStand[];
+}
 
 /** Schritte aufsteigend nach `bis` — die Reihenfolge im Shard ist nicht zugesichert. */
 function nachDatum(schritte: readonly SynopseSchritt[]): SynopseSchritt[] {
   return [...schritte].sort((a, b) => (a.bis < b.bis ? -1 : a.bis > b.bis ? 1 : 0));
 }
 
-/** Der Wortlaut NACH `schritt` für `token` (siehe Kopf: nie der geltende Text, wenn es einen Folgestand gibt). */
+/**
+ * Der Wortlaut NACH `schritt` für `token` (siehe Kopf: nie der geltende Text, wenn es
+ * einen Folgestand gibt).
+ *
+ * DIE LINEAGE-REGEL (W2·6c-ENTSTEHUNG-QUELLLUECKE, 12.9.2026): «Neu» ist der nächste
+ * Wortlaut DERSELBEN KETTE, nicht der nächste Treffer desselben Tokens. Ein ENTFALLENER
+ * Artikel hat in diesem Schritt kein «Neu» — die Kette endet hier. Dass dieselbe eId
+ * Jahre später wieder Text trägt, ist eine NEUE Bestimmung unter derselben Nummer
+ * (Buchung des Generators: `neuEIds` = eingefügt), keine Fortsetzung der alten.
+ *
+ * VORHER stand die Prüfung NACH der Schleife und wirkte darum nur, wenn gar kein
+ * späterer Treffer existierte. Beleg für den Schaden: AVIV Art. 57b (COVID-Verlängerung
+ * der Kurzarbeit) wird am 2021-07-01 zur textlosen Hülse und korrekt als «entfallen»
+ * gebucht; am 2025-11-01 trägt dieselbe eId wieder Text, der zufällig wortgleich ist
+ * («sechs Abrechnungsperioden»). Die Karte stellte damit den Wortlaut von 2025 neben den
+ * von 2021 und zeigte — zwei identische Spalten (Leer-Diff, befristete Ausnahme in
+ * `bibliothek/register/entstehung-leerdiff-ausnahmen.json`, hier abgelöst).
+ *
+ * FÜR `geaendert` BLEIBT ES BEIM FOLGESTAND: dort ist die Kette ununterbrochen, und der
+ * erste spätere Alt-Block trägt genau den Wortlaut, der mit `schritt.bis` galt (jede
+ * Änderung dazwischen hätte einen eigenen Alt-Block erzeugt).
+ */
 function neuNach(
   shard: SynopseShard,
   token: string,
@@ -126,12 +163,12 @@ function neuNach(
   artikel: SynopseArtikel,
   geltend: readonly SynopseBlock[],
 ): Pick<SynopseTreffer, 'neu' | 'neuHerkunft'> {
+  if (artikel.art === 'entfallen') return { neu: null, neuHerkunft: 'entfallen' };
   for (const s of nachDatum(shard.schritte)) {
     if (s.bis <= schritt.bis) continue;
     const a = s.artikel.find((x) => x.token === token);
     if (a) return { neu: a.alt, neuHerkunft: 'folgestand' };
   }
-  if (artikel.art === 'entfallen') return { neu: null, neuHerkunft: 'entfallen' };
   return { neu: [...geltend], neuHerkunft: 'geltend' };
 }
 
@@ -166,6 +203,9 @@ export function lageFuerEreignis(
       konflikt: (schritt.ereignisOhneAenderung ?? []).includes(token),
     };
   }
+  if (artikel.zustand === 'quelle_unvollstaendig') {
+    return { art: 'quelle_unvollstaendig', treffer: quellLueckeTreffer(shard, schritt, artikel) };
+  }
   const liste = artikel.oc ?? [];
   const mehrdeutig = liste.length > 1 || (liste.length > 0 && ocs.length > 0 && !ocs.some((o) => liste.includes(o)));
   return {
@@ -197,6 +237,52 @@ export function ohneEreignisFuerArtikel(
     for (const artikel of schritt.artikel) {
       if (artikel.token !== token || artikel.zustand !== 'ohne_ereignis') continue;
       out.push({ schritt, artikel, mehrdeutig: false, ...neuNach(shard, token, schritt, artikel, geltend) });
+    }
+  }
+  return out.sort((a, b) => (a.schritt.bis < b.schritt.bis ? 1 : -1));
+}
+
+/**
+ * Die Lücken-Stände eines Buchungs-Eintrags — die Stände zwischen `schritt.bis`
+ * (einschliesslich) und `artikel.zurueckAb` (ausschliesslich).
+ *
+ * ABGELEITET, NICHT GESPEICHERT (§5): der Shard führt die Stände ohnehin, und eine
+ * zweite Liste im Eintrag könnte von ihr abweichen. Fehlt `zurueckAb` (nur denkbar bei
+ * einem von Hand verbogenen Shard — `check:entstehung` verlangt es), bleibt es beim
+ * EINEN Stand, der sicher betroffen ist.
+ */
+function quellLueckeTreffer(
+  shard: SynopseShard,
+  schritt: SynopseSchritt,
+  artikel: SynopseArtikel,
+): QuellLueckeTreffer {
+  const bis = artikel.zurueckAb;
+  const belege = shard.staende
+    .filter((s) => s.datum >= schritt.bis && (bis ? s.datum < bis : s.datum === schritt.bis))
+    .sort((a, b) => (a.datum < b.datum ? -1 : 1));
+  return { schritt, artikel, staende: belege.map((s) => s.datum), belege };
+}
+
+/**
+ * Alle Quelllücken dieses Artikels — die Stände, in denen die amtliche Konsolidierung
+ * ihn nicht im Artikelbaum führt.
+ *
+ * SIE HÄNGEN AN KEINEM PUNKT DER FASSUNGSLEISTE, genau wie die Blöcke ohne
+ * Fussnoten-Ereignis: der Fussnoten-Apparat führt zu einer Konversions-Panne
+ * naturgemäss kein Änderungs-Ereignis. Ohne eigene Liste wäre der Zustand im Leser
+ * unerreichbar — und eine Anzeige, die nicht erscheinen kann, täuscht Deckung vor
+ * (§6.7). Hängt am Stand doch ein Ereignis, zeigt ihn zusätzlich `lageFuerEreignis`.
+ */
+export function quellLueckenFuerArtikel(
+  shard: SynopseShard | null | undefined,
+  token: string,
+): QuellLueckeTreffer[] {
+  if (!shard) return [];
+  const out: QuellLueckeTreffer[] = [];
+  for (const schritt of shard.schritte) {
+    for (const artikel of schritt.artikel) {
+      if (artikel.token !== token || artikel.zustand !== 'quelle_unvollstaendig') continue;
+      out.push(quellLueckeTreffer(shard, schritt, artikel));
     }
   }
   return out.sort((a, b) => (a.schritt.bis < b.schritt.bis ? 1 : -1));

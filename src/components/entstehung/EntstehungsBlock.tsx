@@ -12,7 +12,7 @@ import { ladeAnkerSidecar, ankerFuerToken, ankerUrl, type AnkerSidecar } from '.
 import { ladeSynopseShard, type SynopseShard } from '../../lib/entstehung/synopse';
 import { ladeEntwurfShard } from '../../lib/entstehung/synopse-entwurf';
 import {
-  geltendeBloecke, lageFuerEreignis, ohneEreignisFuerArtikel, tokenAusLabel,
+  geltendeBloecke, lageFuerEreignis, ohneEreignisFuerArtikel, quellLueckenFuerArtikel, tokenAusLabel,
   type SynopseLage,
 } from '../../lib/entstehung/synopse-diff';
 import { SynopseKarte, type EntwurfFund } from './SynopseKarte';
@@ -321,6 +321,11 @@ export function EntstehungsBlock({ historie, erlassKey, artikel, snapshot }: {
   };
   /** Alt-Blöcke dieses Artikels ohne Fussnoten-Ereignis — sie hängen an keinem Punkt. */
   const ohneEreignis = ohneEreignisFuerArtikel(synShard, artikel, geltend);
+  /** Stände, in denen die amtliche Quelle diesen Artikel nicht im Artikelbaum führt.
+   *  EIGENE LISTE, nicht in die obige gemischt: das eine ist ein Wortlaut-Unterschied
+   *  ohne Fussnoten-Ereignis, das andere gar kein Unterschied, sondern eine Lücke des
+   *  Artefakts (§8 — zwei verschiedene Aussagen, zwei Überschriften). */
+  const quellLuecken = quellLueckenFuerArtikel(synShard, artikel);
 
   // ── Entwurf ↔ Beschluss: nur, wo er überhaupt sein kann (E6) ───────────────
   //    Die zehn ausgelieferten Entwurfs-Shards gehören zu Vorlagen von 2024/2025
@@ -367,6 +372,10 @@ export function EntstehungsBlock({ historie, erlassKey, artikel, snapshot }: {
     if (e) {
       const ocs = e.quellen.map((q) => ocKurzform(q.url)).filter((x): x is string => !!x);
       lage = lageFuerEreignis(synShard, artikel, e.datum, ocs, geltend);
+    } else if (schluessel.startsWith('q')) {
+      const treffer = quellLuecken[Number(schluessel.slice(1))];
+      if (!treffer) return null;
+      lage = { art: 'quelle_unvollstaendig', treffer };
     } else {
       const treffer = ohneEreignis[Number(schluessel.slice(1))];
       if (!treffer) return null;
@@ -449,6 +458,39 @@ export function EntstehungsBlock({ historie, erlassKey, artikel, snapshot }: {
               return (
                 <li key={k}>
                   <span className="text-ink-600">Stand <span className="num">{datumCh(t.schritt.bis)}</span></span>
+                  {' '}
+                  <button type="button" className="lc-btn-mini lr8-entst-griff text-micro"
+                    aria-expanded={auf} aria-controls={auf ? `${kartenId}-syn-${k}` : undefined}
+                    data-synopse-griff
+                    onClick={() => setSynOffen(auf ? null : k)}>
+                    Alt/Neu<span aria-hidden className="lr7-bez-pfeil">&nbsp;›</span>
+                  </button>
+                  {auf && synopseKarte(k)}
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      )}
+      {quellLuecken.length > 0 && (
+        // §8 · Hier steht KEINE Änderung, sondern eine Lücke der Quelle: die amtliche
+        // Konsolidierung dieses Stands führt den Artikel nicht im Artikelbaum, der
+        // nächste führt ihn unverändert wieder. Bis 12.9.2026 buchte der Generator
+        // daraus «entfallen» + «neu eingefügt» — 22 Aufhebungen, die es nie gab
+        // (CHEMRRV Art. 4–24, Gegenprüfungs-Befund A6 zu PR #798).
+        <div className="lr8-entst-ohne" data-entstehung-quellluecke>
+          <p className="lr8-entst-ohne-kopf">
+            Stände, in denen die amtliche Quelle diesen Artikel nicht führt:
+          </p>
+          <ul>
+            {quellLuecken.map((t, i) => {
+              const k = `q${i}`;
+              const auf = synOffen === k;
+              return (
+                <li key={k}>
+                  <span className="text-ink-600">
+                    Stand <span className="num">{datumCh(t.schritt.bis)}</span>
+                  </span>
                   {' '}
                   <button type="button" className="lc-btn-mini lr8-entst-griff text-micro"
                     aria-expanded={auf} aria-controls={auf ? `${kartenId}-syn-${k}` : undefined}

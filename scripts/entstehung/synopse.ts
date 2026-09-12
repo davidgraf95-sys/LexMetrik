@@ -24,6 +24,7 @@ import { createHash } from 'node:crypto';
 import type { SparqlBinding } from '../fedlex-sparql.ts';
 import { ankerNachToken } from '../materialien/fedlex-anker.ts';
 import { vergleichsformLeerraumBlind } from '../../src/lib/entstehung/normalisierung.ts';
+import { tokenAusLabel } from '../../src/lib/entstehung/synopse-diff.ts';
 import {
   NORM_PROFIL, SYNOPSE_FENSTER_AB,
   type SynopseBlock, type SynopseShard,
@@ -656,6 +657,117 @@ export function titelGeaendert(a: ArtikelFassung, n: ArtikelFassung): boolean {
 /** eId → kanonischer Korpus-Token («art_38_a» → «38_a»); null = kein Artikel-Token. */
 export function tokenAusEId(eId: string): string | null {
   return ankerNachToken(eId);
+}
+
+// ── Quelllücken über die ganze Stände-Kette (W2·6c-ENTSTEHUNG-QUELLLUECKE) ────
+
+/**
+ * Das LEICHTE Profil eines Stands — alles, was die Lücken-Erkennung über die ganze
+ * Kette braucht, und nichts weiter.
+ *
+ * WARUM NICHT DIE GANZEN `ArtikelFassung`-Karten AUFHEBEN: der Runner hält bisher genau
+ * EINEN Stand im Speicher (`vorher`), weil ein einzelner Stand bis 9,7 MB rohes XML wiegt
+ * (R2 §2) und ein Erlass bis 29 Stände führt. Die Erkennung braucht davon nur die
+ * eId-Menge und je eId eine Prüfsumme — gemessen wenige KB je Erlass statt Hunderten MB.
+ */
+export interface StandProfil {
+  /** Alle `<article eId=…>` dieses Stands. */
+  eIds: Set<string>;
+  /** eId → sha256 über den NORMALISIERTEN Wortlaut (dieselbe Vergleichsform wie `shaNorm`). */
+  norm: Map<string, string>;
+  /** Korpus-Token der Artikel, die dieser Stand als `<mod>`/`<quotedStructure>` eines
+   *  Änderungsanhangs führt (amtliche Änderungs-Referenz `fedlex:role="modification-
+   *  reference"`). Das ist der POSITIVE Beleg, dass die Datei den Artikel trotz fehlendem
+   *  `<article>` trägt — die Struktur ist verrutscht, nicht der Text verschwunden. */
+  anhangTokens: Set<string>;
+}
+
+/** Änderungs-Referenz eines `<mod>`: alles zwischen `<mod …>` und `<quotedStructure`. */
+const MOD_REF_RE = /<mod\b[^>]*>([\s\S]*?)<quotedStructure\b/g;
+
+/** REIN: Stand-Profil aus dem schon geparsten Artikelbaum und dem rohen XML. */
+export function standProfil(artikel: Map<string, ArtikelFassung>, xml: string): StandProfil {
+  const norm = new Map<string, string>();
+  for (const [eId, f] of artikel) norm.set(eId, sha256(normalisiere(flachText(f))));
+  const anhangTokens = new Set<string>();
+  MOD_REF_RE.lastIndex = 0;
+  let m: RegExpExecArray | null;
+  while ((m = MOD_REF_RE.exec(xml)) !== null) {
+    // `reinerText` wirft den Fussnoten-Apparat weg und lässt Inline-Auszeichnung
+    // SPURLOS verschwinden — «<b>Art. 4</b><i>a</i>» muss «Art. 4a» ergeben, nie
+    // «Art. 4 a» (sonst liest `tokenAusLabel` Artikel 4 statt 4a).
+    const token = tokenAusLabel(reinerText(m[1]));
+    if (token) anhangTokens.add(token);
+  }
+  return { eIds: new Set(artikel.keys()), norm, anhangTokens };
+}
+
+/** Eine erkannte Lücke der Quelle — Indizes in die Stände-Liste des Erlasses. */
+export interface QuellLuecke {
+  eId: string;
+  /** Index des ERSTEN Stands ohne die eId (= `bis` des Schritts, der sie «entfallen» buchte). */
+  vonIdx: number;
+  /** Index des Stands, der die eId wieder führt (= erster Stand NACH der Lücke). */
+  zurueckIdx: number;
+  /** Der Artikel steht in JEDEM Lücken-Stand im Änderungsanhang derselben Datei. */
+  imAnhang: boolean;
+}
+
+/**
+ * Wie viele Stände eine Lücke höchstens überspannen darf.
+ *
+ * SIE IST EIN SICHERHEITSGURT, KEINE MESSGRÖSSE: gemessen 12.9.2026 über alle 186 Shards
+ * und 1193 Stände ist die längste Lücke ZWEI Stände (CHEMRRV @2022-05-01 + @2022-10-01).
+ * Je länger eine Lücke, desto eher ist sie keine Konversions-Panne, sondern eine echte
+ * Aufhebung mit späterem, zufällig wortgleichem Wiedererlass — und die als «Quelle
+ * unvollständig» zu buchen wäre die schlimmere Falschaussage (§1). Bei Überschreitung
+ * bleibt es darum beim bisherigen «entfallen»; die Zahl steht im Lauf-Protokoll.
+ */
+export const QUELLLUECKE_STAENDE_MAX = 3;
+
+/**
+ * REIN: alle Quelllücken eines Erlasses aus den Stand-Profilen seiner Kette.
+ *
+ * DIE REGEL (und warum sie genau so eng ist):
+ *  (1) Die eId steht im Stand davor, fehlt in einem LÜCKENLOSEN Lauf von Ständen und
+ *      steht danach wieder da. Fehlt sie bis zum Ende der Kette, ist sie entfallen —
+ *      Punkt; hier wird nichts vermutet.
+ *  (2) Der Wortlaut bei der Rückkehr ist Zeichen für Zeichen derselbe wie davor (dieselbe
+ *      Vergleichsform, unter der auch «geändert ja/nein» entschieden wird). Kehrt ein
+ *      GEÄNDERTER Text zurück, kann das ebenso gut eine Aufhebung mit Neuerlass sein —
+ *      dann bleibt es bei «entfallen» + «neu».
+ *  (3) Der Lauf ist höchstens `QUELLLUECKE_STAENDE_MAX` Stände lang (Begründung dort).
+ *
+ * WAS DIE REGEL NICHT BRAUCHT: den Änderungsanhang. Er ist der POSITIVE Beleg und wird
+ * mitgegeben (`imAnhang`), aber nicht verlangt — eine Konversion kann einen Artikel auch
+ * ersatzlos verlieren, und dann ist «die Quelle führt ihn in diesem Stand nicht» immer
+ * noch wahr, während «entfallen» falsch wäre (§8).
+ *
+ * AUFGEHOBENE ARTIKEL SIND NICHT BETROFFEN: eine echte Aufhebung lässt die eId als
+ * «Aufgehoben»-Platzhalter stehen (`extrahiereArtikel` behält sie). Erst das vollständige
+ * VERSCHWINDEN einer eId aus dem Artikelbaum ist die Anomalie, die hier gesucht wird.
+ */
+export function findeQuellLuecken(
+  profile: readonly StandProfil[],
+  tokenFuerEId: (eId: string) => string | null = tokenAusEId,
+): QuellLuecke[] {
+  const out: QuellLuecke[] = [];
+  for (let i = 1; i < profile.length; i += 1) {
+    for (const eId of profile[i - 1].eIds) {
+      if (profile[i].eIds.has(eId)) continue;
+      let j = i + 1;
+      while (j < profile.length && !profile[j].eIds.has(eId)) j += 1;
+      if (j >= profile.length) continue; // (1) kehrt nie zurück = echt entfallen
+      if (j - i > QUELLLUECKE_STAENDE_MAX) continue; // (3)
+      const vorher = profile[i - 1].norm.get(eId);
+      if (!vorher || vorher !== profile[j].norm.get(eId)) continue; // (2)
+      const token = tokenFuerEId(eId);
+      const imAnhang = token !== null
+        && Array.from({ length: j - i }, (_, k) => profile[i + k]).every((p) => p.anhangTokens.has(token));
+      out.push({ eId, vonIdx: i, zurueckIdx: j, imAnhang });
+    }
+  }
+  return out.sort((a, b) => (a.vonIdx !== b.vonIdx ? a.vonIdx - b.vonIdx : a.eId < b.eId ? -1 : 1));
 }
 
 // ── Serialisierung ────────────────────────────────────────────────────────────

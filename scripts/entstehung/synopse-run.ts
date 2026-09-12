@@ -19,7 +19,8 @@ import { sparqlBatch } from '../fedlex-sparql.ts';
 import {
   baueStaendeQuery, baueStaende, extrahiereArtikel, diffStaende, flachText,
   normalisiere, eliKurzAusUrl, abstractUri, liveUrlFuerStand, tokenAusEId, sha256, titelGeaendert,
-  serialisiereShard, shaShard, type ArtikelFassung,
+  serialisiereShard, shaShard, standProfil, findeQuellLuecken, QUELLLUECKE_STAENDE_MAX,
+  type ArtikelFassung, type StandProfil,
 } from './synopse.ts';
 import {
   SYNOPSE_DIR, SYNOPSE_FENSTER_AB, NORM_PROFIL,
@@ -148,6 +149,11 @@ let schritteGesamt = 0;
 let altBloecke = 0;
 let ohneEreignis = 0;
 let konflikte = 0;
+let quellLuecken = 0;
+let quellLueckenOhneAnhang = 0;
+let quellLueckenOhneAltBlock = 0;
+let quellLueckenMitEreignis = 0;
+let lueckeMaxStaende = 0;
 
 for (const e of erlasse) {
   const alleStaende = staendeJeEli.get(abstractUri(e.eli)) ?? [];
@@ -163,9 +169,14 @@ for (const e of erlasse) {
   const schritte: SynopseSchritt[] = [];
 
   let vorher: Map<string, ArtikelFassung> | null = null;
+  // Leichtes Profil JE STAND (eId-Menge, Wortlaut-Prüfsumme, Änderungsanhang) — die
+  // Quelllücken-Regel fragt über die ganze Kette, der Diff nur je Paar. Die vollen
+  // Artikelbäume bleiben deshalb wie bisher auf EINEN Stand beschränkt (§15).
+  const profile: StandProfil[] = [];
   for (let i = 0; i < liste.length; i += 1) {
     const xml = await holeXml(liste[i].xmlUrl);
     const artikel = extrahiereArtikel(xml);
+    profile.push(standProfil(artikel, xml));
     staende.push({
       datum: liste[i].datum,
       xmlUrl: liste[i].xmlUrl,
@@ -213,6 +224,47 @@ for (const e of erlasse) {
       konflikte += ereignisOhneAenderung.length;
     }
     vorher = artikel;
+  }
+
+  // ── Quelllücken: was die QUELLE in einem Stand nicht führt, ist nicht aufgehoben ──
+  //
+  // Erst hier, nach der ganzen Kette: ob ein «entfallen» eine Aufhebung oder eine Lücke
+  // des Artefakts ist, entscheidet sich am Stand DANACH — und den kennt der paarweise
+  // Diff naturgemäss nicht (Gegenprüfungs-Befund A6 zu PR #798, Beleg CHEMRRV Art. 4–24).
+  for (const l of findeQuellLuecken(profile)) {
+    const schritt = schritte[l.vonIdx - 1];
+    const zurueck = schritte[l.zurueckIdx - 1];
+    const idx = schritt.artikel.findIndex((a) => a.eId === l.eId && a.art === 'entfallen');
+    if (idx < 0) {
+      // Kein Alt-Block: die Alt-Fassung trug keinen Wortlaut (Hülse) und steht in
+      // `ohneAltText`, nicht in `artikel`. Dann gibt es nichts umzubuchen — angefasst
+      // wird hier trotzdem nichts, damit der Shard nicht still etwas verliert (§8).
+      quellLueckenOhneAltBlock += 1;
+      continue;
+    }
+    const a = schritt.artikel[idx];
+    if (a.zustand === 'belegt') quellLueckenMitEreignis += 1;
+    // Die Zähler oben laufen beim Bau der Schritte mit — die Umbuchung nimmt den Block
+    // aus seiner alten Klasse heraus, und die Schluss-Zeile soll den Bestand zeigen,
+    // den das Artefakt wirklich trägt (§8).
+    if (a.zustand === 'ohne_ereignis') ohneEreignis -= 1;
+    schritt.artikel[idx] = {
+      ...a,
+      // Kein Wortlaut: über die Lücke hinweg ist er derselbe (genau das ist die
+      // Erkennungsregel) — zwei Spalten mit demselben Text wären keine Synopse.
+      alt: [],
+      zustand: 'quelle_unvollstaendig',
+      zurueckAb: liste[l.zurueckIdx].datum,
+      ...(l.imAnhang ? { imAnhang: true as const } : {}),
+    };
+    // Und die Gegenbuchung: was nie entfallen ist, wird auch nicht «neu eingefügt».
+    if (zurueck?.neuEIds) {
+      const rest = zurueck.neuEIds.filter((x) => x !== l.eId);
+      if (rest.length) zurueck.neuEIds = rest; else delete zurueck.neuEIds;
+    }
+    quellLuecken += 1;
+    if (!l.imAnhang) quellLueckenOhneAnhang += 1;
+    lueckeMaxStaende = Math.max(lueckeMaxStaende, l.zurueckIdx - l.vonIdx);
   }
 
   const shard: SynopseShard = {
@@ -279,5 +331,12 @@ console.log(
   `\nsynopse: ${zuSchreiben.length} Shard(s), ${schritteGesamt} Konsolidierungs-Schritte, `
   + `${altBloecke} Alt-Blöcke (davon ${ohneEreignis} ohne Fussnoten-Ereignis), `
   + `${konflikte} Fussnoten-Ereignisse ohne beobachtete Textänderung → ${SYNOPSE_DIR}`,
+);
+console.log(
+  `synopse: ${quellLuecken} Alt-Block/Blöcke als «Quelle unvollständig» umgebucht statt `
+  + `«entfallen» + «neu eingefügt» (längste Lücke ${lueckeMaxStaende} Stand/Stände, Deckel `
+  + `${QUELLLUECKE_STAENDE_MAX}; ${quellLueckenOhneAnhang} ohne Beleg im Änderungsanhang, `
+  + `${quellLueckenMitEreignis} mit Fussnoten-Ereignis am Lücken-Stand, `
+  + `${quellLueckenOhneAltBlock} Lücke(n) ohne Alt-Block unverändert gelassen).`,
 );
 console.log(`synopse: Quell-Register ${Object.keys(neuRegister.erlasse).length} Einträge → ${SYNOPSE_REGISTER_PFAD}`);

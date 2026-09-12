@@ -107,7 +107,16 @@ export type SynopseZustand =
   /** Textänderung UND passendes Fussnoten-Ereignis am selben Stand-Datum. */
   | 'belegt'
   /** Textänderung ohne Fussnoten-Ereignis — der Widerspruch wird ANGEZEIGT (§11.6). */
-  | 'ohne_ereignis';
+  | 'ohne_ereignis'
+  /** KEINE Textänderung, sondern eine LÜCKE DER QUELLE: die amtliche Konsolidierung
+   *  dieses Stands führt die eId nicht im Artikelbaum, der nächste Stand führt sie
+   *  wieder — mit demselben Wortlaut (Zeichen für Zeichen in der Vergleichsform des
+   *  Profils). Der Artikel war nie aufgehoben; unvollständig ist das Artefakt, nicht
+   *  das Recht. Gebucht wird das statt «entfallen» + «neu eingefügt»
+   *  (`findeQuellLuecken` in `scripts/entstehung/synopse.ts`, Beleg CHEMRRV
+   *  `cc/2005/478` @2022-05-01/@2022-10-01: Art. 4–24 stehen dort als
+   *  `<mod>`/`<quotedStructure>` eines Änderungsanhangs statt als `<article>`). */
+  | 'quelle_unvollstaendig';
 
 /** Die Alt-Fassung eines Artikels in EINEM Konsolidierungs-Schritt. */
 export interface SynopseArtikel {
@@ -132,9 +141,18 @@ export interface SynopseArtikel {
    *  dort nähme, zeigte bei zwei Dritteln aller Artikel eine Titel-Streichung, die es nie
    *  gab (§1). Die beiden amtlichen Konsolidierungen kennt dagegen der Generator. */
   ueberschriftNeu?: string;
-  /** `geaendert` = eId in beiden Ständen, Wortlaut verschieden · `entfallen` = nur im Alt-Stand. */
+  /** `geaendert` = eId in beiden Ständen, Wortlaut verschieden · `entfallen` = nur im
+   *  Alt-Stand. Die Angabe beschreibt, was die QUELLE strukturell zeigt; ob daraus eine
+   *  Aufhebung folgt, sagt `zustand` (`quelle_unvollstaendig` = die eId fehlt bloss in
+   *  diesem Stand). ZWEI FELDER, ZWEI FRAGEN — nie dasselbe zweimal (§5). */
   art: 'geaendert' | 'entfallen';
-  /** Wortlaut der Alt-Fassung. */
+  /** Wortlaut der Alt-Fassung — LEER genau dann, wenn `zustand: 'quelle_unvollstaendig'`:
+   *  dort gibt es keine zwei Fassungen, weil der Wortlaut über die Lücke hinweg derselbe
+   *  bleibt. Ihn aus dem `<quotedStructure>` des Lücken-Stands zu übernehmen wäre eine
+   *  ZWEITE, anders provenierte Kopie derselben Wörter (§5) — und sie wäre nicht einmal
+   *  über die eId zuzuordnen: die Blöcke im Änderungsanhang tragen `annex_1_a/mod_uN/…`,
+   *  nie `art_N` (gemessen 12.9.2026 an CHEMRRV @2022-05-01). `check:entstehung` hält
+   *  beide Richtungen fest. */
   alt: SynopseBlock[];
   /** sha256 über den NORMALISIERTEN Wortlaut (Profil `NORM_PROFIL`) — die Prüfsumme,
    *  an der der Determinismus-Wächter eine echte Textänderung von Parser-Drift trennt.
@@ -144,6 +162,18 @@ export interface SynopseArtikel {
   shaNorm: string;
   /** Gültigkeits-Zustand gegen die Fussnoten-Historie. */
   zustand: SynopseZustand;
+  /** NUR bei `zustand: 'quelle_unvollstaendig'`: der Stand, ab dem die amtliche Quelle
+   *  den Artikel wieder im Artikelbaum führt. Die Lücken-Stände selbst stehen nicht
+   *  hier — sie sind genau die Stände zwischen `schritt.bis` (einschliesslich) und
+   *  `zurueckAb` (ausschliesslich) und werden aus `SynopseShard.staende` abgeleitet,
+   *  statt ein zweites Mal gespeichert zu werden (§5). */
+  zurueckAb?: string;
+  /** NUR bei `zustand: 'quelle_unvollstaendig'`: der Artikel steht in JEDEM Lücken-Stand
+   *  als `<mod>`/`<quotedStructure>` eines Änderungsanhangs derselben Datei — belegt über
+   *  die amtliche Änderungs-Referenz, nicht vermutet. Fehlt das Feld, fehlt der Artikel
+   *  in diesem Stand ganz; die Karte sagt dann den schwächeren, aber ebenso wahren Satz
+   *  («nicht im Artikelbaum») statt den stärkeren zu behaupten (§8). */
+  imAnhang?: true;
   /** AS-ELIs der Fussnoten-Ereignisse dieses Stands in Kurzform («oc/2023/750»; voller
    *  ELI = `https://fedlex.data.admin.ch/eli/` + Kurzform, Repo-Konvention `eliKurz`).
    *  Zusammen mit dem Stand-Datum der Ereignis-Schlüssel (§11.6, nie der Listenindex —
