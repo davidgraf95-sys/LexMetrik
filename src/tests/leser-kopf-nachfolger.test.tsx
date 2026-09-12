@@ -9,7 +9,7 @@
  * geltende Fassung einen Klick entfernt lag.
  *
  * REGEL. Löst die Nachfolge-ELI auf einen Register-Key auf, führt der Link
- * INTERN dorthin («geltende Fassung im Korpus»); die amtliche Fassung bleibt
+ * INTERN dorthin («Nachfolge-Erlass im Korpus»); die amtliche Fassung bleibt
  * als eigener, zusätzlicher Link daneben (§7 — massgeblich ist nie unser
  * Artefakt). Ohne Register-Key bleibt alles wie bisher: ein einziger,
  * externer Link auf die amtliche Quelle (§8 — nie ein Sprung ins Leere).
@@ -65,7 +65,7 @@ describe('Aufhebungs-Banner — Nachfolge-Link', () => {
   it('führt intern in den Korpus, wenn der Nachfolger dort liegt', () => {
     const h = html(basis);
     expect(h).toContain('href="/gesetze/bund/BMV_2025"');
-    expect(h).toContain('geltende Fassung im Korpus');
+    expect(h).toContain('Nachfolge-Erlass im Korpus');
   });
 
   it('bietet die amtliche Fassung des Nachfolgers weiterhin an (§7)', () => {
@@ -79,7 +79,7 @@ describe('Aufhebungs-Banner — Nachfolge-Link', () => {
   it('Rückfall ohne Korpus-Key: nur der externe amtliche Link, kein interner Sprung', () => {
     const h = html(ohneKorpus);
     expect(h).toContain('https://www.fedlex.admin.ch/eli/cc/2099/1/de');
-    expect(h).not.toContain('geltende Fassung im Korpus');
+    expect(h).not.toContain('Nachfolge-Erlass im Korpus');
     expect(h).not.toContain('href="/gesetze/');
   });
 });

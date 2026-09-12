@@ -384,7 +384,7 @@ export function ErlassLeserKopf({
               return (
                 <>
                   <Link to={erlassPfadVonKey(nachfolgerKey)} className="underline hover:no-underline">
-                    {bezeichnung} — geltende Fassung im Korpus
+                    {bezeichnung} — Nachfolge-Erlass im Korpus
                   </Link>
                   <QuellLink href={amtlich} className="underline hover:no-underline">
                     Amtliche Fassung des Nachfolge-Erlasses
