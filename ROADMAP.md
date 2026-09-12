@@ -224,7 +224,7 @@ zgb-a36-anhang: Die ZGB-Gliederung zeigt 74 Artikel des Anhangs «Wortlaut der f
   - [x] **K-16 (BS-Teil) · Kantonale Materialien Basel-Stadt an die Botschaften-Pipeline** — erledigt 12.9.2026, PR #799 (`c83501304`): Grosser Rat (data.bs.ch, CC BY 4.0), 117 Geschäfte, 122 Kanten (8 amtlich, 114 maschinell gekennzeichnet), 409 Verfahrens-Ereignisse. ZH-Teil bleibt offen (Präzisierung 6.9.2026: Bund → BS → ZH; ZH-Pendant FAHRPLAN-KANTONE §5 R12b). Wortlaut: ROADMAP-CHRONIK.md, Umschichtung 12.9.2026.
   - [ ] **K-16-Nachzug · CC-BY-Namensnennung data.bs.ch in der UI** (Entscheid David) — die 114 maschinell gekennzeichneten Kanten und die BS-Materialien stammen aus einer CC-BY-4.0-Quelle; wo/wie die Namensnennung im UI erscheint, ist offen.
   - [ ] **K-16-Nachzug · Fachliche Abnahme der 114 maschinellen Kanten** (David, §7) — Erlass↔Vorstoss-Zuordnung ohne amtlichen Schlüssel (heuristisch, `quelle: maschinell`), Abnahme steht aus.
-  - [ ] **Deckel-Reserven vor ZH (R12b)** — Materialien-Register 332/400 KB gzip (83 %, gemessen 12.9.2026), Verfahrens-Ereignisse 85/100 KB (85 %, 407 Ketten); ein ZH-Schritt gleicher Grösse wie K-16 BS reisst beide Deckel. Deckel-Strategie (Shard je Kanton oder lazy Projektion) klären, bevor R12b baut.
+  - [x] **Deckel-Reserven vor ZH (R12b) — erledigt 12.9.2026 (PR #802, `c0acd4557`):** Register in drei Projektionen geteilt (Kern/i18n/Provenienz nach Nutzungszeitpunkt) — Kern 118/280 KB gzip (42 %), i18n 84/140 KB (60 %), Provenienz 93/240 KB (39 %), Verfahrens-Ereignisse 16/60 KB (27 %, jetzt alle Herkünfte statt nur Bund); ZH-Prognose Kern 49 %. — ✅ Wortlaut: ROADMAP-CHRONIK.md.
 
   - [ ] **PDF-Pfad liest Ziffern-Tarife falsch** *(19B-Nachtrag 13.8.)* — SG-3849-Wurzel: generisches «Art. N»-Muster greift auch in Querverweisen; Regel «Nr. XX.YY am Zeilenanfang» nötig. §1-A.
   - [ ] **Fassungs-Drift PDF-erfasster Snapshots unbemerkt** *(§17-Wurzel-Fix)* — `fassungsToken` ändert sich nicht bei neuer Portal-Fassung (SG-2808 hängt an 2808/2012, amtlich gilt 3863). Nötig: Tor `current_version.id` ↔ Snapshot. §1-A.
@@ -370,6 +370,7 @@ zgb-a36-anhang: Die ZGB-Gliederung zeigt 74 Artikel des Anhangs «Wortlaut der f
   - [ ] **`gen:pdf-quellen --nur=kanton` nachfahren + `check:pdf-quellen` in den Tor-Block** — sonst driftet der amtliche PDF-Link still auf überholte Fassungen.
   - [ ] **`public/normtext/pdf-quellen.json` in eine Paritäts-Klasse aufnehmen** — kann heute byte-abweichen, ohne dass `check:paritaet` es sieht.
   - [ ] **`aufgehoben`-Flag ist golden-neutral (blinder Fleck)** — eine FALSCHE Aufhebungs-Markierung sieht kein Drift-Tor (§8).
+  - [ ] **`check:fedlex-versionen` rot: Pin `erv` html-6 ≠ kanonisch html-7** *(gemeldet von zwei Prüfern 12.9.2026, Vorbestand, Netz-Tor)* — Pin nachführen über den Pflegeweg, nicht von Hand.
 
 - [ ] **FR/IT-Drift-Wächter Stufe 2** *(`QS-FRIT-DRIFT`, Stufe 1 gebaut 15.8.2026)*
   <!-- @meta id: QS-FRIT-DRIFT · status: ready · blocker: null · dep: [] · feld: korpus · fahrplan: fahrplaene/FAHRPLAN-FEDLEX-PORTFOLIO.md -->
@@ -634,6 +635,7 @@ zgb-a36-anhang: Die ZGB-Gliederung zeigt 74 Artikel des Anhangs «Wortlaut der f
   Runde 1 ist gebaut (12 Engines, 81 Invarianten, kein Engine-Defekt — Chronik). Offen bleiben ein
   Korpus-Defekt und zwei fachliche David-Fragen.
   **Detail:** [FAHRPLAN-OFFENE-BEFUNDE.md](fahrplaene/FAHRPLAN-OFFENE-BEFUNDE.md) §5.
+  - [ ] **Split-Regel: bei jedem §6.6-Auszug `check:zyklen` nackt mitfahren** *(Beleg #804: Fassaden-Re-Export + Rückimport = Zyklus, CI rot)*.
   - [ ] **`nichtKonsolidiert`-Marker bei Staatsverträgen falsch-positiv (FZA)** — Wurzel-Fix: AS-Fundstelle im Konsolidierungs-XML als Konsolidiert-Beleg werten; Gegenrechnung über alle 87 Marker.
   - [ ] **Staffel-Invariante lückenlos + widerspruchsfrei** — Property-Test über alle `src/data/tarif/**`-Staffeln: jeder Streitwert trifft genau eine Stufe, keine Überlappung, keine Lücke, Stufen-Grenzen monoton; Rot-Beweis per Mutation. Muster Catala/Z3 «keine Regel anwendbar / zwei Regeln kollidieren». Quelle: Rules-as-Code-Sichtung 5.9.2026 §5.
   - [ ] **Monatsend-Arithmetik der Fristen-Engine explizit** — Prüfauftrag, ob `fristenEngine.ts`/`datumsUtils.ts` bei «31.1. + 1 Monat» und Schaltjahr stillschweigend rundet; Ergebnis als Property-Test mit belegter Norm (Art. 77 OR / Art. 142 ZPO) und ausdrücklicher Rundungsregel statt date-fns-Default. Muster Catala `dates-calc` (Apache-2.0, Namensnennung). Quelle: Rules-as-Code-Sichtung 5.9.2026 §2/§5.

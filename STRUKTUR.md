@@ -43,29 +43,61 @@ Deklaration). #799 K-16 BS-Materialien (`c83501304`, Gegenprüfung Sonnet mit Au
 Rat Basel-Stadt an die Botschaften-Pipeline, 117 Geschäfte, 122 Kanten (8 amtlich/114 maschinell), 409
 Verfahrens-Ereignisse; amtlicher Schlüssel deckt nur 5/859 Erlasse, Deckel Materialien-Register 83 %.
 
-**#798 landet gerade** (Branch `fix/synopse-normalisierung-gemeinsam`, Profil `entstehung-norm/3` →
-`/4`, Stand bei Redaktion dieser Karte: `MERGEABLE`, CI läuft) — gemeinsame Normalisierung
-Generator+Leser über drei Gegenprüfungs-Runden (Sonnet): A1 gelöschter Nachlauftext zurück (4 echte
-KLV-12e-Änderungen), A2 Sachüberschriften als Titel-Paar (522 Blöcke), A4 `entfallen`-Wächter, A5
-zweiter Tor-Ast `phantomVerletzungen()` gegen wandernde Elementgrenzen (10 Phantom-Änderungen weg,
-u. a. FDV/HMG). Vollerhebung (kein Sample) gegen den Vorstand: **0 echte Änderung verloren**.
+**#798 gelandet** (`f6b5471fc`) — gemeinsame Normalisierung Generator+Leser über drei
+Gegenprüfungs-Runden (Sonnet): A1 gelöschter Nachlauftext zurück (4 echte KLV-12e-Änderungen), A2
+Sachüberschriften als Titel-Paar (522 Blöcke), A4 `entfallen`-Wächter, A5 zweiter Tor-Ast
+`phantomVerletzungen()` gegen wandernde Elementgrenzen (10 Phantom-Änderungen weg, u. a. FDV/HMG).
+Vollerhebung (kein Sample) gegen den Vorstand: **0 echte Änderung verloren**. Auflage A6 der
+Gegenprüfung (Quelllücke CHEMRRV) → eigener Schritt `W2·6c-ENTSTEHUNG-QUELLLUECKE`.
 Detail/Zahlen: `FAHRPLAN-MATERIALIEN-VERZAHNUNG.md` §11.10.
 
-**Lehre aus den drei Runden (kein `lehren`-Registereintrag — keine der bestehenden F-Klassen passt
-genau, Detail bleibt in §11.10 der Fahrplan-Datei):** Gegenprüfungs-Runde 2 unterlief bei FDV/HMG
-selbst ein Messfehler, erst Runde 3 (Vollerhebung statt Stichprobe) fand ihn. **Zwei Punkte:** (1) bei
-Verlust-/Vollständigkeits-Fragen («ist wirklich nichts verschwunden?») ist eine Vollerhebung über den
-ganzen Bestand einer Stichprobe vorzuziehen, sobald sie machbar ist — eine Stichprobe kann eine
-Restklasse systematisch verfehlen; (2) der Prüfer-Extraktor selbst kann falsch messen, nicht nur der
-Bauer — eine Gegenprüfung, die nur den Bau misstraut und sich selbst nicht, ist blind auf einem Auge.
+**#801 gelandet** (`e0845936e`) — löst `W2·6c-ENTSTEHUNG-QUELLLUECKE` (Auflage A6): CHEMRRV-22
+Blöcke, die nur in einem amtlichen Änderungsanhang stehen, tragen jetzt `quelle_unvollstaendig`
+statt der falschen Buchung «22× entfallen + 24× neu eingefügt»; Anhang-Beleg (`imAnhang`) als
+Pflicht-Feld, Lineage-Fix in `neuNach()`, befristete Ausnahmeliste 11 → 0.
 
-**Neuer Schritt angelegt:** `W2·6c-ENTSTEHUNG-QUELLLUECKE` (ready, feld: korpus, dep
-`[W2·6c-ENTSTEHUNG-SYNOPSE]`) — löst die 11 befristeten Ausnahmen in
-`entstehung-leerdiff-ausnahmen.json` ab (Auflage A6 aus #798), fällig vor deren Verfall 2026-10-12.
+**#803 gelandet** (`6456dcf00`) — §17-Wurzelfix `check:materialien` Finding 7 (2. Vorfall in 24 h):
+prüft jetzt gegen das Erhebungsdatum (`r.stand`) statt gegen `heute`; eigener, aus `check:seriell`
+ausgenommener Alterungs-Tor `check:vernehmlassungen-alter` (45 Tage) nach dem K7-Muster von
+`check:verfall` (`scripts/check-tor-paritaet.ts` ALLOWLIST); Vernehmlassungs-Monatslauf per PR in
+`normen-monitor.yml`.
+
+**#802 gelandet** (`c0acd4557`) — Deckel-Reserven vor ZH (R12b): Materialien-Register (332/400 KB
+gzip, 83 %) in drei Projektionen geteilt — Kern 118/280 KB (42 %), i18n 84/140 KB (60 %), Provenienz
+93/240 KB (39 %), Verfahrens-Ereignisse 16/60 KB (27 %, jetzt alle Herkünfte statt nur Bund);
+ZH-Prognose Kern 49 %. Deckel gesenkt (400 → 280 KB), nicht angehoben.
+
+**#804 offen** (Branch `fix/synopse-schlankheit`) — `refactor(entstehung)`-Split von
+`scripts/entstehung/synopse.ts` (811 → 729 Z.) in `quellluecken.ts` (94 Z., §6.6-Schwelle 800 nach
+#801 gerissen); Fassaden-Re-Export brach `check:zyklen` (nackt mitfahren lassen bei jedem §6.6-Auszug,
+jetzt in ROADMAP unter QS-CODE-PROP vermerkt).
+
+**Lehren dieser Session:**
+1. **Prüfer-Vollerhebung statt Stichprobe bei Verlustfragen** (aus #798): Gegenprüfungs-Runde 2
+   unterlief bei FDV/HMG selbst ein Messfehler, erst Runde 3 (Vollerhebung statt Stichprobe) fand
+   ihn — bei Verlust-/Vollständigkeitsfragen («ist wirklich nichts verschwunden?») ist eine
+   Vollerhebung einer Stichprobe vorzuziehen, sobald sie machbar ist (kein `lehren`-Registereintrag,
+   keine bestehende F-Klasse passt; Detail bleibt in §11.10 der Fahrplan-Datei).
+2. **Prüfer-Extraktor kann irren — beide Richtungen:** dieselbe Gegenprüfung, die sich selbst bei
+   FDV/HMG irrte (Punkt 1), fand mit Auflage A6 zugleich einen echten, vom Bau übersehenen Defekt
+   (CHEMRRV-Quelllücke, → #801) — eine Gegenprüfung, die nur den Bau misstraut und sich selbst
+   nicht, ist blind auf einem Auge; keines der beiden Ergebnisse darf ungeprüft übernommen werden.
+3. **Wanduhr-abhängige Tore gehören an die Wurzel, nicht in eine Allowlist** (#803, K7-Muster): ein
+   Tor, das `heute`/`Date.now` in seiner Prüflogik liest, färbt die CI an jedem Tag rot, an dem eine
+   Frist abläuft, egal was gebaut wird — Fix ist der Vergleich gegen ein committetes/generiertes
+   Datum, nicht das Herausnehmen aus der Pflichtkette.
+4. **Split ⇒ `check:zyklen` nackt mitfahren** (#804): ein §6.6-Auszug per Fassaden-Re-Export kann
+   einen Import-Zyklus erzeugen, den nur ein eigener Lauf von `check:zyklen` (ohne Pipe) fängt.
+5. **Plan-Buchung macht offene PRs BEHIND ⇒ Merge Queue ist ein David-Entscheid:** jeder gemergte
+   PR erzeugt einen automatischen `docs(plan): … -> done`-Folgecommit auf `main` (z. B. `bbb2a4614`
+   nach #801) — jeder zu diesem Zeitpunkt offene PR ist damit `BEHIND` und muss vor dem eigenen
+   Merge auf `origin/main` gemergt werden. Ob eine GitHub Merge Queue das automatisieren soll, ist
+   eine Prozessentscheidung, die bei David liegt, nicht technisch vorwegzunehmen.
 
 **Wartet auf David:** CC-BY-Namensnennung data.bs.ch in der UI, fachliche Abnahme der 114
-maschinellen K-16-Kanten (§7) — beide unter `W2·13-KANTONE-DATEN` in `ROADMAP.md`. Wartet auf
-Fortsetzung: PR #798 CI/Merge, danach diese Karte und §11.10 bei Bedarf nachtragen.
+maschinellen K-16-Kanten (§7) — beide unter `W2·13-KANTONE-DATEN` in `ROADMAP.md`; Merge-Queue-
+Entscheid (Lehre 5). Wartet auf Fortsetzung: PR #804 CI/Merge (Risikopfad-Gegenprüfung
+`scripts/entstehung/**`).
 
 ## Session 11.9.2026 — W2·26 Funktionszeile + Kette «Entstehung am Artikel» (Daten → Leser → Synopse), acht PRs
 
