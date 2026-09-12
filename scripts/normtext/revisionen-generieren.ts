@@ -114,6 +114,17 @@ export interface RevisionEintrag {
    * SKV-Fall zeigt, dass die Verknüpfung selbst fehlerhaft sein kann). §7: Fedlex bleibt
    * Quelle, der Eintrag wird NIE umgehängt. Einziger bekannter Wert; kein Enum-Ausbau ohne
    * neuen Befund.
+   *
+   * ── Wächter rectifies-Ziel vs. Berichtigungstext (ROADMAP W2·18-FEHLERBUCH) ──
+   * Was HIER fehlt: eine Prüfung, ob das `jolux:rectifies`-Tripel selbst mit dem amtlichen
+   * Berichtigungstext übereinstimmt (`check:revisionen` prüft nur den Marker GEGEN das
+   * gespeicherte Tripel, nicht das Tripel gegen die Quelle). Dafür der separate Netz-Arm
+   * `check:revisionen-rectifies` (`scripts/normtext/check-revisionen-rectifies.ts`,
+   * `rectifies-berichtigung.ts`): holt je rectifies-Kante den Filestore-HTML-Berichtigungstext
+   * und misst dessen Headline-Zitat gegen `zielFundstelle`/`fremdeSr`. Klassen: uebereinstimmend ·
+   * abweichend (SKV ist der erste dokumentierte Fund, `bibliothek/normtext/rectifies-ausnahmen.json`) ·
+   * sammelberichtigung · nicht-abrufbar. Läuft in `check:netz:kette` (Schedule/`workflow_dispatch`),
+   * blockiert daher keinen PR-Merge.
    */
   plausibilitaet?: 'berichtigung-fremdes-as-dokument';
   /** Begründungstext zum Marker (nur gesetzt, wenn `plausibilitaet` gesetzt ist). */
