@@ -560,6 +560,12 @@ export async function parseUndSchreibe(inventar: Inventar, datum: string, limit 
 
   // Bestand additiv: alle Nicht-BS-Snapshots byte-treu von der Platte + BS neu.
   // (Frühere BS-Einträge werden ersetzt/entfernt — Delta-/Takedown-Semantik §5.4.)
+  // Gegenprüfungs-Auflage PR #818: ein legitimer Takedown (BS zieht einen Entscheid
+  // zurück, `snaps.length` < vorherige BS-Zahl) lässt `[...bestand, ...snaps]` unter
+  // den committeten Bestand fallen — die Bestandszahl-Sperre in `schreibeKorpus`
+  // wirft dann bewusst (mit Abgangs-Liste im Log) und braucht `LEXMETRIK_ERLAUBE_
+  // ABGANG=1`, das kein Workflow automatisch setzt. Gewollter manueller Stolperstein
+  // (keine stille Löschung mehr), kein Deadlock: den Lauf mit dem Flag wiederholen.
   const bestand = ladeBestandSnapshots().filter((s) => s.quelle !== 'gerichte-bs');
   const res = schreibeKorpus([...bestand, ...snaps], datum);
   const proGericht = snaps.reduce((m, s) => ((m[s.gericht] = (m[s.gericht] ?? 0) + 1), m), {} as Record<string, number>);

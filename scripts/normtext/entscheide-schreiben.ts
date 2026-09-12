@@ -90,6 +90,25 @@ const LEITFAELLE_PRO_ARTIKEL = 8;
  * ein Befund (fehlender Shard, falscher cwd, Quellen-Ausfall), nie normales Rauschen.
  * `BESTANDSZAHL_MINDESTANTEIL = 1` heisst darum: kein unbegründeter Abgang ohne
  * explizites Flag (`LEXMETRIK_ERLAUBE_ABGANG=1`), auch nicht ein kleiner.
+ *
+ * BEKANNTE, GEWOLLTE AUSNAHME (Delta-Prüfung PR #818): `scripts/rechtsprechung/
+ * bs-parse.ts` ist kein additiver Aufrufer im obigen Sinn, sondern ersetzt den
+ * GESAMTEN BS-Anteil des Bestands bei jedem Lauf (Delta-/Takedown-Semantik §5.4,
+ * Kommentar dort). Zieht das Portal einen BS-Entscheid zurück, liefert dieser Lauf
+ * legitim WENIGER Einträge als vorher committet — die Sperre wirft dann bewusst
+ * (mit Abgangs-Liste) und braucht `LEXMETRIK_ERLAUBE_ABGANG=1`; kein Workflow setzt
+ * das automatisch, ist also ein gewollter manueller Stolperstein, kein Deadlock.
+ *
+ * GRENZFALL `altZahl` vs. `ladeBestandSnapshots` (Delta-Prüfung PR #818): `altZahl`
+ * zählt jeden Nicht-Verweis-Manifest-Eintrag, AUCH einen ohne `datei` (derzeit gibt
+ * es keinen — Ist 12.9.2026 stimmen 5093 Snapshots mit 5093 Nicht-Verweis-Einträgen
+ * exakt überein); `ladeBestandSnapshots` liest dagegen NUR Einträge MIT `datei` (sie
+ * überspringt `!e.datei` wie `e.verweis`, Zeile ~590). Entstünde künftig ein
+ * datei-loser, nicht-verweis Manifest-Eintrag, zählte `altZahl` ihn mit, während ein
+ * additiver Lauf ihn nie in seine Eingabe laden könnte — die Sperre würfe dann
+ * DAUERHAFT, auch bei unverändertem Bestand. Bisher kein solcher Eintragstyp
+ * vorgesehen; träte einer hinzu, müsste `altZahl` denselben Filter wie
+ * `ladeBestandSnapshots` tragen (`!e.verweis && e.datei`).
  */
 const BESTANDSZAHL_MINDESTANTEIL = 1;
 
