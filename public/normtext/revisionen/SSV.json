@@ -1,7 +1,7 @@
 {
   "erlassKey": "SSV",
   "sr": "741.21",
-  "abgerufen": "2026-09-05",
+  "abgerufen": "2026-09-12",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -16,6 +16,32 @@
       "nichtKonsolidiert": true,
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2026/438/de",
       "sha": "50cff585a139e6040e2fabc8a337184521b177e18e70780c4641a1c2c8ea8f5d"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2026-10-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2026/453",
+      "dateDocument": "2026-08-19",
+      "roFundstelle": "AS 2026 453",
+      "titelDe": "Signalisationsverordnung (SSV)",
+      "titelFr": "Ordonnance sur la signalisation routière (OSR)",
+      "titelIt": "Ordinanza sulla segnaletica stradale (OSStr)",
+      "nichtKonsolidiert": true,
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2026/453/de",
+      "sha": "971613f26b5c5871f4d184337efcfb762422087775b5011a848e951ebd0b2eb7"
+    },
+    {
+      "art": "aenderung",
+      "dateEntryInForce": "2026-10-01",
+      "ocUri": "https://fedlex.data.admin.ch/eli/oc/2026/458",
+      "dateDocument": "2026-08-19",
+      "roFundstelle": "AS 2026 458",
+      "titelDe": "Signalisationsverordnung (SSV)",
+      "titelFr": "Ordonnance sur la signalisation routière (OSR)",
+      "titelIt": "Ordinanza sulla segnaletica stradale (OSStr)",
+      "nichtKonsolidiert": true,
+      "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2026/458/de",
+      "sha": "045164d1ea1809046945f73e71d1f113bc5fd85ffe36dfa8d987d34a00e8f096"
     },
     {
       "art": "aenderung",
@@ -80,8 +106,10 @@
       "titelDe": "Signalisationsverordnung (SSV). Berichtigung (Betrifft nur den italienischen Text)",
       "titelFr": "Ordonnance sur la signalisation routière (OSR). Erratum (Ne concerne que le texte italien)",
       "titelIt": "Ordinanza sulla segnaletica stradale (OSStr). Correzione",
+      "plausibilitaet": "widerspruch-fedlex-notation",
+      "plausibilitaetsGrund": "Fedlex klassiert diese Änderung unter SR 741.21 (SSV); sie berichtigt (jolux:rectifies) jedoch einen unter SR 725.111 klassierten Erlass — Widerspruch in der Fedlex-Notation, massgeblich bleibt die amtliche Sammlung (§7/§8).",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2024/144/de",
-      "sha": "3597d9d17cd2d0f469eb6cec00fbe168f52d7ba18919539202f4ec04611875ec"
+      "sha": "c46a69e59c50b32b19edd0719a327379875a02bb26d10825b4b191c85dc123a0"
     },
     {
       "art": "aenderung",
@@ -336,5 +364,5 @@
       "sha": "66a0e32b92bb25bf085f8e97a6e7fb772a50ee6be74399a8f3590045ecd5d31f"
     }
   ],
-  "sha": "80db35e95d176d30779697ef714795a255dc1ed55a22ac17113bffa14376f596"
+  "sha": "e82b088e85780be5b66d8f2c7a98d2a70df8339f027d8ef41d7be7ae9c2c878c"
 }

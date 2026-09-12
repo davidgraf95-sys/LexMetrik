@@ -2012,6 +2012,10 @@
       "titleIt": {
         "type": "literal",
         "value": "Ordinanza 3 sui provvedimenti per combattere il coronavirus (COVID-19) (Ordinanza 3 COVID-19) (Test rapidi SARS-CoV-2). Correzione"
+      },
+      "rectifies": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2020/977"
       }
     },
     {
@@ -2044,6 +2048,10 @@
       "titleIt": {
         "type": "literal",
         "value": "Ordinanza concernente la lotta contro le malattie trasmissibili dell’essere umano (Ordinanza sulle epidemie, OEp). Correzione"
+      },
+      "rectifies": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2021/53"
       }
     },
     {
@@ -2201,5 +2209,10 @@
     "2024-07-01",
     "2025-01-01",
     "2027-01-01"
-  ]
+  ],
+  "belegteOcs": [],
+  "rectifiesSrProOc": {
+    "https://fedlex.data.admin.ch/eli/oc/2021/11": "818.101.24",
+    "https://fedlex.data.admin.ch/eli/oc/2021/122": "818.101.1"
+  }
 }

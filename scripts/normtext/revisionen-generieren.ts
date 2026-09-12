@@ -88,6 +88,18 @@ export interface RevisionEintrag {
   /** true, wenn das Amendment nach dem Korpus-Stand in Kraft trat → noch nicht in den
    *  geltenden (gepinnten) Normtext konsolidiert (Finding 4, user-sichtbar). */
   nichtKonsolidiert?: boolean;
+  /**
+   * Plausibilitäts-Marker (Gegenprüfung #703, §8): Fedlex klassiert diese Änderung per
+   * `jolux:classifiedByTaxonomyEntry` unter der SR DIESES Erlasses, obwohl sie per
+   * `jolux:rectifies` einen unter einer ANDEREN SR klassierten Erlass berichtigt —
+   * ein Fedlex-interner Widerspruch (live belegt: AS 2026 448, klassiert unter 642.11/DBG,
+   * rectifies→eli/oc/1996/1445 unter 824.0/ZDG). §7: Fedlex bleibt Quelle, der Eintrag wird
+   * NIE stillschweigend umgehängt — der Marker macht den Widerspruch nur sichtbar.
+   * Einziger bekannter Wert; kein Enum-Ausbau ohne neuen Befund.
+   */
+  plausibilitaet?: 'widerspruch-fedlex-notation';
+  /** Begründungstext zum Marker (nur gesetzt, wenn `plausibilitaet` gesetzt ist). */
+  plausibilitaetsGrund?: string;
   /** Fedlex-Live-Link auf den AS-Text (art='aenderung') bzw. die amtliche Sammlung. */
   quelleUrl: string;
   /** sha-256 über die Identitätsfelder (Drift-Token, §7d). */
@@ -232,12 +244,17 @@ export function botschaftIndex(): Map<string, string> {
 }
 
 function shaEintrag(e: Omit<RevisionEintrag, 'sha'>): string {
-  const norm = [
+  const felder = [
     e.art, e.dateEntryInForce, e.ocUri ?? '', e.dateDocument ?? '', e.roFundstelle ?? '',
     e.titelDe ?? '', e.titelFr ?? '', e.titelIt ?? '', e.botschaftKey ?? '',
     e.nichtKonsolidiert ? '1' : '', e.quelleUrl,
-  ].join('|');
-  return createHash('sha256').update(norm, 'utf8').digest('hex');
+  ];
+  // Additiv NUR bei gesetztem Marker angehängt (§6.7 Auflage): so bleibt die sha jedes
+  // unbetroffenen Eintrags — und damit der ganze Sidecar — byte-gleich (§703-Vollerhebung
+  // verlangt ausdrücklich nur betroffene Sidecars neu; ein bedingungslos angehängtes Feld
+  // hätte JEDE sha im Korpus verändert).
+  if (e.plausibilitaet) felder.push(e.plausibilitaet, e.plausibilitaetsGrund ?? '');
+  return createHash('sha256').update(felder.join('|'), 'utf8').digest('hex');
 }
 
 /**
@@ -259,8 +276,12 @@ export function baueRevisionen(
   ocZuBotschaft: Map<string, string>,
   abgerufen: string,
   belegteOcs: ReadonlySet<string> = new Set(),
+  rectifiesSrProOc: ReadonlyMap<string, string> = new Map(),
 ): RevisionSidecar {
-  interface Roh { oc: string; dateForce: string; dateDoc?: string; roId?: string; de?: string; fr?: string; it?: string; }
+  interface Roh {
+    oc: string; dateForce: string; dateDoc?: string; roId?: string; de?: string; fr?: string; it?: string;
+    rectifies?: string;
+  }
   const proOc = new Map<string, Roh>();
   for (const b of bBindings) {
     const oc = b.oc?.value;
@@ -275,6 +296,7 @@ export function baueRevisionen(
     if (!r.de && b.titleDe?.value) r.de = b.titleDe.value;
     if (!r.fr && b.titleFr?.value) r.fr = b.titleFr.value;
     if (!r.it && b.titleIt?.value) r.it = b.titleIt.value;
+    if (!r.rectifies && b.rectifies?.value) r.rectifies = b.rectifies.value;
   }
 
   const eintraege: RevisionEintrag[] = [];
@@ -282,6 +304,12 @@ export function baueRevisionen(
   for (const r of proOc.values()) {
     bStaende.add(r.dateForce);
     const botschaftKey = ocZuBotschaft.get(r.oc);
+    // §8-Plausibilitätsmarker (Gegenprüfung #703): rectifiesSrProOc trägt die SR-Notation
+    // des per jolux:rectifies berichtigten Erlasses (falls ermittelt) — weicht sie von der
+    // SR DIESES Erlasses ab, klassiert Fedlex die Änderung widersprüchlich (§7: Fedlex
+    // bleibt Quelle, der Widerspruch wird nur offengelegt, nie stillschweigend behoben).
+    const rectifiesSr = r.rectifies ? rectifiesSrProOc.get(r.oc) : undefined;
+    const widerspruch = rectifiesSr !== undefined && rectifiesSr !== erlass.sr;
     const roh: Omit<RevisionEintrag, 'sha'> = {
       art: 'aenderung',
       dateEntryInForce: r.dateForce,
@@ -293,6 +321,12 @@ export function baueRevisionen(
       titelIt: r.it ? titelText(r.it) : undefined,
       botschaftKey,
       nichtKonsolidiert: (r.dateForce > korpusStand && !belegteOcs.has(r.oc)) ? true : undefined,
+      plausibilitaet: widerspruch ? 'widerspruch-fedlex-notation' : undefined,
+      plausibilitaetsGrund: widerspruch
+        ? `Fedlex klassiert diese Änderung unter SR ${erlass.sr} (${erlass.key}); sie berichtigt `
+          + `(jolux:rectifies) jedoch einen unter SR ${rectifiesSr} klassierten Erlass — `
+          + 'Widerspruch in der Fedlex-Notation, massgeblich bleibt die amtliche Sammlung (§7/§8).'
+        : undefined,
       quelleUrl: liveLink(r.oc),
     };
     eintraege.push({ ...roh, sha: shaEintrag(roh) });
@@ -340,7 +374,7 @@ export function baueRevisionen(
 export function baueQueryB(valuesInline: string): string {
   return `PREFIX jolux: <http://data.legilux.public.lu/resource/ontology/jolux#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-SELECT ?sr ?oc ?dateForce ?dateDoc ?roId ?titleDe ?titleFr ?titleIt WHERE {
+SELECT ?sr ?oc ?dateForce ?dateDoc ?roId ?titleDe ?titleFr ?titleIt ?rectifies WHERE {
   VALUES ?notation { ${valuesInline} }
   ?tax skos:notation ?notation . BIND(STR(?notation) AS ?sr)
   ?oc jolux:classifiedByTaxonomyEntry ?tax ; jolux:legalResourceFamilyType <https://fedlex.data.admin.ch/vocabulary/resource-family/oc> ; jolux:dateEntryInForce ?dateForce .
@@ -349,7 +383,56 @@ SELECT ?sr ?oc ?dateForce ?dateDoc ?roId ?titleDe ?titleFr ?titleIt WHERE {
   OPTIONAL { ?oc jolux:isRealizedBy ?ede . ?ede jolux:language ${LANG.de} ; jolux:title ?titleDe . }
   OPTIONAL { ?oc jolux:isRealizedBy ?efr . ?efr jolux:language ${LANG.fr} ; jolux:title ?titleFr . }
   OPTIONAL { ?oc jolux:isRealizedBy ?eit . ?eit jolux:language ${LANG.it} ; jolux:title ?titleIt . }
+  OPTIONAL { ?oc jolux:rectifies ?rectifies . }
 }`;
+}
+
+/**
+ * Reine Komposition (§2, testbar): oc → SR-Notation des per `jolux:rectifies` berichtigten
+ * Erlasses, gebildet aus den (bereits je Erlass gefilterten) Pfad-(b)-Bindings + der global
+ * aufgelösten Ziel-SR-Map (`holeRectifiesSr`). Kein Netz hier — Netz-Schritt lebt im Runner
+ * (§703-Plausibilitätsmarker, s. `RevisionEintrag.plausibilitaet`).
+ */
+export function baueOcZuRectifiesSr(
+  bBindings: SparqlBinding[], zielSrProOc: ReadonlyMap<string, string>,
+): Map<string, string> {
+  const map = new Map<string, string>();
+  for (const b of bBindings) {
+    const oc = b.oc?.value;
+    const ziel = b.rectifies?.value;
+    if (!oc || !ziel || map.has(oc)) continue;
+    const sr = zielSrProOc.get(ziel);
+    if (sr) map.set(oc, sr);
+  }
+  return map;
+}
+
+/**
+ * Holt für eine Menge von oc-URIs (Ziele eines `jolux:rectifies`) je deren SR-Notation
+ * (`jolux:classifiedByTaxonomyEntry` → `skos:notation`, id-systematique-typisiert — sonst
+ * greift dieselbe Timeout-Falle wie bei Pfad (b), §0c). VALUES-Batching wie `holeBindingsB`.
+ */
+export async function holeRectifiesSr(
+  ocUris: readonly string[], fetchImpl: FetchImpl = fetch,
+): Promise<Map<string, string>> {
+  if (!ocUris.length) return new Map();
+  const werte = [...new Set(ocUris)].map((u) => `<${u}>`);
+  const baueQuery = (valuesInline: string) => `PREFIX jolux: <http://data.legilux.public.lu/resource/ontology/jolux#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?oc ?notation WHERE {
+  VALUES ?oc { ${valuesInline} }
+  ?oc jolux:classifiedByTaxonomyEntry ?tax .
+  ?tax skos:notation ?notation .
+  FILTER(DATATYPE(?notation) = ${NOTATION_TYPE})
+}`;
+  const bindings = await sparqlBatch(werte, baueQuery, { batchGroesse: 40, fetchImpl });
+  const map = new Map<string, string>();
+  for (const b of bindings) {
+    const oc = b.oc?.value;
+    const notation = b.notation?.value;
+    if (oc && notation && !map.has(oc)) map.set(oc, notation);
+  }
+  return map;
 }
 
 /** Holt die Pfad-(b)-Bindings für die gesamte Grundmenge (VALUES-Batching, §0c). */

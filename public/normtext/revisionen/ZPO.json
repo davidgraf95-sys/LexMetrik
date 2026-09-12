@@ -1,7 +1,7 @@
 {
   "erlassKey": "ZPO",
   "sr": "272",
-  "abgerufen": "2026-09-05",
+  "abgerufen": "2026-09-12",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -50,8 +50,10 @@
       "titelDe": "Obligationenrecht (Aktienrecht). Berichtigung",
       "titelFr": "Code des obligations (Droit de la société anonyme). Erratum",
       "titelIt": "Codice delle obbligazioni (Diritto della società anonima). Correzione",
+      "plausibilitaet": "widerspruch-fedlex-notation",
+      "plausibilitaetsGrund": "Fedlex klassiert diese Änderung unter SR 272 (ZPO); sie berichtigt (jolux:rectifies) jedoch einen unter SR 220 klassierten Erlass — Widerspruch in der Fedlex-Notation, massgeblich bleibt die amtliche Sammlung (§7/§8).",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2022/110/de",
-      "sha": "b0472788acadfa0f81ae501a5de1fa34ae65c6a16c14ffa055eea87fcf283db5"
+      "sha": "ef37a8026c44ae0a34dfb6233179f2c0228b78653e336b4ffde6a2928e8d674e"
     },
     {
       "art": "aenderung",
@@ -194,5 +196,5 @@
       "sha": "944ecc53f8c057daf01c18a9289550695c23540abc4abbfddcb1e79b0568e6ad"
     }
   ],
-  "sha": "1aa119d59bdb134474a12d4102d9abc6900b91de7047f642a12cc36a449def5d"
+  "sha": "b92011dfa20e2004aa03895239a18135830d3b0f9f20ad158cb7c0c746a00cff"
 }

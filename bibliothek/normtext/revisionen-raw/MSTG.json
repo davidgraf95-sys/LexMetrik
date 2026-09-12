@@ -572,6 +572,10 @@
       "titleIt": {
         "type": "literal",
         "value": "Legge federale sull’armonizzazione delle pene. Correzione"
+      },
+      "rectifies": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2023/259"
       }
     },
     {
@@ -604,6 +608,10 @@
       "titleIt": {
         "type": "literal",
         "value": "Legge federale sull’esercito e sull’amministrazione militare (Legge militare, LM). Correzione"
+      },
+      "rectifies": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2026/164"
       }
     },
     {
@@ -804,5 +812,10 @@
     "2025-01-01",
     "2026-06-01",
     "2026-06-08"
-  ]
+  ],
+  "belegteOcs": [],
+  "rectifiesSrProOc": {
+    "https://fedlex.data.admin.ch/eli/oc/2023/538": "311.0",
+    "https://fedlex.data.admin.ch/eli/oc/2026/284": "510.10"
+  }
 }

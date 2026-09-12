@@ -3240,6 +3240,10 @@
       "titleIt": {
         "type": "literal",
         "value": "Ordinanza del 18 maggio 2005 concernente la riduzione dei rischi nell'utilizzazione di determinate sostanze, preparati e oggetti particolarmente pericolosi (Ordinanza sulla riduzione dei rischi inerenti ai prodotti chimici, ORRPChim). Correzione (Concerne soltanto il testo francese)"
+      },
+      "rectifies": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2022/162"
       }
     },
     {
@@ -3624,6 +3628,10 @@
       "titleIt": {
         "type": "literal",
         "value": "Ordinanza concernente la riduzione dei rischi nell’utilizzazione di determinate sostanze, preparati e oggetti particolarmente pericolosi (Ordinanza sulla riduzione dei rischi inerenti ai prodotti chimici, ORRPChim). Correzione"
+      },
+      "rectifies": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2012/728"
       }
     },
     {
@@ -3784,6 +3792,10 @@
       "titleIt": {
         "type": "literal",
         "value": "Ordinanza sui prodotti fitosanitari (OPF). Correzione"
+      },
+      "rectifies": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2025/565"
       }
     },
     {
@@ -3816,6 +3828,10 @@
       "titleIt": {
         "type": "literal",
         "value": "Ordinanza concernente la riduzione dei rischi nell’utilizzazione di determinate sostanze, preparati e oggetti particolarmente pericolosi (Ordinanza sulla riduzione dei rischi inerenti ai prodotti chimici, ORRPChim). Correzione"
+      },
+      "rectifies": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2019/289"
       }
     }
   ],
@@ -3903,5 +3919,12 @@
     "2032-01-01",
     "2033-01-01",
     "2035-01-01"
-  ]
+  ],
+  "belegteOcs": [],
+  "rectifiesSrProOc": {
+    "https://fedlex.data.admin.ch/eli/oc/2022/560": "814.81",
+    "https://fedlex.data.admin.ch/eli/oc/2024/557": "814.81",
+    "https://fedlex.data.admin.ch/eli/oc/2025/864": "916.161",
+    "https://fedlex.data.admin.ch/eli/oc/2026/394": "814.81"
+  }
 }

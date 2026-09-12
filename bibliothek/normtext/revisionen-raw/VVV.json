@@ -2012,6 +2012,10 @@
       "titleIt": {
         "type": "literal",
         "value": "Ordinanza concernente le esigenze tecniche per i veicoli stradali (OETV). Correzione"
+      },
+      "rectifies": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/1995/4425_4425_4425"
       }
     },
     {
@@ -2108,6 +2112,10 @@
       "titleIt": {
         "type": "literal",
         "value": "Ordinanza sull’assicurazione dei veicoli (OAV). Correzione"
+      },
+      "rectifies": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2025/645"
       }
     }
   ],
@@ -2157,5 +2165,10 @@
     "2024-04-01",
     "2024-05-01",
     "2026-01-01"
-  ]
+  ],
+  "belegteOcs": [],
+  "rectifiesSrProOc": {
+    "https://fedlex.data.admin.ch/eli/oc/2021/578": "741.41",
+    "https://fedlex.data.admin.ch/eli/oc/2025/687": "741.31"
+  }
 }

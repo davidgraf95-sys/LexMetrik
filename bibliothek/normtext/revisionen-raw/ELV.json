@@ -1464,6 +1464,10 @@
       "titleIt": {
         "type": "literal",
         "value": "Ordinanza sull’assicurazione per l’invalidità (OAI). Correzione"
+      },
+      "rectifies": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2007/723"
       }
     },
     {
@@ -1538,5 +1542,9 @@
     "2024-01-01",
     "2024-04-03",
     "2025-01-01"
-  ]
+  ],
+  "belegteOcs": [],
+  "rectifiesSrProOc": {
+    "https://fedlex.data.admin.ch/eli/oc/2024/130": "831.201"
+  }
 }

@@ -1204,6 +1204,10 @@
       "titleIt": {
         "type": "literal",
         "value": "Ordinanza sulla prevenzione e lo smaltimento dei rifiuti (Ordinanza sui rifiuti, OPSR). Correzione"
+      },
+      "rectifies": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2022/161"
       }
     },
     {
@@ -1268,6 +1272,10 @@
       "titleIt": {
         "type": "literal",
         "value": "Ordinanza sulla messa in commercio di concimi (Ordinanza sui concimi, OCon). Correzione (Concerne soltanto il testo francese)"
+      },
+      "rectifies": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2023/711"
       }
     },
     {
@@ -1419,5 +1427,10 @@
     "2025-12-01",
     "2026-01-01",
     "2026-08-01"
-  ]
+  ],
+  "belegteOcs": [],
+  "rectifiesSrProOc": {
+    "https://fedlex.data.admin.ch/eli/oc/2023/543": "814.600",
+    "https://fedlex.data.admin.ch/eli/oc/2025/256": "916.171"
+  }
 }

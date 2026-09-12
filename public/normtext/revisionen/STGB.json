@@ -1,7 +1,7 @@
 {
   "erlassKey": "STGB",
   "sr": "311.0",
-  "abgerufen": "2026-09-05",
+  "abgerufen": "2026-09-12",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -69,8 +69,10 @@
       "titelDe": "Obligationenrecht (Aktienrecht). Berichtigung",
       "titelFr": "Code des obligations (Droit de la société anonyme). Erratum",
       "titelIt": "Codice delle obbligazioni (Diritto della società anonima). Correzione",
+      "plausibilitaet": "widerspruch-fedlex-notation",
+      "plausibilitaetsGrund": "Fedlex klassiert diese Änderung unter SR 311.0 (STGB); sie berichtigt (jolux:rectifies) jedoch einen unter SR 220 klassierten Erlass — Widerspruch in der Fedlex-Notation, massgeblich bleibt die amtliche Sammlung (§7/§8).",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2023/739/de",
-      "sha": "c343760137ec24a80203bb0bd152e8c7f5a6496fcf55e5e09cbaaae315b2234c"
+      "sha": "e466b0c832d4185e1ecf3be45130535b284fee4f3097bb9c9796d52de3e5d840"
     },
     {
       "art": "sammelerlass-marker",
@@ -961,5 +963,5 @@
       "sha": "a53236e340018d6df287f16d29aee7a1817a1219d43dd8da643d898de1b9e5d2"
     }
   ],
-  "sha": "7feaf597db7a4cb5a95f6a6ec13220341ed3bc8af8a6200f21353f9c3df215cf"
+  "sha": "865398b190af19db4d9e3d23d23e8a81c5ae0fce568cd4bcdc811971fd941b59"
 }

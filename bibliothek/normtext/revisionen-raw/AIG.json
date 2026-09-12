@@ -4876,6 +4876,10 @@
       "titleIt": {
         "type": "literal",
         "value": "Legge sull’asilo (LAsi). Correzione (concerne solo il testo tedesco)"
+      },
+      "rectifies": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2018/438"
       }
     },
     {
@@ -5525,5 +5529,9 @@
     "2026-02-01",
     "2026-06-12",
     "2027-01-01"
-  ]
+  ],
+  "belegteOcs": [],
+  "rectifiesSrProOc": {
+    "https://fedlex.data.admin.ch/eli/oc/2025/342": "142.31"
+  }
 }

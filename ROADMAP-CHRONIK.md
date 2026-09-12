@@ -3967,3 +3967,94 @@ verbliebene Rest-Stub darum jetzt vollständig geschlossen.*
     `lint` grün (0 Fehler); `npx vitest run src/tests/*materialien*
     src/tests/db-vollstaendigkeit.test.ts` 17 Dateien/290 Tests grün.
     `git merge origin/main` sauber. `git status` nur Code/Test/Doku.
+
+## Revisionen: Plausibilitäts-Marker `rectifies`-Notation ≠ eigene (Gegenprüfung #703) — GELÖST 12.9.2026
+
+- [x] **Nullprobe (live, Skill `scraping-swiss-official-sources`, SPARQL):**
+  gegen `https://fedlex.data.admin.ch/sparqlendpoint`, abgerufen 12.9.2026 —
+  `<eli/oc/2026/448> jolux:classifiedByTaxonomyEntry` → Taxonomie-Notation
+  `642.11` (DBG); dieselbe Ressource trägt `jolux:rectifies` →
+  `<eli/oc/1996/1445_1445_1445>`, dessen eigene
+  `jolux:classifiedByTaxonomyEntry` → `824.0` (ZDG, nicht im Korpus) liefert.
+  Der Titel des AS-2026-448-Eintrags nennt explizit «Zivildienstgesetz,
+  ZDG). Berichtigung» — der Widerspruch ist damit auf Fedlex-Seite, nicht im
+  Generator. Vor der Änderung stand der Eintrag in
+  `public/normtext/revisionen/DBG.json` ohne jede Kennzeichnung; es existiert
+  kein `ZDG.json` (ZDG ist kein Bund-Volltext-Erlass in `register.ts`), der
+  Widerspruch war also nur am Titeltext zu erahnen.
+- [x] **Marker (additiv, §6.7):** `baueQueryB` (`scripts/normtext/
+  revisionen-generieren.ts`) fragt neu `OPTIONAL { ?oc jolux:rectifies
+  ?rectifies }` mit ab. Neue reine Funktion `baueOcZuRectifiesSr(bBindings,
+  zielSrProOc)` bildet oc → SR-Notation des berichtigten Erlasses; neue
+  Netzfunktion `holeRectifiesSr(ocUris)` löst diese SR-Notationen in einer
+  globalen VALUES-Batch auf (Muster wie `holeStaendeA`/`holeBindingsB`).
+  `baueRevisionen` erhält den zusätzlichen Parameter `rectifiesSrProOc`
+  (Default leere Map, rückwärtskompatibel zu allen Bestandsaufrufen/-Tests)
+  und setzt `plausibilitaet: 'widerspruch-fedlex-notation'` +
+  `plausibilitaetsGrund` NUR, wenn die aufgelöste rectifies-SR von der SR
+  DIESES Erlasses abweicht — Fedlex bleibt Quelle (§7), der Eintrag wird nie
+  umgehängt. `shaEintrag` hängt die neuen Felder NUR bei gesetztem Marker an
+  den Hash-Input an, damit die sha (und damit der byte-Inhalt) jedes
+  unbetroffenen Eintrags unverändert bleibt (§6.7-Auflage, sonst hätte ein
+  bedingungslos angehängtes Feld JEDE sha im Korpus verändert). Store-raw
+  (`bibliothek/normtext/revisionen-raw/<KEY>.json`) trägt neu
+  `rectifiesSrProOc` (Re-Parse ohne Re-Crawl, §11); `check-revisionen.ts`
+  liest sie offline für den Determinismus-Check und löst sie im
+  `--netz`-Pfad zusätzlich frisch auf (§6.7: sonst könnte
+  `holeRectifiesSr`/`baueOcZuRectifiesSr` beliebig kaputtgehen und
+  `check:revisionen-netz` bliebe grün) sowie eine neue Schema-Prüfung (8):
+  `plausibilitaetsGrund` gdw. `plausibilitaet`, kein unbekannter Marker-Wert.
+  Reader (`src/lib/normtext/revisionen.ts`) übernimmt die zwei Felder
+  1:1 in `RevisionBezug`; `KontextPanel.tsx` zeigt bei
+  `art === 'aenderung'` eine warn-Hinweiszeile — Whitelist auf exakt den
+  einen bekannten Wert `'widerspruch-fedlex-notation'`, kein genereller
+  Switch (kein Ausbau ohne neuen Befund).
+- [x] **Unit-Tests (rot vor Grün, §6.7):** `src/tests/
+  normtext-revisionen.test.ts` — 4 neue Fälle für `baueRevisionen`
+  (Marker bei SR-Abweichung inkl. Grund-Text mit beiden SR-Nummern, kein
+  Marker bei SR-Gleichheit, kein Marker ohne rectifies-Signal, sha
+  unbetroffener Einträge byte-identisch mit/ohne leere `rectifiesSrProOc`-
+  Map) + 1 für die neue reine Komposition `baueOcZuRectifiesSr`. Rot-Beweis
+  per `git stash` nur der Implementierungsdateien (Tests blieben): 2/29 rot
+  (`expected undefined to be 'widerspruch-fedlex-notation'`,
+  `baueOcZuRectifiesSr is not a function`) — danach `git stash pop`, 59/59
+  grün (`normtext-revisionen.test.ts` + `verzahnung-artikel-revisionen.test.ts`).
+- [x] **Vollerhebung (korpusweit, live SPARQL):** vollständiger Lauf über
+  alle 227 Bund-Volltext-Erlasse fand `jolux:rectifies` an 71 Änderungs-
+  Erlassen (70 SR aufgelöst) und **18 Widersprüche in 14 Erlassen**: AIG,
+  CHEMRRV, DBG (×3 — AS 2026 448/ZDG-824.0, AS 2024 215/BGS-935.51, AS 2022
+  112/OR-220), ELV, MSTG (×2), MWSTV (×2), RVOV, SKV, SSV, STGB, VIL, VVEA,
+  VVV, ZPO (je 1, ausser vermerkt). Committet wurden **nur diese 14
+  Sidecars** (`--nur=AIG,CHEMRRV,DBG,ELV,MSTG,MWSTV,RVOV,SKV,SSV,STGB,VIL,
+  VVEA,VVV,ZPO`, plus deren `bibliothek/normtext/revisionen-raw/*.json`) —
+  ein erster ungezielter Vollauf hatte zusätzlich 5 unbeteiligte Erlasse
+  (EOV, FAMZV, IVV, VRV, VTS) mit genuinem, aber unverbundenem Fedlex-
+  Tagesdrift verändert (neue Amendments seit dem letzten Korpus-Stand,
+  0 Bezug zu `rectifies`); dieser Lauf wurde verworfen (`git checkout --`)
+  und durch den gezielten `--nur`-Lauf ersetzt, um die Fund-Reparatur nicht
+  mit unrelated Datendrift zu vermengen (§1). `normtext:churn-reset`
+  bestätigte für die 14 Zieldateien 0 reinen Datums-Churn / 14 mit Substanz.
+- [x] **Tore (nackt, alle grün):** `check:revisionen` (227 Sidecars, 5153
+  Einträge, Determinismus+Schema+Cross-Link+DSG-Anker), `check:revisionen
+  -netz` (Stichprobe DSG/MWSTG/OR/DBG/FZA inkl. frischer rectifies-
+  Auflösung — deckt DBG direkt ab), `check:artikel-revisionen` (202
+  Erlasse/12947 Artikel synchron), `check:historie` (209 Shards synchron),
+  `check:datenhaltung` (Manifest deterministisch, 0 Orphans),
+  `check:paritaet` (9194 Dateien byte-gleich aus der DB), `golden:vergleich`
+  (256 Fälle IDENTISCH), `npx vitest run src/tests/*revision*` (59/59),
+  `npm run lint` (0 Fehler, 1 vorbestehende unabhängige Warnung). Kaskade:
+  `check:entstehung` fiel zunächst mit «14 Projektions-Datei(en) decken sich
+  nicht mit der Neuberechnung» (exakt die 14 betroffenen Erlasse) — behoben
+  durch `gen:entstehung-projektion` + `gen:entstehung-deckung`
+  (Deckungs-Sicht unverändert), danach GRÜN; Manifest anschliessend erneut
+  über `datenhaltung:manifest` nachgezogen, `check:datenhaltung`/
+  `check:paritaet`/`golden:vergleich` erneut grün bestätigt.
+- [x] **Fund-Zeile abgehakt:** `fahrplaene/FAHRPLAN-OFFENE-BEFUNDE.md`.
+
+Whitelist: `scripts/normtext/revisionen-generieren.ts`, `scripts/normtext/
+revisionen-generieren-run.ts`, `scripts/normtext/check-revisionen.ts`,
+`public/normtext/revisionen/**` (14 betroffene), `public/materialien/
+entstehung/**` (Kaskade, 14 betroffene), `daten-manifest.json`,
+`src/lib/normtext/revisionen.ts`, `src/components/kontext/KontextPanel.tsx`
+(nur Hinweiszeile), `src/tests/normtext-revisionen.test.ts`,
+`fahrplaene/FAHRPLAN-OFFENE-BEFUNDE.md` (Fund-Zeile), `ROADMAP-CHRONIK.md`.

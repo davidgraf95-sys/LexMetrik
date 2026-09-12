@@ -1,7 +1,7 @@
 {
   "erlassKey": "ELV",
   "sr": "831.301",
-  "abgerufen": "2026-09-05",
+  "abgerufen": "2026-09-12",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -25,8 +25,10 @@
       "titelDe": "Verordnung über die Invalidenversicherung (IVV). Berichtigung (Betrifft nur den italienischen Text)",
       "titelFr": "Règlement sur l’assurance-invalidité (RAI). Erratum (Ne concerne que le texte italien)",
       "titelIt": "Ordinanza sull’assicurazione per l’invalidità (OAI). Correzione",
+      "plausibilitaet": "widerspruch-fedlex-notation",
+      "plausibilitaetsGrund": "Fedlex klassiert diese Änderung unter SR 831.301 (ELV); sie berichtigt (jolux:rectifies) jedoch einen unter SR 831.201 klassierten Erlass — Widerspruch in der Fedlex-Notation, massgeblich bleibt die amtliche Sammlung (§7/§8).",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2024/130/de",
-      "sha": "cd90636123d199e52be2f1e81b07c616fc0f195cf9ed9ecec8fd1755ff27c35e"
+      "sha": "9c7de051abdae8fb2814125bd130dc630447fd8ccf0c768be41e9fac9712ba54"
     },
     {
       "art": "sammelerlass-marker",
@@ -215,5 +217,5 @@
       "sha": "6a716d1738317f93f515385a72862748f6e274ef452f67356c1406ee5f916cd2"
     }
   ],
-  "sha": "fd3e1d8afe160693c4c9ae92aa2c097429657d617c67aacb43ebb3bd94753f00"
+  "sha": "5d78bc29351730d0c8c6ec08b938895550e250c318e28d1e9b7f9e0f2837138a"
 }

@@ -932,6 +932,10 @@
       "titleIt": {
         "type": "literal",
         "value": "Ordinanza relativa alla legge federale sul coordinamento e la semplificazione delle procedure d’approvazione dei piani. Correzione"
+      },
+      "rectifies": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/121"
       }
     },
     {
@@ -964,6 +968,10 @@
       "titleIt": {
         "type": "literal",
         "value": "Ordinanza relativa alla legge federale sul coordinamento e la semplificazione delle procedure d’approvazione dei piani. Correzione"
+      },
+      "rectifies": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/121"
       }
     },
     {
@@ -996,6 +1004,10 @@
       "titleIt": {
         "type": "literal",
         "value": "Ordinanza relativa alla legge federale sul coordinamento e la semplificazione delle procedure d’approvazione dei piani. Correzione"
+      },
+      "rectifies": {
+        "type": "uri",
+        "value": "https://fedlex.data.admin.ch/eli/oc/2000/121"
       }
     },
     {
@@ -1083,5 +1095,9 @@
     "2023-06-01",
     "2024-01-01",
     "2026-07-01"
-  ]
+  ],
+  "belegteOcs": [],
+  "rectifiesSrProOc": {
+    "https://fedlex.data.admin.ch/eli/oc/2021/269": "451.1"
+  }
 }

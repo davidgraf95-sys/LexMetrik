@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import {
   baueRevisionen, roFundstelleAusOc, fundstelle, liveLink, botschaftIndex, serialisiere,
-  belegtImXml, MARKER_CUTOFF, type ErlassMeta,
+  belegtImXml, baueOcZuRectifiesSr, MARKER_CUTOFF, type ErlassMeta,
 } from '../../scripts/normtext/revisionen-generieren';
 import { revisionenFuerNorm, revisionTitel, type RevisionBezug } from '../lib/normtext/revisionen';
 import { istReinerDatumsChurn } from '../../scripts/normtext/churn-reset';
@@ -158,6 +158,69 @@ describe('baueRevisionen — Kern-Logik', () => {
     expect(a).toBe(b); // reihenfolge-unabhängig
     const s = JSON.parse(a) as { revisionen: RevisionBezug[] };
     expect(s.revisionen.map((r) => r.dateEntryInForce)).toEqual(['2023-09-01', '2019-03-01']);
+  });
+});
+
+// §8-Plausibilitätsmarker (Gegenprüfung #703, Nullprobe 12.9.2026 live gegen
+// https://fedlex.data.admin.ch/sparqlendpoint, abgerufen 12.9.2026): AS 2026 448
+// (eli/oc/2026/448) ist per jolux:classifiedByTaxonomyEntry unter SR 642.11 (DBG)
+// klassiert, berichtigt (jolux:rectifies) aber eli/oc/1996/1445_1445_1445, welches unter
+// SR 824.0 (ZDG, nicht im Korpus) klassiert ist — ein Fedlex-interner Widerspruch. Der
+// Generator liest treu (§7: Fedlex bleibt Quelle) und macht den Widerspruch nur sichtbar,
+// hängt den Eintrag NIE stillschweigend zu ZDG um.
+describe('baueRevisionen — §8-Plausibilitätsmarker (rectifies-SR ≠ eigene SR, Gegenprüfung #703)', () => {
+  const DBG: ErlassMeta = { key: 'DBG', sr: '642.11' };
+  const ZIEL_OC = OC('1996/1445_1445_1445');
+  const RECT_OC = OC('2026/448');
+
+  it('markiert eine Änderung als widerspruch-fedlex-notation, wenn ihr rectifies-Ziel unter einer ANDEREN SR klassiert ist', () => {
+    const bindings = [bind({ oc: RECT_OC, dateForce: '2026-09-02', titleDe: 'Berichtigung', rectifies: ZIEL_OC })];
+    const rectifiesSrProOc = new Map([[RECT_OC, '824.0']]);
+    const s = baueRevisionen(DBG, bindings, [], '2026-09-01', new Map(), '2026-09-12', new Set(), rectifiesSrProOc);
+    const e = s.revisionen.find((r) => r.ocUri === RECT_OC);
+    expect(e?.plausibilitaet).toBe('widerspruch-fedlex-notation');
+    expect(e?.plausibilitaetsGrund).toMatch(/642\.11/);
+    expect(e?.plausibilitaetsGrund).toMatch(/824\.0/);
+  });
+
+  it('setzt KEINEN Marker, wenn die rectifies-SR mit der eigenen SR übereinstimmt', () => {
+    const bindings = [bind({ oc: RECT_OC, dateForce: '2026-09-02', titleDe: 'Berichtigung', rectifies: ZIEL_OC })];
+    const rectifiesSrProOc = new Map([[RECT_OC, '642.11']]); // gleiche SR wie DBG
+    const s = baueRevisionen(DBG, bindings, [], '2026-09-01', new Map(), '2026-09-12', new Set(), rectifiesSrProOc);
+    const e = s.revisionen.find((r) => r.ocUri === RECT_OC);
+    expect(e?.plausibilitaet).toBeUndefined();
+    expect(e?.plausibilitaetsGrund).toBeUndefined();
+  });
+
+  it('setzt KEINEN Marker ohne rectifies-Bindung oder ohne aufgelöste Ziel-SR (Standardfall, kein Netz)', () => {
+    const bindings = [bind({ oc: OC('2024/1'), dateForce: '2024-01-01', titleDe: 'Normale Änderung' })];
+    const s = baueRevisionen(DBG, bindings, [], '2023-01-01', new Map(), '2026-09-12');
+    expect(s.revisionen[0].plausibilitaet).toBeUndefined();
+  });
+
+  it('lässt die sha unbetroffener Einträge unverändert (§6.7: additiv, kein globaler Diff)', () => {
+    // Derselbe Eintrag OHNE Ziel-SR-Auflösung (Default-Map) muss byte-identisch bleiben zur
+    // Fassung, die es vor dem Plausibilitätsmarker gab — sonst würde die Vollerhebung ALLE
+    // 226 unbetroffenen Sidecars unnötig anfassen (§703-Auflage).
+    const bindings = [bind({ oc: RECT_OC, dateForce: '2026-09-02', titleDe: 'Berichtigung' })];
+    const ohneMarker = baueRevisionen(DBG, bindings, [], '2026-09-01', new Map(), '2026-09-12');
+    const mitLeererMap = baueRevisionen(DBG, bindings, [], '2026-09-01', new Map(), '2026-09-12', new Set(), new Map());
+    expect(serialisiere(ohneMarker)).toBe(serialisiere(mitLeererMap));
+  });
+});
+
+describe('baueOcZuRectifiesSr — reine Komposition (§703)', () => {
+  it('bildet oc → SR-Notation des rectifies-Ziels, nur wenn beide bekannt sind', () => {
+    const bindings = [
+      bind({ oc: OC('2026/448'), rectifies: OC('1996/1445_1445_1445') }),
+      bind({ oc: OC('2024/1') }), // keine rectifies-Bindung
+      bind({ oc: OC('2024/2'), rectifies: OC('unbekannt/1') }), // Ziel-SR nicht aufgelöst
+    ];
+    const zielSrProOc = new Map([[OC('1996/1445_1445_1445'), '824.0']]);
+    const m = baueOcZuRectifiesSr(bindings, zielSrProOc);
+    expect(m.get(OC('2026/448'))).toBe('824.0');
+    expect(m.has(OC('2024/1'))).toBe(false);
+    expect(m.has(OC('2024/2'))).toBe(false);
   });
 });
 

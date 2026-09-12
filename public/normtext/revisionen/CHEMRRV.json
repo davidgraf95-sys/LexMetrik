@@ -1,7 +1,7 @@
 {
   "erlassKey": "CHEMRRV",
   "sr": "814.81",
-  "abgerufen": "2026-09-05",
+  "abgerufen": "2026-09-12",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -100,8 +100,10 @@
       "titelDe": "Pflanzenschutzmittelverordnung (PSMV). Berichtigung",
       "titelFr": "Ordonnance sur les produits phytosanitaires (OPPh). Erratum",
       "titelIt": "Ordinanza sui prodotti fitosanitari (OPF). Correzione",
+      "plausibilitaet": "widerspruch-fedlex-notation",
+      "plausibilitaetsGrund": "Fedlex klassiert diese Änderung unter SR 814.81 (CHEMRRV); sie berichtigt (jolux:rectifies) jedoch einen unter SR 916.161 klassierten Erlass — Widerspruch in der Fedlex-Notation, massgeblich bleibt die amtliche Sammlung (§7/§8).",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2025/864/de",
-      "sha": "0f83b380c0faff4bd6cd1a9abc79ab8867d8c533d773a8887308515333e5737a"
+      "sha": "f26a20abbe3e231c2bd4744dcad9528256ef4853c0b779576671a470b260e0d6"
     },
     {
       "art": "aenderung",
@@ -782,5 +784,5 @@
       "sha": "a993ac534035835c97b63b3a35ac82d725066f2f88295f4547cfbe3c39e997d5"
     }
   ],
-  "sha": "182e842484b05c80d6a62497c0e34f75d53f8df6094cc15e08d97df485e8f826"
+  "sha": "78bc3ec87a9f030bbc7dc0318da9938005a2340f0800c018eced6dd6f4d4b40b"
 }

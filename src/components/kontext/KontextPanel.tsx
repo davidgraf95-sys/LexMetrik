@@ -482,6 +482,14 @@ export function KontextPanel({ typ, normKeys, zusatzGruppen, ohneNormen = false,
                               In Kraft, aber noch nicht in den geltenden Text konsolidiert.
                             </span>
                           )}
+                          {/* §8-Plausibilitätsmarker (Gegenprüfung #703): Whitelist auf den
+                              einen bekannten Zustand, kein genereller Switch (kein Ausbau ohne
+                              neuen Befund). Fedlex bleibt Quelle — der Hinweis deckt nur auf. */}
+                          {r.plausibilitaet === 'widerspruch-fedlex-notation' && (
+                            <span className="block text-micro text-warn-700">
+                              Fedlex ordnet diese Änderung widersprüchlich ein (Berichtigungs-Notation) — {r.plausibilitaetsGrund ?? 'Details bei Fedlex.'}
+                            </span>
+                          )}
                         </li>
                       );
                     })}

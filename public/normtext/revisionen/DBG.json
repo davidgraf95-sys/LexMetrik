@@ -1,7 +1,7 @@
 {
   "erlassKey": "DBG",
   "sr": "642.11",
-  "abgerufen": "2026-09-05",
+  "abgerufen": "2026-09-12",
   "reichweite": "Maschinell aus dem amtlichen Fedlex-Graphen (SR-Taxonomie) zusammengestellt; massgeblich bleibt die amtliche Sammlung (AS/RO). Verlässlich ab ~2000; Änderungen über Sammelerlasse anderer SR sind als Marker gekennzeichnet.",
   "revisionen": [
     {
@@ -33,8 +33,10 @@
       "titelDe": "Bundesgesetz über den zivilen Ersatzdienst (Zivildienstgesetz, ZDG). Berichtigung (Betrifft nur den italienischen Text)",
       "titelFr": "Loi fédérale sur le service civil (LSC). Erratum (Ne concerne que le texte italien)",
       "titelIt": "Legge federale sul servizio civile sostitutivo (Legge sul servizio civile, LSC). Correzione",
+      "plausibilitaet": "widerspruch-fedlex-notation",
+      "plausibilitaetsGrund": "Fedlex klassiert diese Änderung unter SR 642.11 (DBG); sie berichtigt (jolux:rectifies) jedoch einen unter SR 824.0 klassierten Erlass — Widerspruch in der Fedlex-Notation, massgeblich bleibt die amtliche Sammlung (§7/§8).",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2026/448/de",
-      "sha": "43d7d32aab4eac9e8dcc4e2f19d6a8396a74a24303f23d6fff62d625a1eaa527"
+      "sha": "e1ab4090d56d758c897c0821330abb3a4ad37c543b301e45c0c108246a8aab6b"
     },
     {
       "art": "sammelerlass-marker",
@@ -77,8 +79,10 @@
       "titelDe": "Bundesgesetz über Geldspiele (Geldspielgesetz, BGS). Berichtigung (Betrifft nur den französischen Text)",
       "titelFr": "Loi fédérale sur les jeux d’argent (LJAr). Erratum",
       "titelIt": "Legge federale sui giochi in denaro (LGD). Correzione (Concerne soltanto il testo francese)",
+      "plausibilitaet": "widerspruch-fedlex-notation",
+      "plausibilitaetsGrund": "Fedlex klassiert diese Änderung unter SR 642.11 (DBG); sie berichtigt (jolux:rectifies) jedoch einen unter SR 935.51 klassierten Erlass — Widerspruch in der Fedlex-Notation, massgeblich bleibt die amtliche Sammlung (§7/§8).",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2024/215/de",
-      "sha": "7e7710f6b7b6bd23015ecf884d5ce17b7b2045f208a5adcae38c65bc3fd40db2"
+      "sha": "9748c91abcf11e5194466874a0d354db94ae2c5fc029e467c8acea91477dd09b"
     },
     {
       "art": "sammelerlass-marker",
@@ -101,8 +105,10 @@
       "titelDe": "Obligationenrecht (Aktienrecht). Berichtigung",
       "titelFr": "Code des obligations (Droit de la société anonyme). Erratum",
       "titelIt": "Codice delle obbligazioni (Diritto della società anonima). Correzione",
+      "plausibilitaet": "widerspruch-fedlex-notation",
+      "plausibilitaetsGrund": "Fedlex klassiert diese Änderung unter SR 642.11 (DBG); sie berichtigt (jolux:rectifies) jedoch einen unter SR 220 klassierten Erlass — Widerspruch in der Fedlex-Notation, massgeblich bleibt die amtliche Sammlung (§7/§8).",
       "quelleUrl": "https://www.fedlex.admin.ch/eli/oc/2022/112/de",
-      "sha": "8e4946ffb2ae3b5b980948dd53f66569726579c8122f502d64bebe4b6fed16ac"
+      "sha": "452181667f1d6dc1b6067f34d18f45eab8f3efc203c0ab96352dbec7bab11e41"
     },
     {
       "art": "aenderung",
@@ -580,5 +586,5 @@
       "sha": "74a5495e38eb632fb30ba6da63289274d420124c5da6b68290cb16603989a9db"
     }
   ],
-  "sha": "65d434124016279f26243139d0ab733e4f227363d0be5bb1e49edee180420258"
+  "sha": "3cf9bbf1a53aa01936dbfc243fa01014a2784ddd2a59b2a2379180b020ad6020"
 }
