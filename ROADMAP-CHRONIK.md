@@ -1,5 +1,71 @@
 # ROADMAP — Erledigt-Chronik (Detail-Archiv erledigter Schritte)
 
+## Geltende BMV (SR 412.103.1) im Korpus — Wortlaut vor der Lösung + Lösung 12.9.2026 (W2·18-FEHLERBUCH)
+
+**Ursprünglicher Befund (Wortlaut, bis 12.9.2026 offen, ROADMAP.md `QS-KORPUS`-Umfeld):**
+«**Geltende BMV in den Korpus aufnehmen** — Totalrevision `cc/2025/408` (gleiche SR 412.103.1)
+fehlt; Nutzer finden nur den historischen Text.» Ausführlicher in
+`fahrplaene/FAHRPLAN-OFFENE-BEFUNDE.md`: «… die seit 1.3.2026 geltende Nachfolge-Verordnung
+(Totalrevision `cc/2025/408`, gleiche SR 412.103.1) fehlt; Nutzer finden nur den historischen
+Text. **Risikopfad** ⇒ Gegenprüfung.» Bau-Spec: `FAHRPLAN-FEDLEX-PORTFOLIO.md` §20.4
+(«regulärer Bundeserlass-Ingest …, neuer Register-Key neben dem historischen `bmv`»).
+
+- [x] **Gelöst 12.9.2026.** **Nullprobe:** Register/Snapshot führten SR 412.103.1 einzig als
+  `BMV` (ELI `cc/2009/423`, Stand 2016-08-23, 37 Artikel) mit korrektem Aufhebungs-Vermerk
+  (`aufgehoben.seit 2026-03-01`, Nachfolger `cc/2025/408`); der Leser zeigte Banner
+  «Aufgehoben per …» plus einen **externen** Fedlex-Link auf die Nachfolgerin — der geltende
+  Text selbst lag nirgends im Korpus. **Amtlich erhoben** (Fedlex-SPARQL, Abruf 12.9.2026):
+  `cc/2025/408` hat genau eine Konsolidierung 2026-03-01, kein `dateNoLongerInForce`,
+  `dateDocument` 2025-06-13; Taxonomie `legal-taxonomy/6599` trägt `skos:notation` **412.103.1**
+  (Status CURRENT) und als `prefLabel` «Verordnung vom 13. Juni 2025 über die eidgenössische
+  Berufsmaturität (Berufsmaturitätsverordnung, BMV)»; kanonische html-Manifestation über
+  `isExemplifiedBy` = **html-N 0** (echt suffixlos, keine Alias-Konstruktion). Der Erlass belegt
+  die Ablösung selbst: Art. 34 hebt die Verordnung vom 24. Juni 2009 auf, Art. 36 setzt den
+  1. März 2026 als Inkrafttreten.
+  **Schlüssel-Entscheid: neuer Key `BMV_2025` neben dem historischen `BMV`** (kein Re-Pin).
+  Ein Re-Pin hätte den historischen Text ersatzlos entfernt, und die Aufhebungs-Deklaration
+  (`ANERKANNTE_AUFHEBUNGEN`), der Nachfolge-Vermerk und die Wiedervorlage-Mechanik hängen an
+  der ELI `cc/2009/423`. Der Key trägt das **Erlassdatum** (2025 = ELI-Jahr), nicht das
+  Inkrafttretens-Jahr: er bezeichnet den Erlass, nicht seine Fassung, und bleibt über künftige
+  Konsolidierungen stabil (der Fund-Text nannte `BMV_2026` als Beispiel — abweichend umgesetzt
+  und offengelegt, §7). §8 in der Oberfläche: geltende Fassung auf Rang 102 neben der BBV,
+  aufgehobene Fassung auf Rang 126 ans Ende der Rubrik, dort mit rotem «aufgehoben»-Marker und
+  Aufhebungs-Banner.
+  **Pflegeweg** (Skill `korpus-werkstatt`): Pin in `scripts/fedlex-cache.sh`
+  (`bmv_2025|cc/2025/408|20260301|0|art_1,art_34,art_36|412.103.1`, Cache-Lauf «3/36 Anker +
+  SR 412.103.1 geprüft») · `ERLASS_MAP` · `FEDLEX`-Schlüssel `BMV-2025` · Register-Eintrag ·
+  Systematik-Gruppe «Arbeit, Bildung & Anwaltsrecht» · Audit-Klassifikation + `GRUNDART_SEED`
+  (`FLACHER_KURZERLASS`, Signale generator-gemessen) · Snapshot (`--nur=bund --erlass=bmv_2025`,
+  36 Artikel) · Struktur-Sidecar · PDF-Quelle · Ur-Inkrafttreten · Revisions-Sidecar ·
+  Bezüge-Zähler · Historie · Suchindex · Manifest · Startseiten-Zähler. Der reine
+  Datums-Churn der 227 fremden Struktur-Sidecars wurde nach der Regeln-Logik von
+  `scripts/normtext/churn-reset.ts` gegen `origin/main` zurückgesetzt — der Diff trägt nur
+  Substanz.
+  **Verifikation:** deterministischer Volltext-Diff Snapshot ↔ amtliche Manifestation über
+  **alle 36 Artikel: null Abweichung** (`scripts/analyse/gemini-diskrepanz.ts --nur-diff`);
+  zusätzlich Stichprobe n=10 (Art. 1/3/5/9/14/20/27/30/34/36) mit wörtlicher
+  Identitätsprüfung jedes Blocks und Aufzählungspunkts gegen die amtliche HTML-Fassung:
+  **10/10**. Golden: 36 neue `bund/BMV_2025/*`-Knoten, kein fremder Knoten bewegt;
+  `golden:vergleich` IDENTISCH (256 Fälle).
+  **§17-Wurzelfix aus dem Bau:** die SR-Nummer ist seit dieser Totalrevision **kein eindeutiger
+  Schlüssel** mehr. `lesePinsMitSr()` in `scripts/normtext/revisionen-generieren-run.ts` baute
+  eine reine SR-Map — **Rot-Beweis 12.9.2026:** `SR 412.103.1 → cc/2025/408 / 2026-03-01` statt
+  `cc/2009/423 / 2016-08-23`; die nächste Vollregeneration hätte dem historischen Erlass still
+  ELI und Korpus-Stand seiner Nachfolgerin untergeschoben (Pfad-(a)-Stände 6 → 1,
+  Sammelerlass-Marker 2013-01-01 weg, `nichtKonsolidiert` durchweg falsch). Fix: Lookup nach
+  Register-key (== Pin-Name in Grossbuchstaben, Invariante des Snapshot-Generators) mit SR als
+  Rückfall, plus SR-Dedupe vor der SPARQL-Abfrage (ohne sie stand die SR doppelt im
+  VALUES-Block und `store-raw` wuchs von 31 auf 62 Bindings). Gegenprobe: `revisionen-raw/BMV.json`
+  nach dem Fix byte-identisch zum Bestand.
+  **Offener Restpunkt (gemessen, nicht geraten):** ein blosses Zitat «Art. 5 BMV» im Fliesstext
+  löst über die FEDLEX-Token-Erkennung weiterhin auf den Schlüssel `BMV` = aufgehobene Fassung.
+  Korpusweite Messung 12.9.2026: **null** echte Zitate der Berufsmaturitätsverordnung, also
+  heute wirkungslos. Einziger «BMV»-Treffer ist `kanton/SG-3849`, wo «BMV» die *Eidgenössische
+  Schutzbautenverordnung vom 27.11.1978* meint — ein falscher Freund, der schon vorher falsch
+  verlinkte (eigener Befund).
+  Beleg §11: `bibliothek/register/bmv-totalrevision-2026-09-12.md`.
+  **Gegenprüfung ausstehend, noch nicht gemergt.**
+
 ## `normtext:struktur`-Erlassfilter + Pin-Sonde auf drei Konsumenten ausgeweitet — gelöst 12.9.2026 (W2·18-FEHLERBUCH)
 
 **Ursprünglicher Befund (Wortlaut, bis 12.9.2026 offen, `fahrplaene/FAHRPLAN-OFFENE-BEFUNDE.md` §4,

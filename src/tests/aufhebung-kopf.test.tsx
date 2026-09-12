@@ -15,6 +15,7 @@
  */
 import { describe, it, expect } from 'vitest';
 import { renderToString } from 'react-dom/server';
+import { MemoryRouter } from 'react-router-dom';
 import { ErlassLeserKopf } from '../pages/gesetz-leser/parts/ErlassLeserKopf';
 import type { BrowseErlass } from '../lib/normtext/browse-typen';
 import type { CurrencyEintrag } from '../lib/normtext/browse';
@@ -42,9 +43,16 @@ const aufgehoben: BrowseErlass = {
 
 const currency: CurrencyEintrag = { geprueftAm: '2026-07-10' };
 
+// HARNESS-NACHZUG (12.9.2026, Gegenprüfungs-Auflage PR #823): das Banner kann
+// den Nachfolge-Erlass jetzt INTERN verlinken (react-router `Link`), sobald er
+// im Korpus liegt — dafür braucht der Server-Render einen Router-Kontext. Das
+// ist eine reine UMGEBUNGS-Änderung: KEINE Erwartung dieser Datei wurde
+// angefasst (§6.3). Die neue Regel selbst prüft `leser-kopf-nachfolger.test.tsx`.
 const html = (e: BrowseErlass, c?: CurrencyEintrag) =>
   renderToString(
-    <ErlassLeserKopf erlass={e} overline="Bund" artikelAnzahl={e.artikelAnzahl} hinweis="H" currency={c} />,
+    <MemoryRouter>
+      <ErlassLeserKopf erlass={e} overline="Bund" artikelAnzahl={e.artikelAnzahl} hinweis="H" currency={c} />
+    </MemoryRouter>,
   );
 
 describe('ErlassLeserKopf — Aufhebungs-Banner', () => {

@@ -23,17 +23,40 @@ const nur = nurArg ? new Set(nurArg.slice('--nur='.length).split(',').map((s) =>
 const SIDECAR_DIR = 'public/normtext/revisionen';
 const RAW_DIR = 'bibliothek/normtext/revisionen-raw';
 
-// ── cache.sh-Pins: SR → { abstractEli (cc/…), kons (Korpus-Stand ISO) } ─────────
+// ── cache.sh-Pins: Register-key UND SR → { abstractEli (cc/…), kons (Korpus-Stand ISO) } ──
 // SSoT §5: die Pins leben EINMAL in scripts/fedlex-cache.sh (name|eli|YYYYMMDD|N|anker|sr).
-function lesePinsMitSr(): Map<string, { abstractEli: string; kons: string; konsKompakt: string }> {
+//
+// WARUM ZWEI SCHLÜSSEL (W2·18-FEHLERBUCH, 12.9.2026). Die SR-Nummer ist KEIN
+// eindeutiger Pin-Schlüssel: eine Totalrevision behält den SR-Slot und bekommt
+// eine neue ELI — SR 412.103.1 trägt seit 1.3.2026 zwei Pins (`bmv` =
+// cc/2009/423, aufgehoben; `bmv_2025` = cc/2025/408, geltend). Eine reine
+// SR-Map behält den ZULETZT gelesenen Pin und hätte dem historischen Erlass
+// still die ELI und den Korpus-Stand seiner Nachfolgerin untergeschoben
+// (gemessener Rot-Beweis 12.9.2026: SR 412.103.1 → cc/2025/408 / 2026-03-01
+// statt cc/2009/423 / 2016-08-23 — die Pfad-(a)-Stände wären von 6 auf 1
+// gefallen, der Sammelerlass-Marker 2013-01-01 verschwunden und jedes
+// `nichtKonsolidiert` falsch berechnet worden).
+//
+// Der eindeutige Schlüssel ist der PIN-NAME: der Snapshot-Generator leitet den
+// Register-key als `name.toUpperCase()` ab (`gesetzKey` in
+// scripts/normtext-snapshot.ts), also gilt für jeden Bund-Volltext-Erlass
+// `pinName === key.toLowerCase()`. Die SR-Map bleibt als Rückfall bestehen
+// (Altbestand/Sonderfälle), wird aber nur noch befragt, wenn der key-Treffer
+// fehlt — und sie trägt bei Mehrdeutigkeit bewusst den ERSTEN Pin, statt den
+// letzten gewinnen zu lassen.
+interface PinBefund { abstractEli: string; kons: string; konsKompakt: string }
+function lesePinsMitSr(): { nachKey: Map<string, PinBefund>; nachSr: Map<string, PinBefund> } {
   const CACHE_SH = resolve(dirname(fileURLToPath(import.meta.url)), '../fedlex-cache.sh');
   const sh = readFileSync(CACHE_SH, 'utf8');
-  const map = new Map<string, { abstractEli: string; kons: string; konsKompakt: string }>();
+  const nachKey = new Map<string, PinBefund>();
+  const nachSr = new Map<string, PinBefund>();
   for (const m of sh.matchAll(/^\s*"([a-z0-9_]+)\|([a-z0-9/_]+)\|(\d{8})\|[^|]*\|[^|]*\|([0-9.]+)"/gm)) {
     const kons = `${m[3].slice(0, 4)}-${m[3].slice(4, 6)}-${m[3].slice(6, 8)}`;
-    map.set(m[4], { abstractEli: m[2], kons, konsKompakt: m[3] });
+    const befund: PinBefund = { abstractEli: m[2], kons, konsKompakt: m[3] };
+    nachKey.set(m[1].toUpperCase(), befund);
+    if (!nachSr.has(m[4])) nachSr.set(m[4], befund);
   }
-  return map;
+  return { nachKey, nachSr };
 }
 
 let meta = grundmenge();
@@ -41,10 +64,21 @@ if (nur) meta = meta.filter((m) => nur.has(m.key));
 if (!meta.length) { console.error('normtext:revisionen: leere Grundmenge (--nur ohne Treffer?)'); process.exit(1); }
 
 const pins = lesePinsMitSr();
+/** Pin eines Erlasses: eindeutig über den Register-key, Rückfall SR (s. lesePinsMitSr). */
+const pinFuer = (key: string, sr: string): PinBefund | undefined => pins.nachKey.get(key) ?? pins.nachSr.get(sr);
 const ocZuBotschaft = botschaftIndex();
 console.log(`revisionen: Grundmenge ${meta.length} Erlasse · Botschafts-oc-Index ${ocZuBotschaft.size} · SPARQL Pfad (b) …`);
 
-const bindings = await holeBindingsB(meta, fetch);
+// SR-Dedupe vor der Abfrage (W2·18-FEHLERBUCH, 12.9.2026): seit der BMV-
+// Totalrevision tragen ZWEI Register-Erlasse dieselbe SR (412.103.1). Ohne
+// Dedupe steht die SR zweimal im VALUES-Block, der Endpunkt liefert jede Zeile
+// doppelt, und `bNachSr` legt 62 statt 31 Bindings in BEIDE store-raw-Dateien —
+// ein aufgeblähtes, nicht mehr reproduzierbares Roh-Artefakt (gemessen: raw
+// BMV.json 31 → 62 Bindings, Sidecar-Inhalt unverändert, weil baueRevisionen
+// über die oc-URI dedupliziert). Die Timeline selbst ist bewusst SR-weit —
+// beide Erlasse teilen sie sich, jeder mit seinem eigenen Korpus-Stand.
+const metaAbfrage = meta.filter((m, i, a) => a.findIndex((x) => x.sr === m.sr) === i);
+const bindings = await holeBindingsB(metaAbfrage, fetch);
 
 // store-raw (§11): je Erlass { sr, bBindings, aStaende } → Re-Parse ohne Re-Crawl.
 mkdirSync(RAW_DIR, { recursive: true });
@@ -73,7 +107,7 @@ let belegtTrotzDatum = 0;
 const datumsfehler: string[] = [];
 
 for (const m of meta as ErlassMeta[]) {
-  const pin = pins.get(m.sr);
+  const pin = pinFuer(m.key, m.sr);
   if (!pin) { ohnePin++; console.warn(`  ⚠ kein cache.sh-Pin für SR ${m.sr} (${m.key}) — Pfad-(a)-Cross-Check entfällt.`); }
   const bBindings = bNachSr.get(m.sr) ?? [];
   const aStaende = pin ? await holeStaendeA(pin.abstractEli, fetch) : [];

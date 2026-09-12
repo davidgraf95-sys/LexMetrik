@@ -286,6 +286,12 @@ export const FEDLEX = {
   VFV: 'https://www.fedlex.admin.ch/eli/cc/1961/419_429_439/de', // SR 831.111, Kons. 20250101
   BBV: 'https://www.fedlex.admin.ch/eli/cc/2003/748/de', // SR 412.101, Kons. 20250301
   BMV: 'https://www.fedlex.admin.ch/eli/cc/2009/423/de', // SR 412.103.1, Kons. 20160823
+  // Totalrevision derselben SR 412.103.1: `BMV` = die 2009er Fassung, seit
+  // 1.3.2026 aufgehoben (historisch, src/lib/normtext/aufhebungen.ts);
+  // `BMV-2025` = die geltende Verordnung vom 13. Juni 2025 (ELI cc/2025/408,
+  // in Kraft seit 1.3.2026). Zwei Schlüssel, weil BEIDE Texte im Korpus liegen
+  // und das Register beide führt (Tor 3 verlangt FEDLEX-Schlüssel ≡ Register).
+  'BMV-2025': 'https://www.fedlex.admin.ch/eli/cc/2025/408/de', // SR 412.103.1, Kons. 20260301
   'ZEMIS-V': 'https://www.fedlex.admin.ch/eli/cc/2006/303/de', // SR 142.513, Kons. 20260612
   AdoV: 'https://www.fedlex.admin.ch/eli/cc/2011/505/de', // SR 211.221.36, Kons. 20230123
   RDV: 'https://www.fedlex.admin.ch/eli/cc/2012/713/de', // SR 143.5, Kons. 20251101

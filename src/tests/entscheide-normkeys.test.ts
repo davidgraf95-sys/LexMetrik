@@ -6,6 +6,7 @@ import {
   remapNormKeys, undeklarierteAltKeys,
   ABK_KOLLISIONEN, ABK_AUSSCHLUSS, AUSGESCHLOSSENE_KEYS,
   ABK_ALIAS_NOTIZEN, ABK_ALIAS_AUSGESCHLOSSEN,
+  ERLASS_FASSUNGS_REIHEN, fassungsReihen, fassungsDatumVon,
 } from '../../scripts/normtext/entscheide-mapping';
 import { extrahiereStatutRefs } from '../lib/rechtsprechung/zitat-extraktion';
 import { ABK_ALIASE } from '../lib/normtext/abk-aliase.generated';
@@ -551,5 +552,86 @@ describe('Literatur-Kontext-Regel — Wirkung auf beiden Ebenen (R3)', () => {
     const s = snap({ abschnitte: ERW(IPRG_TEXT) });
     expect(normKeysVonSnapshot(s)).toEqual(['IPRG']);
     expect([...artikelSchluesselVonSnapshot(s)]).toEqual(['IPRG/126']);
+  });
+});
+
+// ─── FASSUNGS-REIHEN: ein SR-Slot, zwei Fassungen (Totalrevision) ────────────
+//
+// FACHLICHE ÄNDERUNG, deklariert (§6.3 — neue Fälle, keine gelockerte
+// Erwartung): SR 412.103.1 trägt seit dem 1.3.2026 zwei Register-Einträge mit
+// demselben amtlichen Kürzel «BMV» — die geltende Verordnung vom 13.6.2025
+// (`BMV_2025`) und ihre aufgehobene Vorgängerin von 2009 (`BMV`). Die
+// Kollisionsregel hätte das Kürzel beidseitig verworfen und mit ihm die
+// fremdsprachigen Aliase «OMPr» (fr/it); ein Entscheid zur Berufsmaturität
+// hätte GAR KEINEN Norm-Key mehr bekommen. Statt zu verwerfen wird am
+// deklarierten Aufhebungsdatum entschieden. Die beiden Tore oben
+// (`ABK_KOLLISIONEN` exakt leer, `ABK_ALIAS_NOTIZEN` exakt leer) bleiben
+// deshalb unverändert grün — sie sind der Beweis, dass hier keine Ausnahme
+// eingetragen, sondern die Zuordnung fachlich richtig gestellt wurde.
+describe('Fassungs-Reihen — zeitliche Geltung statt Kollision (§1)', () => {
+  it('erkennt genau die deklarierte Abfolge, mit Nachfolger und Datum', () => {
+    // EXAKTE Liste: eine Reihe entschärft die Kollisionsregel für ein Kürzel.
+    // Wächst sie unbemerkt, wächst unbemerkt die Menge der Kürzel, die nicht
+    // mehr beidseitig verworfen werden (§6.7).
+    expect([...ERLASS_FASSUNGS_REIHEN]).toEqual([
+      'SR 412.103.1: BMV_2025 (geltend) ← BMV bis 2026-03-01',
+    ]);
+  });
+  it('löst «BMV» am ENTSCHEIDDATUM auf — alt vor, neu ab dem 1.3.2026', () => {
+    expect(normKeyFuerAbk('BMV', '2020-05-04')).toBe('BMV');
+    expect(normKeyFuerAbk('BMV', '2026-02-28')).toBe('BMV');
+    expect(normKeyFuerAbk('BMV', '2026-03-01')).toBe('BMV_2025');  // Inkrafttreten
+    expect(normKeyFuerAbk('BMV', '2026-07-01')).toBe('BMV_2025');
+  });
+  it('ohne Datum: die heute geltende Fassung (Existenz-Fragen der Tore)', () => {
+    expect(normKeyFuerAbk('BMV')).toBe('BMV_2025');
+    expect(normKeyFuerAbk('BMV_2025')).toBe('BMV_2025');
+  });
+  it('die fremdsprachigen Aliase «OMPr» erben dieselbe Abfolge', () => {
+    // Ohne die Reihe war die SR-Nummer mehrdeutig und BEIDE Aliase verworfen —
+    // ein französischsprachiger Berufsmaturitäts-Entscheid verlor seinen Key.
+    expect(normKeyFuerAbk('OMPr')).toBe('BMV_2025');
+    expect(normKeyFuerAbk('OMPr', '2019-01-01')).toBe('BMV');
+    expect(normKeyFuerAbk('OMPr', '2026-03-01')).toBe('BMV_2025');
+  });
+  it('greift End-to-End über Fliesstext UND Roh-statutes (beide Ebenen)', () => {
+    const alt = snap({
+      datum: '2020-05-04',
+      zitierteNormen: ['Art. 20 BMV'],
+      abschnitte: [{ typ: 'erwaegung', bloecke: [{ marke: '2', text: 'Nach Art. 20 BMV gilt …' }] }],
+    });
+    expect(normKeysVonSnapshot(alt)).toEqual(['BMV']);
+    expect([...artikelSchluesselVonSnapshot(alt)]).toEqual(['BMV/20']);
+
+    const neu = snap({ ...alt, datum: '2026-06-30' });
+    expect(normKeysVonSnapshot(neu)).toEqual(['BMV_2025']);
+    expect([...artikelSchluesselVonSnapshot(neu)]).toEqual(['BMV_2025/20']);
+  });
+  it('das Fassungs-Datum ist das Entscheiddatum, nie «heute» (§2)', () => {
+    expect(fassungsDatumVon(snap({ datum: '2020-05-04' }))).toBe('2020-05-04');
+  });
+  it('SABOTAGE: doppelte SR OHNE deklarierte Aufhebung bleibt Kollision (§6.7)', () => {
+    // Der Riegel muss scheitern KÖNNEN. Zwei Einträge auf derselben SR-Nummer,
+    // beide geltend → keine Reihe → die strenge Kollisionsregel bleibt.
+    const ohneAufhebung = [
+      { key: 'A_ALT', kuerzel: 'A', titel: 'a', sr: '999.9', ebene: 'bund' },
+      { key: 'A_NEU', kuerzel: 'A', titel: 'b', sr: '999.9', ebene: 'bund' },
+    ] as never;
+    expect([...fassungsReihen(ohneAufhebung, () => null).keys()]).toEqual([]);
+
+    // Und: eine Aufhebung OHNE auflösbaren Nachfolger reicht auch nicht — die
+    // Abfolge muss beidseitig belegt sein, nicht aus der SR-Nummer erschlossen.
+    const ohneNachfolger = [
+      { key: 'B_ALT', kuerzel: 'B', titel: 'a', sr: '999.8', ebene: 'bund', aufgehoben: { seit: '2026-03-01' } },
+      { key: 'B_NEU', kuerzel: 'B', titel: 'b', sr: '999.8', ebene: 'bund' },
+    ] as never;
+    expect([...fassungsReihen(ohneNachfolger, () => null).keys()]).toEqual([]);
+
+    // Mit Nachfolger-ELI, die in dieselbe Gruppe auflöst, entsteht sie dagegen.
+    const vollstaendig = [
+      { key: 'C_ALT', kuerzel: 'C', titel: 'a', sr: '999.7', ebene: 'bund', aufgehoben: { seit: '2026-03-01', nachfolger: { sr: '999.7', titel: 'b', eli: 'cc/2025/1' } } },
+      { key: 'C_NEU', kuerzel: 'C', titel: 'b', sr: '999.7', ebene: 'bund' },
+    ] as never;
+    expect([...fassungsReihen(vollstaendig, () => 'C_NEU').keys()]).toEqual(['999.7']);
   });
 });

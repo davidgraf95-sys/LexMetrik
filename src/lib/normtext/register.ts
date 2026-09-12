@@ -321,7 +321,18 @@ export const ERLASS_REGISTER: ReadonlyArray<ErlassRegistereintrag> = ([
   bund('VKL', 'VKL', 'Verordnung über die Kostenermittlung und die Leistungserfassung durch Spitäler, Geburtshäuser und Pflegeheime in der Krankenversicherung (VKL)', '832.104', 'sozialversicherung', 75, 'VKL'),
   bund('ARGV5', 'ArGV 5', 'Verordnung 5 zum Arbeitsgesetz (Jugendarbeitsschutzverordnung, ArGV 5)', '822.115', 'oeffentlich', 124, 'ArGV 5'),
   bund('BBV', 'BBV', 'Verordnung über die Berufsbildung (Berufsbildungsverordnung, BBV)', '412.101', 'oeffentlich', 101, 'BBV'),
-  bund('BMV', 'BMV', 'Verordnung über die Berufsmaturität (Berufsmaturitätsverordnung)', '412.103.1', 'oeffentlich', 102, 'BMV'),
+  // ── SR 412.103.1 · Totalrevision (12.9.2026) ───────────────────────────────
+  // Der SR-Slot trägt ZWEI Erlasse: die geltende Verordnung vom 13. Juni 2025
+  // (ELI cc/2025/408, in Kraft seit 1.3.2026) und ihre in Art. 34 ausdrücklich
+  // aufgehobene Vorgängerin von 2009 (ELI cc/2009/423). Beide bleiben im
+  // Korpus — die geltende, damit der Nutzer sie überhaupt findet (§8), die
+  // historische, weil altes Recht auf den Sachverhalt seiner Zeit anwendbar
+  // bleibt und die Aufhebungs-Deklaration an ihrem key hängt. Der Rang der
+  // aufgehobenen Fassung wandert ans Ende der Rubrik (die geltende steht
+  // neben der BBV, wo man sie sucht); die Liste markiert sie zusätzlich rot
+  // mit «aufgehoben» (ErlassKarte).
+  bund('BMV_2025', 'BMV', 'Verordnung vom 13. Juni 2025 über die eidgenössische Berufsmaturität (Berufsmaturitätsverordnung, BMV)', '412.103.1', 'oeffentlich', 102, 'BMV-2025'),
+  bund('BMV', 'BMV', 'Verordnung über die Berufsmaturität (Berufsmaturitätsverordnung)', '412.103.1', 'oeffentlich', 126, 'BMV'),
   bund('ZEMIS_V', 'ZEMIS-V', 'Verordnung über das Zentrale Migrationsinformationssystem (ZEMIS-Verordnung)', '142.513', 'oeffentlich', 103, 'ZEMIS-V'),
   bund('RDV', 'RDV', 'Verordnung über die Ausstellung von Reisedokumenten für ausländische Personen (RDV)', '143.5', 'oeffentlich', 104, 'RDV'),
   bund('UVPV', 'UVPV', 'Verordnung über die Umweltverträglichkeitsprüfung (UVPV)', '814.011', 'oeffentlich', 105, 'UVPV'),

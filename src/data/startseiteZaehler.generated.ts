@@ -63,9 +63,9 @@ export interface StartseiteZaehler {
 }
 
 export const STARTSEITE_ZAEHLER: StartseiteZaehler = {
-  "gesetzeBundVolltext": 227,
+  "gesetzeBundVolltext": 228,
   "gesetzeKantonVolltext": 1339,
-  "gesetzeVolltext": 1566,
+  "gesetzeVolltext": 1567,
   "kantonErlassZahlen": {
     "AG": 5,
     "AI": 4,
@@ -153,7 +153,7 @@ export const STARTSEITE_ZAEHLER: StartseiteZaehler = {
         "VGKE",
         "VGR"
       ],
-      "anzahl": 139
+      "anzahl": 140
     }
   ],
   "gesetzeInternationalVolltext": 27,

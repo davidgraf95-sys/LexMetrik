@@ -2,7 +2,7 @@
   "erzeugt": "2026-07-03",
   "quelle": "public/normtext/register.json + struktur/** + bund|kanton/**",
   "methode": "Datengetriebene Signal-Extraktion je Erlass, Grundart-Zuordnung per Prioritäts-Kaskade (Trägerformat → Systematik → Bund-Struktur).",
-  "gesamtErlasse": 1469,
+  "gesamtErlasse": 1470,
   "grundarten": [
     {
       "id": "KANTON",
@@ -30,7 +30,7 @@
       "name": "Flacher Kurzerlass",
       "merkmale": "Wenige Artikel, keine oder einstufige Gliederung (Tiefe ≤ 1), kein Anhang. Rendert als schlichte Artikelliste.",
       "referenzErlass": "VMWG",
-      "anzahl": 30
+      "anzahl": 31
     },
     {
       "id": "STAATSVERTRAG",
@@ -3560,6 +3560,31 @@
         "hierarchieTiefe": 2,
         "fussnotenDichte": 0.66,
         "hatAnhang": true,
+        "hatSchlusstitel": false,
+        "hatTabelle": false,
+        "hatBild": false,
+        "paragrafZaehlung": false
+      }
+    },
+    {
+      "key": "BMV_2025",
+      "kuerzel": "BMV",
+      "titel": "Verordnung vom 13. Juni 2025 über die eidgenössische Berufsmaturität (Berufsmaturitätsverordnung, BMV)",
+      "ebene": "bund",
+      "kanton": null,
+      "sr": "412.103.1",
+      "rechtsgebiet": "oeffentlich",
+      "status": "snapshot",
+      "grundart": "FLACHER_KURZERLASS",
+      "signale": {
+        "ebene": "bund",
+        "status": "snapshot",
+        "rechtsgebiet": "oeffentlich",
+        "artikelAnzahl": 36,
+        "marginalieDeckung": 0.944,
+        "hierarchieTiefe": 1,
+        "fussnotenDichte": 0.06,
+        "hatAnhang": false,
         "hatSchlusstitel": false,
         "hatTabelle": false,
         "hatBild": false,
