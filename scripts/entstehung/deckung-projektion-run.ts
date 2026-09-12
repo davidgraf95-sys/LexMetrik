@@ -3,7 +3,7 @@
 //
 // Reine Datei-Arbeit (§3): liest die vorhandenen, bereits gegateten Artefakte,
 // ruft die Ableitung (`./deckung-projektion.ts`) und schreibt
-// `public/materialien/entstehung-deckung.json`. KEIN Netz, keine Uhr — die
+// `public/materialien/deckungs-sicht.json`. KEIN Netz, keine Uhr — die
 // Stände kommen aus den Quellen selbst (§2/§5).
 //
 //   npm run gen:entstehung-deckung            # schreibt

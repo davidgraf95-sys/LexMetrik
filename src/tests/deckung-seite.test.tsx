@@ -6,7 +6,7 @@ import {
   summiere, quote, sortiere, zeilen, DECKUNG_PROFIL,
   type DeckungProjektion,
 } from '../lib/materialien/deckung';
-import echt from '../../public/materialien/entstehung-deckung.json';
+import echt from '../../public/materialien/deckungs-sicht.json';
 import materialRegister from '../../public/materialien/register.json';
 
 // ─── Die Deckungs-Seite «was wir nicht haben» (W2·6c, §11.5) ─────────────────

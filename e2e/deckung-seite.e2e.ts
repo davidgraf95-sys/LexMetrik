@@ -8,7 +8,7 @@
 // FÜNF ZUSAGEN, je einzeln messbar:
 //
 //  (a) EIN LADEKANAL, UND ZWAR NUR DIESER. Die Seite holt genau
-//      `/materialien/entstehung-deckung.json` (78 KB). Die grossen Register —
+//      `/materialien/deckungs-sicht.json` (78 KB). Die grossen Register —
 //      `/materialien/register.json` (1,4 MB), `/normtext/register.json`
 //      (1,5 MB), `/materialien/register-provenienz.json` (540 KB) — und die
 //      Shard-Ordner `/materialien/synopse/` und `/materialien/entstehung/`
@@ -48,7 +48,7 @@ function abrufe(page: Page): { sicht: string[]; schwer: string[] } {
   const g = { sicht: [] as string[], schwer: [] as string[] };
   page.on('request', (r) => {
     const u = r.url();
-    if (u.includes('/materialien/entstehung-deckung.json')) g.sicht.push(u);
+    if (u.includes('/materialien/deckungs-sicht.json')) g.sicht.push(u);
     else if (
       u.includes('/materialien/register.json')
       || u.includes('/materialien/register-provenienz.json')
@@ -79,7 +79,7 @@ test.describe('Deckungs-Seite «was wir nicht haben»', () => {
   test('(b) zeigt Zahlen aus dem Artefakt: Ebenen > 0 und eine Zeile je Erlass', async ({ page }) => {
     await oeffne(page);
     const artefakt = await page.evaluate(async () => {
-      const r = await fetch('/materialien/entstehung-deckung.json');
+      const r = await fetch('/materialien/deckungs-sicht.json');
       const j = await r.json() as {
         erlasse: Record<string, { ocFussnoten: number; ocGetroffen: number; altBloecke?: number }>;
       };

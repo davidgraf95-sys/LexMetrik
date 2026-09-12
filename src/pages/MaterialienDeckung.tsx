@@ -19,7 +19,7 @@ import {
 // die beantwortet man nicht durch Wegglätten, sondern durch Zeigen (§8).
 //
 // ── DIE SEITE RECHNET NICHT (§3) ──────────────────────────────────────────────
-// Jede Zahl kommt aus `/materialien/entstehung-deckung.json`; jede Summe kommt
+// Jede Zahl kommt aus `/materialien/deckungs-sicht.json`; jede Summe kommt
 // aus `summiere()` in der Leseschicht. Hier steht keine einzige hartkodierte
 // Zahl — der Unit-Test (`src/tests/deckung-seite.test.tsx`) rendert die Seite
 // gegen eine Fixture und prüft, dass Summen und Zeilen dasselbe sagen.

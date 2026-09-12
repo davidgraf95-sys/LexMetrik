@@ -1,7 +1,7 @@
 // ─── Deckungs-Sicht: «was wir nicht haben» (W2·6c, §11.5) ────────────────────
 //
 // EINE Quelle für die Form der ausgelieferten Datei
-// `public/materialien/entstehung-deckung.json` (§5): der Generator
+// `public/materialien/deckungs-sicht.json` (§5): der Generator
 // (`scripts/entstehung/deckung-projektion.ts`) baut GEGEN diese Typen, das Tor
 // `check:entstehung` rechnet sie nach, die Seite `/materialien/deckung` liest
 // sie. Stünde die Form zweimal da, könnte eine Seite Felder anzeigen, die der
@@ -191,7 +191,7 @@ export function sortiere(
 // Kein Modul ausserhalb der Seite ruft das hier auf — die Materialien-Übersicht
 // und die Artikel-Karte verlinken die Seite, sie laden sie nicht mit.
 
-export const DECKUNG_URL = '/materialien/entstehung-deckung.json';
+export const DECKUNG_URL = '/materialien/deckungs-sicht.json';
 
 let laufend: Promise<DeckungProjektion | null> | null = null;
 

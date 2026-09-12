@@ -47,7 +47,13 @@ export type {
 } from '../../src/lib/materialien/deckung.ts';
 export { DECKUNG_PROFIL } from '../../src/lib/materialien/deckung.ts';
 
-export const DECKUNG_PROJEKTION_PFAD = 'public/materialien/entstehung-deckung.json';
+// NAME: «Deckungs-Sicht», nicht «entstehung-deckung» — der Basisname wäre sonst
+// derselbe wie beim MESS-Register `bibliothek/register/entstehung-deckung.json`,
+// und die beiden sind verschiedene Dinge: dort die Diagnose je Erlass (Quelle),
+// hier die ausgelieferte Sicht (Projektion). Zwei Dateien, die in Logs, Kommentaren
+// und Tor-Ausgaben gleich heissen, sind eine Verwechslung mit Anlauf (Auflage
+// Gegenprüfung PR #807).
+export const DECKUNG_PROJEKTION_PFAD = 'public/materialien/deckungs-sicht.json';
 
 /** §15 · Deckel der ausgelieferten Datei. Sie ist der EINZIGE Ladekanal der
  *  Deckungs-Seite; wächst sie über diese Marke, ist nicht der Deckel falsch,
