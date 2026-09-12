@@ -22,11 +22,15 @@
 //  · Wortfeld-Tor (§0/A7): keine AFFIRMATIVE «geprüft/gegengeprüft/verifiziert» in EIGENEN
 //    Nutzertexten; Negationen («nicht/noch nicht/ungeprüft») sind ehrliche §8-Offenlegungen
 //    und ERLAUBT. Amtliche `titel` in register.json = Zitat-Felder (ausgenommen).
-//  · Vernehmlassungen Finding 7 (§17-Wurzelfix, war wanduhr-abhängig): 'laufend' mit
+//  · Vernehmlassungen Finding 7 (§17-Wurzelfix PR #803, war wanduhr-abhängig): 'laufend' mit
 //    fristEnde < r.stand (Erhebungsdatum, vom Generator geschrieben) = Datenfehler zum
-//    Erhebungszeitpunkt. Deterministisch, KEIN heute/Date.now. Separat davon ein
-//    Alterungs-Wächter (einzige Stelle, die `heute` liest, --datum-Override testbar): das
-//    Register-Erhebungsdatum älter als 35 Tage ⇒ rot «Nachführung fällig».
+//    Erhebungszeitpunkt. Deterministisch, KEIN heute/Date.now — dieses Tor liest an KEINER
+//    Stelle mehr die Wanduhr (Gegenprüfungs-Auflage A1). Der zugehörige Alterungs-Wächter
+//    (Erhebungsdatum zu alt ⇒ rot) lebt bewusst NICHT hier, sondern im eigenen, standalone
+//    Tor `check:vernehmlassungen-alter` (K7-Entscheid, Begründung dort UND in
+//    scripts/materialien/vernehmlassungen-tor.ts) — sonst würde ein wanduhr-Rot fachfremde
+//    Aufrufer dieses Tors (z. B. normen-monitor.yml Job `bs-grossrat`) vor deren PR-Schritt
+//    mit einem Vernehmlassungs-Befund töten.
 // Harte Verstösse → exit 1.
 
 import { readFileSync, existsSync, readdirSync, statSync } from 'node:fs';
@@ -56,6 +60,7 @@ import {
   type ShardDatei,
 } from './soft-law-projektion.ts';
 import { wortfeldTreffer, wortfeldImQuellcode } from './wortfeld.ts';
+import { finding7Fehler, parseDatumArg } from './vernehmlassungen-tor.ts';
 
 /** Kantonaler Normtext-Korpus: die Datei-Stämme sind die Erlass-Schlüssel (K-16). */
 const KANTON_KORPUS_DIR = join('public', 'normtext', 'kanton');
@@ -103,16 +108,20 @@ function main(): void {
   const kuratiertKeys = new Set(ALLE_MATERIALIEN.map((r) => r.key));
   const korpus = baueKorpusInfo();
 
-  const datumArg = process.argv.find((a) => a.startsWith('--datum='));
-  const heute = datumArg?.slice('--datum='.length);
+  // A2 (Gegenprüfung PR #803): --datum gegen ISO validieren statt ein kaputtes Format
+  // stillschweigend als "kein Override" zu behandeln (Date.parse('kaputt') = NaN hätte
+  // sonst z. B. den Zukunfts-Check unten lautlos abgeschaltet). Ungültig ⇒ harter Fehler,
+  // `heute` bleibt undefined (die übrigen Checks laufen trotzdem, der Fehler oben reicht
+  // für exit 1 in ausgabe()).
+  let heute: string | undefined;
+  try {
+    heute = parseDatumArg(process.argv);
+  } catch (e) {
+    fehler.push((e as Error).message);
+  }
 
   // ── 1. Register-Grundchecks (kuratiert + generierte Botschaften) ──────────────
   const gesehen = new Set<string>();
-  // Erhebungsdatum des Vernehmlassungs-Registers (§17-Wurzelfix, ex-Finding-7-Wanduhr):
-  // der älteste `stand` über alle BUND/vernehmlassung-Einträge. vernehmlassungen-generieren.ts
-  // schreibt allen Einträgen EINES Laufs dasselbe Abfragedatum als `stand` — das Minimum ist
-  // darum robust auch gegen künftige Misch-Läufe (nur der älteste Teil zählt als "nicht frisch").
-  let vernErhebung: string | undefined;
   for (const r of ALLE_MATERIALIEN) {
     if (gesehen.has(r.key)) fehler.push(`Doppelter key: ${r.key}`);
     gesehen.add(r.key);
@@ -156,37 +165,14 @@ function main(): void {
         if (v.fristStart && v.fristEnde && v.fristStart > v.fristEnde) {
           fehler.push(`${r.key}: fristStart ${v.fristStart} > fristEnde ${v.fristEnde} (unmöglicher Zeitraum).`);
         }
-        // Finding 7 (P0, user-sichtbar), REVIDIERT §17-Wurzelfix (war wanduhr-abhängig, PR #789/
-        // heutiger Befund): 'laufend' mit fristEnde VOR dem Erhebungsdatum (= r.stand, das vom
-        // Generator geschriebene SPARQL-Abfragedatum, siehe vernehmlassungen-generieren.ts) ist
-        // ein DATENFEHLER — der Fedlex-Graph zeigte bereits zum Zeitpunkt der Erhebung eine
-        // abgelaufene Frist ohne Status-Wechsel; das ist ein Erhebungs-/Quellproblem, kein blosses
-        // Kalender-Altern, und gehört repariert (Neu-Generierung). Ein Ablauf NACH der Erhebung
-        // (fristEnde ≥ stand) ist KEIN Fehler — reines Alter, dafür der separate Alterungs-Wächter
-        // unten. Deterministisch: kein heute/Date.now (§2) — nur der committete `stand`.
-        if (v.status === 'laufend' && v.fristEnde && v.fristEnde < r.stand) {
-          fehler.push(`${r.key}: Status 'laufend', aber fristEnde ${v.fristEnde} < Erhebungsdatum (stand) ${r.stand} — Konsistenz-Verstoss (Finding 7, Datenfehler zum Erhebungszeitpunkt). Neu generieren (materialien:vernehmlassungen).`);
-        }
-        if (ISO.test(r.stand) && (vernErhebung === undefined || r.stand < vernErhebung)) vernErhebung = r.stand;
+        // Finding 7 (P0, user-sichtbar), deterministisch seit §17-Wurzelfix PR #803 (war
+        // wanduhr-abhängig, #789/Befund 12.9.2026) — reine Funktion in vernehmlassungen-tor.ts,
+        // testbar ohne den ganzen check-materialien-Lauf. Der zugehörige Alterungs-Wächter (liest
+        // `heute`) lebt bewusst NICHT hier, sondern im eigenen Tor `check:vernehmlassungen-alter`
+        // (K7-Entscheid, Begründung im Kopf dieser Datei und in vernehmlassungen-tor.ts).
+        const f7 = finding7Fehler(r.key, v.status, v.fristEnde, r.stand);
+        if (f7) fehler.push(f7);
       }
-    }
-  }
-
-  // ── 1b. Alterungs-Wächter Vernehmlassungs-Register (§17-Wurzelfix) ────────────
-  // Finding 7 oben ist jetzt deterministisch (prüft gegen den committeten `stand`, nie gegen
-  // die Wanduhr). Damit ein simpel abgelaufener Erhebungsstand nicht unbegrenzt unbemerkt
-  // bleibt, braucht es EINEN Alterungs-Schutz — das ist die einzige Stelle in diesem ganzen
-  // Tor, die `heute`/Date.now liest (mit --datum-Override deterministisch testbar, §2). Cadence
-  // 35 Tage ≈ ein Monatslauf (Frische-Kreislauf, .github/workflows/fedlex-frische.yml).
-  const MAX_ALTER_TAGE = 35;
-  if (vernErhebung !== undefined) {
-    const heuteEff = heute ?? new Date().toISOString().slice(0, 10); // NUR HIER: Wanduhr-Lesestelle
-    const alterTage = Math.round((Date.parse(heuteEff) - Date.parse(vernErhebung)) / 86_400_000);
-    if (alterTage > MAX_ALTER_TAGE) {
-      fehler.push(
-        `Vernehmlassungs-Register: Erhebungsdatum (stand) ${vernErhebung} ist ${alterTage} Tage alt ` +
-        `(> ${MAX_ALTER_TAGE}) — Nachführung fällig (materialien:vernehmlassungen).`,
-      );
     }
   }
 

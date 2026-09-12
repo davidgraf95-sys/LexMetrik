@@ -3364,3 +3364,27 @@ verbliebene Rest-Stub darum jetzt vollständig geschlossen.*
     (Frist 2026-09-11 lief amtlich ab), kein Zu-/Abgang sonst (831 Verfahren, 0 neu/entfernt).
     Kommentar in `fedlex-frische.yml` (offener Punkt seit 5.9.2026, #789) ergänzt (nicht
     überschrieben, §2b) mit dem Lösungs-Verweis. Detail: FAHRPLAN-OFFENE-BEFUNDE.md §2.
+
+  - [x] **Gegenprüfung PR #803 — Auflagen A1–A3 (12.9.2026, selber PR, vor dem Merge):**
+    **A1** Deckel 35→45 Tage (ein 31-Tage-Monat + bis zu 5 Tage Gegenprüfung/Merge-Verzug
+    riss 35 schon am 6. des Folgemonats) UND K7-Entscheid: der Alterungs-Wächter zog aus
+    `check-materialien.ts` in einen eigenen, standalone Tor `check:vernehmlassungen-alter`
+    (`scripts/materialien/check-vernehmlassungen-alter.ts`), bewusst NICHT Teil von
+    `check:seriell` — sonst hätte er weiterhin fachfremde Aufrufer von `check:materialien`
+    (normen-monitor.yml Job `bs-grossrat`, das eigene `npm run check` von fedlex-frische.yml)
+    vor deren PR-/Merge-Schritt getötet, genau das K7-Muster von `check:verfall`
+    (`scripts/check-tor-paritaet.ts` ALLOWLIST). Einziger Aufrufer: der wöchentliche
+    Detektor in `normen-monitor.yml` (Job `normen`, direkt nach `check:verfall`,
+    `if: always()`). **A2** `--datum` wird jetzt gegen ISO validiert (`parseDatumArg` in
+    der neuen, testbaren `scripts/materialien/vernehmlassungen-tor.ts`) — ein kaputtes
+    Format wirft statt `Date.parse` still auf NaN laufen zu lassen und den Check
+    lautlos abzuschalten (Rot-Beweis: `--datum=kaputt` lieferte vorher exit 0, jetzt
+    exit 1 in beiden Toren). **A3** kein BUND/vernehmlassung-Eintrag ⇒ eigener Fehler
+    (`alterungsFehler`) statt stillem Skip. Reine Prüf-Logik (`finding7Fehler`,
+    `alterungsFehler`, `parseDatumArg`, `minimum`) jetzt in `vernehmlassungen-tor.ts`
+    ausgelagert (Muster `wortfeld.ts`) — dadurch erstmals mit echten Unit-Tests
+    (`src/tests/vernehmlassungen-tor.test.ts`) belegt; der ursprüngliche Finding-7-Rot-
+    Beweis war ohne Artefakt (nur Konsolen-Log). `check-materialien.ts` liest an KEINER
+    Stelle mehr `heute`/`Date.now`. Zwei absolute Sätze präzisiert statt nachgeführt
+    (§2b): `fedlex-frische.yml` (Kommentar beim offenen Punkt) und
+    `FAHRPLAN-OFFENE-BEFUNDE.md` §2 (Zeile zum Reparatur-Arm-Befund).

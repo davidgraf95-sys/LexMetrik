@@ -118,6 +118,17 @@ jobs:
       - name: Verfallsregister (Termine · mit Vorlauf-Warnung ≤45 Tage)
         if: always()
         run: npm run check:verfall
+
+      # Derselbe K7-Platz wie check:verfall oben (§17-Wurzelfix PR #803, Gegenprüfungs-
+      # Auflage A1): der Alterungs-Wächter des Vernehmlassungs-Registers ist wanduhr-
+      # abhängig und darf darum NICHT in check-materialien.ts hängen — dort würde er
+      # fachfremde Aufrufer (z. B. den Job `bs-grossrat` unten) vor deren PR-Schritt
+      # töten. Sein einziger Aufrufer ist dieser wöchentliche Detektor. `if: always()`
+      # aus demselben Grund wie oben — ein Netzfehler soll den Alterungs-Befund nicht
+      # verdecken. Begründung ausführlich: scripts/materialien/vernehmlassungen-tor.ts.
+      - name: Vernehmlassungs-Register-Alter (Wächter, verhindert keinen Merge)
+        if: always()
+        run: npm run check:vernehmlassungen-alter
       - name: LIK-Reihe frisch (BFS-Monatsindex, O-1.6)
         if: always()
         run: npm run check:lik-frische
