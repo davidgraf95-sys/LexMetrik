@@ -628,7 +628,7 @@ describe('B7/c · «Eidg.» ist verdrahtet, aber korpusweit selten (§8)', () =>
     // 151 I 73/151 II 710/152 V 20 (vorher Auszug-only) brachte deren echte
     // BGG-Zitate hinzu, die Basis-Body-Konflation von 152 V 2 (fälschlich
     // 152-V-20-Inhalt, u.a. BGG-Zitate) wurde entfernt — keine Rechenlogik-
-    // Änderung, reine Datenkorrektur; dokumente 1253 → 1254 (drei aza-Volltexte
+    // Änderung, reine Datenkorrektur; dokumente 1253 → 1254 (zwei aza-Volltexte
     // zitieren BGG neu als eigenständiges Dokument, einer weniger durch die
     // entfernte Fremdkontamination — netto +1).
     const s = JSON.parse(readFileSync('public/rechtsprechung/bezuege/BGG.json', 'utf8')) as BezugsShard;
