@@ -1,5 +1,41 @@
 # ROADMAP — Erledigt-Chronik (Detail-Archiv erledigter Schritte)
 
+## `standRechtsprechung` = max(abgerufen) statt Register-Erzeugungsdatum — 12.9.2026 (#691, W2·18-FEHLERBUCH)
+
+**Ursprünglicher Befund (Wortlaut, bis 12.9.2026 offen, `fahrplaene/FAHRPLAN-OFFENE-BEFUNDE.md` §1):**
+«**`standRechtsprechung` = Erzeugungs- statt Abrufdatum** (#691, latent, nirgends gerendert) —
+Stand aus max(abgerufen) (§8).»
+
+- [x] **Gelöst 12.9.2026.** Nullprobe: `scripts/gen-startseite-zaehler.ts:205` (vor dem Fix) las
+  `standRechtsprechung: r.erzeugt` — `r.erzeugt` ist `public/rechtsprechung/register.json`s
+  Top-Level-Feld, das `entscheide-schreiben.ts` bei JEDEM (auch partiellen) Registerlauf auf das
+  globale `--datum` setzt, unabhängig davon, ob überhaupt ein Entscheid neu abgerufen wurde — ein
+  Bau-Zeitstempel, keine Inhaltsangabe. **Die Klammer «nirgends gerendert» stimmte am 5.9.2026 bei
+  Fund-Erfassung, ist seit dem D8-Umbau vom 6.9.2026 aber überholt** (Beleg altert nicht, wird nur
+  ergänzt, §2b): `src/components/ui/KorpusStand.tsx` bildet seither `[standGesetze,
+  standRechtsprechung, standMaterialien].filter(Boolean).sort().at(-1)` und zeigt das Resultat als
+  «Register erzeugt am …» in Topbar, Sidebar und Shell — der Wert ist seit 6.9. live gerendert.
+  **Fix:** neuer Helfer `scripts/startseite-zaehler-stand.ts` (keine Top-Level-Seiteneffekte, damit
+  isoliert testbar) mit `berechneStandRechtsprechung(entscheide, liesAbgerufen)` — filtert
+  Nicht-Verweise mit eigener `datei`, liest je Snapshot dessen eigenes `erzeugt`-Feld (das
+  `entscheide-schreiben.ts` beim Schreiben bereits auf `snap.abgerufen` setzt — Stichprobe 30/30
+  ohne Abweichung geprüft) und nimmt das lexikografische Maximum (`juengstes`, dieselbe
+  ISO-Tag-Regel wie bei `standGesetze`/`standMaterialien`). Fallback auf `r.erzeugt` nur bei
+  vollständig leerem Bestand (Typ bleibt `string`, kein API-Bruch — ein solcher Bestand reisst
+  ohnehin `check:entscheide`s Mindestzahl-Tor). **Rot-Beweis** (Fixture: reales Register mit
+  fingiertem `erzeugt: '2099-01-01'` gegen den echten Snapshot-Bestand): ALT lieferte `2099-01-01`
+  (kein einziger Entscheid wurde 2099 abgerufen), NEU lieferte `2026-09-12`. **Determinismus-Beleg
+  am realen Korpus:** der reale Wert blieb vor/nach dem Fix identisch `2026-09-12`, weil derselbe
+  Tag tatsächlich der jüngste echte Abruf war (kein Zufall der Formel, sondern Koinzidenz der
+  Daten) — `git diff` an `src/data/startseiteZaehler.generated.ts` zeigt für dieses Feld nur den
+  Doc-Kommentar geändert, den Wert unverändert. 7 neue Vitest-Fälle
+  (`src/tests/startseite-zaehler-stand-rechtsprechung.test.ts`): Maximum über mehrere Daten,
+  Verweise werden übersprungen (Datei nie gelesen), fehlendes `datei`-Feld wirft nicht,
+  ungültige/leere Abrufdaten fallen weg (§8), leerer Bestand ⇒ `null`, Determinismus (gleiche
+  Eingabe → gleiches Ergebnis, kein `Date.now()`, §2). Tore: `check:zaehler`, `check:feed`,
+  `check:datenhaltung`, `golden:vergleich` (256 Fälle byte-gleich), `check:gegenpruefung` (grün —
+  keine Risiko-Datei berührt), Lint (0 Fehler), `npx tsc -b` — alle grün.
+
 ## `nichtKonsolidiert`-Marker falsch-positiv (FZA) — Wortlaut + Fix 12.9.2026 (PR #820, Gegenprüfung ausstehend — nicht gemergt)
 
 **Ursprünglicher Befund (Wortlaut, W2·18-FEHLERBUCH #19 / FAHRPLAN-OFFENE-BEFUNDE.md:203,
