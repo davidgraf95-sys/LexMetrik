@@ -6,7 +6,7 @@
 // erfasste-keys.generated.ts (interne Verlinkung). Eine Stelle, kein Duplikat (§5).
 
 import { mkdirSync, writeFileSync, rmSync, existsSync, readFileSync } from 'node:fs';
-import { join } from 'node:path';
+import { join, resolve } from 'node:path';
 import { kuerzeRegeste, normalisiereRegeste } from '../../src/lib/rechtsprechung/register';
 import type { EntscheidSnapshot, EntscheidSnapshotDatei } from '../../src/lib/rechtsprechung/typen';
 import type { BrowseEntscheid, EntscheidManifest, RichterRef, RichterRegister } from '../../src/lib/rechtsprechung/register';
@@ -68,6 +68,21 @@ export function manifestRegesteKurz(snap: EntscheidSnapshot): string | null {
 // norm-index.json (Budget-Tor in check-entscheide.ts). Bewusst kleiner als der
 // Erlass-Deckel (12), weil eine Artikel-Ansicht die wenigen zentralen Fälle zeigt.
 const LEITFAELLE_PRO_ARTIKEL = 8;
+
+/**
+ * BESTANDSZAHL-SPERRE (§17-Wurzel-Fix, Fund fahrplaene/FAHRPLAN-OFFENE-BEFUNDE.md:35,
+ * #691). `schreibeKorpus` ist die EINE Schreibstelle (§5) für JEDEN additiven Aufruf
+ * in scripts/normtext-entscheide.ts (additiv/bge-refresh/regeste-refresh/rubrum-
+ * refresh/remap/bge-baender) — jeder Aufrufer schützt nur mit `if (!basis.length)`,
+ * das verhindert einen KOMPLETT leeren Lauf, nicht eine stumm GESCHRUMPFTE Teilmenge
+ * (ein fehlender Shard auf der Platte, ein falscher cwd bei relativer `root`, ein
+ * halber Checkout — `ladeBestandSnapshots` übersprang bisher unauffindbare Dateien
+ * mit einem blossen `continue`). 5 % Toleranz deckt normales additives Wachstum
+ * (Ersetzungen/Quarantäne-Rückstufungen einzelner Einträge) ab, ohne bei einem
+ * grösseren, unbeabsichtigten Abgang stillzuhalten. Bewusster Rückbau bleibt möglich
+ * (`LEXMETRIK_ERLAUBE_ABGANG=1`), aber nie stillschweigend.
+ */
+const BESTANDSZAHL_MINDESTANTEIL = 0.95;
 
 /**
  * Totale Ordnung der Leitfälle je Artikel (§2-deterministisch): gewicht ↓, dann
@@ -233,8 +248,41 @@ export function schreibeKorpus(auswahl: EntscheidSnapshot[], datum: string, root
   bezugsShards: number; bezugsBefund: BezugsIndex['befund'] | null;
   literaturVerwurf: { paare: number; nennungen: number; spannen: number };
 } {
+  // Absolute Pfadauflösung (§17-Wurzel-Fix #694/#691): eine relative `root` würde
+  // sich sonst gegen den AKTUELLEN cwd auflösen — läuft der Aufrufer aus einem
+  // anderen Verzeichnis (Sub-Shell, CI-Step-Wechsel), zeigen `PUB`/`GENKEYS` auf
+  // einen unerwarteten Ort, ohne dass irgendein Fehler das meldet (fail-open).
+  // `resolve` fixiert die Wurzel EINMAL, hier, für alle Konsumenten unten.
+  root = resolve(root);
   const PUB = join(root, 'public', 'rechtsprechung');
   const GENKEYS = join(root, 'src', 'lib', 'rechtsprechung', 'erfasste-keys.generated.ts');
+
+  // Bestandszahl-Sperre — MUSS vor dem `rmSync` unten laufen: danach ist der
+  // committete Vergleichswert bereits weg.
+  const regPfadAlt = join(PUB, 'register.json');
+  if (existsSync(regPfadAlt)) {
+    const altManifest = JSON.parse(readFileSync(regPfadAlt, 'utf8')) as EntscheidManifest;
+    const altZahl = altManifest.entscheide.length;
+    const neuZahl = auswahl.length;
+    const erlaubeAbgang = process.env.LEXMETRIK_ERLAUBE_ABGANG === '1';
+    if (!erlaubeAbgang && altZahl > 0 && neuZahl < altZahl * BESTANDSZAHL_MINDESTANTEIL) {
+      const neuKeys = new Set(auswahl.map((s) => keyVon(s).key));
+      const abgang = altManifest.entscheide
+        .filter((e) => !e.verweis && !neuKeys.has(e.key))
+        .map((e) => e.key);
+      console.error(
+        `[schreibeKorpus] BESTANDSZAHL-SPERRE: neue Eingabe ${neuZahl} Snapshot(s) < `
+        + `${(BESTANDSZAHL_MINDESTANTEIL * 100).toFixed(0)}% des committeten Bestands ${altZahl} `
+        + `(Wurzel ${root}). Abgänge (${abgang.length}): `
+        + `${abgang.slice(0, 30).join(', ')}${abgang.length > 30 ? ' …' : ''}`,
+      );
+      throw new Error(
+        `Bestandszahl-Sperre: ${neuZahl} < ${Math.ceil(altZahl * BESTANDSZAHL_MINDESTANTEIL)} `
+        + `(${(BESTANDSZAHL_MINDESTANTEIL * 100).toFixed(0)}% von ${altZahl} committeten Einträgen). `
+        + `Bei ABSICHTLICHEM Abgang erneut mit LEXMETRIK_ERLAUBE_ABGANG=1 ausführen.`,
+      );
+    }
+  }
 
   if (existsSync(PUB)) rmSync(PUB, { recursive: true, force: true });
   mkdirSync(PUB, { recursive: true });
@@ -565,19 +613,37 @@ export function berichteBezuege(shards: number, befund: BezugsIndex['befund'] | 
  * schreibeKorpus den stabil sortierten Manifest unverändert reproduziert.
  */
 export function ladeBestandSnapshots(root = process.cwd()): EntscheidSnapshot[] {
+  // Absolute Pfadauflösung (§17-Wurzel-Fix #694/#691) — wie in `schreibeKorpus`:
+  // eine relative `root` löst sonst fail-open gegen den jeweiligen cwd auf.
+  root = resolve(root);
   const PUB = join(root, 'public', 'rechtsprechung');
   const regPfad = join(PUB, 'register.json');
   if (!existsSync(regPfad)) return [];
   const manifest = JSON.parse(readFileSync(regPfad, 'utf8')) as EntscheidManifest;
   const out: EntscheidSnapshot[] = [];
   const gesehen = new Set<string>();
+  // Im Register geführte, aber auf der Platte fehlende Dateien (#691): früher ein
+  // stummes `continue` — der Aufrufer erfuhr nie, dass die geladene Basis kleiner
+  // war als das Register verspricht. Jetzt gezählt UND gemeldet; die eigentliche
+  // Schutzwirkung gegen einen daraus folgenden Datenverlust liefert die
+  // Bestandszahl-Sperre in `schreibeKorpus` (dort, wo sonst `rmSync` griffe).
+  const fehlend: string[] = [];
   for (const e of manifest.entscheide) {
     if (e.verweis || !e.datei) continue;
     const fp = join(PUB, e.datei);
-    if (!existsSync(fp)) continue;
+    if (!existsSync(fp)) { fehlend.push(e.key); continue; }
     const d = JSON.parse(readFileSync(fp, 'utf8')) as EntscheidSnapshotDatei;
     const snap = d.eintraege?.[0];
     if (snap && !gesehen.has(snap.id)) { gesehen.add(snap.id); out.push(snap); }
+  }
+  if (fehlend.length) {
+    const erwartet = manifest.entscheide.filter((e) => !e.verweis && e.datei).length;
+    console.error(
+      `[ladeBestandSnapshots] ${fehlend.length} im Register geführte Entscheid-Datei(en) `
+      + `fehlen auf der Platte (Wurzel ${root}) — NICHT stumm übersprungen: `
+      + `${fehlend.slice(0, 20).join(', ')}${fehlend.length > 20 ? ` … (+${fehlend.length - 20} weitere)` : ''}. `
+      + `Geladen: ${out.length}/${erwartet}.`,
+    );
   }
   return out;
 }
