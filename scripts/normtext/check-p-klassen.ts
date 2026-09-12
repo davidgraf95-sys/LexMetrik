@@ -14,6 +14,7 @@
  */
 import { readFileSync, existsSync } from 'node:fs';
 import { parseFedlexCacheEintraege } from './inventar-bund.ts';
+import { pinBefund } from './cache-pin-befund.ts';
 
 // ─── Manifest: ENTSCHIEDENE Drop-Klassen (semantischer Leit-Token) ───────────
 // Diese Klassen treffen KEINE Extraktor-Alternative und werden BEWUSST nicht in
@@ -97,14 +98,39 @@ function istErfasst(attrs: string, inner: string, folgt: string): boolean {
 
 const shell = readFileSync('scripts/fedlex-cache.sh', 'utf8');
 const eintraege = parseFedlexCacheEintraege(shell);
+// §17 (Gegenprüfung #822 C1): `ci.yml` fährt dieses Tor bei JEDEM Nicht-Doku-PR, OHNE je
+// `fedlex-cache.sh` zu rufen — dort ist ein /tmp-Cache die AUSNAHME, kein Normalfall.
+// `--cache-pflicht` (nur im Frische-Arm `fedlex-frische.yml` gesetzt, der den Cache selbst
+// frisch fetcht) verlangt die VOLLE Bestandszahl auch bei 0 vorhandenen Caches.
+const cachePflicht = process.argv.includes('--cache-pflicht') || process.env.LEXMETRIK_CACHE_PFLICHT === '1';
 
 const gefundeneTokens = new Set<string>();
 const beispiel = new Map<string, string>();
 let artScan = 0;
 
+// Gegenprüfung #822 B1: mit ALLEN `.pin`-Markern weggelegt hätte ein blosses HINWEIS +
+// `continue` jeden Eintrag übersprungen — `artScan` bliebe 0, und ohne eine untere
+// Schranke meldete das Tor trotzdem «✓ … keine stillen <p>-Verluste» EXIT=0 (fedlex-cache.sh
+// selbst schreibt nie `.pin`, nur normtext-snapshot.ts/struktur-run.ts nach einem Fetch —
+// auf einem frischen Rechner/CI, der nur fedlex-cache.sh gefahren hat, fehlen ALLE Marker).
+let pinFehlerTotal = 0;
+let vorhanden = 0; // Gegenprüfung #822 C1: Caches, die ÜBERHAUPT existieren (Existenz, nicht Pin-Gültigkeit)
+
 for (const e of eintraege) {
   const pfad = `/tmp/${e.name}.html`;
   if (!existsSync(pfad)) continue;
+  vorhanden++;
+  // §17 (Gegenprüfung #808 B4): ein VOR einem Re-Pin geschriebener Cache besteht die
+  // Existenz-Prüfung anstandslos, stammt aber aus der überholten Manifestation —
+  // dieselbe Pin-Sonde wie normtext-snapshot.ts/struktur-run.ts/check-vollstaendigkeit.ts.
+  // FEHLER statt HINWEIS (wie struktur-run.ts): ein Pin-Fehlbefund ist kein tolerierbarer
+  // Lückenfall, sondern ein unzuverlässiger Cache.
+  const pin = pinBefund(e.name, e.eli, e.konsolidierung, e.htmlN);
+  if (!pin.ok) {
+    console.error(`  FEHLER ${e.name}: ${pin.grund} — Cache pin-ungültig, Prüfung unzuverlässig.`);
+    pinFehlerTotal++;
+    continue;
+  }
   const html = readFileSync(pfad, 'utf8');
   const artRe = /<article[^>]*\sid="[^"]+"[^>]*>([\s\S]*?)<\/article>/gi;
   let am: RegExpExecArray | null;
@@ -140,6 +166,40 @@ const neu = [...gefundeneTokens].filter((t) => !bekannt.has(t)).sort();
 const verschwunden = [...bekannt].filter((t) => !gefundeneTokens.has(t)).sort();
 
 console.log(`[check:p-klassen] ${artScan} Artikel gescannt, ${gefundeneTokens.size} entschiedene Drop-Klassen-Tokens.`);
+
+// Bestandszahl-Sperre (Gegenprüfung #822 B1, verschärft C1): der reale Bestand scannt
+// ~25'000 Artikel; ein Kollaps auf (nahe) 0 — z.B. weil ALLE Caches pin-ungültig sind —
+// darf nie als «✓ keine stillen Verluste» durchgehen.
+//
+// C1-KORREKTUR: bezieht sich auf VORHANDENE Caches, nicht auf die volle Registerzahl.
+// `ci.yml` fährt dieses Tor bei JEDEM Nicht-Doku-PR, OHNE je `fedlex-cache.sh` zu rufen —
+// dort ist `vorhanden === 0` der NORMALFALL (Rot-Beweis der Vorfassung: alle 227 Bund-
+// Caches weggelegt stellte JEDEN Nicht-Doku-PR rot). 0 vorhanden ⇒ Prüfung ungefahren
+// (grün, HINWEIS) — ausser `--cache-pflicht` (nur Frische-Arm) verlangt die volle Zahl
+// auch bei 0. Ein TEILBESTAND (0 < n < alle) ist in JEDEM Kontext ein Befund.
+const MINDEST_ARTIKELZAHL = 10_000;
+if (vorhanden === 0 && !cachePflicht) {
+  console.log(`\nHINWEIS: Cache-Prüfung nicht durchgeführt (kein /tmp-Cache; nur im Frische-Arm Pflicht).`);
+} else if (vorhanden > 0 && vorhanden < eintraege.length) {
+  console.error(
+    `\n❌ FEHLER: nur ${vorhanden}/${eintraege.length} Bund-Erlasse haben überhaupt einen /tmp-Cache ` +
+      `(Teilbestand) — entweder ALLE Caches bereitstellen ('bash scripts/fedlex-cache.sh') oder KEINEN.`,
+  );
+  process.exit(1);
+} else if (vorhanden === 0 && cachePflicht) {
+  console.error(
+    `\n❌ FEHLER: --cache-pflicht verlangt Bund-Caches, aber 0/${eintraege.length} vorhanden ` +
+      `— 'bash scripts/fedlex-cache.sh' lief nicht oder scheiterte vollständig.`,
+  );
+  process.exit(1);
+} else if (pinFehlerTotal > 0 || artScan < MINDEST_ARTIKELZAHL) {
+  console.error(
+    `\n❌ FEHLER: ${artScan} Artikel gescannt (Mindestzahl ${MINDEST_ARTIKELZAHL})` +
+      (pinFehlerTotal > 0 ? `, ${pinFehlerTotal} Cache(s) pin-ungültig` : '') +
+      ' — Prüfung unzuverlässig statt grün.',
+  );
+  process.exit(1);
+}
 if (neu.length > 0) {
   console.error('\n❌ NEUE, UNENTSCHIEDENE <p>-Drop-Klasse(n) — stiller Normtext-Verlust droht:');
   for (const t of neu) console.error(`   · class-Leit-Token "${t}"  z.B. ${beispiel.get(t)}`);
