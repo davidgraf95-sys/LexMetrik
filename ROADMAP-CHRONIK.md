@@ -40,7 +40,39 @@ erzeugen. **Risikopfad** ⇒ Gegenprüfung.»
   BGE-Bandjahr liegt — Rot-Beweis vor dem Fix erbracht (exakt dieser eine Treffer, exit 1), grün
   danach. Regeneration ausschliesslich über den Pflegeweg (Adapter-Funktionen, `schreibeKorpus`),
   kein Hand-Edit im Artefakt (§5); reiner `erzeugt`-Zeitstempel-Churn in unbeteiligten Shards wurde
-  vor dem Commit verworfen (bekanntes Muster, vgl. `normtext:struktur`-Churn-Befund).
+  vor dem Commit verworfen (bekanntes Muster, vgl. `normtext:struktur`-Churn-Befund). **Nachtrag
+  Gegenprüfung 12.9.2026 (A1+A2, PR #816):** A1 — der B1-Zweig übernahm ein frisches Ergebnis bis
+  dahin bedingungslos; bei einer Netzstörung im clir-Fetch hätte das ein bereits exaktes
+  Bestandsdatum durch den Bandjahr-Platzhalter ersetzt (1254/1259 BGE tragen exakte Daten, das
+  Fenster-Tor ist dafür blind). Fix: geteiltes, unit-getestetes Modul
+  `scripts/normtext/bge-bandjahr.ts` (`verschlechtertDatum` als Übernahme-Gate,
+  `src/tests/entscheid-bandjahr.test.ts`). A2 — gezielter Nachlauf für die 5 «weiterhin Auszug»
+  gebliebenen BGE, amtlich verifiziert: `151 I 73`/`151 II 710`/`152 V 20` voll aufgelöst,
+  `151 III 336` Datum gehoben (Auszug bleibt, aza-Kandidat kürzer als Auszug), `152 V 2` NEUER
+  Befund — OCLs eigener Basis-Record ist bei full_text/docket_number_2/decision_date komplett mit
+  `152 V 20` konfliert (nicht nur die aza-Auswahl); auf Bandjahr-Platzhalter zurückgestuft,
+  Content-Korrektur bleibt eigener offener Befund (`fahrplaene/FAHRPLAN-OFFENE-BEFUNDE.md`).
+
+## `adapter-lexwork.ts:778` Fetch-Ergebnis unvalidiert — Wortlaut + Fix 12.9.2026 (PR #813, Gegenprüfung ausstehend)
+
+**Ursprünglicher Befund (Wortlaut, ROADMAP.md Stand 29.8.2026 / FAHRPLAN-OFFENE-BEFUNDE.md §1):**
+«`adapter-lexwork.ts:778` Fetch-Ergebnis unvalidiert — `Response.json()` liefert unter `lib: DOM`
+`any`; Shape vor Verwendung prüfen (Nebenfund QS-TYP-LUECKE 15.8., Gegenprüfungs-Auflage A1;
+Risikopfad Extraktion ⇒ QS-GP)».
+
+- [x] **Gefixt 12.9.2026, PR #813 (`af5e35ce9`), Gegenprüfung ausstehend — nicht gemergt:** Der
+  frühere `let json: {...}`-Cast auf das Ergebnis von `Response.json()` prüfte nur beim Compile,
+  nie zur Laufzeit. Nullprobe (drei Tests in `src/tests/normtext-lexwork.test.ts`, empirisch gegen
+  den alten Code verifiziert — `git stash` auf `adapter-lexwork.ts` allein, alle drei liefen rot):
+  `text_of_law` als String statt Objekt lief still durch (leeres nurPdf-Ergebnis ohne Hinweis),
+  `current_version` als Array statt Objekt ebenso (Feld schweigend ignoriert), `xhtml_tol` als
+  Zahl crashte erst tief im XHTML-Parser mit URL-loser Meldung («xhtml.split is not a function»).
+  Fix: `Response.json()` bleibt `unknown`; neue Laufzeit-Validierung `validiereTextOfLaw()` (+
+  Guard `istPlainObject`) prüft Objekt-Form und die tatsächlich verwendeten Feldtypen, wirft bei
+  Verstoss sofort mit URL + Feldpfad + gefundenem Typ (§6.7). Gleiches Muster wie
+  `scripts/materialien/adapter-bs-grossrat.ts` (`unknown` + `typeof`/`Array.isArray`-Wächter,
+  keine neue Bibliothek). Determinismus/Extraktions-Logik unverändert; `golden:vergleich` 256
+  Fälle byte-gleich, `check:golden-normtext` 60283 Knoten/0 Waisen unverändert.
 
 ## Deckungs-Seite «was wir nicht haben» — Wortlaut vor der Lösung + Lösung 12.9.2026 (PR #807)
 
