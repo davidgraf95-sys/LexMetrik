@@ -230,12 +230,14 @@
             {
               "marke": "–",
               "text": "bei einer zwingenden Rückzahlung oder bei einer Rückzahlung nach Wahl des Emittenten: bei Ausgabe einer variablen Anzahl Beteiligungstitel eine allfällige Änderung des Forderungswerts gleichgerichtet, vergleichbar und verknüpft ist mit der Änderung des Werts einer gegebenen Anzahl Beteiligungstitel am Gesellschaftskapital",
-              "tiefe": 2
+              "tiefe": 2,
+              "trenner": ""
             },
             {
               "marke": "–",
               "text": "bei einer Rückzahlung nach Wahl des Inhabers des Finanzinstruments: die FINMA den Antrag der Bank auf Behandlung als Forderung abgelehnt hat.",
-              "tiefe": 2
+              "tiefe": 2,
+              "trenner": ""
             }
           ]
         }
@@ -244,7 +246,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_4",
       "abgerufen": "2026-09-12",
       "fassungsToken": "20250124",
-      "sha": "21abf79f7d40053796ddc7037f6c43bf523e79cc466c04c38c5fe4d0c4a9bbc3"
+      "sha": "b3ff851e0c1740d7355e641c260197e07526c2f86ae129dff09058b4235e5c1f"
     },
     {
       "id": "bund/ERV/art_4_a",
@@ -1941,12 +1943,14 @@
             {
               "marke": "–",
               "text": "über einen definierten Kapitalpuffer verfügt oder",
-              "tiefe": 2
+              "tiefe": 2,
+              "trenner": ""
             },
             {
               "marke": "–",
               "text": "wenn sie eine Ausschüttung an den Kanton vornimmt zur Deckung von dessen Kosten für die Refinanzierung des von ihm in der Sanierung eingeschossenen Kapitals.",
-              "tiefe": 2
+              "tiefe": 2,
+              "trenner": ""
             }
           ]
         },
@@ -1977,7 +1981,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_40_a",
       "abgerufen": "2026-09-12",
       "fassungsToken": "20250124",
-      "sha": "f518bb980fabf35c5122570bae2961748284926825f6bbfdfa3d5c12da7ecb9c"
+      "sha": "54e0e0f288d19d1d3aa1f8a1b9b671f63ebc0f44c0925f382457bb89ecd3d793"
     },
     {
       "id": "bund/ERV/art_41",
@@ -2845,31 +2849,38 @@
           "items": [
             {
               "marke": "+",
-              "text": "nicht erfüllte Kassa- und Terminkäufe (einschliesslich Financial Futures und Swaps)"
+              "text": "nicht erfüllte Kassa- und Terminkäufe (einschliesslich Financial Futures und Swaps)",
+              "trenner": ""
             },
             {
               "marke": "./",
-              "text": "nicht erfüllte Kassa- und Terminverkäufe (einschliesslich Financial Futures und Swaps)"
+              "text": "nicht erfüllte Kassa- und Terminverkäufe (einschliesslich Financial Futures und Swaps)",
+              "trenner": "."
             },
             {
               "marke": "+",
-              "text": "feste Übernahmezusagen aus Emissionen abzüglich abgegebener Unterbeteiligungen und abzüglich fester Zeichnungen, sofern sie das Preisrisiko der Bank beseitigen"
+              "text": "feste Übernahmezusagen aus Emissionen abzüglich abgegebener Unterbeteiligungen und abzüglich fester Zeichnungen, sofern sie das Preisrisiko der Bank beseitigen",
+              "trenner": ""
             },
             {
               "marke": "+",
-              "text": "Lieferansprüche aus Call-Käufen, deltagewichtet"
+              "text": "Lieferansprüche aus Call-Käufen, deltagewichtet",
+              "trenner": ""
             },
             {
               "marke": "./",
-              "text": "Lieferverpflichtungen aus geschriebenen Calls, deltagewichtet"
+              "text": "Lieferverpflichtungen aus geschriebenen Calls, deltagewichtet",
+              "trenner": "."
             },
             {
               "marke": "+",
-              "text": "Übernahmeverpflichtungen aus geschriebenen Puts, deltagewichtet"
+              "text": "Übernahmeverpflichtungen aus geschriebenen Puts, deltagewichtet",
+              "trenner": ""
             },
             {
               "marke": "./",
-              "text": "Abgabeansprüche aus Put-Käufen, deltagewichtet."
+              "text": "Abgabeansprüche aus Put-Käufen, deltagewichtet.",
+              "trenner": "."
             }
           ]
         },
@@ -2886,7 +2897,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_51",
       "abgerufen": "2026-09-12",
       "fassungsToken": "20250124",
-      "sha": "8c6aa2c28708391aaced7b18258fa6b54e9b0737187e8e29a5915fbb0bd4b91b"
+      "sha": "d9b70aa87e527daed6cc823c523be38862a164bd9ae60e995eae2741bd34fd25"
     },
     {
       "id": "bund/ERV/art_52",
@@ -2902,31 +2913,38 @@
           "items": [
             {
               "marke": "+",
-              "text": "nicht erfüllte Kassa- und Terminkäufe (einschliesslich Financial Futures und Swaps)"
+              "text": "nicht erfüllte Kassa- und Terminkäufe (einschliesslich Financial Futures und Swaps)",
+              "trenner": ""
             },
             {
               "marke": "./",
-              "text": "nicht erfüllte Kassa- und Terminverkäufe (einschliesslich Financial Futures und Swaps)"
+              "text": "nicht erfüllte Kassa- und Terminverkäufe (einschliesslich Financial Futures und Swaps)",
+              "trenner": "."
             },
             {
               "marke": "./",
-              "text": "Positionen im Zusammenhang mit Emissionsgeschäften, die fünf Werktage oder weniger gehalten wurden"
+              "text": "Positionen im Zusammenhang mit Emissionsgeschäften, die fünf Werktage oder weniger gehalten wurden",
+              "trenner": "."
             },
             {
               "marke": "+",
-              "text": "Lieferansprüche aus Call-Käufen, deltagewichtet"
+              "text": "Lieferansprüche aus Call-Käufen, deltagewichtet",
+              "trenner": ""
             },
             {
               "marke": "./",
-              "text": "Lieferverpflichtungen aus geschriebenen Calls, deltagewichtet"
+              "text": "Lieferverpflichtungen aus geschriebenen Calls, deltagewichtet",
+              "trenner": "."
             },
             {
               "marke": "+",
-              "text": "Übernahmeverpflichtungen aus geschriebenen Puts, deltagewichtet"
+              "text": "Übernahmeverpflichtungen aus geschriebenen Puts, deltagewichtet",
+              "trenner": ""
             },
             {
               "marke": "./",
-              "text": "Abgabeansprüche aus Put-Käufen, deltagewichtet."
+              "text": "Abgabeansprüche aus Put-Käufen, deltagewichtet.",
+              "trenner": "."
             }
           ]
         },
@@ -2963,7 +2981,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_52",
       "abgerufen": "2026-09-12",
       "fassungsToken": "20250124",
-      "sha": "7f2340fde8ae9211349c1b2d954c9097e007aee9826208be681ccf6686e15014"
+      "sha": "ec00201d3df5817bc1a6ae253132b074899adba857fb2f661c73ca270a308e75"
     },
     {
       "id": "bund/ERV/art_53",
@@ -7588,17 +7606,20 @@
             {
               "marke": "–",
               "text": "den Nominalbeträgen von zusätzlichen verlustabsorbierenden Mitteln, die an Tochtergesellschaften weitergegeben werden",
-              "tiefe": 2
+              "tiefe": 2,
+              "trenner": ""
             },
             {
               "marke": "–",
               "text": "75 Prozent der Gesamtanforderung, mit Ausnahme von zu konsolidierenden Beteiligungen, einschliesslich des in gleicher Weise erfassten regulatorischen Kapitals und von Risiken aus gruppeninternen Beziehungen und",
-              "tiefe": 2
+              "tiefe": 2,
+              "trenner": ""
             },
             {
               "marke": "–",
               "text": "30 Prozent der für diese Einheit konsolidiert geltenden Anforderungen;",
-              "tiefe": 2
+              "tiefe": 2,
+              "trenner": ""
             },
             {
               "marke": "b",
@@ -7631,7 +7652,7 @@
       "quelleUrl": "https://www.fedlex.admin.ch/eli/cc/2012/629/de#art_132",
       "abgerufen": "2026-09-12",
       "fassungsToken": "20250124",
-      "sha": "713d16a03743b09a944fc124cfd9cd2e0bc59be15bb13c77a010a533783d65b2"
+      "sha": "3d1fb66920320617ad7dff4dd68576ae6802d91fb37e3e544ee0eceee7c7d1ea"
     },
     {
       "id": "bund/ERV/art_132_a",

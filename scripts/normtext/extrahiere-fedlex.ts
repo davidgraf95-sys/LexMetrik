@@ -28,7 +28,7 @@ export interface ArtikelText {
      *  steht in `text` und ist dort abgedeckt. Nur Anhang-Einträge tragen das
      *  Feld; bestehende Artikel nie → golden-neutral (additiv). */
     titel?: number;
-    items?: Array<{ marke: string; text: string; tiefe?: number }>;
+    items?: Array<{ marke: string; text: string; tiefe?: number; trenner?: string }>;
     /** Fedlex-<table> als Mehrspalten-Block (Bug-Fix 23.6.2026: Tabellen wurden
      *  zuvor komplett gedroppt — z.B. IVG art_28b Rententabelle, AHVG art_34bis).
      *  M10: kanonisches `spalten`-Modell (T-B1) statt rohem `{kopf,zeilen}`. */
@@ -506,6 +506,28 @@ export function findeDlEnde(html: string, startIdx: number): number {
  * (tiefe 0) bleiben byte-gleich zum bisherigen Modell {marke,text} → keine
  * unnötige Snapshot-Re-Segnung für nicht verschachtelte Erlasse; nur Artikel
  * MIT echter Verschachtelung brechen den Daten-Index (bewusst, §7).
+ *
+ * ── `trenner`: DER AMTLICHE MARKEN-TRENNER WIRD MITGEFÜHRT (#679, 12.9.2026) ──
+ * Fedlex legt ZWEI verschiedene Dinge in dieselbe <dl><dt>-Struktur und
+ * unterscheidet sie AM TRENNER hinter der Marke:
+ *   «a. » / «1. » / «a) »  → Ordinalmarke einer echten Aufzählung (lit./Ziff.)
+ *   «A: » / «BE: »         → LABEL (amtliche Kategorie, Kolonnen-/Legendenschlüssel)
+ *   «BAS »                 → Label OHNE Trenner (Formelgrösse, AsylV 2 Art. 23)
+ * Dieser Trenner ist amtliche Information; bis hierher verwarf ihn der Parser
+ * (er diente nur intern zur Label-Erkennung) und die Lesesicht musste die Art
+ * aus der Marken-SCHREIBWEISE raten («beginnt gross ⇒ Label»,
+ * ArtikelBody.helfer.ts). Das Raten ist bei kleingeschriebenen Labels falsch
+ * («für Witwen und Witwer:», UVG Art. 31) und erfindet bei «a)»/«BAS» einen
+ * Punkt, den die amtliche Fassung nicht setzt. Wurzel (§5/§1): der Extraktor
+ * führt den Trenner mit, Anzeige UND Zitat lesen ihn statt zu raten.
+ *
+ * Emittiert wird `trenner` NUR, wenn das Item NICHT der Normalfall
+ * «kanonische Ordinalmarke + Punkt» ist (37 403 der 44 674 <dt> im gepinnten
+ * Cache) — genau wie `tiefe` nur bei echter Verschachtelung erscheint. Damit
+ * bleibt jedes bisher korrekte Item byte-gleich und nur die Artikel mit
+ * abweichendem Trenner brechen den Daten-Index (bewusst, §7).
+ * Werte: ':' (Label), ')' (Ordinalmarke mit Klammer), '.' (Punkt bei
+ * NICHT-kanonischer Marke, z.B. «B. 1.» GFK Art. 1), '' (kein Trenner).
  */
 function parseDefinitionsListe(
   dlInner: string,
@@ -517,8 +539,8 @@ function parseDefinitionsListe(
   // Garbling-Klasse im Haupttext — Staatsverträge i→ii, Abkürzungs-Legenden — ist
   // ein eigener, deklarierter Folgeschritt mit Artikel-Re-Bless).
   anhang = false,
-): Array<{ marke: string; text: string; tiefe?: number }> {
-  const items: Array<{ marke: string; text: string; tiefe?: number }> = [];
+): Array<{ marke: string; text: string; tiefe?: number; trenner?: string }> {
+  const items: Array<{ marke: string; text: string; tiefe?: number; trenner?: string }> = [];
   // Iterativer Scan über die direkten <dt>…<dd>-Paare DIESER Ebene. Ein <dd>
   // kann eine verschachtelte <dl> enthalten; deren Ende wird balanciert bestimmt
   // (findeDlEnde), damit das <dd>-Ende nicht am inneren </dl> falsch erkannt wird.
@@ -600,7 +622,13 @@ function parseDefinitionsListe(
     const KANONISCHE_MARKE = anhang
       ? new RegExp(`^(?:[0-9]+(?:\\.[0-9]+)*(?:${LAT_SUFFIX})?[a-z]?|[a-z](?:${LAT_SUFFIX})?)$`, 'i')
       : new RegExp(`^(?:[0-9]+(?:${LAT_SUFFIX})?[a-z]?|[a-z](?:${LAT_SUFFIX})?)$`, 'i');
-    const istLabel = /:\s*$/.test(markeRoh);
+    // AMTLICHER TRENNER (#679, s. Funktions-Doku §`trenner`): das letzte Zeichen
+    // der normalisierten <dt>-Marke, wenn es ein Fedlex-Marken-Trenner ist —
+    // sonst '' (kein Trenner, z.B. «BAS»). markeRoh ist bereits getrimmt; das
+    // `\s*$` deckt nur den theoretischen Rest ab. Die Label-Erkennung liest
+    // jetzt DIESEN Wert (eine Stelle, §5) statt eine zweite Regex.
+    const trenner = markeRoh.match(/([.):])\s*$/)?.[1] ?? '';
+    const istLabel = trenner === ':';
     // Nachgestellten Trenner abstreifen — beim Label nur den ':' (der Rest ist
     // Bestandteil des Labels: «Kolonne 1»), sonst die Ordinal-Trenner.
     const markeKern = (
@@ -613,6 +641,11 @@ function parseDefinitionsListe(
       .replace(new RegExp(`^([a-z])\\.(${LAT_SUFFIX})$`, 'i'), '$1$2');
     const istKanonisch = !istLabel && KANONISCHE_MARKE.test(markeKern);
     let marke = istKanonisch ? markeKern.toLowerCase() : markeKern;
+    // Emittiert wird der Trenner nur ABWEICHEND vom Normalfall «kanonische
+    // Ordinalmarke + Punkt» — s. Funktions-Doku (§6/§7: bisher korrekte Items
+    // bleiben byte-gleich). `undefined` = Normalfall, Feld fehlt im Snapshot.
+    let trennerFeld: string | undefined =
+      istKanonisch && trenner === '.' ? undefined : trenner;
 
     const ddVorListe = subDlIdx >= 0 ? ddRoh.slice(0, subDlIdx) : ddRoh;
     const ddOhneFn = ddVorListe.replace(/<sup[^>]*><a[\s\S]*?<\/a><\/sup>/gi, '');
@@ -638,7 +671,10 @@ function parseDefinitionsListe(
       const KANON_QUELLE = anhang
         ? `[0-9]+(?:\\.[0-9]+)*(?:${LAT_SUFFIX})?[a-z]?|[a-z](?:${LAT_SUFFIX})?`
         : `[0-9]+(?:${LAT_SUFFIX})?[a-z]?|[a-z](?:${LAT_SUFFIX})?`;
-      const praefix = markeRoh.match(new RegExp(`^(${KANON_QUELLE})\\s*[.)]?\\s+(?=\\S)`, 'i'));
+      // Gruppe 2 = der Trenner DIESES Präfixes (#679). Hier ist die Marke ein
+      // Präfix des <dt>, der Trenner steht also mitten im <dt>-Text und nicht
+      // an seinem Ende — `trenner` von oben (Zeilen-Ende) wäre hier falsch.
+      const praefix = markeRoh.match(new RegExp(`^(${KANON_QUELLE})\\s*([.)])?\\s+(?=\\S)`, 'i'));
       if (praefix) {
         // entferneTags: identische Bereinigung wie zuvor inline, aber inkl. N1-Fix
         // (Inline-Tags leerzeichenlos) — «14<i>a</i>» im <dt>-Text bleibt «14a».
@@ -649,6 +685,10 @@ function parseDefinitionsListe(
         if (nachMarke) {
           marke = praefix[1].toLowerCase();
           text = nachMarke;
+          // Die Marke IST hier kanonisch (KANON_QUELLE) → Punkt = Normalfall
+          // (Feld fehlt, byte-gleich); ')' oder kein Trenner wird emittiert.
+          const pTrenner = praefix[2] ?? '';
+          trennerFeld = pTrenner === '.' ? undefined : pTrenner;
         }
       }
     }
@@ -675,7 +715,14 @@ function parseDefinitionsListe(
       // (sonst ginge die lit-Ebene verloren — der eigentliche Bug). Andernfalls
       // wie bisher nur bei Text (leere Items werden verworfen).
       // tiefe NUR setzen, wenn verschachtelt (>0) → Top-Level byte-gleich (§7).
-      items.push(tiefe > 0 ? { marke, text, tiefe } : { marke, text });
+      // trenner NUR bei Abweichung vom Normalfall (#679) — Schlüssel-REIHENFOLGE
+      // marke,text,tiefe,trenner ist Teil der Byte-Gleichheit (JSON-Serialisierung).
+      items.push({
+        marke,
+        text,
+        ...(tiefe > 0 ? { tiefe } : {}),
+        ...(trennerFeld !== undefined ? { trenner: trennerFeld } : {}),
+      });
     }
 
     // Unterliste rekursiv anhängen (in Dokumentreihenfolge nach dem Eltern-Item),
