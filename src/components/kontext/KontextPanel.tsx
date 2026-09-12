@@ -12,6 +12,7 @@ import { vernehmlassungenFuer, VERNEHMLASSUNG_STATUS_LABEL, type VernehmlassungB
 import { AMTLICHE_FASSUNG_NOMEN } from '../../lib/benennung';
 import { datumCh } from '../../lib/normtext/erlassKopfText';
 import { AbrufFehler } from '../ui/AbrufFehler';
+import { TitelRueckfallZeile } from './TitelRueckfallZeile';
 import { Datum } from '../ui/Datum';
 import { GruppenKopf } from '../ui/GruppenKopf';
 import { Leerzustand } from '../ui/Leerzustand';
@@ -413,9 +414,7 @@ export function KontextPanel({ typ, normKeys, zusatzGruppen, ohneNormen = false,
                           <a href={fedlexLokalisiert(b.quelleUrl, locale)} target="_blank" rel="noopener noreferrer"
                             className="no-underline hover:text-brass-700">
                             <Datum iso={b.stand} className="text-ink-500" />
-                            {/* `lang="de"` NUR im Rückfall: der Titel ist dann deutsch, obwohl die
-                                Seite auf fr/it steht — Vorlese-Software spräche ihn sonst französisch
-                                bzw. italienisch aus. Keine Optik, eine Tatsachenangabe. */}
+                            {/* `lang="de"` nur im Rückfall (sonst spräche Vorlese-Software ihn fr/it). */}
                             {' — '}<span className="font-medium" {...(b.titelRueckfall ? { lang: 'de' } : {})}>{titel}</span>
                           </a>
                           {b.nummer && b.parlamentUrl && (
@@ -437,16 +436,7 @@ export function KontextPanel({ typ, normKeys, zusatzGruppen, ohneNormen = false,
                       … und <span className="num">{botschaften.length - MAX_BOTSCHAFTEN}</span> weitere. Vollständige Liste über die amtliche Quelle (Fedlex).
                     </p>
                   )}
-                  {/* Auflage der Gegenprüfung #802 (§8): scheitert der Abruf der Titel-
-                      Übersetzungen, standen hier stillschweigend die deutschen Titel. Der
-                      Kanon-Baustein sagt es in der Optik, die das Haus für «nicht
-                      erreichbar» führt — die Liste selbst bleibt, sie ist ja vollständig.
-                      NUR bei 'nicht-geladen': eine fehlende Einzel-Übersetzung ist
-                      «nichts erfasst» und war auch vor der Aufteilung stumm. */}
-                  {botschaften.some((b) => b.titelRueckfall === 'nicht-geladen') && (
-                    <AbrufFehler gegenstand="Die Übersetzung der Titel" href="https://www.fedlex.admin.ch"
-                      daten={{ 'data-titel-rueckfall': 'botschaften' }} />
-                  )}
+                  <TitelRueckfallZeile bezuege={botschaften} bereich="botschaften" />
                 </>
               )}
             </KontextGruppe>
@@ -562,11 +552,7 @@ export function KontextPanel({ typ, normKeys, zusatzGruppen, ohneNormen = false,
                       … und <span className="num">{vernehmlassungen.length - MAX_VERNEHMLASSUNGEN}</span> weitere. Vollständige Liste über die amtliche Quelle (Fedlex).
                     </p>
                   )}
-                  {/* Zweite Fundstelle der Auflage (Begründung bei der ersten). */}
-                  {vernehmlassungen.some((v) => v.titelRueckfall === 'nicht-geladen') && (
-                    <AbrufFehler gegenstand="Die Übersetzung der Titel" href="https://www.fedlex.admin.ch"
-                      daten={{ 'data-titel-rueckfall': 'vernehmlassungen' }} />
-                  )}
+                  <TitelRueckfallZeile bezuege={vernehmlassungen} bereich="vernehmlassungen" />
                 </>
               )}
             </KontextGruppe>
