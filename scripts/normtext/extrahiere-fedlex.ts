@@ -1196,8 +1196,30 @@ export function schlussteilLabelSuffix(anker: string): string {
 
 /** Der amtliche Anhang-Container. EINE Wahrheit (§5) für beide Nutzungen: die
  *  Anker-Suche in `alleAnhangAnker` UND die Container-eId in `anhangContainerEId`
- *  — sonst könnten Fundort und mitgeschnittene eId auseinanderlaufen. */
-const ANNEX_CONTAINER = /<div\s+id="(annex)"\s*>/i;
+ *  — sonst könnten Fundort und mitgeschnittene eId auseinanderlaufen.
+ *
+ *  N1-Härtung (12.9.2026, Nebenbefund der Gegenprüfung zu #425): LITERAL, ohne
+ *  `i`-Flag. Die Capture-Gruppe speist eine eId, die im Browser per
+ *  `getElementById` aufgelöst wird — und das ist case-SENSITIV. Ein gross
+ *  geschriebenes `<div ID="ANNEX">` hätte vorher `annex` als eId geliefert
+ *  (Blindgänger-Link, §8). Korpus heute 0 Varianten: 136/136 Caches tragen den
+ *  Container literal als `<div id="annex">` (Vollerhebung 228 Caches 12.9.2026)
+ *  — reine Robustheit, kein Verhaltens-Fix. */
+const ANNEX_CONTAINER = /<div\s+id="(annex)"\s*>/;
+
+/** Der amtliche Container der Staatsvertrags-Sektionen `scope_*` (Geltungsbereich)
+ *  und `decl_*` (Erklärungen und Vorbehalte der Schweiz).
+ *
+ *  QS-KORPUS-SCOPE (12.9.2026, Nebenbefund N2 der Gegenprüfung zu #425): 12
+ *  Staatsverträge tragen KEINEN annex-Container — ihr Geltungsbereich und die
+ *  CH-Erklärungen stehen ausschliesslich in diesem eigenen `<div id="scope">`.
+ *  `alleAnhangAnker` begann am annex-Container und lieferte für sie darum ein
+ *  leeres Array: 23 amtliche Sektionen fehlten vollständig in Snapshot und
+ *  Sidecar. Vollerhebung 228 Caches (12.9.2026): 136 HTMLs mit annex-Container,
+ *  26 mit scope-Container — 14 davon mit BEIDEN (LUGUE-Klasse, scope NIE vor
+ *  annex), 12 nur mit scope; im scope-Container stehen ausnahmslos
+ *  `scope_*`/`decl_*`-Sektionen, keine fremden. Literal wie ANNEX_CONTAINER. */
+const SCOPE_CONTAINER = /<div\s+id="(scope)"\s*>/;
 
 export interface AnhangText {
   /** Echter Fedlex-Titel des Anhangs («Anhang 1», «Anhang 1.1», «Anhang 4a»),
@@ -1244,7 +1266,11 @@ export interface AnhangText {
  * den Nutzer unsichtbar und kostete im Risiko-Pfad zusätzliche Parser-Logik.
  */
 export function anhangContainerEId(html: string): string | undefined {
-  const m = ANNEX_CONTAINER.exec(html);
+  // QS-KORPUS-SCOPE: ohne annex-Container ist der scope-Container der amtliche
+  // Knoten der Gruppe (12 Staatsverträge). Reihenfolge annex → scope, weil bei
+  // den 14 Erlassen mit BEIDEN Containern der Anhang-Block zuerst kommt und der
+  // Gruppen-Link an den Anfang der Region springen soll (Vorbestand unverändert).
+  const m = ANNEX_CONTAINER.exec(html) ?? SCOPE_CONTAINER.exec(html);
   return m ? m[1] : undefined;
 }
 
@@ -1397,8 +1423,15 @@ function anhangUeberschrift(hInner: string): string {
  * Doppelte ids erhalten — wie alleArtikelTokens — einen Synthese-Suffix «__2».
  */
 export function alleAnhangAnker(html: string): string[] {
-  const divStart = html.search(ANNEX_CONTAINER);
-  if (divStart < 0) return [];
+  // QS-KORPUS-SCOPE (12.9.2026): Startpunkt ist der ERSTE der beiden amtlichen
+  // Container. Bei den 14 Erlassen mit annex UND scope ist das unverändert der
+  // annex-Container (scope liegt korpusweit NIE davor — 228 Caches geprüft), bei
+  // den 12 Staatsverträgen ohne Anhänge der scope-Container. Rein additiv:
+  // Erlasse ohne beide Container liefern weiterhin [].
+  const kandidatenStarts = [html.search(ANNEX_CONTAINER), html.search(SCOPE_CONTAINER)]
+    .filter((i) => i >= 0);
+  if (kandidatenStarts.length === 0) return [];
+  const divStart = Math.min(...kandidatenStarts);
   const seg = html.slice(divStart);
   const re = /<section[^>]*\sid="((?:annex|lvl|scope|decl)[^"/]*)"/gi;
   const kandidaten: Array<{ id: string; start: number; end: number }> = [];

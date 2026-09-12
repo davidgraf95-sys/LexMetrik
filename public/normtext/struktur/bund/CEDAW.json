@@ -1,6 +1,8 @@
 {
  "zaehler":{"10":[1,0],"13":[1,0]},
- "erzeugt": "2026-08-29",
+ "erzeugt": "2026-09-12",
+ "stand": "2023-04-19",
+ "fassungsToken": "20230419",
  "kopf": {
   "srNummer": "0.108",
   "titel": "Übereinkommen zur Beseitigung jeder Form von Diskriminierung der Frau",
@@ -422,6 +424,16 @@
      "ebene": 1,
      "label": "Teil VI",
      "eId": "part_6"
+    }
+   ],
+   "marginalie": []
+  },
+  "scope_u1": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Geltungsbereich",
+     "eId": "scope"
     }
    ],
    "marginalie": []

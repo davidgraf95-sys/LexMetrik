@@ -1,6 +1,8 @@
 {
  "zaehler":{"1":[1,0],"3":[16,0],"4":[1,0],"9":[11,0],"12":[4,0],"14":[1,0],"18":[1,0],"37":[2,0]},
- "erzeugt": "2026-08-29",
+ "erzeugt": "2026-09-12",
+ "stand": "2026-06-12",
+ "fassungsToken": "20260612",
  "kopf": {
   "srNummer": "0.107",
   "titel": "Übereinkommen über die Rechte des Kindes",
@@ -691,6 +693,36 @@
      "ebene": 1,
      "label": "Teil III",
      "eId": "part_III"
+    }
+   ],
+   "marginalie": []
+  },
+  "decl_u2": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Geltungsbereich und Erklärungen",
+     "eId": "scope"
+    }
+   ],
+   "marginalie": []
+  },
+  "scope_u1": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Geltungsbereich und Erklärungen",
+     "eId": "scope"
+    }
+   ],
+   "marginalie": []
+  },
+  "scope_u3": {
+   "gliederung": [
+    {
+     "ebene": 1,
+     "label": "Geltungsbereich und Erklärungen",
+     "eId": "scope"
     }
    ],
    "marginalie": []

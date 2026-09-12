@@ -125,4 +125,41 @@ describe('extrahiereAnhangStruktur — Container-eId des Anhang-Blocks (W2·5d-A
   it('liest die Container-eId aus dem HTML, statt sie zu konstruieren', () => {
     expect(anhangContainerEId(anhang(sektion('annex_1', 'Anhang 1')))).toBe('annex');
   });
+
+  // ── QS-KORPUS-SCOPE (12.9.2026) ───────────────────────────────────────────
+  // Ohne annex-Container ist der amtliche Knoten der scope-Container; der
+  // Gruppen-Knoten heisst dann nach seinem Inhalt, nicht «Anhänge» (§8: ein
+  // Erlass ohne einen einzigen Anhang darf keine Anhang-Stufe behaupten).
+  const scopeDiv = (inner: string) => `<div id="scope">${inner}</div>`;
+
+  it('ohne annex-Container ist die Container-eId der scope-Container', () => {
+    expect(anhangContainerEId(scopeDiv(sektion('scope_u1', 'Geltungsbereich')))).toBe('scope');
+  });
+
+  it('annex gewinnt über scope, wenn BEIDE vorhanden sind (LUGUE-Klasse unverändert)', () => {
+    const html = anhang(sektion('annex_u1', 'Anhang')) + scopeDiv(sektion('scope_u1', 'Geltungsbereich'));
+    expect(anhangContainerEId(html)).toBe('annex');
+  });
+
+  it('nur scope: Gruppen-Knoten heisst «Geltungsbereich» und trägt die scope-eId', () => {
+    const html = scopeDiv(sektion('scope_u1', 'Geltungsbereich am 22. Mai 2026'));
+    const s = extrahiereAnhangStruktur(html);
+    expect(Object.keys(s)).toEqual(['scope_u1']);
+    expect(s['scope_u1'].gliederung).toEqual([
+      { ebene: 1, label: 'Geltungsbereich', eId: 'scope' },
+    ]);
+  });
+
+  it('nur scope MIT decl-Sektionen: Label nennt beide Bestandteile', () => {
+    const html = scopeDiv(
+      sektion('scope_u1', 'Geltungsbereich am 22. Mai 2026') + sektion('decl_u2', 'Erklärungen'),
+    );
+    const s = extrahiereAnhangStruktur(html);
+    expect(Object.keys(s).sort()).toEqual(['decl_u2', 'scope_u1']);
+    for (const k of Object.keys(s)) {
+      expect(s[k].gliederung).toEqual([
+        { ebene: 1, label: 'Geltungsbereich und Erklärungen', eId: 'scope' },
+      ]);
+    }
+  });
 });

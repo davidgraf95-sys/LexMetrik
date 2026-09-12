@@ -7,14 +7,14 @@
   },
   "korpus": {
     "erlasse": 1567,
-    "eintraege": 60347,
-    "texte": 214554
+    "eintraege": 60370,
+    "texte": 214664
   },
   "gesamt": {
-    "stellen": 36083,
-    "self": 19667,
-    "fremd": 11351,
-    "text": 5065,
+    "stellen": 36161,
+    "self": 19728,
+    "fremd": 11360,
+    "text": 5073,
     "selbstmarker": 925
   },
   "klassen": [
@@ -29,8 +29,8 @@
     {
       "klasse": "anker-erlass",
       "entscheid": "FREMD",
-      "stellen": 1095,
-      "erlasse": 362,
+      "stellen": 1097,
+      "erlasse": 363,
       "selbstmarker": 0,
       "was": "Blosser Erlass-Verweis OHNE Artikelnummer → Erlass-Seite (Z1, W2·22)"
     },
@@ -69,8 +69,8 @@
     {
       "klasse": "art-desder-guard",
       "entscheid": "TEXT",
-      "stellen": 914,
-      "erlasse": 331,
+      "stellen": 921,
+      "erlasse": 333,
       "selbstmarker": 0,
       "was": "«Art. N des/der/über/vom …» ohne Klammer-Kürzel"
     },
@@ -93,8 +93,8 @@
     {
       "klasse": "art-m12-kuerzel",
       "entscheid": "TEXT",
-      "stellen": 1006,
-      "erlasse": 266,
+      "stellen": 1007,
+      "erlasse": 267,
       "selbstmarker": 0,
       "was": "«Art. N KÜRZEL» (unbekanntes Kürzel) — Self unterdrückt (M12)"
     },
@@ -109,7 +109,7 @@
     {
       "klasse": "art-self",
       "entscheid": "SELF",
-      "stellen": 12907,
+      "stellen": 12961,
       "erlasse": 472,
       "selbstmarker": 606,
       "was": "bare «Art. N» → Sprung im eigenen Erlass"
@@ -133,8 +133,8 @@
     {
       "klasse": "n2b-genitiv",
       "entscheid": "FREMD",
-      "stellen": 666,
-      "erlasse": 212,
+      "stellen": 672,
+      "erlasse": 213,
       "selbstmarker": 0,
       "was": "Form-B-Glied über kuratierten Kurztitel-Genitiv ohne Klammer («des Bankengesetzes», V-7a; Geltung je Ebene)"
     },
@@ -157,8 +157,8 @@
     {
       "klasse": "n2b-titel",
       "entscheid": "FREMD",
-      "stellen": 330,
-      "erlasse": 161,
+      "stellen": 331,
+      "erlasse": 162,
       "selbstmarker": 0,
       "was": "Form-B-Glied über amtlichen Volltitel «Bundesgesetzes/Verordnung [vom Datum] über …» (V-7b)"
     },
@@ -237,7 +237,7 @@
     {
       "klasse": "plural-glied-self",
       "entscheid": "SELF",
-      "stellen": 3463,
+      "stellen": 3470,
       "erlasse": 204,
       "selbstmarker": 0,
       "was": "A10-Glied → Sprung im eigenen Erlass"
