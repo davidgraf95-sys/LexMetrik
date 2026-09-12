@@ -18,7 +18,7 @@
 import { readFileSync, existsSync, readdirSync } from 'node:fs';
 import {
   grundmenge, holeBindingsB, holeStaendeA, baueRevisionen, serialisiere, botschaftIndex,
-  type RevisionSidecar,
+  ermittleBelegteOcs, type RevisionSidecar,
 } from './revisionen-generieren.ts';
 import { ERLASS_REGISTER } from '../../src/lib/normtext/register.ts';
 import { BOTSCHAFTEN } from '../../src/lib/materialien/botschaften.generated.ts';
@@ -55,11 +55,12 @@ for (const m of meta) {
   const rawP = `${RAW_DIR}/${m.key}.json`;
   if (!existsSync(rawP)) { fehler.push(`Determinismus: store-raw fehlt für ${m.key}.`); continue; }
   const raw = JSON.parse(readFileSync(rawP, 'utf8')) as {
-    korpusStand: string; bBindings: SparqlBinding[]; aStaende: string[];
+    korpusStand: string; bBindings: SparqlBinding[]; aStaende: string[]; belegteOcs?: string[];
   };
+  const belegteOcsSet = new Set(raw.belegteOcs ?? []);
 
   // (1) Determinismus: aus raw neu bauen (mit committetem abgerufen + raw.korpusStand).
-  const neu = baueRevisionen(m, raw.bBindings, raw.aStaende, raw.korpusStand, ocZuBotschaft, sidecar.abgerufen);
+  const neu = baueRevisionen(m, raw.bBindings, raw.aStaende, raw.korpusStand, ocZuBotschaft, sidecar.abgerufen, belegteOcsSet);
   if (serialisiere(neu) !== serialisiere(sidecar)) {
     fehler.push(`Determinismus: ${m.key} — Neubau aus raw ≠ committetes Sidecar (Nichtdeterminismus oder Handedit).`);
   }
@@ -74,8 +75,9 @@ for (const m of meta) {
     if (!/^https?:\/\//.test(r.quelleUrl)) fehler.push(`${m.key}: quelleUrl «${r.quelleUrl}» nicht http(s) (§7c).`);
     if (r.botschaftKey && !botschaftKeys.has(r.botschaftKey)) fehler.push(`${m.key}: toter botschaftKey «${r.botschaftKey}».`);
     if (r.art === 'aenderung' && !r.ocUri) fehler.push(`${m.key}: aenderung ohne ocUri.`);
-    // (6) nichtKonsolidiert korrekt gdw. dateEntryInForce > Korpus-Stand.
-    const soll = r.dateEntryInForce > raw.korpusStand;
+    // (6) nichtKonsolidiert korrekt gdw. dateEntryInForce > Korpus-Stand UND kein Finding-4b-
+    // Text-Beleg (belegteOcs) vorliegt.
+    const soll = r.dateEntryInForce > raw.korpusStand && !(r.ocUri && belegteOcsSet.has(r.ocUri));
     if (soll !== !!r.nichtKonsolidiert) fehler.push(`${m.key}: nichtKonsolidiert falsch bei ${r.dateEntryInForce} (Korpus-Stand ${raw.korpusStand}).`);
     // (4) Sortierung Datum absteigend.
     if (r.dateEntryInForce > vorher) fehler.push(`${m.key}: Sortierung verletzt bei ${r.dateEntryInForce} (> ${vorher}).`);
@@ -91,7 +93,9 @@ for (const m of meta) {
 
 // ── Netz: Stichprobe gegen den amtlichen Endpunkt ─────────────────────────────────
 if (netz) {
-  const stichprobe = ['DSG', 'MWSTG', 'OR', 'DBG'].filter((k) => grundmengeKeys.has(k)).map((k) => meta.find((m) => m.key === k)!);
+  // FZA IMMER dabei (§6.7-Auflage Gegenprüfung PR #820): einziger Erlass mit echtem
+  // Finding-4b-Text-Beleg — ohne ihn bliebe der Drift-Check unten trivial (leere Mengen).
+  const stichprobe = ['DSG', 'MWSTG', 'OR', 'DBG', 'FZA'].filter((k) => grundmengeKeys.has(k)).map((k) => meta.find((m) => m.key === k)!);
   try {
     const bindings = await holeBindingsB(stichprobe, fetch);
     const bNachSr = new Map<string, SparqlBinding[]>();
@@ -101,10 +105,36 @@ if (netz) {
       const committet = lade(m.key);
       const rawP = `${RAW_DIR}/${m.key}.json`;
       if (!committet || !existsSync(rawP)) { fehler.push(`Netz: ${m.key} Sidecar/raw fehlt.`); continue; }
-      const raw = JSON.parse(readFileSync(rawP, 'utf8')) as { korpusStand: string };
+      const raw = JSON.parse(readFileSync(rawP, 'utf8')) as { korpusStand: string; belegteOcs?: string[] };
       const abstractEli = raw.korpusStand ? liesAbstract(m.sr) : '';
       const aStaende = abstractEli ? await holeStaendeA(abstractEli, fetch) : [];
-      const frisch = baueRevisionen(m, bNachSr.get(m.sr) ?? [], aStaende, raw.korpusStand, ocZuBotschaft, committet.abgerufen);
+      const frischeBindings = bNachSr.get(m.sr) ?? [];
+
+      // §6.7-Auflage (Gegenprüfung PR #820, 12.9.2026): OHNE diesen Fetch könnte
+      // `belegtImXml`/`ermittleBelegteOcs` beliebig kaputtgehen und check:revisionen-netz
+      // bliebe grün, weil hier nur der COMMITTETE Wert gespiegelt würde (dieselbe Quelle
+      // wie das Offline-Tor, §6.7 «ein Tor, das nicht scheitern kann»). Deshalb: den
+      // Text-Beleg für die ohnehin gezogene Stichprobe frisch gegen die amtliche
+      // Konsolidierungs-XML nachfahren (1 XML-Fetch je Erlass mit Kandidaten) und gegen
+      // `raw.belegteOcs` vergleichen — Drift = Rot.
+      const kandidatOcs = [...new Set(
+        frischeBindings.filter((b) => (b.dateForce?.value ?? '') > raw.korpusStand)
+          .map((b) => b.oc?.value).filter((v): v is string => !!v),
+      )];
+      const konsEli = abstractEli ? `${abstractEli}/${raw.korpusStand.replace(/-/g, '')}` : null;
+      const belegteOcsFrisch = konsEli && kandidatOcs.length
+        ? await ermittleBelegteOcs(konsEli, kandidatOcs, fetch) : new Set<string>();
+      const belegteOcsCommittet = new Set(raw.belegteOcs ?? []);
+      const nurFrisch = [...belegteOcsFrisch].filter((oc) => !belegteOcsCommittet.has(oc)).sort();
+      const nurCommittet = [...belegteOcsCommittet].filter((oc) => !belegteOcsFrisch.has(oc)).sort();
+      if (nurFrisch.length || nurCommittet.length) {
+        fehler.push(
+          `Netz-Drift (Finding 4b): ${m.key} — frischer Text-Beleg ≠ committet `
+          + `(nur frisch: ${nurFrisch.join(', ') || '∅'}; nur committet: ${nurCommittet.join(', ') || '∅'}). Neu generieren.`,
+        );
+      }
+
+      const frisch = baueRevisionen(m, frischeBindings, aStaende, raw.korpusStand, ocZuBotschaft, committet.abgerufen, belegteOcsFrisch);
       if (frisch.sha !== committet.sha) {
         fehler.push(`Netz-Drift: ${m.key} — frische Query-sha ≠ committet (${frisch.revisionen.length} vs ${committet.revisionen.length} Einträge). Neu generieren.`);
       }
