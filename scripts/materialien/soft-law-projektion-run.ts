@@ -14,6 +14,7 @@ import {
   ladeKantenAusDb,
   dbDokAusZustand,
   schreibeShardsUndBereinige,
+  sammleKantenDokIds,
   teileRegister,
   REGISTER_PFAD,
   REGISTER_I18N_PFAD,
@@ -23,6 +24,7 @@ import {
   type DokMeta,
 } from './soft-law-projektion.ts';
 import { ladeZustand } from './soft-law-zustand.ts';
+import { pruefeDbVollstaendigkeit, pruefeKantenVollstaendigkeit, nurGelistete } from './db-vollstaendigkeit.ts';
 
 const datumArg = process.argv.find((a) => a.startsWith('--datum='));
 const datum = datumArg?.slice('--datum='.length);
@@ -41,6 +43,34 @@ if (existsSync(SOFT_LAW_DB)) {
   db.close();
 } else {
   console.log(`soft-law-projektion: ${SOFT_LAW_DB} fehlt — Kanten-Shards aus DB entfallen (register.json aus Zustands-Manifest, §8).`);
+}
+
+// Vollständigkeits-Wache VOR jedem Schreiben (A2c, Gegenprüfung PR #815 zu #703-Nachzug):
+// dieselben zwei Dimensionen wie check-materialien.ts (Dokument-Meta UND Kanten). Eine DB, die
+// nur EINE gecrawlte Quelle trägt, besteht die bisherige `kanten.length > 0`-Wache trotzdem —
+// `projiziereShards` läse dann die Kanten der FEHLENDEN Quellen als "nicht mehr projiziert" und
+// `schreibeShardsUndBereinige` LÖSCHTE deren committete Shards (dieselbe Beinahe-Datenverlust-
+// Klasse wie die hohle-DB-Lehre 21.7.2026, nur durch einen Teilstand statt einer leeren DB
+// ausgelöst). Klarer Abbruch VOR dem Register-Schreiben statt stillem Weiterlaufen — kein
+// Löschen, kein Teil-Schreiben.
+if (kanten.length > 0) {
+  const dokMetaIds = new Set(dokMeta.keys());
+  const dbKantenDokIds = new Set(kanten.map((k) => k.quelldok_id));
+  const gelistetIds = new Set(dbDocs.map((d) => d.key));
+  const dokMetaVollstaendigkeit = pruefeDbVollstaendigkeit(gelistetIds, dokMetaIds);
+  // A4 (Gegenprüfung PR #815, Deadlock): siehe nurGelistete-Docstring in db-vollstaendigkeit.ts —
+  // ein entlistetes Dokument darf hier fehlen, dieser Lauf bereinigt seine Shard-Kante gerade.
+  const kantenVollstaendigkeit = pruefeKantenVollstaendigkeit(nurGelistete(sammleKantenDokIds(), gelistetIds), dbKantenDokIds);
+  if (!dokMetaVollstaendigkeit.vollstaendig || !kantenVollstaendigkeit.vollstaendig) {
+    const fehlend = [...new Set([...dokMetaVollstaendigkeit.fehlendeIds, ...kantenVollstaendigkeit.fehlendeIds])];
+    console.error(
+      `soft-law-projektion: ${SOFT_LAW_DB} unvollständig geladen (${fehlend.length} Dokument(e) ohne volle ` +
+        `Dok-Meta- und/oder Kanten-Deckung, z. B. ${fehlend.slice(0, 3).join(', ')}${fehlend.length > 3 ? ', …' : ''}) ` +
+        `— Abbruch VOR jedem Schreiben (§17-Wurzelfix A2c): ein Teilstand darf committete Shards weder ` +
+        `überschreiben noch als Orphan löschen. Vollen Snapshot aller Quellen fahren, dann erneut.`,
+    );
+    process.exit(1);
+  }
 }
 
 // (1) Die DREI Register-Projektionen aus EINEM Lauf (Trailing-Newline wie bisher).

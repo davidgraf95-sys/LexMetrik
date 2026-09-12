@@ -3487,3 +3487,205 @@ verbliebene Rest-Stub darum jetzt vollständig geschlossen.*
     `check:paritaet` (9189 Dateien) grün, `golden:vergleich` 256 Fälle byte-gleich,
     zweiter Generator-Lauf byte-gleich (Determinismus). Messung:
     `bibliothek/materialien/2026-09-12-register-deckel-messung.md`.
+
+### `check:materialien` lokal 7 falsche Shard-Abweichungen — §17-Wurzelfix 12.9.2026 (PR #703-Nachzug)
+
+  **Ursprünglicher Befund (Wortlaut, bis 12.9.2026 offen):** «`check:materialien`
+  lokal 7 falsche Shard-Abweichungen (#703) — wenn `daten/soft-law.db` nur die
+  gecrawlte Quelle trägt (ARG…VSTG); Tor darf DB-Zustand nur bei vollständig
+  geladenen Quellen vergleichen. Zähler «0 Kanten · 0 Downgrades» strukturell 0,
+  während der Lauf 3380/1157 zählt (§6.7).»
+
+  - [x] **Nullprobe/Reproduktion 12.9.2026:** `daten/soft-law.db` per
+    `seedSoftLawDb` voll aus dem committeten Zustandsträger + den committeten
+    Shards aufgebaut (298 Dok-Zeilen · 3372 Kanten), dann auf `ESTV-MWST-%`
+    getrimmt (48 · 3091) — simuliert genau den Befund («nur die gecrawlte
+    Quelle»). `check:materialien` unmodifiziert darauf ausgeführt: 11 falsche
+    ROT-Befunde — 7 Orphan-Shards `ARG.json … VSTG.json` (exakt der im Befund
+    genannte Bereich, alphabetisch erste bis letzte der nicht-ESTV-MWST-Shards)
+    + 4 «weicht von der Projektion ab» (`MWSTG.json`, `MWSTG/1.json`,
+    `MWSTG/2.json`, `MWSTV.json`). Ursache: der `reprojektionsfaehig`-Schalter
+    (`kanten.length > 0`) prüfte nur "hat die DB überhaupt Kanten", nicht "hat
+    sie ALLE" — eine DB mit EINIGEN Kanten bestand ihn trotzdem und nahm den
+    Byte-Reprojektions-Pfad, der die aus dem Teilstand projizierten Shards gegen
+    die VOLLSTÄNDIGEN committeten Shards verglich.
+  - [x] **Fix:** neuer Vollständigkeits-Marker `pruefeDbVollstaendigkeit` in
+    `scripts/materialien/db-vollstaendigkeit.ts` (Muster `vernehmlassungen-tor.ts`
+    — reine Prüf-Logik, aus dem vite-node-Entry ausgelagert, damit sie ohne den
+    ganzen Lauf testbar ist): jede im Zustandsträger `soft-law-zustand.jsonl`
+    'gelistet' geführte id MUSS in der aus der DB geladenen Dokument-Meta
+    auftauchen; fehlt auch nur eine, ist die DB nicht reprojektionsfähig.
+    `check-materialien.ts` weicht dann — wie im bereits gelösten
+    hohle-DB-Fall (Falsch-Rot 21.7.2026) — auf `pruefeCommittedShards` (Direkt-
+    validierung der committeten Dateien) aus und protokolliert das als klarer
+    HINWEIS (`HINWEIS materialien: … unvollständig geladen …`), nie rot wegen
+    lokalem Teilstand, nie still. Zweiter Teil (§6.7-Zähler): die Tor-
+    Zusammenfassung («N Kanten · M Downgrades») kam vorher aus der lokalen DB
+    und war in JEDEM Fallback-Zweig (CI ohne DB, hohle DB, jetzt auch
+    unvollständige DB) strukturell 0 — unabhängig von der Grösse des
+    committeten Bestands. Neue reine Funktion `zaehleShardKanten` (selbe Datei)
+    zählt Kanten/Downgrade-Kandidaten je Shard-Objekt; `pruefeShardDatei` gibt
+    sie zurück, `pruefeShardDrift`/`pruefeCommittedShards` akkumulieren sie —
+    die Ausgabe zeigt jetzt in JEDEM Zweig den tatsächlich validierten Bestand
+    (im obigen Teilstand-Repro: «2054 Kanten» statt «0 Kanten»; im CI-Pfad ohne
+    jede lokale DB ebenso). Downgrades zählen bewusst «heute gegen den
+    Revisions-Cutoff verstossende Kanten» (0 in gesundem Bestand — ein echter
+    Befund), nicht die während einer Live-Projektion angewandten Downgrades
+    (kein committetes Artefakt, siehe `soft-law-projektion-run.ts`).
+  - [x] **Rot-Beweis §6.7 (nach dem Fix, im selben Teilstand):** Kopie von
+    `public/materialien/kanten/MWSTG/1.json` manipuliert — eine artikelscharfe
+    Kante (Art. 18, cutoff-pflichtig laut `REVISIONS_CUTOFF.MWSTG`) auf Stand
+    `2020-01-01` (< Cutoff 2025-01-01) gesetzt, Rest unverändert. `check:materialien`
+    bleibt trotz unvollständiger DB rot: «Shard …/MWSTG/1.json: artikelscharfe
+    Kante Art. 18 mit Stand 2020-01-01 < Cutoff MWSTG (Revisions-Regel §2.4
+    verletzt).» Datei danach exakt zurückgesetzt (`git status` sauber).
+  - [x] **Tore/Tests:** `check:materialien`, `check:bs-materialien`,
+    `check:datenhaltung`, `check:tor-paritaet`, `npx tsc -b`, `lint` grün;
+    `npx vitest run src/tests/*materialien*` 16 Dateien/273 Tests grün
+    (davon neu `src/tests/db-vollstaendigkeit.test.ts`, 7 Tests). Keine
+    Artefakt-Änderung (nur `scripts/materialien/check-materialien.ts` geändert,
+    `db-vollstaendigkeit.ts` + Test neu, `daten/` bleibt gitignored/unberührt).
+
+### Gegenprüfungs-Auflagen A1–A3 zu PR #815 (12.9.2026) — Nachzug am selben Tag
+
+  **Auflage (Wortlaut Gegenprüfung, PR #815):** «(A1) Ursachen-Zuschreibung
+  korrigieren: die 7 Orphan-Rots stammen aus der Teil-DB, die 4 «Byte-
+  Abweichungen» dagegen aus dem `erzeugt`-Stempel — mit voller,
+  inhaltsgleicher DB meldet das Tor 11/11 Shards abweichend, Einzeldiff nur
+  Zeile 2 `erzeugt`. (A2a) Vollständigkeits-Marker auf die Kanten-Dimension
+  erweitern: Gegenprobe — volle Dok-Meta 298/298, aber `norm_referenzen` auf
+  ESTV-MWST getrimmt ⇒ Marker sagt «vollständig», Tor liefert die 7 falschen
+  Orphans. (A2b) `erzeugt`-Stempel aus dem Byte-Vergleich herausnehmen. (A2c)
+  Dieselbe Vollständigkeits-Wache in `soft-law-projektion-run.ts` (schreibender
+  Lauf schützt Orphan-Löschung nur mit `kanten.length > 0`) — bei
+  unvollständiger DB kein Löschen, klarer Abbruch. (A3) Downgrade-Zähler: in
+  grünem Lauf strukturell 0, weil jeder Downgrade zugleich Fehler ist —
+  ehrlich formulieren oder streichen, Entscheid begründen.»
+
+  - [x] **A1 (Ursachen-Trennung, per Nullprobe bestätigt):** `daten/soft-law.db`
+    per `seedSoftLawDb` VOLL aufgebaut (298/3372, keine Trimmung) —
+    `check:materialien` unmodifiziert darauf ausgeführt meldete tatsächlich
+    ALLE 11 committeten Shards als «weicht von der Projektion ab», nicht nur
+    4. Ursache bestätigt: `register.json` trägt den `erzeugt`-Stempel des
+    AKTUELLEN Laufs (z. B. `2026-09-12`), jeder committete Shard seinen
+    EIGENEN, historischen (z. B. `2026-08-30` — Shards werden nur bei
+    Byte-Abweichung neu geschrieben, nicht bei jedem Register-Lauf). Eine vom
+    Vollständigkeits-Befund unabhängige, zweite Falsch-Rot-Klasse.
+  - [x] **A2a (zweite Vollständigkeits-Dimension):** neue Funktion
+    `pruefeKantenVollstaendigkeit` (`scripts/materialien/db-vollstaendigkeit.ts`)
+    neben der bestehenden `pruefeDbVollstaendigkeit` (beide jetzt auf einer
+    gemeinsamen `pruefeMengenDeckung`-Primitive) — verlangt, dass jedes
+    Dokument mit mindestens einer COMMITTETEN Kante (gesammelt aus den
+    Shard-Dateien selbst via neuer, gemeinsam genutzter
+    `sammleKantenDokIds()` in `soft-law-projektion.ts`, da der Zustandsträger
+    keine Kanten-Zahl je Dokument führt) auch in der DB-Kantenmenge
+    (`quelldok_id` aus `norm_referenzen`) auftaucht. Rot-Beweis der
+    Gegenprobe reproduziert: `soft_law` auf 298/298 belassen, NUR
+    `norm_referenzen` auf `ESTV-MWST-%` getrimmt (3372 → 3091 Kanten) — die
+    alte, einzeldimensionale Prüfung hätte «vollständig» gemeldet;
+    `pruefeKantenVollstaendigkeit` erkennt die Lücke und `check:materialien`
+    zeigt den ehrlichen HINWEIS statt der 7 falschen Orphans.
+  - [x] **A2b (Stempel-neutraler Vergleich):** neue Funktion
+    `shardInhaltGleich` (selbe Datei) vergleicht zwei Shard-JSON-Strings ohne
+    das Feld `erzeugt` (Fast-Path bei Byte-Gleichheit, sonst Parse + Feld
+    entfernen + zweiter Vergleich; ungültiges JSON auf einer Seite ⇒
+    ungleich, die eigentliche Meldung bleibt bei `pruefeShardDatei`).
+    `pruefeShardDrift` nutzt sie jetzt statt rohem `!==`. Rot-Beweis nach dem
+    Fix: die A1-Nullprobe (volle, inhaltsgleiche DB) läuft jetzt grün (0
+    falsche Abweichungen); ein ECHTER Inhaltsdrift (Unit-Test: unterschiedliche
+    Kanten-Werte bei gleichem UND bei unterschiedlichem Stempel) bleibt
+    ungleich/rot.
+  - [x] **A2c (Wache vor dem schreibenden Lauf):** `soft-law-projektion-run.ts`
+    prüft dieselben zwei Dimensionen (importiert aus `db-vollstaendigkeit.ts`)
+    VOR dem Register-Schreiben, sobald `kanten.length > 0`; bei Lücke:
+    `process.exit(1)` mit Diagnose, KEIN Schreiben, KEIN Löschen. Rot-Beweis
+    (auf der A2a-Gegenprobe-DB, danach vollständig zurückgesetzt via
+    `git checkout`): die UNGESICHERTE Fassung (`git show HEAD:…` temporär
+    eingesetzt) löschte beim Lauf tatsächlich 7 committete Shards
+    (`orphan entfernt: …/ARG.json` … `VSTG.json`) und schrieb die
+    verbleibenden 4 neu — reale, reproduzierte Beinahe-Datenverlust-Situation
+    wie 21.7.2026, nur durch einen Teilstand statt einer leeren DB ausgelöst.
+    Die GESICHERTE Fassung bricht auf derselben DB klar ab (exit 1), `git
+    status` bleibt auf `public/materialien/` sauber.
+  - [x] **A3 (Downgrade-Zähler gestrichen, nicht umformuliert):** Begründung
+    (§17-Gegengewicht): die Bedingung, die eine Kante als «Downgrade» zählen
+    würde (`braucheDowngrade(...)`), löst in `pruefeShardDatei` IMMER
+    gleichzeitig einen `fehler.push(...)` aus — der Lauf wird in demselben
+    Moment rot. Der Zähler kann also im einzigen Zustand, in dem er angezeigt
+    wird (grüner Lauf), nie einen anderen Wert als 0 tragen — kein Befund,
+    sondern ein struktureller Blindwert. Gestrichen statt nur ehrlicher
+    beschriftet («0 Downgrades (jeder Downgrade wäre rot)» wäre die
+    Alternative gewesen, aber selbst diese Formulierung bewacht einen Zustand,
+    der nicht eintreten kann). Die eigentliche Prüfung bleibt unverändert
+    scharf; nur die redundante Anzeigezahl fällt weg. `zaehleShardKanten` →
+    `zaehleKanten` (nur noch Kantenzahl, kein `braucheDowngradeFn`-Parameter
+    mehr).
+  - [x] **Tore/Tests (nach allen vier Auflagen):** `check:materialien` zweimal
+    hintereinander byte-identisch grün («2054 Kanten · 11 Shards», kein
+    Downgrade-Feld mehr); `check:bs-materialien`, `check:datenhaltung`,
+    `check:tor-paritaet`, `npx tsc -b`, `lint` grün (0 Fehler);
+    `npx vitest run src/tests/*materialien* src/tests/db-vollstaendigkeit.test.ts`
+    17 Dateien/286 Tests grün. `git status` nur Code/Test/Doku — `daten/` und
+    `public/materialien/` nach jeder Rot-Beweis-Manipulation exakt
+    zurückgesetzt (`git checkout` / `rm`).
+
+### Auflage A4 (Entlistungs-Deadlock) zu PR #815 (12.9.2026) — Nachzug am selben Tag
+
+  **Auflage (Wortlaut Delta-Prüfung, PR #815):** «in `soft-law-projektion-
+  run.ts:48-70` (und im Tor) ist das Kanten-Soll `sammleKantenDokIds()` = ALLE
+  Dokumente mit committeter Kante, auch entlistete. Nach einer Entlistung
+  (Kanten + soft_law-Zeile eines Dokuments weg, Rest voll — Prüfer simulierte
+  EDOEB-LEITFADEN-WAHLEN-ABSTIMMUNGEN-VERSION-2022) bricht der Generator mit
+  exit 1 ab, während `check-materialien.ts:456` für genau diesen Zustand rot
+  macht («nicht als 'gelistet'») — der einzige Reparaturweg ist blockiert,
+  trifft auch den nächtlichen normen-monitor.»
+
+  - [x] **Nullprobe (Deadlock reproduziert):** volle DB (`seedSoftLawDb`,
+    298/3372) gebaut, dann EDOEB-LEITFADEN-WAHLEN-ABSTIMMUNGEN-VERSION-2022
+    ECHT entlistet — Zeile in der (lokalen Kopie der) `soft-law-
+    zustand.jsonl` auf `status: entlistet` gesetzt UND die Zeilen in
+    `soft_law`/`norm_referenzen` entfernt (so wie es `soft-law-snapshot.ts`
+    nach einem realen Crawl-Verlust selbst schreiben würde), committeter
+    `DSG.json`-Shard unverändert (referenziert das Dokument noch).
+    `check:materialien` meldete exakt den zitierten Befund: «Shard …/DSG.json:
+    dok-Verweis '…' nicht als 'gelistet' im Zustands-Manifest» (plus
+    Folgefehler, weil `register.json` seinerseits noch nicht regeneriert war
+    — real und erwartet). `npm run materialien -- --datum=…` (der einzige
+    Reparaturweg) brach mit «unvollständig geladen» ab — der Deadlock.
+  - [x] **A4-Fix:** `sammleKantenDokIds()` bleibt unverändert (Ground Truth
+    aus den committeten Shards), aber BEIDE Wächter (`check-materialien.ts`
+    UND `soft-law-projektion-run.ts`) schränken die Menge jetzt vor dem
+    Vergleich auf `∩ gelistet` ein — neue Funktion `nurGelistete` in
+    `db-vollstaendigkeit.ts`. Begründung im Docstring von
+    `pruefeKantenVollstaendigkeit`: ein entlistetes Dokument hat im
+    committeten (noch nicht bereinigten) Shard eine Kante, aber weder im
+    Zustandsträger noch in einer frischen DB je wieder eine — kein
+    Ladefehler, sondern der Normalzustand direkt nach einer Entlistung, den
+    der laufende Generator selbst beheben soll.
+  - [x] **Rot-Beweis nachher (derselbe präparierte Zustand):** `npm run
+    materialien -- --datum=…` lief jetzt durch (`register.json 1680
+    Materialien … Shards 11 Datei(en) [11 geschrieben · 0 orphan]`),
+    `DSG.json` trägt die Kante des entlisteten Dokuments danach nicht mehr
+    (`grep -c` 0 Treffer), `check:materialien` läuft grün («1680 Materialien
+    … 2053 Kanten»). Bestehende Rot-Beweise unverändert bestätigt: die
+    A2a-Gegenprobe (soft_law voll, `norm_referenzen` auf ESTV-MWST getrimmt,
+    KEINE Entlistung) liefert weiterhin den HINWEIS «unvollständig» in
+    beiden Wächtern, weil diese Dokumente nach wie vor 'gelistet' sind
+    (`∩ gelistet` verändert dort nichts). Alle Manipulationen (JSONL,
+    `public/materialien/`, `daten/`) danach exakt zurückgesetzt.
+  - [x] **Unit-Tests:** `src/tests/db-vollstaendigkeit.test.ts`, neue
+    `describe('nurGelistete …')` mit 4 Fällen inkl. End-zu-Ende-Vergleich
+    (`pruefeKantenVollstaendigkeit` ohne vs. mit Filter auf derselben
+    Eingabe) — vorher (HEAD vor A4) 4 rot (`nurGelistete is not a
+    function`), nachher 17/17 grün.
+  - [x] **Nebenfund benannt, nicht behoben (optional laut Auflage):**
+    `shardInhaltGleich` (A2b) normalisiert nicht nur den `erzeugt`-Stempel,
+    sondern jede reine Umformatierung, die bei gleicher Feldreihenfolge
+    keinen semantischen Unterschied hinterlässt — im Docstring vermerkt;
+    folgenlos, solange Shards ausschliesslich generiert werden (§2/§5).
+  - [x] **Tore/Tests (nach A4):** `check:materialien` zweimal byte-identisch
+    grün auf sauberem Baum (`2054 Kanten · 11 Shards`); `check:bs-
+    materialien`, `check:datenhaltung`, `check:tor-paritaet`, `npx tsc -b`,
+    `lint` grün (0 Fehler); `npx vitest run src/tests/*materialien*
+    src/tests/db-vollstaendigkeit.test.ts` 17 Dateien/290 Tests grün.
+    `git merge origin/main` sauber. `git status` nur Code/Test/Doku.
