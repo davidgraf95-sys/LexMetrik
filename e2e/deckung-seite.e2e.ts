@@ -146,14 +146,29 @@ test.describe('Deckungs-Seite «was wir nicht haben»', () => {
     const nachher = await kopf.boundingBox();
     expect(nachher!.y, 'der Seitenkopf verschiebt sich beim Nachladen nicht').toBe(vorher!.y);
 
+    // Die SEITE darf nicht waagrecht scrollen — das ist der Massstab, nicht
+    // «kein Element ist breiter als der Schirm»: die Zahlentabelle IST breiter,
+    // sie scrollt aber in ihrem eigenen Kasten (Prüfung direkt darunter).
+    // Gezählt wird deshalb nur, was AUSSERHALB eines Scroll-Kastens übersteht.
     const ueberlauf = await page.evaluate(() => {
       const w = document.documentElement.clientWidth;
+      const imKasten = (e: Element): boolean => {
+        for (let a = e.parentElement; a; a = a.parentElement) {
+          const ox = getComputedStyle(a).overflowX;
+          if (ox === 'auto' || ox === 'scroll' || ox === 'hidden') return true;
+        }
+        return false;
+      };
       return [...document.querySelectorAll('body *')]
-        .filter((e) => e.getBoundingClientRect().right > w + 1)
+        .filter((e) => e.getBoundingClientRect().right > w + 1 && !imKasten(e))
         .map((e) => `${e.tagName}.${(e.className || '').toString().slice(0, 40)}`)
         .slice(0, 5);
     });
     expect(ueberlauf, 'kein Element ragt über den Viewport').toEqual([]);
+    const seiteScrollt = await page.evaluate(
+      () => document.scrollingElement!.scrollWidth > document.documentElement.clientWidth + 1,
+    );
+    expect(seiteScrollt, 'die Seite selbst scrollt nie waagrecht').toBe(false);
     // Die Tabelle selbst darf breiter sein — sie scrollt in ihrem eigenen Kasten.
     const scrollt = await page.locator(TABELLE).evaluate((t) => {
       const k = t.parentElement!;
