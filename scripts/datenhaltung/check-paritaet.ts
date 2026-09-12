@@ -5,7 +5,9 @@
 // Zählern in der Grün-Meldung.
 import { readFileSync } from 'node:fs';
 import { oeffneDb, frischesSchema } from './schema';
-import { ingestNormtext, ingestRechtsprechung, ingestSoftLaw, type Zaehler } from './ingest';
+import {
+  ingestNormtext, ingestRechtsprechung, ingestSoftLaw, ungedeckteTopLevelJson, type Zaehler,
+} from './ingest';
 import {
   projiziereEintragDatei,
   projiziereDokument,
@@ -63,6 +65,25 @@ dbS.close();
 
 const zaehler: Zaehler = { ...zN, ...zR, ...zS };
 
+// ── §17 · VOLLSTÄNDIGKEIT DER FESTEN LISTEN (12.9.2026) ──────────────────────
+// Der Byte-Roundtrip oben beweist nur etwas über Dateien, die überhaupt in die
+// DB kamen. Eine committete Datei, die in keiner Ingest-Liste steht, ist für ihn
+// unsichtbar — dreimal in Folge fiel genau das erst bei der Gegenprüfung auf
+// (norm-index-erlasse, normkeys-kanton, Register-Aufteilung), beim vierten Mal
+// (Deckungs-Sicht) wurde daraus dieser Wächter. Herleitung: ./ingest.ts.
+const ungedeckt = ungedeckteTopLevelJson();
+if (ungedeckt.length) {
+  console.error(
+    `check:paritaet ROT: ${ungedeckt.length} committete Datei(en) stehen in keiner Ingest-Liste `
+    + 'und laufen damit still an Parität und Datenhaltung vorbei:',
+  );
+  for (const u of ungedeckt) console.error(`  - ${u.pfad} → gehört in ${u.liste} (scripts/datenhaltung/ingest.ts)`);
+  console.error(
+    '  Eintragen, nicht globben: die Liste sagt, in WELCHE Doktyp-DB die Datei gehört (§5).',
+  );
+  process.exit(1);
+}
+
 if (diffs.length) {
   console.error(`check:paritaet ROT: ${diffs.length} Datei(en) weichen ab:`);
   for (const d of diffs.slice(0, 20)) console.error(`  - ${d.pfad}: ${d.grund}`);
@@ -71,4 +92,7 @@ if (diffs.length) {
 }
 
 const teile = Object.entries(zaehler).map(([k, v]) => `${k} ${v}`).join(' · ');
-console.log(`check:paritaet grün: ${geprueft} Dateien byte-gleich aus der DB projiziert (${teile}).`);
+console.log(
+  `check:paritaet grün: ${geprueft} Dateien byte-gleich aus der DB projiziert (${teile}); `
+  + 'keine committete Top-Level-JSON ohne Ingest-Eintrag.',
+);

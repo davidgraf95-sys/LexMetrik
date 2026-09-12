@@ -202,6 +202,12 @@ function Aenderungskarte({ e, a, projektion, anker, artikel, abgerufen }: {
           Fedlex, Bundeskanzlei · Abruf <span className="num">{abgerufen ? datumCh(abgerufen) : 'unbekannt'}</span> ·
           massgeblich bleibt {AMTLICHE_FASSUNG_NOMEN}.
         </span>
+        {/* W2·6c-DECKUNGS-SEITE (§8): ein Leser, der hier «Botschaft nicht
+            erfasst» liest, hat genau eine Anschlussfrage — wie oft das
+            vorkommt. Der Link beantwortet sie; er lädt nichts mit, die
+            Deckungs-Sicht wird erst auf der Zielseite geholt. */}
+        {' '}
+        <Link to="/materialien/deckung" className="lr8-entst-mehr">Was fehlt?</Link>
       </p>
     </div>
   );

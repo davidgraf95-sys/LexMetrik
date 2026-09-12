@@ -66,6 +66,9 @@ import {
   type BotschaftQuelle, type HistorieQuelle, type RevisionsQuelle,
 } from './entstehung-projektion.ts';
 import { BOTSCHAFTEN } from '../../src/lib/materialien/botschaften.generated.ts';
+import {
+  pruefeDeckungsSicht, DECKUNG_PROJEKTION_PFAD, DECKUNG_DECKEL,
+} from './deckung-projektion-quellen.ts';
 
 const schreibe = process.argv.includes('--schreibe');
 const datumArg = process.argv.find((a) => a.startsWith('--datum='));
@@ -152,6 +155,10 @@ const DECKEL: readonly (readonly [string, string, number, boolean])[] = [
   // könnte sie unbemerkt dorthin zurückwachsen (Ist 11.9.2026: 692 KB über 185 Erlasse,
   // ø 3,7 KB; grösste Datei AIG 43,6 KB — je Datei bewacht die Zeile darunter).
   ['Entstehungs-Projektion', PROJEKTION_DIR, 1536 * 1024, false],
+  // Deckungs-Sicht (W2·6c, 12.9.2026): EINZIGER Ladekanal von /materialien/deckung.
+  // Sie ersetzt dort 8 MB Artefakte durch eine Datei — ohne eigenen Deckel wüchse
+  // sie unbemerkt dorthin zurück (Ist: 78,5 KB roh / 10,8 KB gzip, 219 Erlasse).
+  ['Deckungs-Sicht        ', DECKUNG_PROJEKTION_PFAD, DECKUNG_DECKEL, false],
 ];
 
 /** §15/§11.6 · Deckel JE ERLASS für die Projektion: die Karte lädt genau EINE
@@ -774,6 +781,14 @@ for (const [name, pfad, max, gzip] of DECKEL) {
       + `/ ${kb(PROJEKTION_DECKEL_DATEI)} je Erlass; ${abweichend} Abweichung(en) zur Neuberechnung.`,
     );
   }
+}
+
+// ── (7) Deckungs-Sicht (W2·6c): Herleitung in ./deckung-projektion-quellen.ts,
+// Muster ./deckel.ts — eingebaut stand das Tor bei 824 > 800 Zeilen (§6.6).
+{
+  const { zeile, fehler: f } = pruefeDeckungsSicht();
+  if (zeile) zeilen.push(zeile);
+  fehler.push(...f);
 }
 
 for (const z of zeilen) console.log(z);

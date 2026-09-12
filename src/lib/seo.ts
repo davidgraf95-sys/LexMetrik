@@ -122,6 +122,10 @@ const STATISCHE_SEITEN: Record<string, { titel: string; beschreibung: string; og
   // (kein STATISCHE_SEITEN-Eintrag → metaFuerPfad fiel auf «/» durch). Kein
   // noindex (Muster /abdeckung, /datenschutz: kein Feld dafür im Register).
   '/einstellungen': { titel: 'Einstellungen — LexMetrik', beschreibung: 'Persönliche Vorgaben für LexMetrik — Standard-Kanton, Vorlagen-Detailgrad, Design und Ausgabestil. Bleiben lokal im Browser gespeichert, nichts wird an einen Server übermittelt.' },
+  // W2·6c-DECKUNGS-SEITE (§11.5, 12.9.2026): Gegenstück zu /abdeckung — dort
+  // «was die Suche durchsucht», hier «wie weit die Entstehungsgeschichte
+  // hinterlegt ist». Zwei Seiten, zwei Bestände, kein Doppel-Canonical.
+  '/materialien/deckung': { titel: 'Was wir nicht haben — LexMetrik', beschreibung: 'Wie weit die Entstehungsgeschichte der erfassten Erlasse hinterlegt ist — und wo nicht: Fussnoten-Deckung, erfasste Botschaften, Fassungsvergleich ab 2021, Parlamentsverfahren, je Erlass mit Zahl, Stand und amtlicher Quelle.' },
   '/abdeckung': { titel: 'Was ist durchsuchbar — LexMetrik', beschreibung: 'Was die LexMetrik-Suche wirklich durchsucht: Bundeserlasse im Volltext, kantonale Erlasse nach Titel, Bundesgerichts-Leitentscheide und amtliche Materialien — ehrlich offengelegt, mit Live-Link zur amtlichen Fassung.' },
   '/suche': { titel: 'Suche — LexMetrik', beschreibung: 'Volltextsuche über LexMetrik: Gesetzestext, Gesetze, Bundesgerichtsentscheide, amtliche Materialien sowie Rechner und Vorlagen — alle Treffer auf einer Seite, nach Inhaltstyp filterbar, mit teilbarem Deep-Link.' },
 };

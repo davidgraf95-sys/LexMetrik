@@ -12,7 +12,7 @@ import {
   // stehen sie in `lib/tabs` und beide Flächen lesen dieselbe Quelle.
   reiterKurzformText,
 } from '../../lib/tabs';
-import { verlaufLabel, type VerlaufManifeste } from '../../lib/verlaufLabel';
+import { verlaufLabel, materialPfad, type VerlaufManifeste } from '../../lib/verlaufLabel';
 import { reiterKategorie } from '../../lib/tabGruppen';
 import { Reiter } from './reiterleiste/Reiter';
 import { ReiterBlatt } from './reiterleiste/ReiterBlatt';
@@ -100,7 +100,13 @@ export function Reiterleiste({ paneSchluessel = [] }: {
   useEffect(() => {
     const brauchtG = tabs.some((t) => reiterKategorie(t.path) === 'gesetze');
     const brauchtE = tabs.some((t) => reiterKategorie(t.path) === 'rechtsprechung');
-    const brauchtM = tabs.some((t) => reiterKategorie(t.path) === 'materialien');
+    // §15-Nachzug (12.9.2026): die Eintrittskarte allein an der KATEGORIE zog
+    // das 1,4-MB-Register auch für Materialien-Routen, die es nie brauchen —
+    // die Übersicht (die es ohnehin selbst lädt) und seit heute
+    // /materialien/deckung. Gebraucht wird es genau für DETAIL-Reiter, und das
+    // sagt `materialPfad` — dieselbe Funktion, die die Aufschrift auflöst.
+    // Rot-Beweis: Sonde e2e/deckung-seite (a) sah vorher genau diesen Abruf.
+    const brauchtM = tabs.some((t) => materialPfad(t.path) !== null);
     if (!brauchtG && !brauchtE && !brauchtM) return;
     let lebt = true;
     void (async () => {

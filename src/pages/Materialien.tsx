@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { SeitenKopf } from '../components/layout/SeitenKopf';
 import { usePaneKlasse } from '../components/layout/PaneKontext';
 import { useSucheAusUrl } from '../components/suche/useSucheAusUrl';
@@ -187,6 +188,16 @@ export function Materialien() {
           Sammlung und gehört zu ihrem Fuss, nicht über ihren Titel. */}
       <p className="border-t border-line/60 pt-3 text-micro text-ink-500 max-w-reading">
         Faktisches «Soft-Law», kein Gesetzesrang. Diese Rubrik führt keine eigenen Volltexte; jeder Eintrag verlinkt die Publikation, massgeblich ist stets {AMTLICHE_FASSUNG_NOMEN}.
+      </p>
+      {/* W2·6c-DECKUNGS-SEITE (§8): unaufdringlich im Fuss, nicht im Einstieg —
+          wer die Rubrik benutzt, sucht ein Dokument; wer wissen will, wie weit
+          der Bestand reicht, sucht diesen Satz. Reiner Link, kein Ladevorgang:
+          die Deckungs-Sicht wird erst auf der Zielseite geholt. */}
+      <p className="text-micro text-ink-500 max-w-reading">
+        Wie weit die Entstehungsgeschichte der Erlasse hinterlegt ist — und wo nicht:{' '}
+        <Link to="/materialien/deckung" className="text-brass-700 underline hover:text-brass-600">
+          Was wir nicht haben
+        </Link>
       </p>
     </div>
   );

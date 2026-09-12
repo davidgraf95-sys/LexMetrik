@@ -99,6 +99,14 @@ describe('B8 · geteilte Scroll-Affordanz (LM-063/LM-064)', () => {
     ['src/components/rechtsprechung/SachgebietKacheln.tsx', 'lc-scrollrand-x'],
     ['src/pages/gesetz-leser/v3/LeserPanel.tsx', 'lc-scrollrand-x'],
     ['src/pages/gesetz-leser/v3/LeserSeitenleiste.tsx', 'lc-scrollrand-y'],
+    // NEUER KONSUMENT (W2·6c-DECKUNGS-SEITE, 12.9.2026, §6.3 deklariert): die
+    // Zahlentabelle von /materialien/deckung ist unter `sm` breiter als der
+    // Schirm. Sie trug zuerst nur `overflow-x-auto` — R8 (`kein-abschnitt`,
+    // Kategorie a) meldete sie in CI viermal, @320 und @390 in hell und dunkel:
+    // ein Scroller ohne Affordanz schneidet die letzte Spalte ab, ohne dass
+    // etwas sagt, dass dort noch Inhalt liegt. Der Anker hält den Fix billig
+    // fest — ohne 3 Minuten Browser-Sweep.
+    ['src/pages/MaterialienDeckung.tsx', 'lc-scrollrand-x'],
     // LM-061 (Entscheid David 31.8.2026, revidiert D11) galt zusätzlich den
     // BEIDEN Startseiten-Streifen — sie trugen die Scrollstand-Affordanz statt
     // der angeschnittenen Karte als einziger Auskunft über ~2'600 px
