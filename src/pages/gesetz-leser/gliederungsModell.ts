@@ -37,7 +37,7 @@
 // §5-Doppelwahrheit ohne Konsumenten. Labels taugen nicht als Schlüssel
 // (SORTG-Labelkollision), eIds fehlen kantonal vollständig.
 
-import type { Sektion } from '../../lib/normtext/browse';
+import type { Sektion, StrukturMap } from '../../lib/normtext/browse';
 import type { NormSnapshot } from '../../lib/normtext/typen';
 import { berechneSektionMeta } from './berechnungen';
 import { artikelSchluessel } from './tocAutoZuklappen';
@@ -253,6 +253,50 @@ function elternToken(token: string): string | null {
   return i > 0 ? token.slice(0, i) : null;
 }
 
+/** Erste Sidecar-Gliederungsstufe eines Tokens, oder `null` (kein Sidecar/Eintrag). */
+function sidecarGruppe(
+  token: string | undefined, struktur: StrukturMap | null,
+): { ebene: number; label: string; eId?: string } | null {
+  if (!token) return null;
+  const g = struktur?.[token]?.gliederung;
+  return g && g.length > 0 ? g[0] : null;
+}
+
+/**
+ * W2·18-FEHLERBUCH (12.9.2026, Gegenprüfung #838): die synthetische
+ * Anhang-Wurzel hiess bisher IMMER «Anhänge» — auch dort, wo unter ihr kein
+ * einziger echter Anhang hängt, sondern ausschliesslich `scope_*`/`decl_*`
+ * (Geltungsbereich, Erklärungen und Vorbehalte der Schweiz). Amtliche Quelle
+ * für den korrekten Namen ist der Struktur-Sidecar: `extrahiereAnhangStruktur`
+ * (`scripts/normtext/struktur-extrahiere.ts`) berechnet dort bereits «Anhänge»
+ * (Container `annex`) bzw. «Geltungsbereich»/«Geltungsbereich und Erklärungen»
+ * (Container `scope`, PR #838) je Artikel — `leserSuche.ts` liest denselben
+ * Wert für die Suchfacette. Diese Funktion ist der zweite Konsument (§5: eine
+ * Berechnung, zwei Verbraucher), nie eine zweite Wahrheit.
+ *
+ * Konservativ nach §8: nur wenn AUSNAHMSLOS jeder Beitrag unter dieser Wurzel
+ * die scope-Container-eId trägt, wird das Sidecar-Label übernommen. Fehlt für
+ * einen Beitrag der Sidecar-Eintrag, oder trägt auch nur einer die annex-eId
+ * (die 14 LUGUE-artigen Staatsverträge: scope UND annex im selben Erlass,
+ * dort bereits heute als «Anhänge» im Sidecar geführt), bleibt es bei
+ * «Anhänge» — eine Behauptung, die im Zweifel den Vorbestand nicht verschärft.
+ * Kantone kennen `scope_`/`decl_` nicht (Bund-Token-Namensraum, s. o.) und
+ * haben ausserdem kein `struktur`-Sidecar für ihre `anhang_N`-Tokens — sie
+ * fallen darum unverändert auf «Anhänge».
+ */
+function waehleAnhangWurzelLabel(
+  anhangFrei: NormSnapshot[], anhangAeste: GliederungsKnoten[], struktur: StrukturMap | null,
+): string {
+  const ANHAENGE = 'Anhänge';
+  const gruppen = [
+    ...anhangFrei.map((a) => sidecarGruppe(a.artikel, struktur)),
+    ...anhangAeste.map((k) => sidecarGruppe(k.ersterArtikel, struktur)),
+  ].filter((g): g is { ebene: number; label: string; eId?: string } => g !== null);
+  if (gruppen.length === 0) return ANHAENGE;
+  if (gruppen.some((g) => g.eId !== 'scope')) return ANHAENGE;
+  return gruppen[0].label;
+}
+
 function baueAnhangAst(arts: NormSnapshot[], dominant: boolean): GliederungsKnoten | null {
   if (arts.length === 0) return null;
   const vorhanden = new Set(arts.map((a) => a.artikel));
@@ -423,6 +467,10 @@ export function baueGliederungsModell(ein: ModellEingabe): GliederungsModell {
       if (dominant) anhangWurzel.startOffen = true;
     }
     for (const ast of anhangAeste) anhangWurzel.kinder.push(ast);
+    // W2·18-FEHLERBUCH: Label NACH dem Zusammenführen von anhangFrei und
+    // anhangAeste neu bestimmen — erst jetzt stehen alle Beitragenden fest.
+    anhangWurzel.label = waehleAnhangWurzelLabel(anhangFrei, anhangAeste, struktur);
+    anhangWurzel.labelKette = [anhangWurzel.label];
     const setzeTiefe = (k: GliederungsKnoten, t: number): void => {
       k.tiefe = t;
       k.kinder.forEach((kk) => setzeTiefe(kk, t + 1));

@@ -1,5 +1,16 @@
 # ROADMAP — Erledigt-Chronik (Detail-Archiv erledigter Schritte)
 
+## Leser-Wurzel «Anhänge» uneinheitlich für scope/decl-Sektionen — gelöst 12.9.2026 (W2·18-FEHLERBUCH)
+
+**Ursprünglicher Befund (Wortlaut, bis 12.9.2026 offen, `W2·18-FEHLERBUCH`):** «**Leser-Wurzel «Anhänge» uneinheitlich für scope/decl-Sektionen** *(Nebenfund PR #838, 12.9.2026, gehört ins Fehlerbuch-Dach `W2·18-FEHLERBUCH`)* — die Leser-Wurzel für scope/decl-Sektionen (Geltungsbereich, CH-Erklärungen/Vorbehalte) heisst synthetisch «Anhänge»; uneinheitlich bei den 14 LUGUE-Verträgen und den 12 aus #838. §3/§8-Darstellungsschritt; Empfehlung der Gegenprüfung zu PR #838 abwarten, bevor gebaut wird.»
+
+- [x] **Gelöst 12.9.2026, PR #840.** `gliederungsModell.ts`: die synthetische Wurzel übernimmt das
+  Struktur-Sidecar-Label («Geltungsbereich» / «Geltungsbereich und Erklärungen»), wenn ausnahmslos
+  jeder Beitrag die scope-Container-eId trägt; gemischt oder ohne Sidecar-Eintrag bleibt «Anhänge»
+  (§8 konservativ, Empfehlung der Gegenprüfung #838 umgesetzt). Wirksam für die 12 Staatsverträge
+  aus #838; LUGUE-Klasse (eId annex) unverändert. 5 Tests additiv, Rot-Beweis 2/5, Golden 256
+  byte-gleich, reine Darstellung (§3).
+
 ## Wächter «rectifies-Ziel vs. Berichtigungstext» — gelöst 12.9.2026 (W2·18-FEHLERBUCH)
 
 **Ursprünglicher Befund (Wortlaut, bis 12.9.2026 offen, `W2·18-FEHLERBUCH`):** «**Wächter «rectifies-Ziel vs. Berichtigungstext»** *(Gegenprüfung PR #827, 12.9.2026)* — Fedlex' `jolux:rectifies` kann auf das falsche AS-Dokument zeigen (AS 2025 686/SKV: Ziel AS 2025 648 = TAFV 2, im amtlichen Text steht AS 2025 644 = SKV; AS 2024 144/SSV: Sammelberichtigung mit nur einem `rectifies`). Tor: die im Berichtigungstext (Filestore-HTML, «(AS … ; SR …)») genannte AS-Fundstelle gegen das `rectifies`-Ziel messen, Abweichung als Befund listen statt in Prosa übersetzen (§7/§17; heute nur Docstring-Vermerk in `scripts/normtext/revisionen-generieren.ts`).»
