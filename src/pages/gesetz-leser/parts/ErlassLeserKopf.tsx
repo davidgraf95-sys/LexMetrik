@@ -1,4 +1,5 @@
 import { type ReactNode } from 'react';
+import { Link } from 'react-router-dom';
 import type { CurrencyEintrag, KantonLueckeEintrag } from '../../../lib/normtext/browse';
 import type { BrowseErlass } from '../../../lib/normtext/browse-typen';
 import {
@@ -10,6 +11,7 @@ import { Datum } from '../../../components/ui/Datum';
 import { QuellLink } from '../../../components/ui/QuellLink';
 import { SeitenTitel } from '../../../components/ui/SeitenTitel';
 import { LeserKopfGeruest } from '../../../components/layout/LeserKopfGeruest';
+import { erlassKeyVonEli, erlassPfadVonKey } from '../../../lib/normtext/erlassAdresse';
 import { kennungEtikett, titelOhneKlammerSuffix } from '../helpers';
 
 // W2·5d G2b — EINE Leser-Kopf-Komponente für ALLE Grundarten (Kopf-Zusammen-
@@ -352,14 +354,44 @@ export function ErlassLeserKopf({
               «amtliche Fassung»-Link und behält darum seinen eigenen Namen —
               aber dieselbe Anatomie (Pfeil hinten, gross beginnend). */}
           <p className="flex flex-wrap items-center gap-x-4 gap-y-1">
-            {erlass.aufgehoben.nachfolger && (
-              <QuellLink
-                href={`https://www.fedlex.admin.ch/eli/${erlass.aufgehoben.nachfolger.eli}/de`}
-                className="underline hover:no-underline"
-              >
-                Nachfolge-Erlass: SR <span className="num">{erlass.aufgehoben.nachfolger.sr}</span> (in Kraft seit <Datum iso={erlass.aufgehoben.seit} />)
-              </QuellLink>
-            )}
+            {/* ── Gegenprüfungs-Auflage PR #823 (12.9.2026) · DER NACHFOLGER
+                KANN JETZT BEI UNS LIEGEN ─────────────────────────────────────
+                Bis zur BMV-Totalrevision führte dieser Link IMMER nach
+                fedlex.admin.ch — richtig, solange wir den Nachfolge-Erlass
+                selbst nicht hatten. Seit `BMV_2025` im Korpus liegt, schickte
+                er den Leser hinaus, obwohl die geltende Fassung einen Klick
+                entfernt ist (§8). `erlassKeyVonEli` beantwortet die Frage
+                deterministisch aus Register + FEDLEX-Tabelle (§5, keine
+                zweite Wahrheit, Mehrdeutigkeit ⇒ kein Treffer).
+                §7 BLEIBT GEWAHRT: die amtliche Fassung des Nachfolgers steht
+                als eigener Link daneben — massgeblich ist nie unser Artefakt.
+                Ohne Korpus-Key ist alles wie zuvor: ein einziger, externer
+                Link (nie ein Sprung ins Leere). */}
+            {erlass.aufgehoben.nachfolger && (() => {
+              const n = erlass.aufgehoben.nachfolger;
+              const nachfolgerKey = erlassKeyVonEli(n.eli);
+              const amtlich = `https://www.fedlex.admin.ch/eli/${n.eli}/de`;
+              const bezeichnung = (
+                <>Nachfolge-Erlass: SR <span className="num">{n.sr}</span> (in Kraft seit <Datum iso={erlass.aufgehoben.seit} />)</>
+              );
+              if (!nachfolgerKey) {
+                return (
+                  <QuellLink href={amtlich} className="underline hover:no-underline">
+                    {bezeichnung}
+                  </QuellLink>
+                );
+              }
+              return (
+                <>
+                  <Link to={erlassPfadVonKey(nachfolgerKey)} className="underline hover:no-underline">
+                    {bezeichnung} — geltende Fassung im Korpus
+                  </Link>
+                  <QuellLink href={amtlich} className="underline hover:no-underline">
+                    Amtliche Fassung des Nachfolge-Erlasses
+                  </QuellLink>
+                </>
+              );
+            })()}
             {erlass.quelleUrl && (
               <QuellLink href={erlass.quelleUrl} variante="aufgehoben" className="underline hover:no-underline" />
             )}
