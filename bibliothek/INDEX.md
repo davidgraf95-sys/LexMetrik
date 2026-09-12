@@ -224,6 +224,19 @@ priorisiert vor den übrigen Ämtern. Vorbild buzer.de-Muster (Point-in-Time-URL
 je Paragraphenfassung, Absatz-Synopse). Maschinell recherchiert; fachliche
 Abnahme David offen.
 
+**Quelllücken der amtlichen Konsolidierung — Messung 12.9.2026:** [materialien/entstehung-2026-09-06/E5-quellluecken-2026-09-12.md](materialien/entstehung-2026-09-06/E5-quellluecken-2026-09-12.md) —
+Quelle Fedlex-Filestore (AKN-XML, DE), Abruf 12.9.2026, vier Manifestationen von
+CHEMRRV `cc/2005/478` mit Bytes und sha belegt. Befund: die Stände 2022-05-01 und
+2022-10-01 führen nur `art_1`–`art_3` als `<article>`, die Artikel 3a–24 stehen in
+derselben Datei als `<mod>`/`<quotedStructure>` eines Änderungsanhangs — eine
+Konversions-Panne, keine Aufhebung. Regel deterministisch: eId fehlt in einem
+lückenlosen Lauf von 1 … 3 Ständen und kehrt byte-gleich zurück ⇒ `zustand:
+'quelle_unvollstaendig'` statt «entfallen» + «neu eingefügt», ohne gespeicherten
+Wortlaut. Stichprobe n=22 (Vollerhebung) 22/22 wortgleich. Geltung: Bund, Fenster ab
+1.1.2021; Ausnahme EPV `art_64_a_64_b` (Lücke 17 Stände, Deckel greift, folgenlos).
+Pflegebedarf: Zahl der Lücken steht in der Schluss-Zeile von `check:entstehung`.
+Abnahme David offen.
+
 **Synopse alt/neu — Vor-Messung E5.0 11.9.2026:** [materialien/entstehung-2026-09-06/E5-0-vormessung.md](materialien/entstehung-2026-09-06/E5-0-vormessung.md) —
 Quelle Fedlex SPARQL + Filestore (AKN-XML, DE), Abruf 11.9.2026, 8 Erlasse
 disjunkt zu R2 (ZGB/STPO/STGB/SCHKG/VTS/AVIV/NHG/UVPV), 68 Konsolidierungs-
