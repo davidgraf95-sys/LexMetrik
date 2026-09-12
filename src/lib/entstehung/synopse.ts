@@ -168,11 +168,17 @@ export interface SynopseArtikel {
    *  `zurueckAb` (ausschliesslich) und werden aus `SynopseShard.staende` abgeleitet,
    *  statt ein zweites Mal gespeichert zu werden (§5). */
   zurueckAb?: string;
-  /** NUR bei `zustand: 'quelle_unvollstaendig'`: der Artikel steht in JEDEM Lücken-Stand
-   *  als `<mod>`/`<quotedStructure>` eines Änderungsanhangs derselben Datei — belegt über
-   *  die amtliche Änderungs-Referenz, nicht vermutet. Fehlt das Feld, fehlt der Artikel
-   *  in diesem Stand ganz; die Karte sagt dann den schwächeren, aber ebenso wahren Satz
-   *  («nicht im Artikelbaum») statt den stärkeren zu behaupten (§8). */
+  /** NUR bei `zustand: 'quelle_unvollstaendig'`, und dort PFLICHT: der Artikel steht in
+   *  JEDEM Lücken-Stand als `<mod>`/`<quotedStructure>` eines Änderungsanhangs derselben
+   *  Datei — belegt über die amtliche Änderungs-Referenz, nicht vermutet.
+   *
+   *  ES IST DIE BEDINGUNG DER BUCHUNG, NICHT IHR SCHMUCK (Auflage Gegenprüfung PR #801):
+   *  ohne diesen positiven Beleg ist eine wortgleiche Rückkehr von einer echten Aufhebung
+   *  mit späterer, wortgleicher Wiedereinführung nicht zu unterscheiden — solche Fälle
+   *  bleiben «entfallen» + «neu eingefügt» und werden im Quell-Register vermerkt
+   *  (`quellLueckeOhneBeleg`), statt als Lücke getarnt zu werden (§1). Optional ist das
+   *  Feld nur im TYP, weil es an den anderen Zuständen nichts zu suchen hat;
+   *  `check:entstehung` verlangt es an jedem Lücken-Block. */
   imAnhang?: true;
   /** AS-ELIs der Fussnoten-Ereignisse dieses Stands in Kurzform («oc/2023/750»; voller
    *  ELI = `https://fedlex.data.admin.ch/eli/` + Kurzform, Repo-Konvention `eliKurz`).

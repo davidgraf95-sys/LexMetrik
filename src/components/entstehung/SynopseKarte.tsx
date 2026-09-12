@@ -219,11 +219,12 @@ function QuellLuecke({ treffer }: { treffer: QuellLueckeTreffer }) {
       </p>
       <p className="lr8-syn-hinweis" data-synopse-quellluecke>
         <span className="lc-chip lr8-syn-warn">Quelle unvollständig</span>{' '}
-        Quelle unvollständig: {standWort} {fuehrt} diesen Artikel{' '}
-        {artikel.imAnhang
-          ? 'nur in einem Änderungsanhang'
-          : 'nicht im Artikelbaum'}
-        ; massgeblich bleibt {AMTLICHE_FASSUNG_NOMEN}.
+        {/* «nur in einem Änderungsanhang» ist keine Vermutung, sondern Bedingung der
+            Buchung: ohne diesen Beleg wird gar keine Quelllücke gebucht (Auflage
+            Gegenprüfung PR #801, `findeQuellLuecken` (4), Tor-Ast in
+            `check:entstehung`). Darum steht hier ein Satz und keine Fallunterscheidung. */}
+        Quelle unvollständig: {standWort} {fuehrt} diesen Artikel nur in einem
+        Änderungsanhang; massgeblich bleibt {AMTLICHE_FASSUNG_NOMEN}.
         {artikel.zurueckAb && <>
           {' '}Ab dem <span className="num">{datumCh(artikel.zurueckAb)}</span> steht er dort
           wieder — mit demselben Wortlaut wie davor. Aufgehoben war er nie; hier fehlt das

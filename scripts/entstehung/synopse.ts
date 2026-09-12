@@ -709,8 +709,19 @@ export interface QuellLuecke {
   vonIdx: number;
   /** Index des Stands, der die eId wieder führt (= erster Stand NACH der Lücke). */
   zurueckIdx: number;
-  /** Der Artikel steht in JEDEM Lücken-Stand im Änderungsanhang derselben Datei. */
+  /** Der Artikel steht in JEDEM Lücken-Stand im Änderungsanhang derselben Datei.
+   *  In `luecken` ist das Feld IMMER `true` — es ist Bedingung, nicht Vermerk (siehe
+   *  `findeQuellLuecken`); in `ohneBeleg` immer `false`. */
   imAnhang: boolean;
+}
+
+/** Was die Kette hergibt: gebuchte Lücken — und die Fälle, die den Beleg schuldig bleiben. */
+export interface QuellLueckenBefund {
+  /** Erfüllen ALLE vier Bedingungen ⇒ `zustand: 'quelle_unvollstaendig'`. */
+  luecken: QuellLuecke[];
+  /** Wortgleiche Rückkehr OHNE Anhang-Beleg: bleibt «entfallen» + «neu eingefügt» und
+   *  wird gemeldet, nie stillschweigend umgebucht (Auflage Gegenprüfung PR #801). */
+  ohneBeleg: QuellLuecke[];
 }
 
 /**
@@ -737,11 +748,15 @@ export const QUELLLUECKE_STAENDE_MAX = 3;
  *      GEÄNDERTER Text zurück, kann das ebenso gut eine Aufhebung mit Neuerlass sein —
  *      dann bleibt es bei «entfallen» + «neu».
  *  (3) Der Lauf ist höchstens `QUELLLUECKE_STAENDE_MAX` Stände lang (Begründung dort).
- *
- * WAS DIE REGEL NICHT BRAUCHT: den Änderungsanhang. Er ist der POSITIVE Beleg und wird
- * mitgegeben (`imAnhang`), aber nicht verlangt — eine Konversion kann einen Artikel auch
- * ersatzlos verlieren, und dann ist «die Quelle führt ihn in diesem Stand nicht» immer
- * noch wahr, während «entfallen» falsch wäre (§8).
+ *  (4) DER ANHANG-BELEG (Auflage der Gegenprüfung zu PR #801, 12.9.2026): der Artikel
+ *      steht in JEDEM Lücken-Stand als `<mod>`/`<quotedStructure>` derselben Datei, über
+ *      die amtliche `modification-reference` dem Korpus-Token zugeordnet. Das ist der
+ *      einzige POSITIVE Beweis, dass die Quelle den Artikel noch führt — ohne ihn ist
+ *      (1)–(3) von einer echten Aufhebung mit späterer, wortgleicher Wiedereinführung
+ *      nicht zu unterscheiden, und die als «Quelle unvollständig» zu tarnen wäre die
+ *      schwerere Falschaussage (§1: lieber eine Aufhebung zu viel zeigen als eine
+ *      verstecken). Solche Fälle kommen in `ohneBeleg` und bleiben «entfallen» + «neu»
+ *      — gemeldet vom Lauf, als Warnung wiederholt von `check:entstehung`.
  *
  * AUFGEHOBENE ARTIKEL SIND NICHT BETROFFEN: eine echte Aufhebung lässt die eId als
  * «Aufgehoben»-Platzhalter stehen (`extrahiereArtikel` behält sie). Erst das vollständige
@@ -750,8 +765,9 @@ export const QUELLLUECKE_STAENDE_MAX = 3;
 export function findeQuellLuecken(
   profile: readonly StandProfil[],
   tokenFuerEId: (eId: string) => string | null = tokenAusEId,
-): QuellLuecke[] {
+): QuellLueckenBefund {
   const out: QuellLuecke[] = [];
+  const ohneBeleg: QuellLuecke[] = [];
   for (let i = 1; i < profile.length; i += 1) {
     for (const eId of profile[i - 1].eIds) {
       if (profile[i].eIds.has(eId)) continue;
@@ -764,10 +780,13 @@ export function findeQuellLuecken(
       const token = tokenFuerEId(eId);
       const imAnhang = token !== null
         && Array.from({ length: j - i }, (_, k) => profile[i + k]).every((p) => p.anhangTokens.has(token));
-      out.push({ eId, vonIdx: i, zurueckIdx: j, imAnhang });
+      (imAnhang ? out : ohneBeleg).push({ eId, vonIdx: i, zurueckIdx: j, imAnhang });
     }
   }
-  return out.sort((a, b) => (a.vonIdx !== b.vonIdx ? a.vonIdx - b.vonIdx : a.eId < b.eId ? -1 : 1));
+  const nachLage = (a: QuellLuecke, b: QuellLuecke): number => (
+    a.vonIdx !== b.vonIdx ? a.vonIdx - b.vonIdx : a.eId < b.eId ? -1 : 1
+  );
+  return { luecken: out.sort(nachLage), ohneBeleg: ohneBeleg.sort(nachLage) };
 }
 
 // ── Serialisierung ────────────────────────────────────────────────────────────

@@ -564,30 +564,44 @@ describe('findeQuellLuecken — eine Lücke der Quelle ist keine Aufhebung (W2·
   const LUECKE = dok(ART('art_3', 'Art. 3', 'Dritter.')) + MOD('<b>Art. 9</b> Örtlicher Geltungsbereich', 'Örtlicher Geltungsbereich: Neuntens.');
 
   it('bucht die Lücke, wenn die eId unverändert zurückkehrt — mit Beleg im Änderungsanhang', () => {
-    const luecken = findeQuellLuecken([profil(VOLL), profil(LUECKE), profil(LUECKE), profil(VOLL)]);
+    const { luecken, ohneBeleg } = findeQuellLuecken([profil(VOLL), profil(LUECKE), profil(LUECKE), profil(VOLL)]);
     expect(luecken).toEqual([{ eId: 'art_9', vonIdx: 1, zurueckIdx: 3, imAnhang: true }]);
+    expect(ohneBeleg).toEqual([]);
   });
 
   it('Rot-Beweis: kehrt ein GEÄNDERTER Wortlaut zurück, bleibt es bei «entfallen»', () => {
     // Sonst versteckte die Buchung eine echte Aufhebung mit Neuerlass (§1) — die
     // gefährlichere Falschaussage von beiden.
     const ANDERS = dok(ART('art_3', 'Art. 3', 'Dritter.'), ART('art_9', 'Art. 9', 'Örtlicher Geltungsbereich: Zehntens.'));
-    expect(findeQuellLuecken([profil(VOLL), profil(LUECKE), profil(ANDERS)])).toEqual([]);
+    expect(findeQuellLuecken([profil(VOLL), profil(LUECKE), profil(ANDERS)]).luecken).toEqual([]);
   });
 
   it('kehrt die eId gar nicht zurück, ist sie entfallen — hier wird nichts vermutet', () => {
-    expect(findeQuellLuecken([profil(VOLL), profil(LUECKE), profil(LUECKE)])).toEqual([]);
+    expect(findeQuellLuecken([profil(VOLL), profil(LUECKE), profil(LUECKE)]).luecken).toEqual([]);
   });
 
   it(`eine Lücke über mehr als ${QUELLLUECKE_STAENDE_MAX} Stände bleibt «entfallen» (Sicherheitsgurt)`, () => {
     const kette = [profil(VOLL), ...Array.from({ length: QUELLLUECKE_STAENDE_MAX + 1 }, () => profil(LUECKE)), profil(VOLL)];
-    expect(findeQuellLuecken(kette)).toEqual([]);
+    expect(findeQuellLuecken(kette).luecken).toEqual([]);
   });
 
-  it('ohne Beleg im Änderungsanhang wird die Lücke gebucht, aber nicht behauptet (§8)', () => {
+  // AUFLAGE DER GEGENPRÜFUNG ZU PR #801 (12.9.2026): der Anhang-Beleg ist BEDINGUNG,
+  // nicht Vermerk. Ohne ihn ist eine wortgleiche Rückkehr innerhalb des Deckels von
+  // einer echten Aufhebung mit späterer, wortgleicher Wiedereinführung nicht zu
+  // unterscheiden — und die als «Quelle unvollständig» zu tarnen wäre die schwerere
+  // Falschaussage (§1). Der Fall bleibt «entfallen» + «neu» und wird gemeldet.
+  it('ohne Beleg im Änderungsanhang wird NICHT gebucht — der Fall wird nur gemeldet', () => {
     const OHNE = dok(ART('art_3', 'Art. 3', 'Dritter.'));
-    const luecken = findeQuellLuecken([profil(VOLL), profil(OHNE), profil(VOLL)]);
-    expect(luecken).toEqual([{ eId: 'art_9', vonIdx: 1, zurueckIdx: 2, imAnhang: false }]);
+    const { luecken, ohneBeleg } = findeQuellLuecken([profil(VOLL), profil(OHNE), profil(VOLL)]);
+    expect(luecken).toEqual([]);
+    expect(ohneBeleg).toEqual([{ eId: 'art_9', vonIdx: 1, zurueckIdx: 2, imAnhang: false }]);
+  });
+
+  it('der Beleg muss in JEDEM Lücken-Stand liegen, nicht nur im ersten', () => {
+    const OHNE = dok(ART('art_3', 'Art. 3', 'Dritter.'));
+    const { luecken, ohneBeleg } = findeQuellLuecken([profil(VOLL), profil(LUECKE), profil(OHNE), profil(VOLL)]);
+    expect(luecken).toEqual([]);
+    expect(ohneBeleg).toHaveLength(1);
   });
 
   it('standProfil liest das Anhang-Etikett über die Inline-Auszeichnung hinweg («Art. 4a», nie «Art. 4 a»)', () => {

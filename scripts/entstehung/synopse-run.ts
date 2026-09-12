@@ -231,7 +231,22 @@ for (const e of erlasse) {
   // Erst hier, nach der ganzen Kette: ob ein «entfallen» eine Aufhebung oder eine Lücke
   // des Artefakts ist, entscheidet sich am Stand DANACH — und den kennt der paarweise
   // Diff naturgemäss nicht (Gegenprüfungs-Befund A6 zu PR #798, Beleg CHEMRRV Art. 4–24).
-  for (const l of findeQuellLuecken(profile)) {
+  const befund = findeQuellLuecken(profile);
+  // Wortgleiche Rückkehr OHNE Anhang-Beleg: NICHT umgebucht (Auflage Gegenprüfung
+  // PR #801). Der Fall bleibt «entfallen» + «neu eingefügt» und wird gemeldet — im Lauf
+  // und, damit er nicht mit diesem Terminal verschwindet, im Quell-Register; von dort
+  // holt ihn `check:entstehung` als WARNUNG (nicht rot: die Buchung ist die vorsichtige).
+  const ohneBeleg = befund.ohneBeleg.map((l) => ({
+    eId: l.eId, stand: liste[l.vonIdx].datum, zurueckAb: liste[l.zurueckIdx].datum,
+  }));
+  quellLueckenOhneAnhang += ohneBeleg.length;
+  for (const o of ohneBeleg) {
+    console.log(
+      `  ${e.key.padEnd(12)} HINWEIS: ${o.eId} kehrt am ${o.zurueckAb} wortgleich zurück, `
+      + `steht aber in ${o.stand} nicht im Änderungsanhang — bleibt «entfallen» + «neu».`,
+    );
+  }
+  for (const l of befund.luecken) {
     const schritt = schritte[l.vonIdx - 1];
     const zurueck = schritte[l.zurueckIdx - 1];
     const idx = schritt.artikel.findIndex((a) => a.eId === l.eId && a.art === 'entfallen');
@@ -263,7 +278,6 @@ for (const e of erlasse) {
       if (rest.length) zurueck.neuEIds = rest; else delete zurueck.neuEIds;
     }
     quellLuecken += 1;
-    if (!l.imAnhang) quellLueckenOhneAnhang += 1;
     lueckeMaxStaende = Math.max(lueckeMaxStaende, l.zurueckIdx - l.vonIdx);
   }
 
@@ -295,6 +309,7 @@ for (const e of erlasse) {
     schritte: schritte.length,
     altBloecke: schritte.reduce((n, s) => n + s.artikel.length, 0),
     staende: staende.map((s) => ({ datum: s.datum, sha: s.sha, xmlUrl: s.xmlUrl })),
+    ...(ohneBeleg.length ? { quellLueckeOhneBeleg: ohneBeleg } : {}),
     ...(parserGrund && quellenGleich && vor && vor.shardSha !== neuSha ? { parserAenderung: parserGrund } : {}),
   };
   console.log(`  ${e.key.padEnd(12)} ${String(staende.length).padStart(3)} Stände, ${String(schritte.length).padStart(3)} Schritte, ${String(shard.schritte.reduce((n, s) => n + s.artikel.length, 0)).padStart(4)} Alt-Blöcke, ${(Buffer.byteLength(roh, 'utf8') / 1024).toFixed(1).padStart(7)} KB`);
@@ -335,7 +350,8 @@ console.log(
 console.log(
   `synopse: ${quellLuecken} Alt-Block/Blöcke als «Quelle unvollständig» umgebucht statt `
   + `«entfallen» + «neu eingefügt» (längste Lücke ${lueckeMaxStaende} Stand/Stände, Deckel `
-  + `${QUELLLUECKE_STAENDE_MAX}; ${quellLueckenOhneAnhang} ohne Beleg im Änderungsanhang, `
+  + `${QUELLLUECKE_STAENDE_MAX}; ${quellLueckenOhneAnhang} wortgleiche Rückkehr(en) OHNE `
+  + 'Anhang-Beleg blieben «entfallen» + «neu» (im Quell-Register vermerkt), '
   + `${quellLueckenMitEreignis} mit Fussnoten-Ereignis am Lücken-Stand, `
   + `${quellLueckenOhneAltBlock} Lücke(n) ohne Alt-Block unverändert gelassen).`,
 );

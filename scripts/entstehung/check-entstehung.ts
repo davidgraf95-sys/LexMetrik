@@ -329,6 +329,7 @@ for (const [name, pfad, max, gzip] of DECKEL) {
   let staende = 0;
   let quellLuecken = 0;
   let quellLueckenBelegt = 0;
+  let quellLueckenOhneBeleg = 0;
   let leerDiffGeprueft = 0;
   let leerDiffAusgenommen = 0;
   let phantomAusgenommen = 0;
@@ -447,6 +448,19 @@ for (const [name, pfad, max, gzip] of DECKEL) {
           for (const a of sch.artikel) {
             if (a.zustand !== 'quelle_unvollstaendig') continue;
             const kopf = `Synopse ${f} Schritt ${sch.von}→${sch.bis}: Alt-Block ${a.eId} («Quelle unvollständig»)`;
+            // (d) DER ANHANG-BELEG IST BEDINGUNG, NICHT VERMERK (Auflage Gegenprüfung
+            // PR #801): ohne ihn ist die Lücke von einer echten Aufhebung mit späterer,
+            // wortgleicher Wiedereinführung nicht zu unterscheiden — und eine getarnte
+            // Aufhebung ist die schwerere Falschaussage (§1). Offline nachprüfbar ist
+            // davon das Feld: der Generator setzt es nur, wenn er den Artikel in JEDEM
+            // Lücken-Stand als `<mod>`/`<quotedStructure>` gefunden hat.
+            if (a.imAnhang !== true) {
+              fehler.push(
+                `${kopf} ohne Anhang-Beleg («imAnhang») — eine Quelllücke wird nur gebucht, `
+                + 'wenn der Artikel in JEDEM Lücken-Stand im Änderungsanhang derselben Datei '
+                + 'steht. Ohne diesen Beleg bleibt es bei «entfallen» + «neu eingefügt».',
+              );
+            }
             const zurueckAb = a.zurueckAb;
             if (!zurueckAb || !/^\d{4}-\d{2}-\d{2}$/.test(zurueckAb)) {
               fehler.push(`${kopf} ohne «zurueckAb» — ohne Rückkehr-Stand ist die Lücke nicht belegbar (§7).`);
@@ -490,6 +504,19 @@ for (const [name, pfad, max, gzip] of DECKEL) {
             }
           }
         }
+      }
+      // WARNUNG (nie rot): wortgleiche Rückkehr OHNE Anhang-Beleg. Der Generator hat
+      // sie vorsichtig als «entfallen» + «neu eingefügt» stehen lassen — richtig, aber
+      // sehenswert: entweder ist es eine echte Aufhebung mit wortgleicher Wiederkehr
+      // (dann stimmt die Buchung), oder eine Konversions-Panne ohne Anhang (dann fehlt
+      // dem Leser die ehrliche Auskunft). Beides entscheidet ein Mensch, nicht ein Tor.
+      for (const o of eintrag.quellLueckeOhneBeleg ?? []) {
+        quellLueckenOhneBeleg += 1;
+        zeilen.push(
+          `check:entstehung — HINWEIS: ${key} ${o.eId} fehlt ab ${o.stand} und kehrt am `
+          + `${o.zurueckAb} wortgleich zurück, steht aber in keinem Lücken-Stand im `
+          + 'Änderungsanhang — bleibt «entfallen» + «neu eingefügt» (§1), von Hand ansehen.',
+        );
       }
       // LEER-DIFF-WÄCHTER (Befund Bauer #796, 11.9.2026, §5/§1): kein gespeicherter
       // Alt-Block darf nach der Leser-Vergleichsform (`vergleichsform`/`synopseZeilen`,
@@ -573,7 +600,8 @@ for (const [name, pfad, max, gzip] of DECKEL) {
     + `geprüft, ${leerDiffAusgenommen} + ${phantomAusgenommen} befristete Ausnahme(n) `
     + `(Muster #779, ${LEERDIFF_AUSNAHME_PFAD}); ${quellLuecken} Quelllücke(n) statt «entfallen» `
     + `+ «neu eingefügt», davon ${quellLueckenBelegt} mit byte-gleicher Rückkehr im Artefakt `
-    + `nachgerechnet (Lücken-Deckel ${QUELLLUECKE_STAENDE_MAX} Stände).`,
+    + `nachgerechnet, alle mit Anhang-Beleg (Lücken-Deckel ${QUELLLUECKE_STAENDE_MAX} Stände); `
+    + `${quellLueckenOhneBeleg} wortgleiche Rückkehr(en) ohne Anhang-Beleg blieben «entfallen».`,
   );
 }
 

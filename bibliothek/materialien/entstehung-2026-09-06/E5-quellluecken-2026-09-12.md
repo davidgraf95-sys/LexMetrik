@@ -37,13 +37,23 @@ Organismen mit einem unbemannten Luftfahrzeug.» (sha `ae2700d448c4…`).
 
 ## Regel (deterministisch)
 
-`findeQuellLuecken()` in `scripts/entstehung/synopse.ts`: eine eId steht im Stand davor,
-fehlt in einem **lückenlosen Lauf von 1 … 3 Ständen** und kehrt **byte-gleich** zurück
-⇒ `zustand: 'quelle_unvollstaendig'` statt «entfallen» + «neu eingefügt»; der Wortlaut
-wird NICHT gespeichert (über die Lücke hinweg ist er derselbe). Der Änderungsanhang ist
-positiver Beleg (`imAnhang`), aber keine Bedingung. Nachgerechnet wird die Kernbedingung
-im Artefakt selbst durch `check:entstehung` (Prüfsummen-Vergleich mit dem ersten
-Alt-Block nach der Rückkehr).
+`findeQuellLuecken()` in `scripts/entstehung/synopse.ts` — **vier** Bedingungen: eine eId
+steht im Stand davor, (1) fehlt in einem **lückenlosen Lauf** von (3) **1 … 3 Ständen**,
+(2) kehrt **byte-gleich** zurück und (4) steht in **jedem** Lücken-Stand im
+Änderungsanhang derselben Datei ⇒ `zustand: 'quelle_unvollstaendig'` statt «entfallen» +
+«neu eingefügt»; der Wortlaut wird NICHT gespeichert (über die Lücke hinweg ist er
+derselbe). Nachgerechnet wird im Artefakt selbst durch `check:entstehung`
+(Prüfsummen-Vergleich mit dem ersten Alt-Block nach der Rückkehr, Pflichtfeld
+`imAnhang`).
+
+**Bedingung (4) kam mit der Gegenprüfung zu PR #801 dazu** (vorher: blosser Vermerk).
+Ohne den positiven Anhang-Beleg ist eine wortgleiche Rückkehr innerhalb des Deckels von
+einer echten Aufhebung mit späterer, wortgleicher Wiedereinführung nicht zu
+unterscheiden — und eine getarnte Aufhebung ist die schwerere Falschaussage (§1). Solche
+Fälle bleiben «entfallen» + «neu» und landen als Vermerk `quellLueckeOhneBeleg` im
+Quell-Register, den `check:entstehung` als HINWEIS wiederholt (nie rot). **Im Bestand
+gibt es heute keinen: alle 22 CHEMRRV-Fälle tragen den Beleg, die Artefakte blieben
+darum byte-gleich.**
 
 ## Geltung und Ausnahmen
 
