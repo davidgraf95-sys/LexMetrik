@@ -38,91 +38,31 @@
 // UNGEPRÜFTE Quote gekennzeichnet — die Stichprobe belegt Einzelfälle, nicht
 // die Quote (ROADMAP-Befund 11.9.2026, unverändert offen).
 
-/** Versionierte Bauart — Muster PROJEKTION_PROFIL: eine geänderte
- *  Ableitungsregel entsteht als `/2` DANEBEN, nie durch Editieren. */
-export const DECKUNG_PROFIL = 'entstehung-deckung/1';
+// Die FORM der ausgelieferten Datei steht genau einmal, in der Leseschicht
+// (`src/lib/materialien/deckung.ts`) — Generator, Tor und Seite bauen gegen
+// dieselben Typen (§5). Richtung wie bei den Nachbarn: scripts/ importiert aus
+// src/, nie umgekehrt.
+export type {
+  DeckungEbene, DeckungErlassZeile, DeckungProjektion,
+} from '../../src/lib/materialien/deckung.ts';
+export { DECKUNG_PROFIL } from '../../src/lib/materialien/deckung.ts';
 
 export const DECKUNG_PROJEKTION_PFAD = 'public/materialien/entstehung-deckung.json';
 
 /** §15 · Deckel der ausgelieferten Datei. Sie ist der EINZIGE Ladekanal der
  *  Deckungs-Seite; wächst sie über diese Marke, ist nicht der Deckel falsch,
- *  sondern die Nutzlast (§8/§15) — dann wandert die Erlass-Liste in Shards. */
-// Ist 12.9.2026: 72,3 KB roh / 9,8 KB gzip über 205 Erlasse (ø 340 B je Zeile).
-// 128 KB tragen rund 170 weitere Erlasse — genug für den Bundes-Zuwachs, zu wenig
-// für einen ganzen Kanton: kommt ZH dazu, muss die Liste geshardet werden, nicht
-// der Deckel wachsen.
+ *  sondern die Nutzlast (§8/§15) — dann wandert die Erlass-Liste in Shards.
+ *
+ *  Ist 12.9.2026: 78,4 KB roh / 10,8 KB gzip über 219 Erlasse (ø 340 B je
+ *  Zeile). 128 KB tragen rund 145 weitere Erlasse — genug für den Bundes-
+ *  Zuwachs, zu wenig für einen ganzen Kanton: kommt ZH dazu, muss die Liste
+ *  geshardet werden, nicht der Deckel wachsen. */
 export const DECKUNG_DECKEL = 128 * 1024;
 
-/** Eine Ebene des Bestandes: «haben» von «gesamt», mit Stand und Quelle.
- *
- *  `gesamt: null` ist KEIN Schönheitsfehler, sondern die ehrlichste Aussage,
- *  die wir über manche Ebene treffen können (§8): für die Parlaments-Geschäfte
- *  und die Basler Verfahrensketten kennen wir den erfassten Bestand, aber nicht
- *  die Grundgesamtheit — «wir haben 385 von 385» wäre eine erfundene
- *  Vollständigkeit. Die Seite zeigt dort «nicht erhoben» statt einer Zahl.
- */
-export interface DeckungEbene {
-  /** Erfasst. */
-  haben: number;
-  /** Grundgesamtheit, gegen die «haben» zu lesen ist; `null` = nicht erhoben. */
-  gesamt: number | null;
-  /** Stand- bzw. Abrufdatum der Quelle (ISO, §7a). */
-  stand: string;
-  /** Amtliche Quelle in Worten (§7b) — die Seite zeigt sie an. */
-  quelle: string;
-}
-
-/** Eine Zeile der Erlass-Liste. Alle Felder sind Auszählungen, keine Urteile. */
-export interface DeckungErlassZeile {
-  /** Kürzel/Titel aus dem Normtext-Register (Anzeige + Sortierung). */
-  titel: string;
-  /** SR-Nummer, sofern das Register sie führt. */
-  sr?: string;
-  /** Distinkte oc-Fundstellen in den Artikel-Fussnoten dieses Erlasses. */
-  ocFussnoten: number;
-  /** davon in der Fedlex-Änderungsliste des Erlasses vorhanden. */
-  ocGetroffen: number;
-  /** Änderungen in der Entstehungs-Projektion (E3). */
-  aenderungen: number;
-  /** davon an eine ERFASSTE Botschaft gebunden. */
-  mitBotschaft: number;
-  /** Ab hier existiert ein Synopse-Shard (E5) — fehlen die Felder, gibt es
-   *  für diesen Erlass kein Fassungsvergleichs-Fenster. */
-  fensterAb?: string;
-  schritte?: number;
-  altBloecke?: number;
-  ohneEreignis?: number;
-  /** Fussnoten-Ereignisse ohne beobachtete Textänderung (Gegenrichtung). */
-  konflikte?: number;
-  /** Als «Quelle unvollständig» gebuchte Alt-Blöcke. */
-  quellLuecken?: number;
-}
-
-export interface DeckungProjektion {
-  profil: typeof DECKUNG_PROFIL;
-  /** Stand je Quelle (ISO) — die Seite zeigt ihn an jeder Zahl (§7a/§8). */
-  staende: {
-    deckung: string;
-    entstehung: string;
-    synopse: string;
-    curia: string;
-    provenienz: string;
-    normtext: string;
-  };
-  /** Ebenen, die sich NICHT aus der Erlass-Liste summieren lassen. */
-  ebenen: {
-    anker: DeckungEbene;
-    curia: DeckungEbene;
-    /** Basler Verfahrensketten (Grosser Rat) — erfasst, Grundgesamtheit offen. */
-    bsVerfahren: DeckungEbene;
-    /** Kanten Geschäft→Erlass: amtlich belegt vs. maschinell abgeleitet.
-     *  Die maschinellen sind fachlich NICHT geprüft und werden so angezeigt (§8). */
-    bsKanten: { amtlich: number; maschinell: number };
-    zh: DeckungEbene;
-  };
-  /** Erlass-Key → Zeile. Schlüssel sortiert (byte-stabil). */
-  erlasse: Record<string, DeckungErlassZeile>;
-}
+import { DECKUNG_PROFIL as PROFIL } from '../../src/lib/materialien/deckung.ts';
+import type {
+  DeckungErlassZeile, DeckungProjektion,
+} from '../../src/lib/materialien/deckung.ts';
 
 /** Byte-deterministische Serialisierung (Schlüssel sortiert, Feldreihenfolge fest). */
 export function serialisiereDeckungProjektion(p: DeckungProjektion): string {
@@ -250,12 +190,24 @@ export function baueDeckungProjektion(e: DeckungBauEingabe): DeckungProjektion {
   let ankerMit = 0;
   for (const q of Object.values(e.ankerRegister.quellen)) if ((q.ankerZahl ?? 0) > 0) ankerMit += 1;
 
+  // BUND/BS OHNE SCHLÜSSEL-SCHNÜFFELN: ein Provenienz-Eintrag gehört zu
+  // Basel-Stadt genau dann, wenn er `bsKanten` trägt — das Feld, das der
+  // BS-Generator setzt. Ein Präfix-Test auf «BS-GR-» wäre eine zweite,
+  // stillschweigende Herkunfts-Regel (§5) und bräche beim ersten Kanton, der
+  // anders schlüsselt.
   let bsKetten = 0;
   let bsAmtlich = 0;
   let bsMaschinell = 0;
+  let verfahrenBund = 0;
+  let verfahrenBs = 0;
   for (const eintrag of Object.values(e.provenienz.eintraege)) {
-    if (!eintrag.bsKanten) continue;
+    const hatKette = (eintrag.ereignisse?.length ?? 0) > 0;
+    if (!eintrag.bsKanten) {
+      if (hatKette) verfahrenBund += 1;
+      continue;
+    }
     bsKetten += 1;
+    if (hatKette) verfahrenBs += 1;
     for (const k of eintrag.bsKanten) {
       if (k.quelle === 'amtlich') bsAmtlich += 1;
       else bsMaschinell += 1;
@@ -263,7 +215,7 @@ export function baueDeckungProjektion(e: DeckungBauEingabe): DeckungProjektion {
   }
 
   return {
-    profil: DECKUNG_PROFIL,
+    profil: PROFIL,
     staende: {
       deckung: e.deckung.erzeugt,
       entstehung: juengstes([...e.entstehung.values()].map((x) => x.abgerufen), e.deckung.erzeugt),
@@ -285,9 +237,15 @@ export function baueDeckungProjektion(e: DeckungBauEingabe): DeckungProjektion {
         stand: e.curia.abgerufen,
         quelle: 'Parlamentsdienste der Bundesversammlung, Bern (Curia Vista)',
       },
-      bsVerfahren: {
-        haben: bsKetten,
+      verfahrenBund: {
+        haben: verfahrenBund,
         gesamt: null,
+        stand: e.provenienz.erzeugt,
+        quelle: 'Parlamentsdienste der Bundesversammlung, Bern (Curia Vista)',
+      },
+      verfahrenBs: {
+        haben: verfahrenBs,
+        gesamt: bsKetten,
         stand: e.provenienz.erzeugt,
         quelle: 'Grosser Rat des Kantons Basel-Stadt (grosserrat.bs.ch)',
       },

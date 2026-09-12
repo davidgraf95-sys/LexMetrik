@@ -21,9 +21,15 @@
       "stand": "2026-09-11",
       "quelle": "Parlamentsdienste der Bundesversammlung, Bern (Curia Vista)"
     },
-    "bsVerfahren": {
-      "haben": 117,
+    "verfahrenBund": {
+      "haben": 407,
       "gesamt": null,
+      "stand": "2026-09-12",
+      "quelle": "Parlamentsdienste der Bundesversammlung, Bern (Curia Vista)"
+    },
+    "verfahrenBs": {
+      "haben": 114,
+      "gesamt": 117,
       "stand": "2026-09-12",
       "quelle": "Grosser Rat des Kantons Basel-Stadt (grosserrat.bs.ch)"
     },
