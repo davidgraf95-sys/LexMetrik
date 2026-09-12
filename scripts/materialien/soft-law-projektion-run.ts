@@ -14,7 +14,10 @@ import {
   ladeKantenAusDb,
   dbDokAusZustand,
   schreibeShardsUndBereinige,
+  teileRegister,
   REGISTER_PFAD,
+  REGISTER_I18N_PFAD,
+  REGISTER_PROVENIENZ_PFAD,
   SOFT_LAW_DB,
   type NormRefRow,
   type DokMeta,
@@ -40,10 +43,16 @@ if (existsSync(SOFT_LAW_DB)) {
   console.log(`soft-law-projektion: ${SOFT_LAW_DB} fehlt — Kanten-Shards aus DB entfallen (register.json aus Zustands-Manifest, §8).`);
 }
 
-// (1) register.json (mit Trailing-Newline wie bisher)
+// (1) Die DREI Register-Projektionen aus EINEM Lauf (Trailing-Newline wie bisher).
+//     Kern · FR/IT-Titel · Provenienz — Aufteilung und Messung: bibliothek/
+//     materialien/2026-09-12-register-deckel-messung.md. Alle drei entstehen
+//     gemeinsam; wer nur eine schreibt, erzeugt eine zweite Wahrheit (§5).
 const register = projiziereRegister(datum, dbDocs);
+const { kern, i18n, provenienz } = teileRegister(register);
 mkdirSync(dirname(REGISTER_PFAD), { recursive: true });
-writeFileSync(REGISTER_PFAD, JSON.stringify(register, null, 2) + '\n', 'utf8');
+writeFileSync(REGISTER_PFAD, JSON.stringify(kern, null, 2) + '\n', 'utf8');
+writeFileSync(REGISTER_I18N_PFAD, JSON.stringify(i18n, null, 2) + '\n', 'utf8');
+writeFileSync(REGISTER_PROVENIENZ_PFAD, JSON.stringify(provenienz, null, 2) + '\n', 'utf8');
 
 // (2) Kanten-Shards + Orphan-Bereinigung — NUR mit Harvest-Kanten (J3-Lehre
 // 29.8.2026, §17): eine fehlende oder hohle soft-law.db (nur Blob-Ingest,
@@ -66,7 +75,8 @@ for (const d of downgrades) console.log(`  Downgrade: ${d.dok} · ${d.erlass} Ar
 for (const n of nichtProjiziert) console.log(`  nicht projiziert: ${n.dok} · ${n.erlass} (${n.grund})`);
 
 console.log(
-  `soft-law-projektion (--datum=${datum}): register.json ${register.materialien.length} Materialien ` +
+  `soft-law-projektion (--datum=${datum}): register.json ${kern.materialien.length} Materialien ` +
+    `(+ register-i18n.json ${Object.keys(i18n.titel).length} FR/IT-Titel · register-provenienz.json ${Object.keys(provenienz.eintraege).length} Einträge) ` +
     `(${register.materialien.length - dbDocs.length} kuratiert · ${dbDocs.length} DB); ` +
     `Shards ${dateien.length} Datei(en) [${geschrieben} geschrieben · ${entfernt} orphan] · ` +
     `${downgrades.length} Downgrades · ${nichtProjiziert.length} nicht projiziert.`,

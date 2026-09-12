@@ -193,6 +193,12 @@ describe('F2-4 · «… konnte nicht geladen werden» läuft über EINEN Baustei
     for (const datei of [
       'pages/gesetz-leser/v3/PanelMaterialien.tsx',
       'components/kontext/KontextPanel.tsx',
+      // DEKLARIERTE FACHLICHE ERWEITERUNG (§6.3, 12.9.2026): vierte Fundstelle —
+      // «Die Übersetzung der Titel konnte nicht geladen werden» (Auflage der
+      // Gegenprüfung zu PR #802). Sie steht in einer eigenen Datei, damit
+      // KontextPanel unter der §6.6-Schwelle bleibt; der Kanon gilt auch für sie,
+      // und ohne diese Zeile wäre der neue Konsument unbewacht.
+      'components/kontext/TitelRueckfallZeile.tsx',
     ]) {
       expect(lies(datei), `${datei} konsumiert AbrufFehler`).toContain('<AbrufFehler');
     }

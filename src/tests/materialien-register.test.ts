@@ -7,7 +7,7 @@ import { BOTSCHAFTEN } from '../lib/materialien/botschaften.generated';
 import { VERNEHMLASSUNGEN } from '../lib/materialien/vernehmlassungen.generated';
 import { BS_MATERIALIEN } from '../lib/materialien/bs-grossrat.generated';
 import { baueMaterialManifest } from '../../scripts/materialien/material-manifest';
-import { projiziereRegister, dbDokAusZustand } from '../../scripts/materialien/soft-law-projektion';
+import { projiziereRegister, dbDokAusZustand, teileRegister } from '../../scripts/materialien/soft-law-projektion';
 import { ladeZustand } from '../../scripts/materialien/soft-law-zustand';
 import { BEHOERDE_RECHTSGEBIET } from '../../scripts/materialien/adapter-typen';
 import { ERLASS_REGISTER, GEBIETE } from '../lib/normtext/register';
@@ -71,7 +71,21 @@ describe('Tor 2 — committetes Manifest == frischer Build (Merge-Modell §2.7, 
     // aus dem committeten Zustands-Manifest, deterministisch sortiert (byte-Beweis: check:materialien).
     const dbDocs = dbDokAusZustand(ladeZustand());
     const frisch = projiziereRegister(committet.erzeugt, dbDocs);
-    expect(committet.materialien).toEqual(frisch.materialien);
+    // DEKLARIERTE FACHLICHE ÄNDERUNG (§6.3, Deckel-Reserven 12.9.2026): `projiziereRegister`
+    // liefert seither das VOLLE Manifest (In-Memory-SSoT), `register.json` nur noch den
+    // Kern. Verglichen wird deshalb gegen `teileRegister(frisch).kern` — die Invariante
+    // selbst ist unverändert («das committete Manifest ist genau der frische Build»),
+    // nur die Projektionsstufe dazwischen ist neu und wird hier mitgeprüft.
+    const geteilt = teileRegister(frisch);
+    expect(committet.materialien).toEqual(geteilt.kern.materialien);
+    // Der Kern trägt keine der ausgelagerten Feldgruppen mehr (§15: was kein Browser
+    // liest, wird nicht ausgeliefert) — und keine geht verloren (§5, Provenienz je Eintrag).
+    for (const m of committet.materialien as unknown as Array<Record<string, unknown>>) {
+      for (const f of ['sha', 'titelFr', 'titelIt', 'ereignisse', 'bsKanten', 'ocUris', 'projEli', 'botschaftDate', 'artAnker']) {
+        expect(f in m, `${String(m.key)}: '${f}' gehört nicht in den Browser-Kanal`).toBe(false);
+      }
+      expect(geteilt.provenienz.eintraege[m.key as string]?.sha).toMatch(/^[0-9a-f]{64}$/);
+    }
     // register.json ist Superset des kuratierten Registers (kein kuratierter Eintrag geht verloren).
     const kuratiertKeys = new Set(MATERIAL_REGISTER.map((m) => m.key));
     const registerKeys = new Set(committet.materialien.map((m) => m.key));
