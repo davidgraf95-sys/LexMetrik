@@ -69,6 +69,16 @@ export interface KantonInventarGruppe {
    *  Artikel-Anker → Gesetzes-Seite). Erster Eintrag der Gruppe gewinnt. */
   quelleUrl: string;
   artikel: KantonInventarArtikel[];
+  /**
+   * §6.7-Auflage A1 (Gegenprüfung PR #828, 12.9.2026): bei zweisprachigen
+   * Erlassen trägt der Bestands-KEY (`lawId`, aus dem Snapshot-`id`-Pfad,
+   * z. B. «130.11-de») den Sprachsuffix — die tatsächliche LexWork-API-URL
+   * trägt ihn NICHT (`/api/de/texts_of_law/130.11`). `fetchLawId` ist die
+   * URL-taugliche, suffixfreie Form für den Netz-Abruf; wenn nicht gesetzt
+   * (alle einsprachigen/tarif-abgeleiteten Gruppen), ist `lawId` bereits
+   * fetch-tauglich (bestehende Konvention, s. `sammleKantonInventar()`).
+   */
+  fetchLawId?: string;
 }
 
 export interface FallbackEintrag {
@@ -399,11 +409,18 @@ export function sammleKantonVollinventarLexWork(): KantonInventarGruppe[] {
     const teile = erster.id.split('/');
     if (teile.length < 4 || teile[0] !== 'kanton') continue;
 
+    // A1: bei zweisprachigen Erlassen (id trägt den Sprachsuffix, z. B.
+    // «130.11-de») ist die URL-abgeleitete lawId (m[3], kanonisiert) die
+    // fetch-taugliche Form; nur setzen, wenn sie vom Bestands-Key abweicht.
+    const urlLawId = kanonischeLawId(m[3]);
+    const bestandsKey = teile[2];
+
     gruppen.push({
       kanton: teile[1],
       host: m[1],
       lang: m[2] as 'de' | 'fr',
-      lawId: teile[2],
+      lawId: bestandsKey,
+      ...(urlLawId !== bestandsKey ? { fetchLawId: urlLawId } : {}),
       erlassName: '',
       erlassNr: '',
       quelleUrl: erster.quelleUrl,
@@ -438,6 +455,27 @@ export function parseKantonNurFilter(argv: string[]): {
   const passt = (g: { kanton: string; lawId: string }): boolean =>
     !nurKeys || nurKeys.has(`${g.kanton}-${lawIdSafe(g.lawId)}`);
   return { nurKeys, passt };
+}
+
+/**
+ * A1-Erweiterung (Gegenprüfung PR #828, 12.9.2026): das Tarif-Inventar allein
+ * kennt nur die per Tarif zitierte Sprachfassung (z. B. VS-173.8 nur `de`) —
+ * ein committeter Erlass ohne (oder mit ANDERER) Tarif-Sprache wäre über
+ * `--nur=<KEY>` sonst nicht adressierbar (Beleg: VS-173.8-fr driftete im
+ * `stand`, war aber über den Tarif-Pfad gar nicht erreichbar). Vollinventar
+ * (bereits suffix-/`fetchLawId`-bewusst) ergänzt genau die fehlenden
+ * Bestands-Keys, ohne tarif-abgedeckte Erlasse zu duplizieren.
+ */
+export function baueKantonNurInventar(
+  kantone: Set<string>,
+  passt: (g: { kanton: string; lawId: string }) => boolean,
+): KantonInventarGruppe[] {
+  const tarif = sammleKantonInventar();
+  const tarifSchluessel = new Set(tarif.map((g) => `${g.kanton}|${g.lawId}`));
+  const vollErgaenzung = sammleKantonVollinventarLexWork().filter(
+    (g) => !tarifSchluessel.has(`${g.kanton}|${g.lawId}`),
+  );
+  return [...tarif, ...vollErgaenzung].filter((g) => kantone.has(g.kanton) && passt(g));
 }
 
 /**

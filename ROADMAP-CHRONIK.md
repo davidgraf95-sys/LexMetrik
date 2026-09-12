@@ -63,6 +63,31 @@ AR/BS-PDF-Versionen; Drift-PR. `confidence.json` seit 23.6. stale (150/1565).»
     ererbte `check:schlankheit`-Restfeld (adapter-lexwork.ts). Wortlaut: ROADMAP-CHRONIK.md (dieser
     Eintrag).
 
+**Nachtrag 12.9.2026 (Gegenprüfung PR #828, Auflage A1 — Wortlaut ergänzt, nicht ersetzt, §2b):**
+`sammleKantonVollinventarLexWork()` leitete `lawId` allein aus dem Snapshot-`id`-Pfad ab; bei den
+vier zweisprachigen Erlassen (FR-130.11-de/-fr, VS-173.8-de/-fr) trägt dieser Pfad den Sprachsuffix,
+die LexWork-API-URL nicht → Netz-Abruf HTTP 404, von `check-drift.ts` als transiente WARNUNG (exit 0)
+klassiert — Drift dieser vier wäre unsichtbar geblieben. Fix: neues Feld `fetchLawId` (suffixfreie,
+URL-taugliche Form, gesetzt nur wenn sie vom Bestands-Key abweicht) in `inventar-kanton.ts`,
+konsumiert in `check-drift.ts` UND in `normtext-snapshot.ts`s `erzeugeKantonsSnapshots` (Content-
+Generator hatte denselben Bug). Rot-Beweis: `check:normtext-netz` vorher 1185 Kanton-Gruppen/4
+Netz-Warnungen (HTTP 404 FR-130.11-de/-fr, VS-173.8-de/-fr) → nachher 1189 Gruppen/0 Warnungen, 0 Drift.
+Nebenfund gleichen Mechanismus (§8): `inKraftSeit()` (adapter-lexwork.ts) kannte für die
+französische «ohne le»-Form («en vigueur depuis DD.MM.YYYY») keinen optionalen Doppelpunkt — lex.vs.ch
+liefert «en vigueur depuis: DD.MM.YYYY» (VS-173.8-fr), das Muster traf nicht und fiel still auf
+`enactment` zurück; VS-173.8-fr zeigte dadurch `stand: 2011-01-01` statt amtlich `2025-01-01` (Token
+unverändert — reiner Stand-Fehler). Regex um `\s*:?\s*` ergänzt (analog zum deutschen Muster), Rot-
+Beweis per Vitest-Regressionsfall (`inKraftSeit` liefert jetzt `2025-01-01`), Snapshot chirurgisch
+nachgeführt (`--nur=VS-173.8-fr`, EINE Datei + register.json + Struktur-Sidecar geändert, Stichprobe
+2 Paragraphen live 2/2 Identität). Dabei entdeckter Zusatz-Bug (§17, in derselben Auflage behoben):
+die kantonsweiten HTM/ZH/PDF-Phasen kannten `--nur=<KEY>` nicht und regenerierten beim ersten
+Testlauf ungewollt auch fremde Erlasse desselben Kantons (VS-1413) — Guard `nurUeberspringt` ergänzt,
+git-revertiert vor dem Commit. `adapter-lexwork.ts` bleibt bei 928 Z. (vorher 926, weiterhin über der
+Baseline-Schwelle, s. o. — die zwei zusätzlichen Zeilen sind die Regex-Begründung dieses Fixes).
+Tore erneut nackt gefahren: `check:struktur-konsistenz`, `check:normkeys-kanton`, `check:datenhaltung`,
+`check:paritaet`, `check:normtext-netz`, `golden:vergleich`, `tsc -b`, `lint`, vitest (7905 Tests,
+davon 3 neu für A1) — alle grün ausser dem unveränderten `check:gegenpruefung`/`check:schlankheit`-Paar.
+
 ## `normtext:struktur`-Erlassfilter + Pin-Sonde auf drei Konsumenten ausgeweitet — gelöst 12.9.2026 (W2·18-FEHLERBUCH)
 
 **Ursprünglicher Befund (Wortlaut, bis 12.9.2026 offen, `fahrplaene/FAHRPLAN-OFFENE-BEFUNDE.md` §4,

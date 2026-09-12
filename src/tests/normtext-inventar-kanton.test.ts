@@ -236,4 +236,28 @@ describe('sammleKantonVollinventarLexWork (Vollabdeckung, §6.7-Fund #694)', () 
     const schluessel = voll.map((g) => `${g.kanton}|${g.host}|${g.lang}|${g.lawId}`);
     expect(new Set(schluessel).size).toBe(schluessel.length);
   });
+
+  // Gegenprüfung PR #828, 12.9.2026, Auflage A1: bei zweisprachigen Erlassen
+  // trägt der Bestands-Key (lawId, aus der Snapshot-id) den Sprachsuffix
+  // («130.11-de»/«130.11-fr»), die LexWork-API-URL nicht («…/texts_of_law/
+  // 130.11»). Ohne fetchLawId hätte der Netz-Abruf mit dem suffix-behafteten
+  // lawId als Pfadsegment HTTP 404 geliefert — Drift dieser vier Erlasse wäre
+  // für immer unsichtbar geblieben (als transiente Netz-WARNUNG klassiert).
+  it('setzt fetchLawId (suffixfrei) für zweisprachige Erlasse — FR-130.11-de/-fr, VS-173.8-de/-fr', () => {
+    for (const [kanton, lawId, erwarteteFetchLawId] of [
+      ['FR', '130.11-de', '130.11'],
+      ['FR', '130.11-fr', '130.11'],
+      ['VS', '173.8-de', '173.8'],
+      ['VS', '173.8-fr', '173.8'],
+    ] as const) {
+      const g = voll.find((x) => x.kanton === kanton && x.lawId === lawId);
+      expect(g, `${kanton}-${lawId} fehlt im Vollinventar`).toBeDefined();
+      expect(g?.fetchLawId).toBe(erwarteteFetchLawId);
+    }
+  });
+
+  it('setzt fetchLawId NICHT für einsprachige Erlasse (Bestands-Key ist bereits fetch-tauglich)', () => {
+    const buerg = voll.find((g) => g.kanton === 'BS' && g.lawId === '121.100');
+    expect(buerg?.fetchLawId).toBeUndefined();
+  });
 });

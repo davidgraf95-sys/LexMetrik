@@ -215,7 +215,10 @@ async function main(): Promise<void> {
           // Gruppen ohne Snapshot NICHT über das Netz holen (wie seriell).
           if (kantonTokens.get(`${gruppe.kanton}/${gruppe.lawId}`) === undefined) return { skip: true };
           try {
-            return { ok: true, ergebnis: await holeLexWork(gruppe.host, gruppe.lang, gruppe.lawId) };
+            // A1 (Gegenprüfung PR #828): zweisprachige Erlasse tragen im
+            // Bestands-Key (gruppe.lawId) den Sprachsuffix, die LexWork-API-URL
+            // nicht — fetchLawId ist die suffixfreie, fetch-taugliche Form.
+            return { ok: true, ergebnis: await holeLexWork(gruppe.host, gruppe.lang, gruppe.fetchLawId ?? gruppe.lawId) };
           } catch (err) {
             // Soft-404-Shell (Endpunkt migriert/tot) ist ein HARTER Fehler, kein
             // transienter Netz-Blip: sonst veraltet der Snapshot still (GL-Klasse).

@@ -31,6 +31,7 @@ import {
   sammleZhPdfInventar,
   sammlePdfInventar,
   parseKantonNurFilter,
+  baueKantonNurInventar,
   type KantonInventarGruppe,
 } from './normtext/inventar-kanton.ts';
 import { enumeriereKanton } from './normtext/lexfind-discovery.ts';
@@ -586,7 +587,9 @@ async function erzeugeKantonsSnapshots(
     inventar.map((g) =>
       limit(async (): Promise<{ ok: true; ergebnis: Awaited<ReturnType<typeof holeLexWork>> } | { ok: false; fehler: string }> => {
         try {
-          return { ok: true, ergebnis: await holeLexWork(g.host, g.lang, g.lawId) };
+          // A1 (Gegenprüfung PR #828): fetchLawId ist die suffixfreie,
+          // fetch-taugliche Form für zweisprachige Bestands-Keys (s. check-drift.ts).
+          return { ok: true, ergebnis: await holeLexWork(g.host, g.lang, g.fetchLawId ?? g.lawId) };
         } catch (e) {
           return { ok: false, fehler: e instanceof Error ? e.message : String(e) };
         }
@@ -1217,10 +1220,9 @@ async function main(): Promise<void> {
     // §6.7-Fund #694 (12.9.2026): Erlass-genauer Filter — s. parseKantonNurFilter.
     const { nurKeys, passt: passtNurFilter } = parseKantonNurFilter(process.argv);
     const goldenIndex: Record<string, string> = {};
-    // Phase-1 (FAHRPLAN-GESETZE-IMPORT-3TIER): mit --discovery wird der Kanton-
-    // Vollkorpus via LexFind enumeriert (Tier A) statt nur tarif-zitierte Erlasse.
-    // Dann läuft NUR die LexWork-Phase (Discovery liefert ausschliesslich Tier-A-
-    // LexWork-Quellen); HTM/ZH/PDF entfallen.
+    // Phase-1 (FAHRPLAN-GESETZE-IMPORT-3TIER): --discovery enumeriert den Kanton-
+    // Vollkorpus via LexFind (Tier A) statt nur tarif-zitierter Erlasse; dann
+    // läuft NUR die LexWork-Phase (HTM/ZH/PDF entfallen, s. nurUeberspringt unten).
     const discovery = process.argv.includes('--discovery');
     const nurSuffix = nurKeys ? ` --nur=${[...nurKeys].join(',')}` : '';
     console.log(`\n[Normtext-Snapshot] --nur=kanton ${[...kantone].join(',')}${discovery ? ' --discovery' : ''}${nurSuffix}, datum=${abgerufen}`);
@@ -1243,15 +1245,17 @@ async function main(): Promise<void> {
       }
       cov = await erzeugeKantonsSnapshots(abgerufen, goldenIndex, kantone, gruppen);
     } else {
-      const inv = nurKeys ? sammleKantonInventar().filter((g) => kantone.has(g.kanton) && passtNurFilter(g)) : undefined;
+      const inv = nurKeys ? baueKantonNurInventar(kantone, passtNurFilter) : undefined; // A1 (PR #828)
       cov = await erzeugeKantonsSnapshots(abgerufen, goldenIndex, kantone, inv);
     }
     for (const z of cov.reportZeilen) console.log(z);
-    const htmCov = discovery ? null : await erzeugeHtmSnapshots(abgerufen, goldenIndex, kantone);
+    // A1 (Gegenprüfung PR #828): --nur=<KEY> ist erlassgenau — ungefilterte HTM/ZH/PDF-Phasen träfen sonst fremde Erlasse desselben Kantons (Rot-Beweis: traf ungewollt VS-1413/PDF).
+    const nurUeberspringt = discovery || !!nurKeys;
+    const htmCov = nurUeberspringt ? null : await erzeugeHtmSnapshots(abgerufen, goldenIndex, kantone);
     if (htmCov) for (const z of htmCov.reportZeilen) console.log(z);
-    const zhCov = discovery ? null : await erzeugeZhPdfSnapshots(abgerufen, goldenIndex, kantone);
+    const zhCov = nurUeberspringt ? null : await erzeugeZhPdfSnapshots(abgerufen, goldenIndex, kantone);
     if (zhCov) for (const z of zhCov.reportZeilen) console.log(z);
-    const pdfCov = discovery ? null : await erzeugePdfSnapshots(abgerufen, goldenIndex, kantone);
+    const pdfCov = nurUeberspringt ? null : await erzeugePdfSnapshots(abgerufen, goldenIndex, kantone);
     if (pdfCov) for (const z of pdfCov.reportZeilen) console.log(z);
 
     const alleFetchFehler = [

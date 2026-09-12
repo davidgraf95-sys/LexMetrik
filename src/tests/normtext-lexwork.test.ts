@@ -89,6 +89,20 @@ describe('inKraftSeit — reines Parsing ohne Netz', () => {
       ),
     ).toBe('2023-01-01');
   });
+
+  // Gegenprüfung PR #828, 12.9.2026: lex.vs.ch (VS-173.8-fr) liefert
+  // «en vigueur depuis: DD.MM.YYYY» — die «ohne le»-Alternative kannte den
+  // Doppelpunkt bis dahin nicht und fiel still auf enactment zurück (2011
+  // statt 2025). Rest von BUG A4 (16.6.2026), das nur die «depuis le»-Form
+  // korrekt behandelte.
+  it('verarbeitet «en vigueur depuis: DD.MM.YYYY» MIT Doppelpunkt, OHNE «le» (VS-173.8-fr)', () => {
+    expect(
+      inKraftSeit(
+        "Version actuelle en vigueur depuis: 01.01.2025 (Date d'adoption: 16.11.2023)",
+        '2011-01-01',
+      ),
+    ).toBe('2025-01-01');
+  });
 });
 
 describe('extrahiereLexWorkArtikel — gegen echte ZG-Fixture', () => {
