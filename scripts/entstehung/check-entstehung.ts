@@ -27,10 +27,14 @@
 // Leer-Diff-Wächters ist ROT, ausser der Fall steht mit Datum und Grund in
 // `bibliothek/register/entstehung-leerdiff-ausnahmen.json`; jeder Eintrag verfällt
 // nach höchstens 30 Tagen (Fang-Vermerk, keine Amnestie) — NIE das Tor selbst
-// abschwächen, nur einzelne, benannte, befristete Fälle. Eingetragen: die Wurzel
-// (Token-Kontinuität in `neuNach()` über echte Zwischenänderungen hinweg, siehe
-// Grund je Eintrag) ist eine Lineage-Frage, die `neuNach()` selbst betrifft — breiter
-// genutzt als dieses Tor, > 1 h von einem sicheren Fix entfernt, eigener Roadmap-Schritt.
+// abschwächen, nur einzelne, benannte, befristete Fälle.
+//
+// DIE LISTE IST SEIT 12.9.2026 LEER (`[]`), und das ist der Punkt: ihre 11 Einträge
+// nannten zwei Wurzeln, und beide sind mit W2·6c-ENTSTEHUNG-QUELLLUECKE behoben —
+// die Quelllücke (10 × CHEMRRV, jetzt `zustand: 'quelle_unvollstaendig'`) und die
+// Token-Kontinuität in `neuNach()` (AVIV 57b, jetzt Lineage-Regel). Die MECHANIK
+// bleibt trotzdem stehen: sie ist der einzige Weg, einen künftigen Einzelfall
+// benannt und befristet durchzulassen, statt am Tor zu drehen (Muster #779).
 import { readFileSync, existsSync, readdirSync, writeFileSync, statSync, mkdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { gzipSync } from 'node:zlib';

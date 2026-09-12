@@ -13,7 +13,7 @@
 // stehen hier, damit er es nicht wieder wird.
 import { describe, it, expect } from 'vitest';
 import {
-  geltendeBloecke, lageFuerEreignis, ohneEreignisFuerArtikel, synopseZeilen,
+  geltendeBloecke, lageFuerEreignis, ohneEreignisFuerArtikel, quellLueckenFuerArtikel, synopseZeilen,
   tokenAusLabel, wortDiff, hatUnterschied, vergleichsform, leerDiffVerletzungen, phantomVerletzungen, nurTitelGeaendert, AEHNLICH_MIN,
   type SynopseZeile,
 } from '../lib/entstehung/synopse-diff';
@@ -166,6 +166,60 @@ describe('Lineage: «Neu» folgt der Kette, nicht dem nächsten Token-Treffer', 
 
   it('und der Leer-Diff-Wächter hat damit nichts mehr zu beanstanden', () => {
     expect(leerDiffVerletzungen(SHARD_LINEAGE, () => GELTEND)).toEqual([]);
+  });
+});
+
+/**
+ * Die Quelllücke im Leser (W2·6c-ENTSTEHUNG-QUELLLUECKE) — nachgebaut nach dem
+ * gemessenen Fall CHEMRRV Art. 9: Stand 2022-04-01 führt den Artikel, 2022-05-01 und
+ * 2022-10-01 führen ihn nur im Änderungsanhang, 2022-10-06 wieder normal und wortgleich.
+ */
+const SHARD_LUECKE: SynopseShard = {
+  erlass: 'TESTQ', eli: 'cc/2005/478', normProfil: 'entstehung-norm/4', erzeugt: '2026-09-12',
+  fensterAb: '2021-01-01', kuenftigeStaende: [],
+  staende: [
+    { datum: '2022-04-01', xmlUrl: 'x1', liveUrl: 'l1', sha: 's1', bytes: 700027, abgerufen: '2026-09-12', artikelZahl: 25 },
+    { datum: '2022-05-01', xmlUrl: 'x2', liveUrl: 'l2', sha: 's2', bytes: 708599, abgerufen: '2026-09-12', artikelZahl: 3 },
+    { datum: '2022-10-01', xmlUrl: 'x3', liveUrl: 'l3', sha: 's3', bytes: 717322, abgerufen: '2026-09-12', artikelZahl: 3 },
+    { datum: '2022-10-06', xmlUrl: 'x4', liveUrl: 'l4', sha: 's4', bytes: 711735, abgerufen: '2026-09-12', artikelZahl: 27 },
+  ],
+  schritte: [
+    {
+      von: '2022-04-01', bis: '2022-05-01',
+      artikel: [{
+        eId: 'art_9', token: '9', label: 'Art. 9', ueberschrift: 'Örtlicher Geltungsbereich',
+        art: 'entfallen', alt: [], shaNorm: 'q', zustand: 'quelle_unvollstaendig',
+        zurueckAb: '2022-10-06', imAnhang: true,
+      }],
+    },
+    { von: '2022-05-01', bis: '2022-10-01', artikel: [] },
+    { von: '2022-10-01', bis: '2022-10-06', artikel: [] },
+  ],
+};
+
+describe('Quelllücke: ein fehlender Stand ist keine Aufhebung (§8)', () => {
+  it('liefert die betroffenen Stände samt Quell-Beleg — abgeleitet, nicht zweitgespeichert', () => {
+    const treffer = quellLueckenFuerArtikel(SHARD_LUECKE, '9');
+    expect(treffer).toHaveLength(1);
+    expect(treffer[0].staende).toEqual(['2022-05-01', '2022-10-01']);
+    expect(treffer[0].belege.map((b) => b.liveUrl)).toEqual(['l2', 'l3']);
+    expect(treffer[0].artikel.imAnhang).toBe(true);
+  });
+
+  it('hängt am Fassungspunkt, wenn der Apparat zum Lücken-Stand doch ein Ereignis führt', () => {
+    const lage = lageFuerEreignis(SHARD_LUECKE, '9', '2022-05-01', ['oc/2022/220'], GELTEND);
+    expect(lage.art).toBe('quelle_unvollstaendig');
+    if (lage.art !== 'quelle_unvollstaendig') return;
+    expect(lage.treffer.staende).toEqual(['2022-05-01', '2022-10-01']);
+  });
+
+  it('steht NICHT in der Liste «ohne Fussnoten-Ereignis» — zwei verschiedene Aussagen', () => {
+    expect(ohneEreignisFuerArtikel(SHARD_LUECKE, '9', GELTEND)).toHaveLength(0);
+  });
+
+  it('und beide Wächter lassen sie in Ruhe: es gibt keinen behaupteten Unterschied', () => {
+    expect(leerDiffVerletzungen(SHARD_LUECKE, () => GELTEND)).toEqual([]);
+    expect(phantomVerletzungen(SHARD_LUECKE, () => GELTEND)).toEqual([]);
   });
 });
 
